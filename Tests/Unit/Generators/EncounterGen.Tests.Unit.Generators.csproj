@@ -71,9 +71,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EncounterGeneratorTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\EncounterGen\Common\EncounterGen.Common.csproj">
+      <Project>{66f5bdd5-ebca-4acf-8c00-7f7daaf8d6c2}</Project>
+      <Name>EncounterGen.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\EncounterGen\Generators\Contracts\EncounterGen.Generators.csproj">
       <Project>{f91eb325-49b6-4e6f-9dbb-c4a7a3e8b524}</Project>
       <Name>EncounterGen.Generators</Name>

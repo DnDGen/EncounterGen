@@ -67,8 +67,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CreatureConstantsTests.cs" />
     <Compile Include="CreatureTests.cs" />
     <Compile Include="EncounterTests.cs" />
+    <Compile Include="EnvironmentConstantsTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -3,7 +3,6 @@ using EncounterGen.Bootstrap;
 using Ninject;
 using NUnit.Framework;
 using RollGen.Bootstrap;
-using System;
 using TreasureGen.Bootstrap;
 
 namespace EncounterGen.Tests.Integration.Common
@@ -40,11 +39,6 @@ namespace EncounterGen.Tests.Integration.Common
         protected T GetNewInstanceOf<T>()
         {
             return kernel.Get<T>();
-        }
-
-        protected T GetNewInstanceOf<T>(String name)
-        {
-            return kernel.Get<T>(name);
         }
     }
 }

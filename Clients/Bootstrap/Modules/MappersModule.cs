@@ -1,5 +1,4 @@
 ﻿using Ninject.Modules;
-using System;
 
 namespace EncounterGen.Bootstrap.Modules
 {
@@ -7,7 +6,6 @@ namespace EncounterGen.Bootstrap.Modules
     {
         public override void Load()
         {
-            throw new NotImplementedException();
         }
     }
 }
