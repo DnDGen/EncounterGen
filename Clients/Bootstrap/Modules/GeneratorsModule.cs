@@ -1,5 +1,5 @@
-﻿using EncounterGen.Generators;
-using EncounterGen.Generators.Domain;
+﻿using EncounterGen.Bootstrap.Factories;
+using EncounterGen.Generators;
 using Ninject.Modules;
 
 namespace EncounterGen.Bootstrap.Modules
@@ -8,7 +8,7 @@ namespace EncounterGen.Bootstrap.Modules
     {
         public override void Load()
         {
-            Bind<IEncounterGenerator>().To<EncounterGenerator>();
+            Bind<IEncounterGenerator>().ToMethod(c => EncounterGeneratorFactory.Create(c.Kernel));
         }
     }
 }

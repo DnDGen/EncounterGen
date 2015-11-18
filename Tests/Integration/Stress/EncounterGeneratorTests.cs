@@ -59,10 +59,12 @@ namespace EncounterGen.Tests.Integration.Stress
             var encounter = EncounterGenerator.Generate(environment, level);
 
             Assert.That(encounter.Creatures, Is.Not.Empty);
-            Assert.That(encounter.Treasure, Is.Not.Null);
 
-            var characterCount = encounter.Creatures.Count(c => c.Name == CreatureConstants.Character);
-            Assert.That(encounter.Characters.Count(), Is.EqualTo(characterCount));
+            if (encounter.Creatures.Any(c => c == CreatureConstants.Character))
+            {
+                Assert.That(encounter.Characters.Count(), Is.EqualTo(encounter.Creatures.Count()));
+                Assert.That(encounter.Treasures, Is.Empty);
+            }
         }
     }
 }

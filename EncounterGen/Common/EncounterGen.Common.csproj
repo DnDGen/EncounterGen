@@ -59,7 +59,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Creature.cs" />
     <Compile Include="CreatureConstants.cs" />
     <Compile Include="Encounter.cs" />
     <Compile Include="EnvironmentConstants.cs" />

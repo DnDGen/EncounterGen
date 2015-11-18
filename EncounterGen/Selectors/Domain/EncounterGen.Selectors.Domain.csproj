@@ -47,7 +47,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdjustmentSelector.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TypeAndAmountPercentileSelector.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Mappers\Contracts\EncounterGen.Mappers.csproj">

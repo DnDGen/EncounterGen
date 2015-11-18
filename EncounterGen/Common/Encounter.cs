@@ -1,4 +1,5 @@
 ﻿using CharacterGen.Common;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using TreasureGen.Common;
@@ -7,15 +8,15 @@ namespace EncounterGen.Common
 {
     public class Encounter
     {
-        public IEnumerable<Creature> Creatures { get; set; }
+        public IEnumerable<String> Creatures { get; set; }
         public IEnumerable<Character> Characters { get; set; }
-        public Treasure Treasure { get; set; }
+        public IEnumerable<Treasure> Treasures { get; set; }
 
         public Encounter()
         {
-            Creatures = Enumerable.Empty<Creature>();
+            Creatures = Enumerable.Empty<String>();
             Characters = Enumerable.Empty<Character>();
-            Treasure = new Treasure();
+            Treasures = Enumerable.Empty<Treasure>();
         }
     }
 }
