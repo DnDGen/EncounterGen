@@ -54,7 +54,9 @@
     <Compile Include="BootstrapAttribute.cs" />
     <Compile Include="BootstrapTests.cs" />
     <Compile Include="Modules\GeneratorModuleTests.cs" />
+    <Compile Include="Modules\MapperModuleTests.cs" />
     <Compile Include="Modules\SelectorModuleTests.cs" />
+    <Compile Include="Modules\TableModuleTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

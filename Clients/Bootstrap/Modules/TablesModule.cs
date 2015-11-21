@@ -1,4 +1,6 @@
-﻿using Ninject.Modules;
+﻿using EncounterGen.Tables;
+using EncounterGen.Tables.Domain;
+using Ninject.Modules;
 
 namespace EncounterGen.Bootstrap.Modules
 {
@@ -6,6 +8,7 @@ namespace EncounterGen.Bootstrap.Modules
     {
         public override void Load()
         {
+            Bind<StreamLoader>().To<EmbeddedResourceStreamLoader>();
         }
     }
 }

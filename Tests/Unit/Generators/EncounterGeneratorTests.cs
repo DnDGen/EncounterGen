@@ -8,11 +8,11 @@ using EncounterGen.Common;
 using EncounterGen.Generators;
 using EncounterGen.Generators.Domain;
 using EncounterGen.Selectors;
-using EncounterGen.Selectors.Models;
 using EncounterGen.Tables;
 using Moq;
 using NUnit.Framework;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using TreasureGen.Common;
 using TreasureGen.Generators;
@@ -33,6 +33,7 @@ namespace EncounterGen.Tests.Unit.Generators
         private Mock<RaceRandomizer> mockAnyMetaraceRandomizer;
         private Mock<IStatsRandomizer> mockRawStatsRandomizer;
         private Mock<IAdjustmentSelector> mockAdjustmentSelector;
+        private Dictionary<String, Int32> typesAndAmounts;
 
         [SetUp]
         public void Setup()
@@ -47,6 +48,7 @@ namespace EncounterGen.Tests.Unit.Generators
             mockAnyMetaraceRandomizer = new Mock<RaceRandomizer>();
             mockRawStatsRandomizer = new Mock<IStatsRandomizer>();
             mockAdjustmentSelector = new Mock<IAdjustmentSelector>();
+            typesAndAmounts = new Dictionary<String, Int32>();
 
             encounterGenerator = new EncounterGenerator(mockTypeAndAmountPercentileSelector.Object, mockTreasureGenerator.Object,
                 mockCharacterGenerator.Object, mockAnyAlignmentRandomizer.Object, mockAnyClassNameRandomizer.Object, mockSetLevelRandomizer.Object,
@@ -60,11 +62,10 @@ namespace EncounterGen.Tests.Unit.Generators
         [Test]
         public void GenerateEncounter()
         {
-            var encounterModel = new TypesAndAmountsModel();
-            encounterModel.TypesAndAmounts["creature"] = 12345;
+            typesAndAmounts["creature"] = 12345;
 
-            var tableName = String.Format(TableNameConstants.LevelXENVIRONMENTEncounter, 9266, "environment");
-            mockTypeAndAmountPercentileSelector.Setup(s => s.SelectFrom(tableName)).Returns(encounterModel);
+            var tableName = String.Format(TableNameConstants.LevelXENVIRONMENTEncounters, 9266, "environment");
+            mockTypeAndAmountPercentileSelector.Setup(s => s.SelectFrom(tableName)).Returns(typesAndAmounts);
 
             var treasure = new Treasure();
             mockTreasureGenerator.Setup(g => g.GenerateAtLevel(9266)).Returns(treasure);
@@ -80,11 +81,10 @@ namespace EncounterGen.Tests.Unit.Generators
         [Test]
         public void GenerateEncounterWithCharacters()
         {
-            var encounterModel = new TypesAndAmountsModel();
-            encounterModel.TypesAndAmounts[CreatureConstants.Character] = 42;
+            typesAndAmounts[CreatureConstants.Character] = 42;
 
-            var tableName = String.Format(TableNameConstants.LevelXENVIRONMENTEncounter, 9266, "environment");
-            mockTypeAndAmountPercentileSelector.Setup(s => s.SelectFrom(tableName)).Returns(encounterModel);
+            var tableName = String.Format(TableNameConstants.LevelXENVIRONMENTEncounters, 9266, "environment");
+            mockTypeAndAmountPercentileSelector.Setup(s => s.SelectFrom(tableName)).Returns(typesAndAmounts);
 
             mockAdjustmentSelector.Setup(s => s.SelectFrom(TableNameConstants.CharacterLevel, "9266")).Returns(23456);
 
@@ -103,17 +103,16 @@ namespace EncounterGen.Tests.Unit.Generators
         [Test]
         public void RollEncounterAgainAtDifferentLevel()
         {
-            var rerollEncounterModel = new TypesAndAmountsModel();
-            rerollEncounterModel.TypesAndAmounts[EncounterConstants.Reroll] = 90210;
+            var rerollTypesAndAmounts = new Dictionary<String, Int32>();
+            rerollTypesAndAmounts[EncounterConstants.Reroll] = 90210;
 
-            var encounterModel = new TypesAndAmountsModel();
-            encounterModel.TypesAndAmounts["creature"] = 12345;
+            typesAndAmounts["creature"] = 12345;
 
-            var tableName = String.Format(TableNameConstants.LevelXENVIRONMENTEncounter, 9266, "environment");
-            mockTypeAndAmountPercentileSelector.Setup(s => s.SelectFrom(tableName)).Returns(rerollEncounterModel);
+            var tableName = String.Format(TableNameConstants.LevelXENVIRONMENTEncounters, 9266, "environment");
+            mockTypeAndAmountPercentileSelector.Setup(s => s.SelectFrom(tableName)).Returns(rerollTypesAndAmounts);
 
-            tableName = String.Format(TableNameConstants.LevelXENVIRONMENTEncounter, 90210, "environment");
-            mockTypeAndAmountPercentileSelector.Setup(s => s.SelectFrom(tableName)).Returns(encounterModel);
+            tableName = String.Format(TableNameConstants.LevelXENVIRONMENTEncounters, 90210, "environment");
+            mockTypeAndAmountPercentileSelector.Setup(s => s.SelectFrom(tableName)).Returns(typesAndAmounts);
 
             var treasure = new Treasure();
             mockTreasureGenerator.Setup(g => g.GenerateAtLevel(90210)).Returns(treasure);
@@ -129,23 +128,22 @@ namespace EncounterGen.Tests.Unit.Generators
         [Test]
         public void RerollUntilNonRerollEncounterIsRolled()
         {
-            var rerollEncounterModel = new TypesAndAmountsModel();
-            rerollEncounterModel.TypesAndAmounts[EncounterConstants.Reroll] = 90210;
+            var rerollTypesAndAmounts = new Dictionary<String, Int32>();
+            rerollTypesAndAmounts[EncounterConstants.Reroll] = 90210;
 
-            var rerollAgainEncounterModel = new TypesAndAmountsModel();
-            rerollAgainEncounterModel.TypesAndAmounts[EncounterConstants.Reroll] = 23456;
+            var rerollAgainTypesAndAmounts = new Dictionary<String, Int32>();
+            rerollAgainTypesAndAmounts[EncounterConstants.Reroll] = 23456;
 
-            var encounterModel = new TypesAndAmountsModel();
-            encounterModel.TypesAndAmounts["creature"] = 12345;
+            typesAndAmounts["creature"] = 12345;
 
-            var tableName = String.Format(TableNameConstants.LevelXENVIRONMENTEncounter, 9266, "environment");
-            mockTypeAndAmountPercentileSelector.Setup(s => s.SelectFrom(tableName)).Returns(rerollEncounterModel);
+            var tableName = String.Format(TableNameConstants.LevelXENVIRONMENTEncounters, 9266, "environment");
+            mockTypeAndAmountPercentileSelector.Setup(s => s.SelectFrom(tableName)).Returns(rerollTypesAndAmounts);
 
-            tableName = String.Format(TableNameConstants.LevelXENVIRONMENTEncounter, 90210, "environment");
-            mockTypeAndAmountPercentileSelector.Setup(s => s.SelectFrom(tableName)).Returns(rerollAgainEncounterModel);
+            tableName = String.Format(TableNameConstants.LevelXENVIRONMENTEncounters, 90210, "environment");
+            mockTypeAndAmountPercentileSelector.Setup(s => s.SelectFrom(tableName)).Returns(rerollAgainTypesAndAmounts);
 
-            tableName = String.Format(TableNameConstants.LevelXENVIRONMENTEncounter, 23456, "environment");
-            mockTypeAndAmountPercentileSelector.Setup(s => s.SelectFrom(tableName)).Returns(encounterModel);
+            tableName = String.Format(TableNameConstants.LevelXENVIRONMENTEncounters, 23456, "environment");
+            mockTypeAndAmountPercentileSelector.Setup(s => s.SelectFrom(tableName)).Returns(typesAndAmounts);
 
             var treasure = new Treasure();
             mockTreasureGenerator.Setup(g => g.GenerateAtLevel(23456)).Returns(treasure);
@@ -161,12 +159,11 @@ namespace EncounterGen.Tests.Unit.Generators
         [Test]
         public void GetEncounterWithMultipleTypesOfCreatures()
         {
-            var encounterModel = new TypesAndAmountsModel();
-            encounterModel.TypesAndAmounts["creature"] = 12345;
-            encounterModel.TypesAndAmounts["other creature"] = 90210;
+            typesAndAmounts["creature"] = 12345;
+            typesAndAmounts["other creature"] = 90210;
 
-            var tableName = String.Format(TableNameConstants.LevelXENVIRONMENTEncounter, 9266, "environment");
-            mockTypeAndAmountPercentileSelector.Setup(s => s.SelectFrom(tableName)).Returns(encounterModel);
+            var tableName = String.Format(TableNameConstants.LevelXENVIRONMENTEncounters, 9266, "environment");
+            mockTypeAndAmountPercentileSelector.Setup(s => s.SelectFrom(tableName)).Returns(typesAndAmounts);
 
             var treasure = new Treasure();
             mockTreasureGenerator.Setup(g => g.GenerateAtLevel(9266)).Returns(treasure);
@@ -183,11 +180,10 @@ namespace EncounterGen.Tests.Unit.Generators
         [Test]
         public void GetMoreTreasure()
         {
-            var encounterModel = new TypesAndAmountsModel();
-            encounterModel.TypesAndAmounts["creature"] = 12345;
+            typesAndAmounts["creature"] = 12345;
 
-            var tableName = String.Format(TableNameConstants.LevelXENVIRONMENTEncounter, 9266, "environment");
-            mockTypeAndAmountPercentileSelector.Setup(s => s.SelectFrom(tableName)).Returns(encounterModel);
+            var tableName = String.Format(TableNameConstants.LevelXENVIRONMENTEncounters, 9266, "environment");
+            mockTypeAndAmountPercentileSelector.Setup(s => s.SelectFrom(tableName)).Returns(typesAndAmounts);
 
             mockAdjustmentSelector.Setup(s => s.SelectFrom(TableNameConstants.TreasureAdjustment, "creature")).Returns(2);
 
@@ -208,11 +204,10 @@ namespace EncounterGen.Tests.Unit.Generators
         [Test]
         public void GetNoTreasure()
         {
-            var encounterModel = new TypesAndAmountsModel();
-            encounterModel.TypesAndAmounts["creature"] = 12345;
+            typesAndAmounts["creature"] = 12345;
 
-            var tableName = String.Format(TableNameConstants.LevelXENVIRONMENTEncounter, 9266, "environment");
-            mockTypeAndAmountPercentileSelector.Setup(s => s.SelectFrom(tableName)).Returns(encounterModel);
+            var tableName = String.Format(TableNameConstants.LevelXENVIRONMENTEncounters, 9266, "environment");
+            mockTypeAndAmountPercentileSelector.Setup(s => s.SelectFrom(tableName)).Returns(typesAndAmounts);
 
             mockAdjustmentSelector.Setup(s => s.SelectFrom(TableNameConstants.TreasureAdjustment, "creature")).Returns(0);
 
@@ -230,12 +225,11 @@ namespace EncounterGen.Tests.Unit.Generators
         [Test]
         public void UseFirstCreatureForTreasure()
         {
-            var encounterModel = new TypesAndAmountsModel();
-            encounterModel.TypesAndAmounts["creature"] = 12345;
-            encounterModel.TypesAndAmounts["other creature"] = 90210;
+            typesAndAmounts["creature"] = 12345;
+            typesAndAmounts["other creature"] = 90210;
 
-            var tableName = String.Format(TableNameConstants.LevelXENVIRONMENTEncounter, 9266, "environment");
-            mockTypeAndAmountPercentileSelector.Setup(s => s.SelectFrom(tableName)).Returns(encounterModel);
+            var tableName = String.Format(TableNameConstants.LevelXENVIRONMENTEncounters, 9266, "environment");
+            mockTypeAndAmountPercentileSelector.Setup(s => s.SelectFrom(tableName)).Returns(typesAndAmounts);
 
             mockAdjustmentSelector.Setup(s => s.SelectFrom(TableNameConstants.TreasureAdjustment, "creature")).Returns(600);
             mockAdjustmentSelector.Setup(s => s.SelectFrom(TableNameConstants.TreasureAdjustment, "other creature")).Returns(1);

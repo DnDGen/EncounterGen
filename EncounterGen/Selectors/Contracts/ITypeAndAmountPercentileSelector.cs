@@ -1,10 +1,10 @@
-﻿using EncounterGen.Selectors.Models;
-using System;
+﻿using System;
+using System.Collections.Generic;
 
 namespace EncounterGen.Selectors
 {
     public interface ITypeAndAmountPercentileSelector
     {
-        TypesAndAmountsModel SelectFrom(String tableName);
+        Dictionary<String, Int32> SelectFrom(String tableName);
     }
 }

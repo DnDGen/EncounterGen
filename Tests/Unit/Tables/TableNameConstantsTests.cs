@@ -8,7 +8,7 @@ namespace EncounterGen.Tests.Unit.Tables
     public class TableNameConstantsTests
     {
         [TestCase(TableNameConstants.CharacterLevel, "CharacterLevel")]
-        [TestCase(TableNameConstants.LevelXENVIRONMENTEncounter, "Level{0}{1}Encounter")]
+        [TestCase(TableNameConstants.LevelXENVIRONMENTEncounters, "Level{0}{1}Encounters")]
         [TestCase(TableNameConstants.TreasureAdjustment, "TreasureAdjustment")]
         public void Constant(String constant, String value)
         {

@@ -19,5 +19,11 @@ namespace EncounterGen.Tests.Integration.Bootstrap
             var second = GetNewInstanceOf<T>();
             Assert.That(first, Is.Not.EqualTo(second));
         }
+
+        protected void AssertInstanceOf<I, T>()
+        {
+            var instance = GetNewInstanceOf<I>();
+            Assert.That(instance, Is.InstanceOf<T>());
+        }
     }
 }

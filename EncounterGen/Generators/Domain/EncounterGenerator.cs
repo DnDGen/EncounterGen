@@ -46,25 +46,25 @@ namespace EncounterGen.Generators.Domain
         public Encounter Generate(String environment, Int32 level)
         {
             var effectiveLevel = level;
-            var tableName = String.Format(TableNameConstants.LevelXENVIRONMENTEncounter, effectiveLevel, environment);
-            var encounterModel = typeAndAmountPercentileSelector.SelectFrom(tableName);
+            var tableName = String.Format(TableNameConstants.LevelXENVIRONMENTEncounters, effectiveLevel, environment);
+            var typesAndAmounts = typeAndAmountPercentileSelector.SelectFrom(tableName);
 
-            while (encounterModel.TypesAndAmounts.ContainsKey(EncounterConstants.Reroll))
+            while (typesAndAmounts.ContainsKey(EncounterConstants.Reroll))
             {
-                effectiveLevel = encounterModel.TypesAndAmounts[EncounterConstants.Reroll];
-                tableName = String.Format(TableNameConstants.LevelXENVIRONMENTEncounter, effectiveLevel, environment);
-                encounterModel = typeAndAmountPercentileSelector.SelectFrom(tableName);
+                effectiveLevel = typesAndAmounts[EncounterConstants.Reroll];
+                tableName = String.Format(TableNameConstants.LevelXENVIRONMENTEncounters, effectiveLevel, environment);
+                typesAndAmounts = typeAndAmountPercentileSelector.SelectFrom(tableName);
             }
 
             var creatures = new List<String>();
 
-            foreach (var kvp in encounterModel.TypesAndAmounts)
+            foreach (var kvp in typesAndAmounts)
                 creatures.AddRange(Enumerable.Repeat<String>(kvp.Key, kvp.Value));
 
             var encounter = new Encounter();
             encounter.Creatures = creatures;
 
-            var leadCreature = encounterModel.TypesAndAmounts.First().Key;
+            var leadCreature = typesAndAmounts.First().Key;
             var treasureMultiplier = adjustmentSelector.SelectFrom(TableNameConstants.TreasureAdjustment, leadCreature);
 
             while (treasureMultiplier-- > 0)

@@ -55,11 +55,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\TypesAndAmountsModelTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TypeAndAmountPercentileSelectorTests.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\EncounterGen\Mappers\Contracts\EncounterGen.Mappers.csproj">
+      <Project>{39d36637-3ae1-402c-b4d4-1aa44f3f7b21}</Project>
+      <Name>EncounterGen.Mappers</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\EncounterGen\Selectors\Contracts\EncounterGen.Selectors.csproj">
       <Project>{d2272e70-0af8-415e-a6f7-d72c67902244}</Project>
       <Name>EncounterGen.Selectors</Name>
