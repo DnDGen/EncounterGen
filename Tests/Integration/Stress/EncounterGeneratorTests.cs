@@ -55,8 +55,27 @@ namespace EncounterGen.Tests.Integration.Stress
         {
             var randomIndex = Random.Next(environments.Count());
             var environment = environments.ElementAt(randomIndex);
+            var encounter = MakeEncounter(environment);
+
+            Assert.That(encounter.Creatures, Is.Not.Empty);
+
+            if (encounter.Creatures.Any(c => c == CreatureConstants.Character))
+            {
+                Assert.That(encounter.Characters.Count(), Is.EqualTo(encounter.Creatures.Count()));
+                Assert.That(encounter.Treasures, Is.Empty);
+            }
+        }
+
+        private Encounter MakeEncounter(String environment)
+        {
             var level = Random.Next(1, 21);
-            var encounter = EncounterGenerator.Generate(environment, level);
+            return EncounterGenerator.Generate(environment, level);
+        }
+
+        [Test]
+        public void StressDungeonEncounters()
+        {
+            var encounter = Generate(() => MakeEncounter(EnvironmentConstants.Dungeon), e => true);
 
             Assert.That(encounter.Creatures, Is.Not.Empty);
 
