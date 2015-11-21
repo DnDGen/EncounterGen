@@ -8,14 +8,19 @@ using EncounterGen.Common;
 using EncounterGen.Generators;
 using EncounterGen.Generators.Domain;
 using EncounterGen.Selectors;
+using EncounterGen.Selectors.Percentiles;
 using EncounterGen.Tables;
 using Moq;
 using NUnit.Framework;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using TreasureGen.Common;
-using TreasureGen.Generators;
+using TreasureGen.Common.Coins;
+using TreasureGen.Common.Goods;
+using TreasureGen.Common.Items;
+using TreasureGen.Generators.Coins;
+using TreasureGen.Generators.Goods;
+using TreasureGen.Generators.Items;
 
 namespace EncounterGen.Tests.Unit.Generators
 {
@@ -24,7 +29,9 @@ namespace EncounterGen.Tests.Unit.Generators
     {
         private IEncounterGenerator encounterGenerator;
         private Mock<ITypeAndAmountPercentileSelector> mockTypeAndAmountPercentileSelector;
-        private Mock<ITreasureGenerator> mockTreasureGenerator;
+        private Mock<ICoinGenerator> mockCoinGenerator;
+        private Mock<IGoodsGenerator> mockGoodsGenerator;
+        private Mock<IItemsGenerator> mockItemsGenerator;
         private Mock<ICharacterGenerator> mockCharacterGenerator;
         private Mock<IAlignmentRandomizer> mockAnyAlignmentRandomizer;
         private Mock<IClassNameRandomizer> mockAnyClassNameRandomizer;
@@ -33,13 +40,21 @@ namespace EncounterGen.Tests.Unit.Generators
         private Mock<RaceRandomizer> mockAnyMetaraceRandomizer;
         private Mock<IStatsRandomizer> mockRawStatsRandomizer;
         private Mock<IAdjustmentSelector> mockAdjustmentSelector;
-        private Dictionary<String, Int32> typesAndAmounts;
+        private Mock<IRollSelector> mockRollSelector;
+        private Mock<IPercentileSelector> mockPercentileSelector;
+        private Mock<IBooleanPercentileSelector> mockBooleanPercentileSelector;
+        private Dictionary<String, String> encounterTypeAndAmount;
+        private Dictionary<String, String> encounterLevelAndModifier;
+        private Int32 level;
+        private String environment;
 
         [SetUp]
         public void Setup()
         {
             mockTypeAndAmountPercentileSelector = new Mock<ITypeAndAmountPercentileSelector>();
-            mockTreasureGenerator = new Mock<ITreasureGenerator>();
+            mockCoinGenerator = new Mock<ICoinGenerator>();
+            mockGoodsGenerator = new Mock<IGoodsGenerator>();
+            mockItemsGenerator = new Mock<IItemsGenerator>();
             mockCharacterGenerator = new Mock<ICharacterGenerator>();
             mockAnyAlignmentRandomizer = new Mock<IAlignmentRandomizer>();
             mockAnyClassNameRandomizer = new Mock<IClassNameRandomizer>();
@@ -48,201 +63,363 @@ namespace EncounterGen.Tests.Unit.Generators
             mockAnyMetaraceRandomizer = new Mock<RaceRandomizer>();
             mockRawStatsRandomizer = new Mock<IStatsRandomizer>();
             mockAdjustmentSelector = new Mock<IAdjustmentSelector>();
-            typesAndAmounts = new Dictionary<String, Int32>();
+            mockRollSelector = new Mock<IRollSelector>();
+            mockPercentileSelector = new Mock<IPercentileSelector>();
+            mockBooleanPercentileSelector = new Mock<IBooleanPercentileSelector>();
 
-            encounterGenerator = new EncounterGenerator(mockTypeAndAmountPercentileSelector.Object, mockTreasureGenerator.Object,
-                mockCharacterGenerator.Object, mockAnyAlignmentRandomizer.Object, mockAnyClassNameRandomizer.Object, mockSetLevelRandomizer.Object,
-                mockAnyBaseRaceRandomizer.Object, mockAnyMetaraceRandomizer.Object, mockRawStatsRandomizer.Object, mockAdjustmentSelector.Object);
+            encounterGenerator = new EncounterGenerator(mockTypeAndAmountPercentileSelector.Object, mockCoinGenerator.Object,
+                mockGoodsGenerator.Object, mockItemsGenerator.Object, mockCharacterGenerator.Object, mockAnyAlignmentRandomizer.Object, mockAnyClassNameRandomizer.Object, mockSetLevelRandomizer.Object,
+                mockAnyBaseRaceRandomizer.Object, mockAnyMetaraceRandomizer.Object, mockRawStatsRandomizer.Object, mockAdjustmentSelector.Object,
+                mockRollSelector.Object, mockPercentileSelector.Object, mockBooleanPercentileSelector.Object);
+
+            encounterLevelAndModifier = new Dictionary<String, String>();
+            encounterTypeAndAmount = new Dictionary<String, String>();
 
             mockSetLevelRandomizer.SetupAllProperties();
 
-            mockAdjustmentSelector.Setup(s => s.SelectFrom(TableNameConstants.TreasureAdjustment, It.IsAny<String>())).Returns(1);
+            level = 9266;
+            environment = "environment";
+            encounterLevelAndModifier["90210"] = "modifier";
+            encounterTypeAndAmount["creature"] = "creature amount";
+
+            var tableName = String.Format(TableNameConstants.LevelXEncounterLevel, level);
+            mockTypeAndAmountPercentileSelector.Setup(s => s.SelectFrom(tableName)).Returns(encounterLevelAndModifier);
+
+            tableName = String.Format(TableNameConstants.LevelXENVIRONMENTEncounters, 90210, environment);
+            mockTypeAndAmountPercentileSelector.Setup(s => s.SelectFrom(tableName)).Returns(encounterTypeAndAmount);
+
+            mockRollSelector.Setup(s => s.SelectFrom("creature amount", "modifier")).Returns("effective roll");
+            mockRollSelector.Setup(s => s.SelectFrom("effective roll")).Returns(42);
         }
 
         [Test]
         public void GenerateEncounter()
         {
-            typesAndAmounts["creature"] = 12345;
-
-            var tableName = String.Format(TableNameConstants.LevelXENVIRONMENTEncounters, 9266, "environment");
-            mockTypeAndAmountPercentileSelector.Setup(s => s.SelectFrom(tableName)).Returns(typesAndAmounts);
-
-            var treasure = new Treasure();
-            mockTreasureGenerator.Setup(g => g.GenerateAtLevel(9266)).Returns(treasure);
-
-            var encounter = encounterGenerator.Generate("environment", 9266);
+            var encounter = encounterGenerator.Generate(environment, level);
             Assert.That(encounter, Is.Not.Null);
             Assert.That(encounter.Creatures, Is.All.EqualTo("creature"));
-            Assert.That(encounter.Creatures.Count(), Is.EqualTo(12345));
+            Assert.That(encounter.Creatures.Count(), Is.EqualTo(42));
             Assert.That(encounter.Characters, Is.Empty);
-            Assert.That(encounter.Treasures.Single(), Is.EqualTo(treasure));
         }
 
         [Test]
         public void GenerateEncounterWithCharacters()
         {
-            typesAndAmounts[CreatureConstants.Character] = 42;
+            encounterTypeAndAmount.Clear();
+            encounterTypeAndAmount[CreatureConstants.Character] = "character amount";
+            mockRollSelector.Setup(s => s.SelectFrom("character amount", "modifier")).Returns("character effective roll");
+            mockRollSelector.Setup(s => s.SelectFrom("character effective roll")).Returns(600);
 
-            var tableName = String.Format(TableNameConstants.LevelXENVIRONMENTEncounters, 9266, "environment");
-            mockTypeAndAmountPercentileSelector.Setup(s => s.SelectFrom(tableName)).Returns(typesAndAmounts);
+            mockAdjustmentSelector.Setup(s => s.SelectFrom(TableNameConstants.CharacterLevel, "90210")).Returns(1337);
 
-            mockAdjustmentSelector.Setup(s => s.SelectFrom(TableNameConstants.CharacterLevel, "9266")).Returns(23456);
-
-            mockCharacterGenerator.Setup(g => g.GenerateWith(mockAnyAlignmentRandomizer.Object, mockAnyClassNameRandomizer.Object, It.Is<ISetLevelRandomizer>(r => r.SetLevel == 23456), mockAnyBaseRaceRandomizer.Object, mockAnyMetaraceRandomizer.Object, mockRawStatsRandomizer.Object))
+            mockCharacterGenerator.Setup(g => g.GenerateWith(mockAnyAlignmentRandomizer.Object, mockAnyClassNameRandomizer.Object, It.Is<ISetLevelRandomizer>(r => r.SetLevel == 1337), mockAnyBaseRaceRandomizer.Object, mockAnyMetaraceRandomizer.Object, mockRawStatsRandomizer.Object))
                 .Returns(() => new Character { InterestingTrait = Guid.NewGuid().ToString() });
 
-            var encounter = encounterGenerator.Generate("environment", 9266);
+            var encounter = encounterGenerator.Generate(environment, level);
             Assert.That(encounter, Is.Not.Null);
             Assert.That(encounter.Creatures, Is.All.EqualTo(CreatureConstants.Character));
-            Assert.That(encounter.Creatures.Count(), Is.EqualTo(42));
-            Assert.That(encounter.Characters.Count(), Is.EqualTo(42));
+            Assert.That(encounter.Creatures.Count(), Is.EqualTo(600));
+            Assert.That(encounter.Characters.Count(), Is.EqualTo(600));
             Assert.That(encounter.Characters, Is.Unique);
             Assert.That(encounter.Characters.Select(c => c.InterestingTrait), Is.Unique);
         }
 
         [Test]
-        public void RollEncounterAgainAtDifferentLevel()
+        public void GenerateEncounterWithCharactersWithSetMetarace()
         {
-            var rerollTypesAndAmounts = new Dictionary<String, Int32>();
-            rerollTypesAndAmounts[EncounterConstants.Reroll] = 90210;
-
-            typesAndAmounts["creature"] = 12345;
-
-            var tableName = String.Format(TableNameConstants.LevelXENVIRONMENTEncounters, 9266, "environment");
-            mockTypeAndAmountPercentileSelector.Setup(s => s.SelectFrom(tableName)).Returns(rerollTypesAndAmounts);
-
-            tableName = String.Format(TableNameConstants.LevelXENVIRONMENTEncounters, 90210, "environment");
-            mockTypeAndAmountPercentileSelector.Setup(s => s.SelectFrom(tableName)).Returns(typesAndAmounts);
-
-            var treasure = new Treasure();
-            mockTreasureGenerator.Setup(g => g.GenerateAtLevel(90210)).Returns(treasure);
-
-            var encounter = encounterGenerator.Generate("environment", 9266);
-            Assert.That(encounter, Is.Not.Null);
-            Assert.That(encounter.Creatures, Is.All.EqualTo("creature"));
-            Assert.That(encounter.Creatures.Count(), Is.EqualTo(12345));
-            Assert.That(encounter.Characters, Is.Empty);
-            Assert.That(encounter.Treasures.Single(), Is.EqualTo(treasure));
+            throw new NotImplementedException("Waiting until CharacterGen has Vampire, Ghost, and Lich metaraces");
         }
 
         [Test]
-        public void RerollUntilNonRerollEncounterIsRolled()
+        public void GenerateEncounterWithDragons()
         {
-            var rerollTypesAndAmounts = new Dictionary<String, Int32>();
-            rerollTypesAndAmounts[EncounterConstants.Reroll] = 90210;
+            encounterTypeAndAmount.Clear();
+            encounterTypeAndAmount[CreatureConstants.Dragon] = "dragon amount";
+            mockRollSelector.Setup(s => s.SelectFrom("dragon amount", "modifier")).Returns("dragon effective roll");
+            mockRollSelector.Setup(s => s.SelectFrom("dragon effective roll")).Returns(600);
 
-            var rerollAgainTypesAndAmounts = new Dictionary<String, Int32>();
-            rerollAgainTypesAndAmounts[EncounterConstants.Reroll] = 23456;
+            var tableName = String.Format(TableNameConstants.LevelXDragons, 90210);
+            mockPercentileSelector.Setup(s => s.SelectFrom(tableName)).Returns("dragon type and age");
 
-            typesAndAmounts["creature"] = 12345;
-
-            var tableName = String.Format(TableNameConstants.LevelXENVIRONMENTEncounters, 9266, "environment");
-            mockTypeAndAmountPercentileSelector.Setup(s => s.SelectFrom(tableName)).Returns(rerollTypesAndAmounts);
-
-            tableName = String.Format(TableNameConstants.LevelXENVIRONMENTEncounters, 90210, "environment");
-            mockTypeAndAmountPercentileSelector.Setup(s => s.SelectFrom(tableName)).Returns(rerollAgainTypesAndAmounts);
-
-            tableName = String.Format(TableNameConstants.LevelXENVIRONMENTEncounters, 23456, "environment");
-            mockTypeAndAmountPercentileSelector.Setup(s => s.SelectFrom(tableName)).Returns(typesAndAmounts);
-
-            var treasure = new Treasure();
-            mockTreasureGenerator.Setup(g => g.GenerateAtLevel(23456)).Returns(treasure);
-
-            var encounter = encounterGenerator.Generate("environment", 9266);
+            var encounter = encounterGenerator.Generate(environment, level);
             Assert.That(encounter, Is.Not.Null);
-            Assert.That(encounter.Creatures, Is.All.EqualTo("creature"));
-            Assert.That(encounter.Creatures.Count(), Is.EqualTo(12345));
+            Assert.That(encounter.Creatures, Is.All.EqualTo("dragon type and age"));
+            Assert.That(encounter.Creatures.Count(), Is.EqualTo(600));
             Assert.That(encounter.Characters, Is.Empty);
-            Assert.That(encounter.Treasures.Single(), Is.EqualTo(treasure));
+        }
+
+        [Test]
+        public void RerollEncounter()
+        {
+            var wrongTypeAndAmount = new Dictionary<String, String>();
+            wrongTypeAndAmount["wrong creature"] = "wrong creature amount";
+
+            var otherTypeAndAmount = new Dictionary<String, String>();
+            otherTypeAndAmount["other creature"] = "other creature amount";
+
+            var tableName = String.Format(TableNameConstants.LevelXENVIRONMENTEncounters, 90210, environment);
+            mockTypeAndAmountPercentileSelector.SetupSequence(s => s.SelectFrom(tableName))
+                .Returns(wrongTypeAndAmount).Returns(otherTypeAndAmount).Returns(encounterTypeAndAmount);
+
+            mockRollSelector.Setup(s => s.SelectFrom("wrong creature amount", "modifier")).Returns(EncounterConstants.Reroll);
+            mockRollSelector.Setup(s => s.SelectFrom("other creature amount", "modifier")).Returns("other effective roll");
+            mockRollSelector.Setup(s => s.SelectFrom("other effective roll")).Returns(600);
+
+            var encounter = encounterGenerator.Generate(environment, level);
+            Assert.That(encounter, Is.Not.Null);
+            Assert.That(encounter.Creatures, Is.All.EqualTo("other creature"));
+            Assert.That(encounter.Creatures.Count(), Is.EqualTo(600));
+            Assert.That(encounter.Characters, Is.Empty);
+        }
+
+        [Test]
+        public void RerollEntireEncounter()
+        {
+            var wrongTypeAndAmount = new Dictionary<String, String>();
+            wrongTypeAndAmount["creature"] = "creature amount";
+            wrongTypeAndAmount["wrong creature"] = "wrong creature amount";
+
+            var otherTypeAndAmount = new Dictionary<String, String>();
+            otherTypeAndAmount["other creature"] = "other creature amount";
+
+            var tableName = String.Format(TableNameConstants.LevelXENVIRONMENTEncounters, 90210, environment);
+            mockTypeAndAmountPercentileSelector.SetupSequence(s => s.SelectFrom(tableName))
+                .Returns(wrongTypeAndAmount).Returns(otherTypeAndAmount).Returns(encounterTypeAndAmount);
+
+            mockRollSelector.Setup(s => s.SelectFrom("wrong creature amount", "modifier")).Returns(EncounterConstants.Reroll);
+            mockRollSelector.Setup(s => s.SelectFrom("other creature amount", "modifier")).Returns("other effective roll");
+            mockRollSelector.Setup(s => s.SelectFrom("other effective roll")).Returns(600);
+
+            var encounter = encounterGenerator.Generate(environment, level);
+            Assert.That(encounter, Is.Not.Null);
+            Assert.That(encounter.Creatures, Is.All.EqualTo("other creature"));
+            Assert.That(encounter.Creatures.Count(), Is.EqualTo(600));
+            Assert.That(encounter.Characters, Is.Empty);
         }
 
         [Test]
         public void GetEncounterWithMultipleTypesOfCreatures()
         {
-            typesAndAmounts["creature"] = 12345;
-            typesAndAmounts["other creature"] = 90210;
+            encounterTypeAndAmount["other creature"] = "other creature amount";
 
-            var tableName = String.Format(TableNameConstants.LevelXENVIRONMENTEncounters, 9266, "environment");
-            mockTypeAndAmountPercentileSelector.Setup(s => s.SelectFrom(tableName)).Returns(typesAndAmounts);
+            mockRollSelector.Setup(s => s.SelectFrom("other creature amount", "modifier")).Returns("other effective roll");
+            mockRollSelector.Setup(s => s.SelectFrom("other effective roll")).Returns(600);
 
-            var treasure = new Treasure();
-            mockTreasureGenerator.Setup(g => g.GenerateAtLevel(9266)).Returns(treasure);
-
-            var encounter = encounterGenerator.Generate("environment", 9266);
+            var encounter = encounterGenerator.Generate(environment, level);
             Assert.That(encounter, Is.Not.Null);
-            Assert.That(encounter.Creatures.Count(c => c == "creature"), Is.EqualTo(12345));
-            Assert.That(encounter.Creatures.Count(c => c == "other creature"), Is.EqualTo(90210));
-            Assert.That(encounter.Creatures.Count(), Is.EqualTo(12345 + 90210));
+            Assert.That(encounter.Creatures.Count(c => c == "creature"), Is.EqualTo(42));
+            Assert.That(encounter.Creatures.Count(c => c == "other creature"), Is.EqualTo(600));
+            Assert.That(encounter.Creatures.Count(), Is.EqualTo(642));
             Assert.That(encounter.Characters, Is.Empty);
-            Assert.That(encounter.Treasures.Single(), Is.EqualTo(treasure));
+        }
+
+        [Test]
+        public void GetTreasure()
+        {
+            mockAdjustmentSelector.Setup(s => s.SelectFrom(TableNameConstants.TreasureAdjustment, "creature")).Returns(1);
+            mockCoinGenerator.Setup(g => g.GenerateAtLevel(level)).Returns(new Coin { Currency = "currency", Quantity = 600 });
+
+            var goods = new[] { new Good(), new Good() };
+            mockGoodsGenerator.Setup(g => g.GenerateAtLevel(level)).Returns(goods);
+
+            var items = new[] { new Item(), new Item() };
+            mockItemsGenerator.Setup(g => g.GenerateAtLevel(level)).Returns(items);
+
+            var encounter = encounterGenerator.Generate(environment, level);
+            Assert.That(encounter, Is.Not.Null);
+            Assert.That(encounter.Treasure.Coin.Currency, Is.EqualTo("currency"));
+            Assert.That(encounter.Treasure.Coin.Quantity, Is.EqualTo(600));
+            Assert.That(goods, Is.SubsetOf(encounter.Treasure.Goods));
+            Assert.That(items, Is.SubsetOf(encounter.Treasure.Items));
         }
 
         [Test]
         public void GetMoreTreasure()
         {
-            typesAndAmounts["creature"] = 12345;
-
-            var tableName = String.Format(TableNameConstants.LevelXENVIRONMENTEncounters, 9266, "environment");
-            mockTypeAndAmountPercentileSelector.Setup(s => s.SelectFrom(tableName)).Returns(typesAndAmounts);
-
             mockAdjustmentSelector.Setup(s => s.SelectFrom(TableNameConstants.TreasureAdjustment, "creature")).Returns(2);
+            mockCoinGenerator.SetupSequence(g => g.GenerateAtLevel(level)).Returns(new Coin { Currency = "currency", Quantity = 600 })
+                .Returns(new Coin { Currency = "wrong currency", Quantity = 666 });
 
-            var treasure = new Treasure();
-            var secondTreasure = new Treasure();
-            mockTreasureGenerator.SetupSequence(g => g.GenerateAtLevel(9266)).Returns(treasure).Returns(secondTreasure);
+            var goods = new[] { new Good(), new Good() };
+            var secondGoods = new[] { new Good(), new Good() };
+            mockGoodsGenerator.SetupSequence(g => g.GenerateAtLevel(level)).Returns(goods).Returns(secondGoods);
 
-            var encounter = encounterGenerator.Generate("environment", 9266);
+            var items = new[] { new Item(), new Item() };
+            var secondItems = new[] { new Item(), new Item() };
+            mockItemsGenerator.SetupSequence(g => g.GenerateAtLevel(level)).Returns(items).Returns(secondItems);
+
+            var encounter = encounterGenerator.Generate(environment, level);
             Assert.That(encounter, Is.Not.Null);
-            Assert.That(encounter.Creatures, Is.All.EqualTo("creature"));
-            Assert.That(encounter.Creatures.Count(), Is.EqualTo(12345));
-            Assert.That(encounter.Characters, Is.Empty);
-            Assert.That(encounter.Treasures, Contains.Item(treasure));
-            Assert.That(encounter.Treasures, Contains.Item(secondTreasure));
-            Assert.That(encounter.Treasures.Count(), Is.EqualTo(2));
+            Assert.That(encounter.Treasure.Coin.Currency, Is.EqualTo("currency"));
+            Assert.That(encounter.Treasure.Coin.Quantity, Is.EqualTo(1200));
+            Assert.That(goods, Is.SubsetOf(encounter.Treasure.Goods));
+            Assert.That(items, Is.SubsetOf(encounter.Treasure.Items));
+            Assert.That(secondGoods, Is.SubsetOf(encounter.Treasure.Goods));
+            Assert.That(secondItems, Is.SubsetOf(encounter.Treasure.Items));
         }
 
         [Test]
-        public void GetNoTreasure()
+        public void GetNoTreasureByChance()
         {
-            typesAndAmounts["creature"] = 12345;
+            mockAdjustmentSelector.Setup(s => s.SelectFrom(TableNameConstants.TreasureAdjustment, "creature")).Returns(2);
+            mockCoinGenerator.SetupSequence(g => g.GenerateAtLevel(level)).Returns(new Coin())
+                .Returns(new Coin { Currency = "wrong currency", Quantity = 666 });
 
-            var tableName = String.Format(TableNameConstants.LevelXENVIRONMENTEncounters, 9266, "environment");
-            mockTypeAndAmountPercentileSelector.Setup(s => s.SelectFrom(tableName)).Returns(typesAndAmounts);
+            var goods = Enumerable.Empty<Good>();
+            mockGoodsGenerator.Setup(g => g.GenerateAtLevel(level)).Returns(goods);
 
+            var items = Enumerable.Empty<Item>();
+            mockItemsGenerator.Setup(g => g.GenerateAtLevel(level)).Returns(items);
+
+            var encounter = encounterGenerator.Generate(environment, level);
+            Assert.That(encounter, Is.Not.Null);
+            Assert.That(encounter.Treasure.Coin.Currency, Is.Empty);
+            Assert.That(encounter.Treasure.Coin.Quantity, Is.EqualTo(0));
+            Assert.That(encounter.Treasure.Goods, Is.Empty);
+            Assert.That(encounter.Treasure.Items, Is.Empty);
+        }
+
+        [Test]
+        public void GetNoTreasureIntentionally()
+        {
             mockAdjustmentSelector.Setup(s => s.SelectFrom(TableNameConstants.TreasureAdjustment, "creature")).Returns(0);
 
-            var treasure = new Treasure();
-            mockTreasureGenerator.Setup(g => g.GenerateAtLevel(9266)).Returns(treasure);
+            mockCoinGenerator.Setup(g => g.GenerateAtLevel(level)).Returns(new Coin { Currency = "currency", Quantity = 600 });
 
-            var encounter = encounterGenerator.Generate("environment", 9266);
-            Assert.That(encounter, Is.Not.Null);
-            Assert.That(encounter.Creatures, Is.All.EqualTo("creature"));
-            Assert.That(encounter.Creatures.Count(), Is.EqualTo(12345));
-            Assert.That(encounter.Characters, Is.Empty);
-            Assert.That(encounter.Treasures, Is.Empty);
+            var goods = new[] { new Good(), new Good() };
+            mockGoodsGenerator.Setup(g => g.GenerateAtLevel(level)).Returns(goods);
+
+            var items = new[] { new Item(), new Item() };
+            mockItemsGenerator.Setup(g => g.GenerateAtLevel(level)).Returns(items);
+
+            var encounter = encounterGenerator.Generate(environment, level);
+            Assert.That(encounter.Treasure.Coin.Currency, Is.Empty);
+            Assert.That(encounter.Treasure.Coin.Quantity, Is.EqualTo(0));
+            Assert.That(encounter.Treasure.Goods, Is.Empty);
+            Assert.That(encounter.Treasure.Items, Is.Empty);
+        }
+
+        [Test]
+        public void GetPartialTreasureWithGoodsAndItems()
+        {
+            mockAdjustmentSelector.Setup(s => s.SelectFrom(TableNameConstants.TreasureAdjustment, "creature")).Returns(EncounterConstants.PartialTreasure);
+
+            mockCoinGenerator.Setup(g => g.GenerateAtLevel(level)).Returns(new Coin { Currency = "currency", Quantity = 600 });
+
+            mockBooleanPercentileSelector.Setup(s => s.SelectFrom(TableNameConstants.PartialTreasure)).Returns(true);
+
+            var goods = new[] { new Good(), new Good() };
+            mockGoodsGenerator.Setup(g => g.GenerateAtLevel(level)).Returns(goods);
+
+            var items = new[] { new Item(), new Item() };
+            mockItemsGenerator.Setup(g => g.GenerateAtLevel(level)).Returns(items);
+
+            var encounter = encounterGenerator.Generate(environment, level);
+            Assert.That(encounter.Treasure.Coin.Currency, Is.EqualTo("currency"));
+            Assert.That(encounter.Treasure.Coin.Quantity, Is.EqualTo(60));
+            Assert.That(goods, Is.SubsetOf(encounter.Treasure.Goods));
+            Assert.That(items, Is.SubsetOf(encounter.Treasure.Items));
+        }
+
+        [Test]
+        public void GetPartialTreasureWithGoods()
+        {
+            mockAdjustmentSelector.Setup(s => s.SelectFrom(TableNameConstants.TreasureAdjustment, "creature")).Returns(EncounterConstants.PartialTreasure);
+
+            mockCoinGenerator.Setup(g => g.GenerateAtLevel(level)).Returns(new Coin { Currency = "currency", Quantity = 600 });
+
+            mockBooleanPercentileSelector.SetupSequence(s => s.SelectFrom(TableNameConstants.PartialTreasure)).Returns(true).Returns(false);
+
+            var goods = new[] { new Good(), new Good() };
+            mockGoodsGenerator.Setup(g => g.GenerateAtLevel(level)).Returns(goods);
+
+            var items = new[] { new Item(), new Item() };
+            mockItemsGenerator.Setup(g => g.GenerateAtLevel(level)).Returns(items);
+
+            var encounter = encounterGenerator.Generate(environment, level);
+            Assert.That(encounter.Treasure.Coin.Currency, Is.EqualTo("currency"));
+            Assert.That(encounter.Treasure.Coin.Quantity, Is.EqualTo(60));
+            Assert.That(goods, Is.SubsetOf(encounter.Treasure.Goods));
+            Assert.That(encounter.Treasure.Items, Is.Empty);
+        }
+
+        [Test]
+        public void GetPartialTreasureWithItems()
+        {
+            mockAdjustmentSelector.Setup(s => s.SelectFrom(TableNameConstants.TreasureAdjustment, "creature")).Returns(EncounterConstants.PartialTreasure);
+
+            mockCoinGenerator.Setup(g => g.GenerateAtLevel(level)).Returns(new Coin { Currency = "currency", Quantity = 600 });
+
+            mockBooleanPercentileSelector.SetupSequence(s => s.SelectFrom(TableNameConstants.PartialTreasure)).Returns(false).Returns(true);
+
+            var goods = new[] { new Good(), new Good() };
+            mockGoodsGenerator.Setup(g => g.GenerateAtLevel(level)).Returns(goods);
+
+            var items = new[] { new Item(), new Item() };
+            mockItemsGenerator.Setup(g => g.GenerateAtLevel(level)).Returns(items);
+
+            var encounter = encounterGenerator.Generate(environment, level);
+            Assert.That(encounter.Treasure.Coin.Currency, Is.EqualTo("currency"));
+            Assert.That(encounter.Treasure.Coin.Quantity, Is.EqualTo(60));
+            Assert.That(encounter.Treasure.Goods, Is.Empty);
+            Assert.That(items, Is.SubsetOf(encounter.Treasure.Items));
+        }
+
+        [Test]
+        public void GetPartialTreasureWithNoGoodsOrItems()
+        {
+            mockAdjustmentSelector.Setup(s => s.SelectFrom(TableNameConstants.TreasureAdjustment, "creature")).Returns(EncounterConstants.PartialTreasure);
+
+            mockCoinGenerator.Setup(g => g.GenerateAtLevel(level)).Returns(new Coin { Currency = "currency", Quantity = 600 });
+
+            mockBooleanPercentileSelector.Setup(s => s.SelectFrom(TableNameConstants.PartialTreasure)).Returns(false);
+
+            var goods = new[] { new Good(), new Good() };
+            mockGoodsGenerator.Setup(g => g.GenerateAtLevel(level)).Returns(goods);
+
+            var items = new[] { new Item(), new Item() };
+            mockItemsGenerator.Setup(g => g.GenerateAtLevel(level)).Returns(items);
+
+            var encounter = encounterGenerator.Generate(environment, level);
+            Assert.That(encounter.Treasure.Coin.Currency, Is.EqualTo("currency"));
+            Assert.That(encounter.Treasure.Coin.Quantity, Is.EqualTo(60));
+            Assert.That(encounter.Treasure.Goods, Is.Empty);
+            Assert.That(encounter.Treasure.Items, Is.Empty);
         }
 
         [Test]
         public void UseFirstCreatureForTreasure()
         {
-            typesAndAmounts["creature"] = 12345;
-            typesAndAmounts["other creature"] = 90210;
+            encounterTypeAndAmount["other creature"] = "other creature amount";
 
-            var tableName = String.Format(TableNameConstants.LevelXENVIRONMENTEncounters, 9266, "environment");
-            mockTypeAndAmountPercentileSelector.Setup(s => s.SelectFrom(tableName)).Returns(typesAndAmounts);
+            mockRollSelector.Setup(s => s.SelectFrom("other creature amount", "modifier")).Returns("other effective roll");
+            mockRollSelector.Setup(s => s.SelectFrom("other effective roll")).Returns(600);
 
-            mockAdjustmentSelector.Setup(s => s.SelectFrom(TableNameConstants.TreasureAdjustment, "creature")).Returns(600);
+            mockAdjustmentSelector.Setup(s => s.SelectFrom(TableNameConstants.TreasureAdjustment, "creature")).Returns(2);
             mockAdjustmentSelector.Setup(s => s.SelectFrom(TableNameConstants.TreasureAdjustment, "other creature")).Returns(1);
 
-            mockTreasureGenerator.Setup(g => g.GenerateAtLevel(9266)).Returns(() => new Treasure());
+            mockCoinGenerator.SetupSequence(g => g.GenerateAtLevel(level)).Returns(new Coin { Currency = "currency", Quantity = 600 })
+                .Returns(new Coin { Currency = "wrong currency", Quantity = 666 });
+
+            var goods = new[] { new Good(), new Good() };
+            var secondGoods = new[] { new Good(), new Good() };
+            var wrongGoods = new[] { new Good(), new Good() };
+            mockGoodsGenerator.SetupSequence(g => g.GenerateAtLevel(level)).Returns(goods).Returns(secondGoods).Returns(wrongGoods);
+
+            var items = new[] { new Item(), new Item() };
+            var secondItems = new[] { new Item(), new Item() };
+            var wrongItems = new[] { new Item(), new Item() };
+            mockItemsGenerator.SetupSequence(g => g.GenerateAtLevel(level)).Returns(items).Returns(secondItems).Returns(wrongItems);
 
             var encounter = encounterGenerator.Generate("environment", 9266);
-            Assert.That(encounter, Is.Not.Null);
-            Assert.That(encounter.Creatures.Count(c => c == "creature"), Is.EqualTo(12345));
-            Assert.That(encounter.Creatures.Count(c => c == "other creature"), Is.EqualTo(90210));
-            Assert.That(encounter.Creatures.Count(), Is.EqualTo(12345 + 90210));
-            Assert.That(encounter.Characters, Is.Empty);
-            Assert.That(encounter.Treasures.Count(), Is.EqualTo(600));
+            Assert.That(encounter.Treasure.Coin.Currency, Is.EqualTo("currency"));
+            Assert.That(encounter.Treasure.Coin.Quantity, Is.EqualTo(1200));
+            Assert.That(goods, Is.SubsetOf(encounter.Treasure.Goods));
+            Assert.That(items, Is.SubsetOf(encounter.Treasure.Items));
+            Assert.That(secondGoods, Is.SubsetOf(encounter.Treasure.Goods));
+            Assert.That(secondItems, Is.SubsetOf(encounter.Treasure.Items));
+            Assert.That(wrongGoods, Is.Not.SubsetOf(encounter.Treasure.Goods));
+            Assert.That(wrongItems, Is.Not.SubsetOf(encounter.Treasure.Items));
         }
     }
 }

@@ -6,8 +6,11 @@ using CharacterGen.Generators.Randomizers.Stats;
 using EncounterGen.Generators;
 using EncounterGen.Generators.Domain;
 using EncounterGen.Selectors;
+using EncounterGen.Selectors.Percentiles;
 using Ninject;
-using TreasureGen.Generators;
+using TreasureGen.Generators.Coins;
+using TreasureGen.Generators.Goods;
+using TreasureGen.Generators.Items;
 
 namespace EncounterGen.Bootstrap.Factories
 {
@@ -16,7 +19,9 @@ namespace EncounterGen.Bootstrap.Factories
         public static IEncounterGenerator Create(IKernel kernel)
         {
             var typeAndAmountPercentileSelector = kernel.Get<ITypeAndAmountPercentileSelector>();
-            var treasureGenerator = kernel.Get<ITreasureGenerator>();
+            var coinGenerator = kernel.Get<ICoinGenerator>();
+            var goodsGenerator = kernel.Get<IGoodsGenerator>();
+            var itemsGenerator = kernel.Get<IItemsGenerator>();
             var characterGenerator = kernel.Get<ICharacterGenerator>();
             var alignmentRandomizer = kernel.Get<IAlignmentRandomizer>(AlignmentRandomizerTypeConstants.Any);
             var classNameRandomizer = kernel.Get<IClassNameRandomizer>(ClassNameRandomizerTypeConstants.Any);
@@ -25,9 +30,13 @@ namespace EncounterGen.Bootstrap.Factories
             var metaraceRandomizer = kernel.Get<RaceRandomizer>(RaceRandomizerTypeConstants.Metarace.AnyMeta);
             var statsRandomizer = kernel.Get<IStatsRandomizer>(StatsRandomizerTypeConstants.Raw);
             var adjustmentSelector = kernel.Get<IAdjustmentSelector>();
+            var rollSelector = kernel.Get<IRollSelector>();
+            var percentileSelector = kernel.Get<IPercentileSelector>();
+            var booleanPercentileSelector = kernel.Get<IBooleanPercentileSelector>();
 
-            return new EncounterGenerator(typeAndAmountPercentileSelector, treasureGenerator, characterGenerator, alignmentRandomizer,
-                classNameRandomizer, setLevelRandomizer, baseRaceRandomizer, metaraceRandomizer, statsRandomizer, adjustmentSelector);
+            return new EncounterGenerator(typeAndAmountPercentileSelector, coinGenerator, goodsGenerator, itemsGenerator, characterGenerator, alignmentRandomizer,
+                classNameRandomizer, setLevelRandomizer, baseRaceRandomizer, metaraceRandomizer, statsRandomizer, adjustmentSelector, rollSelector, percentileSelector,
+                booleanPercentileSelector);
         }
     }
 }

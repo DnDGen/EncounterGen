@@ -56,7 +56,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TypeAndAmountPercentileSelectorTests.cs" />
+    <Compile Include="Percentiles\TypeAndAmountPercentileSelectorTests.cs" />
+    <Compile Include="RollSelectorTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\EncounterGen\Mappers\Contracts\EncounterGen.Mappers.csproj">

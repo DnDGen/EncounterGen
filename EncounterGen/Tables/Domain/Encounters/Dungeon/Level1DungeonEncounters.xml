@@ -4,96 +4,86 @@
   <object>
         <lower>1</lower>
         <content>Medium monstrous centipede/1d3</content>
-        <upper>3</upper>
+        <upper>4</upper>
     </object>
     <object>
-        <lower>4</lower>
-        <content>Dire rat/1d4</content>
-        <upper>8</upper>
+        <lower>5</lower>
+        <content>Dire rat/1d3+1</content>
+        <upper>9</upper>
     </object>
     <object>
-        <lower>9</lower>
-        <content>Giant fire beetle/1d4</content>
-        <upper>10</upper>
+        <lower>10</lower>
+        <content>Giant fire beetle/1d3+1</content>
+        <upper>14</upper>
     </object>
     <object>
-        <lower>11</lower>
+        <lower>15</lower>
         <content>Small monstrous scorpion/1d3</content>
-        <upper>13</upper>
+        <upper>17</upper>
     </object>
     <object>
-        <lower>14</lower>
+        <lower>18</lower>
         <content>Small monstrous spider/1d3</content>
-        <upper>16</upper>
-    </object>
-    <object>
-        <lower>17</lower>
-        <content>Dwarf warrior/1d3</content>
         <upper>20</upper>
     </object>
-    <object>
-        <lower>21</lower>
-        <content>Elf warrior/1d3</content>
-        <upper>22</upper>
-    </object>
-    <object>
-        <lower>23</lower>
-        <content>Darkmantle/1</content>
-        <upper>25</upper>
-    </object>
+  <object>
+    <lower>21</lower>
+    <content>Dragon/1</content>
+    <upper>25</upper>
+  </object>
     <object>
         <lower>26</lower>
-        <content>Krenshar/1</content>
-        <upper>28</upper>
-    </object>
-    <object>
-        <lower>29</lower>
-        <content>Lemure (devil)/1</content>
+        <content>Dwarf warrior/1d3</content>
         <upper>30</upper>
     </object>
     <object>
         <lower>31</lower>
-        <content>Goblin warrior/1d3+1</content>
-        <upper>40</upper>
+        <content>Elf warrior/1d3</content>
+        <upper>35</upper>
     </object>
+  <object>
+    <lower>36</lower>
+    <content>Character/1</content>
+    <upper>40</upper>
+  </object>
     <object>
         <lower>41</lower>
-        <content>Kobold warrior/1d4+2</content>
-        <upper>50</upper>
+        <content>Darkmantle/1</content>
+        <upper>45</upper>
     </object>
     <object>
-        <lower>51</lower>
-        <content>Human warrior skeleton/1d4</content>
-        <upper>56</upper>
+        <lower>46</lower>
+        <content>Krenshar/1</content>
+        <upper>55</upper>
     </object>
     <object>
-        <lower>57</lower>
-        <content>Human commoner zombie/1d3</content>
-        <upper>62</upper>
+        <lower>56</lower>
+        <content>Lemure (devil)/1</content>
+        <upper>60</upper>
     </object>
     <object>
-        <lower>63</lower>
-        <content>Tiny viper snake/1d4+1</content>
-        <upper>71</upper>
+        <lower>61</lower>
+        <content>Goblin/1d4+2</content>
+        <upper>65</upper>
     </object>
+  <object>
+    <lower>66</lower>
+    <content>Hobgoblin/1,Goblin/1d3</content>
+    <upper>70</upper>
+  </object>
     <object>
-        <lower>72</lower>
-        <content>Orc warrior/1d3</content>
+        <lower>71</lower>
+        <content>Kobold/1d6+3</content>
         <upper>80</upper>
     </object>
     <object>
         <lower>81</lower>
-        <content>Stirge/1d3</content>
-        <upper>85</upper>
-    </object>
-    <object>
-        <lower>86</lower>
-        <content>Spider swarm/1</content>
+        <content>Human warrior skeleton/1d3+1</content>
         <upper>90</upper>
     </object>
     <object>
         <lower>91</lower>
-        <content>Reroll/2</content>
+        <content>Human commoner zombie/1d3</content>
         <upper>100</upper>
     </object>
 </percentile>

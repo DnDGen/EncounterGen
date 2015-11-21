@@ -48,8 +48,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AdjustmentSelector.cs" />
+    <Compile Include="Percentiles\BooleanPercentileSelector.cs" />
+    <Compile Include="Percentiles\PercentileSelector.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TypeAndAmountPercentileSelector.cs" />
+    <Compile Include="Percentiles\TypeAndAmountPercentileSelector.cs" />
+    <Compile Include="RollSelector.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Mappers\Contracts\EncounterGen.Mappers.csproj">

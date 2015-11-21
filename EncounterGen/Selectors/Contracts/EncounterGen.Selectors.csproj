@@ -44,7 +44,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IAdjustmentSelector.cs" />
-    <Compile Include="ITypeAndAmountPercentileSelector.cs" />
+    <Compile Include="IRollSelector.cs" />
+    <Compile Include="Percentiles\IBooleanPercentileSelector.cs" />
+    <Compile Include="Percentiles\IPercentileSelector.cs" />
+    <Compile Include="Percentiles\ITypeAndAmountPercentileSelector.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

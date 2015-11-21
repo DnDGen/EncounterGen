@@ -62,7 +62,9 @@ namespace EncounterGen.Tests.Integration.Stress
             if (encounter.Creatures.Any(c => c == CreatureConstants.Character))
             {
                 Assert.That(encounter.Characters.Count(), Is.EqualTo(encounter.Creatures.Count()));
-                Assert.That(encounter.Treasures, Is.Empty);
+                Assert.That(encounter.Treasure.Coin.Quantity, Is.EqualTo(0));
+                Assert.That(encounter.Treasure.Goods, Is.Empty);
+                Assert.That(encounter.Treasure.Items, Is.Empty);
             }
         }
 
@@ -82,7 +84,9 @@ namespace EncounterGen.Tests.Integration.Stress
             if (encounter.Creatures.Any(c => c == CreatureConstants.Character))
             {
                 Assert.That(encounter.Characters.Count(), Is.EqualTo(encounter.Creatures.Count()));
-                Assert.That(encounter.Treasures, Is.Empty);
+                Assert.That(encounter.Treasure.Coin.Quantity, Is.EqualTo(0));
+                Assert.That(encounter.Treasure.Goods, Is.Empty);
+                Assert.That(encounter.Treasure.Items, Is.Empty);
             }
         }
     }

@@ -21,5 +21,14 @@ namespace EncounterGen.Tests.Integration.Tables
             var content = String.Format("{0}/{1}", type, amount);
             Percentile(content, lower, upper);
         }
+
+        public virtual void Percentile(Int32 lower, Int32 upper, String firstType, String firstAmount, String secondType, String secondAmount)
+        {
+            Assert.That(regex.IsMatch(firstAmount), Is.True);
+            Assert.That(regex.IsMatch(secondAmount), Is.True);
+
+            var content = String.Format("{0}/{1},{2}/{3}", firstType, firstAmount, secondType, secondAmount);
+            Percentile(content, lower, upper);
+        }
     }
 }
