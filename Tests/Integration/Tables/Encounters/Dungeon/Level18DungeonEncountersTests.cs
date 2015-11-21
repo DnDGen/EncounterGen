@@ -33,8 +33,7 @@ namespace EncounterGen.Tests.Integration.Tables.Encounters.Dungeon
         [TestCase(44, 44, CreatureConstants.Dragon_Silver_MatureAdult, "1")]
         [TestCase(45, 47, CreatureConstants.Dragon_White_Ancient, "1")]
         [TestCase(48, 62, CreatureConstants.Nightcrawler, "1")]
-        [TestCase(63, 72, CreatureConstants.Character, "1d4")]
-        [TestCase(73, 90, CreatureConstants.Character, "1", CreatureConstants.WerewolfLord, "1")]
+        [TestCase(63, 90, CreatureConstants.Character, "1d3+1")]
         [TestCase(91, 100, EncounterConstants.Reroll, "19")]
         public override void Percentile(Int32 lower, Int32 upper, String type, String amount)
         {
