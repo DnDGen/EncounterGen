@@ -33,10 +33,12 @@ namespace EncounterGen.Bootstrap.Factories
             var rollSelector = kernel.Get<IRollSelector>();
             var percentileSelector = kernel.Get<IPercentileSelector>();
             var booleanPercentileSelector = kernel.Get<IBooleanPercentileSelector>();
+            var collectionSelector = kernel.Get<ICollectionSelector>();
+            var setMetaraceRandomizer = kernel.Get<ISetMetaraceRandomizer>();
 
             return new EncounterGenerator(typeAndAmountPercentileSelector, coinGenerator, goodsGenerator, itemsGenerator, characterGenerator, alignmentRandomizer,
                 classNameRandomizer, setLevelRandomizer, baseRaceRandomizer, metaraceRandomizer, statsRandomizer, adjustmentSelector, rollSelector, percentileSelector,
-                booleanPercentileSelector);
+                booleanPercentileSelector, collectionSelector, setMetaraceRandomizer);
         }
     }
 }

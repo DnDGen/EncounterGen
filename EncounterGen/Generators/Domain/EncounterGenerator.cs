@@ -34,11 +34,14 @@ namespace EncounterGen.Generators.Domain
         private IRollSelector rollSelector;
         private IPercentileSelector percentileSelector;
         private IBooleanPercentileSelector booleanPercentileSelector;
+        private ICollectionSelector collectionSelector;
+        private ISetMetaraceRandomizer setMetaraceRandomizer;
 
         public EncounterGenerator(ITypeAndAmountPercentileSelector typeAndAmountPercentileSelector, ICoinGenerator coinGenerator,
             IGoodsGenerator goodsGenerator, IItemsGenerator itemsGenerator, ICharacterGenerator characterGenerator, IAlignmentRandomizer alignmentRandomizer, IClassNameRandomizer classNameRandomizer,
             ISetLevelRandomizer setLevelRandomizer, RaceRandomizer baseRaceRandomizer, RaceRandomizer metaraceRandomizer, IStatsRandomizer statsRandomizer,
-            IAdjustmentSelector adjustmentSelector, IRollSelector rollSelector, IPercentileSelector percentileSelector, IBooleanPercentileSelector booleanPercentileSelector)
+            IAdjustmentSelector adjustmentSelector, IRollSelector rollSelector, IPercentileSelector percentileSelector, IBooleanPercentileSelector booleanPercentileSelector,
+            ICollectionSelector collectionSelector, ISetMetaraceRandomizer setMetaraceRandomizer)
         {
             this.typeAndAmountPercentileSelector = typeAndAmountPercentileSelector;
             this.coinGenerator = coinGenerator;
@@ -55,6 +58,8 @@ namespace EncounterGen.Generators.Domain
             this.rollSelector = rollSelector;
             this.percentileSelector = percentileSelector;
             this.booleanPercentileSelector = booleanPercentileSelector;
+            this.collectionSelector = collectionSelector;
+            this.setMetaraceRandomizer = setMetaraceRandomizer;
         }
 
         public Encounter Generate(String environment, Int32 level)

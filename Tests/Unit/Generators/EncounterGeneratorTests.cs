@@ -1,4 +1,5 @@
 ﻿using CharacterGen.Common;
+using CharacterGen.Common.CharacterClasses;
 using CharacterGen.Generators;
 using CharacterGen.Generators.Randomizers.Alignments;
 using CharacterGen.Generators.Randomizers.CharacterClasses;
@@ -38,11 +39,13 @@ namespace EncounterGen.Tests.Unit.Generators
         private Mock<ISetLevelRandomizer> mockSetLevelRandomizer;
         private Mock<RaceRandomizer> mockAnyBaseRaceRandomizer;
         private Mock<RaceRandomizer> mockAnyMetaraceRandomizer;
+        private Mock<ISetMetaraceRandomizer> mockSetMetaraceRandomizer;
         private Mock<IStatsRandomizer> mockRawStatsRandomizer;
         private Mock<IAdjustmentSelector> mockAdjustmentSelector;
         private Mock<IRollSelector> mockRollSelector;
         private Mock<IPercentileSelector> mockPercentileSelector;
         private Mock<IBooleanPercentileSelector> mockBooleanPercentileSelector;
+        private Mock<ICollectionSelector> mockCollectionSelector;
         private Dictionary<String, String> encounterTypeAndAmount;
         private Dictionary<String, String> encounterLevelAndModifier;
         private Int32 level;
@@ -66,11 +69,14 @@ namespace EncounterGen.Tests.Unit.Generators
             mockRollSelector = new Mock<IRollSelector>();
             mockPercentileSelector = new Mock<IPercentileSelector>();
             mockBooleanPercentileSelector = new Mock<IBooleanPercentileSelector>();
+            mockCollectionSelector = new Mock<ICollectionSelector>();
+            mockSetMetaraceRandomizer = new Mock<ISetMetaraceRandomizer>();
 
             encounterGenerator = new EncounterGenerator(mockTypeAndAmountPercentileSelector.Object, mockCoinGenerator.Object,
                 mockGoodsGenerator.Object, mockItemsGenerator.Object, mockCharacterGenerator.Object, mockAnyAlignmentRandomizer.Object, mockAnyClassNameRandomizer.Object, mockSetLevelRandomizer.Object,
                 mockAnyBaseRaceRandomizer.Object, mockAnyMetaraceRandomizer.Object, mockRawStatsRandomizer.Object, mockAdjustmentSelector.Object,
-                mockRollSelector.Object, mockPercentileSelector.Object, mockBooleanPercentileSelector.Object);
+                mockRollSelector.Object, mockPercentileSelector.Object, mockBooleanPercentileSelector.Object, mockCollectionSelector.Object,
+                mockSetMetaraceRandomizer.Object);
 
             encounterLevelAndModifier = new Dictionary<String, String>();
             encounterTypeAndAmount = new Dictionary<String, String>();
@@ -112,7 +118,7 @@ namespace EncounterGen.Tests.Unit.Generators
 
             mockAdjustmentSelector.Setup(s => s.SelectFrom(TableNameConstants.CharacterLevel, "90210")).Returns(1337);
 
-            mockCharacterGenerator.Setup(g => g.GenerateWith(mockAnyAlignmentRandomizer.Object, mockAnyClassNameRandomizer.Object, It.Is<ISetLevelRandomizer>(r => r.SetLevel == 1337), mockAnyBaseRaceRandomizer.Object, mockAnyMetaraceRandomizer.Object, mockRawStatsRandomizer.Object))
+            mockCharacterGenerator.Setup(g => g.GenerateWith(mockAnyAlignmentRandomizer.Object, mockAnyClassNameRandomizer.Object, It.Is<ISetLevelRandomizer>(r => r.SetLevel == 1337 && r.AllowAdjustments), mockAnyBaseRaceRandomizer.Object, mockAnyMetaraceRandomizer.Object, mockRawStatsRandomizer.Object))
                 .Returns(() => new Character { InterestingTrait = Guid.NewGuid().ToString() });
 
             var encounter = encounterGenerator.Generate(environment, level);
@@ -127,7 +133,51 @@ namespace EncounterGen.Tests.Unit.Generators
         [Test]
         public void GenerateEncounterWithCharactersWithSetMetarace()
         {
-            throw new NotImplementedException("Waiting until CharacterGen has Vampire, Ghost, and Lich metaraces");
+            var monster = encounterTypeAndAmount.Keys.First();
+            var undead = new[] { monster, "other monster" };
+            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.MonsterGroups, GroupConstants.UndeadNPC)).Returns(undead);
+
+            var tableName = String.Format(TableNameConstants.LevelXUndeadNPC, 90210);
+            mockAdjustmentSelector.Setup(s => s.SelectFrom(tableName, monster)).Returns(1337);
+
+            mockCharacterGenerator.Setup(g => g.GenerateWith(mockAnyAlignmentRandomizer.Object, mockAnyClassNameRandomizer.Object, It.Is<ISetLevelRandomizer>(r => r.SetLevel == 1337 && r.AllowAdjustments == false), mockAnyBaseRaceRandomizer.Object, It.Is<ISetMetaraceRandomizer>(r => r.SetMetarace == monster), mockRawStatsRandomizer.Object))
+                .Returns(() => new Character { InterestingTrait = Guid.NewGuid().ToString() });
+
+            var encounter = encounterGenerator.Generate(environment, level);
+            Assert.That(encounter, Is.Not.Null);
+            Assert.That(encounter.Creatures, Is.All.EqualTo(monster));
+            Assert.That(encounter.Creatures.Count(), Is.EqualTo(42));
+            Assert.That(encounter.Characters.Count(), Is.EqualTo(42));
+            Assert.That(encounter.Characters, Is.Unique);
+            Assert.That(encounter.Characters.Select(c => c.InterestingTrait), Is.Unique);
+        }
+
+        [Test]
+        public void GenerateEncounterWithCharactersWithSetMetaraceEachHasUniqueLevel()
+        {
+            var monster = encounterTypeAndAmount.Keys.First();
+            var undead = new[] { monster, "other monster" };
+            mockRollSelector.Setup(s => s.SelectFrom("effective roll")).Returns(2);
+
+            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.MonsterGroups, GroupConstants.UndeadNPC)).Returns(undead);
+
+            var tableName = String.Format(TableNameConstants.LevelXUndeadNPC, 90210);
+            mockAdjustmentSelector.SetupSequence(s => s.SelectFrom(tableName, monster)).Returns(1337).Returns(1234);
+
+            mockCharacterGenerator.Setup(g => g.GenerateWith(mockAnyAlignmentRandomizer.Object, mockAnyClassNameRandomizer.Object, It.Is<ISetLevelRandomizer>(r => r.SetLevel == 1337 && r.AllowAdjustments == false), mockAnyBaseRaceRandomizer.Object, It.Is<ISetMetaraceRandomizer>(r => r.SetMetarace == monster), mockRawStatsRandomizer.Object))
+                .Returns(() => new Character { Class = new CharacterClass { Level = 1337 } });
+
+            mockCharacterGenerator.Setup(g => g.GenerateWith(mockAnyAlignmentRandomizer.Object, mockAnyClassNameRandomizer.Object, It.Is<ISetLevelRandomizer>(r => r.SetLevel == 1234 && r.AllowAdjustments == false), mockAnyBaseRaceRandomizer.Object, It.Is<ISetMetaraceRandomizer>(r => r.SetMetarace == monster), mockRawStatsRandomizer.Object))
+                .Returns(() => new Character { Class = new CharacterClass { Level = 1234 } });
+
+            var encounter = encounterGenerator.Generate(environment, level);
+            Assert.That(encounter, Is.Not.Null);
+            Assert.That(encounter.Creatures, Is.All.EqualTo(monster));
+            Assert.That(encounter.Creatures.Count(), Is.EqualTo(2));
+            Assert.That(encounter.Characters.Count(), Is.EqualTo(2));
+            Assert.That(encounter.Characters, Is.Unique);
+            Assert.That(encounter.Characters.First().Class.Level, Is.EqualTo(1337));
+            Assert.That(encounter.Characters.Last().Class.Level, Is.EqualTo(1234));
         }
 
         [Test]
