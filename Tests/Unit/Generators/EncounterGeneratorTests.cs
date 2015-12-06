@@ -82,6 +82,9 @@ namespace EncounterGen.Tests.Unit.Generators
             encounterTypeAndAmount = new Dictionary<String, String>();
 
             mockSetLevelRandomizer.SetupAllProperties();
+            mockSetLevelRandomizer.Object.AllowAdjustments = true;
+
+            mockSetMetaraceRandomizer.SetupAllProperties();
 
             level = 9266;
             environment = "environment";
@@ -125,13 +128,14 @@ namespace EncounterGen.Tests.Unit.Generators
             Assert.That(encounter, Is.Not.Null);
             Assert.That(encounter.Creatures, Is.All.EqualTo(CreatureConstants.Character));
             Assert.That(encounter.Creatures.Count(), Is.EqualTo(600));
+            Assert.That(encounter.Characters, Is.All.Not.Null);
             Assert.That(encounter.Characters.Count(), Is.EqualTo(600));
             Assert.That(encounter.Characters, Is.Unique);
             Assert.That(encounter.Characters.Select(c => c.InterestingTrait), Is.Unique);
         }
 
         [Test]
-        public void GenerateEncounterWithCharactersWithSetMetarace()
+        public void GenerateEncounterWithUndeadNPCs()
         {
             var monster = encounterTypeAndAmount.Keys.First();
             var undead = new[] { monster, "other monster" };
@@ -147,13 +151,14 @@ namespace EncounterGen.Tests.Unit.Generators
             Assert.That(encounter, Is.Not.Null);
             Assert.That(encounter.Creatures, Is.All.EqualTo(monster));
             Assert.That(encounter.Creatures.Count(), Is.EqualTo(42));
+            Assert.That(encounter.Characters, Is.All.Not.Null);
             Assert.That(encounter.Characters.Count(), Is.EqualTo(42));
             Assert.That(encounter.Characters, Is.Unique);
             Assert.That(encounter.Characters.Select(c => c.InterestingTrait), Is.Unique);
         }
 
         [Test]
-        public void GenerateEncounterWithCharactersWithSetMetaraceEachHasUniqueLevel()
+        public void UndeadNPCsEachHaveUniqueLevel()
         {
             var monster = encounterTypeAndAmount.Keys.First();
             var undead = new[] { monster, "other monster" };
@@ -174,10 +179,11 @@ namespace EncounterGen.Tests.Unit.Generators
             Assert.That(encounter, Is.Not.Null);
             Assert.That(encounter.Creatures, Is.All.EqualTo(monster));
             Assert.That(encounter.Creatures.Count(), Is.EqualTo(2));
+            Assert.That(encounter.Characters, Is.All.Not.Null);
             Assert.That(encounter.Characters.Count(), Is.EqualTo(2));
             Assert.That(encounter.Characters, Is.Unique);
-            Assert.That(encounter.Characters.First().Class.Level, Is.EqualTo(1337));
-            Assert.That(encounter.Characters.Last().Class.Level, Is.EqualTo(1234));
+            Assert.That(encounter.Characters.Any(c => c.Class.Level == 1337), Is.True);
+            Assert.That(encounter.Characters.Any(c => c.Class.Level == 1234), Is.True);
         }
 
         [Test]

@@ -9,6 +9,7 @@ namespace EncounterGen.Bootstrap.Modules
         public override void Load()
         {
             Bind<PercentileMapper>().ToMethod(c => PercentileMapperFactory.Create(c.Kernel)).InSingletonScope();
+            Bind<CollectionMapper>().ToMethod(c => CollectionMapperFactory.Create(c.Kernel)).InSingletonScope();
         }
     }
 }

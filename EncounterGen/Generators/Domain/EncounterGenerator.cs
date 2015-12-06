@@ -98,16 +98,34 @@ namespace EncounterGen.Generators.Domain
             var leadCreature = encounterCreaturesAndAmounts.First().Key;
             encounter.Treasure = GenerateTreasureFor(leadCreature, level);
 
-            if (encounter.Creatures.Any(c => c == CreatureConstants.Character) == false)
+            var undeadNPCs = collectionSelector.SelectFrom(TableNameConstants.MonsterGroups, GroupConstants.UndeadNPC);
+
+            if (encounter.Creatures.Any(c => c == CreatureConstants.Character) == false && encounter.Creatures.Intersect(undeadNPCs).Any() == false)
                 return encounter;
 
-            var quantity = encounter.Creatures.Count(c => c == CreatureConstants.Character);
+            var characterQuantity = encounter.Creatures.Count(c => c == CreatureConstants.Character);
             setLevelRandomizer.SetLevel = adjustmentSelector.SelectFrom(TableNameConstants.CharacterLevel, effectiveLevel.ToString());
 
-            while (quantity-- > 0)
+            while (characterQuantity-- > 0)
             {
                 var character = characterGenerator.GenerateWith(alignmentRandomizer, classNameRandomizer, setLevelRandomizer, baseRaceRandomizer, metaraceRandomizer, statsRandomizer);
                 encounter.Characters = encounter.Characters.Union(new[] { character });
+            }
+
+            var undeadNPCQuantity = encounter.Creatures.Count(c => undeadNPCs.Contains(c));
+            if (undeadNPCQuantity == 0)
+                return encounter;
+
+            setMetaraceRandomizer.SetMetarace = encounter.Creatures.Intersect(undeadNPCs).Single();
+
+            tableName = String.Format(TableNameConstants.LevelXUndeadNPC, effectiveLevel);
+            setLevelRandomizer.AllowAdjustments = false;
+
+            while (undeadNPCQuantity-- > 0)
+            {
+                setLevelRandomizer.SetLevel = adjustmentSelector.SelectFrom(tableName, setMetaraceRandomizer.SetMetarace);
+                var undeadNPC = characterGenerator.GenerateWith(alignmentRandomizer, classNameRandomizer, setLevelRandomizer, baseRaceRandomizer, setMetaraceRandomizer, statsRandomizer);
+                encounter.Characters = encounter.Characters.Union(new[] { undeadNPC });
             }
 
             return encounter;

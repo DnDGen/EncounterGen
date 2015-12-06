@@ -68,6 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EncounterGenModuleLoader.cs" />
+    <Compile Include="Factories\CollectionMapperFactory.cs" />
     <Compile Include="Factories\EncounterGeneratorFactory.cs" />
     <Compile Include="Factories\PercentileMapperFactory.cs" />
     <Compile Include="Modules\GeneratorsModule.cs" />

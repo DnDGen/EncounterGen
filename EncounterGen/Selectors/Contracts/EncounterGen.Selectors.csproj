@@ -46,6 +46,7 @@
     <Compile Include="IAdjustmentSelector.cs" />
     <Compile Include="ICollectionSelector.cs" />
     <Compile Include="IRollSelector.cs" />
+    <Compile Include="MultiplierConstants.cs" />
     <Compile Include="Percentiles\IBooleanPercentileSelector.cs" />
     <Compile Include="Percentiles\IPercentileSelector.cs" />
     <Compile Include="Percentiles\ITypeAndAmountPercentileSelector.cs" />

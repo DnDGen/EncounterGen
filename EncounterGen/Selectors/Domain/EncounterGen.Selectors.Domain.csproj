@@ -48,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AdjustmentSelector.cs" />
+    <Compile Include="CollectionSelector.cs" />
     <Compile Include="Percentiles\BooleanPercentileSelector.cs" />
     <Compile Include="Percentiles\PercentileSelector.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

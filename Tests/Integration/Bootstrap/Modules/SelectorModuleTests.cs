@@ -36,5 +36,11 @@ namespace EncounterGen.Tests.Integration.Bootstrap.Modules
         {
             AssertNotSingleton<IAdjustmentSelector>();
         }
+
+        [Test]
+        public void CollectionSelectorIsNotASingleton()
+        {
+            AssertNotSingleton<ICollectionSelector>();
+        }
     }
 }

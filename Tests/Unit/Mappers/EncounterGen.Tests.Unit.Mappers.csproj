@@ -51,6 +51,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Collections\CollectionMapperCachingProxyTests.cs" />
+    <Compile Include="Collections\CollectionXmlMapperTests.cs" />
     <Compile Include="Percentiles\PercentileMapperCachingProxyTests.cs" />
     <Compile Include="Percentiles\PercentileXmlMapperTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

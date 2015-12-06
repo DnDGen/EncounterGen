@@ -15,6 +15,7 @@ namespace EncounterGen.Bootstrap.Modules
             Bind<IRollSelector>().To<RollSelector>();
             Bind<IPercentileSelector>().To<PercentileSelector>();
             Bind<IBooleanPercentileSelector>().To<BooleanPercentileSelector>();
+            Bind<ICollectionSelector>().To<CollectionSelector>();
         }
     }
 }
