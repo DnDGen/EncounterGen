@@ -14,6 +14,7 @@ namespace EncounterGen.Tests.Unit.Tables
         [TestCase(TableNameConstants.LevelXUndeadNPC, "Level{0}UndeadNPC")]
         [TestCase(TableNameConstants.MonsterGroups, "MonsterGroups")]
         [TestCase(TableNameConstants.PartialTreasure, "PartialTreasure")]
+        [TestCase(TableNameConstants.ROLLModifiedRolls, "{0}ModifiedRolls")]
         [TestCase(TableNameConstants.TreasureAdjustment, "TreasureAdjustment")]
         public void Constant(String constant, String value)
         {

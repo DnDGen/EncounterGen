@@ -75,6 +75,10 @@
       <Project>{96203cd5-5eea-46fd-b141-8c525699d6fd}</Project>
       <Name>EncounterGen.Selectors.Domain</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\..\EncounterGen\Tables\Contracts\EncounterGen.Tables.csproj">
+      <Project>{8c3e09b5-5d92-43be-99fc-55d833e6fdcc}</Project>
+      <Name>EncounterGen.Tables</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -11,6 +11,7 @@ namespace EncounterGen.Tables
         public const String LevelXUndeadNPC = "Level{0}UndeadNPC";
         public const String MonsterGroups = "MonsterGroups";
         public const String PartialTreasure = "PartialTreasure";
+        public const String ROLLModifiedRolls = "{0}ModifiedRolls";
         public const String TreasureAdjustment = "TreasureAdjustment";
     }
 }

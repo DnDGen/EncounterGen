@@ -64,6 +64,60 @@
   <ItemGroup>
     <EmbeddedResource Include="Encounters\EffectiveLevels\Level10EncounterLevel.xml" />
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Encounters\EffectiveLevels\Level12EncounterLevel.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Encounters\EffectiveLevels\Level3EncounterLevel.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Encounters\EffectiveLevels\Level13EncounterLevel.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Encounters\EffectiveLevels\Level11EncounterLevel.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Encounters\EffectiveLevels\Level1EncounterLevel.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Encounters\EffectiveLevels\Level9EncounterLevel.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Encounters\EffectiveLevels\Level7EncounterLevel.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Encounters\EffectiveLevels\Level8EncounterLevel.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Encounters\EffectiveLevels\Level16EncounterLevel.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Encounters\EffectiveLevels\Level15EncounterLevel.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Encounters\EffectiveLevels\Level6EncounterLevel.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Encounters\EffectiveLevels\Level4EncounterLevel.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Encounters\EffectiveLevels\Level5EncounterLevel.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Encounters\EffectiveLevels\Level2EncounterLevel.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Encounters\EffectiveLevels\Level20EncounterLevel.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Encounters\EffectiveLevels\Level17EncounterLevel.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Encounters\EffectiveLevels\Level18EncounterLevel.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Encounters\EffectiveLevels\Level19EncounterLevel.xml" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
