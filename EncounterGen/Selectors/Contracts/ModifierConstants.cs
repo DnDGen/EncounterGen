@@ -2,7 +2,7 @@
 
 namespace EncounterGen.Selectors
 {
-    public static class MultiplierConstants
+    public static class ModifierConstants
     {
         public const String Quadruple = "x4";
         public const String Triple = "x3";

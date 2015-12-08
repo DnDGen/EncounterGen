@@ -217,7 +217,7 @@ namespace EncounterGen.Tests.Unit.Generators
             mockTypeAndAmountPercentileSelector.SetupSequence(s => s.SelectFrom(tableName))
                 .Returns(wrongTypeAndAmount).Returns(otherTypeAndAmount).Returns(encounterTypeAndAmount);
 
-            mockRollSelector.Setup(s => s.SelectFrom("wrong creature amount", "modifier")).Returns(EncounterConstants.Reroll);
+            mockRollSelector.Setup(s => s.SelectFrom("wrong creature amount", "modifier")).Returns(RollConstants.Reroll);
             mockRollSelector.Setup(s => s.SelectFrom("other creature amount", "modifier")).Returns("other effective roll");
             mockRollSelector.Setup(s => s.SelectFrom("other effective roll")).Returns(600);
 
@@ -242,7 +242,7 @@ namespace EncounterGen.Tests.Unit.Generators
             mockTypeAndAmountPercentileSelector.SetupSequence(s => s.SelectFrom(tableName))
                 .Returns(wrongTypeAndAmount).Returns(otherTypeAndAmount).Returns(encounterTypeAndAmount);
 
-            mockRollSelector.Setup(s => s.SelectFrom("wrong creature amount", "modifier")).Returns(EncounterConstants.Reroll);
+            mockRollSelector.Setup(s => s.SelectFrom("wrong creature amount", "modifier")).Returns(RollConstants.Reroll);
             mockRollSelector.Setup(s => s.SelectFrom("other creature amount", "modifier")).Returns("other effective roll");
             mockRollSelector.Setup(s => s.SelectFrom("other effective roll")).Returns(600);
 

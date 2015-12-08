@@ -133,7 +133,7 @@ namespace EncounterGen.Generators.Domain
 
         private Boolean ShouldReroll(IEnumerable<String> amounts, String modifier)
         {
-            return amounts.Any(a => rollSelector.SelectFrom(a, modifier) == EncounterConstants.Reroll);
+            return amounts.Any(a => rollSelector.SelectFrom(a, modifier) == RollConstants.Reroll);
         }
 
         private Treasure GenerateTreasureFor(String creature, Int32 level)

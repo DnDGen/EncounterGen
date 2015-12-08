@@ -51,9 +51,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CollectionTests.cs" />
     <Compile Include="EmbeddedResourceStreamLoaderTests.cs" />
     <Compile Include="Encounters\Dungeon\Level18DungeonEncountersTests.cs" />
     <Compile Include="Encounters\Dungeon\Level1DungeonEncountersTests.cs" />
+    <Compile Include="Encounters\Dungeon\Level2DungeonEncountersTests.cs" />
     <Compile Include="Encounters\EffectiveLevels\Level17EncounterLevelTests.cs" />
     <Compile Include="Encounters\EffectiveLevels\Level18EncounterLevelTests.cs" />
     <Compile Include="Encounters\EffectiveLevels\Level19EncounterLevelTests.cs" />
@@ -76,6 +78,7 @@
     <Compile Include="Encounters\EffectiveLevels\Level3EncounterLevelTests.cs" />
     <Compile Include="PercentileTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rolls\OneD3Plus1ModifiedRollsTests.cs" />
     <Compile Include="TableAttribute.cs" />
     <Compile Include="TableTests.cs" />
     <Compile Include="TypeAndAmountPercentileTests.cs" />

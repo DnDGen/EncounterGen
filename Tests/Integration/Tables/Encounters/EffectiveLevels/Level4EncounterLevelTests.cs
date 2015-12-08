@@ -22,13 +22,13 @@ namespace EncounterGen.Tests.Integration.Tables.Encounters.EffectiveLevels
             AssertTableIsComplete();
         }
 
-        [TestCase(1, 10, "1", MultiplierConstants.Quadruple)]
-        [TestCase(11, 20, "2", MultiplierConstants.Double)]
-        [TestCase(21, 30, "3", MultiplierConstants.HalfAgain)]
-        [TestCase(31, 70, "4", MultiplierConstants.Same)]
-        [TestCase(71, 80, "5", MultiplierConstants.TwoThirds)]
-        [TestCase(81, 90, "6", MultiplierConstants.Half)]
-        [TestCase(91, 100, "7", MultiplierConstants.OneThird)]
+        [TestCase(1, 10, "1", ModifierConstants.Quadruple)]
+        [TestCase(11, 20, "2", ModifierConstants.Double)]
+        [TestCase(21, 30, "3", ModifierConstants.HalfAgain)]
+        [TestCase(31, 70, "4", ModifierConstants.Same)]
+        [TestCase(71, 80, "5", ModifierConstants.TwoThirds)]
+        [TestCase(81, 90, "6", ModifierConstants.Half)]
+        [TestCase(91, 100, "7", ModifierConstants.OneThird)]
         public override void Percentile(Int32 lower, Int32 upper, String type, String amount)
         {
             base.Percentile(lower, upper, type, amount);
