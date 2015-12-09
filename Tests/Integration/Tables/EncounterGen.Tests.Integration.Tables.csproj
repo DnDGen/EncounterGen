@@ -54,8 +54,10 @@
     <Compile Include="CollectionTests.cs" />
     <Compile Include="EmbeddedResourceStreamLoaderTests.cs" />
     <Compile Include="Encounters\Dungeon\Level18DungeonEncountersTests.cs" />
+    <Compile Include="Encounters\Dungeon\Level19DungeonEncountersTests.cs" />
     <Compile Include="Encounters\Dungeon\Level1DungeonEncountersTests.cs" />
     <Compile Include="Encounters\Dungeon\Level2DungeonEncountersTests.cs" />
+    <Compile Include="Encounters\Dungeon\Level4DungeonEncountersTests.cs" />
     <Compile Include="Encounters\EffectiveLevels\Level17EncounterLevelTests.cs" />
     <Compile Include="Encounters\EffectiveLevels\Level18EncounterLevelTests.cs" />
     <Compile Include="Encounters\EffectiveLevels\Level19EncounterLevelTests.cs" />

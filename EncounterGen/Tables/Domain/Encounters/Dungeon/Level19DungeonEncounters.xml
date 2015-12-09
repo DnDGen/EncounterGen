@@ -8,17 +8,17 @@
     </object>
     <object>
         <lower>21</lower>
-        <content>Balor (demon)/1d3</content>
+        <content>Marilith (demon)/1,Glabrezu (demon)/1d3</content>
         <upper>30</upper>
     </object>
     <object>
         <lower>31</lower>
-        <content>Pit fiend (devil)/1,Gelugon (devil)/1d3+1</content>
+        <content>Pit fiend (devil)/1d3+1</content>
         <upper>40</upper>
     </object>
     <object>
         <lower>41</lower>
-        <content>Planetar (celestial)/1d3</content>
+        <content>Solar (celestial)/1d3</content>
         <upper>45</upper>
     </object>
     <object>
@@ -28,17 +28,17 @@
     </object>
     <object>
         <lower>71</lower>
-        <content>Glabrezu (demon)/1d3+1</content>
+        <content>Nalfeshnee (demon)/1d3+1</content>
         <upper>80</upper>
     </object>
     <object>
         <lower>81</lower>
-        <content>Vampire/1</content>
+        <content>Ghost/1</content>
         <upper>90</upper>
     </object>
     <object>
         <lower>91</lower>
-        <content>Nightwalker (nightshade)/1d3+1</content>
+        <content>Nightcrawler (nightshade)/1d3</content>
         <upper>100</upper>
     </object>
 </percentile>
