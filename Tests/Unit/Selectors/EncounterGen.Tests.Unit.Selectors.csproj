@@ -55,6 +55,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdjustmentSelectorTests.cs" />
     <Compile Include="CollectionSelectorTests.cs" />
     <Compile Include="ModifierConstantsTests.cs" />
     <Compile Include="Percentiles\PercentileSelectorTests.cs" />

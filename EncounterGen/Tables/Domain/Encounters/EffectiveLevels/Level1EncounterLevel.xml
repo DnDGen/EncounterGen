@@ -3,17 +3,17 @@
 <percentile>
     <object>
         <lower>1</lower>
-        <content>1/x1</content>
+        <content>1/0</content>
         <upper>70</upper>
     </object>
     <object>
         <lower>71</lower>
-        <content>2/x.5</content>
+        <content>2/-2</content>
         <upper>90</upper>
     </object>
     <object>
         <lower>91</lower>
-        <content>3/x.33</content>
+        <content>3/-3</content>
         <upper>100</upper>
     </object>
 </percentile>

@@ -88,7 +88,7 @@ namespace EncounterGen.Tests.Unit.Generators
 
             level = 9266;
             environment = "environment";
-            encounterLevelAndModifier["90210"] = "modifier";
+            encounterLevelAndModifier["90210"] = "9876";
             encounterTypeAndAmount["creature"] = "creature amount";
 
             var tableName = String.Format(TableNameConstants.LevelXEncounterLevel, level);
@@ -97,7 +97,7 @@ namespace EncounterGen.Tests.Unit.Generators
             tableName = String.Format(TableNameConstants.LevelXENVIRONMENTEncounters, 90210, environment);
             mockTypeAndAmountPercentileSelector.Setup(s => s.SelectFrom(tableName)).Returns(encounterTypeAndAmount);
 
-            mockRollSelector.Setup(s => s.SelectFrom("creature amount", "modifier")).Returns("effective roll");
+            mockRollSelector.Setup(s => s.SelectFrom("creature amount", 9876)).Returns("effective roll");
             mockRollSelector.Setup(s => s.SelectFrom("effective roll")).Returns(42);
         }
 
@@ -106,8 +106,10 @@ namespace EncounterGen.Tests.Unit.Generators
         {
             var encounter = encounterGenerator.Generate(environment, level);
             Assert.That(encounter, Is.Not.Null);
-            Assert.That(encounter.Creatures, Is.All.EqualTo("creature"));
-            Assert.That(encounter.Creatures.Count(), Is.EqualTo(42));
+
+            var creature = encounter.Creatures.Single();
+            Assert.That(creature.Type, Is.EqualTo("creature"));
+            Assert.That(creature.Quantity, Is.EqualTo(42));
             Assert.That(encounter.Characters, Is.Empty);
         }
 
@@ -115,21 +117,21 @@ namespace EncounterGen.Tests.Unit.Generators
         public void GenerateEncounterWithCharacters()
         {
             encounterTypeAndAmount.Clear();
-            encounterTypeAndAmount[CreatureConstants.Character] = "character amount";
-            mockRollSelector.Setup(s => s.SelectFrom("character amount", "modifier")).Returns("character effective roll");
+            encounterTypeAndAmount[CreatureConstants.Character + "1337"] = "character amount";
+            mockRollSelector.Setup(s => s.SelectFrom("character amount", 9876)).Returns("character effective roll");
             mockRollSelector.Setup(s => s.SelectFrom("character effective roll")).Returns(600);
-
-            mockAdjustmentSelector.Setup(s => s.SelectFrom(TableNameConstants.CharacterLevel, "90210")).Returns(1337);
 
             mockCharacterGenerator.Setup(g => g.GenerateWith(mockAnyAlignmentRandomizer.Object, mockAnyClassNameRandomizer.Object, It.Is<ISetLevelRandomizer>(r => r.SetLevel == 1337 && r.AllowAdjustments), mockAnyBaseRaceRandomizer.Object, mockAnyMetaraceRandomizer.Object, mockRawStatsRandomizer.Object))
                 .Returns(() => new Character { InterestingTrait = Guid.NewGuid().ToString() });
 
             var encounter = encounterGenerator.Generate(environment, level);
             Assert.That(encounter, Is.Not.Null);
-            Assert.That(encounter.Creatures, Is.All.EqualTo(CreatureConstants.Character));
-            Assert.That(encounter.Creatures.Count(), Is.EqualTo(600));
+
+            var creature = encounter.Creatures.Single();
+            Assert.That(creature.Type, Is.EqualTo(CreatureConstants.Character));
+            Assert.That(creature.Quantity, Is.EqualTo(600));
             Assert.That(encounter.Characters, Is.All.Not.Null);
-            Assert.That(encounter.Characters.Count(), Is.EqualTo(600));
+            Assert.That(encounter.Characters.Count(), Is.EqualTo(creature.Quantity));
             Assert.That(encounter.Characters, Is.Unique);
             Assert.That(encounter.Characters.Select(c => c.InterestingTrait), Is.Unique);
         }
@@ -149,8 +151,10 @@ namespace EncounterGen.Tests.Unit.Generators
 
             var encounter = encounterGenerator.Generate(environment, level);
             Assert.That(encounter, Is.Not.Null);
-            Assert.That(encounter.Creatures, Is.All.EqualTo(monster));
-            Assert.That(encounter.Creatures.Count(), Is.EqualTo(42));
+
+            var creature = encounter.Creatures.Single();
+            Assert.That(creature.Type, Is.EqualTo(monster));
+            Assert.That(creature.Quantity, Is.EqualTo(42));
             Assert.That(encounter.Characters, Is.All.Not.Null);
             Assert.That(encounter.Characters.Count(), Is.EqualTo(42));
             Assert.That(encounter.Characters, Is.Unique);
@@ -177,8 +181,10 @@ namespace EncounterGen.Tests.Unit.Generators
 
             var encounter = encounterGenerator.Generate(environment, level);
             Assert.That(encounter, Is.Not.Null);
-            Assert.That(encounter.Creatures, Is.All.EqualTo(monster));
-            Assert.That(encounter.Creatures.Count(), Is.EqualTo(2));
+
+            var creature = encounter.Creatures.Single();
+            Assert.That(creature.Type, Is.EqualTo(monster));
+            Assert.That(creature.Quantity, Is.EqualTo(2));
             Assert.That(encounter.Characters, Is.All.Not.Null);
             Assert.That(encounter.Characters.Count(), Is.EqualTo(2));
             Assert.That(encounter.Characters, Is.Unique);
@@ -191,7 +197,7 @@ namespace EncounterGen.Tests.Unit.Generators
         {
             encounterTypeAndAmount.Clear();
             encounterTypeAndAmount[CreatureConstants.Dragon] = "dragon amount";
-            mockRollSelector.Setup(s => s.SelectFrom("dragon amount", "modifier")).Returns("dragon effective roll");
+            mockRollSelector.Setup(s => s.SelectFrom("dragon amount", 9876)).Returns("dragon effective roll");
             mockRollSelector.Setup(s => s.SelectFrom("dragon effective roll")).Returns(600);
 
             var tableName = String.Format(TableNameConstants.LevelXDragons, 90210);
@@ -199,8 +205,10 @@ namespace EncounterGen.Tests.Unit.Generators
 
             var encounter = encounterGenerator.Generate(environment, level);
             Assert.That(encounter, Is.Not.Null);
-            Assert.That(encounter.Creatures, Is.All.EqualTo("dragon type and age"));
-            Assert.That(encounter.Creatures.Count(), Is.EqualTo(600));
+
+            var creature = encounter.Creatures.Single();
+            Assert.That(creature.Type, Is.EqualTo("dragon type and age"));
+            Assert.That(creature.Quantity, Is.EqualTo(600));
             Assert.That(encounter.Characters, Is.Empty);
         }
 
@@ -217,14 +225,16 @@ namespace EncounterGen.Tests.Unit.Generators
             mockTypeAndAmountPercentileSelector.SetupSequence(s => s.SelectFrom(tableName))
                 .Returns(wrongTypeAndAmount).Returns(otherTypeAndAmount).Returns(encounterTypeAndAmount);
 
-            mockRollSelector.Setup(s => s.SelectFrom("wrong creature amount", "modifier")).Returns(RollConstants.Reroll);
-            mockRollSelector.Setup(s => s.SelectFrom("other creature amount", "modifier")).Returns("other effective roll");
+            mockRollSelector.Setup(s => s.SelectFrom("wrong creature amount", 9876)).Returns(RollConstants.Reroll);
+            mockRollSelector.Setup(s => s.SelectFrom("other creature amount", 9876)).Returns("other effective roll");
             mockRollSelector.Setup(s => s.SelectFrom("other effective roll")).Returns(600);
 
             var encounter = encounterGenerator.Generate(environment, level);
             Assert.That(encounter, Is.Not.Null);
-            Assert.That(encounter.Creatures, Is.All.EqualTo("other creature"));
-            Assert.That(encounter.Creatures.Count(), Is.EqualTo(600));
+
+            var creature = encounter.Creatures.Single();
+            Assert.That(creature.Type, Is.EqualTo("other creature"));
+            Assert.That(creature.Quantity, Is.EqualTo(600));
             Assert.That(encounter.Characters, Is.Empty);
         }
 
@@ -242,14 +252,16 @@ namespace EncounterGen.Tests.Unit.Generators
             mockTypeAndAmountPercentileSelector.SetupSequence(s => s.SelectFrom(tableName))
                 .Returns(wrongTypeAndAmount).Returns(otherTypeAndAmount).Returns(encounterTypeAndAmount);
 
-            mockRollSelector.Setup(s => s.SelectFrom("wrong creature amount", "modifier")).Returns(RollConstants.Reroll);
-            mockRollSelector.Setup(s => s.SelectFrom("other creature amount", "modifier")).Returns("other effective roll");
+            mockRollSelector.Setup(s => s.SelectFrom("wrong creature amount", 9876)).Returns(RollConstants.Reroll);
+            mockRollSelector.Setup(s => s.SelectFrom("other creature amount", 9876)).Returns("other effective roll");
             mockRollSelector.Setup(s => s.SelectFrom("other effective roll")).Returns(600);
 
             var encounter = encounterGenerator.Generate(environment, level);
             Assert.That(encounter, Is.Not.Null);
-            Assert.That(encounter.Creatures, Is.All.EqualTo("other creature"));
-            Assert.That(encounter.Creatures.Count(), Is.EqualTo(600));
+
+            var creature = encounter.Creatures.Single();
+            Assert.That(creature.Type, Is.EqualTo("other creature"));
+            Assert.That(creature.Quantity, Is.EqualTo(600));
             Assert.That(encounter.Characters, Is.Empty);
         }
 
@@ -258,14 +270,17 @@ namespace EncounterGen.Tests.Unit.Generators
         {
             encounterTypeAndAmount["other creature"] = "other creature amount";
 
-            mockRollSelector.Setup(s => s.SelectFrom("other creature amount", "modifier")).Returns("other effective roll");
+            mockRollSelector.Setup(s => s.SelectFrom("other creature amount", 9876)).Returns("other effective roll");
             mockRollSelector.Setup(s => s.SelectFrom("other effective roll")).Returns(600);
 
             var encounter = encounterGenerator.Generate(environment, level);
             Assert.That(encounter, Is.Not.Null);
-            Assert.That(encounter.Creatures.Count(c => c == "creature"), Is.EqualTo(42));
-            Assert.That(encounter.Creatures.Count(c => c == "other creature"), Is.EqualTo(600));
-            Assert.That(encounter.Creatures.Count(), Is.EqualTo(642));
+
+            var creature = encounter.Creatures.Single(c => c.Type == "creature");
+            var otherCreature = encounter.Creatures.Single(c => c.Type == "other creature");
+            Assert.That(creature.Quantity, Is.EqualTo(42));
+            Assert.That(otherCreature.Quantity, Is.EqualTo(600));
+            Assert.That(encounter.Creatures.Count(), Is.EqualTo(2));
             Assert.That(encounter.Characters, Is.Empty);
         }
 
@@ -448,7 +463,7 @@ namespace EncounterGen.Tests.Unit.Generators
         {
             encounterTypeAndAmount["other creature"] = "other creature amount";
 
-            mockRollSelector.Setup(s => s.SelectFrom("other creature amount", "modifier")).Returns("other effective roll");
+            mockRollSelector.Setup(s => s.SelectFrom("other creature amount", 9876)).Returns("other effective roll");
             mockRollSelector.Setup(s => s.SelectFrom("other effective roll")).Returns(600);
 
             mockAdjustmentSelector.Setup(s => s.SelectFrom(TableNameConstants.TreasureAdjustment, "creature")).Returns(2);
@@ -476,6 +491,47 @@ namespace EncounterGen.Tests.Unit.Generators
             Assert.That(secondItems, Is.SubsetOf(encounter.Treasure.Items));
             Assert.That(wrongGoods, Is.Not.SubsetOf(encounter.Treasure.Goods));
             Assert.That(wrongItems, Is.Not.SubsetOf(encounter.Treasure.Items));
+        }
+
+        [Test]
+        public void ReplaceRollsInCreatureType()
+        {
+            encounterTypeAndAmount.Clear();
+            encounterTypeAndAmount["Hydra with 2d3+4 heads"] = "hydra amount";
+            mockRollSelector.Setup(s => s.SelectFrom("hydra amount", 9876)).Returns("hydra effective roll");
+            mockRollSelector.Setup(s => s.SelectFrom("hydra effective roll")).Returns(1);
+            mockRollSelector.Setup(s => s.SelectRollFrom("Hydra with 2d3+4 heads")).Returns("2d3+4");
+            mockRollSelector.Setup(s => s.SelectFrom("2d3+4")).Returns(1337);
+
+            var encounter = encounterGenerator.Generate(environment, level);
+            Assert.That(encounter, Is.Not.Null);
+
+            var creature = encounter.Creatures.Single();
+            Assert.That(creature.Type, Is.EqualTo("Hydra with 1337 heads"));
+            Assert.That(creature.Quantity, Is.EqualTo(1));
+            Assert.That(encounter.Characters, Is.Empty);
+        }
+
+        [Test]
+        public void RollsInCreatureTypeAreUnique()
+        {
+            encounterTypeAndAmount.Clear();
+            encounterTypeAndAmount["Hydra with 2d3+4 heads"] = "hydra amount";
+            mockRollSelector.Setup(s => s.SelectFrom("hydra amount", 9876)).Returns("hydra effective roll");
+            mockRollSelector.Setup(s => s.SelectFrom("hydra effective roll")).Returns(2);
+            mockRollSelector.Setup(s => s.SelectRollFrom("Hydra with 2d3+4 heads")).Returns("2d3+4");
+            mockRollSelector.SetupSequence(s => s.SelectFrom("2d3+4")).Returns(1337).Returns(1234);
+
+            var encounter = encounterGenerator.Generate(environment, level);
+            Assert.That(encounter, Is.Not.Null);
+
+            var firstCreature = encounter.Creatures.First(c => c.Type == "Hydra with 1337 heads");
+            var secondCreature = encounter.Creatures.First(c => c.Type == "Hydra with 1234 heads");
+
+            Assert.That(firstCreature.Quantity, Is.EqualTo(1));
+            Assert.That(secondCreature.Quantity, Is.EqualTo(1));
+            Assert.That(encounter.Creatures.Count(), Is.EqualTo(2));
+            Assert.That(encounter.Characters, Is.Empty);
         }
     }
 }

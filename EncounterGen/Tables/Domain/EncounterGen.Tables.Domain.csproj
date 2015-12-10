@@ -119,13 +119,28 @@
     <EmbeddedResource Include="Encounters\EffectiveLevels\Level19EncounterLevel.xml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Rolls\1d3+1ModifiedRolls.xml" />
+    <EmbeddedResource Include="Rolls\RollOrder.xml" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Encounters\Dungeon\Level2DungeonEncounters.xml" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Encounters\Dungeon\Level19DungeonEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Encounters\Dungeon\Level4DungeonEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Encounters\Dungeon\Level15DungeonEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Encounters\Dungeon\Level16DungeonEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Encounters\Dungeon\Level20DungeonEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Encounters\Dungeon\Level12DungeonEncounters.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

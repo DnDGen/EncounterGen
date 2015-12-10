@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<percentile>
+  <object>
+        <lower>1</lower>
+        <content>Ankheg/1d2</content>
+        <upper>4</upper>
+    </object>
+    <object>
+        <lower>5</lower>
+        <content>Dire weasel/1d3</content>
+        <upper>8</upper>
+    </object>
+  <object>
+    <lower>9</lower>
+    <content>Gray ooze/1</content>
+    <upper>12</upper>
+  </object>
+    <object>
+        <lower>13</lower>
+        <content>Huge viper snake/1d2</content>
+        <upper>15</upper>
+    </object>
+    <object>
+        <lower>16</lower>
+        <content>Dragon/1</content>
+        <upper>20</upper>
+    </object>
+  <object>
+    <lower>21</lower>
+    <content>Formian warrior/1,Formian worker/1d3</content>
+    <upper>23</upper>
+  </object>
+    <object>
+        <lower>24</lower>
+        <content>Imp (devil)/1,Lemure (devil)/1d3</content>
+        <upper>26</upper>
+    </object>
+  <object>
+    <lower>27</lower>
+    <content>Quasit (demon)/1d2</content>
+    <upper>30</upper>
+  </object>
+  <object>
+    <lower>31</lower>
+    <content>Lantern archon (celestial)/1d3</content>
+    <upper>35</upper>
+  </object>
+  <object>
+    <lower>36</lower>
+    <content>Character2/1d3</content>
+    <upper>40</upper>
+  </object>
+    <object>
+        <lower>41</lower>
+        <content>Carrion crawler/1</content>
+        <upper>45</upper>
+    </object>
+    <object>
+        <lower>46</lower>
+        <content>Mimic/1</content>
+        <upper>50</upper>
+    </object>
+    <object>
+        <lower>51</lower>
+        <content>Rust monster/1d2</content>
+        <upper>55</upper>
+    </object>
+  <object>
+    <lower>56</lower>
+    <content>Violet fungi/1d2</content>
+    <upper>60</upper>
+  </object>
+    <object>
+      <lower>61</lower>
+        <content>Bugbear/1,Hobgoblin/1d6+3</content>
+        <upper>62</upper>
+    </object>
+  <object>
+    <lower>63</lower>
+    <content>Ettercap/1</content>
+    <upper>65</upper>
+  </object>
+  <object>
+    <lower>66</lower>
+    <content>Gnoll/1d3,Hyena/1d3</content>
+    <upper>67</upper>
+  </object>
+  <object>
+    <lower>68</lower>
+    <content>Lizardfolk/1d3,Giant lizard/1</content>
+    <upper>70</upper>
+  </object>
+    <object>
+        <lower>71</lower>
+        <content>Magmin/1d2</content>
+        <upper>73</upper>
+    </object>
+  <object>
+    <lower>74</lower>
+    <content>Ogre/1,Orc/1d4+2</content>
+    <upper>76</upper>
+  </object>
+  <object>
+    <lower>77</lower>
+    <content>Orc/1d3,Dire boar/1d2</content>
+    <upper>78</upper>
+  </object>
+  <object>
+    <lower>79</lower>
+    <content>Worg/1d2,Goblin/1d4+2</content>
+    <upper>80</upper>
+  </object>
+    <object>
+        <lower>81</lower>
+        <content>Allip/1d2</content>
+        <upper>85</upper>
+    </object>
+  <object>
+    <lower>86</lower>
+    <content>Ghost/1</content>
+    <upper>90</upper>
+  </object>
+    <object>
+        <lower>91</lower>
+        <content>Vampire spawn/1</content>
+        <upper>95</upper>
+    </object>
+  <object>
+    <lower>96</lower>
+    <content>Wight/1d2</content>
+    <upper>100</upper>
+  </object>
+</percentile>

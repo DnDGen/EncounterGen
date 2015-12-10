@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<percentile>
+  <object>
+        <lower>1</lower>
+        <content>Purple worm/1</content>
+        <upper>4</upper>
+    </object>
+  <object>
+    <lower>5</lower>
+    <content>Colossal monstrous scorpion/1d2</content>
+    <upper>5</upper>
+  </object>
+    <object>
+        <lower>6</lower>
+        <content>Dragon/1</content>
+        <upper>15</upper>
+    </object>
+    <object>
+        <lower>16</lower>
+        <content>Mind flayer/1d4+2</content>
+        <upper>20</upper>
+    </object>
+  <object>
+    <lower>21</lower>
+    <content>Spirit naga/1d3+1</content>
+    <upper>25</upper>
+  </object>
+    <object>
+        <lower>26</lower>
+        <content>Green slaadi/1d3+1</content>
+        <upper>30</upper>
+    </object>
+  <object>
+    <lower>31</lower>
+    <content>Cloud giant (good)/1,Dire lion/1d4+2</content>
+    <upper>35</upper>
+  </object>
+  <object>
+    <lower>36</lower>
+    <content>Character9/1d3+1</content>
+    <upper>50</upper>
+  </object>
+    <object>
+        <lower>51</lower>
+        <content>Cryohydra, 1d3+9 heads/1</content>
+        <upper>55</upper>
+    </object>
+  <object>
+    <lower>56</lower>
+    <content>Stone golem/1d2</content>
+    <upper>60</upper>
+  </object>
+    <object>
+      <lower>61</lower>
+        <content>Pyrohydra, 1d3+9 heads/1</content>
+        <upper>65</upper>
+    </object>
+  <object>
+    <lower>66</lower>
+    <content>Yrthak/1d3+1</content>
+    <upper>70</upper>
+  </object>
+    <object>
+        <lower>71</lower>
+        <content>Cornugon (devil)/1,Hamatula (devil)/1d3</content>
+        <upper>75</upper>
+    </object>
+  <object>
+    <lower>76</lower>
+    <content>Cloud giant (evil)/1,Dire lion/1d4+2</content>
+    <upper>80</upper>
+  </object>
+    <object>
+        <lower>81</lower>
+        <content>Frost giant/1d3+1</content>
+        <upper>85</upper>
+    </object>
+  <object>
+    <lower>86</lower>
+    <content>Large salamander/1d3+1</content>
+    <upper>90</upper>
+  </object>
+  <object>
+    <lower>91</lower>
+    <content>Vampire/1</content>
+    <upper>100</upper>
+  </object>
+</percentile>

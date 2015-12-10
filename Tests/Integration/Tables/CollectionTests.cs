@@ -3,6 +3,7 @@ using Ninject;
 using NUnit.Framework;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace EncounterGen.Tests.Integration.Tables
 {
@@ -31,6 +32,16 @@ namespace EncounterGen.Tests.Integration.Tables
         {
             Assert.That(table.Keys, Contains.Item(entry));
             Assert.That(table[entry], Is.EquivalentTo(items));
+        }
+
+        public virtual void OrderedCollection(String entry, params String[] items)
+        {
+            Collection(entry, items);
+
+            Assert.That(table.Count, Is.EqualTo(items.Length));
+
+            for (var i = 0; i < items.Length; i++)
+                Assert.That(table[entry].ElementAt(i), Is.EqualTo(items[i]));
         }
     }
 }

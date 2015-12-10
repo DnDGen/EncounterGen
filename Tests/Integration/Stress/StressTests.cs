@@ -15,7 +15,7 @@ namespace EncounterGen.Tests.Integration.Stress
 
         private const Int32 ConfidentIterations = 1000000;
 #if STRESS
-        private const Int32 TimeLimitInSeconds = 1000000;
+        private const Int32 TimeLimitInSeconds = 60 * 60 / 2;
 #else
         private const Int32 TimeLimitInSeconds = 1;
 #endif
@@ -39,11 +39,16 @@ namespace EncounterGen.Tests.Integration.Stress
 
         protected void Stress()
         {
-            do MakeAssertions();
-            while (TestShouldKeepRunning());
+            Stress(MakeAssertions);
         }
 
         protected abstract void MakeAssertions();
+
+        protected void Stress(Action makeAssertions)
+        {
+            do makeAssertions();
+            while (TestShouldKeepRunning());
+        }
 
         protected T Generate<T>(Func<T> generate, Func<T, Boolean> isValid)
         {

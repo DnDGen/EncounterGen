@@ -1,4 +1,5 @@
-﻿using CharacterGen.Generators;
+﻿using CharacterGen.Common;
+using CharacterGen.Generators;
 using CharacterGen.Generators.Randomizers.Alignments;
 using CharacterGen.Generators.Randomizers.CharacterClasses;
 using CharacterGen.Generators.Randomizers.Races;
@@ -65,9 +66,9 @@ namespace EncounterGen.Generators.Domain
         public Encounter Generate(String environment, Int32 level)
         {
             var tableName = String.Format(TableNameConstants.LevelXEncounterLevel, level);
-            var encounterLevel = typeAndAmountPercentileSelector.SelectFrom(tableName);
-            var effectiveLevel = Convert.ToInt32(encounterLevel.Single().Key);
-            var modifier = encounterLevel.Single().Value;
+            var encounterLevel = typeAndAmountPercentileSelector.SelectFrom(tableName).Single();
+            var effectiveLevel = Convert.ToInt32(encounterLevel.Key);
+            var modifier = Convert.ToInt32(encounterLevel.Value);
 
             tableName = String.Format(TableNameConstants.LevelXENVIRONMENTEncounters, effectiveLevel, environment);
             var encounterCreaturesAndAmounts = typeAndAmountPercentileSelector.SelectFrom(tableName);
@@ -75,21 +76,12 @@ namespace EncounterGen.Generators.Domain
             while (ShouldReroll(encounterCreaturesAndAmounts.Values, modifier))
                 encounterCreaturesAndAmounts = typeAndAmountPercentileSelector.SelectFrom(tableName);
 
-            var creatures = new List<String>();
+            var creatures = new List<Creature>();
 
             foreach (var kvp in encounterCreaturesAndAmounts)
             {
-                var effectiveRoll = rollSelector.SelectFrom(kvp.Value, modifier);
-                var amount = rollSelector.SelectFrom(effectiveRoll);
-                var creature = kvp.Key;
-
-                if (creature == CreatureConstants.Dragon)
-                {
-                    tableName = String.Format(TableNameConstants.LevelXDragons, effectiveLevel);
-                    creature = percentileSelector.SelectFrom(tableName);
-                }
-
-                creatures.AddRange(Enumerable.Repeat(creature, amount));
+                var newCreatures = GetCreatures(kvp.Key, kvp.Value, modifier, effectiveLevel);
+                creatures.AddRange(newCreatures);
             }
 
             var encounter = new Encounter();
@@ -98,40 +90,109 @@ namespace EncounterGen.Generators.Domain
             var leadCreature = encounterCreaturesAndAmounts.First().Key;
             encounter.Treasure = GenerateTreasureFor(leadCreature, level);
 
-            var undeadNPCs = collectionSelector.SelectFrom(TableNameConstants.MonsterGroups, GroupConstants.UndeadNPC);
+            var characters = GetCharacters(encounter.Creatures);
+            encounter.Characters = encounter.Characters.Union(characters);
 
-            if (encounter.Creatures.Any(c => c == CreatureConstants.Character) == false && encounter.Creatures.Intersect(undeadNPCs).Any() == false)
-                return encounter;
+            var undeadNPCs = GetUndeadNPCs(encounter.Creatures, effectiveLevel);
+            encounter.Characters = encounter.Characters.Union(undeadNPCs);
 
-            var characterQuantity = encounter.Creatures.Count(c => c == CreatureConstants.Character);
-            setLevelRandomizer.SetLevel = adjustmentSelector.SelectFrom(TableNameConstants.CharacterLevel, effectiveLevel.ToString());
+            foreach (var creature in encounter.Creatures)
+                if (creature.Type.Contains(CreatureConstants.Character))
+                    creature.Type = CreatureConstants.Character;
+
+            return encounter;
+        }
+
+        private IEnumerable<Creature> GetCreatures(String creatureType, String amount, Int32 modifier, Int32 effectiveLevel)
+        {
+            var effectiveRoll = rollSelector.SelectFrom(amount, modifier);
+
+            var creatures = new List<Creature>();
+            var creature = new Creature();
+            creature.Type = creatureType;
+            creature.Quantity = rollSelector.SelectFrom(effectiveRoll);
+
+            if (creature.Type == CreatureConstants.Dragon)
+            {
+                var tableName = String.Format(TableNameConstants.LevelXDragons, effectiveLevel);
+                creature.Type = percentileSelector.SelectFrom(tableName);
+            }
+
+            var dieRoll = rollSelector.SelectRollFrom(creature.Type);
+
+            if (String.IsNullOrEmpty(dieRoll))
+            {
+                creatures.Add(creature);
+                return creatures;
+            }
+
+            while (creature.Quantity-- > 0)
+            {
+                var rolledCreature = new Creature();
+                rolledCreature.Quantity = 1;
+
+                var roll = rollSelector.SelectFrom(dieRoll);
+                rolledCreature.Type = creature.Type.Replace(dieRoll, roll.ToString());
+
+                creatures.Add(rolledCreature);
+            }
+
+            return creatures;
+        }
+
+        private IEnumerable<Character> GetCharacters(IEnumerable<Creature> creatures)
+        {
+            var characters = new List<Character>();
+
+            if (creatures.Any(c => c.Type.Contains(CreatureConstants.Character)) == false)
+                return characters;
+
+            var characterCreature = creatures.Single(c => c.Type.Contains(CreatureConstants.Character));
+            var characterQuantity = characterCreature.Quantity;
+            setLevelRandomizer.SetLevel = GetCharacterLevel(characterCreature);
 
             while (characterQuantity-- > 0)
             {
                 var character = characterGenerator.GenerateWith(alignmentRandomizer, classNameRandomizer, setLevelRandomizer, baseRaceRandomizer, metaraceRandomizer, statsRandomizer);
-                encounter.Characters = encounter.Characters.Union(new[] { character });
+                characters.Add(character);
             }
 
-            var undeadNPCQuantity = encounter.Creatures.Count(c => undeadNPCs.Contains(c));
-            if (undeadNPCQuantity == 0)
-                return encounter;
+            return characters;
+        }
 
-            setMetaraceRandomizer.SetMetarace = encounter.Creatures.Intersect(undeadNPCs).Single();
+        private IEnumerable<Character> GetUndeadNPCs(IEnumerable<Creature> creatures, Int32 effectiveLevel)
+        {
+            var undeadNPCTypes = collectionSelector.SelectFrom(TableNameConstants.MonsterGroups, GroupConstants.UndeadNPC);
+            var undeadNPCs = new List<Character>();
 
-            tableName = String.Format(TableNameConstants.LevelXUndeadNPC, effectiveLevel);
+            if (creatures.Any(c => undeadNPCTypes.Contains(c.Type)) == false)
+                return undeadNPCs;
+
+            var undeadNPCCreature = creatures.Single(c => undeadNPCTypes.Contains(c.Type));
+            var undeadNPCQuantity = undeadNPCCreature.Quantity;
+
+            setMetaraceRandomizer.SetMetarace = undeadNPCCreature.Type;
+
+            var tableName = String.Format(TableNameConstants.LevelXUndeadNPC, effectiveLevel);
             setLevelRandomizer.AllowAdjustments = false;
 
             while (undeadNPCQuantity-- > 0)
             {
                 setLevelRandomizer.SetLevel = adjustmentSelector.SelectFrom(tableName, setMetaraceRandomizer.SetMetarace);
                 var undeadNPC = characterGenerator.GenerateWith(alignmentRandomizer, classNameRandomizer, setLevelRandomizer, baseRaceRandomizer, setMetaraceRandomizer, statsRandomizer);
-                encounter.Characters = encounter.Characters.Union(new[] { undeadNPC });
+                undeadNPCs.Add(undeadNPC);
             }
 
-            return encounter;
+            return undeadNPCs;
         }
 
-        private Boolean ShouldReroll(IEnumerable<String> amounts, String modifier)
+        private Int32 GetCharacterLevel(Creature characterCreature)
+        {
+            var levelString = characterCreature.Type.Replace(CreatureConstants.Character, String.Empty);
+            return Convert.ToInt32(levelString);
+        }
+
+        private Boolean ShouldReroll(IEnumerable<String> amounts, Int32 modifier)
         {
             return amounts.Any(a => rollSelector.SelectFrom(a, modifier) == RollConstants.Reroll);
         }

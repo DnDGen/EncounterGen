@@ -3,42 +3,42 @@
 <percentile>
   <object>
         <lower>1</lower>
-        <content>7/x4</content>
+        <content>7/4</content>
         <upper>5</upper>
     </object>
     <object>
         <lower>6</lower>
-        <content>8/x3</content>
+        <content>8/3</content>
         <upper>10</upper>
     </object>
     <object>
         <lower>11</lower>
-        <content>9/x2</content>
+        <content>9/2</content>
         <upper>20</upper>
     </object>
     <object>
         <lower>21</lower>
-        <content>10/x1.5</content>
+        <content>10/1</content>
         <upper>30</upper>
     </object>
     <object>
         <lower>31</lower>
-        <content>11/x1</content>
+        <content>11/0</content>
         <upper>70</upper>
     </object>
     <object>
         <lower>71</lower>
-        <content>12/x.66</content>
+        <content>12/-1</content>
         <upper>80</upper>
     </object>
     <object>
         <lower>81</lower>
-        <content>13/x.5</content>
+        <content>13/-2</content>
         <upper>90</upper>
     </object>
     <object>
         <lower>91</lower>
-        <content>14/x.33</content>
+        <content>14/-3</content>
         <upper>100</upper>
     </object>
 </percentile>

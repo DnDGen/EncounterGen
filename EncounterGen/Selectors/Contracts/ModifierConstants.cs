@@ -4,13 +4,13 @@ namespace EncounterGen.Selectors
 {
     public static class ModifierConstants
     {
-        public const String Quadruple = "x4";
-        public const String Triple = "x3";
-        public const String Double = "x2";
-        public const String HalfAgain = "x1.5";
-        public const String Same = "x1";
-        public const String TwoThirds = "x.66";
-        public const String Half = "x.5";
-        public const String OneThird = "x.33";
+        public const Int32 Quadruple = 4;
+        public const Int32 Triple = 3;
+        public const Int32 Double = 2;
+        public const Int32 HalfAgain = 1;
+        public const Int32 Same = 0;
+        public const Int32 TwoThirds = -1;
+        public const Int32 Half = -2;
+        public const Int32 OneThird = -3;
     }
 }

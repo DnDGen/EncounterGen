@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<percentile>
+  <object>
+        <lower>1</lower>
+        <content>Dragon/1</content>
+        <upper>20</upper>
+    </object>
+    <object>
+        <lower>21</lower>
+        <content>Beholder/1d3</content>
+        <upper>30</upper>
+    </object>
+    <object>
+        <lower>31</lower>
+        <content>Death slaadi/1d2,Green slaadi/1d3+1</content>
+        <upper>40</upper>
+    </object>
+    <object>
+        <lower>41</lower>
+        <content>Ghaeles (celestial)/1d3</content>
+        <upper>45</upper>
+    </object>
+    <object>
+        <lower>46</lower>
+        <content>Character12/1d3+1</content>
+        <upper>70</upper>
+    </object>
+    <object>
+        <lower>71</lower>
+        <content>Hezrou (demon)/1d3+1</content>
+        <upper>80</upper>
+    </object>
+    <object>
+        <lower>81</lower>
+        <content>Gelugon (devil)/1,Cornugon (devil)/1d3+1</content>
+        <upper>90</upper>
+    </object>
+    <object>
+        <lower>91</lower>
+        <content>Vampire/1</content>
+        <upper>100</upper>
+    </object>
+</percentile>

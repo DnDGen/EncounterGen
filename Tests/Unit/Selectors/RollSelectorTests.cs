@@ -4,7 +4,6 @@ using EncounterGen.Tables;
 using Moq;
 using NUnit.Framework;
 using RollGen;
-using System;
 
 namespace EncounterGen.Tests.Unit.Selectors
 {
@@ -21,16 +20,44 @@ namespace EncounterGen.Tests.Unit.Selectors
             mockCollectionSelector = new Mock<ICollectionSelector>();
             mockDice = new Mock<IDice>();
             rollSelector = new RollSelector(mockCollectionSelector.Object, mockDice.Object);
+
+            var rolls = new[] { RollConstants.One, "lesser roll", "base roll", "greater roll", RollConstants.Reroll };
+            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.RollOrder, "All")).Returns(rolls);
         }
 
         [Test]
-        public void GetModifiedRoll()
+        public void GetMinimumModifiedRoll()
         {
-            var tableName = String.Format(TableNameConstants.ROLLModifiedRolls, "base roll");
-            mockCollectionSelector.Setup(s => s.SelectFrom(tableName, "modifier")).Returns(new[] { "modified roll" });
+            var modifiedRoll = rollSelector.SelectFrom("base roll", -9266);
+            Assert.That(modifiedRoll, Is.EqualTo(RollConstants.One));
+        }
 
-            var modifiedRoll = rollSelector.SelectFrom("base roll", "modifier");
-            Assert.That(modifiedRoll, Is.EqualTo("modified roll"));
+        [Test]
+        public void GetLesserModifiedRoll()
+        {
+            var modifiedRoll = rollSelector.SelectFrom("base roll", -1);
+            Assert.That(modifiedRoll, Is.EqualTo("lesser roll"));
+        }
+
+        [Test]
+        public void GetSameModifiedRoll()
+        {
+            var modifiedRoll = rollSelector.SelectFrom("base roll", 0);
+            Assert.That(modifiedRoll, Is.EqualTo("base roll"));
+        }
+
+        [Test]
+        public void GetGreaterModifiedRoll()
+        {
+            var modifiedRoll = rollSelector.SelectFrom("base roll", 1);
+            Assert.That(modifiedRoll, Is.EqualTo("greater roll"));
+        }
+
+        [Test]
+        public void GetMaximumModifiedRoll()
+        {
+            var modifiedRoll = rollSelector.SelectFrom("base roll", 9266);
+            Assert.That(modifiedRoll, Is.EqualTo(RollConstants.Reroll));
         }
 
         [Test]
@@ -54,6 +81,34 @@ namespace EncounterGen.Tests.Unit.Selectors
             mockDice.Setup(r => r.Roll(9266).d(90210)).Returns(42);
             var roll = rollSelector.SelectFrom("9266d90210+600");
             Assert.That(roll, Is.EqualTo(642));
+        }
+
+        [Test]
+        public void FindRollInString()
+        {
+            var roll = rollSelector.SelectRollFrom("this string contains a roll 9266d90210, doesn't it?");
+            Assert.That(roll, Is.EqualTo("9266d90210"));
+        }
+
+        [Test]
+        public void FindRollWithBonusInString()
+        {
+            var roll = rollSelector.SelectRollFrom("this string contains a roll 9266d90210+600, doesn't it?");
+            Assert.That(roll, Is.EqualTo("9266d90210+600"));
+        }
+
+        [Test]
+        public void FindNoRollInString()
+        {
+            var roll = rollSelector.SelectRollFrom("this string does not contain a roll, does it?");
+            Assert.That(roll, Is.Empty);
+        }
+
+        [Test]
+        public void DoNotFindConstantNumberInString()
+        {
+            var roll = rollSelector.SelectRollFrom("this string contains 5 rolls - or not");
+            Assert.That(roll, Is.Empty);
         }
     }
 }
