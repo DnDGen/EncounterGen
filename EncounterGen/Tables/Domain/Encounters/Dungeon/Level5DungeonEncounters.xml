@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<percentile>
+  <object>
+        <lower>1</lower>
+        <content>Giant soldier ant/1,Giant worker ant/1d4+2</content>
+        <upper>2</upper>
+    </object>
+  <object>
+    <lower>3</lower>
+    <content>Dire wolverine/1d2</content>
+    <upper>5</upper>
+  </object>
+    <object>
+        <lower>6</lower>
+        <content>Ochre jelly/1</content>
+        <upper>9</upper>
+    </object>
+  <object>
+    <lower>10</lower>
+    <content>Giant constrictor snake/1</content>
+    <upper>11</upper>
+  </object>
+  <object>
+    <lower>12</lower>
+    <content>Huge monstrous spider/1d2</content>
+    <upper>12</upper>
+  </object>
+    <object>
+        <lower>13</lower>
+        <content>Spider eater/1</content>
+        <upper>15</upper>
+    </object>
+    <object>
+        <lower>16</lower>
+        <content>Dragon/1</content>
+        <upper>20</upper>
+    </object>
+  <object>
+    <lower>21</lower>
+    <content>Doppelganger/1d3</content>
+    <upper>23</upper>
+  </object>
+    <object>
+        <lower>24</lower>
+        <content>Greenhag/1</content>
+        <upper>25</upper>
+    </object>
+  <object>
+    <lower>26</lower>
+    <content>Mephit/1d3</content>
+    <upper>27</upper>
+  </object>
+  <object>
+    <lower>28</lower>
+    <content>Wererat/1d3+1</content>
+    <upper>30</upper>
+  </object>
+  <object>
+    <lower>31</lower>
+    <content>Blink dog/1d3+1</content>
+    <upper>35</upper>
+  </object>
+  <object>
+    <lower>36</lower>
+    <content>Character2/1d3+1</content>
+    <upper>40</upper>
+  </object>
+    <object>
+        <lower>41</lower>
+        <content>Cockatrice/1d3</content>
+        <upper>43</upper>
+    </object>
+  <object>
+    <lower>44</lower>
+    <content>Gibbering mouther/1</content>
+    <upper>47</upper>
+  </object>
+    <object>
+        <lower>48</lower>
+        <content>Grick/1d3</content>
+        <upper>50</upper>
+    </object>
+  <object>
+    <lower>51</lower>
+    <content>Hydra, 1d3+4 heads/1</content>
+    <upper>52</upper>
+  </object>
+    <object>
+        <lower>53</lower>
+        <content>Nightmare/1</content>
+        <upper>55</upper>
+    </object>
+  <object>
+    <lower>56</lower>
+    <content>Shocker lizard/1d3+1</content>
+    <upper>58</upper>
+  </object>
+  <object>
+    <lower>59</lower>
+    <content>Violet fungus/1,Shrieker/1d3+1</content>
+    <upper>60</upper>
+  </object>
+    <object>
+      <lower>61</lower>
+        <content>Azer/1d3+1</content>
+        <upper>64</upper>
+    </object>
+  <object>
+    <lower>65</lower>
+    <content>Bugbear/1d3+1</content>
+    <upper>67</upper>
+  </object>
+  <object>
+    <lower>68</lower>
+    <content>Ettercap/1,Medium monstrous spider/1d3</content>
+    <upper>69</upper>
+  </object>
+    <object>
+        <lower>70</lower>
+        <content>Ogre/1d3+1</content>
+        <upper>72</upper>
+    </object>
+  <object>
+    <lower>73</lower>
+    <content>Small salamander/1d3+1</content>
+    <upper>75</upper>
+  </object>
+  <object>
+    <lower>76</lower>
+    <content>Troglodyte/1d3+1,Giant lizard/1d2</content>
+    <upper>77</upper>
+  </object>
+  <object>
+    <lower>78</lower>
+    <content>Worg/1d3+1</content>
+    <upper>80</upper>
+  </object>
+    <object>
+        <lower>81</lower>
+        <content>Ghast/1,Ghoul/1d3+1</content>
+        <upper>85</upper>
+    </object>
+  <object>
+    <lower>86</lower>
+    <content>Mummy/1d3</content>
+    <upper>90</upper>
+  </object>
+    <object>
+        <lower>91</lower>
+        <content>Giant skeleton/1d3+1</content>
+        <upper>95</upper>
+    </object>
+  <object>
+    <lower>96</lower>
+    <content>Wraith/1</content>
+    <upper>100</upper>
+  </object>
+</percentile>

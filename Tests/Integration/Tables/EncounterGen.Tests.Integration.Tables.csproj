@@ -62,6 +62,7 @@
     <Compile Include="Encounters\Dungeon\Level20DungeonEncountersTests.cs" />
     <Compile Include="Encounters\Dungeon\Level2DungeonEncountersTests.cs" />
     <Compile Include="Encounters\Dungeon\Level4DungeonEncountersTests.cs" />
+    <Compile Include="Encounters\Dungeon\Level5DungeonEncountersTests.cs" />
     <Compile Include="Encounters\EffectiveLevels\Level17EncounterLevelTests.cs" />
     <Compile Include="Encounters\EffectiveLevels\Level18EncounterLevelTests.cs" />
     <Compile Include="Encounters\EffectiveLevels\Level19EncounterLevelTests.cs" />
@@ -87,6 +88,7 @@
     <Compile Include="Rolls\RollOrderTests.cs" />
     <Compile Include="TableAttribute.cs" />
     <Compile Include="TableTests.cs" />
+    <Compile Include="Treasures\TreasureAdjustmentTests.cs" />
     <Compile Include="TypeAndAmountPercentileTests.cs" />
   </ItemGroup>
   <ItemGroup>

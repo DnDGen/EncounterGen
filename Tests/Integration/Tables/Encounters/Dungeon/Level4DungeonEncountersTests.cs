@@ -38,7 +38,7 @@ namespace EncounterGen.Tests.Integration.Tables.Encounters.Dungeon
         [TestCase(41, 45, CreatureConstants.CarrionCrawler, RollConstants.One)]
         [TestCase(46, 50, CreatureConstants.Mimic, RollConstants.One)]
         [TestCase(51, 55, CreatureConstants.RustMonster, RollConstants.OneD2)]
-        [TestCase(56, 60, CreatureConstants.VioletFungi, RollConstants.OneD2)]
+        [TestCase(56, 60, CreatureConstants.VioletFungus, RollConstants.OneD2)]
         [TestCase(61, 62, CreatureConstants.Bugbear, RollConstants.One,
             CreatureConstants.Hobgoblin, RollConstants.OneD6Plus3)]
         [TestCase(63, 65, CreatureConstants.Ettercap, RollConstants.One)]
