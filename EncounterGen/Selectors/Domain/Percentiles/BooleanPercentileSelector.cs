@@ -5,7 +5,7 @@ namespace EncounterGen.Selectors.Domain.Percentiles
 {
     public class BooleanPercentileSelector : IBooleanPercentileSelector
     {
-        public Boolean SelectFrom(String tableName)
+        public Boolean SelectFrom(Double trueThreshold)
         {
             throw new NotImplementedException();
         }

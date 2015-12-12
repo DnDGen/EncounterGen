@@ -24,7 +24,7 @@ namespace EncounterGen.Tests.Integration.Tables.Encounters.Dungeon
         }
 
         [TestCase(1, 5, CreatureConstants.Centipede_Monstrous_Large, RollConstants.OneD3)]
-        [TestCase(6, 10, CreatureConstants.Ant_Giant, RollConstants.OneD3)]
+        [TestCase(6, 10, CreatureConstants.Ant_Giant_Worker, RollConstants.OneD3)]
         [TestCase(11, 15, CreatureConstants.Scorpion_Monstrous_Medium, RollConstants.OneD3)]
         [TestCase(16, 20, CreatureConstants.Spider_Monstrous_Medium, RollConstants.OneD3)]
         [TestCase(21, 25, CreatureConstants.Dragon, RollConstants.One)]

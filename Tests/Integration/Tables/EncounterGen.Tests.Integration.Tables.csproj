@@ -88,7 +88,7 @@
     <Compile Include="Rolls\RollOrderTests.cs" />
     <Compile Include="TableAttribute.cs" />
     <Compile Include="TableTests.cs" />
-    <Compile Include="Treasures\TreasureAdjustmentTests.cs" />
+    <Compile Include="Treasures\TreasureAdjustmentsTests.cs" />
     <Compile Include="TypeAndAmountPercentileTests.cs" />
   </ItemGroup>
   <ItemGroup>

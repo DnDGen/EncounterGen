@@ -110,12 +110,18 @@ namespace EncounterGen.Generators.Domain
             var creatures = new List<Creature>();
             var creature = new Creature();
             creature.Type = creatureType;
-            creature.Quantity = rollSelector.SelectFrom(effectiveRoll);
+
+            var doubleQuantity = rollSelector.SelectFrom(effectiveRoll);
+            creature.Quantity = Convert.ToInt32(doubleQuantity);
 
             if (creature.Type == CreatureConstants.Dragon)
             {
                 var tableName = String.Format(TableNameConstants.LevelXDragons, effectiveLevel);
                 creature.Type = percentileSelector.SelectFrom(tableName);
+            }
+            else if (creature.Type == CreatureConstants.Mephit)
+            {
+                creature.Type = percentileSelector.SelectFrom(TableNameConstants.Mephits);
             }
 
             var dieRoll = rollSelector.SelectRollFrom(creature.Type);
@@ -179,6 +185,7 @@ namespace EncounterGen.Generators.Domain
             while (undeadNPCQuantity-- > 0)
             {
                 setLevelRandomizer.SetLevel = adjustmentSelector.SelectFrom(tableName, setMetaraceRandomizer.SetMetarace);
+
                 var undeadNPC = characterGenerator.GenerateWith(alignmentRandomizer, classNameRandomizer, setLevelRandomizer, baseRaceRandomizer, setMetaraceRandomizer, statsRandomizer);
                 undeadNPCs.Add(undeadNPC);
             }
@@ -199,33 +206,31 @@ namespace EncounterGen.Generators.Domain
 
         private Treasure GenerateTreasureFor(String creature, Int32 level)
         {
-            var treasureMultiplier = adjustmentSelector.SelectFrom(TableNameConstants.TreasureAdjustment, creature);
+            var coinMultiplier = adjustmentSelector.SelectFrom(TableNameConstants.TreasureAdjustments, creature, TreasureConstants.Coin);
+            var goodsMultiplier = adjustmentSelector.SelectFrom(TableNameConstants.TreasureAdjustments, creature, TreasureConstants.Goods);
+            var itemsMultiplier = adjustmentSelector.SelectFrom(TableNameConstants.TreasureAdjustments, creature, TreasureConstants.Items);
+
             var treasure = new Treasure();
 
-            if (treasureMultiplier == 0)
-                return treasure;
+            treasure.Coin = coinGenerator.GenerateAtLevel(level);
 
-            if (treasureMultiplier == EncounterConstants.PartialTreasure)
+            var doubleQuantity = coinMultiplier * treasure.Coin.Quantity;
+            treasure.Coin.Quantity = Convert.ToInt32(doubleQuantity);
+
+            if (booleanPercentileSelector.SelectFrom(goodsMultiplier))
             {
-                treasure.Coin = coinGenerator.GenerateAtLevel(level);
-                treasure.Coin.Quantity /= 10;
+                goodsMultiplier = Math.Ceiling(goodsMultiplier);
 
-                if (booleanPercentileSelector.SelectFrom(TableNameConstants.PartialTreasure))
-                    treasure.Goods = goodsGenerator.GenerateAtLevel(level);
-
-                if (booleanPercentileSelector.SelectFrom(TableNameConstants.PartialTreasure))
-                    treasure.Items = itemsGenerator.GenerateAtLevel(level);
-
-                return treasure;
+                while (goodsMultiplier-- > 0)
+                    treasure.Goods = treasure.Goods.Union(goodsGenerator.GenerateAtLevel(level));
             }
 
-            treasure.Coin = coinGenerator.GenerateAtLevel(level);
-            treasure.Coin.Quantity *= treasureMultiplier;
-
-            while (treasureMultiplier-- > 0)
+            if (booleanPercentileSelector.SelectFrom(itemsMultiplier))
             {
-                treasure.Goods = treasure.Goods.Union(goodsGenerator.GenerateAtLevel(level));
-                treasure.Items = treasure.Items.Union(itemsGenerator.GenerateAtLevel(level));
+                itemsMultiplier = Math.Ceiling(itemsMultiplier);
+
+                while (itemsMultiplier-- > 0)
+                    treasure.Items = treasure.Items.Union(itemsGenerator.GenerateAtLevel(level));
             }
 
             return treasure;

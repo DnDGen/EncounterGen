@@ -4,6 +4,6 @@ namespace EncounterGen.Selectors.Percentiles
 {
     public interface IBooleanPercentileSelector
     {
-        Boolean SelectFrom(String tableName);
+        Boolean SelectFrom(Double trueThreshold);
     }
 }

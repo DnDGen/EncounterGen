@@ -29,5 +29,25 @@ namespace EncounterGen.Tests.Unit.Selectors
             var adjustment = selector.SelectFrom("table name", "entry");
             Assert.That(adjustment, Is.EqualTo(9266));
         }
+
+        [Test]
+        public void SelectSubAdjustment()
+        {
+            mockCollectionSelector.Setup(s => s.SelectFrom("table name", "entry")).Returns(new[] { "adjustment", "other adjustment" });
+            mockRollSelector.Setup(s => s.SelectFrom("other adjustment")).Returns(9266);
+
+            var adjustment = selector.SelectFrom("table name", "entry", 1);
+            Assert.That(adjustment, Is.EqualTo(9266));
+        }
+
+        [Test]
+        public void SelectDoubleSubAdjustment()
+        {
+            mockCollectionSelector.Setup(s => s.SelectFrom("table name", "entry")).Returns(new[] { "adjustment", "other adjustment" });
+            mockRollSelector.Setup(s => s.SelectFrom("other adjustment")).Returns(.5);
+
+            var adjustment = selector.SelectFrom("table name", "entry", 1);
+            Assert.That(adjustment, Is.EqualTo(.5));
+        }
     }
 }

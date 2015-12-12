@@ -63,6 +63,7 @@
     <Compile Include="Percentiles\TypeAndAmountPercentileSelectorTests.cs" />
     <Compile Include="RollConstantsTests.cs" />
     <Compile Include="RollSelectorTests.cs" />
+    <Compile Include="TreasureConstantsTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\EncounterGen\Mappers\Contracts\EncounterGen.Mappers.csproj">

@@ -8,9 +8,9 @@ namespace EncounterGen.Tables
         public const String LevelXEncounterLevel = "Level{0}EncounterLevel";
         public const String LevelXENVIRONMENTEncounters = "Level{0}{1}Encounters";
         public const String LevelXUndeadNPC = "Level{0}UndeadNPC";
+        public const String Mephits = "Mephits";
         public const String MonsterGroups = "MonsterGroups";
-        public const String PartialTreasure = "PartialTreasure";
         public const String RollOrder = "RollOrder";
-        public const String TreasureAdjustment = "TreasureAdjustment";
+        public const String TreasureAdjustments = "TreasureAdjustments";
     }
 }

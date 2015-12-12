@@ -1,0 +1,682 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<collections>
+  <collection>
+    <entry>Allip</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Ankheg</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Astral deva (celestial)</entry>
+    <item>0</item>
+    <item>2</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Azer</entry>
+    <item>1</item>
+    <item>2</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Balor (demon)</entry>
+    <item>1</item>
+    <item>2</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Beholder</entry>
+    <item>2</item>
+    <item>2</item>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Blink dog</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Bugbear</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Carrion crawler</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Choker</entry>
+    <item>0.1</item>
+    <item>0.5</item>
+    <item>0.5</item>
+  </collection>
+  <collection>
+    <entry>Cloud giant</entry>
+    <item>2</item>
+    <item>1</item>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Cockatrice</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Colossal monstrous scorpion</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Cornugon (devil)</entry>
+    <item>1</item>
+    <item>2</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Cryohydra</entry>
+    <item>0.1</item>
+    <item>0.5</item>
+    <item>0.5</item>
+  </collection>
+  <collection>
+    <entry>Darkmantle</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Death slaad</entry>
+    <item>2</item>
+    <item>2</item>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Dire boar</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Dire lion</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Dire rat</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Dire weasel</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Dire wolverine</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Doppelganger</entry>
+    <item>2</item>
+    <item>2</item>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Dwarf warrior</entry>
+    <item>1</item>
+    <item>2</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Elf warrior</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Ethereal marauder</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Ettercap</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Formian warrior</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Formian worker</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Frost giant</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Gelugon (devil)</entry>
+    <item>1</item>
+    <item>2</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Ghaele (celestial)</entry>
+    <item>0</item>
+    <item>2</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Ghast</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Ghost</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Ghoul</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Giant constrictor snake</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Giant fire beetle</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Giant lizard</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Giant skeleton</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Giant soldier ant</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Giant worker ant</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Gibbering mouther</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Glabrezu (demon)</entry>
+    <item>1</item>
+    <item>2</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Gnoll</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Goblin</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Gray ooze</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Green slaad</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Greenhag</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Grick</entry>
+    <item>0.1</item>
+    <item>0.5</item>
+    <item>0.5</item>
+  </collection>
+  <collection>
+    <entry>Hamatula (devil)</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Hezrou (demon)</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Hobgoblin</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Huge monstrous spider</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Huge viper snake</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Human commoner zombie</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Human warrior skeleton</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Hydra</entry>
+    <item>0.1</item>
+    <item>0.5</item>
+    <item>0.5</item>
+  </collection>
+  <collection>
+    <entry>Hyena</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Imp (devil)</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Kobold</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Krenshar</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Lantern archon (celestial)</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Large monstrous centipede</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Large salamander</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Lemure (devil)</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Lich</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Lizardfolk</entry>
+    <item>0.5</item>
+    <item>0.5</item>
+    <item>0.5</item>
+  </collection>
+  <collection>
+    <entry>Magmin</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Marilith (demon)</entry>
+    <item>2</item>
+    <item>1</item>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Medium monstrous centipede</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Medium monstrous scorpion</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Medium monstrous spider</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Mephit</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Mimic</entry>
+    <item>0.1</item>
+    <item>0.5</item>
+    <item>0.5</item>
+  </collection>
+  <collection>
+    <entry>Mind flayer</entry>
+    <item>2</item>
+    <item>2</item>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Mummy</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Nalfeshnee (demon)</entry>
+    <item>2</item>
+    <item>1</item>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Nightcrawler (nightshade)</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Nightmare</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Nightwalker (nightshade)</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Ochre jelly</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Ogre</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Orc</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Pit fiend (devil)</entry>
+    <item>2</item>
+    <item>1</item>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Planetar (celestial)</entry>
+    <item>0</item>
+    <item>2</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Purple worm</entry>
+    <item>0</item>
+    <item>0.5</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Pyrohydra</entry>
+    <item>0.1</item>
+    <item>0.5</item>
+    <item>0.5</item>
+  </collection>
+  <collection>
+    <entry>Quasit (demon)</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Rust monster</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Shocker lizard</entry>
+    <item>0.1</item>
+    <item>0.5</item>
+    <item>0.5</item>
+  </collection>
+  <collection>
+    <entry>Shrieker</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Small monstrous scorpion</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Small monstrous spider</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Solar (celestial)</entry>
+    <item>0</item>
+    <item>2</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Spider eater</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Spirit naga</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Stirge</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Stone golem</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Storm giant</entry>
+    <item>2</item>
+    <item>1</item>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Small salamander</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Tiny viper snake</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Troglodyte</entry>
+    <item>0.5</item>
+    <item>0.5</item>
+    <item>0.5</item>
+  </collection>
+  <collection>
+    <entry>Vampire spawn</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Vampire</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Violet fungus</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Vrock (demon)</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Wererat</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Wight</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Worg</entry>
+    <item>0.1</item>
+    <item>0.5</item>
+    <item>0.5</item>
+  </collection>
+  <collection>
+    <entry>Wraith</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Yrthak</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+</collections>

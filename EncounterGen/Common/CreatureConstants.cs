@@ -35,7 +35,7 @@ namespace EncounterGen.Common
         public const String FormianWarrior = "Formian warrior";
         public const String FormianWorker = "Formian worker";
         public const String Gelugon = "Gelugon (devil)";
-        public const String Ghaeles = "Ghaeles (celestial)";
+        public const String Ghaele = "Ghaele (celestial)";
         public const String Ghast = "Ghast";
         public const String Ghost = "Ghost";
         public const String Ghoul = "Ghoul";
@@ -74,9 +74,9 @@ namespace EncounterGen.Common
         public const String Nightcrawler = "Nightcrawler (nightshade)";
         public const String Nightmare = "Nightmare";
         public const String Nightwalker = "Nightwalker (nightshade)";
-        public const String OchreJelly = "Ochre jelly";
         public const String Ogre = "Ogre";
         public const String Ooze_Gray = "Gray ooze";
+        public const String Ooze_OchreJelly = "Ochre jelly";
         public const String Orc = "Orc";
         public const String PitFiend = "Pit fiend (devil)";
         public const String Planetar = "Planetar (celestial)";
@@ -94,8 +94,8 @@ namespace EncounterGen.Common
         public const String Shrieker = "Shrieker";
         public const String Skeleton_Giant = "Giant skeleton";
         public const String Skeleton_HumanWarrior = "Human warrior skeleton";
-        public const String Slaadi_Death = "Death slaadi";
-        public const String Slaadi_Green = "Green slaadi";
+        public const String Slaad_Death = "Death slaad";
+        public const String Slaad_Green = "Green slaad";
         public const String Snake_Constrictor_Giant = "Giant constrictor snake";
         public const String Snake_Viper_Huge = "Huge viper snake";
         public const String Snake_Viper_Tiny = "Tiny viper snake";

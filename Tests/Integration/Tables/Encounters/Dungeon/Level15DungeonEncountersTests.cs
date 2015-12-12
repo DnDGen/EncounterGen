@@ -25,9 +25,9 @@ namespace EncounterGen.Tests.Integration.Tables.Encounters.Dungeon
 
         [TestCase(1, 20, CreatureConstants.Dragon, RollConstants.One)]
         [TestCase(21, 30, CreatureConstants.Beholder, RollConstants.OneD3)]
-        [TestCase(31, 40, CreatureConstants.Slaadi_Death, RollConstants.OneD2,
-            CreatureConstants.Slaadi_Green, RollConstants.OneD3Plus1)]
-        [TestCase(41, 45, CreatureConstants.Ghaeles, RollConstants.OneD3)]
+        [TestCase(31, 40, CreatureConstants.Slaad_Death, RollConstants.OneD2,
+            CreatureConstants.Slaad_Green, RollConstants.OneD3Plus1)]
+        [TestCase(41, 45, CreatureConstants.Ghaele, RollConstants.OneD3)]
         [TestCase(46, 70, CreatureConstants.Character + "12", RollConstants.OneD3Plus1)]
         [TestCase(71, 80, CreatureConstants.Hezrou, RollConstants.OneD3Plus1)]
         [TestCase(81, 90, CreatureConstants.Gelugon, RollConstants.One,

@@ -20,11 +20,11 @@ namespace EncounterGen.Selectors.Domain
             rollRegex = new Regex("\\d+d\\d+(\\+\\d+)*");
         }
 
-        public Int32 SelectFrom(String roll)
+        public Double SelectFrom(String roll)
         {
             var sections = roll.Split('d', '+');
             if (sections.Length == 1)
-                return Convert.ToInt32(sections[0]);
+                return Convert.ToDouble(sections[0]);
 
             var bonus = 0;
             if (sections.Length == 3)

@@ -8,7 +8,7 @@
     </object>
     <object>
         <lower>6</lower>
-        <content>Giant ant/1d3</content>
+        <content>Giant worker ant/1d3</content>
         <upper>10</upper>
     </object>
     <object>

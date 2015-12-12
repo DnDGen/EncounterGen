@@ -17,7 +17,16 @@ namespace EncounterGen.Selectors.Domain
         public Int32 SelectFrom(String tableName, String entry)
         {
             var collection = collectionSelector.SelectFrom(tableName, entry);
-            var adjustment = collection.Single();
+            var stringAdjustment = collection.Single();
+            var doubleAdjustment = rollSelector.SelectFrom(stringAdjustment);
+
+            return Convert.ToInt32(doubleAdjustment);
+        }
+
+        public Double SelectFrom(String tableName, String entry, Int32 index)
+        {
+            var collection = collectionSelector.SelectFrom(tableName, entry);
+            var adjustment = collection.ElementAt(index);
             return rollSelector.SelectFrom(adjustment);
         }
     }

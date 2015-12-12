@@ -13,12 +13,12 @@
     </object>
     <object>
         <lower>31</lower>
-        <content>Death slaadi/1d2,Green slaadi/1d3+1</content>
+        <content>Death slaad/1d2,Green slaad/1d3+1</content>
         <upper>40</upper>
     </object>
     <object>
         <lower>41</lower>
-        <content>Ghaeles (celestial)/1d3</content>
+        <content>Ghaele (celestial)/1d3</content>
         <upper>45</upper>
     </object>
     <object>

@@ -25,20 +25,29 @@ namespace EncounterGen.Tests.Integration.Tables
 
         protected void AssertEntriesAreComplete(IEnumerable<String> entries)
         {
-            Assert.That(entries, Is.EquivalentTo(table.Keys));
+            AssertCollections(entries, table.Keys);
+        }
+
+        private void AssertCollections(IEnumerable<String> expected, IEnumerable<String> actual)
+        {
+            var missing = expected.Except(actual);
+            Assert.That(missing, Is.Empty, "missing");
+
+            var extra = actual.Except(expected);
+            Assert.That(extra, Is.Empty, "extra");
+
+            Assert.That(actual.Count(), Is.EqualTo(expected.Count()));
         }
 
         public virtual void Collection(String entry, params String[] items)
         {
             Assert.That(table.Keys, Contains.Item(entry));
-            Assert.That(table[entry], Is.EquivalentTo(items));
+            AssertCollections(items, table[entry]);
         }
 
         public virtual void OrderedCollection(String entry, params String[] items)
         {
             Collection(entry, items);
-
-            Assert.That(table.Count, Is.EqualTo(items.Length));
 
             for (var i = 0; i < items.Length; i++)
                 Assert.That(table[entry].ElementAt(i), Is.EqualTo(items[i]));

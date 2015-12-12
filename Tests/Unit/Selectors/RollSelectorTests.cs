@@ -110,5 +110,12 @@ namespace EncounterGen.Tests.Unit.Selectors
             var roll = rollSelector.SelectRollFrom("this string contains 5 rolls - or not");
             Assert.That(roll, Is.Empty);
         }
+
+        [Test]
+        public void GetDoubleConstant()
+        {
+            var roll = rollSelector.SelectFrom(".9266");
+            Assert.That(roll, Is.EqualTo(.9266));
+        }
     }
 }
