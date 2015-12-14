@@ -56,20 +56,20 @@
     <Compile Include="TableNameConstantsTests.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\EncounterGen\Tables\Contracts\EncounterGen.Tables.csproj">
-      <Project>{8c3e09b5-5d92-43be-99fc-55d833e6fdcc}</Project>
-      <Name>EncounterGen.Tables</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\EncounterGen\Tables\Domain\EncounterGen.Tables.Domain.csproj">
-      <Project>{73602477-c45f-458c-bd64-ddf496f491e0}</Project>
-      <Name>EncounterGen.Tables.Domain</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Common\EncounterGen.Common.csproj">
+      <Project>{66f5bdd5-ebca-4acf-8c00-7f7daaf8d6c2}</Project>
+      <Name>EncounterGen.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Tables\Contracts\EncounterGen.Tables.csproj">
+      <Project>{8c3e09b5-5d92-43be-99fc-55d833e6fdcc}</Project>
+      <Name>EncounterGen.Tables</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

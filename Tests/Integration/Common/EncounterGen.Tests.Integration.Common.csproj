@@ -147,13 +147,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Clients\Bootstrap\EncounterGen.Bootstrap.csproj">
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Bootstrap\EncounterGen.Bootstrap.csproj">
       <Project>{2bd2a4e9-5cc8-4202-a0cc-79d846433b29}</Project>
       <Name>EncounterGen.Bootstrap</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -149,13 +149,21 @@
     <Compile Include="StressTests.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\EncounterGen\Common\EncounterGen.Common.csproj">
+    <ProjectReference Include="..\..\..\Bootstrap\EncounterGen.Bootstrap.csproj">
+      <Project>{2bd2a4e9-5cc8-4202-a0cc-79d846433b29}</Project>
+      <Name>EncounterGen.Bootstrap</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Common\EncounterGen.Common.csproj">
       <Project>{66f5bdd5-ebca-4acf-8c00-7f7daaf8d6c2}</Project>
       <Name>EncounterGen.Common</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\EncounterGen\Generators\Contracts\EncounterGen.Generators.csproj">
+    <ProjectReference Include="..\..\..\Generators\Contracts\EncounterGen.Generators.csproj">
       <Project>{f91eb325-49b6-4e6f-9dbb-c4a7a3e8b524}</Project>
       <Name>EncounterGen.Generators</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Tables\Contracts\EncounterGen.Tables.csproj">
+      <Project>{8c3e09b5-5d92-43be-99fc-55d833e6fdcc}</Project>
+      <Name>EncounterGen.Tables</Name>
     </ProjectReference>
     <ProjectReference Include="..\Common\EncounterGen.Tests.Integration.Common.csproj">
       <Project>{0846dfa2-2810-4da1-8291-33878b7d8465}</Project>
