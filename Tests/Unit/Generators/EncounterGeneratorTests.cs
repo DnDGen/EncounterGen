@@ -46,10 +46,10 @@ namespace EncounterGen.Tests.Unit.Generators
         private Mock<IPercentileSelector> mockPercentileSelector;
         private Mock<IBooleanPercentileSelector> mockBooleanPercentileSelector;
         private Mock<ICollectionSelector> mockCollectionSelector;
-        private Dictionary<String, String> encounterTypeAndAmount;
-        private Dictionary<String, String> encounterLevelAndModifier;
-        private Int32 level;
-        private String environment;
+        private Dictionary<string, string> encounterTypeAndAmount;
+        private Dictionary<string, string> encounterLevelAndModifier;
+        private int level;
+        private string environment;
 
         [SetUp]
         public void Setup()
@@ -78,8 +78,8 @@ namespace EncounterGen.Tests.Unit.Generators
                 mockRollSelector.Object, mockPercentileSelector.Object, mockBooleanPercentileSelector.Object, mockCollectionSelector.Object,
                 mockSetMetaraceRandomizer.Object);
 
-            encounterLevelAndModifier = new Dictionary<String, String>();
-            encounterTypeAndAmount = new Dictionary<String, String>();
+            encounterLevelAndModifier = new Dictionary<string, string>();
+            encounterTypeAndAmount = new Dictionary<string, string>();
 
             mockSetLevelRandomizer.SetupAllProperties();
             mockSetLevelRandomizer.Object.AllowAdjustments = true;
@@ -91,17 +91,17 @@ namespace EncounterGen.Tests.Unit.Generators
             encounterLevelAndModifier["90210"] = "9876";
             encounterTypeAndAmount["creature"] = "creature amount";
 
-            var tableName = String.Format(TableNameConstants.LevelXEncounterLevel, level);
+            var tableName = string.Format(TableNameConstants.LevelXEncounterLevel, level);
             mockTypeAndAmountPercentileSelector.Setup(s => s.SelectFrom(tableName)).Returns(encounterLevelAndModifier);
 
-            tableName = String.Format(TableNameConstants.LevelXENVIRONMENTEncounters, 90210, environment);
+            tableName = string.Format(TableNameConstants.LevelXENVIRONMENTEncounters, 90210, environment);
             mockTypeAndAmountPercentileSelector.Setup(s => s.SelectFrom(tableName)).Returns(encounterTypeAndAmount);
 
             mockRollSelector.Setup(s => s.SelectFrom("creature amount", 9876)).Returns("effective roll");
             mockRollSelector.Setup(s => s.SelectFrom("effective roll")).Returns(42);
 
             mockCoinGenerator.Setup(g => g.GenerateAtLevel(level)).Returns(new Coin { Currency = "currency", Quantity = 600 });
-            mockBooleanPercentileSelector.Setup(s => s.SelectFrom(It.IsAny<Double>())).Returns(true);
+            mockBooleanPercentileSelector.Setup(s => s.SelectFrom(It.IsAny<double>())).Returns(true);
         }
 
         [Test]
@@ -235,15 +235,39 @@ namespace EncounterGen.Tests.Unit.Generators
         }
 
         [Test]
+        public void GenerateEncounterWithSubType()
+        {
+            throw new NotImplementedException();
+        }
+
+        [Test]
+        public void SubTypeCannotBeTypeThatRequiresSubType()
+        {
+            throw new NotImplementedException();
+        }
+
+        [Test]
+        public void SubTypeOfNPCBecomesHumanWarrior()
+        {
+            throw new NotImplementedException();
+        }
+
+        [Test]
+        public void SubTypeMustMatchEffectiveLevel()
+        {
+            throw new NotImplementedException();
+        }
+
+        [Test]
         public void RerollEncounter()
         {
-            var wrongTypeAndAmount = new Dictionary<String, String>();
+            var wrongTypeAndAmount = new Dictionary<string, string>();
             wrongTypeAndAmount["wrong creature"] = "wrong creature amount";
 
-            var otherTypeAndAmount = new Dictionary<String, String>();
+            var otherTypeAndAmount = new Dictionary<string, string>();
             otherTypeAndAmount["other creature"] = "other creature amount";
 
-            var tableName = String.Format(TableNameConstants.LevelXENVIRONMENTEncounters, 90210, environment);
+            var tableName = string.Format(TableNameConstants.LevelXENVIRONMENTEncounters, 90210, environment);
             mockTypeAndAmountPercentileSelector.SetupSequence(s => s.SelectFrom(tableName))
                 .Returns(wrongTypeAndAmount).Returns(otherTypeAndAmount).Returns(encounterTypeAndAmount);
 
@@ -263,14 +287,14 @@ namespace EncounterGen.Tests.Unit.Generators
         [Test]
         public void RerollEntireEncounter()
         {
-            var wrongTypeAndAmount = new Dictionary<String, String>();
+            var wrongTypeAndAmount = new Dictionary<string, string>();
             wrongTypeAndAmount["creature"] = "creature amount";
             wrongTypeAndAmount["wrong creature"] = "wrong creature amount";
 
-            var otherTypeAndAmount = new Dictionary<String, String>();
+            var otherTypeAndAmount = new Dictionary<string, string>();
             otherTypeAndAmount["other creature"] = "other creature amount";
 
-            var tableName = String.Format(TableNameConstants.LevelXENVIRONMENTEncounters, 90210, environment);
+            var tableName = string.Format(TableNameConstants.LevelXENVIRONMENTEncounters, 90210, environment);
             mockTypeAndAmountPercentileSelector.SetupSequence(s => s.SelectFrom(tableName))
                 .Returns(wrongTypeAndAmount).Returns(otherTypeAndAmount).Returns(encounterTypeAndAmount);
 
