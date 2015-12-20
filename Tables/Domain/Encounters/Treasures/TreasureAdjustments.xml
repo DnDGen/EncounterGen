@@ -392,10 +392,10 @@
     <item>0</item>
   </collection>
   <collection>
-    <entry>Large salamander</entry>
-    <item>1</item>
-    <item>1</item>
-    <item>1</item>
+    <entry>Noble salamander</entry>
+    <item>2</item>
+    <item>2</item>
+    <item>2</item>
   </collection>
   <collection>
     <entry>Lemure (devil)</entry>
@@ -608,7 +608,13 @@
     <item>2</item>
   </collection>
   <collection>
-    <entry>Small salamander</entry>
+    <entry>Flamebrother salamander</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Average salamander</entry>
     <item>1</item>
     <item>1</item>
     <item>1</item>

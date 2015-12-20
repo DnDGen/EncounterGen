@@ -1,11 +1,10 @@
-﻿using System;
-
-namespace EncounterGen.Selectors
+﻿namespace EncounterGen.Selectors
 {
     public interface IRollSelector
     {
-        String SelectFrom(String baseRoll, Int32 modifier);
-        Double SelectFrom(String roll);
-        String SelectRollFrom(String source);
+        string SelectFrom(string baseRoll, int modifier);
+        double SelectFrom(string roll);
+        string SelectRollFrom(string source);
+        string SelectFrom(int effectiveLevel, string challengeRating);
     }
 }

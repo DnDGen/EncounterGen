@@ -83,6 +83,8 @@
     <Compile Include="Encounters\EffectiveLevels\Level14EncounterLevelTests.cs" />
     <Compile Include="Encounters\EffectiveLevels\Level1EncounterLevelTests.cs" />
     <Compile Include="Encounters\EffectiveLevels\Level3EncounterLevelTests.cs" />
+    <Compile Include="Encounters\WarmHillsDay\Level7WarmHillsDayEncountersTests.cs" />
+    <Compile Include="Encounters\WarmHillsNight\Level7WarmHillsNightEncountersTests.cs" />
     <Compile Include="PercentileTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rolls\RollOrderTests.cs" />

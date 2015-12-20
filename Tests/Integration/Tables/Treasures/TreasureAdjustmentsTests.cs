@@ -102,8 +102,9 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
                 CreatureConstants.Quasit,
                 CreatureConstants.Rat_Dire,
                 CreatureConstants.RustMonster,
-                CreatureConstants.Salamander_Large,
-                CreatureConstants.Salamander_Small,
+                CreatureConstants.Salamander_Noble,
+                CreatureConstants.Salamander_Average,
+                CreatureConstants.Salamander_Flamebrother,
                 CreatureConstants.Scorpion_Monstrous_Colossal,
                 CreatureConstants.Scorpion_Monstrous_Medium,
                 CreatureConstants.Scorpion_Monstrous_Small,
@@ -221,8 +222,9 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
         [TestCase(CreatureConstants.Quasit, 0, 0, 0)]
         [TestCase(CreatureConstants.Rat_Dire, 0, 0, 0)]
         [TestCase(CreatureConstants.RustMonster, 0, 0, 0)]
-        [TestCase(CreatureConstants.Salamander_Large, 1, 1, 1)]
-        [TestCase(CreatureConstants.Salamander_Small, 1, 1, 1)]
+        [TestCase(CreatureConstants.Salamander_Noble, 2, 2, 2)]
+        [TestCase(CreatureConstants.Salamander_Average, 1, 1, 1)]
+        [TestCase(CreatureConstants.Salamander_Flamebrother, 1, 1, 1)]
         [TestCase(CreatureConstants.Scorpion_Monstrous_Colossal, 0, 0, 0)]
         [TestCase(CreatureConstants.Scorpion_Monstrous_Medium, 0, 0, 0)]
         [TestCase(CreatureConstants.Scorpion_Monstrous_Small, 0, 0, 0)]

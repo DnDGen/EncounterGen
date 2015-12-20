@@ -16,32 +16,52 @@ namespace EncounterGen.Tests.Integration.Stress
         [Inject]
         public Random Random { get; set; }
 
-        private IEnumerable<String> environments;
+        private IEnumerable<string> environments;
 
         [SetUp]
         public void Setup()
         {
             environments = new[]
             {
-                EnvironmentConstants.ColdForest,
-                EnvironmentConstants.TemperateForest,
-                EnvironmentConstants.WarmForest,
-                EnvironmentConstants.ColdMarsh,
-                EnvironmentConstants.TemperateMarsh,
-                EnvironmentConstants.WarmMarsh,
-                EnvironmentConstants.ColdHills,
-                EnvironmentConstants.TemperateHills,
-                EnvironmentConstants.WarmHills,
-                EnvironmentConstants.ColdMountain,
-                EnvironmentConstants.TemperateMountain,
-                EnvironmentConstants.WarmMountain,
-                EnvironmentConstants.ColdDesert,
-                EnvironmentConstants.TemperateDesert,
-                EnvironmentConstants.WarmDesert,
-                EnvironmentConstants.ColdPlains,
-                EnvironmentConstants.TemperatePlains,
-                EnvironmentConstants.WarmPlains,
-                EnvironmentConstants.Dungeon
+                EnvironmentConstants.ColdForestDay,
+                EnvironmentConstants.TemperateForestDay,
+                EnvironmentConstants.WarmForestDay,
+                EnvironmentConstants.ColdMarshDay,
+                EnvironmentConstants.TemperateMarshDay,
+                EnvironmentConstants.WarmMarshDay,
+                EnvironmentConstants.ColdHillsDay,
+                EnvironmentConstants.TemperateHillsDay,
+                EnvironmentConstants.WarmHillsDay,
+                EnvironmentConstants.ColdMountainDay,
+                EnvironmentConstants.TemperateMountainDay,
+                EnvironmentConstants.WarmMountainDay,
+                EnvironmentConstants.ColdDesertDay,
+                EnvironmentConstants.TemperateDesertDay,
+                EnvironmentConstants.WarmDesertDay,
+                EnvironmentConstants.ColdPlainsDay,
+                EnvironmentConstants.TemperatePlainsDay,
+                EnvironmentConstants.WarmPlainsDay,
+                EnvironmentConstants.Dungeon,
+                EnvironmentConstants.CivilizedDay,
+                EnvironmentConstants.CivilizedNight,
+                EnvironmentConstants.ColdDesertNight,
+                EnvironmentConstants.ColdForestNight,
+                EnvironmentConstants.ColdHillsNight,
+                EnvironmentConstants.ColdMarshNight,
+                EnvironmentConstants.ColdMountainNight,
+                EnvironmentConstants.ColdPlainsNight,
+                EnvironmentConstants.TemperateDesertNight,
+                EnvironmentConstants.TemperateForestNight,
+                EnvironmentConstants.TemperateHillsNight,
+                EnvironmentConstants.TemperateMarshNight,
+                EnvironmentConstants.TemperateMountainNight,
+                EnvironmentConstants.TemperatePlainsNight,
+                EnvironmentConstants.WarmDesertNight,
+                EnvironmentConstants.WarmForestNight,
+                EnvironmentConstants.WarmHillsNight,
+                EnvironmentConstants.WarmMarshNight,
+                EnvironmentConstants.WarmMountainNight,
+                EnvironmentConstants.WarmPlainsNight
             };
         }
 
@@ -82,18 +102,6 @@ namespace EncounterGen.Tests.Integration.Stress
                 Assert.That(encounter.Treasure.Goods, Is.Empty);
                 Assert.That(encounter.Treasure.Items, Is.Empty);
             }
-        }
-
-        [Test]
-        public void StressDungeonEncounters()
-        {
-            Stress(AssertDungeon);
-        }
-
-        private void AssertDungeon()
-        {
-            var encounter = MakeEncounter(EnvironmentConstants.Dungeon);
-            AssertEncounter(encounter);
         }
     }
 }

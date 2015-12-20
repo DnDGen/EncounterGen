@@ -19,6 +19,7 @@ namespace EncounterGen.Tests.Unit.Common
         {
             Assert.That(creature.Quantity, Is.EqualTo(0));
             Assert.That(creature.Type, Is.Empty);
+            Assert.That(creature.Subtype, Is.Empty);
         }
     }
 }

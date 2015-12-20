@@ -4,6 +4,8 @@ using EncounterGen.Tables;
 using Moq;
 using NUnit.Framework;
 using RollGen;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace EncounterGen.Tests.Unit.Selectors
 {
@@ -116,6 +118,30 @@ namespace EncounterGen.Tests.Unit.Selectors
         {
             var roll = rollSelector.SelectFrom(".9266");
             Assert.That(roll, Is.EqualTo(.9266));
+        }
+
+        [Test]
+        public void GetRollForChallengeRatingAtEffectiveLevel()
+        {
+            var tableName = string.Format(TableNameConstants.LevelXRolls, 9266);
+            mockCollectionSelector.Setup(s => s.SelectFrom(tableName, "challenge rating")).Returns(new[] { "roll" });
+            mockCollectionSelector.Setup(s => s.SelectRandomFrom(It.IsAny<IEnumerable<string>>())).Returns((IEnumerable<string> c) => c.First());
+
+            var roll = rollSelector.SelectFrom(9266, "challenge rating");
+            Assert.That(roll, Is.EqualTo("roll"));
+        }
+
+        [Test]
+        public void GetRandomRollForChallengeRatingAtEffectiveLevel()
+        {
+            var tableName = string.Format(TableNameConstants.LevelXRolls, 9266);
+            var rolls = new[] { "roll", "other roll" };
+
+            mockCollectionSelector.Setup(s => s.SelectFrom(tableName, "challenge rating")).Returns(rolls);
+            mockCollectionSelector.Setup(s => s.SelectRandomFrom(rolls)).Returns("other roll");
+
+            var roll = rollSelector.SelectFrom(9266, "challenge rating");
+            Assert.That(roll, Is.EqualTo("other roll"));
         }
     }
 }

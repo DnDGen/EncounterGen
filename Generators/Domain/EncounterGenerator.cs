@@ -63,14 +63,14 @@ namespace EncounterGen.Generators.Domain
             this.setMetaraceRandomizer = setMetaraceRandomizer;
         }
 
-        public Encounter Generate(String environment, Int32 level)
+        public Encounter Generate(string environment, int level)
         {
-            var tableName = String.Format(TableNameConstants.LevelXEncounterLevel, level);
+            var tableName = string.Format(TableNameConstants.LevelXEncounterLevel, level);
             var encounterLevel = typeAndAmountPercentileSelector.SelectFrom(tableName).Single();
             var effectiveLevel = Convert.ToInt32(encounterLevel.Key);
             var modifier = Convert.ToInt32(encounterLevel.Value);
 
-            tableName = String.Format(TableNameConstants.LevelXENVIRONMENTEncounters, effectiveLevel, environment);
+            tableName = string.Format(TableNameConstants.LevelXENVIRONMENTEncounters, effectiveLevel, environment);
             var encounterCreaturesAndAmounts = typeAndAmountPercentileSelector.SelectFrom(tableName);
 
             while (ShouldReroll(encounterCreaturesAndAmounts.Values, modifier))
@@ -103,20 +103,23 @@ namespace EncounterGen.Generators.Domain
             return encounter;
         }
 
-        private IEnumerable<Creature> GetCreatures(String creatureType, String amount, Int32 modifier, Int32 effectiveLevel)
+        private IEnumerable<Creature> GetCreatures(string creatureType, string amount, int modifier, int effectiveLevel)
         {
-            var effectiveRoll = rollSelector.SelectFrom(amount, modifier);
+            var creaturesRequiringSubtypes = collectionSelector.SelectFrom(TableNameConstants.MonsterGroups, GroupConstants.RequiresSubtype);
+            if (creaturesRequiringSubtypes.Contains(creatureType))
+                return GetCreatureWithSubtype(creatureType, effectiveLevel, modifier);
 
             var creatures = new List<Creature>();
             var creature = new Creature();
             creature.Type = creatureType;
 
+            var effectiveRoll = rollSelector.SelectFrom(amount, modifier);
             var doubleQuantity = rollSelector.SelectFrom(effectiveRoll);
             creature.Quantity = Convert.ToInt32(doubleQuantity);
 
             if (creature.Type == CreatureConstants.Dragon)
             {
-                var tableName = String.Format(TableNameConstants.LevelXDragons, effectiveLevel);
+                var tableName = string.Format(TableNameConstants.LevelXDragons, effectiveLevel);
                 creature.Type = percentileSelector.SelectFrom(tableName);
             }
             else if (creature.Type == CreatureConstants.Mephit)
@@ -126,7 +129,7 @@ namespace EncounterGen.Generators.Domain
 
             var dieRoll = rollSelector.SelectRollFrom(creature.Type);
 
-            if (String.IsNullOrEmpty(dieRoll))
+            if (string.IsNullOrEmpty(dieRoll))
             {
                 creatures.Add(creature);
                 return creatures;
@@ -143,6 +146,36 @@ namespace EncounterGen.Generators.Domain
                 creatures.Add(rolledCreature);
             }
 
+            return creatures;
+        }
+
+        private IEnumerable<Creature> GetCreatureWithSubtype(string creatureType, int effectiveLevel, int modifier)
+        {
+            var creatures = new List<Creature>();
+            var creature = new Creature();
+            creature.Type = creatureType;
+
+            var subtypes = collectionSelector.SelectFrom(TableNameConstants.MonsterGroups, creature.Type);
+            var subtype = collectionSelector.SelectRandomFrom(subtypes);
+
+            var tableName = string.Format(TableNameConstants.CREATURESubtypeChallengeRatings, creature.Type);
+            var challengeRating = collectionSelector.SelectFrom(tableName, subtype).Single();
+            var roll = rollSelector.SelectFrom(effectiveLevel, challengeRating);
+            var effectiveRoll = rollSelector.SelectFrom(roll, modifier);
+
+            while (roll == RollConstants.Reroll || effectiveRoll == RollConstants.Reroll)
+            {
+                subtype = collectionSelector.SelectRandomFrom(subtypes);
+                challengeRating = collectionSelector.SelectFrom(tableName, subtype).Single();
+                roll = rollSelector.SelectFrom(effectiveLevel, challengeRating);
+                effectiveRoll = rollSelector.SelectFrom(roll, modifier);
+            }
+
+            var doubleQuantity = rollSelector.SelectFrom(effectiveRoll);
+            creature.Quantity = Convert.ToInt32(doubleQuantity);
+            creature.Subtype = subtype;
+
+            creatures.Add(creature);
             return creatures;
         }
 
@@ -166,7 +199,7 @@ namespace EncounterGen.Generators.Domain
             return characters;
         }
 
-        private IEnumerable<Character> GetUndeadNPCs(IEnumerable<Creature> creatures, Int32 effectiveLevel)
+        private IEnumerable<Character> GetUndeadNPCs(IEnumerable<Creature> creatures, int effectiveLevel)
         {
             var undeadNPCTypes = collectionSelector.SelectFrom(TableNameConstants.MonsterGroups, GroupConstants.UndeadNPC);
             var undeadNPCs = new List<Character>();
@@ -179,7 +212,7 @@ namespace EncounterGen.Generators.Domain
 
             setMetaraceRandomizer.SetMetarace = undeadNPCCreature.Type;
 
-            var tableName = String.Format(TableNameConstants.LevelXUndeadNPC, effectiveLevel);
+            var tableName = string.Format(TableNameConstants.LevelXUndeadNPC, effectiveLevel);
             setLevelRandomizer.AllowAdjustments = false;
 
             while (undeadNPCQuantity-- > 0)
@@ -193,18 +226,18 @@ namespace EncounterGen.Generators.Domain
             return undeadNPCs;
         }
 
-        private Int32 GetCharacterLevel(Creature characterCreature)
+        private int GetCharacterLevel(Creature characterCreature)
         {
-            var levelString = characterCreature.Type.Replace(CreatureConstants.Character, String.Empty);
+            var levelString = characterCreature.Type.Replace(CreatureConstants.Character, string.Empty);
             return Convert.ToInt32(levelString);
         }
 
-        private Boolean ShouldReroll(IEnumerable<String> amounts, Int32 modifier)
+        private bool ShouldReroll(IEnumerable<string> amounts, int modifier)
         {
             return amounts.Any(a => rollSelector.SelectFrom(a, modifier) == RollConstants.Reroll);
         }
 
-        private Treasure GenerateTreasureFor(String creature, Int32 level)
+        private Treasure GenerateTreasureFor(string creature, int level)
         {
             var coinMultiplier = adjustmentSelector.SelectFrom(TableNameConstants.TreasureAdjustments, creature, TreasureConstants.Coin);
             var goodsMultiplier = adjustmentSelector.SelectFrom(TableNameConstants.TreasureAdjustments, creature, TreasureConstants.Goods);

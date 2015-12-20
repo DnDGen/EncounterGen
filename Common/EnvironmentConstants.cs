@@ -1,27 +1,45 @@
-﻿using System;
-
-namespace EncounterGen.Common
+﻿namespace EncounterGen.Common
 {
     public static class EnvironmentConstants
     {
-        public const String ColdForest = "Cold Forest";
-        public const String TemperateForest = "Temperate Forest";
-        public const String WarmForest = "Warm Forest";
-        public const String ColdMarsh = "Cold Marsh";
-        public const String TemperateMarsh = "Temperate Marsh";
-        public const String WarmMarsh = "Warm Marsh";
-        public const String ColdHills = "Cold Hills";
-        public const String TemperateHills = "Temperate Hills";
-        public const String WarmHills = "Warm Hills";
-        public const String ColdMountain = "Cold Mountain";
-        public const String TemperateMountain = "Temperate Mountain";
-        public const String WarmMountain = "Warm Mountain";
-        public const String ColdDesert = "Cold Desert";
-        public const String TemperateDesert = "Temperate Desert";
-        public const String WarmDesert = "Warm Desert";
-        public const String ColdPlains = "Cold Plains";
-        public const String TemperatePlains = "Temperate Plains";
-        public const String WarmPlains = "Warm Plains";
-        public const String Dungeon = "Dungeon";
+        public const string ColdForestDay = "Cold Forest Day";
+        public const string TemperateForestDay = "Temperate Forest Day";
+        public const string WarmForestDay = "Warm Forest Day";
+        public const string ColdMarshDay = "Cold Marsh Day";
+        public const string TemperateMarshDay = "Temperate Marsh Day";
+        public const string WarmMarshDay = "Warm Marsh Day";
+        public const string ColdHillsDay = "Cold Hills Day";
+        public const string TemperateHillsDay = "Temperate Hills Day";
+        public const string WarmHillsDay = "Warm Hills Day";
+        public const string ColdMountainDay = "Cold Mountain Day";
+        public const string TemperateMountainDay = "Temperate Mountain Day";
+        public const string WarmMountainDay = "Warm Mountain Day";
+        public const string ColdDesertDay = "Cold Desert Day";
+        public const string TemperateDesertDay = "Temperate Desert Day";
+        public const string WarmDesertDay = "Warm Desert Day";
+        public const string ColdPlainsDay = "Cold Plains Day";
+        public const string TemperatePlainsDay = "Temperate Plains Day";
+        public const string WarmPlainsDay = "Warm Plains Day";
+        public const string Dungeon = "Dungeon";
+        public const string CivilizedDay = "Civilized Day";
+        public const string ColdForestNight = "Cold Forest Night";
+        public const string TemperateForestNight = "Temperate Forest Night";
+        public const string WarmForestNight = "Warm Forest Night";
+        public const string ColdMarshNight = "Cold Marsh Night";
+        public const string TemperateMarshNight = "Temperate Marsh Night";
+        public const string WarmMarshNight = "Warm Marsh Night";
+        public const string ColdHillsNight = "Cold Hills Night";
+        public const string TemperateHillsNight = "Temperate Hills Night";
+        public const string WarmHillsNight = "Warm Hills Night";
+        public const string ColdMountainNight = "Cold Mountain Night";
+        public const string TemperateMountainNight = "Temperate Mountain Night";
+        public const string WarmMountainNight = "Warm Mountain Night";
+        public const string ColdDesertNight = "Cold Desert Night";
+        public const string TemperateDesertNight = "Temperate Desert Night";
+        public const string WarmDesertNight = "Warm Desert Night";
+        public const string ColdPlainsNight = "Cold Plains Night";
+        public const string TemperatePlainsNight = "Temperate Plains Night";
+        public const string WarmPlainsNight = "Warm Plains Night";
+        public const string CivilizedNight = "Civilized Night";
     }
 }

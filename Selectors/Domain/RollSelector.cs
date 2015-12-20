@@ -20,7 +20,16 @@ namespace EncounterGen.Selectors.Domain
             rollRegex = new Regex("\\d+d\\d+(\\+\\d+)*");
         }
 
-        public Double SelectFrom(String roll)
+        public string SelectFrom(int effectiveLevel, string challengeRating)
+        {
+            var tableName = string.Format(TableNameConstants.LevelXRolls, effectiveLevel);
+            var rolls = collectionSelector.SelectFrom(tableName, challengeRating);
+            var roll = collectionSelector.SelectRandomFrom(rolls);
+
+            return roll;
+        }
+
+        public double SelectFrom(string roll)
         {
             var sections = roll.Split('d', '+');
             if (sections.Length == 1)
@@ -36,7 +45,7 @@ namespace EncounterGen.Selectors.Domain
             return dice.Roll(quantity).d(die) + bonus;
         }
 
-        public String SelectFrom(String baseRoll, Int32 modifier)
+        public string SelectFrom(string baseRoll, int modifier)
         {
             var rolls = collectionSelector.SelectFrom(TableNameConstants.RollOrder, "All").ToList();
             var index = rolls.IndexOf(baseRoll);
@@ -48,12 +57,12 @@ namespace EncounterGen.Selectors.Domain
             return rolls[modifiedIndex];
         }
 
-        public String SelectRollFrom(String source)
+        public string SelectRollFrom(string source)
         {
             var matches = rollRegex.Matches(source);
 
             if (matches.Count == 0)
-                return String.Empty;
+                return string.Empty;
 
             return matches[0].Value;
         }

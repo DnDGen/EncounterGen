@@ -1,9 +1,8 @@
-﻿using System;
-
-namespace EncounterGen.Tables
+﻿namespace EncounterGen.Tables
 {
     public static class GroupConstants
     {
-        public const String UndeadNPC = "Undead NPC";
+        public const string RequiresSubtype = "Requires Subtype";
+        public const string UndeadNPC = "Undead NPC";
     }
 }

@@ -1,6 +1,5 @@
 ﻿using EncounterGen.Tables;
 using NUnit.Framework;
-using System;
 
 namespace EncounterGen.Tests.Unit.Tables
 {
@@ -8,7 +7,8 @@ namespace EncounterGen.Tests.Unit.Tables
     public class GroupConstantsTests
     {
         [TestCase(GroupConstants.UndeadNPC, "Undead NPC")]
-        public void Constant(String constant, String value)
+        [TestCase(GroupConstants.RequiresSubtype, "Requires Subtype")]
+        public void Constant(string constant, string value)
         {
             Assert.That(constant, Is.EqualTo(value));
         }

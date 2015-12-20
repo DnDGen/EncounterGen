@@ -1,10 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace EncounterGen.Selectors
 {
     public interface ICollectionSelector
     {
-        IEnumerable<String> SelectFrom(String tableName, String name);
+        IEnumerable<string> SelectFrom(string tableName, string name);
+        string SelectRandomFrom(IEnumerable<string> collection);
     }
 }
