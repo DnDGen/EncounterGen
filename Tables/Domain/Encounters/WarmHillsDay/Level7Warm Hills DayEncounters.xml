@@ -193,16 +193,26 @@
   </object>
   <object>
     <lower>87</lower>
-    <content>Celestial creature/1</content>
+    <content>Skeleton/1</content>
     <upper>87</upper>
   </object>
   <object>
     <lower>88</lower>
-    <content>Fiendish creature/1</content>
+    <content>Zombie/1</content>
     <upper>88</upper>
   </object>
   <object>
     <lower>89</lower>
+    <content>Celestial creature/1</content>
+    <upper>89</upper>
+  </object>
+  <object>
+    <lower>90</lower>
+    <content>Fiendish creature/1</content>
+    <upper>90</upper>
+  </object>
+  <object>
+    <lower>91</lower>
     <content>Character4/1d3+1</content>
     <upper>100</upper>
   </object>
