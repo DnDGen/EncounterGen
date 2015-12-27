@@ -9,9 +9,9 @@ namespace EncounterGen.Selectors.Domain
     public class CollectionSelector : ICollectionSelector
     {
         private CollectionMapper mapper;
-        private IDice dice;
+        private Dice dice;
 
-        public CollectionSelector(CollectionMapper mapper, IDice dice)
+        public CollectionSelector(CollectionMapper mapper, Dice dice)
         {
             this.mapper = mapper;
             this.dice = dice;

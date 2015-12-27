@@ -77,6 +77,7 @@ namespace EncounterGen.Tests.Unit.Common
         [TestCase(CreatureConstants.Nightcrawler, "Nightcrawler (nightshade)")]
         [TestCase(CreatureConstants.Nightmare, "Nightmare")]
         [TestCase(CreatureConstants.Nightwalker, "Nightwalker (nightshade)")]
+        [TestCase(CreatureConstants.NPC, "NPC")]
         [TestCase(CreatureConstants.Ogre, "Ogre")]
         [TestCase(CreatureConstants.Ooze_Gray, "Gray ooze")]
         [TestCase(CreatureConstants.Ooze_OchreJelly, "Ochre jelly")]

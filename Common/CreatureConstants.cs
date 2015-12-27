@@ -99,6 +99,7 @@
         public const string Nightcrawler = "Nightcrawler (nightshade)";
         public const string Nightmare = "Nightmare";
         public const string Nightwalker = "Nightwalker (nightshade)";
+        public const string NPC = "NPC";
         public const string Nymph = "Nymph";
         public const string Ogre = "Ogre";
         public const string Ooze_Gray = "Gray ooze";

@@ -11,6 +11,7 @@ using EncounterGen.Tables;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
 using TreasureGen.Common;
 using TreasureGen.Generators.Coins;
 using TreasureGen.Generators.Goods;
@@ -26,7 +27,9 @@ namespace EncounterGen.Generators.Domain
         private IItemsGenerator itemsGenerator;
         private ICharacterGenerator characterGenerator;
         private IAlignmentRandomizer alignmentRandomizer;
-        private IClassNameRandomizer classNameRandomizer;
+        private IClassNameRandomizer anyPlayerClassNameRandomizer;
+        private IClassNameRandomizer anyNPCClassNameRandomizer;
+        private ISetClassNameRandomizer setClassNameRandomizer;
         private ISetLevelRandomizer setLevelRandomizer;
         private RaceRandomizer baseRaceRandomizer;
         private RaceRandomizer metaraceRandomizer;
@@ -37,12 +40,14 @@ namespace EncounterGen.Generators.Domain
         private IBooleanPercentileSelector booleanPercentileSelector;
         private ICollectionSelector collectionSelector;
         private ISetMetaraceRandomizer setMetaraceRandomizer;
+        private Regex characterLevelRegex;
 
         public EncounterGenerator(ITypeAndAmountPercentileSelector typeAndAmountPercentileSelector, ICoinGenerator coinGenerator,
-            IGoodsGenerator goodsGenerator, IItemsGenerator itemsGenerator, ICharacterGenerator characterGenerator, IAlignmentRandomizer alignmentRandomizer, IClassNameRandomizer classNameRandomizer,
+            IGoodsGenerator goodsGenerator, IItemsGenerator itemsGenerator, ICharacterGenerator characterGenerator, IAlignmentRandomizer alignmentRandomizer, IClassNameRandomizer anyPlayerClassNameRandomizer,
             ISetLevelRandomizer setLevelRandomizer, RaceRandomizer baseRaceRandomizer, RaceRandomizer metaraceRandomizer, IStatsRandomizer statsRandomizer,
             IAdjustmentSelector adjustmentSelector, IRollSelector rollSelector, IPercentileSelector percentileSelector, IBooleanPercentileSelector booleanPercentileSelector,
-            ICollectionSelector collectionSelector, ISetMetaraceRandomizer setMetaraceRandomizer)
+            ICollectionSelector collectionSelector, ISetMetaraceRandomizer setMetaraceRandomizer, IClassNameRandomizer anyNPCClassNameRandomizer,
+            ISetClassNameRandomizer setClassNameRandomizer)
         {
             this.typeAndAmountPercentileSelector = typeAndAmountPercentileSelector;
             this.coinGenerator = coinGenerator;
@@ -50,7 +55,7 @@ namespace EncounterGen.Generators.Domain
             this.itemsGenerator = itemsGenerator;
             this.characterGenerator = characterGenerator;
             this.alignmentRandomizer = alignmentRandomizer;
-            this.classNameRandomizer = classNameRandomizer;
+            this.anyPlayerClassNameRandomizer = anyPlayerClassNameRandomizer;
             this.setLevelRandomizer = setLevelRandomizer;
             this.baseRaceRandomizer = baseRaceRandomizer;
             this.metaraceRandomizer = metaraceRandomizer;
@@ -61,6 +66,10 @@ namespace EncounterGen.Generators.Domain
             this.booleanPercentileSelector = booleanPercentileSelector;
             this.collectionSelector = collectionSelector;
             this.setMetaraceRandomizer = setMetaraceRandomizer;
+            this.anyNPCClassNameRandomizer = anyNPCClassNameRandomizer;
+            this.setClassNameRandomizer = setClassNameRandomizer;
+
+            characterLevelRegex = new Regex("\\d+$");
         }
 
         public Encounter Generate(string environment, int level)
@@ -80,36 +89,77 @@ namespace EncounterGen.Generators.Domain
 
             foreach (var kvp in encounterCreaturesAndAmounts)
             {
-                var newCreatures = GetCreatures(kvp.Key, kvp.Value, modifier, effectiveLevel);
-                creatures.AddRange(newCreatures);
+                var newCreature = GetCreature(kvp.Key, kvp.Value, modifier, effectiveLevel);
+                creatures.Add(newCreature);
             }
 
             var encounter = new Encounter();
-            encounter.Creatures = creatures;
-
             var leadCreature = encounterCreaturesAndAmounts.First().Key;
+
             encounter.Treasure = GenerateTreasureFor(leadCreature, level);
-
-            var characters = GetCharacters(encounter.Creatures);
-            encounter.Characters = encounter.Characters.Union(characters);
-
-            var undeadNPCs = GetUndeadNPCs(encounter.Creatures, effectiveLevel);
-            encounter.Characters = encounter.Characters.Union(undeadNPCs);
-
-            foreach (var creature in encounter.Creatures)
-                if (creature.Type.Contains(CreatureConstants.Character))
-                    creature.Type = CreatureConstants.Character;
+            encounter.Characters = GetCharacters(creatures, effectiveLevel);
+            encounter.Creatures = EditCreatureTypes(creatures, effectiveLevel);
 
             return encounter;
         }
 
-        private IEnumerable<Creature> GetCreatures(string creatureType, string amount, int modifier, int effectiveLevel)
+        private IEnumerable<Creature> EditCreatureTypes(IEnumerable<Creature> creatures, int effectiveLevel)
         {
-            var creaturesRequiringSubtypes = collectionSelector.SelectFrom(TableNameConstants.MonsterGroups, GroupConstants.RequiresSubtype);
+            var newCreatures = new List<Creature>();
+            var creaturesToRemove = new List<Creature>();
+
+            foreach (var creature in creatures)
+            {
+                if (IsCharacterCreature(creature))
+                {
+                    creature.Subtype = GetCharacterSubtype(creature.Type, effectiveLevel);
+                    creature.Type = GetCharacterCreatureType(creature.Type);
+                }
+                else if (creature.Type == CreatureConstants.Dragon)
+                {
+                    var tableName = string.Format(TableNameConstants.LevelXDragons, effectiveLevel);
+                    creature.Type = percentileSelector.SelectFrom(tableName);
+                }
+
+                var dieRoll = rollSelector.SelectRollFrom(creature.Type);
+
+                if (string.IsNullOrEmpty(dieRoll))
+                    continue;
+
+                creaturesToRemove.Add(creature);
+
+                while (creature.Quantity-- > 0)
+                {
+                    var rolledCreature = new Creature();
+                    rolledCreature.Quantity = 1;
+
+                    var roll = rollSelector.SelectFrom(dieRoll);
+                    rolledCreature.Type = creature.Type.Replace(dieRoll, roll.ToString());
+
+                    newCreatures.Add(rolledCreature);
+                }
+            }
+
+            return creatures.Union(newCreatures).Except(creaturesToRemove);
+        }
+
+        private string GetCharacterSubtype(string fullCharacterType, int effectiveLevel)
+        {
+            var characterType = GetCharacterCreatureType(fullCharacterType);
+            var level = GetCharacterLevel(fullCharacterType, effectiveLevel);
+
+            return fullCharacterType.Replace(characterType, string.Empty)
+                                    .Replace(" (", string.Empty)
+                                    .Replace(")", string.Empty)
+                                    .Replace(level.ToString(), string.Empty);
+        }
+
+        private Creature GetCreature(string creatureType, string amount, int modifier, int effectiveLevel)
+        {
+            var creaturesRequiringSubtypes = collectionSelector.SelectFrom(TableNameConstants.CreatureGroups, GroupConstants.RequiresSubtype);
             if (creaturesRequiringSubtypes.Contains(creatureType))
                 return GetCreatureWithSubtype(creatureType, effectiveLevel, modifier);
 
-            var creatures = new List<Creature>();
             var creature = new Creature();
             creature.Type = creatureType;
 
@@ -117,45 +167,15 @@ namespace EncounterGen.Generators.Domain
             var doubleQuantity = rollSelector.SelectFrom(effectiveRoll);
             creature.Quantity = Convert.ToInt32(doubleQuantity);
 
-            if (creature.Type == CreatureConstants.Dragon)
-            {
-                var tableName = string.Format(TableNameConstants.LevelXDragons, effectiveLevel);
-                creature.Type = percentileSelector.SelectFrom(tableName);
-            }
-            else if (creature.Type == CreatureConstants.Mephit)
-            {
-                creature.Type = percentileSelector.SelectFrom(TableNameConstants.Mephits);
-            }
-
-            var dieRoll = rollSelector.SelectRollFrom(creature.Type);
-
-            if (string.IsNullOrEmpty(dieRoll))
-            {
-                creatures.Add(creature);
-                return creatures;
-            }
-
-            while (creature.Quantity-- > 0)
-            {
-                var rolledCreature = new Creature();
-                rolledCreature.Quantity = 1;
-
-                var roll = rollSelector.SelectFrom(dieRoll);
-                rolledCreature.Type = creature.Type.Replace(dieRoll, roll.ToString());
-
-                creatures.Add(rolledCreature);
-            }
-
-            return creatures;
+            return creature;
         }
 
-        private IEnumerable<Creature> GetCreatureWithSubtype(string creatureType, int effectiveLevel, int modifier)
+        private Creature GetCreatureWithSubtype(string creatureType, int effectiveLevel, int modifier)
         {
-            var creatures = new List<Creature>();
             var creature = new Creature();
             creature.Type = creatureType;
 
-            var subtypes = collectionSelector.SelectFrom(TableNameConstants.MonsterGroups, creature.Type);
+            var subtypes = collectionSelector.SelectFrom(TableNameConstants.CreatureGroups, creature.Type);
             var subtype = collectionSelector.SelectRandomFrom(subtypes);
 
             var tableName = string.Format(TableNameConstants.CREATURESubtypeChallengeRatings, creature.Type);
@@ -175,61 +195,91 @@ namespace EncounterGen.Generators.Domain
             creature.Quantity = Convert.ToInt32(doubleQuantity);
             creature.Subtype = subtype;
 
-            creatures.Add(creature);
-            return creatures;
+            return creature;
         }
 
-        private IEnumerable<Character> GetCharacters(IEnumerable<Creature> creatures)
+        private IEnumerable<Character> GetCharacters(IEnumerable<Creature> creatures, int effectiveLevel)
         {
             var characters = new List<Character>();
+            var characterCreatures = creatures.Where(c => IsCharacterCreature(c));
 
-            if (creatures.Any(c => c.Type.Contains(CreatureConstants.Character)) == false)
+            if (characterCreatures.Any() == false)
                 return characters;
 
-            var characterCreature = creatures.Single(c => c.Type.Contains(CreatureConstants.Character));
-            var characterQuantity = characterCreature.Quantity;
-            setLevelRandomizer.SetLevel = GetCharacterLevel(characterCreature);
-
-            while (characterQuantity-- > 0)
+            foreach (var characterCreature in characterCreatures)
             {
-                var character = characterGenerator.GenerateWith(alignmentRandomizer, classNameRandomizer, setLevelRandomizer, baseRaceRandomizer, metaraceRandomizer, statsRandomizer);
-                characters.Add(character);
+                var characterQuantity = characterCreature.Quantity;
+
+                while (characterQuantity-- > 0)
+                {
+                    var character = GenerateCharacter(characterCreature, effectiveLevel);
+                    characters.Add(character);
+                }
             }
 
             return characters;
         }
 
-        private IEnumerable<Character> GetUndeadNPCs(IEnumerable<Creature> creatures, int effectiveLevel)
+        private bool IsCharacterCreature(Creature creature)
         {
-            var undeadNPCTypes = collectionSelector.SelectFrom(TableNameConstants.MonsterGroups, GroupConstants.UndeadNPC);
-            var undeadNPCs = new List<Character>();
-
-            if (creatures.Any(c => undeadNPCTypes.Contains(c.Type)) == false)
-                return undeadNPCs;
-
-            var undeadNPCCreature = creatures.Single(c => undeadNPCTypes.Contains(c.Type));
-            var undeadNPCQuantity = undeadNPCCreature.Quantity;
-
-            setMetaraceRandomizer.SetMetarace = undeadNPCCreature.Type;
-
-            var tableName = string.Format(TableNameConstants.LevelXUndeadNPC, effectiveLevel);
-            setLevelRandomizer.AllowAdjustments = false;
-
-            while (undeadNPCQuantity-- > 0)
-            {
-                setLevelRandomizer.SetLevel = adjustmentSelector.SelectFrom(tableName, setMetaraceRandomizer.SetMetarace);
-
-                var undeadNPC = characterGenerator.GenerateWith(alignmentRandomizer, classNameRandomizer, setLevelRandomizer, baseRaceRandomizer, setMetaraceRandomizer, statsRandomizer);
-                undeadNPCs.Add(undeadNPC);
-            }
-
-            return undeadNPCs;
+            var characterCreatureType = GetCharacterCreatureType(creature.Type);
+            return string.IsNullOrEmpty(characterCreatureType) == false;
         }
 
-        private int GetCharacterLevel(Creature characterCreature)
+        private string GetCharacterCreatureType(string creatureType)
         {
-            var levelString = characterCreature.Type.Replace(CreatureConstants.Character, string.Empty);
-            return Convert.ToInt32(levelString);
+            if (creatureType.Contains(CreatureConstants.Character))
+                return CreatureConstants.Character;
+
+            if (creatureType.Contains(CreatureConstants.NPC))
+                return CreatureConstants.NPC;
+
+            var undeadNPCCreatures = collectionSelector.SelectFrom(TableNameConstants.CreatureGroups, GroupConstants.UndeadNPC);
+            if (undeadNPCCreatures.Contains(creatureType))
+                return creatureType;
+
+            var classes = collectionSelector.SelectFrom(TableNameConstants.CreatureGroups, CreatureConstants.Character);
+            return classes.FirstOrDefault(cl => creatureType.Contains(cl));
+        }
+
+        private Character GenerateCharacter(Creature creature, int effectiveLevel)
+        {
+            var characterCreatureType = GetCharacterCreatureType(creature.Type);
+            setLevelRandomizer.SetLevel = GetCharacterLevel(creature.Type, effectiveLevel);
+
+            var undeadNPCCreatures = collectionSelector.SelectFrom(TableNameConstants.CreatureGroups, GroupConstants.UndeadNPC);
+            if (undeadNPCCreatures.Contains(creature.Type))
+            {
+                setMetaraceRandomizer.SetMetarace = creature.Type;
+                setLevelRandomizer.AllowAdjustments = false;
+
+                return characterGenerator.GenerateWith(alignmentRandomizer, anyPlayerClassNameRandomizer, setLevelRandomizer, baseRaceRandomizer, setMetaraceRandomizer, statsRandomizer);
+            }
+
+            if (characterCreatureType == CreatureConstants.Character)
+                return characterGenerator.GenerateWith(alignmentRandomizer, anyPlayerClassNameRandomizer, setLevelRandomizer, baseRaceRandomizer, metaraceRandomizer, statsRandomizer);
+
+            if (characterCreatureType == CreatureConstants.NPC)
+                return characterGenerator.GenerateWith(alignmentRandomizer, anyNPCClassNameRandomizer, setLevelRandomizer, baseRaceRandomizer, metaraceRandomizer, statsRandomizer);
+
+            setClassNameRandomizer.SetClassName = characterCreatureType;
+            return characterGenerator.GenerateWith(alignmentRandomizer, setClassNameRandomizer, setLevelRandomizer, baseRaceRandomizer, metaraceRandomizer, statsRandomizer);
+        }
+
+        private int GetCharacterLevel(string characterCreatureType, int effectiveLevel)
+        {
+            var undeadNPCCreatures = collectionSelector.SelectFrom(TableNameConstants.CreatureGroups, GroupConstants.UndeadNPC);
+            if (undeadNPCCreatures.Contains(characterCreatureType))
+            {
+                var tableName = string.Format(TableNameConstants.LevelXUndeadNPC, effectiveLevel);
+                return adjustmentSelector.SelectFrom(tableName, characterCreatureType);
+            }
+
+            var levelMatch = characterLevelRegex.Match(characterCreatureType);
+            if (string.IsNullOrEmpty(levelMatch.Value))
+                return 0;
+
+            return Convert.ToInt32(levelMatch.Value);
         }
 
         private bool ShouldReroll(IEnumerable<string> amounts, int modifier)

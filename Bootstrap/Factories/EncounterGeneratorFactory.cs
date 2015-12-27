@@ -24,7 +24,9 @@ namespace EncounterGen.Bootstrap.Factories
             var itemsGenerator = kernel.Get<IItemsGenerator>();
             var characterGenerator = kernel.Get<ICharacterGenerator>();
             var alignmentRandomizer = kernel.Get<IAlignmentRandomizer>(AlignmentRandomizerTypeConstants.Any);
-            var classNameRandomizer = kernel.Get<IClassNameRandomizer>(ClassNameRandomizerTypeConstants.Any);
+            var anyPlayerclassNameRandomizer = kernel.Get<IClassNameRandomizer>(ClassNameRandomizerTypeConstants.AnyPlayer);
+            var anyNPCClassNameRandomizer = kernel.Get<IClassNameRandomizer>(ClassNameRandomizerTypeConstants.AnyNPC);
+            var setClassNameRandomizer = kernel.Get<ISetClassNameRandomizer>();
             var setLevelRandomizer = kernel.Get<ISetLevelRandomizer>();
             var baseRaceRandomizer = kernel.Get<RaceRandomizer>(RaceRandomizerTypeConstants.BaseRace.AnyBase);
             var metaraceRandomizer = kernel.Get<RaceRandomizer>(RaceRandomizerTypeConstants.Metarace.AnyMeta);
@@ -37,8 +39,8 @@ namespace EncounterGen.Bootstrap.Factories
             var setMetaraceRandomizer = kernel.Get<ISetMetaraceRandomizer>();
 
             return new EncounterGenerator(typeAndAmountPercentileSelector, coinGenerator, goodsGenerator, itemsGenerator, characterGenerator, alignmentRandomizer,
-                classNameRandomizer, setLevelRandomizer, baseRaceRandomizer, metaraceRandomizer, statsRandomizer, adjustmentSelector, rollSelector, percentileSelector,
-                booleanPercentileSelector, collectionSelector, setMetaraceRandomizer);
+                anyPlayerclassNameRandomizer, setLevelRandomizer, baseRaceRandomizer, metaraceRandomizer, statsRandomizer, adjustmentSelector, rollSelector, percentileSelector,
+                booleanPercentileSelector, collectionSelector, setMetaraceRandomizer, anyNPCClassNameRandomizer, setClassNameRandomizer);
         }
     }
 }

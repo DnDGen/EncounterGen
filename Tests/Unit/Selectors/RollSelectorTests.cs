@@ -14,13 +14,13 @@ namespace EncounterGen.Tests.Unit.Selectors
     {
         private IRollSelector rollSelector;
         private Mock<ICollectionSelector> mockCollectionSelector;
-        private Mock<IDice> mockDice;
+        private Mock<Dice> mockDice;
 
         [SetUp]
         public void Setup()
         {
             mockCollectionSelector = new Mock<ICollectionSelector>();
-            mockDice = new Mock<IDice>();
+            mockDice = new Mock<Dice>();
             rollSelector = new RollSelector(mockCollectionSelector.Object, mockDice.Object);
 
             var rolls = new[] { RollConstants.One, "lesser roll", "base roll", "greater roll", RollConstants.Reroll };
@@ -63,26 +63,11 @@ namespace EncounterGen.Tests.Unit.Selectors
         }
 
         [Test]
-        public void GetConstant()
+        public void GetExpressionRoll()
         {
-            var roll = rollSelector.SelectFrom("9266");
-            Assert.That(roll, Is.EqualTo(9266));
-        }
-
-        [Test]
-        public void GetDieRoll()
-        {
-            mockDice.Setup(r => r.Roll(9266).d(90210)).Returns(42);
-            var roll = rollSelector.SelectFrom("9266d90210");
+            mockDice.Setup(r => r.Roll("expression roll")).Returns(42);
+            var roll = rollSelector.SelectFrom("expression roll");
             Assert.That(roll, Is.EqualTo(42));
-        }
-
-        [Test]
-        public void GetDieRollWithBonus()
-        {
-            mockDice.Setup(r => r.Roll(9266).d(90210)).Returns(42);
-            var roll = rollSelector.SelectFrom("9266d90210+600");
-            Assert.That(roll, Is.EqualTo(642));
         }
 
         [Test]

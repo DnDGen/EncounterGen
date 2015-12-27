@@ -33,8 +33,8 @@
     <OutputPath>bin\Stress\</OutputPath>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="RollGen, Version=1.0.5697.27803, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\D20Dice.9.1\lib\RollGen.dll</HintPath>
+    <Reference Include="RollGen, Version=1.0.5830.19223, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\D20Dice.10.0\lib\RollGen.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />

@@ -17,13 +17,13 @@ namespace EncounterGen.Tests.Unit.Selectors
         private ICollectionSelector selector;
         private Mock<CollectionMapper> mockMapper;
         private Dictionary<string, IEnumerable<string>> allCollections;
-        private Mock<IDice> mockDice;
+        private Mock<Dice> mockDice;
 
         [SetUp]
         public void Setup()
         {
             mockMapper = new Mock<CollectionMapper>();
-            mockDice = new Mock<IDice>();
+            mockDice = new Mock<Dice>();
             selector = new CollectionSelector(mockMapper.Object, mockDice.Object);
             allCollections = new Dictionary<string, IEnumerable<string>>();
 
