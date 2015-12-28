@@ -52,7 +52,7 @@ namespace EncounterGen.Tests.Integration.Tables.Encounters.Dungeon
         [TestCase(70, 72, CreatureConstants.Ogre, RollConstants.OneD3Plus1)]
         [TestCase(73, 75, CreatureConstants.Salamander_Flamebrother, RollConstants.OneD3Plus1)]
         [TestCase(76, 77, CreatureConstants.Troglodyte, RollConstants.OneD3Plus1,
-            CreatureConstants.Lizard_Giant, RollConstants.OneD2)]
+            CreatureConstants.Lizard_Monitor, RollConstants.OneD2)]
         [TestCase(78, 80, CreatureConstants.Worg, RollConstants.OneD3Plus1)]
         [TestCase(81, 85, CreatureConstants.Ghast, RollConstants.One,
             CreatureConstants.Ghoul, RollConstants.OneD3Plus1)]

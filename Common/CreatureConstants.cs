@@ -3,10 +3,14 @@
     public static class CreatureConstants
     {
         public const string Allip = "Allip";
-        public const string Ankheg = "Ankheg";
         public const string AnimatedObject_Gargantuan = "Gargantuan animated object";
+        public const string AnimatedObject_Medium = "Medium animated object";
+        public const string AnimatedObject_Small = "Small animated object";
+        public const string AnimatedObject_Tiny = "Tiny animated object";
+        public const string Ankheg = "Ankheg";
         public const string Ant_Giant_Soldier = "Giant soldier ant";
         public const string Ant_Giant_Worker = "Giant worker ant";
+        public const string Ape = "Ape";
         public const string Ape_Dire = "Dire ape";
         public const string Aranea = "Aranea";
         public const string Arrowhawk_Adult = "Adult arrowhawk";
@@ -18,6 +22,7 @@
         public const string Barbazu = "Barbazu (devil)";
         public const string Barghest = "Barghest";
         public const string Bat_Dire = "Dire bat";
+        public const string Bear_Black = "Black bear";
         public const string Bear_Dire = "Dire bear";
         public const string Bee_Giant = "Giant bee";
         public const string Behir = "Behir";
@@ -30,9 +35,11 @@
         public const string Bugbear = "Bugbear";
         public const string CarrionCrawler = "Carrion crawler";
         public const string CelestialCreature = "Celestial creature";
+        public const string Centipede_Monstrous_Huge = "Huge monstrous centipede";
         public const string Centipede_Monstrous_Large = "Large monstrous centipede";
         public const string Centipede_Monstrous_Medium = "Medium monstrous centipede";
         public const string Centipede_Monstrous_Small = "Small monstrous centipede";
+        public const string Centipede_Monstrous_Tiny = "Tiny monstrous centipede";
         public const string ChaosBeast = "Chaos beast";
         public const string Character = "Character";
         public const string Chimera = "Chimera";
@@ -85,6 +92,7 @@
         public const string Goblin = "Goblin";
         public const string Golem_Flesh = "Flesh golem";
         public const string Golem_Stone = "Stone golem";
+        public const string Golem_Stone_Greater = "Greater stone golem";
         public const string Gorgon = "Gorgon";
         public const string GrayRender = "Gray render";
         public const string Greenhag = "Greenhag";
@@ -106,10 +114,11 @@
         public const string Lammasu = "Lammasu";
         public const string LanternArchon = "Lantern archon (celestial)";
         public const string Lemure = "Lemure (devil)";
+        public const string Leopard = "Leopard";
         public const string Lich = "Lich";
         public const string Lillend = "Lillend";
         public const string Lion_Dire = "Dire lion";
-        public const string Lizard_Giant = "Giant lizard";
+        public const string Lizard_Monitor = "Monitor lizard";
         public const string Lizardfolk = "Lizardfolk";
         public const string Magmin = "Magmin";
         public const string Marilith = "Marilith (demon)";
@@ -138,6 +147,7 @@
         public const string Phasm = "Phasm";
         public const string PitFiend = "Pit fiend (devil)";
         public const string Planetar = "Planetar (celestial)";
+        public const string Pseudodragon = "Pseudodragon";
         public const string PurpleWorm = "Purple worm";
         public const string Pyrohydra = "Pyrohydra";
         public const string Quasit = "Quasit (demon)";
@@ -159,20 +169,25 @@
         public const string Slaad_Death = "Death slaad";
         public const string Slaad_Green = "Green slaad";
         public const string Slaad_Red = "Red slaad";
+        public const string Snake_Constrictor = "Constrictor snake";
         public const string Snake_Constrictor_Giant = "Giant constrictor snake";
         public const string Snake_Viper_Huge = "Huge viper snake";
+        public const string Snake_Viper_Large = "Large viper snake";
         public const string Snake_Viper_Small = "Small viper snake";
         public const string Snake_Viper_Tiny = "Tiny viper snake";
         public const string Solar = "Solar (celestial)";
         public const string Spectre = "Spectre";
         public const string Spider_Monstrous_Gargantuan = "Gargantuan monstrous spider";
         public const string Spider_Monstrous_Huge = "Huge monstrous spider";
+        public const string Spider_Monstrous_Large = "Large monstrous spider";
         public const string Spider_Monstrous_Medium = "Medium monstrous spider";
         public const string Spider_Monstrous_Small = "Small monstrous spider";
+        public const string Spider_Monstrous_Tiny = "Tiny monstrous spider";
         public const string SpiderEater = "Spider eater";
         public const string StagBeetle_Giant = "Giant stag beetle";
         public const string Stirge = "Stirge";
         public const string Succubus = "Succubus (demon)";
+        public const string Thoqqua = "Thoqqua";
         public const string Tiger_Dire = "Dire tiger";
         public const string Treant = "Treant";
         public const string Troglodyte = "Troglodyte";

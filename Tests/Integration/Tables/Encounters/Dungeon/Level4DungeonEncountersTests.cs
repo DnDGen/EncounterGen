@@ -45,7 +45,7 @@ namespace EncounterGen.Tests.Integration.Tables.Encounters.Dungeon
         [TestCase(66, 67, CreatureConstants.Gnoll, RollConstants.OneD3,
             CreatureConstants.Hyena, RollConstants.OneD3)]
         [TestCase(68, 70, CreatureConstants.Lizardfolk, RollConstants.OneD3,
-            CreatureConstants.Lizard_Giant, RollConstants.One)]
+            CreatureConstants.Lizard_Monitor, RollConstants.One)]
         [TestCase(71, 73, CreatureConstants.Magmin, RollConstants.OneD2)]
         [TestCase(74, 76, CreatureConstants.Ogre, RollConstants.One,
             CreatureConstants.Orc, RollConstants.OneD4Plus2)]

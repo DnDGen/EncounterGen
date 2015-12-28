@@ -146,7 +146,7 @@
     <EmbeddedResource Include="Encounters\Dungeon\Level5DungeonEncounters.xml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Encounters\Treasures\TreasureAdjustments.xml" />
+    <EmbeddedResource Include="Treasures\TreasureAdjustments.xml" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Encounters\WarmHillsNight\Level7Warm Hills NightEncounters.xml" />
@@ -162,6 +162,9 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Encounters\WarmForestDay\Level8Warm Forest DayEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Encounters\WarmForestNight\Level2Warm Forest NightEncounters.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

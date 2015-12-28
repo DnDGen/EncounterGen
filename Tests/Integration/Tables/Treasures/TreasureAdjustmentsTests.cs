@@ -9,7 +9,7 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
     [TestFixture]
     public class TreasureAdjustmentsTests : CollectionTests
     {
-        protected override String tableName
+        protected override string tableName
         {
             get
             {
@@ -79,7 +79,7 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
                 CreatureConstants.Lich,
                 CreatureConstants.Lion_Dire,
                 CreatureConstants.Lizardfolk,
-                CreatureConstants.Lizard_Giant,
+                CreatureConstants.Lizard_Monitor,
                 CreatureConstants.Magmin,
                 CreatureConstants.Marilith,
                 CreatureConstants.Mephit,
@@ -199,7 +199,7 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
         [TestCase(CreatureConstants.Lich, 0, 0, 0)]
         [TestCase(CreatureConstants.Lion_Dire, 0, 0, 0)]
         [TestCase(CreatureConstants.Lizardfolk, TreasureConstants.FiftyPercent, TreasureConstants.FiftyPercent, TreasureConstants.FiftyPercent)]
-        [TestCase(CreatureConstants.Lizard_Giant, 0, 0, 0)]
+        [TestCase(CreatureConstants.Lizard_Monitor, 0, 0, 0)]
         [TestCase(CreatureConstants.Magmin, 1, 1, 1)]
         [TestCase(CreatureConstants.Marilith, 2, 1, 2)]
         [TestCase(CreatureConstants.Mephit, 1, 1, 1)]

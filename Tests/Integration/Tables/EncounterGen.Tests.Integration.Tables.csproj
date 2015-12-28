@@ -53,6 +53,7 @@
   <ItemGroup>
     <Compile Include="CollectionTests.cs" />
     <Compile Include="EmbeddedResourceStreamLoaderTests.cs" />
+    <Compile Include="Encounters\ColdHillsNight\Level19ColdHillsNightEncountersTests.cs" />
     <Compile Include="Encounters\Dungeon\Level12DungeonEncountersTests.cs" />
     <Compile Include="Encounters\Dungeon\Level15DungeonEncountersTests.cs" />
     <Compile Include="Encounters\Dungeon\Level16DungeonEncountersTests.cs" />
@@ -86,6 +87,7 @@
     <Compile Include="Encounters\TemperateForestNight\Level18TemperateForestNightEncountersTests.cs" />
     <Compile Include="Encounters\WarmDesertNight\Level1WarmDesertNightEncountersTests.cs" />
     <Compile Include="Encounters\WarmForestDay\Level8WarmForestDayEncountersTests.cs" />
+    <Compile Include="Encounters\WarmForestNight\Level2WarmForestNightEncountersTests.cs" />
     <Compile Include="Encounters\WarmHillsDay\Level7WarmHillsDayEncountersTests.cs" />
     <Compile Include="Encounters\WarmHillsNight\Level7WarmHillsNightEncountersTests.cs" />
     <Compile Include="PercentileTests.cs" />

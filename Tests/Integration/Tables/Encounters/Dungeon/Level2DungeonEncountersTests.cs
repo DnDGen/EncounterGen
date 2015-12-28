@@ -2,18 +2,17 @@
 using EncounterGen.Selectors;
 using EncounterGen.Tables;
 using NUnit.Framework;
-using System;
 
 namespace EncounterGen.Tests.Integration.Tables.Encounters.Dungeon
 {
     [TestFixture]
     public class Level2DungeonEncountersTests : TypeAndAmountPercentileTests
     {
-        protected override String tableName
+        protected override string tableName
         {
             get
             {
-                return String.Format(TableNameConstants.LevelXENVIRONMENTEncounters, 2, EnvironmentConstants.Dungeon);
+                return string.Format(TableNameConstants.LevelXENVIRONMENTEncounters, 2, EnvironmentConstants.Dungeon);
             }
         }
 
@@ -41,7 +40,7 @@ namespace EncounterGen.Tests.Integration.Tables.Encounters.Dungeon
         [TestCase(71, 80, CreatureConstants.Orc, RollConstants.OneD4Plus2)]
         [TestCase(81, 90, CreatureConstants.Zombie_HumanCommoner, RollConstants.OneD4Plus2)]
         [TestCase(91, 100, CreatureConstants.Ghoul, RollConstants.OneD3)]
-        public override void Percentile(Int32 lower, Int32 upper, params String[] typesAndAmounts)
+        public override void Percentile(int lower, int upper, params string[] typesAndAmounts)
         {
             base.Percentile(lower, upper, typesAndAmounts);
         }
