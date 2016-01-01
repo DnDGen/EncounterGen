@@ -3,7 +3,7 @@ using EncounterGen.Selectors;
 using EncounterGen.Tables;
 using NUnit.Framework;
 
-namespace EncounterGen.Tests.Integration.Tables.Encounters.WarmHillsDay
+namespace EncounterGen.Tests.Integration.Tables.Encounters.Hills.Warm.Day
 {
     [TestFixture]
     public class Level7WarmHillsDayEncountersTests : TypeAndAmountPercentileTests

@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<percentile>
+  <object>
+        <lower>1</lower>
+        <content>Barghest/1</content>
+        <upper>3</upper>
+    </object>
+  <object>
+    <lower>4</lower>
+    <content>Dire rat/1d4+10</content>
+    <upper>9</upper>
+  </object>
+  <object>
+    <lower>10</lower>
+    <content>Doppelganger/1d2</content>
+    <upper>15</upper>
+  </object>
+  <object>
+    <lower>16</lower>
+    <content>Gargoyle/1</content>
+    <upper>21</upper>
+  </object>
+  <object>
+    <lower>22</lower>
+    <content>Hell hound/1d2</content>
+    <upper>24</upper>
+  </object>
+  <object>
+    <lower>25</lower>
+    <content>Hound archon/1</content>
+    <upper>27</upper>
+  </object>
+  <object>
+    <lower>28</lower>
+    <content>Janni/1</content>
+    <upper>30</upper>
+  </object>
+  <object>
+    <lower>31</lower>
+    <content>Mimic/1</content>
+    <upper>36</upper>
+  </object>
+    <object>
+        <lower>37</lower>
+        <content>Ogre/1d2</content>
+        <upper>42</upper>
+    </object>
+  <object>
+    <lower>43</lower>
+    <content>Polar bear/1</content>
+    <upper>48</upper>
+  </object>
+  <object>
+    <lower>49</lower>
+    <content>Flamebrother salamander/1d2</content>
+    <upper>51</upper>
+  </object>
+  <object>
+    <lower>52</lower>
+    <content>Wight/1d2</content>
+    <upper>54</upper>
+  </object>
+  <object>
+    <lower>55</lower>
+    <content>Minor xorn/1d2</content>
+    <upper>57</upper>
+  </object>
+    <object>
+      <lower>58</lower>
+        <content>Yeth hound/1d2</content>
+        <upper>60</upper>
+    </object>
+  <object>
+    <lower>61</lower>
+    <content>Dragon/1</content>
+    <upper>66</upper>
+  </object>
+  <object>
+    <lower>67</lower>
+    <content>Celestial creature/1</content>
+    <upper>69</upper>
+  </object>
+    <object>
+        <lower>70</lower>
+        <content>Fiendish creature/1</content>
+        <upper>72</upper>
+    </object>
+  <object>
+    <lower>73</lower>
+    <content>Skeleton/1</content>
+    <upper>75</upper>
+  </object>
+  <object>
+    <lower>76</lower>
+    <content>Zombie/1</content>
+    <upper>78</upper>
+  </object>
+  <object>
+    <lower>79</lower>
+    <content>Character2/1d3</content>
+    <upper>100</upper>
+  </object>
+</percentile>

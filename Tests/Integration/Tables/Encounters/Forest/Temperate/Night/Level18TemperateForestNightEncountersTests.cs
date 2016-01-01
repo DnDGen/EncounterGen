@@ -3,7 +3,7 @@ using EncounterGen.Selectors;
 using EncounterGen.Tables;
 using NUnit.Framework;
 
-namespace EncounterGen.Tests.Integration.Tables.Encounters.TemperateForestNight
+namespace EncounterGen.Tests.Integration.Tables.Encounters.Forest.Temperate.Night
 {
     [TestFixture]
     public class Level18TemperateForestNightEncountersTests : TypeAndAmountPercentileTests

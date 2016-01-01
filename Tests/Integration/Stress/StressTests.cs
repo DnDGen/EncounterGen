@@ -3,6 +3,8 @@ using Ninject;
 using NUnit.Framework;
 using System;
 using System.Diagnostics;
+using System.Linq;
+using System.Reflection;
 
 namespace EncounterGen.Tests.Integration.Stress
 {
@@ -13,14 +15,25 @@ namespace EncounterGen.Tests.Integration.Stress
         [Inject]
         public Stopwatch Stopwatch { get; set; }
 
-        private const Int32 ConfidentIterations = 1000000;
-#if STRESS
-        private const Int32 TimeLimitInSeconds = 60 * 60 / 2;
-#else
-        private const Int32 TimeLimitInSeconds = 1;
-#endif
+        private const int ConfidentIterations = 1000000;
 
-        private Int32 iterations;
+        private readonly int timeLimitInSeconds;
+
+        private int iterations;
+
+        public StressTests()
+        {
+            var assembly = Assembly.GetExecutingAssembly();
+            var types = assembly.GetTypes();
+            var methods = types.SelectMany(t => t.GetMethods());
+            var stressTestsCount = methods.Count(m => m.GetCustomAttributes<TestAttribute>(true).Any() || m.GetCustomAttributes<TestCaseAttribute>().Any());
+
+#if STRESS
+            timeLimitInSeconds = 60 * 60 / stressTestsCount;
+#else
+            timeLimitInSeconds = 1;
+#endif
+        }
 
         [SetUp]
         public void StressSetup()
@@ -35,7 +48,7 @@ namespace EncounterGen.Tests.Integration.Stress
             Stopwatch.Reset();
         }
 
-        public abstract void Stress(String stressSubject);
+        public abstract void Stress(string stressSubject);
 
         protected void Stress()
         {
@@ -50,7 +63,7 @@ namespace EncounterGen.Tests.Integration.Stress
             while (TestShouldKeepRunning());
         }
 
-        protected T Generate<T>(Func<T> generate, Func<T, Boolean> isValid)
+        protected T Generate<T>(Func<T> generate, Func<T, bool> isValid)
         {
             T generatedObject;
 
@@ -60,7 +73,7 @@ namespace EncounterGen.Tests.Integration.Stress
             return generatedObject;
         }
 
-        protected T GenerateOrFail<T>(Func<T> generate, Func<T, Boolean> isValid)
+        protected T GenerateOrFail<T>(Func<T> generate, Func<T, bool> isValid)
         {
             T generatedObject;
 
@@ -73,10 +86,10 @@ namespace EncounterGen.Tests.Integration.Stress
             return generatedObject;
         }
 
-        private Boolean TestShouldKeepRunning()
+        private bool TestShouldKeepRunning()
         {
             iterations++;
-            return Stopwatch.Elapsed.TotalSeconds < TimeLimitInSeconds && iterations < ConfidentIterations;
+            return Stopwatch.Elapsed.TotalSeconds < timeLimitInSeconds && iterations < ConfidentIterations;
         }
     }
 }

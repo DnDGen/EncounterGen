@@ -24,6 +24,7 @@
         public const string Bat_Dire = "Dire bat";
         public const string Bear_Black = "Black bear";
         public const string Bear_Dire = "Dire bear";
+        public const string Bear_Polar = "Polar bear";
         public const string Bee_Giant = "Giant bee";
         public const string Behir = "Behir";
         public const string Beholder = "Beholder";
@@ -77,6 +78,7 @@
         public const string FormianTaskmaster = "Formian taskmaster";
         public const string FormianWarrior = "Formian warrior";
         public const string FormianWorker = "Formian worker";
+        public const string Gargoyle = "Gargoyle";
         public const string Gelugon = "Gelugon (devil)";
         public const string Ghaele = "Ghaele (celestial)";
         public const string Ghast = "Ghast";
@@ -99,6 +101,7 @@
         public const string Grick = "Grick";
         public const string Hamatula = "Hamatula (devil)";
         public const string Hellcat = "Hellcat";
+        public const string HellHound = "Hell hound";
         public const string Hezrou = "Hezrou (demon)";
         public const string Hobgoblin = "Hobgoblin";
         public const string Homunculus = "Homunculus";
@@ -211,6 +214,8 @@
         public const string Wyvern = "Wyvern";
         public const string Xorn_Average = "Average xorn";
         public const string Xorn_Elder = "Elder xorn";
+        public const string Xorn_Minor = "Minor xorn";
+        public const string YethHound = "Yeth hound";
         public const string Yrthak = "Yrthak";
         public const string Zombie = "Zombie";
         public const string Zombie_HumanCommoner = "Human commoner zombie";
