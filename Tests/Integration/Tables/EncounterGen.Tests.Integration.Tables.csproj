@@ -54,6 +54,8 @@
     <Compile Include="CollectionTests.cs" />
     <Compile Include="EmbeddedResourceStreamLoaderTests.cs" />
     <Compile Include="Encounters\Desert\Cold\Day\Level4ColdDesertDayEncountersTests.cs" />
+    <Compile Include="Encounters\Hills\Cold\Day\Level19ColdHillsDayEncountersTests.cs" />
+    <Compile Include="Encounters\Hills\Cold\Night\Level14ColdHillsNightEncountersTests.cs" />
     <Compile Include="Encounters\Hills\Cold\Night\Level19ColdHillsNightEncountersTests.cs" />
     <Compile Include="Encounters\Dungeon\Level12DungeonEncountersTests.cs" />
     <Compile Include="Encounters\Dungeon\Level15DungeonEncountersTests.cs" />
@@ -91,6 +93,8 @@
     <Compile Include="Encounters\Forest\Warm\Night\Level2WarmForestNightEncountersTests.cs" />
     <Compile Include="Encounters\Hills\Warm\Day\Level7WarmHillsDayEncountersTests.cs" />
     <Compile Include="Encounters\Hills\Warm\Night\Level7WarmHillsNightEncountersTests.cs" />
+    <Compile Include="Encounters\Marsh\Temperate\Day\Level19TemperateMarshDayEncountersTests.cs" />
+    <Compile Include="Encounters\Plains\Cold\Day\Level4ColdPlainsDayEncountersTests.cs" />
     <Compile Include="PercentileTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rolls\RollOrderTests.cs" />
@@ -131,6 +135,7 @@
   <ItemGroup>
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

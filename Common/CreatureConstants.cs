@@ -21,6 +21,7 @@
         public const string Balor = "Balor (demon)";
         public const string Barbazu = "Barbazu (devil)";
         public const string Barghest = "Barghest";
+        public const string Bat = "Bat";
         public const string Bat_Dire = "Dire bat";
         public const string Bear_Black = "Black bear";
         public const string Bear_Dire = "Dire bear";
@@ -60,6 +61,7 @@
         public const string Dragonne = "Dragonne";
         public const string Dretch = "Dretch (demon)";
         public const string DwarfWarrior = "Dwarf warrior";
+        public const string Eagle_Giant = "Giant eagle";
         public const string Efreet = "Efreet";
         public const string Elemental_Air_Huge = "Huge air elemental";
         public const string Elemental_Air_Small = "Small air elemental";
@@ -191,10 +193,12 @@
         public const string Stirge = "Stirge";
         public const string Succubus = "Succubus (demon)";
         public const string Thoqqua = "Thoqqua";
+        public const string Tiger = "Tiger";
         public const string Tiger_Dire = "Dire tiger";
         public const string Treant = "Treant";
         public const string Troglodyte = "Troglodyte";
         public const string Troll = "Troll";
+        public const string TrumpetArchon = "Trumpet archon";
         public const string Vampire = "Vampire";
         public const string VampireSpawn = "Vampire spawn";
         public const string Vargouille = "Vargouille";

@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<percentile>
+  <object>
+        <lower>1</lower>
+        <content>Dragon/1</content>
+        <upper>28</upper>
+    </object>
+    <object>
+        <lower>29</lower>
+        <content>Cornugon (devil)/1d3+1</content>
+        <upper>42</upper>
+    </object>
+    <object>
+        <lower>43</lower>
+        <content>Gelugon (devil)/1d6+5</content>
+        <upper>56</upper>
+    </object>
+    <object>
+        <lower>57</lower>
+        <content>Greater stone golem/1d3+1</content>
+        <upper>70</upper>
+    </object>
+    <object>
+        <lower>71</lower>
+        <content>Character16/1d3+1</content>
+        <upper>100</upper>
+    </object>
+</percentile>
