@@ -34,11 +34,11 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="CharacterGen.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\CharacterGen.3.0\lib\CharacterGen.Common.dll</HintPath>
+      <HintPath>..\..\..\packages\CharacterGen.3.2\lib\CharacterGen.Common.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="CharacterGen.Generators, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\CharacterGen.3.0\lib\CharacterGen.Generators.dll</HintPath>
+      <HintPath>..\..\..\packages\CharacterGen.3.2\lib\CharacterGen.Generators.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Moq, Version=4.2.1510.2205, Culture=neutral, PublicKeyToken=69f491c39445e920, processorArchitecture=MSIL">

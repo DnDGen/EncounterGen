@@ -63,6 +63,13 @@ namespace EncounterGen.Tests.Unit.Selectors
         }
 
         [Test]
+        public void IfBaseRollIsReroll_ReturnReroll()
+        {
+            var modifiedRoll = rollSelector.SelectFrom(RollConstants.Reroll, -9266);
+            Assert.That(modifiedRoll, Is.EqualTo(RollConstants.Reroll));
+        }
+
+        [Test]
         public void GetExpressionRoll()
         {
             mockDice.Setup(r => r.Roll("expression roll")).Returns(42);

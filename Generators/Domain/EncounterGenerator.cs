@@ -5,6 +5,7 @@ using CharacterGen.Generators.Randomizers.CharacterClasses;
 using CharacterGen.Generators.Randomizers.Races;
 using CharacterGen.Generators.Randomizers.Stats;
 using EncounterGen.Common;
+using EncounterGen.Generators.Exceptions;
 using EncounterGen.Selectors;
 using EncounterGen.Selectors.Percentiles;
 using EncounterGen.Tables;
@@ -21,6 +22,8 @@ namespace EncounterGen.Generators.Domain
 {
     public class EncounterGenerator : IEncounterGenerator
     {
+        private const int IterationLimit = 10000;
+
         private ITypeAndAmountPercentileSelector typeAndAmountPercentileSelector;
         private ICoinGenerator coinGenerator;
         private IGoodsGenerator goodsGenerator;
@@ -182,14 +185,18 @@ namespace EncounterGen.Generators.Domain
             var challengeRating = collectionSelector.SelectFrom(tableName, subtype).Single();
             var roll = rollSelector.SelectFrom(effectiveLevel, challengeRating);
             var effectiveRoll = rollSelector.SelectFrom(roll, modifier);
+            var iteration = 1;
 
-            while (roll == RollConstants.Reroll || effectiveRoll == RollConstants.Reroll)
+            while ((roll == RollConstants.Reroll || effectiveRoll == RollConstants.Reroll) && iteration++ < IterationLimit)
             {
                 subtype = collectionSelector.SelectRandomFrom(subtypes);
                 challengeRating = collectionSelector.SelectFrom(tableName, subtype).Single();
                 roll = rollSelector.SelectFrom(effectiveLevel, challengeRating);
                 effectiveRoll = rollSelector.SelectFrom(roll, modifier);
             }
+
+            if (roll == RollConstants.Reroll || effectiveRoll == RollConstants.Reroll)
+                throw new ImpossibleEncounterException();
 
             var doubleQuantity = rollSelector.SelectFrom(effectiveRoll);
             creature.Quantity = Convert.ToInt32(doubleQuantity);

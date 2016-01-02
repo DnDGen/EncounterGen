@@ -40,6 +40,9 @@ namespace EncounterGen.Selectors.Domain
 
         public string SelectFrom(string baseRoll, int modifier)
         {
+            if (baseRoll == RollConstants.Reroll)
+                return baseRoll;
+
             var rolls = collectionSelector.SelectFrom(TableNameConstants.RollOrder, "All").ToList();
             var index = rolls.IndexOf(baseRoll);
 
