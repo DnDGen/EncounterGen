@@ -23,22 +23,22 @@
     </object>
     <object>
         <lower>46</lower>
-        <content>Character17/1d3+1</content>
+        <content>Character[17]/1d3+1</content>
         <upper>55</upper>
     </object>
   <object>
     <lower>56</lower>
-    <content>Character18/1d3</content>
+    <content>Character[18]/1d3</content>
     <upper>60</upper>
   </object>
   <object>
     <lower>61</lower>
-    <content>Character19/1d2</content>
+    <content>Character[19]/1d2</content>
     <upper>65</upper>
   </object>
   <object>
     <lower>66</lower>
-    <content>Character20/1</content>
+    <content>Character[20]/1</content>
     <upper>70</upper>
   </object>
     <object>
@@ -48,12 +48,12 @@
     </object>
     <object>
         <lower>81</lower>
-        <content>Ghost/1</content>
+        <content>Ghost[1d2+18]/1</content>
         <upper>85</upper>
     </object>
   <object>
     <lower>86</lower>
-    <content>Lich/1</content>
+    <content>Lich[1d4+16]/1</content>
     <upper>90</upper>
   </object>
   <object>
@@ -63,7 +63,7 @@
   </object>
     <object>
         <lower>96</lower>
-        <content>Vampire/1</content>
+        <content>Vampire[1d3+17]/1</content>
         <upper>100</upper>
     </object>
 </percentile>

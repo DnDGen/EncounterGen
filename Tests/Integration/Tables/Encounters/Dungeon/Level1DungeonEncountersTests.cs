@@ -31,7 +31,7 @@ namespace EncounterGen.Tests.Integration.Tables.Encounters.Dungeon
         [TestCase(21, 25, CreatureConstants.Dragon, RollConstants.One)]
         [TestCase(26, 30, CreatureConstants.DwarfWarrior, RollConstants.OneD3)]
         [TestCase(31, 35, CreatureConstants.ElfWarrior, RollConstants.OneD3)]
-        [TestCase(36, 40, CreatureConstants.Character + "1", RollConstants.One)]
+        [TestCase(36, 40, CreatureConstants.Character + "[1]", RollConstants.One)]
         [TestCase(41, 45, CreatureConstants.Darkmantle, RollConstants.One)]
         [TestCase(46, 55, CreatureConstants.Krenshar, RollConstants.One)]
         [TestCase(56, 60, CreatureConstants.Lemure, RollConstants.One)]

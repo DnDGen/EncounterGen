@@ -45,7 +45,7 @@ namespace EncounterGen.Tests.Integration.Tables
                 Assert.That(table[i], Is.EqualTo("Darkmantle/1"));
 
             for (var i = 40; i > 35; i--)
-                Assert.That(table[i], Is.EqualTo("Character1/1"));
+                Assert.That(table[i], Is.EqualTo("Character[1]/1"));
 
             for (var i = 35; i > 30; i--)
                 Assert.That(table[i], Is.EqualTo("Elf warrior/1d3"));

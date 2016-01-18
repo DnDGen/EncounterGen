@@ -48,6 +48,12 @@
         public const string Choker = "Choker";
         public const string Chuul = "Chuul";
         public const string Cockatrice = "Cockatrice";
+        public const string Commoner_Farmer = "Commoner (Farmer)";
+        public const string Commoner_Herder = "Commoner (Herder)";
+        public const string Commoner_Hunter = "Commoner (Hunter)";
+        public const string Commoner_Merchant = "Commoner (Merchant)";
+        public const string Commoner_Minstrel = "Commoner (Minstrel)";
+        public const string Commoner_Pilgrim = "Commoner (Pilgrim)";
         public const string Cornugon = "Cornugon (devil)";
         public const string Cryohydra = "Cryohydra";
         public const string Darkmantle = "Darkmantle";
@@ -75,6 +81,8 @@
         public const string Erinyes = "Erinyes (devil)";
         public const string EtherealMarauder = "Ethereal marauder";
         public const string Ettercap = "Ettercap";
+        public const string Expert_Merchant = "Expert (Merchant)";
+        public const string Expert_Minstrel = "Expert (Minstrel)";
         public const string FiendishCreature = "Fiendish creature";
         public const string FireBeetle_Giant = "Giant fire beetle";
         public const string FormianTaskmaster = "Formian taskmaster";
@@ -123,6 +131,7 @@
         public const string Lich = "Lich";
         public const string Lillend = "Lillend";
         public const string Lion_Dire = "Dire lion";
+        public const string Livestock = "Livestock";
         public const string Lizard_Monitor = "Monitor lizard";
         public const string Lizardfolk = "Lizardfolk";
         public const string Magmin = "Magmin";
@@ -142,6 +151,7 @@
         public const string Nightwalker = "Nightwalker (nightshade)";
         public const string Nightwing = "Nightwing (nightshade)";
         public const string NPC = "NPC";
+        public const string NPC_Traveler = "NPC (Traveler)";
         public const string Nymph = "Nymph";
         public const string Ogre = "Ogre";
         public const string OgreMage = "Ogre mage";
@@ -204,6 +214,12 @@
         public const string Vargouille = "Vargouille";
         public const string VioletFungus = "Violet fungus";
         public const string Vrock = "Vrock (demon)";
+        public const string Warrior_Bandit = "Warrior (Bandit)";
+        public const string Warrior_BanditLeader = "Warrior (Bandit Leader)";
+        public const string Warrior_Captain = "Warrior (Captain)";
+        public const string Warrior_Guard = "Warrior (Guard)";
+        public const string Warrior_Hunter = "Warrior (Hunter)";
+        public const string Warrior_Patrol = "Warrior (Patrol)";
         public const string Weasel_Dire = "Dire weasel";
         public const string Werebear = "Werebear";
         public const string Wereboar = "Wereboar";

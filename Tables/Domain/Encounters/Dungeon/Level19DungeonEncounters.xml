@@ -23,7 +23,7 @@
     </object>
     <object>
         <lower>46</lower>
-        <content>Character16/1d3+1</content>
+        <content>Character[16]/1d3+1</content>
         <upper>70</upper>
     </object>
     <object>
@@ -33,7 +33,7 @@
     </object>
     <object>
         <lower>81</lower>
-        <content>Ghost/1</content>
+        <content>Ghost[1d3+15]/1</content>
         <upper>90</upper>
     </object>
     <object>

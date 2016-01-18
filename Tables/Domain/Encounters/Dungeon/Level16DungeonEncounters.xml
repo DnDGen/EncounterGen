@@ -18,7 +18,7 @@
     </object>
     <object>
         <lower>36</lower>
-        <content>Character13/1d3+1</content>
+        <content>Character[13]/1d3+1</content>
         <upper>60</upper>
     </object>
   <object>
@@ -38,7 +38,7 @@
     </object>
     <object>
         <lower>91</lower>
-        <content>Ghost/1</content>
+        <content>Ghost[1d3+12]/1</content>
         <upper>100</upper>
     </object>
 </percentile>

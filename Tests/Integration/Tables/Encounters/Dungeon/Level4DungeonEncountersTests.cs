@@ -2,18 +2,17 @@
 using EncounterGen.Selectors;
 using EncounterGen.Tables;
 using NUnit.Framework;
-using System;
 
 namespace EncounterGen.Tests.Integration.Tables.Encounters.Dungeon
 {
     [TestFixture]
     public class Level4DungeonEncountersTests : TypeAndAmountPercentileTests
     {
-        protected override String tableName
+        protected override string tableName
         {
             get
             {
-                return String.Format(TableNameConstants.LevelXENVIRONMENTEncounters, 4, EnvironmentConstants.Dungeon);
+                return string.Format(TableNameConstants.LevelXENVIRONMENTEncounters, 4, EnvironmentConstants.Dungeon);
             }
         }
 
@@ -34,7 +33,7 @@ namespace EncounterGen.Tests.Integration.Tables.Encounters.Dungeon
             CreatureConstants.Lemure, RollConstants.OneD3)]
         [TestCase(27, 30, CreatureConstants.Quasit, RollConstants.OneD2)]
         [TestCase(31, 35, CreatureConstants.LanternArchon, RollConstants.OneD3)]
-        [TestCase(36, 40, CreatureConstants.Character + "2", RollConstants.OneD3)]
+        [TestCase(36, 40, CreatureConstants.Character + "[2]", RollConstants.OneD3)]
         [TestCase(41, 45, CreatureConstants.CarrionCrawler, RollConstants.One)]
         [TestCase(46, 50, CreatureConstants.Mimic, RollConstants.One)]
         [TestCase(51, 55, CreatureConstants.RustMonster, RollConstants.OneD2)]
@@ -54,10 +53,10 @@ namespace EncounterGen.Tests.Integration.Tables.Encounters.Dungeon
         [TestCase(79, 80, CreatureConstants.Worg, RollConstants.OneD2,
             CreatureConstants.Goblin, RollConstants.OneD4Plus2)]
         [TestCase(81, 85, CreatureConstants.Allip, RollConstants.OneD2)]
-        [TestCase(86, 90, CreatureConstants.Ghost, RollConstants.One)]
+        [TestCase(86, 90, CreatureConstants.Ghost + "[1d3]", RollConstants.One)]
         [TestCase(91, 95, CreatureConstants.VampireSpawn, RollConstants.One)]
         [TestCase(96, 100, CreatureConstants.Wight, RollConstants.OneD2)]
-        public override void Percentile(Int32 lower, Int32 upper, params String[] typesAndAmounts)
+        public override void Percentile(int lower, int upper, params string[] typesAndAmounts)
         {
             base.Percentile(lower, upper, typesAndAmounts);
         }

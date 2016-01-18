@@ -133,7 +133,7 @@ namespace EncounterGen.Tests.Unit.Generators
         public void GenerateEncounterWithCharacters()
         {
             encounterTypeAndAmount.Clear();
-            encounterTypeAndAmount[CreatureConstants.Character + "1337"] = "character amount";
+            encounterTypeAndAmount[CreatureConstants.Character + "[1337]"] = "character amount";
             mockRollSelector.Setup(s => s.SelectFrom("character amount", 9876)).Returns("character effective roll");
             mockRollSelector.Setup(s => s.SelectFrom("character effective roll")).Returns(600);
 
@@ -156,9 +156,12 @@ namespace EncounterGen.Tests.Unit.Generators
         public void GenerateEncounterWithCharactersWithVariableLevels()
         {
             encounterTypeAndAmount.Clear();
-            encounterTypeAndAmount[CreatureConstants.Character + "13d37"] = "character amount";
+            encounterTypeAndAmount[CreatureConstants.Character + "[13d37]"] = "character amount";
             mockRollSelector.Setup(s => s.SelectFrom("character amount", 9876)).Returns("character effective roll");
             mockRollSelector.Setup(s => s.SelectFrom("character effective roll")).Returns(600);
+
+            mockRollSelector.Setup(s => s.SelectRollFrom("[13d37]")).Returns("character level roll");
+            mockRollSelector.Setup(s => s.SelectFrom("character level roll")).Returns(1337);
 
             mockCharacterGenerator.Setup(g => g.GenerateWith(mockAnyAlignmentRandomizer.Object, mockAnyPlayerClassNameRandomizer.Object, It.Is<ISetLevelRandomizer>(r => r.SetLevel == 1337 && r.AllowAdjustments), mockAnyBaseRaceRandomizer.Object, mockAnyMetaraceRandomizer.Object, mockRawStatsRandomizer.Object))
                 .Returns(() => new Character { InterestingTrait = Guid.NewGuid().ToString() });
@@ -179,43 +182,52 @@ namespace EncounterGen.Tests.Unit.Generators
         public void VariableLevelsAreUniquePerCharacter()
         {
             encounterTypeAndAmount.Clear();
-            encounterTypeAndAmount[CreatureConstants.Character + "13d37"] = "character amount";
-            mockRollSelector.Setup(s => s.SelectFrom("character amount", 9876)).Returns("character effective roll");
-            mockRollSelector.Setup(s => s.SelectFrom("character effective roll")).Returns(600);
+            encounterTypeAndAmount[CreatureConstants.Character + "[13d37]"] = "character amount";
 
-            mockCharacterGenerator.Setup(g => g.GenerateWith(mockAnyAlignmentRandomizer.Object, mockAnyPlayerClassNameRandomizer.Object, It.Is<ISetLevelRandomizer>(r => r.SetLevel == 1337 && r.AllowAdjustments), mockAnyBaseRaceRandomizer.Object, mockAnyMetaraceRandomizer.Object, mockRawStatsRandomizer.Object))
-                .Returns(() => new Character { InterestingTrait = Guid.NewGuid().ToString() });
+            mockRollSelector.Setup(s => s.SelectFrom("character amount", 9876)).Returns("character effective roll");
+            mockRollSelector.Setup(s => s.SelectFrom("character effective roll")).Returns(2);
+
+            mockRollSelector.Setup(s => s.SelectRollFrom("[13d37]")).Returns("character level roll");
+            mockRollSelector.SetupSequence(s => s.SelectFrom("character level roll")).Returns(1337).Returns(1234);
+
+            mockCharacterGenerator.Setup(g => g.GenerateWith(mockAnyAlignmentRandomizer.Object, mockAnyPlayerClassNameRandomizer.Object, It.Is<ISetLevelRandomizer>(r => r.SetLevel == 1337 && r.AllowAdjustments == true), mockAnyBaseRaceRandomizer.Object, mockAnyMetaraceRandomizer.Object, mockRawStatsRandomizer.Object))
+                .Returns(() => new Character { Class = new CharacterClass { Level = 1337 } });
+
+            mockCharacterGenerator.Setup(g => g.GenerateWith(mockAnyAlignmentRandomizer.Object, mockAnyPlayerClassNameRandomizer.Object, It.Is<ISetLevelRandomizer>(r => r.SetLevel == 1234 && r.AllowAdjustments == true), mockAnyBaseRaceRandomizer.Object, mockAnyMetaraceRandomizer.Object, mockRawStatsRandomizer.Object))
+                .Returns(() => new Character { Class = new CharacterClass { Level = 1234 } });
 
             var encounter = encounterGenerator.Generate(environment, level);
             Assert.That(encounter, Is.Not.Null);
 
             var creature = encounter.Creatures.Single();
             Assert.That(creature.Type, Is.EqualTo(CreatureConstants.Character));
-            Assert.That(creature.Quantity, Is.EqualTo(600));
+            Assert.That(creature.Quantity, Is.EqualTo(2));
             Assert.That(encounter.Characters, Is.All.Not.Null);
-            Assert.That(encounter.Characters.Count(), Is.EqualTo(creature.Quantity));
+            Assert.That(encounter.Characters.Count(), Is.EqualTo(2));
             Assert.That(encounter.Characters, Is.Unique);
-            Assert.That(encounter.Characters.Select(c => c.InterestingTrait), Is.Unique);
+            Assert.That(encounter.Characters.Any(c => c.Class.Level == 1337), Is.True);
+            Assert.That(encounter.Characters.Any(c => c.Class.Level == 1234), Is.True);
         }
 
         [Test]
         public void GenerateEncounterWithUndeadNPCs()
         {
-            var monster = encounterTypeAndAmount.Keys.First();
-            var undead = new[] { monster, "other monster" };
+            var monster = encounterTypeAndAmount.First();
+            encounterTypeAndAmount.Clear();
+
+            encounterTypeAndAmount[monster.Key + "[6789]"] = monster.Value;
+
+            var undead = new[] { monster.Key, "other monster" };
             mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.CreatureGroups, GroupConstants.UndeadNPC)).Returns(undead);
 
-            var tableName = string.Format(TableNameConstants.LevelXUndeadNPC, 90210);
-            mockAdjustmentSelector.Setup(s => s.SelectFrom(tableName, monster)).Returns(1337);
-
-            mockCharacterGenerator.Setup(g => g.GenerateWith(mockAnyAlignmentRandomizer.Object, mockAnyPlayerClassNameRandomizer.Object, It.Is<ISetLevelRandomizer>(r => r.SetLevel == 1337 && r.AllowAdjustments == false), mockAnyBaseRaceRandomizer.Object, It.Is<ISetMetaraceRandomizer>(r => r.SetMetarace == monster), mockRawStatsRandomizer.Object))
+            mockCharacterGenerator.Setup(g => g.GenerateWith(mockAnyAlignmentRandomizer.Object, mockAnyPlayerClassNameRandomizer.Object, It.Is<ISetLevelRandomizer>(r => r.SetLevel == 6789 && r.AllowAdjustments == false), mockAnyBaseRaceRandomizer.Object, It.Is<ISetMetaraceRandomizer>(r => r.SetMetarace == monster.Key), mockRawStatsRandomizer.Object))
                 .Returns(() => new Character { InterestingTrait = Guid.NewGuid().ToString() });
 
             var encounter = encounterGenerator.Generate(environment, level);
             Assert.That(encounter, Is.Not.Null);
 
             var creature = encounter.Creatures.Single();
-            Assert.That(creature.Type, Is.EqualTo(monster));
+            Assert.That(creature.Type, Is.EqualTo(monster.Key));
             Assert.That(creature.Quantity, Is.EqualTo(42));
             Assert.That(encounter.Characters, Is.All.Not.Null);
             Assert.That(encounter.Characters.Count(), Is.EqualTo(42));
@@ -226,26 +238,30 @@ namespace EncounterGen.Tests.Unit.Generators
         [Test]
         public void UndeadNPCsEachHaveUniqueLevel()
         {
-            var monster = encounterTypeAndAmount.Keys.First();
-            var undead = new[] { monster, "other monster" };
+            var monster = encounterTypeAndAmount.First();
+            encounterTypeAndAmount.Clear();
+
+            encounterTypeAndAmount[monster.Key + "[67d89]"] = monster.Value;
+
+            var undead = new[] { monster.Key, "other monster" };
             mockRollSelector.Setup(s => s.SelectFrom("effective roll")).Returns(2);
+
+            mockRollSelector.Setup(s => s.SelectRollFrom("[67d89]")).Returns("character level roll");
+            mockRollSelector.SetupSequence(s => s.SelectFrom("character level roll")).Returns(1337).Returns(1234);
 
             mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.CreatureGroups, GroupConstants.UndeadNPC)).Returns(undead);
 
-            var tableName = string.Format(TableNameConstants.LevelXUndeadNPC, 90210);
-            mockAdjustmentSelector.SetupSequence(s => s.SelectFrom(tableName, monster)).Returns(1337).Returns(1234);
-
-            mockCharacterGenerator.Setup(g => g.GenerateWith(mockAnyAlignmentRandomizer.Object, mockAnyPlayerClassNameRandomizer.Object, It.Is<ISetLevelRandomizer>(r => r.SetLevel == 1337 && r.AllowAdjustments == false), mockAnyBaseRaceRandomizer.Object, It.Is<ISetMetaraceRandomizer>(r => r.SetMetarace == monster), mockRawStatsRandomizer.Object))
+            mockCharacterGenerator.Setup(g => g.GenerateWith(mockAnyAlignmentRandomizer.Object, mockAnyPlayerClassNameRandomizer.Object, It.Is<ISetLevelRandomizer>(r => r.SetLevel == 1337 && r.AllowAdjustments == false), mockAnyBaseRaceRandomizer.Object, It.Is<ISetMetaraceRandomizer>(r => r.SetMetarace == monster.Key), mockRawStatsRandomizer.Object))
                 .Returns(() => new Character { Class = new CharacterClass { Level = 1337 } });
 
-            mockCharacterGenerator.Setup(g => g.GenerateWith(mockAnyAlignmentRandomizer.Object, mockAnyPlayerClassNameRandomizer.Object, It.Is<ISetLevelRandomizer>(r => r.SetLevel == 1234 && r.AllowAdjustments == false), mockAnyBaseRaceRandomizer.Object, It.Is<ISetMetaraceRandomizer>(r => r.SetMetarace == monster), mockRawStatsRandomizer.Object))
+            mockCharacterGenerator.Setup(g => g.GenerateWith(mockAnyAlignmentRandomizer.Object, mockAnyPlayerClassNameRandomizer.Object, It.Is<ISetLevelRandomizer>(r => r.SetLevel == 1234 && r.AllowAdjustments == false), mockAnyBaseRaceRandomizer.Object, It.Is<ISetMetaraceRandomizer>(r => r.SetMetarace == monster.Key), mockRawStatsRandomizer.Object))
                 .Returns(() => new Character { Class = new CharacterClass { Level = 1234 } });
 
             var encounter = encounterGenerator.Generate(environment, level);
             Assert.That(encounter, Is.Not.Null);
 
             var creature = encounter.Creatures.Single();
-            Assert.That(creature.Type, Is.EqualTo(monster));
+            Assert.That(creature.Type, Is.EqualTo(monster.Key));
             Assert.That(creature.Quantity, Is.EqualTo(2));
             Assert.That(encounter.Characters, Is.All.Not.Null);
             Assert.That(encounter.Characters.Count(), Is.EqualTo(2));
@@ -430,7 +446,7 @@ namespace EncounterGen.Tests.Unit.Generators
         public void EncounterSpecificClass()
         {
             encounterTypeAndAmount.Clear();
-            encounterTypeAndAmount["character class1337"] = "character class amount";
+            encounterTypeAndAmount["character class[1337]"] = "character class amount";
             mockRollSelector.Setup(s => s.SelectFrom("character class amount", 9876)).Returns("character class effective roll");
             mockRollSelector.Setup(s => s.SelectFrom("character class effective roll")).Returns(600);
 
@@ -456,7 +472,7 @@ namespace EncounterGen.Tests.Unit.Generators
         public void EncounterSpecificNPCClass()
         {
             encounterTypeAndAmount.Clear();
-            encounterTypeAndAmount["npc class1337"] = "npc class amount";
+            encounterTypeAndAmount["npc class[1337]"] = "npc class amount";
             mockRollSelector.Setup(s => s.SelectFrom("npc class amount", 9876)).Returns("npc class effective roll");
             mockRollSelector.Setup(s => s.SelectFrom("npc class effective roll")).Returns(600);
 
@@ -482,7 +498,7 @@ namespace EncounterGen.Tests.Unit.Generators
         public void EncounterRandomNPCClass()
         {
             encounterTypeAndAmount.Clear();
-            encounterTypeAndAmount[CreatureConstants.NPC + "1337"] = "npc amount";
+            encounterTypeAndAmount[CreatureConstants.NPC + "[1337]"] = "npc amount";
             mockRollSelector.Setup(s => s.SelectFrom("npc amount", 9876)).Returns("npc effective roll");
             mockRollSelector.Setup(s => s.SelectFrom("npc effective roll")).Returns(600);
 
@@ -505,7 +521,7 @@ namespace EncounterGen.Tests.Unit.Generators
         public void EncounterSpecificNPCClassDescribedAsSomethingElse()
         {
             encounterTypeAndAmount.Clear();
-            encounterTypeAndAmount["npc class (description)1337"] = "npc class amount";
+            encounterTypeAndAmount["npc class (description)[1337]"] = "npc class amount";
             mockRollSelector.Setup(s => s.SelectFrom("npc class amount", 9876)).Returns("npc class effective roll");
             mockRollSelector.Setup(s => s.SelectFrom("npc class effective roll")).Returns(600);
 
@@ -532,7 +548,7 @@ namespace EncounterGen.Tests.Unit.Generators
         public void EncounterRandomNPCClassDescribedAsSomethingElse()
         {
             encounterTypeAndAmount.Clear();
-            encounterTypeAndAmount[CreatureConstants.NPC + " (description)1337"] = "npc amount";
+            encounterTypeAndAmount[CreatureConstants.NPC + " (description)[1337]"] = "npc amount";
             mockRollSelector.Setup(s => s.SelectFrom("npc amount", 9876)).Returns("npc effective roll");
             mockRollSelector.Setup(s => s.SelectFrom("npc effective roll")).Returns(600);
 
@@ -555,19 +571,19 @@ namespace EncounterGen.Tests.Unit.Generators
         [Test]
         public void EncounterMultipleTypesOfCharacters()
         {
-            encounterTypeAndAmount[CreatureConstants.NPC + " (description 1)1337"] = "npc with description amount";
-            encounterTypeAndAmount["npc class (description 2)1234"] = "npc class with description amount";
-            encounterTypeAndAmount[CreatureConstants.NPC + "2345"] = "npc amount";
-            encounterTypeAndAmount["npc class3456"] = "npc class amount";
-            encounterTypeAndAmount["character class4567"] = "character class amount";
-            encounterTypeAndAmount[CreatureConstants.Character + "5678"] = "character amount";
+            var monster = encounterTypeAndAmount.First();
+            encounterTypeAndAmount.Clear();
 
-            var monster = encounterTypeAndAmount.Keys.First();
-            var undead = new[] { monster, "other monster" };
+            encounterTypeAndAmount[monster.Key + "[6798]"] = monster.Value;
+            encounterTypeAndAmount[CreatureConstants.NPC + " (description 1)[1337]"] = "npc with description amount";
+            encounterTypeAndAmount["npc class (description 2)[1234]"] = "npc class with description amount";
+            encounterTypeAndAmount[CreatureConstants.NPC + "[2345]"] = "npc amount";
+            encounterTypeAndAmount["npc class[3456]"] = "npc class amount";
+            encounterTypeAndAmount["character class[4567]"] = "character class amount";
+            encounterTypeAndAmount[CreatureConstants.Character + "[5678]"] = "character amount";
+
+            var undead = new[] { monster.Key, "other monster" };
             mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.CreatureGroups, GroupConstants.UndeadNPC)).Returns(undead);
-
-            var tableName = string.Format(TableNameConstants.LevelXUndeadNPC, 90210);
-            mockAdjustmentSelector.Setup(s => s.SelectFrom(tableName, monster)).Returns(6789);
 
             mockRollSelector.Setup(s => s.SelectFrom("character amount", 9876)).Returns("character effective roll");
             mockRollSelector.Setup(s => s.SelectFrom("character effective roll")).Returns(7);
@@ -585,7 +601,7 @@ namespace EncounterGen.Tests.Unit.Generators
             mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.CreatureGroups, CreatureConstants.Character))
                 .Returns(new[] { "other character class", "character class", "npc class" });
 
-            mockCharacterGenerator.Setup(g => g.GenerateWith(mockAnyAlignmentRandomizer.Object, It.IsAny<IClassNameRandomizer>(), It.IsAny<ISetLevelRandomizer>(), mockAnyBaseRaceRandomizer.Object, It.IsAny<RaceRandomizer>(), mockRawStatsRandomizer.Object))
+            mockCharacterGenerator.Setup(g => g.GenerateWith(mockAnyAlignmentRandomizer.Object, It.IsAny<IClassNameRandomizer>(), mockSetLevelRandomizer.Object, mockAnyBaseRaceRandomizer.Object, It.IsAny<RaceRandomizer>(), mockRawStatsRandomizer.Object))
                 .Returns(() => new Character { InterestingTrait = Guid.NewGuid().ToString() });
 
             var encounter = encounterGenerator.Generate(environment, level);
@@ -593,7 +609,7 @@ namespace EncounterGen.Tests.Unit.Generators
 
             var creatureList = encounter.Creatures.ToList();
             Assert.That(creatureList.Count, Is.EqualTo(7));
-            Assert.That(creatureList[0].Type, Is.EqualTo(monster));
+            Assert.That(creatureList[0].Type, Is.EqualTo(monster.Key));
             Assert.That(creatureList[0].Subtype, Is.Empty);
             Assert.That(creatureList[0].Quantity, Is.EqualTo(42));
             Assert.That(creatureList[1].Type, Is.EqualTo(CreatureConstants.NPC));
@@ -953,6 +969,64 @@ namespace EncounterGen.Tests.Unit.Generators
             Assert.That(secondItems, Is.SubsetOf(encounter.Treasure.Items));
             Assert.That(wrongGoods, Is.Not.SubsetOf(encounter.Treasure.Goods));
             Assert.That(wrongItems, Is.Not.SubsetOf(encounter.Treasure.Items));
+        }
+
+        [Test]
+        public void GetTreasureFromCreatureWithDescription()
+        {
+            var monster = encounterTypeAndAmount.First();
+            encounterTypeAndAmount.Clear();
+
+            encounterTypeAndAmount[monster.Key + " (description)"] = monster.Value;
+
+            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.CreatureGroups, CreatureConstants.Character))
+                .Returns(new[] { "other character class", monster.Key });
+
+            mockAdjustmentSelector.Setup(s => s.SelectFrom(TableNameConstants.TreasureAdjustments, "creature", TreasureConstants.Coin)).Returns(1);
+            mockAdjustmentSelector.Setup(s => s.SelectFrom(TableNameConstants.TreasureAdjustments, "creature", TreasureConstants.Goods)).Returns(1);
+            mockAdjustmentSelector.Setup(s => s.SelectFrom(TableNameConstants.TreasureAdjustments, "creature", TreasureConstants.Items)).Returns(1);
+
+            var goods = new[] { new Good(), new Good() };
+            mockGoodsGenerator.Setup(g => g.GenerateAtLevel(level)).Returns(goods);
+
+            var items = new[] { new Item(), new Item() };
+            mockItemsGenerator.Setup(g => g.GenerateAtLevel(level)).Returns(items);
+
+            var encounter = encounterGenerator.Generate(environment, level);
+            Assert.That(encounter, Is.Not.Null);
+            Assert.That(encounter.Treasure.Coin.Currency, Is.EqualTo("currency"));
+            Assert.That(encounter.Treasure.Coin.Quantity, Is.EqualTo(600));
+            Assert.That(goods, Is.SubsetOf(encounter.Treasure.Goods));
+            Assert.That(items, Is.SubsetOf(encounter.Treasure.Items));
+        }
+
+        [Test]
+        public void GetTreasureForCreatureWithCharacterLevel()
+        {
+            var monster = encounterTypeAndAmount.First();
+            encounterTypeAndAmount.Clear();
+
+            encounterTypeAndAmount[monster.Key + "[1]"] = monster.Value;
+
+            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.CreatureGroups, CreatureConstants.Character))
+                .Returns(new[] { "other character class", monster.Key });
+
+            mockAdjustmentSelector.Setup(s => s.SelectFrom(TableNameConstants.TreasureAdjustments, "creature", TreasureConstants.Coin)).Returns(1);
+            mockAdjustmentSelector.Setup(s => s.SelectFrom(TableNameConstants.TreasureAdjustments, "creature", TreasureConstants.Goods)).Returns(1);
+            mockAdjustmentSelector.Setup(s => s.SelectFrom(TableNameConstants.TreasureAdjustments, "creature", TreasureConstants.Items)).Returns(1);
+
+            var goods = new[] { new Good(), new Good() };
+            mockGoodsGenerator.Setup(g => g.GenerateAtLevel(level)).Returns(goods);
+
+            var items = new[] { new Item(), new Item() };
+            mockItemsGenerator.Setup(g => g.GenerateAtLevel(level)).Returns(items);
+
+            var encounter = encounterGenerator.Generate(environment, level);
+            Assert.That(encounter, Is.Not.Null);
+            Assert.That(encounter.Treasure.Coin.Currency, Is.EqualTo("currency"));
+            Assert.That(encounter.Treasure.Coin.Quantity, Is.EqualTo(600));
+            Assert.That(goods, Is.SubsetOf(encounter.Treasure.Goods));
+            Assert.That(items, Is.SubsetOf(encounter.Treasure.Items));
         }
 
         [Test]

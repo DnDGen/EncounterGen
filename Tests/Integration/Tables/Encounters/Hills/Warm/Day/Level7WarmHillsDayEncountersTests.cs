@@ -66,7 +66,7 @@ namespace EncounterGen.Tests.Integration.Tables.Encounters.Hills.Warm.Day
         [TestCase(88, 88, CreatureConstants.Zombie, RollConstants.One)]
         [TestCase(89, 89, CreatureConstants.CelestialCreature, RollConstants.One)]
         [TestCase(90, 90, CreatureConstants.FiendishCreature, RollConstants.One)]
-        [TestCase(91, 100, CreatureConstants.Character + "4", RollConstants.OneD3Plus1)]
+        [TestCase(91, 100, CreatureConstants.Character + "[4]", RollConstants.OneD3Plus1)]
         public override void Percentile(int lower, int upper, params string[] typesAndAmounts)
         {
             base.Percentile(lower, upper, typesAndAmounts);

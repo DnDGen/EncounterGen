@@ -36,7 +36,7 @@ namespace EncounterGen.Tests.Integration.Tables.Encounters.Dungeon
         [TestCase(26, 27, CreatureConstants.Mephit, RollConstants.OneD3)]
         [TestCase(28, 30, CreatureConstants.Wererat, RollConstants.OneD3Plus1)]
         [TestCase(31, 35, CreatureConstants.BlinkDog, RollConstants.OneD3Plus1)]
-        [TestCase(36, 40, CreatureConstants.Character + "2", RollConstants.OneD3Plus1)]
+        [TestCase(36, 40, CreatureConstants.Character + "[2]", RollConstants.OneD3Plus1)]
         [TestCase(41, 43, CreatureConstants.Cockatrice, RollConstants.OneD3)]
         [TestCase(44, 47, CreatureConstants.GibberingMouther, RollConstants.One)]
         [TestCase(48, 50, CreatureConstants.Grick, RollConstants.OneD3)]
@@ -59,7 +59,7 @@ namespace EncounterGen.Tests.Integration.Tables.Encounters.Dungeon
         [TestCase(86, 90, CreatureConstants.Mummy, RollConstants.OneD3)]
         [TestCase(91, 95, CreatureConstants.Skeleton_Giant, RollConstants.OneD3Plus1)]
         [TestCase(96, 100, CreatureConstants.Wraith, RollConstants.One)]
-        public override void Percentile(Int32 lower, Int32 upper, params String[] typesAndAmounts)
+        public override void Percentile(int lower, int upper, params string[] typesAndAmounts)
         {
             base.Percentile(lower, upper, typesAndAmounts);
         }

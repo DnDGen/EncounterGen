@@ -28,11 +28,11 @@ namespace EncounterGen.Tests.Integration.Tables.Encounters.Dungeon
             CreatureConstants.Glabrezu, RollConstants.OneD3)]
         [TestCase(31, 40, CreatureConstants.PitFiend, RollConstants.OneD3Plus1)]
         [TestCase(41, 45, CreatureConstants.Solar, RollConstants.OneD3)]
-        [TestCase(46, 70, CreatureConstants.Character + "16", RollConstants.OneD3Plus1)]
+        [TestCase(46, 70, CreatureConstants.Character + "[16]", RollConstants.OneD3Plus1)]
         [TestCase(71, 80, CreatureConstants.Nalfeshnee, RollConstants.OneD3Plus1)]
-        [TestCase(81, 90, CreatureConstants.Ghost, RollConstants.One)]
+        [TestCase(81, 90, CreatureConstants.Ghost + "[1d3+15]", RollConstants.One)]
         [TestCase(91, 100, CreatureConstants.Nightcrawler, RollConstants.OneD3)]
-        public override void Percentile(Int32 lower, Int32 upper, params String[] typesAndAmounts)
+        public override void Percentile(int lower, int upper, params string[] typesAndAmounts)
         {
             base.Percentile(lower, upper, typesAndAmounts);
         }

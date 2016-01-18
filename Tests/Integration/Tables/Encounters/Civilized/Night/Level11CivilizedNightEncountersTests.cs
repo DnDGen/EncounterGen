@@ -23,41 +23,48 @@ namespace EncounterGen.Tests.Integration.Tables.Encounters.Civilized.Night
             AssertTableIsComplete();
         }
 
-        [TestCase(1, 12, CreatureConstants.Commoner_Farmer + "1d2+17", RollConstants.OneD3)]
-        [TestCase(13, 18, CreatureConstants.Ghost, RollConstants.One)]
-        [TestCase(19, 24, CreatureConstants.Commoner_Herder + "1d2+17", RollConstants.OneD3,
+        [TestCase(1, 4, CreatureConstants.Commoner_Farmer + "[1d2+17]", RollConstants.OneD3)]
+        [TestCase(5, 8, CreatureConstants.Ghost + "[6]", RollConstants.One)]
+        [TestCase(9, 12, CreatureConstants.Commoner_Herder + "[1d2+17]", RollConstants.OneD3,
             CreatureConstants.Livestock, RollConstants.OneD4Plus10)]
-        [TestCase(25, 30, CreatureConstants.Commoner_Hunter + "1d2+15", RollConstants.OneD3,
-            CreatureConstants.Warrior_Hunter + "1d2+15", RollConstants.One)]
-        [TestCase(31, 36, CreatureConstants.Commoner_Merchant + "1d2+11", RollConstants.OneD3,
-            CreatureConstants.Warrior_Guard + "1d2+11", RollConstants.OneD3,
-            CreatureConstants.Expert_Merchant + "1d2+11", RollConstants.One)]
-        [TestCase(37, 42, CreatureConstants.Commoner_Minstrel + "1d2+9", RollConstants.OneD6Plus3,
-            CreatureConstants.Expert_Minstrel + "1d2+9", RollConstants.One)]
-        [TestCase(37, 42, CreatureConstants.Commoner_Minstrel + "1d2+9", RollConstants.OneD6Plus3,
-            CharacterClassConstants.Bard + "7", RollConstants.One)]
-        [TestCase(43, 48, CreatureConstants.Warrior_Patrol + "1d2+11", RollConstants.OneD6Plus3,
-            CreatureConstants.Warrior_Captain + "1d2+13", RollConstants.One)]
-        [TestCase(43, 48, CreatureConstants.Warrior_Patrol + "1d2+9", RollConstants.OneD6Plus3,
-            CharacterClassConstants.Fighter + "7", RollConstants.One)]
-        [TestCase(49, 54, CreatureConstants.Commoner_Pilgrim + "1d2+3", RollConstants.OneD4Plus10,
-            CreatureConstants.Warrior_Guard + "1d2+3", RollConstants.OneD3Plus1,
-            CharacterClassConstants.Cleric + "8", RollConstants.One)]
-        [TestCase(49, 54, CreatureConstants.Commoner_Pilgrim + "1d2+7", RollConstants.OneD6Plus5,
-            CreatureConstants.Warrior_Guard + "1d2+7", RollConstants.OneD3,
-            CharacterClassConstants.Cleric + "6", RollConstants.One)]
-        [TestCase(49, 54, CreatureConstants.Commoner_Pilgrim + "1d2+9", RollConstants.OneD6Plus3,
-            CharacterClassConstants.Cleric + "7", RollConstants.One)]
-        [TestCase(55, 60, CreatureConstants.Warrior_Bandit + "1d2+15", RollConstants.OneD3Plus1)]
-        [TestCase(43, 48, CreatureConstants.Warrior_Bandit + "1d2+11", RollConstants.OneD4Plus2,
-            CreatureConstants.Warrior_Leader + "1d2+13", RollConstants.One)]
-        [TestCase(43, 48, CreatureConstants.Warrior_Bandit + "1d2+9", RollConstants.OneD6Plus3,
-            CreatureConstants.Warrior_Leader + "1d2+11", RollConstants.One)]
-        [TestCase(55, 60, CreatureConstants.Warrior_Bandit + "1d2+15", RollConstants.OneD6Plus5,
-            CharacterClassConstants.Fighter + "", RollConstants.One)]
-        [TestCase(61, 66, CreatureConstants.Slaad_Death, RollConstants.OneD2)]
-        [TestCase(67, 72, CreatureConstants.TrumpetArchon, RollConstants.OneD3Plus1)]
-        [TestCase(73, 100, CreatureConstants.Character + "11", RollConstants.OneD3Plus1)]
+        [TestCase(13, 16, CreatureConstants.Commoner_Hunter + "[1d2+15]", RollConstants.OneD3,
+            CreatureConstants.Warrior_Hunter + "[1d2+15]", RollConstants.One)]
+        [TestCase(17, 20, CreatureConstants.Commoner_Merchant + "[1d2+11]", RollConstants.OneD3,
+            CreatureConstants.Warrior_Guard + "[1d2+11]", RollConstants.OneD3,
+            CreatureConstants.Expert_Merchant + "[1d2+11]", RollConstants.One)]
+        [TestCase(21, 24, CreatureConstants.Commoner_Minstrel + "[1d2+9]", RollConstants.OneD6Plus3,
+            CreatureConstants.Expert_Minstrel + "[1d2+9]", RollConstants.One)]
+        [TestCase(25, 28, CreatureConstants.Commoner_Minstrel + "[1d2+9]", RollConstants.OneD6Plus3,
+            CharacterClassConstants.Bard + "[7]", RollConstants.One)]
+        [TestCase(29, 32, CreatureConstants.Warrior_Patrol + "[1d2+11]", RollConstants.OneD6Plus3,
+            CreatureConstants.Warrior_Captain + "[1d2+13]", RollConstants.One)]
+        [TestCase(33, 36, CreatureConstants.Warrior_Patrol + "[1d2+9]", RollConstants.OneD6Plus3,
+            CharacterClassConstants.Fighter + "[7]", RollConstants.One)]
+        [TestCase(37, 40, CreatureConstants.Commoner_Pilgrim + "[1d2+3]", RollConstants.OneD4Plus10,
+            CreatureConstants.Warrior_Guard + "[1d2+3]", RollConstants.OneD3Plus1,
+            CharacterClassConstants.Cleric + "[8]", RollConstants.One)]
+        [TestCase(41, 44, CreatureConstants.Commoner_Pilgrim + "[1d2+7]", RollConstants.OneD6Plus5,
+            CreatureConstants.Warrior_Guard + "[1d2+7]", RollConstants.OneD3,
+            CharacterClassConstants.Cleric + "[6]", RollConstants.One)]
+        [TestCase(45, 48, CreatureConstants.Commoner_Pilgrim + "[1d2+9]", RollConstants.OneD6Plus3,
+            CharacterClassConstants.Cleric + "[7]", RollConstants.One)]
+        [TestCase(49, 52, CreatureConstants.Warrior_Bandit + "[1d2+15]", RollConstants.OneD3Plus1)]
+        [TestCase(53, 56, CreatureConstants.Warrior_Bandit + "[1d2+11]", RollConstants.OneD4Plus2,
+            CreatureConstants.Warrior_BanditLeader + "[1d2+13]", RollConstants.One)]
+        [TestCase(57, 60, CreatureConstants.Warrior_Bandit + "[1d2+9]", RollConstants.OneD6Plus3,
+            CreatureConstants.Warrior_BanditLeader + "[1d2+11]", RollConstants.One)]
+        [TestCase(61, 64, CreatureConstants.Warrior_Bandit + "[1d2+7]", RollConstants.OneD6Plus5,
+            CharacterClassConstants.Fighter + "[6]", RollConstants.One)]
+        [TestCase(65, 68, CreatureConstants.Warrior_Bandit + "[1d2+5]", RollConstants.OneD4Plus10,
+            CharacterClassConstants.Fighter + "[6]", RollConstants.One)]
+        [TestCase(69, 72, CreatureConstants.NPC_Traveler + "[1d2+17]", RollConstants.OneD3)]
+        [TestCase(73, 76, CreatureConstants.NPC_Traveler + "[1d2+15]", RollConstants.OneD3Plus1)]
+        [TestCase(77, 80, CreatureConstants.Vampire + "[3]", RollConstants.One)]
+        [TestCase(81, 84, CreatureConstants.Character + "[11]", RollConstants.One)]
+        [TestCase(85, 88, CreatureConstants.Character + "[10]", RollConstants.OneD2)]
+        [TestCase(89, 92, CreatureConstants.Character + "[9]", RollConstants.OneD3)]
+        [TestCase(93, 96, CreatureConstants.Character + "[8]", RollConstants.OneD3Plus1)]
+        [TestCase(97, 100, CreatureConstants.Character + "[7]", RollConstants.OneD4Plus2)]
         public override void Percentile(int lower, int upper, params string[] typesAndAmounts)
         {
             base.Percentile(lower, upper, typesAndAmounts);

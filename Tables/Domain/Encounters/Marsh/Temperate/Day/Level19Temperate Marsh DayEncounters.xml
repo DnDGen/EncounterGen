@@ -23,7 +23,7 @@
     </object>
     <object>
         <lower>71</lower>
-        <content>Character16/1d3+1</content>
+        <content>Character[16]/1d3+1</content>
         <upper>100</upper>
     </object>
 </percentile>

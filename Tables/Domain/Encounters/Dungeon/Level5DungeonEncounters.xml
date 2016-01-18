@@ -63,7 +63,7 @@
   </object>
   <object>
     <lower>36</lower>
-    <content>Character2/1d3+1</content>
+    <content>Character[2]/1d3+1</content>
     <upper>40</upper>
   </object>
     <object>
