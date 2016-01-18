@@ -64,7 +64,7 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
                 CreatureConstants.Gnoll,
                 CreatureConstants.Goblin,
                 CreatureConstants.Golem_Stone,
-                CreatureConstants.Greenhag,
+                CreatureConstants.GreenHag,
                 CreatureConstants.Grick,
                 CreatureConstants.Hamatula,
                 CreatureConstants.Hezrou,
@@ -184,7 +184,7 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
         [TestCase(CreatureConstants.Gnoll, 1, 1, 1)]
         [TestCase(CreatureConstants.Goblin, 1, 1, 1)]
         [TestCase(CreatureConstants.Golem_Stone, 0, 0, 0)]
-        [TestCase(CreatureConstants.Greenhag, 1, 1, 1)]
+        [TestCase(CreatureConstants.GreenHag, 1, 1, 1)]
         [TestCase(CreatureConstants.Grick, TreasureConstants.TenPercent, TreasureConstants.FiftyPercent, TreasureConstants.FiftyPercent)]
         [TestCase(CreatureConstants.Hamatula, 1, 1, 1)]
         [TestCase(CreatureConstants.Hezrou, 1, 1, 1)]

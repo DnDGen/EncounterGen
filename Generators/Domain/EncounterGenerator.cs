@@ -154,13 +154,9 @@ namespace EncounterGen.Generators.Domain
             var levelMatch = characterLevelRegex.Match(fullCharacterType);
 
             var subType = fullCharacterType.Replace(characterType, string.Empty);
-
-            if (string.IsNullOrEmpty(subType))
-                return subType;
-
             subType = subType.Replace(" (", string.Empty).Replace(")", string.Empty);
 
-            if (string.IsNullOrEmpty(subType) || string.IsNullOrEmpty(levelMatch.Value))
+            if (string.IsNullOrEmpty(levelMatch.Value))
                 return subType;
 
             return subType.Replace(levelMatch.Value, string.Empty);

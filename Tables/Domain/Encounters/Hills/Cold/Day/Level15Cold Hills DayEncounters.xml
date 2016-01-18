@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<percentile>
+  <object>
+    <lower>1</lower>
+    <content>Astral deva (celestial)/1d2</content>
+    <upper>10</upper>
+  </object>
+  <object>
+    <lower>11</lower>
+    <content>Glabrezu (demon)/1,Succubus (demon)/1,Vrock (demon)/1d3+1</content>
+    <upper>20</upper>
+  </object>
+  <object>
+    <lower>21</lower>
+    <content>Hamatula (devil)/1d4+2</content>
+    <upper>30</upper>
+  </object>
+  <object>
+    <lower>31</lower>
+    <content>Osyluth (devil)/1d6+5</content>
+    <upper>40</upper>
+  </object>
+  <object>
+    <lower>41</lower>
+    <content>Trumpet archon/1d2</content>
+    <upper>50</upper>
+  </object>
+  <object>
+    <lower>51</lower>
+    <content>Vrock (demon)/1d6+5</content>
+    <upper>60</upper>
+  </object>
+  <object>
+    <lower>61</lower>
+    <content>Dragon/1</content>
+    <upper>80</upper>
+  </object>
+  <object>
+    <lower>81</lower>
+    <content>Character[12]/1d3+1</content>
+    <upper>100</upper>
+  </object>
+</percentile>

@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<percentile>
+  <object>
+        <lower>1</lower>
+        <content>Behir/1</content>
+        <upper>2</upper>
+    </object>
+  <object>
+    <lower>3</lower>
+    <content>Gray render/1</content>
+    <upper>4</upper>
+  </object>
+  <object>
+    <lower>5</lower>
+    <content>Ogre/1d6+3</content>
+    <upper>6</upper>
+  </object>
+  <object>
+    <lower>7</lower>
+    <content>Ogre mage/1</content>
+    <upper>8</upper>
+  </object>
+  <object>
+    <lower>9</lower>
+    <content>Troll/1d3+1</content>
+    <upper>10</upper>
+  </object>
+  <object>
+    <lower>11</lower>
+    <content>Vargouille/1d6+5</content>
+    <upper>12</upper>
+  </object>
+  <object>
+    <lower>13</lower>
+    <content>Wererat/1d6+5</content>
+    <upper>14</upper>
+  </object>
+  <object>
+    <lower>15</lower>
+    <content>Giant bombardier beetle/1d6+5</content>
+    <upper>16</upper>
+  </object>
+  <object>
+    <lower>17</lower>
+    <content>Gorgon/1</content>
+    <upper>18</upper>
+  </object>
+    <object>
+        <lower>19</lower>
+        <content>Lammasu/1</content>
+        <upper>20</upper>
+    </object>
+  <object>
+    <lower>21</lower>
+    <content>Dark naga/1</content>
+    <upper>22</upper>
+  </object>
+  <object>
+    <lower>23</lower>
+    <content>Gargantuan monstrous spider/1</content>
+    <upper>24</upper>
+  </object>
+  <object>
+    <lower>25</lower>
+    <content>Huge monstrous spider/1d3+1</content>
+    <upper>26</upper>
+  </object>
+  <object>
+    <lower>27</lower>
+    <content>Hydra, 9 heads/1</content>
+    <upper>28</upper>
+  </object>
+  <object>
+    <lower>29</lower>
+    <content>Cryohydra, 7 heads/1</content>
+    <upper>30</upper>
+  </object>
+  <object>
+    <lower>31</lower>
+    <content>Pyrohydra, 7 heads/1</content>
+    <upper>32</upper>
+  </object>
+  <object>
+    <lower>33</lower>
+    <content>Chuul/1d2</content>
+    <upper>35</upper>
+  </object>
+  <object>
+    <lower>36</lower>
+    <content>Crocodile/1d6+5</content>
+    <upper>38</upper>
+  </object>
+  <object>
+    <lower>39</lower>
+    <content>Tyrannosaurus/1</content>
+    <upper>42</upper>
+  </object>
+  <object>
+    <lower>43</lower>
+    <content>Adult arrowhawk/1d3+1</content>
+    <upper>43</upper>
+  </object>
+    <object>
+        <lower>44</lower>
+        <content>Elder arrowhawk/1</content>
+        <upper>44</upper>
+    </object>
+  <object>
+    <lower>45</lower>
+    <content>Barghest/1d4+2</content>
+    <upper>45</upper>
+  </object>
+  <object>
+    <lower>46</lower>
+    <content>Djinn/1d3+1</content>
+    <upper>46</upper>
+  </object>
+    <object>
+        <lower>47</lower>
+        <content>Noble djinn/1</content>
+        <upper>47</upper>
+    </object>
+  <object>
+    <lower>48</lower>
+    <content>Dretch (demon)/1d6+5</content>
+    <upper>48</upper>
+  </object>
+  <object>
+    <lower>49</lower>
+    <content>Efreet/1</content>
+    <upper>49</upper>
+  </object>
+  <object>
+    <lower>50</lower>
+    <content>Erinyes (devil)/1</content>
+    <upper>50</upper>
+  </object>
+  <object>
+    <lower>51</lower>
+    <content>Hellcat/1d2</content>
+    <upper>51</upper>
+  </object>
+  <object>
+    <lower>52</lower>
+    <content>Mohrg/1</content>
+    <upper>52</upper>
+  </object>
+  <object>
+    <lower>53</lower>
+    <content>Blue slaad/1</content>
+    <upper>53</upper>
+  </object>
+  <object>
+    <lower>54</lower>
+    <content>Red slaad/1d2</content>
+    <upper>54</upper>
+  </object>
+    <object>
+      <lower>55</lower>
+        <content>Elder xorn/1</content>
+        <upper>55</upper>
+    </object>
+  <object>
+    <lower>56</lower>
+    <content>Dragon/1</content>
+    <upper>57</upper>
+  </object>
+  <object>
+    <lower>58</lower>
+    <content>Skeleton/1</content>
+    <upper>58</upper>
+  </object>
+  <object>
+    <lower>59</lower>
+    <content>Zombie/1</content>
+    <upper>59</upper>
+  </object>
+    <object>
+        <lower>60</lower>
+        <content>Celestial creature/1</content>
+        <upper>60</upper>
+    </object>
+  <object>
+    <lower>61</lower>
+    <content>Fiendish creature/1</content>
+    <upper>61</upper>
+  </object>
+  <object>
+    <lower>62</lower>
+    <content>Character[5]/1d3+1</content>
+    <upper>100</upper>
+  </object>
+</percentile>

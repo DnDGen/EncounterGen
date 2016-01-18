@@ -32,7 +32,7 @@ namespace EncounterGen.Tests.Integration.Tables.Encounters.Dungeon
         [TestCase(13, 15, CreatureConstants.SpiderEater, RollConstants.One)]
         [TestCase(16, 20, CreatureConstants.Dragon, RollConstants.One)]
         [TestCase(21, 23, CreatureConstants.Doppelganger, RollConstants.OneD3)]
-        [TestCase(24, 25, CreatureConstants.Greenhag, RollConstants.One)]
+        [TestCase(24, 25, CreatureConstants.GreenHag, RollConstants.One)]
         [TestCase(26, 27, CreatureConstants.Mephit, RollConstants.OneD3)]
         [TestCase(28, 30, CreatureConstants.Wererat, RollConstants.OneD3Plus1)]
         [TestCase(31, 35, CreatureConstants.BlinkDog, RollConstants.OneD3Plus1)]
