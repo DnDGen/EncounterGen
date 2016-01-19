@@ -205,6 +205,30 @@
   <ItemGroup>
     <EmbeddedResource Include="Encounters\Forest\Temperate\Day\Level20Temperate Forest DayEncounters.xml" />
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Encounters\Desert\Temperate\Night\Level6Temperate Desert NightEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Encounters\Marsh\Temperate\Night\Level18Temperate Marsh NightEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Encounters\Plains\Temperate\Night\Level9Temperate Plains NightEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Encounters\Marsh\Cold\Day\Level18Cold Marsh DayEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Encounters\Mountain\Temperate\Night\Level20Temperate Mountain NightEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Encounters\Mountain\Temperate\Day\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Encounters\Marsh\Warm\Day\Level17Warm Marsh DayEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Encounters\Marsh\Temperate\Day\Level20Temperate Marsh DayEncounters.xml" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

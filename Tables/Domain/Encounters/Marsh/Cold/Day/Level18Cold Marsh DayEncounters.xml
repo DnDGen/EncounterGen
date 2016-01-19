@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<percentile>
+  <object>
+        <lower>1</lower>
+        <content>Dragon/1</content>
+        <upper>40</upper>
+    </object>
+    <object>
+        <lower>41</lower>
+        <content>Marilith (demon)/1d2</content>
+        <upper>60</upper>
+    </object>
+    <object>
+        <lower>61</lower>
+        <content>Character[15]/1d3+1</content>
+        <upper>100</upper>
+    </object>
+</percentile>
