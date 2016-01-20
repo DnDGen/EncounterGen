@@ -120,6 +120,7 @@
     <Compile Include="Encounters\Marsh\Temperate\Night\Level18TemperateMarshNightEncountersTests.cs" />
     <Compile Include="Encounters\Marsh\Warm\Day\Level17WarmMarshDayEncountersTests.cs" />
     <Compile Include="Encounters\Marsh\Warm\Day\Level8WarmMarshDayEncountersTests.cs" />
+    <Compile Include="Encounters\Marsh\Warm\Night\Level19WarmMarshNightEncountersTests.cs" />
     <Compile Include="Encounters\Mountain\Cold\Night\Level11ColdMountainNightEncountersTests.cs" />
     <Compile Include="Encounters\Mountain\Temperate\Night\Level20TemperateMountainNightEncountersTests.cs" />
     <Compile Include="Encounters\Plains\Cold\Day\Level4ColdPlainsDayEncountersTests.cs" />
