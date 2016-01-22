@@ -22,13 +22,15 @@ namespace EncounterGen.Tests.Integration.Tables.Encounters.Marsh.Warm.Day
             AssertTableIsComplete();
         }
 
-        [TestCase(1, 10, CreatureConstants.TrumpetArchon, RollConstants.OneD3Plus1)]
-        [TestCase(11, 20, CreatureConstants.AstralDeva, RollConstants.OneD3Plus1)]
-        [TestCase(21, 30, CreatureConstants.Hamatula, RollConstants.OneD6Plus5)]
-        [TestCase(31, 40, CreatureConstants.Marilith, RollConstants.One)]
-        [TestCase(41, 50, CreatureConstants.Planetar, RollConstants.OneD2)]
-        [TestCase(51, 60, CreatureConstants.Salamander_Noble, RollConstants.OneD4Plus10)]
-        [TestCase(61, 80, CreatureConstants.Dragon, RollConstants.One)]
+        [TestCase(1, 8, CreatureConstants.TrumpetArchon, RollConstants.OneD3Plus1)]
+        [TestCase(9, 16, CreatureConstants.AstralDeva, RollConstants.OneD3Plus1)]
+        [TestCase(17, 24, CreatureConstants.Hamatula, RollConstants.OneD6Plus5)]
+        [TestCase(25, 32, CreatureConstants.Marilith, RollConstants.One)]
+        [TestCase(33, 40, CreatureConstants.Planetar, RollConstants.OneD2)]
+        [TestCase(41, 48, CreatureConstants.Salamander_Noble, RollConstants.OneD4Plus10)]
+        [TestCase(49, 64, CreatureConstants.Dragon, RollConstants.One)]
+        [TestCase(65, 72, CreatureConstants.CelestialCreature, RollConstants.One)]
+        [TestCase(73, 80, CreatureConstants.FiendishCreature, RollConstants.One)]
         [TestCase(81, 100, CreatureConstants.Character + "[14]", RollConstants.OneD3Plus1)]
         public override void Percentile(int lower, int upper, params string[] typesAndAmounts)
         {

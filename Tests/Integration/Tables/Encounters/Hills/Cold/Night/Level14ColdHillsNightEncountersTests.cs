@@ -22,18 +22,23 @@ namespace EncounterGen.Tests.Integration.Tables.Encounters.Hills.Cold.Night
             AssertTableIsComplete();
         }
 
-        [TestCase(1, 12, CreatureConstants.Dragon, RollConstants.One)]
-        [TestCase(13, 18, CreatureConstants.AstralDeva, RollConstants.One)]
-        [TestCase(19, 24, CreatureConstants.Efreet, RollConstants.OneD6Plus5)]
-        [TestCase(25, 30, CreatureConstants.Ghaele, RollConstants.OneD2)]
-        [TestCase(31, 36, CreatureConstants.Golem_Stone, RollConstants.OneD3Plus1)]
-        [TestCase(37, 42, CreatureConstants.Hezrou, RollConstants.OneD3Plus1)]
-        [TestCase(43, 48, CreatureConstants.Nalfeshnee, RollConstants.One)]
-        [TestCase(49, 54, CreatureConstants.Nightwing, RollConstants.One)]
-        [TestCase(55, 60, CreatureConstants.Slaad_Blue, RollConstants.OneD6Plus5)]
-        [TestCase(61, 66, CreatureConstants.Slaad_Death, RollConstants.OneD2)]
-        [TestCase(67, 72, CreatureConstants.TrumpetArchon, RollConstants.OneD3Plus1)]
-        [TestCase(73, 100, CreatureConstants.Character + "[11]", RollConstants.OneD3Plus1)]
+        [TestCase(1, 10, CreatureConstants.Dragon, RollConstants.One)]
+        [TestCase(11, 15, CreatureConstants.AstralDeva, RollConstants.One)]
+        [TestCase(16, 20, CreatureConstants.Efreet, RollConstants.OneD6Plus5)]
+        [TestCase(21, 25, CreatureConstants.Ghaele, RollConstants.OneD2)]
+        [TestCase(26, 30, CreatureConstants.Golem_Stone, RollConstants.OneD3Plus1)]
+        [TestCase(31, 35, CreatureConstants.Hezrou, RollConstants.OneD3Plus1)]
+        [TestCase(36, 40, CreatureConstants.Nalfeshnee, RollConstants.One)]
+        [TestCase(41, 45, CreatureConstants.Nightwing, RollConstants.One)]
+        [TestCase(46, 50, CreatureConstants.Slaad_Blue, RollConstants.OneD6Plus5)]
+        [TestCase(51, 55, CreatureConstants.Slaad_Death, RollConstants.OneD2)]
+        [TestCase(56, 60, CreatureConstants.TrumpetArchon, RollConstants.OneD3Plus1)]
+        [TestCase(61, 65, CreatureConstants.Xorn_Elder, RollConstants.OneD6Plus5)]
+        [TestCase(66, 70, CreatureConstants.CelestialCreature, RollConstants.One)]
+        [TestCase(71, 75, CreatureConstants.FiendishCreature, RollConstants.One)]
+        [TestCase(76, 80, CreatureConstants.Skeleton, RollConstants.One)]
+        [TestCase(81, 85, CreatureConstants.Zombie, RollConstants.One)]
+        [TestCase(86, 100, CreatureConstants.Character + "[11]", RollConstants.OneD3Plus1)]
         public override void Percentile(int lower, int upper, params string[] typesAndAmounts)
         {
             base.Percentile(lower, upper, typesAndAmounts);

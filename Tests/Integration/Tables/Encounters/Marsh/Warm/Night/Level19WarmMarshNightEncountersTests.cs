@@ -22,13 +22,15 @@ namespace EncounterGen.Tests.Integration.Tables.Encounters.Marsh.Warm.Night
             AssertTableIsComplete();
         }
 
-        [TestCase(1, 22, CreatureConstants.Dragon, RollConstants.One)]
-        [TestCase(23, 33, CreatureConstants.Cornugon, RollConstants.OneD3Plus1)]
-        [TestCase(34, 44, CreatureConstants.Gelugon, RollConstants.OneD6Plus5)]
-        [TestCase(45, 55, CreatureConstants.Golem_Stone_Greater, RollConstants.OneD3Plus1)]
-        [TestCase(56, 66, CreatureConstants.Nightcrawler, RollConstants.OneD2)]
-        [TestCase(67, 77, CreatureConstants.Nightwalker, RollConstants.OneD3Plus1)]
-        [TestCase(78, 100, CreatureConstants.Character + "[16]", RollConstants.OneD3Plus1)]
+        [TestCase(1, 18, CreatureConstants.Dragon, RollConstants.One)]
+        [TestCase(19, 27, CreatureConstants.Cornugon, RollConstants.OneD3Plus1)]
+        [TestCase(28, 36, CreatureConstants.Gelugon, RollConstants.OneD6Plus5)]
+        [TestCase(37, 45, CreatureConstants.Golem_Stone_Greater, RollConstants.OneD3Plus1)]
+        [TestCase(46, 54, CreatureConstants.Nightcrawler, RollConstants.OneD2)]
+        [TestCase(55, 63, CreatureConstants.Nightwalker, RollConstants.OneD3Plus1)]
+        [TestCase(64, 72, CreatureConstants.CelestialCreature, RollConstants.One)]
+        [TestCase(73, 81, CreatureConstants.FiendishCreature, RollConstants.One)]
+        [TestCase(82, 100, CreatureConstants.Character + "[16]", RollConstants.OneD3Plus1)]
         public override void Percentile(int lower, int upper, params string[] typesAndAmounts)
         {
             base.Percentile(lower, upper, typesAndAmounts);

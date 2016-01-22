@@ -8,7 +8,7 @@ namespace EncounterGen.Tests.Integration.Tables.Rolls
     [TestFixture]
     public class RollOrderTests : CollectionTests
     {
-        protected override String tableName
+        protected override string tableName
         {
             get
             {
@@ -33,7 +33,7 @@ namespace EncounterGen.Tests.Integration.Tables.Rolls
             RollConstants.OneD6Plus5,
             RollConstants.OneD4Plus10,
             RollConstants.Reroll)]
-        public override void OrderedCollection(String entry, params String[] items)
+        public override void OrderedCollection(string entry, params string[] items)
         {
             base.Collection(entry, items);
         }
