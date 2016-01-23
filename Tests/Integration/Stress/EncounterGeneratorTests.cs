@@ -66,7 +66,7 @@ namespace EncounterGen.Tests.Integration.Stress
         }
 
         [TestCase("Encounter Generator")]
-        public override void Stress(String stressSubject)
+        public override void Stress(string stressSubject)
         {
             Stress();
         }
@@ -80,7 +80,7 @@ namespace EncounterGen.Tests.Integration.Stress
             AssertEncounter(encounter);
         }
 
-        private Encounter MakeEncounter(String environment)
+        private Encounter MakeEncounter(string environment)
         {
             var level = Random.Next(1, 21);
             return EncounterGenerator.Generate(environment, level);
@@ -102,6 +102,18 @@ namespace EncounterGen.Tests.Integration.Stress
                 Assert.That(encounter.Treasure.Goods, Is.Empty);
                 Assert.That(encounter.Treasure.Items, Is.Empty);
             }
+        }
+
+        [Test]
+        public void StressDungeonEncounters()
+        {
+            Stress(AssertDungeonEncounter);
+        }
+
+        private void AssertDungeonEncounter()
+        {
+            var encounter = MakeEncounter(EnvironmentConstants.Dungeon);
+            AssertEncounter(encounter);
         }
     }
 }
