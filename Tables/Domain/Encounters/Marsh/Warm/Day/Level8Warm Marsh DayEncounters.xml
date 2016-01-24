@@ -68,17 +68,17 @@
   </object>
   <object>
     <lower>27</lower>
-    <content>Hydra, 9 heads/1</content>
+    <content>Hydra (9 heads)/1</content>
     <upper>28</upper>
   </object>
   <object>
     <lower>29</lower>
-    <content>Cryohydra, 7 heads/1</content>
+    <content>Cryohydra (7 heads)/1</content>
     <upper>30</upper>
   </object>
   <object>
     <lower>31</lower>
-    <content>Pyrohydra, 7 heads/1</content>
+    <content>Pyrohydra (7 heads)/1</content>
     <upper>32</upper>
   </object>
   <object>

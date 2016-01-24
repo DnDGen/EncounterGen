@@ -4,60 +4,85 @@
   <object>
         <lower>1</lower>
         <content>Dragon/1</content>
-        <upper>12</upper>
+        <upper>10</upper>
     </object>
     <object>
-        <lower>13</lower>
+        <lower>11</lower>
         <content>Astral deva (celestial)/1</content>
-        <upper>18</upper>
+        <upper>15</upper>
     </object>
     <object>
-        <lower>19</lower>
+        <lower>16</lower>
         <content>Efreet/1d6+5</content>
-        <upper>24</upper>
+        <upper>20</upper>
     </object>
     <object>
-        <lower>25</lower>
+        <lower>21</lower>
         <content>Ghaele (celestial)/1d2</content>
-        <upper>30</upper>
+        <upper>25</upper>
     </object>
+  <object>
+    <lower>26</lower>
+    <content>Stone golem/1d3+1</content>
+    <upper>30</upper>
+  </object>
   <object>
     <lower>31</lower>
-    <content>Stone golem/1d3+1</content>
-    <upper>36</upper>
-  </object>
-  <object>
-    <lower>37</lower>
     <content>Hezrou (demon)/1d3+1</content>
-    <upper>42</upper>
+    <upper>35</upper>
   </object>
   <object>
-    <lower>43</lower>
+    <lower>36</lower>
     <content>Nalfeshnee (demon)/1</content>
-    <upper>48</upper>
+    <upper>40</upper>
   </object>
   <object>
-    <lower>49</lower>
+    <lower>41</lower>
     <content>Nightwing (nightshade)/1</content>
-    <upper>54</upper>
+    <upper>45</upper>
   </object>
     <object>
-        <lower>55</lower>
+        <lower>46</lower>
         <content>Blue slaad/1d6+5</content>
-        <upper>60</upper>
+        <upper>50</upper>
     </object>
     <object>
-        <lower>61</lower>
+        <lower>51</lower>
         <content>Death slaad/1d2</content>
-        <upper>66</upper>
+        <upper>55</upper>
     </object>
   <object>
-    <lower>67</lower>
+    <lower>56</lower>
     <content>Trumpet archon/1d3+1</content>
-    <upper>72</upper>
+    <upper>60</upper>
   </object>
   <object>
-    <lower>73</lower>
+    <lower>61</lower>
+    <content>Elder xorn/1d6+5</content>
+    <upper>65</upper>
+  </object>
+  <object>
+    <lower>66</lower>
+    <content>Celestial creature/1</content>
+    <upper>70</upper>
+  </object>
+  <object>
+    <lower>71</lower>
+    <content>Fiendish creature/1</content>
+    <upper>75</upper>
+  </object>
+  <object>
+    <lower>76</lower>
+    <content>Skeleton/1</content>
+    <upper>80</upper>
+  </object>
+  <object>
+    <lower>81</lower>
+    <content>Zombie/1</content>
+    <upper>85</upper>
+  </object>
+  <object>
+    <lower>86</lower>
     <content>Character[11]/1d3+1</content>
     <upper>100</upper>
   </object>

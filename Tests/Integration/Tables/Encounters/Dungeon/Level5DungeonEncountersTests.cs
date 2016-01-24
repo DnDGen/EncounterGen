@@ -40,7 +40,7 @@ namespace EncounterGen.Tests.Integration.Tables.Encounters.Dungeon
         [TestCase(41, 43, CreatureConstants.Cockatrice, RollConstants.OneD3)]
         [TestCase(44, 47, CreatureConstants.GibberingMouther, RollConstants.One)]
         [TestCase(48, 50, CreatureConstants.Grick, RollConstants.OneD3)]
-        [TestCase(51, 52, CreatureConstants.Hydra + ", 1d3+4 heads", RollConstants.One)]
+        [TestCase(51, 52, CreatureConstants.Hydra + " (1d3+4 heads)", RollConstants.One)]
         [TestCase(53, 55, CreatureConstants.Nightmare, RollConstants.One)]
         [TestCase(56, 58, CreatureConstants.ShockerLizard, RollConstants.OneD3Plus1)]
         [TestCase(59, 60, CreatureConstants.VioletFungus, RollConstants.One,

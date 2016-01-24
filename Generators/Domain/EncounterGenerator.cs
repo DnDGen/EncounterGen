@@ -45,6 +45,7 @@ namespace EncounterGen.Generators.Domain
         private ISetMetaraceRandomizer setMetaraceRandomizer;
         private Regex characterLevelRegex;
         private Regex setCharacterLevelRegex;
+        private Regex subTypeRegex;
 
         public EncounterGenerator(ITypeAndAmountPercentileSelector typeAndAmountPercentileSelector, ICoinGenerator coinGenerator,
             IGoodsGenerator goodsGenerator, IItemsGenerator itemsGenerator, ICharacterGenerator characterGenerator, IAlignmentRandomizer alignmentRandomizer, IClassNameRandomizer anyPlayerClassNameRandomizer,
@@ -75,6 +76,7 @@ namespace EncounterGen.Generators.Domain
 
             characterLevelRegex = new Regex("\\[.+\\]");
             setCharacterLevelRegex = new Regex("\\d+");
+            subTypeRegex = new Regex(" \\(.+\\)");
         }
 
         public Encounter Generate(string environment, int level)
@@ -99,11 +101,11 @@ namespace EncounterGen.Generators.Domain
             }
 
             var encounter = new Encounter();
-            var leadCreature = encounterCreaturesAndAmounts.First().Key;
-
-            encounter.Treasure = GenerateTreasureFor(leadCreature, level);
             encounter.Characters = GetCharacters(creatures, effectiveLevel);
             encounter.Creatures = EditCreatureTypes(creatures, effectiveLevel);
+
+            var leadCreature = encounter.Creatures.First();
+            encounter.Treasure = GenerateTreasureFor(leadCreature.Type, level);
 
             return encounter;
         }
@@ -115,16 +117,10 @@ namespace EncounterGen.Generators.Domain
 
             foreach (var creature in creatures)
             {
-                if (IsCharacterCreature(creature.Type))
-                {
-                    creature.Subtype = GetCharacterSubtype(creature.Type, effectiveLevel);
-                    creature.Type = GetCharacterCreatureType(creature.Type);
-                }
-                else if (creature.Type == CreatureConstants.Dragon)
-                {
-                    var tableName = string.Format(TableNameConstants.LevelXDragons, effectiveLevel);
-                    creature.Type = percentileSelector.SelectFrom(tableName);
-                }
+                if (creature.Subtype == string.Empty)
+                    creature.Subtype = GetSubtype(creature.Type);
+
+                creature.Type = GetCreatureType(creature.Type, effectiveLevel);
 
                 var dieRoll = rollSelector.SelectRollFrom(creature.Type);
 
@@ -148,28 +144,14 @@ namespace EncounterGen.Generators.Domain
             return creatures.Union(newCreatures).Except(creaturesToRemove);
         }
 
-        private string GetCharacterSubtype(string fullCharacterType, int effectiveLevel)
-        {
-            var characterType = GetCharacterCreatureType(fullCharacterType);
-            var levelMatch = characterLevelRegex.Match(fullCharacterType);
-
-            var subType = fullCharacterType.Replace(characterType, string.Empty);
-            subType = subType.Replace(" (", string.Empty).Replace(")", string.Empty);
-
-            if (string.IsNullOrEmpty(levelMatch.Value))
-                return subType;
-
-            return subType.Replace(levelMatch.Value, string.Empty);
-        }
-
-        private Creature GetCreature(string creatureType, string amount, int modifier, int effectiveLevel)
+        private Creature GetCreature(string fullCreatureType, string amount, int modifier, int effectiveLevel)
         {
             var creaturesRequiringSubtypes = collectionSelector.SelectFrom(TableNameConstants.CreatureGroups, GroupConstants.RequiresSubtype);
-            if (creaturesRequiringSubtypes.Contains(creatureType))
-                return GetCreatureWithSubtype(creatureType, effectiveLevel, modifier);
+            if (creaturesRequiringSubtypes.Contains(fullCreatureType))
+                return GetCreatureWithRandomSubtype(fullCreatureType, effectiveLevel, modifier);
 
             var creature = new Creature();
-            creature.Type = creatureType;
+            creature.Type = fullCreatureType;
 
             var effectiveRoll = rollSelector.SelectFrom(amount, modifier);
             var doubleQuantity = rollSelector.SelectFrom(effectiveRoll);
@@ -178,7 +160,31 @@ namespace EncounterGen.Generators.Domain
             return creature;
         }
 
-        private Creature GetCreatureWithSubtype(string creatureType, int effectiveLevel, int modifier)
+        private string GetCreatureType(string fullCreatureType, int effectiveLevel)
+        {
+            var creatureType = subTypeRegex.Replace(fullCreatureType, string.Empty);
+            creatureType = characterLevelRegex.Replace(creatureType, string.Empty);
+
+            if (creatureType != CreatureConstants.Dragon)
+                return creatureType;
+
+            var tableName = string.Format(TableNameConstants.LevelXDragons, effectiveLevel);
+            return percentileSelector.SelectFrom(tableName);
+        }
+
+        private string GetSubtype(string fullCreatureType)
+        {
+            var subTypeMatch = subTypeRegex.Match(fullCreatureType);
+            if (string.IsNullOrEmpty(subTypeMatch.Value))
+                return string.Empty;
+
+            var subType = subTypeMatch.Value.Replace(" (", string.Empty).Replace(")", string.Empty);
+            subType = characterLevelRegex.Replace(subType, string.Empty);
+
+            return subType;
+        }
+
+        private Creature GetCreatureWithRandomSubtype(string creatureType, int effectiveLevel, int modifier)
         {
             var creature = new Creature();
             creature.Type = creatureType;
@@ -238,20 +244,20 @@ namespace EncounterGen.Generators.Domain
             return string.IsNullOrEmpty(characterCreatureType) == false;
         }
 
-        private string GetCharacterCreatureType(string creatureType)
+        private string GetCharacterCreatureType(string fullCreatureType)
         {
-            if (creatureType.StartsWith(CreatureConstants.Character))
+            if (fullCreatureType.StartsWith(CreatureConstants.Character))
                 return CreatureConstants.Character;
 
-            if (creatureType.StartsWith(CreatureConstants.NPC))
+            if (fullCreatureType.StartsWith(CreatureConstants.NPC))
                 return CreatureConstants.NPC;
 
             var undeadNPCCreatures = collectionSelector.SelectFrom(TableNameConstants.CreatureGroups, GroupConstants.UndeadNPC);
-            if (undeadNPCCreatures.Any(c => creatureType.StartsWith(c)))
-                return undeadNPCCreatures.First(c => creatureType.StartsWith(c));
+            if (undeadNPCCreatures.Any(c => fullCreatureType.StartsWith(c)))
+                return undeadNPCCreatures.First(c => fullCreatureType.StartsWith(c));
 
             var classes = collectionSelector.SelectFrom(TableNameConstants.CreatureGroups, CreatureConstants.Character);
-            return classes.FirstOrDefault(cl => creatureType.StartsWith(cl));
+            return classes.FirstOrDefault(cl => fullCreatureType.StartsWith(cl));
         }
 
         private Character GenerateCharacter(Creature creature, int effectiveLevel)
@@ -301,14 +307,11 @@ namespace EncounterGen.Generators.Domain
             return amounts.Any(a => rollSelector.SelectFrom(a, modifier) == RollConstants.Reroll);
         }
 
-        private Treasure GenerateTreasureFor(string creature, int level)
+        private Treasure GenerateTreasureFor(string creatureType, int level)
         {
-            if (IsCharacterCreature(creature))
-                creature = GetCharacterCreatureType(creature);
-
-            var coinMultiplier = adjustmentSelector.SelectFrom(TableNameConstants.TreasureAdjustments, creature, TreasureConstants.Coin);
-            var goodsMultiplier = adjustmentSelector.SelectFrom(TableNameConstants.TreasureAdjustments, creature, TreasureConstants.Goods);
-            var itemsMultiplier = adjustmentSelector.SelectFrom(TableNameConstants.TreasureAdjustments, creature, TreasureConstants.Items);
+            var coinMultiplier = adjustmentSelector.SelectFrom(TableNameConstants.TreasureAdjustments, creatureType, TreasureConstants.Coin);
+            var goodsMultiplier = adjustmentSelector.SelectFrom(TableNameConstants.TreasureAdjustments, creatureType, TreasureConstants.Goods);
+            var itemsMultiplier = adjustmentSelector.SelectFrom(TableNameConstants.TreasureAdjustments, creatureType, TreasureConstants.Items);
 
             var treasure = new Treasure();
 

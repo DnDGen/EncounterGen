@@ -341,6 +341,24 @@ namespace EncounterGen.Tests.Unit.Generators
         }
 
         [Test]
+        public void GenerateEncounterWithSetSubType()
+        {
+            encounterTypeAndAmount.Clear();
+            encounterTypeAndAmount["creature (subtype)"] = "creature amount";
+            mockRollSelector.Setup(s => s.SelectFrom("creature amount", 9876)).Returns("creature effective roll");
+            mockRollSelector.Setup(s => s.SelectFrom("creature effective roll")).Returns(600);
+
+            var encounter = encounterGenerator.Generate(environment, level);
+            Assert.That(encounter, Is.Not.Null);
+
+            var creature = encounter.Creatures.Single();
+            Assert.That(creature.Type, Is.EqualTo("creature"));
+            Assert.That(creature.Subtype, Is.EqualTo("subtype"));
+            Assert.That(creature.Quantity, Is.EqualTo(600));
+            Assert.That(encounter.Characters, Is.Empty);
+        }
+
+        [Test]
         public void SubTypeIsRerolled()
         {
             requiresSubtype.Add("creature");
@@ -1033,17 +1051,18 @@ namespace EncounterGen.Tests.Unit.Generators
         public void ReplaceRollsInCreatureType()
         {
             encounterTypeAndAmount.Clear();
-            encounterTypeAndAmount["Hydra with 2d3+4 heads"] = "hydra amount";
+            encounterTypeAndAmount["Hydra (2d3+4 heads)"] = "hydra amount";
             mockRollSelector.Setup(s => s.SelectFrom("hydra amount", 9876)).Returns("hydra effective roll");
             mockRollSelector.Setup(s => s.SelectFrom("hydra effective roll")).Returns(1);
-            mockRollSelector.Setup(s => s.SelectRollFrom("Hydra with 2d3+4 heads")).Returns("2d3+4");
+            mockRollSelector.Setup(s => s.SelectRollFrom("Hydra (2d3+4 heads)")).Returns("2d3+4");
             mockRollSelector.Setup(s => s.SelectFrom("2d3+4")).Returns(1337);
 
             var encounter = encounterGenerator.Generate(environment, level);
             Assert.That(encounter, Is.Not.Null);
 
             var creature = encounter.Creatures.Single();
-            Assert.That(creature.Type, Is.EqualTo("Hydra with 1337 heads"));
+            Assert.That(creature.Type, Is.EqualTo("Hydra"));
+            Assert.That(creature.Subtype, Is.EqualTo("1337 heads"));
             Assert.That(creature.Quantity, Is.EqualTo(1));
             Assert.That(encounter.Characters, Is.Empty);
         }
@@ -1052,17 +1071,17 @@ namespace EncounterGen.Tests.Unit.Generators
         public void RollsInCreatureTypeAreUnique()
         {
             encounterTypeAndAmount.Clear();
-            encounterTypeAndAmount["Hydra with 2d3+4 heads"] = "hydra amount";
+            encounterTypeAndAmount["Hydra (2d3+4 heads)"] = "hydra amount";
             mockRollSelector.Setup(s => s.SelectFrom("hydra amount", 9876)).Returns("hydra effective roll");
             mockRollSelector.Setup(s => s.SelectFrom("hydra effective roll")).Returns(2);
-            mockRollSelector.Setup(s => s.SelectRollFrom("Hydra with 2d3+4 heads")).Returns("2d3+4");
+            mockRollSelector.Setup(s => s.SelectRollFrom("Hydra (2d3+4 heads)")).Returns("2d3+4");
             mockRollSelector.SetupSequence(s => s.SelectFrom("2d3+4")).Returns(1337).Returns(1234);
 
             var encounter = encounterGenerator.Generate(environment, level);
             Assert.That(encounter, Is.Not.Null);
 
-            var firstCreature = encounter.Creatures.First(c => c.Type == "Hydra with 1337 heads");
-            var secondCreature = encounter.Creatures.First(c => c.Type == "Hydra with 1234 heads");
+            var firstCreature = encounter.Creatures.First(c => c.Subtype == "1337 heads");
+            var secondCreature = encounter.Creatures.First(c => c.Subtype == "1234 heads");
 
             Assert.That(firstCreature.Quantity, Is.EqualTo(1));
             Assert.That(secondCreature.Quantity, Is.EqualTo(1));

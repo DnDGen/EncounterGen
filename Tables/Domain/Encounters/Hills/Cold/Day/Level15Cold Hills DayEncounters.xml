@@ -4,40 +4,55 @@
   <object>
     <lower>1</lower>
     <content>Astral deva (celestial)/1d2</content>
-    <upper>10</upper>
+    <upper>7</upper>
   </object>
   <object>
-    <lower>11</lower>
+    <lower>8</lower>
     <content>Glabrezu (demon)/1,Succubus (demon)/1,Vrock (demon)/1d3+1</content>
-    <upper>20</upper>
+    <upper>14</upper>
   </object>
   <object>
-    <lower>21</lower>
+    <lower>15</lower>
     <content>Hamatula (devil)/1d4+2</content>
-    <upper>30</upper>
+    <upper>21</upper>
   </object>
   <object>
-    <lower>31</lower>
+    <lower>22</lower>
     <content>Osyluth (devil)/1d6+5</content>
-    <upper>40</upper>
+    <upper>28</upper>
   </object>
   <object>
-    <lower>41</lower>
+    <lower>29</lower>
     <content>Trumpet archon/1d2</content>
-    <upper>50</upper>
+    <upper>35</upper>
   </object>
   <object>
-    <lower>51</lower>
+    <lower>36</lower>
     <content>Vrock (demon)/1d6+5</content>
-    <upper>60</upper>
+    <upper>42</upper>
   </object>
   <object>
-    <lower>61</lower>
+    <lower>43</lower>
     <content>Dragon/1</content>
-    <upper>80</upper>
+    <upper>56</upper>
   </object>
   <object>
-    <lower>81</lower>
+    <lower>57</lower>
+    <content>Celestial creature/1</content>
+    <upper>63</upper>
+  </object>
+  <object>
+    <lower>64</lower>
+    <content>Fiendish creature/1</content>
+    <upper>70</upper>
+  </object>
+  <object>
+    <lower>71</lower>
+    <content>Skeleton/1</content>
+    <upper>77</upper>
+  </object>
+  <object>
+    <lower>78</lower>
     <content>Character[12]/1d3+1</content>
     <upper>100</upper>
   </object>
