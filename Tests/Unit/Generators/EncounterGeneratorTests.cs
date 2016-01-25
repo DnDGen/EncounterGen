@@ -1054,7 +1054,7 @@ namespace EncounterGen.Tests.Unit.Generators
             encounterTypeAndAmount["Hydra (2d3+4 heads)"] = "hydra amount";
             mockRollSelector.Setup(s => s.SelectFrom("hydra amount", 9876)).Returns("hydra effective roll");
             mockRollSelector.Setup(s => s.SelectFrom("hydra effective roll")).Returns(1);
-            mockRollSelector.Setup(s => s.SelectRollFrom("Hydra (2d3+4 heads)")).Returns("2d3+4");
+            mockRollSelector.Setup(s => s.SelectRollFrom("2d3+4 heads")).Returns("2d3+4");
             mockRollSelector.Setup(s => s.SelectFrom("2d3+4")).Returns(1337);
 
             var encounter = encounterGenerator.Generate(environment, level);
@@ -1074,7 +1074,7 @@ namespace EncounterGen.Tests.Unit.Generators
             encounterTypeAndAmount["Hydra (2d3+4 heads)"] = "hydra amount";
             mockRollSelector.Setup(s => s.SelectFrom("hydra amount", 9876)).Returns("hydra effective roll");
             mockRollSelector.Setup(s => s.SelectFrom("hydra effective roll")).Returns(2);
-            mockRollSelector.Setup(s => s.SelectRollFrom("Hydra (2d3+4 heads)")).Returns("2d3+4");
+            mockRollSelector.Setup(s => s.SelectRollFrom("2d3+4 heads")).Returns("2d3+4");
             mockRollSelector.SetupSequence(s => s.SelectFrom("2d3+4")).Returns(1337).Returns(1234);
 
             var encounter = encounterGenerator.Generate(environment, level);

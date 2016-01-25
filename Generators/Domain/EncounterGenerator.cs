@@ -122,7 +122,7 @@ namespace EncounterGen.Generators.Domain
 
                 creature.Type = GetCreatureType(creature.Type, effectiveLevel);
 
-                var dieRoll = rollSelector.SelectRollFrom(creature.Type);
+                var dieRoll = rollSelector.SelectRollFrom(creature.Subtype);
 
                 if (string.IsNullOrEmpty(dieRoll))
                     continue;
@@ -133,9 +133,10 @@ namespace EncounterGen.Generators.Domain
                 {
                     var rolledCreature = new Creature();
                     rolledCreature.Quantity = 1;
+                    rolledCreature.Type = creature.Type;
 
                     var roll = rollSelector.SelectFrom(dieRoll);
-                    rolledCreature.Type = creature.Type.Replace(dieRoll, roll.ToString());
+                    rolledCreature.Subtype = creature.Subtype.Replace(dieRoll, roll.ToString());
 
                     newCreatures.Add(rolledCreature);
                 }
