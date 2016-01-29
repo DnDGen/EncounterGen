@@ -1,13 +1,21 @@
 ﻿using EncounterGen.Selectors.Percentiles;
-using System;
+using RollGen;
 
 namespace EncounterGen.Selectors.Domain.Percentiles
 {
     public class BooleanPercentileSelector : IBooleanPercentileSelector
     {
-        public Boolean SelectFrom(Double trueThreshold)
+        private Dice dice;
+
+        public BooleanPercentileSelector(Dice dice)
         {
-            throw new NotImplementedException();
+            this.dice = dice;
+        }
+
+        public bool SelectFrom(double trueThreshold)
+        {
+            var roll = dice.Roll().Percentile();
+            return roll <= trueThreshold * 100;
         }
     }
 }

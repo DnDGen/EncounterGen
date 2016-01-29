@@ -58,6 +58,7 @@
     <Compile Include="AdjustmentSelectorTests.cs" />
     <Compile Include="CollectionSelectorTests.cs" />
     <Compile Include="ModifierConstantsTests.cs" />
+    <Compile Include="Percentiles\BooleanPercentileSelectorTests.cs" />
     <Compile Include="Percentiles\PercentileSelectorTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Percentiles\TypeAndAmountPercentileSelectorTests.cs" />

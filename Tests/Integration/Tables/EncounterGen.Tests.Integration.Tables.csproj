@@ -72,6 +72,7 @@
     <Compile Include="EmbeddedResourceStreamLoaderTests.cs" />
     <Compile Include="Encounters\Civilized\Day\Level13CivilizedDayEncountersTests.cs" />
     <Compile Include="Encounters\Civilized\Night\Level11CivilizedNightEncountersTests.cs" />
+    <Compile Include="Encounters\Desert\Cold\Day\Level14ColdDesertDayEncountersTests.cs" />
     <Compile Include="Encounters\Desert\Cold\Day\Level4ColdDesertDayEncountersTests.cs" />
     <Compile Include="Encounters\Desert\Temperate\Night\Level6TemperateDesertNightEncountersTests.cs" />
     <Compile Include="Encounters\Forest\Temperate\Day\Level20TemperateForestDayEncountersTests.cs" />
@@ -119,15 +120,19 @@
     <Compile Include="Encounters\Marsh\Cold\Day\Level18ColdMarshDayEncountersTests.cs" />
     <Compile Include="Encounters\Marsh\Temperate\Day\Level19TemperateMarshDayEncountersTests.cs" />
     <Compile Include="Encounters\Marsh\Temperate\Day\Level20TemperateMarshDayEncountersTests.cs" />
+    <Compile Include="Encounters\Marsh\Temperate\Day\Level5TemperateMarshDayEncountersTests.cs" />
     <Compile Include="Encounters\Marsh\Temperate\Night\Level18TemperateMarshNightEncountersTests.cs" />
     <Compile Include="Encounters\Marsh\Warm\Day\Level17WarmMarshDayEncountersTests.cs" />
     <Compile Include="Encounters\Marsh\Warm\Day\Level8WarmMarshDayEncountersTests.cs" />
     <Compile Include="Encounters\Marsh\Warm\Night\Level19WarmMarshNightEncountersTests.cs" />
     <Compile Include="Encounters\Mountain\Cold\Night\Level11ColdMountainNightEncountersTests.cs" />
+    <Compile Include="Encounters\Mountain\Temperate\Day\Level19TemperateMountainDayEncountersTests.cs" />
     <Compile Include="Encounters\Mountain\Temperate\Night\Level20TemperateMountainNightEncountersTests.cs" />
+    <Compile Include="Encounters\Mountain\Warm\Day\Level4WarmMountainDayEncountersTests.cs" />
     <Compile Include="Encounters\Plains\Cold\Day\Level4ColdPlainsDayEncountersTests.cs" />
     <Compile Include="Encounters\Plains\Temperate\Night\Level20TemperatePlainsNightEncountersTests.cs" />
     <Compile Include="Encounters\Plains\Temperate\Night\Level9TemperatePlainsNightEncountersTests.cs" />
+    <Compile Include="Encounters\Plains\Warm\Day\Level17WarmPlainsDatEncountersTests.cs" />
     <Compile Include="Encounters\Plains\Warm\Day\Level7WarmPlainsDayEncountersTests.cs" />
     <Compile Include="PercentileTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
