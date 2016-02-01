@@ -58,13 +58,16 @@ namespace EncounterGen.Tests.Integration.Tables.Encounters.Plains.Warm.Day
         [TestCase(76, 76, CreatureConstants.Salamander_Average, RollConstants.OneD2)]
         [TestCase(77, 77, CreatureConstants.Slaad_Red, RollConstants.One)]
         [TestCase(78, 78, CreatureConstants.Succubus, RollConstants.One)]
-        [TestCase(79, 79, CreatureConstants.Xorn_Average, RollConstants.OneD2)]
-        [TestCase(80, 82, CreatureConstants.Dragon, RollConstants.One)]
-        [TestCase(83, 83, CreatureConstants.CelestialCreature, RollConstants.One)]
-        [TestCase(84, 84, CreatureConstants.FiendishCreature, RollConstants.One)]
-        [TestCase(85, 85, CreatureConstants.Skeleton, RollConstants.One)]
-        [TestCase(86, 86, CreatureConstants.Zombie, RollConstants.One)]
-        [TestCase(87, 100, CreatureConstants.Character + "[4]", RollConstants.OneD3Plus1)]
+        [TestCase(79, 79, CreatureConstants.Wight, RollConstants.OneD4Plus2)]
+        [TestCase(80, 80, CreatureConstants.Xorn_Average, RollConstants.OneD2)]
+        [TestCase(81, 83, CreatureConstants.Dragon, RollConstants.One)]
+        [TestCase(84, 84, CreatureConstants.CelestialCreature, RollConstants.One)]
+        [TestCase(85, 85, CreatureConstants.FiendishCreature, RollConstants.One)]
+        [TestCase(86, 86, CreatureConstants.Skeleton, RollConstants.One)]
+        [TestCase(87, 87, CreatureConstants.Zombie, RollConstants.One)]
+        [TestCase(88, 88, CreatureConstants.Ravid, RollConstants.One,
+            CreatureConstants.AnimatedObject_Huge, RollConstants.One)]
+        [TestCase(89, 100, CreatureConstants.Character + "[4]", RollConstants.OneD3Plus1)]
         public override void Percentile(int lower, int upper, params string[] typesAndAmounts)
         {
             base.Percentile(lower, upper, typesAndAmounts);
