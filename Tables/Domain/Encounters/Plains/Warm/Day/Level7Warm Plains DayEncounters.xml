@@ -173,36 +173,46 @@
   </object>
   <object>
     <lower>79</lower>
-    <content>Average xorn/1d2</content>
+    <content>Wight/1d4+2</content>
     <upper>79</upper>
   </object>
   <object>
     <lower>80</lower>
-    <content>Dragon/1</content>
-    <upper>82</upper>
+    <content>Average xorn/1d2</content>
+    <upper>80</upper>
   </object>
   <object>
-    <lower>83</lower>
-    <content>Celestial creature/1</content>
+    <lower>81</lower>
+    <content>Dragon/1</content>
     <upper>83</upper>
   </object>
   <object>
     <lower>84</lower>
-    <content>Fiendish creature/1</content>
+    <content>Celestial creature/1</content>
     <upper>84</upper>
   </object>
   <object>
     <lower>85</lower>
-    <content>Skeleton/1</content>
+    <content>Fiendish creature/1</content>
     <upper>85</upper>
   </object>
   <object>
     <lower>86</lower>
-    <content>Zombie/1</content>
+    <content>Skeleton/1</content>
     <upper>86</upper>
   </object>
   <object>
     <lower>87</lower>
+    <content>Zombie/1</content>
+    <upper>87</upper>
+  </object>
+  <object>
+    <lower>88</lower>
+    <content>Ravid/1,Huge animated object/1</content>
+    <upper>88</upper>
+  </object>
+  <object>
+    <lower>89</lower>
     <content>Character[4]/1d3+1</content>
     <upper>100</upper>
   </object>

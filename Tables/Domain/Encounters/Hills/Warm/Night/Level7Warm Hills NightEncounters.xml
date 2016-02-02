@@ -34,200 +34,205 @@
   <object>
     <lower>11</lower>
     <content>Deinonychus/1d4+2</content>
-    <upper>15</upper>
+    <upper>14</upper>
   </object>
   <object>
-    <lower>16</lower>
+    <lower>15</lower>
     <content>Dire bat/1d6+3</content>
-    <upper>20</upper>
+    <upper>18</upper>
   </object>
   <object>
-    <lower>21</lower>
+    <lower>19</lower>
     <content>Dire bear/1</content>
-    <upper>23</upper>
+    <upper>21</upper>
   </object>
     <object>
-        <lower>24</lower>
+        <lower>22</lower>
         <content>Doppelganger/1d4+2</content>
-        <upper>26</upper>
+        <upper>24</upper>
     </object>
   <object>
-    <lower>27</lower>
+    <lower>25</lower>
     <content>Dragonne/1</content>
+    <upper>28</upper>
+  </object>
+  <object>
+    <lower>29</lower>
+    <content>Huge air elemental/1</content>
+    <upper>29</upper>
+  </object>
+  <object>
+    <lower>30</lower>
+    <content>Huge earth elemental/1</content>
+    <upper>30</upper>
+  </object>
+  <object>
+    <lower>31</lower>
+    <content>Huge fire elemental/1</content>
     <upper>31</upper>
   </object>
   <object>
     <lower>32</lower>
-    <content>Huge air elemental/1</content>
+    <content>Huge water elemental/1</content>
     <upper>32</upper>
   </object>
   <object>
     <lower>33</lower>
-    <content>Huge earth elemental/1</content>
+    <content>Formian taskmaster/1</content>
     <upper>33</upper>
   </object>
   <object>
     <lower>34</lower>
-    <content>Huge fire elemental/1</content>
-    <upper>34</upper>
-  </object>
-  <object>
-    <lower>35</lower>
-    <content>Huge water elemental/1</content>
-    <upper>35</upper>
-  </object>
-  <object>
-    <lower>36</lower>
-    <content>Formian taskmaster/1</content>
+    <content>Giant bee/1d4+10</content>
     <upper>36</upper>
   </object>
   <object>
     <lower>37</lower>
-    <content>Giant bee/1d4+10</content>
+    <content>Giant owl/1d4+2</content>
     <upper>39</upper>
   </object>
   <object>
     <lower>40</lower>
-    <content>Giant owl/1d4+2</content>
-    <upper>42</upper>
-  </object>
-  <object>
-    <lower>43</lower>
     <content>Giant soldier ant/1,Giant worker ant/1d6+5</content>
-    <upper>47</upper>
+    <upper>43</upper>
   </object>
   <object>
-    <lower>48</lower>
+    <lower>44</lower>
     <content>Flesh golem/1</content>
+    <upper>44</upper>
+  </object>
+    <object>
+        <lower>45</lower>
+        <content>Hellcat/1</content>
+        <upper>45</upper>
+    </object>
+  <object>
+    <lower>46</lower>
+    <content>Hill giant/1</content>
     <upper>48</upper>
   </object>
     <object>
         <lower>49</lower>
-        <content>Hellcat/1</content>
+        <content>Hound archon/1d3+1</content>
         <upper>49</upper>
     </object>
   <object>
     <lower>50</lower>
-    <content>Hill giant/1</content>
+    <content>Huge monstrous scorpion/1</content>
     <upper>52</upper>
   </object>
-    <object>
-        <lower>53</lower>
-        <content>Hound archon/1d3+1</content>
-        <upper>53</upper>
-    </object>
+  <object>
+    <lower>53</lower>
+    <content>Janni/1d3+1</content>
+    <upper>53</upper>
+  </object>
   <object>
     <lower>54</lower>
-    <content>Huge monstrous scorpion/1</content>
-    <upper>56</upper>
+    <content>Lamia/1d2</content>
+    <upper>55</upper>
   </object>
+    <object>
+      <lower>56</lower>
+        <content>Lillend/1</content>
+        <upper>56</upper>
+    </object>
   <object>
     <lower>57</lower>
-    <content>Janni/1d3+1</content>
-    <upper>57</upper>
+    <content>Medusa/1</content>
+    <upper>59</upper>
   </object>
   <object>
-    <lower>58</lower>
-    <content>Lamia/1d2</content>
-    <upper>60</upper>
+    <lower>60</lower>
+    <content>Megaraptor/1d2</content>
+    <upper>63</upper>
   </object>
     <object>
-      <lower>61</lower>
-        <content>Lillend/1</content>
-        <upper>61</upper>
+        <lower>64</lower>
+        <content>Nymph/1</content>
+        <upper>65</upper>
     </object>
   <object>
-    <lower>62</lower>
-    <content>Medusa/1</content>
-    <upper>64</upper>
+    <lower>66</lower>
+    <content>Phasm/1</content>
+    <upper>68</upper>
   </object>
   <object>
-    <lower>65</lower>
-    <content>Megaraptor/1d2</content>
+    <lower>69</lower>
+    <content>Average salamander/1d2</content>
     <upper>69</upper>
   </object>
-    <object>
-        <lower>70</lower>
-        <content>Nymph/1</content>
-        <upper>72</upper>
-    </object>
   <object>
-    <lower>73</lower>
-    <content>Phasm/1</content>
-    <upper>75</upper>
+    <lower>70</lower>
+    <content>Red slaad/1</content>
+    <upper>70</upper>
   </object>
   <object>
+    <lower>71</lower>
+    <content>Spectre/1</content>
+    <upper>71</upper>
+  </object>
+  <object>
+    <lower>72</lower>
+    <content>Succubus (demon)/1</content>
+    <upper>72</upper>
+  </object>
+    <object>
+        <lower>73</lower>
+        <content>Werewolf/1d3+1,Wolf/1d4+2</content>
+        <upper>75</upper>
+    </object>
+  <object>
     <lower>76</lower>
-    <content>Average salamander/1d2</content>
+    <content>Wight/1d4+2</content>
     <upper>76</upper>
   </object>
   <object>
     <lower>77</lower>
-    <content>Red slaad/1</content>
-    <upper>77</upper>
-  </object>
-  <object>
-    <lower>78</lower>
-    <content>Spectre/1</content>
-    <upper>78</upper>
-  </object>
-  <object>
-    <lower>79</lower>
-    <content>Succubus (demon)/1</content>
+    <content>Wolf/1d4+10</content>
     <upper>79</upper>
   </object>
-    <object>
-        <lower>80</lower>
-        <content>Werewolf/1d3+1,Wolf/1d4+2</content>
-        <upper>82</upper>
-    </object>
   <object>
-    <lower>83</lower>
-    <content>Wight/1d4+2</content>
+    <lower>80</lower>
+    <content>Wyvern/1d2</content>
     <upper>83</upper>
   </object>
-  <object>
-    <lower>84</lower>
-    <content>Wolf/1d4+10</content>
-    <upper>86</upper>
-  </object>
-  <object>
-    <lower>87</lower>
-    <content>Wyvern/1d2</content>
-    <upper>91</upper>
-  </object>
     <object>
-        <lower>92</lower>
+        <lower>84</lower>
         <content>Average xorn/1d2</content>
-        <upper>92</upper>
+        <upper>84</upper>
     </object>
   <object>
-    <lower>93</lower>
+    <lower>85</lower>
     <content>Dragon/1</content>
-    <upper>95</upper>
+    <upper>87</upper>
   </object>
   <object>
-    <lower>96</lower>
+    <lower>88</lower>
     <content>Skeleton/1</content>
-    <upper>96</upper>
+    <upper>88</upper>
   </object>
   <object>
-    <lower>97</lower>
+    <lower>89</lower>
     <content>Zombie/1</content>
-    <upper>97</upper>
+    <upper>89</upper>
   </object>
   <object>
-    <lower>98</lower>
+    <lower>90</lower>
     <content>Celestial creature/1</content>
-    <upper>98</upper>
+    <upper>90</upper>
   </object>
   <object>
-    <lower>99</lower>
+    <lower>91</lower>
     <content>Fiendish creature/1</content>
-    <upper>99</upper>
+    <upper>91</upper>
   </object>
   <object>
-    <lower>100</lower>
+    <lower>92</lower>
+    <content>Ravid/1,Huge animated object/1</content>
+    <upper>92</upper>
+  </object>
+  <object>
+    <lower>93</lower>
     <content>Character[4]/1d3+1</content>
     <upper>100</upper>
   </object>

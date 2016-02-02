@@ -158,6 +158,26 @@
   </object>
   <object>
     <lower>87</lower>
+    <content>Ravid/1,Tiny animated object/1d4+2</content>
+    <upper>88</upper>
+  </object>
+  <object>
+    <lower>89</lower>
+    <content>Ravid/1,Small animated object/1d2</content>
+    <upper>90</upper>
+  </object>
+  <object>
+    <lower>91</lower>
+    <content>Ravid/1,Medium animated object/1</content>
+    <upper>92</upper>
+  </object>
+  <object>
+    <lower>93</lower>
+    <content>Ravid/1,Large animated object/1</content>
+    <upper>94</upper>
+  </object>
+  <object>
+    <lower>95</lower>
     <content>Character[3]/1d3+1</content>
     <upper>100</upper>
   </object>

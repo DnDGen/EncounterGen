@@ -2,7 +2,6 @@
 using EncounterGen.Selectors;
 using EncounterGen.Tables;
 using NUnit.Framework;
-using System;
 
 namespace EncounterGen.Tests.Integration.Tables.Encounters.Marsh.Temperate.Day
 {
@@ -65,7 +64,6 @@ namespace EncounterGen.Tests.Integration.Tables.Encounters.Marsh.Temperate.Day
         [TestCase(90, 100, CreatureConstants.Character + "[2]", RollConstants.OneD3Plus1)]
         public override void Percentile(int lower, int upper, params string[] typesAndAmounts)
         {
-            throw new NotImplementedException();
             base.Percentile(lower, upper, typesAndAmounts);
         }
     }

@@ -218,6 +218,11 @@
     </object>
   <object>
     <lower>75</lower>
+    <content>Ravid/1,Gargantuan animated object/1</content>
+    <upper>75</upper>
+  </object>
+  <object>
+    <lower>76</lower>
     <content>Character[5]/1d3+1</content>
     <upper>100</upper>
   </object>

@@ -4,185 +4,205 @@
   <object>
         <lower>1</lower>
         <content>Lamia/1</content>
-        <upper>2</upper>
+        <upper>3</upper>
     </object>
   <object>
-    <lower>3</lower>
+    <lower>4</lower>
     <content>Dire lion/1d2</content>
-    <upper>4</upper>
+    <upper>6</upper>
   </object>
     <object>
-        <lower>5</lower>
+        <lower>7</lower>
         <content>Werebear/1d2</content>
-        <upper>6</upper>
+        <upper>9</upper>
     </object>
   <object>
-    <lower>7</lower>
+    <lower>10</lower>
     <content>Weretiger/1d2</content>
-    <upper>8</upper>
+    <upper>12</upper>
   </object>
   <object>
-    <lower>9</lower>
+    <lower>13</lower>
     <content>Dire badger/1d4+2</content>
-    <upper>11</upper>
+    <upper>19</upper>
   </object>
   <object>
-    <lower>12</lower>
+    <lower>20</lower>
     <content>Ettin/1</content>
-    <upper>14</upper>
-  </object>
-  <object>
-    <lower>15</lower>
-    <content>Tendriculos/1</content>
-    <upper>17</upper>
-  </object>
-    <object>
-        <lower>18</lower>
-        <content>Wyvern/1</content>
-        <upper>20</upper>
-    </object>
-  <object>
-    <lower>21</lower>
-    <content>Annis (hag)/1</content>
-    <upper>22</upper>
-  </object>
-  <object>
-    <lower>23</lower>
-    <content>Beholder/1</content>
-    <upper>24</upper>
-  </object>
-  <object>
-    <lower>25</lower>
-    <content>Ogre/1d3+1</content>
     <upper>26</upper>
   </object>
   <object>
     <lower>27</lower>
-    <content>Wererat/1d3+1,Dire rat/1d6+3</content>
-    <upper>28</upper>
-  </object>
-  <object>
-    <lower>29</lower>
-    <content>Gargantuan monstrous centipede/1</content>
-    <upper>30</upper>
-  </object>
-  <object>
-    <lower>31</lower>
-    <content>Cockatrice/1d3+1</content>
-    <upper>32</upper>
-  </object>
-  <object>
-    <lower>33</lower>
-    <content>Digester/1</content>
-    <upper>34</upper>
-  </object>
-  <object>
-    <lower>35</lower>
-    <content>Manticore/1d2</content>
-    <upper>36</upper>
-  </object>
-  <object>
-    <lower>37</lower>
-    <content>Large monstrous scorpion/1d3+1</content>
-    <upper>38</upper>
-  </object>
-  <object>
-    <lower>39</lower>
-    <content>Giant wasp/1d3+1</content>
-    <upper>40</upper>
-  </object>
-  <object>
-    <lower>41</lower>
-    <content>Juvenile arrowhawk/1d3+1</content>
-    <upper>41</upper>
-  </object>
-  <object>
-    <lower>42</lower>
-    <content>Barbazu (devil)/1d2</content>
-    <upper>42</upper>
-  </object>
-  <object>
-    <lower>43</lower>
-    <content>Belker/1</content>
-    <upper>43</upper>
+    <content>Tendriculos/1</content>
+    <upper>33</upper>
   </object>
     <object>
-        <lower>44</lower>
-        <content>Formian warrior/1d3+1</content>
-        <upper>44</upper>
+        <lower>34</lower>
+        <content>Wyvern/1</content>
+        <upper>40</upper>
     </object>
   <object>
-    <lower>45</lower>
-    <content>Howler/1d3+1</content>
-    <upper>45</upper>
+    <lower>41</lower>
+    <content>Annis (hag)/1</content>
+    <upper>43</upper>
   </object>
   <object>
-    <lower>46</lower>
-    <content>Kyton (devil)/1</content>
+    <lower>44</lower>
+    <content>Beholder/1</content>
     <upper>46</upper>
   </object>
   <object>
     <lower>47</lower>
-    <content>Magmin/1d3+1</content>
-    <upper>47</upper>
-  </object>
-    <object>
-        <lower>48</lower>
-        <content>Mephit/1d3+1</content>
-        <upper>48</upper>
-    </object>
-  <object>
-    <lower>49</lower>
-    <content>Flamebrother salamander/1d3+1</content>
+    <content>Ogre/1d3+1</content>
     <upper>49</upper>
   </object>
   <object>
     <lower>50</lower>
-    <content>Average salamander/1</content>
-    <upper>50</upper>
-  </object>
-  <object>
-    <lower>51</lower>
-    <content>Xill/1</content>
-    <upper>51</upper>
-  </object>
-  <object>
-    <lower>52</lower>
-    <content>Minor xorn/1d3+1</content>
+    <content>Wererat/1d3+1,Dire rat/1d6+3</content>
     <upper>52</upper>
   </object>
   <object>
     <lower>53</lower>
-    <content>Average xorn/1</content>
-    <upper>53</upper>
-  </object>
-  <object>
-    <lower>54</lower>
-    <content>Dragon/1</content>
+    <content>Gargantuan monstrous centipede/1</content>
     <upper>55</upper>
   </object>
-    <object>
-      <lower>56</lower>
-        <content>Skeleton/1</content>
-        <upper>56</upper>
-    </object>
   <object>
-    <lower>57</lower>
-    <content>Zombie/1</content>
-    <upper>57</upper>
-  </object>
-  <object>
-    <lower>58</lower>
-    <content>Celestial creature/1</content>
+    <lower>56</lower>
+    <content>Cockatrice/1d3+1</content>
     <upper>58</upper>
   </object>
   <object>
     <lower>59</lower>
-    <content>Fiendish creature/1</content>
-    <upper>59</upper>
+    <content>Digester/1</content>
+    <upper>61</upper>
   </object>
   <object>
-    <lower>60</lower>
+    <lower>62</lower>
+    <content>Manticore/1d2</content>
+    <upper>64</upper>
+  </object>
+  <object>
+    <lower>65</lower>
+    <content>Large monstrous scorpion/1d3+1</content>
+    <upper>67</upper>
+  </object>
+  <object>
+    <lower>68</lower>
+    <content>Giant wasp/1d3+1</content>
+    <upper>70</upper>
+  </object>
+  <object>
+    <lower>71</lower>
+    <content>Juvenile arrowhawk/1d3+1</content>
+    <upper>71</upper>
+  </object>
+  <object>
+    <lower>72</lower>
+    <content>Barbazu (devil)/1d2</content>
+    <upper>72</upper>
+  </object>
+  <object>
+    <lower>73</lower>
+    <content>Belker/1</content>
+    <upper>73</upper>
+  </object>
+    <object>
+        <lower>74</lower>
+        <content>Formian warrior/1d3+1</content>
+        <upper>74</upper>
+    </object>
+  <object>
+    <lower>75</lower>
+    <content>Howler/1d3+1</content>
+    <upper>75</upper>
+  </object>
+  <object>
+    <lower>76</lower>
+    <content>Kyton (devil)/1</content>
+    <upper>76</upper>
+  </object>
+  <object>
+    <lower>77</lower>
+    <content>Magmin/1d3+1</content>
+    <upper>77</upper>
+  </object>
+    <object>
+        <lower>78</lower>
+        <content>Mephit/1d3+1</content>
+        <upper>78</upper>
+    </object>
+  <object>
+    <lower>79</lower>
+    <content>Flamebrother salamander/1d3+1</content>
+    <upper>79</upper>
+  </object>
+  <object>
+    <lower>80</lower>
+    <content>Average salamander/1</content>
+    <upper>80</upper>
+  </object>
+  <object>
+    <lower>81</lower>
+    <content>Xill/1</content>
+    <upper>81</upper>
+  </object>
+  <object>
+    <lower>82</lower>
+    <content>Minor xorn/1d3+1</content>
+    <upper>82</upper>
+  </object>
+  <object>
+    <lower>83</lower>
+    <content>Average xorn/1</content>
+    <upper>83</upper>
+  </object>
+  <object>
+    <lower>84</lower>
+    <content>Dragon/1</content>
+    <upper>86</upper>
+  </object>
+    <object>
+      <lower>87</lower>
+        <content>Skeleton/1</content>
+        <upper>87</upper>
+    </object>
+  <object>
+    <lower>88</lower>
+    <content>Zombie/1</content>
+    <upper>88</upper>
+  </object>
+  <object>
+    <lower>89</lower>
+    <content>Celestial creature/1</content>
+    <upper>89</upper>
+  </object>
+  <object>
+    <lower>90</lower>
+    <content>Fiendish creature/1</content>
+    <upper>90</upper>
+  </object>
+  <object>
+    <lower>91</lower>
+    <content>Ravid/1,Tiny animated object/1d4+2</content>
+    <upper>91</upper>
+  </object>
+  <object>
+    <lower>92</lower>
+    <content>Ravid/1,Small animated object/1d2</content>
+    <upper>92</upper>
+  </object>
+  <object>
+    <lower>93</lower>
+    <content>Ravid/1,Medium animated object/1</content>
+    <upper>93</upper>
+  </object>
+  <object>
+    <lower>94</lower>
+    <content>Ravid/1,Large animated object/1</content>
+    <upper>94</upper>
+  </object>
+  <object>
+    <lower>95</lower>
     <content>Character[3]/1d3+1</content>
     <upper>100</upper>
   </object>
