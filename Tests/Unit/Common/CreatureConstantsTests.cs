@@ -104,6 +104,7 @@ namespace EncounterGen.Tests.Unit.Common
         [TestCase(CreatureConstants.Devourer, "Devourer")]
         [TestCase(CreatureConstants.Delver, "Delver")]
         [TestCase(CreatureConstants.Digester, "Digester")]
+        [TestCase(CreatureConstants.DisplacerBeast, "Displacer beast")]
         [TestCase(CreatureConstants.Djinn, "Djinn")]
         [TestCase(CreatureConstants.Djinn_Noble, "Noble djinn")]
         [TestCase(CreatureConstants.Dog, "Dog")]

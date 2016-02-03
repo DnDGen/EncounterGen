@@ -100,6 +100,7 @@
         public const string Destrachan = "Destrachan";
         public const string Devourer = "Devourer";
         public const string Digester = "Digester";
+        public const string DisplacerBeast = "Displacer beast";
         public const string Djinn = "Djinn";
         public const string Djinn_Noble = "Noble djinn";
         public const string Dog = "Dog";

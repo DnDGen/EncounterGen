@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<percentile>
+  <object>
+    <lower>1</lower>
+    <content>Cockatrice/1d2</content>
+    <upper>4</upper>
+  </object>
+  <object>
+    <lower>5</lower>
+    <content>Gnoll/1d3+1,Hyena/1d2</content>
+    <upper>8</upper>
+  </object>
+  <object>
+    <lower>9</lower>
+    <content>Harpy/1</content>
+    <upper>12</upper>
+  </object>
+  <object>
+    <lower>13</lower>
+    <content>Small monstrous scorpion/1d6+5</content>
+    <upper>16</upper>
+  </object>
+  <object>
+    <lower>17</lower>
+    <content>Small monstrous spider/1d6+5</content>
+    <upper>20</upper>
+  </object>
+  <object>
+    <lower>21</lower>
+    <content>Doppelganger/1d2</content>
+    <upper>24</upper>
+  </object>
+  <object>
+    <lower>25</lower>
+    <content>Gargoyle/1</content>
+    <upper>28</upper>
+  </object>
+  <object>
+    <lower>29</lower>
+    <content>Mimic/1</content>
+    <upper>32</upper>
+  </object>
+  <object>
+    <lower>33</lower>
+    <content>Ogre/1d2</content>
+    <upper>36</upper>
+  </object>
+  <object>
+    <lower>37</lower>
+    <content>Dire rat/1d4+10</content>
+    <upper>40</upper>
+  </object>
+  <object>
+    <lower>41</lower>
+    <content>Brown bear/1</content>
+    <upper>44</upper>
+  </object>
+  <object>
+    <lower>45</lower>
+    <content>Giant eagle/1d2</content>
+    <upper>48</upper>
+  </object>
+  <object>
+    <lower>49</lower>
+    <content>Giant owl/1d2</content>
+    <upper>52</upper>
+  </object>
+  <object>
+    <lower>53</lower>
+    <content>Tiger/1</content>
+    <upper>56</upper>
+  </object>
+  <object>
+    <lower>57</lower>
+    <content>Werewolf/1d2</content>
+    <upper>60</upper>
+  </object>
+  <object>
+    <lower>61</lower>
+    <content>Displacer beast/1</content>
+    <upper>69</upper>
+  </object>
+  <object>
+    <lower>70</lower>
+    <content>Griffon/1</content>
+    <upper>78</upper>
+  </object>
+  <object>
+    <lower>79</lower>
+    <content>Hound archon/1</content>
+    <upper>79</upper>
+  </object>
+  <object>
+    <lower>80</lower>
+    <content>Barghest/1</content>
+    <upper>80</upper>
+  </object>
+  <object>
+    <lower>81</lower>
+    <content>Hell hound/1d2</content>
+    <upper>81</upper>
+  </object>
+  <object>
+    <lower>82</lower>
+    <content>Janni/1</content>
+    <upper>82</upper>
+  </object>
+  <object>
+    <lower>83</lower>
+    <content>Flamebrother salamander/1d2</content>
+    <upper>83</upper>
+  </object>
+  <object>
+    <lower>84</lower>
+    <content>Wight/1d2</content>
+    <upper>84</upper>
+  </object>
+  <object>
+    <lower>85</lower>
+    <content>Minor xorn/1d2</content>
+    <upper>85</upper>
+  </object>
+    <object>
+      <lower>86</lower>
+        <content>Yeth hound/1d2</content>
+        <upper>86</upper>
+    </object>
+  <object>
+    <lower>87</lower>
+    <content>Dragon/1</content>
+    <upper>90</upper>
+  </object>
+  <object>
+    <lower>91</lower>
+    <content>Celestial creature/1</content>
+    <upper>91</upper>
+  </object>
+    <object>
+        <lower>92</lower>
+        <content>Fiendish creature/1</content>
+        <upper>92</upper>
+    </object>
+  <object>
+    <lower>93</lower>
+    <content>Skeleton/1</content>
+    <upper>93</upper>
+  </object>
+  <object>
+    <lower>94</lower>
+    <content>Zombie/1</content>
+    <upper>94</upper>
+  </object>
+  <object>
+    <lower>95</lower>
+    <content>Character[2]/1d3</content>
+    <upper>100</upper>
+  </object>
+</percentile>
