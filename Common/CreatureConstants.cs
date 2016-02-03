@@ -4,6 +4,7 @@
     {
         public const string Allip = "Allip";
         public const string Androsphinx = "Androsphinx";
+        public const string AnimatedObject_Colossal = "Colossal animated object";
         public const string AnimatedObject_Gargantuan = "Gargantuan animated object";
         public const string AnimatedObject_Huge = "Huge animated object";
         public const string AnimatedObject_Large = "Large animated object";
@@ -39,6 +40,7 @@
         public const string Bear_Brown = "Brown bear";
         public const string Bear_Dire = "Dire bear";
         public const string Bear_Polar = "Polar bear";
+        public const string Bebilith = "Bebilith (demon)";
         public const string Bee_Giant = "Giant bee";
         public const string Behir = "Behir";
         public const string Beholder = "Beholder";
@@ -263,6 +265,7 @@
         public const string Expert_Minstrel = "Expert (Minstrel)";
         public const string FiendishCreature = "Fiendish creature";
         public const string FireBeetle_Giant = "Giant fire beetle";
+        public const string FormianMyrmarch = "Formian myrmarch";
         public const string FormianTaskmaster = "Formian taskmaster";
         public const string FormianWarrior = "Formian warrior";
         public const string FormianWorker = "Formian worker";
@@ -285,7 +288,9 @@
         public const string Gnoll = "Gnoll";
         public const string Gnome = "Gnome";
         public const string Goblin = "Goblin";
+        public const string Golem_Clay = "Clay golem";
         public const string Golem_Flesh = "Flesh golem";
+        public const string Golem_Iron = "Iron golem";
         public const string Golem_Stone = "Stone golem";
         public const string Golem_Stone_Greater = "Greater stone golem";
         public const string Gorgon = "Gorgon";

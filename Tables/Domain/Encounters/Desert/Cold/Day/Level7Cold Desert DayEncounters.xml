@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<percentile>
+  <object>
+        <lower>1</lower>
+        <content>Gargantuan animated object/1</content>
+        <upper>2</upper>
+    </object>
+  <object>
+    <lower>3</lower>
+    <content>Barbazu (devil)/1d3+1</content>
+    <upper>4</upper>
+  </object>
+  <object>
+    <lower>5</lower>
+    <content>Beholder/1d2</content>
+    <upper>8</upper>
+  </object>
+  <object>
+    <lower>9</lower>
+    <content>Belker/1d2</content>
+    <upper>10</upper>
+  </object>
+  <object>
+    <lower>11</lower>
+    <content>Chaos beast/1</content>
+    <upper>12</upper>
+  </object>
+  <object>
+    <lower>13</lower>
+    <content>Chimera/1</content>
+    <upper>16</upper>
+  </object>
+  <object>
+    <lower>17</lower>
+    <content>Doppelganger/1d4+2</content>
+    <upper>20</upper>
+  </object>
+  <object>
+    <lower>21</lower>
+    <content>Huge air elemental/1</content>
+    <upper>22</upper>
+  </object>
+  <object>
+    <lower>23</lower>
+    <content>Huge earth elemental/1</content>
+    <upper>24</upper>
+  </object>
+  <object>
+    <lower>25</lower>
+    <content>Huge fire elemental/1</content>
+    <upper>26</upper>
+  </object>
+  <object>
+    <lower>27</lower>
+    <content>Huge water elemental/1</content>
+    <upper>28</upper>
+  </object>
+  <object>
+    <lower>29</lower>
+    <content>Formian taskmaster/1</content>
+    <upper>30</upper>
+  </object>
+  <object>
+    <lower>31</lower>
+    <content>Flesh golem/1</content>
+    <upper>32</upper>
+  </object>
+    <object>
+        <lower>33</lower>
+        <content>Hellcat/1</content>
+        <upper>34</upper>
+    </object>
+  <object>
+    <lower>35</lower>
+    <content>Hound archon/1d3+1</content>
+    <upper>36</upper>
+  </object>
+  <object>
+    <lower>37</lower>
+    <content>Janni/1d3+1</content>
+    <upper>38</upper>
+  </object>
+  <object>
+    <lower>39</lower>
+    <content>Lamia/1d2</content>
+    <upper>42</upper>
+  </object>
+  <object>
+    <lower>43</lower>
+    <content>Lillend/1</content>
+    <upper>44</upper>
+  </object>
+  <object>
+    <lower>45</lower>
+    <content>Medusa/1</content>
+    <upper>48</upper>
+  </object>
+  <object>
+    <lower>49</lower>
+    <content>Nymph/1</content>
+    <upper>52</upper>
+  </object>
+  <object>
+    <lower>53</lower>
+    <content>Phasm/1</content>
+    <upper>56</upper>
+  </object>
+  <object>
+    <lower>57</lower>
+    <content>Remorhaz/1</content>
+    <upper>60</upper>
+  </object>
+  <object>
+    <lower>61</lower>
+    <content>Average salamander/1d2</content>
+    <upper>62</upper>
+  </object>
+  <object>
+    <lower>63</lower>
+    <content>Red slaad/1</content>
+    <upper>64</upper>
+  </object>
+  <object>
+    <lower>65</lower>
+    <content>Succubus (demon)/1</content>
+    <upper>66</upper>
+  </object>
+  <object>
+    <lower>67</lower>
+    <content>Wight/1d4+2</content>
+    <upper>68</upper>
+  </object>
+  <object>
+    <lower>69</lower>
+    <content>Average xorn/1d2</content>
+    <upper>70</upper>
+  </object>
+  <object>
+    <lower>71</lower>
+    <content>Ravid/1,Huge animated object/1</content>
+    <upper>72</upper>
+  </object>
+  <object>
+    <lower>73</lower>
+    <content>Dragon/1</content>
+    <upper>76</upper>
+  </object>
+  <object>
+    <lower>77</lower>
+    <content>Celestial creature/1</content>
+    <upper>78</upper>
+  </object>
+    <object>
+        <lower>79</lower>
+        <content>Fiendish creature/1</content>
+        <upper>80</upper>
+    </object>
+  <object>
+    <lower>81</lower>
+    <content>Skeleton/1</content>
+    <upper>82</upper>
+  </object>
+  <object>
+    <lower>83</lower>
+    <content>Zombie/1</content>
+    <upper>84</upper>
+  </object>
+  <object>
+    <lower>85</lower>
+    <content>Character[4]/1d3+1</content>
+    <upper>100</upper>
+  </object>
+</percentile>

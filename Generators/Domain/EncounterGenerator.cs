@@ -5,7 +5,6 @@ using CharacterGen.Generators.Randomizers.CharacterClasses;
 using CharacterGen.Generators.Randomizers.Races;
 using CharacterGen.Generators.Randomizers.Stats;
 using EncounterGen.Common;
-using EncounterGen.Generators.Exceptions;
 using EncounterGen.Selectors;
 using EncounterGen.Selectors.Percentiles;
 using EncounterGen.Tables;
@@ -85,19 +84,23 @@ namespace EncounterGen.Generators.Domain
             var encounterLevel = typeAndAmountPercentileSelector.SelectFrom(tableName).Single();
             var effectiveLevel = Convert.ToInt32(encounterLevel.Key);
             var modifier = Convert.ToInt32(encounterLevel.Value);
-
-            tableName = string.Format(TableNameConstants.LevelXENVIRONMENTEncounters, effectiveLevel, environment);
-            var encounterCreaturesAndAmounts = typeAndAmountPercentileSelector.SelectFrom(tableName);
-
-            while (ShouldReroll(encounterCreaturesAndAmounts.Values, modifier))
-                encounterCreaturesAndAmounts = typeAndAmountPercentileSelector.SelectFrom(tableName);
-
             var creatures = new List<Creature>();
 
-            foreach (var kvp in encounterCreaturesAndAmounts)
+            while (creatures.Any() == false || creatures.Contains(null))
             {
-                var newCreature = GetCreature(kvp.Key, kvp.Value, modifier, effectiveLevel);
-                creatures.Add(newCreature);
+                creatures.Clear();
+
+                tableName = string.Format(TableNameConstants.LevelXENVIRONMENTEncounters, effectiveLevel, environment);
+                var encounterCreaturesAndAmounts = typeAndAmountPercentileSelector.SelectFrom(tableName);
+
+                while (ShouldReroll(encounterCreaturesAndAmounts.Values, modifier))
+                    encounterCreaturesAndAmounts = typeAndAmountPercentileSelector.SelectFrom(tableName);
+
+                foreach (var kvp in encounterCreaturesAndAmounts)
+                {
+                    var newCreature = GetCreature(kvp.Key, kvp.Value, modifier, level);
+                    creatures.Add(newCreature);
+                }
             }
 
             var encounter = new Encounter();
@@ -145,11 +148,11 @@ namespace EncounterGen.Generators.Domain
             return creatures.Union(newCreatures).Except(creaturesToRemove);
         }
 
-        private Creature GetCreature(string fullCreatureType, string amount, int modifier, int effectiveLevel)
+        private Creature GetCreature(string fullCreatureType, string amount, int modifier, int level)
         {
             var creaturesRequiringSubtypes = collectionSelector.SelectFrom(TableNameConstants.CreatureGroups, GroupConstants.RequiresSubtype);
             if (creaturesRequiringSubtypes.Contains(fullCreatureType))
-                return GetCreatureWithRandomSubtype(fullCreatureType, effectiveLevel, modifier);
+                return GetCreatureWithRandomSubtype(fullCreatureType, level, modifier);
 
             var creature = new Creature();
             creature.Type = fullCreatureType;
@@ -185,7 +188,7 @@ namespace EncounterGen.Generators.Domain
             return subType;
         }
 
-        private Creature GetCreatureWithRandomSubtype(string creatureType, int effectiveLevel, int modifier)
+        private Creature GetCreatureWithRandomSubtype(string creatureType, int level, int modifier)
         {
             var creature = new Creature();
             creature.Type = creatureType;
@@ -195,7 +198,7 @@ namespace EncounterGen.Generators.Domain
 
             var tableName = string.Format(TableNameConstants.CREATURESubtypeChallengeRatings, creature.Type);
             var challengeRating = collectionSelector.SelectFrom(tableName, subtype).Single();
-            var roll = rollSelector.SelectFrom(effectiveLevel, challengeRating);
+            var roll = rollSelector.SelectFrom(level, challengeRating);
             var effectiveRoll = rollSelector.SelectFrom(roll, modifier);
             var iteration = 1;
 
@@ -203,12 +206,12 @@ namespace EncounterGen.Generators.Domain
             {
                 subtype = collectionSelector.SelectRandomFrom(subtypes);
                 challengeRating = collectionSelector.SelectFrom(tableName, subtype).Single();
-                roll = rollSelector.SelectFrom(effectiveLevel, challengeRating);
+                roll = rollSelector.SelectFrom(level, challengeRating);
                 effectiveRoll = rollSelector.SelectFrom(roll, modifier);
             }
 
             if (roll == RollConstants.Reroll || effectiveRoll == RollConstants.Reroll)
-                throw new ImpossibleEncounterException();
+                return null;
 
             var doubleQuantity = rollSelector.SelectFrom(effectiveRoll);
             creature.Quantity = Convert.ToInt32(doubleQuantity);

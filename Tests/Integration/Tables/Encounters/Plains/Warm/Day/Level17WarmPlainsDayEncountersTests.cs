@@ -2,16 +2,11 @@
 using EncounterGen.Selectors;
 using EncounterGen.Tables;
 using NUnit.Framework;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace EncounterGen.Tests.Integration.Tables.Encounters.Plains.Warm.Day
 {
     [TestFixture]
-    public class Level17WarmPlainsDatEncountersTests : TypeAndAmountPercentileTests
+    public class Level17WarmPlainsDayEncountersTests : TypeAndAmountPercentileTests
     {
         protected override string tableName
         {
