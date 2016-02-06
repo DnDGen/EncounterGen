@@ -70,6 +70,7 @@
     <Compile Include="CollectionTests.cs" />
     <Compile Include="Creatures\CreatureGroupsTests.cs" />
     <Compile Include="EmbeddedResourceStreamLoaderTests.cs" />
+    <Compile Include="Encounters\Civilized\Day\Level11CivilizedDayEncountersTests.cs" />
     <Compile Include="Encounters\Civilized\Day\Level13CivilizedDayEncountersTests.cs" />
     <Compile Include="Encounters\Civilized\Night\Level11CivilizedNightEncountersTests.cs" />
     <Compile Include="Encounters\Civilized\Night\Level2CivilizedNightEncountersTests.cs" />
@@ -81,6 +82,7 @@
     <Compile Include="Encounters\Forest\Cold\Day\Level10ColdForestDayEncountersTests.cs" />
     <Compile Include="Encounters\Forest\Cold\Night\Level16ColdForestNightEncountersTests.cs" />
     <Compile Include="Encounters\Forest\Cold\Night\Level3ColdForestNightEncountersTests.cs" />
+    <Compile Include="Encounters\Forest\Temperate\Day\Level14TemperateForestDayEncountersTests.cs" />
     <Compile Include="Encounters\Forest\Temperate\Night\Level13TemperateForestNightEncountersTests.cs" />
     <Compile Include="Encounters\Desert\Temperate\Night\Level6TemperateDesertNightEncountersTests.cs" />
     <Compile Include="Encounters\Forest\Temperate\Day\Level20TemperateForestDayEncountersTests.cs" />

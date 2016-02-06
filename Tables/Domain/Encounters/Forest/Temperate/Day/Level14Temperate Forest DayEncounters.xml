@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<percentile>
+  <object>
+    <lower>1</lower>
+    <content>Astral deva (celestial)/1</content>
+    <upper>5</upper>
+  </object>
+  <object>
+    <lower>6</lower>
+    <content>Efreet/1d6+5</content>
+    <upper>10</upper>
+  </object>
+    <object>
+        <lower>11</lower>
+        <content>Ghaele (celestial)/1d2</content>
+        <upper>15</upper>
+    </object>
+  <object>
+    <lower>16</lower>
+    <content>Stone golem/1d3+1</content>
+    <upper>20</upper>
+  </object>
+  <object>
+    <lower>21</lower>
+    <content>Gorgon/1d6+5</content>
+    <upper>30</upper>
+  </object>
+  <object>
+    <lower>31</lower>
+    <content>Hezrou (demon)/1d3+1</content>
+    <upper>35</upper>
+  </object>
+  <object>
+    <lower>36</lower>
+    <content>Nalfeshnee (demon)/1</content>
+    <upper>40</upper>
+  </object>
+  <object>
+    <lower>41</lower>
+    <content>Blue slaad/1d6+5</content>
+    <upper>45</upper>
+  </object>
+  <object>
+    <lower>46</lower>
+    <content>Death slaad/1d2</content>
+    <upper>50</upper>
+  </object>
+  <object>
+    <lower>51</lower>
+    <content>Trumpet archon/1</content>
+    <upper>55</upper>
+  </object>
+  <object>
+    <lower>56</lower>
+    <content>Elder xorn/1d6+5</content>
+    <upper>60</upper>
+  </object>
+  <object>
+    <lower>61</lower>
+    <content>Dragon/1</content>
+    <upper>70</upper>
+  </object>
+  <object>
+    <lower>71</lower>
+    <content>Celestial creature/1</content>
+    <upper>75</upper>
+  </object>
+  <object>
+    <lower>76</lower>
+    <content>Fiendish creature/1</content>
+    <upper>80</upper>
+  </object>
+  <object>
+    <lower>81</lower>
+    <content>Zombie/1</content>
+    <upper>85</upper>
+  </object>
+  <object>
+    <lower>86</lower>
+    <content>Skeleton/1</content>
+    <upper>90</upper>
+  </object>
+  <object>
+    <lower>91</lower>
+    <content>Character[11]/1d3+1</content>
+    <upper>100</upper>
+  </object>
+</percentile>
