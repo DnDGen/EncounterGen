@@ -46,6 +46,7 @@
         public const string Beholder = "Beholder";
         public const string Belker = "Belker";
         public const string Bison = "Bison";
+        public const string BlackPudding = "Black pudding";
         public const string BlinkDog = "Blink dog";
         public const string Boar = "Boar";
         public const string Boar_Dire = "Dire boar";
@@ -339,6 +340,7 @@
         public const string Hydra_12Heads = "Hydra (12 heads)";
         public const string Hyena = "Hyena";
         public const string Imp = "Imp (devil)";
+        public const string InvisibleStalker = "Invisible stalker";
         public const string Janni = "Janni";
         public const string Kobold = "Kobold";
         public const string Krenshar = "Krenshar";
