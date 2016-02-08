@@ -80,10 +80,22 @@
     <item>0</item>
   </collection>
   <collection>
+    <entry>Colossal monstrous centipede</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
     <entry>Colossal monstrous scorpion</entry>
-    <item>0</item>
-    <item>0</item>
-    <item>0</item>
+    <item>0.1</item>
+    <item>0.5</item>
+    <item>0.5</item>
+  </collection>
+  <collection>
+    <entry>Colossal monstrous spider</entry>
+    <item>0.1</item>
+    <item>0.5</item>
+    <item>0.5</item>
   </collection>
   <collection>
     <entry>Cornugon</entry>
@@ -108,6 +120,12 @@
     <item>2</item>
     <item>2</item>
     <item>2</item>
+  </collection>
+  <collection>
+    <entry>Boar</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
   </collection>
   <collection>
     <entry>Dire boar</entry>
@@ -194,6 +212,24 @@
     <item>1</item>
   </collection>
   <collection>
+    <entry>Gargantuan monstrous centipede</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Gargantuan monstrous scorpion</entry>
+    <item>0.1</item>
+    <item>0.5</item>
+    <item>0.5</item>
+  </collection>
+  <collection>
+    <entry>Gargantuan monstrous spider</entry>
+    <item>0.1</item>
+    <item>0.5</item>
+    <item>0.5</item>
+  </collection>
+  <collection>
     <entry>Gelugon</entry>
     <item>1</item>
     <item>2</item>
@@ -237,12 +273,6 @@
   </collection>
   <collection>
     <entry>Monitor lizard</entry>
-    <item>0</item>
-    <item>0</item>
-    <item>0</item>
-  </collection>
-  <collection>
-    <entry>Giant skeleton</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
@@ -326,10 +356,22 @@
     <item>1</item>
   </collection>
   <collection>
+    <entry>Huge monstrous centipede</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Huge monstrous scorpion</entry>
+    <item>0.1</item>
+    <item>0.5</item>
+    <item>0.5</item>
+  </collection>
+  <collection>
     <entry>Huge monstrous spider</entry>
-    <item>0</item>
-    <item>0</item>
-    <item>0</item>
+    <item>0.1</item>
+    <item>0.5</item>
+    <item>0.5</item>
   </collection>
   <collection>
     <entry>Huge viper snake</entry>
@@ -338,13 +380,13 @@
     <item>0</item>
   </collection>
   <collection>
-    <entry>Human commoner zombie</entry>
+    <entry>Zombie</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
   </collection>
   <collection>
-    <entry>Human warrior skeleton</entry>
+    <entry>Skeleton</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
@@ -390,6 +432,18 @@
     <item>0</item>
     <item>0</item>
     <item>0</item>
+  </collection>
+  <collection>
+    <entry>Large monstrous scorpion</entry>
+    <item>0.1</item>
+    <item>0.5</item>
+    <item>0.5</item>
+  </collection>
+  <collection>
+    <entry>Large monstrous spider</entry>
+    <item>0.1</item>
+    <item>0.5</item>
+    <item>0.5</item>
   </collection>
   <collection>
     <entry>Noble salamander</entry>
@@ -441,9 +495,9 @@
   </collection>
   <collection>
     <entry>Medium monstrous spider</entry>
-    <item>0</item>
-    <item>0</item>
-    <item>0</item>
+    <item>0.1</item>
+    <item>0.5</item>
+    <item>0.5</item>
   </collection>
   <collection>
     <entry>Mephit</entry>
@@ -560,6 +614,12 @@
     <item>0</item>
   </collection>
   <collection>
+    <entry>Small monstrous centipede</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
     <entry>Small monstrous scorpion</entry>
     <item>0</item>
     <item>0</item>
@@ -618,6 +678,24 @@
     <item>1</item>
     <item>1</item>
     <item>1</item>
+  </collection>
+  <collection>
+    <entry>Tiny monstrous centipede</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Tiny monstrous scorpion</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Tiny monstrous spider</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
   </collection>
   <collection>
     <entry>Tiny viper snake</entry>

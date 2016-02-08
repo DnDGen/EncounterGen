@@ -278,6 +278,7 @@
         public const string FormianWorker = "Formian worker";
         public const string FrostWorm = "Frost worm";
         public const string Gargoyle = "Gargoyle";
+        public const string GelatinousCube = "Gelatinous cube";
         public const string Gelugon = "Gelugon (devil)";
         public const string Ghaele = "Ghaele (celestial)";
         public const string Ghast = "Ghast";
@@ -452,8 +453,9 @@
         public const string ShockerLizard = "Shocker lizard";
         public const string Shrieker = "Shrieker";
         public const string Skeleton = "Skeleton";
-        public const string Skeleton_Giant = "Giant skeleton";
-        public const string Skeleton_HumanWarrior = "Human warrior skeleton";
+        public const string Skeleton_HillGiant = "Skeleton (Hill giant)";
+        public const string Skeleton_Human = "Skeleton (Human)";
+        public const string Skeleton_Ogre = "Skeleton (Ogre)";
         public const string Slaad_Blue = "Blue slaad";
         public const string Slaad_Death = "Death slaad";
         public const string Slaad_Gray = "Gray slaad";
@@ -529,6 +531,6 @@
         public const string YethHound = "Yeth hound";
         public const string Yrthak = "Yrthak";
         public const string Zombie = "Zombie";
-        public const string Zombie_HumanCommoner = "Human commoner zombie";
+        public const string Zombie_Human = "Zombie (Human)";
     }
 }

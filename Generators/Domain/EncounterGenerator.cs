@@ -121,7 +121,7 @@ namespace EncounterGen.Generators.Domain
             foreach (var creature in creatures)
             {
                 if (creature.Subtype == string.Empty)
-                    creature.Subtype = GetSubtype(creature.Type);
+                    creature.Subtype = GetSubtype(creature.Type, effectiveLevel);
 
                 creature.Type = GetCreatureType(creature.Type, effectiveLevel);
 
@@ -169,15 +169,17 @@ namespace EncounterGen.Generators.Domain
             var creatureType = subTypeRegex.Replace(fullCreatureType, string.Empty);
             creatureType = characterLevelRegex.Replace(creatureType, string.Empty);
 
-            if (creatureType != CreatureConstants.Dragon)
-                return creatureType;
-
-            var tableName = string.Format(TableNameConstants.LevelXDragons, effectiveLevel);
-            return percentileSelector.SelectFrom(tableName);
+            return creatureType;
         }
 
-        private string GetSubtype(string fullCreatureType)
+        private string GetSubtype(string fullCreatureType, int effectiveLevel)
         {
+            if (fullCreatureType == CreatureConstants.Dragon)
+            {
+                var tableName = string.Format(TableNameConstants.LevelXDragons, effectiveLevel);
+                return percentileSelector.SelectFrom(tableName);
+            }
+
             var subTypeMatch = subTypeRegex.Match(fullCreatureType);
             if (string.IsNullOrEmpty(subTypeMatch.Value))
                 return string.Empty;

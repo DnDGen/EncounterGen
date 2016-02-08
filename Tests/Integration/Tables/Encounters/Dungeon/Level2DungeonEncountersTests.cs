@@ -38,7 +38,7 @@ namespace EncounterGen.Tests.Integration.Tables.Encounters.Dungeon
             CreatureConstants.Goblin, RollConstants.OneD4Plus2)]
         [TestCase(61, 70, CreatureConstants.Lizardfolk, RollConstants.OneD3)]
         [TestCase(71, 80, CreatureConstants.Orc, RollConstants.OneD4Plus2)]
-        [TestCase(81, 90, CreatureConstants.Zombie_HumanCommoner, RollConstants.OneD4Plus2)]
+        [TestCase(81, 90, CreatureConstants.Zombie_Human, RollConstants.OneD4Plus2)]
         [TestCase(91, 100, CreatureConstants.Ghoul, RollConstants.OneD3)]
         public override void Percentile(int lower, int upper, params string[] typesAndAmounts)
         {

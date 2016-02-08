@@ -284,7 +284,8 @@ namespace EncounterGen.Tests.Unit.Generators
             Assert.That(encounter, Is.Not.Null);
 
             var creature = encounter.Creatures.Single();
-            Assert.That(creature.Type, Is.EqualTo("dragon type and age"));
+            Assert.That(creature.Type, Is.EqualTo(CreatureConstants.Dragon));
+            Assert.That(creature.Subtype, Is.EqualTo("dragon type and age"));
             Assert.That(creature.Quantity, Is.EqualTo(600));
             Assert.That(encounter.Characters, Is.Empty);
         }
@@ -346,6 +347,20 @@ namespace EncounterGen.Tests.Unit.Generators
             encounterTypeAndAmount["creature (subtype)"] = "creature amount";
             mockRollSelector.Setup(s => s.SelectFrom("creature amount", 9876)).Returns("creature effective roll");
             mockRollSelector.Setup(s => s.SelectFrom("creature effective roll")).Returns(600);
+
+            requiresSubtype.Add("creature");
+            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.CreatureGroups, "creature"))
+                .Returns(new[] { "wrong creature", "other creature" });
+
+            var tableName = string.Format(TableNameConstants.CREATURESubtypeChallengeRatings, "creature");
+            mockCollectionSelector.Setup(s => s.SelectFrom(tableName, "other creature")).Returns(new[] { "other challenge rating" });
+            mockRollSelector.Setup(s => s.SelectFrom(level, "other challenge rating")).Returns("other roll");
+            mockRollSelector.Setup(s => s.SelectFrom("other roll", 9876)).Returns("other effective roll");
+            mockRollSelector.Setup(s => s.SelectFrom("other effective roll")).Returns(1234);
+            mockCollectionSelector.Setup(s => s.SelectFrom(tableName, "wrong creature")).Returns(new[] { "wrong challenge rating" });
+            mockRollSelector.Setup(s => s.SelectFrom(level, "wrong challenge rating")).Returns("wrong roll");
+            mockRollSelector.Setup(s => s.SelectFrom("wrong roll", 9876)).Returns("wrong effective roll");
+            mockRollSelector.Setup(s => s.SelectFrom("wrong effective roll")).Returns(1337);
 
             var encounter = encounterGenerator.Generate(environment, level);
             Assert.That(encounter, Is.Not.Null);

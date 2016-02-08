@@ -456,8 +456,10 @@ namespace EncounterGen.Tests.Unit.Common
         [TestCase(CreatureConstants.ShockerLizard, "Shocker lizard")]
         [TestCase(CreatureConstants.Shrieker, "Shrieker")]
         [TestCase(CreatureConstants.Skeleton, "Skeleton")]
-        [TestCase(CreatureConstants.Skeleton_Giant, "Giant skeleton")]
-        [TestCase(CreatureConstants.Skeleton_HumanWarrior, "Human warrior skeleton")]
+        [TestCase(CreatureConstants.Skeleton_HillGiant, "Skeleton (Hill giant)")]
+        [TestCase(CreatureConstants.Skeleton_Human, "Skeleton (Human)")]
+        [TestCase(CreatureConstants.Skeleton_Ogre, "Skeleton (Ogre)")]
+        [TestCase(CreatureConstants.GelatinousCube, "Gelatinous cube")]
         [TestCase(CreatureConstants.Slaad_Blue, "Blue slaad")]
         [TestCase(CreatureConstants.Slaad_Death, "Death slaad")]
         [TestCase(CreatureConstants.Slaad_Gray, "Gray slaad")]
@@ -533,7 +535,7 @@ namespace EncounterGen.Tests.Unit.Common
         [TestCase(CreatureConstants.YethHound, "Yeth hound")]
         [TestCase(CreatureConstants.Yrthak, "Yrthak")]
         [TestCase(CreatureConstants.Zombie, "Zombie")]
-        [TestCase(CreatureConstants.Zombie_HumanCommoner, "Human commoner zombie")]
+        [TestCase(CreatureConstants.Zombie_Human, "Zombie (Human)")]
         public void Constant(string constant, string value)
         {
             Assert.That(constant, Is.EqualTo(value));

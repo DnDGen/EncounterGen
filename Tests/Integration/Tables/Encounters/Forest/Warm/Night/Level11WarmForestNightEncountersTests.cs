@@ -49,7 +49,7 @@ namespace EncounterGen.Tests.Integration.Tables.Encounters.Forest.Warm.Night
         [TestCase(65, 66, CreatureConstants.Hezrou, RollConstants.One)]
         [TestCase(67, 68, CreatureConstants.Mohrg, RollConstants.OneD3Plus1)]
         [TestCase(69, 70, CreatureConstants.Mohrg, RollConstants.OneD3Plus1,
-            CreatureConstants.Zombie_HumanCommoner, RollConstants.OneD6Plus5)]
+            CreatureConstants.Zombie_Human, RollConstants.OneD6Plus5)]
         [TestCase(71, 72, CreatureConstants.Salamander_Noble, RollConstants.OneD2)]
         [TestCase(73, 74, CreatureConstants.ShadowMastiff, RollConstants.OneD6Plus5)]
         [TestCase(75, 76, CreatureConstants.Slaad_Blue, RollConstants.OneD3Plus1)]

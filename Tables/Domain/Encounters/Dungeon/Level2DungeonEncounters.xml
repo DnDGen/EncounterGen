@@ -78,7 +78,7 @@
     </object>
     <object>
         <lower>81</lower>
-        <content>Human commoner zombie/1d4+2</content>
+        <content>Zombie (Human)/1d4+2</content>
         <upper>90</upper>
     </object>
     <object>

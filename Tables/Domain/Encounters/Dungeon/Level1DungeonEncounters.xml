@@ -78,12 +78,12 @@
     </object>
     <object>
         <lower>81</lower>
-        <content>Human warrior skeleton/1d3+1</content>
+        <content>Skeleton (Human)/1d3+1</content>
         <upper>90</upper>
     </object>
     <object>
         <lower>91</lower>
-        <content>Human commoner zombie/1d3</content>
+        <content>Zombie (Human)/1d3</content>
         <upper>100</upper>
     </object>
 </percentile>

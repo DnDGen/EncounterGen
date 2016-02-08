@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<percentile>
+  <object>
+        <lower>1</lower>
+        <content>Giant bombardier beetle/1d2</content>
+        <upper>2</upper>
+    </object>
+    <object>
+        <lower>3</lower>
+        <content>Huge monstrous centipede/1d2</content>
+        <upper>4</upper>
+    </object>
+  <object>
+    <lower>5</lower>
+    <content>Dire badger/1d2</content>
+    <upper>6</upper>
+  </object>
+    <object>
+        <lower>7</lower>
+        <content>Dire bat/1d2</content>
+        <upper>8</upper>
+    </object>
+    <object>
+        <lower>9</lower>
+        <content>Gelatinous cube/1</content>
+        <upper>11</upper>
+    </object>
+  <object>
+    <lower>12</lower>
+    <content>Giant praying mantis/1d2</content>
+    <upper>13</upper>
+  </object>
+    <object>
+        <lower>14</lower>
+        <content>Large monstrous scorpion/1d2</content>
+        <upper>14</upper>
+    </object>
+  <object>
+    <lower>15</lower>
+    <content>Large monstrous spider/1d2</content>
+    <upper>15</upper>
+  </object>
+  <object>
+    <lower>16</lower>
+    <content>Dragon/1</content>
+    <upper>20</upper>
+  </object>
+  <object>
+    <lower>21</lower>
+    <content>Imp (devil)/1d2</content>
+    <upper>25</upper>
+  </object>
+    <object>
+        <lower>26</lower>
+        <content>Wererat/1,Dire rat/1d3+1</content>
+        <upper>30</upper>
+    </object>
+    <object>
+        <lower>31</lower>
+        <content>Dwarf warrior/1d6+3</content>
+        <upper>35</upper>
+    </object>
+    <object>
+        <lower>36</lower>
+        <content>Character[1]/1d3+1</content>
+        <upper>40</upper>
+    </object>
+  <object>
+    <lower>41</lower>
+    <content>Dretch (demon)/1d2</content>
+    <upper>44</upper>
+  </object>
+    <object>
+      <lower>45</lower>
+        <content>Ethereal filcher/1</content>
+        <upper>48</upper>
+    </object>
+  <object>
+    <lower>49</lower>
+    <content>Phantom fungus/1</content>
+    <upper>52</upper>
+  </object>
+  <object>
+    <lower>53</lower>
+    <content>Thoqqua/1d2</content>
+    <upper>56</upper>
+  </object>
+  <object>
+    <lower>57</lower>
+    <content>Vargouille/1d2</content>
+    <upper>60</upper>
+  </object>
+    <object>
+        <lower>61</lower>
+        <content>Bugbear/1,Goblin/1d4+2</content>
+        <upper>62</upper>
+    </object>
+  <object>
+    <lower>63</lower>
+    <content>Gnoll/1d3+1</content>
+    <upper>67</upper>
+  </object>
+  <object>
+    <lower>68</lower>
+    <content>Goblin/1d4+2,Wolf/1d3</content>
+    <upper>69</upper>
+  </object>
+  <object>
+    <lower>70</lower>
+    <content>Hobgoblin/1d3,Wolf/1d3</content>
+    <upper>71</upper>
+  </object>
+    <object>
+        <lower>72</lower>
+        <content>Kobold/1d6+3,Dire weasel/1</content>
+        <upper>75</upper>
+    </object>
+  <object>
+    <lower>76</lower>
+    <content>Troglodyte/1d3+1</content>
+    <upper>80</upper>
+  </object>
+    <object>
+        <lower>81</lower>
+        <content>Shadow/1</content>
+        <upper>90</upper>
+    </object>
+  <object>
+    <lower>91</lower>
+    <content>Skeleton (Ogre)/1d3+1</content>
+    <upper>100</upper>
+  </object>
+</percentile>

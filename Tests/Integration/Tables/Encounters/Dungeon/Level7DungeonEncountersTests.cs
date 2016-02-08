@@ -2,18 +2,17 @@
 using EncounterGen.Selectors;
 using EncounterGen.Tables;
 using NUnit.Framework;
-using System;
 
 namespace EncounterGen.Tests.Integration.Tables.Encounters.Dungeon
 {
     [TestFixture]
-    public class Level5DungeonEncountersTests : TypeAndAmountPercentileTests
+    public class Level7DungeonEncountersTests : TypeAndAmountPercentileTests
     {
-        protected override String tableName
+        protected override string tableName
         {
             get
             {
-                return String.Format(TableNameConstants.LevelXENVIRONMENTEncounters, 5, EnvironmentConstants.Dungeon);
+                return string.Format(TableNameConstants.LevelXENVIRONMENTEncounters, 7, EnvironmentConstants.Dungeon);
             }
         }
 
@@ -23,9 +22,8 @@ namespace EncounterGen.Tests.Integration.Tables.Encounters.Dungeon
             AssertTableIsComplete();
         }
 
-        [TestCase(1, 2, CreatureConstants.Ant_Giant_Soldier, RollConstants.One,
-            CreatureConstants.Ant_Giant_Worker, RollConstants.OneD4Plus2)]
-        [TestCase(3, 5, CreatureConstants.Wolverine_Dire, RollConstants.OneD2)]
+        [TestCase(1, 2, CreatureConstants.BlackPudding, RollConstants.One)]
+        [TestCase(3, 5, CreatureConstants.Centipede_Monstrous_Gargantuan, RollConstants.OneD2)]
         [TestCase(6, 9, CreatureConstants.Ooze_OchreJelly, RollConstants.One)]
         [TestCase(10, 11, CreatureConstants.Snake_Constrictor_Giant, RollConstants.One)]
         [TestCase(12, 12, CreatureConstants.Spider_Monstrous_Huge, RollConstants.OneD2)]

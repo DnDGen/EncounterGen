@@ -21,10 +21,10 @@ namespace EncounterGen.Tests.Integration.Tables
             var table = Load("Level1DungeonEncounters.xml");
 
             for (var i = 100; i > 90; i--)
-                Assert.That(table[i], Is.EqualTo("Human commoner zombie/1d3"));
+                Assert.That(table[i], Is.EqualTo("Zombie (Human)/1d3"));
 
             for (var i = 90; i > 80; i--)
-                Assert.That(table[i], Is.EqualTo("Human warrior skeleton/1d3+1"));
+                Assert.That(table[i], Is.EqualTo("Skeleton (Human)/1d3+1"));
 
             for (var i = 80; i > 70; i--)
                 Assert.That(table[i], Is.EqualTo("Kobold/1d6+3"));
@@ -72,9 +72,9 @@ namespace EncounterGen.Tests.Integration.Tables
                 Assert.That(table[i], Is.EqualTo("Medium monstrous centipede/1d3"));
         }
 
-        private Dictionary<Int32, String> Load(String filename)
+        private Dictionary<int, string> Load(string filename)
         {
-            var table = new Dictionary<Int32, String>();
+            var table = new Dictionary<int, string>();
             var xmlDocument = new XmlDocument();
 
             using (var stream = StreamLoader.LoadFor(filename))
