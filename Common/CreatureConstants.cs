@@ -105,6 +105,7 @@
         public const string Djinn = "Djinn";
         public const string Djinn_Noble = "Noble djinn";
         public const string Dog = "Dog";
+        public const string DominatedCreature = "Dominated creature";
         public const string Donkey = "Donkey";
         public const string Doppelganger = "Doppelganger";
         public const string Dragon = "Dragon";

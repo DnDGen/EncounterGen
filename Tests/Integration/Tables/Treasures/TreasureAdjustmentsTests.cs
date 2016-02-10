@@ -31,6 +31,7 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
                 "Balor",
                 CreatureConstants.Beholder,
                 CreatureConstants.BlinkDog,
+                CreatureConstants.Boar,
                 CreatureConstants.Boar_Dire,
                 CreatureConstants.Bugbear,
                 CreatureConstants.CarrionCrawler,

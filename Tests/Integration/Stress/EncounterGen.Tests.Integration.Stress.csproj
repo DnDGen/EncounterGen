@@ -31,7 +31,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Stress|AnyCPU'">
     <OutputPath>bin\Stress\</OutputPath>
-    <DefineConstants>STRESS</DefineConstants>
+    <DefineConstants>TRACE;DEBUG;STRESS</DefineConstants>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Albatross.Expression, Version=1.1.5700.39687, Culture=neutral, processorArchitecture=MSIL">

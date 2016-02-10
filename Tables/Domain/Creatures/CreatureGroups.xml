@@ -8,6 +8,7 @@
     <item>Fiendish creature</item>
     <item>Skeleton</item>
     <item>Zombie</item>
+    <item>Dominated creature</item>
   </collection>
   <collection>
     <entry>Undead NPC</entry>
@@ -1130,5 +1131,39 @@
     <item>Warrior (Hunter)</item>
     <item>Warrior (Captain)</item>
     <item>Warrior (Patrol)</item>
+  </collection>
+  <collection>
+    <entry>Dominated creature</entry>
+    <item>Aranea</item>
+    <item>Hound archon</item>
+    <item>Barghest</item>
+    <item>Displacer beast</item>
+    <item>Gargoyle</item>
+    <item>Giant stag beetle</item>
+    <item>Gray ooze</item>
+    <item>Janni</item>
+    <item>Mimic</item>
+    <item>Pixie</item>
+    <item>Vampire spawn</item>
+    <item>Brown bear</item>
+    <item>Wereboar</item>
+    <item>Celestial creature</item>
+    <item>Fiendish creature</item>
+    <item>Skeleton</item>
+    <item>Zombie</item>
+    <item>Dragon</item>
+    <item>Character</item>
+    <item>Dire boar</item>
+    <item>Dire wolverine</item>
+    <item>Giant crocodile</item>
+    <item>Griffon</item>
+    <item>Harpy</item>
+    <item>Hydra (5 heads)</item>
+    <item>Otyugh</item>
+    <item>Owlbear</item>
+    <item>Polar bear</item>
+    <item>Rhinoceras</item>
+    <item>Tiger</item>
+    <item>Minotaur</item>
   </collection>
 </collections>

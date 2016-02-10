@@ -200,7 +200,9 @@
     <EmbeddedResource Include="Encounters\Hills\Cold\Day\Level15Cold Hills DayEncounters.xml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Encounters\Mountain\Cold\Night\Level11Cold Mountain NightEncounters.xml" />
+    <EmbeddedResource Include="Encounters\Mountain\Cold\Night\Level11Cold Mountain NightEncounters.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Encounters\Forest\Temperate\Day\Level20Temperate Forest DayEncounters.xml" />
@@ -304,13 +306,17 @@
     <EmbeddedResource Include="Encounters\Forest\Cold\Night\Level3Cold Forest NightEncounters.xml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Encounters\Hills\Cold\Day\Level11Cold Hills DayEncounters.xml" />
+    <EmbeddedResource Include="Encounters\Hills\Cold\Day\Level11Cold Hills DayEncounters.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Encounters\Mountain\Warm\Night\Level15Warm Mountain NightEncounters.xml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Encounters\Forest\Warm\Night\Level11Warm Forest NightEncounters.xml" />
+    <EmbeddedResource Include="Encounters\Forest\Warm\Night\Level11Warm Forest NightEncounters.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Encounters\Hills\Cold\Night\Level3Cold Hills NightEncounters.xml" />
@@ -332,6 +338,9 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Encounters\Dungeon\Level3DungeonEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Encounters\Dungeon\Level7DungeonEncounters.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

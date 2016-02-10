@@ -148,31 +148,36 @@
   </object>
   <object>
     <lower>83</lower>
-    <content>Skeleton/1</content>
+    <content>Formian taskmaster/1d3+1,Dominated creature[4]/1d3+1</content>
     <upper>84</upper>
   </object>
   <object>
     <lower>85</lower>
-    <content>Zombie/1</content>
+    <content>Skeleton/1</content>
     <upper>86</upper>
   </object>
   <object>
     <lower>87</lower>
-    <content>Dragon/1</content>
-    <upper>90</upper>
+    <content>Zombie/1</content>
+    <upper>88</upper>
   </object>
   <object>
-    <lower>91</lower>
-    <content>Celestial creature/1</content>
+    <lower>89</lower>
+    <content>Dragon/1</content>
     <upper>92</upper>
   </object>
   <object>
     <lower>93</lower>
-    <content>Fiendish creature/1</content>
+    <content>Celestial creature/1</content>
     <upper>94</upper>
   </object>
   <object>
     <lower>95</lower>
+    <content>Fiendish creature/1</content>
+    <upper>96</upper>
+  </object>
+  <object>
+    <lower>97</lower>
     <content>Character[8]/1d3+1</content>
     <upper>100</upper>
   </object>

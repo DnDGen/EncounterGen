@@ -48,96 +48,91 @@
   </object>
   <object>
     <lower>47</lower>
-    <content>Formian taskmaster/1d3+1</content>
+    <content>Formian myrmarch/1</content>
     <upper>48</upper>
   </object>
   <object>
     <lower>49</lower>
-    <content>Formian myrmarch/1</content>
+    <content>Clay golem/1</content>
     <upper>50</upper>
   </object>
   <object>
     <lower>51</lower>
-    <content>Clay golem/1</content>
+    <content>Flesh golem/1d3+1</content>
     <upper>52</upper>
   </object>
   <object>
     <lower>53</lower>
-    <content>Flesh golem/1d3+1</content>
+    <content>Avoral/1d2</content>
     <upper>54</upper>
   </object>
   <object>
     <lower>55</lower>
-    <content>Avoral/1d2</content>
+    <content>Nessian warhound/1d2</content>
     <upper>56</upper>
   </object>
   <object>
     <lower>57</lower>
-    <content>Nessian warhound/1d2</content>
+    <content>Janni/1d6+5</content>
     <upper>58</upper>
   </object>
   <object>
     <lower>59</lower>
-    <content>Janni/1d6+5</content>
+    <content>Lillend/1d3+1</content>
     <upper>60</upper>
   </object>
   <object>
     <lower>61</lower>
-    <content>Lillend/1d3+1</content>
+    <content>Noble salamander/1</content>
     <upper>62</upper>
   </object>
   <object>
     <lower>63</lower>
-    <content>Noble salamander/1</content>
+    <content>Gray slaad/1</content>
     <upper>64</upper>
   </object>
   <object>
     <lower>65</lower>
-    <content>Gray slaad/1</content>
+    <content>Red slaad/1d3+1</content>
     <upper>66</upper>
   </object>
   <object>
     <lower>67</lower>
-    <content>Red slaad/1d3+1</content>
+    <content>Vrock (demon)/1d2</content>
     <upper>68</upper>
   </object>
   <object>
     <lower>69</lower>
-    <content>Vrock (demon)/1d2</content>
+    <content>Ravid/1,Colossal animated object/1</content>
     <upper>70</upper>
   </object>
   <object>
     <lower>71</lower>
-    <content>Ravid/1,Colossal animated object/1</content>
-    <upper>72</upper>
+    <content>Dragon/1</content>
+    <upper>76</upper>
   </object>
   <object>
-    <lower>73</lower>
-    <content>Dragon/1</content>
+    <lower>77</lower>
+    <content>Skeleton/1</content>
     <upper>78</upper>
   </object>
   <object>
     <lower>79</lower>
-    <content>Skeleton/1</content>
+    <content>Zombie/1</content>
     <upper>80</upper>
   </object>
   <object>
     <lower>81</lower>
-    <content>Zombie/1</content>
+    <content>Celestial creature/1</content>
     <upper>82</upper>
   </object>
   <object>
     <lower>83</lower>
-    <content>Celestial creature/1</content>
+    <content>Fiendish creature/1</content>
     <upper>84</upper>
   </object>
-  <object>
-    <lower>85</lower>
-    <content>Fiendish creature/1</content>
-    <upper>86</upper>
-  </object>
     <object>
-        <lower>87</lower>
+        <lower>85</lower>
         <content>Character[7]/1d3+1</content>
         <upper>100</upper>
     </object>

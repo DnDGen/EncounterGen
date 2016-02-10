@@ -28,7 +28,8 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures
                 CreatureConstants.FiendishCreature,
                 CreatureConstants.Skeleton,
                 CreatureConstants.Zombie,
-                CreatureConstants.Character
+                CreatureConstants.Character,
+                CreatureConstants.DominatedCreature
             };
 
             AssertEntriesAreComplete(entries);
@@ -39,7 +40,8 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures
             CreatureConstants.CelestialCreature,
             CreatureConstants.FiendishCreature,
             CreatureConstants.Skeleton,
-            CreatureConstants.Zombie)]
+            CreatureConstants.Zombie,
+            CreatureConstants.DominatedCreature)]
         [TestCase(GroupConstants.UndeadNPC,
             CreatureConstants.Lich,
             CreatureConstants.Ghost,
@@ -1148,6 +1150,38 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures
             CharacterClassConstants.Sorcerer,
             CharacterClassConstants.Warrior,
             CharacterClassConstants.Wizard)]
+        [TestCase(CreatureConstants.DominatedCreature,
+            CreatureConstants.Aranea,
+            CreatureConstants.HoundArchon,
+            CreatureConstants.Barghest,
+            CreatureConstants.Bear_Brown,
+            CreatureConstants.Boar_Dire,
+            CreatureConstants.Wolverine_Dire,
+            CreatureConstants.DisplacerBeast,
+            CreatureConstants.Gargoyle,
+            CreatureConstants.Crocodile_Giant,
+            CreatureConstants.StagBeetle_Giant,
+            CreatureConstants.Ooze_Gray,
+            CreatureConstants.Griffon,
+            CreatureConstants.Harpy,
+            CreatureConstants.Hydra_5Heads,
+            CreatureConstants.Janni,
+            CreatureConstants.Mimic,
+            CreatureConstants.Otyugh,
+            CreatureConstants.Owlbear,
+            CreatureConstants.Pixie,
+            CreatureConstants.Bear_Polar,
+            CreatureConstants.Rhinoceras,
+            CreatureConstants.Tiger,
+            CreatureConstants.VampireSpawn,
+            CreatureConstants.Wereboar,
+            CreatureConstants.Minotaur,
+            CreatureConstants.CelestialCreature,
+            CreatureConstants.FiendishCreature,
+            CreatureConstants.Skeleton,
+            CreatureConstants.Zombie,
+            CreatureConstants.Dragon,
+            CreatureConstants.Character)]
         public override void DistinctCollection(string entry, params string[] items)
         {
             base.DistinctCollection(entry, items);

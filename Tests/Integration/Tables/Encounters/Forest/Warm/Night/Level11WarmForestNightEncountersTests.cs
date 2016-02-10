@@ -56,12 +56,14 @@ namespace EncounterGen.Tests.Integration.Tables.Encounters.Forest.Warm.Night
         [TestCase(77, 78, CreatureConstants.Slaad_Gray, RollConstants.OneD2)]
         [TestCase(79, 80, CreatureConstants.Wraith, RollConstants.OneD6Plus5)]
         [TestCase(81, 82, CreatureConstants.Wraith_Dread, RollConstants.One)]
-        [TestCase(83, 84, CreatureConstants.Skeleton, RollConstants.One)]
-        [TestCase(85, 86, CreatureConstants.Zombie, RollConstants.One)]
-        [TestCase(87, 90, CreatureConstants.Dragon, RollConstants.One)]
-        [TestCase(91, 92, CreatureConstants.CelestialCreature, RollConstants.One)]
-        [TestCase(93, 94, CreatureConstants.FiendishCreature, RollConstants.One)]
-        [TestCase(95, 100, CreatureConstants.Character + "[8]", RollConstants.OneD3Plus1)]
+        [TestCase(83, 84, CreatureConstants.FormianTaskmaster, RollConstants.OneD3Plus1,
+            CreatureConstants.DominatedCreature + "[4]", RollConstants.OneD3Plus1)]
+        [TestCase(85, 86, CreatureConstants.Skeleton, RollConstants.One)]
+        [TestCase(87, 88, CreatureConstants.Zombie, RollConstants.One)]
+        [TestCase(89, 92, CreatureConstants.Dragon, RollConstants.One)]
+        [TestCase(93, 94, CreatureConstants.CelestialCreature, RollConstants.One)]
+        [TestCase(95, 96, CreatureConstants.FiendishCreature, RollConstants.One)]
+        [TestCase(97, 100, CreatureConstants.Character + "[8]", RollConstants.OneD3Plus1)]
         public override void Percentile(int lower, int upper, params string[] typesAndAmounts)
         {
             base.Percentile(lower, upper, typesAndAmounts);
