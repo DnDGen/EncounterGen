@@ -206,17 +206,21 @@ namespace EncounterGen.Generators.Domain
 
             if (creaturesRequiringSubtypes.Contains(creature.Subtype))
             {
-                var subSubtype = GenerateRandomSubtype(creature.Subtype, level, modifier, amount);
+                var setChallengeRating = GetSetChallengeRating(fullCreatureType);
+                var subSubtype = GenerateRandomSubtype(creature.Subtype, level, modifier, amount, setChallengeRating);
+
                 creature.Subtype = string.Format("{0} ({1})", creature.Subtype, subSubtype);
             }
 
             return creature;
         }
 
-        private string GenerateRandomSubtype(string fullCreatureType, int level, int modifier, string amount)
+        private string GenerateRandomSubtype(string fullCreatureType, int level, int modifier, string amount, string setChallengeRating = "")
         {
             var creatureType = GetCreatureType(fullCreatureType);
-            var setChallengeRating = GetSetChallengeRating(fullCreatureType);
+
+            if (string.IsNullOrEmpty(setChallengeRating))
+                setChallengeRating = GetSetChallengeRating(fullCreatureType);
 
             var subtypes = collectionSelector.SelectFrom(TableNameConstants.CreatureGroups, creatureType);
             var subtype = collectionSelector.SelectRandomFrom(subtypes);
@@ -228,41 +232,41 @@ namespace EncounterGen.Generators.Domain
                 return percentileSelector.SelectFrom(dragonTableName);
             }
 
-            var tableName = string.Format(TableNameConstants.CREATURESubtypeChallengeRatings, creatureType);
-            var challengeRating = collectionSelector.SelectFrom(tableName, subtype).Single();
-            var effectiveRoll = rollSelector.SelectFrom(amount, modifier);
+            if (IsCharacterCreatureType(subtype))
+                return subtype;
 
-            if (string.IsNullOrEmpty(setChallengeRating))
-            {
-                effectiveRoll = rollSelector.SelectFrom(level, challengeRating);
-            }
-            else if (challengeRating != setChallengeRating)
-            {
-                effectiveRoll = RollConstants.Reroll;
-            }
+            var creaturesRequiringSubtypes = collectionSelector.SelectFrom(TableNameConstants.CreatureGroups, GroupConstants.RequiresSubtype);
+            if (creaturesRequiringSubtypes.Contains(subtype))
+                return subtype;
+
+            var effectiveRoll = GetEffectiveSubtypeRoll(creatureType, subtype, level, amount, modifier, setChallengeRating);
 
             var iteration = 1;
 
             while (effectiveRoll == RollConstants.Reroll && iteration++ < IterationLimit)
             {
                 subtype = collectionSelector.SelectRandomFrom(subtypes);
-                effectiveRoll = rollSelector.SelectFrom(amount, modifier);
-
-                if (string.IsNullOrEmpty(setChallengeRating))
-                {
-                    challengeRating = collectionSelector.SelectFrom(tableName, subtype).Single();
-                    effectiveRoll = rollSelector.SelectFrom(level, challengeRating);
-                }
-                else if (challengeRating != setChallengeRating)
-                {
-                    effectiveRoll = RollConstants.Reroll;
-                }
+                effectiveRoll = GetEffectiveSubtypeRoll(creatureType, subtype, level, amount, modifier, setChallengeRating);
             }
 
             if (effectiveRoll == RollConstants.Reroll)
                 return null;
 
             return subtype;
+        }
+
+        private string GetEffectiveSubtypeRoll(string creatureType, string subtype, int level, string amount, int modifier, string setChallengeRating)
+        {
+            var tableName = string.Format(TableNameConstants.CREATURESubtypeChallengeRatings, creatureType);
+            var challengeRating = collectionSelector.SelectFrom(tableName, subtype).Single();
+
+            if (string.IsNullOrEmpty(setChallengeRating))
+                return rollSelector.SelectFrom(level, challengeRating);
+
+            if (challengeRating != setChallengeRating)
+                return RollConstants.Reroll;
+
+            return rollSelector.SelectFrom(amount, modifier);
         }
 
         private int GetRandomSubtypeQuantity(string subtype, string fullCreatureType, string amount, int modifier, int level)
@@ -287,7 +291,7 @@ namespace EncounterGen.Generators.Domain
         private IEnumerable<Character> GetCharacters(IEnumerable<Creature> creatures)
         {
             var characters = new List<Character>();
-            var characterCreatures = creatures.Where(c => IsCharacterCreature(c));
+            var characterCreatures = creatures.Where(c => IsCharacterCreatureType(c.Type) || IsCharacterCreatureType(c.Subtype));
 
             if (characterCreatures.Any() == false)
                 return characters;
@@ -306,27 +310,37 @@ namespace EncounterGen.Generators.Domain
             return characters;
         }
 
-        private bool IsCharacterCreature(Creature creature)
+        private bool IsCharacterCreatureType(string creatureType)
         {
-            var characterCreatureType = GetCharacterCreatureType(creature);
+            var characterCreatureType = GetCreatureTypeCharacter(creatureType);
 
             return string.IsNullOrEmpty(characterCreatureType) == false;
         }
 
-        private string GetCharacterCreatureType(Creature creature)
+        private string GetCreatureTypeCharacter(string creatureType)
         {
-            if (CreatureMatches(creature, CreatureConstants.Character))
+            if (creatureType.StartsWith(CreatureConstants.Character))
                 return CreatureConstants.Character;
 
-            if (CreatureMatches(creature, CreatureConstants.NPC))
+            if (creatureType.StartsWith(CreatureConstants.NPC))
                 return CreatureConstants.NPC;
 
             var undeadNPCCreatures = collectionSelector.SelectFrom(TableNameConstants.CreatureGroups, GroupConstants.UndeadNPC);
-            if (undeadNPCCreatures.Any(c => CreatureMatches(creature, c)))
-                return undeadNPCCreatures.First(c => CreatureMatches(creature, c));
+            if (undeadNPCCreatures.Any(c => creatureType.StartsWith(c)))
+                return undeadNPCCreatures.First(c => creatureType.StartsWith(c));
 
             var classes = collectionSelector.SelectFrom(TableNameConstants.CreatureGroups, CreatureConstants.Character);
-            return classes.FirstOrDefault(cl => CreatureMatches(creature, cl));
+            return classes.FirstOrDefault(cl => creatureType.StartsWith(cl));
+        }
+
+        private string GetCharacterCreatureType(Creature creature)
+        {
+            var creatureType = GetCreatureTypeCharacter(creature.Type);
+
+            if (string.IsNullOrEmpty(creatureType))
+                return GetCreatureTypeCharacter(creature.Subtype);
+
+            return creatureType;
         }
 
         private bool CreatureMatches(Creature creature, string creatureType)

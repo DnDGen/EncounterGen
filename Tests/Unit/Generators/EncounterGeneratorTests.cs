@@ -183,8 +183,7 @@ namespace EncounterGen.Tests.Unit.Generators
             mockRollSelector.Setup(s => s.SelectFrom("character amount", 9876)).Returns("character effective roll");
             mockRollSelector.Setup(s => s.SelectFrom("character effective roll")).Returns(2);
 
-            mockRollSelector.Setup(s => s.SelectRollFrom("[13d37]")).Returns("character level roll");
-            mockRollSelector.SetupSequence(s => s.SelectFrom("character level roll")).Returns(1337).Returns(1234);
+            mockRollSelector.SetupSequence(s => s.SelectFrom("13d37")).Returns(1337).Returns(1234);
 
             mockCharacterGenerator.Setup(g => g.GenerateWith(mockAnyAlignmentRandomizer.Object, mockAnyPlayerClassNameRandomizer.Object, It.Is<ISetLevelRandomizer>(r => r.SetLevel == 1337 && r.AllowAdjustments == true), mockAnyBaseRaceRandomizer.Object, mockAnyMetaraceRandomizer.Object, mockRawStatsRandomizer.Object))
                 .Returns(() => new Character { Class = new CharacterClass { Level = 1337 } });
@@ -244,8 +243,7 @@ namespace EncounterGen.Tests.Unit.Generators
             var undead = new[] { monster.Key, "other monster" };
             mockRollSelector.Setup(s => s.SelectFrom("effective roll")).Returns(2);
 
-            mockRollSelector.Setup(s => s.SelectRollFrom("[67d89]")).Returns("character level roll");
-            mockRollSelector.SetupSequence(s => s.SelectFrom("character level roll")).Returns(1337).Returns(1234);
+            mockRollSelector.SetupSequence(s => s.SelectFrom("67d89")).Returns(1337).Returns(1234);
 
             mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.CreatureGroups, GroupConstants.UndeadNPC)).Returns(undead);
 
@@ -444,6 +442,7 @@ namespace EncounterGen.Tests.Unit.Generators
 
             mockRollSelector.Setup(s => s.SelectFrom("creature amount", 9876)).Returns("creature effective roll");
             mockRollSelector.Setup(s => s.SelectFrom("creature effective roll")).Returns(76);
+            mockRollSelector.Setup(s => s.SelectFrom("8765")).Returns(8765);
 
             mockCharacterGenerator.Setup(g => g.GenerateWith(mockAnyAlignmentRandomizer.Object, mockAnyPlayerClassNameRandomizer.Object, It.Is<ISetLevelRandomizer>(r => r.SetLevel == 8765 && r.AllowAdjustments), mockAnyBaseRaceRandomizer.Object, mockAnyMetaraceRandomizer.Object, mockRawStatsRandomizer.Object))
                 .Returns(() => new Character { InterestingTrait = Guid.NewGuid().ToString() });
