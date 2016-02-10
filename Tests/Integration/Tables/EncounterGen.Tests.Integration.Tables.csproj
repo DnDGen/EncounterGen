@@ -149,6 +149,7 @@
     <Compile Include="Encounters\Marsh\Warm\Night\Level17WarmMarshNightEncountersTests.cs" />
     <Compile Include="Encounters\Marsh\Warm\Night\Level19WarmMarshNightEncountersTests.cs" />
     <Compile Include="Encounters\Mountain\Cold\Night\Level11ColdMountainNightEncountersTests.cs" />
+    <Compile Include="Encounters\Mountain\Temperate\Day\Level14TemperateMountainDayEncountersTests.cs" />
     <Compile Include="Encounters\Mountain\Temperate\Day\Level19TemperateMountainDayEncountersTests.cs" />
     <Compile Include="Encounters\Mountain\Temperate\Day\Level4TemperateMountainDayEncountersTests.cs" />
     <Compile Include="Encounters\Mountain\Temperate\Night\Level12TemperateMountainNightEncountersTests.cs" />

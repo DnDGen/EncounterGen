@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<percentile>
+  <object>
+    <lower>1</lower>
+    <content>Gorgon/1d6+5</content>
+    <upper>9</upper>
+  </object>
+  <object>
+    <lower>10</lower>
+    <content>Athach/1d6+5</content>
+    <upper>24</upper>
+  </object>
+  <object>
+    <lower>25</lower>
+    <content>Cloud giant/1d3+1</content>
+    <upper>39</upper>
+  </object>
+  <object>
+    <lower>40</lower>
+    <content>Trumpet archon/1</content>
+    <upper>42</upper>
+  </object>
+  <object>
+    <lower>43</lower>
+    <content>Astral deva (celestial)/1</content>
+    <upper>45</upper>
+  </object>
+  <object>
+    <lower>46</lower>
+    <content>Ghaele (celestial)/1d2</content>
+    <upper>48</upper>
+  </object>
+  <object>
+    <lower>49</lower>
+    <content>Efreet/1d6+5</content>
+    <upper>51</upper>
+  </object>
+  <object>
+    <lower>52</lower>
+    <content>Stone golem/1d3+1</content>
+    <upper>54</upper>
+  </object>
+  <object>
+    <lower>55</lower>
+    <content>Hezrou (demon)/1d3+1</content>
+    <upper>57</upper>
+  </object>
+  <object>
+    <lower>58</lower>
+    <content>Nalfeshnee (demon)/1</content>
+    <upper>60</upper>
+  </object>
+  <object>
+    <lower>61</lower>
+    <content>Blue slaad/1d6+5</content>
+    <upper>63</upper>
+  </object>
+  <object>
+    <lower>64</lower>
+    <content>Death slaad/1d2</content>
+    <upper>66</upper>
+  </object>
+  <object>
+    <lower>67</lower>
+    <content>Elder xorn/1d6+5</content>
+    <upper>69</upper>
+  </object>
+  <object>
+        <lower>70</lower>
+        <content>Dragon/1</content>
+        <upper>78</upper>
+    </object>
+  <object>
+    <lower>79</lower>
+    <content>Celestial creature/1</content>
+    <upper>81</upper>
+  </object>
+  <object>
+    <lower>82</lower>
+    <content>Fiendish creature/1</content>
+    <upper>84</upper>
+  </object>
+  <object>
+    <lower>85</lower>
+    <content>Skeleton/1</content>
+    <upper>87</upper>
+  </object>
+  <object>
+    <lower>88</lower>
+    <content>Zombie/1</content>
+    <upper>90</upper>
+  </object>
+    <object>
+        <lower>91</lower>
+        <content>Character[11]/1d3+1</content>
+        <upper>100</upper>
+    </object>
+</percentile>

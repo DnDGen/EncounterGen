@@ -1,5 +1,4 @@
 ﻿using EncounterGen.Selectors.Percentiles;
-using System;
 using System.Collections.Generic;
 
 namespace EncounterGen.Selectors.Domain.Percentiles
@@ -13,11 +12,11 @@ namespace EncounterGen.Selectors.Domain.Percentiles
             this.innerSelector = innerSelector;
         }
 
-        public Dictionary<String, String> SelectFrom(String tableName)
+        public Dictionary<string, string> SelectFrom(string tableName)
         {
             var result = innerSelector.SelectFrom(tableName);
             var typeAndAmountPairs = result.Split(',');
-            var typesAndAmounts = new Dictionary<String, String>();
+            var typesAndAmounts = new Dictionary<string, string>();
 
             foreach (var pair in typeAndAmountPairs)
             {

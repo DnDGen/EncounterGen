@@ -342,6 +342,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Encounters\Dungeon\Level7DungeonEncounters.xml" />
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Encounters\Mountain\Temperate\Day\Level14Temperate Mountain DayEncounters.xml" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
