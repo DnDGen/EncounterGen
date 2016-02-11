@@ -86,6 +86,7 @@
     <Compile Include="Encounters\Forest\Cold\Night\Level16ColdForestNightEncountersTests.cs" />
     <Compile Include="Encounters\Forest\Cold\Night\Level3ColdForestNightEncountersTests.cs" />
     <Compile Include="Encounters\Forest\Temperate\Day\Level14TemperateForestDayEncountersTests.cs" />
+    <Compile Include="Encounters\Forest\Temperate\Day\Level5TemperateForestDayEncountersTests.cs" />
     <Compile Include="Encounters\Forest\Temperate\Night\Level13TemperateForestNightEncountersTests.cs" />
     <Compile Include="Encounters\Desert\Temperate\Night\Level6TemperateDesertNightEncountersTests.cs" />
     <Compile Include="Encounters\Forest\Temperate\Day\Level20TemperateForestDayEncountersTests.cs" />
