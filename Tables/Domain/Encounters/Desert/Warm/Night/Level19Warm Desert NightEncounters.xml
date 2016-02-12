@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<percentile>
+  <object>
+        <lower>1</lower>
+        <content>Dragon/1</content>
+        <upper>18</upper>
+    </object>
+    <object>
+        <lower>19</lower>
+        <content>Cornugon (devil)/1d3+1</content>
+        <upper>27</upper>
+    </object>
+  <object>
+    <lower>28</lower>
+    <content>Gelugon (devil)/1d6+5</content>
+    <upper>36</upper>
+  </object>
+    <object>
+        <lower>37</lower>
+        <content>Greater stone golem/1d3+1</content>
+        <upper>45</upper>
+    </object>
+    <object>
+        <lower>46</lower>
+        <content>Nightcrawler (nightshade)/1d2</content>
+        <upper>54</upper>
+    </object>
+    <object>
+        <lower>55</lower>
+        <content>Nightwalker (nightshade)/1d3+1</content>
+        <upper>63</upper>
+    </object>
+  <object>
+    <lower>64</lower>
+    <content>Celestial creature/1</content>
+    <upper>72</upper>
+  </object>
+  <object>
+    <lower>73</lower>
+    <content>Fiendish creature/1</content>
+    <upper>81</upper>
+  </object>
+  <object>
+    <lower>82</lower>
+    <content>Character[16]/1d3+1</content>
+    <upper>100</upper>
+  </object>
+</percentile>

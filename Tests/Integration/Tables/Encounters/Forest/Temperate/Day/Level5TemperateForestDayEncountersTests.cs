@@ -59,7 +59,7 @@ namespace EncounterGen.Tests.Integration.Tables.Encounters.Forest.Temperate.Day
         [TestCase(73, 74, CreatureConstants.Troll, RollConstants.One)]
         [TestCase(75, 76, CreatureConstants.Vargouille, RollConstants.OneD3Plus1)]
         [TestCase(77, 78, CreatureConstants.Werebear, RollConstants.One)]
-        [TestCase(77, 84, CreatureConstants.Wereboar, RollConstants.OneD2)]
+        [TestCase(79, 84, CreatureConstants.Wereboar, RollConstants.OneD2)]
         [TestCase(85, 86, CreatureConstants.Weretiger, RollConstants.One)]
         [TestCase(87, 87, CreatureConstants.Ravid, RollConstants.One,
             CreatureConstants.AnimatedObject_Tiny, RollConstants.OneD3)]

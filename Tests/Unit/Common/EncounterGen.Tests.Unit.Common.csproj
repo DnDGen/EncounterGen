@@ -68,6 +68,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChallengeRatingConstantsTests.cs" />
     <Compile Include="CreatureConstantsTests.cs" />
     <Compile Include="CreatureTests.cs" />
     <Compile Include="EncounterTests.cs" />
