@@ -32,6 +32,16 @@ namespace EncounterGen.Tests.Unit.Common
         [TestCase(ChallengeRatingConstants.Eighteen, "18")]
         [TestCase(ChallengeRatingConstants.Nineteen, "19")]
         [TestCase(ChallengeRatingConstants.Twenty, "20")]
+        [TestCase(ChallengeRatingConstants.TwentyOne, "21")]
+        [TestCase(ChallengeRatingConstants.TwentyTwo, "22")]
+        [TestCase(ChallengeRatingConstants.TwentyThree, "23")]
+        [TestCase(ChallengeRatingConstants.TwentyFour, "24")]
+        [TestCase(ChallengeRatingConstants.TwentyFive, "25")]
+        [TestCase(ChallengeRatingConstants.TwentySix, "26")]
+        [TestCase(ChallengeRatingConstants.TwentySeven, "27")]
+        [TestCase(ChallengeRatingConstants.TwentyEight, "28")]
+        [TestCase(ChallengeRatingConstants.TwentyNine, "29")]
+        [TestCase(ChallengeRatingConstants.Thirty, "30")]
         public void Constant(string constant, string value)
         {
             Assert.That(constant, Is.EqualTo(value));

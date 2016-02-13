@@ -29,5 +29,15 @@
         public const string Eighteen = "18";
         public const string Nineteen = "19";
         public const string Twenty = "20";
+        public const string TwentyOne = "21";
+        public const string TwentyTwo = "22";
+        public const string TwentyThree = "23";
+        public const string TwentyFour = "24";
+        public const string TwentyFive = "25";
+        public const string TwentySix = "26";
+        public const string TwentySeven = "27";
+        public const string TwentyEight = "28";
+        public const string TwentyNine = "29";
+        public const string Thirty = "30";
     }
 }
