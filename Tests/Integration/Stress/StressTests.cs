@@ -16,6 +16,7 @@ namespace EncounterGen.Tests.Integration.Stress
         public Stopwatch Stopwatch { get; set; }
 
         private const int ConfidentIterations = 1000000;
+        private const int TenMinutesInSeconds = 600;
 
         private readonly int timeLimitInSeconds;
 
@@ -29,7 +30,7 @@ namespace EncounterGen.Tests.Integration.Stress
             var stressTestsCount = methods.Count(m => m.GetCustomAttributes<TestAttribute>(true).Any() || m.GetCustomAttributes<TestCaseAttribute>().Any());
 
 #if STRESS
-            timeLimitInSeconds = 60 * 60 / stressTestsCount;
+            timeLimitInSeconds = TenMinutesInSeconds / stressTestsCount;
 #else
             timeLimitInSeconds = 1;
 #endif
