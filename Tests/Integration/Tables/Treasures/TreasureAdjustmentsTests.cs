@@ -54,6 +54,7 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
                 CreatureConstants.ElfWarrior,
                 CreatureConstants.EtherealMarauder,
                 CreatureConstants.Ettercap,
+                CreatureConstants.Ettin,
                 CreatureConstants.FireBeetle_Giant,
                 CreatureConstants.FormianWarrior,
                 CreatureConstants.FormianWorker,
@@ -75,6 +76,7 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
                 "Hamatula",
                 "Hezrou",
                 CreatureConstants.Hobgoblin,
+                CreatureConstants.HoundArchon,
                 CreatureConstants.Hydra,
                 CreatureConstants.Hyena,
                 "Imp",
@@ -98,6 +100,7 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
                 CreatureConstants.Nightmare,
                 "Nightwalker",
                 CreatureConstants.Ogre,
+                CreatureConstants.OgreMage,
                 CreatureConstants.Ooze_Gray,
                 CreatureConstants.Ooze_OchreJelly,
                 CreatureConstants.Orc,
@@ -139,6 +142,7 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
                 CreatureConstants.Troglodyte,
                 CreatureConstants.VampireSpawn,
                 CreatureConstants.Vampire,
+                CreatureConstants.Vargouille,
                 CreatureConstants.VioletFungus,
                 "Vrock",
                 CreatureConstants.Weasel_Dire,
@@ -187,6 +191,7 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
         [TestCase(CreatureConstants.ElfWarrior, 1, 1, 1)]
         [TestCase(CreatureConstants.EtherealMarauder, 0, 0, 0)]
         [TestCase(CreatureConstants.Ettercap, 1, 1, 1)]
+        [TestCase(CreatureConstants.Ettin, 1, 1, 1)]
         [TestCase(CreatureConstants.FireBeetle_Giant, 0, 0, 0)]
         [TestCase(CreatureConstants.FormianWarrior, 0, 0, 0)]
         [TestCase(CreatureConstants.FormianWorker, 0, 0, 0)]
@@ -208,6 +213,7 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
         [TestCase("Hamatula", 1, 1, 1)]
         [TestCase("Hezrou", 1, 1, 1)]
         [TestCase(CreatureConstants.Hobgoblin, 1, 1, 1)]
+        [TestCase(CreatureConstants.HoundArchon, 0, 2, 1)]
         [TestCase(CreatureConstants.Hydra, TreasureConstants.TenPercent, TreasureConstants.FiftyPercent, TreasureConstants.FiftyPercent)]
         [TestCase(CreatureConstants.Hyena, 0, 0, 0)]
         [TestCase("Imp", 0, 0, 0)]
@@ -231,6 +237,7 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
         [TestCase(CreatureConstants.Nightmare, 0, 0, 0)]
         [TestCase("Nightwalker", 1, 1, 1)]
         [TestCase(CreatureConstants.Ogre, 1, 1, 1)]
+        [TestCase(CreatureConstants.OgreMage, 2, 2, 2)]
         [TestCase(CreatureConstants.Ooze_Gray, 0, 0, 0)]
         [TestCase(CreatureConstants.Ooze_OchreJelly, 0, 0, 0)]
         [TestCase(CreatureConstants.Orc, 1, 1, 1)]
@@ -272,6 +279,7 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
         [TestCase(CreatureConstants.Troglodyte, TreasureConstants.FiftyPercent, TreasureConstants.FiftyPercent, TreasureConstants.FiftyPercent)]
         [TestCase(CreatureConstants.VampireSpawn, 1, 1, 1)]
         [TestCase(CreatureConstants.Vampire, 0, 0, 0)]
+        [TestCase(CreatureConstants.Vargouille, 0, 0, 0)]
         [TestCase(CreatureConstants.VioletFungus, 0, 0, 0)]
         [TestCase("Vrock", 1, 1, 1)]
         [TestCase(CreatureConstants.Weasel_Dire, 0, 0, 0)]

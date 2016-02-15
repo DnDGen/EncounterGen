@@ -29,7 +29,8 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures
                 CreatureConstants.Skeleton,
                 CreatureConstants.Zombie,
                 CreatureConstants.Character,
-                CreatureConstants.DominatedCreature
+                CreatureConstants.DominatedCreature,
+                CreatureConstants.CharmedCreature
             };
 
             AssertEntriesAreComplete(entries);
@@ -41,7 +42,8 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures
             CreatureConstants.FiendishCreature,
             CreatureConstants.Skeleton,
             CreatureConstants.Zombie,
-            CreatureConstants.DominatedCreature)]
+            CreatureConstants.DominatedCreature,
+            CreatureConstants.CharmedCreature)]
         [TestCase(GroupConstants.UndeadNPC,
             CreatureConstants.Lich,
             CreatureConstants.Ghost,
@@ -1183,6 +1185,23 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures
             CreatureConstants.FiendishCreature,
             CreatureConstants.Skeleton,
             CreatureConstants.Zombie,
+            CreatureConstants.Dragon,
+            CreatureConstants.Character)]
+        [TestCase(CreatureConstants.CharmedCreature,
+            CreatureConstants.Giant_Cloud,
+            CreatureConstants.Spider_Monstrous_Colossal,
+            CreatureConstants.Cryohydra_10Heads,
+            CreatureConstants.Devourer,
+            CreatureConstants.Elemental_Air_Elder,
+            CreatureConstants.Elemental_Earth_Elder,
+            CreatureConstants.Elemental_Fire_Elder,
+            CreatureConstants.Elemental_Water_Elder,
+            CreatureConstants.Hamatula,
+            CreatureConstants.Hezrou,
+            CreatureConstants.Hydra_12Heads,
+            CreatureConstants.Pyrohydra_10Heads,
+            CreatureConstants.CelestialCreature,
+            CreatureConstants.FiendishCreature,
             CreatureConstants.Dragon,
             CreatureConstants.Character)]
         public override void DistinctCollection(string entry, params string[] items)

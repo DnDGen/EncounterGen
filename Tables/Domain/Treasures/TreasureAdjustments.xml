@@ -194,6 +194,12 @@
     <item>1</item>
   </collection>
   <collection>
+    <entry>Ettin</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
     <entry>Formian warrior</entry>
     <item>0</item>
     <item>0</item>
@@ -353,6 +359,12 @@
     <entry>Hobgoblin</entry>
     <item>1</item>
     <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Hound archon</entry>
+    <item>0</item>
+    <item>2</item>
     <item>1</item>
   </collection>
   <collection>
@@ -560,6 +572,12 @@
     <item>1</item>
   </collection>
   <collection>
+    <entry>Ogre mage</entry>
+    <item>2</item>
+    <item>2</item>
+    <item>2</item>
+  </collection>
+  <collection>
     <entry>Orc</entry>
     <item>1</item>
     <item>1</item>
@@ -717,6 +735,12 @@
   </collection>
   <collection>
     <entry>Vampire</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Vargouille</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>

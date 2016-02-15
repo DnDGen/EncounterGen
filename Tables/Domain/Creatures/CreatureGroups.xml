@@ -9,6 +9,7 @@
     <item>Skeleton</item>
     <item>Zombie</item>
     <item>Dominated creature</item>
+    <item>Charmed creature</item>
   </collection>
   <collection>
     <entry>Undead NPC</entry>
@@ -458,6 +459,7 @@
     <item>Medusa</item>
     <item>Megaraptor</item>
     <item>Mimic</item>
+    <item>Mind flayer</item>
     <item>Minotaur</item>
     <item>Monkey</item>
     <item>Mule</item>
@@ -767,6 +769,7 @@
     <item>Manticore</item>
     <item>Medusa</item>
     <item>Megaraptor</item>
+    <item>Mind flayer</item>
     <item>Minotaur</item>
     <item>Monkey</item>
     <item>Mule</item>
@@ -1039,6 +1042,7 @@
     <item>Manticore</item>
     <item>Medusa</item>
     <item>Megaraptor</item>
+    <item>Mind flayer</item>
     <item>Minotaur</item>
     <item>Monkey</item>
     <item>Mule</item>
@@ -1165,5 +1169,24 @@
     <item>Rhinoceras</item>
     <item>Tiger</item>
     <item>Minotaur</item>
+  </collection>
+  <collection>
+    <entry>Charmed creature</entry>
+    <item>Cloud giant</item>
+    <item>Colossal monstrous spider</item>
+    <item>Cryohydra (10 heads)</item>
+    <item>Devourer</item>
+    <item>Elder air elemental</item>
+    <item>Elder earth elemental</item>
+    <item>Elder fire elemental</item>
+    <item>Elder water elemental</item>
+    <item>Hamatula (devil)</item>
+    <item>Hezrou (demon)</item>
+    <item>Hydra (12 heads)</item>
+    <item>Pyrohydra (10 heads)</item>
+    <item>Celestial creature</item>
+    <item>Fiendish creature</item>
+    <item>Dragon</item>
+    <item>Character</item>
   </collection>
 </collections>

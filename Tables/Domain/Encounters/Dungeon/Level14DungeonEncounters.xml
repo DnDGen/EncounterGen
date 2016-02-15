@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<percentile>
+  <object>
+        <lower>1</lower>
+        <content>Dragon/1</content>
+        <upper>15</upper>
+    </object>
+    <object>
+        <lower>16</lower>
+        <content>Beholder/1,Charmed creature[11]/1</content>
+        <upper>25</upper>
+    </object>
+    <object>
+        <lower>26</lower>
+        <content>Death slaad/1d2</content>
+        <upper>35</upper>
+    </object>
+  <object>
+    <lower>36</lower>
+    <content>Cloud giant (good)/1d3+1</content>
+    <upper>40</upper>
+  </object>
+    <object>
+        <lower>41</lower>
+        <content>Character[11]/1d3+1</content>
+        <upper>55</upper>
+    </object>
+  <object>
+    <lower>56</lower>
+    <content>Cryohydra (1d4+8 heads)/1</content>
+    <upper>60</upper>
+  </object>
+  <object>
+    <lower>61</lower>
+    <content>Iron golem/1d2</content>
+    <upper>65</upper>
+  </object>
+    <object>
+        <lower>66</lower>
+        <content>Pyrohydra (1d4+8 heads)/1</content>
+        <upper>70</upper>
+    </object>
+    <object>
+        <lower>71</lower>
+        <content>Cloud giant (evil)/1d3+1</content>
+        <upper>80</upper>
+    </object>
+    <object>
+        <lower>81</lower>
+        <content>Storm giant/1,Griffon/1d4+2</content>
+        <upper>90</upper>
+    </object>
+    <object>
+        <lower>91</lower>
+        <content>Lich[1d3+10]/1</content>
+        <upper>100</upper>
+    </object>
+</percentile>

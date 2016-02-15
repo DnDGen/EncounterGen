@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<percentile>
+  <object>
+        <lower>1</lower>
+        <content>Giant soldier ant/1d6+5</content>
+        <upper>3</upper>
+    </object>
+  <object>
+    <lower>4</lower>
+    <content>Dire bat/1d6+5</content>
+    <upper>8</upper>
+  </object>
+  <object>
+    <lower>9</lower>
+    <content>Gargantuan monstrous spider/1d2</content>
+    <upper>10</upper>
+  </object>
+    <object>
+        <lower>11</lower>
+        <content>Dragon/1</content>
+        <upper>20</upper>
+    </object>
+  <object>
+    <lower>21</lower>
+    <content>Aboleth/1,Skum/1d3+1</content>
+    <upper>22</upper>
+  </object>
+    <object>
+        <lower>23</lower>
+        <content>Greater barghest/1d3+1</content>
+        <upper>24</upper>
+    </object>
+  <object>
+    <lower>25</lower>
+    <content>Erinyes (devil)/1d2</content>
+    <upper>26</upper>
+  </object>
+  <object>
+    <lower>27</lower>
+    <content>Medusa/1,Grimlock/1d6+3</content>
+    <upper>28</upper>
+  </object>
+  <object>
+    <lower>29</lower>
+    <content>Mind flayer/1</content>
+    <upper>30</upper>
+  </object>
+  <object>
+    <lower>31</lower>
+    <content>Ogre mage/1</content>
+    <upper>33</upper>
+  </object>
+  <object>
+    <lower>34</lower>
+    <content>Yuan-ti (Halfblood)/1,Yuan-ti (Pureblood)/1d3</content>
+    <upper>35</upper>
+  </object>
+  <object>
+    <lower>36</lower>
+    <content>Lammasu/1</content>
+    <upper>40</upper>
+  </object>
+    <object>
+        <lower>41</lower>
+        <content>Character[5]/1d3+1</content>
+        <upper>45</upper>
+    </object>
+  <object>
+    <lower>46</lower>
+    <content>Achaierais/1d3+1</content>
+    <upper>47</upper>
+  </object>
+  <object>
+    <lower>48</lower>
+    <content>Adult arrowhawk/1d3+1</content>
+    <upper>48</upper>
+  </object>
+  <object>
+    <lower>49</lower>
+    <content>Girallon/1d3+1</content>
+    <upper>50</upper>
+  </object>
+    <object>
+        <lower>51</lower>
+        <content>Flesh golem/1d2</content>
+        <upper>52</upper>
+    </object>
+  <object>
+    <lower>53</lower>
+    <content>Gray render/1</content>
+    <upper>54</upper>
+  </object>
+    <object>
+        <lower>55</lower>
+        <content>Hieracosphinx/1d3+1</content>
+        <upper>56</upper>
+    </object>
+  <object>
+    <lower>57</lower>
+    <content>Hydra (1d3+7 heads)/1</content>
+    <upper>60</upper>
+  </object>
+  <object>
+    <lower>61</lower>
+    <content>Phase spider/1d3+1</content>
+    <upper>62</upper>
+  </object>
+    <object>
+      <lower>63</lower>
+        <content>Rast/1d3+1</content>
+        <upper>64</upper>
+    </object>
+  <object>
+    <lower>65</lower>
+    <content>Shadow mastiff/1d3+1</content>
+    <upper>66</upper>
+  </object>
+  <object>
+    <lower>67</lower>
+    <content>Winter wolf/1d3+1</content>
+    <upper>68</upper>
+  </object>
+  <object>
+    <lower>69</lower>
+    <content>Average xorn/1d3</content>
+    <upper>70</upper>
+  </object>
+    <object>
+        <lower>71</lower>
+        <content>Drider/1,Large monstrous spider/1d3+1</content>
+        <upper>74</upper>
+    </object>
+  <object>
+    <lower>75</lower>
+    <content>Ettin/1d3+1</content>
+    <upper>78</upper>
+  </object>
+    <object>
+        <lower>79</lower>
+        <content>Manticore/1d3+1</content>
+        <upper>82</upper>
+    </object>
+  <object>
+    <lower>83</lower>
+    <content>Flamebrother salamander/1d3+1</content>
+    <upper>86</upper>
+  </object>
+  <object>
+    <lower>87</lower>
+    <content>Troll/1d3+1</content>
+    <upper>90</upper>
+  </object>
+  <object>
+    <lower>91</lower>
+    <content>Spectre/1d2</content>
+    <upper>100</upper>
+  </object>
+</percentile>

@@ -2,6 +2,8 @@
 {
     public static class CreatureConstants
     {
+        public const string Aboleth = "Aboleth";
+        public const string Achaierais = "Achaierais";
         public const string Allip = "Allip";
         public const string Androsphinx = "Androsphinx";
         public const string AnimatedObject_Colossal = "Colossal animated object";
@@ -68,6 +70,7 @@
         public const string Centipede_Monstrous_Tiny = "Tiny monstrous centipede";
         public const string ChaosBeast = "Chaos beast";
         public const string Character = "Character";
+        public const string CharmedCreature = "Charmed creature";
         public const string Cheetah = "Cheetah";
         public const string Chimera = "Chimera";
         public const string Choker = "Choker";
@@ -427,6 +430,7 @@
         public const string Pyrohydra_11Heads = "Pyrohydra (11 heads)";
         public const string Pyrohydra_12Heads = "Pyrohydra (12 heads)";
         public const string Quasit = "Quasit (demon)";
+        public const string Rast = "Rast";
         public const string Rat = "Rat";
         public const string Rat_Dire = "Dire rat";
         public const string Raven = "Raven";
@@ -459,6 +463,7 @@
         public const string Skeleton_HillGiant = "Skeleton (Hill giant)";
         public const string Skeleton_Human = "Skeleton (Human)";
         public const string Skeleton_Ogre = "Skeleton (Ogre)";
+        public const string Skum = "Skum";
         public const string Slaad_Blue = "Blue slaad";
         public const string Slaad_Death = "Death slaad";
         public const string Slaad_Gray = "Gray slaad";
@@ -533,6 +538,9 @@
         public const string Xorn_Minor = "Minor xorn";
         public const string YethHound = "Yeth hound";
         public const string Yrthak = "Yrthak";
+        public const string YuanTi_Abomination = "Yuan-ti (Abomination)";
+        public const string YuanTi_Halfblood = "Yuan-ti (Halfblood)";
+        public const string YuanTi_Pureblood = "Yuan-ti (Pureblood)";
         public const string Zombie = "Zombie";
         public const string Zombie_Human = "Zombie (Human)";
     }
