@@ -368,6 +368,45 @@
   <ItemGroup>
     <EmbeddedResource Include="Encounters\Dungeon\Level10DungeonEncounters.xml" />
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Encounters\Dungeon\Level17DungeonEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Encounters\Dungeon\Level6DungeonEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Creatures\Dragons\Level1Dragons.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Encounters\Dungeon\Level9DungeonEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Creatures\Dragons\Level12Dragons.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Creatures\Dragons\Level18Dragons.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Creatures\Dragons\Level6Dragons.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Creatures\Dragons\Level16Dragons.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Creatures\Dragons\Level15Dragons.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Encounters\Dungeon\Level11DungeonEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Creatures\Dragons\Level19Dragons.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Creatures\Dragons\Level17Dragons.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Creatures\Dragons\Level8Dragons.xml" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

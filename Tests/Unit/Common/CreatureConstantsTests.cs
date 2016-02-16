@@ -32,6 +32,7 @@ namespace EncounterGen.Tests.Unit.Common
         [TestCase(CreatureConstants.Athach, "Athach")]
         [TestCase(CreatureConstants.Avoral, "Avoral")]
         [TestCase(CreatureConstants.Azer, "Azer")]
+        [TestCase(CreatureConstants.Babau, "Babau (demon)")]
         [TestCase(CreatureConstants.Baboon, "Baboon")]
         [TestCase(CreatureConstants.Badger, "Badger")]
         [TestCase(CreatureConstants.Badger_Dire, "Dire badger")]
@@ -236,6 +237,7 @@ namespace EncounterGen.Tests.Unit.Common
         [TestCase(CreatureConstants.Dragon_White_Ancient, "Ancient white dragon")]
         [TestCase(CreatureConstants.Dragon_White_Wyrm, "Wyrm white dragon")]
         [TestCase(CreatureConstants.Dragon_White_GreatWyrm, "Great wyrm white dragon")]
+        [TestCase(CreatureConstants.DragonTurtle, "Dragon turtle")]
         [TestCase(CreatureConstants.Dragonne, "Dragonne")]
         [TestCase(CreatureConstants.Dretch, "Dretch (demon)")]
         [TestCase(CreatureConstants.Drider, "Drider")]
@@ -549,6 +551,7 @@ namespace EncounterGen.Tests.Unit.Common
         [TestCase(CreatureConstants.YuanTi_Halfblood, "Yuan-ti (Halfblood)")]
         [TestCase(CreatureConstants.YuanTi_Pureblood, "Yuan-ti (Pureblood)")]
         [TestCase(CreatureConstants.Zombie, "Zombie")]
+        [TestCase(CreatureConstants.Zombie_HillGiant, "Zombie (Hill giant)")]
         [TestCase(CreatureConstants.Zombie_Human, "Zombie (Human)")]
         public void Constant(string constant, string value)
         {

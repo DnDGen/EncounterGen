@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<percentile>
+  <object>
+        <lower>1</lower>
+        <content>Bulette/1d3</content>
+        <upper>5</upper>
+    </object>
+  <object>
+    <lower>6</lower>
+    <content>Dire lion/1d4+2</content>
+    <upper>10</upper>
+  </object>
+    <object>
+        <lower>11</lower>
+        <content>Dragon/1</content>
+        <upper>20</upper>
+    </object>
+  <object>
+    <lower>21</lower>
+    <content>Bebilith (demon)/1</content>
+    <upper>21</upper>
+  </object>
+  <object>
+    <lower>22</lower>
+    <content>Lamia/1d3+1</content>
+    <upper>22</upper>
+  </object>
+    <object>
+        <lower>23</lower>
+        <content>Mind flayer/1,Charmed creature[6]/1</content>
+        <upper>24</upper>
+    </object>
+  <object>
+    <lower>25</lower>
+    <content>Erinyes (devil)/1d2</content>
+    <upper>26</upper>
+  </object>
+  <object>
+    <lower>27</lower>
+    <content>Medusa/1,Grimlock/1d6+3</content>
+    <upper>28</upper>
+  </object>
+  <object>
+    <lower>29</lower>
+    <content>Mind flayer/1</content>
+    <upper>30</upper>
+  </object>
+  <object>
+    <lower>31</lower>
+    <content>Ogre mage/1</content>
+    <upper>33</upper>
+  </object>
+  <object>
+    <lower>34</lower>
+    <content>Yuan-ti (Halfblood)/1,Yuan-ti (Pureblood)/1d3</content>
+    <upper>35</upper>
+  </object>
+  <object>
+    <lower>36</lower>
+    <content>Lammasu/1</content>
+    <upper>40</upper>
+  </object>
+    <object>
+        <lower>41</lower>
+        <content>Character[6]/1d3+1</content>
+        <upper>45</upper>
+    </object>
+  <object>
+    <lower>46</lower>
+    <content>Behir/1d2</content>
+    <upper>47</upper>
+  </object>
+  <object>
+    <lower>48</lower>
+    <content>Belker/1d3+1</content>
+    <upper>49</upper>
+  </object>
+  <object>
+    <lower>50</lower>
+    <content>Cryohydra (1d3+6 heads)/1</content>
+    <upper>50</upper>
+  </object>
+    <object>
+        <lower>51</lower>
+        <content>Delver/1</content>
+        <upper>52</upper>
+    </object>
+  <object>
+    <lower>53</lower>
+    <content>Dragon turtle/1</content>
+    <upper>54</upper>
+  </object>
+    <object>
+        <lower>55</lower>
+        <content>Pyrohydra (1d3+6 heads)/1</content>
+        <upper>55</upper>
+    </object>
+  <object>
+    <lower>56</lower>
+    <content>Will-O'-Wisp/1d3+1</content>
+    <upper>57</upper>
+  </object>
+  <object>
+    <lower>58</lower>
+    <content>Wyvern/1d3+1</content>
+    <upper>60</upper>
+  </object>
+  <object>
+    <lower>61</lower>
+    <content>Barbazu (devil)/1,Osyluth (devil)/1d2</content>
+    <upper>64</upper>
+  </object>
+  <object>
+    <lower>65</lower>
+    <content>Hill giant/1,Dire wolf/1d3</content>
+    <upper>68</upper>
+  </object>
+  <object>
+    <lower>69</lower>
+    <content>Kyton (devil)/1d3+1</content>
+    <upper>72</upper>
+  </object>
+    <object>
+        <lower>73</lower>
+        <content>Osyluth (devil)/1d3+1</content>
+        <upper>76</upper>
+    </object>
+  <object>
+    <lower>77</lower>
+    <content>Troll/1d3+1,Dire boar/1d3</content>
+    <upper>80</upper>
+  </object>
+  <object>
+    <lower>81</lower>
+    <content>Bodak/1d2</content>
+    <upper>90</upper>
+  </object>
+  <object>
+    <lower>91</lower>
+    <content>Vampire[1d2+6]/1</content>
+    <upper>100</upper>
+  </object>
+</percentile>

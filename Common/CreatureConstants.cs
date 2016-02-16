@@ -28,6 +28,7 @@
         public const string Athach = "Athach";
         public const string Avoral = "Avoral";
         public const string Azer = "Azer";
+        public const string Babau = "Babau (demon)";
         public const string Baboon = "Baboon";
         public const string Badger = "Badger";
         public const string Badger_Dire = "Dire badger";
@@ -232,6 +233,7 @@
         public const string Dragon_White_Ancient = "Ancient white dragon";
         public const string Dragon_White_Wyrm = "Wyrm white dragon";
         public const string Dragon_White_GreatWyrm = "Great wyrm white dragon";
+        public const string DragonTurtle = "Dragon turtle";
         public const string Dragonne = "Dragonne";
         public const string Dretch = "Dretch (demon)";
         public const string Drider = "Drider";
@@ -545,6 +547,7 @@
         public const string YuanTi_Halfblood = "Yuan-ti (Halfblood)";
         public const string YuanTi_Pureblood = "Yuan-ti (Pureblood)";
         public const string Zombie = "Zombie";
+        public const string Zombie_HillGiant = "Zombie (Hill giant)";
         public const string Zombie_Human = "Zombie (Human)";
     }
 }

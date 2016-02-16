@@ -3,87 +3,157 @@
 <percentile>
   <object>
         <lower>1</lower>
-        <content>Purple worm/1</content>
-        <upper>4</upper>
+        <content>Dire bear/1d3+1</content>
+        <upper>5</upper>
     </object>
-  <object>
-    <lower>5</lower>
-    <content>Colossal monstrous scorpion/1d2</content>
-    <upper>5</upper>
-  </object>
     <object>
         <lower>6</lower>
         <content>Dragon/1</content>
         <upper>15</upper>
     </object>
-    <object>
-        <lower>16</lower>
-        <content>Mind flayer/1d4+2</content>
-        <upper>20</upper>
-    </object>
   <object>
-    <lower>21</lower>
-    <content>Spirit naga/1d3+1</content>
-    <upper>25</upper>
+    <lower>16</lower>
+    <content>Aboleth/1d3+1</content>
+    <upper>17</upper>
   </object>
     <object>
-        <lower>26</lower>
-        <content>Green slaad/1d3+1</content>
-        <upper>30</upper>
+        <lower>18</lower>
+        <content>Athach/1d3+1</content>
+        <upper>19</upper>
     </object>
+  <object>
+    <lower>20</lower>
+    <content>Formian myrmarch/1</content>
+    <upper>21</upper>
+  </object>
+  <object>
+    <lower>22</lower>
+    <content>Medusa/1d3+1</content>
+    <upper>24</upper>
+  </object>
+  <object>
+    <lower>25</lower>
+    <content>Water naga/1d3+1</content>
+    <upper>26</upper>
+  </object>
+    <object>
+        <lower>27</lower>
+        <content>Night hag/1,Nightmare/1</content>
+        <upper>28</upper>
+    </object>
+  <object>
+    <lower>29</lower>
+    <content>Noble salamander/1,Flamebrother salamander/1d3</content>
+    <upper>30</upper>
+  </object>
   <object>
     <lower>31</lower>
-    <content>Cloud giant (good)/1,Dire lion/1d4+2</content>
-    <upper>35</upper>
+    <content>Yuan-ti (Abomination)/1d3+1</content>
+    <upper>32</upper>
   </object>
   <object>
-    <lower>36</lower>
-    <content>Character[9]/1d3+1</content>
-    <upper>50</upper>
+    <lower>33</lower>
+    <content>Lillend/1d3+1</content>
+    <upper>37</upper>
+  </object>
+  <object>
+    <lower>38</lower>
+    <content>Character[7]/1d3+1</content>
+    <upper>47</upper>
+  </object>
+  <object>
+    <lower>48</lower>
+    <content>Chaos beast/1d3+1</content>
+    <upper>49</upper>
   </object>
     <object>
-        <lower>51</lower>
-        <content>Cryohydra, 1d3+9 heads/1</content>
-        <upper>55</upper>
+        <lower>50</lower>
+        <content>Chimera/1d3+1</content>
+        <upper>51</upper>
     </object>
   <object>
-    <lower>56</lower>
-    <content>Stone golem/1d2</content>
+    <lower>52</lower>
+    <content>Chuul/1d3+1</content>
+    <upper>53</upper>
+  </object>
+  <object>
+    <lower>54</lower>
+    <content>Cryohydra (1d4+4 heads)/1</content>
+    <upper>54</upper>
+  </object>
+  <object>
+    <lower>55</lower>
+    <content>Dragonne/1d3+1</content>
+    <upper>56</upper>
+  </object>
+  <object>
+    <lower>57</lower>
+    <content>Hellcat/1d3+1</content>
+    <upper>58</upper>
+  </object>
+  <object>
+    <lower>59</lower>
+    <content>Hydra (1d3+9 heads)/1</content>
+    <upper>59</upper>
+  </object>
+  <object>
+    <lower>60</lower>
+    <content>Phasm/1</content>
     <upper>60</upper>
   </object>
     <object>
       <lower>61</lower>
-        <content>Pyrohydra, 1d3+9 heads/1</content>
-        <upper>65</upper>
+        <content>Pyrohydra (1d4+4 heads)/1</content>
+        <upper>61</upper>
     </object>
   <object>
+    <lower>62</lower>
+    <content>Retriever/1</content>
+    <upper>63</upper>
+  </object>
+  <object>
+    <lower>64</lower>
+    <content>Red slaad/1d3+1</content>
+    <upper>65</upper>
+  </object>
+  <object>
     <lower>66</lower>
-    <content>Yrthak/1d3+1</content>
-    <upper>70</upper>
+    <content>Umber hulk/1d3+1</content>
+    <upper>67</upper>
+  </object>
+  <object>
+    <lower>68</lower>
+    <content>Barbazu (devil)/1d3+1</content>
+    <upper>71</upper>
   </object>
     <object>
-        <lower>71</lower>
-        <content>Cornugon (devil)/1,Hamatula (devil)/1d3</content>
+        <lower>72</lower>
+        <content>Drider/1d3+1</content>
         <upper>75</upper>
     </object>
   <object>
     <lower>76</lower>
-    <content>Cloud giant (evil)/1,Dire lion/1d4+2</content>
-    <upper>80</upper>
+    <content>Frost giant/1,Winter wolf/1d3</content>
+    <upper>79</upper>
+  </object>
+  <object>
+    <lower>80</lower>
+    <content>Stone giant/1,Dire bear/1d2</content>
+    <upper>83</upper>
   </object>
     <object>
-        <lower>81</lower>
-        <content>Frost giant/1d3+1</content>
-        <upper>85</upper>
+      <lower>84</lower>
+      <content>Hill giant/1d3+1</content>
+      <upper>87</upper>
     </object>
   <object>
-    <lower>86</lower>
-    <content>Noble salamander/1d3+1</content>
+    <lower>88</lower>
+    <content>Hamatula (devil)/1,Barbazu (devil)/1d2</content>
     <upper>90</upper>
   </object>
   <object>
     <lower>91</lower>
-    <content>Vampire[1d3+8]/1</content>
+    <content>Ghost[1d3+6]/1</content>
     <upper>100</upper>
   </object>
 </percentile>

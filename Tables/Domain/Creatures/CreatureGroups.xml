@@ -533,6 +533,7 @@
     <item>Tyrannosaurus</item>
     <item>Troglodyte</item>
     <item>Troll</item>
+    <item>Umber hulk</item>
     <item>Will-O'-Wisp</item>
     <item>Winter wolf</item>
     <item>Worg</item>
@@ -546,6 +547,9 @@
     <item>Dire wolverine</item>
     <item>Wyvern</item>
     <item>Yrthak</item>
+    <item>Yuan-ti (Abomination)</item>
+    <item>Yuan-ti (Halfblood)</item>
+    <item>Yuan-ti (Pureblood)</item>
   </collection>
   <collection>
     <entry>Skeleton</entry>
@@ -813,6 +817,9 @@
     <item>Wolverine</item>
     <item>Dire wolverine</item>
     <item>Worg</item>
+    <item>Yuan-ti (Abomination)</item>
+    <item>Yuan-ti (Halfblood)</item>
+    <item>Yuan-ti (Pureblood)</item>
   </collection>
   <collection>
     <entry>Zombie</entry>
@@ -1099,6 +1106,9 @@
     <item>Worg</item>
     <item>Wyvern</item>
     <item>Yrthak</item>
+    <item>Yuan-ti (Abomination)</item>
+    <item>Yuan-ti (Halfblood)</item>
+    <item>Yuan-ti (Pureblood)</item>
   </collection>
   <collection>
     <entry>Character</entry>
@@ -1188,5 +1198,25 @@
     <item>Fiendish creature</item>
     <item>Dragon</item>
     <item>Character</item>
+    <item>Annis (hag)</item>
+    <item>Average xorn</item>
+    <item>Average salamander</item>
+    <item>Babau (demon)</item>
+    <item>Belker</item>
+    <item>Kyton (devil)</item>
+    <item>Digester</item>
+    <item>Ettin</item>
+    <item>Hydra (7 heads)</item>
+    <item>Gargantuan monstrous centipede</item>
+    <item>Pyrohydra (5 heads)</item>
+    <item>Cryohydra (5 heads)</item>
+    <item>Girallon</item>
+    <item>Lamia</item>
+    <item>Megaraptor</item>
+    <item>Shambling mound</item>
+    <item>Tendriculos</item>
+    <item>Will-O'-Wisp</item>
+    <item>Wyvern</item>
+    <item>Xill</item>
   </collection>
 </collections>

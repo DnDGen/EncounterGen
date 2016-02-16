@@ -2,6 +2,12 @@
 
 <collections>
   <collection>
+    <entry>Achaierais</entry>
+    <item>2</item>
+    <item>2</item>
+    <item>2</item>
+  </collection>
+  <collection>
     <entry>Allip</entry>
     <item>0</item>
     <item>0</item>
@@ -32,6 +38,30 @@
     <item>1</item>
   </collection>
   <collection>
+    <entry>Barghest</entry>
+    <item>2</item>
+    <item>2</item>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Greater barghest</entry>
+    <item>2</item>
+    <item>2</item>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Bat</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Dire bat</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
     <entry>Beholder</entry>
     <item>2</item>
     <item>2</item>
@@ -60,6 +90,12 @@
     <item>0</item>
     <item>0</item>
     <item>0</item>
+  </collection>
+  <collection>
+    <entry>Chimera</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
   </collection>
   <collection>
     <entry>Choker</entry>
@@ -218,6 +254,12 @@
     <item>1</item>
   </collection>
   <collection>
+    <entry>Frost worm</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
     <entry>Gargantuan monstrous centipede</entry>
     <item>0</item>
     <item>0</item>
@@ -234,6 +276,12 @@
     <item>0.1</item>
     <item>0.5</item>
     <item>0.5</item>
+  </collection>
+  <collection>
+    <entry>Gargoyle</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
   </collection>
   <collection>
     <entry>Gelugon</entry>
@@ -326,6 +374,12 @@
     <item>0</item>
   </collection>
   <collection>
+    <entry>Gray render</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
     <entry>Green slaad</entry>
     <item>1</item>
     <item>1</item>
@@ -356,6 +410,12 @@
     <item>1</item>
   </collection>
   <collection>
+    <entry>Hill giant</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
     <entry>Hobgoblin</entry>
     <item>1</item>
     <item>1</item>
@@ -366,6 +426,12 @@
     <item>0</item>
     <item>2</item>
     <item>1</item>
+  </collection>
+  <collection>
+    <entry>Howler</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
   </collection>
   <collection>
     <entry>Huge monstrous centipede</entry>
@@ -434,6 +500,12 @@
     <item>0</item>
   </collection>
   <collection>
+    <entry>Lammasu</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
     <entry>Lantern archon</entry>
     <item>0</item>
     <item>0</item>
@@ -474,6 +546,12 @@
     <item>0</item>
     <item>0</item>
     <item>0</item>
+  </collection>
+  <collection>
+    <entry>Lillend</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
   </collection>
   <collection>
     <entry>Lizardfolk</entry>
@@ -656,6 +734,12 @@
     <item>1</item>
   </collection>
   <collection>
+    <entry>Spectre</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
     <entry>Spider eater</entry>
     <item>0</item>
     <item>0</item>
@@ -696,6 +780,12 @@
     <item>1</item>
     <item>1</item>
     <item>1</item>
+  </collection>
+  <collection>
+    <entry>Thoqqua</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
   </collection>
   <collection>
     <entry>Tiny monstrous centipede</entry>
@@ -758,7 +848,31 @@
     <item>1</item>
   </collection>
   <collection>
+    <entry>Werebear</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Wereboar</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
     <entry>Wererat</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Weretiger</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Werewolf</entry>
     <item>1</item>
     <item>1</item>
     <item>1</item>

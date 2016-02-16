@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<percentile>
+  <object>
+        <lower>1</lower>
+        <content>Digester/1</content>
+        <upper>2</upper>
+    </object>
+  <object>
+    <lower>3</lower>
+    <content>Dire ape/1d3+1</content>
+    <upper>4</upper>
+  </object>
+  <object>
+    <lower>5</lower>
+    <content>Dire wolf/1d3+1</content>
+    <upper>6</upper>
+  </object>
+  <object>
+    <lower>7</lower>
+    <content>Giant stag beetle/1d3</content>
+    <upper>7</upper>
+  </object>
+    <object>
+        <lower>8</lower>
+        <content>Giant wasp/1d3+1</content>
+        <upper>9</upper>
+    </object>
+  <object>
+    <lower>10</lower>
+    <content>Owlbear/1d3</content>
+    <upper>12</upper>
+  </object>
+    <object>
+        <lower>13</lower>
+        <content>Shambling mound/1</content>
+        <upper>15</upper>
+    </object>
+    <object>
+        <lower>16</lower>
+        <content>Dragon/1</content>
+        <upper>20</upper>
+    </object>
+  <object>
+    <lower>21</lower>
+    <content>Annis (hag)/1</content>
+    <upper>22</upper>
+  </object>
+    <object>
+        <lower>23</lower>
+        <content>Harpy/1d3</content>
+        <upper>25</upper>
+    </object>
+  <object>
+    <lower>26</lower>
+    <content>Quasit (demon)/1,Dretch (demon)/1d2</content>
+    <upper>26</upper>
+  </object>
+  <object>
+    <lower>27</lower>
+    <content>Wereboar/1d3+1</content>
+    <upper>28</upper>
+  </object>
+  <object>
+    <lower>29</lower>
+    <content>Werewolf/1d3+1</content>
+    <upper>30</upper>
+  </object>
+  <object>
+    <lower>31</lower>
+    <content>Werebear/1d2</content>
+    <upper>35</upper>
+  </object>
+  <object>
+    <lower>36</lower>
+    <content>Character[3]/1d3+1</content>
+    <upper>40</upper>
+  </object>
+    <object>
+        <lower>41</lower>
+        <content>Juvenile arrowhawk/1d3+1</content>
+        <upper>43</upper>
+    </object>
+  <object>
+    <lower>44</lower>
+    <content>Basilisk/1d2</content>
+    <upper>46</upper>
+  </object>
+    <object>
+        <lower>47</lower>
+        <content>Displacer beast/1d3</content>
+        <upper>50</upper>
+    </object>
+  <object>
+    <lower>51</lower>
+    <content>Gargoyle/1d3</content>
+    <upper>53</upper>
+  </object>
+    <object>
+        <lower>54</lower>
+        <content>Hell hound/1d3+1</content>
+        <upper>56</upper>
+    </object>
+  <object>
+    <lower>57</lower>
+    <content>Howler/1d3+1</content>
+    <upper>59</upper>
+  </object>
+  <object>
+    <lower>60</lower>
+    <content>Otyugh/1d3</content>
+    <upper>62</upper>
+  </object>
+    <object>
+      <lower>63</lower>
+        <content>Ravid/1,Large animated object/1</content>
+        <upper>65</upper>
+    </object>
+  <object>
+    <lower>66</lower>
+    <content>Minor xorn/1d3+1</content>
+    <upper>67</upper>
+  </object>
+  <object>
+    <lower>68</lower>
+    <content>Yeth hound/1d3+1</content>
+    <upper>70</upper>
+  </object>
+  <object>
+    <lower>71</lower>
+    <content>Ettin/1,Orc/1d6+3</content>
+    <upper>77</upper>
+  </object>
+  <object>
+    <lower>78</lower>
+    <content>Ogre/1d3,Boar/1d3</content>
+    <upper>82</upper>
+  </object>
+  <object>
+    <lower>83</lower>
+    <content>Weretiger/1d2</content>
+    <upper>90</upper>
+  </object>
+  <object>
+    <lower>91</lower>
+    <content>Zombie (Hill giant)/1d3+1</content>
+    <upper>100</upper>
+  </object>
+</percentile>

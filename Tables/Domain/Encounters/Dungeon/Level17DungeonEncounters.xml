@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<percentile>
+  <object>
+        <lower>1</lower>
+        <content>Dragon/1</content>
+        <upper>20</upper>
+    </object>
+    <object>
+        <lower>21</lower>
+        <content>Marilith (demon)/1</content>
+        <upper>30</upper>
+    </object>
+    <object>
+        <lower>31</lower>
+        <content>Trumpet archon/1d3+1</content>
+        <upper>35</upper>
+    </object>
+    <object>
+        <lower>36</lower>
+        <content>Character[14]/1d3+1</content>
+        <upper>60</upper>
+    </object>
+    <object>
+        <lower>61</lower>
+        <content>Glabrezu (demon)/1d3</content>
+        <upper>70</upper>
+    </object>
+  <object>
+    <lower>71</lower>
+    <content>Hezrou (demon)/1d3+1</content>
+    <upper>80</upper>
+  </object>
+    <object>
+        <lower>81</lower>
+        <content>Lich[1d3+13]/1</content>
+        <upper>90</upper>
+    </object>
+    <object>
+        <lower>91</lower>
+        <content>Nightwing (nightshade)/1d3+1</content>
+        <upper>100</upper>
+    </object>
+</percentile>

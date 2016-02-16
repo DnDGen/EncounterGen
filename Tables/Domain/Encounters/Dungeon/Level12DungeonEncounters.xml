@@ -43,7 +43,7 @@
   </object>
     <object>
         <lower>51</lower>
-        <content>Cryohydra, 1d3+9 heads/1</content>
+        <content>Cryohydra (1d3+9 heads)/1</content>
         <upper>55</upper>
     </object>
   <object>
@@ -53,7 +53,7 @@
   </object>
     <object>
       <lower>61</lower>
-        <content>Pyrohydra, 1d3+9 heads/1</content>
+        <content>Pyrohydra (1d3+9 heads)/1</content>
         <upper>65</upper>
     </object>
   <object>
