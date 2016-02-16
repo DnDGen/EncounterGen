@@ -31,9 +31,9 @@ namespace EncounterGen.Tests.Integration.Tables.Encounters.Dungeon
         [TestCase(31, 35, CreatureConstants.Giant_Cloud + " (good)", RollConstants.One,
             CreatureConstants.Lion_Dire, RollConstants.OneD4Plus2)]
         [TestCase(36, 50, CreatureConstants.Character + "[9]", RollConstants.OneD3Plus1)]
-        [TestCase(51, 55, CreatureConstants.Cryohydra + ", 1d3+9 heads", RollConstants.One)]
+        [TestCase(51, 55, CreatureConstants.Cryohydra + " (1d3+9 heads)", RollConstants.One)]
         [TestCase(56, 60, CreatureConstants.Golem_Stone, RollConstants.OneD2)]
-        [TestCase(61, 65, CreatureConstants.Pyrohydra + ", 1d3+9 heads", RollConstants.One)]
+        [TestCase(61, 65, CreatureConstants.Pyrohydra + " (1d3+9 heads)", RollConstants.One)]
         [TestCase(66, 70, CreatureConstants.Yrthak, RollConstants.OneD3Plus1)]
         [TestCase(71, 75, CreatureConstants.Cornugon, RollConstants.One,
             CreatureConstants.Hamatula, RollConstants.OneD3)]

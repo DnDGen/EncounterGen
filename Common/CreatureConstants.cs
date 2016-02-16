@@ -388,6 +388,7 @@
         public const string Naga_Dark = "Dark naga";
         public const string Naga_Guardian = "Guardian naga";
         public const string Naga_Spirit = "Spirit naga";
+        public const string Naga_Water = "Water naga";
         public const string Nalfeshnee = "Nalfeshnee (demon)";
         public const string NessianWarhound = "Nessian warhound";
         public const string Nightcrawler = "Nightcrawler (nightshade)";
@@ -437,6 +438,7 @@
         public const string Ravid = "Ravid";
         public const string RazorBoar = "Razor boar";
         public const string Remorhaz = "Remorhaz";
+        public const string Retriever = "Retriever";
         public const string Rhinoceras = "Rhinoceras";
         public const string Roc = "Roc";
         public const string Roper = "Roper";
@@ -501,6 +503,7 @@
         public const string Troll = "Troll";
         public const string TrumpetArchon = "Trumpet archon";
         public const string Tyrannosaurus = "Tyrannosaurus";
+        public const string UmberHulk = "Umber hulk";
         public const string Unicorn = "Unicorn";
         public const string Vampire = "Vampire";
         public const string VampireSpawn = "Vampire spawn";
