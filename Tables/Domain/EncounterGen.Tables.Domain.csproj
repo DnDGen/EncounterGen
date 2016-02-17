@@ -32,6 +32,8 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Stress|AnyCPU'">
     <OutputPath>bin\Stress\</OutputPath>
     <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -439,6 +441,9 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Creatures\Dragons\Level13Dragons.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Creatures\Dragons\Level2Dragons.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

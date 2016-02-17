@@ -32,6 +32,8 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Stress|AnyCPU'">
     <OutputPath>bin\Stress\</OutputPath>
     <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />

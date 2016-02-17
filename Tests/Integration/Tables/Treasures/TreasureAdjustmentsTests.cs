@@ -88,7 +88,11 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
                 "Glabrezu",
                 CreatureConstants.Gnoll,
                 CreatureConstants.Goblin,
+                CreatureConstants.Golem_Clay,
+                CreatureConstants.Golem_Flesh,
+                CreatureConstants.Golem_Iron,
                 CreatureConstants.Golem_Stone,
+                CreatureConstants.Golem_Stone_Greater,
                 CreatureConstants.Gorgon,
                 CreatureConstants.GrayRender,
                 "Green hag",
@@ -139,6 +143,7 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
                 CreatureConstants.Owl_Giant,
                 "Pit fiend",
                 "Planetar",
+                CreatureConstants.PrayingMantis_Giant,
                 CreatureConstants.PurpleWorm,
                 CreatureConstants.Pyrohydra,
                 "Quasit",
@@ -198,6 +203,8 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
                 CreatureConstants.Weretiger,
                 CreatureConstants.Werewolf,
                 CreatureConstants.Wight,
+                CreatureConstants.Wolf,
+                CreatureConstants.Wolf_Dire,
                 CreatureConstants.Wolverine_Dire,
                 CreatureConstants.Worg,
                 CreatureConstants.Wraith,
@@ -233,6 +240,7 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
         [TestCase(CreatureConstants.Boar, 0, 0, 0)]
         [TestCase(CreatureConstants.Boar_Dire, 0, 0, 0)]
         [TestCase(CreatureConstants.Bodak, 0, 0, 0)]
+        [TestCase(CreatureConstants.BombardierBeetle_Giant, 0, 0, 0)]
         [TestCase(CreatureConstants.Bugbear, 1, 1, 1)]
         [TestCase(CreatureConstants.CarrionCrawler, 0, 0, 0)]
         [TestCase(CreatureConstants.Centipede_Monstrous_Colossal, 0, 0, 0)]
@@ -333,6 +341,7 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
         [TestCase(CreatureConstants.Owlbear, 0, 0, 0)]
         [TestCase("Pit fiend", 2, 1, 2)]
         [TestCase("Planetar", 0, 2, 1)]
+        [TestCase(CreatureConstants.PrayingMantis_Giant, 0, 0, 0)]
         [TestCase(CreatureConstants.PurpleWorm, 0, TreasureConstants.FiftyPercent, 0)]
         [TestCase(CreatureConstants.Pyrohydra, TreasureConstants.TenPercent, TreasureConstants.FiftyPercent, TreasureConstants.FiftyPercent)]
         [TestCase("Quasit", 0, 0, 0)]
@@ -392,6 +401,8 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
         [TestCase(CreatureConstants.Weretiger, 1, 1, 1)]
         [TestCase(CreatureConstants.Werewolf, 1, 1, 1)]
         [TestCase(CreatureConstants.Wight, 0, 0, 0)]
+        [TestCase(CreatureConstants.Wolf, 0, 0, 0)]
+        [TestCase(CreatureConstants.Wolf_Dire, 0, 0, 0)]
         [TestCase(CreatureConstants.Wolverine_Dire, 0, 0, 0)]
         [TestCase(CreatureConstants.Worg, TreasureConstants.TenPercent, TreasureConstants.FiftyPercent, TreasureConstants.FiftyPercent)]
         [TestCase(CreatureConstants.Wraith, 0, 0, 0)]

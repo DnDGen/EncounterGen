@@ -98,6 +98,12 @@
     <item>0</item>
   </collection>
   <collection>
+    <entry>Giant bombardier beetle</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
     <entry>Bugbear</entry>
     <item>1</item>
     <item>1</item>
@@ -812,6 +818,12 @@
     <item>1</item>
   </collection>
   <collection>
+    <entry>Giant praying mantis</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
     <entry>Purple worm</entry>
     <item>0</item>
     <item>0.5</item>
@@ -1089,6 +1101,18 @@
   </collection>
   <collection>
     <entry>Wight</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Wolf</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Dire wolf</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
