@@ -20,6 +20,12 @@
     <item>0</item>
   </collection>
   <collection>
+    <entry>Annis</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
     <entry>Astral deva</entry>
     <item>0</item>
     <item>2</item>
@@ -72,6 +78,12 @@
     <item>2</item>
     <item>2</item>
     <item>2</item>
+  </collection>
+  <collection>
+    <entry>Black pudding</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
   </collection>
   <collection>
     <entry>Blink dog</entry>
@@ -176,6 +188,24 @@
     <item>2</item>
   </collection>
   <collection>
+    <entry>Gray slaad</entry>
+    <item>2</item>
+    <item>2</item>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Blue slaad</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Red slaad</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
     <entry>Boar</entry>
     <item>0</item>
     <item>0</item>
@@ -212,6 +242,12 @@
     <item>0</item>
   </collection>
   <collection>
+    <entry>Displacer beast</entry>
+    <item>0.5</item>
+    <item>0.5</item>
+    <item>0.5</item>
+  </collection>
+  <collection>
     <entry>Doppelganger</entry>
     <item>2</item>
     <item>2</item>
@@ -222,6 +258,12 @@
     <item>3</item>
     <item>3</item>
     <item>3</item>
+  </collection>
+  <collection>
+    <entry>Drider</entry>
+    <item>2</item>
+    <item>2</item>
+    <item>2</item>
   </collection>
   <collection>
     <entry>Dwarf warrior</entry>
@@ -249,6 +291,12 @@
   </collection>
   <collection>
     <entry>Ettin</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Fire giant</entry>
     <item>1</item>
     <item>1</item>
     <item>1</item>
@@ -368,6 +416,12 @@
     <item>0</item>
   </collection>
   <collection>
+    <entry>Girallon</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
     <entry>Glabrezu</entry>
     <item>1</item>
     <item>2</item>
@@ -384,6 +438,12 @@
     <item>1</item>
     <item>1</item>
     <item>1</item>
+  </collection>
+  <collection>
+    <entry>Gorgon</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
   </collection>
   <collection>
     <entry>Gray ooze</entry>
@@ -420,6 +480,12 @@
     <item>1</item>
     <item>1</item>
     <item>1</item>
+  </collection>
+  <collection>
+    <entry>Hellcat</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
   </collection>
   <collection>
     <entry>Hezrou</entry>
@@ -596,6 +662,12 @@
     <item>1</item>
   </collection>
   <collection>
+    <entry>Manticore</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
     <entry>Marilith</entry>
     <item>2</item>
     <item>1</item>
@@ -636,6 +708,12 @@
     <item>2</item>
     <item>2</item>
     <item>2</item>
+  </collection>
+  <collection>
+    <entry>Mohrg</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
   </collection>
   <collection>
     <entry>Mummy</entry>
@@ -704,6 +782,24 @@
     <item>1</item>
   </collection>
   <collection>
+    <entry>Owl</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Owlbear</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Giant owl</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
     <entry>Pit fiend</entry>
     <item>2</item>
     <item>1</item>
@@ -740,10 +836,22 @@
     <item>0</item>
   </collection>
   <collection>
+    <entry>Remorhaz</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
     <entry>Rust monster</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
+  </collection>
+  <collection>
+    <entry>Shambling mound</entry>
+    <item>0.1</item>
+    <item>0.5</item>
+    <item>0.5</item>
   </collection>
   <collection>
     <entry>Shocker lizard</entry>
@@ -806,7 +914,31 @@
     <item>0</item>
   </collection>
   <collection>
+    <entry>Clay golem</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Flesh golem</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Iron golem</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
     <entry>Stone golem</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Greater stone golem</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
@@ -876,6 +1008,18 @@
     <item>0.5</item>
     <item>0.5</item>
     <item>0.5</item>
+  </collection>
+  <collection>
+    <entry>Troll</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Trumpet archon</entry>
+    <item>0</item>
+    <item>2</item>
+    <item>1</item>
   </collection>
   <collection>
     <entry>Umber hulk</entry>
@@ -960,6 +1104,12 @@
     <item>0</item>
     <item>0</item>
     <item>0</item>
+  </collection>
+  <collection>
+    <entry>Wyvern</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
   </collection>
   <collection>
     <entry>Average xorn</entry>

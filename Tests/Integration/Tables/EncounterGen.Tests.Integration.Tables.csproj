@@ -73,7 +73,9 @@
     <Compile Include="Creatures\CharmedCreatureSubtypeChallengeRatingsTests.cs" />
     <Compile Include="Creatures\CreatureGroupsTests.cs" />
     <Compile Include="Creatures\Dragons\Level10DragonsTests.cs" />
+    <Compile Include="Creatures\Dragons\Level11DragonsTests.cs" />
     <Compile Include="Creatures\Dragons\Level12DragonsTests.cs" />
+    <Compile Include="Creatures\Dragons\Level13DragonsTests.cs" />
     <Compile Include="Creatures\Dragons\Level14DragonsTests.cs" />
     <Compile Include="Creatures\Dragons\Level15DragonsTests.cs" />
     <Compile Include="Creatures\Dragons\Level16DragonsTests.cs" />
@@ -87,6 +89,7 @@
     <Compile Include="Creatures\Dragons\Level6DragonsTests.cs" />
     <Compile Include="Creatures\Dragons\Level7DragonsTests.cs" />
     <Compile Include="Creatures\Dragons\Level8DragonsTests.cs" />
+    <Compile Include="Creatures\Dragons\Level9DragonsTests.cs" />
     <Compile Include="EmbeddedResourceStreamLoaderTests.cs" />
     <Compile Include="Encounters\Civilized\Day\Level11CivilizedDayEncountersTests.cs" />
     <Compile Include="Encounters\Civilized\Day\Level13CivilizedDayEncountersTests.cs" />

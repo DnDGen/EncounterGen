@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<percentile>
+  <object>
+        <lower>1</lower>
+        <content>Old white dragon</content>
+        <upper>16</upper>
+    </object>
+    <object>
+        <lower>17</lower>
+      <content>Old black dragon</content>
+        <upper>32</upper>
+    </object>
+  <object>
+    <lower>33</lower>
+    <content>Mature adult green dragon</content>
+    <upper>48</upper>
+  </object>
+    <object>
+        <lower>49</lower>
+      <content>Adult blue dragon</content>
+        <upper>64</upper>
+    </object>
+    <object>
+        <lower>65</lower>
+      <content>Adult red dragon</content>
+      <upper>80</upper>
+    </object>
+    <object>
+      <lower>81</lower>
+      <content>Mature adult brass dragon</content>
+        <upper>84</upper>
+    </object>
+  <object>
+    <lower>85</lower>
+    <content>Adult copper dragon</content>
+    <upper>88</upper>
+  </object>
+  <object>
+    <lower>89</lower>
+        <content>Adult bronze dragon</content>
+    <upper>92</upper>
+  </object>
+  <object>
+    <lower>93</lower>
+    <content>Adult silver dragon</content>
+    <upper>96</upper>
+  </object>
+  <object>
+    <lower>97</lower>
+    <content>Young adult gold dragon</content>
+    <upper>100</upper>
+  </object>
+</percentile>
