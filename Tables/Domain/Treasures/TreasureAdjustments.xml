@@ -44,6 +44,18 @@
     <item>1</item>
   </collection>
   <collection>
+    <entry>Badger</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Dire badger</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
     <entry>Balor</entry>
     <item>1</item>
     <item>2</item>
@@ -110,6 +122,12 @@
     <item>1</item>
   </collection>
   <collection>
+    <entry>Bulette</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
     <entry>Carrion crawler</entry>
     <item>0</item>
     <item>0</item>
@@ -167,6 +185,18 @@
     <entry>Cornugon</entry>
     <item>1</item>
     <item>2</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Couatl</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Criosphinx</entry>
+    <item>1</item>
+    <item>1</item>
     <item>1</item>
   </collection>
   <collection>
@@ -278,6 +308,12 @@
     <item>1</item>
   </collection>
   <collection>
+    <entry>Efreet</entry>
+    <item>1</item>
+    <item>2</item>
+    <item>1</item>
+  </collection>
+  <collection>
     <entry>Elf warrior</entry>
     <item>1</item>
     <item>1</item>
@@ -318,6 +354,18 @@
     <item>0</item>
     <item>0</item>
     <item>0</item>
+  </collection>
+  <collection>
+    <entry>Formian taskmaster</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Formian myrmarch</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
   </collection>
   <collection>
     <entry>Frost giant</entry>
@@ -596,6 +644,12 @@
     <item>1</item>
   </collection>
   <collection>
+    <entry>Janni</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
     <entry>Lamia</entry>
     <item>1</item>
     <item>1</item>
@@ -728,6 +782,30 @@
     <item>1</item>
   </collection>
   <collection>
+    <entry>Dark naga</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Guardian naga</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Spirit naga</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Water naga</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
     <entry>Nalfeshnee</entry>
     <item>2</item>
     <item>1</item>
@@ -783,6 +861,12 @@
   </collection>
   <collection>
     <entry>Orc</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Otyugh</entry>
     <item>1</item>
     <item>1</item>
     <item>1</item>
@@ -854,7 +938,19 @@
     <item>0</item>
   </collection>
   <collection>
+    <entry>Roper</entry>
+    <item>0</item>
+    <item>0.5</item>
+    <item>0</item>
+  </collection>
+  <collection>
     <entry>Rust monster</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Shadow</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
@@ -914,12 +1010,6 @@
     <item>0</item>
   </collection>
   <collection>
-    <entry>Spirit naga</entry>
-    <item>1</item>
-    <item>1</item>
-    <item>1</item>
-  </collection>
-  <collection>
     <entry>Stirge</entry>
     <item>0</item>
     <item>0</item>
@@ -954,6 +1044,12 @@
     <item>0</item>
     <item>0</item>
     <item>0</item>
+  </collection>
+  <collection>
+    <entry>Stone giant</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
   </collection>
   <collection>
     <entry>Storm giant</entry>
