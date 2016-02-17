@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<percentile>
+  <object>
+        <lower>1</lower>
+        <content>Juvenile white dragon</content>
+        <upper>16</upper>
+    </object>
+    <object>
+        <lower>17</lower>
+      <content>Juvenile black dragon</content>
+        <upper>32</upper>
+    </object>
+  <object>
+    <lower>33</lower>
+    <content>Young green dragon</content>
+    <upper>48</upper>
+  </object>
+    <object>
+        <lower>49</lower>
+      <content>Young blue dragon</content>
+        <upper>64</upper>
+    </object>
+    <object>
+        <lower>65</lower>
+      <content>Young red dragon</content>
+      <upper>80</upper>
+    </object>
+    <object>
+      <lower>81</lower>
+      <content>Young brass dragon</content>
+        <upper>84</upper>
+    </object>
+  <object>
+    <lower>85</lower>
+    <content>Young copper dragon</content>
+    <upper>88</upper>
+  </object>
+  <object>
+    <lower>89</lower>
+        <content>Young bronze dragon</content>
+    <upper>92</upper>
+  </object>
+  <object>
+    <lower>93</lower>
+    <content>Young silver dragon</content>
+    <upper>96</upper>
+  </object>
+  <object>
+    <lower>97</lower>
+    <content>Very young gold dragon</content>
+    <upper>100</upper>
+  </object>
+</percentile>

@@ -26,6 +26,12 @@
     <item>1</item>
   </collection>
   <collection>
+    <entry>Avoral</entry>
+    <item>0</item>
+    <item>2</item>
+    <item>1</item>
+  </collection>
+  <collection>
     <entry>Azer</entry>
     <item>1</item>
     <item>2</item>
@@ -69,6 +75,12 @@
   </collection>
   <collection>
     <entry>Blink dog</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Bodak</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
@@ -147,6 +159,12 @@
   </collection>
   <collection>
     <entry>Darkmantle</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Devourer</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
@@ -500,6 +518,18 @@
     <item>0</item>
   </collection>
   <collection>
+    <entry>Kyton</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Lamia</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
     <entry>Lammasu</entry>
     <item>1</item>
     <item>1</item>
@@ -620,6 +650,12 @@
     <item>2</item>
   </collection>
   <collection>
+    <entry>Night hag</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
     <entry>Nightcrawler</entry>
     <item>1</item>
     <item>1</item>
@@ -633,6 +669,12 @@
   </collection>
   <collection>
     <entry>Nightwalker</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Nightwing</entry>
     <item>1</item>
     <item>1</item>
     <item>1</item>
@@ -687,6 +729,12 @@
   </collection>
   <collection>
     <entry>Quasit</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Ravid</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
@@ -788,6 +836,18 @@
     <item>0</item>
   </collection>
   <collection>
+    <entry>Tiger</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Dire tiger</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
     <entry>Tiny monstrous centipede</entry>
     <item>0</item>
     <item>0</item>
@@ -816,6 +876,12 @@
     <item>0.5</item>
     <item>0.5</item>
     <item>0.5</item>
+  </collection>
+  <collection>
+    <entry>Umber hulk</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
   </collection>
   <collection>
     <entry>Vampire spawn</entry>
@@ -896,9 +962,33 @@
     <item>0</item>
   </collection>
   <collection>
+    <entry>Average xorn</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Elder xorn</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Minor xorn</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
     <entry>Yrthak</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
+  </collection>
+  <collection>
+    <entry>Yuan-ti</entry>
+    <item>2</item>
+    <item>2</item>
+    <item>2</item>
   </collection>
 </collections>

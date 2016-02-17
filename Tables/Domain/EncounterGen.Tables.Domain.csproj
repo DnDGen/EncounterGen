@@ -31,6 +31,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Stress|AnyCPU'">
     <OutputPath>bin\Stress\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -406,6 +407,29 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Creatures\Dragons\Level8Dragons.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Creatures\Dragons\Level5Dragons.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Creatures\Dragons\Level14Dragons.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Creatures\Dragons\Level3Dragons.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Creatures\Dragons\Level10Dragons.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Creatures\Dragons\Level20Dragons.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Creatures\Dragons\Level7Dragons.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Creatures\Charmed creatureSubtypeChallengeRatings.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
