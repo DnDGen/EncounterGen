@@ -2,6 +2,12 @@
 
 <collections>
   <collection>
+    <entry>Aboleth</entry>
+    <item>2</item>
+    <item>2</item>
+    <item>2</item>
+  </collection>
+  <collection>
     <entry>Achaierais</entry>
     <item>2</item>
     <item>2</item>
@@ -24,6 +30,24 @@
     <item>1</item>
     <item>1</item>
     <item>1</item>
+  </collection>
+  <collection>
+    <entry>Juvenile arrowhawk</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Adult arrowhawk</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Elder arrowhawk</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
   </collection>
   <collection>
     <entry>Astral deva</entry>
@@ -72,6 +96,12 @@
     <item>2</item>
     <item>2</item>
     <item>2</item>
+  </collection>
+  <collection>
+    <entry>Basilisk</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
   </collection>
   <collection>
     <entry>Bat</entry>
@@ -296,6 +326,12 @@
     <item>3</item>
   </collection>
   <collection>
+    <entry>Dretch</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
     <entry>Drider</entry>
     <item>2</item>
     <item>2</item>
@@ -318,6 +354,18 @@
     <item>1</item>
     <item>1</item>
     <item>1</item>
+  </collection>
+  <collection>
+    <entry>Erinyes</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Ethereal filcher</entry>
+    <item>0</item>
+    <item>1</item>
+    <item>2</item>
   </collection>
   <collection>
     <entry>Ethereal marauder</entry>
@@ -542,6 +590,12 @@
     <item>0</item>
   </collection>
   <collection>
+    <entry>Hell hound</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
     <entry>Hezrou</entry>
     <item>1</item>
     <item>1</item>
@@ -621,6 +675,12 @@
   </collection>
   <collection>
     <entry>Imp</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Invisible stalker</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
@@ -770,6 +830,12 @@
     <item>2</item>
   </collection>
   <collection>
+    <entry>Minotaur</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
     <entry>Mohrg</entry>
     <item>0</item>
     <item>0</item>
@@ -890,6 +956,12 @@
     <item>0</item>
   </collection>
   <collection>
+    <entry>Phase spider</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
     <entry>Pit fiend</entry>
     <item>2</item>
     <item>1</item>
@@ -921,6 +993,18 @@
   </collection>
   <collection>
     <entry>Quasit</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Rast</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Rat</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
@@ -1005,6 +1089,12 @@
   </collection>
   <collection>
     <entry>Spider eater</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Giant stag beetle</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
@@ -1166,6 +1256,18 @@
     <item>1</item>
   </collection>
   <collection>
+    <entry>Giant wasp</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Weasel</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
     <entry>Werebear</entry>
     <item>1</item>
     <item>1</item>
@@ -1200,6 +1302,12 @@
     <item>0</item>
     <item>0</item>
     <item>0</item>
+  </collection>
+  <collection>
+    <entry>Will-O'-Wisp</entry>
+    <item>0.1</item>
+    <item>0.5</item>
+    <item>0.5</item>
   </collection>
   <collection>
     <entry>Wolf</entry>
@@ -1245,6 +1353,12 @@
   </collection>
   <collection>
     <entry>Minor xorn</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Yeth hound</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>

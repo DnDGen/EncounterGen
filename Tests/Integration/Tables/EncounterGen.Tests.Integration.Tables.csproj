@@ -37,11 +37,11 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="CharacterGen.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\CharacterGen.3.4\lib\CharacterGen.Common.dll</HintPath>
+      <HintPath>..\..\..\packages\CharacterGen.3.5\lib\CharacterGen.Common.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="CharacterGen.Generators, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\CharacterGen.3.4\lib\CharacterGen.Generators.dll</HintPath>
+      <HintPath>..\..\..\packages\CharacterGen.3.5\lib\CharacterGen.Generators.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Ninject, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
@@ -88,6 +88,7 @@
     <Compile Include="Creatures\Dragons\Level20DragonsTests.cs" />
     <Compile Include="Creatures\Dragons\Level2DragonsTests.cs" />
     <Compile Include="Creatures\Dragons\Level3DragonsTests.cs" />
+    <Compile Include="Creatures\Dragons\Level4DragonsTests.cs" />
     <Compile Include="Creatures\Dragons\Level5DragonsTests.cs" />
     <Compile Include="Creatures\Dragons\Level6DragonsTests.cs" />
     <Compile Include="Creatures\Dragons\Level7DragonsTests.cs" />

@@ -37,11 +37,11 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="CharacterGen.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\CharacterGen.3.4\lib\CharacterGen.Common.dll</HintPath>
+      <HintPath>..\packages\CharacterGen.3.5\lib\CharacterGen.Common.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="CharacterGen.Generators, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\CharacterGen.3.4\lib\CharacterGen.Generators.dll</HintPath>
+      <HintPath>..\packages\CharacterGen.3.5\lib\CharacterGen.Generators.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />

@@ -22,12 +22,16 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
         {
             var entries = new[]
             {
+                CreatureConstants.Aboleth,
                 CreatureConstants.Achaierais,
                 CreatureConstants.Allip,
                 CreatureConstants.Ankheg,
                 "Annis",
                 CreatureConstants.Ant_Giant_Soldier,
                 CreatureConstants.Ant_Giant_Worker,
+                CreatureConstants.Arrowhawk_Adult,
+                CreatureConstants.Arrowhawk_Elder,
+                CreatureConstants.Arrowhawk_Juvenile,
                 "Astral deva",
                 CreatureConstants.Avoral,
                 CreatureConstants.Azer,
@@ -36,6 +40,7 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
                 CreatureConstants.Badger_Dire,
                 CreatureConstants.Barghest,
                 CreatureConstants.Barghest_Greater,
+                CreatureConstants.Basilisk,
                 CreatureConstants.Bat,
                 CreatureConstants.Bat_Dire,
                 CreatureConstants.Beholder,
@@ -68,10 +73,13 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
                 CreatureConstants.DisplacerBeast,
                 CreatureConstants.Doppelganger,
                 CreatureConstants.Dragon,
+                "Dretch",
                 CreatureConstants.Drider,
                 CreatureConstants.DwarfWarrior,
                 CreatureConstants.Efreet,
                 CreatureConstants.ElfWarrior,
+                "Erinyes",
+                CreatureConstants.EtherealFilcher,
                 CreatureConstants.EtherealMarauder,
                 CreatureConstants.Ettercap,
                 CreatureConstants.Ettin,
@@ -109,6 +117,7 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
                 CreatureConstants.Grick,
                 "Hamatula",
                 CreatureConstants.Hellcat,
+                CreatureConstants.HellHound,
                 "Hezrou",
                 CreatureConstants.Hobgoblin,
                 CreatureConstants.HoundArchon,
@@ -116,6 +125,7 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
                 CreatureConstants.Hydra,
                 CreatureConstants.Hyena,
                 "Imp",
+                CreatureConstants.InvisibleStalker,
                 CreatureConstants.Janni,
                 CreatureConstants.Kobold,
                 CreatureConstants.Krenshar,
@@ -135,6 +145,7 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
                 CreatureConstants.Mephit,
                 CreatureConstants.Mimic,
                 CreatureConstants.MindFlayer,
+                CreatureConstants.Minotaur,
                 CreatureConstants.Mohrg,
                 CreatureConstants.Mummy,
                 CreatureConstants.Naga_Dark,
@@ -156,12 +167,15 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
                 CreatureConstants.Owl,
                 CreatureConstants.Owlbear,
                 CreatureConstants.Owl_Giant,
+                CreatureConstants.PhaseSpider,
                 "Pit fiend",
                 "Planetar",
                 CreatureConstants.PrayingMantis_Giant,
                 CreatureConstants.PurpleWorm,
                 CreatureConstants.Pyrohydra,
                 "Quasit",
+                CreatureConstants.Rast,
+                CreatureConstants.Rat,
                 CreatureConstants.Rat_Dire,
                 CreatureConstants.Ravid,
                 CreatureConstants.Remorhaz,
@@ -200,6 +214,7 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
                 CreatureConstants.Spider_Monstrous_Medium,
                 CreatureConstants.Spider_Monstrous_Small,
                 CreatureConstants.Spider_Monstrous_Tiny,
+                CreatureConstants.StagBeetle_Giant,
                 CreatureConstants.Stirge,
                 CreatureConstants.Thoqqua,
                 CreatureConstants.Tiger,
@@ -213,6 +228,8 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
                 CreatureConstants.Vargouille,
                 CreatureConstants.VioletFungus,
                 "Vrock",
+                CreatureConstants.Wasp_Giant,
+                CreatureConstants.Weasel,
                 CreatureConstants.Weasel_Dire,
                 CreatureConstants.Werebear,
                 CreatureConstants.Wereboar,
@@ -220,6 +237,7 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
                 CreatureConstants.Weretiger,
                 CreatureConstants.Werewolf,
                 CreatureConstants.Wight,
+                CreatureConstants.WillOWisp,
                 CreatureConstants.Wolf,
                 CreatureConstants.Wolf_Dire,
                 CreatureConstants.Wolverine_Dire,
@@ -229,6 +247,7 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
                 CreatureConstants.Xorn_Average,
                 CreatureConstants.Xorn_Elder,
                 CreatureConstants.Xorn_Minor,
+                CreatureConstants.YethHound,
                 CreatureConstants.Yrthak,
                 "Yuan-ti",
                 CreatureConstants.Zombie
@@ -237,12 +256,16 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
             AssertEntriesAreComplete(entries);
         }
 
+        [TestCase(CreatureConstants.Aboleth, 2, 2, 2)]
         [TestCase(CreatureConstants.Achaierais, 2, 2, 2)]
         [TestCase(CreatureConstants.Allip, 0, 0, 0)]
         [TestCase(CreatureConstants.Ankheg, 0, 0, 0)]
         [TestCase("Annis", 1, 1, 1)]
         [TestCase(CreatureConstants.Ant_Giant_Soldier, 0, 0, 0)]
         [TestCase(CreatureConstants.Ant_Giant_Worker, 0, 0, 0)]
+        [TestCase(CreatureConstants.Arrowhawk_Adult, 0, 0, 0)]
+        [TestCase(CreatureConstants.Arrowhawk_Elder, 0, 0, 0)]
+        [TestCase(CreatureConstants.Arrowhawk_Juvenile, 0, 0, 0)]
         [TestCase("Astral deva", 0, 2, 1)]
         [TestCase(CreatureConstants.Avoral, 0, 2, 1)]
         [TestCase(CreatureConstants.Azer, 1, 2, 1)]
@@ -251,6 +274,7 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
         [TestCase(CreatureConstants.Badger_Dire, 0, 0, 0)]
         [TestCase(CreatureConstants.Barghest, 2, 2, 2)]
         [TestCase(CreatureConstants.Barghest_Greater, 2, 2, 2)]
+        [TestCase(CreatureConstants.Basilisk, 0, 0, 0)]
         [TestCase(CreatureConstants.Bat, 0, 0, 0)]
         [TestCase(CreatureConstants.Bat_Dire, 0, 0, 0)]
         [TestCase(CreatureConstants.Beholder, 2, 2, 2)]
@@ -283,10 +307,13 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
         [TestCase(CreatureConstants.DisplacerBeast, TreasureConstants.FiftyPercent, TreasureConstants.FiftyPercent, TreasureConstants.FiftyPercent)]
         [TestCase(CreatureConstants.Doppelganger, 2, 2, 2)]
         [TestCase(CreatureConstants.Dragon, 3, 3, 3)]
+        [TestCase("Dretch", 0, 0, 0)]
         [TestCase(CreatureConstants.Drider, 2, 2, 2)]
         [TestCase(CreatureConstants.DwarfWarrior, 1, 2, 1)]
         [TestCase(CreatureConstants.Efreet, 1, 2, 1)]
         [TestCase(CreatureConstants.ElfWarrior, 1, 1, 1)]
+        [TestCase("Erinyes", 1, 1, 1)]
+        [TestCase(CreatureConstants.EtherealFilcher, 0, 1, 2)]
         [TestCase(CreatureConstants.EtherealMarauder, 0, 0, 0)]
         [TestCase(CreatureConstants.Ettercap, 1, 1, 1)]
         [TestCase(CreatureConstants.Ettin, 1, 1, 1)]
@@ -324,6 +351,7 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
         [TestCase(CreatureConstants.Grick, TreasureConstants.TenPercent, TreasureConstants.FiftyPercent, TreasureConstants.FiftyPercent)]
         [TestCase("Hamatula", 1, 1, 1)]
         [TestCase(CreatureConstants.Hellcat, 0, 0, 0)]
+        [TestCase(CreatureConstants.HellHound, 0, 0, 0)]
         [TestCase("Hezrou", 1, 1, 1)]
         [TestCase(CreatureConstants.Hobgoblin, 1, 1, 1)]
         [TestCase(CreatureConstants.HoundArchon, 0, 2, 1)]
@@ -331,6 +359,7 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
         [TestCase(CreatureConstants.Hydra, TreasureConstants.TenPercent, TreasureConstants.FiftyPercent, TreasureConstants.FiftyPercent)]
         [TestCase(CreatureConstants.Hyena, 0, 0, 0)]
         [TestCase("Imp", 0, 0, 0)]
+        [TestCase(CreatureConstants.InvisibleStalker, 0, 0, 0)]
         [TestCase(CreatureConstants.Kobold, 1, 1, 1)]
         [TestCase(CreatureConstants.Krenshar, 0, 0, 0)]
         [TestCase("Kyton", 1, 1, 1)]
@@ -350,6 +379,7 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
         [TestCase(CreatureConstants.Mephit, 1, 1, 1)]
         [TestCase(CreatureConstants.Mimic, TreasureConstants.TenPercent, TreasureConstants.FiftyPercent, TreasureConstants.FiftyPercent)]
         [TestCase(CreatureConstants.MindFlayer, 2, 2, 2)]
+        [TestCase(CreatureConstants.Minotaur, 1, 1, 1)]
         [TestCase(CreatureConstants.Mohrg, 0, 0, 0)]
         [TestCase(CreatureConstants.Mummy, 1, 1, 1)]
         [TestCase(CreatureConstants.Naga_Dark, 1, 1, 1)]
@@ -371,12 +401,15 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
         [TestCase(CreatureConstants.Owl, 0, 0, 0)]
         [TestCase(CreatureConstants.Owl_Giant, 0, 0, 0)]
         [TestCase(CreatureConstants.Owlbear, 0, 0, 0)]
+        [TestCase(CreatureConstants.PhaseSpider, 0, 0, 0)]
         [TestCase("Pit fiend", 2, 1, 2)]
         [TestCase("Planetar", 0, 2, 1)]
         [TestCase(CreatureConstants.PrayingMantis_Giant, 0, 0, 0)]
         [TestCase(CreatureConstants.PurpleWorm, 0, TreasureConstants.FiftyPercent, 0)]
         [TestCase(CreatureConstants.Pyrohydra, TreasureConstants.TenPercent, TreasureConstants.FiftyPercent, TreasureConstants.FiftyPercent)]
         [TestCase("Quasit", 0, 0, 0)]
+        [TestCase(CreatureConstants.Rast, 0, 0, 0)]
+        [TestCase(CreatureConstants.Rat, 0, 0, 0)]
         [TestCase(CreatureConstants.Rat_Dire, 0, 0, 0)]
         [TestCase(CreatureConstants.Ravid, 0, 0, 0)]
         [TestCase(CreatureConstants.Remorhaz, 0, 0, 0)]
@@ -415,6 +448,7 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
         [TestCase(CreatureConstants.Spider_Monstrous_Medium, TreasureConstants.TenPercent, TreasureConstants.FiftyPercent, TreasureConstants.FiftyPercent)]
         [TestCase(CreatureConstants.Spider_Monstrous_Small, 0, 0, 0)]
         [TestCase(CreatureConstants.Spider_Monstrous_Tiny, 0, 0, 0)]
+        [TestCase(CreatureConstants.StagBeetle_Giant, 0, 0, 0)]
         [TestCase(CreatureConstants.Stirge, 0, 0, 0)]
         [TestCase(CreatureConstants.Thoqqua, 0, 0, 0)]
         [TestCase(CreatureConstants.Tiger, 0, 0, 0)]
@@ -428,6 +462,8 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
         [TestCase(CreatureConstants.Vargouille, 0, 0, 0)]
         [TestCase(CreatureConstants.VioletFungus, 0, 0, 0)]
         [TestCase("Vrock", 1, 1, 1)]
+        [TestCase(CreatureConstants.Wasp_Giant, 0, 0, 0)]
+        [TestCase(CreatureConstants.Weasel, 0, 0, 0)]
         [TestCase(CreatureConstants.Weasel_Dire, 0, 0, 0)]
         [TestCase(CreatureConstants.Werebear, 1, 1, 1)]
         [TestCase(CreatureConstants.Wereboar, 1, 1, 1)]
@@ -435,6 +471,7 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
         [TestCase(CreatureConstants.Weretiger, 1, 1, 1)]
         [TestCase(CreatureConstants.Werewolf, 1, 1, 1)]
         [TestCase(CreatureConstants.Wight, 0, 0, 0)]
+        [TestCase(CreatureConstants.WillOWisp, TreasureConstants.TenPercent, TreasureConstants.FiftyPercent, TreasureConstants.FiftyPercent)]
         [TestCase(CreatureConstants.Wolf, 0, 0, 0)]
         [TestCase(CreatureConstants.Wolf_Dire, 0, 0, 0)]
         [TestCase(CreatureConstants.Wolverine_Dire, 0, 0, 0)]
@@ -444,6 +481,7 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
         [TestCase(CreatureConstants.Xorn_Average, 0, 0, 0)]
         [TestCase(CreatureConstants.Xorn_Elder, 0, 0, 0)]
         [TestCase(CreatureConstants.Xorn_Minor, 0, 0, 0)]
+        [TestCase(CreatureConstants.YethHound, 0, 0, 0)]
         [TestCase(CreatureConstants.Yrthak, 0, 0, 0)]
         [TestCase("Yuan-ti", 2, 2, 2)]
         [TestCase(CreatureConstants.Zombie, 0, 0, 0)]
