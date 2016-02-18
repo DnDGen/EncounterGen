@@ -293,9 +293,6 @@ namespace EncounterGen.Generators.Domain
             var characters = new List<Character>();
             var characterCreatures = creatures.Where(c => IsCharacterCreatureType(c.Type) || IsCharacterCreatureType(c.Subtype));
 
-            if (characterCreatures.Any() == false)
-                return characters;
-
             foreach (var characterCreature in characterCreatures)
             {
                 var characterQuantity = characterCreature.Quantity;
@@ -310,27 +307,26 @@ namespace EncounterGen.Generators.Domain
             return characters;
         }
 
-        private bool IsCharacterCreatureType(string creatureType)
+        private bool IsCharacterCreatureType(string fullCreatureType)
         {
-            var characterCreatureType = GetCreatureTypeCharacter(creatureType);
+            var characterCreatureType = GetCreatureTypeCharacter(fullCreatureType);
 
             return string.IsNullOrEmpty(characterCreatureType) == false;
         }
 
-        private string GetCreatureTypeCharacter(string creatureType)
+        private string GetCreatureTypeCharacter(string fullCreatureType)
         {
-            if (creatureType.StartsWith(CreatureConstants.Character))
-                return CreatureConstants.Character;
-
-            if (creatureType.StartsWith(CreatureConstants.NPC))
-                return CreatureConstants.NPC;
+            var creatureType = GetCreatureType(fullCreatureType);
 
             var undeadNPCCreatures = collectionSelector.SelectFrom(TableNameConstants.CreatureGroups, GroupConstants.UndeadNPC);
-            if (undeadNPCCreatures.Any(c => creatureType.StartsWith(c)))
-                return undeadNPCCreatures.First(c => creatureType.StartsWith(c));
+            if (undeadNPCCreatures.Contains(creatureType))
+                return creatureType;
 
             var classes = collectionSelector.SelectFrom(TableNameConstants.CreatureGroups, CreatureConstants.Character);
-            return classes.FirstOrDefault(cl => creatureType.StartsWith(cl));
+            if (classes.Contains(creatureType))
+                return creatureType;
+
+            return string.Empty;
         }
 
         private string GetCharacterCreatureType(Creature creature)
@@ -343,14 +339,10 @@ namespace EncounterGen.Generators.Domain
             return creatureType;
         }
 
-        private bool CreatureMatches(Creature creature, string creatureType)
-        {
-            return creature.Type.StartsWith(creatureType) || creature.Subtype.StartsWith(creatureType);
-        }
-
         private Character GenerateCharacter(Creature creature)
         {
             var characterCreatureType = GetCharacterCreatureType(creature);
+
             setLevelRandomizer.SetLevel = GetCharacterLevel(creature.Type);
             setLevelRandomizer.AllowAdjustments = true;
 
@@ -377,7 +369,10 @@ namespace EncounterGen.Generators.Domain
         {
             var challengeRating = GetSetChallengeRating(characterCreatureType);
             if (string.IsNullOrEmpty(challengeRating))
-                return 0;
+            {
+                var message = string.Format("Character level was not provided for a character creature type \"{0}\"", characterCreatureType);
+                throw new ArgumentException(message);
+            }
 
             var doubleRoll = rollSelector.SelectFrom(challengeRating);
             return Convert.ToInt32(doubleRoll);

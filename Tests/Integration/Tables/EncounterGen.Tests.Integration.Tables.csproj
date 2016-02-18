@@ -94,6 +94,7 @@
     <Compile Include="Creatures\Dragons\Level7DragonsTests.cs" />
     <Compile Include="Creatures\Dragons\Level8DragonsTests.cs" />
     <Compile Include="Creatures\Dragons\Level9DragonsTests.cs" />
+    <Compile Include="Creatures\MephitSubtypeChallengeRatingsTests.cs" />
     <Compile Include="EmbeddedResourceStreamLoaderTests.cs" />
     <Compile Include="Encounters\Civilized\Day\Level11CivilizedDayEncountersTests.cs" />
     <Compile Include="Encounters\Civilized\Day\Level13CivilizedDayEncountersTests.cs" />

@@ -32,6 +32,24 @@
     <item>1</item>
   </collection>
   <collection>
+    <entry>Ape</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Dire ape</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Aranea</entry>
+    <item>1</item>
+    <item>2</item>
+    <item>1</item>
+  </collection>
+  <collection>
     <entry>Juvenile arrowhawk</entry>
     <item>0</item>
     <item>0</item>
@@ -98,6 +116,12 @@
     <item>2</item>
   </collection>
   <collection>
+    <entry>Barbazu</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
     <entry>Basilisk</entry>
     <item>0</item>
     <item>0</item>
@@ -120,6 +144,12 @@
     <item>2</item>
     <item>2</item>
     <item>2</item>
+  </collection>
+  <collection>
+    <entry>Belker</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
   </collection>
   <collection>
     <entry>Black pudding</entry>
@@ -164,6 +194,12 @@
     <item>0</item>
   </collection>
   <collection>
+    <entry>Chaos beast</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
     <entry>Character</entry>
     <item>0</item>
     <item>0</item>
@@ -180,6 +216,18 @@
     <item>0.1</item>
     <item>0.5</item>
     <item>0.5</item>
+  </collection>
+  <collection>
+    <entry>Chuul</entry>
+    <item>0.1</item>
+    <item>0.5</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Cloaker</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
   </collection>
   <collection>
     <entry>Cloud giant</entry>
@@ -237,6 +285,18 @@
   </collection>
   <collection>
     <entry>Darkmantle</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Delver</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Destrachan</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
@@ -324,6 +384,12 @@
     <item>3</item>
     <item>3</item>
     <item>3</item>
+  </collection>
+  <collection>
+    <entry>Dragonne</entry>
+    <item>2</item>
+    <item>2</item>
+    <item>2</item>
   </collection>
   <collection>
     <entry>Dretch</entry>
@@ -578,7 +644,19 @@
     <item>0.5</item>
   </collection>
   <collection>
+    <entry>Gynosphinx</entry>
+    <item>2</item>
+    <item>2</item>
+    <item>2</item>
+  </collection>
+  <collection>
     <entry>Hamatula</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Harpy</entry>
     <item>1</item>
     <item>1</item>
     <item>1</item>
@@ -812,6 +890,12 @@
     <item>0.5</item>
   </collection>
   <collection>
+    <entry>Medusa</entry>
+    <item>2</item>
+    <item>2</item>
+    <item>2</item>
+  </collection>
+  <collection>
     <entry>Mephit</entry>
     <item>1</item>
     <item>1</item>
@@ -956,6 +1040,12 @@
     <item>0</item>
   </collection>
   <collection>
+    <entry>Phantom fungus</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
     <entry>Phase spider</entry>
     <item>0</item>
     <item>0</item>
@@ -1022,6 +1112,12 @@
     <item>0</item>
   </collection>
   <collection>
+    <entry>Retriever</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
     <entry>Roper</entry>
     <item>0</item>
     <item>0.5</item>
@@ -1035,6 +1131,12 @@
   </collection>
   <collection>
     <entry>Shadow</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Shadow mastiff</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
