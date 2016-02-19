@@ -1,0 +1,980 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<collections>
+  <collection>
+    <entry>Adult black dragon</entry>
+    <item>13</item>
+  </collection>
+  <collection>
+    <entry>Adult blue dragon</entry>
+    <item>16</item>
+  </collection>
+  <collection>
+    <entry>Adult green dragon</entry>
+    <item>15</item>
+  </collection>
+  <collection>
+    <entry>Adult red dragon</entry>
+    <item>17</item>
+  </collection>
+  <collection>
+    <entry>Adult white dragon</entry>
+    <item>12</item>
+  </collection>
+  <collection>
+    <entry>Ancient black dragon</entry>
+    <item>21</item>
+  </collection>
+  <collection>
+    <entry>Ancient blue dragon</entry>
+    <item>23</item>
+  </collection>
+  <collection>
+    <entry>Ancient green dragon</entry>
+    <item>23</item>
+  </collection>
+  <collection>
+    <entry>Ancient red dragon</entry>
+    <item>25</item>
+  </collection>
+  <collection>
+    <entry>Ancient white dragon</entry>
+    <item>20</item>
+  </collection>
+  <collection>
+    <entry>Androsphinx</entry>
+    <item>11</item>
+  </collection>
+  <collection>
+    <entry>Ankheg</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Ape</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Aranea</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Assassin vine</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Baboon</entry>
+    <item>1/2</item>
+  </collection>
+  <collection>
+    <entry>Badger</entry>
+    <item>1/2</item>
+  </collection>
+  <collection>
+    <entry>Basilisk</entry>
+    <item>6</item>
+  </collection>
+  <collection>
+    <entry>Bat</entry>
+    <item>1/10</item>
+  </collection>
+  <collection>
+    <entry>Behir</entry>
+    <item>10</item>
+  </collection>
+  <collection>
+    <entry>Bison</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Black bear</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Blink dog</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Boar</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Brown bear</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Bulette</entry>
+    <item>9</item>
+  </collection>
+  <collection>
+    <entry>Camel</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Cat</entry>
+    <item>1/4</item>
+  </collection>
+  <collection>
+    <entry>Centaur</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Cheetah</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Cloaker</entry>
+    <item>6</item>
+  </collection>
+  <collection>
+    <entry>Cloud giant</entry>
+    <item>13</item>
+  </collection>
+  <collection>
+    <entry>Cockatrice</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Colossal monstrous centipede</entry>
+    <item>11</item>
+  </collection>
+  <collection>
+    <entry>Colossal monstrous scorpion</entry>
+    <item>14</item>
+  </collection>
+  <collection>
+    <entry>Colossal monstrous spider</entry>
+    <item>13</item>
+  </collection>
+  <collection>
+    <entry>Constrictor snake</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Criosphinx</entry>
+    <item>9</item>
+  </collection>
+  <collection>
+    <entry>Crocodile</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Cryohydra (10 heads)</entry>
+    <item>13</item>
+  </collection>
+  <collection>
+    <entry>Cryohydra (11 heads)</entry>
+    <item>14</item>
+  </collection>
+  <collection>
+    <entry>Cryohydra (12 heads)</entry>
+    <item>15</item>
+  </collection>
+  <collection>
+    <entry>Cryohydra (5 heads)</entry>
+    <item>8</item>
+  </collection>
+  <collection>
+    <entry>Cryohydra (6 heads)</entry>
+    <item>9</item>
+  </collection>
+  <collection>
+    <entry>Cryohydra (7 heads)</entry>
+    <item>10</item>
+  </collection>
+  <collection>
+    <entry>Cryohydra (8 heads)</entry>
+    <item>11</item>
+  </collection>
+  <collection>
+    <entry>Cryohydra (9 heads)</entry>
+    <item>12</item>
+  </collection>
+  <collection>
+    <entry>Darkmantle</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Deinonychus</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Delver</entry>
+    <item>11</item>
+  </collection>
+  <collection>
+    <entry>Digester</entry>
+    <item>8</item>
+  </collection>
+  <collection>
+    <entry>Dire ape</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Dire badger</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Dire bat</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Dire bear</entry>
+    <item>9</item>
+  </collection>
+  <collection>
+    <entry>Dire boar</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Dire lion</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Dire rat</entry>
+    <item>1/3</item>
+  </collection>
+  <collection>
+    <entry>Dire tiger</entry>
+    <item>10</item>
+  </collection>
+  <collection>
+    <entry>Dire weasel</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Dire wolf</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Dire wolverine</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Dog</entry>
+    <item>1/3</item>
+  </collection>
+  <collection>
+    <entry>Donkey</entry>
+    <item>1/6</item>
+  </collection>
+  <collection>
+    <entry>Doppelganger</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Dragonne</entry>
+    <item>9</item>
+  </collection>
+  <collection>
+    <entry>Dryad</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Dwarf</entry>
+    <item>1/2</item>
+  </collection>
+  <collection>
+    <entry>Eagle</entry>
+    <item>1/2</item>
+  </collection>
+  <collection>
+    <entry>Elephant</entry>
+    <item>9</item>
+  </collection>
+  <collection>
+    <entry>Elf</entry>
+    <item>1/2</item>
+  </collection>
+  <collection>
+    <entry>Frost worm</entry>
+    <item>14</item>
+  </collection>
+  <collection>
+    <entry>Gargantuan monstrous centipede</entry>
+    <item>8</item>
+  </collection>
+  <collection>
+    <entry>Gargantuan monstrous scorpion</entry>
+    <item>12</item>
+  </collection>
+  <collection>
+    <entry>Gargantuan monstrous spider</entry>
+    <item>10</item>
+  </collection>
+  <collection>
+    <entry>Giant bee</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Giant bombardier beetle</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Giant constrictor snake</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Giant crocodile</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Giant eagle</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Giant fire beetle</entry>
+    <item>1/3</item>
+  </collection>
+  <collection>
+    <entry>Giant owl</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Giant praying mantis</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Giant soldier ant</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Giant stag beetle</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Giant wasp</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Giant worker ant</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Gibbering mouther</entry>
+    <item>6</item>
+  </collection>
+  <collection>
+    <entry>Girallon</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Gnome</entry>
+    <item>1/2</item>
+  </collection>
+  <collection>
+    <entry>Gorgon</entry>
+    <item>10</item>
+  </collection>
+  <collection>
+    <entry>Gray render</entry>
+    <item>10</item>
+  </collection>
+  <collection>
+    <entry>Great wyrm black dragon</entry>
+    <item>24</item>
+  </collection>
+  <collection>
+    <entry>Great wyrm blue dragon</entry>
+    <item>27</item>
+  </collection>
+  <collection>
+    <entry>Great wyrm green dragon</entry>
+    <item>26</item>
+  </collection>
+  <collection>
+    <entry>Great wyrm red dragon</entry>
+    <item>28</item>
+  </collection>
+  <collection>
+    <entry>Great wyrm white dragon</entry>
+    <item>23</item>
+  </collection>
+  <collection>
+    <entry>Grick</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Griffon</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Grig</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Guardian naga</entry>
+    <item>12</item>
+  </collection>
+  <collection>
+    <entry>Gynosphinx</entry>
+    <item>10</item>
+  </collection>
+  <collection>
+    <entry>Halfling</entry>
+    <item>1/2</item>
+  </collection>
+  <collection>
+    <entry>Hawk</entry>
+    <item>1/3</item>
+  </collection>
+  <collection>
+    <entry>Heavy warhorse</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Heavy horse</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Hippogriff</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Huge monstrous centipede</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Huge monstrous scorpion</entry>
+    <item>9</item>
+  </collection>
+  <collection>
+    <entry>Huge monstrous spider</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Huge viper snake</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Hydra (10 heads)</entry>
+    <item>11</item>
+  </collection>
+  <collection>
+    <entry>Hydra (11 heads)</entry>
+    <item>12</item>
+  </collection>
+  <collection>
+    <entry>Hydra (12 heads)</entry>
+    <item>13</item>
+  </collection>
+  <collection>
+    <entry>Hydra (5 heads)</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Hydra (6 heads)</entry>
+    <item>6</item>
+  </collection>
+  <collection>
+    <entry>Hydra (7 heads)</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Hydra (8 heads)</entry>
+    <item>9</item>
+  </collection>
+  <collection>
+    <entry>Hydra (9 heads)</entry>
+    <item>10</item>
+  </collection>
+  <collection>
+    <entry>Hyena</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Juvenile black dragon</entry>
+    <item>9</item>
+  </collection>
+  <collection>
+    <entry>Juvenile blue dragon</entry>
+    <item>10</item>
+  </collection>
+  <collection>
+    <entry>Juvenile green dragon</entry>
+    <item>10</item>
+  </collection>
+  <collection>
+    <entry>Juvenile red dragon</entry>
+    <item>12</item>
+  </collection>
+  <collection>
+    <entry>Juvenile white dragon</entry>
+    <item>8</item>
+  </collection>
+  <collection>
+    <entry>Krenshar</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Lammasu</entry>
+    <item>9</item>
+  </collection>
+  <collection>
+    <entry>Large monstrous centipede</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Large monstrous scorpion</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Large monstrous spider</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Large viper snake</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Leopard</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Light horse</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Light warhorse</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Lion</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Lizard</entry>
+    <item>1/6</item>
+  </collection>
+  <collection>
+    <entry>Lizardfolk</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Mature adult black dragon</entry>
+    <item>16</item>
+  </collection>
+  <collection>
+    <entry>Mature adult blue dragon</entry>
+    <item>18</item>
+  </collection>
+  <collection>
+    <entry>Mature adult green dragon</entry>
+    <item>18</item>
+  </collection>
+  <collection>
+    <entry>Mature adult red dragon</entry>
+    <item>20</item>
+  </collection>
+  <collection>
+    <entry>Mature adult white dragon</entry>
+    <item>14</item>
+  </collection>
+  <collection>
+    <entry>Medium monstrous centipede</entry>
+    <item>1/2</item>
+  </collection>
+  <collection>
+    <entry>Medium monstrous scorpion</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Medium monstrous spider</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Medium viper snake</entry>
+    <item>1/2</item>
+  </collection>
+  <collection>
+    <entry>Megaraptor</entry>
+    <item>8</item>
+  </collection>
+  <collection>
+    <entry>Mimic</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Monitor lizard</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Monkey</entry>
+    <item>1/6</item>
+  </collection>
+  <collection>
+    <entry>Mule</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Nymph</entry>
+    <item>8</item>
+  </collection>
+  <collection>
+    <entry>Old black dragon</entry>
+    <item>18</item>
+  </collection>
+  <collection>
+    <entry>Old blue dragon</entry>
+    <item>20</item>
+  </collection>
+  <collection>
+    <entry>Old green dragon</entry>
+    <item>20</item>
+  </collection>
+  <collection>
+    <entry>Old red dragon</entry>
+    <item>22</item>
+  </collection>
+  <collection>
+    <entry>Old white dragon</entry>
+    <item>17</item>
+  </collection>
+  <collection>
+    <entry>Otyugh</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Owl</entry>
+    <item>1/4</item>
+  </collection>
+  <collection>
+    <entry>Owlbear</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Pegasus</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Phantom fungus</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Phase spider</entry>
+    <item>6</item>
+  </collection>
+  <collection>
+    <entry>Phasm</entry>
+    <item>9</item>
+  </collection>
+  <collection>
+    <entry>Pixie</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Polar bear</entry>
+    <item>6</item>
+  </collection>
+  <collection>
+    <entry>Pony</entry>
+    <item>1/4</item>
+  </collection>
+  <collection>
+    <entry>Pseudodragon</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Purple worm</entry>
+    <item>14</item>
+  </collection>
+  <collection>
+    <entry>Pyrohydra (10 heads)</entry>
+    <item>13</item>
+  </collection>
+  <collection>
+    <entry>Pyrohydra (11 heads)</entry>
+    <item>14</item>
+  </collection>
+  <collection>
+    <entry>Pyrohydra (12 heads)</entry>
+    <item>15</item>
+  </collection>
+  <collection>
+    <entry>Pyrohydra (5 heads)</entry>
+    <item>8</item>
+  </collection>
+  <collection>
+    <entry>Pyrohydra (6 heads)</entry>
+    <item>9</item>
+  </collection>
+  <collection>
+    <entry>Pyrohydra (7 heads)</entry>
+    <item>10</item>
+  </collection>
+  <collection>
+    <entry>Pyrohydra (8 heads)</entry>
+    <item>11</item>
+  </collection>
+  <collection>
+    <entry>Pyrohydra (9 heads)</entry>
+    <item>12</item>
+  </collection>
+  <collection>
+    <entry>Rat</entry>
+    <item>1/8</item>
+  </collection>
+  <collection>
+    <entry>Raven</entry>
+    <item>1/6</item>
+  </collection>
+  <collection>
+    <entry>Razor boar</entry>
+    <item>12</item>
+  </collection>
+  <collection>
+    <entry>Remorhaz</entry>
+    <item>8</item>
+  </collection>
+  <collection>
+    <entry>Rhinoceras</entry>
+    <item>6</item>
+  </collection>
+  <collection>
+    <entry>Roc</entry>
+    <item>11</item>
+  </collection>
+  <collection>
+    <entry>Rust monster</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Satyr</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Shambling mound</entry>
+    <item>8</item>
+  </collection>
+  <collection>
+    <entry>Shocker lizard</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Shrieker</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Small monstrous centipede</entry>
+    <item>1/4</item>
+  </collection>
+  <collection>
+    <entry>Small monstrous scorpion</entry>
+    <item>1/2</item>
+  </collection>
+  <collection>
+    <entry>Small monstrous spider</entry>
+    <item>1/2</item>
+  </collection>
+  <collection>
+    <entry>Small viper snake</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Spider eater</entry>
+    <item>6</item>
+  </collection>
+  <collection>
+    <entry>Stirge</entry>
+    <item>1/2</item>
+  </collection>
+  <collection>
+    <entry>Stone giant</entry>
+    <item>10</item>
+  </collection>
+  <collection>
+    <entry>Storm giant</entry>
+    <item>15</item>
+  </collection>
+  <collection>
+    <entry>Tendriculos</entry>
+    <item>8</item>
+  </collection>
+  <collection>
+    <entry>Tiger</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Tiny monstrous centipede</entry>
+    <item>1/8</item>
+  </collection>
+  <collection>
+    <entry>Tiny monstrous scorpion</entry>
+    <item>1/4</item>
+  </collection>
+  <collection>
+    <entry>Tiny monstrous spider</entry>
+    <item>1/4</item>
+  </collection>
+  <collection>
+    <entry>Tiny viper snake</entry>
+    <item>1/3</item>
+  </collection>
+  <collection>
+    <entry>Toad</entry>
+    <item>1/10</item>
+  </collection>
+  <collection>
+    <entry>Treant</entry>
+    <item>9</item>
+  </collection>
+  <collection>
+    <entry>Triceratops</entry>
+    <item>11</item>
+  </collection>
+  <collection>
+    <entry>Tyrannosaurus</entry>
+    <item>10</item>
+  </collection>
+  <collection>
+    <entry>Unicorn</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Very old black dragon</entry>
+    <item>20</item>
+  </collection>
+  <collection>
+    <entry>Very old blue dragon</entry>
+    <item>21</item>
+  </collection>
+  <collection>
+    <entry>Very old green dragon</entry>
+    <item>21</item>
+  </collection>
+  <collection>
+    <entry>Very old red dragon</entry>
+    <item>23</item>
+  </collection>
+  <collection>
+    <entry>Very old white dragon</entry>
+    <item>19</item>
+  </collection>
+  <collection>
+    <entry>Very young black dragon</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Very young blue dragon</entry>
+    <item>6</item>
+  </collection>
+  <collection>
+    <entry>Very young green dragon</entry>
+    <item>6</item>
+  </collection>
+  <collection>
+    <entry>Very young red dragon</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Very young white dragon</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Violet fungus</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Warpony</entry>
+    <item>1/2</item>
+  </collection>
+  <collection>
+    <entry>Weasel</entry>
+    <item>1/4</item>
+  </collection>
+  <collection>
+    <entry>Wolf</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Wolverine</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Wyrm black dragon</entry>
+    <item>22</item>
+  </collection>
+  <collection>
+    <entry>Wyrm blue dragon</entry>
+    <item>25</item>
+  </collection>
+  <collection>
+    <entry>Wyrm green dragon</entry>
+    <item>24</item>
+  </collection>
+  <collection>
+    <entry>Wyrm red dragon</entry>
+    <item>26</item>
+  </collection>
+  <collection>
+    <entry>Wyrm white dragon</entry>
+    <item>21</item>
+  </collection>
+  <collection>
+    <entry>Wyrmling black dragon</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Wyrmling blue dragon</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Wyrmling green dragon</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Wyrmling red dragon</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Wyrmling white dragon</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Wyvern</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Young adult black dragon</entry>
+    <item>11</item>
+  </collection>
+  <collection>
+    <entry>Young adult blue dragon</entry>
+    <item>13</item>
+  </collection>
+  <collection>
+    <entry>Young adult green dragon</entry>
+    <item>13</item>
+  </collection>
+  <collection>
+    <entry>Young adult red dragon</entry>
+    <item>15</item>
+  </collection>
+  <collection>
+    <entry>Young adult white dragon</entry>
+    <item>10</item>
+  </collection>
+  <collection>
+    <entry>Young black dragon</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Young blue dragon</entry>
+    <item>8</item>
+  </collection>
+  <collection>
+    <entry>Young green dragon</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Young red dragon</entry>
+    <item>9</item>
+  </collection>
+  <collection>
+    <entry>Young white dragon</entry>
+    <item>6</item>
+  </collection>
+  <collection>
+    <entry>Yrthak</entry>
+    <item>11</item>
+  </collection>
+</collections>

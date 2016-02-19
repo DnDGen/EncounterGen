@@ -7,7 +7,6 @@
         public const string LevelXDragons = "Level{0}Dragons";
         public const string LevelXEncounterLevel = "Level{0}EncounterLevel";
         public const string LevelXENVIRONMENTEncounters = "Level{0}{1}Encounters";
-        public const string LevelXRolls = "Level{0}Rolls";
         public const string RollOrder = "RollOrder";
         public const string TreasureAdjustments = "TreasureAdjustments";
     }

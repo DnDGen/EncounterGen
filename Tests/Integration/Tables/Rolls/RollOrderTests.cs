@@ -1,7 +1,7 @@
-﻿using EncounterGen.Selectors;
+﻿using EncounterGen.Common;
+using EncounterGen.Selectors;
 using EncounterGen.Tables;
 using NUnit.Framework;
-using System;
 
 namespace EncounterGen.Tests.Integration.Tables.Rolls
 {
@@ -19,7 +19,7 @@ namespace EncounterGen.Tests.Integration.Tables.Rolls
         [Test]
         public override void EntriesAreComplete()
         {
-            var entries = new[] { "All" };
+            var entries = new[] { "All", "CR" };
             AssertEntriesAreComplete(entries);
         }
 
@@ -31,8 +31,44 @@ namespace EncounterGen.Tests.Integration.Tables.Rolls
             RollConstants.OneD4Plus2,
             RollConstants.OneD6Plus3,
             RollConstants.OneD6Plus5,
-            RollConstants.OneD4Plus10,
-            RollConstants.Reroll)]
+            RollConstants.OneD4Plus10)]
+        [TestCase("CR",
+            ChallengeRatingConstants.OneTenth,
+            ChallengeRatingConstants.OneEighth,
+            ChallengeRatingConstants.OneSixth,
+            ChallengeRatingConstants.OneFourth,
+            ChallengeRatingConstants.OneThird,
+            ChallengeRatingConstants.OneHalf,
+            ChallengeRatingConstants.One,
+            ChallengeRatingConstants.Two,
+            ChallengeRatingConstants.Three,
+            ChallengeRatingConstants.Four,
+            ChallengeRatingConstants.Five,
+            ChallengeRatingConstants.Six,
+            ChallengeRatingConstants.Seven,
+            ChallengeRatingConstants.Eight,
+            ChallengeRatingConstants.Nine,
+            ChallengeRatingConstants.Ten,
+            ChallengeRatingConstants.Eleven,
+            ChallengeRatingConstants.Twelve,
+            ChallengeRatingConstants.Thirteen,
+            ChallengeRatingConstants.Fourteen,
+            ChallengeRatingConstants.Fifteen,
+            ChallengeRatingConstants.Sixteen,
+            ChallengeRatingConstants.Seventeen,
+            ChallengeRatingConstants.Eighteen,
+            ChallengeRatingConstants.Nineteen,
+            ChallengeRatingConstants.Twenty,
+            ChallengeRatingConstants.TwentyOne,
+            ChallengeRatingConstants.TwentyTwo,
+            ChallengeRatingConstants.TwentyThree,
+            ChallengeRatingConstants.TwentyFour,
+            ChallengeRatingConstants.TwentyFive,
+            ChallengeRatingConstants.TwentySix,
+            ChallengeRatingConstants.TwentySeven,
+            ChallengeRatingConstants.TwentyEight,
+            ChallengeRatingConstants.TwentyNine,
+            ChallengeRatingConstants.Thirty)]
         public override void OrderedCollection(string entry, params string[] items)
         {
             base.Collection(entry, items);

@@ -74,6 +74,12 @@
     <item>1</item>
   </collection>
   <collection>
+    <entry>Athach</entry>
+    <item>0.5</item>
+    <item>2</item>
+    <item>1</item>
+  </collection>
+  <collection>
     <entry>Avoral</entry>
     <item>0</item>
     <item>2</item>
@@ -138,6 +144,36 @@
     <item>0</item>
     <item>0</item>
     <item>0</item>
+  </collection>
+  <collection>
+    <entry>Dire bear</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Black bear</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Brown bear</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Polar bear</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Behir</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
   </collection>
   <collection>
     <entry>Beholder</entry>
@@ -308,6 +344,12 @@
     <item>0</item>
   </collection>
   <collection>
+    <entry>Digester</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
     <entry>Death slaad</entry>
     <item>2</item>
     <item>2</item>
@@ -374,6 +416,12 @@
     <item>0.5</item>
   </collection>
   <collection>
+    <entry>Djinn</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
     <entry>Doppelganger</entry>
     <item>2</item>
     <item>2</item>
@@ -381,6 +429,12 @@
   </collection>
   <collection>
     <entry>Dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Dragon turtle</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
@@ -516,6 +570,12 @@
     <item>1</item>
     <item>1</item>
     <item>1</item>
+  </collection>
+  <collection>
+    <entry>Gelatinous cube</entry>
+    <item>0.1</item>
+    <item>0.5</item>
+    <item>0.5</item>
   </collection>
   <collection>
     <entry>Gelugon</entry>
@@ -678,6 +738,12 @@
     <item>1</item>
     <item>1</item>
     <item>1</item>
+  </collection>
+  <collection>
+    <entry>Hieracosphinx</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
   </collection>
   <collection>
     <entry>Hill giant</entry>
@@ -1011,6 +1077,12 @@
   </collection>
   <collection>
     <entry>Orc</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Osyluth</entry>
     <item>1</item>
     <item>1</item>
     <item>1</item>
@@ -1407,6 +1479,12 @@
   </collection>
   <collection>
     <entry>Will-O'-Wisp</entry>
+    <item>0.1</item>
+    <item>0.5</item>
+    <item>0.5</item>
+  </collection>
+  <collection>
+    <entry>Winter wolf</entry>
     <item>0.1</item>
     <item>0.5</item>
     <item>0.5</item>

@@ -4,8 +4,6 @@ using EncounterGen.Tables;
 using Moq;
 using NUnit.Framework;
 using RollGen;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace EncounterGen.Tests.Unit.Selectors
 {
@@ -23,42 +21,56 @@ namespace EncounterGen.Tests.Unit.Selectors
             mockDice = new Mock<Dice>();
             rollSelector = new RollSelector(mockCollectionSelector.Object, mockDice.Object);
 
-            var rolls = new[] { RollConstants.One, "lesser roll", "base roll", "greater roll", RollConstants.Reroll };
+            var rolls = new[] { "lesser roll", RollConstants.One, "greater roll" };
             mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.RollOrder, "All")).Returns(rolls);
         }
 
         [Test]
-        public void GetMinimumModifiedRoll()
+        public void RerollMinimumModifiedRoll()
         {
-            var modifiedRoll = rollSelector.SelectFrom("base roll", -9266);
-            Assert.That(modifiedRoll, Is.EqualTo(RollConstants.One));
+            var modifiedRoll = rollSelector.SelectFrom(RollConstants.One, -2);
+            Assert.That(modifiedRoll, Is.EqualTo(RollConstants.Reroll));
         }
 
         [Test]
         public void GetLesserModifiedRoll()
         {
-            var modifiedRoll = rollSelector.SelectFrom("base roll", -1);
+            var modifiedRoll = rollSelector.SelectFrom(RollConstants.One, -1);
             Assert.That(modifiedRoll, Is.EqualTo("lesser roll"));
         }
 
         [Test]
         public void GetSameModifiedRoll()
         {
-            var modifiedRoll = rollSelector.SelectFrom("base roll", 0);
-            Assert.That(modifiedRoll, Is.EqualTo("base roll"));
+            var modifiedRoll = rollSelector.SelectFrom(RollConstants.One, 0);
+            Assert.That(modifiedRoll, Is.EqualTo(RollConstants.One));
         }
 
         [Test]
         public void GetGreaterModifiedRoll()
         {
-            var modifiedRoll = rollSelector.SelectFrom("base roll", 1);
+            var modifiedRoll = rollSelector.SelectFrom(RollConstants.One, 1);
+            Assert.That(modifiedRoll, Is.EqualTo("greater roll"));
+        }
+
+        [Test]
+        public void GetMuchLessModifiedRoll()
+        {
+            var modifiedRoll = rollSelector.SelectFrom("greater roll", -2);
+            Assert.That(modifiedRoll, Is.EqualTo("lesser roll"));
+        }
+
+        [Test]
+        public void GetMuchMoreModifiedRoll()
+        {
+            var modifiedRoll = rollSelector.SelectFrom("lesser roll", 2);
             Assert.That(modifiedRoll, Is.EqualTo("greater roll"));
         }
 
         [Test]
         public void GetMaximumModifiedRoll()
         {
-            var modifiedRoll = rollSelector.SelectFrom("base roll", 9266);
+            var modifiedRoll = rollSelector.SelectFrom(RollConstants.One, 2);
             Assert.That(modifiedRoll, Is.EqualTo(RollConstants.Reroll));
         }
 
@@ -115,25 +127,28 @@ namespace EncounterGen.Tests.Unit.Selectors
         [Test]
         public void GetRollForChallengeRatingAtEffectiveLevel()
         {
-            var tableName = string.Format(TableNameConstants.LevelXRolls, 9266);
-            mockCollectionSelector.Setup(s => s.SelectFrom(tableName, "challenge rating")).Returns(new[] { "roll" });
-            mockCollectionSelector.Setup(s => s.SelectRandomFrom(It.IsAny<IEnumerable<string>>())).Returns((IEnumerable<string> c) => c.First());
+            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.RollOrder, "CR")).Returns(new[] { "lesser challenge rating", "challenge rating", "9266", "higher challenge rating" });
 
             var roll = rollSelector.SelectFrom(9266, "challenge rating");
-            Assert.That(roll, Is.EqualTo("roll"));
+            Assert.That(roll, Is.EqualTo("greater roll"));
         }
 
         [Test]
-        public void GetRandomRollForChallengeRatingAtEffectiveLevel()
+        public void RerollTooHighForChallengeRatingAtEffectiveLevel()
         {
-            var tableName = string.Format(TableNameConstants.LevelXRolls, 9266);
-            var rolls = new[] { "roll", "other roll" };
+            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.RollOrder, "CR")).Returns(new[] { "lesser challenge rating", "challenge rating", "9266", "higher challenge rating" });
 
-            mockCollectionSelector.Setup(s => s.SelectFrom(tableName, "challenge rating")).Returns(rolls);
-            mockCollectionSelector.Setup(s => s.SelectRandomFrom(rolls)).Returns("other roll");
+            var roll = rollSelector.SelectFrom(9266, "lesser challenge rating");
+            Assert.That(roll, Is.EqualTo(RollConstants.Reroll));
+        }
 
-            var roll = rollSelector.SelectFrom(9266, "challenge rating");
-            Assert.That(roll, Is.EqualTo("other roll"));
+        [Test]
+        public void RerollTooLowForChallengeRatingAtEffectiveLevel()
+        {
+            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.RollOrder, "CR")).Returns(new[] { "lesser challenge rating", "challenge rating", "9266", "higher challenge rating", "too high" });
+
+            var roll = rollSelector.SelectFrom(9266, "too high");
+            Assert.That(roll, Is.EqualTo(RollConstants.Reroll));
         }
     }
 }

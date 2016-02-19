@@ -1,6 +1,5 @@
 ﻿using EncounterGen.Tables;
 using RollGen;
-using System;
 using System.Linq;
 using System.Text.RegularExpressions;
 
@@ -22,11 +21,13 @@ namespace EncounterGen.Selectors.Domain
 
         public string SelectFrom(int effectiveLevel, string challengeRating)
         {
-            var tableName = string.Format(TableNameConstants.LevelXRolls, effectiveLevel);
-            var rolls = collectionSelector.SelectFrom(tableName, challengeRating);
-            var roll = collectionSelector.SelectRandomFrom(rolls);
+            var challengeRatings = collectionSelector.SelectFrom(TableNameConstants.RollOrder, "CR").ToList();
 
-            return roll;
+            var levelIndex = challengeRatings.IndexOf(effectiveLevel.ToString());
+            var challengeRatingIndex = challengeRatings.IndexOf(challengeRating);
+            var modifer = levelIndex - challengeRatingIndex;
+
+            return SelectFrom(RollConstants.One, modifer);
         }
 
         public double SelectFrom(string roll)
@@ -47,8 +48,9 @@ namespace EncounterGen.Selectors.Domain
             var index = rolls.IndexOf(baseRoll);
 
             var modifiedIndex = index + modifier;
-            modifiedIndex = Math.Min(modifiedIndex, rolls.Count - 1);
-            modifiedIndex = Math.Max(modifiedIndex, 0);
+
+            if (modifiedIndex > rolls.Count - 1 || modifiedIndex < 0)
+                return RollConstants.Reroll;
 
             return rolls[modifiedIndex];
         }

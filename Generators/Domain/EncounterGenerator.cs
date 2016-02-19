@@ -200,8 +200,6 @@ namespace EncounterGen.Generators.Domain
             if (creature.Subtype == null)
                 return null;
 
-            creature.Quantity = GetRandomSubtypeQuantity(creature.Subtype, fullCreatureType, amount, modifier, level);
-
             var creaturesRequiringSubtypes = collectionSelector.SelectFrom(TableNameConstants.CreatureGroups, GroupConstants.RequiresSubtype);
 
             if (creaturesRequiringSubtypes.Contains(creature.Subtype))
@@ -211,6 +209,8 @@ namespace EncounterGen.Generators.Domain
 
                 creature.Subtype = string.Format("{0} ({1})", creature.Subtype, subSubtype);
             }
+
+            creature.Quantity = GetRandomSubtypeQuantity(creature.Subtype, fullCreatureType, amount, modifier, level);
 
             return creature;
         }
@@ -240,12 +240,15 @@ namespace EncounterGen.Generators.Domain
                 return subtype;
 
             var effectiveRoll = GetEffectiveSubtypeRoll(creatureType, subtype, level, amount, modifier, setChallengeRating);
-
             var iteration = 1;
 
             while (effectiveRoll == RollConstants.Reroll && iteration++ < IterationLimit)
             {
                 subtype = collectionSelector.SelectRandomFrom(subtypes);
+
+                if (creaturesRequiringSubtypes.Contains(subtype))
+                    return subtype;
+
                 effectiveRoll = GetEffectiveSubtypeRoll(creatureType, subtype, level, amount, modifier, setChallengeRating);
             }
 
@@ -269,23 +272,34 @@ namespace EncounterGen.Generators.Domain
             return rollSelector.SelectFrom(amount, modifier);
         }
 
-        private int GetRandomSubtypeQuantity(string subtype, string fullCreatureType, string amount, int modifier, int level)
+        private int GetRandomSubtypeQuantity(string fullSubtype, string fullCreatureType, string amount, int modifier, int level)
         {
             var creatureType = GetCreatureType(fullCreatureType);
+            var subtype = GetCreatureType(fullSubtype);
+            var subSubtype = GetSubtype(fullSubtype, level);
             var setChallengeRating = GetSetChallengeRating(fullCreatureType);
             var effectiveRoll = rollSelector.SelectFrom(amount, modifier);
 
-            if (string.IsNullOrEmpty(setChallengeRating))
+            if (string.IsNullOrEmpty(setChallengeRating) && string.IsNullOrEmpty(subSubtype))
             {
-                var tableName = string.Format(TableNameConstants.CREATURESubtypeChallengeRatings, creatureType);
-                var challengeRating = collectionSelector.SelectFrom(tableName, subtype).Single();
-
-                effectiveRoll = rollSelector.SelectFrom(level, challengeRating);
+                effectiveRoll = GetEffectiveRoll(creatureType, subtype, level);
+            }
+            else if (string.IsNullOrEmpty(setChallengeRating) && string.IsNullOrEmpty(subSubtype) == false)
+            {
+                effectiveRoll = GetEffectiveRoll(subtype, subSubtype, level);
             }
 
             var doubleQuantity = rollSelector.SelectFrom(effectiveRoll);
 
             return Convert.ToInt32(doubleQuantity);
+        }
+
+        private string GetEffectiveRoll(string creatureType, string subtype, int level)
+        {
+            var tableName = string.Format(TableNameConstants.CREATURESubtypeChallengeRatings, creatureType);
+            var challengeRating = collectionSelector.SelectFrom(tableName, subtype).Single();
+
+            return rollSelector.SelectFrom(level, challengeRating);
         }
 
         private IEnumerable<Character> GetCharacters(IEnumerable<Creature> creatures)
