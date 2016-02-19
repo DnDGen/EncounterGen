@@ -246,6 +246,16 @@ namespace EncounterGen.Generators.Domain
             {
                 subtype = collectionSelector.SelectRandomFrom(subtypes);
 
+                if (IsCharacterCreatureType(subtype))
+                    return subtype;
+
+                if (subtype == CreatureConstants.Dragon)
+                {
+                    var dragonLevel = Convert.ToInt32(setChallengeRating);
+                    var dragonTableName = string.Format(TableNameConstants.LevelXDragons, dragonLevel);
+                    return percentileSelector.SelectFrom(dragonTableName);
+                }
+
                 if (creaturesRequiringSubtypes.Contains(subtype))
                     return subtype;
 

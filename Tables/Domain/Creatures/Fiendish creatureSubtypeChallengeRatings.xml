@@ -42,12 +42,12 @@
     <item>20</item>
   </collection>
   <collection>
-    <entry>Androsphinx</entry>
-    <item>11</item>
-  </collection>
-  <collection>
     <entry>Ankheg</entry>
     <item>3</item>
+  </collection>
+  <collection>
+    <entry>Annis (hag)</entry>
+    <item>7</item>
   </collection>
   <collection>
     <entry>Ape</entry>
@@ -60,6 +60,10 @@
   <collection>
     <entry>Assassin vine</entry>
     <item>4</item>
+  </collection>
+  <collection>
+    <entry>Athach</entry>
+    <item>10</item>
   </collection>
   <collection>
     <entry>Baboon</entry>
@@ -90,16 +94,16 @@
     <item>3</item>
   </collection>
   <collection>
-    <entry>Blink dog</entry>
-    <item>3</item>
-  </collection>
-  <collection>
     <entry>Boar</entry>
     <item>3</item>
   </collection>
   <collection>
     <entry>Brown bear</entry>
     <item>5</item>
+  </collection>
+  <collection>
+    <entry>Bugbear</entry>
+    <item>2</item>
   </collection>
   <collection>
     <entry>Bulette</entry>
@@ -114,11 +118,15 @@
     <item>1/4</item>
   </collection>
   <collection>
-    <entry>Centaur</entry>
-    <item>4</item>
+    <entry>Cheetah</entry>
+    <item>2</item>
   </collection>
   <collection>
-    <entry>Cheetah</entry>
+    <entry>Chimera</entry>
+    <item>9</item>
+  </collection>
+  <collection>
+    <entry>Choker</entry>
     <item>2</item>
   </collection>
   <collection>
@@ -202,6 +210,14 @@
     <item>11</item>
   </collection>
   <collection>
+    <entry>Derro</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Destrachan</entry>
+    <item>10</item>
+  </collection>
+  <collection>
     <entry>Digester</entry>
     <item>8</item>
   </collection>
@@ -266,8 +282,8 @@
     <item>9</item>
   </collection>
   <collection>
-    <entry>Dryad</entry>
-    <item>4</item>
+    <entry>Drider</entry>
+    <item>8</item>
   </collection>
   <collection>
     <entry>Dwarf</entry>
@@ -286,6 +302,14 @@
     <item>1/2</item>
   </collection>
   <collection>
+    <entry>Ettercap</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Ettin</entry>
+    <item>8</item>
+  </collection>
+  <collection>
     <entry>Frost worm</entry>
     <item>14</item>
   </collection>
@@ -300,6 +324,22 @@
   <collection>
     <entry>Gargantuan monstrous spider</entry>
     <item>10</item>
+  </collection>
+  <collection>
+    <entry>Gargoyle</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Fire giant</entry>
+    <item>12</item>
+  </collection>
+  <collection>
+    <entry>Frost giant</entry>
+    <item>11</item>
+  </collection>
+  <collection>
+    <entry>Hill giant</entry>
+    <item>9</item>
   </collection>
   <collection>
     <entry>Giant bee</entry>
@@ -318,16 +358,8 @@
     <item>5</item>
   </collection>
   <collection>
-    <entry>Giant eagle</entry>
-    <item>4</item>
-  </collection>
-  <collection>
     <entry>Giant fire beetle</entry>
     <item>1/3</item>
-  </collection>
-  <collection>
-    <entry>Giant owl</entry>
-    <item>4</item>
   </collection>
   <collection>
     <entry>Giant praying mantis</entry>
@@ -358,8 +390,12 @@
     <item>7</item>
   </collection>
   <collection>
-    <entry>Gnome</entry>
-    <item>1/2</item>
+    <entry>Gnoll</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Goblin</entry>
+    <item>1/3</item>
   </collection>
   <collection>
     <entry>Gorgon</entry>
@@ -390,6 +426,10 @@
     <item>23</item>
   </collection>
   <collection>
+    <entry>Green hag (hag)</entry>
+    <item>7</item>
+  </collection>
+  <collection>
     <entry>Grick</entry>
     <item>3</item>
   </collection>
@@ -398,12 +438,8 @@
     <item>5</item>
   </collection>
   <collection>
-    <entry>Grig</entry>
+    <entry>Grimlock</entry>
     <item>1</item>
-  </collection>
-  <collection>
-    <entry>Guardian naga</entry>
-    <item>12</item>
   </collection>
   <collection>
     <entry>Gynosphinx</entry>
@@ -412,6 +448,10 @@
   <collection>
     <entry>Halfling</entry>
     <item>1/2</item>
+  </collection>
+  <collection>
+    <entry>Harpy</entry>
+    <item>5</item>
   </collection>
   <collection>
     <entry>Hawk</entry>
@@ -426,8 +466,16 @@
     <item>1</item>
   </collection>
   <collection>
+    <entry>Hieracosphinx</entry>
+    <item>7</item>
+  </collection>
+  <collection>
     <entry>Hippogriff</entry>
     <item>2</item>
+  </collection>
+  <collection>
+    <entry>Hobgoblin</entry>
+    <item>1/2</item>
   </collection>
   <collection>
     <entry>Huge monstrous centipede</entry>
@@ -502,12 +550,16 @@
     <item>8</item>
   </collection>
   <collection>
+    <entry>Kobold</entry>
+    <item>1/4</item>
+  </collection>
+  <collection>
     <entry>Krenshar</entry>
     <item>1</item>
   </collection>
   <collection>
-    <entry>Lammasu</entry>
-    <item>9</item>
+    <entry>Lamia</entry>
+    <item>8</item>
   </collection>
   <collection>
     <entry>Large monstrous centipede</entry>
@@ -550,6 +602,10 @@
     <item>1</item>
   </collection>
   <collection>
+    <entry>Manticore</entry>
+    <item>6</item>
+  </collection>
+  <collection>
     <entry>Mature adult black dragon</entry>
     <item>16</item>
   </collection>
@@ -586,11 +642,23 @@
     <item>1/2</item>
   </collection>
   <collection>
+    <entry>Medusa</entry>
+    <item>8</item>
+  </collection>
+  <collection>
     <entry>Megaraptor</entry>
     <item>8</item>
   </collection>
   <collection>
     <entry>Mimic</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Mind flayer</entry>
+    <item>10</item>
+  </collection>
+  <collection>
+    <entry>Minotaur</entry>
     <item>5</item>
   </collection>
   <collection>
@@ -606,8 +674,12 @@
     <item>1</item>
   </collection>
   <collection>
-    <entry>Nymph</entry>
-    <item>8</item>
+    <entry>Dark naga</entry>
+    <item>10</item>
+  </collection>
+  <collection>
+    <entry>Spirit naga</entry>
+    <item>11</item>
   </collection>
   <collection>
     <entry>Old black dragon</entry>
@@ -630,6 +702,18 @@
     <item>17</item>
   </collection>
   <collection>
+    <entry>Ogre</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Ogre mage</entry>
+    <item>9</item>
+  </collection>
+  <collection>
+    <entry>Orc</entry>
+    <item>1/2</item>
+  </collection>
+  <collection>
     <entry>Otyugh</entry>
     <item>5</item>
   </collection>
@@ -640,10 +724,6 @@
   <collection>
     <entry>Owlbear</entry>
     <item>5</item>
-  </collection>
-  <collection>
-    <entry>Pegasus</entry>
-    <item>4</item>
   </collection>
   <collection>
     <entry>Phantom fungus</entry>
@@ -658,20 +738,12 @@
     <item>9</item>
   </collection>
   <collection>
-    <entry>Pixie</entry>
-    <item>4</item>
-  </collection>
-  <collection>
     <entry>Polar bear</entry>
     <item>6</item>
   </collection>
   <collection>
     <entry>Pony</entry>
     <item>1/4</item>
-  </collection>
-  <collection>
-    <entry>Pseudodragon</entry>
-    <item>1</item>
   </collection>
   <collection>
     <entry>Purple worm</entry>
@@ -734,12 +806,24 @@
     <item>11</item>
   </collection>
   <collection>
+    <entry>Roper</entry>
+    <item>14</item>
+  </collection>
+  <collection>
     <entry>Rust monster</entry>
     <item>4</item>
   </collection>
   <collection>
     <entry>Satyr</entry>
     <item>3</item>
+  </collection>
+  <collection>
+    <entry>Scorpionfolk</entry>
+    <item>9</item>
+  </collection>
+  <collection>
+    <entry>Sea hag (hag)</entry>
+    <item>4</item>
   </collection>
   <collection>
     <entry>Shambling mound</entry>
@@ -782,10 +866,6 @@
     <item>10</item>
   </collection>
   <collection>
-    <entry>Storm giant</entry>
-    <item>15</item>
-  </collection>
-  <collection>
     <entry>Tendriculos</entry>
     <item>8</item>
   </collection>
@@ -814,20 +894,24 @@
     <item>1/10</item>
   </collection>
   <collection>
-    <entry>Treant</entry>
-    <item>9</item>
-  </collection>
-  <collection>
     <entry>Triceratops</entry>
     <item>11</item>
+  </collection>
+  <collection>
+    <entry>Troglodyte</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Troll</entry>
+    <item>6</item>
   </collection>
   <collection>
     <entry>Tyrannosaurus</entry>
     <item>10</item>
   </collection>
   <collection>
-    <entry>Unicorn</entry>
-    <item>4</item>
+    <entry>Umber hulk</entry>
+    <item>9</item>
   </collection>
   <collection>
     <entry>Very old black dragon</entry>
@@ -882,12 +966,24 @@
     <item>1/4</item>
   </collection>
   <collection>
+    <entry>Will-O'-Wisp</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Winter wolf</entry>
+    <item>6</item>
+  </collection>
+  <collection>
     <entry>Wolf</entry>
     <item>1</item>
   </collection>
   <collection>
     <entry>Wolverine</entry>
     <item>2</item>
+  </collection>
+  <collection>
+    <entry>Worg</entry>
+    <item>3</item>
   </collection>
   <collection>
     <entry>Wyrm black dragon</entry>
@@ -976,5 +1072,17 @@
   <collection>
     <entry>Yrthak</entry>
     <item>11</item>
+  </collection>
+  <collection>
+    <entry>Yuan-ti (Abomination)</entry>
+    <item>9</item>
+  </collection>
+  <collection>
+    <entry>Yuan-ti (Halfblood)</entry>
+    <item>6</item>
+  </collection>
+  <collection>
+    <entry>Yuan-ti (Pureblood)</entry>
+    <item>4</item>
   </collection>
 </collections>

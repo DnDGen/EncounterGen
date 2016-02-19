@@ -73,11 +73,16 @@ namespace EncounterGen.Tests.Integration.Stress
 
         protected override void MakeAssertions()
         {
+            var encounter = MakeEncounter();
+            AssertEncounter(encounter);
+        }
+
+        private Encounter MakeEncounter()
+        {
             var randomIndex = Random.Next(environments.Count());
             var environment = environments.ElementAt(randomIndex);
 
-            var encounter = MakeEncounter(environment);
-            AssertEncounter(encounter);
+            return MakeEncounter(environment);
         }
 
         private Encounter MakeEncounter(string environment)
@@ -89,18 +94,13 @@ namespace EncounterGen.Tests.Integration.Stress
         private void AssertEncounter(Encounter encounter)
         {
             Assert.That(encounter.Creatures, Is.Not.Empty);
+            Assert.That(encounter.Creatures, Is.All.Not.Null);
+            Assert.That(encounter.Characters, Is.All.Not.Null);
 
             foreach (var creature in encounter.Creatures)
             {
                 Assert.That(creature.Type, Is.Not.Empty);
                 Assert.That(creature.Quantity, Is.InRange(1, 14));
-            }
-
-            if (encounter.Characters.Any())
-            {
-                Assert.That(encounter.Treasure.Coin.Quantity, Is.EqualTo(0));
-                Assert.That(encounter.Treasure.Goods, Is.Empty);
-                Assert.That(encounter.Treasure.Items, Is.Empty);
             }
         }
 
@@ -114,6 +114,72 @@ namespace EncounterGen.Tests.Integration.Stress
         {
             var encounter = MakeEncounter(EnvironmentConstants.Dungeon);
             AssertEncounter(encounter);
+        }
+
+        [Test]
+        public void TreasureDoesNotHappen()
+        {
+            var encounter = GenerateOrFail(MakeEncounter, e => e.Treasure.Coin.Quantity == 0 && e.Treasure.Goods.Any() == false && e.Treasure.Items.Any() == false);
+            Assert.That(encounter.Treasure.Coin.Quantity, Is.EqualTo(0));
+            Assert.That(encounter.Treasure.Goods, Is.Empty);
+            Assert.That(encounter.Treasure.Items, Is.Empty);
+        }
+
+        [Test]
+        public void TreasureHappens()
+        {
+            var encounter = GenerateOrFail(MakeEncounter, e => e.Treasure.Coin.Quantity > 0 || e.Treasure.Goods.Any() || e.Treasure.Items.Any());
+            Assert.That(encounter.Treasure.Coin.Quantity > 0 || encounter.Treasure.Goods.Any() || encounter.Treasure.Items.Any(), Is.True);
+        }
+
+        [Test]
+        public void CoinHappens()
+        {
+            var encounter = GenerateOrFail(MakeEncounter, e => e.Treasure.Coin.Quantity > 0);
+            Assert.That(encounter.Treasure.Coin.Quantity, Is.Positive);
+            Assert.That(encounter.Treasure.Coin.Currency, Is.Not.Empty);
+        }
+
+        [Test]
+        public void GoodsHappen()
+        {
+            var encounter = GenerateOrFail(MakeEncounter, e => e.Treasure.Goods.Any());
+            Assert.That(encounter.Treasure.Goods, Is.Not.Empty);
+        }
+
+        [Test]
+        public void ItemsHappen()
+        {
+            var encounter = GenerateOrFail(MakeEncounter, e => e.Treasure.Items.Any());
+            Assert.That(encounter.Treasure.Items, Is.Not.Empty);
+        }
+
+        [Test]
+        public void CharactersHappen()
+        {
+            var encounter = GenerateOrFail(MakeEncounter, e => e.Characters.Any());
+            Assert.That(encounter.Characters, Is.Not.Empty);
+        }
+
+        [Test]
+        public void CharactersDoNotHappen()
+        {
+            var encounter = GenerateOrFail(MakeEncounter, e => e.Characters.Any() == false);
+            Assert.That(encounter.Characters, Is.Empty);
+        }
+
+        [Test]
+        public void SingleCreatureHappens()
+        {
+            var encounter = GenerateOrFail(MakeEncounter, e => e.Creatures.Count() == 1);
+            Assert.That(encounter.Creatures.Count(), Is.EqualTo(1));
+        }
+
+        [Test]
+        public void MultipleCreaturesHappen()
+        {
+            var encounter = GenerateOrFail(MakeEncounter, e => e.Creatures.Count() > 1);
+            Assert.That(encounter.Creatures.Count(), Is.GreaterThan(1));
         }
     }
 }

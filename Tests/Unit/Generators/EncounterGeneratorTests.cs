@@ -564,6 +564,82 @@ namespace EncounterGen.Tests.Unit.Generators
         }
 
         [Test]
+        public void RerolledSubtypeIsCharacter()
+        {
+            requiresSubtype.Add("creature");
+
+            encounterTypeAndAmount.Clear();
+            encounterTypeAndAmount["creature[1337]"] = "creature amount";
+
+            var subtypes = new[] { "wrong creature", CreatureConstants.Character };
+            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.CreatureGroups, "creature")).Returns(subtypes);
+
+            mockCollectionSelector.SetupSequence(s => s.SelectRandomFrom(subtypes)).Returns("wrong creature").Returns(CreatureConstants.Character);
+
+            var tableName = string.Format(TableNameConstants.CREATURESubtypeChallengeRatings, "creature");
+            mockCollectionSelector.Setup(s => s.SelectFrom(tableName, "wrong creature")).Returns(new[] { "wrong challenge rating" });
+            mockRollSelector.Setup(s => s.SelectFrom(level, "wrong challenge rating")).Returns(RollConstants.Reroll);
+            mockRollSelector.Setup(s => s.SelectFrom(RollConstants.Reroll)).Returns(7654);
+
+            mockRollSelector.Setup(s => s.SelectFrom("1337")).Returns(1337);
+
+            mockCharacterGenerator.Setup(g => g.GenerateWith(mockAnyAlignmentRandomizer.Object, mockAnyPlayerClassNameRandomizer.Object, It.Is<ISetLevelRandomizer>(r => r.SetLevel == 1337 && r.AllowAdjustments), mockAnyBaseRaceRandomizer.Object, mockAnyMetaraceRandomizer.Object, mockRawStatsRandomizer.Object))
+                .Returns(() => new Character { InterestingTrait = Guid.NewGuid().ToString() });
+
+            var encounter = encounterGenerator.Generate(environment, level);
+            Assert.That(encounter, Is.Not.Null);
+
+            var creature = encounter.Creatures.Single();
+            Assert.That(creature.Type, Is.EqualTo("creature"));
+            Assert.That(creature.Subtype, Is.EqualTo(CreatureConstants.Character));
+            Assert.That(creature.Quantity, Is.EqualTo(42));
+            Assert.That(encounter.Characters.Count(), Is.EqualTo(42));
+            Assert.That(encounter.Characters, Is.Unique);
+            Assert.That(encounter.Characters.Select(c => c.InterestingTrait), Is.Unique);
+        }
+
+        [Test]
+        public void RerolledSubtypeIsDragon()
+        {
+            requiresSubtype.Add("creature");
+
+            encounterTypeAndAmount.Clear();
+            encounterTypeAndAmount["creature[1337]"] = "creature amount";
+
+            var subtypes = new[] { "wrong creature", CreatureConstants.Dragon };
+            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.CreatureGroups, "creature")).Returns(subtypes);
+
+            mockCollectionSelector.SetupSequence(s => s.SelectRandomFrom(subtypes)).Returns("wrong creature").Returns(CreatureConstants.Dragon);
+
+            var tableName = string.Format(TableNameConstants.CREATURESubtypeChallengeRatings, "creature");
+            mockCollectionSelector.Setup(s => s.SelectFrom(tableName, "dragon type and age")).Returns(new[] { "dragon challenge rating" });
+            mockRollSelector.Setup(s => s.SelectFrom(level, "dragon challenge rating")).Returns("dragon roll");
+            mockRollSelector.Setup(s => s.SelectFrom("dragon roll")).Returns(600);
+            mockCollectionSelector.Setup(s => s.SelectFrom(tableName, "wrong creature")).Returns(new[] { "wrong challenge rating" });
+            mockRollSelector.Setup(s => s.SelectFrom(level, "wrong challenge rating")).Returns(RollConstants.Reroll);
+            mockRollSelector.Setup(s => s.SelectFrom(RollConstants.Reroll)).Returns(7654);
+
+            mockRollSelector.Setup(s => s.SelectFrom("1337")).Returns(1337);
+
+            tableName = string.Format(TableNameConstants.CREATURESubtypeChallengeRatings, "other creature");
+            mockCollectionSelector.Setup(s => s.SelectFrom(tableName, "dragon type and age")).Returns(new[] { "challenge rating" });
+            mockRollSelector.Setup(s => s.SelectFrom(level, "challenge rating")).Returns("roll");
+            mockRollSelector.Setup(s => s.SelectFrom("roll")).Returns(8765);
+
+            tableName = string.Format(TableNameConstants.LevelXDragons, 1337);
+            mockPercentileSelector.Setup(s => s.SelectFrom(tableName)).Returns("dragon type and age");
+
+            var encounter = encounterGenerator.Generate(environment, level);
+            Assert.That(encounter, Is.Not.Null);
+
+            var creature = encounter.Creatures.Single();
+            Assert.That(creature.Type, Is.EqualTo("creature"));
+            Assert.That(creature.Subtype, Is.EqualTo("dragon type and age"));
+            Assert.That(creature.Quantity, Is.EqualTo(42));
+            Assert.That(encounter.Characters, Is.Empty);
+        }
+
+        [Test]
         public void ImpossibleSubtypeForcesReroll()
         {
             var correctEncounterTypeAndAmount = new Dictionary<string, string>();

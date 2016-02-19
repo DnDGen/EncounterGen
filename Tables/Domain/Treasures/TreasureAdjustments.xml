@@ -170,6 +170,12 @@
     <item>0</item>
   </collection>
   <collection>
+    <entry>Bebilith</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
     <entry>Behir</entry>
     <item>1</item>
     <item>1</item>
@@ -1122,6 +1128,12 @@
     <item>0</item>
     <item>0</item>
     <item>0</item>
+  </collection>
+  <collection>
+    <entry>Phasm</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
   </collection>
   <collection>
     <entry>Pit fiend</entry>

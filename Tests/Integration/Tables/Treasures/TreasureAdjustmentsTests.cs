@@ -52,6 +52,7 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
                 CreatureConstants.Bear_Brown,
                 CreatureConstants.Bear_Dire,
                 CreatureConstants.Bear_Polar,
+                "Bebilith",
                 CreatureConstants.Behir,
                 CreatureConstants.Beholder,
                 CreatureConstants.Belker,
@@ -195,6 +196,7 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
                 CreatureConstants.Owl_Giant,
                 CreatureConstants.PhantomFungus,
                 CreatureConstants.PhaseSpider,
+                CreatureConstants.Phasm,
                 "Pit fiend",
                 "Planetar",
                 CreatureConstants.PrayingMantis_Giant,
@@ -316,6 +318,7 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
         [TestCase(CreatureConstants.Bear_Brown, 0, 0, 0)]
         [TestCase(CreatureConstants.Bear_Dire, 0, 0, 0)]
         [TestCase(CreatureConstants.Bear_Polar, 0, 0, 0)]
+        [TestCase("Bebilith", 0, 0, 0)]
         [TestCase(CreatureConstants.Behir, 1, 1, 1)]
         [TestCase(CreatureConstants.Beholder, 2, 2, 2)]
         [TestCase(CreatureConstants.Belker, 0, 0, 0)]
@@ -459,6 +462,7 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
         [TestCase(CreatureConstants.Owlbear, 0, 0, 0)]
         [TestCase(CreatureConstants.PhantomFungus, 0, 0, 0)]
         [TestCase(CreatureConstants.PhaseSpider, 0, 0, 0)]
+        [TestCase(CreatureConstants.Phasm, 1, 1, 1)]
         [TestCase("Pit fiend", 2, 1, 2)]
         [TestCase("Planetar", 0, 2, 1)]
         [TestCase(CreatureConstants.PrayingMantis_Giant, 0, 0, 0)]
