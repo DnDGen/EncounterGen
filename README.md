@@ -9,10 +9,10 @@ Generate random Dungeons & Dragons encounters
 
 To use EncounterGen, simply use the EncounterGenerator.  The environments are listed in the EnvironmentConstants.  Levels up to 20 are supported.
 
-**There are currently no fully-working environments yet.  This is still in development**
+**Dungeons are currently the only fully-working environments.  This is still in development**
 
 ```C#
-var encounter = characterGenerator.GenerateWith(EnvironmentConstants.Dungeon, 15);
+var encounter = encounterGenerator.GenerateWith(EnvironmentConstants.Dungeon, 15);
 ```
 
 ### Getting the Generators
