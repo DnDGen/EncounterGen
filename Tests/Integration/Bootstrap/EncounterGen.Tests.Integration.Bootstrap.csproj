@@ -41,63 +41,63 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="CharacterGen.Bootstrap, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\CharacterGen.Bootstrap.3.5\lib\CharacterGen.Bootstrap.dll</HintPath>
+      <HintPath>..\..\..\packages\CharacterGen.Bootstrap.4.0\lib\CharacterGen.Bootstrap.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="CharacterGen.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\CharacterGen.3.5\lib\CharacterGen.Common.dll</HintPath>
+      <HintPath>..\..\..\packages\CharacterGen.4.0\lib\CharacterGen.Common.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="CharacterGen.Generators, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\CharacterGen.3.5\lib\CharacterGen.Generators.dll</HintPath>
+      <HintPath>..\..\..\packages\CharacterGen.4.0\lib\CharacterGen.Generators.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="CharacterGen.Generators.Domain, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\CharacterGen.Bootstrap.3.5\lib\CharacterGen.Generators.Domain.dll</HintPath>
+      <HintPath>..\..\..\packages\CharacterGen.Bootstrap.4.0\lib\CharacterGen.Generators.Domain.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="CharacterGen.Mappers, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\CharacterGen.Bootstrap.3.5\lib\CharacterGen.Mappers.dll</HintPath>
+      <HintPath>..\..\..\packages\CharacterGen.Bootstrap.4.0\lib\CharacterGen.Mappers.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="CharacterGen.Mappers.Domain, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\CharacterGen.Bootstrap.3.5\lib\CharacterGen.Mappers.Domain.dll</HintPath>
+      <HintPath>..\..\..\packages\CharacterGen.Bootstrap.4.0\lib\CharacterGen.Mappers.Domain.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="CharacterGen.Selectors, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\CharacterGen.Bootstrap.3.5\lib\CharacterGen.Selectors.dll</HintPath>
+      <HintPath>..\..\..\packages\CharacterGen.Bootstrap.4.0\lib\CharacterGen.Selectors.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="CharacterGen.Selectors.Domain, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\CharacterGen.Bootstrap.3.5\lib\CharacterGen.Selectors.Domain.dll</HintPath>
+      <HintPath>..\..\..\packages\CharacterGen.Bootstrap.4.0\lib\CharacterGen.Selectors.Domain.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="CharacterGen.Tables, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\CharacterGen.Bootstrap.3.5\lib\CharacterGen.Tables.dll</HintPath>
+      <HintPath>..\..\..\packages\CharacterGen.Bootstrap.4.0\lib\CharacterGen.Tables.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="CharacterGen.Tables.Domain, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\CharacterGen.Bootstrap.3.5\lib\CharacterGen.Tables.Domain.dll</HintPath>
+      <HintPath>..\..\..\packages\CharacterGen.Bootstrap.4.0\lib\CharacterGen.Tables.Domain.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Ninject, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
       <HintPath>..\..\..\packages\Ninject.3.2.2.0\lib\net45-full\Ninject.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="nunit.framework, Version=3.0.5813.39031, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\NUnit.3.0.1\lib\net45\nunit.framework.dll</HintPath>
+    <Reference Include="nunit.framework, Version=3.2.0.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\NUnit.3.2.0\lib\net45\nunit.framework.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="RollGen, Version=1.0.5830.19223, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\D20Dice.10.0\lib\RollGen.dll</HintPath>
+    <Reference Include="RollGen, Version=1.0.5900.36696, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\D20Dice.11.0\lib\RollGen.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="RollGen.Bootstrap, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\D20Dice.Bootstrap.10.0\lib\RollGen.Bootstrap.dll</HintPath>
+      <HintPath>..\..\..\packages\D20Dice.Bootstrap.11.0.1\lib\RollGen.Bootstrap.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="RollGen.Domain, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\D20Dice.Bootstrap.10.0\lib\RollGen.Domain.dll</HintPath>
+      <HintPath>..\..\..\packages\D20Dice.Bootstrap.11.0.1\lib\RollGen.Domain.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />

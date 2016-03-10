@@ -48,7 +48,7 @@ namespace EncounterGen.Tests.Unit.Selectors
         public void SelectRandomElementOfCollection()
         {
             var collection = new[] { "first", "second", "third" };
-            mockDice.Setup(d => d.Roll(1).d(3)).Returns(2);
+            mockDice.Setup(d => d.Roll(1).IndividualRolls(3)).Returns(new[] { 2 });
 
             var item = selector.SelectRandomFrom(collection);
             Assert.That(item, Is.EqualTo("second"));

@@ -8,6 +8,7 @@ using EncounterGen.Common;
 using EncounterGen.Selectors;
 using EncounterGen.Selectors.Percentiles;
 using EncounterGen.Tables;
+using RollGen;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -45,13 +46,14 @@ namespace EncounterGen.Generators.Domain
         private Regex challengeRatingRegex;
         private Regex setCharacterLevelRegex;
         private Regex subTypeRegex;
+        private Dice dice;
 
         public EncounterGenerator(ITypeAndAmountPercentileSelector typeAndAmountPercentileSelector, ICoinGenerator coinGenerator,
             IGoodsGenerator goodsGenerator, IItemsGenerator itemsGenerator, ICharacterGenerator characterGenerator, IAlignmentRandomizer alignmentRandomizer, IClassNameRandomizer anyPlayerClassNameRandomizer,
             ISetLevelRandomizer setLevelRandomizer, RaceRandomizer baseRaceRandomizer, RaceRandomizer metaraceRandomizer, IStatsRandomizer statsRandomizer,
             IAdjustmentSelector adjustmentSelector, IRollSelector rollSelector, IPercentileSelector percentileSelector, IBooleanPercentileSelector booleanPercentileSelector,
             ICollectionSelector collectionSelector, ISetMetaraceRandomizer setMetaraceRandomizer, IClassNameRandomizer anyNPCClassNameRandomizer,
-            ISetClassNameRandomizer setClassNameRandomizer)
+            ISetClassNameRandomizer setClassNameRandomizer, Dice dice)
         {
             this.typeAndAmountPercentileSelector = typeAndAmountPercentileSelector;
             this.coinGenerator = coinGenerator;
@@ -72,6 +74,7 @@ namespace EncounterGen.Generators.Domain
             this.setMetaraceRandomizer = setMetaraceRandomizer;
             this.anyNPCClassNameRandomizer = anyNPCClassNameRandomizer;
             this.setClassNameRandomizer = setClassNameRandomizer;
+            this.dice = dice;
 
             challengeRatingRegex = new Regex("\\[.+\\]");
             setCharacterLevelRegex = new Regex("\\d+");
@@ -122,9 +125,7 @@ namespace EncounterGen.Generators.Domain
             {
                 creature.Type = GetCreatureType(creature.Type);
 
-                var dieRoll = rollSelector.SelectRollFrom(creature.Subtype);
-
-                if (string.IsNullOrEmpty(dieRoll))
+                if (dice.ContainsRoll(creature.Subtype) == false)
                     continue;
 
                 creaturesToRemove.Add(creature);
@@ -134,9 +135,7 @@ namespace EncounterGen.Generators.Domain
                     var rolledCreature = new Creature();
                     rolledCreature.Quantity = 1;
                     rolledCreature.Type = creature.Type;
-
-                    var roll = rollSelector.SelectFrom(dieRoll);
-                    rolledCreature.Subtype = creature.Subtype.Replace(dieRoll, roll.ToString());
+                    rolledCreature.Subtype = dice.ReplaceExpressionWithTotal(creature.Subtype);
 
                     newCreatures.Add(rolledCreature);
                 }
@@ -159,8 +158,7 @@ namespace EncounterGen.Generators.Domain
             creature.Subtype = setSubtype;
 
             var effectiveRoll = rollSelector.SelectFrom(amount, modifier);
-            var doubleQuantity = rollSelector.SelectFrom(effectiveRoll);
-            creature.Quantity = Convert.ToInt32(doubleQuantity);
+            creature.Quantity = dice.Roll(effectiveRoll);
 
             return creature;
         }
@@ -299,9 +297,7 @@ namespace EncounterGen.Generators.Domain
                 effectiveRoll = GetEffectiveRoll(subtype, subSubtype, level);
             }
 
-            var doubleQuantity = rollSelector.SelectFrom(effectiveRoll);
-
-            return Convert.ToInt32(doubleQuantity);
+            return dice.Roll(effectiveRoll);
         }
 
         private string GetEffectiveRoll(string creatureType, string subtype, int level)
@@ -398,8 +394,7 @@ namespace EncounterGen.Generators.Domain
                 throw new ArgumentException(message);
             }
 
-            var doubleRoll = rollSelector.SelectFrom(challengeRating);
-            return Convert.ToInt32(doubleRoll);
+            return dice.Roll(challengeRating);
         }
 
         private string GetSetChallengeRating(string creatureType)
@@ -418,9 +413,9 @@ namespace EncounterGen.Generators.Domain
 
         private Treasure GenerateTreasureFor(string creatureType, int level)
         {
-            var coinMultiplier = adjustmentSelector.SelectFrom(TableNameConstants.TreasureAdjustments, creatureType, TreasureConstants.Coin);
-            var goodsMultiplier = adjustmentSelector.SelectFrom(TableNameConstants.TreasureAdjustments, creatureType, TreasureConstants.Goods);
-            var itemsMultiplier = adjustmentSelector.SelectFrom(TableNameConstants.TreasureAdjustments, creatureType, TreasureConstants.Items);
+            var coinMultiplier = adjustmentSelector.Select<double>(TableNameConstants.TreasureAdjustments, creatureType, TreasureConstants.Coin);
+            var goodsMultiplier = adjustmentSelector.Select<double>(TableNameConstants.TreasureAdjustments, creatureType, TreasureConstants.Goods);
+            var itemsMultiplier = adjustmentSelector.Select<double>(TableNameConstants.TreasureAdjustments, creatureType, TreasureConstants.Items);
 
             var treasure = new Treasure();
 

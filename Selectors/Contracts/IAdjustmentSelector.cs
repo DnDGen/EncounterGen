@@ -1,10 +1,8 @@
-﻿using System;
-
-namespace EncounterGen.Selectors
+﻿namespace EncounterGen.Selectors
 {
     public interface IAdjustmentSelector
     {
-        Int32 SelectFrom(String tableName, String entry);
-        Double SelectFrom(String tableName, String entry, Int32 subEntry);
+        int Select(string tableName, string entry, int index = 0);
+        T Select<T>(string tableName, string entry, int index = 0);
     }
 }

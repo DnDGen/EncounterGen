@@ -32,7 +32,7 @@ namespace EncounterGen.Tests.Unit.Selectors.Percentiles
             for (var i = 6; i <= 10; i++)
                 table.Add(i, i.ToString());
 
-            mockDice.Setup(d => d.Roll(1).Percentile()).Returns(1);
+            mockDice.Setup(d => d.Roll(1).IndividualRolls(100)).Returns(new[] { 1 });
             mockPercentileMapper.Setup(p => p.Map(tableName)).Returns(table);
         }
 
@@ -48,7 +48,7 @@ namespace EncounterGen.Tests.Unit.Selectors.Percentiles
         [TestCase(10, "10")]
         public void GetPercentile(int roll, string content)
         {
-            mockDice.Setup(d => d.Roll(1).Percentile()).Returns(roll);
+            mockDice.Setup(d => d.Roll(1).IndividualRolls(100)).Returns(new[] { roll });
             var result = selector.SelectFrom(tableName);
             Assert.That(result, Is.EqualTo(content));
         }
@@ -56,7 +56,7 @@ namespace EncounterGen.Tests.Unit.Selectors.Percentiles
         [Test]
         public void IfRollNotPresentInTable_ThrowException()
         {
-            mockDice.Setup(d => d.Roll(1).Percentile()).Returns(11);
+            mockDice.Setup(d => d.Roll(1).IndividualRolls(100)).Returns(new[] { 11 });
             Assert.That(() => selector.SelectFrom(tableName), Throws.Exception.With.Message.EqualTo("11 is not a valid entry in the table table name"));
         }
     }

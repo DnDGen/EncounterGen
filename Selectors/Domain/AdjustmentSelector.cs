@@ -1,4 +1,4 @@
-﻿using System;
+﻿using RollGen;
 using System.Linq;
 
 namespace EncounterGen.Selectors.Domain
@@ -6,28 +6,25 @@ namespace EncounterGen.Selectors.Domain
     public class AdjustmentSelector : IAdjustmentSelector
     {
         private ICollectionSelector collectionSelector;
-        private IRollSelector rollSelector;
+        private Dice dice;
 
-        public AdjustmentSelector(ICollectionSelector collectionSelector, IRollSelector rollSelector)
+        public AdjustmentSelector(ICollectionSelector collectionSelector, Dice dice)
         {
             this.collectionSelector = collectionSelector;
-            this.rollSelector = rollSelector;
+            this.dice = dice;
         }
 
-        public Int32 SelectFrom(String tableName, String entry)
+        public int Select(string tableName, string entry, int index = 0)
         {
-            var collection = collectionSelector.SelectFrom(tableName, entry);
-            var stringAdjustment = collection.Single();
-            var doubleAdjustment = rollSelector.SelectFrom(stringAdjustment);
-
-            return Convert.ToInt32(doubleAdjustment);
+            return Select<int>(tableName, entry, index);
         }
 
-        public Double SelectFrom(String tableName, String entry, Int32 index)
+        public T Select<T>(string tableName, string entry, int index = 0)
         {
             var collection = collectionSelector.SelectFrom(tableName, entry);
             var adjustment = collection.ElementAt(index);
-            return rollSelector.SelectFrom(adjustment);
+            var expression = dice.ReplaceExpressionWithTotal(adjustment);
+            return dice.Evaluate<T>(expression);
         }
     }
 }

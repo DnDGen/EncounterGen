@@ -8,6 +8,7 @@ using EncounterGen.Generators.Domain;
 using EncounterGen.Selectors;
 using EncounterGen.Selectors.Percentiles;
 using Ninject;
+using RollGen;
 using TreasureGen.Generators.Coins;
 using TreasureGen.Generators.Goods;
 using TreasureGen.Generators.Items;
@@ -37,10 +38,11 @@ namespace EncounterGen.Bootstrap.Factories
             var booleanPercentileSelector = kernel.Get<IBooleanPercentileSelector>();
             var collectionSelector = kernel.Get<ICollectionSelector>();
             var setMetaraceRandomizer = kernel.Get<ISetMetaraceRandomizer>();
+            var dice = kernel.Get<Dice>();
 
             return new EncounterGenerator(typeAndAmountPercentileSelector, coinGenerator, goodsGenerator, itemsGenerator, characterGenerator, alignmentRandomizer,
                 anyPlayerclassNameRandomizer, setLevelRandomizer, baseRaceRandomizer, metaraceRandomizer, statsRandomizer, adjustmentSelector, rollSelector, percentileSelector,
-                booleanPercentileSelector, collectionSelector, setMetaraceRandomizer, anyNPCClassNameRandomizer, setClassNameRandomizer);
+                booleanPercentileSelector, collectionSelector, setMetaraceRandomizer, anyNPCClassNameRandomizer, setClassNameRandomizer, dice);
         }
     }
 }

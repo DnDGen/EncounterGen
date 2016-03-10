@@ -82,49 +82,6 @@ namespace EncounterGen.Tests.Unit.Selectors
         }
 
         [Test]
-        public void GetExpressionRoll()
-        {
-            mockDice.Setup(r => r.Roll("expression roll")).Returns(42);
-            var roll = rollSelector.SelectFrom("expression roll");
-            Assert.That(roll, Is.EqualTo(42));
-        }
-
-        [Test]
-        public void FindRollInString()
-        {
-            var roll = rollSelector.SelectRollFrom("this string contains a roll 9266d90210, doesn't it?");
-            Assert.That(roll, Is.EqualTo("9266d90210"));
-        }
-
-        [Test]
-        public void FindRollWithBonusInString()
-        {
-            var roll = rollSelector.SelectRollFrom("this string contains a roll 9266d90210+600, doesn't it?");
-            Assert.That(roll, Is.EqualTo("9266d90210+600"));
-        }
-
-        [Test]
-        public void FindNoRollInString()
-        {
-            var roll = rollSelector.SelectRollFrom("this string does not contain a roll, does it?");
-            Assert.That(roll, Is.Empty);
-        }
-
-        [Test]
-        public void DoNotFindConstantNumberInString()
-        {
-            var roll = rollSelector.SelectRollFrom("this string contains 5 rolls - or not");
-            Assert.That(roll, Is.Empty);
-        }
-
-        [Test]
-        public void GetDoubleConstant()
-        {
-            var roll = rollSelector.SelectFrom(".9266");
-            Assert.That(roll, Is.EqualTo(.9266));
-        }
-
-        [Test]
         public void GetRollForChallengeRatingAtEffectiveLevel()
         {
             mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.RollOrder, "CR")).Returns(new[] { "lesser challenge rating", "challenge rating", "9266", "higher challenge rating" });

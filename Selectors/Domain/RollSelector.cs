@@ -1,7 +1,6 @@
 ﻿using EncounterGen.Tables;
 using RollGen;
 using System.Linq;
-using System.Text.RegularExpressions;
 
 namespace EncounterGen.Selectors.Domain
 {
@@ -9,14 +8,11 @@ namespace EncounterGen.Selectors.Domain
     {
         private ICollectionSelector collectionSelector;
         private Dice dice;
-        private Regex rollRegex;
 
         public RollSelector(ICollectionSelector collectionSelector, Dice dice)
         {
             this.collectionSelector = collectionSelector;
             this.dice = dice;
-
-            rollRegex = new Regex("\\d+d\\d+(\\+\\d+)*");
         }
 
         public string SelectFrom(int effectiveLevel, string challengeRating)
@@ -28,15 +24,6 @@ namespace EncounterGen.Selectors.Domain
             var modifer = levelIndex - challengeRatingIndex;
 
             return SelectFrom(RollConstants.One, modifer);
-        }
-
-        public double SelectFrom(string roll)
-        {
-            double testDouble;
-            if (double.TryParse(roll, out testDouble))
-                return testDouble;
-
-            return dice.Roll(roll);
         }
 
         public string SelectFrom(string baseRoll, int modifier)
@@ -53,12 +40,6 @@ namespace EncounterGen.Selectors.Domain
                 return RollConstants.Reroll;
 
             return rolls[modifiedIndex];
-        }
-
-        public string SelectRollFrom(string source)
-        {
-            var match = rollRegex.Match(source);
-            return match.Value;
         }
     }
 }

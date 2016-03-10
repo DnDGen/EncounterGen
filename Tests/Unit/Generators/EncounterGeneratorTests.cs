@@ -13,6 +13,7 @@ using EncounterGen.Selectors.Percentiles;
 using EncounterGen.Tables;
 using Moq;
 using NUnit.Framework;
+using RollGen;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -48,6 +49,7 @@ namespace EncounterGen.Tests.Unit.Generators
         private Mock<IBooleanPercentileSelector> mockBooleanPercentileSelector;
         private Mock<ICollectionSelector> mockCollectionSelector;
         private Mock<ISetClassNameRandomizer> mockSetClassNameRandomizer;
+        private Mock<Dice> mockDice;
         private Dictionary<string, string> encounterTypeAndAmount;
         private Dictionary<string, string> encounterLevelAndModifier;
         private int level;
@@ -78,12 +80,13 @@ namespace EncounterGen.Tests.Unit.Generators
             mockSetMetaraceRandomizer = new Mock<ISetMetaraceRandomizer>();
             mockSetClassNameRandomizer = new Mock<ISetClassNameRandomizer>();
             mockAnyNPCClassNameRandomizer = new Mock<IClassNameRandomizer>();
+            mockDice = new Mock<Dice>();
 
             encounterGenerator = new EncounterGenerator(mockTypeAndAmountPercentileSelector.Object, mockCoinGenerator.Object,
                 mockGoodsGenerator.Object, mockItemsGenerator.Object, mockCharacterGenerator.Object, mockAnyAlignmentRandomizer.Object, mockAnyPlayerClassNameRandomizer.Object, mockSetLevelRandomizer.Object,
                 mockAnyBaseRaceRandomizer.Object, mockAnyMetaraceRandomizer.Object, mockRawStatsRandomizer.Object, mockAdjustmentSelector.Object,
                 mockRollSelector.Object, mockPercentileSelector.Object, mockBooleanPercentileSelector.Object, mockCollectionSelector.Object,
-                mockSetMetaraceRandomizer.Object, mockAnyNPCClassNameRandomizer.Object, mockSetClassNameRandomizer.Object);
+                mockSetMetaraceRandomizer.Object, mockAnyNPCClassNameRandomizer.Object, mockSetClassNameRandomizer.Object, mockDice.Object);
 
             encounterLevelAndModifier = new Dictionary<string, string>();
             encounterTypeAndAmount = new Dictionary<string, string>();
@@ -112,7 +115,8 @@ namespace EncounterGen.Tests.Unit.Generators
             mockTypeAndAmountPercentileSelector.Setup(s => s.SelectFrom(tableName)).Returns(encounterTypeAndAmount);
 
             mockRollSelector.Setup(s => s.SelectFrom("creature amount", 9876)).Returns("effective roll");
-            mockRollSelector.Setup(s => s.SelectFrom("effective roll")).Returns(42);
+            mockDice.Setup(d => d.Roll(It.IsAny<string>())).Returns((string s) => ParseRoll(s));
+            mockDice.Setup(d => d.Roll("effective roll")).Returns(42);
 
             mockCoinGenerator.Setup(g => g.GenerateAtLevel(level)).Returns(new Coin { Currency = "currency", Quantity = 600 });
             mockBooleanPercentileSelector.Setup(s => s.SelectFrom(It.IsAny<double>())).Returns(true);
@@ -121,6 +125,15 @@ namespace EncounterGen.Tests.Unit.Generators
             mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.CreatureGroups, CreatureConstants.Character)).Returns(characters);
             mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.CreatureGroups, GroupConstants.UndeadNPC)).Returns(undeadNPCs);
             mockCollectionSelector.Setup(s => s.SelectRandomFrom(It.IsAny<IEnumerable<string>>())).Returns((IEnumerable<string> c) => c.Last());
+        }
+
+        private int ParseRoll(string roll)
+        {
+            var value = 0;
+            if (int.TryParse(roll, out value))
+                return value;
+
+            throw new ArgumentException("This roll was not set up to be parsed: " + roll);
         }
 
         [Test]
@@ -141,8 +154,7 @@ namespace EncounterGen.Tests.Unit.Generators
             encounterTypeAndAmount.Clear();
             encounterTypeAndAmount[CreatureConstants.Character + "[1337]"] = "character amount";
             mockRollSelector.Setup(s => s.SelectFrom("character amount", 9876)).Returns("character effective roll");
-            mockRollSelector.Setup(s => s.SelectFrom("character effective roll")).Returns(600);
-            mockRollSelector.Setup(s => s.SelectFrom("1337")).Returns(1337);
+            mockDice.Setup(d => d.Roll("character effective roll")).Returns(600);
 
             mockCharacterGenerator.Setup(g => g.GenerateWith(mockAnyAlignmentRandomizer.Object, mockAnyPlayerClassNameRandomizer.Object, It.Is<ISetLevelRandomizer>(r => r.SetLevel == 1337 && r.AllowAdjustments), mockAnyBaseRaceRandomizer.Object, mockAnyMetaraceRandomizer.Object, mockRawStatsRandomizer.Object))
                 .Returns(() => new Character { InterestingTrait = Guid.NewGuid().ToString() });
@@ -165,8 +177,8 @@ namespace EncounterGen.Tests.Unit.Generators
             encounterTypeAndAmount.Clear();
             encounterTypeAndAmount[CreatureConstants.Character + "[13d37]"] = "character amount";
             mockRollSelector.Setup(s => s.SelectFrom("character amount", 9876)).Returns("character effective roll");
-            mockRollSelector.Setup(s => s.SelectFrom("character effective roll")).Returns(600);
-            mockRollSelector.Setup(s => s.SelectFrom("13d37")).Returns(1337);
+            mockDice.Setup(d => d.Roll("character effective roll")).Returns(600);
+            mockDice.Setup(d => d.Roll("13d37")).Returns(1337);
 
             mockCharacterGenerator.Setup(g => g.GenerateWith(mockAnyAlignmentRandomizer.Object, mockAnyPlayerClassNameRandomizer.Object, It.Is<ISetLevelRandomizer>(r => r.SetLevel == 1337 && r.AllowAdjustments), mockAnyBaseRaceRandomizer.Object, mockAnyMetaraceRandomizer.Object, mockRawStatsRandomizer.Object))
                 .Returns(() => new Character { InterestingTrait = Guid.NewGuid().ToString() });
@@ -189,9 +201,9 @@ namespace EncounterGen.Tests.Unit.Generators
             encounterTypeAndAmount.Clear();
             encounterTypeAndAmount[CreatureConstants.Character + "[13d37]"] = "character amount";
             mockRollSelector.Setup(s => s.SelectFrom("character amount", 9876)).Returns("character effective roll");
-            mockRollSelector.Setup(s => s.SelectFrom("character effective roll")).Returns(2);
+            mockDice.Setup(d => d.Roll("character effective roll")).Returns(2);
 
-            mockRollSelector.SetupSequence(s => s.SelectFrom("13d37")).Returns(1337).Returns(1234);
+            mockDice.SetupSequence(d => d.Roll("13d37")).Returns(1337).Returns(1234);
 
             mockCharacterGenerator.Setup(g => g.GenerateWith(mockAnyAlignmentRandomizer.Object, mockAnyPlayerClassNameRandomizer.Object, It.Is<ISetLevelRandomizer>(r => r.SetLevel == 1337 && r.AllowAdjustments == true), mockAnyBaseRaceRandomizer.Object, mockAnyMetaraceRandomizer.Object, mockRawStatsRandomizer.Object))
                 .Returns(() => new Character { Class = new CharacterClass { Level = 1337 } });
@@ -222,8 +234,6 @@ namespace EncounterGen.Tests.Unit.Generators
             undeadNPCs.Add(monster.Key);
             undeadNPCs.Add("other monster");
 
-            mockRollSelector.Setup(s => s.SelectFrom("6789")).Returns(6789);
-
             mockCharacterGenerator.Setup(g => g.GenerateWith(mockAnyAlignmentRandomizer.Object, mockAnyPlayerClassNameRandomizer.Object, It.Is<ISetLevelRandomizer>(r => r.SetLevel == 6789 && r.AllowAdjustments == false), mockAnyBaseRaceRandomizer.Object, It.Is<ISetMetaraceRandomizer>(r => r.SetMetarace == monster.Key), mockRawStatsRandomizer.Object))
                 .Returns(() => new Character { InterestingTrait = Guid.NewGuid().ToString() });
 
@@ -246,8 +256,8 @@ namespace EncounterGen.Tests.Unit.Generators
             encounterTypeAndAmount.Clear();
             encounterTypeAndAmount[monster.Key + "[67d89]"] = monster.Value;
 
-            mockRollSelector.Setup(s => s.SelectFrom("effective roll")).Returns(2);
-            mockRollSelector.SetupSequence(s => s.SelectFrom("67d89")).Returns(1337).Returns(1234);
+            mockDice.Setup(d => d.Roll("effective roll")).Returns(2);
+            mockDice.SetupSequence(d => d.Roll("67d89")).Returns(1337).Returns(1234);
 
             undeadNPCs.Add(monster.Key);
             undeadNPCs.Add("other monster");
@@ -277,7 +287,7 @@ namespace EncounterGen.Tests.Unit.Generators
             encounterTypeAndAmount.Clear();
             encounterTypeAndAmount[CreatureConstants.Dragon] = "dragon amount";
             mockRollSelector.Setup(s => s.SelectFrom("dragon amount", 9876)).Returns("dragon effective roll");
-            mockRollSelector.Setup(s => s.SelectFrom("dragon effective roll")).Returns(600);
+            mockDice.Setup(d => d.Roll("dragon effective roll")).Returns(600);
 
             var tableName = string.Format(TableNameConstants.LevelXDragons, 90210);
             mockPercentileSelector.Setup(s => s.SelectFrom(tableName)).Returns("dragon type and age");
@@ -302,10 +312,10 @@ namespace EncounterGen.Tests.Unit.Generators
             var tableName = string.Format(TableNameConstants.CREATURESubtypeChallengeRatings, "creature");
             mockCollectionSelector.Setup(s => s.SelectFrom(tableName, "other creature")).Returns(new[] { "other challenge rating" });
             mockRollSelector.Setup(s => s.SelectFrom(level, "other challenge rating")).Returns("other roll");
-            mockRollSelector.Setup(s => s.SelectFrom("other roll")).Returns(600);
+            mockDice.Setup(d => d.Roll("other roll")).Returns(600);
             mockCollectionSelector.Setup(s => s.SelectFrom(tableName, "wrong creature")).Returns(new[] { "wrong challenge rating" });
             mockRollSelector.Setup(s => s.SelectFrom(level, "wrong challenge rating")).Returns("wrong roll");
-            mockRollSelector.Setup(s => s.SelectFrom("wrong roll")).Returns(1337);
+            mockDice.Setup(d => d.Roll("wrong roll")).Returns(1337);
 
             var encounter = encounterGenerator.Generate(environment, level);
             Assert.That(encounter, Is.Not.Null);
@@ -323,7 +333,7 @@ namespace EncounterGen.Tests.Unit.Generators
             encounterTypeAndAmount.Clear();
             encounterTypeAndAmount["creature (subtype)"] = "creature amount";
             mockRollSelector.Setup(s => s.SelectFrom("creature amount", 9876)).Returns("creature effective roll");
-            mockRollSelector.Setup(s => s.SelectFrom("creature effective roll")).Returns(600);
+            mockDice.Setup(d => d.Roll("creature effective roll")).Returns(600);
 
             requiresSubtype.Add("creature");
             mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.CreatureGroups, "creature"))
@@ -333,11 +343,11 @@ namespace EncounterGen.Tests.Unit.Generators
             mockCollectionSelector.Setup(s => s.SelectFrom(tableName, "other creature")).Returns(new[] { "other challenge rating" });
             mockRollSelector.Setup(s => s.SelectFrom(level, "other challenge rating")).Returns("other roll");
             mockRollSelector.Setup(s => s.SelectFrom("other roll", 9876)).Returns("other effective roll");
-            mockRollSelector.Setup(s => s.SelectFrom("other effective roll")).Returns(1234);
+            mockDice.Setup(d => d.Roll("other effective roll")).Returns(1234);
             mockCollectionSelector.Setup(s => s.SelectFrom(tableName, "wrong creature")).Returns(new[] { "wrong challenge rating" });
             mockRollSelector.Setup(s => s.SelectFrom(level, "wrong challenge rating")).Returns("wrong roll");
             mockRollSelector.Setup(s => s.SelectFrom("wrong roll", 9876)).Returns("wrong effective roll");
-            mockRollSelector.Setup(s => s.SelectFrom("wrong effective roll")).Returns(1337);
+            mockDice.Setup(d => d.Roll("wrong effective roll")).Returns(1337);
 
             var encounter = encounterGenerator.Generate(environment, level);
             Assert.That(encounter, Is.Not.Null);
@@ -364,13 +374,13 @@ namespace EncounterGen.Tests.Unit.Generators
             var tableName = string.Format(TableNameConstants.CREATURESubtypeChallengeRatings, "creature");
             mockCollectionSelector.Setup(s => s.SelectFrom(tableName, "other creature")).Returns(new[] { "challenge rating" });
             mockRollSelector.Setup(s => s.SelectFrom(level, "challenge rating")).Returns("roll");
-            mockRollSelector.Setup(s => s.SelectFrom("roll")).Returns(7654);
+            mockDice.Setup(d => d.Roll("roll")).Returns(7654);
             mockCollectionSelector.Setup(s => s.SelectFrom(tableName, "wrong creature")).Returns(new[] { "wrong challenge rating" });
             mockRollSelector.Setup(s => s.SelectFrom(level, "wrong challenge rating")).Returns(RollConstants.Reroll);
-            mockRollSelector.Setup(s => s.SelectFrom(RollConstants.Reroll)).Returns(1337);
+            mockDice.Setup(d => d.Roll(RollConstants.Reroll)).Returns(1337);
 
             mockRollSelector.Setup(s => s.SelectFrom("creature amount", 9876)).Returns("creature effective roll");
-            mockRollSelector.Setup(s => s.SelectFrom("creature effective roll")).Returns(8765);
+            mockDice.Setup(d => d.Roll("creature effective roll")).Returns(8765);
 
             var encounter = encounterGenerator.Generate(environment, level);
             Assert.That(encounter, Is.Not.Null);
@@ -405,14 +415,14 @@ namespace EncounterGen.Tests.Unit.Generators
             tableName = string.Format(TableNameConstants.CREATURESubtypeChallengeRatings, "other creature");
             mockCollectionSelector.Setup(s => s.SelectFrom(tableName, "subtype")).Returns(new[] { "challenge rating" });
             mockRollSelector.Setup(s => s.SelectFrom(level, "challenge rating")).Returns("roll");
-            mockRollSelector.Setup(s => s.SelectFrom("roll")).Returns(600);
+            mockDice.Setup(d => d.Roll("roll")).Returns(600);
             mockCollectionSelector.Setup(s => s.SelectFrom(tableName, "wrong subtype")).Returns(new[] { "wrong challenge rating" });
             mockCollectionSelector.Setup(s => s.SelectFrom(tableName, "wrong creature")).Returns(new[] { "wrong challenge rating" });
             mockRollSelector.Setup(s => s.SelectFrom(level, "wrong challenge rating")).Returns("wrong roll");
-            mockRollSelector.Setup(s => s.SelectFrom("wrong roll")).Returns(1337);
+            mockDice.Setup(d => d.Roll("wrong roll")).Returns(1337);
 
             mockRollSelector.Setup(s => s.SelectFrom("creature amount", 9876)).Returns("creature effective roll");
-            mockRollSelector.Setup(s => s.SelectFrom("creature effective roll")).Returns(8765);
+            mockDice.Setup(d => d.Roll("creature effective roll")).Returns(7654);
 
             var encounter = encounterGenerator.Generate(environment, level);
             Assert.That(encounter, Is.Not.Null);
@@ -420,7 +430,7 @@ namespace EncounterGen.Tests.Unit.Generators
             var creature = encounter.Creatures.Single();
             Assert.That(creature.Type, Is.EqualTo("creature"));
             Assert.That(creature.Subtype, Is.EqualTo("other creature (subtype)"));
-            Assert.That(creature.Quantity, Is.EqualTo(8765));
+            Assert.That(creature.Quantity, Is.EqualTo(7654));
             Assert.That(encounter.Characters, Is.Empty);
         }
 
@@ -439,15 +449,14 @@ namespace EncounterGen.Tests.Unit.Generators
             mockCollectionSelector.Setup(s => s.SelectFrom(tableName, CreatureConstants.Character)).Returns(new[] { "character challenge rating" });
             mockRollSelector.Setup(s => s.SelectFrom(level, "character challenge rating")).Returns("other roll");
             mockRollSelector.Setup(s => s.SelectFrom("other roll", 9876)).Returns("other effective roll");
-            mockRollSelector.Setup(s => s.SelectFrom("other effective roll")).Returns(600);
+            mockDice.Setup(d => d.Roll("other effective roll")).Returns(600);
             mockCollectionSelector.Setup(s => s.SelectFrom(tableName, "wrong subtype")).Returns(new[] { "wrong challenge rating" });
             mockRollSelector.Setup(s => s.SelectFrom(level, "wrong challenge rating")).Returns("wrong roll");
             mockRollSelector.Setup(s => s.SelectFrom("wrong roll", 9876)).Returns("wrong effective roll");
-            mockRollSelector.Setup(s => s.SelectFrom("wrong effective roll")).Returns(1337);
+            mockDice.Setup(d => d.Roll("wrong effective roll")).Returns(1337);
 
             mockRollSelector.Setup(s => s.SelectFrom("creature amount", 9876)).Returns("creature effective roll");
-            mockRollSelector.Setup(s => s.SelectFrom("creature effective roll")).Returns(76);
-            mockRollSelector.Setup(s => s.SelectFrom("8765")).Returns(8765);
+            mockDice.Setup(d => d.Roll("creature effective roll")).Returns(76);
 
             mockCharacterGenerator.Setup(g => g.GenerateWith(mockAnyAlignmentRandomizer.Object, mockAnyPlayerClassNameRandomizer.Object, It.Is<ISetLevelRandomizer>(r => r.SetLevel == 8765 && r.AllowAdjustments), mockAnyBaseRaceRandomizer.Object, mockAnyMetaraceRandomizer.Object, mockRawStatsRandomizer.Object))
                 .Returns(() => new Character { InterestingTrait = Guid.NewGuid().ToString() });
@@ -479,14 +488,14 @@ namespace EncounterGen.Tests.Unit.Generators
             mockCollectionSelector.Setup(s => s.SelectFrom(tableName, CreatureConstants.Dragon)).Returns(new[] { "dragon challenge rating" });
             mockRollSelector.Setup(s => s.SelectFrom(level, "dragon challenge rating")).Returns("other roll");
             mockRollSelector.Setup(s => s.SelectFrom("other roll", 9876)).Returns("other effective roll");
-            mockRollSelector.Setup(s => s.SelectFrom("other effective roll")).Returns(600);
+            mockDice.Setup(d => d.Roll("other effective roll")).Returns(600);
             mockCollectionSelector.Setup(s => s.SelectFrom(tableName, "wrong subtype")).Returns(new[] { "wrong challenge rating" });
             mockRollSelector.Setup(s => s.SelectFrom(level, "wrong challenge rating")).Returns("wrong roll");
             mockRollSelector.Setup(s => s.SelectFrom("wrong roll", 9876)).Returns("wrong effective roll");
-            mockRollSelector.Setup(s => s.SelectFrom("wrong effective roll")).Returns(1337);
+            mockDice.Setup(d => d.Roll("wrong effective roll")).Returns(1337);
 
             mockRollSelector.Setup(s => s.SelectFrom("creature amount", 9876)).Returns("creature effective roll");
-            mockRollSelector.Setup(s => s.SelectFrom("creature effective roll")).Returns(76);
+            mockDice.Setup(d => d.Roll("creature effective roll")).Returns(76);
 
             tableName = string.Format(TableNameConstants.LevelXDragons, 8765);
             mockPercentileSelector.Setup(s => s.SelectFrom(tableName)).Returns("dragon type and age");
@@ -513,10 +522,10 @@ namespace EncounterGen.Tests.Unit.Generators
             var tableName = string.Format(TableNameConstants.CREATURESubtypeChallengeRatings, "creature");
             mockCollectionSelector.Setup(s => s.SelectFrom(tableName, "other creature")).Returns(new[] { "other challenge rating" });
             mockRollSelector.Setup(s => s.SelectFrom(level, "other challenge rating")).Returns("other roll");
-            mockRollSelector.Setup(s => s.SelectFrom("other roll")).Returns(600);
+            mockDice.Setup(d => d.Roll("other roll")).Returns(600);
             mockCollectionSelector.Setup(s => s.SelectFrom(tableName, "wrong creature")).Returns(new[] { "wrong challenge rating" });
             mockRollSelector.Setup(s => s.SelectFrom(level, "wrong challenge rating")).Returns(RollConstants.Reroll);
-            mockRollSelector.Setup(s => s.SelectFrom(RollConstants.Reroll)).Returns(1337);
+            mockDice.Setup(d => d.Roll(RollConstants.Reroll)).Returns(1337);
 
             var encounter = encounterGenerator.Generate(environment, level);
             Assert.That(encounter, Is.Not.Null);
@@ -543,15 +552,15 @@ namespace EncounterGen.Tests.Unit.Generators
             var tableName = string.Format(TableNameConstants.CREATURESubtypeChallengeRatings, "creature");
             mockCollectionSelector.Setup(s => s.SelectFrom(tableName, "other creature")).Returns(new[] { "other challenge rating" });
             mockRollSelector.Setup(s => s.SelectFrom(level, "other challenge rating")).Returns("other roll");
-            mockRollSelector.Setup(s => s.SelectFrom("other roll")).Returns(600);
+            mockDice.Setup(d => d.Roll("other roll")).Returns(600);
             mockCollectionSelector.Setup(s => s.SelectFrom(tableName, "wrong creature")).Returns(new[] { "wrong challenge rating" });
             mockRollSelector.Setup(s => s.SelectFrom(level, "wrong challenge rating")).Returns(RollConstants.Reroll);
-            mockRollSelector.Setup(s => s.SelectFrom(RollConstants.Reroll)).Returns(1337);
+            mockDice.Setup(d => d.Roll(RollConstants.Reroll)).Returns(1337);
 
             tableName = string.Format(TableNameConstants.CREATURESubtypeChallengeRatings, "other creature");
             mockCollectionSelector.Setup(s => s.SelectFrom(tableName, "subtype")).Returns(new[] { "challenge rating" });
             mockRollSelector.Setup(s => s.SelectFrom(level, "challenge rating")).Returns("roll");
-            mockRollSelector.Setup(s => s.SelectFrom("roll")).Returns(8765);
+            mockDice.Setup(d => d.Roll("roll")).Returns(8765);
 
             var encounter = encounterGenerator.Generate(environment, level);
             Assert.That(encounter, Is.Not.Null);
@@ -579,9 +588,7 @@ namespace EncounterGen.Tests.Unit.Generators
             var tableName = string.Format(TableNameConstants.CREATURESubtypeChallengeRatings, "creature");
             mockCollectionSelector.Setup(s => s.SelectFrom(tableName, "wrong creature")).Returns(new[] { "wrong challenge rating" });
             mockRollSelector.Setup(s => s.SelectFrom(level, "wrong challenge rating")).Returns(RollConstants.Reroll);
-            mockRollSelector.Setup(s => s.SelectFrom(RollConstants.Reroll)).Returns(7654);
-
-            mockRollSelector.Setup(s => s.SelectFrom("1337")).Returns(1337);
+            mockDice.Setup(d => d.Roll(RollConstants.Reroll)).Returns(7654);
 
             mockCharacterGenerator.Setup(g => g.GenerateWith(mockAnyAlignmentRandomizer.Object, mockAnyPlayerClassNameRandomizer.Object, It.Is<ISetLevelRandomizer>(r => r.SetLevel == 1337 && r.AllowAdjustments), mockAnyBaseRaceRandomizer.Object, mockAnyMetaraceRandomizer.Object, mockRawStatsRandomizer.Object))
                 .Returns(() => new Character { InterestingTrait = Guid.NewGuid().ToString() });
@@ -614,17 +621,15 @@ namespace EncounterGen.Tests.Unit.Generators
             var tableName = string.Format(TableNameConstants.CREATURESubtypeChallengeRatings, "creature");
             mockCollectionSelector.Setup(s => s.SelectFrom(tableName, "dragon type and age")).Returns(new[] { "dragon challenge rating" });
             mockRollSelector.Setup(s => s.SelectFrom(level, "dragon challenge rating")).Returns("dragon roll");
-            mockRollSelector.Setup(s => s.SelectFrom("dragon roll")).Returns(600);
+            mockDice.Setup(d => d.Roll("dragon roll")).Returns(600);
             mockCollectionSelector.Setup(s => s.SelectFrom(tableName, "wrong creature")).Returns(new[] { "wrong challenge rating" });
             mockRollSelector.Setup(s => s.SelectFrom(level, "wrong challenge rating")).Returns(RollConstants.Reroll);
-            mockRollSelector.Setup(s => s.SelectFrom(RollConstants.Reroll)).Returns(7654);
-
-            mockRollSelector.Setup(s => s.SelectFrom("1337")).Returns(1337);
+            mockDice.Setup(d => d.Roll(RollConstants.Reroll)).Returns(7654);
 
             tableName = string.Format(TableNameConstants.CREATURESubtypeChallengeRatings, "other creature");
             mockCollectionSelector.Setup(s => s.SelectFrom(tableName, "dragon type and age")).Returns(new[] { "challenge rating" });
             mockRollSelector.Setup(s => s.SelectFrom(level, "challenge rating")).Returns("roll");
-            mockRollSelector.Setup(s => s.SelectFrom("roll")).Returns(8765);
+            mockDice.Setup(d => d.Roll("roll")).Returns(8765);
 
             tableName = string.Format(TableNameConstants.LevelXDragons, 1337);
             mockPercentileSelector.Setup(s => s.SelectFrom(tableName)).Returns("dragon type and age");
@@ -645,7 +650,7 @@ namespace EncounterGen.Tests.Unit.Generators
             var correctEncounterTypeAndAmount = new Dictionary<string, string>();
             correctEncounterTypeAndAmount["correct creature"] = "correct creature amount";
             mockRollSelector.Setup(s => s.SelectFrom("correct creature amount", 9876)).Returns("correct creature effective roll");
-            mockRollSelector.Setup(s => s.SelectFrom("correct creature effective roll")).Returns(1234);
+            mockDice.Setup(d => d.Roll("correct creature effective roll")).Returns(1234);
 
             var tableName = string.Format(TableNameConstants.LevelXENVIRONMENTEncounters, 90210, environment);
             mockTypeAndAmountPercentileSelector.SetupSequence(s => s.SelectFrom(tableName)).Returns(encounterTypeAndAmount).Returns(correctEncounterTypeAndAmount);
@@ -659,7 +664,7 @@ namespace EncounterGen.Tests.Unit.Generators
             tableName = string.Format(TableNameConstants.CREATURESubtypeChallengeRatings, "creature");
             mockCollectionSelector.Setup(s => s.SelectFrom(tableName, "wrong creature")).Returns(new[] { "wrong challenge rating" });
             mockRollSelector.Setup(s => s.SelectFrom(level, "wrong challenge rating")).Returns(RollConstants.Reroll);
-            mockRollSelector.Setup(s => s.SelectFrom(RollConstants.Reroll)).Returns(1337);
+            mockDice.Setup(d => d.Roll(RollConstants.Reroll)).Returns(1337);
 
             var encounter = encounterGenerator.Generate(environment, level);
             Assert.That(encounter, Is.Not.Null);
@@ -681,8 +686,7 @@ namespace EncounterGen.Tests.Unit.Generators
             encounterTypeAndAmount.Clear();
             encounterTypeAndAmount["character class[1337]"] = "character class amount";
             mockRollSelector.Setup(s => s.SelectFrom("character class amount", 9876)).Returns("character class effective roll");
-            mockRollSelector.Setup(s => s.SelectFrom("character class effective roll")).Returns(600);
-            mockRollSelector.Setup(s => s.SelectFrom("1337")).Returns(1337);
+            mockDice.Setup(d => d.Roll("character class effective roll")).Returns(600);
 
             characters.Add("character class");
 
@@ -708,8 +712,7 @@ namespace EncounterGen.Tests.Unit.Generators
             encounterTypeAndAmount.Clear();
             encounterTypeAndAmount["npc class[1337]"] = "npc class amount";
             mockRollSelector.Setup(s => s.SelectFrom("npc class amount", 9876)).Returns("npc class effective roll");
-            mockRollSelector.Setup(s => s.SelectFrom("npc class effective roll")).Returns(600);
-            mockRollSelector.Setup(s => s.SelectFrom("1337")).Returns(1337);
+            mockDice.Setup(d => d.Roll("npc class effective roll")).Returns(600);
 
             characters.Add("character class");
             characters.Add("npc class");
@@ -736,8 +739,7 @@ namespace EncounterGen.Tests.Unit.Generators
             encounterTypeAndAmount.Clear();
             encounterTypeAndAmount[CreatureConstants.NPC + "[1337]"] = "npc amount";
             mockRollSelector.Setup(s => s.SelectFrom("npc amount", 9876)).Returns("npc effective roll");
-            mockRollSelector.Setup(s => s.SelectFrom("npc effective roll")).Returns(600);
-            mockRollSelector.Setup(s => s.SelectFrom("1337")).Returns(1337);
+            mockDice.Setup(d => d.Roll("npc effective roll")).Returns(600);
 
             mockCharacterGenerator.Setup(g => g.GenerateWith(mockAnyAlignmentRandomizer.Object, mockAnyNPCClassNameRandomizer.Object, It.Is<ISetLevelRandomizer>(r => r.SetLevel == 1337 && r.AllowAdjustments), mockAnyBaseRaceRandomizer.Object, mockAnyMetaraceRandomizer.Object, mockRawStatsRandomizer.Object))
                 .Returns(() => new Character { InterestingTrait = Guid.NewGuid().ToString() });
@@ -760,8 +762,7 @@ namespace EncounterGen.Tests.Unit.Generators
             encounterTypeAndAmount.Clear();
             encounterTypeAndAmount["npc class (description)[1337]"] = "npc class amount";
             mockRollSelector.Setup(s => s.SelectFrom("npc class amount", 9876)).Returns("npc class effective roll");
-            mockRollSelector.Setup(s => s.SelectFrom("npc class effective roll")).Returns(600);
-            mockRollSelector.Setup(s => s.SelectFrom("1337")).Returns(1337);
+            mockDice.Setup(d => d.Roll("npc class effective roll")).Returns(600);
 
             characters.Add("npc class");
 
@@ -788,8 +789,7 @@ namespace EncounterGen.Tests.Unit.Generators
             encounterTypeAndAmount.Clear();
             encounterTypeAndAmount[CreatureConstants.NPC + " (description)[1337]"] = "npc amount";
             mockRollSelector.Setup(s => s.SelectFrom("npc amount", 9876)).Returns("npc effective roll");
-            mockRollSelector.Setup(s => s.SelectFrom("npc effective roll")).Returns(600);
-            mockRollSelector.Setup(s => s.SelectFrom("1337")).Returns(1337);
+            mockDice.Setup(d => d.Roll("npc effective roll")).Returns(600);
 
             mockCharacterGenerator.Setup(g => g.GenerateWith(mockAnyAlignmentRandomizer.Object, mockAnyNPCClassNameRandomizer.Object, It.Is<ISetLevelRandomizer>(r => r.SetLevel == 1337 && r.AllowAdjustments), mockAnyBaseRaceRandomizer.Object, mockAnyMetaraceRandomizer.Object, mockRawStatsRandomizer.Object))
                 .Returns(() => new Character { InterestingTrait = Guid.NewGuid().ToString() });
@@ -828,17 +828,17 @@ namespace EncounterGen.Tests.Unit.Generators
             characters.Add("npc class");
 
             mockRollSelector.Setup(s => s.SelectFrom("character amount", 9876)).Returns("character effective roll");
-            mockRollSelector.Setup(s => s.SelectFrom("character effective roll")).Returns(7);
+            mockDice.Setup(d => d.Roll("character effective roll")).Returns(7);
             mockRollSelector.Setup(s => s.SelectFrom("character class amount", 9876)).Returns("character class effective roll");
-            mockRollSelector.Setup(s => s.SelectFrom("character class effective roll")).Returns(8);
+            mockDice.Setup(d => d.Roll("character class effective roll")).Returns(8);
             mockRollSelector.Setup(s => s.SelectFrom("npc class amount", 9876)).Returns("npc class effective roll");
-            mockRollSelector.Setup(s => s.SelectFrom("npc class effective roll")).Returns(9);
+            mockDice.Setup(d => d.Roll("npc class effective roll")).Returns(9);
             mockRollSelector.Setup(s => s.SelectFrom("npc amount", 9876)).Returns("npc effective roll");
-            mockRollSelector.Setup(s => s.SelectFrom("npc effective roll")).Returns(10);
+            mockDice.Setup(d => d.Roll("npc effective roll")).Returns(10);
             mockRollSelector.Setup(s => s.SelectFrom("npc class with description amount", 9876)).Returns("npc class with description effective roll");
-            mockRollSelector.Setup(s => s.SelectFrom("npc class with description effective roll")).Returns(11);
+            mockDice.Setup(d => d.Roll("npc class with description effective roll")).Returns(11);
             mockRollSelector.Setup(s => s.SelectFrom("npc with description amount", 9876)).Returns("npc with description effective roll");
-            mockRollSelector.Setup(s => s.SelectFrom("npc with description effective roll")).Returns(12);
+            mockDice.Setup(d => d.Roll("npc with description effective roll")).Returns(12);
 
             mockCharacterGenerator.Setup(g => g.GenerateWith(mockAnyAlignmentRandomizer.Object, It.IsAny<IClassNameRandomizer>(), mockSetLevelRandomizer.Object, mockAnyBaseRaceRandomizer.Object, It.IsAny<RaceRandomizer>(), mockRawStatsRandomizer.Object))
                 .Returns(() => new Character { InterestingTrait = Guid.NewGuid().ToString() });
@@ -891,7 +891,7 @@ namespace EncounterGen.Tests.Unit.Generators
 
             mockRollSelector.Setup(s => s.SelectFrom("wrong creature amount", 9876)).Returns(RollConstants.Reroll);
             mockRollSelector.Setup(s => s.SelectFrom("other creature amount", 9876)).Returns("other effective roll");
-            mockRollSelector.Setup(s => s.SelectFrom("other effective roll")).Returns(600);
+            mockDice.Setup(d => d.Roll("other effective roll")).Returns(600);
 
             var encounter = encounterGenerator.Generate(environment, level);
             Assert.That(encounter, Is.Not.Null);
@@ -918,7 +918,7 @@ namespace EncounterGen.Tests.Unit.Generators
 
             mockRollSelector.Setup(s => s.SelectFrom("wrong creature amount", 9876)).Returns(RollConstants.Reroll);
             mockRollSelector.Setup(s => s.SelectFrom("other creature amount", 9876)).Returns("other effective roll");
-            mockRollSelector.Setup(s => s.SelectFrom("other effective roll")).Returns(600);
+            mockDice.Setup(d => d.Roll("other effective roll")).Returns(600);
 
             var encounter = encounterGenerator.Generate(environment, level);
             Assert.That(encounter, Is.Not.Null);
@@ -935,7 +935,7 @@ namespace EncounterGen.Tests.Unit.Generators
             encounterTypeAndAmount["other creature"] = "other creature amount";
 
             mockRollSelector.Setup(s => s.SelectFrom("other creature amount", 9876)).Returns("other effective roll");
-            mockRollSelector.Setup(s => s.SelectFrom("other effective roll")).Returns(600);
+            mockDice.Setup(d => d.Roll("other effective roll")).Returns(600);
 
             var encounter = encounterGenerator.Generate(environment, level);
             Assert.That(encounter, Is.Not.Null);
@@ -951,9 +951,9 @@ namespace EncounterGen.Tests.Unit.Generators
         [Test]
         public void GetTreasure()
         {
-            mockAdjustmentSelector.Setup(s => s.SelectFrom(TableNameConstants.TreasureAdjustments, "creature", TreasureConstants.Coin)).Returns(1);
-            mockAdjustmentSelector.Setup(s => s.SelectFrom(TableNameConstants.TreasureAdjustments, "creature", TreasureConstants.Goods)).Returns(1);
-            mockAdjustmentSelector.Setup(s => s.SelectFrom(TableNameConstants.TreasureAdjustments, "creature", TreasureConstants.Items)).Returns(1);
+            mockAdjustmentSelector.Setup(s => s.Select<double>(TableNameConstants.TreasureAdjustments, "creature", TreasureConstants.Coin)).Returns(1);
+            mockAdjustmentSelector.Setup(s => s.Select<double>(TableNameConstants.TreasureAdjustments, "creature", TreasureConstants.Goods)).Returns(1);
+            mockAdjustmentSelector.Setup(s => s.Select<double>(TableNameConstants.TreasureAdjustments, "creature", TreasureConstants.Items)).Returns(1);
 
             var goods = new[] { new Good(), new Good() };
             mockGoodsGenerator.Setup(g => g.GenerateAtLevel(level)).Returns(goods);
@@ -972,9 +972,9 @@ namespace EncounterGen.Tests.Unit.Generators
         [Test]
         public void GetDifferentLevelsOfTreasure()
         {
-            mockAdjustmentSelector.Setup(s => s.SelectFrom(TableNameConstants.TreasureAdjustments, "creature", TreasureConstants.Coin)).Returns(0);
-            mockAdjustmentSelector.Setup(s => s.SelectFrom(TableNameConstants.TreasureAdjustments, "creature", TreasureConstants.Goods)).Returns(2);
-            mockAdjustmentSelector.Setup(s => s.SelectFrom(TableNameConstants.TreasureAdjustments, "creature", TreasureConstants.Items)).Returns(1);
+            mockAdjustmentSelector.Setup(s => s.Select<double>(TableNameConstants.TreasureAdjustments, "creature", TreasureConstants.Coin)).Returns(0);
+            mockAdjustmentSelector.Setup(s => s.Select<double>(TableNameConstants.TreasureAdjustments, "creature", TreasureConstants.Goods)).Returns(2);
+            mockAdjustmentSelector.Setup(s => s.Select<double>(TableNameConstants.TreasureAdjustments, "creature", TreasureConstants.Items)).Returns(1);
 
             var goods = new[] { new Good(), new Good() };
             var secondGoods = new[] { new Good(), new Good() };
@@ -996,9 +996,9 @@ namespace EncounterGen.Tests.Unit.Generators
         [Test]
         public void GetMoreTreasure()
         {
-            mockAdjustmentSelector.Setup(s => s.SelectFrom(TableNameConstants.TreasureAdjustments, "creature", TreasureConstants.Coin)).Returns(2);
-            mockAdjustmentSelector.Setup(s => s.SelectFrom(TableNameConstants.TreasureAdjustments, "creature", TreasureConstants.Goods)).Returns(2);
-            mockAdjustmentSelector.Setup(s => s.SelectFrom(TableNameConstants.TreasureAdjustments, "creature", TreasureConstants.Items)).Returns(2);
+            mockAdjustmentSelector.Setup(s => s.Select<double>(TableNameConstants.TreasureAdjustments, "creature", TreasureConstants.Coin)).Returns(2);
+            mockAdjustmentSelector.Setup(s => s.Select<double>(TableNameConstants.TreasureAdjustments, "creature", TreasureConstants.Goods)).Returns(2);
+            mockAdjustmentSelector.Setup(s => s.Select<double>(TableNameConstants.TreasureAdjustments, "creature", TreasureConstants.Items)).Returns(2);
             mockCoinGenerator.SetupSequence(g => g.GenerateAtLevel(level)).Returns(new Coin { Currency = "currency", Quantity = 600 })
                 .Returns(new Coin { Currency = "wrong currency", Quantity = 666 });
 
@@ -1023,9 +1023,9 @@ namespace EncounterGen.Tests.Unit.Generators
         [Test]
         public void GetNoTreasureByChance()
         {
-            mockAdjustmentSelector.Setup(s => s.SelectFrom(TableNameConstants.TreasureAdjustments, "creature", TreasureConstants.Coin)).Returns(2);
-            mockAdjustmentSelector.Setup(s => s.SelectFrom(TableNameConstants.TreasureAdjustments, "creature", TreasureConstants.Goods)).Returns(2);
-            mockAdjustmentSelector.Setup(s => s.SelectFrom(TableNameConstants.TreasureAdjustments, "creature", TreasureConstants.Items)).Returns(2);
+            mockAdjustmentSelector.Setup(s => s.Select<double>(TableNameConstants.TreasureAdjustments, "creature", TreasureConstants.Coin)).Returns(2);
+            mockAdjustmentSelector.Setup(s => s.Select<double>(TableNameConstants.TreasureAdjustments, "creature", TreasureConstants.Goods)).Returns(2);
+            mockAdjustmentSelector.Setup(s => s.Select<double>(TableNameConstants.TreasureAdjustments, "creature", TreasureConstants.Items)).Returns(2);
             mockCoinGenerator.SetupSequence(g => g.GenerateAtLevel(level)).Returns(new Coin())
                 .Returns(new Coin { Currency = "wrong currency", Quantity = 666 });
 
@@ -1046,9 +1046,9 @@ namespace EncounterGen.Tests.Unit.Generators
         [Test]
         public void GetNoTreasureIntentionally()
         {
-            mockAdjustmentSelector.Setup(s => s.SelectFrom(TableNameConstants.TreasureAdjustments, "creature", TreasureConstants.Coin)).Returns(0);
-            mockAdjustmentSelector.Setup(s => s.SelectFrom(TableNameConstants.TreasureAdjustments, "creature", TreasureConstants.Goods)).Returns(0);
-            mockAdjustmentSelector.Setup(s => s.SelectFrom(TableNameConstants.TreasureAdjustments, "creature", TreasureConstants.Items)).Returns(0);
+            mockAdjustmentSelector.Setup(s => s.Select<double>(TableNameConstants.TreasureAdjustments, "creature", TreasureConstants.Coin)).Returns(0);
+            mockAdjustmentSelector.Setup(s => s.Select<double>(TableNameConstants.TreasureAdjustments, "creature", TreasureConstants.Goods)).Returns(0);
+            mockAdjustmentSelector.Setup(s => s.Select<double>(TableNameConstants.TreasureAdjustments, "creature", TreasureConstants.Items)).Returns(0);
 
             mockCoinGenerator.Setup(g => g.GenerateAtLevel(level)).Returns(new Coin { Currency = "currency", Quantity = 600 });
 
@@ -1067,9 +1067,9 @@ namespace EncounterGen.Tests.Unit.Generators
         [Test]
         public void GetPartialTreasureWithGoodsAndItems()
         {
-            mockAdjustmentSelector.Setup(s => s.SelectFrom(TableNameConstants.TreasureAdjustments, "creature", TreasureConstants.Coin)).Returns(TreasureConstants.FiftyPercent);
-            mockAdjustmentSelector.Setup(s => s.SelectFrom(TableNameConstants.TreasureAdjustments, "creature", TreasureConstants.Goods)).Returns(TreasureConstants.FiftyPercent);
-            mockAdjustmentSelector.Setup(s => s.SelectFrom(TableNameConstants.TreasureAdjustments, "creature", TreasureConstants.Items)).Returns(TreasureConstants.FiftyPercent);
+            mockAdjustmentSelector.Setup(s => s.Select<double>(TableNameConstants.TreasureAdjustments, "creature", TreasureConstants.Coin)).Returns(TreasureConstants.FiftyPercent);
+            mockAdjustmentSelector.Setup(s => s.Select<double>(TableNameConstants.TreasureAdjustments, "creature", TreasureConstants.Goods)).Returns(TreasureConstants.FiftyPercent);
+            mockAdjustmentSelector.Setup(s => s.Select<double>(TableNameConstants.TreasureAdjustments, "creature", TreasureConstants.Items)).Returns(TreasureConstants.FiftyPercent);
 
             var goods = new[] { new Good(), new Good() };
             mockGoodsGenerator.Setup(g => g.GenerateAtLevel(level)).Returns(goods);
@@ -1087,9 +1087,9 @@ namespace EncounterGen.Tests.Unit.Generators
         [Test]
         public void GetDifferentPartialTreasureWithGoodsAndItems()
         {
-            mockAdjustmentSelector.Setup(s => s.SelectFrom(TableNameConstants.TreasureAdjustments, "creature", TreasureConstants.Coin)).Returns(TreasureConstants.TenPercent);
-            mockAdjustmentSelector.Setup(s => s.SelectFrom(TableNameConstants.TreasureAdjustments, "creature", TreasureConstants.Goods)).Returns(TreasureConstants.FiftyPercent);
-            mockAdjustmentSelector.Setup(s => s.SelectFrom(TableNameConstants.TreasureAdjustments, "creature", TreasureConstants.Items)).Returns(TreasureConstants.TenPercent);
+            mockAdjustmentSelector.Setup(s => s.Select<double>(TableNameConstants.TreasureAdjustments, "creature", TreasureConstants.Coin)).Returns(TreasureConstants.TenPercent);
+            mockAdjustmentSelector.Setup(s => s.Select<double>(TableNameConstants.TreasureAdjustments, "creature", TreasureConstants.Goods)).Returns(TreasureConstants.FiftyPercent);
+            mockAdjustmentSelector.Setup(s => s.Select<double>(TableNameConstants.TreasureAdjustments, "creature", TreasureConstants.Items)).Returns(TreasureConstants.TenPercent);
 
             var goods = new[] { new Good(), new Good() };
             mockGoodsGenerator.Setup(g => g.GenerateAtLevel(level)).Returns(goods);
@@ -1107,9 +1107,9 @@ namespace EncounterGen.Tests.Unit.Generators
         [Test]
         public void GetPartialTreasureWithGoods()
         {
-            mockAdjustmentSelector.Setup(s => s.SelectFrom(TableNameConstants.TreasureAdjustments, "creature", TreasureConstants.Coin)).Returns(TreasureConstants.TenPercent);
-            mockAdjustmentSelector.Setup(s => s.SelectFrom(TableNameConstants.TreasureAdjustments, "creature", TreasureConstants.Goods)).Returns(TreasureConstants.FiftyPercent);
-            mockAdjustmentSelector.Setup(s => s.SelectFrom(TableNameConstants.TreasureAdjustments, "creature", TreasureConstants.Items)).Returns(TreasureConstants.TenPercent);
+            mockAdjustmentSelector.Setup(s => s.Select<double>(TableNameConstants.TreasureAdjustments, "creature", TreasureConstants.Coin)).Returns(TreasureConstants.TenPercent);
+            mockAdjustmentSelector.Setup(s => s.Select<double>(TableNameConstants.TreasureAdjustments, "creature", TreasureConstants.Goods)).Returns(TreasureConstants.FiftyPercent);
+            mockAdjustmentSelector.Setup(s => s.Select<double>(TableNameConstants.TreasureAdjustments, "creature", TreasureConstants.Items)).Returns(TreasureConstants.TenPercent);
 
             mockBooleanPercentileSelector.Setup(s => s.SelectFrom(TreasureConstants.TenPercent)).Returns(false);
 
@@ -1129,9 +1129,9 @@ namespace EncounterGen.Tests.Unit.Generators
         [Test]
         public void GetPartialTreasureWithItems()
         {
-            mockAdjustmentSelector.Setup(s => s.SelectFrom(TableNameConstants.TreasureAdjustments, "creature", TreasureConstants.Coin)).Returns(TreasureConstants.TenPercent);
-            mockAdjustmentSelector.Setup(s => s.SelectFrom(TableNameConstants.TreasureAdjustments, "creature", TreasureConstants.Goods)).Returns(TreasureConstants.FiftyPercent);
-            mockAdjustmentSelector.Setup(s => s.SelectFrom(TableNameConstants.TreasureAdjustments, "creature", TreasureConstants.Items)).Returns(TreasureConstants.TenPercent);
+            mockAdjustmentSelector.Setup(s => s.Select<double>(TableNameConstants.TreasureAdjustments, "creature", TreasureConstants.Coin)).Returns(TreasureConstants.TenPercent);
+            mockAdjustmentSelector.Setup(s => s.Select<double>(TableNameConstants.TreasureAdjustments, "creature", TreasureConstants.Goods)).Returns(TreasureConstants.FiftyPercent);
+            mockAdjustmentSelector.Setup(s => s.Select<double>(TableNameConstants.TreasureAdjustments, "creature", TreasureConstants.Items)).Returns(TreasureConstants.TenPercent);
 
             mockBooleanPercentileSelector.Setup(s => s.SelectFrom(TreasureConstants.FiftyPercent)).Returns(false);
 
@@ -1151,9 +1151,9 @@ namespace EncounterGen.Tests.Unit.Generators
         [Test]
         public void GetPartialTreasureWithNoGoodsOrItems()
         {
-            mockAdjustmentSelector.Setup(s => s.SelectFrom(TableNameConstants.TreasureAdjustments, "creature", TreasureConstants.Coin)).Returns(TreasureConstants.TenPercent);
-            mockAdjustmentSelector.Setup(s => s.SelectFrom(TableNameConstants.TreasureAdjustments, "creature", TreasureConstants.Goods)).Returns(TreasureConstants.FiftyPercent);
-            mockAdjustmentSelector.Setup(s => s.SelectFrom(TableNameConstants.TreasureAdjustments, "creature", TreasureConstants.Items)).Returns(TreasureConstants.TenPercent);
+            mockAdjustmentSelector.Setup(s => s.Select<double>(TableNameConstants.TreasureAdjustments, "creature", TreasureConstants.Coin)).Returns(TreasureConstants.TenPercent);
+            mockAdjustmentSelector.Setup(s => s.Select<double>(TableNameConstants.TreasureAdjustments, "creature", TreasureConstants.Goods)).Returns(TreasureConstants.FiftyPercent);
+            mockAdjustmentSelector.Setup(s => s.Select<double>(TableNameConstants.TreasureAdjustments, "creature", TreasureConstants.Items)).Returns(TreasureConstants.TenPercent);
 
             mockBooleanPercentileSelector.Setup(s => s.SelectFrom(TreasureConstants.FiftyPercent)).Returns(false);
             mockBooleanPercentileSelector.Setup(s => s.SelectFrom(TreasureConstants.TenPercent)).Returns(false);
@@ -1177,14 +1177,14 @@ namespace EncounterGen.Tests.Unit.Generators
             encounterTypeAndAmount["other creature"] = "other creature amount";
 
             mockRollSelector.Setup(s => s.SelectFrom("other creature amount", 9876)).Returns("other effective roll");
-            mockRollSelector.Setup(s => s.SelectFrom("other effective roll")).Returns(600);
+            mockDice.Setup(d => d.Roll("other effective roll")).Returns(600);
 
-            mockAdjustmentSelector.Setup(s => s.SelectFrom(TableNameConstants.TreasureAdjustments, "creature", TreasureConstants.Coin)).Returns(2);
-            mockAdjustmentSelector.Setup(s => s.SelectFrom(TableNameConstants.TreasureAdjustments, "creature", TreasureConstants.Goods)).Returns(2);
-            mockAdjustmentSelector.Setup(s => s.SelectFrom(TableNameConstants.TreasureAdjustments, "creature", TreasureConstants.Items)).Returns(2);
-            mockAdjustmentSelector.Setup(s => s.SelectFrom(TableNameConstants.TreasureAdjustments, "other creature", TreasureConstants.Coin)).Returns(1);
-            mockAdjustmentSelector.Setup(s => s.SelectFrom(TableNameConstants.TreasureAdjustments, "other creature", TreasureConstants.Goods)).Returns(1);
-            mockAdjustmentSelector.Setup(s => s.SelectFrom(TableNameConstants.TreasureAdjustments, "other creature", TreasureConstants.Items)).Returns(1);
+            mockAdjustmentSelector.Setup(s => s.Select<double>(TableNameConstants.TreasureAdjustments, "creature", TreasureConstants.Coin)).Returns(2);
+            mockAdjustmentSelector.Setup(s => s.Select<double>(TableNameConstants.TreasureAdjustments, "creature", TreasureConstants.Goods)).Returns(2);
+            mockAdjustmentSelector.Setup(s => s.Select<double>(TableNameConstants.TreasureAdjustments, "creature", TreasureConstants.Items)).Returns(2);
+            mockAdjustmentSelector.Setup(s => s.Select<double>(TableNameConstants.TreasureAdjustments, "other creature", TreasureConstants.Coin)).Returns(1);
+            mockAdjustmentSelector.Setup(s => s.Select<double>(TableNameConstants.TreasureAdjustments, "other creature", TreasureConstants.Goods)).Returns(1);
+            mockAdjustmentSelector.Setup(s => s.Select<double>(TableNameConstants.TreasureAdjustments, "other creature", TreasureConstants.Items)).Returns(1);
 
             mockCoinGenerator.SetupSequence(g => g.GenerateAtLevel(level)).Returns(new Coin { Currency = "currency", Quantity = 600 })
                 .Returns(new Coin { Currency = "wrong currency", Quantity = 666 });
@@ -1218,9 +1218,9 @@ namespace EncounterGen.Tests.Unit.Generators
 
             encounterTypeAndAmount[monster.Key + " (description)"] = monster.Value;
 
-            mockAdjustmentSelector.Setup(s => s.SelectFrom(TableNameConstants.TreasureAdjustments, "creature", TreasureConstants.Coin)).Returns(1);
-            mockAdjustmentSelector.Setup(s => s.SelectFrom(TableNameConstants.TreasureAdjustments, "creature", TreasureConstants.Goods)).Returns(1);
-            mockAdjustmentSelector.Setup(s => s.SelectFrom(TableNameConstants.TreasureAdjustments, "creature", TreasureConstants.Items)).Returns(1);
+            mockAdjustmentSelector.Setup(s => s.Select<double>(TableNameConstants.TreasureAdjustments, "creature", TreasureConstants.Coin)).Returns(1);
+            mockAdjustmentSelector.Setup(s => s.Select<double>(TableNameConstants.TreasureAdjustments, "creature", TreasureConstants.Goods)).Returns(1);
+            mockAdjustmentSelector.Setup(s => s.Select<double>(TableNameConstants.TreasureAdjustments, "creature", TreasureConstants.Items)).Returns(1);
 
             var goods = new[] { new Good(), new Good() };
             mockGoodsGenerator.Setup(g => g.GenerateAtLevel(level)).Returns(goods);
@@ -1247,9 +1247,9 @@ namespace EncounterGen.Tests.Unit.Generators
             mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.CreatureGroups, CreatureConstants.Character))
                 .Returns(new[] { "other character class", monster.Key });
 
-            mockAdjustmentSelector.Setup(s => s.SelectFrom(TableNameConstants.TreasureAdjustments, "creature", TreasureConstants.Coin)).Returns(1);
-            mockAdjustmentSelector.Setup(s => s.SelectFrom(TableNameConstants.TreasureAdjustments, "creature", TreasureConstants.Goods)).Returns(1);
-            mockAdjustmentSelector.Setup(s => s.SelectFrom(TableNameConstants.TreasureAdjustments, "creature", TreasureConstants.Items)).Returns(1);
+            mockAdjustmentSelector.Setup(s => s.Select<double>(TableNameConstants.TreasureAdjustments, "creature", TreasureConstants.Coin)).Returns(1);
+            mockAdjustmentSelector.Setup(s => s.Select<double>(TableNameConstants.TreasureAdjustments, "creature", TreasureConstants.Goods)).Returns(1);
+            mockAdjustmentSelector.Setup(s => s.Select<double>(TableNameConstants.TreasureAdjustments, "creature", TreasureConstants.Items)).Returns(1);
 
             var goods = new[] { new Good(), new Good() };
             mockGoodsGenerator.Setup(g => g.GenerateAtLevel(level)).Returns(goods);
@@ -1271,9 +1271,9 @@ namespace EncounterGen.Tests.Unit.Generators
             encounterTypeAndAmount.Clear();
             encounterTypeAndAmount["Hydra (2d3+4 heads)"] = "hydra amount";
             mockRollSelector.Setup(s => s.SelectFrom("hydra amount", 9876)).Returns("hydra effective roll");
-            mockRollSelector.Setup(s => s.SelectFrom("hydra effective roll")).Returns(1);
-            mockRollSelector.Setup(s => s.SelectRollFrom("2d3+4 heads")).Returns("2d3+4");
-            mockRollSelector.Setup(s => s.SelectFrom("2d3+4")).Returns(1337);
+            mockDice.Setup(d => d.Roll("hydra effective roll")).Returns(1);
+            mockDice.Setup(d => d.ContainsRoll("2d3+4 heads")).Returns(true);
+            mockDice.Setup(d => d.ReplaceExpressionWithTotal("2d3+4 heads")).Returns("1337 heads");
 
             var encounter = encounterGenerator.Generate(environment, level);
             Assert.That(encounter, Is.Not.Null);
@@ -1291,9 +1291,9 @@ namespace EncounterGen.Tests.Unit.Generators
             encounterTypeAndAmount.Clear();
             encounterTypeAndAmount["Hydra (2d3+4 heads)"] = "hydra amount";
             mockRollSelector.Setup(s => s.SelectFrom("hydra amount", 9876)).Returns("hydra effective roll");
-            mockRollSelector.Setup(s => s.SelectFrom("hydra effective roll")).Returns(2);
-            mockRollSelector.Setup(s => s.SelectRollFrom("2d3+4 heads")).Returns("2d3+4");
-            mockRollSelector.SetupSequence(s => s.SelectFrom("2d3+4")).Returns(1337).Returns(1234);
+            mockDice.Setup(d => d.Roll("hydra effective roll")).Returns(2);
+            mockDice.Setup(d => d.ContainsRoll("2d3+4 heads")).Returns(true);
+            mockDice.SetupSequence(d => d.ReplaceExpressionWithTotal("2d3+4 heads")).Returns("1337 heads").Returns("1234 heads");
 
             var encounter = encounterGenerator.Generate(environment, level);
             Assert.That(encounter, Is.Not.Null);
@@ -1313,7 +1313,7 @@ namespace EncounterGen.Tests.Unit.Generators
             encounterTypeAndAmount.Clear();
             encounterTypeAndAmount[CreatureConstants.Character + " but not really"] = "character amount";
             mockRollSelector.Setup(s => s.SelectFrom("character amount", 9876)).Returns("character effective roll");
-            mockRollSelector.Setup(s => s.SelectFrom("character effective roll")).Returns(600);
+            mockDice.Setup(d => d.Roll("character effective roll")).Returns(600);
 
             var encounter = encounterGenerator.Generate(environment, level);
             Assert.That(encounter, Is.Not.Null);
@@ -1330,7 +1330,7 @@ namespace EncounterGen.Tests.Unit.Generators
             encounterTypeAndAmount.Clear();
             encounterTypeAndAmount["undead minion"] = "undead minion amount";
             mockRollSelector.Setup(s => s.SelectFrom("undead minion amount", 9876)).Returns("undead minion effective roll");
-            mockRollSelector.Setup(s => s.SelectFrom("undead minion effective roll")).Returns(600);
+            mockDice.Setup(d => d.Roll("undead minion effective roll")).Returns(600);
 
             undeadNPCs.Add("undead");
 
