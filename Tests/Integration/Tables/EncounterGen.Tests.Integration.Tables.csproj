@@ -99,8 +99,12 @@
     <Compile Include="EmbeddedResourceStreamLoaderTests.cs" />
     <Compile Include="Encounters\Civilized\Day\Level11CivilizedDayEncountersTests.cs" />
     <Compile Include="Encounters\Civilized\Day\Level13CivilizedDayEncountersTests.cs" />
+    <Compile Include="Encounters\Civilized\Day\Level6CivilizedDayEncountersTests.cs" />
     <Compile Include="Encounters\Civilized\Night\Level11CivilizedNightEncountersTests.cs" />
+    <Compile Include="Encounters\Civilized\Night\Level17CivilizedNightEncountersTests.cs" />
     <Compile Include="Encounters\Civilized\Night\Level2CivilizedNightEncountersTests.cs" />
+    <Compile Include="Encounters\Civilized\Night\Level5CivilizedNightEncountersTests.cs" />
+    <Compile Include="Encounters\Civilized\Night\Level7CivilizedNightEncountersTests.cs" />
     <Compile Include="Encounters\Desert\Cold\Day\Level14ColdDesertDayEncountersTests.cs" />
     <Compile Include="Encounters\Desert\Cold\Day\Level4ColdDesertDayEncountersTests.cs" />
     <Compile Include="Encounters\Desert\Cold\Day\Level7ColdDesertDayEncountersTests.cs" />

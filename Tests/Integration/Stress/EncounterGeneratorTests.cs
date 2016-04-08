@@ -16,12 +16,12 @@ namespace EncounterGen.Tests.Integration.Stress
         [Inject]
         public Random Random { get; set; }
 
-        private IEnumerable<string> environments;
+        private IEnumerable<string> allEnvironments;
 
         [SetUp]
         public void Setup()
         {
-            environments = new[]
+            allEnvironments = new[]
             {
                 EnvironmentConstants.ColdForestDay,
                 EnvironmentConstants.TemperateForestDay,
@@ -73,11 +73,10 @@ namespace EncounterGen.Tests.Integration.Stress
 
         protected override void MakeAssertions()
         {
-            var encounter = MakeEncounter();
-            AssertEncounter(encounter);
+            AssertEncounterInRandomEnvironment(allEnvironments);
         }
 
-        private Encounter MakeEncounter()
+        private Encounter MakeEncounter(IEnumerable<string> environments)
         {
             var randomIndex = Random.Next(environments.Count());
             var environment = environments.ElementAt(randomIndex);
@@ -117,9 +116,202 @@ namespace EncounterGen.Tests.Integration.Stress
         }
 
         [Test]
+        public void StressColdEncounters()
+        {
+            var coldEnvironments = new[]
+            {
+                EnvironmentConstants.ColdDesertDay,
+                EnvironmentConstants.ColdDesertNight,
+                EnvironmentConstants.ColdForestDay,
+                EnvironmentConstants.ColdForestNight,
+                EnvironmentConstants.ColdHillsDay,
+                EnvironmentConstants.ColdHillsNight,
+                EnvironmentConstants.ColdMarshDay,
+                EnvironmentConstants.ColdMarshNight,
+                EnvironmentConstants.ColdMountainDay,
+                EnvironmentConstants.ColdMountainNight,
+                EnvironmentConstants.ColdPlainsDay,
+                EnvironmentConstants.ColdPlainsNight
+            };
+
+            Stress(() => AssertEncounterInRandomEnvironment(coldEnvironments));
+        }
+
+        [Test]
+        public void StressTemperateEncounters()
+        {
+            var temperateEnvironments = new[]
+            {
+                EnvironmentConstants.TemperateDesertDay,
+                EnvironmentConstants.TemperateDesertNight,
+                EnvironmentConstants.TemperateForestDay,
+                EnvironmentConstants.TemperateForestNight,
+                EnvironmentConstants.TemperateHillsDay,
+                EnvironmentConstants.TemperateHillsNight,
+                EnvironmentConstants.TemperateMarshDay,
+                EnvironmentConstants.TemperateMarshNight,
+                EnvironmentConstants.TemperateMountainDay,
+                EnvironmentConstants.TemperateMountainNight,
+                EnvironmentConstants.TemperatePlainsDay,
+                EnvironmentConstants.TemperatePlainsNight
+            };
+
+            Stress(() => AssertEncounterInRandomEnvironment(temperateEnvironments));
+        }
+
+        [Test]
+        public void StressWarmEncounters()
+        {
+            var warmEnvironments = new[]
+            {
+                EnvironmentConstants.WarmDesertDay,
+                EnvironmentConstants.WarmDesertNight,
+                EnvironmentConstants.WarmForestDay,
+                EnvironmentConstants.WarmForestNight,
+                EnvironmentConstants.WarmHillsDay,
+                EnvironmentConstants.WarmHillsNight,
+                EnvironmentConstants.WarmMarshDay,
+                EnvironmentConstants.WarmMarshNight,
+                EnvironmentConstants.WarmMountainDay,
+                EnvironmentConstants.WarmMountainNight,
+                EnvironmentConstants.WarmPlainsDay,
+                EnvironmentConstants.WarmPlainsNight
+            };
+
+            Stress(() => AssertEncounterInRandomEnvironment(warmEnvironments));
+        }
+
+        [TestCase(EnvironmentConstants.CivilizedDay, EnvironmentConstants.CivilizedNight)]
+        [TestCase(EnvironmentConstants.ColdDesertDay, EnvironmentConstants.ColdDesertNight)]
+        [TestCase(EnvironmentConstants.ColdForestDay, EnvironmentConstants.ColdForestNight)]
+        [TestCase(EnvironmentConstants.ColdHillsDay, EnvironmentConstants.ColdHillsNight)]
+        [TestCase(EnvironmentConstants.ColdMarshDay, EnvironmentConstants.ColdMarshNight)]
+        [TestCase(EnvironmentConstants.ColdMountainDay, EnvironmentConstants.ColdMountainNight)]
+        [TestCase(EnvironmentConstants.ColdPlainsDay, EnvironmentConstants.ColdPlainsNight)]
+        [TestCase(EnvironmentConstants.TemperateDesertDay, EnvironmentConstants.TemperateDesertNight)]
+        [TestCase(EnvironmentConstants.TemperateForestDay, EnvironmentConstants.TemperateForestNight)]
+        [TestCase(EnvironmentConstants.TemperateHillsDay, EnvironmentConstants.TemperateHillsNight)]
+        [TestCase(EnvironmentConstants.TemperateMarshDay, EnvironmentConstants.TemperateMarshNight)]
+        [TestCase(EnvironmentConstants.TemperateMountainDay, EnvironmentConstants.TemperateMountainNight)]
+        [TestCase(EnvironmentConstants.TemperatePlainsDay, EnvironmentConstants.TemperatePlainsNight)]
+        [TestCase(EnvironmentConstants.WarmDesertDay, EnvironmentConstants.WarmDesertNight)]
+        [TestCase(EnvironmentConstants.WarmForestDay, EnvironmentConstants.WarmForestNight)]
+        [TestCase(EnvironmentConstants.WarmHillsDay, EnvironmentConstants.WarmHillsNight)]
+        [TestCase(EnvironmentConstants.WarmMarshDay, EnvironmentConstants.WarmMarshNight)]
+        [TestCase(EnvironmentConstants.WarmMountainDay, EnvironmentConstants.WarmMountainNight)]
+        [TestCase(EnvironmentConstants.WarmPlainsDay, EnvironmentConstants.WarmPlainsNight)]
+        public void StressFullDayOfEncounters(string day, string night)
+        {
+            var environments = new[] { day, night };
+            Stress(() => AssertEncounterInRandomEnvironment(environments));
+        }
+
+        [Test]
+        public void StressDesertEncounters()
+        {
+            var desertEnvironments = new[]
+            {
+                EnvironmentConstants.ColdDesertDay,
+                EnvironmentConstants.ColdDesertNight,
+                EnvironmentConstants.TemperateDesertDay,
+                EnvironmentConstants.TemperateDesertNight,
+                EnvironmentConstants.WarmDesertDay,
+                EnvironmentConstants.WarmDesertNight
+            };
+
+            Stress(() => AssertEncounterInRandomEnvironment(desertEnvironments));
+        }
+
+        [Test]
+        public void StressForestEncounters()
+        {
+            var forestEnvironments = new[]
+            {
+                EnvironmentConstants.ColdForestDay,
+                EnvironmentConstants.ColdForestNight,
+                EnvironmentConstants.TemperateForestDay,
+                EnvironmentConstants.TemperateForestNight,
+                EnvironmentConstants.WarmForestDay,
+                EnvironmentConstants.WarmForestNight
+            };
+
+            Stress(() => AssertEncounterInRandomEnvironment(forestEnvironments));
+        }
+
+        [Test]
+        public void StressHillsEncounters()
+        {
+            var hillsEnvironments = new[]
+            {
+                EnvironmentConstants.ColdHillsDay,
+                EnvironmentConstants.ColdHillsNight,
+                EnvironmentConstants.TemperateHillsDay,
+                EnvironmentConstants.TemperateHillsNight,
+                EnvironmentConstants.WarmHillsDay,
+                EnvironmentConstants.WarmHillsNight
+            };
+
+            Stress(() => AssertEncounterInRandomEnvironment(hillsEnvironments));
+        }
+
+        [Test]
+        public void StressMarshEncounters()
+        {
+            var marshEnvironments = new[]
+            {
+                EnvironmentConstants.ColdMarshDay,
+                EnvironmentConstants.ColdMarshNight,
+                EnvironmentConstants.TemperateMarshDay,
+                EnvironmentConstants.TemperateMarshNight,
+                EnvironmentConstants.WarmMarshDay,
+                EnvironmentConstants.WarmMarshNight
+            };
+
+            Stress(() => AssertEncounterInRandomEnvironment(marshEnvironments));
+        }
+
+        [Test]
+        public void StressMountainEncounters()
+        {
+            var mountainEnvironments = new[]
+            {
+                EnvironmentConstants.ColdMountainDay,
+                EnvironmentConstants.ColdMountainNight,
+                EnvironmentConstants.TemperateMountainDay,
+                EnvironmentConstants.TemperateMountainNight,
+                EnvironmentConstants.WarmMountainDay,
+                EnvironmentConstants.WarmMountainNight
+            };
+
+            Stress(() => AssertEncounterInRandomEnvironment(mountainEnvironments));
+        }
+
+        [Test]
+        public void StressPlainsEncounters()
+        {
+            var plainsEnvironments = new[]
+            {
+                EnvironmentConstants.ColdPlainsDay,
+                EnvironmentConstants.ColdPlainsNight,
+                EnvironmentConstants.TemperatePlainsDay,
+                EnvironmentConstants.TemperatePlainsNight,
+                EnvironmentConstants.WarmPlainsDay,
+                EnvironmentConstants.WarmPlainsNight
+            };
+
+            Stress(() => AssertEncounterInRandomEnvironment(plainsEnvironments));
+        }
+
+        private void AssertEncounterInRandomEnvironment(IEnumerable<string> environments)
+        {
+            var encounter = MakeEncounter(environments);
+            AssertEncounter(encounter);
+        }
+
+        [Test]
         public void TreasureDoesNotHappen()
         {
-            var encounter = GenerateOrFail(MakeEncounter, e => e.Treasure.Coin.Quantity == 0 && e.Treasure.Goods.Any() == false && e.Treasure.Items.Any() == false);
+            var encounter = GenerateOrFail(() => MakeEncounter(allEnvironments), e => e.Treasure.Coin.Quantity == 0 && e.Treasure.Goods.Any() == false && e.Treasure.Items.Any() == false);
             Assert.That(encounter.Treasure.Coin.Quantity, Is.EqualTo(0));
             Assert.That(encounter.Treasure.Goods, Is.Empty);
             Assert.That(encounter.Treasure.Items, Is.Empty);
@@ -128,14 +320,14 @@ namespace EncounterGen.Tests.Integration.Stress
         [Test]
         public void TreasureHappens()
         {
-            var encounter = GenerateOrFail(MakeEncounter, e => e.Treasure.Coin.Quantity > 0 || e.Treasure.Goods.Any() || e.Treasure.Items.Any());
+            var encounter = GenerateOrFail(() => MakeEncounter(allEnvironments), e => e.Treasure.Coin.Quantity > 0 || e.Treasure.Goods.Any() || e.Treasure.Items.Any());
             Assert.That(encounter.Treasure.Coin.Quantity > 0 || encounter.Treasure.Goods.Any() || encounter.Treasure.Items.Any(), Is.True);
         }
 
         [Test]
         public void CoinHappens()
         {
-            var encounter = GenerateOrFail(MakeEncounter, e => e.Treasure.Coin.Quantity > 0);
+            var encounter = GenerateOrFail(() => MakeEncounter(allEnvironments), e => e.Treasure.Coin.Quantity > 0);
             Assert.That(encounter.Treasure.Coin.Quantity, Is.Positive);
             Assert.That(encounter.Treasure.Coin.Currency, Is.Not.Empty);
         }
@@ -143,42 +335,42 @@ namespace EncounterGen.Tests.Integration.Stress
         [Test]
         public void GoodsHappen()
         {
-            var encounter = GenerateOrFail(MakeEncounter, e => e.Treasure.Goods.Any());
+            var encounter = GenerateOrFail(() => MakeEncounter(allEnvironments), e => e.Treasure.Goods.Any());
             Assert.That(encounter.Treasure.Goods, Is.Not.Empty);
         }
 
         [Test]
         public void ItemsHappen()
         {
-            var encounter = GenerateOrFail(MakeEncounter, e => e.Treasure.Items.Any());
+            var encounter = GenerateOrFail(() => MakeEncounter(allEnvironments), e => e.Treasure.Items.Any());
             Assert.That(encounter.Treasure.Items, Is.Not.Empty);
         }
 
         [Test]
         public void CharactersHappen()
         {
-            var encounter = GenerateOrFail(MakeEncounter, e => e.Characters.Any());
+            var encounter = GenerateOrFail(() => MakeEncounter(allEnvironments), e => e.Characters.Any());
             Assert.That(encounter.Characters, Is.Not.Empty);
         }
 
         [Test]
         public void CharactersDoNotHappen()
         {
-            var encounter = GenerateOrFail(MakeEncounter, e => e.Characters.Any() == false);
+            var encounter = GenerateOrFail(() => MakeEncounter(allEnvironments), e => e.Characters.Any() == false);
             Assert.That(encounter.Characters, Is.Empty);
         }
 
         [Test]
         public void SingleCreatureHappens()
         {
-            var encounter = GenerateOrFail(MakeEncounter, e => e.Creatures.Count() == 1);
+            var encounter = GenerateOrFail(() => MakeEncounter(allEnvironments), e => e.Creatures.Count() == 1);
             Assert.That(encounter.Creatures.Count(), Is.EqualTo(1));
         }
 
         [Test]
         public void MultipleCreaturesHappen()
         {
-            var encounter = GenerateOrFail(MakeEncounter, e => e.Creatures.Count() > 1);
+            var encounter = GenerateOrFail(() => MakeEncounter(allEnvironments), e => e.Creatures.Count() > 1);
             Assert.That(encounter.Creatures.Count(), Is.GreaterThan(1));
         }
     }

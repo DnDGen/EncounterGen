@@ -3,6 +3,8 @@ using Ninject;
 using NUnit.Framework;
 using System;
 using System.Diagnostics;
+using System.Linq;
+using System.Reflection;
 
 namespace EncounterGen.Tests.Integration.Stress
 {
@@ -15,6 +17,7 @@ namespace EncounterGen.Tests.Integration.Stress
 
         private const int ConfidentIterations = 1000000;
         private const int TenMinutesInSeconds = 600;
+        private const int TwoHoursInSeconds = 3600 * 2;
 
         private readonly int timeLimitInSeconds;
 
@@ -22,8 +25,16 @@ namespace EncounterGen.Tests.Integration.Stress
 
         public StressTests()
         {
+            var assembly = Assembly.GetExecutingAssembly();
+            var types = assembly.GetTypes();
+            var methods = types.SelectMany(t => t.GetMethods());
+            var stressTestsCount = methods.Sum(m => m.GetCustomAttributes<TestAttribute>(true).Count());
+            var stressTestCasesCount = methods.Sum(m => m.GetCustomAttributes<TestCaseAttribute>().Count());
+            var stressTestsTotal = stressTestsCount + stressTestCasesCount;
+
+            var twoHourTimeLimitPerTest = TwoHoursInSeconds / stressTestsTotal;
 #if STRESS
-            timeLimitInSeconds = TenMinutesInSeconds - 10;
+            timeLimitInSeconds = Math.Min(twoHourTimeLimitPerTest, TenMinutesInSeconds - 10);
 #else
             timeLimitInSeconds = 1;
 #endif
