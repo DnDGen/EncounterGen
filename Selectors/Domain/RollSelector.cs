@@ -32,7 +32,7 @@ namespace EncounterGen.Selectors.Domain
                 return baseRoll;
 
             var rolls = collectionSelector.SelectFrom(TableNameConstants.RollOrder, "All").ToList();
-            var index = rolls.IndexOf(baseRoll);
+            var index = rolls.LastIndexOf(baseRoll);
 
             var modifiedIndex = index + modifier;
 

@@ -77,7 +77,7 @@ namespace EncounterGen.Tests.Unit.Selectors
         [Test]
         public void IfBaseRollIsReroll_ReturnReroll()
         {
-            var modifiedRoll = rollSelector.SelectFrom(RollConstants.Reroll, -9266);
+            var modifiedRoll = rollSelector.SelectFrom(RollConstants.Reroll, -2);
             Assert.That(modifiedRoll, Is.EqualTo(RollConstants.Reroll));
         }
 
@@ -105,6 +105,68 @@ namespace EncounterGen.Tests.Unit.Selectors
             mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.RollOrder, "CR")).Returns(new[] { "lesser challenge rating", "challenge rating", "9266", "higher challenge rating", "too high" });
 
             var roll = rollSelector.SelectFrom(9266, "too high");
+            Assert.That(roll, Is.EqualTo(RollConstants.Reroll));
+        }
+
+        [Test]
+        public void CanHaveMultipleLowestLevelModifiedRolls()
+        {
+            var rolls = new[] { "lesser roll", "lesser roll", "lesser roll", RollConstants.One, "greater roll" };
+            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.RollOrder, "All")).Returns(rolls);
+
+            var modifiedRoll = rollSelector.SelectFrom(RollConstants.One, -3);
+            Assert.That(modifiedRoll, Is.EqualTo("lesser roll"));
+        }
+
+        [Test]
+        public void CanHaveTooLittleForMultipleLowestLevelModifiedRolls()
+        {
+            var rolls = new[] { "lesser roll", "lesser roll", "lesser roll", RollConstants.One, "greater roll" };
+            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.RollOrder, "All")).Returns(rolls);
+
+            var modifiedRoll = rollSelector.SelectFrom(RollConstants.One, -4);
+            Assert.That(modifiedRoll, Is.EqualTo(RollConstants.Reroll));
+        }
+
+        [Test]
+        public void CanIncreaseFromMultipleLowestLevelModifiedRolls()
+        {
+            var rolls = new[] { "lesser roll", "lesser roll", "lesser roll", RollConstants.One, "greater roll" };
+            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.RollOrder, "All")).Returns(rolls);
+
+            var modifiedRoll = rollSelector.SelectFrom("lesser roll", 1);
+            Assert.That(modifiedRoll, Is.EqualTo(RollConstants.One));
+        }
+
+        [Test]
+        public void CanDecreaseFromMultipleLowestLevelModifiedRolls()
+        {
+            var rolls = new[] { "lesser roll", "lesser roll", "lesser roll", RollConstants.One, "greater roll" };
+            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.RollOrder, "All")).Returns(rolls);
+
+            var modifiedRoll = rollSelector.SelectFrom("lesser roll", -2);
+            Assert.That(modifiedRoll, Is.EqualTo("lesser roll"));
+        }
+
+        [Test]
+        public void GetRollForChallengeRatingAtEffectiveLevelWithMultipleLowestLevels()
+        {
+            var rolls = new[] { "lesser roll", "lesser roll", "lesser roll", RollConstants.One, "greater roll" };
+            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.RollOrder, "All")).Returns(rolls);
+            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.RollOrder, "CR")).Returns(new[] { "lesser challenge rating", "9266", "90210", "42", "challenge rating", "higher challenge rating" });
+
+            var roll = rollSelector.SelectFrom(9266, "challenge rating");
+            Assert.That(roll, Is.EqualTo("lesser roll"));
+        }
+
+        [Test]
+        public void RerollTooLowForChallengeRatingAtEffectiveLevelWithMultipleLowestLevels()
+        {
+            var rolls = new[] { "lesser roll", "lesser roll", "lesser roll", RollConstants.One, "greater roll" };
+            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.RollOrder, "All")).Returns(rolls);
+            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.RollOrder, "CR")).Returns(new[] { "lesser challenge rating", "9266", "90210", "42", "600", "challenge rating", "higher challenge rating" });
+
+            var roll = rollSelector.SelectFrom(9266, "challenge rating");
             Assert.That(roll, Is.EqualTo(RollConstants.Reroll));
         }
     }

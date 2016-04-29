@@ -25,6 +25,8 @@ namespace EncounterGen.Tests.Integration.Tables.Rolls
 
         [TestCase("All",
             RollConstants.One,
+            RollConstants.One,
+            RollConstants.One,
             RollConstants.OneD2,
             RollConstants.OneD3,
             RollConstants.OneD3Plus1,
