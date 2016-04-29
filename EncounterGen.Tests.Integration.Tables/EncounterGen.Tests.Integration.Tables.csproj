@@ -1,0 +1,247 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A2450D95-C7C7-455F-A459-9252ADBAC265}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EncounterGen.Tests.Integration.Tables</RootNamespace>
+    <AssemblyName>EncounterGen.Tests.Integration.Tables</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Stress|AnyCPU'">
+    <OutputPath>bin\Stress\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CharacterGen.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\CharacterGen.4.0\lib\CharacterGen.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CharacterGen.Generators, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\CharacterGen.4.0\lib\CharacterGen.Generators.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ninject, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Ninject.3.2.2.0\lib\net45-full\Ninject.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="nunit.framework, Version=3.2.1.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\NUnit.3.2.1\lib\net45\nunit.framework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TreasureGen.Common, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\EquipmentGen.3.5\lib\TreasureGen.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="TreasureGen.Generators, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\EquipmentGen.3.5\lib\TreasureGen.Generators.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CollectionTests.cs" />
+    <Compile Include="Creatures\CelestialCreatureSubtypeChallengeRatingsTests.cs" />
+    <Compile Include="Creatures\CharmedCreatureSubtypeChallengeRatingsTests.cs" />
+    <Compile Include="Creatures\CreatureGroupsTests.cs" />
+    <Compile Include="Creatures\Dragons\Level10DragonsTests.cs" />
+    <Compile Include="Creatures\Dragons\Level11DragonsTests.cs" />
+    <Compile Include="Creatures\Dragons\Level12DragonsTests.cs" />
+    <Compile Include="Creatures\Dragons\Level13DragonsTests.cs" />
+    <Compile Include="Creatures\Dragons\Level14DragonsTests.cs" />
+    <Compile Include="Creatures\Dragons\Level15DragonsTests.cs" />
+    <Compile Include="Creatures\Dragons\Level16DragonsTests.cs" />
+    <Compile Include="Creatures\Dragons\Level17DragonsTests.cs" />
+    <Compile Include="Creatures\Dragons\Level18DragonsTests.cs" />
+    <Compile Include="Creatures\Dragons\Level19DragonsTests.cs" />
+    <Compile Include="Creatures\Dragons\Level1DragonsTests.cs" />
+    <Compile Include="Creatures\Dragons\Level20DragonsTests.cs" />
+    <Compile Include="Creatures\Dragons\Level2DragonsTests.cs" />
+    <Compile Include="Creatures\Dragons\Level3DragonsTests.cs" />
+    <Compile Include="Creatures\Dragons\Level4DragonsTests.cs" />
+    <Compile Include="Creatures\Dragons\Level5DragonsTests.cs" />
+    <Compile Include="Creatures\Dragons\Level6DragonsTests.cs" />
+    <Compile Include="Creatures\Dragons\Level7DragonsTests.cs" />
+    <Compile Include="Creatures\Dragons\Level8DragonsTests.cs" />
+    <Compile Include="Creatures\Dragons\Level9DragonsTests.cs" />
+    <Compile Include="Creatures\FiendishCreatureSubtypeChallengeRatingsTests.cs" />
+    <Compile Include="Creatures\MephitSubtypeChallengeRatingsTests.cs" />
+    <Compile Include="Creatures\SkeletonSubtypeChallengeRatingsTests.cs" />
+    <Compile Include="EmbeddedResourceStreamLoaderTests.cs" />
+    <Compile Include="Encounters\Civilized\Day\Level11CivilizedDayEncountersTests.cs" />
+    <Compile Include="Encounters\Civilized\Day\Level13CivilizedDayEncountersTests.cs" />
+    <Compile Include="Encounters\Civilized\Day\Level6CivilizedDayEncountersTests.cs" />
+    <Compile Include="Encounters\Civilized\Night\Level11CivilizedNightEncountersTests.cs" />
+    <Compile Include="Encounters\Civilized\Night\Level17CivilizedNightEncountersTests.cs" />
+    <Compile Include="Encounters\Civilized\Night\Level2CivilizedNightEncountersTests.cs" />
+    <Compile Include="Encounters\Civilized\Night\Level5CivilizedNightEncountersTests.cs" />
+    <Compile Include="Encounters\Civilized\Night\Level7CivilizedNightEncountersTests.cs" />
+    <Compile Include="Encounters\Desert\Cold\Day\Level14ColdDesertDayEncountersTests.cs" />
+    <Compile Include="Encounters\Desert\Cold\Day\Level4ColdDesertDayEncountersTests.cs" />
+    <Compile Include="Encounters\Desert\Cold\Day\Level7ColdDesertDayEncountersTests.cs" />
+    <Compile Include="Encounters\Desert\Cold\Night\Level1ColdDesertNightEncountersTests.cs" />
+    <Compile Include="Encounters\Desert\Temperate\Day\Level17TemperateDesertDayEncountersTests.cs" />
+    <Compile Include="Encounters\Desert\Warm\Night\Level19WarmDesertNightEncountersTests.cs" />
+    <Compile Include="Encounters\Dungeon\Level10DungeonEncountersTests.cs" />
+    <Compile Include="Encounters\Dungeon\Level11DungeonEncountersTests.cs" />
+    <Compile Include="Encounters\Dungeon\Level13DungeonEncountersTests.cs" />
+    <Compile Include="Encounters\Dungeon\Level14DungeonEncountersTests.cs" />
+    <Compile Include="Encounters\Dungeon\Level17DungeonEncountersTests.cs" />
+    <Compile Include="Encounters\Dungeon\Level3DungeonEncountersTests.cs" />
+    <Compile Include="Encounters\Dungeon\Level6DungeonEncountersTests.cs" />
+    <Compile Include="Encounters\Dungeon\Level7DungeonEncountersTests.cs" />
+    <Compile Include="Encounters\Dungeon\Level8DungeonEncountersTests.cs" />
+    <Compile Include="Encounters\Dungeon\Level9DungeonEncountersTests.cs" />
+    <Compile Include="Encounters\Forest\Cold\Day\Level10ColdForestDayEncountersTests.cs" />
+    <Compile Include="Encounters\Forest\Cold\Night\Level16ColdForestNightEncountersTests.cs" />
+    <Compile Include="Encounters\Forest\Cold\Night\Level3ColdForestNightEncountersTests.cs" />
+    <Compile Include="Encounters\Forest\Temperate\Day\Level12TemperateForestDayEncountersTests.cs" />
+    <Compile Include="Encounters\Forest\Temperate\Day\Level14TemperateForestDayEncountersTests.cs" />
+    <Compile Include="Encounters\Forest\Temperate\Day\Level5TemperateForestDayEncountersTests.cs" />
+    <Compile Include="Encounters\Forest\Temperate\Night\Level13TemperateForestNightEncountersTests.cs" />
+    <Compile Include="Encounters\Desert\Temperate\Night\Level6TemperateDesertNightEncountersTests.cs" />
+    <Compile Include="Encounters\Forest\Temperate\Day\Level20TemperateForestDayEncountersTests.cs" />
+    <Compile Include="Encounters\Forest\Warm\Day\Level17WarmForestDayEncountersTests.cs" />
+    <Compile Include="Encounters\Forest\Warm\Day\Level2WarmForestDayEncountersTests.cs" />
+    <Compile Include="Encounters\Forest\Warm\Night\Level11WarmForestNightEncountersTests.cs" />
+    <Compile Include="Encounters\Hills\Cold\Day\Level11ColdHillsDayEncountersTests.cs" />
+    <Compile Include="Encounters\Hills\Cold\Day\Level15ColdHillsDayEncountersTests.cs" />
+    <Compile Include="Encounters\Hills\Cold\Day\Level19ColdHillsDayEncountersTests.cs" />
+    <Compile Include="Encounters\Hills\Cold\Night\Level14ColdHillsNightEncountersTests.cs" />
+    <Compile Include="Encounters\Hills\Cold\Night\Level19ColdHillsNightEncountersTests.cs" />
+    <Compile Include="Encounters\Dungeon\Level12DungeonEncountersTests.cs" />
+    <Compile Include="Encounters\Dungeon\Level15DungeonEncountersTests.cs" />
+    <Compile Include="Encounters\Dungeon\Level16DungeonEncountersTests.cs" />
+    <Compile Include="Encounters\Dungeon\Level18DungeonEncountersTests.cs" />
+    <Compile Include="Encounters\Dungeon\Level19DungeonEncountersTests.cs" />
+    <Compile Include="Encounters\Dungeon\Level1DungeonEncountersTests.cs" />
+    <Compile Include="Encounters\Dungeon\Level20DungeonEncountersTests.cs" />
+    <Compile Include="Encounters\Dungeon\Level2DungeonEncountersTests.cs" />
+    <Compile Include="Encounters\Dungeon\Level4DungeonEncountersTests.cs" />
+    <Compile Include="Encounters\Dungeon\Level5DungeonEncountersTests.cs" />
+    <Compile Include="Encounters\EffectiveLevels\Level17EncounterLevelTests.cs" />
+    <Compile Include="Encounters\EffectiveLevels\Level18EncounterLevelTests.cs" />
+    <Compile Include="Encounters\EffectiveLevels\Level19EncounterLevelTests.cs" />
+    <Compile Include="Encounters\EffectiveLevels\Level20EncounterLevelTests.cs" />
+    <Compile Include="Encounters\EffectiveLevels\Level16EncounterLevelTests.cs" />
+    <Compile Include="Encounters\EffectiveLevels\Level15EncounterLevelTests.cs" />
+    <Compile Include="Encounters\EffectiveLevels\Level2EncounterLevelTests.cs" />
+    <Compile Include="Encounters\EffectiveLevels\Level4EncounterLevelTests.cs" />
+    <Compile Include="Encounters\EffectiveLevels\Level5EncounterLevelTests.cs" />
+    <Compile Include="Encounters\EffectiveLevels\Level6EncounterLevelTests.cs" />
+    <Compile Include="Encounters\EffectiveLevels\Level9EncounterLevelTests.cs" />
+    <Compile Include="Encounters\EffectiveLevels\Level8EncounterLevelTests.cs" />
+    <Compile Include="Encounters\EffectiveLevels\Level7EncounterLevelTests.cs" />
+    <Compile Include="Encounters\EffectiveLevels\Level10EncounterLevelTests.cs" />
+    <Compile Include="Encounters\EffectiveLevels\Level11EncounterLevelTests.cs" />
+    <Compile Include="Encounters\EffectiveLevels\Level13EncounterLevelTests.cs" />
+    <Compile Include="Encounters\EffectiveLevels\Level12EncounterLevelTests.cs" />
+    <Compile Include="Encounters\EffectiveLevels\Level14EncounterLevelTests.cs" />
+    <Compile Include="Encounters\EffectiveLevels\Level1EncounterLevelTests.cs" />
+    <Compile Include="Encounters\EffectiveLevels\Level3EncounterLevelTests.cs" />
+    <Compile Include="Encounters\Forest\Temperate\Night\Level18TemperateForestNightEncountersTests.cs" />
+    <Compile Include="Encounters\Desert\Warm\Night\Level1WarmDesertNightEncountersTests.cs" />
+    <Compile Include="Encounters\Forest\Warm\Day\Level8WarmForestDayEncountersTests.cs" />
+    <Compile Include="Encounters\Forest\Warm\Night\Level2WarmForestNightEncountersTests.cs" />
+    <Compile Include="Encounters\Hills\Cold\Night\Level1ColdHillsNightEncountersTests.cs" />
+    <Compile Include="Encounters\Hills\Cold\Night\Level3ColdHillsNightEncountersTests.cs" />
+    <Compile Include="Encounters\Hills\Temperate\Day\Level6TemperateHillsDayEncountersTests.cs" />
+    <Compile Include="Encounters\Hills\Temperate\Night\Level17TemperateHillsNightEencounters.cs" />
+    <Compile Include="Encounters\Hills\Warm\Day\Level7WarmHillsDayEncountersTests.cs" />
+    <Compile Include="Encounters\Hills\Warm\Night\Level2WarmHillsNightEncountersTests.cs" />
+    <Compile Include="Encounters\Hills\Warm\Night\Level7WarmHillsNightEncountersTests.cs" />
+    <Compile Include="Encounters\Marsh\Cold\Day\Level18ColdMarshDayEncountersTests.cs" />
+    <Compile Include="Encounters\Marsh\Temperate\Day\Level19TemperateMarshDayEncountersTests.cs" />
+    <Compile Include="Encounters\Marsh\Temperate\Day\Level20TemperateMarshDayEncountersTests.cs" />
+    <Compile Include="Encounters\Marsh\Temperate\Day\Level5TemperateMarshDayEncountersTests.cs" />
+    <Compile Include="Encounters\Marsh\Temperate\Night\Level17TemperateMarshNightEncountersTests.cs" />
+    <Compile Include="Encounters\Marsh\Temperate\Night\Level18TemperateMarshNightEncountersTests.cs" />
+    <Compile Include="Encounters\Marsh\Warm\Day\Level17WarmMarshDayEncountersTests.cs" />
+    <Compile Include="Encounters\Marsh\Warm\Day\Level8WarmMarshDayEncountersTests.cs" />
+    <Compile Include="Encounters\Marsh\Warm\Night\Level17WarmMarshNightEncountersTests.cs" />
+    <Compile Include="Encounters\Marsh\Warm\Night\Level19WarmMarshNightEncountersTests.cs" />
+    <Compile Include="Encounters\Mountain\Cold\Night\Level10ColdMountainNightEncountersTests.cs" />
+    <Compile Include="Encounters\Mountain\Cold\Night\Level11ColdMountainNightEncountersTests.cs" />
+    <Compile Include="Encounters\Mountain\Temperate\Day\Level14TemperateMountainDayEncountersTests.cs" />
+    <Compile Include="Encounters\Mountain\Temperate\Day\Level19TemperateMountainDayEncountersTests.cs" />
+    <Compile Include="Encounters\Mountain\Temperate\Day\Level4TemperateMountainDayEncountersTests.cs" />
+    <Compile Include="Encounters\Mountain\Temperate\Night\Level12TemperateMountainNightEncountersTests.cs" />
+    <Compile Include="Encounters\Mountain\Temperate\Night\Level20TemperateMountainNightEncountersTests.cs" />
+    <Compile Include="Encounters\Mountain\Warm\Day\Level17WarmMountainDayEncountersTests.cs" />
+    <Compile Include="Encounters\Mountain\Warm\Day\Level4WarmMountainDayEncountersTests.cs" />
+    <Compile Include="Encounters\Mountain\Warm\Night\Level15WarmMountainNightEncountersTests.cs" />
+    <Compile Include="Encounters\Plains\Cold\Day\Level18ColdPlainsDayEncountersTests.cs" />
+    <Compile Include="Encounters\Plains\Cold\Day\Level4ColdPlainsDayEncountersTests.cs" />
+    <Compile Include="Encounters\Plains\Cold\Night\Level13ColdPlainsNightEncountersTests.cs" />
+    <Compile Include="Encounters\Plains\Temperate\Night\Level20TemperatePlainsNightEncountersTests.cs" />
+    <Compile Include="Encounters\Plains\Temperate\Night\Level9TemperatePlainsNightEncountersTests.cs" />
+    <Compile Include="Encounters\Plains\Warm\Day\Level17WarmPlainsDayEncountersTests.cs" />
+    <Compile Include="Encounters\Plains\Warm\Day\Level7WarmPlainsDayEncountersTests.cs" />
+    <Compile Include="PercentileTests.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rolls\RollOrderTests.cs" />
+    <Compile Include="TableAttribute.cs" />
+    <Compile Include="TableTests.cs" />
+    <Compile Include="Treasures\TreasureAdjustmentsTests.cs" />
+    <Compile Include="TypeAndAmountPercentileTests.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EncounterGen.Domain\EncounterGen.Domain.csproj">
+      <Project>{2bd2a4e9-5cc8-4202-a0cc-79d846433b29}</Project>
+      <Name>EncounterGen.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EncounterGen\EncounterGen.csproj">
+      <Project>{79ca8727-5e80-4da4-84c0-c9e620884362}</Project>
+      <Name>EncounterGen</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EncounterGen.Tests.Integration\EncounterGen.Tests.Integration.csproj">
+      <Project>{0846dfa2-2810-4da1-8291-33878b7d8465}</Project>
+      <Name>EncounterGen.Tests.Integration.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

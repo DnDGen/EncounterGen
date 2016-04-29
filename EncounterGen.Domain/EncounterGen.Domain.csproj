@@ -1,0 +1,633 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2BD2A4E9-5CC8-4202-A0CC-79D846433B29}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EncounterGen.Domain</RootNamespace>
+    <AssemblyName>EncounterGen.Domain</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Stress|AnyCPU'">
+    <OutputPath>bin\Stress\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Albatross.Expression, Version=1.1.5700.39687, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Albatross.Expression.1.1.5700.39687\lib\net40\Albatross.Expression.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CharacterGen.Bootstrap, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\CharacterGen.Bootstrap.4.0\lib\CharacterGen.Bootstrap.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CharacterGen.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\CharacterGen.4.0\lib\CharacterGen.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CharacterGen.Generators, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\CharacterGen.4.0\lib\CharacterGen.Generators.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CharacterGen.Generators.Domain, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\CharacterGen.Bootstrap.4.0\lib\CharacterGen.Generators.Domain.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CharacterGen.Mappers, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\CharacterGen.Bootstrap.4.0\lib\CharacterGen.Mappers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CharacterGen.Mappers.Domain, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\CharacterGen.Bootstrap.4.0\lib\CharacterGen.Mappers.Domain.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CharacterGen.Selectors, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\CharacterGen.Bootstrap.4.0\lib\CharacterGen.Selectors.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CharacterGen.Selectors.Domain, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\CharacterGen.Bootstrap.4.0\lib\CharacterGen.Selectors.Domain.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CharacterGen.Tables, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\CharacterGen.Bootstrap.4.0\lib\CharacterGen.Tables.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CharacterGen.Tables.Domain, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\CharacterGen.Bootstrap.4.0\lib\CharacterGen.Tables.Domain.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ninject, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.3.2.2.0\lib\net45-full\Ninject.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="RollGen, Version=1.0.5900.36696, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\D20Dice.11.0\lib\RollGen.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="RollGen.Bootstrap, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\D20Dice.Bootstrap.11.0.1\lib\RollGen.Bootstrap.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="RollGen.Domain, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\D20Dice.Bootstrap.11.0.1\lib\RollGen.Domain.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TreasureGen.Bootstrap, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\EquipmentGen.Bootstrap.3.5\lib\TreasureGen.Bootstrap.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="TreasureGen.Common, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\EquipmentGen.3.5\lib\TreasureGen.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="TreasureGen.Generators, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\EquipmentGen.3.5\lib\TreasureGen.Generators.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="TreasureGen.Generators.Domain, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\EquipmentGen.Bootstrap.3.5\lib\TreasureGen.Generators.Domain.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="TreasureGen.Mappers, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\EquipmentGen.Bootstrap.3.5\lib\TreasureGen.Mappers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="TreasureGen.Mappers.Domain, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\EquipmentGen.Bootstrap.3.5\lib\TreasureGen.Mappers.Domain.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="TreasureGen.Selectors, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\EquipmentGen.Bootstrap.3.5\lib\TreasureGen.Selectors.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="TreasureGen.Selectors.Domain, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\EquipmentGen.Bootstrap.3.5\lib\TreasureGen.Selectors.Domain.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="TreasureGen.Tables, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\EquipmentGen.Bootstrap.3.5\lib\TreasureGen.Tables.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="TreasureGen.Tables.Domain, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\EquipmentGen.Bootstrap.3.5\lib\TreasureGen.Tables.Domain.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Generators\EncounterGenerator.cs" />
+    <Compile Include="IoC\EncounterGenModuleLoader.cs" />
+    <Compile Include="IoC\Factories\CollectionMapperFactory.cs" />
+    <Compile Include="IoC\Factories\EncounterGeneratorFactory.cs" />
+    <Compile Include="IoC\Factories\PercentileMapperFactory.cs" />
+    <Compile Include="IoC\Modules\GeneratorsModule.cs" />
+    <Compile Include="IoC\Modules\MappersModule.cs" />
+    <Compile Include="IoC\Modules\SelectorsModule.cs" />
+    <Compile Include="IoC\Modules\TablesModule.cs" />
+    <Compile Include="Mappers\Collections\CollectionMapper.cs" />
+    <Compile Include="Mappers\Collections\CollectionMapperCachingProxy.cs" />
+    <Compile Include="Mappers\Collections\CollectionXmlMapper.cs" />
+    <Compile Include="Mappers\Percentiles\PercentileMapper.cs" />
+    <Compile Include="Mappers\Percentiles\PercentileMapperCachingProxy.cs" />
+    <Compile Include="Mappers\Percentiles\PercentileXmlMapper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Selectors\AdjustmentSelector.cs" />
+    <Compile Include="Selectors\CollectionSelector.cs" />
+    <Compile Include="Selectors\IAdjustmentSelector.cs" />
+    <Compile Include="Selectors\ICollectionSelector.cs" />
+    <Compile Include="Selectors\IRollSelector.cs" />
+    <Compile Include="Selectors\ModifierConstants.cs" />
+    <Compile Include="Selectors\Percentiles\BooleanPercentileSelector.cs" />
+    <Compile Include="Selectors\Percentiles\IBooleanPercentileSelector.cs" />
+    <Compile Include="Selectors\Percentiles\IPercentileSelector.cs" />
+    <Compile Include="Selectors\Percentiles\ITypeAndAmountPercentileSelector.cs" />
+    <Compile Include="Selectors\Percentiles\PercentileSelector.cs" />
+    <Compile Include="Selectors\Percentiles\TypeAndAmountPercentileSelector.cs" />
+    <Compile Include="Selectors\RollConstants.cs" />
+    <Compile Include="Selectors\RollSelector.cs" />
+    <Compile Include="Selectors\TreasureConstants.cs" />
+    <Compile Include="Tables\EmbeddedResourceStreamLoader.cs" />
+    <Compile Include="Tables\GroupConstants.cs" />
+    <Compile Include="Tables\StreamLoader.cs" />
+    <Compile Include="Tables\TableNameConstants.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EncounterGen\EncounterGen.csproj">
+      <Project>{79ca8727-5e80-4da4-84c0-c9e620884362}</Project>
+      <Name>EncounterGen</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Creatures\SkeletonSubtypeChallengeRatings.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Creatures\Celestial creatureSubtypeChallengeRatings.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Creatures\Charmed creatureSubtypeChallengeRatings.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Creatures\CreatureGroups.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Creatures\Dragons\Level10Dragons.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Creatures\Dragons\Level11Dragons.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Creatures\Dragons\Level12Dragons.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Creatures\Dragons\Level13Dragons.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Creatures\Dragons\Level14Dragons.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Creatures\Dragons\Level15Dragons.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Creatures\Dragons\Level16Dragons.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Creatures\Dragons\Level17Dragons.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Creatures\Dragons\Level18Dragons.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Creatures\Dragons\Level19Dragons.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Creatures\Dragons\Level1Dragons.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Creatures\Dragons\Level20Dragons.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Creatures\Dragons\Level2Dragons.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Creatures\Dragons\Level3Dragons.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Creatures\Dragons\Level4Dragons.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Creatures\Dragons\Level5Dragons.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Creatures\Dragons\Level6Dragons.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Creatures\Dragons\Level7Dragons.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Creatures\Dragons\Level8Dragons.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Creatures\Dragons\Level9Dragons.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Creatures\Fiendish creatureSubtypeChallengeRatings.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Creatures\MephitSubtypeChallengeRatings.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Civilized\Day\Level11Civilized DayEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Civilized\Day\Level13Civilized DayEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Civilized\Day\Level6Civilized DayEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Civilized\Night\Level11Civilized NightEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Civilized\Night\Level17Civilized NightEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Civilized\Night\Level2Civilized NightEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Civilized\Night\Level5Civilized NightEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Civilized\Night\Level7Civilized NightEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Desert\Cold\Day\Level14Cold Desert DayEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Desert\Cold\Day\Level4Cold Desert DayEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Desert\Cold\Day\Level7Cold Desert DayEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Desert\Cold\Night\Level1Cold Desert NightEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Desert\Temperate\Day\Level17Temperate Desert DayEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Desert\Temperate\Night\Level6Temperate Desert NightEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Desert\Warm\Night\Level19Warm Desert NightEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Desert\Warm\Night\Level1Warm Desert NightEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Dungeon\Level10DungeonEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Dungeon\Level11DungeonEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Dungeon\Level12DungeonEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Dungeon\Level13DungeonEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Dungeon\Level14DungeonEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Dungeon\Level15DungeonEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Dungeon\Level16DungeonEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Dungeon\Level17DungeonEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Dungeon\Level18DungeonEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Dungeon\Level19DungeonEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Dungeon\Level1DungeonEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Dungeon\Level20DungeonEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Dungeon\Level2DungeonEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Dungeon\Level3DungeonEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Dungeon\Level4DungeonEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Dungeon\Level5DungeonEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Dungeon\Level6DungeonEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Dungeon\Level7DungeonEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Dungeon\Level8DungeonEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Dungeon\Level9DungeonEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\EffectiveLevels\Level10EncounterLevel.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\EffectiveLevels\Level11EncounterLevel.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\EffectiveLevels\Level12EncounterLevel.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\EffectiveLevels\Level13EncounterLevel.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\EffectiveLevels\Level14EncounterLevel.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\EffectiveLevels\Level15EncounterLevel.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\EffectiveLevels\Level16EncounterLevel.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\EffectiveLevels\Level17EncounterLevel.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\EffectiveLevels\Level18EncounterLevel.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\EffectiveLevels\Level19EncounterLevel.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\EffectiveLevels\Level1EncounterLevel.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\EffectiveLevels\Level20EncounterLevel.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\EffectiveLevels\Level2EncounterLevel.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\EffectiveLevels\Level3EncounterLevel.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\EffectiveLevels\Level4EncounterLevel.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\EffectiveLevels\Level5EncounterLevel.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\EffectiveLevels\Level6EncounterLevel.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\EffectiveLevels\Level7EncounterLevel.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\EffectiveLevels\Level8EncounterLevel.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\EffectiveLevels\Level9EncounterLevel.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Forest\Cold\Day\Level10Cold Forest DayEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Forest\Cold\Night\Level16Cold Forest NightEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Forest\Cold\Night\Level3Cold Forest NightEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Forest\Temperate\Day\Level12Temperate Forest DayEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Forest\Temperate\Day\Level14Temperate Forest DayEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Forest\Temperate\Day\Level20Temperate Forest DayEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Forest\Temperate\Day\Level5Temperate Forest DayEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Forest\Temperate\Night\Level13Temperate Forest NightEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Forest\Temperate\Night\Level18Temperate Forest NightEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Forest\Warm\Day\Level17Warm Forest DayEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Forest\Warm\Day\Level2Warm Forest DayEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Forest\Warm\Day\Level8Warm Forest DayEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Forest\Warm\Night\Level11Warm Forest NightEncounters.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Forest\Warm\Night\Level2Warm Forest NightEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Hills\Cold\Day\Level11Cold Hills DayEncounters.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Hills\Cold\Day\Level15Cold Hills DayEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Hills\Cold\Day\Level19Cold Hills DayEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Hills\Cold\Night\Level14Cold Hills NightEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Hills\Cold\Night\Level19Cold Hills NightEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Hills\Cold\Night\Level1Cold Hills NightEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Hills\Cold\Night\Level3Cold Hills NightEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Hills\Temperate\Day\Level6Temperate Hills DayEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Hills\Temperate\Night\Level17Temperate Hills NightEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Hills\Warm\Day\Level7Warm Hills DayEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Hills\Warm\Night\Level2Warm Hills NightEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Hills\Warm\Night\Level7Warm Hills NightEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Marsh\Cold\Day\Level18Cold Marsh DayEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Marsh\Temperate\Day\Level19Temperate Marsh DayEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Marsh\Temperate\Day\Level20Temperate Marsh DayEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Marsh\Temperate\Day\Level5Temperate Marsh DayEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Marsh\Temperate\Night\Level17Temperate Marsh NightEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Marsh\Temperate\Night\Level18Temperate Marsh NightEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Marsh\Warm\Day\Level17Warm Marsh DayEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Marsh\Warm\Day\Level8Warm Marsh DayEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Marsh\Warm\Night\Level17Warm Marsh NightEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Marsh\Warm\Night\Level19Warm Marsh NightEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Mountain\Cold\Night\Level10Cold Mountain NightEncounters.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Mountain\Cold\Night\Level11Cold Mountain NightEncounters.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Mountain\Temperate\Day\Level14Temperate Mountain DayEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Mountain\Temperate\Day\Level19Temperate Mountain DayEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Mountain\Temperate\Day\Level4Temperate Mountain DayEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Mountain\Temperate\Night\Level12Temperate Mountain NightEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Mountain\Temperate\Night\Level20Temperate Mountain NightEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Mountain\Warm\Day\Level17Warm Mountain DayEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Mountain\Warm\Day\Level4Warm Mountain DayEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Mountain\Warm\Night\Level15Warm Mountain NightEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Plains\Cold\Day\Level18Cold Plains DayEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Plains\Cold\Day\Level4Cold Plains DayEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Plains\Cold\Night\Level13Cold Plains NightEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Plains\Temperate\Night\Level20Temperate Plains NightEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Plains\Temperate\Night\Level9Temperate Plains NightEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Plains\Warm\Day\Level17Warm Plains DayEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Plains\Warm\Day\Level7Warm Plains DayEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Rolls\RollOrder.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Treasures\TreasureAdjustments.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
