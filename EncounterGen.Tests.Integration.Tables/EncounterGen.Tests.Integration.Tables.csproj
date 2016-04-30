@@ -61,11 +61,11 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
     <Reference Include="TreasureGen.Common, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\EquipmentGen.3.5\lib\TreasureGen.Common.dll</HintPath>
+      <HintPath>..\packages\EquipmentGen.3.5\lib\TreasureGen.Common.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="TreasureGen.Generators, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\EquipmentGen.3.5\lib\TreasureGen.Generators.dll</HintPath>
+      <HintPath>..\packages\EquipmentGen.3.5\lib\TreasureGen.Generators.dll</HintPath>
       <Private>True</Private>
     </Reference>
   </ItemGroup>

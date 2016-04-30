@@ -186,12 +186,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\EncounterGen\EncounterGen.csproj">
-      <Project>{79ca8727-5e80-4da4-84c0-c9e620884362}</Project>
-      <Name>EncounterGen</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Tables\Creatures\SkeletonSubtypeChallengeRatings.xml">
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -621,6 +615,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Tables\Treasures\TreasureAdjustments.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EncounterGen\EncounterGen.csproj">
+      <Project>{79ca8727-5e80-4da4-84c0-c9e620884362}</Project>
+      <Name>EncounterGen</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
