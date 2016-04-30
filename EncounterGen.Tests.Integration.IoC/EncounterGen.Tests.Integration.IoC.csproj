@@ -7,8 +7,8 @@
     <ProjectGuid>{18CAB703-F4C7-445E-8837-44061579D026}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>EncounterGen.Tests.Integration.Bootstrap</RootNamespace>
-    <AssemblyName>EncounterGen.Tests.Integration.Bootstrap</AssemblyName>
+    <RootNamespace>EncounterGen.Tests.Integration.IoC</RootNamespace>
+    <AssemblyName>EncounterGen.Tests.Integration.IoC</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
