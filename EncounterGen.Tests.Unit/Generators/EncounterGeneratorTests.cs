@@ -6,11 +6,11 @@ using CharacterGen.Generators.Randomizers.CharacterClasses;
 using CharacterGen.Generators.Randomizers.Races;
 using CharacterGen.Generators.Randomizers.Stats;
 using EncounterGen.Common;
-using EncounterGen.Generators;
 using EncounterGen.Domain.Generators;
 using EncounterGen.Domain.Selectors;
 using EncounterGen.Domain.Selectors.Percentiles;
 using EncounterGen.Domain.Tables;
+using EncounterGen.Generators;
 using Moq;
 using NUnit.Framework;
 using RollGen;
@@ -389,6 +389,42 @@ namespace EncounterGen.Tests.Unit.Generators
             Assert.That(creature.Type, Is.EqualTo("creature"));
             Assert.That(creature.Subtype, Is.EqualTo("other creature"));
             Assert.That(creature.Quantity, Is.EqualTo(8765));
+            Assert.That(encounter.Characters, Is.Empty);
+        }
+
+        [Test]
+        public void SubtypeHasFurtherSetSubtype()
+        {
+            encounterTypeAndAmount.Clear();
+            encounterTypeAndAmount["creature[challenge rating]"] = "creature amount";
+
+            requiresSubtype.Add("creature");
+
+            var subtypes = new[] { "wrong creature", "other creature (subtype)" };
+            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.CreatureGroups, "creature"))
+                .Returns(subtypes);
+
+            mockCollectionSelector.SetupSequence(s => s.SelectRandomFrom(subtypes)).Returns(subtypes.First()).Returns(subtypes.Last());
+
+            var tableName = string.Format(TableNameConstants.CREATURESubtypeChallengeRatings, "creature");
+            mockCollectionSelector.Setup(s => s.SelectFrom(tableName, "other creature (subtype)")).Returns(new[] { "other challenge rating" });
+
+            mockRollSelector.Setup(s => s.SelectFrom(level, "other challenge rating")).Returns("other roll");
+            mockDice.Setup(d => d.Roll("other roll")).Returns(600);
+            mockCollectionSelector.Setup(s => s.SelectFrom(tableName, "wrong creature")).Returns(new[] { "wrong challenge rating" });
+            mockRollSelector.Setup(s => s.SelectFrom(level, "wrong challenge rating")).Returns("wrong roll");
+            mockDice.Setup(d => d.Roll("wrong roll")).Returns(1337);
+
+            mockRollSelector.Setup(s => s.SelectFrom("creature amount", 9876)).Returns("creature effective roll");
+            mockDice.Setup(d => d.Roll("creature effective roll")).Returns(7654);
+
+            var encounter = encounterGenerator.Generate(environment, level);
+            Assert.That(encounter, Is.Not.Null);
+
+            var creature = encounter.Creatures.Single();
+            Assert.That(creature.Type, Is.EqualTo("creature"));
+            Assert.That(creature.Subtype, Is.EqualTo("other creature (subtype)"));
+            Assert.That(creature.Quantity, Is.EqualTo(7654));
             Assert.That(encounter.Characters, Is.Empty);
         }
 
@@ -1355,6 +1391,18 @@ namespace EncounterGen.Tests.Unit.Generators
         {
             undeadNPCs.Add(encounterTypeAndAmount.Keys.First());
             Assert.That(() => encounterGenerator.Generate(environment, level), Throws.InstanceOf<ArgumentException>().With.Message.EqualTo("Character level was not provided for a character creature type \"creature\""));
+        }
+
+        [Test]
+        public void UseSubtypeForTreasure()
+        {
+            throw new NotImplementedException("This is for celestial and fiendish creatures, who have treasure the same as subtype.  Skeletons, zombies, etc. still go by normal creature type");
+        }
+
+        [Test]
+        public void UseSubtypeWithoutSubSubtypeForTreasure()
+        {
+            throw new NotImplementedException("This is for celestial and fiendish creatures, who have treasure the same as subtype.  Skeletons, zombies, etc. still go by normal creature type");
         }
     }
 }
