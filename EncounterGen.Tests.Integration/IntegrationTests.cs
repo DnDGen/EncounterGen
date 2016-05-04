@@ -17,8 +17,8 @@ namespace EncounterGen.Tests.Integration
         {
             kernel = new StandardKernel(new NinjectSettings() { InjectNonPublic = true });
 
-            var diceLoader = new RollGenModuleLoader();
-            diceLoader.LoadModules(kernel);
+            var rollGenLoader = new RollGenModuleLoader();
+            rollGenLoader.LoadModules(kernel);
 
             var treasureGenLoader = new TreasureGenModuleLoader();
             treasureGenLoader.LoadModules(kernel);

@@ -396,7 +396,7 @@ namespace EncounterGen.Tests.Unit.Generators
         public void SubtypeHasFurtherSetSubtype()
         {
             encounterTypeAndAmount.Clear();
-            encounterTypeAndAmount["creature[challenge rating]"] = "creature amount";
+            encounterTypeAndAmount["creature"] = "creature amount";
 
             requiresSubtype.Add("creature");
 
