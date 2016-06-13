@@ -1,4 +1,4 @@
-﻿using EncounterGen.Domain.IoC.Factories;
+﻿using EncounterGen.Domain.IoC.Providers;
 using EncounterGen.Generators;
 using Ninject.Modules;
 
@@ -8,7 +8,7 @@ namespace EncounterGen.Domain.IoC.Modules
     {
         public override void Load()
         {
-            Bind<IEncounterGenerator>().ToMethod(c => EncounterGeneratorFactory.Create(c.Kernel));
+            Bind<IEncounterGenerator>().ToProvider<EncounterGeneratorProvider>();
         }
     }
 }

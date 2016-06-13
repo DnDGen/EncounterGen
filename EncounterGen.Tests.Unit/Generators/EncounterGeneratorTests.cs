@@ -1,10 +1,9 @@
-﻿using CharacterGen.Common;
-using CharacterGen.Common.CharacterClasses;
-using CharacterGen.Generators;
-using CharacterGen.Generators.Randomizers.Alignments;
-using CharacterGen.Generators.Randomizers.CharacterClasses;
-using CharacterGen.Generators.Randomizers.Races;
-using CharacterGen.Generators.Randomizers.Stats;
+﻿using CharacterGen;
+using CharacterGen.CharacterClasses;
+using CharacterGen.Randomizers.Alignments;
+using CharacterGen.Randomizers.CharacterClasses;
+using CharacterGen.Randomizers.Races;
+using CharacterGen.Randomizers.Stats;
 using EncounterGen.Common;
 using EncounterGen.Domain.Generators;
 using EncounterGen.Domain.Selectors;
@@ -17,12 +16,9 @@ using RollGen;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using TreasureGen.Common.Coins;
-using TreasureGen.Common.Goods;
-using TreasureGen.Common.Items;
-using TreasureGen.Generators.Coins;
-using TreasureGen.Generators.Goods;
-using TreasureGen.Generators.Items;
+using TreasureGen.Coins;
+using TreasureGen.Goods;
+using TreasureGen.Items;
 
 namespace EncounterGen.Tests.Unit.Generators
 {
@@ -313,6 +309,7 @@ namespace EncounterGen.Tests.Unit.Generators
             mockCollectionSelector.Setup(s => s.SelectFrom(tableName, "other creature")).Returns(new[] { "other challenge rating" });
             mockRollSelector.Setup(s => s.SelectFrom(level, "other challenge rating")).Returns("other roll");
             mockDice.Setup(d => d.Roll("other roll")).Returns(600);
+
             mockCollectionSelector.Setup(s => s.SelectFrom(tableName, "wrong creature")).Returns(new[] { "wrong challenge rating" });
             mockRollSelector.Setup(s => s.SelectFrom(level, "wrong challenge rating")).Returns("wrong roll");
             mockDice.Setup(d => d.Roll("wrong roll")).Returns(1337);
@@ -375,6 +372,7 @@ namespace EncounterGen.Tests.Unit.Generators
             mockCollectionSelector.Setup(s => s.SelectFrom(tableName, "other creature")).Returns(new[] { "challenge rating" });
             mockRollSelector.Setup(s => s.SelectFrom(level, "challenge rating")).Returns("roll");
             mockDice.Setup(d => d.Roll("roll")).Returns(7654);
+
             mockCollectionSelector.Setup(s => s.SelectFrom(tableName, "wrong creature")).Returns(new[] { "wrong challenge rating" });
             mockRollSelector.Setup(s => s.SelectFrom(level, "wrong challenge rating")).Returns(RollConstants.Reroll);
             mockDice.Setup(d => d.Roll(RollConstants.Reroll)).Returns(1337);
@@ -408,12 +406,13 @@ namespace EncounterGen.Tests.Unit.Generators
 
             var tableName = string.Format(TableNameConstants.CREATURESubtypeChallengeRatings, "creature");
             mockCollectionSelector.Setup(s => s.SelectFrom(tableName, "other creature (subtype)")).Returns(new[] { "other challenge rating" });
-
             mockRollSelector.Setup(s => s.SelectFrom(level, "other challenge rating")).Returns("other roll");
             mockDice.Setup(d => d.Roll("other roll")).Returns(600);
+
             mockCollectionSelector.Setup(s => s.SelectFrom(tableName, "wrong creature")).Returns(new[] { "wrong challenge rating" });
-            mockRollSelector.Setup(s => s.SelectFrom(level, "wrong challenge rating")).Returns("wrong roll");
+            mockRollSelector.Setup(s => s.SelectFrom(level, "wrong challenge rating")).Returns(RollConstants.Reroll);
             mockDice.Setup(d => d.Roll("wrong roll")).Returns(1337);
+
 
             mockRollSelector.Setup(s => s.SelectFrom("creature amount", 9876)).Returns("creature effective roll");
             mockDice.Setup(d => d.Roll("creature effective roll")).Returns(7654);
@@ -1308,8 +1307,8 @@ namespace EncounterGen.Tests.Unit.Generators
             encounterTypeAndAmount["Hydra (2d3+4 heads)"] = "hydra amount";
             mockRollSelector.Setup(s => s.SelectFrom("hydra amount", 9876)).Returns("hydra effective roll");
             mockDice.Setup(d => d.Roll("hydra effective roll")).Returns(1);
-            mockDice.Setup(d => d.ContainsRoll("2d3+4 heads")).Returns(true);
-            mockDice.Setup(d => d.ReplaceExpressionWithTotal("2d3+4 heads")).Returns("1337 heads");
+            mockDice.Setup(d => d.ContainsRoll("2d3+4 heads", true)).Returns(true);
+            mockDice.Setup(d => d.ReplaceExpressionWithTotal("2d3+4 heads", true)).Returns("1337 heads");
 
             var encounter = encounterGenerator.Generate(environment, level);
             Assert.That(encounter, Is.Not.Null);
@@ -1328,8 +1327,8 @@ namespace EncounterGen.Tests.Unit.Generators
             encounterTypeAndAmount["Hydra (2d3+4 heads)"] = "hydra amount";
             mockRollSelector.Setup(s => s.SelectFrom("hydra amount", 9876)).Returns("hydra effective roll");
             mockDice.Setup(d => d.Roll("hydra effective roll")).Returns(2);
-            mockDice.Setup(d => d.ContainsRoll("2d3+4 heads")).Returns(true);
-            mockDice.SetupSequence(d => d.ReplaceExpressionWithTotal("2d3+4 heads")).Returns("1337 heads").Returns("1234 heads");
+            mockDice.Setup(d => d.ContainsRoll("2d3+4 heads", true)).Returns(true);
+            mockDice.SetupSequence(d => d.ReplaceExpressionWithTotal("2d3+4 heads", true)).Returns("1337 heads").Returns("1234 heads");
 
             var encounter = encounterGenerator.Generate(environment, level);
             Assert.That(encounter, Is.Not.Null);

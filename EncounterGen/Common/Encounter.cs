@@ -1,7 +1,7 @@
-﻿using CharacterGen.Common;
+﻿using CharacterGen;
 using System.Collections.Generic;
 using System.Linq;
-using TreasureGen.Common;
+using TreasureGen;
 
 namespace EncounterGen.Common
 {

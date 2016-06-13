@@ -1,9 +1,9 @@
-﻿using CharacterGen.Bootstrap;
+﻿using CharacterGen.Domain.IoC;
 using EncounterGen.Domain.IoC;
 using Ninject;
 using NUnit.Framework;
-using RollGen.Bootstrap;
-using TreasureGen.Bootstrap;
+using RollGen.Domain.Ioc;
+using TreasureGen.Domain.IoC;
 
 namespace EncounterGen.Tests.Integration
 {

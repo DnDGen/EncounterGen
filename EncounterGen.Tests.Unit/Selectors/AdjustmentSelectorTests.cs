@@ -24,7 +24,7 @@ namespace EncounterGen.Tests.Unit.Selectors
         public void SelectAdjustment()
         {
             mockCollectionSelector.Setup(s => s.SelectFrom("table name", "entry")).Returns(new[] { "adjustment" });
-            mockDice.Setup(d => d.ReplaceExpressionWithTotal("adjustment")).Returns("rolled adjustment");
+            mockDice.Setup(d => d.ReplaceExpressionWithTotal("adjustment", true)).Returns("rolled adjustment");
             mockDice.Setup(d => d.Evaluate<int>("rolled adjustment")).Returns(9266);
 
             var adjustment = selector.Select("table name", "entry");
@@ -35,7 +35,7 @@ namespace EncounterGen.Tests.Unit.Selectors
         public void SelectSubAdjustment()
         {
             mockCollectionSelector.Setup(s => s.SelectFrom("table name", "entry")).Returns(new[] { "adjustment", "other adjustment" });
-            mockDice.Setup(d => d.ReplaceExpressionWithTotal("other adjustment")).Returns("rolled adjustment");
+            mockDice.Setup(d => d.ReplaceExpressionWithTotal("other adjustment", true)).Returns("rolled adjustment");
             mockDice.Setup(d => d.Evaluate<int>("rolled adjustment")).Returns(9266);
 
             var adjustment = selector.Select("table name", "entry", 1);
@@ -46,7 +46,7 @@ namespace EncounterGen.Tests.Unit.Selectors
         public void SelectDoubleAdjustment()
         {
             mockCollectionSelector.Setup(s => s.SelectFrom("table name", "entry")).Returns(new[] { "adjustment" });
-            mockDice.Setup(d => d.ReplaceExpressionWithTotal("adjustment")).Returns("rolled adjustment");
+            mockDice.Setup(d => d.ReplaceExpressionWithTotal("adjustment", true)).Returns("rolled adjustment");
             mockDice.Setup(d => d.Evaluate<double>("rolled adjustment")).Returns(.5);
 
             var adjustment = selector.Select<double>("table name", "entry");
@@ -57,7 +57,7 @@ namespace EncounterGen.Tests.Unit.Selectors
         public void SelectDoubleSubAdjustment()
         {
             mockCollectionSelector.Setup(s => s.SelectFrom("table name", "entry")).Returns(new[] { "adjustment", "other adjustment" });
-            mockDice.Setup(d => d.ReplaceExpressionWithTotal("other adjustment")).Returns("rolled adjustment");
+            mockDice.Setup(d => d.ReplaceExpressionWithTotal("other adjustment", true)).Returns("rolled adjustment");
             mockDice.Setup(d => d.Evaluate<double>("rolled adjustment")).Returns(.5);
 
             var adjustment = selector.Select<double>("table name", "entry", 1);

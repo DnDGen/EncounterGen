@@ -1,9 +1,8 @@
-﻿using CharacterGen.Common;
-using CharacterGen.Generators;
-using CharacterGen.Generators.Randomizers.Alignments;
-using CharacterGen.Generators.Randomizers.CharacterClasses;
-using CharacterGen.Generators.Randomizers.Races;
-using CharacterGen.Generators.Randomizers.Stats;
+﻿using CharacterGen;
+using CharacterGen.Randomizers.Alignments;
+using CharacterGen.Randomizers.CharacterClasses;
+using CharacterGen.Randomizers.Races;
+using CharacterGen.Randomizers.Stats;
 using EncounterGen.Common;
 using EncounterGen.Domain.Selectors;
 using EncounterGen.Domain.Selectors.Percentiles;
@@ -14,10 +13,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
-using TreasureGen.Common;
-using TreasureGen.Generators.Coins;
-using TreasureGen.Generators.Goods;
-using TreasureGen.Generators.Items;
+using TreasureGen;
+using TreasureGen.Coins;
+using TreasureGen.Goods;
+using TreasureGen.Items;
 
 namespace EncounterGen.Domain.Generators
 {
@@ -126,7 +125,7 @@ namespace EncounterGen.Domain.Generators
             {
                 creature.Type = GetCreatureType(creature.Type);
 
-                if (dice.ContainsRoll(creature.Subtype) == false)
+                if (dice.ContainsRoll(creature.Subtype, true) == false)
                     continue;
 
                 creaturesToRemove.Add(creature);
@@ -136,7 +135,7 @@ namespace EncounterGen.Domain.Generators
                     var rolledCreature = new Creature();
                     rolledCreature.Quantity = 1;
                     rolledCreature.Type = creature.Type;
-                    rolledCreature.Subtype = dice.ReplaceExpressionWithTotal(creature.Subtype);
+                    rolledCreature.Subtype = dice.ReplaceExpressionWithTotal(creature.Subtype, true);
 
                     newCreatures.Add(rolledCreature);
                 }

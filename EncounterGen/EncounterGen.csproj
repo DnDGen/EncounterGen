@@ -30,12 +30,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CharacterGen.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\CharacterGen.4.0\lib\CharacterGen.Common.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="CharacterGen.Generators, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\CharacterGen.4.0\lib\CharacterGen.Generators.dll</HintPath>
+    <Reference Include="CharacterGen, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\CharacterGen.5.0\lib\CharacterGen.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -46,12 +42,8 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
-    <Reference Include="TreasureGen.Common, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\EquipmentGen.3.5\lib\TreasureGen.Common.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="TreasureGen.Generators, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\EquipmentGen.3.5\lib\TreasureGen.Generators.dll</HintPath>
+    <Reference Include="TreasureGen, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DnDGen.TreasureGen.4.0\lib\TreasureGen.dll</HintPath>
       <Private>True</Private>
     </Reference>
   </ItemGroup>

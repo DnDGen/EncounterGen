@@ -23,7 +23,7 @@ namespace EncounterGen.Domain.Selectors
         {
             var collection = collectionSelector.SelectFrom(tableName, entry);
             var adjustment = collection.ElementAt(index);
-            var expression = dice.ReplaceExpressionWithTotal(adjustment);
+            var expression = dice.ReplaceExpressionWithTotal(adjustment, true);
             return dice.Evaluate<T>(expression);
         }
     }

@@ -1,4 +1,4 @@
-﻿using CharacterGen.Common.CharacterClasses;
+﻿using CharacterGen.CharacterClasses;
 using EncounterGen.Common;
 using EncounterGen.Domain.Tables;
 using NUnit.Framework;
