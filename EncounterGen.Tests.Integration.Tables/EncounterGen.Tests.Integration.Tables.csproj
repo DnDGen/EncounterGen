@@ -111,6 +111,7 @@
     <Compile Include="Encounters\Desert\Cold\Day\Level7ColdDesertDayEncountersTests.cs" />
     <Compile Include="Encounters\Desert\Cold\Night\Level1ColdDesertNightEncountersTests.cs" />
     <Compile Include="Encounters\Desert\Temperate\Day\Level17TemperateDesertDayEncountersTests.cs" />
+    <Compile Include="Encounters\Desert\Temperate\Night\Level10TemperateDesertNightEncountersTests.cs" />
     <Compile Include="Encounters\Desert\Warm\Night\Level19WarmDesertNightEncountersTests.cs" />
     <Compile Include="Encounters\Dungeon\Level10DungeonEncountersTests.cs" />
     <Compile Include="Encounters\Dungeon\Level11DungeonEncountersTests.cs" />
@@ -134,6 +135,7 @@
     <Compile Include="Encounters\Forest\Warm\Day\Level17WarmForestDayEncountersTests.cs" />
     <Compile Include="Encounters\Forest\Warm\Day\Level2WarmForestDayEncountersTests.cs" />
     <Compile Include="Encounters\Forest\Warm\Night\Level11WarmForestNightEncountersTests.cs" />
+    <Compile Include="Encounters\Forest\Warm\Night\Level18WarmForestNightEncountersTests.cs" />
     <Compile Include="Encounters\Hills\Cold\Day\Level11ColdHillsDayEncountersTests.cs" />
     <Compile Include="Encounters\Hills\Cold\Day\Level15ColdHillsDayEncountersTests.cs" />
     <Compile Include="Encounters\Hills\Cold\Day\Level19ColdHillsDayEncountersTests.cs" />
@@ -190,6 +192,8 @@
     <Compile Include="Encounters\Marsh\Warm\Day\Level8WarmMarshDayEncountersTests.cs" />
     <Compile Include="Encounters\Marsh\Warm\Night\Level17WarmMarshNightEncountersTests.cs" />
     <Compile Include="Encounters\Marsh\Warm\Night\Level19WarmMarshNightEncountersTests.cs" />
+    <Compile Include="Encounters\Mountain\Cold\Day\Level20ColdMountainDayEncountersTests.cs" />
+    <Compile Include="Encounters\Mountain\Cold\Day\Level6ColdMountainDayEncountersTests.cs" />
     <Compile Include="Encounters\Mountain\Cold\Night\Level10ColdMountainNightEncountersTests.cs" />
     <Compile Include="Encounters\Mountain\Cold\Night\Level11ColdMountainNightEncountersTests.cs" />
     <Compile Include="Encounters\Mountain\Temperate\Day\Level14TemperateMountainDayEncountersTests.cs" />

@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<percentile>
+  <object>
+        <lower>1</lower>
+        <content>Dragon/1</content>
+        <upper>22</upper>
+    </object>
+  <object>
+    <lower>23</lower>
+    <content>Marilith (demon)/1d2</content>
+    <upper>33</upper>
+  </object>
+    <object>
+        <lower>34</lower>
+        <content>Nightcrawler (nightshade)/1</content>
+        <upper>44</upper>
+    </object>
+    <object>
+        <lower>45</lower>
+        <content>Nightwing (nightshade)/1d4+2</content>
+        <upper>55</upper>
+    </object>
+  <object>
+    <lower>56</lower>
+    <content>Celestial creature/1</content>
+    <upper>66</upper>
+  </object>
+  <object>
+    <lower>67</lower>
+    <content>Fiendish creature/1</content>
+    <upper>77</upper>
+  </object>
+    <object>
+        <lower>78</lower>
+        <content>Character[15]/1d3+1</content>
+        <upper>100</upper>
+    </object>
+</percentile>
