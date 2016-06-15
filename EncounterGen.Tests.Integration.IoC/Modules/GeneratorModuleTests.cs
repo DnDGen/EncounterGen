@@ -1,4 +1,5 @@
-﻿using EncounterGen.Generators;
+﻿using EncounterGen.Domain.Generators;
+using EncounterGen.Generators;
 using NUnit.Framework;
 
 namespace EncounterGen.Tests.Integration.IoC.Modules
@@ -10,6 +11,18 @@ namespace EncounterGen.Tests.Integration.IoC.Modules
         public void EncounterGeneratorIsNotASingleton()
         {
             AssertNotSingleton<IEncounterGenerator>();
+        }
+
+        [Test]
+        public void EncounterCharacterGeneratorIsNotASingleton()
+        {
+            AssertNotSingleton<IEncounterCharacterGenerator>();
+        }
+
+        [Test]
+        public void EncounterTreasureGeneratorIsNotASingleton()
+        {
+            AssertNotSingleton<IEncounterTreasureGenerator>();
         }
     }
 }

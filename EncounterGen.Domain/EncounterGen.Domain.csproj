@@ -70,13 +70,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Generators\EncounterCharacterGenerator.cs" />
     <Compile Include="Generators\EncounterGenerator.cs" />
+    <Compile Include="Generators\EncounterTreasureGenerator.cs" />
+    <Compile Include="Generators\IEncounterCharacterGenerator.cs" />
+    <Compile Include="Generators\IEncounterTreasureGenerator.cs" />
+    <Compile Include="Generators\RegexConstants.cs" />
     <Compile Include="IoC\EncounterGenModuleLoader.cs" />
     <Compile Include="IoC\Modules\GeneratorsModule.cs" />
     <Compile Include="IoC\Modules\MappersModule.cs" />
     <Compile Include="IoC\Modules\SelectorsModule.cs" />
     <Compile Include="IoC\Modules\TablesModule.cs" />
-    <Compile Include="IoC\Providers\EncounterGeneratorProvider.cs" />
+    <Compile Include="IoC\Providers\EncounterCharacterGeneratorProvider.cs" />
     <Compile Include="Mappers\Collections\CollectionMapper.cs" />
     <Compile Include="Mappers\Collections\CollectionMapperCachingProxy.cs" />
     <Compile Include="Mappers\Collections\CollectionXmlMapper.cs" />
@@ -557,6 +562,78 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Tables\Encounters\Mountain\Cold\Day\Level20Cold Mountain DayEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Civilized\Day\Level19Civilized DayEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Civilized\Day\Level17Civilized DayEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Civilized\Day\Level2Civilized DayEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Civilized\Night\Level13Civilized NightEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Civilized\Night\Level19Civilized NightEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Civilized\Night\Level6Civilized NightEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Civilized\Day\Level5Civilized DayEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Civilized\Day\Level7Civilized DayEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Civilized\Day\Level12Civilized DayEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Civilized\Night\Level12Civilized NightEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Civilized\Night\Level1Civilized NightEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Civilized\Day\Level1Civilized DayEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Civilized\Night\Level20Civilized NightEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Civilized\Day\Level20Civilized DayEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Civilized\Night\Level10Civilized NightEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Civilized\Day\Level10Civilized DayEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Civilized\Night\Level8Civilized NightEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Civilized\Day\Level8Civilized DayEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Civilized\Day\Level9Civilized DayEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Civilized\Night\Level9Civilized NightEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Civilized\Day\Level3Civilized DayEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Civilized\Night\Level3Civilized NightEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Civilized\Night\Level4Civilized NightEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Civilized\Day\Level4Civilized DayEncounters.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

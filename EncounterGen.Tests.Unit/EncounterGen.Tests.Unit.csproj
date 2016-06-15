@@ -74,7 +74,10 @@
     <Compile Include="Common\CreatureTests.cs" />
     <Compile Include="Common\EncounterTests.cs" />
     <Compile Include="Common\EnvironmentConstantsTests.cs" />
+    <Compile Include="Generators\EncounterCharacterGeneratorTests.cs" />
     <Compile Include="Generators\EncounterGeneratorTests.cs" />
+    <Compile Include="Generators\EncounterTreasureGeneratorTests.cs" />
+    <Compile Include="Generators\RegexConstantsTests.cs" />
     <Compile Include="Mappers\Collections\CollectionMapperCachingProxyTests.cs" />
     <Compile Include="Mappers\Collections\CollectionXmlMapperTests.cs" />
     <Compile Include="Mappers\Percentiles\PercentileMapperCachingProxyTests.cs" />

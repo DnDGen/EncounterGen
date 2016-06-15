@@ -30,7 +30,8 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures
                 CreatureConstants.Zombie,
                 CreatureConstants.Character,
                 CreatureConstants.DominatedCreature,
-                CreatureConstants.CharmedCreature
+                CreatureConstants.CharmedCreature,
+                GroupConstants.UseSubtypeForTreasure
             };
 
             AssertEntriesAreComplete(entries);
@@ -91,6 +92,9 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures
             CreatureConstants.Zombie,
             CreatureConstants.Dragon,
             CreatureConstants.Character)]
+        [TestCase(GroupConstants.UseSubtypeForTreasure,
+            CreatureConstants.CelestialCreature,
+            CreatureConstants.FiendishCreature)]
         public override void DistinctCollection(string entry, params string[] items)
         {
             base.DistinctCollection(entry, items);

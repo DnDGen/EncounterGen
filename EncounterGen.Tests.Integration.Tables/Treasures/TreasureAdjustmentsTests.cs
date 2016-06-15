@@ -94,12 +94,156 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
                 CreatureConstants.Djinn,
                 CreatureConstants.Doppelganger,
                 CreatureConstants.Dragon,
+                CreatureConstants.Dragon_Black_Wyrmling,
+                CreatureConstants.Dragon_Black_VeryYoung,
+                CreatureConstants.Dragon_Black_Young,
+                CreatureConstants.Dragon_Black_Juvenile,
+                CreatureConstants.Dragon_Black_YoungAdult,
+                CreatureConstants.Dragon_Black_Adult,
+                CreatureConstants.Dragon_Black_MatureAdult,
+                CreatureConstants.Dragon_Black_Old,
+                CreatureConstants.Dragon_Black_VeryOld,
+                CreatureConstants.Dragon_Black_Ancient,
+                CreatureConstants.Dragon_Black_Wyrm,
+                CreatureConstants.Dragon_Black_GreatWyrm,
+                CreatureConstants.Dragon_Blue_Wyrmling,
+                CreatureConstants.Dragon_Blue_VeryYoung,
+                CreatureConstants.Dragon_Blue_Young,
+                CreatureConstants.Dragon_Blue_Juvenile,
+                CreatureConstants.Dragon_Blue_YoungAdult,
+                CreatureConstants.Dragon_Blue_Adult,
+                CreatureConstants.Dragon_Blue_MatureAdult,
+                CreatureConstants.Dragon_Blue_Old,
+                CreatureConstants.Dragon_Blue_VeryOld,
+                CreatureConstants.Dragon_Blue_Ancient,
+                CreatureConstants.Dragon_Blue_Wyrm,
+                CreatureConstants.Dragon_Blue_GreatWyrm,
+                CreatureConstants.Dragon_Green_Wyrmling,
+                CreatureConstants.Dragon_Green_VeryYoung,
+                CreatureConstants.Dragon_Green_Young,
+                CreatureConstants.Dragon_Green_Juvenile,
+                CreatureConstants.Dragon_Green_YoungAdult,
+                CreatureConstants.Dragon_Green_Adult,
+                CreatureConstants.Dragon_Green_MatureAdult,
+                CreatureConstants.Dragon_Green_Old,
+                CreatureConstants.Dragon_Green_VeryOld,
+                CreatureConstants.Dragon_Green_Ancient,
+                CreatureConstants.Dragon_Green_Wyrm,
+                CreatureConstants.Dragon_Green_GreatWyrm,
+                CreatureConstants.Dragon_Red_Wyrmling,
+                CreatureConstants.Dragon_Red_VeryYoung,
+                CreatureConstants.Dragon_Red_Young,
+                CreatureConstants.Dragon_Red_Juvenile,
+                CreatureConstants.Dragon_Red_YoungAdult,
+                CreatureConstants.Dragon_Red_Adult,
+                CreatureConstants.Dragon_Red_MatureAdult,
+                CreatureConstants.Dragon_Red_Old,
+                CreatureConstants.Dragon_Red_VeryOld,
+                CreatureConstants.Dragon_Red_Ancient,
+                CreatureConstants.Dragon_Red_Wyrm,
+                CreatureConstants.Dragon_Red_GreatWyrm,
+                CreatureConstants.Dragon_White_Wyrmling,
+                CreatureConstants.Dragon_White_VeryYoung,
+                CreatureConstants.Dragon_White_Young,
+                CreatureConstants.Dragon_White_Juvenile,
+                CreatureConstants.Dragon_White_YoungAdult,
+                CreatureConstants.Dragon_White_Adult,
+                CreatureConstants.Dragon_White_MatureAdult,
+                CreatureConstants.Dragon_White_Old,
+                CreatureConstants.Dragon_White_VeryOld,
+                CreatureConstants.Dragon_White_Ancient,
+                CreatureConstants.Dragon_White_Wyrm,
+                CreatureConstants.Dragon_White_GreatWyrm,
+                CreatureConstants.Dragon_Brass_Wyrmling,
+                CreatureConstants.Dragon_Brass_VeryYoung,
+                CreatureConstants.Dragon_Brass_Young,
+                CreatureConstants.Dragon_Brass_Juvenile,
+                CreatureConstants.Dragon_Brass_YoungAdult,
+                CreatureConstants.Dragon_Brass_Adult,
+                CreatureConstants.Dragon_Brass_MatureAdult,
+                CreatureConstants.Dragon_Brass_Old,
+                CreatureConstants.Dragon_Brass_VeryOld,
+                CreatureConstants.Dragon_Brass_Ancient,
+                CreatureConstants.Dragon_Brass_Wyrm,
+                CreatureConstants.Dragon_Brass_GreatWyrm,
+                CreatureConstants.Dragon_Bronze_Wyrmling,
+                CreatureConstants.Dragon_Bronze_VeryYoung,
+                CreatureConstants.Dragon_Bronze_Young,
+                CreatureConstants.Dragon_Bronze_Juvenile,
+                CreatureConstants.Dragon_Bronze_YoungAdult,
+                CreatureConstants.Dragon_Bronze_Adult,
+                CreatureConstants.Dragon_Bronze_MatureAdult,
+                CreatureConstants.Dragon_Bronze_Old,
+                CreatureConstants.Dragon_Bronze_VeryOld,
+                CreatureConstants.Dragon_Bronze_Ancient,
+                CreatureConstants.Dragon_Bronze_Wyrm,
+                CreatureConstants.Dragon_Bronze_GreatWyrm,
+                CreatureConstants.Dragon_Copper_Wyrmling,
+                CreatureConstants.Dragon_Copper_VeryYoung,
+                CreatureConstants.Dragon_Copper_Young,
+                CreatureConstants.Dragon_Copper_Juvenile,
+                CreatureConstants.Dragon_Copper_YoungAdult,
+                CreatureConstants.Dragon_Copper_Adult,
+                CreatureConstants.Dragon_Copper_MatureAdult,
+                CreatureConstants.Dragon_Copper_Old,
+                CreatureConstants.Dragon_Copper_VeryOld,
+                CreatureConstants.Dragon_Copper_Ancient,
+                CreatureConstants.Dragon_Copper_Wyrm,
+                CreatureConstants.Dragon_Copper_GreatWyrm,
+                CreatureConstants.Dragon_Gold_Wyrmling,
+                CreatureConstants.Dragon_Gold_VeryYoung,
+                CreatureConstants.Dragon_Gold_Young,
+                CreatureConstants.Dragon_Gold_Juvenile,
+                CreatureConstants.Dragon_Gold_YoungAdult,
+                CreatureConstants.Dragon_Gold_Adult,
+                CreatureConstants.Dragon_Gold_MatureAdult,
+                CreatureConstants.Dragon_Gold_Old,
+                CreatureConstants.Dragon_Gold_VeryOld,
+                CreatureConstants.Dragon_Gold_Ancient,
+                CreatureConstants.Dragon_Gold_Wyrm,
+                CreatureConstants.Dragon_Gold_GreatWyrm,
+                CreatureConstants.Dragon_Silver_Wyrmling,
+                CreatureConstants.Dragon_Silver_VeryYoung,
+                CreatureConstants.Dragon_Silver_Young,
+                CreatureConstants.Dragon_Silver_Juvenile,
+                CreatureConstants.Dragon_Silver_YoungAdult,
+                CreatureConstants.Dragon_Silver_Adult,
+                CreatureConstants.Dragon_Silver_MatureAdult,
+                CreatureConstants.Dragon_Silver_Old,
+                CreatureConstants.Dragon_Silver_VeryOld,
+                CreatureConstants.Dragon_Silver_Ancient,
+                CreatureConstants.Dragon_Silver_Wyrm,
+                CreatureConstants.Dragon_Silver_GreatWyrm,
                 CreatureConstants.DragonTurtle,
                 CreatureConstants.Dragonne,
                 "Dretch",
                 CreatureConstants.Drider,
                 CreatureConstants.DwarfWarrior,
                 CreatureConstants.Efreet,
+                CreatureConstants.Elemental_Air_Elder,
+                CreatureConstants.Elemental_Air_Greater,
+                CreatureConstants.Elemental_Air_Huge,
+                CreatureConstants.Elemental_Air_Large,
+                CreatureConstants.Elemental_Air_Medium,
+                CreatureConstants.Elemental_Air_Small,
+                CreatureConstants.Elemental_Earth_Elder,
+                CreatureConstants.Elemental_Earth_Greater,
+                CreatureConstants.Elemental_Earth_Huge,
+                CreatureConstants.Elemental_Earth_Large,
+                CreatureConstants.Elemental_Earth_Medium,
+                CreatureConstants.Elemental_Earth_Small,
+                CreatureConstants.Elemental_Fire_Elder,
+                CreatureConstants.Elemental_Fire_Greater,
+                CreatureConstants.Elemental_Fire_Huge,
+                CreatureConstants.Elemental_Fire_Large,
+                CreatureConstants.Elemental_Fire_Medium,
+                CreatureConstants.Elemental_Fire_Small,
+                CreatureConstants.Elemental_Water_Elder,
+                CreatureConstants.Elemental_Water_Greater,
+                CreatureConstants.Elemental_Water_Huge,
+                CreatureConstants.Elemental_Water_Large,
+                CreatureConstants.Elemental_Water_Medium,
+                CreatureConstants.Elemental_Water_Small,
                 CreatureConstants.ElfWarrior,
                 "Erinyes",
                 CreatureConstants.EtherealFilcher,
@@ -284,7 +428,9 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
                 CreatureConstants.YethHound,
                 CreatureConstants.Yrthak,
                 "Yuan-ti",
-                CreatureConstants.Zombie
+                CreatureConstants.Zombie,
+                CreatureConstants.NPC,
+                CharacterClassConstants.Warrior
             };
 
             AssertEntriesAreComplete(entries);
@@ -342,6 +488,8 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
         [TestCase(CreatureConstants.Centipede_Monstrous_Tiny, 0, 0, 0)]
         [TestCase(CreatureConstants.ChaosBeast, 0, 0, 0)]
         [TestCase(CreatureConstants.Character, 0, 0, 0)]
+        [TestCase(CreatureConstants.NPC, 0, 0, 0)]
+        [TestCase(CharacterClassConstants.Warrior, 0, 0, 0)]
         [TestCase(CreatureConstants.Chimera, 1, 1, 1)]
         [TestCase(CreatureConstants.Choker, TreasureConstants.TenPercent, TreasureConstants.FiftyPercent, TreasureConstants.FiftyPercent)]
         [TestCase(CreatureConstants.Chuul, TreasureConstants.TenPercent, TreasureConstants.FiftyPercent, 1)]
@@ -361,12 +509,156 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
         [TestCase(CreatureConstants.Djinn, 1, 1, 1)]
         [TestCase(CreatureConstants.Doppelganger, 2, 2, 2)]
         [TestCase(CreatureConstants.Dragon, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_Black_Adult, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_Black_Ancient, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_Black_GreatWyrm, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_Black_Juvenile, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_Black_MatureAdult, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_Black_Old, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_Black_VeryOld, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_Black_VeryYoung, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_Black_Wyrm, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_Black_Wyrmling, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_Black_Young, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_Black_YoungAdult, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_Blue_Adult, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_Blue_Ancient, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_Blue_GreatWyrm, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_Blue_Juvenile, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_Blue_MatureAdult, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_Blue_Old, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_Blue_VeryOld, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_Blue_VeryYoung, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_Blue_Wyrm, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_Blue_Wyrmling, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_Blue_Young, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_Blue_YoungAdult, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_Green_Adult, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_Green_Ancient, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_Green_GreatWyrm, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_Green_Juvenile, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_Green_MatureAdult, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_Green_Old, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_Green_VeryOld, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_Green_VeryYoung, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_Green_Wyrm, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_Green_Wyrmling, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_Green_Young, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_Green_YoungAdult, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_Red_Adult, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_Red_Ancient, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_Red_GreatWyrm, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_Red_Juvenile, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_Red_MatureAdult, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_Red_Old, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_Red_VeryOld, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_Red_VeryYoung, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_Red_Wyrm, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_Red_Wyrmling, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_Red_Young, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_Red_YoungAdult, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_White_Adult, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_White_Ancient, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_White_GreatWyrm, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_White_Juvenile, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_White_MatureAdult, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_White_Old, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_White_VeryOld, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_White_VeryYoung, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_White_Wyrm, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_White_Wyrmling, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_White_Young, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_White_YoungAdult, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_Bronze_Adult, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_Bronze_Ancient, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_Bronze_GreatWyrm, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_Bronze_Juvenile, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_Bronze_MatureAdult, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_Bronze_Old, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_Bronze_VeryOld, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_Bronze_VeryYoung, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_Bronze_Wyrm, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_Bronze_Wyrmling, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_Bronze_Young, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_Bronze_YoungAdult, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_Copper_Adult, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_Copper_Ancient, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_Copper_GreatWyrm, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_Copper_Juvenile, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_Copper_MatureAdult, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_Copper_Old, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_Copper_VeryOld, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_Copper_VeryYoung, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_Copper_Wyrm, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_Copper_Wyrmling, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_Copper_Young, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_Copper_YoungAdult, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_Silver_Adult, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_Silver_Ancient, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_Silver_GreatWyrm, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_Silver_Juvenile, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_Silver_MatureAdult, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_Silver_Old, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_Silver_VeryOld, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_Silver_VeryYoung, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_Silver_Wyrm, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_Silver_Wyrmling, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_Silver_Young, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_Silver_YoungAdult, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_Gold_Adult, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_Gold_Ancient, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_Gold_GreatWyrm, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_Gold_Juvenile, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_Gold_MatureAdult, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_Gold_Old, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_Gold_VeryOld, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_Gold_VeryYoung, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_Gold_Wyrm, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_Gold_Wyrmling, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_Gold_Young, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_Gold_YoungAdult, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_Brass_Adult, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_Brass_Ancient, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_Brass_GreatWyrm, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_Brass_Juvenile, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_Brass_MatureAdult, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_Brass_Old, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_Brass_VeryOld, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_Brass_VeryYoung, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_Brass_Wyrm, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_Brass_Wyrmling, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_Brass_Young, 3, 3, 3)]
+        [TestCase(CreatureConstants.Dragon_Brass_YoungAdult, 3, 3, 3)]
         [TestCase(CreatureConstants.DragonTurtle, 3, 3, 3)]
         [TestCase(CreatureConstants.Dragonne, 2, 2, 2)]
         [TestCase("Dretch", 0, 0, 0)]
         [TestCase(CreatureConstants.Drider, 2, 2, 2)]
         [TestCase(CreatureConstants.DwarfWarrior, 1, 2, 1)]
         [TestCase(CreatureConstants.Efreet, 1, 2, 1)]
+        [TestCase(CreatureConstants.Elemental_Air_Elder, 0, 0, 0)]
+        [TestCase(CreatureConstants.Elemental_Air_Greater, 0, 0, 0)]
+        [TestCase(CreatureConstants.Elemental_Air_Huge, 0, 0, 0)]
+        [TestCase(CreatureConstants.Elemental_Air_Large, 0, 0, 0)]
+        [TestCase(CreatureConstants.Elemental_Air_Medium, 0, 0, 0)]
+        [TestCase(CreatureConstants.Elemental_Air_Small, 0, 0, 0)]
+        [TestCase(CreatureConstants.Elemental_Earth_Elder, 0, 0, 0)]
+        [TestCase(CreatureConstants.Elemental_Earth_Greater, 0, 0, 0)]
+        [TestCase(CreatureConstants.Elemental_Earth_Huge, 0, 0, 0)]
+        [TestCase(CreatureConstants.Elemental_Earth_Large, 0, 0, 0)]
+        [TestCase(CreatureConstants.Elemental_Earth_Medium, 0, 0, 0)]
+        [TestCase(CreatureConstants.Elemental_Earth_Small, 0, 0, 0)]
+        [TestCase(CreatureConstants.Elemental_Fire_Elder, 0, 0, 0)]
+        [TestCase(CreatureConstants.Elemental_Fire_Greater, 0, 0, 0)]
+        [TestCase(CreatureConstants.Elemental_Fire_Huge, 0, 0, 0)]
+        [TestCase(CreatureConstants.Elemental_Fire_Large, 0, 0, 0)]
+        [TestCase(CreatureConstants.Elemental_Fire_Medium, 0, 0, 0)]
+        [TestCase(CreatureConstants.Elemental_Fire_Small, 0, 0, 0)]
+        [TestCase(CreatureConstants.Elemental_Water_Elder, 0, 0, 0)]
+        [TestCase(CreatureConstants.Elemental_Water_Greater, 0, 0, 0)]
+        [TestCase(CreatureConstants.Elemental_Water_Huge, 0, 0, 0)]
+        [TestCase(CreatureConstants.Elemental_Water_Large, 0, 0, 0)]
+        [TestCase(CreatureConstants.Elemental_Water_Medium, 0, 0, 0)]
+        [TestCase(CreatureConstants.Elemental_Water_Small, 0, 0, 0)]
         [TestCase(CreatureConstants.ElfWarrior, 1, 1, 1)]
         [TestCase("Erinyes", 1, 1, 1)]
         [TestCase(CreatureConstants.EtherealFilcher, 0, 1, 2)]

@@ -1,9 +1,4 @@
-﻿using CharacterGen;
-using CharacterGen.Randomizers.Alignments;
-using CharacterGen.Randomizers.CharacterClasses;
-using CharacterGen.Randomizers.Races;
-using CharacterGen.Randomizers.Stats;
-using EncounterGen.Common;
+﻿using EncounterGen.Common;
 using EncounterGen.Domain.Selectors;
 using EncounterGen.Domain.Selectors.Percentiles;
 using EncounterGen.Domain.Tables;
@@ -13,10 +8,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
-using TreasureGen;
-using TreasureGen.Coins;
-using TreasureGen.Goods;
-using TreasureGen.Items;
 
 namespace EncounterGen.Domain.Generators
 {
@@ -25,60 +16,28 @@ namespace EncounterGen.Domain.Generators
         private const int IterationLimit = 10000;
 
         private ITypeAndAmountPercentileSelector typeAndAmountPercentileSelector;
-        private ICoinGenerator coinGenerator;
-        private IGoodsGenerator goodsGenerator;
-        private IItemsGenerator itemsGenerator;
-        private ICharacterGenerator characterGenerator;
-        private IAlignmentRandomizer alignmentRandomizer;
-        private IClassNameRandomizer anyPlayerClassNameRandomizer;
-        private IClassNameRandomizer anyNPCClassNameRandomizer;
-        private ISetClassNameRandomizer setClassNameRandomizer;
-        private ISetLevelRandomizer setLevelRandomizer;
-        private RaceRandomizer baseRaceRandomizer;
-        private RaceRandomizer metaraceRandomizer;
-        private IStatsRandomizer statsRandomizer;
-        private IAdjustmentSelector adjustmentSelector;
         private IRollSelector rollSelector;
         private IPercentileSelector percentileSelector;
-        private IBooleanPercentileSelector booleanPercentileSelector;
         private ICollectionSelector collectionSelector;
-        private ISetMetaraceRandomizer setMetaraceRandomizer;
         private Regex challengeRatingRegex;
-        private Regex setCharacterLevelRegex;
         private Regex subTypeRegex;
         private Dice dice;
+        private IEncounterCharacterGenerator encounterCharacterGenerator;
+        private IEncounterTreasureGenerator encounterTreasureGenerator;
 
-        public EncounterGenerator(ITypeAndAmountPercentileSelector typeAndAmountPercentileSelector, ICoinGenerator coinGenerator,
-            IGoodsGenerator goodsGenerator, IItemsGenerator itemsGenerator, ICharacterGenerator characterGenerator, IAlignmentRandomizer alignmentRandomizer, IClassNameRandomizer anyPlayerClassNameRandomizer,
-            ISetLevelRandomizer setLevelRandomizer, RaceRandomizer baseRaceRandomizer, RaceRandomizer metaraceRandomizer, IStatsRandomizer statsRandomizer,
-            IAdjustmentSelector adjustmentSelector, IRollSelector rollSelector, IPercentileSelector percentileSelector, IBooleanPercentileSelector booleanPercentileSelector,
-            ICollectionSelector collectionSelector, ISetMetaraceRandomizer setMetaraceRandomizer, IClassNameRandomizer anyNPCClassNameRandomizer,
-            ISetClassNameRandomizer setClassNameRandomizer, Dice dice)
+        public EncounterGenerator(ITypeAndAmountPercentileSelector typeAndAmountPercentileSelector, IRollSelector rollSelector, IPercentileSelector percentileSelector,
+            ICollectionSelector collectionSelector, Dice dice, IEncounterCharacterGenerator encounterCharacterGenerator, IEncounterTreasureGenerator encounterTreasureGenerator)
         {
             this.typeAndAmountPercentileSelector = typeAndAmountPercentileSelector;
-            this.coinGenerator = coinGenerator;
-            this.goodsGenerator = goodsGenerator;
-            this.itemsGenerator = itemsGenerator;
-            this.characterGenerator = characterGenerator;
-            this.alignmentRandomizer = alignmentRandomizer;
-            this.anyPlayerClassNameRandomizer = anyPlayerClassNameRandomizer;
-            this.setLevelRandomizer = setLevelRandomizer;
-            this.baseRaceRandomizer = baseRaceRandomizer;
-            this.metaraceRandomizer = metaraceRandomizer;
-            this.statsRandomizer = statsRandomizer;
-            this.adjustmentSelector = adjustmentSelector;
             this.rollSelector = rollSelector;
             this.percentileSelector = percentileSelector;
-            this.booleanPercentileSelector = booleanPercentileSelector;
             this.collectionSelector = collectionSelector;
-            this.setMetaraceRandomizer = setMetaraceRandomizer;
-            this.anyNPCClassNameRandomizer = anyNPCClassNameRandomizer;
-            this.setClassNameRandomizer = setClassNameRandomizer;
             this.dice = dice;
+            this.encounterTreasureGenerator = encounterTreasureGenerator;
+            this.encounterCharacterGenerator = encounterCharacterGenerator;
 
-            challengeRatingRegex = new Regex("\\[.+\\]");
-            setCharacterLevelRegex = new Regex("\\d+");
-            subTypeRegex = new Regex(" \\(.+\\)");
+            challengeRatingRegex = new Regex(RegexConstants.ChallengeRatingPattern);
+            subTypeRegex = new Regex(RegexConstants.SubTypePattern);
         }
 
         public Encounter Generate(string environment, int level)
@@ -107,11 +66,11 @@ namespace EncounterGen.Domain.Generators
             }
 
             var encounter = new Encounter();
-            encounter.Characters = GetCharacters(creatures);
+            encounter.Characters = encounterCharacterGenerator.GenerateFrom(creatures);
             encounter.Creatures = EditCreatureTypes(creatures);
 
             var leadCreature = encounter.Creatures.First();
-            encounter.Treasure = GenerateTreasureFor(leadCreature.Type, level);
+            encounter.Treasure = encounterTreasureGenerator.GenerateFor(leadCreature, level);
 
             return encounter;
         }
@@ -308,25 +267,6 @@ namespace EncounterGen.Domain.Generators
             return rollSelector.SelectFrom(level, challengeRating);
         }
 
-        private IEnumerable<Character> GetCharacters(IEnumerable<Creature> creatures)
-        {
-            var characters = new List<Character>();
-            var characterCreatures = creatures.Where(c => IsCharacterCreatureType(c.Type) || IsCharacterCreatureType(c.Subtype));
-
-            foreach (var characterCreature in characterCreatures)
-            {
-                var characterQuantity = characterCreature.Quantity;
-
-                while (characterQuantity-- > 0)
-                {
-                    var character = GenerateCharacter(characterCreature);
-                    characters.Add(character);
-                }
-            }
-
-            return characters;
-        }
-
         private bool IsCharacterCreatureType(string fullCreatureType)
         {
             var characterCreatureType = GetCreatureTypeCharacter(fullCreatureType);
@@ -349,54 +289,6 @@ namespace EncounterGen.Domain.Generators
             return string.Empty;
         }
 
-        private string GetCharacterCreatureType(Creature creature)
-        {
-            var creatureType = GetCreatureTypeCharacter(creature.Type);
-
-            if (string.IsNullOrEmpty(creatureType))
-                return GetCreatureTypeCharacter(creature.Subtype);
-
-            return creatureType;
-        }
-
-        private Character GenerateCharacter(Creature creature)
-        {
-            var characterCreatureType = GetCharacterCreatureType(creature);
-
-            setLevelRandomizer.SetLevel = GetCharacterLevel(creature.Type);
-            setLevelRandomizer.AllowAdjustments = true;
-
-            var undeadNPCCreatures = collectionSelector.SelectFrom(TableNameConstants.CreatureGroups, GroupConstants.UndeadNPC);
-            if (undeadNPCCreatures.Contains(characterCreatureType))
-            {
-                setMetaraceRandomizer.SetMetarace = characterCreatureType;
-                setLevelRandomizer.AllowAdjustments = false;
-
-                return characterGenerator.GenerateWith(alignmentRandomizer, anyPlayerClassNameRandomizer, setLevelRandomizer, baseRaceRandomizer, setMetaraceRandomizer, statsRandomizer);
-            }
-
-            if (characterCreatureType == CreatureConstants.Character)
-                return characterGenerator.GenerateWith(alignmentRandomizer, anyPlayerClassNameRandomizer, setLevelRandomizer, baseRaceRandomizer, metaraceRandomizer, statsRandomizer);
-
-            if (characterCreatureType == CreatureConstants.NPC)
-                return characterGenerator.GenerateWith(alignmentRandomizer, anyNPCClassNameRandomizer, setLevelRandomizer, baseRaceRandomizer, metaraceRandomizer, statsRandomizer);
-
-            setClassNameRandomizer.SetClassName = characterCreatureType;
-            return characterGenerator.GenerateWith(alignmentRandomizer, setClassNameRandomizer, setLevelRandomizer, baseRaceRandomizer, metaraceRandomizer, statsRandomizer);
-        }
-
-        private int GetCharacterLevel(string characterCreatureType)
-        {
-            var challengeRating = GetSetChallengeRating(characterCreatureType);
-            if (string.IsNullOrEmpty(challengeRating))
-            {
-                var message = string.Format("Character level was not provided for a character creature type \"{0}\"", characterCreatureType);
-                throw new ArgumentException(message);
-            }
-
-            return dice.Roll(challengeRating);
-        }
-
         private string GetSetChallengeRating(string creatureType)
         {
             var levelMatch = challengeRatingRegex.Match(creatureType);
@@ -409,38 +301,6 @@ namespace EncounterGen.Domain.Generators
         private bool ShouldReroll(IEnumerable<string> amounts, int modifier)
         {
             return amounts.Any(a => rollSelector.SelectFrom(a, modifier) == RollConstants.Reroll);
-        }
-
-        private Treasure GenerateTreasureFor(string creatureType, int level)
-        {
-            var coinMultiplier = adjustmentSelector.Select<double>(TableNameConstants.TreasureAdjustments, creatureType, TreasureConstants.Coin);
-            var goodsMultiplier = adjustmentSelector.Select<double>(TableNameConstants.TreasureAdjustments, creatureType, TreasureConstants.Goods);
-            var itemsMultiplier = adjustmentSelector.Select<double>(TableNameConstants.TreasureAdjustments, creatureType, TreasureConstants.Items);
-
-            var treasure = new Treasure();
-
-            treasure.Coin = coinGenerator.GenerateAtLevel(level);
-
-            var doubleQuantity = coinMultiplier * treasure.Coin.Quantity;
-            treasure.Coin.Quantity = Convert.ToInt32(doubleQuantity);
-
-            if (booleanPercentileSelector.SelectFrom(goodsMultiplier))
-            {
-                goodsMultiplier = Math.Ceiling(goodsMultiplier);
-
-                while (goodsMultiplier-- > 0)
-                    treasure.Goods = treasure.Goods.Union(goodsGenerator.GenerateAtLevel(level));
-            }
-
-            if (booleanPercentileSelector.SelectFrom(itemsMultiplier))
-            {
-                itemsMultiplier = Math.Ceiling(itemsMultiplier);
-
-                while (itemsMultiplier-- > 0)
-                    treasure.Items = treasure.Items.Union(itemsGenerator.GenerateAtLevel(level));
-            }
-
-            return treasure;
         }
     }
 }

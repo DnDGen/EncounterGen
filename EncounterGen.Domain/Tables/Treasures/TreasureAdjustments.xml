@@ -248,6 +248,18 @@
     <item>0</item>
   </collection>
   <collection>
+    <entry>NPC</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Warrior</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
     <entry>Chimera</entry>
     <item>1</item>
     <item>1</item>
@@ -446,6 +458,666 @@
     <item>3</item>
   </collection>
   <collection>
+    <entry>Ancient black dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Ancient blue dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Ancient brass dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Ancient bronze dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Ancient copper dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Ancient green dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Ancient gold dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Ancient red dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Ancient silver dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Ancient white dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Great wyrm black dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Great wyrm blue dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Great wyrm brass dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Great wyrm bronze dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Great wyrm copper dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Great wyrm green dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Great wyrm gold dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Great wyrm red dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Great wyrm silver dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Great wyrm white dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Wyrmling black dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Wyrmling blue dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Wyrmling brass dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Wyrmling bronze dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Wyrmling copper dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Wyrmling green dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Wyrmling gold dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Wyrmling red dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Wyrmling silver dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Wyrmling white dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Wyrm black dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Wyrm blue dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Wyrm brass dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Wyrm bronze dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Wyrm copper dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Wyrm green dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Wyrm gold dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Wyrm red dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Wyrm silver dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Wyrm white dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Very young black dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Very young blue dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Very young brass dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Very young bronze dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Very young copper dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Very young green dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Very young gold dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Very young red dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Very young silver dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Very young white dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Young black dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Young blue dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Young brass dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Young bronze dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Young copper dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Young green dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Young gold dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Young red dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Young silver dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Young white dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Young adult black dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Young adult blue dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Young adult brass dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Young adult bronze dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Young adult copper dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Young adult green dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Young adult gold dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Young adult red dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Young adult silver dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Young adult white dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Adult black dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Adult blue dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Adult brass dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Adult bronze dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Adult copper dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Adult green dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Adult gold dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Adult red dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Adult silver dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Adult white dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Mature adult black dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Mature adult blue dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Mature adult brass dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Mature adult bronze dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Mature adult copper dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Mature adult green dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Mature adult gold dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Mature adult red dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Mature adult silver dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Mature adult white dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Old black dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Old blue dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Old brass dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Old bronze dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Old copper dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Old green dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Old gold dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Old red dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Old silver dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Old white dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Very old black dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Very old blue dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Very old brass dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Very old bronze dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Very old copper dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Very old green dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Very old gold dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Very old red dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Very old silver dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Very old white dragon</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
     <entry>Dragon turtle</entry>
     <item>3</item>
     <item>3</item>
@@ -480,6 +1152,12 @@
     <item>1</item>
     <item>2</item>
     <item>1</item>
+  </collection>
+  <collection>
+    <entry>Small air elemental</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
   </collection>
   <collection>
     <entry>Elf warrior</entry>

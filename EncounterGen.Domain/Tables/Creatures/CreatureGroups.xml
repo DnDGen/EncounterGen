@@ -18,6 +18,11 @@
     <item>Vampire</item>
   </collection>
   <collection>
+    <entry>Use Subtype for Treasure</entry>
+    <item>Celestial creature</item>
+    <item>Fiendish creature</item>
+  </collection>
+  <collection>
     <entry>Mephit</entry>
     <item>Air mephit</item>
     <item>Dust mephit</item>

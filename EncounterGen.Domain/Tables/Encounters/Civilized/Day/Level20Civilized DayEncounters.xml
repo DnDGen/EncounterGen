@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<percentile>
+  <object>
+    <lower>1</lower>
+    <content>Character[20]/1</content>
+    <upper>20</upper>
+  </object>
+  <object>
+    <lower>21</lower>
+    <content>Character[19]/1d2</content>
+    <upper>40</upper>
+  </object>
+  <object>
+    <lower>41</lower>
+    <content>Character[18]/1d3</content>
+    <upper>60</upper>
+  </object>
+  <object>
+    <lower>61</lower>
+    <content>Character[17]/1d3+1</content>
+    <upper>80</upper>
+  </object>
+  <object>
+    <lower>81</lower>
+    <content>Character[16]/1d4+2</content>
+    <upper>100</upper>
+  </object>
+</percentile>
