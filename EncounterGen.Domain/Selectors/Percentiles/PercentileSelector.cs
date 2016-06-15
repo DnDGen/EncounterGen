@@ -1,6 +1,8 @@
 ﻿using EncounterGen.Domain.Mappers.Percentiles;
 using RollGen;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace EncounterGen.Domain.Selectors.Percentiles
 {
@@ -27,6 +29,12 @@ namespace EncounterGen.Domain.Selectors.Percentiles
             }
 
             return table[roll];
+        }
+
+        public IEnumerable<string> SelectAllFrom(string tableName)
+        {
+            var table = percentileMapper.Map(tableName);
+            return table.Values.Distinct();
         }
     }
 }

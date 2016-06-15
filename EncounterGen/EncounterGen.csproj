@@ -55,6 +55,7 @@
     <Compile Include="Common\EnvironmentConstants.cs" />
     <Compile Include="Generators\Exceptions\ImpossibleEncounterException.cs" />
     <Compile Include="Generators\IEncounterGenerator.cs" />
+    <Compile Include="Generators\IFilterVerifier.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

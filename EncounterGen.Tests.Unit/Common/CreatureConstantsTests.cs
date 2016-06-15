@@ -336,7 +336,7 @@ namespace EncounterGen.Tests.Unit.Common
         [TestCase(CreatureConstants.Horse_Heavy_War, "Heavy warhorse")]
         [TestCase(CreatureConstants.Horse_Light, "Light horse")]
         [TestCase(CreatureConstants.Horse_Light_War, "Light warhorse")]
-        [TestCase(CreatureConstants.HoundArchon, "Hound archon")]
+        [TestCase(CreatureConstants.HoundArchon, "Hound archon (celestial)")]
         [TestCase(CreatureConstants.Howler, "Howler")]
         [TestCase(CreatureConstants.Human, "Human")]
         [TestCase(CreatureConstants.Hydra, "Hydra")]
@@ -507,7 +507,7 @@ namespace EncounterGen.Tests.Unit.Common
         [TestCase(CreatureConstants.Triceratops, "Triceratops")]
         [TestCase(CreatureConstants.Troglodyte, "Troglodyte")]
         [TestCase(CreatureConstants.Troll, "Troll")]
-        [TestCase(CreatureConstants.TrumpetArchon, "Trumpet archon")]
+        [TestCase(CreatureConstants.TrumpetArchon, "Trumpet archon (celestial)")]
         [TestCase(CreatureConstants.Tyrannosaurus, "Tyrannosaurus")]
         [TestCase(CreatureConstants.UmberHulk, "Umber hulk")]
         [TestCase(CreatureConstants.Unicorn, "Unicorn")]
@@ -554,6 +554,26 @@ namespace EncounterGen.Tests.Unit.Common
         [TestCase(CreatureConstants.Zombie_HillGiant, "Zombie (Hill giant)")]
         [TestCase(CreatureConstants.Zombie_Human, "Zombie (Human)")]
         public void Constant(string constant, string value)
+        {
+            Assert.That(constant, Is.EqualTo(value));
+        }
+
+        [TestCase(CreatureConstants.Types.Aberration, "Aberration")]
+        [TestCase(CreatureConstants.Types.Animal, "Animal")]
+        [TestCase(CreatureConstants.Types.Construct, "Construct")]
+        [TestCase(CreatureConstants.Types.Dragon, "Dragon")]
+        [TestCase(CreatureConstants.Types.Elemental, "Elemental")]
+        [TestCase(CreatureConstants.Types.Fey, "Fey")]
+        [TestCase(CreatureConstants.Types.Giant, "Giant")]
+        [TestCase(CreatureConstants.Types.Humanoid, "Humanoid")]
+        [TestCase(CreatureConstants.Types.MagicalBeast, "Magical Beast")]
+        [TestCase(CreatureConstants.Types.MonstrousHumanoid, "Monstrous Humanoid")]
+        [TestCase(CreatureConstants.Types.Ooze, "Ooze")]
+        [TestCase(CreatureConstants.Types.Outsider, "Outsider")]
+        [TestCase(CreatureConstants.Types.Plant, "Plant")]
+        [TestCase(CreatureConstants.Types.Undead, "Undead")]
+        [TestCase(CreatureConstants.Types.Vermin, "Vermin")]
+        public void CreatureTypeConstants(string constant, string value)
         {
             Assert.That(constant, Is.EqualTo(value));
         }

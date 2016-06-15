@@ -66,8 +66,8 @@ namespace EncounterGen.Tests.Unit.Generators
 
             creatures.Add(new Creature());
             creatures[0].Quantity = 600;
-            creatures[0].Type = $"{CreatureConstants.Character}[1337]";
-            creatures[0].Subtype = "character subtype";
+            creatures[0].Name = $"{CreatureConstants.Character}[1337]";
+            creatures[0].Description = "character subtype";
 
             mockSetLevelRandomizer.SetupAllProperties();
             mockSetLevelRandomizer.Object.AllowAdjustments = true;
@@ -123,7 +123,7 @@ namespace EncounterGen.Tests.Unit.Generators
         [Test]
         public void GenerateCharactersWithVariableLevels()
         {
-            creatures[0].Type = $"{CreatureConstants.Character}[13d37]";
+            creatures[0].Name = $"{CreatureConstants.Character}[13d37]";
             mockDice.Setup(d => d.Roll("13d37")).Returns(1337);
 
             mockCharacterGenerator.Setup(g => g.GenerateWith(mockAnyAlignmentRandomizer.Object, mockAnyPlayerClassNameRandomizer.Object, It.Is<ISetLevelRandomizer>(r => r.SetLevel == 1337 && r.AllowAdjustments), mockAnyBaseRaceRandomizer.Object, mockAnyMetaraceRandomizer.Object, mockRawStatsRandomizer.Object))
@@ -140,7 +140,7 @@ namespace EncounterGen.Tests.Unit.Generators
         [Test]
         public void VariableLevelsAreUniquePerCharacter()
         {
-            creatures[0].Type = $"{CreatureConstants.Character}[13d37]";
+            creatures[0].Name = $"{CreatureConstants.Character}[13d37]";
             creatures[0].Quantity = 2;
 
             mockDice.SetupSequence(d => d.Roll("13d37")).Returns(1337).Returns(1234);
@@ -164,7 +164,7 @@ namespace EncounterGen.Tests.Unit.Generators
         [Test]
         public void GenerateUndeadNPCs()
         {
-            creatures[0].Type = $"creature[1337]";
+            creatures[0].Name = $"creature[1337]";
 
             undeadNPCs.Add("creature");
             undeadNPCs.Add("other monster");
@@ -184,7 +184,7 @@ namespace EncounterGen.Tests.Unit.Generators
         [Test]
         public void GenerateUndeadNPCsWithVariableLevels()
         {
-            creatures[0].Type = $"creature[13d37]";
+            creatures[0].Name = $"creature[13d37]";
             mockDice.Setup(d => d.Roll("13d37")).Returns(1337);
 
             undeadNPCs.Add("creature");
@@ -205,7 +205,7 @@ namespace EncounterGen.Tests.Unit.Generators
         [Test]
         public void VariableLevelsAreUniquePerUndeadNPC()
         {
-            creatures[0].Type = $"creature[13d37]";
+            creatures[0].Name = $"creature[13d37]";
             creatures[0].Quantity = 2;
 
             undeadNPCs.Add("creature");
@@ -233,8 +233,8 @@ namespace EncounterGen.Tests.Unit.Generators
         [Test]
         public void GenerateCharactersFromSubtype()
         {
-            creatures[0].Type = $"creature[1337]";
-            creatures[0].Subtype = CreatureConstants.Character;
+            creatures[0].Name = $"creature[1337]";
+            creatures[0].Description = CreatureConstants.Character;
 
             mockCharacterGenerator.Setup(g => g.GenerateWith(mockAnyAlignmentRandomizer.Object, mockAnyPlayerClassNameRandomizer.Object, It.Is<ISetLevelRandomizer>(r => r.SetLevel == 1337 && r.AllowAdjustments), mockAnyBaseRaceRandomizer.Object, mockAnyMetaraceRandomizer.Object, mockRawStatsRandomizer.Object))
                 .Returns(() => BuildCharacter(1337));
@@ -249,7 +249,7 @@ namespace EncounterGen.Tests.Unit.Generators
         [Test]
         public void GenerateSpecificClass()
         {
-            creatures[0].Type = $"character class[1337]";
+            creatures[0].Name = $"character class[1337]";
             charactersGroup.Add("character class");
 
             mockCharacterGenerator.Setup(g => g.GenerateWith(mockAnyAlignmentRandomizer.Object, It.Is<ISetClassNameRandomizer>(r => r.SetClassName == "character class"), It.Is<ISetLevelRandomizer>(r => r.SetLevel == 1337 && r.AllowAdjustments), mockAnyBaseRaceRandomizer.Object, mockAnyMetaraceRandomizer.Object, mockRawStatsRandomizer.Object))
@@ -267,7 +267,7 @@ namespace EncounterGen.Tests.Unit.Generators
         [Test]
         public void GenerateSpecificNPCClass()
         {
-            creatures[0].Type = $"npc class[1337]";
+            creatures[0].Name = $"npc class[1337]";
             charactersGroup.Add("npc class");
 
             mockCharacterGenerator.Setup(g => g.GenerateWith(mockAnyAlignmentRandomizer.Object, It.Is<ISetClassNameRandomizer>(r => r.SetClassName == "npc class"), It.Is<ISetLevelRandomizer>(r => r.SetLevel == 1337 && r.AllowAdjustments), mockAnyBaseRaceRandomizer.Object, mockAnyMetaraceRandomizer.Object, mockRawStatsRandomizer.Object))
@@ -285,7 +285,7 @@ namespace EncounterGen.Tests.Unit.Generators
         [Test]
         public void GenerateRandomNPCClass()
         {
-            creatures[0].Type = $"{CreatureConstants.NPC}[1337]";
+            creatures[0].Name = $"{CreatureConstants.NPC}[1337]";
 
             mockCharacterGenerator.Setup(g => g.GenerateWith(mockAnyAlignmentRandomizer.Object, mockAnyNPCClassNameRandomizer.Object, It.Is<ISetLevelRandomizer>(r => r.SetLevel == 1337 && r.AllowAdjustments), mockAnyBaseRaceRandomizer.Object, mockAnyMetaraceRandomizer.Object, mockRawStatsRandomizer.Object))
                 .Returns(() => BuildCharacter(1337));
@@ -301,7 +301,7 @@ namespace EncounterGen.Tests.Unit.Generators
         [Test]
         public void GenerateSpecificNPCClassDescribedAsSomethingElse()
         {
-            creatures[0].Type = $"npc class (description)[1337]";
+            creatures[0].Name = $"npc class (description)[1337]";
             charactersGroup.Add("npc class");
 
             mockCharacterGenerator.Setup(g => g.GenerateWith(mockAnyAlignmentRandomizer.Object, It.Is<ISetClassNameRandomizer>(r => r.SetClassName == "npc class"), It.Is<ISetLevelRandomizer>(r => r.SetLevel == 1337 && r.AllowAdjustments), mockAnyBaseRaceRandomizer.Object, mockAnyMetaraceRandomizer.Object, mockRawStatsRandomizer.Object))
@@ -319,7 +319,7 @@ namespace EncounterGen.Tests.Unit.Generators
         [Test]
         public void GenerateRandomNPCClassDescribedAsSomethingElse()
         {
-            creatures[0].Type = $"{CreatureConstants.NPC} (description)[1337]";
+            creatures[0].Name = $"{CreatureConstants.NPC} (description)[1337]";
 
             mockCharacterGenerator.Setup(g => g.GenerateWith(mockAnyAlignmentRandomizer.Object, mockAnyNPCClassNameRandomizer.Object, It.Is<ISetLevelRandomizer>(r => r.SetLevel == 1337 && r.AllowAdjustments), mockAnyBaseRaceRandomizer.Object, mockAnyMetaraceRandomizer.Object, mockRawStatsRandomizer.Object))
                 .Returns(() => BuildCharacter(1337));
@@ -342,18 +342,18 @@ namespace EncounterGen.Tests.Unit.Generators
             creatures.Add(new Creature());
             creatures.Add(new Creature());
 
-            creatures[0].Type = "creature[6789]";
-            creatures[1].Type = $"{CreatureConstants.NPC} (description 1)[1337]";
+            creatures[0].Name = "creature[6789]";
+            creatures[1].Name = $"{CreatureConstants.NPC} (description 1)[1337]";
             creatures[1].Quantity = 12;
-            creatures[2].Type = $"npc class[3456]";
+            creatures[2].Name = $"npc class[3456]";
             creatures[2].Quantity = 9;
-            creatures[3].Type = $"npc class (description 2)[1234]";
+            creatures[3].Name = $"npc class (description 2)[1234]";
             creatures[3].Quantity = 11;
-            creatures[4].Type = $"{CreatureConstants.NPC}[2345]";
+            creatures[4].Name = $"{CreatureConstants.NPC}[2345]";
             creatures[4].Quantity = 10;
-            creatures[5].Type = $"{CreatureConstants.Character}[5678]";
+            creatures[5].Name = $"{CreatureConstants.Character}[5678]";
             creatures[5].Quantity = 7;
-            creatures[6].Type = $"character class[4567]";
+            creatures[6].Name = $"character class[4567]";
             creatures[6].Quantity = 8;
 
             undeadNPCs.Add("creature");
@@ -377,7 +377,7 @@ namespace EncounterGen.Tests.Unit.Generators
         [Test]
         public void WholeCreatureTypeMustMatchToBeCharacter()
         {
-            creatures[0].Type = $"{CreatureConstants.Character} but not really[6789]";
+            creatures[0].Name = $"{CreatureConstants.Character} but not really[6789]";
 
             var characters = encounterCharacterGenerator.GenerateFrom(creatures);
             Assert.That(characters, Is.Not.Null);
@@ -387,7 +387,7 @@ namespace EncounterGen.Tests.Unit.Generators
         [Test]
         public void WholeCreatureTypeMustMatchToBeUndeadNPC()
         {
-            creatures[0].Type = $"undead but not really[6789]";
+            creatures[0].Name = $"undead but not really[6789]";
             undeadNPCs.Add("undead");
 
             var characters = encounterCharacterGenerator.GenerateFrom(creatures);
@@ -398,14 +398,14 @@ namespace EncounterGen.Tests.Unit.Generators
         [Test]
         public void NotSpecifyingLevelForCharacterThrowsException()
         {
-            creatures[0].Type = CreatureConstants.Character;
+            creatures[0].Name = CreatureConstants.Character;
             Assert.That(() => encounterCharacterGenerator.GenerateFrom(creatures), Throws.InstanceOf<ArgumentException>().With.Message.EqualTo("Character level was not provided for a character creature type \"Character\""));
         }
 
         [Test]
         public void NotSpecifyingLevelForUndeadNPCThrowsException()
         {
-            creatures[0].Type = "undead";
+            creatures[0].Name = "undead";
             undeadNPCs.Add("undead");
 
             Assert.That(() => encounterCharacterGenerator.GenerateFrom(creatures), Throws.InstanceOf<ArgumentException>().With.Message.EqualTo("Character level was not provided for a character creature type \"undead\""));

@@ -24,5 +24,11 @@ namespace EncounterGen.Tests.Integration.IoC.Modules
         {
             AssertNotSingleton<IEncounterTreasureGenerator>();
         }
+
+        [Test]
+        public void FilterVerifierIsNotASingleton()
+        {
+            AssertNotSingleton<IFilterVerifier>();
+        }
     }
 }

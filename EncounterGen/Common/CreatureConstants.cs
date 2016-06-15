@@ -2,6 +2,25 @@
 {
     public static class CreatureConstants
     {
+        public static class Types
+        {
+            public const string Aberration = "Aberration";
+            public const string Animal = "Animal";
+            public const string Construct = "Construct";
+            public const string Dragon = "Dragon";
+            public const string Elemental = "Elemental";
+            public const string Fey = "Fey";
+            public const string Giant = "Giant";
+            public const string Humanoid = "Humanoid";
+            public const string MagicalBeast = "Magical Beast";
+            public const string MonstrousHumanoid = "Monstrous Humanoid";
+            public const string Ooze = "Ooze";
+            public const string Outsider = "Outsider";
+            public const string Plant = "Plant";
+            public const string Undead = "Undead";
+            public const string Vermin = "Vermin";
+        }
+
         public const string Aboleth = "Aboleth";
         public const string Achaierais = "Achaierais";
         public const string Allip = "Allip";
@@ -332,7 +351,7 @@
         public const string Horse_Heavy_War = "Heavy warhorse";
         public const string Horse_Light = "Light horse";
         public const string Horse_Light_War = "Light warhorse";
-        public const string HoundArchon = "Hound archon";
+        public const string HoundArchon = "Hound archon (celestial)";
         public const string Howler = "Howler";
         public const string Human = "Human";
         public const string Hydra = "Hydra";
@@ -503,7 +522,7 @@
         public const string Triceratops = "Triceratops";
         public const string Troglodyte = "Troglodyte";
         public const string Troll = "Troll";
-        public const string TrumpetArchon = "Trumpet archon";
+        public const string TrumpetArchon = "Trumpet archon (celestial)";
         public const string Tyrannosaurus = "Tyrannosaurus";
         public const string UmberHulk = "Umber hulk";
         public const string Unicorn = "Unicorn";

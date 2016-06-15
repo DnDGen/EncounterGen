@@ -15,6 +15,8 @@ namespace EncounterGen.Tests.Integration.Stress
         public IEncounterGenerator EncounterGenerator { get; set; }
         [Inject]
         public Random Random { get; set; }
+        [Inject]
+        public IFilterVerifier FilterVerifier { get; set; }
 
         private IEnumerable<string> allEnvironments;
 
@@ -76,18 +78,31 @@ namespace EncounterGen.Tests.Integration.Stress
             AssertEncounterInRandomEnvironment(allEnvironments);
         }
 
-        private Encounter MakeEncounter(IEnumerable<string> environments)
+        private Encounter MakeEncounter(IEnumerable<string> environments, params string[] filters)
         {
             var randomIndex = Random.Next(environments.Count());
             var environment = environments.ElementAt(randomIndex);
+            var levels = Enumerable.Range(1, 20);
+
+            while (levels.Any(l => FilterVerifier.FiltersAreValid(environment, l, filters) == false))
+            {
+                randomIndex = Random.Next(environments.Count());
+                environment = environments.ElementAt(randomIndex);
+            }
 
             return MakeEncounter(environment);
         }
 
-        private Encounter MakeEncounter(string environment)
+        private Encounter MakeEncounter(string environment, params string[] filters)
         {
             var level = Random.Next(1, 21);
-            return EncounterGenerator.Generate(environment, level);
+
+            while (FilterVerifier.FiltersAreValid(environment, level, filters) == false)
+            {
+                level = Random.Next(1, 21);
+            }
+
+            return EncounterGenerator.Generate(environment, level, filters);
         }
 
         private void AssertEncounter(Encounter encounter)
@@ -98,7 +113,7 @@ namespace EncounterGen.Tests.Integration.Stress
 
             foreach (var creature in encounter.Creatures)
             {
-                Assert.That(creature.Type, Is.Not.Empty);
+                Assert.That(creature.Name, Is.Not.Empty);
                 Assert.That(creature.Quantity, Is.InRange(1, 14));
             }
         }
@@ -302,9 +317,9 @@ namespace EncounterGen.Tests.Integration.Stress
             Stress(() => AssertEncounterInRandomEnvironment(plainsEnvironments));
         }
 
-        private void AssertEncounterInRandomEnvironment(IEnumerable<string> environments)
+        private void AssertEncounterInRandomEnvironment(IEnumerable<string> environments, params string[] filters)
         {
-            var encounter = MakeEncounter(environments);
+            var encounter = MakeEncounter(environments, filters);
             AssertEncounter(encounter);
         }
 
@@ -372,6 +387,26 @@ namespace EncounterGen.Tests.Integration.Stress
         {
             var encounter = GenerateOrFail(() => MakeEncounter(allEnvironments), e => e.Creatures.Count() > 1);
             Assert.That(encounter.Creatures.Count(), Is.GreaterThan(1));
+        }
+
+        [TestCase(CreatureConstants.Types.Aberration)]
+        [TestCase(CreatureConstants.Types.Animal)]
+        [TestCase(CreatureConstants.Types.Construct)]
+        [TestCase(CreatureConstants.Types.Dragon)]
+        [TestCase(CreatureConstants.Types.Elemental)]
+        [TestCase(CreatureConstants.Types.Fey)]
+        [TestCase(CreatureConstants.Types.Giant)]
+        [TestCase(CreatureConstants.Types.Humanoid)]
+        [TestCase(CreatureConstants.Types.MagicalBeast)]
+        [TestCase(CreatureConstants.Types.MonstrousHumanoid)]
+        [TestCase(CreatureConstants.Types.Ooze)]
+        [TestCase(CreatureConstants.Types.Outsider)]
+        [TestCase(CreatureConstants.Types.Plant)]
+        [TestCase(CreatureConstants.Types.Undead)]
+        [TestCase(CreatureConstants.Types.Vermin)]
+        public void StressFilter(string filter)
+        {
+            Stress(() => AssertEncounterInRandomEnvironment(allEnvironments, filter));
         }
     }
 }

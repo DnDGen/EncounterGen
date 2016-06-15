@@ -58,7 +58,7 @@ namespace EncounterGen.Domain.Generators
         public IEnumerable<Character> GenerateFrom(IEnumerable<Creature> creatures)
         {
             var characters = new List<Character>();
-            var characterCreatures = creatures.Where(c => IsCharacterCreatureType(c.Type) || IsCharacterCreatureType(c.Subtype));
+            var characterCreatures = creatures.Where(c => IsCharacterCreatureType(c.Name) || IsCharacterCreatureType(c.Description));
 
             foreach (var characterCreature in characterCreatures)
             {
@@ -85,7 +85,7 @@ namespace EncounterGen.Domain.Generators
         {
             var characterCreatureType = GetCharacterCreatureType(creature);
 
-            setLevelRandomizer.SetLevel = GetCharacterLevel(creature.Type);
+            setLevelRandomizer.SetLevel = GetCharacterLevel(creature.Name);
             setLevelRandomizer.AllowAdjustments = true;
 
             var undeadNPCCreatures = collectionSelector.SelectFrom(TableNameConstants.CreatureGroups, GroupConstants.UndeadNPC);
@@ -109,10 +109,10 @@ namespace EncounterGen.Domain.Generators
 
         private string GetCharacterCreatureType(Creature creature)
         {
-            var creatureType = GetCreatureTypeCharacter(creature.Type);
+            var creatureType = GetCreatureTypeCharacter(creature.Name);
 
             if (string.IsNullOrEmpty(creatureType))
-                return GetCreatureTypeCharacter(creature.Subtype);
+                return GetCreatureTypeCharacter(creature.Description);
 
             return creatureType;
         }

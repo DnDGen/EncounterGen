@@ -291,7 +291,7 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
                 "Hezrou",
                 CreatureConstants.Hieracosphinx,
                 CreatureConstants.Hobgoblin,
-                CreatureConstants.HoundArchon,
+                "Hound archon",
                 CreatureConstants.Howler,
                 CreatureConstants.Hydra,
                 CreatureConstants.Hyena,
@@ -398,7 +398,7 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
                 CreatureConstants.Tiger_Dire,
                 CreatureConstants.Troglodyte,
                 CreatureConstants.Troll,
-                CreatureConstants.TrumpetArchon,
+                "Trumpet archon",
                 CreatureConstants.UmberHulk,
                 CreatureConstants.VampireSpawn,
                 CreatureConstants.Vampire,
@@ -706,7 +706,7 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
         [TestCase("Hezrou", 1, 1, 1)]
         [TestCase(CreatureConstants.Hieracosphinx, 0, 0, 0)]
         [TestCase(CreatureConstants.Hobgoblin, 1, 1, 1)]
-        [TestCase(CreatureConstants.HoundArchon, 0, 2, 1)]
+        [TestCase("Hound archon", 0, 2, 1)]
         [TestCase(CreatureConstants.Howler, 0, 0, 0)]
         [TestCase(CreatureConstants.Hydra, TreasureConstants.TenPercent, TreasureConstants.FiftyPercent, TreasureConstants.FiftyPercent)]
         [TestCase(CreatureConstants.Hyena, 0, 0, 0)]
@@ -813,7 +813,7 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
         [TestCase(CreatureConstants.Tiger_Dire, 0, 0, 0)]
         [TestCase(CreatureConstants.Troglodyte, TreasureConstants.FiftyPercent, TreasureConstants.FiftyPercent, TreasureConstants.FiftyPercent)]
         [TestCase(CreatureConstants.Troll, 1, 1, 1)]
-        [TestCase(CreatureConstants.TrumpetArchon, 0, 2, 1)]
+        [TestCase("Trumpet archon", 0, 2, 1)]
         [TestCase(CreatureConstants.UmberHulk, 1, 1, 1)]
         [TestCase(CreatureConstants.VampireSpawn, 1, 1, 1)]
         [TestCase(CreatureConstants.Vampire, 0, 0, 0)]

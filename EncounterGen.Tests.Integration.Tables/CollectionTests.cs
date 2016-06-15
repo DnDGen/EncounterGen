@@ -65,7 +65,7 @@ namespace EncounterGen.Tests.Integration.Tables
         private void AssertNoDuplicates(IEnumerable<string> collection)
         {
             var duplicates = collection.Where(i => collection.Count(ii => ii == i) > 1).Distinct();
-            Assert.That(duplicates, Is.Empty);
+            Assert.That(collection, Is.Unique, $"Duplicates: {string.Join(", ", duplicates)}");
         }
 
         public virtual void OrderedCollection(string entry, params string[] items)

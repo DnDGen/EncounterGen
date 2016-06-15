@@ -18,6 +18,396 @@
     <item>Vampire</item>
   </collection>
   <collection>
+    <entry>Undead</entry>
+    <item>Lich</item>
+    <item>Ghost</item>
+    <item>Vampire</item>
+    <item>Zombie</item>
+    <item>Skeleton</item>
+    <item>Ghoul</item>
+    <item>Ghast</item>
+    <item>Mummy</item>
+    <item>Bodak</item>
+    <item>Vampire spawn</item>
+  </collection>
+  <collection>
+    <entry>Aberration</entry>
+    <item>Aboleth</item>
+    <item>Athach</item>
+    <item>Choker</item>
+    <item>Chuul</item>
+    <item>Cloaker</item>
+    <item>Delver</item>
+    <item>Destrachan</item>
+    <item>Drider</item>
+    <item>Mind flayer</item>
+    <item>Umber hulk</item>
+    <item>Beholder</item>
+    <item>Carrion crawler</item>
+    <item>Ethereal filcher</item>
+    <item>Ettercap</item>
+    <item>Gibbering mouther</item>
+    <item>Grick</item>
+    <item>Mimic</item>
+    <item>Dark naga</item>
+    <item>Guardian naga</item>
+    <item>Spirit naga</item>
+    <item>Water naga</item>
+    <item>Otyugh</item>
+    <item>Phasm</item>
+    <item>Rust monster</item>
+    <item>Will-O'-Wisp</item>
+  </collection>
+  <collection>
+    <entry>Animal</entry>
+    <item>Deinonychus</item>
+    <item>Megaraptor</item>
+    <item>Triceratops</item>
+    <item>Tyrannosaurus</item>
+    <item>Ape</item>
+    <item>Dire ape</item>
+    <item>Badger</item>
+    <item>Dire badger</item>
+    <item>Bat</item>
+    <item>Dire bat</item>
+    <item>Black bear</item>
+    <item>Brown bear</item>
+    <item>Polar bear</item>
+    <item>Dire bear</item>
+    <item>Boar</item>
+    <item>Dire boar</item>
+    <item>Lion</item>
+    <item>Dire lion</item>
+    <item>Rat</item>
+    <item>Dire rat</item>
+    <item>Tiger</item>
+    <item>Dire tiger</item>
+    <item>Weasel</item>
+    <item>Dire weasel</item>
+    <item>Wolf</item>
+    <item>Dire wolf</item>
+    <item>Wovlerine</item>
+    <item>Dire wolverine</item>
+    <item>Roc</item>
+    <item>Baboon</item>
+  </collection>
+  <collection>
+    <entry>Plant</entry>
+    <item>Assassin vine</item>
+    <item>Shrieker</item>
+    <item>Violet fungus</item>
+    <item>Phantom fungus</item>
+    <item>Shambling mound</item>
+    <item>Tendriculos</item>
+  </collection>
+  <collection>
+    <entry>Humanoid</entry>
+    <item>Bugbear</item>
+    <item>Character</item>
+    <item>NPC</item>
+    <item>NPC (Traveler)</item>
+    <item>Dwarf</item>
+    <item>Dwarf warrior</item>
+    <item>Elf</item>
+    <item>Elf warrior</item>
+    <item>Halfling</item>
+    <item>Gnome</item>
+    <item>Gnoll</item>
+    <item>Goblin</item>
+    <item>Hobgoblin</item>
+    <item>Kobold</item>
+    <item>Lizardfolk</item>
+    <item>Orc</item>
+    <item>Troglodyte</item>
+    <item>Warrior (Bandit)</item>
+    <item>Warrior (Bandit Leader)</item>
+    <item>Warrior (Captain)</item>
+    <item>Warrior (Guard)</item>
+    <item>Warrior (Hunter)</item>
+    <item>Warrior (Patrol)</item>
+    <item>Commoner (Farmer)</item>
+    <item>Commoner (Herder)</item>
+    <item>Commoner (Hunter)</item>
+    <item>Commoner (Merchant)</item>
+    <item>Commoner (Minstrel)</item>
+    <item>Commoner (Pilgim)</item>
+    <item>Expert (Merchant)</item>
+    <item>Adept</item>
+    <item>Bard</item>
+    <item>Barbarian</item>
+    <item>Cleric</item>
+    <item>Druid</item>
+    <item>Aristocrat</item>
+    <item>Monk</item>
+    <item>Paladin</item>
+    <item>Ranger</item>
+    <item>Rogue</item>
+    <item>Sorcerer</item>
+    <item>Wizard</item>
+    <item>Expert</item>
+    <item>Commoner</item>
+    <item>Warrior</item>
+  </collection>
+  <collection>
+    <entry>Monstrous Humanoid</entry>
+    <item>Centaur</item>
+    <item>Derro</item>
+    <item>Doppelganger</item>
+    <item>Yuan-ti</item>
+    <item>Yuan-ti (Abomination)</item>
+    <item>Yuan-ti (Halfblood)</item>
+    <item>Yuan-ti (Pureblood)</item>
+    <item>Gargoyle</item>
+    <item>Grimlock</item>
+    <item>Annis (hag)</item>
+    <item>Annis</item>
+    <item>Green hag (hag)</item>
+    <item>Green hag</item>
+    <item>Sea hag (hag)</item>
+    <item>Sea hag</item>
+  </collection>
+  <collection>
+    <entry>Vermin</entry>
+    <item>Lich</item>
+    <item>Ghost</item>
+    <item>Vampire</item>
+  </collection>
+  <collection>
+    <entry>Outsider</entry>
+    <item>Achaierais</item>
+    <item>Astral deva (celestial)</item>
+    <item>Astral deva</item>
+    <item>Planetar (celestial)</item>
+    <item>Planetar</item>
+    <item>Solar (celestial)</item>
+    <item>Solar</item>
+    <item>Hound archon (celestial)</item>
+    <item>Hound archon</item>
+    <item>Lantern archon (celestial)</item>
+    <item>Lantern archon</item>
+    <item>Trumpet archon (celestial)</item>
+    <item>Trumpet archon</item>
+    <item>Adult arrowhawk</item>
+    <item>Elder arrowhawk</item>
+    <item>Juvenile arrowhawk</item>
+    <item>Avoral</item>
+    <item>Azer</item>
+    <item>Barghest</item>
+    <item>Greater barghest</item>
+    <item>Chaos beast</item>
+    <item>Couatl</item>
+    <item>Babau (demon)</item>
+    <item>Babau</item>
+    <item>Balor (demon)</item>
+    <item>Balor</item>
+    <item>Bebilith (demon)</item>
+    <item>Bebilith</item>
+    <item>Dretch (demon)</item>
+    <item>Dretch</item>
+  </collection>
+  <collection>
+    <entry>Dragon</entry>
+    <item>Wyrmling brass dragon</item>
+    <item>Very young brass dragon</item>
+    <item>Young brass dragon</item>
+    <item>Juvenile brass dragon</item>
+    <item>Young adult brass dragon</item>
+    <item>Adult brass dragon</item>
+    <item>Mature adult brass dragon</item>
+    <item>Old brass dragon</item>
+    <item>Very old brass dragon</item>
+    <item>Ancient brass dragon</item>
+    <item>Wyrm brass dragon</item>
+    <item>Great wyrm brass dragon</item>
+    <item>Wyrmling bronze dragon</item>
+    <item>Very young bronze dragon</item>
+    <item>Young bronze dragon</item>
+    <item>Juvenile bronze dragon</item>
+    <item>Young adult bronze dragon</item>
+    <item>Adult bronze dragon</item>
+    <item>Mature adult bronze dragon</item>
+    <item>Old bronze dragon</item>
+    <item>Very old bronze dragon</item>
+    <item>Ancient bronze dragon</item>
+    <item>Wyrm bronze dragon</item>
+    <item>Great wyrm bronze dragon</item>
+    <item>Wyrmling copper dragon</item>
+    <item>Very young copper dragon</item>
+    <item>Young copper dragon</item>
+    <item>Juvenile copper dragon</item>
+    <item>Young adult copper dragon</item>
+    <item>Adult copper dragon</item>
+    <item>Mature adult copper dragon</item>
+    <item>Old copper dragon</item>
+    <item>Very old copper dragon</item>
+    <item>Ancient copper dragon</item>
+    <item>Wyrm copper dragon</item>
+    <item>Great wyrm copper dragon</item>
+    <item>Wyrmling gold dragon</item>
+    <item>Very young gold dragon</item>
+    <item>Young gold dragon</item>
+    <item>Juvenile gold dragon</item>
+    <item>Young adult gold dragon</item>
+    <item>Adult gold dragon</item>
+    <item>Mature adult gold dragon</item>
+    <item>Old gold dragon</item>
+    <item>Very old gold dragon</item>
+    <item>Ancient gold dragon</item>
+    <item>Wyrm gold dragon</item>
+    <item>Great wyrm gold dragon</item>
+    <item>Wyrmling silver dragon</item>
+    <item>Very young silver dragon</item>
+    <item>Young silver dragon</item>
+    <item>Juvenile silver dragon</item>
+    <item>Young adult silver dragon</item>
+    <item>Adult silver dragon</item>
+    <item>Mature adult silver dragon</item>
+    <item>Old silver dragon</item>
+    <item>Very old silver dragon</item>
+    <item>Ancient silver dragon</item>
+    <item>Wyrm silver dragon</item>
+    <item>Great wyrm silver dragon</item>
+    <item>Wyrmling black dragon</item>
+    <item>Very young black dragon</item>
+    <item>Young black dragon</item>
+    <item>Juvenile black dragon</item>
+    <item>Young adult black dragon</item>
+    <item>Adult black dragon</item>
+    <item>Mature adult black dragon</item>
+    <item>Old black dragon</item>
+    <item>Very old black dragon</item>
+    <item>Ancient black dragon</item>
+    <item>Wyrm black dragon</item>
+    <item>Great wyrm black dragon</item>
+    <item>Wyrmling blue dragon</item>
+    <item>Very young blue dragon</item>
+    <item>Young blue dragon</item>
+    <item>Juvenile blue dragon</item>
+    <item>Young adult blue dragon</item>
+    <item>Adult blue dragon</item>
+    <item>Mature adult blue dragon</item>
+    <item>Old blue dragon</item>
+    <item>Very old blue dragon</item>
+    <item>Ancient blue dragon</item>
+    <item>Wyrm blue dragon</item>
+    <item>Great wyrm blue dragon</item>
+    <item>Wyrmling green dragon</item>
+    <item>Very young green dragon</item>
+    <item>Young green dragon</item>
+    <item>Juvenile green dragon</item>
+    <item>Young adult green dragon</item>
+    <item>Adult green dragon</item>
+    <item>Mature adult green dragon</item>
+    <item>Old green dragon</item>
+    <item>Very old green dragon</item>
+    <item>Ancient green dragon</item>
+    <item>Wyrm green dragon</item>
+    <item>Great wyrm green dragon</item>
+    <item>Wyrmling red dragon</item>
+    <item>Very young red dragon</item>
+    <item>Young red dragon</item>
+    <item>Juvenile red dragon</item>
+    <item>Young adult red dragon</item>
+    <item>Adult red dragon</item>
+    <item>Mature adult red dragon</item>
+    <item>Old red dragon</item>
+    <item>Very old red dragon</item>
+    <item>Ancient red dragon</item>
+    <item>Wyrm red dragon</item>
+    <item>Great wyrm red dragon</item>
+    <item>Wyrmling white dragon</item>
+    <item>Very young white dragon</item>
+    <item>Young white dragon</item>
+    <item>Juvenile white dragon</item>
+    <item>Young adult white dragon</item>
+    <item>Adult white dragon</item>
+    <item>Mature adult white dragon</item>
+    <item>Old white dragon</item>
+    <item>Very old white dragon</item>
+    <item>Ancient white dragon</item>
+    <item>Wyrm white dragon</item>
+    <item>Great wyrm white dragon</item>
+    <item>Dragon</item>
+    <item>Dragon turtle</item>
+    <item>Pseudodragon</item>
+    <item>Wyvern</item>
+  </collection>
+  <collection>
+    <entry>Elemental</entry>
+    <item>Belker</item>
+    <item>Elder air elemental</item>
+    <item>Greater air elemental</item>
+    <item>Huge air elemental</item>
+    <item>Large air elemental</item>
+    <item>Medium air elemental</item>
+    <item>Small air elemental</item>
+    <item>Elder earth elemental</item>
+    <item>Greater earth elemental</item>
+    <item>Huge earth elemental</item>
+    <item>Large earth elemental</item>
+    <item>Medium earth elemental</item>
+    <item>Small earth elemental</item>
+    <item>Elder fire elemental</item>
+    <item>Greater fire elemental</item>
+    <item>Huge fire elemental</item>
+    <item>Large fire elemental</item>
+    <item>Medium fire elemental</item>
+    <item>Small fire elemental</item>
+    <item>Elder water elemental</item>
+    <item>Greater water elemental</item>
+    <item>Huge water elemental</item>
+    <item>Large water elemental</item>
+    <item>Medium water elemental</item>
+    <item>Small water elemental</item>
+    <item>Invisible stalker</item>
+    <item>Magmin</item>
+    <item>Thoqqua</item>
+  </collection>
+  <collection>
+    <entry>Fey</entry>
+    <item>Dryad</item>
+    <item>Nymph</item>
+    <item>Satyr</item>
+    <item>Grig</item>
+    <item>Pixie</item>
+  </collection>
+  <collection>
+    <entry>Giant</entry>
+    <item>Ettin</item>
+    <item>Cloud giant</item>
+    <item>Fire giant</item>
+    <item>Frost giant</item>
+    <item>Hill giant</item>
+    <item>Stone giant</item>
+    <item>Storm giant</item>
+    <item>Ogre</item>
+    <item>Ogre mage</item>
+    <item>Troll</item>
+  </collection>
+  <collection>
+    <entry>Ooze</entry>
+    <item>Black pudding</item>
+    <item>Gelatinous cube</item>
+    <item>Gray ooze</item>
+    <item>Ochre jelly</item>
+  </collection>
+  <collection>
+    <entry>Construct</entry>
+    <item>Colossal animated object</item>
+    <item>Gargantuan animated object</item>
+    <item>Huge animated object</item>
+    <item>Large animated object</item>
+    <item>Medium animated object</item>
+    <item>Small animated object</item>
+    <item>Tiny animated object</item>
+    <item>Clay golem</item>
+    <item>Flesh golem</item>
+    <item>Iron golem</item>
+    <item>Stone golem</item>
+    <item>Greater stone golem</item>
+    <item>Homunculus</item>
+  </collection>
+  <collection>
     <entry>Use Subtype for Treasure</entry>
     <item>Celestial creature</item>
     <item>Fiendish creature</item>
@@ -281,6 +671,86 @@
     <item>Dire wolverine</item>
     <item>Wyvern</item>
     <item>Yrthak</item>
+  </collection>
+  <collection>
+    <entry>Magical Beast</entry>
+    <item>Androsphinx</item>
+    <item>Ankheg</item>
+    <item>Aranea</item>
+    <item>Celestial creature</item>
+    <item>Fiendish creature</item>
+    <item>Basilisk</item>
+    <item>Behir</item>
+    <item>Blink dog</item>
+    <item>Bulette</item>
+    <item>Cockatrice</item>
+    <item>Criosphinx</item>
+    <item>Cryohydra (5 heads)</item>
+    <item>Cryohydra (6 heads)</item>
+    <item>Cryohydra (7 heads)</item>
+    <item>Cryohydra (8 heads)</item>
+    <item>Cryohydra (9 heads)</item>
+    <item>Cryohydra (10 heads)</item>
+    <item>Cryohydra (11 heads)</item>
+    <item>Cryohydra (12 heads)</item>
+    <item>Darkmantle</item>
+    <item>Digester</item>
+    <item>Cryohydra</item>
+    <item>Pyrohydra</item>
+    <item>Hydra</item>
+    <item>Dragonne</item>
+    <item>Giant eagle</item>
+    <item>Frost worm</item>
+    <item>Girallon</item>
+    <item>Gorgon</item>
+    <item>Gray render</item>
+    <item>Griffon</item>
+    <item>Gynosphinx</item>
+    <item>Hippogriff</item>
+    <item>Hydra (5 heads)</item>
+    <item>Hydra (6 heads)</item>
+    <item>Hydra (7 heads)</item>
+    <item>Hydra (8 heads)</item>
+    <item>Hydra (9 heads)</item>
+    <item>Hydra (10 heads)</item>
+    <item>Hydra (11 heads)</item>
+    <item>Hydra (12 heads)</item>
+    <item>Krenshar</item>
+    <item>Lammasu</item>
+    <item>Otyugh</item>
+    <item>Giant owl</item>
+    <item>Owlbear</item>
+    <item>Pegasus</item>
+    <item>Phase spider</item>
+    <item>Purple worm</item>
+    <item>Pyrohydra (5 heads)</item>
+    <item>Pyrohydra (6 heads)</item>
+    <item>Pyrohydra (7 heads)</item>
+    <item>Pyrohydra (8 heads)</item>
+    <item>Pyrohydra (9 heads)</item>
+    <item>Pyrohydra (10 heads)</item>
+    <item>Pyrohydra (11 heads)</item>
+    <item>Pyrohydra (12 heads)</item>
+    <item>Razor boar</item>
+    <item>Remorhaz</item>
+    <item>Rust monster</item>
+    <item>Satyr</item>
+    <item>Shocker lizard</item>
+    <item>Spider eater</item>
+    <item>Stirge</item>
+    <item>Unicorn</item>
+    <item>Wyvern</item>
+    <item>Yrthak</item>
+    <item>Chimera</item>
+    <item>Ethereal marauder</item>
+    <item>Lamia</item>
+    <item>Manticore</item>
+    <item>Roper</item>
+    <item>Hieracosphinx</item>
+    <item>Tarrasque</item>
+    <item>Winter wolf</item>
+    <item>Worg</item>
+    <item>Displacer beast</item>
   </collection>
   <collection>
     <entry>Fiendish creature</entry>
@@ -1087,6 +1557,7 @@
   <collection>
     <entry>Dominated creature</entry>
     <item>Aranea</item>
+    <item>Hound archon (celestial)</item>
     <item>Hound archon</item>
     <item>Barghest</item>
     <item>Displacer beast</item>

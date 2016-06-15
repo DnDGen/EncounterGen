@@ -73,6 +73,7 @@
     <Compile Include="Generators\EncounterCharacterGenerator.cs" />
     <Compile Include="Generators\EncounterGenerator.cs" />
     <Compile Include="Generators\EncounterTreasureGenerator.cs" />
+    <Compile Include="Generators\FilterVerifier.cs" />
     <Compile Include="Generators\IEncounterCharacterGenerator.cs" />
     <Compile Include="Generators\IEncounterTreasureGenerator.cs" />
     <Compile Include="Generators\RegexConstants.cs" />

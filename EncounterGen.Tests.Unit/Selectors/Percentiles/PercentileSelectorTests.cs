@@ -4,6 +4,7 @@ using Moq;
 using NUnit.Framework;
 using RollGen;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace EncounterGen.Tests.Unit.Selectors.Percentiles
 {
@@ -57,6 +58,19 @@ namespace EncounterGen.Tests.Unit.Selectors.Percentiles
         {
             mockDice.Setup(d => d.Roll(1).IndividualRolls(100)).Returns(new[] { 11 });
             Assert.That(() => selector.SelectFrom(tableName), Throws.Exception.With.Message.EqualTo("11 is not a valid entry in the table table name"));
+        }
+
+        [Test]
+        public void GetAllDistinctResults()
+        {
+            var results = selector.SelectAllFrom(tableName);
+            Assert.That(results, Contains.Item("content"));
+            Assert.That(results, Contains.Item("6"));
+            Assert.That(results, Contains.Item("7"));
+            Assert.That(results, Contains.Item("8"));
+            Assert.That(results, Contains.Item("9"));
+            Assert.That(results, Contains.Item("10"));
+            Assert.That(results.Count, Is.EqualTo(6));
         }
     }
 }

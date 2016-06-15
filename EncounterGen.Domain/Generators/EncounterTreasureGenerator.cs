@@ -65,10 +65,10 @@ namespace EncounterGen.Domain.Generators
         {
             var useSubtypeForTreasure = collectionSelector.SelectFrom(TableNameConstants.CreatureGroups, GroupConstants.UseSubtypeForTreasure);
 
-            if (useSubtypeForTreasure.Contains(creature.Type))
-                return creature.Subtype;
+            if (useSubtypeForTreasure.Contains(creature.Name))
+                return creature.Description;
 
-            return creature.Type;
+            return creature.Name;
         }
     }
 }
