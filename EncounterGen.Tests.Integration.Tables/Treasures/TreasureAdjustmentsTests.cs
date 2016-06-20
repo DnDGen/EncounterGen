@@ -27,6 +27,13 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
                 CreatureConstants.Achaierais,
                 CreatureConstants.Allip,
                 CreatureConstants.Ankheg,
+                CreatureConstants.AnimatedObject_Colossal,
+                CreatureConstants.AnimatedObject_Gargantuan,
+                CreatureConstants.AnimatedObject_Huge,
+                CreatureConstants.AnimatedObject_Large,
+                CreatureConstants.AnimatedObject_Medium,
+                CreatureConstants.AnimatedObject_Small,
+                CreatureConstants.AnimatedObject_Tiny,
                 "Annis",
                 CreatureConstants.Ant_Giant_Soldier,
                 CreatureConstants.Ant_Giant_Worker,
@@ -92,6 +99,7 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
                 CreatureConstants.Digester,
                 CreatureConstants.DisplacerBeast,
                 CreatureConstants.Djinn,
+                CreatureConstants.Dog,
                 CreatureConstants.Doppelganger,
                 CreatureConstants.Dragon,
                 CreatureConstants.Dragon_Black_Wyrmling,
@@ -393,6 +401,7 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
                 CreatureConstants.Spider_Monstrous_Tiny,
                 CreatureConstants.StagBeetle_Giant,
                 CreatureConstants.Stirge,
+                CreatureConstants.Tarrasque,
                 CreatureConstants.Thoqqua,
                 CreatureConstants.Tiger,
                 CreatureConstants.Tiger_Dire,
@@ -439,6 +448,13 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
         [TestCase(CreatureConstants.Aboleth, 2, 2, 2)]
         [TestCase(CreatureConstants.Achaierais, 2, 2, 2)]
         [TestCase(CreatureConstants.Allip, 0, 0, 0)]
+        [TestCase(CreatureConstants.AnimatedObject_Colossal, 0, 0, 0)]
+        [TestCase(CreatureConstants.AnimatedObject_Gargantuan, 0, 0, 0)]
+        [TestCase(CreatureConstants.AnimatedObject_Huge, 0, 0, 0)]
+        [TestCase(CreatureConstants.AnimatedObject_Large, 0, 0, 0)]
+        [TestCase(CreatureConstants.AnimatedObject_Medium, 0, 0, 0)]
+        [TestCase(CreatureConstants.AnimatedObject_Small, 0, 0, 0)]
+        [TestCase(CreatureConstants.AnimatedObject_Tiny, 0, 0, 0)]
         [TestCase(CreatureConstants.Ankheg, 0, 0, 0)]
         [TestCase("Annis", 1, 1, 1)]
         [TestCase(CreatureConstants.Ant_Giant_Soldier, 0, 0, 0)]
@@ -507,6 +523,7 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
         [TestCase(CreatureConstants.Digester, 0, 0, 0)]
         [TestCase(CreatureConstants.DisplacerBeast, TreasureConstants.FiftyPercent, TreasureConstants.FiftyPercent, TreasureConstants.FiftyPercent)]
         [TestCase(CreatureConstants.Djinn, 1, 1, 1)]
+        [TestCase(CreatureConstants.Dog, 0, 0, 0)]
         [TestCase(CreatureConstants.Doppelganger, 2, 2, 2)]
         [TestCase(CreatureConstants.Dragon, 3, 3, 3)]
         [TestCase(CreatureConstants.Dragon_Black_Adult, 3, 3, 3)]
@@ -808,6 +825,7 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
         [TestCase(CreatureConstants.Spider_Monstrous_Tiny, 0, 0, 0)]
         [TestCase(CreatureConstants.StagBeetle_Giant, 0, 0, 0)]
         [TestCase(CreatureConstants.Stirge, 0, 0, 0)]
+        [TestCase(CreatureConstants.Tarrasque, 0, 0, 0)]
         [TestCase(CreatureConstants.Thoqqua, 0, 0, 0)]
         [TestCase(CreatureConstants.Tiger, 0, 0, 0)]
         [TestCase(CreatureConstants.Tiger_Dire, 0, 0, 0)]

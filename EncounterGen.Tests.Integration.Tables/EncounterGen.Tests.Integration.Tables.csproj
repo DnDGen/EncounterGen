@@ -94,6 +94,7 @@
     <Compile Include="Encounters\Civilized\Day\Level11CivilizedDayEncountersTests.cs" />
     <Compile Include="Encounters\Civilized\Day\Level12CivilizedDayEncountersTests.cs" />
     <Compile Include="Encounters\Civilized\Day\Level13CivilizedDayEncountersTests.cs" />
+    <Compile Include="Encounters\Civilized\Day\Level16CivilizedDayEncountersTests.cs" />
     <Compile Include="Encounters\Civilized\Day\Level1CivilizedDayEncountersTests.cs" />
     <Compile Include="Encounters\Civilized\Day\Level20CivilizedDayEncountersTests.cs" />
     <Compile Include="Encounters\Civilized\Day\Level3CivilizedDayEncountersTests.cs" />
@@ -110,6 +111,7 @@
     <Compile Include="Encounters\Civilized\Day\Level2CivilizedDayEncountersTests.cs" />
     <Compile Include="Encounters\Civilized\Day\Level6CivilizedDayEncountersTests.cs" />
     <Compile Include="Encounters\Civilized\Night\Level11CivilizedNightEncountersTests.cs" />
+    <Compile Include="Encounters\Civilized\Night\Level16CivilizedNightEncountersTests.cs" />
     <Compile Include="Encounters\Civilized\Night\Level17CivilizedNightEncountersTests.cs" />
     <Compile Include="Encounters\Civilized\Night\Level19CivilizedNightEncountersTests.cs" />
     <Compile Include="Encounters\Civilized\Night\Level1CivilizedNightEncountersTests.cs" />
@@ -126,8 +128,10 @@
     <Compile Include="Encounters\Desert\Cold\Day\Level4ColdDesertDayEncountersTests.cs" />
     <Compile Include="Encounters\Desert\Cold\Day\Level7ColdDesertDayEncountersTests.cs" />
     <Compile Include="Encounters\Desert\Cold\Night\Level1ColdDesertNightEncountersTests.cs" />
+    <Compile Include="Encounters\Desert\Cold\Night\Level20ColdDesertNightEncountersTests.cs" />
     <Compile Include="Encounters\Desert\Temperate\Day\Level17TemperateDesertDayEncountersTests.cs" />
     <Compile Include="Encounters\Desert\Temperate\Night\Level10TemperateDesertNightEncountersTests.cs" />
+    <Compile Include="Encounters\Desert\Temperate\Night\Level20TemperateDesertNightEncountersTests.cs" />
     <Compile Include="Encounters\Desert\Warm\Night\Level19WarmDesertNightEncountersTests.cs" />
     <Compile Include="Encounters\Dungeon\Level10DungeonEncountersTests.cs" />
     <Compile Include="Encounters\Dungeon\Level11DungeonEncountersTests.cs" />
@@ -149,6 +153,7 @@
     <Compile Include="Encounters\Desert\Temperate\Night\Level6TemperateDesertNightEncountersTests.cs" />
     <Compile Include="Encounters\Forest\Temperate\Day\Level20TemperateForestDayEncountersTests.cs" />
     <Compile Include="Encounters\Forest\Warm\Day\Level17WarmForestDayEncountersTests.cs" />
+    <Compile Include="Encounters\Forest\Warm\Day\Level20WarmForestDayEncountersTests.cs" />
     <Compile Include="Encounters\Forest\Warm\Day\Level2WarmForestDayEncountersTests.cs" />
     <Compile Include="Encounters\Forest\Warm\Night\Level11WarmForestNightEncountersTests.cs" />
     <Compile Include="Encounters\Forest\Warm\Night\Level18WarmForestNightEncountersTests.cs" />
@@ -212,6 +217,7 @@
     <Compile Include="Encounters\Mountain\Cold\Day\Level6ColdMountainDayEncountersTests.cs" />
     <Compile Include="Encounters\Mountain\Cold\Night\Level10ColdMountainNightEncountersTests.cs" />
     <Compile Include="Encounters\Mountain\Cold\Night\Level11ColdMountainNightEncountersTests.cs" />
+    <Compile Include="Encounters\Mountain\Cold\Night\Level13ColdMountainNightEncountersTests.cs" />
     <Compile Include="Encounters\Mountain\Temperate\Day\Level14TemperateMountainDayEncountersTests.cs" />
     <Compile Include="Encounters\Mountain\Temperate\Day\Level19TemperateMountainDayEncountersTests.cs" />
     <Compile Include="Encounters\Mountain\Temperate\Day\Level4TemperateMountainDayEncountersTests.cs" />
@@ -220,12 +226,16 @@
     <Compile Include="Encounters\Mountain\Warm\Day\Level17WarmMountainDayEncountersTests.cs" />
     <Compile Include="Encounters\Mountain\Warm\Day\Level4WarmMountainDayEncountersTests.cs" />
     <Compile Include="Encounters\Mountain\Warm\Night\Level15WarmMountainNightEncountersTests.cs" />
+    <Compile Include="Encounters\Mountain\Warm\Night\Level20WarmMountainNightEncountersTests.cs" />
     <Compile Include="Encounters\Plains\Cold\Day\Level18ColdPlainsDayEncountersTests.cs" />
+    <Compile Include="Encounters\Plains\Cold\Day\Level20ColdPlainsDayEncountersTests.cs" />
     <Compile Include="Encounters\Plains\Cold\Day\Level4ColdPlainsDayEncountersTests.cs" />
     <Compile Include="Encounters\Plains\Cold\Night\Level13ColdPlainsNightEncountersTests.cs" />
+    <Compile Include="Encounters\Plains\Cold\Night\Level20ColdPlainsNightEncountersTests.cs" />
     <Compile Include="Encounters\Plains\Temperate\Night\Level20TemperatePlainsNightEncountersTests.cs" />
     <Compile Include="Encounters\Plains\Temperate\Night\Level9TemperatePlainsNightEncountersTests.cs" />
     <Compile Include="Encounters\Plains\Warm\Day\Level17WarmPlainsDayEncountersTests.cs" />
+    <Compile Include="Encounters\Plains\Warm\Day\Level20WarmPlainsDayEncountersTests.cs" />
     <Compile Include="Encounters\Plains\Warm\Day\Level7WarmPlainsDayEncountersTests.cs" />
     <Compile Include="PercentileTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

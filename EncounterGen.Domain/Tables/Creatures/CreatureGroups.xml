@@ -29,6 +29,25 @@
     <item>Mummy</item>
     <item>Bodak</item>
     <item>Vampire spawn</item>
+    <item>Allip</item>
+    <item>Mohrg</item>
+    <item>Devourer</item>
+    <item>Nightcrawler (nightshade)</item>
+    <item>Nightwalker (nightshade)</item>
+    <item>Nightwing (nightshade)</item>
+    <item>Shadow</item>
+    <item>Nightcrawler</item>
+    <item>Nightwalker</item>
+    <item>Nightwing</item>
+    <item>Skeleton (Hill giant)</item>
+    <item>Skeleton (Human)</item>
+    <item>Skeleton (Ogre)</item>
+    <item>Zombie (Hill giant)</item>
+    <item>Zombie (Human)</item>
+    <item>Spectre</item>
+    <item>Wight</item>
+    <item>Wraith</item>
+    <item>Dread wraith</item>
   </collection>
   <collection>
     <entry>Aberration</entry>
@@ -86,10 +105,44 @@
     <item>Dire weasel</item>
     <item>Wolf</item>
     <item>Dire wolf</item>
-    <item>Wovlerine</item>
+    <item>Wolverine</item>
     <item>Dire wolverine</item>
     <item>Roc</item>
+    <item>Cat</item>
     <item>Baboon</item>
+    <item>Dog</item>
+    <item>Bison</item>
+    <item>Camel</item>
+    <item>Cheetah</item>
+    <item>Crocodile</item>
+    <item>Giant crocodile</item>
+    <item>Donkey</item>
+    <item>Eagle</item>
+    <item>Elephant</item>
+    <item>Hawk</item>
+    <item>Heavy horse</item>
+    <item>Light horse</item>
+    <item>Heavy warhorse</item>
+    <item>Light warhorse</item>
+    <item>Hyena</item>
+    <item>Leopard</item>
+    <item>Pony</item>
+    <item>Warpony</item>
+    <item>Lizard</item>
+    <item>Monitor lizard</item>
+    <item>Monkey</item>
+    <item>Mule</item>
+    <item>Owl</item>
+    <item>Raven</item>
+    <item>Rhinoceras</item>
+    <item>Constrictor snake</item>
+    <item>Giant constrictor snake</item>
+    <item>Huge viper snake</item>
+    <item>Large viper snake</item>
+    <item>Medium viper snake</item>
+    <item>Small viper snake</item>
+    <item>Tiny viper snake</item>
+    <item>Toad</item>
   </collection>
   <collection>
     <entry>Plant</entry>
@@ -130,7 +183,7 @@
     <item>Commoner (Hunter)</item>
     <item>Commoner (Merchant)</item>
     <item>Commoner (Minstrel)</item>
-    <item>Commoner (Pilgim)</item>
+    <item>Commoner (Pilgrim)</item>
     <item>Expert (Merchant)</item>
     <item>Adept</item>
     <item>Bard</item>
@@ -147,6 +200,8 @@
     <item>Expert</item>
     <item>Commoner</item>
     <item>Warrior</item>
+    <item>Expert (Minstrel)</item>
+    <item>Fighter</item>
   </collection>
   <collection>
     <entry>Monstrous Humanoid</entry>
@@ -165,12 +220,47 @@
     <item>Green hag</item>
     <item>Sea hag (hag)</item>
     <item>Sea hag</item>
+    <item>Harpy</item>
+    <item>Werebear</item>
+    <item>Wereboar</item>
+    <item>Wererat</item>
+    <item>Weretiger</item>
+    <item>Werewolf</item>
+    <item>Medusa</item>
+    <item>Minotaur</item>
+    <item>Scorpionfolk</item>
   </collection>
   <collection>
     <entry>Vermin</entry>
-    <item>Lich</item>
-    <item>Ghost</item>
-    <item>Vampire</item>
+    <item>Giant soldier ant</item>
+    <item>Giant worker ant</item>
+    <item>Giant bee</item>
+    <item>Giant bombardier beetle</item>
+    <item>Giant fire beetle</item>
+    <item>Giant stag beetle</item>
+    <item>Giant praying mantis</item>
+    <item>Giant wasp</item>
+    <item>Colossal monstrous centipede</item>
+    <item>Gargantuan monstrous centipede</item>
+    <item>Huge monstrous centipede</item>
+    <item>Large monstrous centipede</item>
+    <item>Medium monstrous centipede</item>
+    <item>Small monstrous centipede</item>
+    <item>Tiny monstrous centipede</item>
+    <item>Colossal monstrous scorpion</item>
+    <item>Gargantuan monstrous scorpion</item>
+    <item>Huge monstrous scorpion</item>
+    <item>Large monstrous scorpion</item>
+    <item>Medium monstrous scorpion</item>
+    <item>Small monstrous scorpion</item>
+    <item>Tiny monstrous scorpion</item>
+    <item>Colossal monstrous spider</item>
+    <item>Gargantuan monstrous spider</item>
+    <item>Huge monstrous spider</item>
+    <item>Large monstrous spider</item>
+    <item>Medium monstrous spider</item>
+    <item>Small monstrous spider</item>
+    <item>Tiny monstrous spider</item>
   </collection>
   <collection>
     <entry>Outsider</entry>
@@ -204,6 +294,86 @@
     <item>Bebilith</item>
     <item>Dretch (demon)</item>
     <item>Dretch</item>
+    <item>Glabrezu (demon)</item>
+    <item>Glabrezu</item>
+    <item>Hezrou (demon)</item>
+    <item>Hezrou</item>
+    <item>Marilith (demon)</item>
+    <item>Marilith</item>
+    <item>Nalfeshnee (demon)</item>
+    <item>Nalfeshnee</item>
+    <item>Quasit (demon)</item>
+    <item>Quasit</item>
+    <item>Succubus (demon)</item>
+    <item>Succubus</item>
+    <item>Vrock (demon)</item>
+    <item>Vrock</item>
+    <item>Hamatula (devil)</item>
+    <item>Hamatula</item>
+    <item>Barbazu (devil)</item>
+    <item>Barbazu</item>
+    <item>Osyluth (devil)</item>
+    <item>Osyluth</item>
+    <item>Retriever</item>
+    <item>Kyton (devil)</item>
+    <item>Kyton</item>
+    <item>Erinyes (devil)</item>
+    <item>Erinyes</item>
+    <item>Hellcat</item>
+    <item>Cornugon (devil)</item>
+    <item>Cornugon</item>
+    <item>Gelugon (devil)</item>
+    <item>Gelugon</item>
+    <item>Imp (devil)</item>
+    <item>Imp</item>
+    <item>Lemure (devil)</item>
+    <item>Lemure</item>
+    <item>Pit fiend (devil)</item>
+    <item>Pit fiend</item>
+    <item>Blue slaad</item>
+    <item>Death slaad</item>
+    <item>Gray slaad</item>
+    <item>Green slaad</item>
+    <item>Red slaad</item>
+    <item>Formian myrmarch</item>
+    <item>Formian taskmaster</item>
+    <item>Formian warrior</item>
+    <item>Formian worker</item>
+    <item>Djinn</item>
+    <item>Noble djinn</item>
+    <item>Efreet</item>
+    <item>Janni</item>
+    <item>Ghaele (celestial)</item>
+    <item>Ghaele</item>
+    <item>Hell hound</item>
+    <item>Nessian warhound</item>
+    <item>Howler</item>
+    <item>Lillend</item>
+    <item>Mephit</item>
+    <item>Air mephit</item>
+    <item>Ooze mephit</item>
+    <item>Magma mephit</item>
+    <item>Dust mephit</item>
+    <item>Ice mephit</item>
+    <item>Earth mephit</item>
+    <item>Fire mephit</item>
+    <item>Salt mephit</item>
+    <item>Steam mephit</item>
+    <item>Water mephit</item>
+    <item>Night hag</item>
+    <item>Rast</item>
+    <item>Nightmare</item>
+    <item>Ravid</item>
+    <item>Average salamander</item>
+    <item>Flamebrother salamander</item>
+    <item>Noble salamander</item>
+    <item>Shadow mastiff</item>
+    <item>Vargouille</item>
+    <item>Xill</item>
+    <item>Average xorn</item>
+    <item>Elder xorn</item>
+    <item>Minor xorn</item>
+    <item>Yeth hound</item>
   </collection>
   <collection>
     <entry>Dragon</entry>
@@ -717,7 +887,6 @@
     <item>Hydra (12 heads)</item>
     <item>Krenshar</item>
     <item>Lammasu</item>
-    <item>Otyugh</item>
     <item>Giant owl</item>
     <item>Owlbear</item>
     <item>Pegasus</item>
@@ -733,13 +902,10 @@
     <item>Pyrohydra (12 heads)</item>
     <item>Razor boar</item>
     <item>Remorhaz</item>
-    <item>Rust monster</item>
-    <item>Satyr</item>
     <item>Shocker lizard</item>
     <item>Spider eater</item>
     <item>Stirge</item>
     <item>Unicorn</item>
-    <item>Wyvern</item>
     <item>Yrthak</item>
     <item>Chimera</item>
     <item>Ethereal marauder</item>

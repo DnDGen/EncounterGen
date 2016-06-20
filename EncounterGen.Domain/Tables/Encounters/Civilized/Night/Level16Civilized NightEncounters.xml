@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<percentile>
+  <object>
+    <lower>9</lower>
+    <content>Commoner (Minstrel)[20]/1d6+3,Expert (Minstrel)[20]/1</content>
+    <upper>12</upper>
+  </object>
+  <object>
+    <lower>13</lower>
+    <content>Commoner (Minstrel)[20]/1d6+3,Bard[12]/1</content>
+    <upper>16</upper>
+  </object>
+  <object>
+    <lower>21</lower>
+    <content>Warrior (Patrol)[20]/1d6+3,Fighter[12]/1</content>
+    <upper>24</upper>
+  </object>
+    <object>
+        <lower>25</lower>
+        <content>Commoner (Pilgrim)[1d2+13]/1d4+10,Warrior (Guard)[1d2+13]/1d3+1,Cleric[13]/1</content>
+        <upper>28</upper>
+    </object>
+  <object>
+    <lower>29</lower>
+    <content>Commoner (Pilgrim)[1d2+17]/1d6+5,Warrior (Guard)[1d2+17]/1d3,Cleric[11]/1</content>
+    <upper>32</upper>
+  </object>
+  <object>
+    <lower>33</lower>
+    <content>Commoner (Pilgrim)[20]/1d6+3,Cleric[12]/1</content>
+    <upper>36</upper>
+  </object>
+  <object>
+    <lower>49</lower>
+    <content>Warrior (Bandit)[1d2+17]/1d6+5,Fighter[11]/1</content>
+    <upper>52</upper>
+  </object>
+  <object>
+    <lower>53</lower>
+    <content>Warrior (Bandit)[1d2+15]/1d4+10,Fighter[11]/1</content>
+    <upper>56</upper>
+  </object>
+  <object>
+    <lower>61</lower>
+    <content>Vampire[8]/1</content>
+    <upper>65</upper>
+  </object>
+  <object>
+    <lower>66</lower>
+    <content>Ghost[11]/1</content>
+    <upper>70</upper>
+  </object>
+  <object>
+    <lower>71</lower>
+    <content>Character[16]/1</content>
+    <upper>76</upper>
+  </object>
+  <object>
+    <lower>77</lower>
+    <content>Character[15]/1d2</content>
+    <upper>82</upper>
+  </object>
+  <object>
+    <lower>83</lower>
+    <content>Character[14]/1d3</content>
+    <upper>88</upper>
+  </object>
+  <object>
+    <lower>89</lower>
+    <content>Character[13]/1d3+1</content>
+    <upper>94</upper>
+  </object>
+  <object>
+    <lower>95</lower>
+    <content>Character[12]/1d4+2</content>
+    <upper>100</upper>
+  </object>
+</percentile>

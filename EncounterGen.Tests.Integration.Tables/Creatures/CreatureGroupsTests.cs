@@ -75,45 +75,54 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures
             CreatureConstants.Mephit_Salt,
             CreatureConstants.Mephit_Steam,
             CreatureConstants.Mephit_Water)]
-        [TestCase(CreatureConstants.DominatedCreature,
-            CreatureConstants.Aranea,
-            CreatureConstants.HoundArchon,
-            "Hound archon",
-            CreatureConstants.Barghest,
-            CreatureConstants.Bear_Brown,
-            CreatureConstants.Boar_Dire,
-            CreatureConstants.Wolverine_Dire,
-            CreatureConstants.DisplacerBeast,
-            CreatureConstants.Gargoyle,
-            CreatureConstants.Crocodile_Giant,
-            CreatureConstants.StagBeetle_Giant,
-            CreatureConstants.Ooze_Gray,
-            CreatureConstants.Griffon,
-            CreatureConstants.Harpy,
-            CreatureConstants.Hydra_5Heads,
-            CreatureConstants.Janni,
-            CreatureConstants.Mimic,
-            CreatureConstants.Otyugh,
-            CreatureConstants.Owlbear,
-            CreatureConstants.Pixie,
-            CreatureConstants.Bear_Polar,
-            CreatureConstants.Rhinoceras,
-            CreatureConstants.Tiger,
-            CreatureConstants.VampireSpawn,
-            CreatureConstants.Wereboar,
-            CreatureConstants.Minotaur,
-            CreatureConstants.CelestialCreature,
-            CreatureConstants.FiendishCreature,
-            CreatureConstants.Skeleton,
-            CreatureConstants.Zombie,
-            CreatureConstants.Dragon,
-            CreatureConstants.Character)]
         [TestCase(GroupConstants.UseSubtypeForTreasure,
             CreatureConstants.CelestialCreature,
             CreatureConstants.FiendishCreature)]
         public override void DistinctCollection(string entry, params string[] items)
         {
             base.DistinctCollection(entry, items);
+        }
+
+        [Test]
+        public void DominatedCreature()
+        {
+            var subtypes = new[]
+            {
+                CreatureConstants.Aranea,
+                CreatureConstants.HoundArchon,
+                "Hound archon",
+                CreatureConstants.Barghest,
+                CreatureConstants.Bear_Brown,
+                CreatureConstants.Boar_Dire,
+                CreatureConstants.Wolverine_Dire,
+                CreatureConstants.DisplacerBeast,
+                CreatureConstants.Gargoyle,
+                CreatureConstants.Crocodile_Giant,
+                CreatureConstants.StagBeetle_Giant,
+                CreatureConstants.Ooze_Gray,
+                CreatureConstants.Griffon,
+                CreatureConstants.Harpy,
+                CreatureConstants.Hydra_5Heads,
+                CreatureConstants.Janni,
+                CreatureConstants.Mimic,
+                CreatureConstants.Otyugh,
+                CreatureConstants.Owlbear,
+                CreatureConstants.Pixie,
+                CreatureConstants.Bear_Polar,
+                CreatureConstants.Rhinoceras,
+                CreatureConstants.Tiger,
+                CreatureConstants.VampireSpawn,
+                CreatureConstants.Wereboar,
+                CreatureConstants.Minotaur,
+                CreatureConstants.CelestialCreature,
+                CreatureConstants.FiendishCreature,
+                CreatureConstants.Skeleton,
+                CreatureConstants.Zombie,
+                CreatureConstants.Dragon,
+                CreatureConstants.Character
+            };
+
+            base.DistinctCollection(CreatureConstants.DominatedCreature, subtypes);
         }
 
         [Test]
@@ -774,6 +783,7 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures
                 CreatureConstants.Efreet,
                 CreatureConstants.Janni,
                 CreatureConstants.Ghaele,
+                "Ghaele",
                 CreatureConstants.HellHound,
                 CreatureConstants.NessianWarhound,
                 CreatureConstants.Howler,
@@ -854,7 +864,10 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures
                 CreatureConstants.Spectre,
                 CreatureConstants.Wight,
                 CreatureConstants.Wraith,
-                CreatureConstants.Wraith_Dread
+                CreatureConstants.Wraith_Dread,
+                "Nightcrawler",
+                "Nightwalker",
+                "Nightwing"
             };
 
             base.DistinctCollection(CreatureConstants.Types.Undead, creatures);

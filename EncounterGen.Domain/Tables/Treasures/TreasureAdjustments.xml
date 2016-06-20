@@ -20,6 +20,48 @@
     <item>0</item>
   </collection>
   <collection>
+    <entry>Gargantuan animated object</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Colossal animated object</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Huge animated object</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Large animated object</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Medium animated object</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Small animated object</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Tiny animated object</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
     <entry>Ankheg</entry>
     <item>0</item>
     <item>0</item>
@@ -444,6 +486,12 @@
     <item>1</item>
     <item>1</item>
     <item>1</item>
+  </collection>
+  <collection>
+    <entry>Dog</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
   </collection>
   <collection>
     <entry>Doppelganger</entry>
@@ -2226,6 +2274,12 @@
     <item>1</item>
     <item>1</item>
     <item>1</item>
+  </collection>
+  <collection>
+    <entry>Tarrasque</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
   </collection>
   <collection>
     <entry>Thoqqua</entry>
