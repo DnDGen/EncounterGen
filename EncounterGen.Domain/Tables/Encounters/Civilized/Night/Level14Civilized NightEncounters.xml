@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<percentile>
+  <object>
+    <lower>1</lower>
+    <content>Commoner (Merchant)[1d2+17]/1d3,Warrior (Guard)[1d2+17]/1d3,Expert (Merchant)[1d2+17]/1</content>
+    <upper>5</upper>
+  </object>
+  <object>
+    <lower>6</lower>
+    <content>Commoner (Minstrel)[1d2+15]/1d6+3,Expert (Minstrel)[1d2+15]/1</content>
+    <upper>10</upper>
+  </object>
+  <object>
+    <lower>11</lower>
+    <content>Commoner (Minstrel)[1d2+15]/1d6+3,Bard[10]/1</content>
+    <upper>15</upper>
+  </object>
+  <object>
+    <lower>16</lower>
+    <content>Warrior (Patrol)[1d2+17]/1d6+3,Warrior (Captain)[20]/1</content>
+    <upper>20</upper>
+  </object>
+  <object>
+    <lower>21</lower>
+    <content>Warrior (Patrol)[1d2+15]/1d6+3,Fighter[10]/1</content>
+    <upper>25</upper>
+  </object>
+    <object>
+        <lower>26</lower>
+        <content>Commoner (Pilgrim)[1d2+9]/1d4+10,Warrior (Guard)[1d2+9]/1d3+1,Cleric[11]/1</content>
+        <upper>30</upper>
+    </object>
+  <object>
+    <lower>31</lower>
+    <content>Commoner (Pilgrim)[1d2+13]/1d6+5,Warrior (Guard)[1d2+13]/1d3,Cleric[9]/1</content>
+    <upper>35</upper>
+  </object>
+  <object>
+    <lower>36</lower>
+    <content>Commoner (Pilgrim)[1d2+15]/1d6+3,Cleric[10]/1</content>
+    <upper>40</upper>
+  </object>
+  <object>
+    <lower>41</lower>
+    <content>Warrior (Bandit)[1d2+17]/1d4+2,Warrior (Bandit Leader)[20]/1</content>
+    <upper>45</upper>
+  </object>
+  <object>
+    <lower>46</lower>
+    <content>Warrior (Bandit)[1d2+15]/1d6+3,Warrior (Bandit Leader)[1d2+17]/1</content>
+    <upper>50</upper>
+  </object>
+  <object>
+    <lower>51</lower>
+    <content>Warrior (Bandit)[1d2+13]/1d6+5,Fighter[9]/1</content>
+    <upper>55</upper>
+  </object>
+  <object>
+    <lower>56</lower>
+    <content>Warrior (Bandit)[1d2+11]/1d4+10,Fighter[9]/1</content>
+    <upper>60</upper>
+  </object>
+  <object>
+    <lower>61</lower>
+    <content>Vampire[6]/1</content>
+    <upper>65</upper>
+  </object>
+  <object>
+    <lower>66</lower>
+    <content>Ghost[9]/1</content>
+    <upper>70</upper>
+  </object>
+  <object>
+    <lower>71</lower>
+    <content>Character[14]/1</content>
+    <upper>76</upper>
+  </object>
+  <object>
+    <lower>77</lower>
+    <content>Character[13]/1d2</content>
+    <upper>82</upper>
+  </object>
+  <object>
+    <lower>83</lower>
+    <content>Character[12]/1d3</content>
+    <upper>88</upper>
+  </object>
+  <object>
+    <lower>89</lower>
+    <content>Character[11]/1d3+1</content>
+    <upper>94</upper>
+  </object>
+  <object>
+    <lower>95</lower>
+    <content>Character[10]/1d4+2</content>
+    <upper>100</upper>
+  </object>
+</percentile>

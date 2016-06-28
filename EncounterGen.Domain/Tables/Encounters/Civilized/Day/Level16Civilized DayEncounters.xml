@@ -2,67 +2,67 @@
 
 <percentile>
   <object>
-    <lower>9</lower>
+    <lower>1</lower>
     <content>Commoner (Minstrel)[20]/1d6+3,Expert (Minstrel)[20]/1</content>
-    <upper>12</upper>
+    <upper>8</upper>
   </object>
   <object>
-    <lower>13</lower>
+    <lower>9</lower>
     <content>Commoner (Minstrel)[20]/1d6+3,Bard[12]/1</content>
-    <upper>16</upper>
+    <upper>15</upper>
   </object>
   <object>
-    <lower>21</lower>
+    <lower>16</lower>
     <content>Warrior (Patrol)[20]/1d6+3,Fighter[12]/1</content>
-    <upper>24</upper>
+    <upper>23</upper>
   </object>
     <object>
-        <lower>25</lower>
+        <lower>24</lower>
         <content>Commoner (Pilgrim)[1d2+13]/1d4+10,Warrior (Guard)[1d2+13]/1d3+1,Cleric[13]/1</content>
-        <upper>28</upper>
+        <upper>30</upper>
     </object>
   <object>
-    <lower>29</lower>
+    <lower>31</lower>
     <content>Commoner (Pilgrim)[1d2+17]/1d6+5,Warrior (Guard)[1d2+17]/1d3,Cleric[11]/1</content>
-    <upper>32</upper>
+    <upper>38</upper>
   </object>
   <object>
-    <lower>33</lower>
+    <lower>39</lower>
     <content>Commoner (Pilgrim)[20]/1d6+3,Cleric[12]/1</content>
-    <upper>36</upper>
+    <upper>45</upper>
   </object>
   <object>
-    <lower>49</lower>
+    <lower>46</lower>
     <content>Warrior (Bandit)[1d2+17]/1d6+5,Fighter[11]/1</content>
-    <upper>52</upper>
+    <upper>53</upper>
   </object>
   <object>
-    <lower>53</lower>
+    <lower>54</lower>
     <content>Warrior (Bandit)[1d2+15]/1d4+10,Fighter[11]/1</content>
-    <upper>56</upper>
+    <upper>60</upper>
   </object>
   <object>
-    <lower>71</lower>
+    <lower>61</lower>
     <content>Character[16]/1</content>
-    <upper>76</upper>
+    <upper>68</upper>
   </object>
   <object>
-    <lower>77</lower>
+    <lower>69</lower>
     <content>Character[15]/1d2</content>
-    <upper>82</upper>
+    <upper>75</upper>
   </object>
   <object>
-    <lower>83</lower>
+    <lower>76</lower>
     <content>Character[14]/1d3</content>
-    <upper>88</upper>
+    <upper>83</upper>
   </object>
   <object>
-    <lower>89</lower>
+    <lower>84</lower>
     <content>Character[13]/1d3+1</content>
-    <upper>94</upper>
+    <upper>90</upper>
   </object>
   <object>
-    <lower>95</lower>
+    <lower>91</lower>
     <content>Character[12]/1d4+2</content>
     <upper>100</upper>
   </object>
