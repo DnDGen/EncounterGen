@@ -97,6 +97,7 @@
     <Compile Include="Encounters\Civilized\Day\Level14CivilizedDayEncountersTests.cs" />
     <Compile Include="Encounters\Civilized\Day\Level15CivilizedDayEncountersTests.cs" />
     <Compile Include="Encounters\Civilized\Day\Level16CivilizedDayEncountersTests.cs" />
+    <Compile Include="Encounters\Civilized\Day\Level18CivilizedDayEnountersTests.cs" />
     <Compile Include="Encounters\Civilized\Day\Level1CivilizedDayEncountersTests.cs" />
     <Compile Include="Encounters\Civilized\Day\Level20CivilizedDayEncountersTests.cs" />
     <Compile Include="Encounters\Civilized\Day\Level3CivilizedDayEncountersTests.cs" />
@@ -117,6 +118,7 @@
     <Compile Include="Encounters\Civilized\Night\Level15CivilizedNightEncountersTests.cs" />
     <Compile Include="Encounters\Civilized\Night\Level16CivilizedNightEncountersTests.cs" />
     <Compile Include="Encounters\Civilized\Night\Level17CivilizedNightEncountersTests.cs" />
+    <Compile Include="Encounters\Civilized\Night\Level18CivilizedNightEncountersTests.cs" />
     <Compile Include="Encounters\Civilized\Night\Level19CivilizedNightEncountersTests.cs" />
     <Compile Include="Encounters\Civilized\Night\Level1CivilizedNightEncountersTests.cs" />
     <Compile Include="Encounters\Civilized\Night\Level20CivilizedNightEncountersTests.cs" />
