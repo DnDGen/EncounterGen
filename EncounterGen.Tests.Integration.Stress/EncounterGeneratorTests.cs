@@ -82,7 +82,7 @@ namespace EncounterGen.Tests.Integration.Stress
         {
             var levels = Enumerable.Range(1, 20);
 
-            var environment = Generate(() => GeneratEnvironment(environments),
+            var environment = Generate(() => GenerateEnvironment(environments),
                 e => levels.Any(l => FilterVerifier.FiltersAreValid(e, l, filters)));
 
             return MakeEncounter(environment);
