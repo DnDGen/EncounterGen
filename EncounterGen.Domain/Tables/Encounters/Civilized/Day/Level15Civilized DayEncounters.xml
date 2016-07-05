@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<percentile>
+  <object>
+    <lower>1</lower>
+    <content>Commoner (Merchant)[20]/1d3,Warrior (Guard)[20]/1d3,Expert (Merchant)[20]/1</content>
+    <upper>6</upper>
+  </object>
+  <object>
+    <lower>7</lower>
+    <content>Commoner (Minstrel)[1d2+17]/1d6+3,Expert (Minstrel)[1d2+17]/1</content>
+    <upper>12</upper>
+  </object>
+  <object>
+    <lower>13</lower>
+    <content>Commoner (Minstrel)[1d2+17]/1d6+3,Bard[11]/1</content>
+    <upper>18</upper>
+  </object>
+  <object>
+    <lower>19</lower>
+    <content>Warrior (Patrol)[1d2+17]/1d6+3,Fighter[11]/1</content>
+    <upper>24</upper>
+  </object>
+  <object>
+    <lower>25</lower>
+    <content>Commoner (Pilgrim)[1d2+11]/1d4+10,Warrior (Guard)[1d2+11]/1d3+1,Cleric[12]/1</content>
+    <upper>30</upper>
+  </object>
+  <object>
+    <lower>31</lower>
+    <content>Commoner (Pilgrim)[1d2+15]/1d6+5,Warrior (Guard)[1d2+15]/1d3,Cleric[10]/1</content>
+    <upper>36</upper>
+  </object>
+  <object>
+    <lower>37</lower>
+    <content>Commoner (Pilgrim)[1d2+17]/1d6+3,Cleric[11]/1</content>
+    <upper>42</upper>
+  </object>
+  <object>
+    <lower>43</lower>
+    <content>Warrior (Bandit)[1d2+17]/1d6+3,Warrior (Bandit Leader)[20]/1</content>
+    <upper>48</upper>
+  </object>
+  <object>
+    <lower>49</lower>
+    <content>Warrior (Bandit)[1d2+15]/1d6+5,Fighter[10]/1</content>
+    <upper>54</upper>
+  </object>
+  <object>
+    <lower>55</lower>
+    <content>Warrior (Bandit)[1d2+13]/1d4+10,Fighter[10]/1</content>
+    <upper>60</upper>
+  </object>
+  <object>
+    <lower>61</lower>
+    <content>Character[15]/1</content>
+    <upper>68</upper>
+  </object>
+  <object>
+    <lower>69</lower>
+    <content>Character[14]/1d2</content>
+    <upper>76</upper>
+  </object>
+  <object>
+    <lower>77</lower>
+    <content>Character[13]/1d3</content>
+    <upper>84</upper>
+  </object>
+  <object>
+    <lower>85</lower>
+    <content>Character[12]/1d3+1</content>
+    <upper>92</upper>
+  </object>
+  <object>
+    <lower>93</lower>
+    <content>Character[11]/1d4+2</content>
+    <upper>100</upper>
+  </object>
+</percentile>

@@ -674,6 +674,18 @@
   <ItemGroup>
     <EmbeddedResource Include="Tables\Encounters\Civilized\Day\Level14Civilized DayEncounters.xml" />
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Civilized\Night\Level18Civilized NightEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Civilized\Day\Level18Civilized DayEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Civilized\Night\Level15Civilized NightEncounters.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Encounters\Civilized\Day\Level15Civilized DayEncounters.xml" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

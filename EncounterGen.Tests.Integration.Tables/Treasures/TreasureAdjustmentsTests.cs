@@ -73,6 +73,7 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
                 CreatureConstants.Bugbear,
                 CreatureConstants.Bulette,
                 CreatureConstants.CarrionCrawler,
+                CreatureConstants.Cat,
                 CreatureConstants.Centipede_Monstrous_Colossal,
                 CreatureConstants.Centipede_Monstrous_Gargantuan,
                 CreatureConstants.Centipede_Monstrous_Huge,
@@ -361,6 +362,7 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
                 CreatureConstants.Rat,
                 CreatureConstants.Rat_Dire,
                 CreatureConstants.Ravid,
+                CreatureConstants.RazorBoar,
                 CreatureConstants.Remorhaz,
                 CreatureConstants.Retriever,
                 CreatureConstants.Roper,
@@ -495,6 +497,7 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
         [TestCase(CreatureConstants.Bugbear, 1, 1, 1)]
         [TestCase(CreatureConstants.Bulette, 0, 0, 0)]
         [TestCase(CreatureConstants.CarrionCrawler, 0, 0, 0)]
+        [TestCase(CreatureConstants.Cat, 0, 0, 0)]
         [TestCase(CreatureConstants.Centipede_Monstrous_Colossal, 0, 0, 0)]
         [TestCase(CreatureConstants.Centipede_Monstrous_Gargantuan, 0, 0, 0)]
         [TestCase(CreatureConstants.Centipede_Monstrous_Huge, 0, 0, 0)]
@@ -785,6 +788,7 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
         [TestCase(CreatureConstants.Rat, 0, 0, 0)]
         [TestCase(CreatureConstants.Rat_Dire, 0, 0, 0)]
         [TestCase(CreatureConstants.Ravid, 0, 0, 0)]
+        [TestCase(CreatureConstants.RazorBoar, 0, 0, 0)]
         [TestCase(CreatureConstants.Remorhaz, 0, 0, 0)]
         [TestCase(CreatureConstants.Retriever, 0, 0, 0)]
         [TestCase(CreatureConstants.Roper, 0, TreasureConstants.FiftyPercent, 0)]

@@ -26,7 +26,7 @@ namespace EncounterGen.Tests.Integration.Stress
         {
             var assembly = Assembly.GetExecutingAssembly();
             var types = assembly.GetTypes();
-            var methods = types.SelectMany(t => t.GetMethods());
+            var methods = types.Where(t => t.GetCustomAttributes<StressAttribute>().Any()).SelectMany(t => t.GetMethods());
             var stressTestsCount = methods.Sum(m => m.GetCustomAttributes<TestAttribute>(true).Count());
             var stressTestCasesCount = methods.Sum(m => m.GetCustomAttributes<TestCaseAttribute>().Count());
             var stressTestsTotal = stressTestsCount + stressTestCasesCount;
@@ -69,6 +69,19 @@ namespace EncounterGen.Tests.Integration.Stress
             Console.WriteLine($"Stress test complete after {Stopwatch.Elapsed} and {iterations} iterations");
         }
 
+        protected T Generate<T>(Func<T> generate, Func<T, bool> isValid)
+        {
+            T generatedObject;
+
+            do generatedObject = generate();
+            while (isValid(generatedObject) == false && Stopwatch.Elapsed.TotalSeconds < timeLimitInSeconds + 10);
+
+            if (isValid(generatedObject) == false)
+                Assert.Fail($"Failed to generate after {Stopwatch.Elapsed}");
+
+            return generatedObject;
+        }
+
         protected T GenerateOrFail<T>(Func<T> generate, Func<T, bool> isValid)
         {
             T generatedObject;
@@ -79,7 +92,7 @@ namespace EncounterGen.Tests.Integration.Stress
             Console.WriteLine($"Generation complete after {Stopwatch.Elapsed} and {iterations} iterations");
 
             if (TestShouldKeepRunning() == false && isValid(generatedObject) == false)
-                Assert.Fail("Stress test timed out.");
+                Assert.Fail($"Failed to generate after {Stopwatch.Elapsed} and {iterations} iterations.");
 
             return generatedObject;
         }
