@@ -64,10 +64,6 @@
       <HintPath>..\packages\DnDGen.TreasureGen.4.0\lib\TreasureGen.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="TreasureGen.Domain, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\DnDGen.TreasureGen.Domain.4.0\lib\TreasureGen.Domain.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Generators\EncounterCharacterGenerator.cs" />
