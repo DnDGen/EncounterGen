@@ -88,6 +88,7 @@ namespace EncounterGen.Tests.Integration.Stress
             return MakeEncounter(environment);
         }
 
+        private string GenerateEnvironment(IEnumerable<string> environments)
         {
             var total = environments.Count();
             var randomIndex = Random.Next(total);
