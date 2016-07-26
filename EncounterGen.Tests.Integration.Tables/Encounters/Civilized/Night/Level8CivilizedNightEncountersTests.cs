@@ -24,7 +24,7 @@ namespace EncounterGen.Tests.Integration.Tables.Encounters.Civilized.Night
         }
 
         [TestCase(1, 4, CreatureConstants.Commoner_Farmer + "[1d2+11]", RollConstants.OneD3)]
-        [TestCase(5, 8, CreatureConstants.Ghost + "[3]", RollConstants.One)]
+        [TestCase(5, 8, CreatureConstants.Ghost + "[6]", RollConstants.One)]
         [TestCase(9, 12, CreatureConstants.Commoner_Herder + "[1d2+11]", RollConstants.OneD3,
             CreatureConstants.Livestock, RollConstants.OneD4Plus10)]
         [TestCase(13, 16, CreatureConstants.Commoner_Hunter + "[1d2+9]", RollConstants.OneD3,
@@ -60,7 +60,8 @@ namespace EncounterGen.Tests.Integration.Tables.Encounters.Civilized.Night
         [TestCase(77, 80, CreatureConstants.Character + "[7]", RollConstants.OneD2)]
         [TestCase(81, 84, CreatureConstants.Character + "[6]", RollConstants.OneD3)]
         [TestCase(85, 88, CreatureConstants.Character + "[5]", RollConstants.OneD3Plus1)]
-        [TestCase(89, 100, CreatureConstants.Character + "[4]", RollConstants.OneD4Plus2)]
+        [TestCase(89, 92, CreatureConstants.Vampire + "[6]", RollConstants.One)]
+        [TestCase(93, 100, CreatureConstants.Character + "[4]", RollConstants.OneD4Plus2)]
         public override void Percentile(int lower, int upper, params string[] typesAndAmounts)
         {
             base.Percentile(lower, upper, typesAndAmounts);

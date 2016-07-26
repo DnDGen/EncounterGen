@@ -22,8 +22,8 @@ namespace EncounterGen.Tests.Integration.Tables.Encounters.Civilized.Night
             AssertTableIsComplete();
         }
 
-        [TestCase(1, 14, CreatureConstants.Vampire + "[12]", RollConstants.One)]
-        [TestCase(15, 28, CreatureConstants.Ghost + "[15]", RollConstants.One)]
+        [TestCase(1, 14, CreatureConstants.Vampire + "[18]", RollConstants.One)]
+        [TestCase(15, 28, CreatureConstants.Ghost + "[18]", RollConstants.One)]
         [TestCase(29, 42, CreatureConstants.Character + "[20]", RollConstants.One)]
         [TestCase(43, 56, CreatureConstants.Character + "[19]", RollConstants.OneD2)]
         [TestCase(57, 70, CreatureConstants.Character + "[18]", RollConstants.OneD3)]

@@ -8,7 +8,7 @@
     </object>
   <object>
     <lower>5</lower>
-    <content>Ghost[6]/1</content>
+    <content>Ghost[9]/1</content>
     <upper>8</upper>
   </object>
   <object>
@@ -98,7 +98,7 @@
   </object>
   <object>
     <lower>77</lower>
-    <content>Vampire[3]/1</content>
+    <content>Vampire[9]/1</content>
     <upper>80</upper>
   </object>
   <object>

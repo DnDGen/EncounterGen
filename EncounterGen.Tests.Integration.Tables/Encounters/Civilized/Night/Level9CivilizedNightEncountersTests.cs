@@ -24,7 +24,7 @@ namespace EncounterGen.Tests.Integration.Tables.Encounters.Civilized.Night
         }
 
         [TestCase(1, 4, CreatureConstants.Commoner_Farmer + "[1d2+13]", RollConstants.OneD3)]
-        [TestCase(5, 8, CreatureConstants.Ghost + "[4]", RollConstants.One)]
+        [TestCase(5, 8, CreatureConstants.Ghost + "[7]", RollConstants.One)]
         [TestCase(9, 12, CreatureConstants.Commoner_Herder + "[1d2+13]", RollConstants.OneD3,
             CreatureConstants.Livestock, RollConstants.OneD4Plus10)]
         [TestCase(13, 16, CreatureConstants.Commoner_Hunter + "[1d2+11]", RollConstants.OneD3,
@@ -59,7 +59,7 @@ namespace EncounterGen.Tests.Integration.Tables.Encounters.Civilized.Night
             CharacterClassConstants.Fighter + "[4]", RollConstants.One)]
         [TestCase(69, 72, CreatureConstants.NPC_Traveler + "[1d2+13]", RollConstants.OneD3)]
         [TestCase(73, 76, CreatureConstants.NPC_Traveler + "[1d2+11]", RollConstants.OneD3Plus1)]
-        [TestCase(77, 80, CreatureConstants.Vampire + "[1]", RollConstants.One)]
+        [TestCase(77, 80, CreatureConstants.Vampire + "[7]", RollConstants.One)]
         [TestCase(81, 84, CreatureConstants.Character + "[9]", RollConstants.One)]
         [TestCase(85, 88, CreatureConstants.Character + "[8]", RollConstants.OneD2)]
         [TestCase(89, 92, CreatureConstants.Character + "[7]", RollConstants.OneD3)]

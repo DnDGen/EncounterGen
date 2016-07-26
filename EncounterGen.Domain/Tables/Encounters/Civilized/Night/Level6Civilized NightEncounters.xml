@@ -9,95 +9,100 @@
   <object>
     <lower>6</lower>
     <content>Commoner (Herder)[1d2+7]/1d3,Livestock/1d4+10</content>
-    <upper>10</upper>
+    <upper>9</upper>
   </object>
   <object>
-    <lower>11</lower>
+    <lower>10</lower>
     <content>Commoner (Hunter)[1d2+5]/1d3,Warrior (Hunter)[1d2+5]/1</content>
-    <upper>15</upper>
+    <upper>14</upper>
   </object>
   <object>
-    <lower>16</lower>
+    <lower>15</lower>
     <content>Commoner (Merchant)[1d2+1]/1d3,Warrior (Guard)[1d2+1]/1d3,Expert (Merchant)[1d2+1]/1</content>
-    <upper>20</upper>
+    <upper>18</upper>
   </object>
   <object>
-    <lower>21</lower>
+    <lower>19</lower>
     <content>Commoner (Minstrel)[1]/1d6+3,Expert (Minstrel)[1]/1</content>
-    <upper>25</upper>
+    <upper>23</upper>
   </object>
   <object>
-    <lower>26</lower>
+    <lower>24</lower>
     <content>Commoner (Minstrel)[1]/1d6+3,Bard[2]/1</content>
-    <upper>30</upper>
+    <upper>27</upper>
   </object>
   <object>
-    <lower>31</lower>
+    <lower>28</lower>
     <content>Warrior (Patrol)[1d2+1]/1d6+3,Warrior (Captain)[1d2+3]/1</content>
-    <upper>35</upper>
+    <upper>32</upper>
   </object>
   <object>
-    <lower>36</lower>
+    <lower>33</lower>
     <content>Warrior (Patrol)[1]/1d6+3,Fighter[2]/1</content>
-    <upper>40</upper>
+    <upper>36</upper>
   </object>
   <object>
-    <lower>41</lower>
+    <lower>37</lower>
     <content>Commoner (Pilgrim)[1]/1d6+3,Cleric[2]/1</content>
+    <upper>41</upper>
+  </object>
+  <object>
+    <lower>42</lower>
+    <content>Warrior (Bandit)[1d2+5]/1d3+1</content>
     <upper>45</upper>
   </object>
   <object>
     <lower>46</lower>
-    <content>Warrior (Bandit)[1d2+5]/1d3+1</content>
+    <content>Warrior (Bandit)[1d2+1]/1d4+2,Warrior (Bandit Leader)[1d2+3]/1</content>
     <upper>50</upper>
   </object>
   <object>
     <lower>51</lower>
-    <content>Warrior (Bandit)[1d2+1]/1d4+2,Warrior (Bandit Leader)[1d2+3]/1</content>
-    <upper>55</upper>
-  </object>
-  <object>
-    <lower>56</lower>
     <content>Warrior (Bandit)[1]/1d6+3,Warrior (Bandit Leader)[1d2+1]/1</content>
-    <upper>60</upper>
+    <upper>54</upper>
   </object>
   <object>
-    <lower>61</lower>
+    <lower>55</lower>
     <content>NPC (Traveler)[1d2+7]/1d3</content>
-    <upper>65</upper>
+    <upper>59</upper>
   </object>
   <object>
-    <lower>66</lower>
+    <lower>60</lower>
     <content>NPC (Traveler)[1d2+5]/1d3+1</content>
-    <upper>70</upper>
+    <upper>63</upper>
   </object>
   <object>
-    <lower>71</lower>
-    <content>Ghost[1]/1</content>
-    <upper>75</upper>
+    <lower>64</lower>
+    <content>Ghost[4]/1</content>
+    <upper>68</upper>
   </object>
   <object>
-    <lower>76</lower>
+    <lower>69</lower>
+    <content>Vampire[4]/1</content>
+    <upper>72</upper>
+  </object>
+  <object>
+    <lower>73</lower>
     <content>Character[6]/1</content>
-    <upper>80</upper>
+    <upper>77</upper>
   </object>
   <object>
-    <lower>81</lower>
+    <lower>78</lower>
     <content>Character[5]/1d2</content>
-    <upper>85</upper>
+    <upper>81</upper>
   </object>
   <object>
-    <lower>86</lower>
+    <lower>82</lower>
     <content>Character[4]/1d3</content>
+    <upper>86</upper>
+  </object>
+  <object>
+    <lower>87</lower>
+    <content>Character[3]/1d3+1</content>
     <upper>90</upper>
   </object>
   <object>
     <lower>91</lower>
-    <content>Character[3]/1d3+1</content>
-    <upper>95</upper>
-  </object>
-  <object>
-    <lower>96</lower>
     <content>Character[2]/1d4+2</content>
     <upper>100</upper>
   </object>

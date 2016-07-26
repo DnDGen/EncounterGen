@@ -41,8 +41,8 @@ namespace EncounterGen.Tests.Integration.Tables.Encounters.Civilized.Night
             CharacterClassConstants.Fighter + "[11]", RollConstants.One)]
         [TestCase(47, 52, CreatureConstants.Warrior_Bandit + "[1d2+15]", RollConstants.OneD4Plus10,
             CharacterClassConstants.Fighter + "[11]", RollConstants.One)]
-        [TestCase(53, 59, CreatureConstants.Vampire + "[8]", RollConstants.One)]
-        [TestCase(60, 65, CreatureConstants.Ghost + "[11]", RollConstants.One)]
+        [TestCase(53, 59, CreatureConstants.Vampire + "[14]", RollConstants.One)]
+        [TestCase(60, 65, CreatureConstants.Ghost + "[14]", RollConstants.One)]
         [TestCase(66, 72, CreatureConstants.Character + "[16]", RollConstants.One)]
         [TestCase(73, 78, CreatureConstants.Character + "[15]", RollConstants.OneD2)]
         [TestCase(79, 85, CreatureConstants.Character + "[14]", RollConstants.OneD3)]

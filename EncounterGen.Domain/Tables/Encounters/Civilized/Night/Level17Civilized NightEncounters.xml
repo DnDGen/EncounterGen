@@ -3,7 +3,7 @@
 <percentile>
   <object>
     <lower>1</lower>
-    <content>Ghost[12]/1</content>
+    <content>Ghost[15]/1</content>
     <upper>9</upper>
   </object>
     <object>
@@ -28,7 +28,7 @@
   </object>
   <object>
     <lower>46</lower>
-    <content>Vampire[9]/1</content>
+    <content>Vampire[15]/1</content>
     <upper>54</upper>
   </object>
   <object>

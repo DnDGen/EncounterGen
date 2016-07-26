@@ -9,11 +9,11 @@ namespace EncounterGen.Tests.Integration.Tables.Encounters.Dungeon
     [TestFixture]
     public class Level1DungeonEncountersTests : TypeAndAmountPercentileTests
     {
-        protected override String tableName
+        protected override string tableName
         {
             get
             {
-                return String.Format(TableNameConstants.LevelXENVIRONMENTEncounters, 1, EnvironmentConstants.Dungeon);
+                return string.Format(TableNameConstants.LevelXENVIRONMENTEncounters, 1, EnvironmentConstants.Dungeon);
             }
         }
 

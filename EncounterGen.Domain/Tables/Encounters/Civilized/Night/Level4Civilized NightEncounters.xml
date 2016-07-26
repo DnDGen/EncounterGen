@@ -4,40 +4,50 @@
   <object>
     <lower>1</lower>
     <content>Commoner (Farmer)[1d2+3]/1d3</content>
-    <upper>10</upper>
+    <upper>8</upper>
   </object>
   <object>
-    <lower>11</lower>
+    <lower>9</lower>
     <content>Commoner (Herder)[1d2+3]/1d3,Livestock/1d4+10</content>
-    <upper>20</upper>
+    <upper>16</upper>
   </object>
   <object>
-    <lower>21</lower>
+    <lower>17</lower>
     <content>Commoner (Hunter)[1d2+1]/1d3,Warrior (Hunter)[1d2+1]/1</content>
-    <upper>30</upper>
+    <upper>24</upper>
   </object>
   <object>
-    <lower>31</lower>
+    <lower>25</lower>
     <content>Warrior (Bandit)[1d2+1]/1d3+1</content>
+    <upper>32</upper>
+  </object>
+  <object>
+    <lower>33</lower>
+    <content>NPC (Traveler)[1d2+3]/1d3</content>
     <upper>40</upper>
   </object>
   <object>
     <lower>41</lower>
-    <content>NPC (Traveler)[1d2+3]/1d3</content>
-    <upper>50</upper>
-  </object>
-  <object>
-    <lower>51</lower>
     <content>NPC (Traveler)[1d2+1]/1d3+1</content>
-    <upper>60</upper>
+    <upper>48</upper>
   </object>
   <object>
-    <lower>61</lower>
+    <lower>49</lower>
+    <content>Vampire[2]/1</content>
+    <upper>56</upper>
+  </object>
+  <object>
+    <lower>57</lower>
+    <content>Ghost[2]/1</content>
+    <upper>64</upper>
+  </object>
+  <object>
+    <lower>65</lower>
     <content>Character[4]/1</content>
-    <upper>70</upper>
+    <upper>72</upper>
   </object>
   <object>
-    <lower>71</lower>
+    <lower>73</lower>
     <content>Character[3]/1d2</content>
     <upper>80</upper>
   </object>

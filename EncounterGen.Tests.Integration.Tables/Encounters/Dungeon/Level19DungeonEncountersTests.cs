@@ -2,18 +2,17 @@
 using EncounterGen.Domain.Selectors;
 using EncounterGen.Domain.Tables;
 using NUnit.Framework;
-using System;
 
 namespace EncounterGen.Tests.Integration.Tables.Encounters.Dungeon
 {
     [TestFixture]
     public class Level19DungeonEncountersTests : TypeAndAmountPercentileTests
     {
-        protected override String tableName
+        protected override string tableName
         {
             get
             {
-                return String.Format(TableNameConstants.LevelXENVIRONMENTEncounters, 19, EnvironmentConstants.Dungeon);
+                return string.Format(TableNameConstants.LevelXENVIRONMENTEncounters, 19, EnvironmentConstants.Dungeon);
             }
         }
 

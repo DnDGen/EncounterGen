@@ -23,7 +23,7 @@ namespace EncounterGen.Tests.Integration.Tables.Encounters.Civilized.Night
             AssertTableIsComplete();
         }
 
-        [TestCase(1, 9, CreatureConstants.Ghost + "[12]", RollConstants.One)]
+        [TestCase(1, 9, CreatureConstants.Ghost + "[15]", RollConstants.One)]
         [TestCase(10, 18, CreatureConstants.Commoner_Pilgrim + "[1d2+15]", RollConstants.OneD4Plus10,
             CreatureConstants.Warrior_Guard + "[1d2+15]", RollConstants.OneD3Plus1,
             CharacterClassConstants.Cleric + "[14]", RollConstants.One)]
@@ -34,7 +34,7 @@ namespace EncounterGen.Tests.Integration.Tables.Encounters.Civilized.Night
             CharacterClassConstants.Fighter + "[12]", RollConstants.One)]
         [TestCase(37, 45, CreatureConstants.Warrior_Bandit + "[1d2+17]", RollConstants.OneD4Plus10,
             CharacterClassConstants.Fighter + "[12]", RollConstants.One)]
-        [TestCase(46, 54, CreatureConstants.Vampire + "[9]", RollConstants.One)]
+        [TestCase(46, 54, CreatureConstants.Vampire + "[15]", RollConstants.One)]
         [TestCase(55, 63, CreatureConstants.Character + "[17]", RollConstants.One)]
         [TestCase(64, 72, CreatureConstants.Character + "[16]", RollConstants.OneD2)]
         [TestCase(73, 81, CreatureConstants.Character + "[15]", RollConstants.OneD3)]

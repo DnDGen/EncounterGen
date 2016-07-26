@@ -8,12 +8,12 @@
     </object>
   <object>
     <lower>13</lower>
-    <content>Vampire[11]/1</content>
+    <content>Vampire[17]/1</content>
     <upper>25</upper>
   </object>
   <object>
     <lower>26</lower>
-    <content>Ghost[14]/1</content>
+    <content>Ghost[17]/1</content>
     <upper>37</upper>
   </object>
   <object>

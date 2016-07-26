@@ -22,16 +22,18 @@ namespace EncounterGen.Tests.Integration.Tables.Encounters.Civilized.Night
             AssertTableIsComplete();
         }
 
-        [TestCase(1, 10, CreatureConstants.Commoner_Farmer + "[1d2+3]", RollConstants.OneD3)]
-        [TestCase(11, 20, CreatureConstants.Commoner_Herder + "[1d2+3]", RollConstants.OneD3,
+        [TestCase(1, 8, CreatureConstants.Commoner_Farmer + "[1d2+3]", RollConstants.OneD3)]
+        [TestCase(9, 16, CreatureConstants.Commoner_Herder + "[1d2+3]", RollConstants.OneD3,
             CreatureConstants.Livestock, RollConstants.OneD4Plus10)]
-        [TestCase(21, 30, CreatureConstants.Commoner_Hunter + "[1d2+1]", RollConstants.OneD3,
+        [TestCase(17, 24, CreatureConstants.Commoner_Hunter + "[1d2+1]", RollConstants.OneD3,
             CreatureConstants.Warrior_Hunter + "[1d2+1]", RollConstants.One)]
-        [TestCase(31, 40, CreatureConstants.Warrior_Bandit + "[1d2+1]", RollConstants.OneD3Plus1)]
-        [TestCase(41, 50, CreatureConstants.NPC_Traveler + "[1d2+3]", RollConstants.OneD3)]
-        [TestCase(51, 60, CreatureConstants.NPC_Traveler + "[1d2+1]", RollConstants.OneD3Plus1)]
-        [TestCase(61, 70, CreatureConstants.Character + "[4]", RollConstants.One)]
-        [TestCase(71, 80, CreatureConstants.Character + "[3]", RollConstants.OneD2)]
+        [TestCase(25, 32, CreatureConstants.Warrior_Bandit + "[1d2+1]", RollConstants.OneD3Plus1)]
+        [TestCase(33, 40, CreatureConstants.NPC_Traveler + "[1d2+3]", RollConstants.OneD3)]
+        [TestCase(41, 48, CreatureConstants.NPC_Traveler + "[1d2+1]", RollConstants.OneD3Plus1)]
+        [TestCase(49, 56, CreatureConstants.Vampire + "[2]", RollConstants.One)]
+        [TestCase(57, 64, CreatureConstants.Ghost + "[2]", RollConstants.One)]
+        [TestCase(65, 72, CreatureConstants.Character + "[4]", RollConstants.One)]
+        [TestCase(73, 80, CreatureConstants.Character + "[3]", RollConstants.OneD2)]
         [TestCase(81, 90, CreatureConstants.Character + "[2]", RollConstants.OneD3)]
         [TestCase(91, 100, CreatureConstants.Character + "[1]", RollConstants.OneD3Plus1)]
         public override void Percentile(int lower, int upper, params string[] typesAndAmounts)
