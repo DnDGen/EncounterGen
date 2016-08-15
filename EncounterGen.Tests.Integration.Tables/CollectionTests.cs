@@ -1,6 +1,7 @@
 ﻿using EncounterGen.Domain.Mappers.Collections;
 using Ninject;
 using NUnit.Framework;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -22,14 +23,27 @@ namespace EncounterGen.Tests.Integration.Tables
 
         public abstract void EntriesAreComplete();
 
+        protected IEnumerable<string> GetCollection(string name)
+        {
+            if (table.ContainsKey(name) == false)
+                throw new ArgumentException($"Table {tableName} does not contain entry {name}");
+
+            return table[name];
+        }
+
+        protected IEnumerable<string> GetAllCollections()
+        {
+            return table.Values.SelectMany(vv => vv);
+        }
+
         protected void AssertEntriesAreComplete(IEnumerable<string> entries)
         {
             AssertNoDuplicates(entries);
             AssertNoDuplicates(table.Keys);
-            AssertCollection(entries, table.Keys);
+            AssertWholeCollection(entries, table.Keys);
         }
 
-        private void AssertCollection(IEnumerable<string> expected, IEnumerable<string> actual)
+        protected void AssertWholeCollection(IEnumerable<string> expected, IEnumerable<string> actual)
         {
             if (expected.Count() < 10)
             {
@@ -38,19 +52,32 @@ namespace EncounterGen.Tests.Integration.Tables
             else
             {
                 var missing = expected.Except(actual);
-                Assert.That(missing, Is.Empty, "missing");
+                Assert.That(missing, Is.Empty, $"{missing.Count()} missing");
 
                 var extra = actual.Except(expected);
-                Assert.That(extra, Is.Empty, "extra");
+                Assert.That(extra, Is.Empty, $"{extra.Count()} extra");
             }
 
             Assert.That(actual.Count(), Is.EqualTo(expected.Count()));
         }
 
+        protected void AssertContainedCollection(IEnumerable<string> contained, IEnumerable<string> container)
+        {
+            if (contained.Count() < 10)
+            {
+                Assert.That(contained, Is.SubsetOf(container));
+            }
+            else
+            {
+                var extra = contained.Except(container);
+                Assert.That(extra, Is.Empty, $"{extra.Count()} extra in contained collection that are not in container");
+            }
+        }
+
         public virtual void Collection(string entry, params string[] items)
         {
             Assert.That(table.Keys, Contains.Item(entry));
-            AssertCollection(items, table[entry]);
+            AssertWholeCollection(items, table[entry]);
         }
 
         public virtual void DistinctCollection(string entry, params string[] items)
@@ -59,10 +86,16 @@ namespace EncounterGen.Tests.Integration.Tables
             Assert.That(table.Keys, Contains.Item(entry));
             AssertNoDuplicates(table[entry]);
 
-            AssertCollection(items, table[entry]);
+            AssertWholeCollection(items, table[entry]);
         }
 
-        private void AssertNoDuplicates(IEnumerable<string> collection)
+        protected void ContainedCollection(string entry, params string[] items)
+        {
+            Assert.That(table.Keys, Contains.Item(entry));
+            AssertContainedCollection(table[entry], items);
+        }
+
+        protected void AssertNoDuplicates(IEnumerable<string> collection)
         {
             var duplicates = collection.Where(i => collection.Count(ii => ii == i) > 1).Distinct();
             Assert.That(collection, Is.Unique, $"Duplicates: {string.Join(", ", duplicates)}");

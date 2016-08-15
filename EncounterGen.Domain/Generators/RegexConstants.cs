@@ -3,7 +3,7 @@
     internal static class RegexConstants
     {
         public const string ChallengeRatingPattern = "\\[.+\\]";
-        public const string SubTypePattern = " \\(.+\\)";
+        public const string DescriptionPattern = " \\(.+\\)";
         public const string SetCharacterLevelPattern = "\\d+";
     }
 }

@@ -321,5 +321,54 @@ namespace EncounterGen.Tests.Unit.Generators
             Assert.That(treasure.Goods.Count, Is.EqualTo(4));
             Assert.That(treasure.Items.Count, Is.EqualTo(4));
         }
+
+        [Test]
+        public void UseSubtypeWithoutFurtherSubtypeForTreasure()
+        {
+            creature.Description = "subtype (further subtype)";
+
+            usesSubtypeForTreasure.Add(creature.Name);
+
+            mockAdjustmentSelector.Setup(s => s.Select<double>(TableNameConstants.TreasureAdjustments, "subtype", TreasureConstants.Coin)).Returns(2);
+            mockAdjustmentSelector.Setup(s => s.Select<double>(TableNameConstants.TreasureAdjustments, "subtype", TreasureConstants.Goods)).Returns(2);
+            mockAdjustmentSelector.Setup(s => s.Select<double>(TableNameConstants.TreasureAdjustments, "subtype", TreasureConstants.Items)).Returns(2);
+
+            var secondGoods = new[] { new Good(), new Good() };
+            mockGoodsGenerator.SetupSequence(g => g.GenerateAtLevel(level)).Returns(goods).Returns(secondGoods);
+
+            var secondItems = new[] { new Item(), new Item() };
+            mockItemsGenerator.SetupSequence(g => g.GenerateAtLevel(level)).Returns(items).Returns(secondItems);
+
+            var treasure = encounterTreasureGenerator.GenerateFor(creature, level);
+            Assert.That(treasure.Coin.Currency, Is.EqualTo("currency"));
+            Assert.That(treasure.Coin.Quantity, Is.EqualTo(1200));
+            Assert.That(treasure.Goods.Count, Is.EqualTo(4));
+            Assert.That(treasure.Items.Count, Is.EqualTo(4));
+        }
+
+        [Test]
+        public void UseFurtherSubtypeForTreasure()
+        {
+            creature.Description = "subtype (further subtype)";
+
+            usesSubtypeForTreasure.Add(creature.Name);
+            usesSubtypeForTreasure.Add("subtype");
+
+            mockAdjustmentSelector.Setup(s => s.Select<double>(TableNameConstants.TreasureAdjustments, "further subtype", TreasureConstants.Coin)).Returns(2);
+            mockAdjustmentSelector.Setup(s => s.Select<double>(TableNameConstants.TreasureAdjustments, "further subtype", TreasureConstants.Goods)).Returns(2);
+            mockAdjustmentSelector.Setup(s => s.Select<double>(TableNameConstants.TreasureAdjustments, "further subtype", TreasureConstants.Items)).Returns(2);
+
+            var secondGoods = new[] { new Good(), new Good() };
+            mockGoodsGenerator.SetupSequence(g => g.GenerateAtLevel(level)).Returns(goods).Returns(secondGoods);
+
+            var secondItems = new[] { new Item(), new Item() };
+            mockItemsGenerator.SetupSequence(g => g.GenerateAtLevel(level)).Returns(items).Returns(secondItems);
+
+            var treasure = encounterTreasureGenerator.GenerateFor(creature, level);
+            Assert.That(treasure.Coin.Currency, Is.EqualTo("currency"));
+            Assert.That(treasure.Coin.Quantity, Is.EqualTo(1200));
+            Assert.That(treasure.Goods.Count, Is.EqualTo(4));
+            Assert.That(treasure.Items.Count, Is.EqualTo(4));
+        }
     }
 }

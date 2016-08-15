@@ -8,7 +8,7 @@ namespace EncounterGen.Tests.Unit.Generators
     {
         [TestCase(RegexConstants.ChallengeRatingPattern, "\\[.+\\]")]
         [TestCase(RegexConstants.SetCharacterLevelPattern, "\\d+")]
-        [TestCase(RegexConstants.SubTypePattern, " \\(.+\\)")]
+        [TestCase(RegexConstants.DescriptionPattern, " \\(.+\\)")]
         public void Constant(string constant, string value)
         {
             Assert.That(constant, Is.EqualTo(value));

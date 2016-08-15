@@ -42,5 +42,11 @@ namespace EncounterGen.Tests.Integration.IoC.Modules
         {
             AssertNotSingleton<ICollectionSelector>();
         }
+
+        [Test]
+        public void EncounterCollectionSelectorIsASingleton()
+        {
+            AssertSingleton<IEncounterCollectionSelector>();
+        }
     }
 }

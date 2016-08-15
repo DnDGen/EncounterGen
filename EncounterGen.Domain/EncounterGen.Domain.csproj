@@ -88,8 +88,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Selectors\AdjustmentSelector.cs" />
     <Compile Include="Selectors\CollectionSelector.cs" />
+    <Compile Include="Selectors\EncounterCollectionSelector.cs" />
     <Compile Include="Selectors\IAdjustmentSelector.cs" />
     <Compile Include="Selectors\ICollectionSelector.cs" />
+    <Compile Include="Selectors\IEncounterCollectionSelector.cs" />
     <Compile Include="Selectors\IRollSelector.cs" />
     <Compile Include="Selectors\ModifierConstants.cs" />
     <Compile Include="Selectors\Percentiles\BooleanPercentileSelector.cs" />
@@ -200,339 +202,64 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Civilized\Day\Level11Civilized DayEncounters.xml" />
+    <EmbeddedResource Include="Tables\EffectiveLevels\Level10EncounterLevel.xml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Civilized\Day\Level13Civilized DayEncounters.xml" />
+    <EmbeddedResource Include="Tables\EffectiveLevels\Level11EncounterLevel.xml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Civilized\Day\Level6Civilized DayEncounters.xml" />
+    <EmbeddedResource Include="Tables\EffectiveLevels\Level12EncounterLevel.xml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Civilized\Night\Level11Civilized NightEncounters.xml" />
+    <EmbeddedResource Include="Tables\EffectiveLevels\Level13EncounterLevel.xml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Civilized\Night\Level17Civilized NightEncounters.xml" />
+    <EmbeddedResource Include="Tables\EffectiveLevels\Level14EncounterLevel.xml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Civilized\Night\Level2Civilized NightEncounters.xml" />
+    <EmbeddedResource Include="Tables\EffectiveLevels\Level15EncounterLevel.xml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Civilized\Night\Level5Civilized NightEncounters.xml" />
+    <EmbeddedResource Include="Tables\EffectiveLevels\Level16EncounterLevel.xml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Civilized\Night\Level7Civilized NightEncounters.xml" />
+    <EmbeddedResource Include="Tables\EffectiveLevels\Level17EncounterLevel.xml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Desert\Cold\Day\Level14Cold Desert DayEncounters.xml" />
+    <EmbeddedResource Include="Tables\EffectiveLevels\Level18EncounterLevel.xml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Desert\Cold\Day\Level4Cold Desert DayEncounters.xml" />
+    <EmbeddedResource Include="Tables\EffectiveLevels\Level19EncounterLevel.xml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Desert\Cold\Day\Level7Cold Desert DayEncounters.xml" />
+    <EmbeddedResource Include="Tables\EffectiveLevels\Level1EncounterLevel.xml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Desert\Cold\Night\Level1Cold Desert NightEncounters.xml" />
+    <EmbeddedResource Include="Tables\EffectiveLevels\Level20EncounterLevel.xml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Desert\Temperate\Day\Level17Temperate Desert DayEncounters.xml" />
+    <EmbeddedResource Include="Tables\EffectiveLevels\Level2EncounterLevel.xml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Desert\Temperate\Night\Level6Temperate Desert NightEncounters.xml" />
+    <EmbeddedResource Include="Tables\EffectiveLevels\Level3EncounterLevel.xml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Desert\Warm\Night\Level19Warm Desert NightEncounters.xml" />
+    <EmbeddedResource Include="Tables\EffectiveLevels\Level4EncounterLevel.xml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Desert\Warm\Night\Level1Warm Desert NightEncounters.xml" />
+    <EmbeddedResource Include="Tables\EffectiveLevels\Level5EncounterLevel.xml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Dungeon\Level10DungeonEncounters.xml" />
+    <EmbeddedResource Include="Tables\EffectiveLevels\Level6EncounterLevel.xml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Dungeon\Level11DungeonEncounters.xml" />
+    <EmbeddedResource Include="Tables\EffectiveLevels\Level7EncounterLevel.xml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Dungeon\Level12DungeonEncounters.xml" />
+    <EmbeddedResource Include="Tables\EffectiveLevels\Level8EncounterLevel.xml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Dungeon\Level13DungeonEncounters.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Dungeon\Level14DungeonEncounters.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Dungeon\Level15DungeonEncounters.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Dungeon\Level16DungeonEncounters.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Dungeon\Level17DungeonEncounters.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Dungeon\Level18DungeonEncounters.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Dungeon\Level19DungeonEncounters.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Dungeon\Level1DungeonEncounters.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Dungeon\Level20DungeonEncounters.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Dungeon\Level2DungeonEncounters.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Dungeon\Level3DungeonEncounters.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Dungeon\Level4DungeonEncounters.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Dungeon\Level5DungeonEncounters.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Dungeon\Level6DungeonEncounters.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Dungeon\Level7DungeonEncounters.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Dungeon\Level8DungeonEncounters.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Dungeon\Level9DungeonEncounters.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\EffectiveLevels\Level10EncounterLevel.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\EffectiveLevels\Level11EncounterLevel.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\EffectiveLevels\Level12EncounterLevel.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\EffectiveLevels\Level13EncounterLevel.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\EffectiveLevels\Level14EncounterLevel.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\EffectiveLevels\Level15EncounterLevel.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\EffectiveLevels\Level16EncounterLevel.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\EffectiveLevels\Level17EncounterLevel.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\EffectiveLevels\Level18EncounterLevel.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\EffectiveLevels\Level19EncounterLevel.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\EffectiveLevels\Level1EncounterLevel.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\EffectiveLevels\Level20EncounterLevel.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\EffectiveLevels\Level2EncounterLevel.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\EffectiveLevels\Level3EncounterLevel.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\EffectiveLevels\Level4EncounterLevel.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\EffectiveLevels\Level5EncounterLevel.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\EffectiveLevels\Level6EncounterLevel.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\EffectiveLevels\Level7EncounterLevel.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\EffectiveLevels\Level8EncounterLevel.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\EffectiveLevels\Level9EncounterLevel.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Forest\Cold\Day\Level10Cold Forest DayEncounters.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Forest\Cold\Night\Level16Cold Forest NightEncounters.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Forest\Cold\Night\Level3Cold Forest NightEncounters.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Forest\Temperate\Day\Level12Temperate Forest DayEncounters.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Forest\Temperate\Day\Level14Temperate Forest DayEncounters.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Forest\Temperate\Day\Level20Temperate Forest DayEncounters.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Forest\Temperate\Day\Level5Temperate Forest DayEncounters.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Forest\Temperate\Night\Level13Temperate Forest NightEncounters.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Forest\Temperate\Night\Level18Temperate Forest NightEncounters.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Forest\Warm\Day\Level17Warm Forest DayEncounters.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Forest\Warm\Day\Level2Warm Forest DayEncounters.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Forest\Warm\Day\Level8Warm Forest DayEncounters.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Forest\Warm\Night\Level11Warm Forest NightEncounters.xml">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Forest\Warm\Night\Level2Warm Forest NightEncounters.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Hills\Cold\Day\Level11Cold Hills DayEncounters.xml">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Hills\Cold\Day\Level15Cold Hills DayEncounters.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Hills\Cold\Day\Level19Cold Hills DayEncounters.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Hills\Cold\Night\Level14Cold Hills NightEncounters.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Hills\Cold\Night\Level19Cold Hills NightEncounters.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Hills\Cold\Night\Level1Cold Hills NightEncounters.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Hills\Cold\Night\Level3Cold Hills NightEncounters.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Hills\Temperate\Day\Level6Temperate Hills DayEncounters.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Hills\Temperate\Night\Level17Temperate Hills NightEncounters.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Hills\Warm\Day\Level7Warm Hills DayEncounters.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Hills\Warm\Night\Level2Warm Hills NightEncounters.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Hills\Warm\Night\Level7Warm Hills NightEncounters.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Marsh\Cold\Day\Level18Cold Marsh DayEncounters.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Marsh\Temperate\Day\Level19Temperate Marsh DayEncounters.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Marsh\Temperate\Day\Level20Temperate Marsh DayEncounters.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Marsh\Temperate\Day\Level5Temperate Marsh DayEncounters.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Marsh\Temperate\Night\Level17Temperate Marsh NightEncounters.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Marsh\Temperate\Night\Level18Temperate Marsh NightEncounters.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Marsh\Warm\Day\Level17Warm Marsh DayEncounters.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Marsh\Warm\Day\Level8Warm Marsh DayEncounters.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Marsh\Warm\Night\Level17Warm Marsh NightEncounters.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Marsh\Warm\Night\Level19Warm Marsh NightEncounters.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Mountain\Cold\Night\Level10Cold Mountain NightEncounters.xml">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Mountain\Cold\Night\Level11Cold Mountain NightEncounters.xml">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Mountain\Temperate\Day\Level14Temperate Mountain DayEncounters.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Mountain\Temperate\Day\Level19Temperate Mountain DayEncounters.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Mountain\Temperate\Day\Level4Temperate Mountain DayEncounters.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Mountain\Temperate\Night\Level12Temperate Mountain NightEncounters.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Mountain\Temperate\Night\Level20Temperate Mountain NightEncounters.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Mountain\Warm\Day\Level17Warm Mountain DayEncounters.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Mountain\Warm\Day\Level4Warm Mountain DayEncounters.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Mountain\Warm\Night\Level15Warm Mountain NightEncounters.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Plains\Cold\Day\Level18Cold Plains DayEncounters.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Plains\Cold\Day\Level4Cold Plains DayEncounters.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Plains\Cold\Night\Level13Cold Plains NightEncounters.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Plains\Temperate\Night\Level20Temperate Plains NightEncounters.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Plains\Temperate\Night\Level9Temperate Plains NightEncounters.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Plains\Warm\Day\Level17Warm Plains DayEncounters.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Plains\Warm\Day\Level7Warm Plains DayEncounters.xml" />
+    <EmbeddedResource Include="Tables\EffectiveLevels\Level9EncounterLevel.xml" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Tables\Rolls\RollOrder.xml" />
@@ -547,140 +274,19 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Mountain\Cold\Day\Level6Cold Mountain DayEncounters.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Desert\Temperate\Night\Level10Temperate Desert NightEncounters.xml">
+    <EmbeddedResource Include="Tables\Creatures\EncounterGroups.xml">
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Forest\Warm\Night\Level18Warm Forest NightEncounters.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Mountain\Cold\Day\Level20Cold Mountain DayEncounters.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Civilized\Day\Level19Civilized DayEncounters.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Civilized\Day\Level17Civilized DayEncounters.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Civilized\Day\Level2Civilized DayEncounters.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Civilized\Night\Level13Civilized NightEncounters.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Civilized\Night\Level19Civilized NightEncounters.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Civilized\Night\Level6Civilized NightEncounters.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Civilized\Day\Level5Civilized DayEncounters.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Civilized\Day\Level7Civilized DayEncounters.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Civilized\Day\Level12Civilized DayEncounters.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Civilized\Night\Level12Civilized NightEncounters.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Civilized\Night\Level1Civilized NightEncounters.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Civilized\Day\Level1Civilized DayEncounters.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Civilized\Night\Level20Civilized NightEncounters.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Civilized\Day\Level20Civilized DayEncounters.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Civilized\Night\Level10Civilized NightEncounters.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Civilized\Day\Level10Civilized DayEncounters.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Civilized\Night\Level8Civilized NightEncounters.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Civilized\Day\Level8Civilized DayEncounters.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Civilized\Day\Level9Civilized DayEncounters.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Civilized\Night\Level9Civilized NightEncounters.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Civilized\Day\Level3Civilized DayEncounters.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Civilized\Night\Level3Civilized NightEncounters.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Civilized\Night\Level4Civilized NightEncounters.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Civilized\Day\Level4Civilized DayEncounters.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Desert\Temperate\Night\Level20Temperate Desert NightEncounters.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Plains\Cold\Day\Level20Cold Plains DayEncounters.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Desert\Cold\Night\Level20Cold Desert NightEncounters.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Plains\Cold\Night\Level20Cold Plains NightEncounters.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Plains\Warm\Day\Level20Warm Plains DayEncounters.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Mountain\Cold\Night\Level13Cold Mountain NightEncounters.xml">
+    <EmbeddedResource Include="Tables\Creatures\ZombieSubtypeChallengeRatings.xml">
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Mountain\Warm\Night\Level20Warm Mountain NightEncounters.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Forest\Warm\Day\Level20Warm Forest DayEncounters.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Civilized\Night\Level16Civilized NightEncounters.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Civilized\Day\Level16Civilized DayEncounters.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Civilized\Night\Level14Civilized NightEncounters.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Civilized\Day\Level14Civilized DayEncounters.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Civilized\Night\Level18Civilized NightEncounters.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Civilized\Day\Level18Civilized DayEncounters.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Civilized\Night\Level15Civilized NightEncounters.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Encounters\Civilized\Day\Level15Civilized DayEncounters.xml" />
+    <EmbeddedResource Include="Tables\Creatures\Dominated creatureSubtypeChallengeRatings.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -173,7 +173,7 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures
                 CreatureConstants.Hydra_10Heads,
                 CreatureConstants.Hydra_11Heads,
                 CreatureConstants.Hydra_12Heads,
-                CreatureConstants.Hyena,
+                CreatureConstants.Dog_Hyena,
                 CreatureConstants.Krenshar,
                 CreatureConstants.Lammasu,
                 CreatureConstants.Leopard,
@@ -422,7 +422,7 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures
         [TestCase(CreatureConstants.Hydra_10Heads, ChallengeRatingConstants.Eleven)]
         [TestCase(CreatureConstants.Hydra_11Heads, ChallengeRatingConstants.Twelve)]
         [TestCase(CreatureConstants.Hydra_12Heads, ChallengeRatingConstants.Thirteen)]
-        [TestCase(CreatureConstants.Hyena, ChallengeRatingConstants.One)]
+        [TestCase(CreatureConstants.Dog_Hyena, ChallengeRatingConstants.One)]
         [TestCase(CreatureConstants.Krenshar, ChallengeRatingConstants.One)]
         [TestCase(CreatureConstants.Lammasu, ChallengeRatingConstants.Nine)]
         [TestCase(CreatureConstants.Leopard, ChallengeRatingConstants.Two)]

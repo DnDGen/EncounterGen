@@ -20,6 +20,12 @@
     <item>0</item>
   </collection>
   <collection>
+    <entry>Androsphinx</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
     <entry>Gargantuan animated object</entry>
     <item>0</item>
     <item>0</item>
@@ -110,6 +116,12 @@
     <item>0</item>
   </collection>
   <collection>
+    <entry>Assassin vine</entry>
+    <item>0.1</item>
+    <item>0.5</item>
+    <item>0.5</item>
+  </collection>
+  <collection>
     <entry>Astral deva</entry>
     <item>0</item>
     <item>2</item>
@@ -176,6 +188,18 @@
     <item>0</item>
   </collection>
   <collection>
+    <entry>Baboon</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Giant bee</entry>
+    <item>0</item>
+    <item>0.25</item>
+    <item>0</item>
+  </collection>
+  <collection>
     <entry>Bat</entry>
     <item>0</item>
     <item>0</item>
@@ -236,7 +260,19 @@
     <item>0</item>
   </collection>
   <collection>
+    <entry>Bison</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
     <entry>Black pudding</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Elder black pudding</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
@@ -284,6 +320,12 @@
     <item>0</item>
   </collection>
   <collection>
+    <entry>Centaur</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
     <entry>Chaos beast</entry>
     <item>0</item>
     <item>0</item>
@@ -296,6 +338,18 @@
     <item>0</item>
   </collection>
   <collection>
+    <entry>Crocodile</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Giant crocodile</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
     <entry>NPC</entry>
     <item>0</item>
     <item>0</item>
@@ -303,6 +357,18 @@
   </collection>
   <collection>
     <entry>Warrior</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Camel</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Cheetah</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
@@ -458,6 +524,12 @@
     <item>0</item>
   </collection>
   <collection>
+    <entry>Lion</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
     <entry>Dire lion</entry>
     <item>0</item>
     <item>0</item>
@@ -494,7 +566,43 @@
     <item>1</item>
   </collection>
   <collection>
+    <entry>Noble djinn</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
     <entry>Dog</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Homunculus</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Light warhorse</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Heavy warhorse</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Light horse</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Heavy horse</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
@@ -1256,6 +1364,24 @@
     <item>2</item>
   </collection>
   <collection>
+    <entry>Dryad</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Derro</entry>
+    <item>1</item>
+    <item>2</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Dwarf</entry>
+    <item>1</item>
+    <item>2</item>
+    <item>1</item>
+  </collection>
+  <collection>
     <entry>Dwarf warrior</entry>
     <item>1</item>
     <item>2</item>
@@ -1266,6 +1392,18 @@
     <item>1</item>
     <item>2</item>
     <item>1</item>
+  </collection>
+  <collection>
+    <entry>Eagle</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Giant eagle</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
   </collection>
   <collection>
     <entry>Small air elemental</entry>
@@ -1412,7 +1550,43 @@
     <item>0</item>
   </collection>
   <collection>
+    <entry>Elephant</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Elf</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
     <entry>Elf warrior</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Halfling</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Halfling warrior</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Gnome</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Gnome warrior</entry>
     <item>1</item>
     <item>1</item>
     <item>1</item>
@@ -1550,6 +1724,12 @@
     <item>0</item>
   </collection>
   <collection>
+    <entry>Constrictor snake</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
     <entry>Giant constrictor snake</entry>
     <item>0</item>
     <item>0</item>
@@ -1557,6 +1737,12 @@
   </collection>
   <collection>
     <entry>Giant fire beetle</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Lizard</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
@@ -1646,6 +1832,24 @@
     <item>0.5</item>
   </collection>
   <collection>
+    <entry>Griffon</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Grig</entry>
+    <item>0</item>
+    <item>0.5</item>
+    <item>0.5</item>
+  </collection>
+  <collection>
+    <entry>Grimlock</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
     <entry>Gynosphinx</entry>
     <item>2</item>
     <item>2</item>
@@ -1664,6 +1868,12 @@
     <item>1</item>
   </collection>
   <collection>
+    <entry>Hawk</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
     <entry>Hellcat</entry>
     <item>0</item>
     <item>0</item>
@@ -1676,6 +1886,12 @@
     <item>0</item>
   </collection>
   <collection>
+    <entry>Nessian warhound</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
     <entry>Hezrou</entry>
     <item>1</item>
     <item>1</item>
@@ -1683,6 +1899,12 @@
   </collection>
   <collection>
     <entry>Hieracosphinx</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Hippogriff</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
@@ -1736,6 +1958,24 @@
     <item>0</item>
   </collection>
   <collection>
+    <entry>Large viper snake</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Medium viper snake</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Small viper snake</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
     <entry>Zombie</entry>
     <item>0</item>
     <item>0</item>
@@ -1754,7 +1994,13 @@
     <item>0.5</item>
   </collection>
   <collection>
-    <entry>Hyena</entry>
+    <entry>Dog (Hyena)</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Donkey</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
@@ -1839,6 +2085,12 @@
   </collection>
   <collection>
     <entry>Lemure</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Leopard</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
@@ -1934,6 +2186,18 @@
     <item>0</item>
   </collection>
   <collection>
+    <entry>Monkey</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Mule</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
     <entry>Mummy</entry>
     <item>1</item>
     <item>1</item>
@@ -2006,6 +2270,12 @@
     <item>0</item>
   </collection>
   <collection>
+    <entry>Nymph</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
     <entry>Ogre</entry>
     <item>1</item>
     <item>1</item>
@@ -2054,6 +2324,12 @@
     <item>0</item>
   </collection>
   <collection>
+    <entry>Pegasus</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
     <entry>Phantom fungus</entry>
     <item>0</item>
     <item>0</item>
@@ -2078,13 +2354,31 @@
     <item>2</item>
   </collection>
   <collection>
+    <entry>Pixie</entry>
+    <item>0</item>
+    <item>0.5</item>
+    <item>0.5</item>
+  </collection>
+  <collection>
     <entry>Planetar</entry>
     <item>0</item>
     <item>2</item>
     <item>1</item>
   </collection>
   <collection>
+    <entry>Pony</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
     <entry>Giant praying mantis</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Pseudodragon</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
@@ -2108,6 +2402,12 @@
     <item>0</item>
   </collection>
   <collection>
+    <entry>Rakshasa</entry>
+    <item>1</item>
+    <item>2</item>
+    <item>1</item>
+  </collection>
+  <collection>
     <entry>Rast</entry>
     <item>0</item>
     <item>0</item>
@@ -2115,6 +2415,12 @@
   </collection>
   <collection>
     <entry>Rat</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Raven</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
@@ -2144,6 +2450,18 @@
     <item>0</item>
   </collection>
   <collection>
+    <entry>Rhinoceras</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Roc</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
     <entry>Roper</entry>
     <item>0</item>
     <item>0.5</item>
@@ -2156,7 +2474,25 @@
     <item>0</item>
   </collection>
   <collection>
+    <entry>Satyr</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Sea hag</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
     <entry>Shadow</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Greater shadow</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
@@ -2184,6 +2520,12 @@
     <item>0</item>
     <item>0</item>
     <item>0</item>
+  </collection>
+  <collection>
+    <entry>Scorpionfolk</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
   </collection>
   <collection>
     <entry>Small monstrous centipede</entry>
@@ -2232,6 +2574,12 @@
     <item>0</item>
     <item>0</item>
     <item>0</item>
+  </collection>
+  <collection>
+    <entry>Succubus</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
   </collection>
   <collection>
     <entry>Clay golem</entry>
@@ -2294,6 +2642,12 @@
     <item>0</item>
   </collection>
   <collection>
+    <entry>Tendriculos</entry>
+    <item>0.1</item>
+    <item>0.5</item>
+    <item>0.5</item>
+  </collection>
+  <collection>
     <entry>Thoqqua</entry>
     <item>0</item>
     <item>0</item>
@@ -2307,6 +2661,12 @@
   </collection>
   <collection>
     <entry>Dire tiger</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Toad</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
@@ -2342,6 +2702,36 @@
     <item>0.5</item>
   </collection>
   <collection>
+    <entry>Deinonychus</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Megaraptor</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Triceratops</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Treant</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Tyrannosaurus</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
     <entry>Troll</entry>
     <item>1</item>
     <item>1</item>
@@ -2358,6 +2748,18 @@
     <item>1</item>
     <item>1</item>
     <item>1</item>
+  </collection>
+  <collection>
+    <entry>Truly horrid umber hulk</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Unicorn</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
   </collection>
   <collection>
     <entry>Vampire spawn</entry>
@@ -2391,6 +2793,12 @@
   </collection>
   <collection>
     <entry>Giant wasp</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Warpony</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
@@ -2462,6 +2870,12 @@
     <item>0</item>
   </collection>
   <collection>
+    <entry>Wolverine</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
     <entry>Worg</entry>
     <item>0.1</item>
     <item>0.5</item>
@@ -2474,7 +2888,19 @@
     <item>0</item>
   </collection>
   <collection>
+    <entry>Dread wraith</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
     <entry>Wyvern</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Xill</entry>
     <item>1</item>
     <item>1</item>
     <item>1</item>

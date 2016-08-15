@@ -366,7 +366,7 @@
     <item>4</item>
   </collection>
   <collection>
-    <entry>Hyena</entry>
+    <entry>Dog (Hyena)</entry>
     <item>1</item>
   </collection>
   <collection>
@@ -571,6 +571,10 @@
   </collection>
   <collection>
     <entry>Stone giant</entry>
+    <item>6</item>
+  </collection>
+  <collection>
+    <entry>Stone giant elder</entry>
     <item>6</item>
   </collection>
   <collection>

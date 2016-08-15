@@ -11,6 +11,7 @@ namespace EncounterGen.Tests.Unit.Selectors
         [TestCase(TreasureConstants.Items, 2)]
         [TestCase(TreasureConstants.FiftyPercent, .5)]
         [TestCase(TreasureConstants.TenPercent, .1)]
+        [TestCase(TreasureConstants.TwentyFivePercent, .25)]
         public void Constant(double constant, double value)
         {
             Assert.That(constant, Is.EqualTo(value));

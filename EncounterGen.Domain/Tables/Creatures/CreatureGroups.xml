@@ -36,6 +36,7 @@
     <item>Nightwalker (nightshade)</item>
     <item>Nightwing (nightshade)</item>
     <item>Shadow</item>
+    <item>Greater shadow</item>
     <item>Nightcrawler</item>
     <item>Nightwalker</item>
     <item>Nightwing</item>
@@ -61,6 +62,7 @@
     <item>Drider</item>
     <item>Mind flayer</item>
     <item>Umber hulk</item>
+    <item>Truly horrid umber hulk</item>
     <item>Beholder</item>
     <item>Carrion crawler</item>
     <item>Ethereal filcher</item>
@@ -124,7 +126,7 @@
     <item>Light horse</item>
     <item>Heavy warhorse</item>
     <item>Light warhorse</item>
-    <item>Hyena</item>
+    <item>Dog (Hyena)</item>
     <item>Leopard</item>
     <item>Pony</item>
     <item>Warpony</item>
@@ -143,6 +145,7 @@
     <item>Small viper snake</item>
     <item>Tiny viper snake</item>
     <item>Toad</item>
+    <item>Livestock</item>
   </collection>
   <collection>
     <entry>Plant</entry>
@@ -152,6 +155,7 @@
     <item>Phantom fungus</item>
     <item>Shambling mound</item>
     <item>Tendriculos</item>
+    <item>Treant</item>
   </collection>
   <collection>
     <entry>Humanoid</entry>
@@ -164,7 +168,9 @@
     <item>Elf</item>
     <item>Elf warrior</item>
     <item>Halfling</item>
+    <item>Halfling warrior</item>
     <item>Gnome</item>
+    <item>Gnome warrior</item>
     <item>Gnoll</item>
     <item>Goblin</item>
     <item>Hobgoblin</item>
@@ -294,6 +300,7 @@
     <item>Bebilith</item>
     <item>Dretch (demon)</item>
     <item>Dretch</item>
+    <item>Rakshasa</item>
     <item>Glabrezu (demon)</item>
     <item>Glabrezu</item>
     <item>Hezrou (demon)</item>
@@ -553,10 +560,13 @@
     <item>Ogre</item>
     <item>Ogre mage</item>
     <item>Troll</item>
+    <item>Frost giant (Jarl)</item>
+    <item>Stone giant elder</item>
   </collection>
   <collection>
     <entry>Ooze</entry>
     <item>Black pudding</item>
+    <item>Elder black pudding</item>
     <item>Gelatinous cube</item>
     <item>Gray ooze</item>
     <item>Ochre jelly</item>
@@ -750,7 +760,7 @@
     <item>Hydra (10 heads)</item>
     <item>Hydra (11 heads)</item>
     <item>Hydra (12 heads)</item>
-    <item>Hyena</item>
+    <item>Dog (Hyena)</item>
     <item>Krenshar</item>
     <item>Lammasu</item>
     <item>Leopard</item>
@@ -1086,7 +1096,7 @@
     <item>Hydra (10 heads)</item>
     <item>Hydra (11 heads)</item>
     <item>Hydra (12 heads)</item>
-    <item>Hyena</item>
+    <item>Dog (Hyena)</item>
     <item>Kobold</item>
     <item>Krenshar</item>
     <item>Lamia</item>
@@ -1307,6 +1317,7 @@
     <item>Hill giant</item>
     <item>Stone giant</item>
     <item>Storm giant</item>
+    <item>Stone giant elder</item>
     <item>Girallon</item>
     <item>Gnoll</item>
     <item>Gnome</item>
@@ -1334,7 +1345,7 @@
     <item>Hydra (10 heads)</item>
     <item>Hydra (11 heads)</item>
     <item>Hydra (12 heads)</item>
-    <item>Hyena</item>
+    <item>Dog (Hyena)</item>
     <item>Kobold</item>
     <item>Krenshar</item>
     <item>Lamia</item>
@@ -1377,7 +1388,6 @@
     <item>Shocker lizard</item>
     <item>Tiger</item>
     <item>Dire tiger</item>
-    <item>Toad</item>
     <item>Triceratops</item>
     <item>Troglodyte</item>
     <item>Troll</item>
@@ -1446,124 +1456,25 @@
     <item>Wyrmling brass dragon</item>
     <item>Very young brass dragon</item>
     <item>Young brass dragon</item>
-    <item>Juvenile brass dragon</item>
-    <item>Young adult brass dragon</item>
-    <item>Adult brass dragon</item>
-    <item>Mature adult brass dragon</item>
-    <item>Old brass dragon</item>
-    <item>Very old brass dragon</item>
-    <item>Ancient brass dragon</item>
-    <item>Wyrm brass dragon</item>
-    <item>Great wyrm brass dragon</item>
     <item>Wyrmling bronze dragon</item>
     <item>Very young bronze dragon</item>
-    <item>Young bronze dragon</item>
-    <item>Juvenile bronze dragon</item>
-    <item>Young adult bronze dragon</item>
-    <item>Adult bronze dragon</item>
-    <item>Mature adult bronze dragon</item>
-    <item>Old bronze dragon</item>
-    <item>Very old bronze dragon</item>
-    <item>Ancient bronze dragon</item>
-    <item>Wyrm bronze dragon</item>
-    <item>Great wyrm bronze dragon</item>
     <item>Wyrmling copper dragon</item>
     <item>Very young copper dragon</item>
-    <item>Young copper dragon</item>
-    <item>Juvenile copper dragon</item>
-    <item>Young adult copper dragon</item>
-    <item>Adult copper dragon</item>
-    <item>Mature adult copper dragon</item>
-    <item>Old copper dragon</item>
-    <item>Very old copper dragon</item>
-    <item>Ancient copper dragon</item>
-    <item>Wyrm copper dragon</item>
-    <item>Great wyrm copper dragon</item>
     <item>Wyrmling gold dragon</item>
-    <item>Very young gold dragon</item>
-    <item>Young gold dragon</item>
-    <item>Juvenile gold dragon</item>
-    <item>Young adult gold dragon</item>
-    <item>Adult gold dragon</item>
-    <item>Mature adult gold dragon</item>
-    <item>Old gold dragon</item>
-    <item>Very old gold dragon</item>
-    <item>Ancient gold dragon</item>
-    <item>Wyrm gold dragon</item>
-    <item>Great wyrm gold dragon</item>
     <item>Wyrmling silver dragon</item>
     <item>Very young silver dragon</item>
-    <item>Young silver dragon</item>
-    <item>Juvenile silver dragon</item>
-    <item>Young adult silver dragon</item>
-    <item>Adult silver dragon</item>
-    <item>Mature adult silver dragon</item>
-    <item>Old silver dragon</item>
-    <item>Very old silver dragon</item>
-    <item>Ancient silver dragon</item>
-    <item>Wyrm silver dragon</item>
-    <item>Great wyrm silver dragon</item>
     <item>Wyrmling black dragon</item>
     <item>Very young black dragon</item>
     <item>Young black dragon</item>
-    <item>Juvenile black dragon</item>
-    <item>Young adult black dragon</item>
-    <item>Adult black dragon</item>
-    <item>Mature adult black dragon</item>
-    <item>Old black dragon</item>
-    <item>Very old black dragon</item>
-    <item>Ancient black dragon</item>
-    <item>Wyrm black dragon</item>
-    <item>Great wyrm black dragon</item>
     <item>Wyrmling blue dragon</item>
     <item>Very young blue dragon</item>
-    <item>Young blue dragon</item>
-    <item>Juvenile blue dragon</item>
-    <item>Young adult blue dragon</item>
-    <item>Adult blue dragon</item>
-    <item>Mature adult blue dragon</item>
-    <item>Old blue dragon</item>
-    <item>Very old blue dragon</item>
-    <item>Ancient blue dragon</item>
-    <item>Wyrm blue dragon</item>
-    <item>Great wyrm blue dragon</item>
     <item>Wyrmling green dragon</item>
     <item>Very young green dragon</item>
-    <item>Young green dragon</item>
-    <item>Juvenile green dragon</item>
-    <item>Young adult green dragon</item>
-    <item>Adult green dragon</item>
-    <item>Mature adult green dragon</item>
-    <item>Old green dragon</item>
-    <item>Very old green dragon</item>
-    <item>Ancient green dragon</item>
-    <item>Wyrm green dragon</item>
-    <item>Great wyrm green dragon</item>
     <item>Wyrmling red dragon</item>
     <item>Very young red dragon</item>
-    <item>Young red dragon</item>
-    <item>Juvenile red dragon</item>
-    <item>Young adult red dragon</item>
-    <item>Adult red dragon</item>
-    <item>Mature adult red dragon</item>
-    <item>Old red dragon</item>
-    <item>Very old red dragon</item>
-    <item>Ancient red dragon</item>
-    <item>Wyrm red dragon</item>
-    <item>Great wyrm red dragon</item>
     <item>Wyrmling white dragon</item>
     <item>Very young white dragon</item>
     <item>Young white dragon</item>
-    <item>Juvenile white dragon</item>
-    <item>Young adult white dragon</item>
-    <item>Adult white dragon</item>
-    <item>Mature adult white dragon</item>
-    <item>Old white dragon</item>
-    <item>Very old white dragon</item>
-    <item>Ancient white dragon</item>
-    <item>Wyrm white dragon</item>
-    <item>Great wyrm white dragon</item>
-    <item>Bat</item>
     <item>Dire bat</item>
     <item>Cloaker</item>
     <item>Dragonne</item>
@@ -1575,12 +1486,6 @@
     <item>Elf</item>
     <item>Ettercap</item>
     <item>Ettin</item>
-    <item>Cloud giant</item>
-    <item>Fire giant</item>
-    <item>Frost giant</item>
-    <item>Hill giant</item>
-    <item>Stone giant</item>
-    <item>Storm giant</item>
     <item>Girallon</item>
     <item>Gnoll</item>
     <item>Gnome</item>
@@ -1609,7 +1514,7 @@
     <item>Hydra (10 heads)</item>
     <item>Hydra (11 heads)</item>
     <item>Hydra (12 heads)</item>
-    <item>Hyena</item>
+    <item>Dog (Hyena)</item>
     <item>Kobold</item>
     <item>Krenshar</item>
     <item>Lamia</item>
@@ -1646,25 +1551,19 @@
     <item>Pyrohydra (11 heads)</item>
     <item>Pyrohydra (12 heads)</item>
     <item>Otyugh</item>
-    <item>Rat</item>
     <item>Dire rat</item>
-    <item>Raven</item>
     <item>Razor boar</item>
     <item>Rhinoceras</item>
-    <item>Roc</item>
     <item>Satyr</item>
     <item>Sea hag (hag)</item>
     <item>Shocker lizard</item>
     <item>Constrictor snake</item>
-    <item>Giant constrictor snake</item>
     <item>Huge viper snake</item>
     <item>Large viper snake</item>
     <item>Medium viper snake</item>
     <item>Small viper snake</item>
-    <item>Tiny viper snake</item>
     <item>Tiger</item>
     <item>Dire tiger</item>
-    <item>Toad</item>
     <item>Triceratops</item>
     <item>Troglodyte</item>
     <item>Troll</item>
@@ -1679,7 +1578,6 @@
     <item>Dire wolverine</item>
     <item>Worg</item>
     <item>Wyvern</item>
-    <item>Yrthak</item>
     <item>Yuan-ti (Abomination)</item>
     <item>Yuan-ti (Halfblood)</item>
     <item>Yuan-ti (Pureblood)</item>

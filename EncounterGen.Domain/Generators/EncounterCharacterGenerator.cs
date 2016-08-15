@@ -52,7 +52,7 @@ namespace EncounterGen.Domain.Generators
 
             challengeRatingRegex = new Regex(RegexConstants.ChallengeRatingPattern);
             setCharacterLevelRegex = new Regex(RegexConstants.SetCharacterLevelPattern);
-            subTypeRegex = new Regex(RegexConstants.SubTypePattern);
+            subTypeRegex = new Regex(RegexConstants.DescriptionPattern);
         }
 
         public IEnumerable<Character> GenerateFrom(IEnumerable<Creature> creatures)

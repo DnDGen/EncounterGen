@@ -69,6 +69,7 @@
         public const string Belker = "Belker";
         public const string Bison = "Bison";
         public const string BlackPudding = "Black pudding";
+        public const string BlackPudding_Elder = "Elder black pudding";
         public const string BlinkDog = "Blink dog";
         public const string Boar = "Boar";
         public const string Boar_Dire = "Dire boar";
@@ -128,6 +129,8 @@
         public const string Djinn = "Djinn";
         public const string Djinn_Noble = "Noble djinn";
         public const string Dog = "Dog";
+        public const string Dog_Riding = "Dog (Riding)";
+        public const string Dog_Hyena = "Dog (Hyena)";
         public const string DominatedCreature = "Dominated creature";
         public const string Donkey = "Donkey";
         public const string Doppelganger = "Doppelganger";
@@ -313,14 +316,17 @@
         public const string Giant_Cloud = "Cloud giant";
         public const string Giant_Fire = "Fire giant";
         public const string Giant_Frost = "Frost giant";
+        public const string Giant_Frost_Jarl = "Frost giant (Jarl)";
         public const string Giant_Hill = "Hill giant";
         public const string Giant_Stone = "Stone giant";
+        public const string Giant_Stone_Elder = "Stone giant elder";
         public const string Giant_Storm = "Storm giant";
         public const string GibberingMouther = "Gibbering mouther";
         public const string Girallon = "Girallon";
         public const string Glabrezu = "Glabrezu (demon)";
         public const string Gnoll = "Gnoll";
         public const string Gnome = "Gnome";
+        public const string GnomeWarrior = "Gnome warrior";
         public const string Goblin = "Goblin";
         public const string Golem_Clay = "Clay golem";
         public const string Golem_Flesh = "Flesh golem";
@@ -337,6 +343,7 @@
         public const string Grimlock = "Grimlock";
         public const string Gynosphinx = "Gynosphinx";
         public const string Halfling = "Halfling";
+        public const string HalflingWarrior = "Halfling warrior";
         public const string Hamatula = "Hamatula (devil)";
         public const string Harpy = "Harpy";
         public const string Hawk = "Hawk";
@@ -363,7 +370,6 @@
         public const string Hydra_10Heads = "Hydra (10 heads)";
         public const string Hydra_11Heads = "Hydra (11 heads)";
         public const string Hydra_12Heads = "Hydra (12 heads)";
-        public const string Hyena = "Hyena";
         public const string Imp = "Imp (devil)";
         public const string InvisibleStalker = "Invisible stalker";
         public const string Janni = "Janni";
@@ -452,6 +458,7 @@
         public const string Pyrohydra_11Heads = "Pyrohydra (11 heads)";
         public const string Pyrohydra_12Heads = "Pyrohydra (12 heads)";
         public const string Quasit = "Quasit (demon)";
+        public const string Rakshasa = "Rakshasa";
         public const string Rast = "Rast";
         public const string Rat = "Rat";
         public const string Rat_Dire = "Dire rat";
@@ -478,6 +485,7 @@
         public const string Scorpionfolk = "Scorpionfolk";
         public const string SeaHag = "Sea hag (hag)";
         public const string Shadow = "Shadow";
+        public const string Shadow_Greater = "Greater shadow";
         public const string ShadowMastiff = "Shadow mastiff";
         public const string ShamblingMound = "Shambling mound";
         public const string ShockerLizard = "Shocker lizard";
@@ -525,6 +533,7 @@
         public const string TrumpetArchon = "Trumpet archon (celestial)";
         public const string Tyrannosaurus = "Tyrannosaurus";
         public const string UmberHulk = "Umber hulk";
+        public const string UmberHulk_TrulyHorrid = "Truly horrid umber hulk";
         public const string Unicorn = "Unicorn";
         public const string Vampire = "Vampire";
         public const string VampireSpawn = "Vampire spawn";

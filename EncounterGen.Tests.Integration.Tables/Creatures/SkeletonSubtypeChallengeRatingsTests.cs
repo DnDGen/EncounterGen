@@ -132,6 +132,7 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures
                 CreatureConstants.Giant_Frost,
                 CreatureConstants.Giant_Hill,
                 CreatureConstants.Giant_Stone,
+                CreatureConstants.Giant_Stone_Elder,
                 CreatureConstants.Giant_Storm,
                 CreatureConstants.Girallon,
                 CreatureConstants.Gnoll,
@@ -160,7 +161,7 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures
                 CreatureConstants.Hydra_10Heads,
                 CreatureConstants.Hydra_11Heads,
                 CreatureConstants.Hydra_12Heads,
-                CreatureConstants.Hyena,
+                CreatureConstants.Dog_Hyena,
                 CreatureConstants.Kobold,
                 CreatureConstants.Krenshar,
                 CreatureConstants.Lamia,
@@ -336,6 +337,7 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures
         [TestCase(CreatureConstants.Giant_Frost, ChallengeRatingConstants.Six)]
         [TestCase(CreatureConstants.Giant_Hill, ChallengeRatingConstants.Six)]
         [TestCase(CreatureConstants.Giant_Stone, ChallengeRatingConstants.Six)]
+        [TestCase(CreatureConstants.Giant_Stone_Elder, ChallengeRatingConstants.Six)]
         [TestCase(CreatureConstants.Giant_Storm, ChallengeRatingConstants.Eight)]
         [TestCase(CreatureConstants.Girallon, ChallengeRatingConstants.Three)]
         [TestCase(CreatureConstants.Gnoll, ChallengeRatingConstants.One)]
@@ -364,7 +366,7 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures
         [TestCase(CreatureConstants.Hydra_10Heads, ChallengeRatingConstants.Five)]
         [TestCase(CreatureConstants.Hydra_11Heads, ChallengeRatingConstants.Five)]
         [TestCase(CreatureConstants.Hydra_12Heads, ChallengeRatingConstants.Six)]
-        [TestCase(CreatureConstants.Hyena, ChallengeRatingConstants.One)]
+        [TestCase(CreatureConstants.Dog_Hyena, ChallengeRatingConstants.One)]
         [TestCase(CreatureConstants.Kobold, ChallengeRatingConstants.OneThird)]
         [TestCase(CreatureConstants.Krenshar, ChallengeRatingConstants.One)]
         [TestCase(CreatureConstants.Lamia, ChallengeRatingConstants.Four)]

@@ -52,15 +52,6 @@ namespace EncounterGen.Tests.Integration.Stress
             Stopwatch.Reset();
         }
 
-        public abstract void Stress(string stressSubject);
-
-        protected void Stress()
-        {
-            Stress(MakeAssertions);
-        }
-
-        protected abstract void MakeAssertions();
-
         protected void Stress(Action makeAssertions)
         {
             do makeAssertions();

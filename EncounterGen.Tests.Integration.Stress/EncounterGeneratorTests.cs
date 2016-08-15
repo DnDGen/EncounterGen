@@ -19,89 +19,76 @@ namespace EncounterGen.Tests.Integration.Stress
         public IFilterVerifier FilterVerifier { get; set; }
 
         private IEnumerable<string> allEnvironments;
+        private IEnumerable<string> allTemperatures;
+        private IEnumerable<string> allTimesOfDay;
 
         [SetUp]
         public void Setup()
         {
             allEnvironments = new[]
             {
-                EnvironmentConstants.ColdForestDay,
-                EnvironmentConstants.TemperateForestDay,
-                EnvironmentConstants.WarmForestDay,
-                EnvironmentConstants.ColdMarshDay,
-                EnvironmentConstants.TemperateMarshDay,
-                EnvironmentConstants.WarmMarshDay,
-                EnvironmentConstants.ColdHillsDay,
-                EnvironmentConstants.TemperateHillsDay,
-                EnvironmentConstants.WarmHillsDay,
-                EnvironmentConstants.ColdMountainDay,
-                EnvironmentConstants.TemperateMountainDay,
-                EnvironmentConstants.WarmMountainDay,
-                EnvironmentConstants.ColdDesertDay,
-                EnvironmentConstants.TemperateDesertDay,
-                EnvironmentConstants.WarmDesertDay,
-                EnvironmentConstants.ColdPlainsDay,
-                EnvironmentConstants.TemperatePlainsDay,
-                EnvironmentConstants.WarmPlainsDay,
+                EnvironmentConstants.Forest,
+                EnvironmentConstants.Marsh,
+                EnvironmentConstants.Mountain,
+                EnvironmentConstants.Hills,
+                EnvironmentConstants.Civilized,
+                EnvironmentConstants.Desert,
                 EnvironmentConstants.Dungeon,
-                EnvironmentConstants.CivilizedDay,
-                EnvironmentConstants.CivilizedNight,
-                EnvironmentConstants.ColdDesertNight,
-                EnvironmentConstants.ColdForestNight,
-                EnvironmentConstants.ColdHillsNight,
-                EnvironmentConstants.ColdMarshNight,
-                EnvironmentConstants.ColdMountainNight,
-                EnvironmentConstants.ColdPlainsNight,
-                EnvironmentConstants.TemperateDesertNight,
-                EnvironmentConstants.TemperateForestNight,
-                EnvironmentConstants.TemperateHillsNight,
-                EnvironmentConstants.TemperateMarshNight,
-                EnvironmentConstants.TemperateMountainNight,
-                EnvironmentConstants.TemperatePlainsNight,
-                EnvironmentConstants.WarmDesertNight,
-                EnvironmentConstants.WarmForestNight,
-                EnvironmentConstants.WarmHillsNight,
-                EnvironmentConstants.WarmMarshNight,
-                EnvironmentConstants.WarmMountainNight,
-                EnvironmentConstants.WarmPlainsNight
+                EnvironmentConstants.Plains
+            };
+
+            allTemperatures = new[]
+            {
+                EnvironmentConstants.Temperatures.Cold,
+                EnvironmentConstants.Temperatures.Temperate,
+                EnvironmentConstants.Temperatures.Warm
+            };
+
+            allTimesOfDay = new[]
+            {
+                EnvironmentConstants.TimesOfDay.Day,
+                EnvironmentConstants.TimesOfDay.Night
             };
         }
 
-        [TestCase("Encounter Generator", IgnoreReason = "Ignoring for 0.2")]
-        public override void Stress(string stressSubject)
+        [Test]
+        public void StressEncounterGenerator()
         {
-            Stress();
+            Stress(() => AssertEncounterInRandomEnvironment());
         }
 
-        protected override void MakeAssertions()
+        private Encounter MakeEncounterInRandomEnvironment(params string[] filters)
         {
-            AssertEncounterInRandomEnvironment(allEnvironments);
+            var parameters = Generate(RandomizeParameters, p => FilterVerifier.FiltersAreValid(p.Environment, p.Level, p.Temperature, p.TimeOfDay, filters));
+            return EncounterGenerator.Generate(parameters.Environment, parameters.Level, parameters.Temperature, parameters.TimeOfDay, filters);
         }
 
-        private Encounter MakeEncounter(IEnumerable<string> environments, params string[] filters)
+        private EncounterGeneratorParameters RandomizeParameters()
         {
-            var levels = Enumerable.Range(1, 20);
+            var parameters = new EncounterGeneratorParameters();
+            parameters.Environment = GetRandomFrom(allEnvironments);
+            parameters.Temperature = GetRandomFrom(allTemperatures);
+            parameters.TimeOfDay = GetRandomFrom(allTimesOfDay);
+            parameters.Level = Random.Next(1, 21);
 
-            var environment = Generate(() => GenerateEnvironment(environments),
-                e => levels.Any(l => FilterVerifier.FiltersAreValid(e, l, filters)));
-
-            return MakeEncounter(environment);
+            return parameters;
         }
 
-        private string GenerateEnvironment(IEnumerable<string> environments)
+        private class EncounterGeneratorParameters
         {
-            var total = environments.Count();
+            public string Environment { get; set; }
+            public string Temperature { get; set; }
+            public string TimeOfDay { get; set; }
+            public int Level { get; set; }
+        }
+
+        private string GetRandomFrom(IEnumerable<string> collection)
+        {
+            var total = collection.Count();
             var randomIndex = Random.Next(total);
-            var environment = environments.ElementAt(randomIndex);
+            var randomValue = collection.ElementAt(randomIndex);
 
-            return environment;
-        }
-
-        private Encounter MakeEncounter(string environment, params string[] filters)
-        {
-            var level = Generate(() => Random.Next(1, 21), l => FilterVerifier.FiltersAreValid(environment, 1, filters));
-
-            return EncounterGenerator.Generate(environment, level, filters);
+            return randomValue;
         }
 
         private void AssertEncounter(Encounter encounter)
@@ -114,259 +101,182 @@ namespace EncounterGen.Tests.Integration.Stress
             {
                 Assert.That(creature.Name, Is.Not.Empty);
                 Assert.That(creature.Quantity, Is.InRange(1, 14));
+                Assert.That(creature.Description, Is.Not.Null);
             }
         }
 
-        [TestCase(EnvironmentConstants.Dungeon)]
-        [TestCase(EnvironmentConstants.ColdDesertDay,
-            EnvironmentConstants.ColdDesertNight,
-            EnvironmentConstants.ColdForestDay,
-            EnvironmentConstants.ColdForestNight,
-            EnvironmentConstants.ColdHillsDay,
-            EnvironmentConstants.ColdHillsNight,
-            EnvironmentConstants.ColdMarshDay,
-            EnvironmentConstants.ColdMarshNight,
-            EnvironmentConstants.ColdMountainDay,
-            EnvironmentConstants.ColdMountainNight,
-            EnvironmentConstants.ColdPlainsDay,
-            EnvironmentConstants.ColdPlainsNight, IgnoreReason = "Ignoring for 0.2")]
-        [TestCase(EnvironmentConstants.TemperateDesertDay,
-            EnvironmentConstants.TemperateDesertNight,
-            EnvironmentConstants.TemperateForestDay,
-            EnvironmentConstants.TemperateForestNight,
-            EnvironmentConstants.TemperateHillsDay,
-            EnvironmentConstants.TemperateHillsNight,
-            EnvironmentConstants.TemperateMarshDay,
-            EnvironmentConstants.TemperateMarshNight,
-            EnvironmentConstants.TemperateMountainDay,
-            EnvironmentConstants.TemperateMountainNight,
-            EnvironmentConstants.TemperatePlainsDay,
-            EnvironmentConstants.TemperatePlainsNight, IgnoreReason = "Ignoring for 0.2")]
-        [TestCase(EnvironmentConstants.WarmDesertDay,
-            EnvironmentConstants.WarmDesertNight,
-            EnvironmentConstants.WarmForestDay,
-            EnvironmentConstants.WarmForestNight,
-            EnvironmentConstants.WarmHillsDay,
-            EnvironmentConstants.WarmHillsNight,
-            EnvironmentConstants.WarmMarshDay,
-            EnvironmentConstants.WarmMarshNight,
-            EnvironmentConstants.WarmMountainDay,
-            EnvironmentConstants.WarmMountainNight,
-            EnvironmentConstants.WarmPlainsDay,
-            EnvironmentConstants.WarmPlainsNight, IgnoreReason = "Ignoring for 0.2")]
-        [TestCase(EnvironmentConstants.CivilizedDay, EnvironmentConstants.CivilizedNight)]
-        [TestCase(EnvironmentConstants.ColdDesertDay, EnvironmentConstants.ColdDesertNight, IgnoreReason = "Ignoring for 0.2")]
-        [TestCase(EnvironmentConstants.ColdForestDay, EnvironmentConstants.ColdForestNight, IgnoreReason = "Ignoring for 0.2")]
-        [TestCase(EnvironmentConstants.ColdHillsDay, EnvironmentConstants.ColdHillsNight, IgnoreReason = "Ignoring for 0.2")]
-        [TestCase(EnvironmentConstants.ColdMarshDay, EnvironmentConstants.ColdMarshNight, IgnoreReason = "Ignoring for 0.2")]
-        [TestCase(EnvironmentConstants.ColdMountainDay, EnvironmentConstants.ColdMountainNight, IgnoreReason = "Ignoring for 0.2")]
-        [TestCase(EnvironmentConstants.ColdPlainsDay, EnvironmentConstants.ColdPlainsNight, IgnoreReason = "Ignoring for 0.2")]
-        [TestCase(EnvironmentConstants.TemperateDesertDay, EnvironmentConstants.TemperateDesertNight, IgnoreReason = "Ignoring for 0.2")]
-        [TestCase(EnvironmentConstants.TemperateForestDay, EnvironmentConstants.TemperateForestNight, IgnoreReason = "Ignoring for 0.2")]
-        [TestCase(EnvironmentConstants.TemperateHillsDay, EnvironmentConstants.TemperateHillsNight, IgnoreReason = "Ignoring for 0.2")]
-        [TestCase(EnvironmentConstants.TemperateMarshDay, EnvironmentConstants.TemperateMarshNight, IgnoreReason = "Ignoring for 0.2")]
-        [TestCase(EnvironmentConstants.TemperateMountainDay, EnvironmentConstants.TemperateMountainNight, IgnoreReason = "Ignoring for 0.2")]
-        [TestCase(EnvironmentConstants.TemperatePlainsDay, EnvironmentConstants.TemperatePlainsNight, IgnoreReason = "Ignoring for 0.2")]
-        [TestCase(EnvironmentConstants.WarmDesertDay, EnvironmentConstants.WarmDesertNight, IgnoreReason = "Ignoring for 0.2")]
-        [TestCase(EnvironmentConstants.WarmForestDay, EnvironmentConstants.WarmForestNight, IgnoreReason = "Ignoring for 0.2")]
-        [TestCase(EnvironmentConstants.WarmHillsDay, EnvironmentConstants.WarmHillsNight, IgnoreReason = "Ignoring for 0.2")]
-        [TestCase(EnvironmentConstants.WarmMarshDay, EnvironmentConstants.WarmMarshNight, IgnoreReason = "Ignoring for 0.2")]
-        [TestCase(EnvironmentConstants.WarmMountainDay, EnvironmentConstants.WarmMountainNight, IgnoreReason = "Ignoring for 0.2")]
-        [TestCase(EnvironmentConstants.WarmPlainsDay, EnvironmentConstants.WarmPlainsNight, IgnoreReason = "Ignoring for 0.2")]
-        [TestCase(EnvironmentConstants.ColdDesertDay,
-            EnvironmentConstants.ColdDesertNight,
-            EnvironmentConstants.TemperateDesertDay,
-            EnvironmentConstants.TemperateDesertNight,
-            EnvironmentConstants.WarmDesertDay,
-            EnvironmentConstants.WarmDesertNight, IgnoreReason = "Ignoring for 0.2")]
-        [TestCase(EnvironmentConstants.ColdForestDay,
-            EnvironmentConstants.ColdForestNight,
-            EnvironmentConstants.TemperateForestDay,
-            EnvironmentConstants.TemperateForestNight,
-            EnvironmentConstants.WarmForestDay,
-            EnvironmentConstants.WarmForestNight, IgnoreReason = "Ignoring for 0.2")]
-        [TestCase(EnvironmentConstants.ColdHillsDay,
-            EnvironmentConstants.ColdHillsNight,
-            EnvironmentConstants.TemperateHillsDay,
-            EnvironmentConstants.TemperateHillsNight,
-            EnvironmentConstants.WarmHillsDay,
-            EnvironmentConstants.WarmHillsNight, IgnoreReason = "Ignoring for 0.2")]
-        [TestCase(EnvironmentConstants.ColdMarshDay,
-            EnvironmentConstants.ColdMarshNight,
-            EnvironmentConstants.TemperateMarshDay,
-            EnvironmentConstants.TemperateMarshNight,
-            EnvironmentConstants.WarmMarshDay,
-            EnvironmentConstants.WarmMarshNight, IgnoreReason = "Ignoring for 0.2")]
-        [TestCase(EnvironmentConstants.ColdMountainDay,
-            EnvironmentConstants.ColdMountainNight,
-            EnvironmentConstants.TemperateMountainDay,
-            EnvironmentConstants.TemperateMountainNight,
-            EnvironmentConstants.WarmMountainDay,
-            EnvironmentConstants.WarmMountainNight, IgnoreReason = "Ignoring for 0.2")]
-        [TestCase(EnvironmentConstants.ColdPlainsDay,
-            EnvironmentConstants.ColdPlainsNight,
-            EnvironmentConstants.TemperatePlainsDay,
-            EnvironmentConstants.TemperatePlainsNight,
-            EnvironmentConstants.WarmPlainsDay,
-            EnvironmentConstants.WarmPlainsNight, IgnoreReason = "Ignoring for 0.2")]
-        public void StressEnvironments(params string[] environments)
+        [TestCase(EnvironmentConstants.Dungeon, EnvironmentConstants.TimesOfDay.Night, EnvironmentConstants.Temperatures.Cold)]
+        [TestCase(EnvironmentConstants.Dungeon, EnvironmentConstants.TimesOfDay.Night, EnvironmentConstants.Temperatures.Temperate)]
+        [TestCase(EnvironmentConstants.Dungeon, EnvironmentConstants.TimesOfDay.Night, EnvironmentConstants.Temperatures.Warm)]
+        [TestCase(EnvironmentConstants.Dungeon, EnvironmentConstants.TimesOfDay.Day, EnvironmentConstants.Temperatures.Cold)]
+        [TestCase(EnvironmentConstants.Dungeon, EnvironmentConstants.TimesOfDay.Day, EnvironmentConstants.Temperatures.Temperate)]
+        [TestCase(EnvironmentConstants.Dungeon, EnvironmentConstants.TimesOfDay.Day, EnvironmentConstants.Temperatures.Warm)]
+        [TestCase(EnvironmentConstants.Civilized, EnvironmentConstants.TimesOfDay.Night, EnvironmentConstants.Temperatures.Cold)]
+        [TestCase(EnvironmentConstants.Civilized, EnvironmentConstants.TimesOfDay.Night, EnvironmentConstants.Temperatures.Temperate)]
+        [TestCase(EnvironmentConstants.Civilized, EnvironmentConstants.TimesOfDay.Night, EnvironmentConstants.Temperatures.Warm)]
+        [TestCase(EnvironmentConstants.Civilized, EnvironmentConstants.TimesOfDay.Day, EnvironmentConstants.Temperatures.Cold)]
+        [TestCase(EnvironmentConstants.Civilized, EnvironmentConstants.TimesOfDay.Day, EnvironmentConstants.Temperatures.Temperate)]
+        [TestCase(EnvironmentConstants.Civilized, EnvironmentConstants.TimesOfDay.Day, EnvironmentConstants.Temperatures.Warm)]
+        [TestCase(EnvironmentConstants.Desert, EnvironmentConstants.TimesOfDay.Night, EnvironmentConstants.Temperatures.Cold)]
+        [TestCase(EnvironmentConstants.Desert, EnvironmentConstants.TimesOfDay.Night, EnvironmentConstants.Temperatures.Warm)]
+        [TestCase(EnvironmentConstants.Desert, EnvironmentConstants.TimesOfDay.Night, EnvironmentConstants.Temperatures.Temperate)]
+        [TestCase(EnvironmentConstants.Desert, EnvironmentConstants.TimesOfDay.Day, EnvironmentConstants.Temperatures.Cold)]
+        [TestCase(EnvironmentConstants.Desert, EnvironmentConstants.TimesOfDay.Day, EnvironmentConstants.Temperatures.Warm)]
+        [TestCase(EnvironmentConstants.Desert, EnvironmentConstants.TimesOfDay.Day, EnvironmentConstants.Temperatures.Temperate)]
+        [TestCase(EnvironmentConstants.Hills, EnvironmentConstants.TimesOfDay.Night, EnvironmentConstants.Temperatures.Cold)]
+        [TestCase(EnvironmentConstants.Hills, EnvironmentConstants.TimesOfDay.Night, EnvironmentConstants.Temperatures.Warm)]
+        [TestCase(EnvironmentConstants.Hills, EnvironmentConstants.TimesOfDay.Night, EnvironmentConstants.Temperatures.Temperate)]
+        [TestCase(EnvironmentConstants.Hills, EnvironmentConstants.TimesOfDay.Day, EnvironmentConstants.Temperatures.Cold)]
+        [TestCase(EnvironmentConstants.Hills, EnvironmentConstants.TimesOfDay.Day, EnvironmentConstants.Temperatures.Warm)]
+        [TestCase(EnvironmentConstants.Hills, EnvironmentConstants.TimesOfDay.Day, EnvironmentConstants.Temperatures.Temperate)]
+        [TestCase(EnvironmentConstants.Marsh, EnvironmentConstants.TimesOfDay.Night, EnvironmentConstants.Temperatures.Cold)]
+        [TestCase(EnvironmentConstants.Marsh, EnvironmentConstants.TimesOfDay.Night, EnvironmentConstants.Temperatures.Warm)]
+        [TestCase(EnvironmentConstants.Marsh, EnvironmentConstants.TimesOfDay.Night, EnvironmentConstants.Temperatures.Temperate)]
+        [TestCase(EnvironmentConstants.Marsh, EnvironmentConstants.TimesOfDay.Day, EnvironmentConstants.Temperatures.Cold)]
+        [TestCase(EnvironmentConstants.Marsh, EnvironmentConstants.TimesOfDay.Day, EnvironmentConstants.Temperatures.Warm)]
+        [TestCase(EnvironmentConstants.Marsh, EnvironmentConstants.TimesOfDay.Day, EnvironmentConstants.Temperatures.Temperate)]
+        [TestCase(EnvironmentConstants.Forest, EnvironmentConstants.TimesOfDay.Night, EnvironmentConstants.Temperatures.Cold)]
+        [TestCase(EnvironmentConstants.Forest, EnvironmentConstants.TimesOfDay.Night, EnvironmentConstants.Temperatures.Warm)]
+        [TestCase(EnvironmentConstants.Forest, EnvironmentConstants.TimesOfDay.Night, EnvironmentConstants.Temperatures.Temperate)]
+        [TestCase(EnvironmentConstants.Forest, EnvironmentConstants.TimesOfDay.Day, EnvironmentConstants.Temperatures.Cold)]
+        [TestCase(EnvironmentConstants.Forest, EnvironmentConstants.TimesOfDay.Day, EnvironmentConstants.Temperatures.Warm)]
+        [TestCase(EnvironmentConstants.Forest, EnvironmentConstants.TimesOfDay.Day, EnvironmentConstants.Temperatures.Temperate)]
+        [TestCase(EnvironmentConstants.Plains, EnvironmentConstants.TimesOfDay.Night, EnvironmentConstants.Temperatures.Cold)]
+        [TestCase(EnvironmentConstants.Plains, EnvironmentConstants.TimesOfDay.Night, EnvironmentConstants.Temperatures.Warm)]
+        [TestCase(EnvironmentConstants.Plains, EnvironmentConstants.TimesOfDay.Night, EnvironmentConstants.Temperatures.Temperate)]
+        [TestCase(EnvironmentConstants.Plains, EnvironmentConstants.TimesOfDay.Day, EnvironmentConstants.Temperatures.Cold)]
+        [TestCase(EnvironmentConstants.Plains, EnvironmentConstants.TimesOfDay.Day, EnvironmentConstants.Temperatures.Warm)]
+        [TestCase(EnvironmentConstants.Plains, EnvironmentConstants.TimesOfDay.Day, EnvironmentConstants.Temperatures.Temperate)]
+        [TestCase(EnvironmentConstants.Mountain, EnvironmentConstants.TimesOfDay.Night, EnvironmentConstants.Temperatures.Cold)]
+        [TestCase(EnvironmentConstants.Mountain, EnvironmentConstants.TimesOfDay.Night, EnvironmentConstants.Temperatures.Warm)]
+        [TestCase(EnvironmentConstants.Mountain, EnvironmentConstants.TimesOfDay.Night, EnvironmentConstants.Temperatures.Temperate)]
+        [TestCase(EnvironmentConstants.Mountain, EnvironmentConstants.TimesOfDay.Day, EnvironmentConstants.Temperatures.Cold)]
+        [TestCase(EnvironmentConstants.Mountain, EnvironmentConstants.TimesOfDay.Day, EnvironmentConstants.Temperatures.Warm)]
+        [TestCase(EnvironmentConstants.Mountain, EnvironmentConstants.TimesOfDay.Day, EnvironmentConstants.Temperatures.Temperate)]
+        public void StressEnvironment(string environment, string timeOfDay, string temperature)
         {
-            Stress(() => AssertEncounterInRandomEnvironment(environments));
+            Stress(() => AssertEncounterInEnvironment(environment, temperature, timeOfDay));
         }
 
-        private void AssertEncounterInRandomEnvironment(IEnumerable<string> environments, params string[] filters)
+        private void AssertEncounterInRandomEnvironment(params string[] filters)
         {
-            var encounter = MakeEncounter(environments, filters);
+            var encounter = MakeEncounterInRandomEnvironment(filters);
             AssertEncounter(encounter);
         }
 
-        [Test, Ignore("Ignoring for 0.2")]
+        private void AssertEncounterInEnvironment(string environment, string temperature, string timeOfDay, params string[] filters)
+        {
+            var level = Generate(() => Random.Next(1, 21), lvl => FilterVerifier.FiltersAreValid(environment, lvl, temperature, timeOfDay, filters));
+            AssertEncounterInSpecificEnvironment(environment, temperature, timeOfDay, level, filters);
+        }
+
+        private void AssertEncounterInSpecificEnvironment(string environment, string temperature, string timeOfDay, int level, params string[] filters)
+        {
+            var encounter = EncounterGenerator.Generate(environment, level, temperature, timeOfDay, filters);
+            AssertEncounter(encounter);
+        }
+
+        [Test]
         public void TreasureDoesNotHappen()
         {
-            var encounter = GenerateOrFail(() => MakeEncounter(allEnvironments), e => e.Treasure.Coin.Quantity == 0 && e.Treasure.Goods.Any() == false && e.Treasure.Items.Any() == false);
+            var encounter = GenerateOrFail(() => MakeEncounterInRandomEnvironment(), e => e.Treasure.Coin.Quantity == 0 && e.Treasure.Goods.Any() == false && e.Treasure.Items.Any() == false);
             Assert.That(encounter.Treasure.Coin.Quantity, Is.EqualTo(0));
             Assert.That(encounter.Treasure.Goods, Is.Empty);
             Assert.That(encounter.Treasure.Items, Is.Empty);
         }
 
-        [Test, Ignore("Ignoring for 0.2")]
+        [Test]
         public void TreasureHappens()
         {
-            var encounter = GenerateOrFail(() => MakeEncounter(allEnvironments), e => e.Treasure.Coin.Quantity > 0 || e.Treasure.Goods.Any() || e.Treasure.Items.Any());
+            var encounter = GenerateOrFail(() => MakeEncounterInRandomEnvironment(), e => e.Treasure.Coin.Quantity > 0 || e.Treasure.Goods.Any() || e.Treasure.Items.Any());
             Assert.That(encounter.Treasure.Coin.Quantity > 0 || encounter.Treasure.Goods.Any() || encounter.Treasure.Items.Any(), Is.True);
         }
 
-        [Test, Ignore("Ignoring for 0.2")]
+        [Test]
         public void CoinHappens()
         {
-            var encounter = GenerateOrFail(() => MakeEncounter(allEnvironments), e => e.Treasure.Coin.Quantity > 0);
+            var encounter = GenerateOrFail(() => MakeEncounterInRandomEnvironment(), e => e.Treasure.Coin.Quantity > 0);
             Assert.That(encounter.Treasure.Coin.Quantity, Is.Positive);
             Assert.That(encounter.Treasure.Coin.Currency, Is.Not.Empty);
         }
 
-        [Test, Ignore("Ignoring for 0.2")]
+        [Test]
         public void GoodsHappen()
         {
-            var encounter = GenerateOrFail(() => MakeEncounter(allEnvironments), e => e.Treasure.Goods.Any());
+            var encounter = GenerateOrFail(() => MakeEncounterInRandomEnvironment(), e => e.Treasure.Goods.Any());
             Assert.That(encounter.Treasure.Goods, Is.Not.Empty);
         }
 
-        [Test, Ignore("Ignoring for 0.2")]
+        [Test]
         public void ItemsHappen()
         {
-            var encounter = GenerateOrFail(() => MakeEncounter(allEnvironments), e => e.Treasure.Items.Any());
+            var encounter = GenerateOrFail(() => MakeEncounterInRandomEnvironment(), e => e.Treasure.Items.Any());
             Assert.That(encounter.Treasure.Items, Is.Not.Empty);
         }
 
-        [Test, Ignore("Ignoring for 0.2")]
+        [Test]
         public void CharactersHappen()
         {
-            var encounter = GenerateOrFail(() => MakeEncounter(allEnvironments), e => e.Characters.Any());
+            var encounter = GenerateOrFail(() => MakeEncounterInRandomEnvironment(), e => e.Characters.Any());
             Assert.That(encounter.Characters, Is.Not.Empty);
         }
 
-        [Test, Ignore("Ignoring for 0.2")]
+        [Test]
         public void CharactersDoNotHappen()
         {
-            var encounter = GenerateOrFail(() => MakeEncounter(allEnvironments), e => e.Characters.Any() == false);
+            var encounter = GenerateOrFail(() => MakeEncounterInRandomEnvironment(), e => e.Characters.Any() == false);
             Assert.That(encounter.Characters, Is.Empty);
         }
 
-        [Test, Ignore("Ignoring for 0.2")]
+        [Test]
         public void SingleCreatureHappens()
         {
-            var encounter = GenerateOrFail(() => MakeEncounter(allEnvironments), e => e.Creatures.Count() == 1);
+            var encounter = GenerateOrFail(() => MakeEncounterInRandomEnvironment(), e => e.Creatures.Count() == 1);
             Assert.That(encounter.Creatures.Count(), Is.EqualTo(1));
         }
 
-        [Test, Ignore("Ignoring for 0.2")]
+        [Test]
         public void MultipleCreaturesHappen()
         {
-            var encounter = GenerateOrFail(() => MakeEncounter(allEnvironments), e => e.Creatures.Count() > 1);
+            var encounter = GenerateOrFail(() => MakeEncounterInRandomEnvironment(), e => e.Creatures.Count() > 1);
             Assert.That(encounter.Creatures.Count(), Is.GreaterThan(1));
         }
 
-        [TestCase(CreatureConstants.Types.Aberration, IgnoreReason = "Ignoring for 0.2")]
-        [TestCase(CreatureConstants.Types.Animal, IgnoreReason = "Ignoring for 0.2")]
-        [TestCase(CreatureConstants.Types.Construct, IgnoreReason = "Ignoring for 0.2")]
-        [TestCase(CreatureConstants.Types.Dragon, IgnoreReason = "Ignoring for 0.2")]
-        [TestCase(CreatureConstants.Types.Elemental, IgnoreReason = "Ignoring for 0.2")]
-        [TestCase(CreatureConstants.Types.Fey, IgnoreReason = "Ignoring for 0.2")]
-        [TestCase(CreatureConstants.Types.Giant, IgnoreReason = "Ignoring for 0.2")]
-        [TestCase(CreatureConstants.Types.Humanoid, IgnoreReason = "Ignoring for 0.2")]
-        [TestCase(CreatureConstants.Types.MagicalBeast, IgnoreReason = "Ignoring for 0.2")]
-        [TestCase(CreatureConstants.Types.MonstrousHumanoid, IgnoreReason = "Ignoring for 0.2")]
-        [TestCase(CreatureConstants.Types.Ooze, IgnoreReason = "Ignoring for 0.2")]
-        [TestCase(CreatureConstants.Types.Outsider, IgnoreReason = "Ignoring for 0.2")]
-        [TestCase(CreatureConstants.Types.Plant, IgnoreReason = "Ignoring for 0.2")]
-        [TestCase(CreatureConstants.Types.Undead, IgnoreReason = "Ignoring for 0.2")]
-        [TestCase(CreatureConstants.Types.Vermin, IgnoreReason = "Ignoring for 0.2")]
-        [TestCase(CreatureConstants.Types.Aberration,
-            EnvironmentConstants.Dungeon,
-            EnvironmentConstants.CivilizedDay,
-            EnvironmentConstants.CivilizedNight)]
-        [TestCase(CreatureConstants.Types.Animal,
-            EnvironmentConstants.Dungeon,
-            EnvironmentConstants.CivilizedDay,
-            EnvironmentConstants.CivilizedNight)]
-        [TestCase(CreatureConstants.Types.Construct,
-            EnvironmentConstants.Dungeon,
-            EnvironmentConstants.CivilizedDay,
-            EnvironmentConstants.CivilizedNight)]
-        [TestCase(CreatureConstants.Types.Dragon,
-            EnvironmentConstants.Dungeon,
-            EnvironmentConstants.CivilizedDay,
-            EnvironmentConstants.CivilizedNight)]
-        [TestCase(CreatureConstants.Types.Elemental,
-            EnvironmentConstants.Dungeon,
-            EnvironmentConstants.CivilizedDay,
-            EnvironmentConstants.CivilizedNight)]
-        [TestCase(CreatureConstants.Types.Fey,
-            EnvironmentConstants.Dungeon,
-            EnvironmentConstants.CivilizedDay,
-            EnvironmentConstants.CivilizedNight, IgnoreReason = "Ignoring for 0.2 (No Feys in these environments)")]
-        [TestCase(CreatureConstants.Types.Giant,
-            EnvironmentConstants.Dungeon,
-            EnvironmentConstants.CivilizedDay,
-            EnvironmentConstants.CivilizedNight)]
-        [TestCase(CreatureConstants.Types.Humanoid,
-            EnvironmentConstants.Dungeon,
-            EnvironmentConstants.CivilizedDay,
-            EnvironmentConstants.CivilizedNight)]
-        [TestCase(CreatureConstants.Types.MagicalBeast,
-            EnvironmentConstants.Dungeon,
-            EnvironmentConstants.CivilizedDay,
-            EnvironmentConstants.CivilizedNight)]
-        [TestCase(CreatureConstants.Types.MonstrousHumanoid,
-            EnvironmentConstants.Dungeon,
-            EnvironmentConstants.CivilizedDay,
-            EnvironmentConstants.CivilizedNight)]
-        [TestCase(CreatureConstants.Types.Ooze,
-            EnvironmentConstants.Dungeon,
-            EnvironmentConstants.CivilizedDay,
-            EnvironmentConstants.CivilizedNight)]
-        [TestCase(CreatureConstants.Types.Outsider,
-            EnvironmentConstants.Dungeon,
-            EnvironmentConstants.CivilizedDay,
-            EnvironmentConstants.CivilizedNight)]
-        [TestCase(CreatureConstants.Types.Plant,
-            EnvironmentConstants.Dungeon,
-            EnvironmentConstants.CivilizedDay,
-            EnvironmentConstants.CivilizedNight)]
-        [TestCase(CreatureConstants.Types.Undead,
-            EnvironmentConstants.Dungeon,
-            EnvironmentConstants.CivilizedDay,
-            EnvironmentConstants.CivilizedNight)]
-        [TestCase(CreatureConstants.Types.Vermin,
-            EnvironmentConstants.Dungeon,
-            EnvironmentConstants.CivilizedDay,
-            EnvironmentConstants.CivilizedNight)]
-        public void StressFilter(string filter, params string[] environments)
+        [TestCase(CreatureConstants.Types.Aberration)]
+        [TestCase(CreatureConstants.Types.Animal)]
+        [TestCase(CreatureConstants.Types.Construct)]
+        [TestCase(CreatureConstants.Types.Dragon)]
+        [TestCase(CreatureConstants.Types.Elemental)]
+        [TestCase(CreatureConstants.Types.Fey)]
+        [TestCase(CreatureConstants.Types.Giant)]
+        [TestCase(CreatureConstants.Types.Humanoid)]
+        [TestCase(CreatureConstants.Types.MagicalBeast)]
+        [TestCase(CreatureConstants.Types.MonstrousHumanoid)]
+        [TestCase(CreatureConstants.Types.Ooze)]
+        [TestCase(CreatureConstants.Types.Outsider)]
+        [TestCase(CreatureConstants.Types.Plant)]
+        [TestCase(CreatureConstants.Types.Undead)]
+        [TestCase(CreatureConstants.Types.Vermin)]
+        public void StressFilter(string filter)
         {
-            if (environments.Any())
-                Stress(() => AssertEncounterInRandomEnvironment(environments, filter));
-            else
-                Stress(() => AssertEncounterInRandomEnvironment(allEnvironments, filter));
+            Stress(() => AssertEncounterInRandomEnvironment(filter));
+        }
+
+        [Test]
+        public void CharactersOccurAMinorityOfTheTime()
+        {
+            var charactersOccurred = new List<bool>();
+            Stress(() => StressCharacterPercentage(charactersOccurred));
+
+            var percentage = charactersOccurred.Count(o => o) / (double)charactersOccurred.Count;
+            Assert.That(percentage, Is.LessThan(.5), $"{charactersOccurred.Count} encounters total");
+        }
+
+        private void StressCharacterPercentage(List<bool> charactersOccurred)
+        {
+            var encounter = MakeEncounterInRandomEnvironment();
+            var charactersHappened = encounter.Characters.Any();
+            charactersOccurred.Add(charactersHappened);
         }
     }
 }

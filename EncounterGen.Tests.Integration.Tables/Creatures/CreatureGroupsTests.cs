@@ -2,6 +2,7 @@
 using EncounterGen.Common;
 using EncounterGen.Domain.Tables;
 using NUnit.Framework;
+using System.Collections.Generic;
 
 namespace EncounterGen.Tests.Integration.Tables.Creatures
 {
@@ -46,7 +47,7 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures
                 CreatureConstants.Types.Outsider,
                 CreatureConstants.Types.Plant,
                 CreatureConstants.Types.Undead,
-                CreatureConstants.Types.Vermin
+                CreatureConstants.Types.Vermin,
             };
 
             AssertEntriesAreComplete(entries);
@@ -269,6 +270,7 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures
                 CreatureConstants.Drider,
                 CreatureConstants.MindFlayer,
                 CreatureConstants.UmberHulk,
+                CreatureConstants.UmberHulk_TrulyHorrid,
                 CreatureConstants.Beholder,
                 CreatureConstants.CarrionCrawler,
                 CreatureConstants.EtherealFilcher,
@@ -339,7 +341,7 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures
                 CreatureConstants.Horse_Heavy_War,
                 CreatureConstants.Horse_Light,
                 CreatureConstants.Horse_Light_War,
-                CreatureConstants.Hyena,
+                CreatureConstants.Dog_Hyena,
                 CreatureConstants.Leopard,
                 CreatureConstants.Pony,
                 CreatureConstants.Pony_War,
@@ -357,7 +359,8 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures
                 CreatureConstants.Snake_Viper_Medium,
                 CreatureConstants.Snake_Viper_Small,
                 CreatureConstants.Snake_Viper_Tiny,
-                CreatureConstants.Toad
+                CreatureConstants.Toad,
+                CreatureConstants.Livestock
             };
 
             base.DistinctCollection(CreatureConstants.Types.Animal, creatures);
@@ -587,7 +590,9 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures
                 CreatureConstants.Giant_Storm,
                 CreatureConstants.Ogre,
                 CreatureConstants.OgreMage,
-                CreatureConstants.Troll
+                CreatureConstants.Troll,
+                CreatureConstants.Giant_Frost_Jarl,
+                CreatureConstants.Giant_Stone_Elder
             };
 
             base.DistinctCollection(CreatureConstants.Types.Giant, creatures);
@@ -607,7 +612,9 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures
                 CreatureConstants.Elf,
                 CreatureConstants.ElfWarrior,
                 CreatureConstants.Halfling,
+                CreatureConstants.HalflingWarrior,
                 CreatureConstants.Gnome,
+                CreatureConstants.GnomeWarrior,
                 CreatureConstants.Gnoll,
                 CreatureConstants.Goblin,
                 CreatureConstants.Hobgoblin,
@@ -656,6 +663,7 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures
             var creatures = new[]
             {
                 CreatureConstants.BlackPudding,
+                CreatureConstants.BlackPudding_Elder,
                 CreatureConstants.GelatinousCube,
                 CreatureConstants.Ooze_Gray,
                 CreatureConstants.Ooze_OchreJelly
@@ -801,6 +809,7 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures
                 CreatureConstants.Mephit_Water,
                 CreatureConstants.NightHag,
                 CreatureConstants.Nightmare,
+                CreatureConstants.Rakshasa,
                 CreatureConstants.Rast,
                 CreatureConstants.Ravid,
                 CreatureConstants.Salamander_Average,
@@ -828,7 +837,8 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures
                 CreatureConstants.VioletFungus,
                 CreatureConstants.PhantomFungus,
                 CreatureConstants.ShamblingMound,
-                CreatureConstants.Tendriculos
+                CreatureConstants.Tendriculos,
+                CreatureConstants.Treant
             };
 
             base.DistinctCollection(CreatureConstants.Types.Plant, creatures);
@@ -854,6 +864,7 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures
                 CreatureConstants.Nightwalker,
                 CreatureConstants.Nightwing,
                 CreatureConstants.Shadow,
+                CreatureConstants.Shadow_Greater,
                 CreatureConstants.Skeleton,
                 CreatureConstants.Skeleton_HillGiant,
                 CreatureConstants.Skeleton_Human,
@@ -1029,6 +1040,7 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures
                 CreatureConstants.Giant_Frost,
                 CreatureConstants.Giant_Hill,
                 CreatureConstants.Giant_Stone,
+                CreatureConstants.Giant_Stone_Elder,
                 CreatureConstants.Giant_Storm,
                 CreatureConstants.Girallon,
                 CreatureConstants.Gnoll,
@@ -1057,7 +1069,7 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures
                 CreatureConstants.Hydra_10Heads,
                 CreatureConstants.Hydra_11Heads,
                 CreatureConstants.Hydra_12Heads,
-                CreatureConstants.Hyena,
+                CreatureConstants.Dog_Hyena,
                 CreatureConstants.Kobold,
                 CreatureConstants.Krenshar,
                 CreatureConstants.Lamia,
@@ -1100,7 +1112,6 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures
                 CreatureConstants.ShockerLizard,
                 CreatureConstants.Tiger,
                 CreatureConstants.Tiger_Dire,
-                CreatureConstants.Toad,
                 CreatureConstants.Triceratops,
                 CreatureConstants.Troglodyte,
                 CreatureConstants.Troll,
@@ -1136,7 +1147,6 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures
                 CreatureConstants.Badger,
                 CreatureConstants.Badger_Dire,
                 CreatureConstants.Basilisk,
-                CreatureConstants.Bat,
                 CreatureConstants.Bat_Dire,
                 CreatureConstants.Bear_Black,
                 CreatureConstants.Bear_Brown,
@@ -1179,123 +1189,25 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures
                 CreatureConstants.Dragon_Black_Wyrmling,
                 CreatureConstants.Dragon_Black_VeryYoung,
                 CreatureConstants.Dragon_Black_Young,
-                CreatureConstants.Dragon_Black_Juvenile,
-                CreatureConstants.Dragon_Black_YoungAdult,
-                CreatureConstants.Dragon_Black_Adult,
-                CreatureConstants.Dragon_Black_MatureAdult,
-                CreatureConstants.Dragon_Black_Old,
-                CreatureConstants.Dragon_Black_VeryOld,
-                CreatureConstants.Dragon_Black_Ancient,
-                CreatureConstants.Dragon_Black_Wyrm,
-                CreatureConstants.Dragon_Black_GreatWyrm,
                 CreatureConstants.Dragon_Blue_Wyrmling,
                 CreatureConstants.Dragon_Blue_VeryYoung,
-                CreatureConstants.Dragon_Blue_Young,
-                CreatureConstants.Dragon_Blue_Juvenile,
-                CreatureConstants.Dragon_Blue_YoungAdult,
-                CreatureConstants.Dragon_Blue_Adult,
-                CreatureConstants.Dragon_Blue_MatureAdult,
-                CreatureConstants.Dragon_Blue_Old,
-                CreatureConstants.Dragon_Blue_VeryOld,
-                CreatureConstants.Dragon_Blue_Ancient,
-                CreatureConstants.Dragon_Blue_Wyrm,
-                CreatureConstants.Dragon_Blue_GreatWyrm,
                 CreatureConstants.Dragon_Brass_Wyrmling,
                 CreatureConstants.Dragon_Brass_VeryYoung,
                 CreatureConstants.Dragon_Brass_Young,
-                CreatureConstants.Dragon_Brass_Juvenile,
-                CreatureConstants.Dragon_Brass_YoungAdult,
-                CreatureConstants.Dragon_Brass_Adult,
-                CreatureConstants.Dragon_Brass_MatureAdult,
-                CreatureConstants.Dragon_Brass_Old,
-                CreatureConstants.Dragon_Brass_VeryOld,
-                CreatureConstants.Dragon_Brass_Ancient,
-                CreatureConstants.Dragon_Brass_Wyrm,
-                CreatureConstants.Dragon_Brass_GreatWyrm,
                 CreatureConstants.Dragon_Bronze_Wyrmling,
                 CreatureConstants.Dragon_Bronze_VeryYoung,
-                CreatureConstants.Dragon_Bronze_Young,
-                CreatureConstants.Dragon_Bronze_Juvenile,
-                CreatureConstants.Dragon_Bronze_YoungAdult,
-                CreatureConstants.Dragon_Bronze_Adult,
-                CreatureConstants.Dragon_Bronze_MatureAdult,
-                CreatureConstants.Dragon_Bronze_Old,
-                CreatureConstants.Dragon_Bronze_VeryOld,
-                CreatureConstants.Dragon_Bronze_Ancient,
-                CreatureConstants.Dragon_Bronze_Wyrm,
-                CreatureConstants.Dragon_Bronze_GreatWyrm,
                 CreatureConstants.Dragon_Copper_Wyrmling,
                 CreatureConstants.Dragon_Copper_VeryYoung,
-                CreatureConstants.Dragon_Copper_Young,
-                CreatureConstants.Dragon_Copper_Juvenile,
-                CreatureConstants.Dragon_Copper_YoungAdult,
-                CreatureConstants.Dragon_Copper_Adult,
-                CreatureConstants.Dragon_Copper_MatureAdult,
-                CreatureConstants.Dragon_Copper_Old,
-                CreatureConstants.Dragon_Copper_VeryOld,
-                CreatureConstants.Dragon_Copper_Ancient,
-                CreatureConstants.Dragon_Copper_Wyrm,
-                CreatureConstants.Dragon_Copper_GreatWyrm,
                 CreatureConstants.Dragon_Gold_Wyrmling,
-                CreatureConstants.Dragon_Gold_VeryYoung,
-                CreatureConstants.Dragon_Gold_Young,
-                CreatureConstants.Dragon_Gold_Juvenile,
-                CreatureConstants.Dragon_Gold_YoungAdult,
-                CreatureConstants.Dragon_Gold_Adult,
-                CreatureConstants.Dragon_Gold_MatureAdult,
-                CreatureConstants.Dragon_Gold_Old,
-                CreatureConstants.Dragon_Gold_VeryOld,
-                CreatureConstants.Dragon_Gold_Ancient,
-                CreatureConstants.Dragon_Gold_Wyrm,
-                CreatureConstants.Dragon_Gold_GreatWyrm,
                 CreatureConstants.Dragon_Green_Wyrmling,
                 CreatureConstants.Dragon_Green_VeryYoung,
-                CreatureConstants.Dragon_Green_Young,
-                CreatureConstants.Dragon_Green_Juvenile,
-                CreatureConstants.Dragon_Green_YoungAdult,
-                CreatureConstants.Dragon_Green_Adult,
-                CreatureConstants.Dragon_Green_MatureAdult,
-                CreatureConstants.Dragon_Green_Old,
-                CreatureConstants.Dragon_Green_VeryOld,
-                CreatureConstants.Dragon_Green_Ancient,
-                CreatureConstants.Dragon_Green_Wyrm,
-                CreatureConstants.Dragon_Green_GreatWyrm,
                 CreatureConstants.Dragon_Red_Wyrmling,
                 CreatureConstants.Dragon_Red_VeryYoung,
-                CreatureConstants.Dragon_Red_Young,
-                CreatureConstants.Dragon_Red_Juvenile,
-                CreatureConstants.Dragon_Red_YoungAdult,
-                CreatureConstants.Dragon_Red_Adult,
-                CreatureConstants.Dragon_Red_MatureAdult,
-                CreatureConstants.Dragon_Red_Old,
-                CreatureConstants.Dragon_Red_VeryOld,
-                CreatureConstants.Dragon_Red_Ancient,
-                CreatureConstants.Dragon_Red_Wyrm,
-                CreatureConstants.Dragon_Red_GreatWyrm,
                 CreatureConstants.Dragon_Silver_Wyrmling,
                 CreatureConstants.Dragon_Silver_VeryYoung,
-                CreatureConstants.Dragon_Silver_Young,
-                CreatureConstants.Dragon_Silver_Juvenile,
-                CreatureConstants.Dragon_Silver_YoungAdult,
-                CreatureConstants.Dragon_Silver_Adult,
-                CreatureConstants.Dragon_Silver_MatureAdult,
-                CreatureConstants.Dragon_Silver_Old,
-                CreatureConstants.Dragon_Silver_VeryOld,
-                CreatureConstants.Dragon_Silver_Ancient,
-                CreatureConstants.Dragon_Silver_Wyrm,
-                CreatureConstants.Dragon_Silver_GreatWyrm,
                 CreatureConstants.Dragon_White_Wyrmling,
                 CreatureConstants.Dragon_White_VeryYoung,
                 CreatureConstants.Dragon_White_Young,
-                CreatureConstants.Dragon_White_Juvenile,
-                CreatureConstants.Dragon_White_YoungAdult,
-                CreatureConstants.Dragon_White_Adult,
-                CreatureConstants.Dragon_White_MatureAdult,
-                CreatureConstants.Dragon_White_Old,
-                CreatureConstants.Dragon_White_VeryOld,
-                CreatureConstants.Dragon_White_Ancient,
-                CreatureConstants.Dragon_White_Wyrm,
-                CreatureConstants.Dragon_White_GreatWyrm,
                 CreatureConstants.Dragonne,
                 CreatureConstants.Dryad,
                 CreatureConstants.Dwarf,
@@ -1305,12 +1217,6 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures
                 CreatureConstants.Elf,
                 CreatureConstants.Ettercap,
                 CreatureConstants.Ettin,
-                CreatureConstants.Giant_Cloud,
-                CreatureConstants.Giant_Fire,
-                CreatureConstants.Giant_Frost,
-                CreatureConstants.Giant_Hill,
-                CreatureConstants.Giant_Stone,
-                CreatureConstants.Giant_Storm,
                 CreatureConstants.Girallon,
                 CreatureConstants.Gnoll,
                 CreatureConstants.Gnome,
@@ -1339,7 +1245,7 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures
                 CreatureConstants.Hydra_10Heads,
                 CreatureConstants.Hydra_11Heads,
                 CreatureConstants.Hydra_12Heads,
-                CreatureConstants.Hyena,
+                CreatureConstants.Dog_Hyena,
                 CreatureConstants.Kobold,
                 CreatureConstants.Krenshar,
                 CreatureConstants.Lamia,
@@ -1376,25 +1282,19 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures
                 CreatureConstants.Pyrohydra_10Heads,
                 CreatureConstants.Pyrohydra_11Heads,
                 CreatureConstants.Pyrohydra_12Heads,
-                CreatureConstants.Rat,
                 CreatureConstants.Rat_Dire,
-                CreatureConstants.Raven,
                 CreatureConstants.RazorBoar,
                 CreatureConstants.Rhinoceras,
-                CreatureConstants.Roc,
                 CreatureConstants.Satyr,
                 CreatureConstants.SeaHag,
                 CreatureConstants.ShockerLizard,
                 CreatureConstants.Snake_Constrictor,
-                CreatureConstants.Snake_Constrictor_Giant,
                 CreatureConstants.Snake_Viper_Huge,
                 CreatureConstants.Snake_Viper_Large,
                 CreatureConstants.Snake_Viper_Medium,
                 CreatureConstants.Snake_Viper_Small,
-                CreatureConstants.Snake_Viper_Tiny,
                 CreatureConstants.Tiger,
                 CreatureConstants.Tiger_Dire,
-                CreatureConstants.Toad,
                 CreatureConstants.Triceratops,
                 CreatureConstants.Troglodyte,
                 CreatureConstants.Troll,
@@ -1409,7 +1309,6 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures
                 CreatureConstants.Wolverine_Dire,
                 CreatureConstants.Worg,
                 CreatureConstants.Wyvern,
-                CreatureConstants.Yrthak,
                 CreatureConstants.YuanTi_Abomination,
                 CreatureConstants.YuanTi_Halfblood,
                 CreatureConstants.YuanTi_Pureblood
@@ -1576,7 +1475,7 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures
                 CreatureConstants.Hydra_10Heads,
                 CreatureConstants.Hydra_11Heads,
                 CreatureConstants.Hydra_12Heads,
-                CreatureConstants.Hyena,
+                CreatureConstants.Dog_Hyena,
                 CreatureConstants.Krenshar,
                 CreatureConstants.Lammasu,
                 CreatureConstants.Leopard,
@@ -1843,7 +1742,7 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures
                 CreatureConstants.Hydra_10Heads,
                 CreatureConstants.Hydra_11Heads,
                 CreatureConstants.Hydra_12Heads,
-                CreatureConstants.Hyena,
+                CreatureConstants.Dog_Hyena,
                 CreatureConstants.Kobold,
                 CreatureConstants.Krenshar,
                 CreatureConstants.Lamia,
@@ -1994,6 +1893,39 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures
             };
 
             base.DistinctCollection(CreatureConstants.Character, creatures);
+        }
+
+        [Test]
+        public void AllCreatureTypesAreDistinct()
+        {
+            var types = new[]
+            {
+                CreatureConstants.Types.Aberration,
+                CreatureConstants.Types.Animal,
+                CreatureConstants.Types.Construct,
+                CreatureConstants.Types.Dragon,
+                CreatureConstants.Types.Elemental,
+                CreatureConstants.Types.Fey,
+                CreatureConstants.Types.Giant,
+                CreatureConstants.Types.Humanoid,
+                CreatureConstants.Types.MagicalBeast,
+                CreatureConstants.Types.MonstrousHumanoid,
+                CreatureConstants.Types.Ooze,
+                CreatureConstants.Types.Outsider,
+                CreatureConstants.Types.Plant,
+                CreatureConstants.Types.Undead,
+                CreatureConstants.Types.Vermin,
+            };
+
+            var creatures = new List<string>();
+
+            foreach (var type in types)
+            {
+                var creaturesOfType = GetCollection(type);
+                creatures.AddRange(creaturesOfType);
+            }
+
+            Assert.That(creatures, Is.Unique);
         }
     }
 }

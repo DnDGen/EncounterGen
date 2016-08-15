@@ -13,38 +13,54 @@ namespace EncounterGen.Domain.Generators
     {
         private ITypeAndAmountPercentileSelector typeAndAmountPercentileSelector;
         private ICollectionSelector collectionSelector;
+        private IEncounterCollectionSelector encounterCollectionSelector;
+        private IRollSelector rollSelector;
         private Regex challengeRatingRegex;
-        private Regex subTypeRegex;
+        private Regex descriptionRegex;
 
-        public FilterVerifier(ITypeAndAmountPercentileSelector typeAndAmountPercentileSelector, ICollectionSelector collectionSelector)
+        public FilterVerifier(ITypeAndAmountPercentileSelector typeAndAmountPercentileSelector, ICollectionSelector collectionSelector, IEncounterCollectionSelector encounterCollectionSelector, IRollSelector rollSelector)
         {
             this.typeAndAmountPercentileSelector = typeAndAmountPercentileSelector;
             this.collectionSelector = collectionSelector;
+            this.encounterCollectionSelector = encounterCollectionSelector;
+            this.rollSelector = rollSelector;
 
             challengeRatingRegex = new Regex(RegexConstants.ChallengeRatingPattern);
-            subTypeRegex = new Regex(RegexConstants.SubTypePattern);
+            descriptionRegex = new Regex(RegexConstants.DescriptionPattern);
         }
 
-        public bool FiltersAreValid(string environment, int level, params string[] creatureTypeFilters)
+        public bool FiltersAreValid(string environment, int level, string temperature, string timeOfDay, params string[] creatureTypeFilters)
         {
             if (creatureTypeFilters.Any() == false)
                 return true;
 
             var tableName = string.Format(TableNameConstants.LevelXEncounterLevel, level);
-            var encounterLevelsAndAmounts = typeAndAmountPercentileSelector.SelectAllFrom(tableName);
-            var potentialLevels = encounterLevelsAndAmounts.SelectMany(dict => dict.Keys).Select(k => Convert.ToInt32(k));
+            var allEncounterLevelsAndModifiers = typeAndAmountPercentileSelector.SelectAllFrom(tableName);
 
-            foreach (var potentialLevel in potentialLevels)
+            foreach (var encounterLevelsAndModifiers in allEncounterLevelsAndModifiers)
             {
-                tableName = string.Format(TableNameConstants.LevelXENVIRONMENTEncounters, potentialLevel, environment);
-                var encounterCreaturesAndAmounts = typeAndAmountPercentileSelector.SelectAllFrom(tableName);
-                var potentialCreatures = encounterCreaturesAndAmounts.SelectMany(dict => dict.Keys);
+                foreach (var encounterLevelAndModifier in encounterLevelsAndModifiers)
+                {
+                    var potentialLevel = Convert.ToInt32(encounterLevelAndModifier.Key);
+                    var potentialModifier = Convert.ToInt32(encounterLevelAndModifier.Value);
 
-                if (potentialCreatures.Any(c => CreatureIsValid(c, creatureTypeFilters)))
-                    return true;
+                    var allEncounterCreaturesAndAmounts = encounterCollectionSelector.SelectAllFrom(potentialLevel, environment, temperature, timeOfDay);
+
+                    var validEncounterExists = allEncounterCreaturesAndAmounts.Any(e => EncounterIsValid(e, potentialModifier, creatureTypeFilters));
+                    if (validEncounterExists)
+                        return true;
+                }
             }
 
             return false;
+        }
+
+        public bool EncounterIsValid(Dictionary<string, string> creaturesAndAmounts, int modifier, params string[] creatureTypeFilters)
+        {
+            var creatures = creaturesAndAmounts.Keys;
+            var amounts = creaturesAndAmounts.Values;
+
+            return creatures.Any(c => CreatureIsValid(c, creatureTypeFilters)) && amounts.All(a => rollSelector.SelectFrom(a, modifier) != RollConstants.Reroll);
         }
 
         public bool CreatureIsValid(string creatureName, params string[] creatureTypeFilters)
@@ -53,7 +69,7 @@ namespace EncounterGen.Domain.Generators
                 return true;
 
             var allowedCreatureNames = GetAllowedCreatureNames(creatureTypeFilters);
-            var potentialCreatureName = GetCreatureType(creatureName);
+            var potentialCreatureName = GetCreatureName(creatureName);
 
             return allowedCreatureNames.Contains(potentialCreatureName);
         }
@@ -71,12 +87,12 @@ namespace EncounterGen.Domain.Generators
             return creatureNames;
         }
 
-        private string GetCreatureType(string fullCreatureType)
+        private string GetCreatureName(string fullCreatureName)
         {
-            var creatureType = subTypeRegex.Replace(fullCreatureType, string.Empty);
-            creatureType = challengeRatingRegex.Replace(creatureType, string.Empty);
+            var creatureName = descriptionRegex.Replace(fullCreatureName, string.Empty);
+            creatureName = challengeRatingRegex.Replace(creatureName, string.Empty);
 
-            return creatureType;
+            return creatureName;
         }
     }
 }
