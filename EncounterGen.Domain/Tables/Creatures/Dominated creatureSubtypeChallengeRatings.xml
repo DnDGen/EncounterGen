@@ -34,10 +34,6 @@
     <item>4</item>
   </collection>
   <collection>
-    <entry>Dragon</entry>
-    <item>4</item>
-  </collection>
-  <collection>
     <entry>Fiendish creature</entry>
     <item>4</item>
   </collection>
@@ -127,6 +123,34 @@
   </collection>
   <collection>
     <entry>Zombie</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Very young black dragon</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Very young blue dragon</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Very young brass dragon</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Very young green dragon</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Wyrmling red dragon</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Wyrmling silver dragon</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Young white dragon</entry>
     <item>4</item>
   </collection>
 </collections>

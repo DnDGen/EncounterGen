@@ -504,7 +504,6 @@
     <item>Ancient white dragon</item>
     <item>Wyrm white dragon</item>
     <item>Great wyrm white dragon</item>
-    <item>Dragon</item>
     <item>Dragon turtle</item>
     <item>Pseudodragon</item>
     <item>Wyvern</item>
@@ -1638,7 +1637,6 @@
     <item>Fiendish creature</item>
     <item>Skeleton</item>
     <item>Zombie</item>
-    <item>Dragon</item>
     <item>Character</item>
     <item>Dire boar</item>
     <item>Dire wolverine</item>
@@ -1652,6 +1650,13 @@
     <item>Rhinoceras</item>
     <item>Tiger</item>
     <item>Minotaur</item>
+    <item>Very young black dragon</item>
+    <item>Very young blue dragon</item>
+    <item>Very young green dragon</item>
+    <item>Wyrmling red dragon</item>
+    <item>Young white dragon</item>
+    <item>Very young brass dragon</item>
+    <item>Wyrmling silver dragon</item>
   </collection>
   <collection>
     <entry>Charmed creature</entry>
@@ -1669,7 +1674,6 @@
     <item>Pyrohydra (10 heads)</item>
     <item>Celestial creature</item>
     <item>Fiendish creature</item>
-    <item>Dragon</item>
     <item>Character</item>
     <item>Annis (hag)</item>
     <item>Average xorn</item>
@@ -1691,5 +1695,13 @@
     <item>Will-O'-Wisp</item>
     <item>Wyvern</item>
     <item>Xill</item>
+    <item>Young blue dragon</item>
+    <item>Juvenile white dragon</item>
+    <item>Young brass dragon</item>
+    <item>Adult black dragon</item>
+    <item>Young adult blue dragon</item>
+    <item>Young adult green dragon</item>
+    <item>Young adult copper dragon</item>
+    <item>Juvenile gold dragon</item>
   </collection>
 </collections>

@@ -11,6 +11,7 @@ namespace EncounterGen.Tests.Unit.Tables
         [TestCase(GroupConstants.UseSubtypeForTreasure, "Use Subtype for Treasure")]
         [TestCase(GroupConstants.Magic, "Magic")]
         [TestCase(GroupConstants.Land, "Land")]
+        [TestCase(GroupConstants.Dragon, "Dragon")]
         public void Constant(string constant, string value)
         {
             Assert.That(constant, Is.EqualTo(value));

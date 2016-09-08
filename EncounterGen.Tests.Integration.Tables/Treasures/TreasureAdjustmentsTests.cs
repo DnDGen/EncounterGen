@@ -124,7 +124,6 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
                 CreatureConstants.Dog,
                 CreatureConstants.Donkey,
                 CreatureConstants.Doppelganger,
-                CreatureConstants.Dragon,
                 CreatureConstants.Dragon_Black_Wyrmling,
                 CreatureConstants.Dragon_Black_VeryYoung,
                 CreatureConstants.Dragon_Black_Young,
@@ -613,7 +612,6 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
         [TestCase(CreatureConstants.Dog, 0, 0, 0)]
         [TestCase(CreatureConstants.Donkey, 0, 0, 0)]
         [TestCase(CreatureConstants.Doppelganger, 2, 2, 2)]
-        [TestCase(CreatureConstants.Dragon, 3, 3, 3)]
         [TestCase(CreatureConstants.Dragon_Black_Adult, 3, 3, 3)]
         [TestCase(CreatureConstants.Dragon_Black_Ancient, 3, 3, 3)]
         [TestCase(CreatureConstants.Dragon_Black_GreatWyrm, 3, 3, 3)]

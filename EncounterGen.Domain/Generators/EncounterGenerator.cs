@@ -152,12 +152,6 @@ namespace EncounterGen.Domain.Generators
 
         private string GetSubtype(string fullCreatureType, int effectiveLevel)
         {
-            if (fullCreatureType == CreatureConstants.Dragon)
-            {
-                var tableName = string.Format(TableNameConstants.LevelXDragons, effectiveLevel);
-                return percentileSelector.SelectFrom(tableName);
-            }
-
             var subTypeMatch = subTypeRegex.Match(fullCreatureType);
             if (string.IsNullOrEmpty(subTypeMatch.Value))
                 return string.Empty;
@@ -201,19 +195,9 @@ namespace EncounterGen.Domain.Generators
 
             var subtypes = collectionSelector.SelectFrom(TableNameConstants.CreatureGroups, creatureType);
             var subtype = collectionSelector.SelectRandomFrom(subtypes);
-
-            if (subtype == CreatureConstants.Dragon)
-            {
-                var dragonLevel = Convert.ToInt32(setChallengeRating);
-                var dragonTableName = string.Format(TableNameConstants.LevelXDragons, dragonLevel);
-                return percentileSelector.SelectFrom(dragonTableName);
-            }
-
-            if (IsCharacterCreatureType(subtype))
-                return subtype;
-
             var creaturesRequiringSubtypes = collectionSelector.SelectFrom(TableNameConstants.CreatureGroups, GroupConstants.RequiresSubtype);
-            if (creaturesRequiringSubtypes.Contains(subtype))
+
+            if (IsCharacterCreatureType(subtype) || creaturesRequiringSubtypes.Contains(subtype))
                 return subtype;
 
             var effectiveRoll = GetEffectiveSubtypeRoll(creatureType, subtype, level, amount, modifier, setChallengeRating);
@@ -223,17 +207,7 @@ namespace EncounterGen.Domain.Generators
             {
                 subtype = collectionSelector.SelectRandomFrom(subtypes);
 
-                if (IsCharacterCreatureType(subtype))
-                    return subtype;
-
-                if (subtype == CreatureConstants.Dragon)
-                {
-                    var dragonLevel = Convert.ToInt32(setChallengeRating);
-                    var dragonTableName = string.Format(TableNameConstants.LevelXDragons, dragonLevel);
-                    return percentileSelector.SelectFrom(dragonTableName);
-                }
-
-                if (creaturesRequiringSubtypes.Contains(subtype))
+                if (IsCharacterCreatureType(subtype) || creaturesRequiringSubtypes.Contains(subtype))
                     return subtype;
 
                 effectiveRoll = GetEffectiveSubtypeRoll(creatureType, subtype, level, amount, modifier, setChallengeRating);

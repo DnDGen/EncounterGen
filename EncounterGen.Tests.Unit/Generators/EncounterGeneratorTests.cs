@@ -120,27 +120,6 @@ namespace EncounterGen.Tests.Unit.Generators
         }
 
         [Test]
-        public void GenerateEncounterWithDragons()
-        {
-            encounterTypeAndAmount.Clear();
-            encounterTypeAndAmount[CreatureConstants.Dragon] = "dragon amount";
-            mockRollSelector.Setup(s => s.SelectFrom("dragon amount", 9876)).Returns("dragon effective roll");
-            mockDice.Setup(d => d.Roll("dragon effective roll")).Returns(600);
-
-            var tableName = string.Format(TableNameConstants.LevelXDragons, 90210);
-            mockPercentileSelector.Setup(s => s.SelectFrom(tableName)).Returns("dragon type and age");
-
-            var encounter = encounterGenerator.Generate(environment, level, temperature, timeOfDay);
-            Assert.That(encounter, Is.Not.Null);
-
-            var creature = encounter.Creatures.Single();
-            Assert.That(creature.Name, Is.EqualTo(CreatureConstants.Dragon));
-            Assert.That(creature.Description, Is.EqualTo("dragon type and age"));
-            Assert.That(creature.Quantity, Is.EqualTo(600));
-            Assert.That(encounter.Characters, Is.Empty);
-        }
-
-        [Test]
         public void GenerateEncounterWithRandomSubType()
         {
             requiresSubtype.Add("creature");
@@ -417,43 +396,6 @@ namespace EncounterGen.Tests.Unit.Generators
         }
 
         [Test]
-        public void SubtypeIsDragon()
-        {
-            encounterTypeAndAmount.Clear();
-            encounterTypeAndAmount["creature[8765]"] = "creature amount";
-
-            requiresSubtype.Add("creature");
-
-            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.CreatureGroups, "creature"))
-                .Returns(new[] { "wrong creature", CreatureConstants.Dragon });
-
-            var tableName = string.Format(TableNameConstants.CREATURESubtypeChallengeRatings, "creature");
-            mockCollectionSelector.Setup(s => s.SelectFrom(tableName, CreatureConstants.Dragon)).Returns(new[] { "dragon challenge rating" });
-            mockRollSelector.Setup(s => s.SelectFrom(level, "dragon challenge rating")).Returns("other roll");
-            mockRollSelector.Setup(s => s.SelectFrom("other roll", 9876)).Returns("other effective roll");
-            mockDice.Setup(d => d.Roll("other effective roll")).Returns(600);
-            mockCollectionSelector.Setup(s => s.SelectFrom(tableName, "wrong subtype")).Returns(new[] { "wrong challenge rating" });
-            mockRollSelector.Setup(s => s.SelectFrom(level, "wrong challenge rating")).Returns("wrong roll");
-            mockRollSelector.Setup(s => s.SelectFrom("wrong roll", 9876)).Returns("wrong effective roll");
-            mockDice.Setup(d => d.Roll("wrong effective roll")).Returns(1337);
-
-            mockRollSelector.Setup(s => s.SelectFrom("creature amount", 9876)).Returns("creature effective roll");
-            mockDice.Setup(d => d.Roll("creature effective roll")).Returns(76);
-
-            tableName = string.Format(TableNameConstants.LevelXDragons, 8765);
-            mockPercentileSelector.Setup(s => s.SelectFrom(tableName)).Returns("dragon type and age");
-
-            var encounter = encounterGenerator.Generate(environment, level, temperature, timeOfDay);
-            Assert.That(encounter, Is.Not.Null);
-
-            var creature = encounter.Creatures.Single();
-            Assert.That(creature.Name, Is.EqualTo("creature"));
-            Assert.That(creature.Description, Is.EqualTo("dragon type and age"));
-            Assert.That(creature.Quantity, Is.EqualTo(76));
-            Assert.That(encounter.Characters, Is.Empty);
-        }
-
-        [Test]
         public void SubTypeIsRerolled()
         {
             requiresSubtype.Add("creature");
@@ -512,45 +454,6 @@ namespace EncounterGen.Tests.Unit.Generators
             Assert.That(creature.Name, Is.EqualTo("creature"));
             Assert.That(creature.Description, Is.EqualTo("other creature (subtype)"));
             Assert.That(creature.Quantity, Is.EqualTo(8765));
-            Assert.That(encounter.Characters, Is.Empty);
-        }
-
-        [Test]
-        public void RerolledSubtypeIsDragon()
-        {
-            requiresSubtype.Add("creature");
-
-            encounterTypeAndAmount.Clear();
-            encounterTypeAndAmount["creature[1337]"] = "creature amount";
-
-            var subtypes = new[] { "wrong creature", CreatureConstants.Dragon };
-            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.CreatureGroups, "creature")).Returns(subtypes);
-
-            mockCollectionSelector.SetupSequence(s => s.SelectRandomFrom(subtypes)).Returns("wrong creature").Returns(CreatureConstants.Dragon);
-
-            var tableName = string.Format(TableNameConstants.CREATURESubtypeChallengeRatings, "creature");
-            mockCollectionSelector.Setup(s => s.SelectFrom(tableName, "dragon type and age")).Returns(new[] { "dragon challenge rating" });
-            mockRollSelector.Setup(s => s.SelectFrom(level, "dragon challenge rating")).Returns("dragon roll");
-            mockDice.Setup(d => d.Roll("dragon roll")).Returns(600);
-            mockCollectionSelector.Setup(s => s.SelectFrom(tableName, "wrong creature")).Returns(new[] { "wrong challenge rating" });
-            mockRollSelector.Setup(s => s.SelectFrom(level, "wrong challenge rating")).Returns(RollConstants.Reroll);
-            mockDice.Setup(d => d.Roll(RollConstants.Reroll)).Returns(7654);
-
-            tableName = string.Format(TableNameConstants.CREATURESubtypeChallengeRatings, "other creature");
-            mockCollectionSelector.Setup(s => s.SelectFrom(tableName, "dragon type and age")).Returns(new[] { "challenge rating" });
-            mockRollSelector.Setup(s => s.SelectFrom(level, "challenge rating")).Returns("roll");
-            mockDice.Setup(d => d.Roll("roll")).Returns(8765);
-
-            tableName = string.Format(TableNameConstants.LevelXDragons, 1337);
-            mockPercentileSelector.Setup(s => s.SelectFrom(tableName)).Returns("dragon type and age");
-
-            var encounter = encounterGenerator.Generate(environment, level, temperature, timeOfDay);
-            Assert.That(encounter, Is.Not.Null);
-
-            var creature = encounter.Creatures.Single();
-            Assert.That(creature.Name, Is.EqualTo("creature"));
-            Assert.That(creature.Description, Is.EqualTo("dragon type and age"));
-            Assert.That(creature.Quantity, Is.EqualTo(42));
             Assert.That(encounter.Characters, Is.Empty);
         }
 

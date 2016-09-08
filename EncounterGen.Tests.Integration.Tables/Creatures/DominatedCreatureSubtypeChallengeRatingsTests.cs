@@ -50,8 +50,14 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures
                 CreatureConstants.FiendishCreature,
                 CreatureConstants.Skeleton,
                 CreatureConstants.Zombie,
-                CreatureConstants.Dragon,
-                CreatureConstants.Character
+                CreatureConstants.Character,
+                CreatureConstants.Dragon_Black_VeryYoung,
+                CreatureConstants.Dragon_Blue_VeryYoung,
+                CreatureConstants.Dragon_Green_VeryYoung,
+                CreatureConstants.Dragon_Red_Wyrmling,
+                CreatureConstants.Dragon_White_Young,
+                CreatureConstants.Dragon_Brass_VeryYoung,
+                CreatureConstants.Dragon_Silver_Wyrmling,
             };
 
             AssertEntriesAreComplete(names);
@@ -87,8 +93,14 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures
         [TestCase(CreatureConstants.FiendishCreature, ChallengeRatingConstants.Four)]
         [TestCase(CreatureConstants.Skeleton, ChallengeRatingConstants.Four)]
         [TestCase(CreatureConstants.Zombie, ChallengeRatingConstants.Four)]
-        [TestCase(CreatureConstants.Dragon, ChallengeRatingConstants.Four)]
         [TestCase(CreatureConstants.Character, ChallengeRatingConstants.Four)]
+        [TestCase(CreatureConstants.Dragon_Black_VeryYoung, ChallengeRatingConstants.Four)]
+        [TestCase(CreatureConstants.Dragon_Blue_VeryYoung, ChallengeRatingConstants.Four)]
+        [TestCase(CreatureConstants.Dragon_Green_VeryYoung, ChallengeRatingConstants.Four)]
+        [TestCase(CreatureConstants.Dragon_Red_Wyrmling, ChallengeRatingConstants.Four)]
+        [TestCase(CreatureConstants.Dragon_White_Young, ChallengeRatingConstants.Four)]
+        [TestCase(CreatureConstants.Dragon_Brass_VeryYoung, ChallengeRatingConstants.Four)]
+        [TestCase(CreatureConstants.Dragon_Silver_Wyrmling, ChallengeRatingConstants.Four)]
         public override void DistinctCollection(string entry, params string[] items)
         {
             base.DistinctCollection(entry, items);

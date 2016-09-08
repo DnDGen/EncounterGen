@@ -25,6 +25,7 @@ namespace EncounterGen.Tests.Unit.Selectors
         private List<string> magicEncounters;
         private List<string> specificEncounters;
         private List<string> landEncounters;
+        private List<string> dragonEncounters;
 
         [SetUp]
         public void Setup()
@@ -39,12 +40,14 @@ namespace EncounterGen.Tests.Unit.Selectors
             magicEncounters = new List<string>();
             specificEncounters = new List<string>();
             landEncounters = new List<string>();
+            dragonEncounters = new List<string>();
 
             environmentEncounters.Add("encounter/amount");
             environmentEncounters.Add("environment encounter/environment amount");
             temperatureEncounters.Add("temperature encounter/temperature amount");
             magicEncounters.Add("magic encounter/amount");
             landEncounters.Add("land encounter/amount");
+            dragonEncounters.Add("dragon encounter/amount");
 
             levelEncounters.Add("encounter/amount");
             levelEncounters.Add("encounter/level amount");
@@ -59,6 +62,7 @@ namespace EncounterGen.Tests.Unit.Selectors
             mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.EncounterGroups, string.Empty)).Returns(Enumerable.Empty<string>());
             mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.EncounterGroups, temperature + environment)).Returns(specificEncounters);
             mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.EncounterGroups, GroupConstants.Land)).Returns(landEncounters);
+            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.EncounterGroups, GroupConstants.Dragon)).Returns(dragonEncounters);
 
             mockCollectionSelector.Setup(s => s.SelectRandomFrom(It.IsAny<IEnumerable<string>>())).Returns((IEnumerable<string> collection) => collection.Last());
         }
@@ -157,6 +161,23 @@ namespace EncounterGen.Tests.Unit.Selectors
         }
 
         [Test]
+        public void SingleWeightDragonEncounters()
+        {
+            levelEncounters.Add(dragonEncounters[0]);
+            timeOfDayEncounters.Add(dragonEncounters[0]);
+
+            var expectedEncounters = new[]
+            {
+                "encounter", "amount",
+                "dragon encounter", "amount",
+                "encounter", "amount",
+                "encounter", "amount"
+            };
+
+            AssertEncounterWeight(expectedEncounters);
+        }
+
+        [Test]
         public void DoubleWeightLandEncounters()
         {
             levelEncounters.Add(landEncounters[0]);
@@ -244,11 +265,13 @@ namespace EncounterGen.Tests.Unit.Selectors
             //INFO: Wildlife is found in magic, land, specific (with temperature), and temperature encounters
             levelEncounters.Add(magicEncounters[0]);
             levelEncounters.Add(landEncounters[0]);
+            levelEncounters.Add(dragonEncounters[0]);
             levelEncounters.Add(temperatureEncounters[0]);
             levelEncounters.Add(civilizedEncounters[0]);
             levelEncounters.Add(specificCivilizedEncounters[0]);
             timeOfDayEncounters.Add(magicEncounters[0]);
             timeOfDayEncounters.Add(landEncounters[0]);
+            timeOfDayEncounters.Add(dragonEncounters[0]);
             timeOfDayEncounters.Add(temperatureEncounters[0]);
             timeOfDayEncounters.Add(civilizedEncounters[0]);
             timeOfDayEncounters.Add(specificCivilizedEncounters[0]);
@@ -274,6 +297,7 @@ namespace EncounterGen.Tests.Unit.Selectors
             //INFO: Wildlife is found in magic, land, and temperature encounters
             levelEncounters.Add(magicEncounters[0]);
             levelEncounters.Add(landEncounters[0]);
+            levelEncounters.Add(dragonEncounters[0]);
             levelEncounters.Add(temperatureEncounters[0]);
             levelEncounters.Add(dungeonEncounters[0]);
             levelEncounters.Add(specificDungeonEncounters[0]);
@@ -285,6 +309,7 @@ namespace EncounterGen.Tests.Unit.Selectors
                 "magic encounter", "amount",
                 "land encounter", "amount",
                 "specific dungeon encounter", "amount",
+                "dragon encounter", "amount",
                 "dungeon encounter", "amount",
                 "temperature encounter", "temperature amount",
                 "land encounter", "amount",
@@ -550,7 +575,7 @@ namespace EncounterGen.Tests.Unit.Selectors
             AssertTypesAndAmounts(array[3], "Index 3", "other encounter", "other amount");
             AssertTypesAndAmounts(array[4], "Index 4", "encounter", "amount");
             AssertTypesAndAmounts(array[5], "Index 5", "other encounter", "other amount");
-    }
+        }
 
         [Test]
         public void GetAllPossibleWeightedCivilizedEncounters()

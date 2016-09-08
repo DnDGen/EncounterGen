@@ -9,7 +9,6 @@ namespace EncounterGen.Tests.Unit.Tables
         [TestCase(TableNameConstants.CreatureGroups, "CreatureGroups")]
         [TestCase(TableNameConstants.CREATURESubtypeChallengeRatings, "{0}SubtypeChallengeRatings")]
         [TestCase(TableNameConstants.EncounterGroups, "EncounterGroups")]
-        [TestCase(TableNameConstants.LevelXDragons, "Level{0}Dragons")]
         [TestCase(TableNameConstants.LevelXEncounterLevel, "Level{0}EncounterLevel")]
         [TestCase(TableNameConstants.RollOrder, "RollOrder")]
         [TestCase(TableNameConstants.TreasureAdjustments, "TreasureAdjustments")]

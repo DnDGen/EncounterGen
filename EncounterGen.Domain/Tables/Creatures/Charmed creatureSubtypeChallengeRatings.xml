@@ -129,4 +129,36 @@
     <entry>Xill</entry>
     <item>6</item>
   </collection>
+  <collection>
+    <entry>Juvenile white dragon</entry>
+    <item>6</item>
+  </collection>
+  <collection>
+    <entry>Young blue dragon</entry>
+    <item>6</item>
+  </collection>
+  <collection>
+    <entry>Young brass dragon</entry>
+    <item>6</item>
+  </collection>
+  <collection>
+    <entry>Adult black dragon</entry>
+    <item>11</item>
+  </collection>
+  <collection>
+    <entry>Juvenile gold dragon</entry>
+    <item>11</item>
+  </collection>
+  <collection>
+    <entry>Young adult blue dragon</entry>
+    <item>11</item>
+  </collection>
+  <collection>
+    <entry>Young adult copper dragon</entry>
+    <item>11</item>
+  </collection>
+  <collection>
+    <entry>Young adult green dragon</entry>
+    <item>11</item>
+  </collection>
 </collections>

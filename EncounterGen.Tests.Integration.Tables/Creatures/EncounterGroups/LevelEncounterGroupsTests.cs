@@ -1,7 +1,6 @@
 ﻿using CharacterGen.CharacterClasses;
 using EncounterGen.Common;
 using EncounterGen.Domain.Selectors;
-using EncounterGen.Domain.Tables;
 using NUnit.Framework;
 using System.Linq;
 
@@ -13,51 +12,7 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
         [Test]
         public override void EntriesAreComplete()
         {
-            var entries = new[]
-            {
-                string.Empty,
-                EnvironmentConstants.Civilized,
-                EnvironmentConstants.Desert,
-                EnvironmentConstants.Dungeon,
-                EnvironmentConstants.Forest,
-                EnvironmentConstants.Hills,
-                EnvironmentConstants.Marsh,
-                EnvironmentConstants.Mountain,
-                EnvironmentConstants.Plains,
-                EnvironmentConstants.Temperatures.Cold,
-                EnvironmentConstants.Temperatures.Temperate,
-                EnvironmentConstants.Temperatures.Warm,
-                EnvironmentConstants.TimesOfDay.Day,
-                EnvironmentConstants.TimesOfDay.Night,
-                GroupConstants.Magic,
-                GroupConstants.Land,
-                EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Desert,
-                EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Dungeon,
-                EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Forest,
-                EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Hills,
-                EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Marsh,
-                EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain,
-                EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Plains,
-                EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert,
-                EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Dungeon,
-                EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest,
-                EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills,
-                EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh,
-                EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain,
-                EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains,
-                EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert,
-                EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Dungeon,
-                EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest,
-                EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills,
-                EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh,
-                EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain,
-                EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains,
-            };
-
-            var levels = Enumerable.Range(1, 24).Select(lvl => lvl.ToString());
-            var allEntries = entries.Union(levels);
-
-            AssertEntriesAreComplete(allEntries);
+            AssertEncounterGroupEntriesAreComplete();
         }
 
         [Test]
@@ -69,7 +24,6 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
                 FormatEncounter(CreatureConstants.FiendishCreature, RollConstants.One),
                 FormatEncounter(CreatureConstants.Zombie, RollConstants.One),
                 FormatEncounter(CreatureConstants.Skeleton, RollConstants.One),
-                FormatEncounter(CreatureConstants.Dragon, RollConstants.One),
                 FormatEncounter(CreatureConstants.Character + "[1]", RollConstants.One),
                 FormatEncounter(CreatureConstants.Elemental_Air_Small, RollConstants.One),
                 FormatEncounter(CreatureConstants.Elemental_Earth_Small, RollConstants.One),
@@ -119,7 +73,6 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
                 FormatEncounter(CreatureConstants.FiendishCreature, RollConstants.One),
                 FormatEncounter(CreatureConstants.Zombie, RollConstants.One),
                 FormatEncounter(CreatureConstants.Skeleton, RollConstants.One),
-                FormatEncounter(CreatureConstants.Dragon, RollConstants.One),
                 FormatEncounter(CreatureConstants.Character + "[2]", RollConstants.One),
                 FormatEncounter(CreatureConstants.Character + "[1]", RollConstants.OneD2),
                 FormatEncounter(CreatureConstants.FormianWorker, RollConstants.OneD3Plus1),
@@ -183,6 +136,7 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
                 FormatEncounter(CreatureConstants.Warrior_Bandit + "[1]", RollConstants.OneD3Plus1),
                 FormatEncounter(CreatureConstants.NPC_Traveler + "[1]", RollConstants.OneD3Plus1),
                 FormatEncounter(CreatureConstants.NPC_Traveler + "[1d2+1]", RollConstants.OneD3),
+                FormatEncounter(CreatureConstants.Dragon_White_Wyrmling, RollConstants.One),
             };
 
             base.DistinctCollection("2", encounters);
@@ -197,7 +151,6 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
                 FormatEncounter(CreatureConstants.FiendishCreature, RollConstants.One),
                 FormatEncounter(CreatureConstants.Zombie, RollConstants.One),
                 FormatEncounter(CreatureConstants.Skeleton, RollConstants.One),
-                FormatEncounter(CreatureConstants.Dragon, RollConstants.One),
                 FormatEncounter(CreatureConstants.Character + "[3]", RollConstants.One),
                 FormatEncounter(CreatureConstants.Character + "[2]", RollConstants.OneD2),
                 FormatEncounter(CreatureConstants.Character + "[1]", RollConstants.OneD3),
@@ -290,6 +243,13 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
                 FormatEncounter(CreatureConstants.Commoner_Merchant + "[1]", RollConstants.OneD3,
                     CreatureConstants.Warrior_Guard + "[1]", RollConstants.OneD3,
                     CreatureConstants.Expert_Merchant + "[1]", RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Black_Wyrmling, RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Blue_Wyrmling, RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Green_Wyrmling, RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_White_VeryYoung, RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Brass_Wyrmling, RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Bronze_Wyrmling, RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Copper_Wyrmling, RollConstants.One),
             };
 
             base.DistinctCollection("3", encounters);
@@ -304,7 +264,6 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
                 FormatEncounter(CreatureConstants.FiendishCreature, RollConstants.One),
                 FormatEncounter(CreatureConstants.Zombie, RollConstants.One),
                 FormatEncounter(CreatureConstants.Skeleton, RollConstants.One),
-                FormatEncounter(CreatureConstants.Dragon, RollConstants.One),
                 FormatEncounter(CreatureConstants.Character + "[4]", RollConstants.One),
                 FormatEncounter(CreatureConstants.Character + "[3]", RollConstants.OneD2),
                 FormatEncounter(CreatureConstants.Character + "[2]", RollConstants.OneD3),
@@ -379,6 +338,13 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
                     CreatureConstants.Expert_Minstrel + "[1]", RollConstants.One),
                 FormatEncounter(CreatureConstants.Warrior_Bandit + "[1]", RollConstants.OneD6Plus3,
                     CreatureConstants.Warrior_BanditLeader + "[1d2+1]", RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Black_VeryYoung, RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Blue_VeryYoung, RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Green_VeryYoung, RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Red_Wyrmling, RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_White_Young, RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Brass_VeryYoung, RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Silver_Wyrmling, RollConstants.One),
             };
 
             base.DistinctCollection("4", encounters);
@@ -393,7 +359,6 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
                 FormatEncounter(CreatureConstants.FiendishCreature, RollConstants.One),
                 FormatEncounter(CreatureConstants.Zombie, RollConstants.One),
                 FormatEncounter(CreatureConstants.Skeleton, RollConstants.One),
-                FormatEncounter(CreatureConstants.Dragon, RollConstants.One),
                 FormatEncounter(CreatureConstants.Character + "[5]", RollConstants.One),
                 FormatEncounter(CreatureConstants.Character + "[4]", RollConstants.OneD2),
                 FormatEncounter(CreatureConstants.Character + "[3]", RollConstants.OneD3),
@@ -501,6 +466,14 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
                 FormatEncounter(CreatureConstants.Commoner_Hunter + "[1d2+3]", RollConstants.OneD3,
                     CreatureConstants.Warrior_Hunter + "[1d2+3]", RollConstants.One),
                 FormatEncounter(CreatureConstants.Warrior_Bandit + "[1d2+3]", RollConstants.OneD3Plus1),
+                FormatEncounter(CreatureConstants.Dragon_Black_Young, RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Green_Young, RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Red_VeryYoung, RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_White_Wyrmling, RollConstants.OneD3Plus1),
+                FormatEncounter(CreatureConstants.Dragon_Bronze_VeryYoung, RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Copper_VeryYoung, RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Gold_Wyrmling, RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Silver_VeryYoung, RollConstants.One),
             };
 
             base.DistinctCollection("5", encounters);
@@ -515,7 +488,6 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
                 FormatEncounter(CreatureConstants.FiendishCreature, RollConstants.One),
                 FormatEncounter(CreatureConstants.Zombie, RollConstants.One),
                 FormatEncounter(CreatureConstants.Skeleton, RollConstants.One),
-                FormatEncounter(CreatureConstants.Dragon, RollConstants.One),
                 FormatEncounter(CreatureConstants.Character + "[6]", RollConstants.One),
                 FormatEncounter(CreatureConstants.Character + "[5]", RollConstants.OneD2),
                 FormatEncounter(CreatureConstants.Character + "[4]", RollConstants.OneD3),
@@ -612,6 +584,16 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
                     CreatureConstants.Warrior_BanditLeader + "[1d2+3]", RollConstants.One),
                 FormatEncounter(CreatureConstants.Warrior_Bandit + "[1]", RollConstants.OneD4Plus10,
                     CharacterClassConstants.Fighter + "[2]", RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Black_Wyrmling, RollConstants.OneD3Plus1),
+                FormatEncounter(CreatureConstants.Dragon_Blue_Wyrmling, RollConstants.OneD3Plus1),
+                FormatEncounter(CreatureConstants.Dragon_Blue_Young, RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Green_Wyrmling, RollConstants.OneD3Plus1),
+                FormatEncounter(CreatureConstants.Dragon_White_VeryYoung, RollConstants.OneD3Plus1),
+                FormatEncounter(CreatureConstants.Dragon_White_Juvenile, RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Brass_Wyrmling, RollConstants.OneD3Plus1),
+                FormatEncounter(CreatureConstants.Dragon_Brass_Young, RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Bronze_Wyrmling, RollConstants.OneD3Plus1),
+                FormatEncounter(CreatureConstants.Dragon_Copper_Wyrmling, RollConstants.OneD3Plus1),
             };
 
             base.DistinctCollection("6", encounters);
@@ -626,7 +608,6 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
                 FormatEncounter(CreatureConstants.FiendishCreature, RollConstants.One),
                 FormatEncounter(CreatureConstants.Zombie, RollConstants.One),
                 FormatEncounter(CreatureConstants.Skeleton, RollConstants.One),
-                FormatEncounter(CreatureConstants.Dragon, RollConstants.One),
                 FormatEncounter(CreatureConstants.Character + "[7]", RollConstants.One),
                 FormatEncounter(CreatureConstants.Character + "[6]", RollConstants.OneD2),
                 FormatEncounter(CreatureConstants.Character + "[5]", RollConstants.OneD3),
@@ -731,6 +712,19 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
                     CharacterClassConstants.Cleric + "[3]", RollConstants.One),
                 FormatEncounter(CreatureConstants.Warrior_Bandit + "[1d2+1]", RollConstants.OneD6Plus5,
                     CharacterClassConstants.Fighter + "[3]", RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Black_VeryYoung, RollConstants.OneD3Plus1),
+                FormatEncounter(CreatureConstants.Dragon_Black_Juvenile, RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Blue_VeryYoung, RollConstants.OneD3Plus1),
+                FormatEncounter(CreatureConstants.Dragon_Green_VeryYoung, RollConstants.OneD3Plus1),
+                FormatEncounter(CreatureConstants.Dragon_Red_Wyrmling, RollConstants.OneD3Plus1),
+                FormatEncounter(CreatureConstants.Dragon_Red_Young, RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_White_Young, RollConstants.OneD3Plus1),
+                FormatEncounter(CreatureConstants.Dragon_Brass_VeryYoung, RollConstants.OneD3Plus1),
+                FormatEncounter(CreatureConstants.Dragon_Bronze_Young, RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Copper_Young, RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Gold_VeryYoung, RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Silver_Wyrmling, RollConstants.OneD3Plus1),
+                FormatEncounter(CreatureConstants.Dragon_Silver_Young, RollConstants.One),
             };
 
             base.DistinctCollection("7", encounters);
@@ -745,7 +739,6 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
                 FormatEncounter(CreatureConstants.FiendishCreature, RollConstants.One),
                 FormatEncounter(CreatureConstants.Zombie, RollConstants.One),
                 FormatEncounter(CreatureConstants.Skeleton, RollConstants.One),
-                FormatEncounter(CreatureConstants.Dragon, RollConstants.One),
                 FormatEncounter(CreatureConstants.Character + "[8]", RollConstants.One),
                 FormatEncounter(CreatureConstants.Character + "[7]", RollConstants.OneD2),
                 FormatEncounter(CreatureConstants.Character + "[6]", RollConstants.OneD3),
@@ -867,6 +860,17 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
                     CharacterClassConstants.Cleric + "[6]", RollConstants.One),
                 FormatEncounter(CreatureConstants.Warrior_Bandit + "[1d2+1]", RollConstants.OneD4Plus10,
                     CharacterClassConstants.Fighter + "[3]", RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Black_Young, RollConstants.OneD3Plus1),
+                FormatEncounter(CreatureConstants.Dragon_Blue_Juvenile, RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Green_Young, RollConstants.OneD3Plus1),
+                FormatEncounter(CreatureConstants.Dragon_Green_Juvenile, RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Red_VeryYoung, RollConstants.OneD3Plus1),
+                FormatEncounter(CreatureConstants.Dragon_White_YoungAdult, RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Bronze_VeryYoung, RollConstants.OneD3Plus1),
+                FormatEncounter(CreatureConstants.Dragon_Brass_Juvenile, RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Copper_VeryYoung, RollConstants.OneD3Plus1),
+                FormatEncounter(CreatureConstants.Dragon_Gold_Wyrmling, RollConstants.OneD3Plus1),
+                FormatEncounter(CreatureConstants.Dragon_Silver_VeryYoung, RollConstants.OneD3Plus1),
             };
 
             base.DistinctCollection("8", encounters);
@@ -881,7 +885,6 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
                 FormatEncounter(CreatureConstants.FiendishCreature, RollConstants.One),
                 FormatEncounter(CreatureConstants.Zombie, RollConstants.One),
                 FormatEncounter(CreatureConstants.Skeleton, RollConstants.One),
-                FormatEncounter(CreatureConstants.Dragon, RollConstants.One),
                 FormatEncounter(CreatureConstants.Character + "[9]", RollConstants.One),
                 FormatEncounter(CreatureConstants.Character + "[8]", RollConstants.OneD2),
                 FormatEncounter(CreatureConstants.Character + "[7]", RollConstants.OneD3),
@@ -1000,6 +1003,13 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
                 FormatEncounter(CreatureConstants.Commoner_Pilgrim + "[1d2+1]", RollConstants.OneD4Plus10,
                     CreatureConstants.Warrior_Guard + "[1d2+1]", RollConstants.OneD3Plus1,
                     CharacterClassConstants.Cleric + "[7]", RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Black_YoungAdult, RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Blue_Young, RollConstants.OneD3Plus1),
+                FormatEncounter(CreatureConstants.Dragon_White_Juvenile, RollConstants.OneD3Plus1),
+                FormatEncounter(CreatureConstants.Dragon_Brass_Young, RollConstants.OneD3Plus1),
+                FormatEncounter(CreatureConstants.Dragon_Bronze_Juvenile, RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Copper_Juvenile, RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Gold_Young, RollConstants.One),
             };
 
             base.DistinctCollection("9", encounters);
@@ -1014,7 +1024,6 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
                 FormatEncounter(CreatureConstants.FiendishCreature, RollConstants.One),
                 FormatEncounter(CreatureConstants.Zombie, RollConstants.One),
                 FormatEncounter(CreatureConstants.Skeleton, RollConstants.One),
-                FormatEncounter(CreatureConstants.Dragon, RollConstants.One),
                 FormatEncounter(CreatureConstants.Character + "[10]", RollConstants.One),
                 FormatEncounter(CreatureConstants.Character + "[9]", RollConstants.OneD2),
                 FormatEncounter(CreatureConstants.Character + "[8]", RollConstants.OneD3),
@@ -1112,6 +1121,16 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
                 FormatEncounter(CreatureConstants.Crocodile_Giant, RollConstants.OneD6Plus5),
                 FormatEncounter(CreatureConstants.Warrior_Bandit + "[1d2+3]", RollConstants.OneD4Plus10,
                     CharacterClassConstants.Fighter + "[4]", RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Black_Juvenile, RollConstants.OneD3Plus1),
+                FormatEncounter(CreatureConstants.Dragon_Red_Young, RollConstants.OneD3Plus1),
+                FormatEncounter(CreatureConstants.Dragon_Red_Juvenile, RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_White_Adult, RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Brass_YoungAdult, RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Bronze_Young, RollConstants.OneD3Plus1),
+                FormatEncounter(CreatureConstants.Dragon_Copper_Young, RollConstants.OneD3Plus1),
+                FormatEncounter(CreatureConstants.Dragon_Gold_VeryYoung, RollConstants.OneD3Plus1),
+                FormatEncounter(CreatureConstants.Dragon_Silver_Young, RollConstants.OneD3Plus1),
+                FormatEncounter(CreatureConstants.Dragon_Silver_Juvenile, RollConstants.One),
             };
 
             base.DistinctCollection("10", encounters);
@@ -1126,7 +1145,6 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
                 FormatEncounter(CreatureConstants.FiendishCreature, RollConstants.One),
                 FormatEncounter(CreatureConstants.Zombie, RollConstants.One),
                 FormatEncounter(CreatureConstants.Skeleton, RollConstants.One),
-                FormatEncounter(CreatureConstants.Dragon, RollConstants.One),
                 FormatEncounter(CreatureConstants.Character + "[11]", RollConstants.One),
                 FormatEncounter(CreatureConstants.Character + "[10]", RollConstants.OneD2),
                 FormatEncounter(CreatureConstants.Character + "[9]", RollConstants.OneD3),
@@ -1227,6 +1245,16 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
                     CharacterClassConstants.Cleric + "[8]", RollConstants.One),
                 FormatEncounter(CreatureConstants.Warrior_Bandit + "[1d2+5]", RollConstants.OneD4Plus10,
                     CharacterClassConstants.Fighter + "[5]", RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Black_Adult, RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Blue_Juvenile, RollConstants.OneD3Plus1),
+                FormatEncounter(CreatureConstants.Dragon_Blue_YoungAdult, RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Green_Juvenile, RollConstants.OneD3Plus1),
+                FormatEncounter(CreatureConstants.Dragon_Green_YoungAdult, RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_White_YoungAdult, RollConstants.OneD3Plus1),
+                FormatEncounter(CreatureConstants.Dragon_White_Adult, RollConstants.OneD2),
+                FormatEncounter(CreatureConstants.Dragon_Brass_Juvenile, RollConstants.OneD3Plus1),
+                FormatEncounter(CreatureConstants.Dragon_Copper_YoungAdult, RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Gold_Juvenile, RollConstants.One),
             };
 
             base.DistinctCollection("11", encounters);
@@ -1241,7 +1269,6 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
                 FormatEncounter(CreatureConstants.FiendishCreature, RollConstants.One),
                 FormatEncounter(CreatureConstants.Zombie, RollConstants.One),
                 FormatEncounter(CreatureConstants.Skeleton, RollConstants.One),
-                FormatEncounter(CreatureConstants.Dragon, RollConstants.One),
                 FormatEncounter(CreatureConstants.Character + "[12]", RollConstants.One),
                 FormatEncounter(CreatureConstants.Character + "[11]", RollConstants.OneD2),
                 FormatEncounter(CreatureConstants.Character + "[10]", RollConstants.OneD3),
@@ -1320,6 +1347,16 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
                     CharacterClassConstants.Cleric + "[9]", RollConstants.One),
                 FormatEncounter(CreatureConstants.Warrior_Bandit + "[1d2+7]", RollConstants.OneD4Plus10,
                     CharacterClassConstants.Fighter + "[6]", RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Black_YoungAdult, RollConstants.OneD3Plus1),
+                FormatEncounter(CreatureConstants.Dragon_Black_Adult, RollConstants.OneD2),
+                FormatEncounter(CreatureConstants.Dragon_White_Adult, RollConstants.OneD2,
+                    CreatureConstants.Dragon_White_Wyrmling, RollConstants.OneD3Plus1),
+                FormatEncounter(CreatureConstants.Dragon_White_MatureAdult, RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Brass_Adult, RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Bronze_Juvenile, RollConstants.OneD3Plus1),
+                FormatEncounter(CreatureConstants.Dragon_Bronze_YoungAdult, RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Copper_Juvenile, RollConstants.OneD3Plus1),
+                FormatEncounter(CreatureConstants.Dragon_Gold_Young, RollConstants.OneD3Plus1),
             };
 
             base.DistinctCollection("12", encounters);
@@ -1334,7 +1371,6 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
                 FormatEncounter(CreatureConstants.FiendishCreature, RollConstants.One),
                 FormatEncounter(CreatureConstants.Zombie, RollConstants.One),
                 FormatEncounter(CreatureConstants.Skeleton, RollConstants.One),
-                FormatEncounter(CreatureConstants.Dragon, RollConstants.One),
                 FormatEncounter(CreatureConstants.Character + "[13]", RollConstants.One),
                 FormatEncounter(CreatureConstants.Character + "[12]", RollConstants.OneD2),
                 FormatEncounter(CreatureConstants.Character + "[11]", RollConstants.OneD3),
@@ -1403,6 +1439,16 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
                     CharacterClassConstants.Cleric + "[10]", RollConstants.One),
                 FormatEncounter(CreatureConstants.Warrior_Bandit + "[1d2+9]", RollConstants.OneD4Plus10,
                     CharacterClassConstants.Fighter + "[7]", RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Black_Adult, RollConstants.OneD2,
+                    CreatureConstants.Dragon_Black_Wyrmling, RollConstants.OneD3Plus1),
+                FormatEncounter(CreatureConstants.Dragon_Green_Adult, RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Red_Juvenile, RollConstants.OneD3Plus1),
+                FormatEncounter(CreatureConstants.Dragon_Red_YoungAdult, RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Brass_YoungAdult, RollConstants.OneD3Plus1),
+                FormatEncounter(CreatureConstants.Dragon_White_MatureAdult, RollConstants.OneD2),
+                FormatEncounter(CreatureConstants.Dragon_Brass_Adult, RollConstants.OneD2),
+                FormatEncounter(CreatureConstants.Dragon_Silver_Juvenile, RollConstants.OneD3Plus1),
+                FormatEncounter(CreatureConstants.Dragon_Silver_YoungAdult, RollConstants.One),
             };
 
             base.DistinctCollection("13", encounters);
@@ -1417,7 +1463,6 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
                 FormatEncounter(CreatureConstants.FiendishCreature, RollConstants.One),
                 FormatEncounter(CreatureConstants.Zombie, RollConstants.One),
                 FormatEncounter(CreatureConstants.Skeleton, RollConstants.One),
-                FormatEncounter(CreatureConstants.Dragon, RollConstants.One),
                 FormatEncounter(CreatureConstants.Character + "[14]", RollConstants.One),
                 FormatEncounter(CreatureConstants.Character + "[13]", RollConstants.OneD2),
                 FormatEncounter(CreatureConstants.Character + "[12]", RollConstants.OneD3),
@@ -1483,6 +1528,19 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
                     CharacterClassConstants.Cleric + "[11]", RollConstants.One),
                 FormatEncounter(CreatureConstants.Warrior_Bandit + "[1d2+11]", RollConstants.OneD4Plus10,
                     CharacterClassConstants.Fighter + "[8]", RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Black_MatureAdult, RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Blue_YoungAdult, RollConstants.OneD3Plus1),
+                FormatEncounter(CreatureConstants.Dragon_Blue_Adult, RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Green_YoungAdult, RollConstants.OneD3Plus1),
+                FormatEncounter(CreatureConstants.Dragon_Green_Adult, RollConstants.OneD2),
+                FormatEncounter(CreatureConstants.Dragon_White_MatureAdult, RollConstants.OneD2,
+                    CreatureConstants.Dragon_White_VeryYoung, RollConstants.OneD3Plus1),
+                FormatEncounter(CreatureConstants.Dragon_Brass_Adult, RollConstants.OneD2,
+                    CreatureConstants.Dragon_Brass_Wyrmling, RollConstants.OneD3Plus1),
+                FormatEncounter(CreatureConstants.Dragon_Copper_YoungAdult, RollConstants.OneD3Plus1),
+                FormatEncounter(CreatureConstants.Dragon_Copper_Adult, RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Gold_Juvenile, RollConstants.OneD3Plus1),
+                FormatEncounter(CreatureConstants.Dragon_Gold_YoungAdult, RollConstants.One),
             };
 
             base.DistinctCollection("14", encounters);
@@ -1496,7 +1554,6 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
                 FormatEncounter(CreatureConstants.CelestialCreature, RollConstants.One),
                 FormatEncounter(CreatureConstants.FiendishCreature, RollConstants.One),
                 FormatEncounter(CreatureConstants.Skeleton, RollConstants.One),
-                FormatEncounter(CreatureConstants.Dragon, RollConstants.One),
                 FormatEncounter(CreatureConstants.Character + "[15]", RollConstants.One),
                 FormatEncounter(CreatureConstants.Character + "[14]", RollConstants.OneD2),
                 FormatEncounter(CreatureConstants.Character + "[13]", RollConstants.OneD3),
@@ -1550,6 +1607,17 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
                     CharacterClassConstants.Cleric + "[12]", RollConstants.One),
                 FormatEncounter(CreatureConstants.Warrior_Bandit + "[1d2+13]", RollConstants.OneD4Plus10,
                     CharacterClassConstants.Fighter + "[9]", RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Black_MatureAdult, RollConstants.OneD2),
+                FormatEncounter(CreatureConstants.Dragon_Blue_Adult, RollConstants.OneD2),
+                FormatEncounter(CreatureConstants.Dragon_Green_Adult, RollConstants.OneD2,
+                    CreatureConstants.Dragon_Green_Wyrmling, RollConstants.OneD3Plus1),
+                FormatEncounter(CreatureConstants.Dragon_Red_Adult, RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_White_Old, RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Brass_MatureAdult, RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Bronze_YoungAdult, RollConstants.OneD3Plus1),
+                FormatEncounter(CreatureConstants.Dragon_Bronze_Adult, RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Copper_Adult, RollConstants.OneD2),
+                FormatEncounter(CreatureConstants.Dragon_Silver_Adult, RollConstants.One),
             };
 
             base.DistinctCollection("15", encounters);
@@ -1563,7 +1631,6 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
                 FormatEncounter(CreatureConstants.CelestialCreature, RollConstants.One),
                 FormatEncounter(CreatureConstants.FiendishCreature, RollConstants.One),
                 FormatEncounter(CreatureConstants.Skeleton, RollConstants.One),
-                FormatEncounter(CreatureConstants.Dragon, RollConstants.One),
                 FormatEncounter(CreatureConstants.Character + "[16]", RollConstants.One),
                 FormatEncounter(CreatureConstants.Character + "[15]", RollConstants.OneD2),
                 FormatEncounter(CreatureConstants.Character + "[14]", RollConstants.OneD3),
@@ -1612,6 +1679,24 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
                     CharacterClassConstants.Cleric + "[13]", RollConstants.One),
                 FormatEncounter(CreatureConstants.Warrior_Bandit + "[1d2+15]", RollConstants.OneD4Plus10,
                     CharacterClassConstants.Fighter + "[10]", RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Black_MatureAdult, RollConstants.OneD2,
+                    CreatureConstants.Dragon_Black_VeryYoung, RollConstants.OneD3Plus1),
+                FormatEncounter(CreatureConstants.Dragon_Black_Old, RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Blue_Adult, RollConstants.OneD2,
+                    CreatureConstants.Dragon_Blue_Wyrmling, RollConstants.OneD3Plus1),
+                FormatEncounter(CreatureConstants.Dragon_Blue_MatureAdult, RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Green_MatureAdult, RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Red_YoungAdult, RollConstants.OneD3Plus1),
+                FormatEncounter(CreatureConstants.Dragon_Red_Adult, RollConstants.OneD2),
+                FormatEncounter(CreatureConstants.Dragon_White_Old, RollConstants.OneD2),
+                FormatEncounter(CreatureConstants.Dragon_Brass_MatureAdult, RollConstants.OneD2),
+                FormatEncounter(CreatureConstants.Dragon_Bronze_Adult, RollConstants.OneD2),
+                FormatEncounter(CreatureConstants.Dragon_Copper_Adult, RollConstants.OneD2,
+                    CreatureConstants.Dragon_Copper_Wyrmling, RollConstants.OneD3Plus1),
+                FormatEncounter(CreatureConstants.Dragon_Copper_MatureAdult, RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Gold_Adult, RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Silver_YoungAdult, RollConstants.OneD3Plus1),
+                FormatEncounter(CreatureConstants.Dragon_Silver_Adult, RollConstants.OneD2),
             };
 
             base.DistinctCollection("16", encounters);
@@ -1624,7 +1709,6 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
             {
                 FormatEncounter(CreatureConstants.CelestialCreature, RollConstants.One),
                 FormatEncounter(CreatureConstants.FiendishCreature, RollConstants.One),
-                FormatEncounter(CreatureConstants.Dragon, RollConstants.One),
                 FormatEncounter(CreatureConstants.Character + "[17]", RollConstants.One),
                 FormatEncounter(CreatureConstants.Character + "[16]", RollConstants.OneD2),
                 FormatEncounter(CreatureConstants.Character + "[15]", RollConstants.OneD3),
@@ -1666,6 +1750,25 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
                 FormatEncounter(CreatureConstants.Commoner_Pilgrim + "[1d2+15]", RollConstants.OneD4Plus10,
                     CreatureConstants.Warrior_Guard + "[1d2+15]", RollConstants.OneD3Plus1,
                     CharacterClassConstants.Cleric + "[14]", RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Black_Old, RollConstants.OneD2),
+                FormatEncounter(CreatureConstants.Dragon_Blue_MatureAdult, RollConstants.OneD2),
+                FormatEncounter(CreatureConstants.Dragon_Green_MatureAdult, RollConstants.OneD2),
+                FormatEncounter(CreatureConstants.Dragon_Red_Adult, RollConstants.OneD2,
+                    CreatureConstants.Dragon_Red_Wyrmling, RollConstants.OneD3Plus1),
+                FormatEncounter(CreatureConstants.Dragon_White_Old, RollConstants.OneD2,
+                    CreatureConstants.Dragon_White_Young, RollConstants.OneD3Plus1),
+                FormatEncounter(CreatureConstants.Dragon_White_VeryOld, RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Brass_MatureAdult, RollConstants.OneD2,
+                    CreatureConstants.Dragon_Brass_VeryYoung, RollConstants.OneD3Plus1),
+                FormatEncounter(CreatureConstants.Dragon_Brass_Old, RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Bronze_Adult, RollConstants.OneD2,
+                    CreatureConstants.Dragon_Bronze_Wyrmling, RollConstants.OneD3Plus1),
+                FormatEncounter(CreatureConstants.Dragon_Bronze_MatureAdult, RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Copper_MatureAdult, RollConstants.OneD2),
+                FormatEncounter(CreatureConstants.Dragon_Gold_YoungAdult, RollConstants.OneD3Plus1),
+                FormatEncounter(CreatureConstants.Dragon_Gold_Adult, RollConstants.OneD2),
+                FormatEncounter(CreatureConstants.Dragon_Silver_Adult, RollConstants.OneD2,
+                    CreatureConstants.Dragon_Silver_Wyrmling, RollConstants.OneD3Plus1),
             };
 
             base.DistinctCollection("17", encounters);
@@ -1678,7 +1781,6 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
             {
                 FormatEncounter(CreatureConstants.CelestialCreature, RollConstants.One),
                 FormatEncounter(CreatureConstants.FiendishCreature, RollConstants.One),
-                FormatEncounter(CreatureConstants.Dragon, RollConstants.One),
                 FormatEncounter(CreatureConstants.Character + "[18]", RollConstants.One),
                 FormatEncounter(CreatureConstants.Character + "[17]", RollConstants.OneD2),
                 FormatEncounter(CreatureConstants.Character + "[16]", RollConstants.OneD3),
@@ -1700,6 +1802,25 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
                     CharacterClassConstants.Cleric + "[15]", RollConstants.One),
                 FormatEncounter(CreatureConstants.Warrior_Bandit + "[20]", RollConstants.OneD4Plus10,
                     CharacterClassConstants.Fighter + "[12]", RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Black_Old, RollConstants.OneD2,
+                    CreatureConstants.Dragon_Black_Young, RollConstants.OneD3Plus1),
+                FormatEncounter(CreatureConstants.Dragon_Black_VeryOld, RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Blue_MatureAdult, RollConstants.OneD2,
+                    CreatureConstants.Dragon_Blue_VeryYoung, RollConstants.OneD3Plus1),
+                FormatEncounter(CreatureConstants.Dragon_Blue_Old, RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Green_MatureAdult, RollConstants.OneD2,
+                    CreatureConstants.Dragon_Green_VeryYoung, RollConstants.OneD3Plus1),
+                FormatEncounter(CreatureConstants.Dragon_Green_Old, RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Red_MatureAdult, RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_White_VeryOld, RollConstants.OneD2),
+                FormatEncounter(CreatureConstants.Dragon_White_Ancient, RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Brass_Old, RollConstants.OneD2),
+                FormatEncounter(CreatureConstants.Dragon_Bronze_MatureAdult, RollConstants.OneD2),
+                FormatEncounter(CreatureConstants.Dragon_Copper_MatureAdult, RollConstants.OneD2,
+                    CreatureConstants.Dragon_Copper_VeryYoung, RollConstants.OneD3Plus1),
+                FormatEncounter(CreatureConstants.Dragon_Gold_Adult, RollConstants.OneD2,
+                    CreatureConstants.Dragon_Gold_Wyrmling, RollConstants.OneD3Plus1),
+                FormatEncounter(CreatureConstants.Dragon_Silver_MatureAdult, RollConstants.One),
             };
 
             base.DistinctCollection("18", encounters);
@@ -1712,7 +1833,6 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
             {
                 FormatEncounter(CreatureConstants.CelestialCreature, RollConstants.One),
                 FormatEncounter(CreatureConstants.FiendishCreature, RollConstants.One),
-                FormatEncounter(CreatureConstants.Dragon, RollConstants.One),
                 FormatEncounter(CreatureConstants.Character + "[19]", RollConstants.One),
                 FormatEncounter(CreatureConstants.Character + "[18]", RollConstants.OneD2),
                 FormatEncounter(CreatureConstants.Character + "[17]", RollConstants.OneD3),
@@ -1729,6 +1849,26 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
                 FormatEncounter(CreatureConstants.Commoner_Pilgrim + "[20]", RollConstants.OneD4Plus10,
                     CreatureConstants.Warrior_Guard + "[20]", RollConstants.OneD3Plus1,
                     CharacterClassConstants.Cleric + "[16]", RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Black_VeryOld, RollConstants.OneD2),
+                FormatEncounter(CreatureConstants.Dragon_Black_Ancient, RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Blue_Old, RollConstants.OneD2),
+                FormatEncounter(CreatureConstants.Dragon_Blue_VeryOld, RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Green_Old, RollConstants.OneD2),
+                FormatEncounter(CreatureConstants.Dragon_Green_VeryOld, RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Red_MatureAdult, RollConstants.OneD2),
+                FormatEncounter(CreatureConstants.Dragon_White_VeryOld, RollConstants.OneD2,
+                    CreatureConstants.Dragon_White_Juvenile, RollConstants.OneD3Plus1),
+                FormatEncounter(CreatureConstants.Dragon_White_Ancient, RollConstants.OneD2),
+                FormatEncounter(CreatureConstants.Dragon_White_Wyrm, RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Brass_Old, RollConstants.OneD2,
+                    CreatureConstants.Dragon_Brass_Young, RollConstants.OneD3Plus1),
+                FormatEncounter(CreatureConstants.Dragon_Brass_VeryOld, RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Bronze_MatureAdult, RollConstants.OneD2,
+                    CreatureConstants.Dragon_Bronze_VeryYoung, RollConstants.OneD3Plus1),
+                FormatEncounter(CreatureConstants.Dragon_Bronze_Old, RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Copper_Old, RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Gold_MatureAdult, RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Silver_MatureAdult, RollConstants.OneD2),
             };
 
             base.DistinctCollection("19", encounters);
@@ -1741,7 +1881,6 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
             {
                 FormatEncounter(CreatureConstants.CelestialCreature, RollConstants.One),
                 FormatEncounter(CreatureConstants.FiendishCreature, RollConstants.One),
-                FormatEncounter(CreatureConstants.Dragon, RollConstants.One),
                 FormatEncounter(CreatureConstants.Character + "[20]", RollConstants.One),
                 FormatEncounter(CreatureConstants.Character + "[19]", RollConstants.OneD2),
                 FormatEncounter(CreatureConstants.Character + "[18]", RollConstants.OneD3),
@@ -1753,6 +1892,32 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
                 FormatEncounter(CreatureConstants.Balor, RollConstants.One),
                 FormatEncounter(CreatureConstants.PitFiend, RollConstants.One),
                 FormatEncounter(CreatureConstants.Tarrasque, RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Black_VeryOld, RollConstants.OneD2,
+                    CreatureConstants.Dragon_Black_Juvenile, RollConstants.OneD3Plus1),
+                FormatEncounter(CreatureConstants.Dragon_Black_Ancient, RollConstants.OneD2),
+                FormatEncounter(CreatureConstants.Dragon_Black_Wyrm, RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Blue_Old, RollConstants.OneD2,
+                    CreatureConstants.Dragon_Blue_Young, RollConstants.OneD3Plus1),
+                FormatEncounter(CreatureConstants.Dragon_Blue_VeryOld, RollConstants.OneD2),
+                FormatEncounter(CreatureConstants.Dragon_Green_Old, RollConstants.OneD2,
+                    CreatureConstants.Dragon_Green_Young, RollConstants.OneD3Plus1),
+                FormatEncounter(CreatureConstants.Dragon_Green_VeryOld, RollConstants.OneD2),
+                FormatEncounter(CreatureConstants.Dragon_Red_MatureAdult, RollConstants.OneD2,
+                    CreatureConstants.Dragon_Red_VeryYoung, RollConstants.OneD3Plus1),
+                FormatEncounter(CreatureConstants.Dragon_Red_Old, RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_White_Ancient, RollConstants.OneD2,
+                    CreatureConstants.Dragon_White_YoungAdult, RollConstants.OneD3Plus1),
+                FormatEncounter(CreatureConstants.Dragon_White_Wyrm, RollConstants.OneD2),
+                FormatEncounter(CreatureConstants.Dragon_Brass_VeryOld, RollConstants.OneD2),
+                FormatEncounter(CreatureConstants.Dragon_Brass_Ancient, RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Bronze_Old, RollConstants.OneD2),
+                FormatEncounter(CreatureConstants.Dragon_Bronze_VeryOld, RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Copper_Old, RollConstants.OneD2),
+                FormatEncounter(CreatureConstants.Dragon_Copper_VeryOld, RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Gold_MatureAdult, RollConstants.OneD2),
+                FormatEncounter(CreatureConstants.Dragon_Silver_MatureAdult, RollConstants.OneD2,
+                    CreatureConstants.Dragon_Silver_VeryYoung, RollConstants.OneD3Plus1),
+                FormatEncounter(CreatureConstants.Dragon_Silver_Old, RollConstants.One),
             };
 
             base.DistinctCollection("20", encounters);
@@ -1765,7 +1930,6 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
             {
                 FormatEncounter(CreatureConstants.CelestialCreature, RollConstants.One),
                 FormatEncounter(CreatureConstants.FiendishCreature, RollConstants.One),
-                FormatEncounter(CreatureConstants.Dragon, RollConstants.One),
                 FormatEncounter(CreatureConstants.Character + "[18]", RollConstants.OneD3Plus1),
                 FormatEncounter(CreatureConstants.Ghost + "[19]", RollConstants.One),
                 FormatEncounter(CreatureConstants.Lich + "[19]", RollConstants.One),
@@ -1774,6 +1938,36 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
                     CreatureConstants.Marilith, RollConstants.One,
                     CreatureConstants.Hezrou, RollConstants.OneD3Plus1),
                 FormatEncounter(CreatureConstants.PitFiend, RollConstants.OneD2),
+                FormatEncounter(CreatureConstants.Dragon_Black_Ancient, RollConstants.OneD2,
+                    CreatureConstants.Dragon_Black_YoungAdult, RollConstants.OneD3Plus1),
+                FormatEncounter(CreatureConstants.Dragon_Black_Wyrm, RollConstants.OneD2),
+                FormatEncounter(CreatureConstants.Dragon_Blue_VeryOld, RollConstants.OneD2,
+                    CreatureConstants.Dragon_Blue_Juvenile, RollConstants.OneD3Plus1),
+                FormatEncounter(CreatureConstants.Dragon_Blue_Ancient, RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Green_VeryOld, RollConstants.OneD2,
+                    CreatureConstants.Dragon_Green_Juvenile, RollConstants.OneD3Plus1),
+                FormatEncounter(CreatureConstants.Dragon_Green_Ancient, RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Red_Old, RollConstants.OneD2),
+                FormatEncounter(CreatureConstants.Dragon_Red_VeryOld, RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_White_Wyrm, RollConstants.OneD2,
+                    CreatureConstants.Dragon_White_Adult, RollConstants.OneD3Plus1,
+                    CreatureConstants.Dragon_White_Wyrmling, RollConstants.OneD6Plus5),
+                FormatEncounter(CreatureConstants.Dragon_White_GreatWyrm, RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Brass_VeryOld, RollConstants.OneD2,
+                    CreatureConstants.Dragon_Brass_Juvenile, RollConstants.OneD3Plus1),
+                FormatEncounter(CreatureConstants.Dragon_Brass_Ancient, RollConstants.OneD2),
+                FormatEncounter(CreatureConstants.Dragon_Brass_Wyrm, RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Bronze_Old, RollConstants.OneD2,
+                    CreatureConstants.Dragon_Bronze_Young, RollConstants.OneD3Plus1),
+                FormatEncounter(CreatureConstants.Dragon_Bronze_VeryOld, RollConstants.OneD2),
+                FormatEncounter(CreatureConstants.Dragon_Copper_Old, RollConstants.OneD2,
+                    CreatureConstants.Dragon_Copper_Young, RollConstants.OneD3Plus1),
+                FormatEncounter(CreatureConstants.Dragon_Copper_VeryOld, RollConstants.OneD2),
+                FormatEncounter(CreatureConstants.Dragon_Gold_MatureAdult, RollConstants.OneD2,
+                    CreatureConstants.Dragon_Gold_VeryYoung, RollConstants.OneD3Plus1),
+                FormatEncounter(CreatureConstants.Dragon_Gold_Old, RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Silver_Old, RollConstants.OneD2),
+                FormatEncounter(CreatureConstants.Dragon_Silver_VeryOld, RollConstants.One),
             };
 
             base.DistinctCollection("21", encounters);
@@ -1786,12 +1980,36 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
             {
                 FormatEncounter(CreatureConstants.CelestialCreature, RollConstants.One),
                 FormatEncounter(CreatureConstants.FiendishCreature, RollConstants.One),
-                FormatEncounter(CreatureConstants.Dragon, RollConstants.One),
                 FormatEncounter(CreatureConstants.Character + "[19]", RollConstants.OneD3Plus1),
                 FormatEncounter(CreatureConstants.Ghost + "[20]", RollConstants.One),
                 FormatEncounter(CreatureConstants.Lich + "[20]", RollConstants.One),
                 FormatEncounter(CreatureConstants.Vampire + "[20]", RollConstants.One),
                 FormatEncounter(CreatureConstants.Cornugon, RollConstants.OneD6Plus5),
+                FormatEncounter(CreatureConstants.Dragon_Black_Wyrm, RollConstants.OneD2,
+                    CreatureConstants.Dragon_Black_Adult, RollConstants.OneD3Plus1,
+                    CreatureConstants.Dragon_Black_Wyrmling, RollConstants.OneD6Plus5),
+                FormatEncounter(CreatureConstants.Dragon_Black_GreatWyrm, RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Blue_Ancient, RollConstants.OneD2),
+                FormatEncounter(CreatureConstants.Dragon_Green_Ancient, RollConstants.OneD2),
+                FormatEncounter(CreatureConstants.Dragon_Green_Wyrm, RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Red_Old, RollConstants.OneD2,
+                    CreatureConstants.Dragon_Red_Young, RollConstants.OneD3Plus1),
+                FormatEncounter(CreatureConstants.Dragon_Red_VeryOld, RollConstants.OneD2),
+                FormatEncounter(CreatureConstants.Dragon_White_GreatWyrm, RollConstants.OneD2),
+                FormatEncounter(CreatureConstants.Dragon_Brass_Ancient, RollConstants.OneD2,
+                    CreatureConstants.Dragon_Brass_YoungAdult, RollConstants.OneD3Plus1),
+                FormatEncounter(CreatureConstants.Dragon_Brass_Wyrm, RollConstants.OneD2),
+                FormatEncounter(CreatureConstants.Dragon_Bronze_VeryOld, RollConstants.OneD2,
+                    CreatureConstants.Dragon_Bronze_Juvenile, RollConstants.OneD3Plus1),
+                FormatEncounter(CreatureConstants.Dragon_Bronze_Ancient, RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Copper_VeryOld, RollConstants.OneD2,
+                    CreatureConstants.Dragon_Copper_Juvenile, RollConstants.OneD3Plus1),
+                FormatEncounter(CreatureConstants.Dragon_Copper_Ancient, RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Gold_Old, RollConstants.OneD2),
+                FormatEncounter(CreatureConstants.Dragon_Gold_VeryOld, RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Silver_Old, RollConstants.OneD2,
+                    CreatureConstants.Dragon_Silver_Young, RollConstants.OneD3Plus1),
+                FormatEncounter(CreatureConstants.Dragon_Silver_VeryOld, RollConstants.OneD2),
             };
 
             base.DistinctCollection("22", encounters);
@@ -1804,7 +2022,6 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
             {
                 FormatEncounter(CreatureConstants.CelestialCreature, RollConstants.One),
                 FormatEncounter(CreatureConstants.FiendishCreature, RollConstants.One),
-                FormatEncounter(CreatureConstants.Dragon, RollConstants.One),
                 FormatEncounter(CreatureConstants.Character + "[20]", RollConstants.OneD3Plus1),
                 FormatEncounter(CreatureConstants.Ghost + "[21]", RollConstants.One),
                 FormatEncounter(CreatureConstants.Lich + "[21]", RollConstants.One),
@@ -1814,6 +2031,33 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
                     CreatureConstants.Cornugon, RollConstants.OneD3Plus1,
                     CreatureConstants.Hamatula, RollConstants.OneD3Plus1),
                 FormatEncounter(CreatureConstants.Solar, RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Black_GreatWyrm, RollConstants.OneD2),
+                FormatEncounter(CreatureConstants.Dragon_Blue_Ancient, RollConstants.OneD2,
+                    CreatureConstants.Dragon_Blue_YoungAdult, RollConstants.OneD3Plus1),
+                FormatEncounter(CreatureConstants.Dragon_Blue_Wyrm, RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Green_Ancient, RollConstants.OneD2,
+                    CreatureConstants.Dragon_Green_YoungAdult, RollConstants.OneD3Plus1),
+                FormatEncounter(CreatureConstants.Dragon_Green_Wyrm, RollConstants.OneD2),
+                FormatEncounter(CreatureConstants.Dragon_Red_VeryOld, RollConstants.OneD2,
+                    CreatureConstants.Dragon_Red_Juvenile, RollConstants.OneD3Plus1),
+                FormatEncounter(CreatureConstants.Dragon_Red_Ancient, RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_White_GreatWyrm, RollConstants.OneD2,
+                    CreatureConstants.Dragon_White_MatureAdult, RollConstants.OneD3Plus1,
+                    CreatureConstants.Dragon_White_VeryYoung, RollConstants.OneD6Plus5),
+                FormatEncounter(CreatureConstants.Dragon_Brass_Wyrm, RollConstants.OneD2,
+                    CreatureConstants.Dragon_Brass_Adult, RollConstants.OneD3Plus1,
+                    CreatureConstants.Dragon_Brass_Wyrmling, RollConstants.OneD6Plus5),
+                FormatEncounter(CreatureConstants.Dragon_Brass_GreatWyrm, RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Bronze_Ancient, RollConstants.OneD2),
+                FormatEncounter(CreatureConstants.Dragon_Bronze_Wyrm, RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Copper_Ancient, RollConstants.OneD2),
+                FormatEncounter(CreatureConstants.Dragon_Copper_Wyrm, RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Gold_Old, RollConstants.OneD2,
+                    CreatureConstants.Dragon_Gold_Young, RollConstants.OneD3Plus1),
+                FormatEncounter(CreatureConstants.Dragon_Gold_VeryOld, RollConstants.OneD2),
+                FormatEncounter(CreatureConstants.Dragon_Silver_VeryOld, RollConstants.OneD2,
+                    CreatureConstants.Dragon_Silver_Juvenile, RollConstants.OneD3Plus1),
+                FormatEncounter(CreatureConstants.Dragon_Silver_Ancient, RollConstants.One),
             };
 
             base.DistinctCollection("23", encounters);
@@ -1826,24 +2070,190 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
             {
                 FormatEncounter(CreatureConstants.CelestialCreature, RollConstants.One),
                 FormatEncounter(CreatureConstants.FiendishCreature, RollConstants.One),
-                FormatEncounter(CreatureConstants.Dragon, RollConstants.One),
                 FormatEncounter(CreatureConstants.Character + "[21]", RollConstants.OneD3Plus1),
                 FormatEncounter(CreatureConstants.Ghost + "[22]", RollConstants.One),
                 FormatEncounter(CreatureConstants.Lich + "[22]", RollConstants.One),
                 FormatEncounter(CreatureConstants.Vampire + "[22]", RollConstants.One),
                 FormatEncounter(CreatureConstants.Solar, RollConstants.OneD2),
+                FormatEncounter(CreatureConstants.Dragon_Black_GreatWyrm, RollConstants.OneD2,
+                    CreatureConstants.Dragon_Black_MatureAdult, RollConstants.OneD3Plus1,
+                    CreatureConstants.Dragon_Black_VeryYoung, RollConstants.OneD6Plus5),
+                FormatEncounter(CreatureConstants.Dragon_Blue_Wyrm, RollConstants.OneD2),
+                FormatEncounter(CreatureConstants.Dragon_Green_Wyrm, RollConstants.OneD2,
+                    CreatureConstants.Dragon_Green_Adult, RollConstants.OneD3Plus1,
+                    CreatureConstants.Dragon_Green_Wyrmling, RollConstants.OneD6Plus5),
+                FormatEncounter(CreatureConstants.Dragon_Green_GreatWyrm, RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Red_Ancient, RollConstants.OneD2),
+                FormatEncounter(CreatureConstants.Dragon_Red_Wyrm, RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Brass_GreatWyrm, RollConstants.OneD2),
+                FormatEncounter(CreatureConstants.Dragon_Bronze_Ancient, RollConstants.OneD2,
+                    CreatureConstants.Dragon_Bronze_YoungAdult, RollConstants.OneD3Plus1),
+                FormatEncounter(CreatureConstants.Dragon_Bronze_Wyrm, RollConstants.OneD2),
+                FormatEncounter(CreatureConstants.Dragon_Copper_Ancient, RollConstants.OneD2,
+                    CreatureConstants.Dragon_Copper_YoungAdult, RollConstants.OneD3Plus1),
+                FormatEncounter(CreatureConstants.Dragon_Copper_Wyrm, RollConstants.OneD2),
+                FormatEncounter(CreatureConstants.Dragon_Gold_VeryOld, RollConstants.OneD2,
+                    CreatureConstants.Dragon_Gold_Juvenile, RollConstants.OneD3Plus1),
+                FormatEncounter(CreatureConstants.Dragon_Gold_Ancient, RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Silver_Ancient, RollConstants.OneD2),
+                FormatEncounter(CreatureConstants.Dragon_Silver_Wyrm, RollConstants.One),
             };
 
             base.DistinctCollection("24", encounters);
         }
 
         [Test]
-        public void NoCreaturesAppearInMoreThan1Level()
+        public void Level25Encounters()
+        {
+            var encounters = new[]
+            {
+                FormatEncounter(CreatureConstants.CelestialCreature, RollConstants.One),
+                FormatEncounter(CreatureConstants.FiendishCreature, RollConstants.One),
+                FormatEncounter(CreatureConstants.Character + "[22]", RollConstants.OneD3Plus1),
+                FormatEncounter(CreatureConstants.Ghost + "[23]", RollConstants.One),
+                FormatEncounter(CreatureConstants.Lich + "[23]", RollConstants.One),
+                FormatEncounter(CreatureConstants.Vampire + "[23]", RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Blue_Wyrm, RollConstants.OneD2,
+                    CreatureConstants.Dragon_Blue_Adult, RollConstants.OneD3Plus1,
+                    CreatureConstants.Dragon_Blue_Wyrmling, RollConstants.OneD6Plus5),
+                FormatEncounter(CreatureConstants.Dragon_Blue_GreatWyrm, RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Green_GreatWyrm, RollConstants.OneD2),
+                FormatEncounter(CreatureConstants.Dragon_Red_Ancient, RollConstants.OneD2,
+                    CreatureConstants.Dragon_Red_YoungAdult, RollConstants.OneD3Plus1),
+                FormatEncounter(CreatureConstants.Dragon_Red_Wyrm, RollConstants.OneD2),
+                FormatEncounter(CreatureConstants.Dragon_Brass_GreatWyrm, RollConstants.OneD2,
+                    CreatureConstants.Dragon_Brass_MatureAdult, RollConstants.OneD3Plus1,
+                    CreatureConstants.Dragon_Brass_VeryYoung, RollConstants.OneD6Plus5),
+                FormatEncounter(CreatureConstants.Dragon_Bronze_Wyrm, RollConstants.OneD2,
+                    CreatureConstants.Dragon_Bronze_Adult, RollConstants.OneD3Plus1,
+                    CreatureConstants.Dragon_Bronze_Wyrmling, RollConstants.OneD6Plus5),
+                FormatEncounter(CreatureConstants.Dragon_Bronze_GreatWyrm, RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Copper_Wyrm, RollConstants.OneD2,
+                    CreatureConstants.Dragon_Copper_Adult, RollConstants.OneD3Plus1,
+                    CreatureConstants.Dragon_Copper_Wyrmling, RollConstants.OneD6Plus5),
+                FormatEncounter(CreatureConstants.Dragon_Copper_GreatWyrm, RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Gold_Ancient, RollConstants.OneD2),
+                FormatEncounter(CreatureConstants.Dragon_Gold_Wyrm, RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Silver_Ancient, RollConstants.OneD2,
+                    CreatureConstants.Dragon_Silver_YoungAdult, RollConstants.OneD3Plus1),
+                FormatEncounter(CreatureConstants.Dragon_Silver_Wyrm, RollConstants.OneD2),
+            };
+
+            base.DistinctCollection("25", encounters);
+        }
+
+        [Test]
+        public void Level26Encounters()
+        {
+            var encounters = new[]
+            {
+                FormatEncounter(CreatureConstants.CelestialCreature, RollConstants.One),
+                FormatEncounter(CreatureConstants.FiendishCreature, RollConstants.One),
+                FormatEncounter(CreatureConstants.Character + "[23]", RollConstants.OneD3Plus1),
+                FormatEncounter(CreatureConstants.Ghost + "[24]", RollConstants.One),
+                FormatEncounter(CreatureConstants.Lich + "[24]", RollConstants.One),
+                FormatEncounter(CreatureConstants.Vampire + "[24]", RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Blue_GreatWyrm, RollConstants.OneD2),
+                FormatEncounter(CreatureConstants.Dragon_Green_GreatWyrm, RollConstants.OneD2,
+                    CreatureConstants.Dragon_Green_MatureAdult, RollConstants.OneD3Plus1,
+                    CreatureConstants.Dragon_Green_VeryYoung, RollConstants.OneD6Plus5),
+                FormatEncounter(CreatureConstants.Dragon_Red_Wyrm, RollConstants.OneD2,
+                    CreatureConstants.Dragon_Red_Adult, RollConstants.OneD3Plus1,
+                    CreatureConstants.Dragon_Red_Wyrmling, RollConstants.OneD6Plus5),
+                FormatEncounter(CreatureConstants.Dragon_Red_GreatWyrm, RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Bronze_GreatWyrm, RollConstants.OneD2),
+                FormatEncounter(CreatureConstants.Dragon_Copper_GreatWyrm, RollConstants.OneD2),
+                FormatEncounter(CreatureConstants.Dragon_Gold_Ancient, RollConstants.OneD2,
+                    CreatureConstants.Dragon_Gold_YoungAdult, RollConstants.OneD3Plus1),
+                FormatEncounter(CreatureConstants.Dragon_Gold_Wyrm, RollConstants.OneD2),
+                FormatEncounter(CreatureConstants.Dragon_Silver_Wyrm, RollConstants.OneD2,
+                    CreatureConstants.Dragon_Silver_Adult, RollConstants.OneD3Plus1,
+                    CreatureConstants.Dragon_Silver_Wyrmling, RollConstants.OneD6Plus5),
+                FormatEncounter(CreatureConstants.Dragon_Silver_GreatWyrm, RollConstants.One),
+            };
+
+            base.DistinctCollection("26", encounters);
+        }
+
+        [Test]
+        public void Level27Encounters()
+        {
+            var encounters = new[]
+            {
+                FormatEncounter(CreatureConstants.CelestialCreature, RollConstants.One),
+                FormatEncounter(CreatureConstants.FiendishCreature, RollConstants.One),
+                FormatEncounter(CreatureConstants.Character + "[24]", RollConstants.OneD3Plus1),
+                FormatEncounter(CreatureConstants.Ghost + "[25]", RollConstants.One),
+                FormatEncounter(CreatureConstants.Lich + "[25]", RollConstants.One),
+                FormatEncounter(CreatureConstants.Vampire + "[25]", RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Blue_GreatWyrm, RollConstants.OneD2,
+                    CreatureConstants.Dragon_Blue_MatureAdult, RollConstants.OneD3Plus1,
+                    CreatureConstants.Dragon_Blue_VeryYoung, RollConstants.OneD6Plus5),
+                FormatEncounter(CreatureConstants.Dragon_Red_GreatWyrm, RollConstants.OneD2),
+                FormatEncounter(CreatureConstants.Dragon_Bronze_GreatWyrm, RollConstants.OneD2,
+                    CreatureConstants.Dragon_Bronze_MatureAdult, RollConstants.OneD3Plus1,
+                    CreatureConstants.Dragon_Bronze_VeryYoung, RollConstants.OneD6Plus5),
+                FormatEncounter(CreatureConstants.Dragon_Copper_GreatWyrm, RollConstants.OneD2,
+                    CreatureConstants.Dragon_Copper_MatureAdult, RollConstants.OneD3Plus1,
+                    CreatureConstants.Dragon_Copper_VeryYoung, RollConstants.OneD6Plus5),
+                FormatEncounter(CreatureConstants.Dragon_Gold_Wyrm, RollConstants.OneD2,
+                    CreatureConstants.Dragon_Gold_Adult, RollConstants.OneD3Plus1,
+                    CreatureConstants.Dragon_Gold_Wyrmling, RollConstants.OneD6Plus5),
+                FormatEncounter(CreatureConstants.Dragon_Gold_GreatWyrm, RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Silver_GreatWyrm, RollConstants.OneD2),
+            };
+
+            base.DistinctCollection("27", encounters);
+        }
+
+        [Test]
+        public void Level28Encounters()
+        {
+            var encounters = new[]
+            {
+                FormatEncounter(CreatureConstants.CelestialCreature, RollConstants.One),
+                FormatEncounter(CreatureConstants.FiendishCreature, RollConstants.One),
+                FormatEncounter(CreatureConstants.Character + "[25]", RollConstants.OneD3Plus1),
+                FormatEncounter(CreatureConstants.Ghost + "[26]", RollConstants.One),
+                FormatEncounter(CreatureConstants.Lich + "[26]", RollConstants.One),
+                FormatEncounter(CreatureConstants.Vampire + "[26]", RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Red_GreatWyrm, RollConstants.OneD2,
+                    CreatureConstants.Dragon_Red_MatureAdult, RollConstants.OneD3Plus1,
+                    CreatureConstants.Dragon_Red_VeryYoung, RollConstants.OneD6Plus5),
+                FormatEncounter(CreatureConstants.Dragon_Gold_GreatWyrm, RollConstants.OneD2),
+                FormatEncounter(CreatureConstants.Dragon_Silver_GreatWyrm, RollConstants.OneD2,
+                    CreatureConstants.Dragon_Silver_MatureAdult, RollConstants.OneD3Plus1,
+                    CreatureConstants.Dragon_Silver_VeryYoung, RollConstants.OneD6Plus5),
+            };
+
+            base.DistinctCollection("28", encounters);
+        }
+
+        [Test]
+        public void Level29Encounters()
+        {
+            var encounters = new[]
+            {
+                FormatEncounter(CreatureConstants.CelestialCreature, RollConstants.One),
+                FormatEncounter(CreatureConstants.FiendishCreature, RollConstants.One),
+                FormatEncounter(CreatureConstants.Character + "[26]", RollConstants.OneD3Plus1),
+                FormatEncounter(CreatureConstants.Ghost + "[27]", RollConstants.One),
+                FormatEncounter(CreatureConstants.Lich + "[27]", RollConstants.One),
+                FormatEncounter(CreatureConstants.Vampire + "[27]", RollConstants.One),
+                FormatEncounter(CreatureConstants.Dragon_Gold_GreatWyrm, RollConstants.OneD2,
+                    CreatureConstants.Dragon_Gold_MatureAdult, RollConstants.OneD3Plus1,
+                    CreatureConstants.Dragon_Gold_VeryYoung, RollConstants.OneD6Plus5),
+            };
+
+            base.DistinctCollection("29", encounters);
+        }
+
+        [Test]
+        public void NoEncountersAppearInMoreThanOneLevel()
         {
             var levelEncounters = GetAllLevelEncounters();
             var genericEncounters = new[]
             {
-                FormatEncounter(CreatureConstants.Dragon, "1"),
                 FormatEncounter(CreatureConstants.CelestialCreature, "1"),
                 FormatEncounter(CreatureConstants.FiendishCreature, "1"),
                 FormatEncounter(CreatureConstants.Skeleton, "1"),

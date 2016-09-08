@@ -1,8 +1,6 @@
 ﻿using EncounterGen.Common;
 using EncounterGen.Domain.Selectors;
-using EncounterGen.Domain.Tables;
 using NUnit.Framework;
-using System.Linq;
 
 namespace EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
 {
@@ -12,51 +10,7 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
         [Test]
         public override void EntriesAreComplete()
         {
-            var entries = new[]
-            {
-                string.Empty,
-                EnvironmentConstants.Civilized,
-                EnvironmentConstants.Desert,
-                EnvironmentConstants.Dungeon,
-                EnvironmentConstants.Forest,
-                EnvironmentConstants.Hills,
-                EnvironmentConstants.Marsh,
-                EnvironmentConstants.Mountain,
-                EnvironmentConstants.Plains,
-                EnvironmentConstants.Temperatures.Cold,
-                EnvironmentConstants.Temperatures.Temperate,
-                EnvironmentConstants.Temperatures.Warm,
-                EnvironmentConstants.TimesOfDay.Day,
-                EnvironmentConstants.TimesOfDay.Night,
-                GroupConstants.Magic,
-                GroupConstants.Land,
-                EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Desert,
-                EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Dungeon,
-                EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Forest,
-                EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Hills,
-                EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Marsh,
-                EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain,
-                EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Plains,
-                EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert,
-                EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Dungeon,
-                EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest,
-                EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills,
-                EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh,
-                EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain,
-                EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains,
-                EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert,
-                EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Dungeon,
-                EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest,
-                EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills,
-                EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh,
-                EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain,
-                EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains,
-            };
-
-            var levels = Enumerable.Range(1, 24).Select(lvl => lvl.ToString());
-            var allEntries = entries.Union(levels);
-
-            AssertEntriesAreComplete(allEntries);
+            AssertEncounterGroupEntriesAreComplete();
         }
 
         [Test]

@@ -119,8 +119,14 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures
                 CreatureConstants.FiendishCreature,
                 CreatureConstants.Skeleton,
                 CreatureConstants.Zombie,
-                CreatureConstants.Dragon,
-                CreatureConstants.Character
+                CreatureConstants.Character,
+                CreatureConstants.Dragon_Black_VeryYoung,
+                CreatureConstants.Dragon_Blue_VeryYoung,
+                CreatureConstants.Dragon_Green_VeryYoung,
+                CreatureConstants.Dragon_Red_Wyrmling,
+                CreatureConstants.Dragon_White_Young,
+                CreatureConstants.Dragon_Brass_VeryYoung,
+                CreatureConstants.Dragon_Silver_Wyrmling,
             };
 
             base.DistinctCollection(CreatureConstants.DominatedCreature, subtypes);
@@ -145,7 +151,6 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures
                 CreatureConstants.Pyrohydra_10Heads,
                 CreatureConstants.CelestialCreature,
                 CreatureConstants.FiendishCreature,
-                CreatureConstants.Dragon,
                 CreatureConstants.Character,
                 CreatureConstants.Annis,
                 CreatureConstants.Xorn_Average,
@@ -166,7 +171,15 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures
                 CreatureConstants.Tendriculos,
                 CreatureConstants.WillOWisp,
                 CreatureConstants.Wyvern,
-                CreatureConstants.Xill
+                CreatureConstants.Xill,
+                CreatureConstants.Dragon_Blue_Young,
+                CreatureConstants.Dragon_White_Juvenile,
+                CreatureConstants.Dragon_Brass_Young,
+                CreatureConstants.Dragon_Black_Adult,
+                CreatureConstants.Dragon_Blue_YoungAdult,
+                CreatureConstants.Dragon_Green_YoungAdult,
+                CreatureConstants.Dragon_Copper_YoungAdult,
+                CreatureConstants.Dragon_Gold_Juvenile,
             };
 
             base.DistinctCollection(CreatureConstants.CharmedCreature, subtypes);
@@ -394,7 +407,6 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures
         {
             var creatures = new[]
             {
-                CreatureConstants.Dragon,
                 CreatureConstants.Dragon_Black_Wyrmling,
                 CreatureConstants.Dragon_Black_VeryYoung,
                 CreatureConstants.Dragon_Black_Young,

@@ -57,19 +57,19 @@ namespace EncounterGen.Tests.Integration.Stress
             Stress(() => AssertEncounterInRandomEnvironment());
         }
 
-        private Encounter MakeEncounterInRandomEnvironment(params string[] filters)
+        private Encounter MakeEncounterInRandomEnvironment(int minLevel = 1, int maxLevel = 20, params string[] filters)
         {
-            var parameters = Generate(RandomizeParameters, p => FilterVerifier.FiltersAreValid(p.Environment, p.Level, p.Temperature, p.TimeOfDay, filters));
+            var parameters = Generate(() => RandomizeParameters(minLevel, maxLevel), p => FilterVerifier.FiltersAreValid(p.Environment, p.Level, p.Temperature, p.TimeOfDay, filters));
             return EncounterGenerator.Generate(parameters.Environment, parameters.Level, parameters.Temperature, parameters.TimeOfDay, filters);
         }
 
-        private EncounterGeneratorParameters RandomizeParameters()
+        private EncounterGeneratorParameters RandomizeParameters(int minLevel, int maxLevel)
         {
             var parameters = new EncounterGeneratorParameters();
             parameters.Environment = GetRandomFrom(allEnvironments);
             parameters.Temperature = GetRandomFrom(allTemperatures);
             parameters.TimeOfDay = GetRandomFrom(allTimesOfDay);
-            parameters.Level = Random.Next(1, 21);
+            parameters.Level = Random.Next(minLevel, maxLevel + 1);
 
             return parameters;
         }
@@ -160,7 +160,7 @@ namespace EncounterGen.Tests.Integration.Stress
 
         private void AssertEncounterInRandomEnvironment(params string[] filters)
         {
-            var encounter = MakeEncounterInRandomEnvironment(filters);
+            var encounter = MakeEncounterInRandomEnvironment(filters: filters);
             AssertEncounter(encounter);
         }
 
@@ -269,14 +269,88 @@ namespace EncounterGen.Tests.Integration.Stress
             Stress(() => StressCharacterPercentage(charactersOccurred));
 
             var percentage = charactersOccurred.Count(o => o) / (double)charactersOccurred.Count;
+            Assert.That(percentage, Is.Positive, $"{charactersOccurred.Count} encounters total");
             Assert.That(percentage, Is.LessThan(.5), $"{charactersOccurred.Count} encounters total");
+            Console.WriteLine("Actual percentage was {0:P}", percentage);
         }
 
         private void StressCharacterPercentage(List<bool> charactersOccurred)
         {
             var encounter = MakeEncounterInRandomEnvironment();
-            var charactersHappened = encounter.Characters.Any();
+            var charactersHappened = CharacterOccurred(encounter);
             charactersOccurred.Add(charactersHappened);
+        }
+
+        private bool CharacterOccurred(Encounter encounter)
+        {
+            return encounter.Characters.Any();
+        }
+
+        [Test]
+        public void DragonsOccurAMinorityOfTheTime()
+        {
+            var dragonsOccurred = new List<bool>();
+            Stress(() => StressDragonPercentage(dragonsOccurred));
+
+            var percentage = dragonsOccurred.Count(o => o) / (double)dragonsOccurred.Count;
+            Assert.That(percentage, Is.Positive, $"{dragonsOccurred.Count} encounters total");
+            Assert.That(percentage, Is.LessThan(.5), $"{dragonsOccurred.Count} encounters total");
+            Console.WriteLine("Actual percentage was {0:P}", percentage);
+        }
+
+        private void StressDragonPercentage(List<bool> dragonOccurred)
+        {
+            var encounter = MakeEncounterInRandomEnvironment();
+            var dragonsHappened = DragonOccured(encounter);
+            dragonOccurred.Add(dragonsHappened);
+        }
+
+        private bool DragonOccured(Encounter encounter)
+        {
+            return encounter.Creatures.First().Name.Contains("dragon");
+        }
+
+        [Test]
+        public void DragonsAndCharactersOccurAMinorityOfTheTime()
+        {
+            var dragonOrCharacterOccurred = new List<bool>();
+            Stress(() => StressDragonAndCharacterPercentage(dragonOrCharacterOccurred));
+
+            var percentage = dragonOrCharacterOccurred.Count(o => o) / (double)dragonOrCharacterOccurred.Count;
+            Assert.That(percentage, Is.Positive, $"{dragonOrCharacterOccurred.Count} encounters total");
+            Assert.That(percentage, Is.LessThan(.5), $"{dragonOrCharacterOccurred.Count} encounters total");
+            Console.WriteLine("Actual percentage was {0:P}", percentage);
+        }
+
+        private void StressDragonAndCharacterPercentage(List<bool> dragonOrCharacterOccurred, int maxLevel = 20, int minLevel = 1)
+        {
+            var encounter = MakeEncounterInRandomEnvironment(minLevel, maxLevel);
+            var dragonOrCharactersHappened = DragonOccured(encounter) || CharacterOccurred(encounter);
+            dragonOrCharacterOccurred.Add(dragonOrCharactersHappened);
+        }
+
+        [Test]
+        public void DragonsAndCharactersOccurAMinorityOfTheTimeForAllButHighest()
+        {
+            var dragonOrCharacterOccurred = new List<bool>();
+            Stress(() => StressDragonAndCharacterPercentage(dragonOrCharacterOccurred, 17));
+
+            var percentage = dragonOrCharacterOccurred.Count(o => o) / (double)dragonOrCharacterOccurred.Count;
+            Assert.That(percentage, Is.Positive, $"{dragonOrCharacterOccurred.Count} encounters total");
+            Assert.That(percentage, Is.LessThan(.5), $"{dragonOrCharacterOccurred.Count} encounters total");
+            Console.WriteLine("Actual percentage was {0:P}", percentage);
+        }
+
+        [Test]
+        public void DragonsAndCharactersOccurAMajorityOfTheTimeForHighest()
+        {
+            var dragonOrCharacterOccurred = new List<bool>();
+            Stress(() => StressDragonAndCharacterPercentage(dragonOrCharacterOccurred, minLevel: 18));
+
+            var percentage = dragonOrCharacterOccurred.Count(o => o) / (double)dragonOrCharacterOccurred.Count;
+            Assert.That(percentage, Is.LessThan(1), $"{dragonOrCharacterOccurred.Count} encounters total");
+            Assert.That(percentage, Is.GreaterThan(.5), $"{dragonOrCharacterOccurred.Count} encounters total");
+            Console.WriteLine("Actual percentage was {0:P}", percentage);
         }
     }
 }

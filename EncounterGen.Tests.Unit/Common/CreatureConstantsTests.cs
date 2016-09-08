@@ -118,7 +118,6 @@ namespace EncounterGen.Tests.Unit.Common
         [TestCase(CreatureConstants.DominatedCreature, "Dominated creature")]
         [TestCase(CreatureConstants.Donkey, "Donkey")]
         [TestCase(CreatureConstants.Doppelganger, "Doppelganger")]
-        [TestCase(CreatureConstants.Dragon, "Dragon")]
         [TestCase(CreatureConstants.Dragon_Black_Wyrmling, "Wyrmling black dragon")]
         [TestCase(CreatureConstants.Dragon_Black_VeryYoung, "Very young black dragon")]
         [TestCase(CreatureConstants.Dragon_Black_Young, "Young black dragon")]

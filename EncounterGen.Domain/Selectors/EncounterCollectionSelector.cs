@@ -71,6 +71,7 @@ namespace EncounterGen.Domain.Selectors
             var magicEncounters = Enumerable.Empty<string>();
             var landEncounters = Enumerable.Empty<string>();
             var specificEncounters = Enumerable.Empty<string>();
+            var dragonEncounters = Enumerable.Empty<string>();
             var environmentEncounters = collectionSelector.SelectFrom(TableNameConstants.EncounterGroups, environment);
             var allEncounters = environmentEncounters;
 
@@ -80,16 +81,17 @@ namespace EncounterGen.Domain.Selectors
                 landEncounters = collectionSelector.SelectFrom(TableNameConstants.EncounterGroups, GroupConstants.Land);
                 temperatureEncounters = collectionSelector.SelectFrom(TableNameConstants.EncounterGroups, temperature);
                 specificEncounters = collectionSelector.SelectFrom(TableNameConstants.EncounterGroups, temperature + environment);
+                dragonEncounters = collectionSelector.SelectFrom(TableNameConstants.EncounterGroups, GroupConstants.Dragon);
 
-                var wildlife = temperatureEncounters.Union(magicEncounters).Union(landEncounters).Union(specificEncounters);
+                var wildlife = temperatureEncounters.Union(magicEncounters).Union(landEncounters).Union(specificEncounters).Union(dragonEncounters);
                 allEncounters = allEncounters.Union(wildlife);
             }
 
             var validEncounters = GetValidEncounters(allEncounters, level, timeOfDay);
             weightedEncounters.AddRange(validEncounters);
 
-            var validNonMagicEncounters = validEncounters.Except(magicEncounters);
-            weightedEncounters.AddRange(validNonMagicEncounters);
+            var validCommonEncounters = validEncounters.Except(magicEncounters).Except(dragonEncounters);
+            weightedEncounters.AddRange(validCommonEncounters);
 
             var validEnvironmentEncounters = validEncounters.Intersect(environmentEncounters);
             weightedEncounters.AddRange(validEnvironmentEncounters);

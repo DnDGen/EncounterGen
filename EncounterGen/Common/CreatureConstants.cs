@@ -134,7 +134,6 @@
         public const string DominatedCreature = "Dominated creature";
         public const string Donkey = "Donkey";
         public const string Doppelganger = "Doppelganger";
-        public const string Dragon = "Dragon";
         public const string Dragon_Black_Wyrmling = "Wyrmling black dragon";
         public const string Dragon_Black_VeryYoung = "Very young black dragon";
         public const string Dragon_Black_Young = "Young black dragon";

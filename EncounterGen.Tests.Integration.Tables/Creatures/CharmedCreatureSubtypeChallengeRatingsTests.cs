@@ -51,7 +51,15 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures
                 CreatureConstants.Tendriculos,
                 CreatureConstants.WillOWisp,
                 CreatureConstants.Wyvern,
-                CreatureConstants.Xill
+                CreatureConstants.Xill,
+                CreatureConstants.Dragon_Blue_Young,
+                CreatureConstants.Dragon_White_Juvenile,
+                CreatureConstants.Dragon_Brass_Young,
+                CreatureConstants.Dragon_Black_Adult,
+                CreatureConstants.Dragon_Blue_YoungAdult,
+                CreatureConstants.Dragon_Green_YoungAdult,
+                CreatureConstants.Dragon_Copper_YoungAdult,
+                CreatureConstants.Dragon_Gold_Juvenile,
             };
 
             AssertEntriesAreComplete(names);
@@ -89,6 +97,14 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures
         [TestCase(CreatureConstants.WillOWisp, ChallengeRatingConstants.Six)]
         [TestCase(CreatureConstants.Wyvern, ChallengeRatingConstants.Six)]
         [TestCase(CreatureConstants.Xill, ChallengeRatingConstants.Six)]
+        [TestCase(CreatureConstants.Dragon_Blue_Young, ChallengeRatingConstants.Six)]
+        [TestCase(CreatureConstants.Dragon_White_Juvenile, ChallengeRatingConstants.Six)]
+        [TestCase(CreatureConstants.Dragon_Brass_Young, ChallengeRatingConstants.Six)]
+        [TestCase(CreatureConstants.Dragon_Black_Adult, ChallengeRatingConstants.Eleven)]
+        [TestCase(CreatureConstants.Dragon_Blue_YoungAdult, ChallengeRatingConstants.Eleven)]
+        [TestCase(CreatureConstants.Dragon_Green_YoungAdult, ChallengeRatingConstants.Eleven)]
+        [TestCase(CreatureConstants.Dragon_Copper_YoungAdult, ChallengeRatingConstants.Eleven)]
+        [TestCase(CreatureConstants.Dragon_Gold_Juvenile, ChallengeRatingConstants.Eleven)]
         public override void DistinctCollection(string entry, params string[] items)
         {
             base.DistinctCollection(entry, items);
