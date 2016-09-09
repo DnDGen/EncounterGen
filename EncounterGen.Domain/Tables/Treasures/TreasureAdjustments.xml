@@ -2,13 +2,19 @@
 
 <collections>
   <collection>
+    <entry>Aasimar warrior</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
     <entry>Aboleth</entry>
     <item>2</item>
     <item>2</item>
     <item>2</item>
   </collection>
   <collection>
-    <entry>Achaierais</entry>
+    <entry>Achaierai</entry>
     <item>2</item>
     <item>2</item>
     <item>2</item>
@@ -146,6 +152,18 @@
     <item>1</item>
   </collection>
   <collection>
+    <entry>Babau</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Baboon</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
     <entry>Badger</entry>
     <item>0</item>
     <item>0</item>
@@ -176,7 +194,7 @@
     <item>2</item>
   </collection>
   <collection>
-    <entry>Barbazu</entry>
+    <entry>Bearded Devil</entry>
     <item>1</item>
     <item>1</item>
     <item>1</item>
@@ -188,10 +206,10 @@
     <item>0</item>
   </collection>
   <collection>
-    <entry>Baboon</entry>
-    <item>0</item>
-    <item>0</item>
-    <item>0</item>
+    <entry>Abyssal greater basilisk</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
   </collection>
   <collection>
     <entry>Giant bee</entry>
@@ -294,6 +312,12 @@
     <item>0</item>
     <item>0</item>
     <item>0</item>
+  </collection>
+  <collection>
+    <entry>Bralani</entry>
+    <item>0</item>
+    <item>2</item>
+    <item>1</item>
   </collection>
   <collection>
     <entry>Bugbear</entry>
@@ -416,6 +440,90 @@
     <item>0</item>
   </collection>
   <collection>
+    <entry>Adept</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Aristocrat</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Expert</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Barbarian</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Bard</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Cleric</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Druid</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Fighter</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Monk</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Paladin</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Ranger</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Rogue</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Sorcerer</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Wizard</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
     <entry>Colossal monstrous centipede</entry>
     <item>0</item>
     <item>0</item>
@@ -434,7 +542,7 @@
     <item>0.5</item>
   </collection>
   <collection>
-    <entry>Cornugon</entry>
+    <entry>Horned Devil</entry>
     <item>1</item>
     <item>2</item>
     <item>1</item>
@@ -560,13 +668,13 @@
     <item>0.5</item>
   </collection>
   <collection>
-    <entry>Djinn</entry>
+    <entry>Djinni</entry>
     <item>1</item>
     <item>1</item>
     <item>1</item>
   </collection>
   <collection>
-    <entry>Noble djinn</entry>
+    <entry>Noble djinni</entry>
     <item>1</item>
     <item>1</item>
     <item>1</item>
@@ -1358,6 +1466,12 @@
     <item>2</item>
   </collection>
   <collection>
+    <entry>Drow warrior</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
     <entry>Dryad</entry>
     <item>1</item>
     <item>1</item>
@@ -1370,7 +1484,7 @@
     <item>1</item>
   </collection>
   <collection>
-    <entry>Dwarf</entry>
+    <entry>Duergar warrior</entry>
     <item>1</item>
     <item>2</item>
     <item>1</item>
@@ -1382,7 +1496,7 @@
     <item>1</item>
   </collection>
   <collection>
-    <entry>Efreet</entry>
+    <entry>Efreeti</entry>
     <item>1</item>
     <item>2</item>
     <item>1</item>
@@ -1550,31 +1664,13 @@
     <item>0</item>
   </collection>
   <collection>
-    <entry>Elf</entry>
-    <item>1</item>
-    <item>1</item>
-    <item>1</item>
-  </collection>
-  <collection>
     <entry>Elf warrior</entry>
     <item>1</item>
     <item>1</item>
     <item>1</item>
   </collection>
   <collection>
-    <entry>Halfling</entry>
-    <item>1</item>
-    <item>1</item>
-    <item>1</item>
-  </collection>
-  <collection>
     <entry>Halfling warrior</entry>
-    <item>1</item>
-    <item>1</item>
-    <item>1</item>
-  </collection>
-  <collection>
-    <entry>Gnome</entry>
     <item>1</item>
     <item>1</item>
     <item>1</item>
@@ -1646,6 +1742,12 @@
     <item>1</item>
   </collection>
   <collection>
+    <entry>Formian queen</entry>
+    <item>2</item>
+    <item>2</item>
+    <item>2</item>
+  </collection>
+  <collection>
     <entry>Frost giant</entry>
     <item>1</item>
     <item>1</item>
@@ -1688,7 +1790,7 @@
     <item>0.5</item>
   </collection>
   <collection>
-    <entry>Gelugon</entry>
+    <entry>Ice Devil</entry>
     <item>1</item>
     <item>2</item>
     <item>1</item>
@@ -1748,16 +1850,22 @@
     <item>0</item>
   </collection>
   <collection>
-    <entry>Giant soldier ant</entry>
+    <entry>Giant ant soldier</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
   </collection>
   <collection>
-    <entry>Giant worker ant</entry>
+    <entry>Giant ant worker</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
+  </collection>
+  <collection>
+    <entry>Giant ant queen</entry>
+    <item>0.1</item>
+    <item>0.5</item>
+    <item>0.5</item>
   </collection>
   <collection>
     <entry>Gibbering mouther</entry>
@@ -1850,7 +1958,7 @@
     <item>2</item>
   </collection>
   <collection>
-    <entry>Hamatula</entry>
+    <entry>Barbed Devil</entry>
     <item>1</item>
     <item>1</item>
     <item>1</item>
@@ -1970,12 +2078,6 @@
     <item>0</item>
   </collection>
   <collection>
-    <entry>Zombie</entry>
-    <item>0</item>
-    <item>0</item>
-    <item>0</item>
-  </collection>
-  <collection>
     <entry>Skeleton</entry>
     <item>0</item>
     <item>0</item>
@@ -1988,7 +2090,7 @@
     <item>0.5</item>
   </collection>
   <collection>
-    <entry>Dog (Hyena)</entry>
+    <entry>Hyena</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
@@ -2018,13 +2120,19 @@
     <item>1</item>
   </collection>
   <collection>
+    <entry>Kolyarut</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
     <entry>Krenshar</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
   </collection>
   <collection>
-    <entry>Kyton</entry>
+    <entry>Chain Devil</entry>
     <item>1</item>
     <item>1</item>
     <item>1</item>
@@ -2084,6 +2192,12 @@
     <item>0</item>
   </collection>
   <collection>
+    <entry>Leonal</entry>
+    <item>0</item>
+    <item>2</item>
+    <item>1</item>
+  </collection>
+  <collection>
     <entry>Leopard</entry>
     <item>0</item>
     <item>0</item>
@@ -2091,15 +2205,21 @@
   </collection>
   <collection>
     <entry>Lich</entry>
-    <item>0</item>
-    <item>0</item>
-    <item>0</item>
+    <item>1</item>
+    <item>2</item>
+    <item>2</item>
   </collection>
   <collection>
     <entry>Lillend</entry>
     <item>1</item>
     <item>1</item>
     <item>1</item>
+  </collection>
+  <collection>
+    <entry>Livestock</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
   </collection>
   <collection>
     <entry>Lizardfolk</entry>
@@ -2124,6 +2244,12 @@
     <item>2</item>
     <item>1</item>
     <item>2</item>
+  </collection>
+  <collection>
+    <entry>Marut</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
   </collection>
   <collection>
     <entry>Medium monstrous centipede</entry>
@@ -2288,7 +2414,7 @@
     <item>1</item>
   </collection>
   <collection>
-    <entry>Osyluth</entry>
+    <entry>Bone Devil</entry>
     <item>1</item>
     <item>1</item>
     <item>1</item>
@@ -2612,6 +2738,12 @@
     <item>1</item>
   </collection>
   <collection>
+    <entry>Stone giant elder</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
     <entry>Storm giant</entry>
     <item>2</item>
     <item>1</item>
@@ -2625,6 +2757,18 @@
   </collection>
   <collection>
     <entry>Average salamander</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Shield guardian</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Svirfneblin warrior</entry>
     <item>1</item>
     <item>1</item>
     <item>1</item>
@@ -2646,6 +2790,12 @@
     <item>0</item>
     <item>0</item>
     <item>0</item>
+  </collection>
+  <collection>
+    <entry>Tiefling warrior</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
   </collection>
   <collection>
     <entry>Tiger</entry>
@@ -2763,9 +2913,9 @@
   </collection>
   <collection>
     <entry>Vampire</entry>
-    <item>0</item>
-    <item>0</item>
-    <item>0</item>
+    <item>2</item>
+    <item>2</item>
+    <item>2</item>
   </collection>
   <collection>
     <entry>Vargouille</entry>
@@ -2930,9 +3080,33 @@
     <item>0</item>
   </collection>
   <collection>
-    <entry>Yuan-ti</entry>
+    <entry>Yuan-ti Pureblood</entry>
     <item>2</item>
     <item>2</item>
     <item>2</item>
+  </collection>
+  <collection>
+    <entry>Yuan-ti Halfblood</entry>
+    <item>2</item>
+    <item>2</item>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Yuan-ti Abomination</entry>
+    <item>2</item>
+    <item>2</item>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Zelekhut</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Zombie</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
   </collection>
 </collections>

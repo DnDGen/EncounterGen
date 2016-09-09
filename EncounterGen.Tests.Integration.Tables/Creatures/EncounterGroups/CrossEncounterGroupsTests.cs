@@ -140,6 +140,15 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
         [TestCase(18)]
         [TestCase(19)]
         [TestCase(20)]
+        [TestCase(21)]
+        [TestCase(22)]
+        [TestCase(23)]
+        [TestCase(24)]
+        [TestCase(25)]
+        [TestCase(26)]
+        [TestCase(27)]
+        [TestCase(28)]
+        [TestCase(29)]
         public void AllLevelEncountersArePresentInOtherCategories(int level)
         {
             var levelEncounters = GetCollection(level.ToString());
@@ -3108,6 +3117,13 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
             var totalPercentage = dragonPercentage + characterPercentage;
             Assert.That(totalPercentage, Is.GreaterThan(.5));
             Console.WriteLine("Actual percentage was {0:P}", totalPercentage);
+        }
+
+        [TestCase(EnvironmentConstants.Dungeon, EnvironmentConstants.Temperatures.Temperate, EnvironmentConstants.TimesOfDay.Night, 10, CreatureConstants.Types.Fey)]
+        public void FilterIsValid(string environment, string temperature, string timeOfDay, int level, string filter)
+        {
+            var filterIsValid = FilterVerifier.FiltersAreValid(environment, level, temperature, timeOfDay, filter);
+            Assert.That(filterIsValid, Is.True);
         }
     }
 }

@@ -32,14 +32,11 @@
     <item>Allip</item>
     <item>Mohrg</item>
     <item>Devourer</item>
-    <item>Nightcrawler (nightshade)</item>
-    <item>Nightwalker (nightshade)</item>
-    <item>Nightwing (nightshade)</item>
-    <item>Shadow</item>
-    <item>Greater shadow</item>
     <item>Nightcrawler</item>
     <item>Nightwalker</item>
     <item>Nightwing</item>
+    <item>Shadow</item>
+    <item>Greater shadow</item>
     <item>Skeleton (Hill giant)</item>
     <item>Skeleton (Human)</item>
     <item>Skeleton (Ogre)</item>
@@ -126,7 +123,7 @@
     <item>Light horse</item>
     <item>Heavy warhorse</item>
     <item>Light warhorse</item>
-    <item>Dog (Hyena)</item>
+    <item>Hyena</item>
     <item>Leopard</item>
     <item>Pony</item>
     <item>Warpony</item>
@@ -159,18 +156,19 @@
   </collection>
   <collection>
     <entry>Humanoid</entry>
+    <item>Aasimar warrior</item>
+    <item>Tiefling warrior</item>
     <item>Bugbear</item>
     <item>Character</item>
     <item>NPC</item>
     <item>NPC (Traveler)</item>
-    <item>Dwarf</item>
     <item>Dwarf warrior</item>
-    <item>Elf</item>
+    <item>Duergar warrior</item>
     <item>Elf warrior</item>
-    <item>Halfling</item>
+    <item>Drow warrior</item>
     <item>Halfling warrior</item>
-    <item>Gnome</item>
     <item>Gnome warrior</item>
+    <item>Svirfneblin warrior</item>
     <item>Gnoll</item>
     <item>Goblin</item>
     <item>Hobgoblin</item>
@@ -214,17 +212,13 @@
     <item>Centaur</item>
     <item>Derro</item>
     <item>Doppelganger</item>
-    <item>Yuan-ti</item>
-    <item>Yuan-ti (Abomination)</item>
-    <item>Yuan-ti (Halfblood)</item>
-    <item>Yuan-ti (Pureblood)</item>
+    <item>Yuan-ti Abomination</item>
+    <item>Yuan-ti Halfblood</item>
+    <item>Yuan-ti Pureblood</item>
     <item>Gargoyle</item>
     <item>Grimlock</item>
-    <item>Annis (hag)</item>
     <item>Annis</item>
-    <item>Green hag (hag)</item>
     <item>Green hag</item>
-    <item>Sea hag (hag)</item>
     <item>Sea hag</item>
     <item>Harpy</item>
     <item>Werebear</item>
@@ -238,8 +232,9 @@
   </collection>
   <collection>
     <entry>Vermin</entry>
-    <item>Giant soldier ant</item>
-    <item>Giant worker ant</item>
+    <item>Giant ant soldier</item>
+    <item>Giant ant worker</item>
+    <item>Giant ant queen</item>
     <item>Giant bee</item>
     <item>Giant bombardier beetle</item>
     <item>Giant fire beetle</item>
@@ -270,18 +265,20 @@
   </collection>
   <collection>
     <entry>Outsider</entry>
-    <item>Achaierais</item>
-    <item>Astral deva (celestial)</item>
+    <item>Abyssal greater basilisk</item>
+    <item>Formian queen</item>
+    <item>Titan</item>
+    <item>Marut</item>
+    <item>Kolyarut</item>
+    <item>Bralani</item>
+    <item>Zelekhut</item>
+    <item>Leonal</item>
+    <item>Achaierai</item>
     <item>Astral deva</item>
-    <item>Planetar (celestial)</item>
     <item>Planetar</item>
-    <item>Solar (celestial)</item>
     <item>Solar</item>
-    <item>Hound archon (celestial)</item>
     <item>Hound archon</item>
-    <item>Lantern archon (celestial)</item>
     <item>Lantern archon</item>
-    <item>Trumpet archon (celestial)</item>
     <item>Trumpet archon</item>
     <item>Adult arrowhawk</item>
     <item>Elder arrowhawk</item>
@@ -292,50 +289,36 @@
     <item>Greater barghest</item>
     <item>Chaos beast</item>
     <item>Couatl</item>
-    <item>Babau (demon)</item>
     <item>Babau</item>
-    <item>Balor (demon)</item>
     <item>Balor</item>
-    <item>Bebilith (demon)</item>
     <item>Bebilith</item>
-    <item>Dretch (demon)</item>
     <item>Dretch</item>
     <item>Rakshasa</item>
-    <item>Glabrezu (demon)</item>
     <item>Glabrezu</item>
-    <item>Hezrou (demon)</item>
     <item>Hezrou</item>
-    <item>Marilith (demon)</item>
     <item>Marilith</item>
-    <item>Nalfeshnee (demon)</item>
     <item>Nalfeshnee</item>
-    <item>Quasit (demon)</item>
     <item>Quasit</item>
-    <item>Succubus (demon)</item>
     <item>Succubus</item>
-    <item>Vrock (demon)</item>
     <item>Vrock</item>
-    <item>Hamatula (devil)</item>
-    <item>Hamatula</item>
-    <item>Barbazu (devil)</item>
-    <item>Barbazu</item>
-    <item>Osyluth (devil)</item>
-    <item>Osyluth</item>
+    <item>Barbed Devil (Hamatula)</item>
+    <item>Bearded Devil (Barbazu)</item>
+    <item>Bone Devil (Osyluth)</item>
+    <item>Chain Devil (Kyton)</item>
+    <item>Hellcat (Bezekira)</item>
+    <item>Horned Devil (Cornugon)</item>
+    <item>Ice Devil (Gelugon)</item>
+    <item>Barbed Devil</item>
+    <item>Bearded Devil</item>
+    <item>Bone Devil</item>
     <item>Retriever</item>
-    <item>Kyton (devil)</item>
-    <item>Kyton</item>
-    <item>Erinyes (devil)</item>
+    <item>Chain Devil</item>
     <item>Erinyes</item>
     <item>Hellcat</item>
-    <item>Cornugon (devil)</item>
-    <item>Cornugon</item>
-    <item>Gelugon (devil)</item>
-    <item>Gelugon</item>
-    <item>Imp (devil)</item>
+    <item>Horned Devil</item>
+    <item>Ice Devil</item>
     <item>Imp</item>
-    <item>Lemure (devil)</item>
     <item>Lemure</item>
-    <item>Pit fiend (devil)</item>
     <item>Pit fiend</item>
     <item>Blue slaad</item>
     <item>Death slaad</item>
@@ -346,11 +329,10 @@
     <item>Formian taskmaster</item>
     <item>Formian warrior</item>
     <item>Formian worker</item>
-    <item>Djinn</item>
-    <item>Noble djinn</item>
-    <item>Efreet</item>
+    <item>Djinni</item>
+    <item>Noble djinni</item>
+    <item>Efreeti</item>
     <item>Janni</item>
-    <item>Ghaele (celestial)</item>
     <item>Ghaele</item>
     <item>Hell hound</item>
     <item>Nessian warhound</item>
@@ -370,6 +352,7 @@
     <item>Night hag</item>
     <item>Rast</item>
     <item>Nightmare</item>
+    <item>Nightmare (Cauchemar)</item>
     <item>Ravid</item>
     <item>Average salamander</item>
     <item>Flamebrother salamander</item>
@@ -585,11 +568,18 @@
     <item>Stone golem</item>
     <item>Greater stone golem</item>
     <item>Homunculus</item>
+    <item>Shield guardian</item>
+    <item>Marut</item>
+    <item>Retriever</item>
+    <item>Kolyarut</item>
+    <item>Zelekhut</item>
   </collection>
   <collection>
     <entry>Use Subtype for Treasure</entry>
     <item>Celestial creature</item>
     <item>Fiendish creature</item>
+    <item>Charmed creature</item>
+    <item>Dominated creature</item>
   </collection>
   <collection>
     <entry>Mephit</entry>
@@ -608,8 +598,9 @@
     <entry>Celestial creature</entry>
     <item>Androsphinx</item>
     <item>Ankheg</item>
-    <item>Giant soldier ant</item>
-    <item>Giant worker ant</item>
+    <item>Giant ant soldier</item>
+    <item>Giant ant worker</item>
+    <item>Giant ant queen</item>
     <item>Ape</item>
     <item>Dire ape</item>
     <item>Aranea</item>
@@ -725,11 +716,11 @@
     <item>Great wyrm silver dragon</item>
     <item>Dragonne</item>
     <item>Dryad</item>
-    <item>Dwarf</item>
+    <item>Dwarf warrior</item>
     <item>Eagle</item>
     <item>Giant eagle</item>
     <item>Elephant</item>
-    <item>Elf</item>
+    <item>Elf warrior</item>
     <item>Giant fire beetle</item>
     <item>Frost worm</item>
     <item>Cloud giant</item>
@@ -737,14 +728,14 @@
     <item>Storm giant</item>
     <item>Gibbering mouther</item>
     <item>Girallon</item>
-    <item>Gnome</item>
+    <item>Gnome warrior</item>
     <item>Gorgon</item>
     <item>Gray render</item>
     <item>Grick</item>
     <item>Griffon</item>
     <item>Grig</item>
     <item>Gynosphinx</item>
-    <item>Halfling</item>
+    <item>Halfling warrior</item>
     <item>Hawk</item>
     <item>Heavy horse</item>
     <item>Heavy warhorse</item>
@@ -759,7 +750,7 @@
     <item>Hydra (10 heads)</item>
     <item>Hydra (11 heads)</item>
     <item>Hydra (12 heads)</item>
-    <item>Dog (Hyena)</item>
+    <item>Hyena</item>
     <item>Krenshar</item>
     <item>Lammasu</item>
     <item>Leopard</item>
@@ -930,9 +921,10 @@
   <collection>
     <entry>Fiendish creature</entry>
     <item>Ankheg</item>
-    <item>Annis (hag)</item>
-    <item>Giant soldier ant</item>
-    <item>Giant worker ant</item>
+    <item>Annis</item>
+    <item>Giant ant soldier</item>
+    <item>Giant ant worker</item>
+    <item>Giant ant queen</item>
     <item>Ape</item>
     <item>Dire ape</item>
     <item>Aranea</item>
@@ -1052,10 +1044,10 @@
     <item>Great wyrm white dragon</item>
     <item>Dragonne</item>
     <item>Drider</item>
-    <item>Dwarf</item>
+    <item>Dwarf warrior</item>
     <item>Eagle</item>
     <item>Elephant</item>
-    <item>Elf</item>
+    <item>Elf warrior</item>
     <item>Ettercap</item>
     <item>Ettin</item>
     <item>Giant fire beetle</item>
@@ -1072,12 +1064,12 @@
     <item>Goblin</item>
     <item>Gorgon</item>
     <item>Gray render</item>
-    <item>Green hag (hag)</item>
+    <item>Green hag</item>
     <item>Grick</item>
     <item>Griffon</item>
     <item>Grimlock</item>
     <item>Gynosphinx</item>
-    <item>Halfling</item>
+    <item>Halfling warrior</item>
     <item>Harpy</item>
     <item>Hawk</item>
     <item>Hieracosphinx</item>
@@ -1095,7 +1087,7 @@
     <item>Hydra (10 heads)</item>
     <item>Hydra (11 heads)</item>
     <item>Hydra (12 heads)</item>
-    <item>Dog (Hyena)</item>
+    <item>Hyena</item>
     <item>Kobold</item>
     <item>Krenshar</item>
     <item>Lamia</item>
@@ -1154,7 +1146,7 @@
     <item>Small monstrous scorpion</item>
     <item>Tiny monstrous scorpion</item>
     <item>Scorpionfolk</item>
-    <item>Sea hag (hag)</item>
+    <item>Sea hag</item>
     <item>Shambling mound</item>
     <item>Shocker lizard</item>
     <item>Shrieker</item>
@@ -1197,14 +1189,14 @@
     <item>Dire wolverine</item>
     <item>Wyvern</item>
     <item>Yrthak</item>
-    <item>Yuan-ti (Abomination)</item>
-    <item>Yuan-ti (Halfblood)</item>
-    <item>Yuan-ti (Pureblood)</item>
+    <item>Yuan-ti Abomination</item>
+    <item>Yuan-ti Halfblood</item>
+    <item>Yuan-ti Pureblood</item>
   </collection>
   <collection>
     <entry>Skeleton</entry>
     <item>Androsphinx</item>
-    <item>Annis (hag)</item>
+    <item>Annis</item>
     <item>Ape</item>
     <item>Dire ape</item>
     <item>Athach</item>
@@ -1305,9 +1297,9 @@
     <item>Adult white dragon</item>
     <item>Dragonne</item>
     <item>Dryad</item>
-    <item>Dwarf</item>
+    <item>Dwarf warrior</item>
     <item>Elephant</item>
-    <item>Elf</item>
+    <item>Elf warrior</item>
     <item>Ettercap</item>
     <item>Ettin</item>
     <item>Cloud giant</item>
@@ -1319,15 +1311,15 @@
     <item>Stone giant elder</item>
     <item>Girallon</item>
     <item>Gnoll</item>
-    <item>Gnome</item>
+    <item>Gnome warrior</item>
     <item>Goblin</item>
     <item>Gorgon</item>
     <item>Gray render</item>
-    <item>Green hag (hag)</item>
+    <item>Green hag</item>
     <item>Griffon</item>
     <item>Grimlock</item>
     <item>Gynosphinx</item>
-    <item>Halfling</item>
+    <item>Halfling warrior</item>
     <item>Harpy</item>
     <item>Hieracosphinx</item>
     <item>Hobgoblin</item>
@@ -1344,7 +1336,7 @@
     <item>Hydra (10 heads)</item>
     <item>Hydra (11 heads)</item>
     <item>Hydra (12 heads)</item>
-    <item>Dog (Hyena)</item>
+    <item>Hyena</item>
     <item>Kobold</item>
     <item>Krenshar</item>
     <item>Lamia</item>
@@ -1383,7 +1375,7 @@
     <item>Razor boar</item>
     <item>Rhinoceras</item>
     <item>Satyr</item>
-    <item>Sea hag (hag)</item>
+    <item>Sea hag</item>
     <item>Shocker lizard</item>
     <item>Tiger</item>
     <item>Dire tiger</item>
@@ -1400,14 +1392,14 @@
     <item>Wolverine</item>
     <item>Dire wolverine</item>
     <item>Worg</item>
-    <item>Yuan-ti (Abomination)</item>
-    <item>Yuan-ti (Halfblood)</item>
-    <item>Yuan-ti (Pureblood)</item>
+    <item>Yuan-ti Abomination</item>
+    <item>Yuan-ti Halfblood</item>
+    <item>Yuan-ti Pureblood</item>
   </collection>
   <collection>
     <entry>Zombie</entry>
     <item>Androsphinx</item>
-    <item>Annis (hag)</item>
+    <item>Annis</item>
     <item>Ape</item>
     <item>Dire ape</item>
     <item>Athach</item>
@@ -1478,24 +1470,24 @@
     <item>Cloaker</item>
     <item>Dragonne</item>
     <item>Dryad</item>
-    <item>Dwarf</item>
+    <item>Dwarf warrior</item>
     <item>Eagle</item>
     <item>Giant eagle</item>
     <item>Elephant</item>
-    <item>Elf</item>
+    <item>Elf warrior</item>
     <item>Ettercap</item>
     <item>Ettin</item>
     <item>Girallon</item>
     <item>Gnoll</item>
-    <item>Gnome</item>
+    <item>Gnome warrior</item>
     <item>Goblin</item>
     <item>Gorgon</item>
     <item>Gray render</item>
-    <item>Green hag (hag)</item>
+    <item>Green hag</item>
     <item>Griffon</item>
     <item>Grimlock</item>
     <item>Gynosphinx</item>
-    <item>Halfling</item>
+    <item>Halfling warrior</item>
     <item>Harpy</item>
     <item>Hawk</item>
     <item>Hieracosphinx</item>
@@ -1513,7 +1505,7 @@
     <item>Hydra (10 heads)</item>
     <item>Hydra (11 heads)</item>
     <item>Hydra (12 heads)</item>
-    <item>Dog (Hyena)</item>
+    <item>Hyena</item>
     <item>Kobold</item>
     <item>Krenshar</item>
     <item>Lamia</item>
@@ -1554,7 +1546,7 @@
     <item>Razor boar</item>
     <item>Rhinoceras</item>
     <item>Satyr</item>
-    <item>Sea hag (hag)</item>
+    <item>Sea hag</item>
     <item>Shocker lizard</item>
     <item>Constrictor snake</item>
     <item>Huge viper snake</item>
@@ -1577,9 +1569,9 @@
     <item>Dire wolverine</item>
     <item>Worg</item>
     <item>Wyvern</item>
-    <item>Yuan-ti (Abomination)</item>
-    <item>Yuan-ti (Halfblood)</item>
-    <item>Yuan-ti (Pureblood)</item>
+    <item>Yuan-ti Abomination</item>
+    <item>Yuan-ti Halfblood</item>
+    <item>Yuan-ti Pureblood</item>
   </collection>
   <collection>
     <entry>Character</entry>
@@ -1620,7 +1612,6 @@
   <collection>
     <entry>Dominated creature</entry>
     <item>Aranea</item>
-    <item>Hound archon (celestial)</item>
     <item>Hound archon</item>
     <item>Barghest</item>
     <item>Displacer beast</item>
@@ -1668,19 +1659,19 @@
     <item>Elder earth elemental</item>
     <item>Elder fire elemental</item>
     <item>Elder water elemental</item>
-    <item>Hamatula (devil)</item>
-    <item>Hezrou (demon)</item>
+    <item>Barbed Devil (Hamatula)</item>
+    <item>Hezrou</item>
     <item>Hydra (12 heads)</item>
     <item>Pyrohydra (10 heads)</item>
     <item>Celestial creature</item>
     <item>Fiendish creature</item>
     <item>Character</item>
-    <item>Annis (hag)</item>
+    <item>Annis</item>
     <item>Average xorn</item>
     <item>Average salamander</item>
-    <item>Babau (demon)</item>
+    <item>Babau</item>
     <item>Belker</item>
-    <item>Kyton (devil)</item>
+    <item>Chain Devil (Kyton)</item>
     <item>Digester</item>
     <item>Ettin</item>
     <item>Hydra (7 heads)</item>

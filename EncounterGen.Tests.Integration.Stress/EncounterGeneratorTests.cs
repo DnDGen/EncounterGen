@@ -57,19 +57,22 @@ namespace EncounterGen.Tests.Integration.Stress
             Stress(() => AssertEncounterInRandomEnvironment());
         }
 
-        private Encounter MakeEncounterInRandomEnvironment(int minLevel = 1, int maxLevel = 20, params string[] filters)
+        private Encounter MakeEncounterInRandomEnvironment(int level = 0, string environment = "", string temperature = "", string timeOfDay = "", params string[] filters)
         {
-            var parameters = Generate(() => RandomizeParameters(minLevel, maxLevel), p => FilterVerifier.FiltersAreValid(p.Environment, p.Level, p.Temperature, p.TimeOfDay, filters));
+            var parameters = Generate(
+                () => RandomizeParameters(level, environment, temperature, timeOfDay),
+                p => FilterVerifier.FiltersAreValid(p.Environment, p.Level, p.Temperature, p.TimeOfDay, filters));
+
             return EncounterGenerator.Generate(parameters.Environment, parameters.Level, parameters.Temperature, parameters.TimeOfDay, filters);
         }
 
-        private EncounterGeneratorParameters RandomizeParameters(int minLevel, int maxLevel)
+        private EncounterGeneratorParameters RandomizeParameters(int level = 0, string environment = "", string temperature = "", string timeOfDay = "")
         {
             var parameters = new EncounterGeneratorParameters();
-            parameters.Environment = GetRandomFrom(allEnvironments);
-            parameters.Temperature = GetRandomFrom(allTemperatures);
-            parameters.TimeOfDay = GetRandomFrom(allTimesOfDay);
-            parameters.Level = Random.Next(minLevel, maxLevel + 1);
+            parameters.Environment = string.IsNullOrEmpty(environment) ? GetRandomFrom(allEnvironments) : environment;
+            parameters.Temperature = string.IsNullOrEmpty(temperature) ? GetRandomFrom(allTemperatures) : temperature;
+            parameters.TimeOfDay = string.IsNullOrEmpty(timeOfDay) ? GetRandomFrom(allTimesOfDay) : timeOfDay;
+            parameters.Level = level > 0 ? level : Random.Next(20) + 1;
 
             return parameters;
         }
@@ -95,14 +98,23 @@ namespace EncounterGen.Tests.Integration.Stress
         {
             Assert.That(encounter.Creatures, Is.Not.Empty);
             Assert.That(encounter.Creatures, Is.All.Not.Null);
+            Assert.That(encounter.Characters, Is.Not.Null);
             Assert.That(encounter.Characters, Is.All.Not.Null);
 
             foreach (var creature in encounter.Creatures)
             {
                 Assert.That(creature.Name, Is.Not.Empty);
-                Assert.That(creature.Quantity, Is.InRange(1, 14));
+                Assert.That(creature.Quantity, Is.Positive);
                 Assert.That(creature.Description, Is.Not.Null);
             }
+
+            Assert.That(encounter.Treasures, Is.Not.Null);
+            Assert.That(encounter.Treasures, Is.All.Not.Null);
+            Assert.That(encounter.Treasures.Select(t => t.IsAny), Is.All.True);
+
+            var totalCreatures = encounter.Creatures.Sum(c => c.Quantity);
+            Assert.That(encounter.Characters.Count, Is.LessThanOrEqualTo(totalCreatures));
+            Assert.That(encounter.Treasures.Count, Is.LessThanOrEqualTo(encounter.Creatures.Count()));
         }
 
         [TestCase(EnvironmentConstants.Dungeon, EnvironmentConstants.TimesOfDay.Night, EnvironmentConstants.Temperatures.Cold)]
@@ -155,69 +167,92 @@ namespace EncounterGen.Tests.Integration.Stress
         [TestCase(EnvironmentConstants.Mountain, EnvironmentConstants.TimesOfDay.Day, EnvironmentConstants.Temperatures.Temperate)]
         public void StressEnvironment(string environment, string timeOfDay, string temperature)
         {
-            Stress(() => AssertEncounterInEnvironment(environment, temperature, timeOfDay));
+            Stress(() => AssertEncounterInRandomEnvironment(environment, temperature, timeOfDay));
         }
 
-        private void AssertEncounterInRandomEnvironment(params string[] filters)
+        private void AssertEncounterInRandomEnvironment(string environment = "", string temperature = "", string timeOfDay = "", int level = 0, params string[] filters)
         {
-            var encounter = MakeEncounterInRandomEnvironment(filters: filters);
+            var encounter = MakeEncounterInRandomEnvironment(level, environment, temperature, timeOfDay, filters);
             AssertEncounter(encounter);
         }
 
-        private void AssertEncounterInEnvironment(string environment, string temperature, string timeOfDay, params string[] filters)
+        [TestCase(1)]
+        [TestCase(2)]
+        [TestCase(3)]
+        [TestCase(4)]
+        [TestCase(5)]
+        [TestCase(6)]
+        [TestCase(7)]
+        [TestCase(8)]
+        [TestCase(9)]
+        [TestCase(10)]
+        [TestCase(11)]
+        [TestCase(12)]
+        [TestCase(13)]
+        [TestCase(14)]
+        [TestCase(15)]
+        [TestCase(16)]
+        [TestCase(17)]
+        [TestCase(18)]
+        [TestCase(19)]
+        [TestCase(20)]
+        public void StressEncounterLevel(int level)
         {
-            var level = Generate(() => Random.Next(1, 21), lvl => FilterVerifier.FiltersAreValid(environment, lvl, temperature, timeOfDay, filters));
-            AssertEncounterInSpecificEnvironment(environment, temperature, timeOfDay, level, filters);
-        }
-
-        private void AssertEncounterInSpecificEnvironment(string environment, string temperature, string timeOfDay, int level, params string[] filters)
-        {
-            var encounter = EncounterGenerator.Generate(environment, level, temperature, timeOfDay, filters);
-            AssertEncounter(encounter);
+            Stress(() => AssertEncounterInRandomEnvironment(level: level));
         }
 
         [Test]
         public void TreasureDoesNotHappen()
         {
-            var encounter = GenerateOrFail(() => MakeEncounterInRandomEnvironment(), e => e.Treasure.Coin.Quantity == 0 && e.Treasure.Goods.Any() == false && e.Treasure.Items.Any() == false);
-            Assert.That(encounter.Treasure.Coin.Quantity, Is.EqualTo(0));
-            Assert.That(encounter.Treasure.Goods, Is.Empty);
-            Assert.That(encounter.Treasure.Items, Is.Empty);
+            var encounter = GenerateOrFail(() => MakeEncounterInRandomEnvironment(), e => e.Treasures.Any() == false);
+            AssertEncounter(encounter);
+            Assert.That(encounter.Treasures, Is.Empty);
         }
 
         [Test]
         public void TreasureHappens()
         {
-            var encounter = GenerateOrFail(() => MakeEncounterInRandomEnvironment(), e => e.Treasure.Coin.Quantity > 0 || e.Treasure.Goods.Any() || e.Treasure.Items.Any());
-            Assert.That(encounter.Treasure.Coin.Quantity > 0 || encounter.Treasure.Goods.Any() || encounter.Treasure.Items.Any(), Is.True);
+            var encounter = GenerateOrFail(() => MakeEncounterInRandomEnvironment(), e => e.Treasures.Any());
+            AssertEncounter(encounter);
+            Assert.That(encounter.Treasures, Is.Not.Empty);
         }
 
         [Test]
         public void CoinHappens()
         {
-            var encounter = GenerateOrFail(() => MakeEncounterInRandomEnvironment(), e => e.Treasure.Coin.Quantity > 0);
-            Assert.That(encounter.Treasure.Coin.Quantity, Is.Positive);
-            Assert.That(encounter.Treasure.Coin.Currency, Is.Not.Empty);
+            var encounter = GenerateOrFail(() => MakeEncounterInRandomEnvironment(), e => e.Treasures.Any(t => t.Coin.Quantity > 0));
+            AssertEncounter(encounter);
+
+            var coinTreasure = encounter.Treasures.First(t => t.Coin.Quantity > 0);
+            Assert.That(coinTreasure.Coin.Quantity, Is.Positive);
+            Assert.That(coinTreasure.Coin.Currency, Is.Not.Empty);
         }
 
         [Test]
         public void GoodsHappen()
         {
-            var encounter = GenerateOrFail(() => MakeEncounterInRandomEnvironment(), e => e.Treasure.Goods.Any());
-            Assert.That(encounter.Treasure.Goods, Is.Not.Empty);
+            var encounter = GenerateOrFail(() => MakeEncounterInRandomEnvironment(), e => e.Treasures.Any(t => t.Goods.Any()));
+            AssertEncounter(encounter);
+
+            var goodsTreasure = encounter.Treasures.First(t => t.Goods.Any());
+            Assert.That(goodsTreasure.Goods, Is.Not.Empty);
         }
 
         [Test]
         public void ItemsHappen()
         {
-            var encounter = GenerateOrFail(() => MakeEncounterInRandomEnvironment(), e => e.Treasure.Items.Any());
-            Assert.That(encounter.Treasure.Items, Is.Not.Empty);
+            var encounter = GenerateOrFail(() => MakeEncounterInRandomEnvironment(), e => e.Treasures.Any(t => t.Items.Any()));
+            AssertEncounter(encounter);
+
+            var itemsTreasure = encounter.Treasures.First(t => t.Items.Any());
+            Assert.That(itemsTreasure.Items, Is.Not.Empty);
         }
 
         [Test]
         public void CharactersHappen()
         {
             var encounter = GenerateOrFail(() => MakeEncounterInRandomEnvironment(), e => e.Characters.Any());
+            AssertEncounter(encounter);
             Assert.That(encounter.Characters, Is.Not.Empty);
         }
 
@@ -225,6 +260,7 @@ namespace EncounterGen.Tests.Integration.Stress
         public void CharactersDoNotHappen()
         {
             var encounter = GenerateOrFail(() => MakeEncounterInRandomEnvironment(), e => e.Characters.Any() == false);
+            AssertEncounter(encounter);
             Assert.That(encounter.Characters, Is.Empty);
         }
 
@@ -232,6 +268,7 @@ namespace EncounterGen.Tests.Integration.Stress
         public void SingleCreatureHappens()
         {
             var encounter = GenerateOrFail(() => MakeEncounterInRandomEnvironment(), e => e.Creatures.Count() == 1);
+            AssertEncounter(encounter);
             Assert.That(encounter.Creatures.Count(), Is.EqualTo(1));
         }
 
@@ -239,6 +276,7 @@ namespace EncounterGen.Tests.Integration.Stress
         public void MultipleCreaturesHappen()
         {
             var encounter = GenerateOrFail(() => MakeEncounterInRandomEnvironment(), e => e.Creatures.Count() > 1);
+            AssertEncounter(encounter);
             Assert.That(encounter.Creatures.Count(), Is.GreaterThan(1));
         }
 
@@ -259,26 +297,40 @@ namespace EncounterGen.Tests.Integration.Stress
         [TestCase(CreatureConstants.Types.Vermin)]
         public void StressFilter(string filter)
         {
-            Stress(() => AssertEncounterInRandomEnvironment(filter));
+            Stress(() => AssertEncounterInRandomEnvironment(filters: new[] { filter }));
         }
 
         [Test]
         public void CharactersOccurAMinorityOfTheTime()
         {
-            var charactersOccurred = new List<bool>();
-            Stress(() => StressCharacterPercentage(charactersOccurred));
+            StressPercentage(CharacterOccurred);
+        }
 
-            var percentage = charactersOccurred.Count(o => o) / (double)charactersOccurred.Count;
-            Assert.That(percentage, Is.Positive, $"{charactersOccurred.Count} encounters total");
-            Assert.That(percentage, Is.LessThan(.5), $"{charactersOccurred.Count} encounters total");
+        private void StressPercentage(Func<Encounter, bool> occurred)
+        {
+            var occurrances = new List<bool>();
+            Stress(() => StressPercentage(occurrances, occurred));
+            AssertPercentageIsMinority(occurrances);
+        }
+
+        private void AssertPercentageIsMinority(IEnumerable<bool> occurances)
+        {
+            var total = occurances.Count();
+            var percentage = occurances.Count(o => o) / (double)total;
+
+            Assert.That(percentage, Is.Positive, $"{total} encounters total");
+            Assert.That(percentage, Is.LessThan(.5), $"{total} encounters total");
+
             Console.WriteLine("Actual percentage was {0:P}", percentage);
         }
 
-        private void StressCharacterPercentage(List<bool> charactersOccurred)
+        private void StressPercentage(List<bool> occurances, Func<Encounter, bool> occured)
         {
             var encounter = MakeEncounterInRandomEnvironment();
-            var charactersHappened = CharacterOccurred(encounter);
-            charactersOccurred.Add(charactersHappened);
+            AssertEncounter(encounter);
+
+            var occuranceHappened = occured(encounter);
+            occurances.Add(occuranceHappened);
         }
 
         private bool CharacterOccurred(Encounter encounter)
@@ -289,20 +341,7 @@ namespace EncounterGen.Tests.Integration.Stress
         [Test]
         public void DragonsOccurAMinorityOfTheTime()
         {
-            var dragonsOccurred = new List<bool>();
-            Stress(() => StressDragonPercentage(dragonsOccurred));
-
-            var percentage = dragonsOccurred.Count(o => o) / (double)dragonsOccurred.Count;
-            Assert.That(percentage, Is.Positive, $"{dragonsOccurred.Count} encounters total");
-            Assert.That(percentage, Is.LessThan(.5), $"{dragonsOccurred.Count} encounters total");
-            Console.WriteLine("Actual percentage was {0:P}", percentage);
-        }
-
-        private void StressDragonPercentage(List<bool> dragonOccurred)
-        {
-            var encounter = MakeEncounterInRandomEnvironment();
-            var dragonsHappened = DragonOccured(encounter);
-            dragonOccurred.Add(dragonsHappened);
+            StressPercentage(DragonOccured);
         }
 
         private bool DragonOccured(Encounter encounter)
@@ -313,44 +352,7 @@ namespace EncounterGen.Tests.Integration.Stress
         [Test]
         public void DragonsAndCharactersOccurAMinorityOfTheTime()
         {
-            var dragonOrCharacterOccurred = new List<bool>();
-            Stress(() => StressDragonAndCharacterPercentage(dragonOrCharacterOccurred));
-
-            var percentage = dragonOrCharacterOccurred.Count(o => o) / (double)dragonOrCharacterOccurred.Count;
-            Assert.That(percentage, Is.Positive, $"{dragonOrCharacterOccurred.Count} encounters total");
-            Assert.That(percentage, Is.LessThan(.5), $"{dragonOrCharacterOccurred.Count} encounters total");
-            Console.WriteLine("Actual percentage was {0:P}", percentage);
-        }
-
-        private void StressDragonAndCharacterPercentage(List<bool> dragonOrCharacterOccurred, int maxLevel = 20, int minLevel = 1)
-        {
-            var encounter = MakeEncounterInRandomEnvironment(minLevel, maxLevel);
-            var dragonOrCharactersHappened = DragonOccured(encounter) || CharacterOccurred(encounter);
-            dragonOrCharacterOccurred.Add(dragonOrCharactersHappened);
-        }
-
-        [Test]
-        public void DragonsAndCharactersOccurAMinorityOfTheTimeForAllButHighest()
-        {
-            var dragonOrCharacterOccurred = new List<bool>();
-            Stress(() => StressDragonAndCharacterPercentage(dragonOrCharacterOccurred, 17));
-
-            var percentage = dragonOrCharacterOccurred.Count(o => o) / (double)dragonOrCharacterOccurred.Count;
-            Assert.That(percentage, Is.Positive, $"{dragonOrCharacterOccurred.Count} encounters total");
-            Assert.That(percentage, Is.LessThan(.5), $"{dragonOrCharacterOccurred.Count} encounters total");
-            Console.WriteLine("Actual percentage was {0:P}", percentage);
-        }
-
-        [Test]
-        public void DragonsAndCharactersOccurAMajorityOfTheTimeForHighest()
-        {
-            var dragonOrCharacterOccurred = new List<bool>();
-            Stress(() => StressDragonAndCharacterPercentage(dragonOrCharacterOccurred, minLevel: 18));
-
-            var percentage = dragonOrCharacterOccurred.Count(o => o) / (double)dragonOrCharacterOccurred.Count;
-            Assert.That(percentage, Is.LessThan(1), $"{dragonOrCharacterOccurred.Count} encounters total");
-            Assert.That(percentage, Is.GreaterThan(.5), $"{dragonOrCharacterOccurred.Count} encounters total");
-            Console.WriteLine("Actual percentage was {0:P}", percentage);
+            StressPercentage(e => CharacterOccurred(e) || DragonOccured(e));
         }
     }
 }

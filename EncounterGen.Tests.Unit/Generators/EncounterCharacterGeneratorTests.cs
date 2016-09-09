@@ -32,7 +32,6 @@ namespace EncounterGen.Tests.Unit.Generators
         private Mock<ICollectionSelector> mockCollectionSelector;
         private Mock<ISetClassNameRandomizer> mockSetClassNameRandomizer;
         private Mock<Dice> mockDice;
-        private int level;
         private List<string> undeadNPCs;
         private List<string> charactersGroup;
         private List<Creature> creatures;
@@ -74,8 +73,6 @@ namespace EncounterGen.Tests.Unit.Generators
 
             mockSetMetaraceRandomizer.SetupAllProperties();
             mockSetClassNameRandomizer.SetupAllProperties();
-
-            level = 9266;
 
             mockDice.Setup(d => d.Roll(It.IsAny<string>())).Returns((string s) => ParseRoll(s));
             mockDice.Setup(d => d.Roll("effective roll")).Returns(42);

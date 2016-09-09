@@ -122,9 +122,9 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures
                 CreatureConstants.Dragon_White_Adult,
                 CreatureConstants.Dragonne,
                 CreatureConstants.Dryad,
-                CreatureConstants.Dwarf,
+                CreatureConstants.DwarfWarrior,
                 CreatureConstants.Elephant,
-                CreatureConstants.Elf,
+                CreatureConstants.ElfWarrior,
                 CreatureConstants.Ettercap,
                 CreatureConstants.Ettin,
                 CreatureConstants.Giant_Cloud,
@@ -136,7 +136,7 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures
                 CreatureConstants.Giant_Storm,
                 CreatureConstants.Girallon,
                 CreatureConstants.Gnoll,
-                CreatureConstants.Gnome,
+                CreatureConstants.GnomeWarrior,
                 CreatureConstants.Goblin,
                 CreatureConstants.Gorgon,
                 CreatureConstants.GrayRender,
@@ -144,7 +144,7 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures
                 CreatureConstants.Griffon,
                 CreatureConstants.Grimlock,
                 CreatureConstants.Gynosphinx,
-                CreatureConstants.Halfling,
+                CreatureConstants.HalflingWarrior,
                 CreatureConstants.Harpy,
                 CreatureConstants.Hieracosphinx,
                 CreatureConstants.Hobgoblin,
@@ -161,7 +161,7 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures
                 CreatureConstants.Hydra_10Heads,
                 CreatureConstants.Hydra_11Heads,
                 CreatureConstants.Hydra_12Heads,
-                CreatureConstants.Dog_Hyena,
+                CreatureConstants.Hyena,
                 CreatureConstants.Kobold,
                 CreatureConstants.Krenshar,
                 CreatureConstants.Lamia,
@@ -327,9 +327,9 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures
         [TestCase(CreatureConstants.Dragon_White_Adult, ChallengeRatingConstants.Eight)]
         [TestCase(CreatureConstants.Dragonne, ChallengeRatingConstants.Four)]
         [TestCase(CreatureConstants.Dryad, ChallengeRatingConstants.Two)]
-        [TestCase(CreatureConstants.Dwarf, ChallengeRatingConstants.OneThird)]
+        [TestCase(CreatureConstants.DwarfWarrior, ChallengeRatingConstants.OneThird)]
         [TestCase(CreatureConstants.Elephant, ChallengeRatingConstants.Five)]
-        [TestCase(CreatureConstants.Elf, ChallengeRatingConstants.OneThird)]
+        [TestCase(CreatureConstants.ElfWarrior, ChallengeRatingConstants.OneThird)]
         [TestCase(CreatureConstants.Ettercap, ChallengeRatingConstants.Two)]
         [TestCase(CreatureConstants.Ettin, ChallengeRatingConstants.Five)]
         [TestCase(CreatureConstants.Giant_Cloud, ChallengeRatingConstants.Seven)]
@@ -341,7 +341,7 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures
         [TestCase(CreatureConstants.Giant_Storm, ChallengeRatingConstants.Eight)]
         [TestCase(CreatureConstants.Girallon, ChallengeRatingConstants.Three)]
         [TestCase(CreatureConstants.Gnoll, ChallengeRatingConstants.One)]
-        [TestCase(CreatureConstants.Gnome, ChallengeRatingConstants.OneThird)]
+        [TestCase(CreatureConstants.GnomeWarrior, ChallengeRatingConstants.OneThird)]
         [TestCase(CreatureConstants.Goblin, ChallengeRatingConstants.OneThird)]
         [TestCase(CreatureConstants.Gorgon, ChallengeRatingConstants.Four)]
         [TestCase(CreatureConstants.GrayRender, ChallengeRatingConstants.Five)]
@@ -349,7 +349,7 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures
         [TestCase(CreatureConstants.Griffon, ChallengeRatingConstants.Three)]
         [TestCase(CreatureConstants.Grimlock, ChallengeRatingConstants.One)]
         [TestCase(CreatureConstants.Gynosphinx, ChallengeRatingConstants.Four)]
-        [TestCase(CreatureConstants.Halfling, ChallengeRatingConstants.OneThird)]
+        [TestCase(CreatureConstants.HalflingWarrior, ChallengeRatingConstants.OneThird)]
         [TestCase(CreatureConstants.Harpy, ChallengeRatingConstants.Three)]
         [TestCase(CreatureConstants.Hieracosphinx, ChallengeRatingConstants.Four)]
         [TestCase(CreatureConstants.Hobgoblin, ChallengeRatingConstants.OneThird)]
@@ -366,7 +366,7 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures
         [TestCase(CreatureConstants.Hydra_10Heads, ChallengeRatingConstants.Five)]
         [TestCase(CreatureConstants.Hydra_11Heads, ChallengeRatingConstants.Five)]
         [TestCase(CreatureConstants.Hydra_12Heads, ChallengeRatingConstants.Six)]
-        [TestCase(CreatureConstants.Dog_Hyena, ChallengeRatingConstants.One)]
+        [TestCase(CreatureConstants.Hyena, ChallengeRatingConstants.One)]
         [TestCase(CreatureConstants.Kobold, ChallengeRatingConstants.OneThird)]
         [TestCase(CreatureConstants.Krenshar, ChallengeRatingConstants.One)]
         [TestCase(CreatureConstants.Lamia, ChallengeRatingConstants.Four)]

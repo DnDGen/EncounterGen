@@ -28,7 +28,7 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures
                 CreatureConstants.Elemental_Earth_Elder,
                 CreatureConstants.Elemental_Fire_Elder,
                 CreatureConstants.Elemental_Water_Elder,
-                CreatureConstants.Hamatula,
+                CreatureConstants.BarbedDevil_Hamatula,
                 CreatureConstants.Hezrou,
                 CreatureConstants.Hydra_12Heads,
                 CreatureConstants.Pyrohydra_10Heads,
@@ -37,7 +37,7 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures
                 CreatureConstants.Salamander_Average,
                 CreatureConstants.Babau,
                 CreatureConstants.Belker,
-                CreatureConstants.Kyton,
+                CreatureConstants.ChainDevil_Kyton,
                 CreatureConstants.Digester,
                 CreatureConstants.Ettin,
                 CreatureConstants.Hydra_7Heads,
@@ -73,7 +73,7 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures
         [TestCase(CreatureConstants.Elemental_Earth_Elder, ChallengeRatingConstants.Eleven)]
         [TestCase(CreatureConstants.Elemental_Fire_Elder, ChallengeRatingConstants.Eleven)]
         [TestCase(CreatureConstants.Elemental_Water_Elder, ChallengeRatingConstants.Eleven)]
-        [TestCase(CreatureConstants.Hamatula, ChallengeRatingConstants.Eleven)]
+        [TestCase(CreatureConstants.BarbedDevil_Hamatula, ChallengeRatingConstants.Eleven)]
         [TestCase(CreatureConstants.Hezrou, ChallengeRatingConstants.Eleven)]
         [TestCase(CreatureConstants.Hydra_12Heads, ChallengeRatingConstants.Eleven)]
         [TestCase(CreatureConstants.Pyrohydra_10Heads, ChallengeRatingConstants.Eleven)]
@@ -82,7 +82,7 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures
         [TestCase(CreatureConstants.Salamander_Average, ChallengeRatingConstants.Six)]
         [TestCase(CreatureConstants.Babau, ChallengeRatingConstants.Six)]
         [TestCase(CreatureConstants.Belker, ChallengeRatingConstants.Six)]
-        [TestCase(CreatureConstants.Kyton, ChallengeRatingConstants.Six)]
+        [TestCase(CreatureConstants.ChainDevil_Kyton, ChallengeRatingConstants.Six)]
         [TestCase(CreatureConstants.Digester, ChallengeRatingConstants.Six)]
         [TestCase(CreatureConstants.Ettin, ChallengeRatingConstants.Six)]
         [TestCase(CreatureConstants.Hydra_7Heads, ChallengeRatingConstants.Six)]

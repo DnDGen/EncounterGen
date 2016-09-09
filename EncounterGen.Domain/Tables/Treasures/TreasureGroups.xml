@@ -1,0 +1,1679 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<collections>
+  <collection>
+    <entry>Aasimar warrior</entry>
+    <item>Longsword[Weapon]#Medium#</item>
+    <item>Light crossbow[Weapon]#Medium#</item>
+  </collection>
+  <collection>
+    <entry>Achaierai</entry>
+  </collection>
+  <collection>
+    <entry>Adept</entry>
+  </collection>
+  <collection>
+    <entry>Aristocrat</entry>
+  </collection>
+  <collection>
+    <entry>Barbarian</entry>
+  </collection>
+  <collection>
+    <entry>Bard</entry>
+  </collection>
+  <collection>
+    <entry>Cleric</entry>
+  </collection>
+  <collection>
+    <entry>Druid</entry>
+  </collection>
+  <collection>
+    <entry>Fighter</entry>
+  </collection>
+  <collection>
+    <entry>Monk</entry>
+  </collection>
+  <collection>
+    <entry>Paladin</entry>
+  </collection>
+  <collection>
+    <entry>Ranger</entry>
+  </collection>
+  <collection>
+    <entry>Rogue</entry>
+  </collection>
+  <collection>
+    <entry>Sorcerer</entry>
+  </collection>
+  <collection>
+    <entry>Wizard</entry>
+  </collection>
+  <collection>
+    <entry>Allip</entry>
+  </collection>
+  <collection>
+    <entry>Androsphinx</entry>
+  </collection>
+  <collection>
+    <entry>Ankheg</entry>
+  </collection>
+  <collection>
+    <entry>Colossal animated object</entry>
+  </collection>
+  <collection>
+    <entry>Gargantuan animated object</entry>
+  </collection>
+  <collection>
+    <entry>Huge animated object</entry>
+  </collection>
+  <collection>
+    <entry>Large animated object</entry>
+  </collection>
+  <collection>
+    <entry>Medium animated object</entry>
+  </collection>
+  <collection>
+    <entry>Small animated object</entry>
+  </collection>
+  <collection>
+    <entry>Tiny animated object</entry>
+  </collection>
+  <collection>
+    <entry>Annis</entry>
+  </collection>
+  <collection>
+    <entry>Sea hag</entry>
+  </collection>
+  <collection>
+    <entry>Giant ant soldier</entry>
+  </collection>
+  <collection>
+    <entry>Giant ant worker</entry>
+  </collection>
+  <collection>
+    <entry>Giant ant queen</entry>
+  </collection>
+  <collection>
+    <entry>Ape</entry>
+  </collection>
+  <collection>
+    <entry>Dire ape</entry>
+  </collection>
+  <collection>
+    <entry>Aranea</entry>
+  </collection>
+  <collection>
+    <entry>Adult arrowhawk</entry>
+  </collection>
+  <collection>
+    <entry>Elder arrowhawk</entry>
+  </collection>
+  <collection>
+    <entry>Juvenile arrowhawk</entry>
+  </collection>
+  <collection>
+    <entry>Astral deva</entry>
+    <item>Heavy mace[Weapon](3){Disruption}</item>
+  </collection>
+  <collection>
+    <entry>Assassin vine</entry>
+  </collection>
+  <collection>
+    <entry>Athach</entry>
+    <item>Morningstar[Weapon]#Huge#</item>
+    <item>Morningstar[Weapon]#Huge#</item>
+    <item>Morningstar[Weapon]#Huge#</item>
+  </collection>
+  <collection>
+    <entry>Avoral</entry>
+  </collection>
+  <collection>
+    <entry>Azer</entry>
+    <item>Warhammer[Weapon]#Medium#</item>
+    <item>Shortspear[Weapon]#Medium#</item>
+  </collection>
+  <collection>
+    <entry>Babau</entry>
+  </collection>
+  <collection>
+    <entry>Baboon</entry>
+  </collection>
+  <collection>
+    <entry>Badger</entry>
+  </collection>
+  <collection>
+    <entry>Dire badger</entry>
+  </collection>
+  <collection>
+    <entry>Balor</entry>
+    <item>Longsword[Weapon](1){Vorpal}</item>
+    <item>Whip[Weapon](1){Flaming}</item>
+  </collection>
+  <collection>
+    <entry>Barghest</entry>
+  </collection>
+  <collection>
+    <entry>Greater barghest</entry>
+  </collection>
+  <collection>
+    <entry>Basilisk</entry>
+  </collection>
+  <collection>
+    <entry>Abyssal greater basilisk</entry>
+  </collection>
+  <collection>
+    <entry>Bat</entry>
+  </collection>
+  <collection>
+    <entry>Dire bat</entry>
+  </collection>
+  <collection>
+    <entry>Bearded Devil</entry>
+    <item>Glaive[Weapon]#Medium#</item>
+  </collection>
+  <collection>
+    <entry>Black bear</entry>
+  </collection>
+  <collection>
+    <entry>Brown bear</entry>
+  </collection>
+  <collection>
+    <entry>Dire bear</entry>
+  </collection>
+  <collection>
+    <entry>Polar bear</entry>
+  </collection>
+  <collection>
+    <entry>Bebilith</entry>
+  </collection>
+  <collection>
+    <entry>Giant bee</entry>
+  </collection>
+  <collection>
+    <entry>Behir</entry>
+  </collection>
+  <collection>
+    <entry>Beholder</entry>
+  </collection>
+  <collection>
+    <entry>Belker</entry>
+  </collection>
+  <collection>
+    <entry>Bison</entry>
+  </collection>
+  <collection>
+    <entry>Black pudding</entry>
+  </collection>
+  <collection>
+    <entry>Elder black pudding</entry>
+  </collection>
+  <collection>
+    <entry>Blink dog</entry>
+  </collection>
+  <collection>
+    <entry>Boar</entry>
+  </collection>
+  <collection>
+    <entry>Dire boar</entry>
+  </collection>
+  <collection>
+    <entry>Bodak</entry>
+  </collection>
+  <collection>
+    <entry>Giant bombardier beetle</entry>
+  </collection>
+  <collection>
+    <entry>Bralani</entry>
+    <item>Scimitar[Weapon](1){Holy}</item>
+    <item>Composite longbow[Weapon]#+4 Strength bonus#(1){Holy}</item>
+  </collection>
+  <collection>
+    <entry>Bugbear</entry>
+    <item>Morningstar[Weapon]#Medium#</item>
+    <item>Javelin[Weapon]#Medium#</item>
+  </collection>
+  <collection>
+    <entry>Bulette</entry>
+  </collection>
+  <collection>
+    <entry>Camel</entry>
+  </collection>
+  <collection>
+    <entry>Carrion crawler</entry>
+  </collection>
+  <collection>
+    <entry>Cat</entry>
+  </collection>
+  <collection>
+    <entry>Centaur</entry>
+    <item>Longsword[Weapon]#Large#</item>
+    <item>Composite longbow[Weapon]#Large,+4 Strength bonus#</item>
+  </collection>
+  <collection>
+    <entry>Colossal monstrous centipede</entry>
+  </collection>
+  <collection>
+    <entry>Gargantuan monstrous centipede</entry>
+  </collection>
+  <collection>
+    <entry>Huge monstrous centipede</entry>
+  </collection>
+  <collection>
+    <entry>Large monstrous centipede</entry>
+  </collection>
+  <collection>
+    <entry>Medium monstrous centipede</entry>
+  </collection>
+  <collection>
+    <entry>Small monstrous centipede</entry>
+  </collection>
+  <collection>
+    <entry>Tiny monstrous centipede</entry>
+  </collection>
+  <collection>
+    <entry>Chaos beast</entry>
+  </collection>
+  <collection>
+    <entry>Character</entry>
+  </collection>
+  <collection>
+    <entry>Cheetah</entry>
+  </collection>
+  <collection>
+    <entry>Chimera</entry>
+  </collection>
+  <collection>
+    <entry>Choker</entry>
+  </collection>
+  <collection>
+    <entry>Chuul</entry>
+  </collection>
+  <collection>
+    <entry>Cloaker</entry>
+  </collection>
+  <collection>
+    <entry>Commoner</entry>
+  </collection>
+  <collection>
+    <entry>Horned Devil</entry>
+    <item>Spiked chain[Weapon]#Large#</item>
+  </collection>
+  <collection>
+    <entry>Cockatrice</entry>
+  </collection>
+  <collection>
+    <entry>Couatl</entry>
+  </collection>
+  <collection>
+    <entry>Criosphinx</entry>
+  </collection>
+  <collection>
+    <entry>Crocodile</entry>
+  </collection>
+  <collection>
+    <entry>Giant crocodile</entry>
+  </collection>
+  <collection>
+    <entry>Cryohydra</entry>
+  </collection>
+  <collection>
+    <entry>Darkmantle</entry>
+  </collection>
+  <collection>
+    <entry>Deinonychus</entry>
+  </collection>
+  <collection>
+    <entry>Delver</entry>
+  </collection>
+  <collection>
+    <entry>Derro</entry>
+    <item>Short sword[Weapon]#Small#</item>
+    <item>Light repeating crossbow[Weapon]#Small#</item>
+  </collection>
+  <collection>
+    <entry>Destrachan</entry>
+  </collection>
+  <collection>
+    <entry>Devourer</entry>
+  </collection>
+  <collection>
+    <entry>Digester</entry>
+  </collection>
+  <collection>
+    <entry>Displacer beast</entry>
+  </collection>
+  <collection>
+    <entry>Djinni</entry>
+  </collection>
+  <collection>
+    <entry>Noble djinni</entry>
+  </collection>
+  <collection>
+    <entry>Dog</entry>
+  </collection>
+  <collection>
+    <entry>Donkey</entry>
+  </collection>
+  <collection>
+    <entry>Doppelganger</entry>
+  </collection>
+  <collection>
+    <entry>Wyrmling black dragon</entry>
+  </collection>
+  <collection>
+    <entry>Very young black dragon</entry>
+  </collection>
+  <collection>
+    <entry>Young black dragon</entry>
+  </collection>
+  <collection>
+    <entry>Juvenile black dragon</entry>
+  </collection>
+  <collection>
+    <entry>Young adult black dragon</entry>
+  </collection>
+  <collection>
+    <entry>Adult black dragon</entry>
+  </collection>
+  <collection>
+    <entry>Mature adult black dragon</entry>
+  </collection>
+  <collection>
+    <entry>Old black dragon</entry>
+  </collection>
+  <collection>
+    <entry>Very old black dragon</entry>
+  </collection>
+  <collection>
+    <entry>Ancient black dragon</entry>
+  </collection>
+  <collection>
+    <entry>Wyrm black dragon</entry>
+  </collection>
+  <collection>
+    <entry>Great wyrm black dragon</entry>
+  </collection>
+  <collection>
+    <entry>Wyrmling blue dragon</entry>
+  </collection>
+  <collection>
+    <entry>Very young blue dragon</entry>
+  </collection>
+  <collection>
+    <entry>Young blue dragon</entry>
+  </collection>
+  <collection>
+    <entry>Juvenile blue dragon</entry>
+  </collection>
+  <collection>
+    <entry>Young adult blue dragon</entry>
+  </collection>
+  <collection>
+    <entry>Adult blue dragon</entry>
+  </collection>
+  <collection>
+    <entry>Mature adult blue dragon</entry>
+  </collection>
+  <collection>
+    <entry>Old blue dragon</entry>
+  </collection>
+  <collection>
+    <entry>Very old blue dragon</entry>
+  </collection>
+  <collection>
+    <entry>Ancient blue dragon</entry>
+  </collection>
+  <collection>
+    <entry>Wyrm blue dragon</entry>
+  </collection>
+  <collection>
+    <entry>Great wyrm blue dragon</entry>
+  </collection>
+  <collection>
+    <entry>Wyrmling green dragon</entry>
+  </collection>
+  <collection>
+    <entry>Very young green dragon</entry>
+  </collection>
+  <collection>
+    <entry>Young green dragon</entry>
+  </collection>
+  <collection>
+    <entry>Juvenile green dragon</entry>
+  </collection>
+  <collection>
+    <entry>Young adult green dragon</entry>
+  </collection>
+  <collection>
+    <entry>Adult green dragon</entry>
+  </collection>
+  <collection>
+    <entry>Mature adult green dragon</entry>
+  </collection>
+  <collection>
+    <entry>Old green dragon</entry>
+  </collection>
+  <collection>
+    <entry>Very old green dragon</entry>
+  </collection>
+  <collection>
+    <entry>Ancient green dragon</entry>
+  </collection>
+  <collection>
+    <entry>Wyrm green dragon</entry>
+  </collection>
+  <collection>
+    <entry>Great wyrm green dragon</entry>
+  </collection>
+  <collection>
+    <entry>Wyrmling red dragon</entry>
+  </collection>
+  <collection>
+    <entry>Very young red dragon</entry>
+  </collection>
+  <collection>
+    <entry>Young red dragon</entry>
+  </collection>
+  <collection>
+    <entry>Juvenile red dragon</entry>
+  </collection>
+  <collection>
+    <entry>Young adult red dragon</entry>
+  </collection>
+  <collection>
+    <entry>Adult red dragon</entry>
+  </collection>
+  <collection>
+    <entry>Mature adult red dragon</entry>
+  </collection>
+  <collection>
+    <entry>Old red dragon</entry>
+  </collection>
+  <collection>
+    <entry>Very old red dragon</entry>
+  </collection>
+  <collection>
+    <entry>Ancient red dragon</entry>
+  </collection>
+  <collection>
+    <entry>Wyrm red dragon</entry>
+  </collection>
+  <collection>
+    <entry>Great wyrm red dragon</entry>
+  </collection>
+  <collection>
+    <entry>Wyrmling white dragon</entry>
+  </collection>
+  <collection>
+    <entry>Very young white dragon</entry>
+  </collection>
+  <collection>
+    <entry>Young white dragon</entry>
+  </collection>
+  <collection>
+    <entry>Juvenile white dragon</entry>
+  </collection>
+  <collection>
+    <entry>Young adult white dragon</entry>
+  </collection>
+  <collection>
+    <entry>Adult white dragon</entry>
+  </collection>
+  <collection>
+    <entry>Mature adult white dragon</entry>
+  </collection>
+  <collection>
+    <entry>Old white dragon</entry>
+  </collection>
+  <collection>
+    <entry>Very old white dragon</entry>
+  </collection>
+  <collection>
+    <entry>Ancient white dragon</entry>
+  </collection>
+  <collection>
+    <entry>Wyrm white dragon</entry>
+  </collection>
+  <collection>
+    <entry>Great wyrm white dragon</entry>
+  </collection>
+  <collection>
+    <entry>Wyrmling bronze dragon</entry>
+  </collection>
+  <collection>
+    <entry>Very young bronze dragon</entry>
+  </collection>
+  <collection>
+    <entry>Young bronze dragon</entry>
+  </collection>
+  <collection>
+    <entry>Juvenile bronze dragon</entry>
+  </collection>
+  <collection>
+    <entry>Young adult bronze dragon</entry>
+  </collection>
+  <collection>
+    <entry>Adult bronze dragon</entry>
+  </collection>
+  <collection>
+    <entry>Mature adult bronze dragon</entry>
+  </collection>
+  <collection>
+    <entry>Old bronze dragon</entry>
+  </collection>
+  <collection>
+    <entry>Very old bronze dragon</entry>
+  </collection>
+  <collection>
+    <entry>Ancient bronze dragon</entry>
+  </collection>
+  <collection>
+    <entry>Wyrm bronze dragon</entry>
+  </collection>
+  <collection>
+    <entry>Great wyrm bronze dragon</entry>
+  </collection>
+  <collection>
+    <entry>Wyrmling brass dragon</entry>
+  </collection>
+  <collection>
+    <entry>Very young brass dragon</entry>
+  </collection>
+  <collection>
+    <entry>Young brass dragon</entry>
+  </collection>
+  <collection>
+    <entry>Juvenile brass dragon</entry>
+  </collection>
+  <collection>
+    <entry>Young adult brass dragon</entry>
+  </collection>
+  <collection>
+    <entry>Adult brass dragon</entry>
+  </collection>
+  <collection>
+    <entry>Mature adult brass dragon</entry>
+  </collection>
+  <collection>
+    <entry>Old brass dragon</entry>
+  </collection>
+  <collection>
+    <entry>Very old brass dragon</entry>
+  </collection>
+  <collection>
+    <entry>Ancient brass dragon</entry>
+  </collection>
+  <collection>
+    <entry>Wyrm brass dragon</entry>
+  </collection>
+  <collection>
+    <entry>Great wyrm brass dragon</entry>
+  </collection>
+  <collection>
+    <entry>Wyrmling copper dragon</entry>
+  </collection>
+  <collection>
+    <entry>Very young copper dragon</entry>
+  </collection>
+  <collection>
+    <entry>Young copper dragon</entry>
+  </collection>
+  <collection>
+    <entry>Juvenile copper dragon</entry>
+  </collection>
+  <collection>
+    <entry>Young adult copper dragon</entry>
+  </collection>
+  <collection>
+    <entry>Adult copper dragon</entry>
+  </collection>
+  <collection>
+    <entry>Mature adult copper dragon</entry>
+  </collection>
+  <collection>
+    <entry>Old copper dragon</entry>
+  </collection>
+  <collection>
+    <entry>Very old copper dragon</entry>
+  </collection>
+  <collection>
+    <entry>Ancient copper dragon</entry>
+  </collection>
+  <collection>
+    <entry>Wyrm copper dragon</entry>
+  </collection>
+  <collection>
+    <entry>Great wyrm copper dragon</entry>
+  </collection>
+  <collection>
+    <entry>Wyrmling gold dragon</entry>
+  </collection>
+  <collection>
+    <entry>Very young gold dragon</entry>
+  </collection>
+  <collection>
+    <entry>Young gold dragon</entry>
+  </collection>
+  <collection>
+    <entry>Juvenile gold dragon</entry>
+  </collection>
+  <collection>
+    <entry>Young adult gold dragon</entry>
+  </collection>
+  <collection>
+    <entry>Adult gold dragon</entry>
+  </collection>
+  <collection>
+    <entry>Mature adult gold dragon</entry>
+  </collection>
+  <collection>
+    <entry>Old gold dragon</entry>
+  </collection>
+  <collection>
+    <entry>Very old gold dragon</entry>
+  </collection>
+  <collection>
+    <entry>Ancient gold dragon</entry>
+  </collection>
+  <collection>
+    <entry>Wyrm gold dragon</entry>
+  </collection>
+  <collection>
+    <entry>Great wyrm gold dragon</entry>
+  </collection>
+  <collection>
+    <entry>Wyrmling silver dragon</entry>
+  </collection>
+  <collection>
+    <entry>Very young silver dragon</entry>
+  </collection>
+  <collection>
+    <entry>Young silver dragon</entry>
+  </collection>
+  <collection>
+    <entry>Juvenile silver dragon</entry>
+  </collection>
+  <collection>
+    <entry>Young adult silver dragon</entry>
+  </collection>
+  <collection>
+    <entry>Adult silver dragon</entry>
+  </collection>
+  <collection>
+    <entry>Mature adult silver dragon</entry>
+  </collection>
+  <collection>
+    <entry>Old silver dragon</entry>
+  </collection>
+  <collection>
+    <entry>Very old silver dragon</entry>
+  </collection>
+  <collection>
+    <entry>Ancient silver dragon</entry>
+  </collection>
+  <collection>
+    <entry>Wyrm silver dragon</entry>
+  </collection>
+  <collection>
+    <entry>Great wyrm silver dragon</entry>
+  </collection>
+  <collection>
+    <entry>Dragonne</entry>
+  </collection>
+  <collection>
+    <entry>Dretch</entry>
+  </collection>
+  <collection>
+    <entry>Drider</entry>
+    <item>Dagger[Weapon]#Large#</item>
+    <item>Dagger[Weapon]#Large#</item>
+    <item>Shortbow[Weapon]#Large#</item>
+  </collection>
+  <collection>
+    <entry>Drow warrior</entry>
+    <item>Rapier[Weapon]#Medium#</item>
+    <item>Hand crossbow[Weapon]#Medium#</item>
+  </collection>
+  <collection>
+    <entry>Dryad</entry>
+    <item>Dagger[Weapon]#Medium#</item>
+    <item>Longbow[Weapon]#Medium,Masterwork#</item>
+  </collection>
+  <collection>
+    <entry>Duergar warrior</entry>
+    <item>Warhammer[Weapon]#Medium#</item>
+    <item>Light crossbow[Weapon]#Medium#</item>
+  </collection>
+  <collection>
+    <entry>Dwarf warrior</entry>
+    <item>Dwarven waraxe[Weapon]#Medium#</item>
+    <item>Shortbow[Weapon]#Medium#</item>
+  </collection>
+  <collection>
+    <entry>Eagle</entry>
+  </collection>
+  <collection>
+    <entry>Giant eagle</entry>
+  </collection>
+  <collection>
+    <entry>Efreeti</entry>
+  </collection>
+  <collection>
+    <entry>Elephant</entry>
+  </collection>
+  <collection>
+    <entry>Elder air elemental</entry>
+  </collection>
+  <collection>
+    <entry>Greater air elemental</entry>
+  </collection>
+  <collection>
+    <entry>Huge air elemental</entry>
+  </collection>
+  <collection>
+    <entry>Large air elemental</entry>
+  </collection>
+  <collection>
+    <entry>Medium air elemental</entry>
+  </collection>
+  <collection>
+    <entry>Small air elemental</entry>
+  </collection>
+  <collection>
+    <entry>Elder earth elemental</entry>
+  </collection>
+  <collection>
+    <entry>Greater earth elemental</entry>
+  </collection>
+  <collection>
+    <entry>Huge earth elemental</entry>
+  </collection>
+  <collection>
+    <entry>Large earth elemental</entry>
+  </collection>
+  <collection>
+    <entry>Medium earth elemental</entry>
+  </collection>
+  <collection>
+    <entry>Small earth elemental</entry>
+  </collection>
+  <collection>
+    <entry>Elder fire elemental</entry>
+  </collection>
+  <collection>
+    <entry>Greater fire elemental</entry>
+  </collection>
+  <collection>
+    <entry>Huge fire elemental</entry>
+  </collection>
+  <collection>
+    <entry>Large fire elemental</entry>
+  </collection>
+  <collection>
+    <entry>Medium fire elemental</entry>
+  </collection>
+  <collection>
+    <entry>Small fire elemental</entry>
+  </collection>
+  <collection>
+    <entry>Elder water elemental</entry>
+  </collection>
+  <collection>
+    <entry>Greater water elemental</entry>
+  </collection>
+  <collection>
+    <entry>Huge water elemental</entry>
+  </collection>
+  <collection>
+    <entry>Large water elemental</entry>
+  </collection>
+  <collection>
+    <entry>Medium water elemental</entry>
+  </collection>
+  <collection>
+    <entry>Small water elemental</entry>
+  </collection>
+  <collection>
+    <entry>Elf warrior</entry>
+    <item>Longsword[Weapon]#Medium#</item>
+    <item>Longbow[Weapon]#Medium#</item>
+  </collection>
+  <collection>
+    <entry>Erinyes</entry>
+    <item>Longsword[Weapon]#Medium#</item>
+    <item>Composite longbow[Weapon]#+5 Strength bonus#(1){Flaming}</item>
+    <item>Rope, 50 ft.[Tool]</item>
+  </collection>
+  <collection>
+    <entry>Ethereal filcher</entry>
+  </collection>
+  <collection>
+    <entry>Ethereal marauder</entry>
+  </collection>
+  <collection>
+    <entry>Ettercap</entry>
+  </collection>
+  <collection>
+    <entry>Ettin</entry>
+    <item>Javelin[Weapon]#Large#</item>
+    <item>Morningstar[Weapon]#Large#</item>
+  </collection>
+  <collection>
+    <entry>Expert</entry>
+  </collection>
+  <collection>
+    <entry>Giant fire beetle</entry>
+  </collection>
+  <collection>
+    <entry>Formian queen</entry>
+  </collection>
+  <collection>
+    <entry>Formian taskmaster</entry>
+  </collection>
+  <collection>
+    <entry>Formian warrior</entry>
+  </collection>
+  <collection>
+    <entry>Formian worker</entry>
+  </collection>
+  <collection>
+    <entry>Formian myrmarch</entry>
+    <item>Javelin[Weapon]#Large#</item>
+  </collection>
+  <collection>
+    <entry>Frost worm</entry>
+  </collection>
+  <collection>
+    <entry>Ice Devil</entry>
+    <item>Longspear[Weapon]#Large#</item>
+  </collection>
+  <collection>
+    <entry>Gargoyle</entry>
+  </collection>
+  <collection>
+    <entry>Gelatinous cube</entry>
+  </collection>
+  <collection>
+    <entry>Ghaele</entry>
+    <item>Greatsword[Weapon](4){Holy}</item>
+  </collection>
+  <collection>
+    <entry>Ghast</entry>
+  </collection>
+  <collection>
+    <entry>Ghost</entry>
+  </collection>
+  <collection>
+    <entry>Ghoul</entry>
+  </collection>
+  <collection>
+    <entry>Cloud giant</entry>
+    <item>Morningstar[Weapon]#Gargantuan#</item>
+  </collection>
+  <collection>
+    <entry>Fire giant</entry>
+    <item>Greatsword[Weapon]#Large#</item>
+  </collection>
+  <collection>
+    <entry>Frost giant</entry>
+    <item>Greataxe[Weapon]#Large#</item>
+  </collection>
+  <collection>
+    <entry>Hill giant</entry>
+    <item>Greatclub[Weapon]#Large#</item>
+  </collection>
+  <collection>
+    <entry>Stone giant</entry>
+    <item>Greatclub[Weapon]#Large#</item>
+  </collection>
+  <collection>
+    <entry>Stone giant elder</entry>
+    <item>Greatclub[Weapon]#Large#</item>
+  </collection>
+  <collection>
+    <entry>Storm giant</entry>
+    <item>Greatsword[Weapon]#Huge#</item>
+    <item>Composite longbow[Weapon]#Huge,+14 Strength bonus#</item>
+  </collection>
+  <collection>
+    <entry>Gibbering mouther</entry>
+  </collection>
+  <collection>
+    <entry>Girallon</entry>
+  </collection>
+  <collection>
+    <entry>Glabrezu</entry>
+  </collection>
+  <collection>
+    <entry>Gnoll</entry>
+    <item>Battleaxe[Weapon]#Medium#</item>
+    <item>Shortbow[Weapon]#Medium#</item>
+  </collection>
+  <collection>
+    <entry>Gnome warrior</entry>
+    <item>Longsword[Weapon]#Small#</item>
+    <item>Light crossbow[Weapon]#Small#</item>
+  </collection>
+  <collection>
+    <entry>Goblin</entry>
+    <item>Morningstar[Weapon]#Small#</item>
+    <item>Javelin[Weapon]#Small#</item>
+  </collection>
+  <collection>
+    <entry>Flesh golem</entry>
+  </collection>
+  <collection>
+    <entry>Clay golem</entry>
+  </collection>
+  <collection>
+    <entry>Iron golem</entry>
+  </collection>
+  <collection>
+    <entry>Stone golem</entry>
+  </collection>
+  <collection>
+    <entry>Greater stone golem</entry>
+  </collection>
+  <collection>
+    <entry>Gorgon</entry>
+  </collection>
+  <collection>
+    <entry>Gray render</entry>
+  </collection>
+  <collection>
+    <entry>Green hag</entry>
+  </collection>
+  <collection>
+    <entry>Grick</entry>
+  </collection>
+  <collection>
+    <entry>Grig</entry>
+    <item>Short sword[Weapon]#Tiny#</item>
+    <item>Longbow[Weapon]#Tiny#</item>
+  </collection>
+  <collection>
+    <entry>Griffon</entry>
+  </collection>
+  <collection>
+    <entry>Grimlock</entry>
+    <item>Battleaxe[Weapon]#Medium#</item>
+  </collection>
+  <collection>
+    <entry>Gynosphinx</entry>
+  </collection>
+  <collection>
+    <entry>Barbed Devil</entry>
+  </collection>
+  <collection>
+    <entry>Halfling warrior</entry>
+    <item>Longsword[Weapon]#Small#</item>
+    <item>Light crossbow[Weapon]#Small#</item>
+  </collection>
+  <collection>
+    <entry>Harpy</entry>
+    <item>Club[Weapon]#Medium#</item>
+  </collection>
+  <collection>
+    <entry>Hawk</entry>
+  </collection>
+  <collection>
+    <entry>Hell hound</entry>
+  </collection>
+  <collection>
+    <entry>Hellcat</entry>
+  </collection>
+  <collection>
+    <entry>Hezrou</entry>
+  </collection>
+  <collection>
+    <entry>Hieracosphinx</entry>
+  </collection>
+  <collection>
+    <entry>Hippogriff</entry>
+  </collection>
+  <collection>
+    <entry>Hobgoblin</entry>
+    <item>Longsword[Weapon]#Medium#</item>
+    <item>Javelin[Weapon]#Medium#</item>
+  </collection>
+  <collection>
+    <entry>Homunculus</entry>
+  </collection>
+  <collection>
+    <entry>Light warhorse</entry>
+  </collection>
+  <collection>
+    <entry>Light horse</entry>
+  </collection>
+  <collection>
+    <entry>Heavy warhorse</entry>
+  </collection>
+  <collection>
+    <entry>Heavy horse</entry>
+  </collection>
+  <collection>
+    <entry>Hound archon</entry>
+    <item>Greatsword[Weapon]#Medium#</item>
+  </collection>
+  <collection>
+    <entry>Howler</entry>
+  </collection>
+  <collection>
+    <entry>Hydra</entry>
+  </collection>
+  <collection>
+    <entry>Hyena</entry>
+  </collection>
+  <collection>
+    <entry>Imp</entry>
+  </collection>
+  <collection>
+    <entry>Invisible stalker</entry>
+  </collection>
+  <collection>
+    <entry>Janni</entry>
+    <item>Scimitar[Weapon]#Medium#</item>
+    <item>Longbow[Weapon]#Medium#</item>
+  </collection>
+  <collection>
+    <entry>Chain Devil</entry>
+    <item>Spiked chain[Weapon]#Medium#</item>
+  </collection>
+  <collection>
+    <entry>Kobold</entry>
+    <item>Shortspear[Weapon]#Small#</item>
+    <item>Sling[Weapon]#Small#</item>
+  </collection>
+  <collection>
+    <entry>Kolyarut</entry>
+    <item>Longsword[Weapon](2)</item>
+  </collection>
+  <collection>
+    <entry>Krenshar</entry>
+  </collection>
+  <collection>
+    <entry>Lamia</entry>
+    <item>Dagger[Weapon]#Large#</item>
+  </collection>
+  <collection>
+    <entry>Lammasu</entry>
+  </collection>
+  <collection>
+    <entry>Lantern archon</entry>
+  </collection>
+  <collection>
+    <entry>Lemure</entry>
+  </collection>
+  <collection>
+    <entry>Leonal</entry>
+  </collection>
+  <collection>
+    <entry>Leopard</entry>
+  </collection>
+  <collection>
+    <entry>Lich</entry>
+  </collection>
+  <collection>
+    <entry>Lillend</entry>
+    <item>Short sword[Weapon]#Large#</item>
+  </collection>
+  <collection>
+    <entry>Lion</entry>
+  </collection>
+  <collection>
+    <entry>Dire lion</entry>
+  </collection>
+  <collection>
+    <entry>Livestock</entry>
+  </collection>
+  <collection>
+    <entry>Lizard</entry>
+  </collection>
+  <collection>
+    <entry>Lizardfolk</entry>
+    <item>Club[Weapon]#Medium#</item>
+    <item>Javelin[Weapon]#Medium#</item>
+  </collection>
+  <collection>
+    <entry>Magmin</entry>
+  </collection>
+  <collection>
+    <entry>Manticore</entry>
+  </collection>
+  <collection>
+    <entry>Marilith</entry>
+    <item>Longsword[Weapon]#Large#</item>
+    <item>Longsword[Weapon]#Large#</item>
+    <item>Longsword[Weapon]#Large#</item>
+    <item>Longsword[Weapon]#Large#</item>
+    <item>Longsword[Weapon]#Large#</item>
+    <item>Longsword[Weapon]#Large#</item>
+  </collection>
+  <collection>
+    <entry>Marut</entry>
+  </collection>
+  <collection>
+    <entry>Medusa</entry>
+    <item>Shortbow[Weapon]#Medium#</item>
+    <item>Dagger[Weapon]#Medium#</item>
+  </collection>
+  <collection>
+    <entry>Megaraptor</entry>
+  </collection>
+  <collection>
+    <entry>Mephit</entry>
+  </collection>
+  <collection>
+    <entry>Mimic</entry>
+  </collection>
+  <collection>
+    <entry>Mind flayer</entry>
+  </collection>
+  <collection>
+    <entry>Minotaur</entry>
+    <item>Greataxe[Weapon]#Large#</item>
+  </collection>
+  <collection>
+    <entry>Monitor lizard</entry>
+  </collection>
+  <collection>
+    <entry>Mohrg</entry>
+  </collection>
+  <collection>
+    <entry>Monkey</entry>
+  </collection>
+  <collection>
+    <entry>Mule</entry>
+  </collection>
+  <collection>
+    <entry>Mummy</entry>
+  </collection>
+  <collection>
+    <entry>Dark naga</entry>
+  </collection>
+  <collection>
+    <entry>Guardian naga</entry>
+  </collection>
+  <collection>
+    <entry>Spirit naga</entry>
+  </collection>
+  <collection>
+    <entry>Water naga</entry>
+  </collection>
+  <collection>
+    <entry>Nalfeshnee</entry>
+  </collection>
+  <collection>
+    <entry>Nessian warhound</entry>
+    <item>Chain shirt[Armor]#Barding#(2)</item>
+  </collection>
+  <collection>
+    <entry>Night hag</entry>
+  </collection>
+  <collection>
+    <entry>Nightcrawler</entry>
+  </collection>
+  <collection>
+    <entry>Nightmare</entry>
+  </collection>
+  <collection>
+    <entry>Nightwalker</entry>
+  </collection>
+  <collection>
+    <entry>Nightwing</entry>
+  </collection>
+  <collection>
+    <entry>NPC</entry>
+  </collection>
+  <collection>
+    <entry>Nymph</entry>
+    <item>Dagger[Weapon]#Medium#</item>
+  </collection>
+  <collection>
+    <entry>Ogre</entry>
+    <item>Greatclub[Weapon]#Large#</item>
+    <item>Javelin[Weapon]#Large#</item>
+  </collection>
+  <collection>
+    <entry>Ogre mage</entry>
+    <item>Greatsword[Weapon]#Large#</item>
+    <item>Longbow[Weapon]#Large#</item>
+  </collection>
+  <collection>
+    <entry>Gray ooze</entry>
+  </collection>
+  <collection>
+    <entry>Ochre jelly</entry>
+  </collection>
+  <collection>
+    <entry>Orc</entry>
+    <item>Falchion[Weapon]#Medium#</item>
+    <item>Javelin[Weapon]#Medium#</item>
+  </collection>
+  <collection>
+    <entry>Otyugh</entry>
+  </collection>
+  <collection>
+    <entry>Bone Devil</entry>
+  </collection>
+  <collection>
+    <entry>Owl</entry>
+  </collection>
+  <collection>
+    <entry>Giant owl</entry>
+  </collection>
+  <collection>
+    <entry>Owlbear</entry>
+  </collection>
+  <collection>
+    <entry>Pegasus</entry>
+  </collection>
+  <collection>
+    <entry>Phantom fungus</entry>
+  </collection>
+  <collection>
+    <entry>Phase spider</entry>
+  </collection>
+  <collection>
+    <entry>Phasm</entry>
+  </collection>
+  <collection>
+    <entry>Pit fiend</entry>
+  </collection>
+  <collection>
+    <entry>Pixie</entry>
+    <item>Short sword[Weapon]#Small#</item>
+    <item>Longbow[Weapon]#Small#</item>
+  </collection>
+  <collection>
+    <entry>Planetar</entry>
+    <item>Greatsword[Weapon](3)</item>
+  </collection>
+  <collection>
+    <entry>Pony</entry>
+  </collection>
+  <collection>
+    <entry>Warpony</entry>
+  </collection>
+  <collection>
+    <entry>Giant praying mantis</entry>
+  </collection>
+  <collection>
+    <entry>Pseudodragon</entry>
+  </collection>
+  <collection>
+    <entry>Purple worm</entry>
+  </collection>
+  <collection>
+    <entry>Pyrohydra</entry>
+  </collection>
+  <collection>
+    <entry>Quasit</entry>
+  </collection>
+  <collection>
+    <entry>Rakshasa</entry>
+  </collection>
+  <collection>
+    <entry>Rast</entry>
+  </collection>
+  <collection>
+    <entry>Rat</entry>
+  </collection>
+  <collection>
+    <entry>Dire rat</entry>
+  </collection>
+  <collection>
+    <entry>Raven</entry>
+  </collection>
+  <collection>
+    <entry>Ravid</entry>
+  </collection>
+  <collection>
+    <entry>Razor boar</entry>
+  </collection>
+  <collection>
+    <entry>Remorhaz</entry>
+  </collection>
+  <collection>
+    <entry>Retriever</entry>
+  </collection>
+  <collection>
+    <entry>Rhinoceras</entry>
+  </collection>
+  <collection>
+    <entry>Roc</entry>
+  </collection>
+  <collection>
+    <entry>Roper</entry>
+  </collection>
+  <collection>
+    <entry>Rust monster</entry>
+  </collection>
+  <collection>
+    <entry>Flamebrother salamander</entry>
+    <item>Shortspear[Weapon]#Small#</item>
+  </collection>
+  <collection>
+    <entry>Average salamander</entry>
+    <item>Shortspear[Weapon]#Medium#</item>
+  </collection>
+  <collection>
+    <entry>Noble salamander</entry>
+    <item>Longspear[Weapon](3)</item>
+  </collection>
+  <collection>
+    <entry>Satyr</entry>
+    <item>Dagger[Weapon]#Medium#</item>
+    <item>Shortbow[Weapon]#Medium#</item>
+  </collection>
+  <collection>
+    <entry>Colossal monstrous scorpion</entry>
+  </collection>
+  <collection>
+    <entry>Gargantuan monstrous scorpion</entry>
+  </collection>
+  <collection>
+    <entry>Huge monstrous scorpion</entry>
+  </collection>
+  <collection>
+    <entry>Large monstrous scorpion</entry>
+  </collection>
+  <collection>
+    <entry>Medium monstrous scorpion</entry>
+  </collection>
+  <collection>
+    <entry>Small monstrous scorpion</entry>
+  </collection>
+  <collection>
+    <entry>Tiny monstrous scorpion</entry>
+  </collection>
+  <collection>
+    <entry>Scorpionfolk</entry>
+    <item>Lance[Weapon]#Large#</item>
+  </collection>
+  <collection>
+    <entry>Shadow</entry>
+  </collection>
+  <collection>
+    <entry>Greater shadow</entry>
+  </collection>
+  <collection>
+    <entry>Shadow mastiff</entry>
+  </collection>
+  <collection>
+    <entry>Shambling mound</entry>
+  </collection>
+  <collection>
+    <entry>Shield guardian</entry>
+  </collection>
+  <collection>
+    <entry>Shocker lizard</entry>
+  </collection>
+  <collection>
+    <entry>Shrieker</entry>
+  </collection>
+  <collection>
+    <entry>Skeleton</entry>
+  </collection>
+  <collection>
+    <entry>Blue slaad</entry>
+  </collection>
+  <collection>
+    <entry>Death slaad</entry>
+  </collection>
+  <collection>
+    <entry>Gray slaad</entry>
+  </collection>
+  <collection>
+    <entry>Green slaad</entry>
+  </collection>
+  <collection>
+    <entry>Red slaad</entry>
+  </collection>
+  <collection>
+    <entry>Solar</entry>
+    <item>Greatsword[Weapon](5){Dancing}</item>
+    <item>Composite longbow[Weapon]#+5 Strength bonus,Creates slaying arrows keyed to any creature type or subtype#(2)</item>
+  </collection>
+  <collection>
+    <entry>Constrictor snake</entry>
+  </collection>
+  <collection>
+    <entry>Giant constrictor snake</entry>
+  </collection>
+  <collection>
+    <entry>Huge viper snake</entry>
+  </collection>
+  <collection>
+    <entry>Large viper snake</entry>
+  </collection>
+  <collection>
+    <entry>Medium viper snake</entry>
+  </collection>
+  <collection>
+    <entry>Small viper snake</entry>
+  </collection>
+  <collection>
+    <entry>Tiny viper snake</entry>
+  </collection>
+  <collection>
+    <entry>Spectre</entry>
+  </collection>
+  <collection>
+    <entry>Colossal monstrous spider</entry>
+  </collection>
+  <collection>
+    <entry>Gargantuan monstrous spider</entry>
+  </collection>
+  <collection>
+    <entry>Huge monstrous spider</entry>
+  </collection>
+  <collection>
+    <entry>Large monstrous spider</entry>
+  </collection>
+  <collection>
+    <entry>Medium monstrous spider</entry>
+  </collection>
+  <collection>
+    <entry>Small monstrous spider</entry>
+  </collection>
+  <collection>
+    <entry>Tiny monstrous spider</entry>
+  </collection>
+  <collection>
+    <entry>Spider eater</entry>
+  </collection>
+  <collection>
+    <entry>Giant stag beetle</entry>
+  </collection>
+  <collection>
+    <entry>Stirge</entry>
+  </collection>
+  <collection>
+    <entry>Succubus</entry>
+  </collection>
+  <collection>
+    <entry>Svirfneblin warrior</entry>
+    <item>Heavy pick[Weapon]#Small#</item>
+    <item>Light crossbow[Weapon]#Small#</item>
+  </collection>
+  <collection>
+    <entry>Tarrasque</entry>
+  </collection>
+  <collection>
+    <entry>Tendriculos</entry>
+  </collection>
+  <collection>
+    <entry>Thoqqua</entry>
+  </collection>
+  <collection>
+    <entry>Tiefling warrior</entry>
+    <item>Rapier[Weapon]#Medium#</item>
+    <item>Light crossbow[Weapon]#Medium#</item>
+  </collection>
+  <collection>
+    <entry>Tiger</entry>
+  </collection>
+  <collection>
+    <entry>Dire tiger</entry>
+  </collection>
+  <collection>
+    <entry>Toad</entry>
+  </collection>
+  <collection>
+    <entry>Treant</entry>
+  </collection>
+  <collection>
+    <entry>Triceratops</entry>
+  </collection>
+  <collection>
+    <entry>Troglodyte</entry>
+    <item>Club[Weapon]#Medium#</item>
+    <item>Javelin[Weapon]#Medium#</item>
+  </collection>
+  <collection>
+    <entry>Troll</entry>
+  </collection>
+  <collection>
+    <entry>Trumpet archon</entry>
+    <item>Greatsword[Weapon](4)</item>
+  </collection>
+  <collection>
+    <entry>Tyrannosaurus</entry>
+  </collection>
+  <collection>
+    <entry>Umber hulk</entry>
+  </collection>
+  <collection>
+    <entry>Truly horrid umber hulk</entry>
+  </collection>
+  <collection>
+    <entry>Unicorn</entry>
+  </collection>
+  <collection>
+    <entry>Vampire</entry>
+  </collection>
+  <collection>
+    <entry>Vampire spawn</entry>
+  </collection>
+  <collection>
+    <entry>Vargouille</entry>
+  </collection>
+  <collection>
+    <entry>Violet fungus</entry>
+  </collection>
+  <collection>
+    <entry>Vrock</entry>
+  </collection>
+  <collection>
+    <entry>Warrior</entry>
+  </collection>
+  <collection>
+    <entry>Giant wasp</entry>
+  </collection>
+  <collection>
+    <entry>Weasel</entry>
+  </collection>
+  <collection>
+    <entry>Dire weasel</entry>
+  </collection>
+  <collection>
+    <entry>Werebear</entry>
+    <item>Greataxe[Weapon]#Medium#</item>
+    <item>Throwing axe[Weapon]#Medium#</item>
+  </collection>
+  <collection>
+    <entry>Wereboar</entry>
+    <item>Battleaxe[Weapon]#Medium#</item>
+    <item>Javelin[Weapon]#Medium#</item>
+  </collection>
+  <collection>
+    <entry>Wererat</entry>
+    <item>Rapier[Weapon]#Medium#</item>
+    <item>Light crossbow[Weapon]#Medium#</item>
+  </collection>
+  <collection>
+    <entry>Weretiger</entry>
+    <item>Glaive[Weapon]#Medium#</item>
+    <item>Composite longbow[Weapon]#Medium,+1 Strength bonus#</item>
+  </collection>
+  <collection>
+    <entry>Werewolf</entry>
+    <item>Longsword[Weapon]#Medium#</item>
+    <item>Light crossbow[Weapon]#Medium#</item>
+  </collection>
+  <collection>
+    <entry>Wight</entry>
+  </collection>
+  <collection>
+    <entry>Will-O'-Wisp</entry>
+  </collection>
+  <collection>
+    <entry>Winter wolf</entry>
+  </collection>
+  <collection>
+    <entry>Wolf</entry>
+  </collection>
+  <collection>
+    <entry>Dire wolf</entry>
+  </collection>
+  <collection>
+    <entry>Wolverine</entry>
+  </collection>
+  <collection>
+    <entry>Dire wolverine</entry>
+  </collection>
+  <collection>
+    <entry>Worg</entry>
+  </collection>
+  <collection>
+    <entry>Wraith</entry>
+  </collection>
+  <collection>
+    <entry>Dread wraith</entry>
+  </collection>
+  <collection>
+    <entry>Wyvern</entry>
+  </collection>
+  <collection>
+    <entry>Xill</entry>
+  </collection>
+  <collection>
+    <entry>Minor xorn</entry>
+  </collection>
+  <collection>
+    <entry>Average xorn</entry>
+  </collection>
+  <collection>
+    <entry>Elder xorn</entry>
+  </collection>
+  <collection>
+    <entry>Yeth hound</entry>
+  </collection>
+  <collection>
+    <entry>Yrthak</entry>
+  </collection>
+  <collection>
+    <entry>Yuan-ti Pureblood</entry>
+    <item>Longbow[Weapon]#Medium#</item>
+    <item>Scimitar[Weapon]#Medium#</item>
+  </collection>
+  <collection>
+    <entry>Yuan-ti Halfblood</entry>
+    <item>Composite longbow[Weapon]#Medium,+2 Strength bonus#</item>
+    <item>Scimitar[Weapon]#Medium#</item>
+  </collection>
+  <collection>
+    <entry>Yuan-ti Abomination</entry>
+    <item>Composite longbow[Weapon]#Large,+4 Strength bonus#</item>
+    <item>Scimitar[Weapon]#Large#</item>
+  </collection>
+  <collection>
+    <entry>Zelekhut</entry>
+    <item>Spiked chain[Weapon]#Large#</item>
+    <item>Spiked chain[Weapon]#Large#</item>
+  </collection>
+  <collection>
+    <entry>Zombie</entry>
+  </collection>
+</collections>

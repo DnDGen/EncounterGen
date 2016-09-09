@@ -57,7 +57,19 @@ namespace EncounterGen.Tests.Integration.Stress
             do makeAssertions();
             while (TestShouldKeepRunning());
 
-            Console.WriteLine($"Stress test complete after {Stopwatch.Elapsed} and {iterations} iterations");
+            var message = BuildMessage("Stress test complete");
+            Console.WriteLine(message);
+        }
+
+        private string BuildMessage(string baseMessage, bool includeIterations = true)
+        {
+            var message = $"{baseMessage} after {Stopwatch.Elapsed}";
+
+            if (!includeIterations)
+                return message;
+
+            var iterationsPerSecond = Math.Round(iterations / Stopwatch.Elapsed.TotalSeconds, 2);
+            return $"{message} and {iterations} iterations, or {iterationsPerSecond} iterations/second";
         }
 
         protected T Generate<T>(Func<T> generate, Func<T, bool> isValid)
@@ -68,7 +80,10 @@ namespace EncounterGen.Tests.Integration.Stress
             while (isValid(generatedObject) == false && Stopwatch.Elapsed.TotalSeconds < timeLimitInSeconds + 10);
 
             if (isValid(generatedObject) == false)
-                Assert.Fail($"Failed to generate after {Stopwatch.Elapsed}");
+            {
+                var message = BuildMessage("Failed to generate", false);
+                Assert.Fail(message);
+            }
 
             return generatedObject;
         }
@@ -80,10 +95,14 @@ namespace EncounterGen.Tests.Integration.Stress
             do generatedObject = generate();
             while (TestShouldKeepRunning() && isValid(generatedObject) == false);
 
-            Console.WriteLine($"Generation complete after {Stopwatch.Elapsed} and {iterations} iterations");
+            var message = BuildMessage("Generation complete");
+            Console.WriteLine(message);
 
             if (TestShouldKeepRunning() == false && isValid(generatedObject) == false)
-                Assert.Fail($"Failed to generate after {Stopwatch.Elapsed} and {iterations} iterations.");
+            {
+                message = BuildMessage("Failed to generate");
+                Assert.Fail(message);
+            }
 
             return generatedObject;
         }

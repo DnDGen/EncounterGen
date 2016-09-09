@@ -8,5 +8,6 @@
         public const string LevelXEncounterLevel = "Level{0}EncounterLevel";
         public const string RollOrder = "RollOrder";
         public const string TreasureAdjustments = "TreasureAdjustments";
+        public const string TreasureGroups = "TreasureGroups";
     }
 }

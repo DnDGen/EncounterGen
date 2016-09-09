@@ -22,7 +22,6 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures
             {
                 CreatureConstants.Aranea,
                 CreatureConstants.HoundArchon,
-                "Hound archon",
                 CreatureConstants.Barghest,
                 CreatureConstants.Bear_Brown,
                 CreatureConstants.Boar_Dire,
@@ -65,7 +64,6 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures
 
         [TestCase(CreatureConstants.Aranea, ChallengeRatingConstants.Four)]
         [TestCase(CreatureConstants.HoundArchon, ChallengeRatingConstants.Four)]
-        [TestCase("Hound archon", ChallengeRatingConstants.Four)]
         [TestCase(CreatureConstants.Barghest, ChallengeRatingConstants.Four)]
         [TestCase(CreatureConstants.Bear_Brown, ChallengeRatingConstants.Four)]
         [TestCase(CreatureConstants.Boar_Dire, ChallengeRatingConstants.Four)]

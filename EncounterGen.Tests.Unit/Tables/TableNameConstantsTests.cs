@@ -12,6 +12,7 @@ namespace EncounterGen.Tests.Unit.Tables
         [TestCase(TableNameConstants.LevelXEncounterLevel, "Level{0}EncounterLevel")]
         [TestCase(TableNameConstants.RollOrder, "RollOrder")]
         [TestCase(TableNameConstants.TreasureAdjustments, "TreasureAdjustments")]
+        [TestCase(TableNameConstants.TreasureGroups, "TreasureGroups")]
         public void Constant(string constant, string value)
         {
             Assert.That(constant, Is.EqualTo(value));

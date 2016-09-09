@@ -22,7 +22,7 @@
     <item>4</item>
   </collection>
   <collection>
-    <entry>Annis (hag)</entry>
+    <entry>Annis</entry>
     <item>2</item>
   </collection>
   <collection>
@@ -238,7 +238,7 @@
     <item>1</item>
   </collection>
   <collection>
-    <entry>Dwarf</entry>
+    <entry>Dwarf warrior</entry>
     <item>1/4</item>
   </collection>
   <collection>
@@ -254,7 +254,7 @@
     <item>3</item>
   </collection>
   <collection>
-    <entry>Elf</entry>
+    <entry>Elf warrior</entry>
     <item>1/4</item>
   </collection>
   <collection>
@@ -286,7 +286,7 @@
     <item>1/2</item>
   </collection>
   <collection>
-    <entry>Gnome</entry>
+    <entry>Gnome warrior</entry>
     <item>1/4</item>
   </collection>
   <collection>
@@ -302,7 +302,7 @@
     <item>3</item>
   </collection>
   <collection>
-    <entry>Green hag (hag)</entry>
+    <entry>Green hag</entry>
     <item>3</item>
   </collection>
   <collection>
@@ -318,7 +318,7 @@
     <item>3</item>
   </collection>
   <collection>
-    <entry>Halfling</entry>
+    <entry>Halfling warrior</entry>
     <item>1/4</item>
   </collection>
   <collection>
@@ -386,7 +386,7 @@
     <item>3</item>
   </collection>
   <collection>
-    <entry>Dog (Hyena)</entry>
+    <entry>Hyena</entry>
     <item>1/2</item>
   </collection>
   <collection>
@@ -610,7 +610,7 @@
     <item>1/4</item>
   </collection>
   <collection>
-    <entry>Sea hag (hag)</entry>
+    <entry>Sea hag</entry>
     <item>1/2</item>
   </collection>
   <collection>
@@ -838,15 +838,15 @@
     <item>4</item>
   </collection>
   <collection>
-    <entry>Yuan-ti (Abomination)</entry>
+    <entry>Yuan-ti Abomination</entry>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Yuan-ti (Halfblood)</entry>
+    <entry>Yuan-ti Halfblood</entry>
     <item>2</item>
   </collection>
   <collection>
-    <entry>Yuan-ti (Pureblood)</entry>
+    <entry>Yuan-ti Pureblood</entry>
     <item>2</item>
   </collection>
 </collections>

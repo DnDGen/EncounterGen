@@ -9,12 +9,13 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
+using TreasureGen;
 
 namespace EncounterGen.Domain.Generators
 {
     internal class EncounterGenerator : IEncounterGenerator
     {
-        private const int IterationLimit = 10000;
+        private const int IterationLimit = 30000;
 
         private ITypeAndAmountPercentileSelector typeAndAmountPercentileSelector;
         private IRollSelector rollSelector;
@@ -90,9 +91,24 @@ namespace EncounterGen.Domain.Generators
             encounter.Creatures = EditCreatureTypes(creatures);
 
             var leadCreature = encounter.Creatures.First();
-            encounter.Treasure = encounterTreasureGenerator.GenerateFor(leadCreature, level);
+            encounter.Treasures = GetTreasures(encounter.Creatures, level);
 
             return encounter;
+        }
+
+        private IEnumerable<Treasure> GetTreasures(IEnumerable<Creature> creatures, int level)
+        {
+            var treasures = new List<Treasure>();
+
+            foreach (var creature in creatures)
+            {
+                var treasure = encounterTreasureGenerator.GenerateFor(creature, level);
+
+                if (treasure.IsAny)
+                    treasures.Add(treasure);
+            }
+
+            return treasures;
         }
 
         private IEnumerable<Creature> EditCreatureTypes(IEnumerable<Creature> creatures)

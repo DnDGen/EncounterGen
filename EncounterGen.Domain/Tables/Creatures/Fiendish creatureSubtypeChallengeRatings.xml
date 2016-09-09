@@ -46,7 +46,7 @@
     <item>3</item>
   </collection>
   <collection>
-    <entry>Annis (hag)</entry>
+    <entry>Annis</entry>
     <item>7</item>
   </collection>
   <collection>
@@ -286,7 +286,7 @@
     <item>8</item>
   </collection>
   <collection>
-    <entry>Dwarf</entry>
+    <entry>Dwarf warrior</entry>
     <item>1/2</item>
   </collection>
   <collection>
@@ -298,7 +298,7 @@
     <item>9</item>
   </collection>
   <collection>
-    <entry>Elf</entry>
+    <entry>Elf warrior</entry>
     <item>1/2</item>
   </collection>
   <collection>
@@ -366,7 +366,7 @@
     <item>5</item>
   </collection>
   <collection>
-    <entry>Giant soldier ant</entry>
+    <entry>Giant ant worker</entry>
     <item>1</item>
   </collection>
   <collection>
@@ -378,8 +378,12 @@
     <item>4</item>
   </collection>
   <collection>
-    <entry>Giant worker ant</entry>
+    <entry>Giant ant soldier</entry>
     <item>2</item>
+  </collection>
+  <collection>
+    <entry>Giant ant queen</entry>
+    <item>3</item>
   </collection>
   <collection>
     <entry>Gibbering mouther</entry>
@@ -426,7 +430,7 @@
     <item>23</item>
   </collection>
   <collection>
-    <entry>Green hag (hag)</entry>
+    <entry>Green hag</entry>
     <item>7</item>
   </collection>
   <collection>
@@ -446,7 +450,7 @@
     <item>10</item>
   </collection>
   <collection>
-    <entry>Halfling</entry>
+    <entry>Halfling warrior</entry>
     <item>1/2</item>
   </collection>
   <collection>
@@ -526,7 +530,7 @@
     <item>10</item>
   </collection>
   <collection>
-    <entry>Dog (Hyena)</entry>
+    <entry>Hyena</entry>
     <item>1</item>
   </collection>
   <collection>
@@ -822,7 +826,7 @@
     <item>9</item>
   </collection>
   <collection>
-    <entry>Sea hag (hag)</entry>
+    <entry>Sea hag</entry>
     <item>4</item>
   </collection>
   <collection>
@@ -1074,15 +1078,15 @@
     <item>11</item>
   </collection>
   <collection>
-    <entry>Yuan-ti (Abomination)</entry>
+    <entry>Yuan-ti Abomination</entry>
     <item>9</item>
   </collection>
   <collection>
-    <entry>Yuan-ti (Halfblood)</entry>
+    <entry>Yuan-ti Halfblood</entry>
     <item>6</item>
   </collection>
   <collection>
-    <entry>Yuan-ti (Pureblood)</entry>
+    <entry>Yuan-ti Pureblood</entry>
     <item>4</item>
   </collection>
 </collections>

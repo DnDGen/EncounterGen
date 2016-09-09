@@ -270,7 +270,7 @@
     <item>4</item>
   </collection>
   <collection>
-    <entry>Dwarf</entry>
+    <entry>Dwarf warrior</entry>
     <item>1/2</item>
   </collection>
   <collection>
@@ -282,7 +282,7 @@
     <item>9</item>
   </collection>
   <collection>
-    <entry>Elf</entry>
+    <entry>Elf warrior</entry>
     <item>1/2</item>
   </collection>
   <collection>
@@ -334,8 +334,8 @@
     <item>5</item>
   </collection>
   <collection>
-    <entry>Giant soldier ant</entry>
-    <item>1</item>
+    <entry>Giant ant soldier</entry>
+    <item>2</item>
   </collection>
   <collection>
     <entry>Giant stag beetle</entry>
@@ -346,8 +346,12 @@
     <item>4</item>
   </collection>
   <collection>
-    <entry>Giant worker ant</entry>
-    <item>2</item>
+    <entry>Giant ant worker</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Giant ant queen</entry>
+    <item>3</item>
   </collection>
   <collection>
     <entry>Gibbering mouther</entry>
@@ -358,7 +362,7 @@
     <item>7</item>
   </collection>
   <collection>
-    <entry>Gnome</entry>
+    <entry>Gnome warrior</entry>
     <item>1/2</item>
   </collection>
   <collection>
@@ -410,7 +414,7 @@
     <item>10</item>
   </collection>
   <collection>
-    <entry>Halfling</entry>
+    <entry>Halfling warrior</entry>
     <item>1/2</item>
   </collection>
   <collection>
@@ -478,7 +482,7 @@
     <item>10</item>
   </collection>
   <collection>
-    <entry>Dog (Hyena)</entry>
+    <entry>Hyena</entry>
     <item>1</item>
   </collection>
   <collection>

@@ -10,6 +10,8 @@ using System.Linq;
 using TreasureGen.Coins;
 using TreasureGen.Goods;
 using TreasureGen.Items;
+using TreasureGen.Items.Magical;
+using TreasureGen.Items.Mundane;
 
 namespace EncounterGen.Tests.Unit.Generators
 {
@@ -32,6 +34,8 @@ namespace EncounterGen.Tests.Unit.Generators
         private List<Item> items;
         private Coin coin;
         private List<string> usesSubtypeForTreasure;
+        private Mock<IMagicalItemGeneratorRuntimeFactory> mockMagicalItemGeneratorFactory;
+        private Mock<IMundaneItemGeneratorRuntimeFactory> mockMundaneItemGeneratorFactory;
 
         [SetUp]
         public void Setup()
@@ -42,9 +46,11 @@ namespace EncounterGen.Tests.Unit.Generators
             mockAdjustmentSelector = new Mock<IAdjustmentSelector>();
             mockBooleanPercentileSelector = new Mock<IBooleanPercentileSelector>();
             mockCollectionSelector = new Mock<ICollectionSelector>();
+            mockMagicalItemGeneratorFactory = new Mock<IMagicalItemGeneratorRuntimeFactory>();
+            mockMundaneItemGeneratorFactory = new Mock<IMundaneItemGeneratorRuntimeFactory>();
 
             encounterTreasureGenerator = new EncounterTreasureGenerator(mockCoinGenerator.Object, mockGoodsGenerator.Object, mockItemsGenerator.Object,
-                mockAdjustmentSelector.Object, mockBooleanPercentileSelector.Object, mockCollectionSelector.Object);
+                mockAdjustmentSelector.Object, mockBooleanPercentileSelector.Object, mockCollectionSelector.Object, mockMagicalItemGeneratorFactory.Object, mockMundaneItemGeneratorFactory.Object);
 
             creature = new Creature();
             usesSubtypeForTreasure = new List<string>();
@@ -52,6 +58,7 @@ namespace EncounterGen.Tests.Unit.Generators
             level = 9266;
             creature.Name = "creature";
             creature.Description = "subtype";
+            creature.Quantity = 1;
             coinMultiplier = 1;
             goodsMultiplier = 1;
             itemsMultiplier = 1;
@@ -153,9 +160,7 @@ namespace EncounterGen.Tests.Unit.Generators
 
             var treasure = encounterTreasureGenerator.GenerateFor(creature, level);
             Assert.That(treasure, Is.Not.Null);
-            Assert.That(treasure.Coin.Quantity, Is.EqualTo(0));
-            Assert.That(treasure.Goods, Is.Empty);
-            Assert.That(treasure.Items, Is.Empty);
+            Assert.That(treasure.IsAny, Is.False);
         }
 
         [Test]
@@ -167,9 +172,7 @@ namespace EncounterGen.Tests.Unit.Generators
 
             var treasure = encounterTreasureGenerator.GenerateFor(creature, level);
             Assert.That(treasure, Is.Not.Null);
-            Assert.That(treasure.Coin.Quantity, Is.EqualTo(0));
-            Assert.That(treasure.Goods, Is.Empty);
-            Assert.That(treasure.Items, Is.Empty);
+            Assert.That(treasure.IsAny, Is.False);
         }
 
         [Test]
@@ -369,6 +372,224 @@ namespace EncounterGen.Tests.Unit.Generators
             Assert.That(treasure.Coin.Quantity, Is.EqualTo(1200));
             Assert.That(treasure.Goods.Count, Is.EqualTo(4));
             Assert.That(treasure.Items.Count, Is.EqualTo(4));
+        }
+
+        [Test]
+        public void SPECIFIC_CharmedFiendishHydraWith10Heads()
+        {
+            creature.Name = CreatureConstants.CharmedCreature;
+            creature.Description = $"{CreatureConstants.FiendishCreature} ({CreatureConstants.Hydra_10Heads})";
+
+            usesSubtypeForTreasure.Add(CreatureConstants.CharmedCreature);
+            usesSubtypeForTreasure.Add(CreatureConstants.FiendishCreature);
+
+            mockAdjustmentSelector.Setup(s => s.Select<double>(TableNameConstants.TreasureAdjustments, CreatureConstants.Hydra, TreasureConstants.Coin)).Returns(2);
+            mockAdjustmentSelector.Setup(s => s.Select<double>(TableNameConstants.TreasureAdjustments, CreatureConstants.Hydra, TreasureConstants.Goods)).Returns(2);
+            mockAdjustmentSelector.Setup(s => s.Select<double>(TableNameConstants.TreasureAdjustments, CreatureConstants.Hydra, TreasureConstants.Items)).Returns(2);
+
+            var secondGoods = new[] { new Good(), new Good() };
+            mockGoodsGenerator.SetupSequence(g => g.GenerateAtLevel(level)).Returns(goods).Returns(secondGoods);
+
+            var secondItems = new[] { new Item(), new Item() };
+            mockItemsGenerator.SetupSequence(g => g.GenerateAtLevel(level)).Returns(items).Returns(secondItems);
+
+            var treasure = encounterTreasureGenerator.GenerateFor(creature, level);
+            Assert.That(treasure.Coin.Currency, Is.EqualTo("currency"));
+            Assert.That(treasure.Coin.Quantity, Is.EqualTo(1200));
+            Assert.That(treasure.Goods.Count, Is.EqualTo(4));
+            Assert.That(treasure.Items.Count, Is.EqualTo(4));
+        }
+
+        [Test]
+        public void GetSetTreasure()
+        {
+            var setTreasureItems = new[] { "item 1[item type]", "item 2[other item type]" };
+            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.TreasureGroups, creature.Name)).Returns(setTreasureItems);
+
+            var mockMundaneItemGenerator = new Mock<MundaneItemGenerator>();
+            var mockOtherMundaneItemGenerator = new Mock<MundaneItemGenerator>();
+            mockMundaneItemGeneratorFactory.Setup(f => f.CreateGeneratorOf("item type")).Returns(mockMundaneItemGenerator.Object);
+            mockMundaneItemGeneratorFactory.Setup(f => f.CreateGeneratorOf("other item type")).Returns(mockOtherMundaneItemGenerator.Object);
+
+            var setItem = new Item();
+            var otherSetItem = new Item();
+            mockMundaneItemGenerator.Setup(g => g.Generate(It.Is<Item>(i => i.Name == "item 1"), true)).Returns(setItem);
+            mockOtherMundaneItemGenerator.Setup(g => g.Generate(It.Is<Item>(i => i.Name == "item 2"), true)).Returns(otherSetItem);
+
+            var treasure = encounterTreasureGenerator.GenerateFor(creature, level);
+            Assert.That(treasure.Items, Contains.Item(setItem));
+            Assert.That(treasure.Items, Contains.Item(otherSetItem));
+        }
+
+        [Test]
+        public void GetSetTreasureWithMagicBonus()
+        {
+            var setTreasureItems = new[] { "item 1[item type](90210)", "item 2[other item type]" };
+            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.TreasureGroups, creature.Name)).Returns(setTreasureItems);
+
+            var mockMagicalItemGenerator = new Mock<MagicalItemGenerator>();
+            var mockMundaneItemGenerator = new Mock<MundaneItemGenerator>();
+            mockMagicalItemGeneratorFactory.Setup(f => f.CreateGeneratorOf("item type")).Returns(mockMagicalItemGenerator.Object);
+            mockMundaneItemGeneratorFactory.Setup(f => f.CreateGeneratorOf("other item type")).Returns(mockMundaneItemGenerator.Object);
+
+            var setItem = new Item();
+            var otherSetItem = new Item();
+            mockMagicalItemGenerator.Setup(g => g.Generate(It.Is<Item>(i => i.Name == "item 1" && i.Magic.Bonus == 90210), true)).Returns(setItem);
+            mockMundaneItemGenerator.Setup(g => g.Generate(It.Is<Item>(i => i.Name == "item 2" && i.IsMagical == false), true)).Returns(otherSetItem);
+
+            var treasure = encounterTreasureGenerator.GenerateFor(creature, level);
+            Assert.That(treasure.Items, Contains.Item(setItem));
+            Assert.That(treasure.Items, Contains.Item(otherSetItem));
+        }
+
+        [Test]
+        public void GetSetTreasureWithSpecialAbilities()
+        {
+            var setTreasureItems = new[] { "item 1[item type](90210)", "item 2[other item type]#Trait#(42){ability 1,ability 2}" };
+            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.TreasureGroups, creature.Name)).Returns(setTreasureItems);
+
+            var mockMagicalItemGenerator = new Mock<MagicalItemGenerator>();
+            var mockOtherMagicalItemGenerator = new Mock<MagicalItemGenerator>();
+            mockMagicalItemGeneratorFactory.Setup(f => f.CreateGeneratorOf("item type")).Returns(mockMagicalItemGenerator.Object);
+            mockMagicalItemGeneratorFactory.Setup(f => f.CreateGeneratorOf("other item type")).Returns(mockOtherMagicalItemGenerator.Object);
+
+            var setItem = new Item();
+            var otherSetItem = new Item();
+            mockMagicalItemGenerator.Setup(g => g.Generate(It.Is<Item>(i => i.Name == "item 1" && i.Magic.Bonus == 90210), true)).Returns(setItem);
+            mockOtherMagicalItemGenerator.Setup(g => g.Generate(It.Is<Item>(i => i.Name == "item 2" && i.Magic.Bonus == 42 && i.Traits.Single() == "Trait"
+                && i.Magic.SpecialAbilities.Count() == 2 && i.Magic.SpecialAbilities.Any(a => a.Name == "ability 1") && i.Magic.SpecialAbilities.Any(a => a.Name == "ability 2")), true))
+                .Returns(otherSetItem);
+
+            var treasure = encounterTreasureGenerator.GenerateFor(creature, level);
+            Assert.That(treasure.Items, Contains.Item(setItem));
+            Assert.That(treasure.Items, Contains.Item(otherSetItem));
+        }
+
+        [Test]
+        public void GetSetTreasureWithTraits()
+        {
+            var setTreasureItems = new[] { "item 1[item type]#size#", "item 2[other item type]#other size,trait#" };
+            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.TreasureGroups, creature.Name)).Returns(setTreasureItems);
+
+            var mockMundaneItemGenerator = new Mock<MundaneItemGenerator>();
+            var mockOtherMundaneItemGenerator = new Mock<MundaneItemGenerator>();
+            mockMundaneItemGeneratorFactory.Setup(f => f.CreateGeneratorOf("item type")).Returns(mockMundaneItemGenerator.Object);
+            mockMundaneItemGeneratorFactory.Setup(f => f.CreateGeneratorOf("other item type")).Returns(mockOtherMundaneItemGenerator.Object);
+
+            var setItem = new Item();
+            var otherSetItem = new Item();
+            mockMundaneItemGenerator.Setup(g => g.Generate(It.Is<Item>(i => i.Name == "item 1" && i.Traits.Single() == "size"), true)).Returns(setItem);
+            mockOtherMundaneItemGenerator.Setup(g => g.Generate(It.Is<Item>(i => i.Name == "item 2" && i.Traits.First() == "other size" && i.Traits.Last() == "trait" && i.Traits.Count() == 2), true)).Returns(otherSetItem);
+
+            var treasure = encounterTreasureGenerator.GenerateFor(creature, level);
+            Assert.That(treasure.Items, Contains.Item(setItem));
+            Assert.That(treasure.Items, Contains.Item(otherSetItem));
+        }
+
+        [Test]
+        public void GetSetTreasurePerCreature()
+        {
+            var setTreasureItems = new[] { "item 1[item type]", "item 2[other item type]" };
+            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.TreasureGroups, creature.Name)).Returns(setTreasureItems);
+
+            var mockMundaneItemGenerator = new Mock<MundaneItemGenerator>();
+            var mockOtherMundaneItemGenerator = new Mock<MundaneItemGenerator>();
+            mockMundaneItemGeneratorFactory.Setup(f => f.CreateGeneratorOf("item type")).Returns(mockMundaneItemGenerator.Object);
+            mockMundaneItemGeneratorFactory.Setup(f => f.CreateGeneratorOf("other item type")).Returns(mockOtherMundaneItemGenerator.Object);
+
+            mockMundaneItemGenerator.Setup(g => g.Generate(It.Is<Item>(i => i.Name == "item 1"), true)).Returns((Item t, bool a) => t.Copy());
+            mockOtherMundaneItemGenerator.Setup(g => g.Generate(It.Is<Item>(i => i.Name == "item 2"), true)).Returns((Item t, bool a) => t.Copy());
+
+            creature.Quantity = 42;
+
+            var treasure = encounterTreasureGenerator.GenerateFor(creature, level);
+            Assert.That(treasure.Items.Count(i => i.Name == "item 1"), Is.EqualTo(42));
+            Assert.That(treasure.Items.Count(i => i.Name == "item 2"), Is.EqualTo(42));
+        }
+
+        [Test]
+        public void UseSubtypeForSetTreasure()
+        {
+            usesSubtypeForTreasure.Add(creature.Name);
+
+            mockAdjustmentSelector.Setup(s => s.Select<double>(TableNameConstants.TreasureAdjustments, creature.Description, TreasureConstants.Coin)).Returns(2);
+            mockAdjustmentSelector.Setup(s => s.Select<double>(TableNameConstants.TreasureAdjustments, creature.Description, TreasureConstants.Goods)).Returns(2);
+            mockAdjustmentSelector.Setup(s => s.Select<double>(TableNameConstants.TreasureAdjustments, creature.Description, TreasureConstants.Items)).Returns(2);
+
+            var secondGoods = new[] { new Good(), new Good() };
+            mockGoodsGenerator.SetupSequence(g => g.GenerateAtLevel(level)).Returns(goods).Returns(secondGoods);
+
+            var secondItems = new[] { new Item(), new Item() };
+            mockItemsGenerator.SetupSequence(g => g.GenerateAtLevel(level)).Returns(items).Returns(secondItems);
+
+            var setTreasureItems = new[] { "item 1[item type]", "item 2[other item type]" };
+            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.TreasureGroups, creature.Description)).Returns(setTreasureItems);
+
+            var mockMundaneItemGenerator = new Mock<MundaneItemGenerator>();
+            var mockOtherMundaneItemGenerator = new Mock<MundaneItemGenerator>();
+            mockMundaneItemGeneratorFactory.Setup(f => f.CreateGeneratorOf("item type")).Returns(mockMundaneItemGenerator.Object);
+            mockMundaneItemGeneratorFactory.Setup(f => f.CreateGeneratorOf("other item type")).Returns(mockOtherMundaneItemGenerator.Object);
+
+            var setItem = new Item();
+            var otherSetItem = new Item();
+            mockMundaneItemGenerator.Setup(g => g.Generate(It.Is<Item>(i => i.Name == "item 1"), true)).Returns(setItem);
+            mockOtherMundaneItemGenerator.Setup(g => g.Generate(It.Is<Item>(i => i.Name == "item 2"), true)).Returns(otherSetItem);
+
+            var treasure = encounterTreasureGenerator.GenerateFor(creature, level);
+            Assert.That(treasure.Coin.Currency, Is.EqualTo("currency"));
+            Assert.That(treasure.Coin.Quantity, Is.EqualTo(1200));
+            Assert.That(treasure.Goods.Count, Is.EqualTo(4));
+            Assert.That(treasure.Items.Count, Is.EqualTo(6));
+            Assert.That(secondGoods, Is.SubsetOf(treasure.Goods));
+            Assert.That(goods, Is.SubsetOf(treasure.Goods));
+            Assert.That(items, Is.SubsetOf(treasure.Items));
+            Assert.That(secondItems, Is.SubsetOf(treasure.Items));
+            Assert.That(treasure.Items, Contains.Item(setItem));
+            Assert.That(treasure.Items, Contains.Item(otherSetItem));
+        }
+
+        [Test]
+        public void UseFurtherSubtypeForSetTreasure()
+        {
+            creature.Description = "subtype (further subtype)";
+
+            usesSubtypeForTreasure.Add(creature.Name);
+            usesSubtypeForTreasure.Add("subtype");
+
+            mockAdjustmentSelector.Setup(s => s.Select<double>(TableNameConstants.TreasureAdjustments, "further subtype", TreasureConstants.Coin)).Returns(2);
+            mockAdjustmentSelector.Setup(s => s.Select<double>(TableNameConstants.TreasureAdjustments, "further subtype", TreasureConstants.Goods)).Returns(2);
+            mockAdjustmentSelector.Setup(s => s.Select<double>(TableNameConstants.TreasureAdjustments, "further subtype", TreasureConstants.Items)).Returns(2);
+
+            var secondGoods = new[] { new Good(), new Good() };
+            mockGoodsGenerator.SetupSequence(g => g.GenerateAtLevel(level)).Returns(goods).Returns(secondGoods);
+
+            var secondItems = new[] { new Item(), new Item() };
+            mockItemsGenerator.SetupSequence(g => g.GenerateAtLevel(level)).Returns(items).Returns(secondItems);
+
+            var setTreasureItems = new[] { "item 1[item type]", "item 2[other item type]" };
+            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.TreasureGroups, "further subtype")).Returns(setTreasureItems);
+
+            var mockMundaneItemGenerator = new Mock<MundaneItemGenerator>();
+            var mockOtherMundaneItemGenerator = new Mock<MundaneItemGenerator>();
+            mockMundaneItemGeneratorFactory.Setup(f => f.CreateGeneratorOf("item type")).Returns(mockMundaneItemGenerator.Object);
+            mockMundaneItemGeneratorFactory.Setup(f => f.CreateGeneratorOf("other item type")).Returns(mockOtherMundaneItemGenerator.Object);
+
+            var setItem = new Item();
+            var otherSetItem = new Item();
+            mockMundaneItemGenerator.Setup(g => g.Generate(It.Is<Item>(i => i.Name == "item 1"), true)).Returns(setItem);
+            mockOtherMundaneItemGenerator.Setup(g => g.Generate(It.Is<Item>(i => i.Name == "item 2"), true)).Returns(otherSetItem);
+
+            var treasure = encounterTreasureGenerator.GenerateFor(creature, level);
+            Assert.That(treasure.Coin.Currency, Is.EqualTo("currency"));
+            Assert.That(treasure.Coin.Quantity, Is.EqualTo(1200));
+            Assert.That(treasure.Goods.Count, Is.EqualTo(4));
+            Assert.That(treasure.Items.Count, Is.EqualTo(6));
+            Assert.That(secondGoods, Is.SubsetOf(treasure.Goods));
+            Assert.That(goods, Is.SubsetOf(treasure.Goods));
+            Assert.That(items, Is.SubsetOf(treasure.Items));
+            Assert.That(secondItems, Is.SubsetOf(treasure.Items));
+            Assert.That(treasure.Items, Contains.Item(setItem));
+            Assert.That(treasure.Items, Contains.Item(otherSetItem));
         }
     }
 }

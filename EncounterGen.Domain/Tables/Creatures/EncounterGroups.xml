@@ -420,6 +420,18 @@
   </collection>
   <collection>
     <entry>Dungeon</entry>
+    <item>Drow warrior/1d3+1</item>
+    <item>Drow warrior/1d6+5</item>
+    <item>Drow warrior/1d4+10</item>
+    <item>Duergar warrior/1d3+1</item>
+    <item>Duergar warrior/1d6+5</item>
+    <item>Duergar warrior/1d4+10</item>
+    <item>Svirfneblin warrior/1d3+1</item>
+    <item>Svirfneblin warrior/1d4+10</item>
+    <item>Svirfneblin warrior/1d4+10,Medium earth elemental/1d3+1</item>
+    <item>Derro/1d3+1</item>
+    <item>Derro/1d6+3</item>
+    <item>Derro/1d4+10</item>
     <item>Dragonne/1</item>
     <item>Dragonne/1d2</item>
     <item>Dragonne/1d6+5</item>
@@ -477,10 +489,10 @@
     <item>Kobold/1d4+10</item>
     <item>Kobold/1d4+10,Dire weasel/1d3+1</item>
     <item>Kobold/1d4+10,Dire weasel/1d6+3</item>
-    <item>Giant worker ant/1d4+2</item>
-    <item>Giant soldier ant/1</item>
-    <item>Giant soldier ant/1,Giant worker ant/1d6+5</item>
-    <item>Giant soldier ant/1d3+1</item>
+    <item>Giant ant worker/1d4+2</item>
+    <item>Giant ant soldier/1</item>
+    <item>Giant ant soldier/1,Giant ant worker/1d6+5</item>
+    <item>Giant ant soldier/1d3+1</item>
     <item>Choker/1</item>
     <item>Shrieker/1</item>
     <item>Shrieker/1d4+2</item>
@@ -525,10 +537,7 @@
     <item>Dire wolverine/1d2</item>
     <item>Constrictor snake/1</item>
     <item>Giant constrictor snake/1</item>
-    <item>Green hag (hag)/1</item>
-    <item>Green hag (hag)/1d3+1,Ogre/1d4+2,Hill giant/1d3</item>
-    <item>Green hag (hag)/1d3,Annis (hag)/1,Ogre/1d4+2,Hill giant/1d3</item>
-    <item>Annis (hag)/1d3,Green hag (hag)/1,Ogre/1d4+2,Hill giant/1d3</item>
+    <item>Green hag/1</item>
     <item>Blink dog/1</item>
     <item>Blink dog/1d2</item>
     <item>Blink dog/1d4+10</item>
@@ -565,6 +574,8 @@
     <item>Displacer beast/1</item>
     <item>Displacer beast/1d2</item>
     <item>Displacer beast/1d6+5</item>
+    <item>Displacer beast (Pack lord)/1</item>
+    <item>Displacer beast (Pack lord)/1d2</item>
     <item>Otyugh/1</item>
     <item>Otyugh/1d2</item>
     <item>Otyugh/1d3+1</item>
@@ -646,6 +657,10 @@
   </collection>
   <collection>
     <entry>Forest</entry>
+    <item>Grig/1d4+10</item>
+    <item>Pixie/1d6+5,Pixie (with Irresistable Dance)/1</item>
+    <item>Pixie/1d4+10,Pixie (with Irresistable Dance)/1</item>
+    <item>Owl/1</item>
     <item>Brown bear/1</item>
     <item>Brown bear/1d2</item>
     <item>Dire bear/1</item>
@@ -700,6 +715,7 @@
   </collection>
   <collection>
     <entry>Hills</entry>
+    <item>Owl/1</item>
     <item>Brown bear/1</item>
     <item>Brown bear/1d2</item>
     <item>Dire bear/1</item>
@@ -804,6 +820,7 @@
     <item>Giant eagle/1</item>
     <item>Giant eagle/1d2</item>
     <item>Giant eagle/1d6+5</item>
+    <item>Owl/1</item>
     <item>Giant owl/1</item>
     <item>Giant owl/1d2</item>
     <item>Giant owl/1d4+2</item>
@@ -867,6 +884,7 @@
     <item>Giant eagle/1</item>
     <item>Giant eagle/1d2</item>
     <item>Giant eagle/1d6+5</item>
+    <item>Owl/1</item>
     <item>Giant owl/1</item>
     <item>Giant owl/1d2</item>
     <item>Giant owl/1d4+2</item>
@@ -942,7 +960,7 @@
     <item>Giant fire beetle/1d6+5</item>
     <item>Gnoll/1</item>
     <item>Gnoll/1d2</item>
-    <item>Gnoll/1d3+1,Dog (Hyena)/1d2</item>
+    <item>Gnoll/1d3+1,Hyena/1d2</item>
     <item>Goblin/1d6+3</item>
     <item>Goblin/1d4+10</item>
     <item>Goblin/1d4+10,Worg/1d4+10</item>
@@ -977,42 +995,54 @@
     <item>Giant wasp/1</item>
     <item>Giant wasp/1d3+1</item>
     <item>Giant wasp/1d4+10</item>
-    <item>Yuan-ti (Halfblood)/1</item>
-    <item>Yuan-ti (Halfblood)/1d2</item>
-    <item>Yuan-ti (Halfblood)/1d3+1</item>
-    <item>Yuan-ti (Pureblood)/1</item>
-    <item>Yuan-ti (Pureblood)/1d2</item>
-    <item>Yuan-ti (Pureblood)/1d3+1</item>
-    <item>Yuan-ti (Abomination)/1</item>
-    <item>Yuan-ti (Abomination)/1d2</item>
-    <item>Yuan-ti (Abomination)/1d3+1</item>
-    <item>Yuan-ti (Abomination)/1d3+1,Yuan-ti (Halfblood)/1d4+2,Yuan-ti (Pureblood)/1d6+5</item>
-    <item>Yuan-ti (Abomination)/1d6+3,Yuan-ti (Halfblood)/1d6+5,Yuan-ti (Pureblood)/1d4+10</item>
+    <item>Yuan-ti Halfblood/1</item>
+    <item>Yuan-ti Halfblood/1d2</item>
+    <item>Yuan-ti Halfblood/1d3+1</item>
+    <item>Yuan-ti Pureblood/1</item>
+    <item>Yuan-ti Pureblood/1d2</item>
+    <item>Yuan-ti Pureblood/1d3+1</item>
+    <item>Yuan-ti Abomination/1</item>
+    <item>Yuan-ti Abomination/1d2</item>
+    <item>Yuan-ti Abomination/1d3+1</item>
+    <item>Yuan-ti Abomination/1d3+1,Yuan-ti Halfblood/1d4+2,Yuan-ti Pureblood/1d6+5</item>
+    <item>Yuan-ti Abomination/1d6+3,Yuan-ti Halfblood/1d6+5,Yuan-ti Pureblood/1d4+10</item>
   </collection>
   <collection>
     <entry>TemperateDesert</entry>
-    <item>Giant worker ant/1d4+2</item>
-    <item>Giant soldier ant/1</item>
-    <item>Giant soldier ant/1,Giant worker ant/1d6+5</item>
-    <item>Giant soldier ant/1d3+1</item>
+    <item>Giant ant worker/1d4+2</item>
+    <item>Giant ant soldier/1</item>
+    <item>Giant ant soldier/1,Giant ant worker/1d6+5</item>
+    <item>Giant ant soldier/1d3+1</item>
+    <item>Giant ant queen/1,Giant ant worker/1d4+10,Giant ant soldier/1d6+5</item>
+    <item>Giant ant queen/1,Giant ant worker/1d4+10,Giant ant soldier/1d4+10</item>
     <item>Bat/1d4+10</item>
     <item>Dire bat/1</item>
     <item>Dire bat/1d6+3</item>
     <item>Dragonne/1</item>
     <item>Dragonne/1d2</item>
     <item>Dragonne/1d6+5</item>
+    <item>Donkey/1</item>
   </collection>
   <collection>
     <entry>TemperateDungeon</entry>
   </collection>
   <collection>
     <entry>TemperateForest</entry>
+    <item>Satyr (with pipes)/1</item>
+    <item>Satyr/1d2,Satyr (with pipes)/1</item>
+    <item>Satyr/1d4+2,Satyr (with pipes)/1</item>
+    <item>Satyr/1d6+5,Satyr (with pipes)/1</item>
+    <item>Razor boar/1</item>
+    <item>Hawk/1d2</item>
+    <item>Raven/1</item>
     <item>Ankheg/1</item>
     <item>Ankheg/1d3+1</item>
-    <item>Giant worker ant/1d4+2</item>
-    <item>Giant soldier ant/1</item>
-    <item>Giant soldier ant/1,Giant worker ant/1d6+5</item>
-    <item>Giant soldier ant/1d3+1</item>
+    <item>Giant ant worker/1d4+2</item>
+    <item>Giant ant soldier/1</item>
+    <item>Giant ant soldier/1,Giant ant worker/1d6+5</item>
+    <item>Giant ant soldier/1d3+1</item>
+    <item>Giant ant queen/1,Giant ant worker/1d4+10,Giant ant soldier/1d6+5</item>
+    <item>Giant ant queen/1,Giant ant worker/1d4+10,Giant ant soldier/1d4+10</item>
     <item>Aranea/1</item>
     <item>Aranea/1d4+2</item>
     <item>Assassin vine/1</item>
@@ -1040,15 +1070,14 @@
     <item>Displacer beast/1</item>
     <item>Displacer beast/1d2</item>
     <item>Displacer beast/1d6+5</item>
+    <item>Displacer beast (Pack lord)/1</item>
+    <item>Displacer beast (Pack lord)/1d2</item>
     <item>Dryad/1</item>
     <item>Dryad/1d4+2</item>
     <item>Ettercap/1</item>
     <item>Ettercap/1d2</item>
     <item>Ettercap/1d2,Medium monstrous spider/1d3+1</item>
-    <item>Green hag (hag)/1</item>
-    <item>Green hag (hag)/1d3+1,Ogre/1d4+2,Hill giant/1d3</item>
-    <item>Green hag (hag)/1d3,Annis (hag)/1,Ogre/1d4+2,Hill giant/1d3</item>
-    <item>Annis (hag)/1d3,Green hag (hag)/1,Ogre/1d4+2,Hill giant/1d3</item>
+    <item>Green hag/1</item>
     <item>Krenshar/1</item>
     <item>Krenshar/1d2</item>
     <item>Krenshar/1d6+5</item>
@@ -1085,10 +1114,12 @@
   </collection>
   <collection>
     <entry>TemperateHills</entry>
-    <item>Giant worker ant/1d4+2</item>
-    <item>Giant soldier ant/1</item>
-    <item>Giant soldier ant/1,Giant worker ant/1d6+5</item>
-    <item>Giant soldier ant/1d3+1</item>
+    <item>Giant ant worker/1d4+2</item>
+    <item>Giant ant soldier/1</item>
+    <item>Giant ant soldier/1,Giant ant worker/1d6+5</item>
+    <item>Giant ant soldier/1d3+1</item>
+    <item>Giant ant queen/1,Giant ant worker/1d4+10,Giant ant soldier/1d6+5</item>
+    <item>Giant ant queen/1,Giant ant worker/1d4+10,Giant ant soldier/1d4+10</item>
     <item>Badger/1</item>
     <item>Badger/1d2</item>
     <item>Badger/1d4+2</item>
@@ -1102,6 +1133,8 @@
     <item>Displacer beast/1</item>
     <item>Displacer beast/1d2</item>
     <item>Displacer beast/1d6+5</item>
+    <item>Displacer beast (Pack lord)/1</item>
+    <item>Displacer beast (Pack lord)/1d2</item>
     <item>Dragonne/1</item>
     <item>Dragonne/1d2</item>
     <item>Dragonne/1d6+5</item>
@@ -1131,19 +1164,19 @@
   </collection>
   <collection>
     <entry>TemperateMarsh</entry>
-    <item>Green hag (hag)/1</item>
-    <item>Green hag (hag)/1d3+1,Ogre/1d4+2,Hill giant/1d3</item>
-    <item>Green hag (hag)/1d3,Annis (hag)/1,Ogre/1d4+2,Hill giant/1d3</item>
-    <item>Annis (hag)/1d3,Green hag (hag)/1,Ogre/1d4+2,Hill giant/1d3</item>
+    <item>Sea hag/1</item>
+    <item>Green hag/1</item>
     <item>Lizardfolk/1d3+1</item>
     <item>Lizardfolk/1d6+5</item>
     <item>Lizardfolk/1d4+10</item>
     <item>Tendriculos/1</item>
     <item>Giant praying mantis/1</item>
     <item>Shambling mound/1</item>
+    <item>Toad/1d4+10</item>
   </collection>
   <collection>
     <entry>TemperateMountain</entry>
+    <item>Razor boar/1</item>
     <item>Black bear/1</item>
     <item>Black bear/1d2</item>
     <item>Bugbear/1</item>
@@ -1152,6 +1185,8 @@
     <item>Displacer beast/1</item>
     <item>Displacer beast/1d2</item>
     <item>Displacer beast/1d6+5</item>
+    <item>Displacer beast (Pack lord)/1</item>
+    <item>Displacer beast (Pack lord)/1d2</item>
     <item>Ettin/1</item>
     <item>Ettin/1d2,Brown bear/1d2</item>
     <item>Ettin/1d3+1</item>
@@ -1181,12 +1216,20 @@
   </collection>
   <collection>
     <entry>TemperatePlains</entry>
+    <item>Bison/1</item>
+    <item>Bison/1d6+5</item>
+    <item>Bison/1d4+10</item>
+    <item>Light horse/1d6+5</item>
+    <item>Light horse/1d4+10</item>
+    <item>Pony/1</item>
     <item>Ankheg/1</item>
     <item>Ankheg/1d3+1</item>
-    <item>Giant worker ant/1d4+2</item>
-    <item>Giant soldier ant/1</item>
-    <item>Giant soldier ant/1,Giant worker ant/1d6+5</item>
-    <item>Giant soldier ant/1d3+1</item>
+    <item>Giant ant worker/1d4+2</item>
+    <item>Giant ant soldier/1</item>
+    <item>Giant ant soldier/1,Giant ant worker/1d6+5</item>
+    <item>Giant ant soldier/1d3+1</item>
+    <item>Giant ant queen/1,Giant ant worker/1d4+10,Giant ant soldier/1d6+5</item>
+    <item>Giant ant queen/1,Giant ant worker/1d4+10,Giant ant soldier/1d4+10</item>
     <item>Badger/1</item>
     <item>Badger/1d2</item>
     <item>Badger/1d4+2</item>
@@ -1264,7 +1307,7 @@
     <item>Giant fire beetle/1d6+5</item>
     <item>Gnoll/1</item>
     <item>Gnoll/1d2</item>
-    <item>Gnoll/1d3+1,Dog (Hyena)/1d2</item>
+    <item>Gnoll/1d3+1,Hyena/1d2</item>
     <item>Goblin/1d6+3</item>
     <item>Goblin/1d4+10</item>
     <item>Goblin/1d4+10,Worg/1d4+10</item>
@@ -1300,24 +1343,26 @@
     <item>Giant wasp/1</item>
     <item>Giant wasp/1d3+1</item>
     <item>Giant wasp/1d4+10</item>
-    <item>Yuan-ti (Halfblood)/1</item>
-    <item>Yuan-ti (Halfblood)/1d2</item>
-    <item>Yuan-ti (Halfblood)/1d3+1</item>
-    <item>Yuan-ti (Pureblood)/1</item>
-    <item>Yuan-ti (Pureblood)/1d2</item>
-    <item>Yuan-ti (Pureblood)/1d3+1</item>
-    <item>Yuan-ti (Abomination)/1</item>
-    <item>Yuan-ti (Abomination)/1d2</item>
-    <item>Yuan-ti (Abomination)/1d3+1</item>
-    <item>Yuan-ti (Abomination)/1d3+1,Yuan-ti (Halfblood)/1d4+2,Yuan-ti (Pureblood)/1d6+5</item>
-    <item>Yuan-ti (Abomination)/1d6+3,Yuan-ti (Halfblood)/1d6+5,Yuan-ti (Pureblood)/1d4+10</item>
+    <item>Yuan-ti Halfblood/1</item>
+    <item>Yuan-ti Halfblood/1d2</item>
+    <item>Yuan-ti Halfblood/1d3+1</item>
+    <item>Yuan-ti Pureblood/1</item>
+    <item>Yuan-ti Pureblood/1d2</item>
+    <item>Yuan-ti Pureblood/1d3+1</item>
+    <item>Yuan-ti Abomination/1</item>
+    <item>Yuan-ti Abomination/1d2</item>
+    <item>Yuan-ti Abomination/1d3+1</item>
+    <item>Yuan-ti Abomination/1d3+1,Yuan-ti Halfblood/1d4+2,Yuan-ti Pureblood/1d6+5</item>
+    <item>Yuan-ti Abomination/1d6+3,Yuan-ti Halfblood/1d6+5,Yuan-ti Pureblood/1d4+10</item>
   </collection>
   <collection>
     <entry>WarmDesert</entry>
-    <item>Giant worker ant/1d4+2</item>
-    <item>Giant soldier ant/1</item>
-    <item>Giant soldier ant/1,Giant worker ant/1d6+5</item>
-    <item>Giant soldier ant/1d3+1</item>
+    <item>Giant ant worker/1d4+2</item>
+    <item>Giant ant soldier/1</item>
+    <item>Giant ant soldier/1,Giant ant worker/1d6+5</item>
+    <item>Giant ant soldier/1d3+1</item>
+    <item>Giant ant queen/1,Giant ant worker/1d4+10,Giant ant soldier/1d6+5</item>
+    <item>Giant ant queen/1,Giant ant worker/1d4+10,Giant ant soldier/1d4+10</item>
     <item>Baboon/1</item>
     <item>Baboon/1d4+10</item>
     <item>Bat/1d4+10</item>
@@ -1334,16 +1379,32 @@
     <item>Hieracosphinx/1</item>
     <item>Hieracosphinx/1d2</item>
     <item>Hieracosphinx/1d4+2</item>
+    <item>Scorpionfolk/1</item>
+    <item>Scorpionfolk/1d2</item>
+    <item>Scorpionfolk/1d3+1</item>
+    <item>Scorpionfolk/1d6+5,Medium monstrous scorpion/1d3+1</item>
+    <item>Scorpionfolk/1d4+10,Medium monstrous scorpion/1d6+3</item>
+    <item>Scorpionfolk/1d4+10,Medium monstrous scorpion/1d6+3,Large monstrous scorpion/1d2</item>
+    <item>Scorpionfolk/1d4+10,Medium monstrous scorpion/1d4+10,Large monstrous scorpion/1d3+1</item>
+    <item>Hyena/1</item>
+    <item>Hyena/1d2</item>
+    <item>Hyena/1d6+5</item>
+    <item>Hyena/1d4+10</item>
   </collection>
   <collection>
     <entry>WarmDungeon</entry>
   </collection>
   <collection>
     <entry>WarmForest</entry>
-    <item>Giant worker ant/1d4+2</item>
-    <item>Giant soldier ant/1</item>
-    <item>Giant soldier ant/1,Giant worker ant/1d6+5</item>
-    <item>Giant soldier ant/1d3+1</item>
+    <item>Razor boar/1</item>
+    <item>Lizard/1</item>
+    <item>Monkey/1d4+10</item>
+    <item>Giant ant worker/1d4+2</item>
+    <item>Giant ant soldier/1</item>
+    <item>Giant ant soldier/1,Giant ant worker/1d6+5</item>
+    <item>Giant ant soldier/1d3+1</item>
+    <item>Giant ant queen/1,Giant ant worker/1d4+10,Giant ant soldier/1d6+5</item>
+    <item>Giant ant queen/1,Giant ant worker/1d4+10,Giant ant soldier/1d4+10</item>
     <item>Ape/1</item>
     <item>Ape/1d2</item>
     <item>Ape/1d3+1</item>
@@ -1383,10 +1444,7 @@
     <item>Ettercap/1d2,Medium monstrous spider/1d3+1</item>
     <item>Girallon/1</item>
     <item>Girallon/1d6+3</item>
-    <item>Green hag (hag)/1</item>
-    <item>Green hag (hag)/1d3+1,Ogre/1d4+2,Hill giant/1d3</item>
-    <item>Green hag (hag)/1d3,Annis (hag)/1,Ogre/1d4+2,Hill giant/1d3</item>
-    <item>Annis (hag)/1d3,Green hag (hag)/1,Ogre/1d4+2,Hill giant/1d3</item>
+    <item>Green hag/1</item>
     <item>Krenshar/1</item>
     <item>Krenshar/1d2</item>
     <item>Krenshar/1d6+5</item>
@@ -1415,10 +1473,19 @@
   </collection>
   <collection>
     <entry>WarmHills</entry>
-    <item>Giant worker ant/1d4+2</item>
-    <item>Giant soldier ant/1</item>
-    <item>Giant soldier ant/1,Giant worker ant/1d6+5</item>
-    <item>Giant soldier ant/1d3+1</item>
+    <item>Scorpionfolk/1</item>
+    <item>Scorpionfolk/1d2</item>
+    <item>Scorpionfolk/1d3+1</item>
+    <item>Scorpionfolk/1d6+5,Medium monstrous scorpion/1d3+1</item>
+    <item>Scorpionfolk/1d4+10,Medium monstrous scorpion/1d6+3</item>
+    <item>Scorpionfolk/1d4+10,Medium monstrous scorpion/1d6+3,Large monstrous scorpion/1d2</item>
+    <item>Scorpionfolk/1d4+10,Medium monstrous scorpion/1d4+10,Large monstrous scorpion/1d3+1</item>
+    <item>Giant ant worker/1d4+2</item>
+    <item>Giant ant soldier/1</item>
+    <item>Giant ant soldier/1,Giant ant worker/1d6+5</item>
+    <item>Giant ant soldier/1d3+1</item>
+    <item>Giant ant queen/1,Giant ant worker/1d4+10,Giant ant soldier/1d6+5</item>
+    <item>Giant ant queen/1,Giant ant worker/1d4+10,Giant ant soldier/1d4+10</item>
     <item>Athach/1</item>
     <item>Athach/1d3+1</item>
     <item>Athach/1d6+5</item>
@@ -1457,6 +1524,7 @@
   </collection>
   <collection>
     <entry>WarmMarsh</entry>
+    <item>Sea hag/1</item>
     <item>Crocodile/1</item>
     <item>Crocodile/1d6+5</item>
     <item>Giant crocodile/1</item>
@@ -1465,10 +1533,7 @@
     <item>Deinonychus/1</item>
     <item>Deinonychus/1d2</item>
     <item>Deinonychus/1d4+2</item>
-    <item>Green hag (hag)/1</item>
-    <item>Green hag (hag)/1d3+1,Ogre/1d4+2,Hill giant/1d3</item>
-    <item>Green hag (hag)/1d3,Annis (hag)/1,Ogre/1d4+2,Hill giant/1d3</item>
-    <item>Annis (hag)/1d3,Green hag (hag)/1,Ogre/1d4+2,Hill giant/1d3</item>
+    <item>Green hag/1</item>
     <item>Lizardfolk/1d3+1</item>
     <item>Lizardfolk/1d6+5</item>
     <item>Lizardfolk/1d4+10</item>
@@ -1508,15 +1573,25 @@
     <item>Wyvern/1</item>
     <item>Wyvern/1d2</item>
     <item>Wyvern/1d4+2</item>
+    <item>Razor boar/1</item>
   </collection>
   <collection>
     <entry>WarmPlains</entry>
+    <item>Scorpionfolk/1</item>
+    <item>Scorpionfolk/1d2</item>
+    <item>Scorpionfolk/1d3+1</item>
+    <item>Scorpionfolk/1d6+5,Medium monstrous scorpion/1d3+1</item>
+    <item>Scorpionfolk/1d4+10,Medium monstrous scorpion/1d6+3</item>
+    <item>Scorpionfolk/1d4+10,Medium monstrous scorpion/1d6+3,Large monstrous scorpion/1d2</item>
+    <item>Scorpionfolk/1d4+10,Medium monstrous scorpion/1d4+10,Large monstrous scorpion/1d3+1</item>
     <item>Ankheg/1</item>
     <item>Ankheg/1d3+1</item>
-    <item>Giant worker ant/1d4+2</item>
-    <item>Giant soldier ant/1</item>
-    <item>Giant soldier ant/1,Giant worker ant/1d6+5</item>
-    <item>Giant soldier ant/1d3+1</item>
+    <item>Giant ant worker/1d4+2</item>
+    <item>Giant ant soldier/1</item>
+    <item>Giant ant soldier/1,Giant ant worker/1d6+5</item>
+    <item>Giant ant soldier/1d3+1</item>
+    <item>Giant ant queen/1,Giant ant worker/1d4+10,Giant ant soldier/1d6+5</item>
+    <item>Giant ant queen/1,Giant ant worker/1d4+10,Giant ant soldier/1d4+10</item>
     <item>Bat/1d4+10</item>
     <item>Dire bat/1</item>
     <item>Dire bat/1d6+3</item>
@@ -1684,10 +1759,7 @@
     <item>Satyr/1d2</item>
     <item>Satyr/1d4+2</item>
     <item>Satyr/1d6+5</item>
-    <item>Green hag (hag)/1</item>
-    <item>Green hag (hag)/1d3+1,Ogre/1d4+2,Hill giant/1d3</item>
-    <item>Green hag (hag)/1d3,Annis (hag)/1,Ogre/1d4+2,Hill giant/1d3</item>
-    <item>Annis (hag)/1d3,Green hag (hag)/1,Ogre/1d4+2,Hill giant/1d3</item>
+    <item>Green hag/1</item>
     <item>Krenshar/1</item>
     <item>Krenshar/1d2</item>
     <item>Krenshar/1d6+5</item>
@@ -1699,6 +1771,8 @@
     <item>Displacer beast/1</item>
     <item>Displacer beast/1d2</item>
     <item>Displacer beast/1d6+5</item>
+    <item>Displacer beast (Pack lord)/1</item>
+    <item>Displacer beast (Pack lord)/1d2</item>
     <item>Dryad/1</item>
     <item>Dryad/1d4+2</item>
     <item>Ettercap/1</item>
@@ -1725,10 +1799,10 @@
     <item>Badger/1d4+2</item>
     <item>Dire badger/1</item>
     <item>Dire badger/1d4+2</item>
-    <item>Giant worker ant/1d4+2</item>
-    <item>Giant soldier ant/1</item>
-    <item>Giant soldier ant/1,Giant worker ant/1d6+5</item>
-    <item>Giant soldier ant/1d3+1</item>
+    <item>Giant ant worker/1d4+2</item>
+    <item>Giant ant soldier/1</item>
+    <item>Giant ant soldier/1,Giant ant worker/1d6+5</item>
+    <item>Giant ant soldier/1d3+1</item>
     <item>Bat/1d4+10</item>
     <item>Dire bat/1</item>
     <item>Dire bat/1d6+3</item>
@@ -1788,7 +1862,7 @@
     <item>Giant fire beetle/1d6+5</item>
     <item>Gnoll/1</item>
     <item>Gnoll/1d2</item>
-    <item>Gnoll/1d3+1,Dog (Hyena)/1d2</item>
+    <item>Gnoll/1d3+1,Hyena/1d2</item>
     <item>Goblin/1d6+3</item>
     <item>Goblin/1d4+10</item>
     <item>Goblin/1d4+10,Worg/1d4+10</item>
@@ -1823,17 +1897,17 @@
     <item>Giant wasp/1</item>
     <item>Giant wasp/1d3+1</item>
     <item>Giant wasp/1d4+10</item>
-    <item>Yuan-ti (Halfblood)/1</item>
-    <item>Yuan-ti (Halfblood)/1d2</item>
-    <item>Yuan-ti (Halfblood)/1d3+1</item>
-    <item>Yuan-ti (Pureblood)/1</item>
-    <item>Yuan-ti (Pureblood)/1d2</item>
-    <item>Yuan-ti (Pureblood)/1d3+1</item>
-    <item>Yuan-ti (Abomination)/1</item>
-    <item>Yuan-ti (Abomination)/1d2</item>
-    <item>Yuan-ti (Abomination)/1d3+1</item>
-    <item>Yuan-ti (Abomination)/1d3+1,Yuan-ti (Halfblood)/1d4+2,Yuan-ti (Pureblood)/1d6+5</item>
-    <item>Yuan-ti (Abomination)/1d6+3,Yuan-ti (Halfblood)/1d6+5,Yuan-ti (Pureblood)/1d4+10</item>
+    <item>Yuan-ti Halfblood/1</item>
+    <item>Yuan-ti Halfblood/1d2</item>
+    <item>Yuan-ti Halfblood/1d3+1</item>
+    <item>Yuan-ti Pureblood/1</item>
+    <item>Yuan-ti Pureblood/1d2</item>
+    <item>Yuan-ti Pureblood/1d3+1</item>
+    <item>Yuan-ti Abomination/1</item>
+    <item>Yuan-ti Abomination/1d2</item>
+    <item>Yuan-ti Abomination/1d3+1</item>
+    <item>Yuan-ti Abomination/1d3+1,Yuan-ti Halfblood/1d4+2,Yuan-ti Pureblood/1d6+5</item>
+    <item>Yuan-ti Abomination/1d6+3,Yuan-ti Halfblood/1d6+5,Yuan-ti Pureblood/1d4+10</item>
     <item>Troglodyte/1d3+1</item>
     <item>Troglodyte/1d6+5,Monitor lizard/1d2</item>
     <item>Grimlock/1d3+1</item>
@@ -2047,8 +2121,7 @@
     <item>Warrior (Patrol)[1d2+15]/1d6+3,Fighter[10]/1</item>
     <item>Warrior (Patrol)[1d2+17]/1d6+3,Fighter[11]/1</item>
     <item>Warrior (Patrol)[20]/1d6+3,Fighter[12]/1</item>
-    <item>Annis (hag)/1</item>
-    <item>Annis (hag)/1d3+1,Ogre/1d4+2,Hill giant/1d3</item>
+    <item>Annis/1</item>
     <item>Basilisk/1</item>
     <item>Basilisk/1d4+2</item>
     <item>Behir/1</item>
@@ -2344,8 +2417,8 @@
     <item>Lich[16]/1</item>
     <item>Lich[17]/1</item>
     <item>Lich[18]/1</item>
-    <item>Achaierais/1</item>
-    <item>Achaierais/1d6+3</item>
+    <item>Achaierai/1</item>
+    <item>Achaierai/1d6+3</item>
     <item>Allip/1</item>
     <item>Colossal animated object/1</item>
     <item>Gargantuan animated object/1</item>
@@ -2360,26 +2433,26 @@
     <item>Elder arrowhawk/1d3+1</item>
     <item>Juvenile arrowhawk/1</item>
     <item>Juvenile arrowhawk/1d3+1</item>
-    <item>Astral deva (celestial)/1</item>
-    <item>Astral deva (celestial)/1d2</item>
-    <item>Astral deva (celestial)/1d3+1</item>
+    <item>Astral deva/1</item>
+    <item>Astral deva/1d2</item>
+    <item>Astral deva/1d3+1</item>
     <item>Avoral/1</item>
     <item>Avoral/1d2</item>
     <item>Avoral/1d3+1</item>
     <item>Azer/1</item>
     <item>Azer/1d2</item>
     <item>Azer/1d3+1</item>
-    <item>Balor (demon)/1</item>
-    <item>Balor (demon)/1,Marilith (demon)/1,Hezrou (demon)/1d3+1</item>
-    <item>Barbazu (devil)/1</item>
-    <item>Barbazu (devil)/1d2</item>
-    <item>Barbazu (devil)/1d3+1</item>
-    <item>Barbazu (devil)/1d6+5</item>
+    <item>Balor/1</item>
+    <item>Balor/1,Marilith/1,Hezrou/1d3+1</item>
+    <item>Bearded Devil (Barbazu)/1</item>
+    <item>Bearded Devil (Barbazu)/1d2</item>
+    <item>Bearded Devil (Barbazu)/1d3+1</item>
+    <item>Bearded Devil (Barbazu)/1d6+5</item>
     <item>Barghest/1</item>
     <item>Barghest/1d4+2</item>
     <item>Greater barghest/1</item>
     <item>Greater barghest/1d4+2</item>
-    <item>Bebilith (demon)/1</item>
+    <item>Bebilith/1</item>
     <item>Belker/1</item>
     <item>Belker/1d2</item>
     <item>Belker/1d3+1</item>
@@ -2388,22 +2461,22 @@
     <item>Skeleton/1</item>
     <item>Zombie/1</item>
     <item>Chaos beast/1</item>
-    <item>Cornugon (devil)/1</item>
-    <item>Cornugon (devil)/1d3+1</item>
-    <item>Cornugon (devil)/1d6+5</item>
+    <item>Horned Devil (Cornugon)/1</item>
+    <item>Horned Devil (Cornugon)/1d3+1</item>
+    <item>Horned Devil (Cornugon)/1d6+5</item>
     <item>Devourer/1</item>
-    <item>Djinn/1</item>
-    <item>Djinn/1d3+1</item>
-    <item>Djinn/1d6+5</item>
-    <item>Noble djinn/1</item>
-    <item>Dretch (demon)/1</item>
-    <item>Dretch (demon)/1d2</item>
-    <item>Dretch (demon)/1d3+1</item>
-    <item>Dretch (demon)/1d6+5</item>
-    <item>Dretch (demon)/1d4+10</item>
-    <item>Efreet/1</item>
-    <item>Efreet/1d3+1</item>
-    <item>Efreet/1d6+5</item>
+    <item>Djinni/1</item>
+    <item>Djinni/1d3+1</item>
+    <item>Djinni/1d6+5</item>
+    <item>Noble djinni/1</item>
+    <item>Dretch/1</item>
+    <item>Dretch/1d2</item>
+    <item>Dretch/1d3+1</item>
+    <item>Dretch/1d6+5</item>
+    <item>Dretch/1d4+10</item>
+    <item>Efreeti/1</item>
+    <item>Efreeti/1d3+1</item>
+    <item>Efreeti/1d6+5</item>
     <item>Elder air elemental/1</item>
     <item>Elder earth elemental/1</item>
     <item>Elder fire elemental/1</item>
@@ -2428,7 +2501,7 @@
     <item>Small earth elemental/1</item>
     <item>Small fire elemental/1</item>
     <item>Small water elemental/1</item>
-    <item>Erinyes (devil)/1</item>
+    <item>Erinyes/1</item>
     <item>Ethereal filcher/1</item>
     <item>Ethereal marauder/1</item>
     <item>Formian myrmarch/1</item>
@@ -2441,21 +2514,21 @@
     <item>Formian warrior/1d6+5</item>
     <item>Formian worker/1d3+1</item>
     <item>Formian worker/1d4+10</item>
-    <item>Gelugon (devil)/1</item>
-    <item>Gelugon (devil)/1d3+1</item>
-    <item>Gelugon (devil)/1d6+5</item>
-    <item>Gelugon (devil)/1d2,Osyluth (devil)/1d3+1,Barbazu (devil)/1d6+5</item>
-    <item>Ghaele (celestial)/1</item>
-    <item>Ghaele (celestial)/1d2</item>
-    <item>Ghaele (celestial)/1d3+1</item>
+    <item>Ice Devil (Gelugon)/1</item>
+    <item>Ice Devil (Gelugon)/1d3+1</item>
+    <item>Ice Devil (Gelugon)/1d6+5</item>
+    <item>Ice Devil (Gelugon)/1d2,Bone Devil (Osyluth)/1d3+1,Bearded Devil (Barbazu)/1d6+5</item>
+    <item>Ghaele/1</item>
+    <item>Ghaele/1d2</item>
+    <item>Ghaele/1d3+1</item>
     <item>Ghast/1</item>
     <item>Ghast/1d3+1</item>
     <item>Ghast/1d3+1,Ghoul/1d6+5</item>
     <item>Ghoul/1</item>
     <item>Ghoul/1d3+1</item>
     <item>Ghoul/1d6+5</item>
-    <item>Glabrezu (demon)/1</item>
-    <item>Glabrezu (demon)/1,Succubus (demon)/1,Vrock (demon)/1d3+1</item>
+    <item>Glabrezu/1</item>
+    <item>Glabrezu/1,Succubus/1,Vrock/1d3+1</item>
     <item>Clay golem/1</item>
     <item>Clay golem/1d3+1</item>
     <item>Flesh golem/1</item>
@@ -2466,72 +2539,72 @@
     <item>Iron golem/1d3+1</item>
     <item>Greater stone golem/1</item>
     <item>Greater stone golem/1d3+1</item>
-    <item>Hamatula (devil)/1</item>
-    <item>Hamatula (devil)/1d2</item>
-    <item>Hamatula (devil)/1d4+2</item>
-    <item>Hamatula (devil)/1d6+5</item>
-    <item>Hellcat/1</item>
-    <item>Hellcat/1d2</item>
-    <item>Hellcat/1d6+5</item>
+    <item>Barbed Devil (Hamatula)/1</item>
+    <item>Barbed Devil (Hamatula)/1d2</item>
+    <item>Barbed Devil (Hamatula)/1d4+2</item>
+    <item>Barbed Devil (Hamatula)/1d6+5</item>
+    <item>Hellcat (Bezekira)/1</item>
+    <item>Hellcat (Bezekira)/1d2</item>
+    <item>Hellcat (Bezekira)/1d6+5</item>
     <item>Hell hound/1</item>
     <item>Hell hound/1d2</item>
     <item>Hell hound/1d6+5</item>
-    <item>Hezrou (demon)/1</item>
-    <item>Hezrou (demon)/1d3+1</item>
+    <item>Hezrou/1</item>
+    <item>Hezrou/1d3+1</item>
     <item>Homunculus/1</item>
-    <item>Hound archon (celestial)/1</item>
-    <item>Hound archon (celestial)/1d2</item>
-    <item>Hound archon (celestial)/1d3+1</item>
+    <item>Hound archon/1</item>
+    <item>Hound archon/1d2</item>
+    <item>Hound archon/1d3+1</item>
     <item>Howler/1</item>
     <item>Howler/1d3+1</item>
     <item>Howler/1d6+5</item>
-    <item>Imp (devil)/1</item>
+    <item>Imp/1</item>
     <item>Invisible stalker/1</item>
     <item>Janni/1</item>
     <item>Janni/1d3+1</item>
     <item>Janni/1d6+5</item>
-    <item>Kyton (devil)/1</item>
-    <item>Kyton (devil)/1d3+1</item>
-    <item>Kyton (devil)/1d6+5</item>
-    <item>Kyton (devil)/1d4+10</item>
-    <item>Lantern archon (celestial)/1</item>
-    <item>Lantern archon (celestial)/1d2</item>
-    <item>Lantern archon (celestial)/1d3+1</item>
-    <item>Lemure (devil)/1</item>
-    <item>Lemure (devil)/1d2</item>
-    <item>Lemure (devil)/1d3+1</item>
-    <item>Lemure (devil)/1d6+5</item>
-    <item>Lemure (devil)/1d4+10</item>
+    <item>Chain Devil (Kyton)/1</item>
+    <item>Chain Devil (Kyton)/1d3+1</item>
+    <item>Chain Devil (Kyton)/1d6+5</item>
+    <item>Chain Devil (Kyton)/1d4+10</item>
+    <item>Lantern archon/1</item>
+    <item>Lantern archon/1d2</item>
+    <item>Lantern archon/1d3+1</item>
+    <item>Lemure/1</item>
+    <item>Lemure/1d2</item>
+    <item>Lemure/1d3+1</item>
+    <item>Lemure/1d6+5</item>
+    <item>Lemure/1d4+10</item>
     <item>Lillend/1</item>
     <item>Lillend/1d3+1</item>
     <item>Magmin/1</item>
     <item>Magmin/1d3+1</item>
     <item>Magmin/1d6+5</item>
-    <item>Marilith (demon)/1</item>
-    <item>Marilith (demon)/1d2</item>
+    <item>Marilith/1</item>
+    <item>Marilith/1d2</item>
     <item>Mephit/1</item>
     <item>Mephit/1d3+1</item>
     <item>Mephit/1d6+5</item>
     <item>Mohrg/1</item>
     <item>Mohrg/1d3+1</item>
     <item>Mohrg/1d3+1,Zombie (Human)/1d6+5</item>
-    <item>Nalfeshnee (demon)/1</item>
-    <item>Nalfeshnee (demon)/1,Hezrou (demon)/1,Vrock (demon)/1d3+1</item>
+    <item>Nalfeshnee/1</item>
+    <item>Nalfeshnee/1,Hezrou/1,Vrock/1d3+1</item>
     <item>Nessian warhound/1</item>
     <item>Nessian warhound/1d2</item>
     <item>Nessian warhound/1d2,Hell hound/1d6+5</item>
-    <item>Osyluth (devil)/1</item>
-    <item>Osyluth (devil)/1d3+1</item>
-    <item>Osyluth (devil)/1d6+5</item>
+    <item>Bone Devil (Osyluth)/1</item>
+    <item>Bone Devil (Osyluth)/1d3+1</item>
+    <item>Bone Devil (Osyluth)/1d6+5</item>
     <item>Phase spider/1</item>
     <item>Phase spider/1d4+2</item>
-    <item>Pit fiend (devil)/1</item>
-    <item>Pit fiend (devil)/1d2</item>
-    <item>Pit fiend (devil)/1d3+1</item>
-    <item>Pit fiend (devil)/1d2,Cornugon (devil)/1d3+1,Hamatula (devil)/1d3+1</item>
-    <item>Planetar (celestial)/1</item>
-    <item>Planetar (celestial)/1d2</item>
-    <item>Quasit (demon)/1</item>
+    <item>Pit fiend/1</item>
+    <item>Pit fiend/1d2</item>
+    <item>Pit fiend/1d3+1</item>
+    <item>Pit fiend/1d2,Horned Devil (Cornugon)/1d3+1,Barbed Devil (Hamatula)/1d3+1</item>
+    <item>Planetar/1</item>
+    <item>Planetar/1d2</item>
+    <item>Quasit/1</item>
     <item>Rast/1</item>
     <item>Rast/1d2</item>
     <item>Rast/1d4+2</item>
@@ -2568,18 +2641,18 @@
     <item>Red slaad/1d2</item>
     <item>Red slaad/1d3+1</item>
     <item>Red slaad/1d6+5</item>
-    <item>Solar (celestial)/1</item>
-    <item>Solar (celestial)/1d2</item>
-    <item>Succubus (demon)/1</item>
+    <item>Solar/1</item>
+    <item>Solar/1d2</item>
+    <item>Succubus/1</item>
     <item>Thoqqua/1</item>
     <item>Thoqqua/1d2</item>
-    <item>Trumpet archon (celestial)/1</item>
-    <item>Trumpet archon (celestial)/1d2</item>
-    <item>Trumpet archon (celestial)/1d3+1</item>
-    <item>Vrock (demon)/1</item>
-    <item>Vrock (demon)/1d2</item>
-    <item>Vrock (demon)/1d4+2</item>
-    <item>Vrock (demon)/1d6+5</item>
+    <item>Trumpet archon/1</item>
+    <item>Trumpet archon/1d2</item>
+    <item>Trumpet archon/1d3+1</item>
+    <item>Vrock/1</item>
+    <item>Vrock/1d2</item>
+    <item>Vrock/1d4+2</item>
+    <item>Vrock/1d6+5</item>
     <item>Wight/1</item>
     <item>Wight/1d2</item>
     <item>Wight/1d4+2</item>
@@ -2965,9 +3038,143 @@
     <item>Character[22]/1d3+1</item>
     <item>Ghost[23]/1</item>
     <item>Lich[23]/1</item>
+    <item>Babau/1</item>
+    <item>Babau/1d4+2</item>
+    <item>Giant ant queen/1,Giant ant worker/1d4+10,Giant ant soldier/1d6+5</item>
+    <item>Giant ant queen/1,Giant ant worker/1d4+10,Giant ant soldier/1d4+10</item>
+    <item>Sea hag/1</item>
+    <item>Annis/1,Green hag/1,Sea hag/1,Ogre/1d3,Hill giant/1d2</item>
+    <item>Annis/1,Green hag/1,Sea hag/1,Ogre/1d6+3,Hill giant/1d3+1</item>
+    <item>Derro/1d3+1</item>
+    <item>Derro/1d6+3</item>
+    <item>Derro/1d4+10</item>
+    <item>Owl/1</item>
+    <item>Rat/1d4+10</item>
+    <item>Titan/1</item>
+    <item>Titan/1d2</item>
+    <item>Formian queen/1,Formian worker/1d4+10,Formian warrior/1d4+10,Formian taskmaster/1d4+2,Dominated creature[4]/1d4+2,Formian myrmarch/1d6+3</item>
+    <item>Leonal/1d6+3</item>
+    <item>Marut/1</item>
+    <item>Scorpionfolk/1d4+10,Medium monstrous scorpion/1d4+10,Large monstrous scorpion/1d3+1</item>
+    <item>Scorpionfolk/1d4+10,Medium monstrous scorpion/1d6+3,Large monstrous scorpion/1d2</item>
+    <item>Scorpionfolk/1d6+5,Medium monstrous scorpion/1d3+1</item>
+    <item>Scorpionfolk/1d4+10,Medium monstrous scorpion/1d6+3</item>
+    <item>Leonal/1</item>
+    <item>Bison/1</item>
+    <item>Bison/1d6+5</item>
+    <item>Bison/1d4+10</item>
+    <item>Light horse/1d6+5</item>
+    <item>Light horse/1d4+10</item>
+    <item>Pony/1</item>
+    <item>Toad/1d4+10</item>
+    <item>Razor boar/1</item>
+    <item>Lizard/1</item>
+    <item>Monkey/1d4+10</item>
+    <item>Hyena/1</item>
+    <item>Hyena/1d2</item>
+    <item>Hyena/1d6+5</item>
+    <item>Hyena/1d4+10</item>
+    <item>Scorpionfolk/1</item>
+    <item>Scorpionfolk/1d2</item>
+    <item>Scorpionfolk/1d3+1</item>
+    <item>Bralani/1</item>
+    <item>Bralani/1d2</item>
+    <item>Bralani/1d3+1</item>
+    <item>Kolyarut/1</item>
+    <item>Zelekhut/1</item>
+    <item>Shield guardian/1</item>
+    <item>Donkey/1</item>
+    <item>Hawk/1d2</item>
+    <item>Raven/1</item>
+    <item>Grig/1d4+10</item>
+    <item>Pixie/1d6+5,Pixie (with Irresistable Dance)/1</item>
+    <item>Pixie/1d4+10,Pixie (with Irresistable Dance)/1</item>
+    <item>Svirfneblin warrior/1d3+1</item>
+    <item>Svirfneblin warrior/1d4+10</item>
+    <item>Svirfneblin warrior/1d4+10,Medium earth elemental/1d3+1</item>
+    <item>Aasimar warrior/1d2</item>
+    <item>Tiefling warrior/1d2</item>
+    <item>Aasimar warrior/1d3+1</item>
+    <item>Tiefling warrior/1d3+1</item>
+    <item>Abyssal greater basilisk/1</item>
+    <item>Abyssal greater basilisk/1d4+2</item>
+    <item>Satyr (with pipes)/1</item>
+    <item>Satyr/1d2,Satyr (with pipes)/1</item>
+    <item>Satyr/1d4+2,Satyr (with pipes)/1</item>
+    <item>Satyr/1d6+5,Satyr (with pipes)/1</item>
   </collection>
   <collection>
     <entry>Night</entry>
+    <item>Satyr (with pipes)/1</item>
+    <item>Satyr/1d2,Satyr (with pipes)/1</item>
+    <item>Satyr/1d4+2,Satyr (with pipes)/1</item>
+    <item>Satyr/1d6+5,Satyr (with pipes)/1</item>
+    <item>Abyssal greater basilisk/1</item>
+    <item>Abyssal greater basilisk/1d4+2</item>
+    <item>Aasimar warrior/1d2</item>
+    <item>Tiefling warrior/1d2</item>
+    <item>Aasimar warrior/1d3+1</item>
+    <item>Tiefling warrior/1d3+1</item>
+    <item>Drow warrior/1d3+1</item>
+    <item>Drow warrior/1d6+5</item>
+    <item>Drow warrior/1d4+10</item>
+    <item>Duergar warrior/1d3+1</item>
+    <item>Duergar warrior/1d6+5</item>
+    <item>Duergar warrior/1d4+10</item>
+    <item>Svirfneblin warrior/1d3+1</item>
+    <item>Svirfneblin warrior/1d4+10</item>
+    <item>Svirfneblin warrior/1d4+10,Medium earth elemental/1d3+1</item>
+    <item>Grig/1d4+10</item>
+    <item>Pixie/1d6+5,Pixie (with Irresistable Dance)/1</item>
+    <item>Pixie/1d4+10,Pixie (with Irresistable Dance)/1</item>
+    <item>Donkey/1</item>
+    <item>Hawk/1d2</item>
+    <item>Raven/1</item>
+    <item>Bison/1</item>
+    <item>Bison/1d6+5</item>
+    <item>Bison/1d4+10</item>
+    <item>Light horse/1d6+5</item>
+    <item>Light horse/1d4+10</item>
+    <item>Pony/1</item>
+    <item>Toad/1d4+10</item>
+    <item>Razor boar/1</item>
+    <item>Lizard/1</item>
+    <item>Monkey/1d4+10</item>
+    <item>Hyena/1</item>
+    <item>Hyena/1d2</item>
+    <item>Hyena/1d6+5</item>
+    <item>Hyena/1d4+10</item>
+    <item>Scorpionfolk/1</item>
+    <item>Scorpionfolk/1d2</item>
+    <item>Scorpionfolk/1d3+1</item>
+    <item>Bralani/1</item>
+    <item>Bralani/1d2</item>
+    <item>Bralani/1d3+1</item>
+    <item>Kolyarut/1</item>
+    <item>Zelekhut/1</item>
+    <item>Shield guardian/1</item>
+    <item>Titan/1</item>
+    <item>Titan/1d2</item>
+    <item>Formian queen/1,Formian worker/1d4+10,Formian warrior/1d4+10,Formian taskmaster/1d4+2,Dominated creature[4]/1d4+2,Formian myrmarch/1d6+3</item>
+    <item>Leonal/1d6+3</item>
+    <item>Marut/1</item>
+    <item>Scorpionfolk/1d4+10,Medium monstrous scorpion/1d4+10,Large monstrous scorpion/1d3+1</item>
+    <item>Scorpionfolk/1d4+10,Medium monstrous scorpion/1d6+3,Large monstrous scorpion/1d2</item>
+    <item>Scorpionfolk/1d6+5,Medium monstrous scorpion/1d3+1</item>
+    <item>Scorpionfolk/1d4+10,Medium monstrous scorpion/1d6+3</item>
+    <item>Leonal/1</item>
+    <item>Owl/1</item>
+    <item>Rat/1d4+10</item>
+    <item>Derro/1d3+1</item>
+    <item>Derro/1d6+3</item>
+    <item>Derro/1d4+10</item>
+    <item>Sea hag/1</item>
+    <item>Annis/1,Green hag/1,Sea hag/1,Ogre/1d3,Hill giant/1d2</item>
+    <item>Annis/1,Green hag/1,Sea hag/1,Ogre/1d6+3,Hill giant/1d3+1</item>
+    <item>Giant ant queen/1,Giant ant worker/1d4+10,Giant ant soldier/1d6+5</item>
+    <item>Giant ant queen/1,Giant ant worker/1d4+10,Giant ant soldier/1d4+10</item>
+    <item>Babau/1</item>
+    <item>Babau/1d4+2</item>
     <item>Character[26]/1d3+1</item>
     <item>Ghost[27]/1</item>
     <item>Lich[27]/1</item>
@@ -3462,10 +3669,7 @@
     <item>Satyr/1d2</item>
     <item>Satyr/1d4+2</item>
     <item>Satyr/1d6+5</item>
-    <item>Green hag (hag)/1</item>
-    <item>Green hag (hag)/1d3+1,Ogre/1d4+2,Hill giant/1d3</item>
-    <item>Green hag (hag)/1d3,Annis (hag)/1,Ogre/1d4+2,Hill giant/1d3</item>
-    <item>Annis (hag)/1d3,Green hag (hag)/1,Ogre/1d4+2,Hill giant/1d3</item>
+    <item>Green hag/1</item>
     <item>Krenshar/1</item>
     <item>Krenshar/1d2</item>
     <item>Krenshar/1d6+5</item>
@@ -3477,6 +3681,8 @@
     <item>Displacer beast/1</item>
     <item>Displacer beast/1d2</item>
     <item>Displacer beast/1d6+5</item>
+    <item>Displacer beast (Pack lord)/1</item>
+    <item>Displacer beast (Pack lord)/1d2</item>
     <item>Dryad/1</item>
     <item>Dryad/1d4+2</item>
     <item>Ettercap/1</item>
@@ -3503,10 +3709,10 @@
     <item>Badger/1d4+2</item>
     <item>Dire badger/1</item>
     <item>Dire badger/1d4+2</item>
-    <item>Giant worker ant/1d4+2</item>
-    <item>Giant soldier ant/1</item>
-    <item>Giant soldier ant/1,Giant worker ant/1d6+5</item>
-    <item>Giant soldier ant/1d3+1</item>
+    <item>Giant ant worker/1d4+2</item>
+    <item>Giant ant soldier/1</item>
+    <item>Giant ant soldier/1,Giant ant worker/1d6+5</item>
+    <item>Giant ant soldier/1d3+1</item>
     <item>Bat/1d4+10</item>
     <item>Dire bat/1</item>
     <item>Dire bat/1d6+3</item>
@@ -3566,7 +3772,7 @@
     <item>Giant fire beetle/1d6+5</item>
     <item>Gnoll/1</item>
     <item>Gnoll/1d2</item>
-    <item>Gnoll/1d3+1,Dog (Hyena)/1d2</item>
+    <item>Gnoll/1d3+1,Hyena/1d2</item>
     <item>Goblin/1d6+3</item>
     <item>Goblin/1d4+10</item>
     <item>Goblin/1d4+10,Worg/1d4+10</item>
@@ -3601,17 +3807,17 @@
     <item>Giant wasp/1</item>
     <item>Giant wasp/1d3+1</item>
     <item>Giant wasp/1d4+10</item>
-    <item>Yuan-ti (Halfblood)/1</item>
-    <item>Yuan-ti (Halfblood)/1d2</item>
-    <item>Yuan-ti (Halfblood)/1d3+1</item>
-    <item>Yuan-ti (Pureblood)/1</item>
-    <item>Yuan-ti (Pureblood)/1d2</item>
-    <item>Yuan-ti (Pureblood)/1d3+1</item>
-    <item>Yuan-ti (Abomination)/1</item>
-    <item>Yuan-ti (Abomination)/1d2</item>
-    <item>Yuan-ti (Abomination)/1d3+1</item>
-    <item>Yuan-ti (Abomination)/1d3+1,Yuan-ti (Halfblood)/1d4+2,Yuan-ti (Pureblood)/1d6+5</item>
-    <item>Yuan-ti (Abomination)/1d6+3,Yuan-ti (Halfblood)/1d6+5,Yuan-ti (Pureblood)/1d4+10</item>
+    <item>Yuan-ti Halfblood/1</item>
+    <item>Yuan-ti Halfblood/1d2</item>
+    <item>Yuan-ti Halfblood/1d3+1</item>
+    <item>Yuan-ti Pureblood/1</item>
+    <item>Yuan-ti Pureblood/1d2</item>
+    <item>Yuan-ti Pureblood/1d3+1</item>
+    <item>Yuan-ti Abomination/1</item>
+    <item>Yuan-ti Abomination/1d2</item>
+    <item>Yuan-ti Abomination/1d3+1</item>
+    <item>Yuan-ti Abomination/1d3+1,Yuan-ti Halfblood/1d4+2,Yuan-ti Pureblood/1d6+5</item>
+    <item>Yuan-ti Abomination/1d6+3,Yuan-ti Halfblood/1d6+5,Yuan-ti Pureblood/1d4+10</item>
     <item>Troglodyte/1d3+1</item>
     <item>Troglodyte/1d6+5,Monitor lizard/1d2</item>
     <item>Grimlock/1d3+1</item>
@@ -3825,8 +4031,7 @@
     <item>Warrior (Patrol)[1d2+15]/1d6+3,Fighter[10]/1</item>
     <item>Warrior (Patrol)[1d2+17]/1d6+3,Fighter[11]/1</item>
     <item>Warrior (Patrol)[20]/1d6+3,Fighter[12]/1</item>
-    <item>Annis (hag)/1</item>
-    <item>Annis (hag)/1d3+1,Ogre/1d4+2,Hill giant/1d3</item>
+    <item>Annis/1</item>
     <item>Basilisk/1</item>
     <item>Basilisk/1d4+2</item>
     <item>Behir/1</item>
@@ -4156,8 +4361,8 @@
     <item>Vampire[20]/1</item>
     <item>Vampire[21]/1</item>
     <item>Vampire[22]/1</item>
-    <item>Achaierais/1</item>
-    <item>Achaierais/1d6+3</item>
+    <item>Achaierai/1</item>
+    <item>Achaierai/1d6+3</item>
     <item>Allip/1</item>
     <item>Colossal animated object/1</item>
     <item>Gargantuan animated object/1</item>
@@ -4172,26 +4377,26 @@
     <item>Elder arrowhawk/1d3+1</item>
     <item>Juvenile arrowhawk/1</item>
     <item>Juvenile arrowhawk/1d3+1</item>
-    <item>Astral deva (celestial)/1</item>
-    <item>Astral deva (celestial)/1d2</item>
-    <item>Astral deva (celestial)/1d3+1</item>
+    <item>Astral deva/1</item>
+    <item>Astral deva/1d2</item>
+    <item>Astral deva/1d3+1</item>
     <item>Avoral/1</item>
     <item>Avoral/1d2</item>
     <item>Avoral/1d3+1</item>
     <item>Azer/1</item>
     <item>Azer/1d2</item>
     <item>Azer/1d3+1</item>
-    <item>Balor (demon)/1</item>
-    <item>Balor (demon)/1,Marilith (demon)/1,Hezrou (demon)/1d3+1</item>
-    <item>Barbazu (devil)/1</item>
-    <item>Barbazu (devil)/1d2</item>
-    <item>Barbazu (devil)/1d3+1</item>
-    <item>Barbazu (devil)/1d6+5</item>
+    <item>Balor/1</item>
+    <item>Balor/1,Marilith/1,Hezrou/1d3+1</item>
+    <item>Bearded Devil (Barbazu)/1</item>
+    <item>Bearded Devil (Barbazu)/1d2</item>
+    <item>Bearded Devil (Barbazu)/1d3+1</item>
+    <item>Bearded Devil (Barbazu)/1d6+5</item>
     <item>Barghest/1</item>
     <item>Barghest/1d4+2</item>
     <item>Greater barghest/1</item>
     <item>Greater barghest/1d4+2</item>
-    <item>Bebilith (demon)/1</item>
+    <item>Bebilith/1</item>
     <item>Belker/1</item>
     <item>Belker/1d2</item>
     <item>Belker/1d3+1</item>
@@ -4202,22 +4407,22 @@
     <item>Skeleton/1</item>
     <item>Zombie/1</item>
     <item>Chaos beast/1</item>
-    <item>Cornugon (devil)/1</item>
-    <item>Cornugon (devil)/1d3+1</item>
-    <item>Cornugon (devil)/1d6+5</item>
+    <item>Horned Devil (Cornugon)/1</item>
+    <item>Horned Devil (Cornugon)/1d3+1</item>
+    <item>Horned Devil (Cornugon)/1d6+5</item>
     <item>Devourer/1</item>
-    <item>Djinn/1</item>
-    <item>Djinn/1d3+1</item>
-    <item>Djinn/1d6+5</item>
-    <item>Noble djinn/1</item>
-    <item>Dretch (demon)/1</item>
-    <item>Dretch (demon)/1d2</item>
-    <item>Dretch (demon)/1d3+1</item>
-    <item>Dretch (demon)/1d6+5</item>
-    <item>Dretch (demon)/1d4+10</item>
-    <item>Efreet/1</item>
-    <item>Efreet/1d3+1</item>
-    <item>Efreet/1d6+5</item>
+    <item>Djinni/1</item>
+    <item>Djinni/1d3+1</item>
+    <item>Djinni/1d6+5</item>
+    <item>Noble djinni/1</item>
+    <item>Dretch/1</item>
+    <item>Dretch/1d2</item>
+    <item>Dretch/1d3+1</item>
+    <item>Dretch/1d6+5</item>
+    <item>Dretch/1d4+10</item>
+    <item>Efreeti/1</item>
+    <item>Efreeti/1d3+1</item>
+    <item>Efreeti/1d6+5</item>
     <item>Elder air elemental/1</item>
     <item>Elder earth elemental/1</item>
     <item>Elder fire elemental/1</item>
@@ -4242,7 +4447,7 @@
     <item>Small earth elemental/1</item>
     <item>Small fire elemental/1</item>
     <item>Small water elemental/1</item>
-    <item>Erinyes (devil)/1</item>
+    <item>Erinyes/1</item>
     <item>Ethereal filcher/1</item>
     <item>Ethereal marauder/1</item>
     <item>Formian myrmarch/1</item>
@@ -4255,21 +4460,21 @@
     <item>Formian warrior/1d6+5</item>
     <item>Formian worker/1d3+1</item>
     <item>Formian worker/1d4+10</item>
-    <item>Gelugon (devil)/1</item>
-    <item>Gelugon (devil)/1d3+1</item>
-    <item>Gelugon (devil)/1d6+5</item>
-    <item>Gelugon (devil)/1d2,Osyluth (devil)/1d3+1,Barbazu (devil)/1d6+5</item>
-    <item>Ghaele (celestial)/1</item>
-    <item>Ghaele (celestial)/1d2</item>
-    <item>Ghaele (celestial)/1d3+1</item>
+    <item>Ice Devil (Gelugon)/1</item>
+    <item>Ice Devil (Gelugon)/1d3+1</item>
+    <item>Ice Devil (Gelugon)/1d6+5</item>
+    <item>Ice Devil (Gelugon)/1d2,Bone Devil (Osyluth)/1d3+1,Bearded Devil (Barbazu)/1d6+5</item>
+    <item>Ghaele/1</item>
+    <item>Ghaele/1d2</item>
+    <item>Ghaele/1d3+1</item>
     <item>Ghast/1</item>
     <item>Ghast/1d3+1</item>
     <item>Ghast/1d3+1,Ghoul/1d6+5</item>
     <item>Ghoul/1</item>
     <item>Ghoul/1d3+1</item>
     <item>Ghoul/1d6+5</item>
-    <item>Glabrezu (demon)/1</item>
-    <item>Glabrezu (demon)/1,Succubus (demon)/1,Vrock (demon)/1d3+1</item>
+    <item>Glabrezu/1</item>
+    <item>Glabrezu/1,Succubus/1,Vrock/1d3+1</item>
     <item>Clay golem/1</item>
     <item>Clay golem/1d3+1</item>
     <item>Flesh golem/1</item>
@@ -4280,84 +4485,85 @@
     <item>Iron golem/1d3+1</item>
     <item>Greater stone golem/1</item>
     <item>Greater stone golem/1d3+1</item>
-    <item>Hamatula (devil)/1</item>
-    <item>Hamatula (devil)/1d2</item>
-    <item>Hamatula (devil)/1d4+2</item>
-    <item>Hamatula (devil)/1d6+5</item>
-    <item>Hellcat/1</item>
-    <item>Hellcat/1d2</item>
-    <item>Hellcat/1d6+5</item>
+    <item>Barbed Devil (Hamatula)/1</item>
+    <item>Barbed Devil (Hamatula)/1d2</item>
+    <item>Barbed Devil (Hamatula)/1d4+2</item>
+    <item>Barbed Devil (Hamatula)/1d6+5</item>
+    <item>Hellcat (Bezekira)/1</item>
+    <item>Hellcat (Bezekira)/1d2</item>
+    <item>Hellcat (Bezekira)/1d6+5</item>
     <item>Hell hound/1</item>
     <item>Hell hound/1d2</item>
     <item>Hell hound/1d6+5</item>
-    <item>Hezrou (demon)/1</item>
-    <item>Hezrou (demon)/1d3+1</item>
+    <item>Hezrou/1</item>
+    <item>Hezrou/1d3+1</item>
     <item>Homunculus/1</item>
-    <item>Hound archon (celestial)/1</item>
-    <item>Hound archon (celestial)/1d2</item>
-    <item>Hound archon (celestial)/1d3+1</item>
+    <item>Hound archon/1</item>
+    <item>Hound archon/1d2</item>
+    <item>Hound archon/1d3+1</item>
     <item>Howler/1</item>
     <item>Howler/1d3+1</item>
     <item>Howler/1d6+5</item>
-    <item>Imp (devil)/1</item>
+    <item>Imp/1</item>
     <item>Invisible stalker/1</item>
     <item>Janni/1</item>
     <item>Janni/1d3+1</item>
     <item>Janni/1d6+5</item>
-    <item>Kyton (devil)/1</item>
-    <item>Kyton (devil)/1d3+1</item>
-    <item>Kyton (devil)/1d6+5</item>
-    <item>Kyton (devil)/1d4+10</item>
-    <item>Lantern archon (celestial)/1</item>
-    <item>Lantern archon (celestial)/1d2</item>
-    <item>Lantern archon (celestial)/1d3+1</item>
-    <item>Lemure (devil)/1</item>
-    <item>Lemure (devil)/1d2</item>
-    <item>Lemure (devil)/1d3+1</item>
-    <item>Lemure (devil)/1d6+5</item>
-    <item>Lemure (devil)/1d4+10</item>
+    <item>Chain Devil (Kyton)/1</item>
+    <item>Chain Devil (Kyton)/1d3+1</item>
+    <item>Chain Devil (Kyton)/1d6+5</item>
+    <item>Chain Devil (Kyton)/1d4+10</item>
+    <item>Lantern archon/1</item>
+    <item>Lantern archon/1d2</item>
+    <item>Lantern archon/1d3+1</item>
+    <item>Lemure/1</item>
+    <item>Lemure/1d2</item>
+    <item>Lemure/1d3+1</item>
+    <item>Lemure/1d6+5</item>
+    <item>Lemure/1d4+10</item>
     <item>Lillend/1</item>
     <item>Lillend/1d3+1</item>
     <item>Magmin/1</item>
     <item>Magmin/1d3+1</item>
     <item>Magmin/1d6+5</item>
-    <item>Marilith (demon)/1</item>
-    <item>Marilith (demon)/1d2</item>
+    <item>Marilith/1</item>
+    <item>Marilith/1d2</item>
     <item>Mephit/1</item>
     <item>Mephit/1d3+1</item>
     <item>Mephit/1d6+5</item>
     <item>Mohrg/1</item>
     <item>Mohrg/1d3+1</item>
     <item>Mohrg/1d3+1,Zombie (Human)/1d6+5</item>
-    <item>Nalfeshnee (demon)/1</item>
-    <item>Nalfeshnee (demon)/1,Hezrou (demon)/1,Vrock (demon)/1d3+1</item>
+    <item>Nalfeshnee/1</item>
+    <item>Nalfeshnee/1,Hezrou/1,Vrock/1d3+1</item>
     <item>Nessian warhound/1</item>
     <item>Nessian warhound/1d2</item>
     <item>Nessian warhound/1d2,Hell hound/1d6+5</item>
-    <item>Nightcrawler (nightshade)/1</item>
-    <item>Nightcrawler (nightshade)/1d2</item>
-    <item>Nightwalker (nightshade)/1</item>
-    <item>Nightwalker (nightshade)/1d2</item>
-    <item>Nightwalker (nightshade)/1d3+1</item>
+    <item>Nightcrawler/1</item>
+    <item>Nightcrawler/1d2</item>
+    <item>Nightwalker/1</item>
+    <item>Nightwalker/1d2</item>
+    <item>Nightwalker/1d3+1</item>
     <item>Night hag/1</item>
     <item>Night hag/1,Nightmare/1</item>
     <item>Night hag/1d3,Nightmare/1d3</item>
     <item>Nightmare/1</item>
-    <item>Nightwing (nightshade)/1</item>
-    <item>Nightwing (nightshade)/1d2</item>
-    <item>Nightwing (nightshade)/1d4+2</item>
-    <item>Osyluth (devil)/1</item>
-    <item>Osyluth (devil)/1d3+1</item>
-    <item>Osyluth (devil)/1d6+5</item>
+    <item>Nightmare (Cauchemar)/1</item>
+    <item>Nightwing/1</item>
+    <item>Nightwing/1d2</item>
+    <item>Nightwing/1d4+2</item>
+    <item>Bone Devil (Osyluth)/1</item>
+    <item>Bone Devil (Osyluth)/1d3+1</item>
+    <item>Bone Devil (Osyluth)/1d6+5</item>
     <item>Phase spider/1</item>
     <item>Phase spider/1d4+2</item>
-    <item>Pit fiend (devil)/1</item>
-    <item>Pit fiend (devil)/1d2</item>
-    <item>Pit fiend (devil)/1d3+1</item>
-    <item>Pit fiend (devil)/1d2,Cornugon (devil)/1d3+1,Hamatula (devil)/1d3+1</item>
-    <item>Planetar (celestial)/1</item>
-    <item>Planetar (celestial)/1d2</item>
-    <item>Quasit (demon)/1</item>
+    <item>Pit fiend/1</item>
+    <item>Pit fiend/1d2</item>
+    <item>Pit fiend/1d3+1</item>
+    <item>Pit fiend/1d2,Horned Devil (Cornugon)/1d3+1,Barbed Devil (Hamatula)/1d3+1</item>
+    <item>Planetar/1</item>
+    <item>Planetar/1d2</item>
+    <item>Quasit/1</item>
     <item>Rast/1</item>
     <item>Rast/1d2</item>
     <item>Rast/1d4+2</item>
@@ -4401,23 +4607,23 @@
     <item>Red slaad/1d2</item>
     <item>Red slaad/1d3+1</item>
     <item>Red slaad/1d6+5</item>
-    <item>Solar (celestial)/1</item>
-    <item>Solar (celestial)/1d2</item>
+    <item>Solar/1</item>
+    <item>Solar/1d2</item>
     <item>Spectre/1</item>
     <item>Spectre/1d3+1</item>
     <item>Spectre/1d6+5</item>
-    <item>Succubus (demon)/1</item>
+    <item>Succubus/1</item>
     <item>Thoqqua/1</item>
     <item>Thoqqua/1d2</item>
-    <item>Trumpet archon (celestial)/1</item>
-    <item>Trumpet archon (celestial)/1d2</item>
-    <item>Trumpet archon (celestial)/1d3+1</item>
+    <item>Trumpet archon/1</item>
+    <item>Trumpet archon/1d2</item>
+    <item>Trumpet archon/1d3+1</item>
     <item>Vampire spawn/1</item>
     <item>Vampire spawn/1d4+2</item>
-    <item>Vrock (demon)/1</item>
-    <item>Vrock (demon)/1d2</item>
-    <item>Vrock (demon)/1d4+2</item>
-    <item>Vrock (demon)/1d6+5</item>
+    <item>Vrock/1</item>
+    <item>Vrock/1d2</item>
+    <item>Vrock/1d4+2</item>
+    <item>Vrock/1d6+5</item>
     <item>Wight/1</item>
     <item>Wight/1d2</item>
     <item>Wight/1d4+2</item>
@@ -4443,6 +4649,14 @@
   </collection>
   <collection>
     <entry>1</entry>
+    <item>Owl/1</item>
+    <item>Donkey/1</item>
+    <item>Hawk/1d2</item>
+    <item>Hyena/1</item>
+    <item>Lizard/1</item>
+    <item>Pony/1</item>
+    <item>Raven/1</item>
+    <item>Toad/1d4+10</item>
     <item>Celestial creature/1</item>
     <item>Fiendish creature/1</item>
     <item>Zombie/1</item>
@@ -4461,7 +4675,7 @@
     <item>Darkmantle/1</item>
     <item>Dire rat/1</item>
     <item>Krenshar/1</item>
-    <item>Lemure (devil)/1</item>
+    <item>Lemure/1</item>
     <item>Shrieker/1</item>
     <item>Ghoul/1</item>
     <item>Gnoll/1</item>
@@ -4482,9 +4696,13 @@
     <item>Weasel/1</item>
     <item>Commoner (Farmer)[1]/1d3</item>
     <item>NPC (Traveler)[1]/1d3</item>
+    <item>Aasimar warrior/1d2</item>
+    <item>Tiefling warrior/1d2</item>
   </collection>
   <collection>
     <entry>2</entry>
+    <item>Aasimar warrior/1d3+1</item>
+    <item>Tiefling warrior/1d3+1</item>
     <item>Elf warrior/1d3+1</item>
     <item>Dwarf warrior/1d3+1</item>
     <item>Halfling warrior/1d3+1</item>
@@ -4505,22 +4723,22 @@
     <item>Small monstrous spider/1d3+1</item>
     <item>Darkmantle/1d2</item>
     <item>Krenshar/1d2</item>
-    <item>Lemure (devil)/1d2</item>
+    <item>Lemure/1d2</item>
     <item>Goblin/1d6+3</item>
     <item>Kobold/1d6+3</item>
-    <item>Giant soldier ant/1</item>
+    <item>Giant ant soldier/1</item>
     <item>Choker/1</item>
     <item>Orc/1d3+1</item>
-    <item>Imp (devil)/1</item>
+    <item>Imp/1</item>
     <item>Wererat/1</item>
-    <item>Dretch (demon)/1</item>
+    <item>Dretch/1</item>
     <item>Thoqqua/1</item>
     <item>Bugbear/1</item>
     <item>Gnoll/1d2</item>
     <item>Dire weasel/1</item>
     <item>Large viper snake/1</item>
-    <item>Quasit (demon)/1</item>
-    <item>Lantern archon (celestial)/1</item>
+    <item>Quasit/1</item>
+    <item>Lantern archon/1</item>
     <item>Blink dog/1</item>
     <item>Shocker lizard/1</item>
     <item>Azer/1</item>
@@ -4551,9 +4769,16 @@
     <item>Cheetah/1</item>
     <item>Crocodile/1</item>
     <item>Wyrmling white dragon/1</item>
+    <item>Bison/1</item>
+    <item>Hyena/1d2</item>
+    <item>Monkey/1d4+10</item>
   </collection>
   <collection>
     <entry>3</entry>
+    <item>Svirfneblin warrior/1d3+1</item>
+    <item>Drow warrior/1d3+1</item>
+    <item>Duergar warrior/1d3+1</item>
+    <item>Rat/1d4+10</item>
     <item>Celestial creature/1</item>
     <item>Fiendish creature/1</item>
     <item>Zombie/1</item>
@@ -4567,7 +4792,7 @@
     <item>Formian warrior/1</item>
     <item>Flamebrother salamander/1</item>
     <item>Hell hound/1</item>
-    <item>Yuan-ti (Pureblood)/1</item>
+    <item>Yuan-ti Pureblood/1</item>
     <item>Medium air elemental/1</item>
     <item>Medium earth elemental/1</item>
     <item>Medium fire elemental/1</item>
@@ -4589,7 +4814,7 @@
     <item>Gelatinous cube/1</item>
     <item>Giant praying mantis/1</item>
     <item>Wererat/1d2</item>
-    <item>Dretch (demon)/1d2</item>
+    <item>Dretch/1d2</item>
     <item>Ethereal filcher/1</item>
     <item>Phantom fungus/1</item>
     <item>Thoqqua/1d2</item>
@@ -4598,7 +4823,7 @@
     <item>Ankheg/1</item>
     <item>Dire weasel/1d2</item>
     <item>Huge viper snake/1</item>
-    <item>Lantern archon (celestial)/1d2</item>
+    <item>Lantern archon/1d2</item>
     <item>Rust monster/1</item>
     <item>Ettercap/1</item>
     <item>Magmin/1</item>
@@ -4656,6 +4881,8 @@
   </collection>
   <collection>
     <entry>4</entry>
+    <item>Satyr (with pipes)/1</item>
+    <item>Sea hag/1</item>
     <item>Celestial creature/1</item>
     <item>Fiendish creature/1</item>
     <item>Zombie/1</item>
@@ -4670,18 +4897,18 @@
     <item>Flamebrother salamander/1d2</item>
     <item>Hydra (5 heads)/1</item>
     <item>Hell hound/1d2</item>
-    <item>Yuan-ti (Pureblood)/1d2</item>
+    <item>Yuan-ti Pureblood/1d2</item>
     <item>Barghest/1</item>
     <item>Minor xorn/1d2</item>
     <item>Small monstrous scorpion/1d6+5</item>
     <item>Dire rat/1d4+10</item>
     <item>Small monstrous spider/1d6+5</item>
-    <item>Lemure (devil)/1d3+1</item>
+    <item>Lemure/1d3+1</item>
     <item>Goblin/1d4+10</item>
     <item>Hobgoblin/1d6+3</item>
-    <item>Giant worker ant/1d4+2</item>
+    <item>Giant ant worker/1d4+2</item>
     <item>Lizardfolk/1d3+1</item>
-    <item>Gnoll/1d3+1,Dog (Hyena)/1d2</item>
+    <item>Gnoll/1d3+1,Hyena/1d2</item>
     <item>Mimic/1</item>
     <item>Gray ooze/1</item>
     <item>Carrion crawler/1</item>
@@ -4704,7 +4931,7 @@
     <item>Dire boar/1</item>
     <item>Aranea/1</item>
     <item>Janni/1</item>
-    <item>Hound archon (celestial)/1</item>
+    <item>Hound archon/1</item>
     <item>Commoner (Farmer)[1d2+3]/1d3</item>
     <item>Commoner (Herder)[1d2+3]/1d3,Livestock/1d4+10</item>
     <item>Commoner (Minstrel)[1]/1d6+3,Expert (Minstrel)[1]/1</item>
@@ -4737,6 +4964,7 @@
   </collection>
   <collection>
     <entry>5</entry>
+    <item>Satyr/1d2,Satyr (with pipes)/1</item>
     <item>Elf warrior/1d4+10</item>
     <item>Dwarf warrior/1d4+10</item>
     <item>Halfling warrior/1d4+10</item>
@@ -4756,8 +4984,8 @@
     <item>Formian worker/1d4+10</item>
     <item>Nightmare/1</item>
     <item>Hydra (6 heads)/1</item>
-    <item>Yuan-ti (Halfblood)/1</item>
-    <item>Barbazu (devil)/1</item>
+    <item>Yuan-ti Halfblood/1</item>
+    <item>Bearded Devil (Barbazu)/1</item>
     <item>Greater barghest/1</item>
     <item>Large air elemental/1</item>
     <item>Large earth elemental/1</item>
@@ -4769,19 +4997,19 @@
     <item>Huge monstrous spider/1</item>
     <item>Large monstrous spider/1d3+1</item>
     <item>Hobgoblin/1d4+10</item>
-    <item>Giant soldier ant/1d3+1</item>
+    <item>Giant ant soldier/1d3+1</item>
     <item>Shrieker/1d4+2</item>
     <item>Orc/1d4+10</item>
     <item>Giant bombardier beetle/1d3+1</item>
-    <item>Dretch (demon)/1d3+1</item>
+    <item>Dretch/1d3+1</item>
     <item>Vargouille/1d3+1</item>
     <item>Bugbear/1d3+1</item>
     <item>Ochre jelly/1</item>
-    <item>Lantern archon (celestial)/1d3+1</item>
+    <item>Lantern archon/1d3+1</item>
     <item>Carrion crawler/1d2</item>
     <item>Dire wolverine/1d2</item>
     <item>Spider eater/1</item>
-    <item>Green hag (hag)/1</item>
+    <item>Green hag/1</item>
     <item>Gibbering mouther/1</item>
     <item>Shocker lizard/1d3+1</item>
     <item>Azer/1d3+1</item>
@@ -4812,11 +5040,11 @@
     <item>Ravid/1,Small animated object/1</item>
     <item>Ravid/1,Tiny animated object/1d3</item>
     <item>Weretiger/1</item>
-    <item>Djinn/1</item>
-    <item>Hound archon (celestial)/1d2</item>
+    <item>Djinni/1</item>
+    <item>Hound archon/1d2</item>
     <item>Cloaker/1</item>
     <item>Minotaur/1d2</item>
-    <item>Achaierais/1</item>
+    <item>Achaierai/1</item>
     <item>Hieracosphinx/1</item>
     <item>Phase spider/1</item>
     <item>Rast/1</item>
@@ -4844,6 +5072,13 @@
   </collection>
   <collection>
     <entry>6</entry>
+    <item>Drow warrior/1d6+5</item>
+    <item>Duergar warrior/1d6+5</item>
+    <item>Bralani/1</item>
+    <item>Derro/1d3+1</item>
+    <item>Hyena/1d6+5</item>
+    <item>Light horse/1d6+5</item>
+    <item>Babau/1</item>
     <item>Gnome warrior/1d4+10,Dire badger/1d3+1</item>
     <item>Celestial creature/1</item>
     <item>Fiendish creature/1</item>
@@ -4862,10 +5097,10 @@
     <item>Hydra (7 heads)/1</item>
     <item>Pyrohydra (5 heads)/1</item>
     <item>Cryohydra (5 heads)/1</item>
-    <item>Yuan-ti (Pureblood)/1d3+1</item>
-    <item>Yuan-ti (Halfblood)/1d2</item>
-    <item>Barbazu (devil)/1d2</item>
-    <item>Annis (hag)/1</item>
+    <item>Yuan-ti Pureblood/1d3+1</item>
+    <item>Yuan-ti Halfblood/1d2</item>
+    <item>Bearded Devil (Barbazu)/1d2</item>
+    <item>Annis/1</item>
     <item>Juvenile arrowhawk/1d3+1</item>
     <item>Average xorn/1</item>
     <item>Minor xorn/1d3+1</item>
@@ -4919,7 +5154,7 @@
     <item>Belker/1</item>
     <item>Will-O'-Wisp/1</item>
     <item>Wyvern/1</item>
-    <item>Kyton (devil)/1</item>
+    <item>Chain Devil (Kyton)/1</item>
     <item>Xill/1</item>
     <item>Pixie/1d3+1</item>
     <item>Assassin vine/1d3+1</item>
@@ -4941,6 +5176,15 @@
   </collection>
   <collection>
     <entry>7</entry>
+    <item>Satyr/1d4+2,Satyr (with pipes)/1</item>
+    <item>Svirfneblin warrior/1d4+10</item>
+    <item>Drow warrior/1d4+10</item>
+    <item>Duergar warrior/1d4+10</item>
+    <item>Grig/1d4+10</item>
+    <item>Bralani/1d2</item>
+    <item>Scorpionfolk/1</item>
+    <item>Hyena/1d4+10</item>
+    <item>Light horse/1d4+10</item>
     <item>Camel/1d6+5</item>
     <item>Halfling warrior/1d4+10,Dog/1d6+5,Dog (Riding)/1d3+1</item>
     <item>Celestial creature/1</item>
@@ -4965,9 +5209,9 @@
     <item>Pyrohydra (6 heads)/1</item>
     <item>Cryohydra (6 heads)/1</item>
     <item>Dragonne/1</item>
-    <item>Hellcat/1</item>
+    <item>Hellcat (Bezekira)/1</item>
     <item>Phasm/1</item>
-    <item>Yuan-ti (Abomination)/1</item>
+    <item>Yuan-ti Abomination/1</item>
     <item>Red slaad/1</item>
     <item>Umber hulk/1</item>
     <item>Huge air elemental/1</item>
@@ -4981,8 +5225,8 @@
     <item>Huge monstrous scorpion/1</item>
     <item>Darkmantle/1d6+5</item>
     <item>Krenshar/1d6+5</item>
-    <item>Lemure (devil)/1d6+5</item>
-    <item>Giant soldier ant/1,Giant worker ant/1d6+5</item>
+    <item>Lemure/1d6+5</item>
+    <item>Giant ant soldier/1,Giant ant worker/1d6+5</item>
     <item>Lizardfolk/1d6+5</item>
     <item>Dire bat/1d6+3</item>
     <item>Black pudding/1</item>
@@ -5008,7 +5252,7 @@
     <item>NPC (Traveler)[1d2+7]/1d3+1</item>
     <item>Remorhaz/1</item>
     <item>Janni/1d3+1</item>
-    <item>Hound archon (celestial)/1d3+1</item>
+    <item>Hound archon/1d3+1</item>
     <item>Invisible stalker/1</item>
     <item>Minotaur/1d3+1</item>
     <item>Spectre/1</item>
@@ -5019,7 +5263,7 @@
     <item>Wyvern/1d2</item>
     <item>Gargantuan animated object/1</item>
     <item>Nymph/1</item>
-    <item>Succubus (demon)/1</item>
+    <item>Succubus/1</item>
     <item>Giant bee/1d4+10</item>
     <item>Baboon/1d4+10</item>
     <item>Giant owl/1d4+2</item>
@@ -5049,6 +5293,10 @@
   </collection>
   <collection>
     <entry>8</entry>
+    <item>Derro/1d6+3</item>
+    <item>Scorpionfolk/1d2</item>
+    <item>Shield guardian/1</item>
+    <item>Bison/1d6+5</item>
     <item>Camel/1d4+10</item>
     <item>Celestial creature/1</item>
     <item>Fiendish creature/1</item>
@@ -5069,18 +5317,18 @@
     <item>Pyrohydra (7 heads)/1</item>
     <item>Cryohydra (7 heads)/1</item>
     <item>Dragonne/1d2</item>
-    <item>Hellcat/1d2</item>
-    <item>Yuan-ti (Halfblood)/1d3+1</item>
-    <item>Yuan-ti (Abomination)/1d2</item>
+    <item>Hellcat (Bezekira)/1d2</item>
+    <item>Yuan-ti Halfblood/1d3+1</item>
+    <item>Yuan-ti Abomination/1d2</item>
     <item>Blue slaad/1</item>
     <item>Red slaad/1d2</item>
-    <item>Barbazu (devil)/1d3+1</item>
+    <item>Bearded Devil (Barbazu)/1d3+1</item>
     <item>Barghest/1d4+2</item>
     <item>Mummy/1d3+1</item>
     <item>Drider/1d2</item>
     <item>Stone giant/1</item>
     <item>Dire tiger/1</item>
-    <item>Efreet/1</item>
+    <item>Efreeti/1</item>
     <item>Adult arrowhawk/1d3+1</item>
     <item>Elder arrowhawk/1</item>
     <item>Destrachan/1</item>
@@ -5091,14 +5339,14 @@
     <item>Gargantuan monstrous spider/1</item>
     <item>Huge monstrous spider/1d3+1</item>
     <item>Darkmantle/1d4+10</item>
-    <item>Lemure (devil)/1d4+10</item>
+    <item>Lemure/1d4+10</item>
     <item>Kobold/1d4+10,Dire weasel/1d6+3</item>
     <item>Violet fungus/1d3+1,Shrieker/1d4+2</item>
     <item>Lizardfolk/1d4+10</item>
     <item>Ghast/1d3+1,Ghoul/1d6+5</item>
     <item>Wererat/1d6+5</item>
     <item>Giant bombardier beetle/1d6+5</item>
-    <item>Dretch (demon)/1d6+5</item>
+    <item>Dretch/1d6+5</item>
     <item>Vargouille/1d6+5</item>
     <item>Commoner (Farmer)[1d2+11]/1d3</item>
     <item>Commoner (Herder)[1d2+11]/1d3,Livestock/1d4+10</item>
@@ -5132,9 +5380,9 @@
     <item>Werewolf/1d6+3</item>
     <item>Werebear/1d3+1</item>
     <item>Aranea/1d4+2</item>
-    <item>Djinn/1d3+1</item>
-    <item>Noble djinn/1</item>
-    <item>Erinyes (devil)/1</item>
+    <item>Djinni/1d3+1</item>
+    <item>Noble djinni/1</item>
+    <item>Erinyes/1</item>
     <item>Wereboar/1d3+1,Boar/1d3</item>
     <item>Ravid/1,Gargantuan animated object/1</item>
     <item>Lammasu/1</item>
@@ -5167,6 +5415,11 @@
   </collection>
   <collection>
     <entry>9</entry>
+    <item>Satyr/1d6+5,Satyr (with pipes)/1</item>
+    <item>Svirfneblin warrior/1d4+10,Medium earth elemental/1d3+1</item>
+    <item>Bralani/1d3+1</item>
+    <item>Zelekhut/1</item>
+    <item>Bison/1d4+10</item>
     <item>Celestial creature/1</item>
     <item>Fiendish creature/1</item>
     <item>Zombie/1</item>
@@ -5205,11 +5458,11 @@
     <item>Mind flayer/1,Charmed creature[6]/1</item>
     <item>Mind flayer/1d2</item>
     <item>Yrthak/1</item>
-    <item>Vrock (demon)/1</item>
+    <item>Vrock/1</item>
     <item>Colossal monstrous centipede/1</item>
     <item>Hobgoblin/1d4+10,Ogre/1d3,Dire wolf/1d3+1</item>
     <item>Hobgoblin/1d4+10,Troll/1d3,Dire wolf/1d3+1</item>
-    <item>Dretch (demon)/1d4+10</item>
+    <item>Dretch/1d4+10</item>
     <item>Bugbear/1d4+10</item>
     <item>Shadow/1d6+5</item>
     <item>Magmin/1d6+5</item>
@@ -5252,8 +5505,8 @@
     <item>Belker/1d3+1</item>
     <item>Delver/1</item>
     <item>Will-O'-Wisp/1d3+1</item>
-    <item>Kyton (devil)/1d3+1</item>
-    <item>Osyluth (devil)/1</item>
+    <item>Chain Devil (Kyton)/1d3+1</item>
+    <item>Bone Devil (Osyluth)/1</item>
     <item>Xill/1d3+1</item>
     <item>Giant eagle/1d6+5</item>
     <item>Dire boar/1d6+3</item>
@@ -5274,6 +5527,11 @@
   </collection>
   <collection>
     <entry>10</entry>
+    <item>Pixie/1d6+5,Pixie (with Irresistable Dance)/1</item>
+    <item>Derro/1d4+10</item>
+    <item>Razor boar/1</item>
+    <item>Scorpionfolk/1d3+1</item>
+    <item>Giant ant queen/1,Giant ant worker/1d4+10,Giant ant soldier/1d6+5</item>
     <item>Celestial creature/1</item>
     <item>Fiendish creature/1</item>
     <item>Zombie/1</item>
@@ -5291,7 +5549,7 @@
     <item>Guardian naga/1</item>
     <item>Night hag/1,Nightmare/1</item>
     <item>Noble salamander/1</item>
-    <item>Yuan-ti (Abomination)/1d3+1</item>
+    <item>Yuan-ti Abomination/1d3+1</item>
     <item>Lillend/1d3+1</item>
     <item>Chimera/1d3+1</item>
     <item>Hydra (11 heads)/1</item>
@@ -5309,7 +5567,7 @@
     <item>Gargantuan monstrous scorpion/1</item>
     <item>Huge monstrous scorpion/1d3+1</item>
     <item>Couatl/1</item>
-    <item>Vrock (demon)/1d2</item>
+    <item>Vrock/1d2</item>
     <item>Goblin/1d4+10,Worg/1d4+10</item>
     <item>Goblin/1d4+10,Worg/1d4+10,Dire wolf/1d3+1</item>
     <item>Ogre mage/1d2,Ogre/1d3+1</item>
@@ -5322,9 +5580,9 @@
     <item>Ravid/1,Colossal animated object/1</item>
     <item>Ettin/1d3+1,Brown bear/1d2</item>
     <item>Janni/1d6+5</item>
-    <item>Achaierais/1d6+3</item>
+    <item>Achaierai/1d6+3</item>
     <item>Spectre/1d3+1</item>
-    <item>Bebilith (demon)/1</item>
+    <item>Bebilith/1</item>
     <item>Wyvern/1d4+2</item>
     <item>Commoner (Farmer)[1d2+15]/1d3</item>
     <item>Commoner (Herder)[1d2+15]/1d3,Livestock/1d4+10</item>
@@ -5362,9 +5620,14 @@
     <item>Very young gold dragon/1d3+1</item>
     <item>Young silver dragon/1d3+1</item>
     <item>Juvenile silver dragon/1</item>
+    <item>Babau/1d4+2</item>
   </collection>
   <collection>
     <entry>11</entry>
+    <item>Nightmare (Cauchemar)/1</item>
+    <item>Pixie/1d4+10,Pixie (with Irresistable Dance)/1</item>
+    <item>Annis/1,Green hag/1,Sea hag/1,Ogre/1d3,Hill giant/1d2</item>
+    <item>Giant ant queen/1,Giant ant worker/1d4+10,Giant ant soldier/1d4+10</item>
     <item>Celestial creature/1</item>
     <item>Fiendish creature/1</item>
     <item>Zombie/1</item>
@@ -5387,15 +5650,15 @@
     <item>Retriever/1</item>
     <item>Blue slaad/1d3+1</item>
     <item>Gray slaad/1d2</item>
-    <item>Barbazu (devil)/1d6+5</item>
+    <item>Bearded Devil (Barbazu)/1d6+5</item>
     <item>Elder air elemental/1</item>
     <item>Elder earth elemental/1</item>
     <item>Elder fire elemental/1</item>
     <item>Elder water elemental/1</item>
     <item>Mummy/1d6+5</item>
     <item>Stone giant/1d3+1</item>
-    <item>Hamatula (devil)/1</item>
-    <item>Efreet/1d3+1</item>
+    <item>Barbed Devil (Hamatula)/1</item>
+    <item>Efreeti/1d3+1</item>
     <item>Elder arrowhawk/1d3+1</item>
     <item>Stone golem/1</item>
     <item>Gorgon/1d3+1</item>
@@ -5403,15 +5666,13 @@
     <item>Mohrg/1d3+1</item>
     <item>Mohrg/1d3+1,Zombie (Human)/1d6+5</item>
     <item>Couatl/1d2</item>
-    <item>Hezrou (demon)/1</item>
+    <item>Hezrou/1</item>
     <item>Colossal monstrous spider/1</item>
-    <item>Green hag (hag)/1d3+1,Ogre/1d4+2,Hill giant/1d3</item>
-    <item>Green hag (hag)/1d3,Annis (hag)/1,Ogre/1d4+2,Hill giant/1d3</item>
     <item>Wraith/1d6+5</item>
     <item>Dread wraith/1</item>
     <item>Ettin/1d3+1,Brown bear/1d2,Goblin/1d4+10</item>
     <item>Ettin/1d3+1,Brown bear/1d2,Orc/1d6+5</item>
-    <item>Djinn/1d6+5</item>
+    <item>Djinni/1d6+5</item>
     <item>Cloaker/1d6+5</item>
     <item>Girallon/1d6+3</item>
     <item>Commoner (Farmer)[1d2+17]/1d3</item>
@@ -5453,6 +5714,10 @@
   </collection>
   <collection>
     <entry>12</entry>
+    <item>Displacer beast (Pack lord)/1</item>
+    <item>Abyssal greater basilisk/1</item>
+    <item>Kolyarut/1</item>
+    <item>Annis/1,Green hag/1,Sea hag/1,Ogre/1d6+3,Hill giant/1d3+1</item>
     <item>Celestial creature/1</item>
     <item>Fiendish creature/1</item>
     <item>Zombie/1</item>
@@ -5475,7 +5740,7 @@
     <item>Frost giant/1d3+1</item>
     <item>Frost worm/1</item>
     <item>Hill giant/1d6+3</item>
-    <item>Hamatula (devil)/1d2</item>
+    <item>Barbed Devil (Hamatula)/1d2</item>
     <item>Avoral/1d3+1</item>
     <item>Destrachan/1d4+2</item>
     <item>Purple worm/1</item>
@@ -5484,10 +5749,8 @@
     <item>Yrthak/1d3+1</item>
     <item>Roper/1</item>
     <item>Elder black pudding/1</item>
-    <item>Annis (hag)/1d3+1,Ogre/1d4+2,Hill giant/1d3</item>
-    <item>Annis (hag)/1d3,Green hag (hag)/1,Ogre/1d4+2,Hill giant/1d3</item>
-    <item>Kyton (devil)/1d6+5</item>
-    <item>Osyluth (devil)/1d3+1</item>
+    <item>Chain Devil (Kyton)/1d6+5</item>
+    <item>Bone Devil (Osyluth)/1d3+1</item>
     <item>Commoner (Farmer)[20]/1d3</item>
     <item>Commoner (Herder)[20]/1d3,Livestock/1d4+10</item>
     <item>Commoner (Hunter)[1d2+17]/1d3,Warrior (Hunter)[1d2+17]/1</item>
@@ -5517,9 +5780,11 @@
     <item>Young adult bronze dragon/1</item>
     <item>Juvenile copper dragon/1d3+1</item>
     <item>Young gold dragon/1d3+1</item>
+    <item>Leonal/1</item>
   </collection>
   <collection>
     <entry>13</entry>
+    <item>Displacer beast (Pack lord)/1d2</item>
     <item>Celestial creature/1</item>
     <item>Fiendish creature/1</item>
     <item>Zombie/1</item>
@@ -5538,8 +5803,8 @@
     <item>Pyrohydra (12 heads)/1</item>
     <item>Cryohydra (12 heads)/1</item>
     <item>Dragonne/1d6+5</item>
-    <item>Hellcat/1d6+5</item>
-    <item>Yuan-ti (Abomination)/1d3+1,Yuan-ti (Halfblood)/1d4+2,Yuan-ti (Pureblood)/1d6+5</item>
+    <item>Hellcat (Bezekira)/1d6+5</item>
+    <item>Yuan-ti Abomination/1d3+1,Yuan-ti Halfblood/1d4+2,Yuan-ti Pureblood/1d6+5</item>
     <item>Death slaad/1</item>
     <item>Red slaad/1d6+5</item>
     <item>Stone giant/1d6+3</item>
@@ -5550,12 +5815,12 @@
     <item>Beholder/1</item>
     <item>Roper/1d2</item>
     <item>Storm giant/1</item>
-    <item>Ghaele (celestial)/1</item>
-    <item>Gelugon (devil)/1</item>
-    <item>Vrock (demon)/1d4+2</item>
-    <item>Glabrezu (demon)/1</item>
+    <item>Ghaele/1</item>
+    <item>Ice Devil (Gelugon)/1</item>
+    <item>Vrock/1d4+2</item>
+    <item>Glabrezu/1</item>
     <item>Spectre/1d6+5</item>
-    <item>Kyton (devil)/1d4+10</item>
+    <item>Chain Devil (Kyton)/1d4+10</item>
     <item>Commoner (Hunter)[20]/1d3,Warrior (Hunter)[20]/1</item>
     <item>Commoner (Merchant)[1d2+15]/1d3,Warrior (Guard)[1d2+15]/1d3,Expert (Merchant)[1d2+15]/1</item>
     <item>Commoner (Minstrel)[1d2+13]/1d6+3,Expert (Minstrel)[1d2+13]/1</item>
@@ -5581,9 +5846,12 @@
     <item>Adult brass dragon/1d2</item>
     <item>Juvenile silver dragon/1d3+1</item>
     <item>Young adult silver dragon/1</item>
+    <item>Scorpionfolk/1d6+5,Medium monstrous scorpion/1d3+1</item>
   </collection>
   <collection>
     <entry>14</entry>
+    <item>Scorpionfolk/1d4+10,Medium monstrous scorpion/1d6+3</item>
+    <item>Scorpionfolk/1d4+10,Medium monstrous scorpion/1d6+3,Large monstrous scorpion/1d2</item>
     <item>Celestial creature/1</item>
     <item>Fiendish creature/1</item>
     <item>Zombie/1</item>
@@ -5596,23 +5864,23 @@
     <item>Ghost[12]/1</item>
     <item>Lich[12]/1</item>
     <item>Vampire[12]/1</item>
-    <item>Yuan-ti (Abomination)/1d6+3,Yuan-ti (Halfblood)/1d6+5,Yuan-ti (Pureblood)/1d4+10</item>
+    <item>Yuan-ti Abomination/1d6+3,Yuan-ti Halfblood/1d6+5,Yuan-ti Pureblood/1d4+10</item>
     <item>Blue slaad/1d6+5</item>
     <item>Death slaad/1d2</item>
     <item>Truly horrid umber hulk/1</item>
-    <item>Efreet/1d6+5</item>
+    <item>Efreeti/1d6+5</item>
     <item>Stone golem/1d3+1</item>
     <item>Gorgon/1d6+5</item>
     <item>Elder xorn/1d6+5</item>
     <item>Beholder/1d2</item>
     <item>Couatl/1d4+2</item>
     <item>Beholder/1,Charmed creature[11]/1</item>
-    <item>Ghaele (celestial)/1d2</item>
-    <item>Hezrou (demon)/1d3+1</item>
-    <item>Astral deva (celestial)/1</item>
-    <item>Trumpet archon (celestial)/1</item>
-    <item>Nightwing (nightshade)/1</item>
-    <item>Nalfeshnee (demon)/1</item>
+    <item>Ghaele/1d2</item>
+    <item>Hezrou/1d3+1</item>
+    <item>Astral deva/1</item>
+    <item>Trumpet archon/1</item>
+    <item>Nightwing/1</item>
+    <item>Nalfeshnee/1</item>
     <item>Commoner (Merchant)[1d2+17]/1d3,Warrior (Guard)[1d2+17]/1d3,Expert (Merchant)[1d2+17]/1</item>
     <item>Commoner (Minstrel)[1d2+15]/1d6+3,Expert (Minstrel)[1d2+15]/1</item>
     <item>Commoner (Minstrel)[1d2+15]/1d6+3,Bard[10]/1</item>
@@ -5646,6 +5914,8 @@
   </collection>
   <collection>
     <entry>15</entry>
+    <item>Marut/1</item>
+    <item>Scorpionfolk/1d4+10,Medium monstrous scorpion/1d4+10,Large monstrous scorpion/1d3+1</item>
     <item>Celestial creature/1</item>
     <item>Fiendish creature/1</item>
     <item>Skeleton/1</item>
@@ -5657,13 +5927,13 @@
     <item>Ghost[13]/1</item>
     <item>Lich[13]/1</item>
     <item>Vampire[13]/1</item>
-    <item>Hamatula (devil)/1d4+2</item>
-    <item>Astral deva (celestial)/1d2</item>
-    <item>Vrock (demon)/1d6+5</item>
-    <item>Trumpet archon (celestial)/1d2</item>
-    <item>Glabrezu (demon)/1,Succubus (demon)/1,Vrock (demon)/1d3+1</item>
-    <item>Nightwing (nightshade)/1d2</item>
-    <item>Osyluth (devil)/1d6+5</item>
+    <item>Barbed Devil (Hamatula)/1d4+2</item>
+    <item>Astral deva/1d2</item>
+    <item>Vrock/1d6+5</item>
+    <item>Trumpet archon/1d2</item>
+    <item>Glabrezu/1,Succubus/1,Vrock/1d3+1</item>
+    <item>Nightwing/1d2</item>
+    <item>Bone Devil (Osyluth)/1d6+5</item>
     <item>Commoner (Merchant)[20]/1d3,Warrior (Guard)[20]/1d3,Expert (Merchant)[20]/1</item>
     <item>Commoner (Minstrel)[1d2+17]/1d6+3,Expert (Minstrel)[1d2+17]/1</item>
     <item>Commoner (Minstrel)[1d2+17]/1d6+3,Bard[11]/1</item>
@@ -5692,6 +5962,7 @@
   </collection>
   <collection>
     <entry>16</entry>
+    <item>Abyssal greater basilisk/1d4+2</item>
     <item>Celestial creature/1</item>
     <item>Fiendish creature/1</item>
     <item>Skeleton/1</item>
@@ -5705,14 +5976,14 @@
     <item>Vampire[14]/1</item>
     <item>Iron golem/1d3+1</item>
     <item>Greater stone golem/1</item>
-    <item>Cornugon (devil)/1</item>
+    <item>Horned Devil (Cornugon)/1</item>
     <item>Roper/1d4+2</item>
-    <item>Ghaele (celestial)/1d3+1</item>
-    <item>Gelugon (devil)/1d3+1</item>
-    <item>Gelugon (devil)/1d2,Osyluth (devil)/1d3+1,Barbazu (devil)/1d6+5</item>
-    <item>Planetar (celestial)/1</item>
-    <item>Nightwalker (nightshade)/1</item>
-    <item>Nalfeshnee (demon)/1,Hezrou (demon)/1,Vrock (demon)/1d3+1</item>
+    <item>Ghaele/1d3+1</item>
+    <item>Ice Devil (Gelugon)/1d3+1</item>
+    <item>Ice Devil (Gelugon)/1d2,Bone Devil (Osyluth)/1d3+1,Bearded Devil (Barbazu)/1d6+5</item>
+    <item>Planetar/1</item>
+    <item>Nightwalker/1</item>
+    <item>Nalfeshnee/1,Hezrou/1,Vrock/1d3+1</item>
     <item>Commoner (Minstrel)[20]/1d6+3,Expert (Minstrel)[20]/1</item>
     <item>Commoner (Minstrel)[20]/1d6+3,Bard[12]/1</item>
     <item>Warrior (Patrol)[20]/1d6+3,Fighter[12]/1</item>
@@ -5742,6 +6013,7 @@
   </collection>
   <collection>
     <entry>17</entry>
+    <item>Leonal/1d6+3</item>
     <item>Celestial creature/1</item>
     <item>Fiendish creature/1</item>
     <item>Character[17]/1</item>
@@ -5753,13 +6025,13 @@
     <item>Lich[15]/1</item>
     <item>Vampire[15]/1</item>
     <item>Noble salamander/1d4+10</item>
-    <item>Hamatula (devil)/1d6+5</item>
+    <item>Barbed Devil (Hamatula)/1d6+5</item>
     <item>Beholder/1d4+2</item>
-    <item>Astral deva (celestial)/1d3+1</item>
-    <item>Marilith (demon)/1</item>
-    <item>Trumpet archon (celestial)/1d3+1</item>
-    <item>Planetar (celestial)/1d2</item>
-    <item>Nightwalker (nightshade)/1d2</item>
+    <item>Astral deva/1d3+1</item>
+    <item>Marilith/1</item>
+    <item>Trumpet archon/1d3+1</item>
+    <item>Planetar/1d2</item>
+    <item>Nightwalker/1d2</item>
     <item>Commoner (Pilgrim)[20]/1d6+3,Warrior (Guard)[20]/1d3,Cleric[12]/1</item>
     <item>Commoner (Pilgrim)[1d2+15]/1d4+10,Warrior (Guard)[1d2+15]/1d3+1,Cleric[14]/1</item>
     <item>Warrior (Bandit)[20]/1d6+5,Fighter[12]/1</item>
@@ -5796,9 +6068,9 @@
     <item>Ghost[16]/1</item>
     <item>Lich[16]/1</item>
     <item>Vampire[16]/1</item>
-    <item>Marilith (demon)/1d2</item>
-    <item>Nightwing (nightshade)/1d4+2</item>
-    <item>Nightcrawler (nightshade)/1</item>
+    <item>Marilith/1d2</item>
+    <item>Nightwing/1d4+2</item>
+    <item>Nightcrawler/1</item>
     <item>Commoner (Pilgrim)[1d2+17]/1d4+10,Warrior (Guard)[1d2+17]/1d3+1,Cleric[15]/1</item>
     <item>Warrior (Bandit)[20]/1d4+10,Fighter[12]/1</item>
     <item>Fire giant/1d4+10,Hell hound/1d4+10,Troll/1d4+10,Ettin/1d6+5,Young red dragon/1d2</item>
@@ -5830,10 +6102,10 @@
     <item>Lich[17]/1</item>
     <item>Vampire[17]/1</item>
     <item>Greater stone golem/1d3+1</item>
-    <item>Cornugon (devil)/1d3+1</item>
-    <item>Gelugon (devil)/1d6+5</item>
-    <item>Nightwalker (nightshade)/1d3+1</item>
-    <item>Nightcrawler (nightshade)/1d2</item>
+    <item>Horned Devil (Cornugon)/1d3+1</item>
+    <item>Ice Devil (Gelugon)/1d6+5</item>
+    <item>Nightwalker/1d3+1</item>
+    <item>Nightcrawler/1d2</item>
     <item>Commoner (Pilgrim)[20]/1d4+10,Warrior (Guard)[20]/1d3+1,Cleric[16]/1</item>
     <item>Very old black dragon/1d2</item>
     <item>Ancient black dragon/1</item>
@@ -5852,6 +6124,7 @@
     <item>Old copper dragon/1</item>
     <item>Mature adult gold dragon/1</item>
     <item>Mature adult silver dragon/1d2</item>
+    <item>Formian queen/1,Formian worker/1d4+10,Formian warrior/1d4+10,Formian taskmaster/1d4+2,Dominated creature[4]/1d4+2,Formian myrmarch/1d6+3</item>
   </collection>
   <collection>
     <entry>20</entry>
@@ -5865,8 +6138,8 @@
     <item>Ghost[18]/1</item>
     <item>Lich[18]/1</item>
     <item>Vampire[18]/1</item>
-    <item>Balor (demon)/1</item>
-    <item>Pit fiend (devil)/1</item>
+    <item>Balor/1</item>
+    <item>Pit fiend/1</item>
     <item>Tarrasque/1</item>
     <item>Very old black dragon/1d2,Juvenile black dragon/1d3+1</item>
     <item>Ancient black dragon/1d2</item>
@@ -5897,8 +6170,8 @@
     <item>Ghost[19]/1</item>
     <item>Lich[19]/1</item>
     <item>Vampire[19]/1</item>
-    <item>Balor (demon)/1,Marilith (demon)/1,Hezrou (demon)/1d3+1</item>
-    <item>Pit fiend (devil)/1d2</item>
+    <item>Balor/1,Marilith/1,Hezrou/1d3+1</item>
+    <item>Pit fiend/1d2</item>
     <item>Ancient black dragon/1d2,Young adult black dragon/1d3+1</item>
     <item>Wyrm black dragon/1d2</item>
     <item>Very old blue dragon/1d2,Juvenile blue dragon/1d3+1</item>
@@ -5920,6 +6193,7 @@
     <item>Old gold dragon/1</item>
     <item>Old silver dragon/1d2</item>
     <item>Very old silver dragon/1</item>
+    <item>Titan/1</item>
   </collection>
   <collection>
     <entry>22</entry>
@@ -5929,7 +6203,7 @@
     <item>Ghost[20]/1</item>
     <item>Lich[20]/1</item>
     <item>Vampire[20]/1</item>
-    <item>Cornugon (devil)/1d6+5</item>
+    <item>Horned Devil (Cornugon)/1d6+5</item>
     <item>Wyrm black dragon/1d2,Adult black dragon/1d3+1,Wyrmling black dragon/1d6+5</item>
     <item>Great wyrm black dragon/1</item>
     <item>Ancient blue dragon/1d2</item>
@@ -5948,6 +6222,7 @@
     <item>Very old gold dragon/1</item>
     <item>Old silver dragon/1d2,Young silver dragon/1d3+1</item>
     <item>Very old silver dragon/1d2</item>
+    <item>Titan/1d2</item>
   </collection>
   <collection>
     <entry>23</entry>
@@ -5957,9 +6232,9 @@
     <item>Ghost[21]/1</item>
     <item>Lich[21]/1</item>
     <item>Vampire[21]/1</item>
-    <item>Pit fiend (devil)/1d3+1</item>
-    <item>Pit fiend (devil)/1d2,Cornugon (devil)/1d3+1,Hamatula (devil)/1d3+1</item>
-    <item>Solar (celestial)/1</item>
+    <item>Pit fiend/1d3+1</item>
+    <item>Pit fiend/1d2,Horned Devil (Cornugon)/1d3+1,Barbed Devil (Hamatula)/1d3+1</item>
+    <item>Solar/1</item>
     <item>Great wyrm black dragon/1d2</item>
     <item>Ancient blue dragon/1d2,Young adult blue dragon/1d3+1</item>
     <item>Wyrm blue dragon/1</item>
@@ -5987,7 +6262,7 @@
     <item>Ghost[22]/1</item>
     <item>Lich[22]/1</item>
     <item>Vampire[22]/1</item>
-    <item>Solar (celestial)/1d2</item>
+    <item>Solar/1d2</item>
     <item>Great wyrm black dragon/1d2,Mature adult black dragon/1d3+1,Very young black dragon/1d6+5</item>
     <item>Wyrm blue dragon/1d2</item>
     <item>Wyrm green dragon/1d2,Adult green dragon/1d3+1,Wyrmling green dragon/1d6+5</item>
@@ -6086,6 +6361,11 @@
   </collection>
   <collection>
     <entry>Land</entry>
+    <item>Aasimar warrior/1d2</item>
+    <item>Tiefling warrior/1d2</item>
+    <item>Aasimar warrior/1d3+1</item>
+    <item>Tiefling warrior/1d3+1</item>
+    <item>Rat/1d4+10</item>
     <item>Elf warrior/1d3+1</item>
     <item>Elf warrior/1d4+10</item>
     <item>Dwarf warrior/1d3+1</item>
@@ -6096,8 +6376,9 @@
     <item>Gnome warrior/1d3+1</item>
     <item>Gnome warrior/1d4+10</item>
     <item>Gnome warrior/1d4+10,Dire badger/1d3+1</item>
-    <item>Annis (hag)/1</item>
-    <item>Annis (hag)/1d3+1,Ogre/1d4+2,Hill giant/1d3</item>
+    <item>Annis/1</item>
+    <item>Annis/1,Green hag/1,Sea hag/1,Ogre/1d3,Hill giant/1d2</item>
+    <item>Annis/1,Green hag/1,Sea hag/1,Ogre/1d6+3,Hill giant/1d3+1</item>
     <item>Basilisk/1</item>
     <item>Basilisk/1d4+2</item>
     <item>Behir/1</item>
@@ -6257,6 +6538,12 @@
   </collection>
   <collection>
     <entry>Magic</entry>
+    <item>Abyssal greater basilisk/1</item>
+    <item>Abyssal greater basilisk/1d4+2</item>
+    <item>Titan/1</item>
+    <item>Titan/1d2</item>
+    <item>Babau/1</item>
+    <item>Babau/1d4+2</item>
     <item>Ghost[1]/1</item>
     <item>Ghost[2]/1</item>
     <item>Ghost[3]/1</item>
@@ -6338,8 +6625,8 @@
     <item>Vampire[25]/1</item>
     <item>Vampire[26]/1</item>
     <item>Vampire[27]/1</item>
-    <item>Achaierais/1</item>
-    <item>Achaierais/1d6+3</item>
+    <item>Achaierai/1</item>
+    <item>Achaierai/1d6+3</item>
     <item>Allip/1</item>
     <item>Colossal animated object/1</item>
     <item>Gargantuan animated object/1</item>
@@ -6354,26 +6641,26 @@
     <item>Elder arrowhawk/1d3+1</item>
     <item>Juvenile arrowhawk/1</item>
     <item>Juvenile arrowhawk/1d3+1</item>
-    <item>Astral deva (celestial)/1</item>
-    <item>Astral deva (celestial)/1d2</item>
-    <item>Astral deva (celestial)/1d3+1</item>
+    <item>Astral deva/1</item>
+    <item>Astral deva/1d2</item>
+    <item>Astral deva/1d3+1</item>
     <item>Avoral/1</item>
     <item>Avoral/1d2</item>
     <item>Avoral/1d3+1</item>
     <item>Azer/1</item>
     <item>Azer/1d2</item>
     <item>Azer/1d3+1</item>
-    <item>Balor (demon)/1</item>
-    <item>Balor (demon)/1,Marilith (demon)/1,Hezrou (demon)/1d3+1</item>
-    <item>Barbazu (devil)/1</item>
-    <item>Barbazu (devil)/1d2</item>
-    <item>Barbazu (devil)/1d3+1</item>
-    <item>Barbazu (devil)/1d6+5</item>
+    <item>Balor/1</item>
+    <item>Balor/1,Marilith/1,Hezrou/1d3+1</item>
+    <item>Bearded Devil (Barbazu)/1</item>
+    <item>Bearded Devil (Barbazu)/1d2</item>
+    <item>Bearded Devil (Barbazu)/1d3+1</item>
+    <item>Bearded Devil (Barbazu)/1d6+5</item>
     <item>Barghest/1</item>
     <item>Barghest/1d4+2</item>
     <item>Greater barghest/1</item>
     <item>Greater barghest/1d4+2</item>
-    <item>Bebilith (demon)/1</item>
+    <item>Bebilith/1</item>
     <item>Belker/1</item>
     <item>Belker/1d2</item>
     <item>Belker/1d3+1</item>
@@ -6384,22 +6671,22 @@
     <item>Skeleton/1</item>
     <item>Zombie/1</item>
     <item>Chaos beast/1</item>
-    <item>Cornugon (devil)/1</item>
-    <item>Cornugon (devil)/1d3+1</item>
-    <item>Cornugon (devil)/1d6+5</item>
+    <item>Horned Devil (Cornugon)/1</item>
+    <item>Horned Devil (Cornugon)/1d3+1</item>
+    <item>Horned Devil (Cornugon)/1d6+5</item>
     <item>Devourer/1</item>
-    <item>Djinn/1</item>
-    <item>Djinn/1d3+1</item>
-    <item>Djinn/1d6+5</item>
-    <item>Noble djinn/1</item>
-    <item>Dretch (demon)/1</item>
-    <item>Dretch (demon)/1d2</item>
-    <item>Dretch (demon)/1d3+1</item>
-    <item>Dretch (demon)/1d6+5</item>
-    <item>Dretch (demon)/1d4+10</item>
-    <item>Efreet/1</item>
-    <item>Efreet/1d3+1</item>
-    <item>Efreet/1d6+5</item>
+    <item>Djinni/1</item>
+    <item>Djinni/1d3+1</item>
+    <item>Djinni/1d6+5</item>
+    <item>Noble djinni/1</item>
+    <item>Dretch/1</item>
+    <item>Dretch/1d2</item>
+    <item>Dretch/1d3+1</item>
+    <item>Dretch/1d6+5</item>
+    <item>Dretch/1d4+10</item>
+    <item>Efreeti/1</item>
+    <item>Efreeti/1d3+1</item>
+    <item>Efreeti/1d6+5</item>
     <item>Elder air elemental/1</item>
     <item>Elder earth elemental/1</item>
     <item>Elder fire elemental/1</item>
@@ -6424,7 +6711,7 @@
     <item>Small earth elemental/1</item>
     <item>Small fire elemental/1</item>
     <item>Small water elemental/1</item>
-    <item>Erinyes (devil)/1</item>
+    <item>Erinyes/1</item>
     <item>Ethereal filcher/1</item>
     <item>Ethereal marauder/1</item>
     <item>Formian myrmarch/1</item>
@@ -6437,21 +6724,22 @@
     <item>Formian warrior/1d6+5</item>
     <item>Formian worker/1d3+1</item>
     <item>Formian worker/1d4+10</item>
-    <item>Gelugon (devil)/1</item>
-    <item>Gelugon (devil)/1d3+1</item>
-    <item>Gelugon (devil)/1d6+5</item>
-    <item>Gelugon (devil)/1d2,Osyluth (devil)/1d3+1,Barbazu (devil)/1d6+5</item>
-    <item>Ghaele (celestial)/1</item>
-    <item>Ghaele (celestial)/1d2</item>
-    <item>Ghaele (celestial)/1d3+1</item>
+    <item>Formian queen/1,Formian worker/1d4+10,Formian warrior/1d4+10,Formian taskmaster/1d4+2,Dominated creature[4]/1d4+2,Formian myrmarch/1d6+3</item>
+    <item>Ice Devil (Gelugon)/1</item>
+    <item>Ice Devil (Gelugon)/1d3+1</item>
+    <item>Ice Devil (Gelugon)/1d6+5</item>
+    <item>Ice Devil (Gelugon)/1d2,Bone Devil (Osyluth)/1d3+1,Bearded Devil (Barbazu)/1d6+5</item>
+    <item>Ghaele/1</item>
+    <item>Ghaele/1d2</item>
+    <item>Ghaele/1d3+1</item>
     <item>Ghast/1</item>
     <item>Ghast/1d3+1</item>
     <item>Ghast/1d3+1,Ghoul/1d6+5</item>
     <item>Ghoul/1</item>
     <item>Ghoul/1d3+1</item>
     <item>Ghoul/1d6+5</item>
-    <item>Glabrezu (demon)/1</item>
-    <item>Glabrezu (demon)/1,Succubus (demon)/1,Vrock (demon)/1d3+1</item>
+    <item>Glabrezu/1</item>
+    <item>Glabrezu/1,Succubus/1,Vrock/1d3+1</item>
     <item>Clay golem/1</item>
     <item>Clay golem/1d3+1</item>
     <item>Flesh golem/1</item>
@@ -6462,84 +6750,85 @@
     <item>Iron golem/1d3+1</item>
     <item>Greater stone golem/1</item>
     <item>Greater stone golem/1d3+1</item>
-    <item>Hamatula (devil)/1</item>
-    <item>Hamatula (devil)/1d2</item>
-    <item>Hamatula (devil)/1d4+2</item>
-    <item>Hamatula (devil)/1d6+5</item>
-    <item>Hellcat/1</item>
-    <item>Hellcat/1d2</item>
-    <item>Hellcat/1d6+5</item>
+    <item>Barbed Devil (Hamatula)/1</item>
+    <item>Barbed Devil (Hamatula)/1d2</item>
+    <item>Barbed Devil (Hamatula)/1d4+2</item>
+    <item>Barbed Devil (Hamatula)/1d6+5</item>
+    <item>Hellcat (Bezekira)/1</item>
+    <item>Hellcat (Bezekira)/1d2</item>
+    <item>Hellcat (Bezekira)/1d6+5</item>
     <item>Hell hound/1</item>
     <item>Hell hound/1d2</item>
     <item>Hell hound/1d6+5</item>
-    <item>Hezrou (demon)/1</item>
-    <item>Hezrou (demon)/1d3+1</item>
+    <item>Hezrou/1</item>
+    <item>Hezrou/1d3+1</item>
     <item>Homunculus/1</item>
-    <item>Hound archon (celestial)/1</item>
-    <item>Hound archon (celestial)/1d2</item>
-    <item>Hound archon (celestial)/1d3+1</item>
+    <item>Hound archon/1</item>
+    <item>Hound archon/1d2</item>
+    <item>Hound archon/1d3+1</item>
     <item>Howler/1</item>
     <item>Howler/1d3+1</item>
     <item>Howler/1d6+5</item>
-    <item>Imp (devil)/1</item>
+    <item>Imp/1</item>
     <item>Invisible stalker/1</item>
     <item>Janni/1</item>
     <item>Janni/1d3+1</item>
     <item>Janni/1d6+5</item>
-    <item>Kyton (devil)/1</item>
-    <item>Kyton (devil)/1d3+1</item>
-    <item>Kyton (devil)/1d6+5</item>
-    <item>Kyton (devil)/1d4+10</item>
-    <item>Lantern archon (celestial)/1</item>
-    <item>Lantern archon (celestial)/1d2</item>
-    <item>Lantern archon (celestial)/1d3+1</item>
-    <item>Lemure (devil)/1</item>
-    <item>Lemure (devil)/1d2</item>
-    <item>Lemure (devil)/1d3+1</item>
-    <item>Lemure (devil)/1d6+5</item>
-    <item>Lemure (devil)/1d4+10</item>
+    <item>Chain Devil (Kyton)/1</item>
+    <item>Chain Devil (Kyton)/1d3+1</item>
+    <item>Chain Devil (Kyton)/1d6+5</item>
+    <item>Chain Devil (Kyton)/1d4+10</item>
+    <item>Lantern archon/1</item>
+    <item>Lantern archon/1d2</item>
+    <item>Lantern archon/1d3+1</item>
+    <item>Lemure/1</item>
+    <item>Lemure/1d2</item>
+    <item>Lemure/1d3+1</item>
+    <item>Lemure/1d6+5</item>
+    <item>Lemure/1d4+10</item>
     <item>Lillend/1</item>
     <item>Lillend/1d3+1</item>
     <item>Magmin/1</item>
     <item>Magmin/1d3+1</item>
     <item>Magmin/1d6+5</item>
-    <item>Marilith (demon)/1</item>
-    <item>Marilith (demon)/1d2</item>
+    <item>Marilith/1</item>
+    <item>Marilith/1d2</item>
     <item>Mephit/1</item>
     <item>Mephit/1d3+1</item>
     <item>Mephit/1d6+5</item>
     <item>Mohrg/1</item>
     <item>Mohrg/1d3+1</item>
     <item>Mohrg/1d3+1,Zombie (Human)/1d6+5</item>
-    <item>Nalfeshnee (demon)/1</item>
-    <item>Nalfeshnee (demon)/1,Hezrou (demon)/1,Vrock (demon)/1d3+1</item>
+    <item>Nalfeshnee/1</item>
+    <item>Nalfeshnee/1,Hezrou/1,Vrock/1d3+1</item>
     <item>Nessian warhound/1</item>
     <item>Nessian warhound/1d2</item>
     <item>Nessian warhound/1d2,Hell hound/1d6+5</item>
-    <item>Nightcrawler (nightshade)/1</item>
-    <item>Nightcrawler (nightshade)/1d2</item>
-    <item>Nightwalker (nightshade)/1</item>
-    <item>Nightwalker (nightshade)/1d2</item>
-    <item>Nightwalker (nightshade)/1d3+1</item>
+    <item>Nightcrawler/1</item>
+    <item>Nightcrawler/1d2</item>
+    <item>Nightwalker/1</item>
+    <item>Nightwalker/1d2</item>
+    <item>Nightwalker/1d3+1</item>
     <item>Night hag/1</item>
     <item>Night hag/1,Nightmare/1</item>
     <item>Night hag/1d3,Nightmare/1d3</item>
     <item>Nightmare/1</item>
-    <item>Nightwing (nightshade)/1</item>
-    <item>Nightwing (nightshade)/1d2</item>
-    <item>Nightwing (nightshade)/1d4+2</item>
-    <item>Osyluth (devil)/1</item>
-    <item>Osyluth (devil)/1d3+1</item>
-    <item>Osyluth (devil)/1d6+5</item>
+    <item>Nightmare (Cauchemar)/1</item>
+    <item>Nightwing/1</item>
+    <item>Nightwing/1d2</item>
+    <item>Nightwing/1d4+2</item>
+    <item>Bone Devil (Osyluth)/1</item>
+    <item>Bone Devil (Osyluth)/1d3+1</item>
+    <item>Bone Devil (Osyluth)/1d6+5</item>
     <item>Phase spider/1</item>
     <item>Phase spider/1d4+2</item>
-    <item>Pit fiend (devil)/1</item>
-    <item>Pit fiend (devil)/1d2</item>
-    <item>Pit fiend (devil)/1d3+1</item>
-    <item>Pit fiend (devil)/1d2,Cornugon (devil)/1d3+1,Hamatula (devil)/1d3+1</item>
-    <item>Planetar (celestial)/1</item>
-    <item>Planetar (celestial)/1d2</item>
-    <item>Quasit (demon)/1</item>
+    <item>Pit fiend/1</item>
+    <item>Pit fiend/1d2</item>
+    <item>Pit fiend/1d3+1</item>
+    <item>Pit fiend/1d2,Horned Devil (Cornugon)/1d3+1,Barbed Devil (Hamatula)/1d3+1</item>
+    <item>Planetar/1</item>
+    <item>Planetar/1d2</item>
+    <item>Quasit/1</item>
     <item>Rast/1</item>
     <item>Rast/1d2</item>
     <item>Rast/1d4+2</item>
@@ -6583,23 +6872,23 @@
     <item>Red slaad/1d2</item>
     <item>Red slaad/1d3+1</item>
     <item>Red slaad/1d6+5</item>
-    <item>Solar (celestial)/1</item>
-    <item>Solar (celestial)/1d2</item>
+    <item>Solar/1</item>
+    <item>Solar/1d2</item>
     <item>Spectre/1</item>
     <item>Spectre/1d3+1</item>
     <item>Spectre/1d6+5</item>
-    <item>Succubus (demon)/1</item>
+    <item>Succubus/1</item>
     <item>Thoqqua/1</item>
     <item>Thoqqua/1d2</item>
-    <item>Trumpet archon (celestial)/1</item>
-    <item>Trumpet archon (celestial)/1d2</item>
-    <item>Trumpet archon (celestial)/1d3+1</item>
+    <item>Trumpet archon/1</item>
+    <item>Trumpet archon/1d2</item>
+    <item>Trumpet archon/1d3+1</item>
     <item>Vampire spawn/1</item>
     <item>Vampire spawn/1d4+2</item>
-    <item>Vrock (demon)/1</item>
-    <item>Vrock (demon)/1d2</item>
-    <item>Vrock (demon)/1d4+2</item>
-    <item>Vrock (demon)/1d6+5</item>
+    <item>Vrock/1</item>
+    <item>Vrock/1d2</item>
+    <item>Vrock/1d4+2</item>
+    <item>Vrock/1d6+5</item>
     <item>Wight/1</item>
     <item>Wight/1d2</item>
     <item>Wight/1d4+2</item>
@@ -6622,6 +6911,15 @@
     <item>Yeth hound/1</item>
     <item>Yeth hound/1d2</item>
     <item>Yeth hound/1d6+5</item>
+    <item>Bralani/1</item>
+    <item>Bralani/1d2</item>
+    <item>Bralani/1d3+1</item>
+    <item>Kolyarut/1</item>
+    <item>Marut/1</item>
+    <item>Zelekhut/1</item>
+    <item>Leonal/1</item>
+    <item>Leonal/1d6+3</item>
+    <item>Shield guardian/1</item>
   </collection>
   <collection>
     <entry></entry>
