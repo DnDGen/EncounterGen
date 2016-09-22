@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>EncounterGen.Domain</id>
+    <version>1.0.0</version>
+    <title>EncounterGen.Domain</title>
+    <authors>Karl M. Speer</authors>
+    <owners>cidthecoatrack</owners>
+    <description>
+      This is the Ninject-based bootstrapper for EncounterGen
+    </description>
+    <releaseNotes>
+      Full release!
+    </releaseNotes>
+    <summary>
+      This generates encounters for the Dungeons and Dragons 3.5 system.
+    </summary>
+    <language>en-US</language>
+    <projectUrl>https://github.com/DnDGen/EncounterGen</projectUrl>
+    <iconUrl>http://www.downloadclipart.net/thumb/18531-twenty-sided-dice-vector-thumb.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <licenseUrl>http://opensource.org/licenses/Apache-2.0</licenseUrl>
+    <copyright>Copyright 2016</copyright>
+    <dependencies>
+      <dependency id="EncounterGen" version="1.0.0" />
+      <dependency id="CharacterGen" version="7.0.0" />
+      <dependency id="DnDGen.TreasureGen" version="5.0.0" />
+      <dependency id="DnDGen.RollGen" version="12.2.0" />
+      <dependency id="Ninject" version="3.2.2" />
+    </dependencies>
+    <references></references>
+    <tags> encounter npc character equipment treasure generator dice dungeons dragons d20 dnd 3.5 gen </tags>
+  </metadata>
+  <files>
+    <file src="..\EncounterGen.Domain\bin\Debug\EncounterGen.Domain.dll" target="lib" />
+  </files>
+</package>
