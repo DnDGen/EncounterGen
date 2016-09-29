@@ -13,7 +13,7 @@ namespace EncounterGen.Domain.Selectors.Percentiles
 
         public bool SelectFrom(double trueThreshold)
         {
-            var roll = dice.Roll().Percentile();
+            var roll = dice.Roll().Percentile().AsSum();
             return roll <= trueThreshold * 100;
         }
     }

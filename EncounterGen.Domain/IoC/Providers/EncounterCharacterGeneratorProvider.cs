@@ -4,7 +4,7 @@ using CharacterGen.Randomizers.CharacterClasses;
 using CharacterGen.Randomizers.Races;
 using CharacterGen.Randomizers.Stats;
 using EncounterGen.Domain.Generators;
-using EncounterGen.Domain.Selectors;
+using EncounterGen.Domain.Selectors.Collections;
 using Ninject;
 using Ninject.Activation;
 using RollGen;
@@ -28,8 +28,19 @@ namespace EncounterGen.Domain.IoC.Providers
             var setMetaraceRandomizer = context.Kernel.Get<ISetMetaraceRandomizer>();
             var dice = context.Kernel.Get<Dice>();
 
-            return new EncounterCharacterGenerator(characterGenerator, alignmentRandomizer,
-                anyPlayerclassNameRandomizer, setLevelRandomizer, baseRaceRandomizer, metaraceRandomizer, statsRandomizer, collectionSelector, setMetaraceRandomizer, anyNPCClassNameRandomizer, setClassNameRandomizer, dice);
+            return new EncounterCharacterGenerator(
+                characterGenerator,
+                alignmentRandomizer,
+                anyPlayerclassNameRandomizer,
+                setLevelRandomizer,
+                baseRaceRandomizer,
+                metaraceRandomizer,
+                statsRandomizer,
+                collectionSelector,
+                setMetaraceRandomizer,
+                anyNPCClassNameRandomizer,
+                setClassNameRandomizer,
+                dice);
         }
     }
 }

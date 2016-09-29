@@ -41,15 +41,15 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="CharacterGen, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\CharacterGen.7.0.0\lib\CharacterGen.dll</HintPath>
+      <HintPath>..\packages\CharacterGen.7.1.0\lib\CharacterGen.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Ninject, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
       <HintPath>..\packages\Ninject.3.2.2.0\lib\net45-full\Ninject.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="RollGen, Version=12.1.5991.24748, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\DnDGen.RollGen.12.2\lib\RollGen.dll</HintPath>
+    <Reference Include="RollGen, Version=12.1.6162.15224, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DnDGen.RollGen.13.1.0\lib\RollGen.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -69,7 +69,7 @@
     <Compile Include="Generators\EncounterCharacterGenerator.cs" />
     <Compile Include="Generators\EncounterGenerator.cs" />
     <Compile Include="Generators\EncounterTreasureGenerator.cs" />
-    <Compile Include="Generators\FilterVerifier.cs" />
+    <Compile Include="Generators\EncounterVerifier.cs" />
     <Compile Include="Generators\IEncounterCharacterGenerator.cs" />
     <Compile Include="Generators\IEncounterTreasureGenerator.cs" />
     <Compile Include="Generators\RegexConstants.cs" />
@@ -86,22 +86,22 @@
     <Compile Include="Mappers\Percentiles\PercentileMapperCachingProxy.cs" />
     <Compile Include="Mappers\Percentiles\PercentileXmlMapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Selectors\AdjustmentSelector.cs" />
-    <Compile Include="Selectors\CollectionSelector.cs" />
-    <Compile Include="Selectors\EncounterCollectionSelector.cs" />
-    <Compile Include="Selectors\IAdjustmentSelector.cs" />
-    <Compile Include="Selectors\ICollectionSelector.cs" />
-    <Compile Include="Selectors\IEncounterCollectionSelector.cs" />
-    <Compile Include="Selectors\IRollSelector.cs" />
-    <Compile Include="Selectors\ModifierConstants.cs" />
+    <Compile Include="Selectors\Collections\AdjustmentSelector.cs" />
+    <Compile Include="Selectors\Collections\CollectionSelector.cs" />
+    <Compile Include="Selectors\Collections\CollectionSelectorCachingProxy.cs" />
+    <Compile Include="Selectors\Collections\EncounterCollectionSelector.cs" />
+    <Compile Include="Selectors\Collections\EncounterCollectionSelectorCachingProxy.cs" />
+    <Compile Include="Selectors\EncounterConstants.cs" />
+    <Compile Include="Selectors\Collections\IAdjustmentSelector.cs" />
+    <Compile Include="Selectors\Collections\ICollectionSelector.cs" />
+    <Compile Include="Selectors\Collections\IEncounterCollectionSelector.cs" />
+    <Compile Include="Selectors\IAmountSelector.cs" />
     <Compile Include="Selectors\Percentiles\BooleanPercentileSelector.cs" />
     <Compile Include="Selectors\Percentiles\IBooleanPercentileSelector.cs" />
     <Compile Include="Selectors\Percentiles\IPercentileSelector.cs" />
-    <Compile Include="Selectors\Percentiles\ITypeAndAmountPercentileSelector.cs" />
     <Compile Include="Selectors\Percentiles\PercentileSelector.cs" />
-    <Compile Include="Selectors\Percentiles\TypeAndAmountPercentileSelector.cs" />
-    <Compile Include="Selectors\RollConstants.cs" />
-    <Compile Include="Selectors\RollSelector.cs" />
+    <Compile Include="Selectors\AmountConstants.cs" />
+    <Compile Include="Selectors\AmountSelector.cs" />
     <Compile Include="Selectors\TreasureConstants.cs" />
     <Compile Include="Tables\EmbeddedResourceStreamLoader.cs" />
     <Compile Include="Tables\GroupConstants.cs" />
@@ -112,157 +112,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Tables\Creatures\SkeletonSubtypeChallengeRatings.xml">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Creatures\Celestial creatureSubtypeChallengeRatings.xml">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Creatures\Charmed creatureSubtypeChallengeRatings.xml">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Tables\Creatures\CreatureGroups.xml">
       <SubType>Designer</SubType>
     </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Creatures\Dragons\Level10Dragons.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Creatures\Dragons\Level11Dragons.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Creatures\Dragons\Level12Dragons.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Creatures\Dragons\Level13Dragons.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Creatures\Dragons\Level14Dragons.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Creatures\Dragons\Level15Dragons.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Creatures\Dragons\Level16Dragons.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Creatures\Dragons\Level17Dragons.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Creatures\Dragons\Level18Dragons.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Creatures\Dragons\Level19Dragons.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Creatures\Dragons\Level1Dragons.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Creatures\Dragons\Level20Dragons.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Creatures\Dragons\Level2Dragons.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Creatures\Dragons\Level3Dragons.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Creatures\Dragons\Level4Dragons.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Creatures\Dragons\Level5Dragons.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Creatures\Dragons\Level6Dragons.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Creatures\Dragons\Level7Dragons.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Creatures\Dragons\Level8Dragons.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Creatures\Dragons\Level9Dragons.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Creatures\Fiendish creatureSubtypeChallengeRatings.xml">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Creatures\MephitSubtypeChallengeRatings.xml">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\EffectiveLevels\Level10EncounterLevel.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\EffectiveLevels\Level11EncounterLevel.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\EffectiveLevels\Level12EncounterLevel.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\EffectiveLevels\Level13EncounterLevel.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\EffectiveLevels\Level14EncounterLevel.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\EffectiveLevels\Level15EncounterLevel.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\EffectiveLevels\Level16EncounterLevel.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\EffectiveLevels\Level17EncounterLevel.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\EffectiveLevels\Level18EncounterLevel.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\EffectiveLevels\Level19EncounterLevel.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\EffectiveLevels\Level1EncounterLevel.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\EffectiveLevels\Level20EncounterLevel.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\EffectiveLevels\Level2EncounterLevel.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\EffectiveLevels\Level3EncounterLevel.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\EffectiveLevels\Level4EncounterLevel.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\EffectiveLevels\Level5EncounterLevel.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\EffectiveLevels\Level6EncounterLevel.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\EffectiveLevels\Level7EncounterLevel.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\EffectiveLevels\Level8EncounterLevel.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\EffectiveLevels\Level9EncounterLevel.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Rolls\RollOrder.xml" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Tables\Treasures\TreasureAdjustments.xml" />
@@ -279,17 +131,18 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Tables\Creatures\ZombieSubtypeChallengeRatings.xml">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Tables\Creatures\Dominated creatureSubtypeChallengeRatings.xml">
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Tables\Treasures\TreasureGroups.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\EncounterLevelModifiers.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\EncounterDifficulty.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Creatures\ChallengeRatings.xml">
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>

@@ -3,7 +3,6 @@ using Ninject;
 using NUnit.Framework;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Xml;
 
 namespace EncounterGen.Tests.Integration.Tables
@@ -17,14 +16,24 @@ namespace EncounterGen.Tests.Integration.Tables
         [Test]
         public void GetsFileIfItIsAnEmbeddedResource()
         {
-            var table = Load("RollOrder.xml");
+            var table = Load("EncounterDifficulty.xml");
 
-            var rolls = new[] { "1", "1", "1", "1d2", "1d3", "1d3+1", "1d4+2", "1d6+3", "1d6+5", "1d4+10" };
-            Assert.That(table["All"], Is.EquivalentTo(rolls));
+            Assert.That(table["-7"], Is.EquivalentTo(new[] { "Very Easy" }));
+            Assert.That(table["-6"], Is.EquivalentTo(new[] { "Very Easy" }));
+            Assert.That(table["-5"], Is.EquivalentTo(new[] { "Very Easy" }));
+            Assert.That(table["-4"], Is.EquivalentTo(new[] { "Easy" }));
+            Assert.That(table["-3"], Is.EquivalentTo(new[] { "Easy" }));
+            Assert.That(table["-2"], Is.EquivalentTo(new[] { "Easy" }));
+            Assert.That(table["-1"], Is.EquivalentTo(new[] { "Easy" }));
+            Assert.That(table["0"], Is.EquivalentTo(new[] { "Challenging" }));
+            Assert.That(table["1"], Is.EquivalentTo(new[] { "Very Difficult" }));
+            Assert.That(table["2"], Is.EquivalentTo(new[] { "Very Difficult" }));
+            Assert.That(table["3"], Is.EquivalentTo(new[] { "Very Difficult" }));
+            Assert.That(table["4"], Is.EquivalentTo(new[] { "Very Difficult" }));
+            Assert.That(table["5"], Is.EquivalentTo(new[] { "Overpowering" }));
+            Assert.That(table["6"], Is.EquivalentTo(new[] { "Overpowering" }));
 
-            var challengeRatings = new[] { "1/10", "1/8", "1/6", "1/4", "1/3", "1/2" };
-            var levels = Enumerable.Range(1, 30).Select(l => l.ToString());
-            Assert.That(table["CR"], Is.EquivalentTo(challengeRatings.Union(levels)));
+            Assert.That(table.Count, Is.EqualTo(14));
         }
 
         private Dictionary<string, List<string>> Load(string filename)
@@ -53,7 +62,7 @@ namespace EncounterGen.Tests.Integration.Tables
         [Test]
         public void ThrowErrorIfFileIsNotFormattedCorrectly()
         {
-            Assert.That(() => StreamLoader.LoadFor("RollOrder"), Throws.ArgumentException.With.Message.EqualTo("\"RollOrder\" is not a valid file"));
+            Assert.That(() => StreamLoader.LoadFor("EncounterDifficulty"), Throws.ArgumentException.With.Message.EqualTo("\"EncounterDifficulty\" is not a valid file"));
         }
 
         [Test]
@@ -65,7 +74,7 @@ namespace EncounterGen.Tests.Integration.Tables
         [Test]
         public void MatchWholeFileName()
         {
-            Assert.That(() => StreamLoader.LoadFor("Order.xml"), Throws.InstanceOf<FileNotFoundException>().With.Message.EqualTo("Order.xml"));
+            Assert.That(() => StreamLoader.LoadFor("Difficulty.xml"), Throws.InstanceOf<FileNotFoundException>().With.Message.EqualTo("Difficulty.xml"));
         }
     }
 }

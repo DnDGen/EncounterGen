@@ -12,7 +12,7 @@ namespace EncounterGen.Domain.IoC.Modules
             Bind<IEncounterGenerator>().To<EncounterGenerator>();
             Bind<IEncounterCharacterGenerator>().ToProvider<EncounterCharacterGeneratorProvider>();
             Bind<IEncounterTreasureGenerator>().To<EncounterTreasureGenerator>();
-            Bind<IFilterVerifier>().To<FilterVerifier>();
+            Bind<IEncounterVerifier>().To<EncounterVerifier>();
         }
     }
 }

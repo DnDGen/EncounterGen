@@ -4,7 +4,7 @@ using NUnit.Framework;
 namespace EncounterGen.Tests.Integration.IoC.Modules
 {
     [TestFixture]
-    public class TableModuleTests : BootstrapTests
+    public class TableModuleTests : IoCTests
     {
         [Test]
         public void StreamLoaderIsNotASingleton()

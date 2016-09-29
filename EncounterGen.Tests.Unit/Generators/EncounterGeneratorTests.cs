@@ -2,12 +2,12 @@
 using EncounterGen.Common;
 using EncounterGen.Domain.Generators;
 using EncounterGen.Domain.Selectors;
+using EncounterGen.Domain.Selectors.Collections;
 using EncounterGen.Domain.Selectors.Percentiles;
 using EncounterGen.Domain.Tables;
 using EncounterGen.Generators;
 using Moq;
 using NUnit.Framework;
-using RollGen;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,71 +19,80 @@ namespace EncounterGen.Tests.Unit.Generators
     public class EncounterGeneratorTests
     {
         private IEncounterGenerator encounterGenerator;
-        private Mock<ITypeAndAmountPercentileSelector> mockTypeAndAmountPercentileSelector;
-        private Mock<IRollSelector> mockRollSelector;
+        private Mock<IAmountSelector> mockAmountSelector;
         private Mock<IPercentileSelector> mockPercentileSelector;
         private Mock<ICollectionSelector> mockCollectionSelector;
-        private Mock<Dice> mockDice;
         private Mock<IEncounterCharacterGenerator> mockEncounterCharacterGenerator;
         private Mock<IEncounterTreasureGenerator> mockEncounterTreasureGenerator;
-        private Dictionary<string, string> encounterTypeAndAmount;
-        private Dictionary<string, string> encounterLevelAndModifier;
+        private Dictionary<string, string> creaturesAndAmounts;
         private int level;
         private string environment;
         private string temperature;
         private string timeOfDay;
         private List<string> requiresSubtype;
-        private Mock<IFilterVerifier> mockFilterVerifier;
+        private Mock<IEncounterVerifier> mockEncounterVerifier;
         private Mock<IEncounterCollectionSelector> mockCreatureCollectionSelector;
         private Treasure treasure;
+        private int levelModifier;
+        private int actualEncounterLevel;
+
+        private int encounterLevel
+        {
+            get
+            {
+                return level + levelModifier;
+            }
+        }
 
         [SetUp]
         public void Setup()
         {
-            mockTypeAndAmountPercentileSelector = new Mock<ITypeAndAmountPercentileSelector>();
-            mockRollSelector = new Mock<IRollSelector>();
+            mockAmountSelector = new Mock<IAmountSelector>();
             mockPercentileSelector = new Mock<IPercentileSelector>();
             mockCollectionSelector = new Mock<ICollectionSelector>();
-            mockDice = new Mock<Dice>();
             mockEncounterCharacterGenerator = new Mock<IEncounterCharacterGenerator>();
             mockEncounterTreasureGenerator = new Mock<IEncounterTreasureGenerator>();
-            mockFilterVerifier = new Mock<IFilterVerifier>();
+            mockEncounterVerifier = new Mock<IEncounterVerifier>();
             mockCreatureCollectionSelector = new Mock<IEncounterCollectionSelector>();
 
-            encounterGenerator = new EncounterGenerator(mockTypeAndAmountPercentileSelector.Object, mockRollSelector.Object, mockPercentileSelector.Object, mockCollectionSelector.Object,
-                mockDice.Object, mockEncounterCharacterGenerator.Object, mockEncounterTreasureGenerator.Object, mockFilterVerifier.Object, mockCreatureCollectionSelector.Object);
+            encounterGenerator = new EncounterGenerator(mockAmountSelector.Object, mockPercentileSelector.Object, mockCollectionSelector.Object,
+                mockEncounterCharacterGenerator.Object, mockEncounterTreasureGenerator.Object, mockEncounterVerifier.Object, mockCreatureCollectionSelector.Object);
 
-            encounterLevelAndModifier = new Dictionary<string, string>();
-            encounterTypeAndAmount = new Dictionary<string, string>();
+            creaturesAndAmounts = new Dictionary<string, string>();
             requiresSubtype = new List<string>();
 
-            level = 9266;
+            level = 10;
+            levelModifier = 1;
             environment = "environment";
             temperature = "temperature";
             timeOfDay = "time of day";
-            encounterLevelAndModifier["90210"] = "9876";
-            encounterTypeAndAmount["creature"] = "creature amount";
+            creaturesAndAmounts["creature"] = "creature amount";
             treasure = new Treasure();
             treasure.Coin.Quantity = 8765;
+            actualEncounterLevel = 12;
 
-            var tableName = string.Format(TableNameConstants.LevelXEncounterLevel, level);
-            mockTypeAndAmountPercentileSelector.Setup(s => s.SelectFrom(tableName)).Returns(encounterLevelAndModifier);
+            mockPercentileSelector.Setup(s => s.SelectFrom(TableNameConstants.EncounterLevelModifiers)).Returns(() => levelModifier);
 
-            mockCreatureCollectionSelector.Setup(s => s.SelectFrom(90210, environment, temperature, timeOfDay)).Returns(encounterTypeAndAmount);
-            mockCreatureCollectionSelector.Setup(s => s.SelectAllFrom(level, environment, temperature, timeOfDay)).Returns(new[] { encounterTypeAndAmount });
+            mockCreatureCollectionSelector.Setup(s => s.SelectRandomFrom(encounterLevel, environment, temperature, timeOfDay)).Returns(creaturesAndAmounts);
+            mockCreatureCollectionSelector.Setup(s => s.SelectAllWeightedFrom(level, environment, temperature, timeOfDay)).Returns(new[] { creaturesAndAmounts });
 
-            mockRollSelector.Setup(s => s.SelectFrom("creature amount", 9876)).Returns("effective roll");
-            mockDice.Setup(d => d.Roll(It.IsAny<string>())).Returns((string s) => ParseRoll(s));
-            mockDice.Setup(d => d.Roll("effective roll")).Returns(42);
+            mockAmountSelector.Setup(d => d.SelectFrom(It.IsAny<string>())).Returns((string s) => ParseRoll(s));
+            mockAmountSelector.Setup(d => d.SelectFrom("creature amount")).Returns(42);
+            mockAmountSelector.Setup(d => d.SelectEncounterLevel(It.IsAny<IEnumerable<Creature>>())).Returns(actualEncounterLevel);
 
             mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.CreatureGroups, GroupConstants.RequiresSubtype)).Returns(requiresSubtype);
             mockCollectionSelector.Setup(s => s.SelectRandomFrom(It.IsAny<IEnumerable<string>>())).Returns((IEnumerable<string> c) => c.Last());
 
-            mockFilterVerifier.Setup(v => v.FiltersAreValid(environment, level, temperature, timeOfDay)).Returns(true);
-            mockFilterVerifier.Setup(v => v.EncounterIsValid(It.IsAny<Dictionary<string, string>>(), It.IsAny<int>())).Returns(true);
+            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.ChallengeRatings, It.IsAny<string>())).Returns(new[] { "default challenge rating" });
+            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.ChallengeRatings, "creature")).Returns(new[] { "challenge rating" });
 
-            mockEncounterTreasureGenerator.Setup(g => g.GenerateFor(It.Is<Creature>(c => c.Name == "creature"), level)).Returns(treasure);
-            mockEncounterTreasureGenerator.Setup(g => g.GenerateFor(It.Is<Creature>(c => c.Name != "creature"), level)).Returns(() => new Treasure());
+            mockEncounterVerifier.Setup(v => v.ValidEncounterExistsAtLevel(environment, It.IsAny<int>(), temperature, timeOfDay, It.IsAny<string[]>())).Returns(true);
+            mockEncounterVerifier.Setup(v => v.EncounterIsValid(It.IsAny<IEnumerable<Creature>>(), It.IsAny<string[]>())).Returns(true);
+            mockEncounterVerifier.SetupGet(v => v.MaximumLevel).Returns(30);
+            mockEncounterVerifier.SetupGet(v => v.MinimumLevel).Returns(1);
+
+            mockEncounterTreasureGenerator.Setup(g => g.GenerateFor(It.IsAny<Creature>(), It.IsAny<int>())).Returns(() => new Treasure());
+            mockEncounterTreasureGenerator.Setup(g => g.GenerateFor(It.Is<Creature>(c => c.Name == "creature"), actualEncounterLevel)).Returns(treasure);
         }
 
         private int ParseRoll(string roll)
@@ -100,11 +109,177 @@ namespace EncounterGen.Tests.Unit.Generators
         {
             var encounter = encounterGenerator.Generate(environment, level, temperature, timeOfDay);
             Assert.That(encounter, Is.Not.Null);
+            Assert.That(encounter.Characters, Is.Empty);
+            Assert.That(encounter.AverageDifficulty, Is.EqualTo(DifficultyConstants.VeryDifficult));
+            Assert.That(encounter.AverageEncounterLevel, Is.EqualTo(11));
+            Assert.That(encounter.ActualDifficulty, Is.EqualTo(DifficultyConstants.VeryDifficult));
+            Assert.That(encounter.ActualEncounterLevel, Is.EqualTo(12));
 
             var creature = encounter.Creatures.Single();
             Assert.That(creature.Name, Is.EqualTo("creature"));
             Assert.That(creature.Quantity, Is.EqualTo(42));
+            Assert.That(creature.ChallengeRating, Is.EqualTo("challenge rating"));
+        }
+
+        [TestCase(-9999, DifficultyConstants.VeryEasy)]
+        [TestCase(-5, DifficultyConstants.VeryEasy)]
+        [TestCase(-4, DifficultyConstants.Easy)]
+        [TestCase(-3, DifficultyConstants.Easy)]
+        [TestCase(-2, DifficultyConstants.Easy)]
+        [TestCase(-1, DifficultyConstants.Easy)]
+        [TestCase(0, DifficultyConstants.Challenging)]
+        [TestCase(1, DifficultyConstants.VeryDifficult)]
+        [TestCase(2, DifficultyConstants.VeryDifficult)]
+        [TestCase(3, DifficultyConstants.VeryDifficult)]
+        [TestCase(4, DifficultyConstants.VeryDifficult)]
+        [TestCase(5, DifficultyConstants.Overpowering)]
+        [TestCase(9999, DifficultyConstants.Overpowering)]
+        public void GenerateAverageEncounterDifficulty(int newLevelModifier, string difficulty)
+        {
+            levelModifier = newLevelModifier;
+            mockCreatureCollectionSelector.Setup(s => s.SelectRandomFrom(encounterLevel, environment, temperature, timeOfDay)).Returns(creaturesAndAmounts);
+
+            var encounter = encounterGenerator.Generate(environment, level, temperature, timeOfDay);
+            Assert.That(encounter, Is.Not.Null);
+            Assert.That(encounter.AverageDifficulty, Is.EqualTo(difficulty));
+            Assert.That(encounter.AverageEncounterLevel, Is.EqualTo(level + newLevelModifier));
+        }
+
+        [TestCase(-9999, DifficultyConstants.VeryEasy)]
+        [TestCase(-5, DifficultyConstants.VeryEasy)]
+        [TestCase(-4, DifficultyConstants.Easy)]
+        [TestCase(-3, DifficultyConstants.Easy)]
+        [TestCase(-2, DifficultyConstants.Easy)]
+        [TestCase(-1, DifficultyConstants.Easy)]
+        [TestCase(0, DifficultyConstants.Challenging)]
+        [TestCase(1, DifficultyConstants.VeryDifficult)]
+        [TestCase(2, DifficultyConstants.VeryDifficult)]
+        [TestCase(3, DifficultyConstants.VeryDifficult)]
+        [TestCase(4, DifficultyConstants.VeryDifficult)]
+        [TestCase(5, DifficultyConstants.Overpowering)]
+        [TestCase(9999, DifficultyConstants.Overpowering)]
+        public void GenerateActualEncounterDifficulty(int actualLevelModifier, string difficulty)
+        {
+            var actualLevel = level + actualLevelModifier;
+            mockAmountSelector.Setup(d => d.SelectEncounterLevel(It.IsAny<IEnumerable<Creature>>())).Returns(actualLevel);
+
+            var encounter = encounterGenerator.Generate(environment, level, temperature, timeOfDay);
+            Assert.That(encounter, Is.Not.Null);
+            Assert.That(encounter.ActualDifficulty, Is.EqualTo(difficulty));
+            Assert.That(encounter.ActualEncounterLevel, Is.EqualTo(actualLevel));
+        }
+
+        [Test]
+        public void EncounterLevelCannotBeLessThan1()
+        {
+            levelModifier = -9999;
+            mockCreatureCollectionSelector.Setup(s => s.SelectRandomFrom(1, environment, temperature, timeOfDay)).Returns(creaturesAndAmounts);
+
+            mockPercentileSelector.SetupSequence(s => s.SelectFrom(TableNameConstants.EncounterLevelModifiers)).Returns(-9999).Returns(-9);
+            mockAmountSelector.Setup(d => d.SelectEncounterLevel(It.IsAny<IEnumerable<Creature>>())).Returns(1);
+
+            mockEncounterTreasureGenerator.Setup(g => g.GenerateFor(It.Is<Creature>(c => c.Name == "creature"), 1)).Returns(treasure);
+            mockEncounterTreasureGenerator.Setup(g => g.GenerateFor(It.Is<Creature>(c => c.Name != "creature"), 1)).Returns(() => new Treasure());
+
+            mockEncounterVerifier.Setup(v => v.ValidEncounterExistsAtLevel(environment, -9989, temperature, timeOfDay)).Returns(false);
+
+            var encounter = encounterGenerator.Generate(environment, level, temperature, timeOfDay);
+            Assert.That(encounter, Is.Not.Null);
             Assert.That(encounter.Characters, Is.Empty);
+            Assert.That(encounter.AverageDifficulty, Is.EqualTo(DifficultyConstants.VeryEasy));
+            Assert.That(encounter.AverageEncounterLevel, Is.EqualTo(1));
+            Assert.That(encounter.ActualDifficulty, Is.EqualTo(DifficultyConstants.VeryEasy));
+            Assert.That(encounter.ActualEncounterLevel, Is.EqualTo(1));
+
+            var creature = encounter.Creatures.Single();
+            Assert.That(creature.Name, Is.EqualTo("creature"));
+            Assert.That(creature.Quantity, Is.EqualTo(42));
+            Assert.That(creature.ChallengeRating, Is.EqualTo("challenge rating"));
+            mockCreatureCollectionSelector.Verify(s => s.SelectRandomFrom(1, environment, temperature, timeOfDay), Times.Once);
+        }
+
+        [Test]
+        public void EncounterLevelCanBeMoreThan20()
+        {
+            levelModifier = 12;
+            mockCreatureCollectionSelector.Setup(s => s.SelectRandomFrom(22, environment, temperature, timeOfDay)).Returns(creaturesAndAmounts);
+
+            mockAmountSelector.Setup(d => d.SelectEncounterLevel(It.IsAny<IEnumerable<Creature>>())).Returns(23);
+
+            mockEncounterTreasureGenerator.Setup(g => g.GenerateFor(It.Is<Creature>(c => c.Name == "creature"), 23)).Returns(treasure);
+            mockEncounterTreasureGenerator.Setup(g => g.GenerateFor(It.Is<Creature>(c => c.Name != "creature"), 23)).Returns(() => new Treasure());
+
+            var encounter = encounterGenerator.Generate(environment, level, temperature, timeOfDay);
+            Assert.That(encounter, Is.Not.Null);
+            Assert.That(encounter.Characters, Is.Empty);
+            Assert.That(encounter.AverageEncounterLevel, Is.EqualTo(22));
+            Assert.That(encounter.AverageDifficulty, Is.EqualTo(DifficultyConstants.Overpowering));
+            Assert.That(encounter.ActualEncounterLevel, Is.EqualTo(23));
+            Assert.That(encounter.ActualDifficulty, Is.EqualTo(DifficultyConstants.Overpowering));
+
+            var creature = encounter.Creatures.Single();
+            Assert.That(creature.Name, Is.EqualTo("creature"));
+            Assert.That(creature.Quantity, Is.EqualTo(42));
+            Assert.That(creature.ChallengeRating, Is.EqualTo("challenge rating"));
+            mockCreatureCollectionSelector.Verify(s => s.SelectRandomFrom(22, environment, temperature, timeOfDay), Times.Once);
+        }
+
+        [Test]
+        public void EncounterLevelMustBeValid()
+        {
+            mockPercentileSelector.SetupSequence(s => s.SelectFrom(TableNameConstants.EncounterLevelModifiers)).Returns(9999).Returns(levelModifier);
+            mockEncounterVerifier.Setup(v => v.ValidEncounterExistsAtLevel(environment, 10009, temperature, timeOfDay)).Returns(false);
+
+            var encounter = encounterGenerator.Generate(environment, level, temperature, timeOfDay);
+            Assert.That(encounter, Is.Not.Null);
+            Assert.That(encounter.Characters, Is.Empty);
+            Assert.That(encounter.AverageDifficulty, Is.EqualTo(DifficultyConstants.VeryDifficult));
+            Assert.That(encounter.AverageEncounterLevel, Is.EqualTo(11));
+            Assert.That(encounter.ActualDifficulty, Is.EqualTo(DifficultyConstants.VeryDifficult));
+            Assert.That(encounter.ActualEncounterLevel, Is.EqualTo(12));
+
+            var creature = encounter.Creatures.Single();
+            Assert.That(creature.Name, Is.EqualTo("creature"));
+            Assert.That(creature.Quantity, Is.EqualTo(42));
+            Assert.That(creature.ChallengeRating, Is.EqualTo("challenge rating"));
+        }
+
+        [Test]
+        public void IfCreatureHasCountOf0_ThenRemoveCreature()
+        {
+            creaturesAndAmounts["other creature"] = "other amount";
+
+            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.ChallengeRatings, "other creature")).Returns(new[] { "other challenge rating" });
+
+            mockAmountSelector.Setup(d => d.SelectFrom("creature amount")).Returns(0);
+            mockAmountSelector.Setup(d => d.SelectFrom("other amount")).Returns(69);
+
+            var encounter = encounterGenerator.Generate(environment, level, temperature, timeOfDay);
+            Assert.That(encounter, Is.Not.Null);
+
+            var creature = encounter.Creatures.Single();
+            Assert.That(creature.Name, Is.EqualTo("other creature"));
+            Assert.That(creature.Quantity, Is.EqualTo(69));
+            Assert.That(creature.ChallengeRating, Is.EqualTo("other challenge rating"));
+        }
+
+        [Test]
+        public void IfCreatureHasCountLessThan0_ThenRemoveCreature()
+        {
+            creaturesAndAmounts["other creature"] = "other amount";
+
+            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.ChallengeRatings, "other creature")).Returns(new[] { "other challenge rating" });
+
+            mockAmountSelector.Setup(d => d.SelectFrom("creature amount")).Returns(-42);
+            mockAmountSelector.Setup(d => d.SelectFrom("other amount")).Returns(69);
+
+            var encounter = encounterGenerator.Generate(environment, level, temperature, timeOfDay);
+            Assert.That(encounter, Is.Not.Null);
+
+            var creature = encounter.Creatures.Single();
+            Assert.That(creature.Name, Is.EqualTo("other creature"));
+            Assert.That(creature.Quantity, Is.EqualTo(69));
+            Assert.That(creature.ChallengeRating, Is.EqualTo("other challenge rating"));
         }
 
         [Test]
@@ -119,6 +294,7 @@ namespace EncounterGen.Tests.Unit.Generators
             var creature = encounter.Creatures.Single();
             Assert.That(creature.Name, Is.EqualTo("creature"));
             Assert.That(creature.Quantity, Is.EqualTo(42));
+            Assert.That(creature.ChallengeRating, Is.EqualTo("challenge rating"));
 
             Assert.That(encounter.Characters, Is.All.Not.Null);
             Assert.That(characters, Is.SubsetOf(encounter.Characters));
@@ -126,158 +302,18 @@ namespace EncounterGen.Tests.Unit.Generators
         }
 
         [Test]
-        public void GenerateEncounterWithRandomSubType()
+        public void GenerateEncounterWithDescription()
         {
-            requiresSubtype.Add("creature");
-            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.CreatureGroups, "creature"))
-                .Returns(new[] { "wrong creature", "other creature" });
-
-            var tableName = string.Format(TableNameConstants.CREATURESubtypeChallengeRatings, "creature");
-            mockCollectionSelector.Setup(s => s.SelectFrom(tableName, "other creature")).Returns(new[] { "other challenge rating" });
-            mockRollSelector.Setup(s => s.SelectFrom(level, "other challenge rating")).Returns("other roll");
-            mockDice.Setup(d => d.Roll("other roll")).Returns(600);
-
-            mockCollectionSelector.Setup(s => s.SelectFrom(tableName, "wrong creature")).Returns(new[] { "wrong challenge rating" });
-            mockRollSelector.Setup(s => s.SelectFrom(level, "wrong challenge rating")).Returns("wrong roll");
-            mockDice.Setup(d => d.Roll("wrong roll")).Returns(1337);
-
-            var encounter = encounterGenerator.Generate(environment, level, temperature, timeOfDay);
-            Assert.That(encounter, Is.Not.Null);
-
-            var creature = encounter.Creatures.Single();
-            Assert.That(creature.Name, Is.EqualTo("creature"));
-            Assert.That(creature.Description, Is.EqualTo("other creature"));
-            Assert.That(creature.Quantity, Is.EqualTo(600));
-            Assert.That(encounter.Characters, Is.Empty);
-        }
-
-        [Test]
-        public void GenerateEncounterWithRandomSubTypeWithFurtherSubtype()
-        {
-            requiresSubtype.Add("creature");
-            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.CreatureGroups, "creature"))
-                .Returns(new[] { "wrong creature", "other creature (further subtype)" });
-
-            var tableName = string.Format(TableNameConstants.CREATURESubtypeChallengeRatings, "creature");
-            mockCollectionSelector.Setup(s => s.SelectFrom(tableName, "other creature (further subtype)")).Returns(new[] { "other challenge rating" });
-            mockRollSelector.Setup(s => s.SelectFrom(level, "other challenge rating")).Returns("other roll");
-            mockDice.Setup(d => d.Roll("other roll")).Returns(600);
-
-            mockCollectionSelector.Setup(s => s.SelectFrom(tableName, "wrong creature")).Returns(new[] { "wrong challenge rating" });
-            mockRollSelector.Setup(s => s.SelectFrom(level, "wrong challenge rating")).Returns("wrong roll");
-            mockDice.Setup(d => d.Roll("wrong roll")).Returns(1337);
-
-            var encounter = encounterGenerator.Generate(environment, level, temperature, timeOfDay);
-            Assert.That(encounter, Is.Not.Null);
-
-            var creature = encounter.Creatures.Single();
-            Assert.That(creature.Name, Is.EqualTo("creature"));
-            Assert.That(creature.Description, Is.EqualTo("other creature (further subtype)"));
-            Assert.That(creature.Quantity, Is.EqualTo(600));
-            Assert.That(encounter.Characters, Is.Empty);
-        }
-
-        [Test]
-        public void SpecificTestCase_DominatedCelestialCreature()
-        {
-            encounterTypeAndAmount.Clear();
-            encounterTypeAndAmount[$"{CreatureConstants.DominatedCreature}[4]"] = "creature amount";
-
-            requiresSubtype.Add(CreatureConstants.DominatedCreature);
-            requiresSubtype.Add(CreatureConstants.CelestialCreature);
-
-            var subSubtypes = new[] { "wrong subtype", CreatureConstants.Bear_Black };
-            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.CreatureGroups, CreatureConstants.CelestialCreature))
-                .Returns(subSubtypes);
-            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.CreatureGroups, CreatureConstants.DominatedCreature))
-                .Returns(new[] { "wrong creature", CreatureConstants.CelestialCreature });
-
-            mockCollectionSelector.SetupSequence(s => s.SelectRandomFrom(subSubtypes)).Returns(subSubtypes.First()).Returns(subSubtypes.Last());
-
-            var tableName = string.Format(TableNameConstants.CREATURESubtypeChallengeRatings, CreatureConstants.DominatedCreature);
-            mockCollectionSelector.Setup(s => s.SelectFrom(tableName, CreatureConstants.CelestialCreature)).Returns(new[] { "other challenge rating" });
-
-            tableName = string.Format(TableNameConstants.CREATURESubtypeChallengeRatings, CreatureConstants.CelestialCreature);
-            mockCollectionSelector.Setup(s => s.SelectFrom(tableName, CreatureConstants.Bear_Black)).Returns(new[] { "4" });
-            mockCollectionSelector.Setup(s => s.SelectFrom(tableName, "wrong subtype")).Returns(new[] { "3" });
-
-            mockRollSelector.Setup(s => s.SelectFrom(level, "4")).Returns("roll");
-            mockDice.Setup(d => d.Roll("roll")).Returns(600);
-            mockCollectionSelector.Setup(s => s.SelectFrom(tableName, "wrong creature")).Returns(new[] { "wrong challenge rating" });
-            mockRollSelector.Setup(s => s.SelectFrom(level, "wrong challenge rating")).Returns("wrong roll");
-            mockDice.Setup(d => d.Roll("wrong roll")).Returns(1337);
-
-            mockRollSelector.Setup(s => s.SelectFrom("creature amount", 9876)).Returns("creature effective roll");
-            mockDice.Setup(d => d.Roll("creature effective roll")).Returns(7654);
-
-            var encounter = encounterGenerator.Generate(environment, level, temperature, timeOfDay);
-            Assert.That(encounter, Is.Not.Null);
-
-            var creature = encounter.Creatures.Single();
-            Assert.That(creature.Name, Is.EqualTo(CreatureConstants.DominatedCreature));
-            Assert.That(creature.Description, Is.EqualTo($"{CreatureConstants.CelestialCreature} ({CreatureConstants.Bear_Black})"));
-            Assert.That(creature.Quantity, Is.EqualTo(7654));
-            Assert.That(encounter.Characters, Is.Empty);
-        }
-
-        [Test]
-        public void SpecificTestCase_ZombieHydra()
-        {
-            encounterTypeAndAmount.Clear();
-            encounterTypeAndAmount[CreatureConstants.Zombie] = "creature amount";
-
-            requiresSubtype.Add(CreatureConstants.Zombie);
-
-            var subtypes = new[] { "wrong creature", CreatureConstants.Hydra_10Heads };
-            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.CreatureGroups, CreatureConstants.Zombie))
-                .Returns(subtypes);
-
-            mockCollectionSelector.SetupSequence(s => s.SelectRandomFrom(subtypes)).Returns(subtypes.First()).Returns(subtypes.Last());
-
-            var tableName = string.Format(TableNameConstants.CREATURESubtypeChallengeRatings, CreatureConstants.Zombie);
-            mockCollectionSelector.Setup(s => s.SelectFrom(tableName, CreatureConstants.Hydra_10Heads)).Returns(new[] { "challenge rating" });
-
-            mockRollSelector.Setup(s => s.SelectFrom(level, "challenge rating")).Returns("roll");
-            mockDice.Setup(d => d.Roll("roll")).Returns(600);
-
-            mockCollectionSelector.Setup(s => s.SelectFrom(tableName, "wrong creature")).Returns(new[] { "wrong challenge rating" });
-            mockRollSelector.Setup(s => s.SelectFrom(level, "wrong challenge rating")).Returns(RollConstants.Reroll);
-            mockDice.Setup(d => d.Roll("wrong roll")).Returns(1337);
-
-            mockRollSelector.Setup(s => s.SelectFrom("creature amount", 9876)).Returns("creature effective roll");
-            mockDice.Setup(d => d.Roll("creature effective roll")).Returns(7654);
-
-            var encounter = encounterGenerator.Generate(environment, level, temperature, timeOfDay);
-            Assert.That(encounter, Is.Not.Null);
-
-            var creature = encounter.Creatures.Single();
-            Assert.That(creature.Name, Is.EqualTo(CreatureConstants.Zombie));
-            Assert.That(creature.Description, Is.EqualTo(CreatureConstants.Hydra_10Heads));
-            Assert.That(creature.Quantity, Is.EqualTo(600));
-            Assert.That(encounter.Characters, Is.Empty);
-        }
-
-        [Test]
-        public void GenerateEncounterWithSetSubType()
-        {
-            encounterTypeAndAmount.Clear();
-            encounterTypeAndAmount["creature (subtype)"] = "creature amount";
-            mockRollSelector.Setup(s => s.SelectFrom("creature amount", 9876)).Returns("creature effective roll");
-            mockDice.Setup(d => d.Roll("creature effective roll")).Returns(600);
+            creaturesAndAmounts.Clear();
+            creaturesAndAmounts["creature (subtype)"] = "creature amount";
 
             requiresSubtype.Add("creature");
             mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.CreatureGroups, "creature"))
                 .Returns(new[] { "wrong creature", "other creature" });
 
-            var tableName = string.Format(TableNameConstants.CREATURESubtypeChallengeRatings, "creature");
-            mockCollectionSelector.Setup(s => s.SelectFrom(tableName, "other creature")).Returns(new[] { "other challenge rating" });
-            mockRollSelector.Setup(s => s.SelectFrom(level, "other challenge rating")).Returns("other roll");
-            mockRollSelector.Setup(s => s.SelectFrom("other roll", 9876)).Returns("other effective roll");
-            mockDice.Setup(d => d.Roll("other effective roll")).Returns(1234);
-            mockCollectionSelector.Setup(s => s.SelectFrom(tableName, "wrong creature")).Returns(new[] { "wrong challenge rating" });
-            mockRollSelector.Setup(s => s.SelectFrom(level, "wrong challenge rating")).Returns("wrong roll");
-            mockRollSelector.Setup(s => s.SelectFrom("wrong roll", 9876)).Returns("wrong effective roll");
-            mockDice.Setup(d => d.Roll("wrong effective roll")).Returns(1337);
+            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.ChallengeRatings, "other creature")).Returns(new[] { "other challenge rating" });
+            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.ChallengeRatings, "wrong creature")).Returns(new[] { "wrong challenge rating" });
+            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.ChallengeRatings, "creature (subtype)")).Returns(new[] { "subtype challenge rating" });
 
             var encounter = encounterGenerator.Generate(environment, level, temperature, timeOfDay);
             Assert.That(encounter, Is.Not.Null);
@@ -285,15 +321,16 @@ namespace EncounterGen.Tests.Unit.Generators
             var creature = encounter.Creatures.Single();
             Assert.That(creature.Name, Is.EqualTo("creature"));
             Assert.That(creature.Description, Is.EqualTo("subtype"));
-            Assert.That(creature.Quantity, Is.EqualTo(600));
+            Assert.That(creature.Quantity, Is.EqualTo(42));
+            Assert.That(creature.ChallengeRating, Is.EqualTo("subtype challenge rating"));
             Assert.That(encounter.Characters, Is.Empty);
         }
 
         [Test]
-        public void GenerateRandomSubtypeOfSetChallengeRating()
+        public void EncounterWithRandomSubTypeShouldUseSetAmountAndSetChallengeRating()
         {
-            encounterTypeAndAmount.Clear();
-            encounterTypeAndAmount["creature[challenge rating]"] = "creature amount";
+            creaturesAndAmounts.Clear();
+            creaturesAndAmounts["creature[challenge rating]"] = "creature amount";
             requiresSubtype.Add("creature");
 
             var subtypes = new[] { "wrong creature", "other creature" };
@@ -301,17 +338,9 @@ namespace EncounterGen.Tests.Unit.Generators
 
             mockCollectionSelector.SetupSequence(s => s.SelectRandomFrom(subtypes)).Returns(subtypes.First()).Returns(subtypes.Last());
 
-            var tableName = string.Format(TableNameConstants.CREATURESubtypeChallengeRatings, "creature");
-            mockCollectionSelector.Setup(s => s.SelectFrom(tableName, "other creature")).Returns(new[] { "challenge rating" });
-            mockRollSelector.Setup(s => s.SelectFrom(level, "challenge rating")).Returns("roll");
-            mockDice.Setup(d => d.Roll("roll")).Returns(7654);
-
-            mockCollectionSelector.Setup(s => s.SelectFrom(tableName, "wrong creature")).Returns(new[] { "wrong challenge rating" });
-            mockRollSelector.Setup(s => s.SelectFrom(level, "wrong challenge rating")).Returns(RollConstants.Reroll);
-            mockDice.Setup(d => d.Roll(RollConstants.Reroll)).Returns(1337);
-
-            mockRollSelector.Setup(s => s.SelectFrom("creature amount", 9876)).Returns("creature effective roll");
-            mockDice.Setup(d => d.Roll("creature effective roll")).Returns(8765);
+            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.ChallengeRatings, "other creature")).Returns(new[] { "challenge rating" });
+            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.ChallengeRatings, "wrong creature")).Returns(new[] { "wrong challenge rating" });
+            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.ChallengeRatings, "creature[challenge rating]")).Returns(new[] { "specific challenge rating" });
 
             var encounter = encounterGenerator.Generate(environment, level, temperature, timeOfDay);
             Assert.That(encounter, Is.Not.Null);
@@ -319,35 +348,79 @@ namespace EncounterGen.Tests.Unit.Generators
             var creature = encounter.Creatures.Single();
             Assert.That(creature.Name, Is.EqualTo("creature"));
             Assert.That(creature.Description, Is.EqualTo("other creature"));
-            Assert.That(creature.Quantity, Is.EqualTo(8765));
+            Assert.That(creature.Quantity, Is.EqualTo(42));
+            Assert.That(creature.ChallengeRating, Is.EqualTo("specific challenge rating"));
             Assert.That(encounter.Characters, Is.Empty);
         }
 
         [Test]
-        public void SubtypeHasFurtherSetSubtype()
+        public void EncounterWithRandomSubTypeShouldPickNewSubtypeForEachInQuantity()
         {
-            encounterTypeAndAmount.Clear();
-            encounterTypeAndAmount["creature[challenge rating]"] = "creature amount";
+            creaturesAndAmounts.Clear();
+            creaturesAndAmounts["creature[challenge rating]"] = "creature amount";
+            requiresSubtype.Add("creature");
+
+            var subtypes = new[] { "other creature", "random creature" };
+            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.CreatureGroups, "creature")).Returns(subtypes);
+
+            var count = 0;
+            mockCollectionSelector.Setup(s => s.SelectRandomFrom(subtypes)).Returns(() => subtypes.ElementAt(count++ % 2));
+
+            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.ChallengeRatings, "other creature")).Returns(new[] { "challenge rating" });
+            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.ChallengeRatings, "random creature")).Returns(new[] { "challenge rating" });
+            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.ChallengeRatings, "wrong creature")).Returns(new[] { "wrong challenge rating" });
+            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.ChallengeRatings, "creature[challenge rating]")).Returns(new[] { "specific challenge rating" });
+
+            var encounter = encounterGenerator.Generate(environment, level, temperature, timeOfDay);
+            Assert.That(encounter, Is.Not.Null);
+            Assert.That(encounter.Characters, Is.Empty);
+            Assert.That(encounter.Creatures.Count, Is.EqualTo(2));
+
+            var first = encounter.Creatures.First();
+            Assert.That(first.Name, Is.EqualTo("creature"));
+            Assert.That(first.Description, Is.EqualTo("other creature"));
+            Assert.That(first.Quantity, Is.EqualTo(21));
+            Assert.That(first.ChallengeRating, Is.EqualTo("specific challenge rating"));
+
+            var last = encounter.Creatures.Last();
+            Assert.That(last.Name, Is.EqualTo("creature"));
+            Assert.That(last.Description, Is.EqualTo("random creature"));
+            Assert.That(last.Quantity, Is.EqualTo(21));
+            Assert.That(last.ChallengeRating, Is.EqualTo("specific challenge rating"));
+        }
+
+        [Test]
+        public void EncounterWithRandomSubTypeWithoutSetChallengeRatingThrowsException()
+        {
+            requiresSubtype.Add("creature");
+
+            var subtypes = new[] { "wrong creature", "other creature" };
+            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.CreatureGroups, "creature")).Returns(subtypes);
+
+            mockCollectionSelector.SetupSequence(s => s.SelectRandomFrom(subtypes)).Returns(subtypes.First()).Returns(subtypes.Last());
+
+            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.ChallengeRatings, "other creature")).Returns(new[] { "challenge rating" });
+            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.ChallengeRatings, "wrong creature")).Returns(new[] { "wrong challenge rating" });
+
+            Assert.That(() => encounterGenerator.Generate(environment, level, temperature, timeOfDay), Throws.InvalidOperationException.With.Message.EqualTo("Cannot generate random subtype of creature without a set challenge rating"));
+        }
+
+        [Test]
+        public void EncounterWithRandomSubTypeWithFurtherSubtypeShouldUseSetAmountAndSetChallengeRating()
+        {
+            creaturesAndAmounts.Clear();
+            creaturesAndAmounts["creature[challenge rating]"] = "creature amount";
 
             requiresSubtype.Add("creature");
 
             var subtypes = new[] { "wrong creature", "other creature (subtype)" };
-            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.CreatureGroups, "creature"))
-                .Returns(subtypes);
+            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.CreatureGroups, "creature")).Returns(subtypes);
 
             mockCollectionSelector.SetupSequence(s => s.SelectRandomFrom(subtypes)).Returns(subtypes.First()).Returns(subtypes.Last());
 
-            var tableName = string.Format(TableNameConstants.CREATURESubtypeChallengeRatings, "creature");
-            mockCollectionSelector.Setup(s => s.SelectFrom(tableName, "other creature (subtype)")).Returns(new[] { "challenge rating" });
-            mockRollSelector.Setup(s => s.SelectFrom(level, "other challenge rating")).Returns("other roll");
-            mockDice.Setup(d => d.Roll("other roll")).Returns(600);
-
-            mockCollectionSelector.Setup(s => s.SelectFrom(tableName, "wrong creature")).Returns(new[] { "wrong challenge rating" });
-            mockRollSelector.Setup(s => s.SelectFrom(level, "wrong challenge rating")).Returns(RollConstants.Reroll);
-            mockDice.Setup(d => d.Roll("wrong roll")).Returns(1337);
-
-            mockRollSelector.Setup(s => s.SelectFrom("creature amount", 9876)).Returns("creature effective roll");
-            mockDice.Setup(d => d.Roll("creature effective roll")).Returns(7654);
+            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.ChallengeRatings, "other creature (subtype)")).Returns(new[] { "challenge rating" });
+            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.ChallengeRatings, "wrong creature")).Returns(new[] { "wrong challenge rating" });
+            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.ChallengeRatings, "creature[challenge rating]")).Returns(new[] { "specific challenge rating" });
 
             var encounter = encounterGenerator.Generate(environment, level, temperature, timeOfDay);
             Assert.That(encounter, Is.Not.Null);
@@ -355,41 +428,32 @@ namespace EncounterGen.Tests.Unit.Generators
             var creature = encounter.Creatures.Single();
             Assert.That(creature.Name, Is.EqualTo("creature"));
             Assert.That(creature.Description, Is.EqualTo("other creature (subtype)"));
-            Assert.That(creature.Quantity, Is.EqualTo(7654));
+            Assert.That(creature.Quantity, Is.EqualTo(42));
+            Assert.That(creature.ChallengeRating, Is.EqualTo("specific challenge rating"));
             Assert.That(encounter.Characters, Is.Empty);
         }
 
+        //INFO: Example of this might be a dominated mephit
         [Test]
-        public void SubtypeHasFurtherSubtype()
+        public void EncounterWithRandomSubtypeHasFurtherRandomSubtype()
         {
-            encounterTypeAndAmount.Clear();
-            encounterTypeAndAmount["creature[challenge rating]"] = "creature amount";
+            creaturesAndAmounts.Clear();
+            creaturesAndAmounts["creature[challenge rating]"] = "creature amount";
 
             requiresSubtype.Add("creature");
             requiresSubtype.Add("other creature");
 
             var subSubtypes = new[] { "wrong subtype", "subtype" };
-            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.CreatureGroups, "other creature"))
-                .Returns(subSubtypes);
-            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.CreatureGroups, "creature"))
-                .Returns(new[] { "wrong creature", "other creature" });
+            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.CreatureGroups, "other creature")).Returns(subSubtypes);
+            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.CreatureGroups, "creature")).Returns(new[] { "wrong creature", "other creature" });
 
             mockCollectionSelector.SetupSequence(s => s.SelectRandomFrom(subSubtypes)).Returns(subSubtypes.First()).Returns(subSubtypes.Last());
 
-            var tableName = string.Format(TableNameConstants.CREATURESubtypeChallengeRatings, "creature");
-            mockCollectionSelector.Setup(s => s.SelectFrom(tableName, "other creature")).Returns(new[] { "other challenge rating" });
-
-            tableName = string.Format(TableNameConstants.CREATURESubtypeChallengeRatings, "other creature");
-            mockCollectionSelector.Setup(s => s.SelectFrom(tableName, "subtype")).Returns(new[] { "challenge rating" });
-            mockRollSelector.Setup(s => s.SelectFrom(level, "challenge rating")).Returns("roll");
-            mockDice.Setup(d => d.Roll("roll")).Returns(600);
-            mockCollectionSelector.Setup(s => s.SelectFrom(tableName, "wrong subtype")).Returns(new[] { "wrong challenge rating" });
-            mockCollectionSelector.Setup(s => s.SelectFrom(tableName, "wrong creature")).Returns(new[] { "wrong challenge rating" });
-            mockRollSelector.Setup(s => s.SelectFrom(level, "wrong challenge rating")).Returns("wrong roll");
-            mockDice.Setup(d => d.Roll("wrong roll")).Returns(1337);
-
-            mockRollSelector.Setup(s => s.SelectFrom("creature amount", 9876)).Returns("creature effective roll");
-            mockDice.Setup(d => d.Roll("creature effective roll")).Returns(7654);
+            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.ChallengeRatings, "other creature")).Returns(new[] { "challenge rating" });
+            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.ChallengeRatings, "subtype")).Returns(new[] { "challenge rating" });
+            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.ChallengeRatings, "wrong subtype")).Returns(new[] { "wrong challenge rating" });
+            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.ChallengeRatings, "wrong creature")).Returns(new[] { "wrong challenge rating" });
+            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.ChallengeRatings, "creature[challenge rating]")).Returns(new[] { "specific challenge rating" });
 
             var encounter = encounterGenerator.Generate(environment, level, temperature, timeOfDay);
             Assert.That(encounter, Is.Not.Null);
@@ -397,131 +461,152 @@ namespace EncounterGen.Tests.Unit.Generators
             var creature = encounter.Creatures.Single();
             Assert.That(creature.Name, Is.EqualTo("creature"));
             Assert.That(creature.Description, Is.EqualTo("other creature (subtype)"));
-            Assert.That(creature.Quantity, Is.EqualTo(7654));
+            Assert.That(creature.Quantity, Is.EqualTo(42));
+            Assert.That(creature.ChallengeRating, Is.EqualTo("specific challenge rating"));
             Assert.That(encounter.Characters, Is.Empty);
         }
 
+        //INFO: Example of this might be a dominated mephit
         [Test]
-        public void SubTypeIsRerolled()
+        public void EncounterWithRandomSubtypeAndFurtherRandomSubtypeSelectsRandomEachTime()
         {
-            requiresSubtype.Add("creature");
-            var subtypes = new[] { "wrong creature", "other creature" };
-            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.CreatureGroups, "creature")).Returns(subtypes);
+            creaturesAndAmounts.Clear();
+            creaturesAndAmounts["creature[challenge rating]"] = "creature amount";
 
-            mockCollectionSelector.SetupSequence(s => s.SelectRandomFrom(subtypes)).Returns("wrong creature").Returns("other creature");
-
-            var tableName = string.Format(TableNameConstants.CREATURESubtypeChallengeRatings, "creature");
-            mockCollectionSelector.Setup(s => s.SelectFrom(tableName, "other creature")).Returns(new[] { "other challenge rating" });
-            mockRollSelector.Setup(s => s.SelectFrom(level, "other challenge rating")).Returns("other roll");
-            mockDice.Setup(d => d.Roll("other roll")).Returns(600);
-            mockCollectionSelector.Setup(s => s.SelectFrom(tableName, "wrong creature")).Returns(new[] { "wrong challenge rating" });
-            mockRollSelector.Setup(s => s.SelectFrom(level, "wrong challenge rating")).Returns(RollConstants.Reroll);
-            mockDice.Setup(d => d.Roll(RollConstants.Reroll)).Returns(1337);
-
-            var encounter = encounterGenerator.Generate(environment, level, temperature, timeOfDay);
-            Assert.That(encounter, Is.Not.Null);
-
-            var creature = encounter.Creatures.Single();
-            Assert.That(creature.Name, Is.EqualTo("creature"));
-            Assert.That(creature.Description, Is.EqualTo("other creature"));
-            Assert.That(creature.Quantity, Is.EqualTo(600));
-            Assert.That(encounter.Characters, Is.Empty);
-        }
-
-        [Test]
-        public void RerolledSubtypeRequiresFurtherSubtype()
-        {
             requiresSubtype.Add("creature");
             requiresSubtype.Add("other creature");
 
-            var subtypes = new[] { "wrong creature", "other creature" };
+            var subtypes = new[] { "wrong creature", "random creature", "other creature" };
             mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.CreatureGroups, "creature")).Returns(subtypes);
-            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.CreatureGroups, "other creature")).Returns(new[] { "wrong subtype", "subtype" });
 
-            mockCollectionSelector.SetupSequence(s => s.SelectRandomFrom(subtypes)).Returns("wrong creature").Returns("other creature");
+            var subSubtypes = new[] { "wrong subtype", "other subtype", "subtype" };
+            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.CreatureGroups, "other creature")).Returns(subSubtypes);
 
-            var tableName = string.Format(TableNameConstants.CREATURESubtypeChallengeRatings, "creature");
-            mockCollectionSelector.Setup(s => s.SelectFrom(tableName, "other creature")).Returns(new[] { "other challenge rating" });
-            mockRollSelector.Setup(s => s.SelectFrom(level, "other challenge rating")).Returns("other roll");
-            mockDice.Setup(d => d.Roll("other roll")).Returns(600);
-            mockCollectionSelector.Setup(s => s.SelectFrom(tableName, "wrong creature")).Returns(new[] { "wrong challenge rating" });
-            mockRollSelector.Setup(s => s.SelectFrom(level, "wrong challenge rating")).Returns(RollConstants.Reroll);
-            mockDice.Setup(d => d.Roll(RollConstants.Reroll)).Returns(1337);
+            var count = 0;
+            mockCollectionSelector.Setup(s => s.SelectRandomFrom(It.IsAny<IEnumerable<string>>())).Returns((IEnumerable<string> c) => c.ElementAt(GetIndex(count++)));
 
-            tableName = string.Format(TableNameConstants.CREATURESubtypeChallengeRatings, "other creature");
-            mockCollectionSelector.Setup(s => s.SelectFrom(tableName, "subtype")).Returns(new[] { "challenge rating" });
-            mockRollSelector.Setup(s => s.SelectFrom(level, "challenge rating")).Returns("roll");
-            mockDice.Setup(d => d.Roll("roll")).Returns(8765);
+            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.ChallengeRatings, "other creature")).Returns(new[] { "challenge rating" });
+            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.ChallengeRatings, "random creature")).Returns(new[] { "challenge rating" });
+            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.ChallengeRatings, "subtype")).Returns(new[] { "challenge rating" });
+            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.ChallengeRatings, "other subtype")).Returns(new[] { "challenge rating" });
+
+            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.ChallengeRatings, "wrong subtype")).Returns(new[] { "wrong challenge rating" });
+            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.ChallengeRatings, "wrong creature")).Returns(new[] { "wrong challenge rating" });
+
+            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.ChallengeRatings, "creature[challenge rating]")).Returns(new[] { "specific challenge rating" });
 
             var encounter = encounterGenerator.Generate(environment, level, temperature, timeOfDay);
             Assert.That(encounter, Is.Not.Null);
-
-            var creature = encounter.Creatures.Single();
-            Assert.That(creature.Name, Is.EqualTo("creature"));
-            Assert.That(creature.Description, Is.EqualTo("other creature (subtype)"));
-            Assert.That(creature.Quantity, Is.EqualTo(8765));
             Assert.That(encounter.Characters, Is.Empty);
+            Assert.That(encounter.Creatures.Count, Is.EqualTo(3));
+
+            var creatures = encounter.Creatures.ToArray();
+            Assert.That(creatures[0].Name, Is.EqualTo("creature"));
+            Assert.That(creatures[0].Description, Is.EqualTo("random creature"));
+            Assert.That(creatures[0].Quantity, Is.EqualTo(21));
+            Assert.That(creatures[0].ChallengeRating, Is.EqualTo("specific challenge rating"));
+
+            Assert.That(creatures[1].Name, Is.EqualTo("creature"));
+            Assert.That(creatures[1].Description, Is.EqualTo("other creature (other subtype)"));
+            Assert.That(creatures[1].Quantity, Is.EqualTo(11));
+            Assert.That(creatures[1].ChallengeRating, Is.EqualTo("specific challenge rating"));
+
+            Assert.That(creatures[2].Name, Is.EqualTo("creature"));
+            Assert.That(creatures[2].Description, Is.EqualTo("other creature (subtype)"));
+            Assert.That(creatures[2].Quantity, Is.EqualTo(10));
+            Assert.That(creatures[2].ChallengeRating, Is.EqualTo("specific challenge rating"));
+        }
+
+        private int GetIndex(int count)
+        {
+            switch (count % 6)
+            {
+                case 0: return 0;
+                case 1: return 1;
+                case 2: return 0;
+                case 3: return 0;
+                case 4: return 1;
+                case 5: return 1;
+                default: return 0;
+            }
         }
 
         [Test]
-        public void ImpossibleSubtypeForcesReroll()
+        public void CleanUpName()
         {
-            var correctEncounterTypeAndAmount = new Dictionary<string, string>();
-            correctEncounterTypeAndAmount["correct creature"] = "correct creature amount";
-            mockRollSelector.Setup(s => s.SelectFrom("correct creature amount", 9876)).Returns("correct creature effective roll");
-            mockDice.Setup(d => d.Roll("correct creature effective roll")).Returns(1234);
-
-            mockCreatureCollectionSelector.SetupSequence(s => s.SelectFrom(90210, environment, temperature, timeOfDay)).Returns(encounterTypeAndAmount).Returns(correctEncounterTypeAndAmount);
-
-            requiresSubtype.Add("creature");
-            var subtypes = new[] { "wrong creature", "other creature" };
-            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.CreatureGroups, "creature")).Returns(subtypes);
-
-            mockCollectionSelector.Setup(s => s.SelectRandomFrom(subtypes)).Returns("wrong creature");
-
-            var tableName = string.Format(TableNameConstants.CREATURESubtypeChallengeRatings, "creature");
-            mockCollectionSelector.Setup(s => s.SelectFrom(tableName, "wrong creature")).Returns(new[] { "wrong challenge rating" });
-            mockRollSelector.Setup(s => s.SelectFrom(level, "wrong challenge rating")).Returns(RollConstants.Reroll);
-            mockDice.Setup(d => d.Roll(RollConstants.Reroll)).Returns(1337);
+            creaturesAndAmounts.Clear();
+            creaturesAndAmounts["creature (description)[challenge rating]"] = "creature amount";
 
             var encounter = encounterGenerator.Generate(environment, level, temperature, timeOfDay);
             Assert.That(encounter, Is.Not.Null);
-
-            var creature = encounter.Creatures.Single();
-            Assert.That(creature.Name, Is.EqualTo("correct creature"));
-            Assert.That(creature.Description, Is.Empty);
-            Assert.That(creature.Quantity, Is.EqualTo(1234));
             Assert.That(encounter.Characters, Is.Empty);
 
-            mockCollectionSelector.Verify(s => s.SelectRandomFrom(subtypes), Times.Exactly(30000));
-            mockCollectionSelector.Verify(s => s.SelectFrom(tableName, "wrong creature"), Times.Exactly(30000));
-            mockRollSelector.Verify(s => s.SelectFrom(level, "wrong challenge rating"), Times.Exactly(30000));
+            var creature = encounter.Creatures.Single();
+            Assert.That(creature.Name, Is.EqualTo("creature"));
+            Assert.That(creature.Description, Is.EqualTo("description"));
+        }
+
+        [Test]
+        public void CleanUpDescription()
+        {
+            creaturesAndAmounts.Clear();
+            creaturesAndAmounts["creature[challenge rating]"] = "creature amount";
+
+            requiresSubtype.Add("creature");
+            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.CreatureGroups, "creature")).Returns(new[] { "subtype (description)[subtype challenge rating]" });
+
+            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.ChallengeRatings, "subtype (description)[subtype challenge rating]")).Returns(new[] { "challenge rating" });
+            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.ChallengeRatings, "creature[challenge rating]")).Returns(new[] { "specific challenge rating" });
+
+            var encounter = encounterGenerator.Generate(environment, level, temperature, timeOfDay);
+            Assert.That(encounter, Is.Not.Null);
+            Assert.That(encounter.Characters, Is.Empty);
+
+            var creature = encounter.Creatures.Single();
+            Assert.That(creature.Name, Is.EqualTo("creature"));
+            Assert.That(creature.Description, Is.EqualTo("subtype (description)"));
+        }
+
+        [Test]
+        public void CleanUpDescriptionWithSubDescription()
+        {
+            creaturesAndAmounts.Clear();
+            creaturesAndAmounts["creature[challenge rating]"] = "creature amount";
+
+            requiresSubtype.Add("creature");
+            requiresSubtype.Add("subtype");
+
+            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.CreatureGroups, "creature")).Returns(new[] { "subtype[subtype challenge rating]" });
+            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.CreatureGroups, "subtype")).Returns(new[] { "further subtype (description)[further subtype challenge rating]" });
+
+            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.ChallengeRatings, "subtype[subtype challenge rating]")).Returns(new[] { "challenge rating" });
+            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.ChallengeRatings, "further subtype (description)[further subtype challenge rating]")).Returns(new[] { "challenge rating" });
+            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.ChallengeRatings, "creature[challenge rating]")).Returns(new[] { "specific challenge rating" });
+
+            var encounter = encounterGenerator.Generate(environment, level, temperature, timeOfDay);
+            Assert.That(encounter, Is.Not.Null);
+            Assert.That(encounter.Characters, Is.Empty);
+
+            var creature = encounter.Creatures.Single();
+            Assert.That(creature.Name, Is.EqualTo("creature"));
+            Assert.That(creature.Description, Is.EqualTo("subtype (further subtype (description))"));
         }
 
         [Test]
         public void RerollEncounter()
         {
-            var wrongTypeAndAmount = new Dictionary<string, string>();
-            wrongTypeAndAmount["wrong creature"] = "wrong creature amount";
+            mockAmountSelector.SetupSequence(d => d.SelectFrom("creature amount")).Returns(666).Returns(600);
 
-            var otherTypeAndAmount = new Dictionary<string, string>();
-            otherTypeAndAmount["other creature"] = "other creature amount";
-
-            mockCreatureCollectionSelector.SetupSequence(s => s.SelectFrom(90210, environment, temperature, timeOfDay))
-                .Returns(wrongTypeAndAmount).Returns(otherTypeAndAmount).Returns(encounterTypeAndAmount);
-
-            mockRollSelector.Setup(s => s.SelectFrom("other creature amount", 9876)).Returns("other effective roll");
-            mockDice.Setup(d => d.Roll("other effective roll")).Returns(600);
-
-            mockFilterVerifier.Setup(v => v.EncounterIsValid(otherTypeAndAmount, 9876)).Returns(true);
-            mockFilterVerifier.Setup(v => v.EncounterIsValid(wrongTypeAndAmount, 9876)).Returns(false);
+            mockEncounterVerifier.Setup(v => v.EncounterIsValid(It.Is<IEnumerable<Creature>>(cc => cc.Single().Quantity == 600))).Returns(true);
+            mockEncounterVerifier.Setup(v => v.EncounterIsValid(It.Is<IEnumerable<Creature>>(cc => cc.Single().Quantity == 666))).Returns(false);
 
             var encounter = encounterGenerator.Generate(environment, level, temperature, timeOfDay);
             Assert.That(encounter, Is.Not.Null);
 
             var creature = encounter.Creatures.Single();
-            Assert.That(creature.Name, Is.EqualTo("other creature"));
+            Assert.That(creature.Name, Is.EqualTo("creature"));
             Assert.That(creature.Quantity, Is.EqualTo(600));
+            Assert.That(creature.ChallengeRating, Is.EqualTo("challenge rating"));
             Assert.That(encounter.Characters, Is.Empty);
         }
 
@@ -535,14 +620,16 @@ namespace EncounterGen.Tests.Unit.Generators
             var otherTypeAndAmount = new Dictionary<string, string>();
             otherTypeAndAmount["other creature"] = "other creature amount";
 
-            mockCreatureCollectionSelector.SetupSequence(s => s.SelectFrom(90210, environment, temperature, timeOfDay))
-                .Returns(wrongTypeAndAmount).Returns(otherTypeAndAmount).Returns(encounterTypeAndAmount);
+            mockCreatureCollectionSelector.SetupSequence(s => s.SelectRandomFrom(encounterLevel, environment, temperature, timeOfDay))
+                .Returns(wrongTypeAndAmount).Returns(otherTypeAndAmount).Returns(creaturesAndAmounts);
 
-            mockRollSelector.Setup(s => s.SelectFrom("other creature amount", 9876)).Returns("other effective roll");
-            mockDice.Setup(d => d.Roll("other effective roll")).Returns(600);
+            mockAmountSelector.Setup(d => d.SelectFrom("other creature amount")).Returns(600);
+            mockAmountSelector.Setup(d => d.SelectFrom("wrong creature amount")).Returns(666);
 
-            mockFilterVerifier.Setup(v => v.EncounterIsValid(otherTypeAndAmount, 9876)).Returns(true);
-            mockFilterVerifier.Setup(v => v.EncounterIsValid(wrongTypeAndAmount, 9876)).Returns(false);
+            mockEncounterVerifier.Setup(v => v.EncounterIsValid(It.Is<IEnumerable<Creature>>(cc => cc.Any(c => c.Name == "other creature")))).Returns(true);
+            mockEncounterVerifier.Setup(v => v.EncounterIsValid(It.Is<IEnumerable<Creature>>(cc => cc.Any(c => c.Name == "wrong creature")))).Returns(false);
+
+            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.ChallengeRatings, "other creature")).Returns(new[] { "other challenge rating" });
 
             var encounter = encounterGenerator.Generate(environment, level, temperature, timeOfDay);
             Assert.That(encounter, Is.Not.Null);
@@ -550,16 +637,17 @@ namespace EncounterGen.Tests.Unit.Generators
             var creature = encounter.Creatures.Single();
             Assert.That(creature.Name, Is.EqualTo("other creature"));
             Assert.That(creature.Quantity, Is.EqualTo(600));
+            Assert.That(creature.ChallengeRating, Is.EqualTo("other challenge rating"));
             Assert.That(encounter.Characters, Is.Empty);
         }
 
         [Test]
         public void GetEncounterWithMultipleTypesOfCreatures()
         {
-            encounterTypeAndAmount["other creature"] = "other creature amount";
+            creaturesAndAmounts["other creature"] = "other creature amount";
+            mockAmountSelector.Setup(d => d.SelectFrom("other creature amount")).Returns(600);
 
-            mockRollSelector.Setup(s => s.SelectFrom("other creature amount", 9876)).Returns("other effective roll");
-            mockDice.Setup(d => d.Roll("other effective roll")).Returns(600);
+            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.ChallengeRatings, "other creature")).Returns(new[] { "other challenge rating" });
 
             var encounter = encounterGenerator.Generate(environment, level, temperature, timeOfDay);
             Assert.That(encounter, Is.Not.Null);
@@ -567,7 +655,9 @@ namespace EncounterGen.Tests.Unit.Generators
             var creature = encounter.Creatures.Single(c => c.Name == "creature");
             var otherCreature = encounter.Creatures.Single(c => c.Name == "other creature");
             Assert.That(creature.Quantity, Is.EqualTo(42));
+            Assert.That(creature.ChallengeRating, Is.EqualTo("challenge rating"));
             Assert.That(otherCreature.Quantity, Is.EqualTo(600));
+            Assert.That(otherCreature.ChallengeRating, Is.EqualTo("other challenge rating"));
             Assert.That(encounter.Creatures.Count(), Is.EqualTo(2));
             Assert.That(encounter.Characters, Is.Empty);
         }
@@ -583,14 +673,14 @@ namespace EncounterGen.Tests.Unit.Generators
         [Test]
         public void GetTreasureForAllCreatures()
         {
-            encounterTypeAndAmount["other creature"] = "other creature amount";
-
-            mockRollSelector.Setup(s => s.SelectFrom("other creature amount", 9876)).Returns("other effective roll");
-            mockDice.Setup(d => d.Roll("other effective roll")).Returns(600);
+            creaturesAndAmounts["other creature"] = "other creature amount";
+            mockAmountSelector.Setup(d => d.SelectFrom("other creature amount")).Returns(600);
 
             var otherTreasure = new Treasure();
             otherTreasure.Coin.Quantity = 1337;
-            mockEncounterTreasureGenerator.Setup(g => g.GenerateFor(It.Is<Creature>(c => c.Name == "other creature"), level)).Returns(otherTreasure);
+            mockEncounterTreasureGenerator.Setup(g => g.GenerateFor(It.Is<Creature>(c => c.Name == "other creature"), actualEncounterLevel)).Returns(otherTreasure);
+
+            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.ChallengeRatings, "other creature")).Returns(new[] { "other challenge rating" });
 
             var encounter = encounterGenerator.Generate(environment, level, temperature, timeOfDay);
             Assert.That(encounter, Is.Not.Null);
@@ -612,10 +702,10 @@ namespace EncounterGen.Tests.Unit.Generators
         [Test]
         public void DoNotGetEmptyTreasure()
         {
-            encounterTypeAndAmount["other creature"] = "other creature amount";
+            creaturesAndAmounts["other creature"] = "other creature amount";
 
-            mockRollSelector.Setup(s => s.SelectFrom("other creature amount", 9876)).Returns("other effective roll");
-            mockDice.Setup(d => d.Roll("other effective roll")).Returns(600);
+            mockAmountSelector.Setup(d => d.SelectFrom("other creature amount")).Returns(600);
+            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.ChallengeRatings, "other creature")).Returns(new[] { "other challenge rating" });
 
             var encounter = encounterGenerator.Generate(environment, level, temperature, timeOfDay);
             Assert.That(encounter, Is.Not.Null);
@@ -625,10 +715,12 @@ namespace EncounterGen.Tests.Unit.Generators
         [Test]
         public void GetTreasureForCreatureWithDescription()
         {
-            var monster = encounterTypeAndAmount.First();
-            encounterTypeAndAmount.Clear();
+            var monster = creaturesAndAmounts.First();
+            creaturesAndAmounts.Clear();
 
-            encounterTypeAndAmount[monster.Key + " (description)"] = monster.Value;
+            creaturesAndAmounts[monster.Key + " (description)"] = monster.Value;
+
+            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.ChallengeRatings, "creature (description)")).Returns(new[] { "descriptive challenge rating" });
 
             var encounter = encounterGenerator.Generate(environment, level, temperature, timeOfDay);
             Assert.That(encounter, Is.Not.Null);
@@ -638,10 +730,12 @@ namespace EncounterGen.Tests.Unit.Generators
         [Test]
         public void GetTreasureForCreatureWithCharacterLevel()
         {
-            var monster = encounterTypeAndAmount.First();
-            encounterTypeAndAmount.Clear();
+            var monster = creaturesAndAmounts.First();
+            creaturesAndAmounts.Clear();
 
-            encounterTypeAndAmount[monster.Key + "[1]"] = monster.Value;
+            creaturesAndAmounts[monster.Key + "[1]"] = monster.Value;
+
+            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.ChallengeRatings, "creature[1]")).Returns(new[] { "specific challenge rating" });
 
             mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.CreatureGroups, CreatureConstants.Character))
                 .Returns(new[] { "other character class", monster.Key });
@@ -654,10 +748,12 @@ namespace EncounterGen.Tests.Unit.Generators
         [Test]
         public void GetTreasureForCreatureWithDescriptionAndCharacterLevel()
         {
-            var monster = encounterTypeAndAmount.First();
-            encounterTypeAndAmount.Clear();
+            var monster = creaturesAndAmounts.First();
+            creaturesAndAmounts.Clear();
 
-            encounterTypeAndAmount[monster.Key + " (description)[1]"] = monster.Value;
+            creaturesAndAmounts[monster.Key + " (description)[1]"] = monster.Value;
+
+            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.ChallengeRatings, "creature (description)[1]")).Returns(new[] { "specific challenge rating" });
 
             mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.CreatureGroups, CreatureConstants.Character))
                 .Returns(new[] { "other character class", monster.Key });
@@ -668,51 +764,10 @@ namespace EncounterGen.Tests.Unit.Generators
         }
 
         [Test]
-        public void ReplaceRollsInCreatureType()
-        {
-            encounterTypeAndAmount.Clear();
-            encounterTypeAndAmount["Hydra (2d3+4 heads)"] = "hydra amount";
-            mockRollSelector.Setup(s => s.SelectFrom("hydra amount", 9876)).Returns("hydra effective roll");
-            mockDice.Setup(d => d.Roll("hydra effective roll")).Returns(1);
-            mockDice.Setup(d => d.ContainsRoll("2d3+4 heads", true)).Returns(true);
-            mockDice.Setup(d => d.ReplaceExpressionWithTotal("2d3+4 heads", true)).Returns("1337 heads");
-
-            var encounter = encounterGenerator.Generate(environment, level, temperature, timeOfDay);
-            Assert.That(encounter, Is.Not.Null);
-
-            var creature = encounter.Creatures.Single();
-            Assert.That(creature.Name, Is.EqualTo("Hydra"));
-            Assert.That(creature.Description, Is.EqualTo("1337 heads"));
-            Assert.That(creature.Quantity, Is.EqualTo(1));
-            Assert.That(encounter.Characters, Is.Empty);
-        }
-
-        [Test]
-        public void RollsInCreatureTypeAreUnique()
-        {
-            encounterTypeAndAmount.Clear();
-            encounterTypeAndAmount["Hydra (2d3+4 heads)"] = "hydra amount";
-            mockRollSelector.Setup(s => s.SelectFrom("hydra amount", 9876)).Returns("hydra effective roll");
-            mockDice.Setup(d => d.Roll("hydra effective roll")).Returns(2);
-            mockDice.Setup(d => d.ContainsRoll("2d3+4 heads", true)).Returns(true);
-            mockDice.SetupSequence(d => d.ReplaceExpressionWithTotal("2d3+4 heads", true)).Returns("1337 heads").Returns("1234 heads");
-
-            var encounter = encounterGenerator.Generate(environment, level, temperature, timeOfDay);
-            Assert.That(encounter, Is.Not.Null);
-
-            var firstCreature = encounter.Creatures.First(c => c.Description == "1337 heads");
-            var secondCreature = encounter.Creatures.First(c => c.Description == "1234 heads");
-
-            Assert.That(firstCreature.Quantity, Is.EqualTo(1));
-            Assert.That(secondCreature.Quantity, Is.EqualTo(1));
-            Assert.That(encounter.Creatures.Count(), Is.EqualTo(2));
-            Assert.That(encounter.Characters, Is.Empty);
-        }
-
-        [Test]
         public void FilterCreatureTypes()
         {
-            mockFilterVerifier.Setup(v => v.FiltersAreValid(environment, level, temperature, timeOfDay, "filter")).Returns(true);
+            mockEncounterVerifier.Setup(v => v.ValidEncounterExistsAtLevel(environment, level, temperature, timeOfDay, "filter")).Returns(true);
+            mockEncounterVerifier.Setup(v => v.ValidEncounterExistsAtLevel(environment, encounterLevel, temperature, timeOfDay, "filter")).Returns(true);
 
             var wrongTypeAndAmount = new Dictionary<string, string>();
             wrongTypeAndAmount["wrong creature"] = "wrong creature amount";
@@ -720,14 +775,16 @@ namespace EncounterGen.Tests.Unit.Generators
             var otherTypeAndAmount = new Dictionary<string, string>();
             otherTypeAndAmount["other creature"] = "other creature amount";
 
-            mockCreatureCollectionSelector.SetupSequence(s => s.SelectFrom(90210, environment, temperature, timeOfDay))
-                .Returns(wrongTypeAndAmount).Returns(otherTypeAndAmount).Returns(encounterTypeAndAmount);
+            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.ChallengeRatings, "other creature")).Returns(new[] { "other challenge rating" });
 
-            mockRollSelector.Setup(s => s.SelectFrom("wrong creature amount", 9876)).Returns("wrong effective roll");
-            mockRollSelector.Setup(s => s.SelectFrom("other creature amount", 9876)).Returns("other effective roll");
-            mockDice.Setup(d => d.Roll("other effective roll")).Returns(600);
-            mockDice.Setup(d => d.Roll("wrong effective roll")).Returns(666);
-            mockFilterVerifier.Setup(v => v.EncounterIsValid(otherTypeAndAmount, 9876, "filter")).Returns(true);
+            mockCreatureCollectionSelector.SetupSequence(s => s.SelectRandomFrom(encounterLevel, environment, temperature, timeOfDay, "filter"))
+                .Returns(wrongTypeAndAmount).Returns(otherTypeAndAmount).Returns(creaturesAndAmounts);
+
+            mockAmountSelector.Setup(d => d.SelectFrom("other creature amount")).Returns(600);
+            mockAmountSelector.Setup(d => d.SelectFrom("wrong creature amount")).Returns(666);
+
+            mockEncounterVerifier.Setup(v => v.EncounterIsValid(It.Is<IEnumerable<Creature>>(cc => cc.Any(c => c.Name == "other creature")), "filter")).Returns(true);
+            mockEncounterVerifier.Setup(v => v.EncounterIsValid(It.Is<IEnumerable<Creature>>(cc => cc.Any(c => c.Name == "wrong creature")), "filter")).Returns(false);
 
             var encounter = encounterGenerator.Generate(environment, level, temperature, timeOfDay, "filter");
             Assert.That(encounter, Is.Not.Null);
@@ -735,13 +792,15 @@ namespace EncounterGen.Tests.Unit.Generators
             var creature = encounter.Creatures.Single();
             Assert.That(creature.Name, Is.EqualTo("other creature"));
             Assert.That(creature.Quantity, Is.EqualTo(600));
+            Assert.That(creature.ChallengeRating, Is.EqualTo("other challenge rating"));
             Assert.That(encounter.Characters, Is.Empty);
         }
 
         [Test]
         public void UseMultipleFiltersForCreatureTypes()
         {
-            mockFilterVerifier.Setup(v => v.FiltersAreValid(environment, level, temperature, timeOfDay, "filter 1", "filter 2")).Returns(true);
+            mockEncounterVerifier.Setup(v => v.ValidEncounterExistsAtLevel(environment, level, temperature, timeOfDay, "filter 1", "filter 2")).Returns(true);
+            mockEncounterVerifier.Setup(v => v.ValidEncounterExistsAtLevel(environment, encounterLevel, temperature, timeOfDay, "filter 1", "filter 2")).Returns(true);
 
             var wrongTypeAndAmount = new Dictionary<string, string>();
             wrongTypeAndAmount["wrong creature"] = "wrong creature amount";
@@ -749,14 +808,16 @@ namespace EncounterGen.Tests.Unit.Generators
             var otherTypeAndAmount = new Dictionary<string, string>();
             otherTypeAndAmount["other creature"] = "other creature amount";
 
-            mockCreatureCollectionSelector.SetupSequence(s => s.SelectFrom(90210, environment, temperature, timeOfDay))
-                .Returns(wrongTypeAndAmount).Returns(otherTypeAndAmount).Returns(encounterTypeAndAmount);
+            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.ChallengeRatings, "other creature")).Returns(new[] { "other challenge rating" });
 
-            mockRollSelector.Setup(s => s.SelectFrom("wrong creature amount", 9876)).Returns("wrong effective roll");
-            mockRollSelector.Setup(s => s.SelectFrom("other creature amount", 9876)).Returns("other effective roll");
-            mockDice.Setup(d => d.Roll("other effective roll")).Returns(600);
-            mockDice.Setup(d => d.Roll("wrong effective roll")).Returns(666);
-            mockFilterVerifier.Setup(v => v.EncounterIsValid(otherTypeAndAmount, 9876, "filter 1", "filter 2")).Returns(true);
+            mockCreatureCollectionSelector.SetupSequence(s => s.SelectRandomFrom(encounterLevel, environment, temperature, timeOfDay, "filter 1", "filter 2"))
+                .Returns(wrongTypeAndAmount).Returns(otherTypeAndAmount).Returns(creaturesAndAmounts);
+
+            mockAmountSelector.Setup(d => d.SelectFrom("other creature amount")).Returns(600);
+            mockAmountSelector.Setup(d => d.SelectFrom("wrong creature amount")).Returns(666);
+
+            mockEncounterVerifier.Setup(v => v.EncounterIsValid(It.Is<IEnumerable<Creature>>(cc => cc.Any(c => c.Name == "other creature")), "filter 1", "filter 2")).Returns(true);
+            mockEncounterVerifier.Setup(v => v.EncounterIsValid(It.Is<IEnumerable<Creature>>(cc => cc.Any(c => c.Name == "wrong creature")), "filter 1", "filter 2")).Returns(false);
 
             var encounter = encounterGenerator.Generate(environment, level, temperature, timeOfDay, "filter 1", "filter 2");
             Assert.That(encounter, Is.Not.Null);
@@ -764,37 +825,37 @@ namespace EncounterGen.Tests.Unit.Generators
             var creature = encounter.Creatures.Single();
             Assert.That(creature.Name, Is.EqualTo("other creature"));
             Assert.That(creature.Quantity, Is.EqualTo(600));
+            Assert.That(creature.ChallengeRating, Is.EqualTo("other challenge rating"));
             Assert.That(encounter.Characters, Is.Empty);
         }
 
         [Test]
         public void RerollEffectiveLevelIfEncounterMustBeRerolledForFilter()
         {
-            mockFilterVerifier.Setup(v => v.FiltersAreValid(environment, level, temperature, timeOfDay, "filter")).Returns(true);
-
             var wrongTypeAndAmount = new Dictionary<string, string>();
             wrongTypeAndAmount["wrong creature"] = "wrong creature amount";
 
             var otherTypeAndAmount = new Dictionary<string, string>();
             otherTypeAndAmount["other creature"] = "other creature amount";
 
-            var wrongEncounterLevelAndModifier = new Dictionary<string, string>();
-            wrongEncounterLevelAndModifier["666"] = "13";
+            mockPercentileSelector.SetupSequence(s => s.SelectFrom(TableNameConstants.EncounterLevelModifiers))
+                .Returns(-4)
+                .Returns(4);
 
-            var tableName = string.Format(TableNameConstants.LevelXEncounterLevel, level);
-            mockTypeAndAmountPercentileSelector.SetupSequence(s => s.SelectFrom(tableName))
-                .Returns(wrongEncounterLevelAndModifier)
-                .Returns(encounterLevelAndModifier);
+            mockCreatureCollectionSelector.SetupSequence(s => s.SelectRandomFrom(level + 4, environment, temperature, timeOfDay, "filter")).Returns(otherTypeAndAmount);
+            mockCreatureCollectionSelector.SetupSequence(s => s.SelectRandomFrom(level - 4, environment, temperature, timeOfDay, "filter")).Returns(wrongTypeAndAmount);
 
-            mockCreatureCollectionSelector.SetupSequence(s => s.SelectFrom(90210, environment, temperature, timeOfDay)).Returns(otherTypeAndAmount);
-            mockCreatureCollectionSelector.SetupSequence(s => s.SelectFrom(666, environment, temperature, timeOfDay)).Returns(wrongTypeAndAmount);
+            mockEncounterVerifier.Setup(v => v.ValidEncounterExistsAtLevel(environment, level, temperature, timeOfDay, "filter")).Returns(true);
+            mockEncounterVerifier.Setup(v => v.ValidEncounterExistsAtLevel(environment, level + 4, temperature, timeOfDay, "filter")).Returns(true);
+            mockEncounterVerifier.Setup(v => v.ValidEncounterExistsAtLevel(environment, level - 4, temperature, timeOfDay, "filter")).Returns(false);
 
-            mockRollSelector.Setup(s => s.SelectFrom("wrong creature amount", 9876)).Returns("wrong effective roll");
-            mockRollSelector.Setup(s => s.SelectFrom("other creature amount", 9876)).Returns("other effective roll");
-            mockDice.Setup(d => d.Roll("other effective roll")).Returns(600);
-            mockDice.Setup(d => d.Roll("wrong effective roll")).Returns(666);
-            mockFilterVerifier.Setup(v => v.EncounterIsValid(otherTypeAndAmount, 9876, "filter")).Returns(true);
-            mockFilterVerifier.Setup(v => v.EncounterIsValid(wrongTypeAndAmount, 13, "filter")).Returns(false);
+            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.ChallengeRatings, "other creature")).Returns(new[] { "other challenge rating" });
+
+            mockAmountSelector.Setup(d => d.SelectFrom("other creature amount")).Returns(600);
+            mockAmountSelector.Setup(d => d.SelectFrom("wrong creature amount")).Returns(666);
+
+            mockEncounterVerifier.Setup(v => v.EncounterIsValid(It.Is<IEnumerable<Creature>>(cc => cc.Any(c => c.Name == "other creature")), "filter")).Returns(true);
+            mockEncounterVerifier.Setup(v => v.EncounterIsValid(It.Is<IEnumerable<Creature>>(cc => cc.Any(c => c.Name == "wrong creature")), "filter")).Returns(false);
 
             var encounter = encounterGenerator.Generate(environment, level, temperature, timeOfDay, "filter");
             Assert.That(encounter, Is.Not.Null);
@@ -802,56 +863,36 @@ namespace EncounterGen.Tests.Unit.Generators
             var creature = encounter.Creatures.Single();
             Assert.That(creature.Name, Is.EqualTo("other creature"));
             Assert.That(creature.Quantity, Is.EqualTo(600));
+            Assert.That(creature.ChallengeRating, Is.EqualTo("other challenge rating"));
             Assert.That(encounter.Characters, Is.Empty);
-
-            mockFilterVerifier.Verify(v => v.EncounterIsValid(otherTypeAndAmount, 9876, "filter"), Times.AtLeastOnce);
-            mockFilterVerifier.Verify(v => v.EncounterIsValid(wrongTypeAndAmount, 13, "filter"), Times.AtLeastOnce);
         }
 
         [Test]
-        public void StopRegenerationDueToRandomFilterIncompatibility()
+        public void RegenerateEncounterIfEncounterActualCreaturesAndAmountsAreInvalid()
         {
-            mockFilterVerifier.Setup(v => v.FiltersAreValid(environment, level, temperature, timeOfDay, "filter", "other filter")).Returns(true);
-
-            var wrongTypeAndAmount = new Dictionary<string, string>();
-            wrongTypeAndAmount["wrong creature"] = "wrong creature amount";
-
-            mockFilterVerifier.Setup(v => v.EncounterIsValid(wrongTypeAndAmount, 9876, "filter", "other filter")).Returns(false);
-            mockCreatureCollectionSelector.Setup(s => s.SelectFrom(90210, environment, temperature, timeOfDay)).Returns(wrongTypeAndAmount);
-
-            mockRollSelector.Setup(s => s.SelectFrom("wrong creature amount", 9876)).Returns("wrong effective roll");
-            mockDice.Setup(d => d.Roll("other effective roll")).Returns(600);
-
-            Assert.That(() => encounterGenerator.Generate(environment, level, temperature, timeOfDay, "filter", "other filter"), Throws.Exception.With.Message.EqualTo("Failed to generate level 9266 creature for [filter,other filter] in temperature environment time of day after 30001 iterations"));
-        }
-
-        [Test]
-        public void SuccessfulRegenerationAtLimitIsStillValid()
-        {
-            mockFilterVerifier.Setup(v => v.FiltersAreValid(environment, level, temperature, timeOfDay, "filter", "other filter")).Returns(true);
-
             var wrongTypeAndAmount = new Dictionary<string, string>();
             wrongTypeAndAmount["wrong creature"] = "wrong creature amount";
 
             var otherTypeAndAmount = new Dictionary<string, string>();
             otherTypeAndAmount["other creature"] = "other creature amount";
 
-            var count = 0;
-            var sequence = mockCreatureCollectionSelector.Setup(s => s.SelectFrom(90210, environment, temperature, timeOfDay)).Returns(() => count++ == 10000 ? otherTypeAndAmount : wrongTypeAndAmount);
-            mockFilterVerifier.Setup(v => v.EncounterIsValid(wrongTypeAndAmount, 9876, "filter", "other filter")).Returns(false);
-            mockFilterVerifier.Setup(v => v.EncounterIsValid(otherTypeAndAmount, 9876, "filter", "other filter")).Returns(true);
+            mockCreatureCollectionSelector.SetupSequence(s => s.SelectRandomFrom(encounterLevel, environment, temperature, timeOfDay))
+                .Returns(wrongTypeAndAmount).Returns(otherTypeAndAmount).Returns(creaturesAndAmounts);
 
-            mockRollSelector.Setup(s => s.SelectFrom("wrong creature amount", 9876)).Returns("wrong effective roll");
-            mockRollSelector.Setup(s => s.SelectFrom("other creature amount", 9876)).Returns("other effective roll");
-            mockDice.Setup(d => d.Roll("other effective roll")).Returns(600);
-            mockDice.Setup(d => d.Roll("wrong effective roll")).Returns(666);
+            mockAmountSelector.Setup(d => d.SelectFrom("other creature amount")).Returns(600);
+            mockAmountSelector.Setup(d => d.SelectFrom("wrong creature amount")).Returns(666);
 
-            var encounter = encounterGenerator.Generate(environment, level, temperature, timeOfDay, "filter", "other filter");
+            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.ChallengeRatings, "other creature")).Returns(new[] { "other challenge rating" });
+
+            mockEncounterVerifier.SetupSequence(d => d.EncounterIsValid(It.IsAny<IEnumerable<Creature>>())).Returns(false).Returns(true);
+
+            var encounter = encounterGenerator.Generate(environment, level, temperature, timeOfDay);
             Assert.That(encounter, Is.Not.Null);
 
             var creature = encounter.Creatures.Single();
             Assert.That(creature.Name, Is.EqualTo("other creature"));
             Assert.That(creature.Quantity, Is.EqualTo(600));
+            Assert.That(creature.ChallengeRating, Is.EqualTo("other challenge rating"));
             Assert.That(encounter.Characters, Is.Empty);
         }
     }

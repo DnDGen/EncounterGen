@@ -29,12 +29,7 @@ namespace EncounterGen.Tests.Integration.Tables
             Assert.That(table.Keys.Count, Is.EqualTo(100), tableName);
         }
 
-        public virtual void Percentile(string content, int roll)
-        {
-            AssertPercentile(content, roll);
-        }
-
-        public virtual void Percentile(string content, int lower, int upper)
+        public virtual void Percentile(int lower, int upper, int content)
         {
             for (var roll = lower; roll <= upper; roll++)
                 AssertPercentile(content, roll);
@@ -52,12 +47,12 @@ namespace EncounterGen.Tests.Integration.Tables
             }
         }
 
-        private void AssertPercentile(string content, int roll)
+        private void AssertPercentile(int content, int roll)
         {
             Assert.That(table.Keys, Contains.Item(roll), tableName);
 
             var message = string.Format("Roll: {0}", roll);
-            Assert.That(table[roll], Is.EqualTo(content), message);
+            Assert.That(table[roll], Is.EqualTo(content.ToString()), message);
         }
     }
 }

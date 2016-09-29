@@ -5,7 +5,7 @@ using NUnit.Framework;
 namespace EncounterGen.Tests.Integration.IoC.Modules
 {
     [TestFixture]
-    public class MapperModuleTests : BootstrapTests
+    public class MapperModuleTests : IoCTests
     {
         [Test]
         public void PercentileMapperIsASingleton()

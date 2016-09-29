@@ -17,10 +17,10 @@ namespace EncounterGen.Domain.Selectors.Percentiles
             this.dice = dice;
         }
 
-        public string SelectFrom(string tableName)
+        public int SelectFrom(string tableName)
         {
             var table = percentileMapper.Map(tableName);
-            var roll = dice.Roll().Percentile();
+            var roll = dice.Roll().Percentile().AsSum();
 
             if (table.ContainsKey(roll) == false)
             {
@@ -28,13 +28,13 @@ namespace EncounterGen.Domain.Selectors.Percentiles
                 throw new ArgumentException(message);
             }
 
-            return table[roll];
+            return Convert.ToInt32(table[roll]);
         }
 
-        public IEnumerable<string> SelectAllFrom(string tableName)
+        public IEnumerable<int> SelectAllFrom(string tableName)
         {
             var table = percentileMapper.Map(tableName);
-            return table.Values.Distinct();
+            return table.Values.Distinct().Select(v => Convert.ToInt32(v));
         }
     }
 }

@@ -37,15 +37,15 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="CharacterGen, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\CharacterGen.7.0.0\lib\CharacterGen.dll</HintPath>
+      <HintPath>..\packages\CharacterGen.7.1.0\lib\CharacterGen.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Ninject, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
       <HintPath>..\packages\Ninject.3.2.2.0\lib\net45-full\Ninject.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="nunit.framework, Version=3.4.1.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
-      <HintPath>..\packages\NUnit.3.4.1\lib\net45\nunit.framework.dll</HintPath>
+    <Reference Include="nunit.framework, Version=3.5.0.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnit.3.5.0\lib\net45\nunit.framework.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -63,51 +63,25 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CollectionTests.cs" />
-    <Compile Include="Creatures\CelestialCreatureSubtypeChallengeRatingsTests.cs" />
-    <Compile Include="Creatures\CharmedCreatureSubtypeChallengeRatingsTests.cs" />
-    <Compile Include="Creatures\DominatedCreatureSubtypeChallengeRatingsTests.cs" />
+    <Compile Include="Creatures\CreatureGroups\CreatureGroupsTests.cs" />
+    <Compile Include="Creatures\CreatureGroups\CrossCreatureGroupsTests.cs" />
+    <Compile Include="Creatures\CreatureGroups\EnvironmentCreatureGroupsTests.cs" />
+    <Compile Include="Creatures\CreatureGroups\SpecificCreatureGroupsTests.cs" />
+    <Compile Include="Creatures\CreatureGroups\TemperatureCreatureGroupsTests.cs" />
+    <Compile Include="Creatures\CreatureGroups\TimeOfDayCreatureGroupsTests.cs" />
+    <Compile Include="Creatures\ChallengeRatingsTests.cs" />
+    <Compile Include="Creatures\EncounterGroups\CreatureEncounterGroupsTests.cs" />
     <Compile Include="Creatures\EncounterGroups\EncounterGroupsTests.cs" />
-    <Compile Include="Creatures\EncounterGroups\TimeOfDayEncounterGroupsTests.cs" />
     <Compile Include="Creatures\EncounterGroups\CrossEncounterGroupsTests.cs" />
-    <Compile Include="Creatures\EncounterGroups\GeneralEncounterGroupsTests.cs" />
-    <Compile Include="Creatures\EncounterGroups\LevelEncounterGroupsTests.cs" />
-    <Compile Include="Creatures\EncounterGroups\EnvironmentEncounterGroupsTests.cs" />
-    <Compile Include="Creatures\CreatureGroupsTests.cs" />
-    <Compile Include="Creatures\EncounterGroups\TemperatureEncounterGroupsTests.cs" />
-    <Compile Include="Creatures\EncounterGroups\SpecificEncounterGroupsTests.cs" />
-    <Compile Include="Creatures\FiendishCreatureSubtypeChallengeRatingsTests.cs" />
-    <Compile Include="Creatures\MephitSubtypeChallengeRatingsTests.cs" />
-    <Compile Include="Creatures\SkeletonSubtypeChallengeRatingsTests.cs" />
-    <Compile Include="Creatures\ZombieSubtypeChallengeRatingsTests.cs" />
+    <Compile Include="Creatures\CreatureGroups\GeneralCreatureGroupsTests.cs" />
     <Compile Include="EmbeddedResourceStreamLoaderTests.cs" />
-    <Compile Include="EffectiveLevels\Level17EncounterLevelTests.cs" />
-    <Compile Include="EffectiveLevels\Level18EncounterLevelTests.cs" />
-    <Compile Include="EffectiveLevels\Level19EncounterLevelTests.cs" />
-    <Compile Include="EffectiveLevels\Level20EncounterLevelTests.cs" />
-    <Compile Include="EffectiveLevels\Level16EncounterLevelTests.cs" />
-    <Compile Include="EffectiveLevels\Level15EncounterLevelTests.cs" />
-    <Compile Include="EffectiveLevels\Level2EncounterLevelTests.cs" />
-    <Compile Include="EffectiveLevels\Level4EncounterLevelTests.cs" />
-    <Compile Include="EffectiveLevels\Level5EncounterLevelTests.cs" />
-    <Compile Include="EffectiveLevels\Level6EncounterLevelTests.cs" />
-    <Compile Include="EffectiveLevels\Level9EncounterLevelTests.cs" />
-    <Compile Include="EffectiveLevels\Level8EncounterLevelTests.cs" />
-    <Compile Include="EffectiveLevels\Level7EncounterLevelTests.cs" />
-    <Compile Include="EffectiveLevels\Level10EncounterLevelTests.cs" />
-    <Compile Include="EffectiveLevels\Level11EncounterLevelTests.cs" />
-    <Compile Include="EffectiveLevels\Level13EncounterLevelTests.cs" />
-    <Compile Include="EffectiveLevels\Level12EncounterLevelTests.cs" />
-    <Compile Include="EffectiveLevels\Level14EncounterLevelTests.cs" />
-    <Compile Include="EffectiveLevels\Level1EncounterLevelTests.cs" />
-    <Compile Include="EffectiveLevels\Level3EncounterLevelTests.cs" />
+    <Compile Include="EncounterLevelModifiersTests.cs" />
     <Compile Include="PercentileTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Rolls\RollOrderTests.cs" />
     <Compile Include="TableAttribute.cs" />
     <Compile Include="TableTests.cs" />
     <Compile Include="Treasures\TreasureAdjustmentsTests.cs" />
     <Compile Include="Treasures\TreasureGroupsTests.cs" />
-    <Compile Include="TypeAndAmountPercentileTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\EncounterGen.Domain\EncounterGen.Domain.csproj">

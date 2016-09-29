@@ -14,6 +14,12 @@
     <item>2</item>
   </collection>
   <collection>
+    <entry>Aboleth Mage</entry>
+    <item>2</item>
+    <item>2</item>
+    <item>2</item>
+  </collection>
+  <collection>
     <entry>Achaierai</entry>
     <item>2</item>
     <item>2</item>
@@ -176,6 +182,12 @@
     <item>0</item>
   </collection>
   <collection>
+    <entry>Celestial badger</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
     <entry>Balor</entry>
     <item>1</item>
     <item>2</item>
@@ -225,6 +237,12 @@
   </collection>
   <collection>
     <entry>Dire bat</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Bat swarm</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
@@ -530,6 +548,42 @@
     <item>0</item>
   </collection>
   <collection>
+    <entry>Colossal fiendish monstrous centipede</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Gargantuan fiendish monstrous centipede</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Huge fiendish monstrous centipede</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Large fiendish monstrous centipede</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Medium fiendish monstrous centipede</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Centipede swarm</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
     <entry>Colossal monstrous scorpion</entry>
     <item>0.1</item>
     <item>0.5</item>
@@ -650,6 +704,12 @@
     <item>0</item>
   </collection>
   <collection>
+    <entry>Rat swarm</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
     <entry>Dire weasel</entry>
     <item>0</item>
     <item>0</item>
@@ -681,6 +741,12 @@
   </collection>
   <collection>
     <entry>Dog</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Celestial dog</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
@@ -1754,6 +1820,12 @@
     <item>1</item>
   </collection>
   <collection>
+    <entry>Frost giant Jarl</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
     <entry>Frost worm</entry>
     <item>0</item>
     <item>0</item>
@@ -1833,6 +1905,12 @@
   </collection>
   <collection>
     <entry>Giant fire beetle</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Celestial giant fire beetle</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
@@ -1970,6 +2048,12 @@
     <item>1</item>
   </collection>
   <collection>
+    <entry>Harpy archer</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
     <entry>Hawk</entry>
     <item>0</item>
     <item>0</item>
@@ -1983,6 +2067,12 @@
   </collection>
   <collection>
     <entry>Hell hound</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Hellwasp swarm</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
@@ -2027,6 +2117,12 @@
     <entry>Hound archon</entry>
     <item>0</item>
     <item>2</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Hound archon Hero</entry>
+    <item>1</item>
+    <item>1</item>
     <item>1</item>
   </collection>
   <collection>
@@ -2079,6 +2175,12 @@
   </collection>
   <collection>
     <entry>Skeleton</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Skum</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
@@ -2216,7 +2318,7 @@
     <item>1</item>
   </collection>
   <collection>
-    <entry>Livestock</entry>
+    <entry>Livestock (Noncombatant)</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
@@ -2226,6 +2328,12 @@
     <item>0.5</item>
     <item>0.5</item>
     <item>0.5</item>
+  </collection>
+  <collection>
+    <entry>Locust swarm</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
   </collection>
   <collection>
     <entry>Magmin</entry>
@@ -2294,6 +2402,12 @@
     <item>2</item>
   </collection>
   <collection>
+    <entry>Mind flayer Sorcerer</entry>
+    <item>2</item>
+    <item>2</item>
+    <item>2</item>
+  </collection>
+  <collection>
     <entry>Minotaur</entry>
     <item>1</item>
     <item>1</item>
@@ -2312,6 +2426,12 @@
     <item>0</item>
   </collection>
   <collection>
+    <entry>Celestial monkey</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
     <entry>Mule</entry>
     <item>0</item>
     <item>0</item>
@@ -2319,6 +2439,12 @@
   </collection>
   <collection>
     <entry>Mummy</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Mummy Lord</entry>
     <item>1</item>
     <item>1</item>
     <item>1</item>
@@ -2384,10 +2510,10 @@
     <item>1</item>
   </collection>
   <collection>
-    <entry>Ochre jelly</entry>
+    <entry>Nixie</entry>
     <item>0</item>
-    <item>0</item>
-    <item>0</item>
+    <item>0.5</item>
+    <item>0.5</item>
   </collection>
   <collection>
     <entry>Nymph</entry>
@@ -2396,7 +2522,19 @@
     <item>1</item>
   </collection>
   <collection>
+    <entry>Ochre jelly</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
     <entry>Ogre</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Ogre Barbarian</entry>
     <item>1</item>
     <item>1</item>
     <item>1</item>
@@ -2432,13 +2570,19 @@
     <item>0</item>
   </collection>
   <collection>
-    <entry>Owlbear</entry>
+    <entry>Giant owl</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
   </collection>
   <collection>
-    <entry>Giant owl</entry>
+    <entry>Celestial owl</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Owlbear</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
@@ -2540,7 +2684,19 @@
     <item>0</item>
   </collection>
   <collection>
+    <entry>Fiendish dire rat</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
     <entry>Raven</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Fiendish raven</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
@@ -2684,6 +2840,12 @@
     <item>0</item>
   </collection>
   <collection>
+    <entry>Spider swarm</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
     <entry>Giant stag beetle</entry>
     <item>0</item>
     <item>0</item>
@@ -2810,6 +2972,12 @@
     <item>0</item>
   </collection>
   <collection>
+    <entry>Titan</entry>
+    <item>2</item>
+    <item>2</item>
+    <item>2</item>
+  </collection>
+  <collection>
     <entry>Toad</entry>
     <item>0</item>
     <item>0</item>
@@ -2877,6 +3045,12 @@
   </collection>
   <collection>
     <entry>Troll</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Troll Hunter</entry>
     <item>1</item>
     <item>1</item>
     <item>1</item>
@@ -2966,6 +3140,12 @@
     <item>1</item>
   </collection>
   <collection>
+    <entry>Hill giant dire wereboar</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
     <entry>Wererat</entry>
     <item>1</item>
     <item>1</item>
@@ -2979,6 +3159,12 @@
   </collection>
   <collection>
     <entry>Werewolf</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Werewolf Lord</entry>
     <item>1</item>
     <item>1</item>
     <item>1</item>

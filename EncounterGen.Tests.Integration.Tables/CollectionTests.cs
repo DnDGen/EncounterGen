@@ -26,14 +26,15 @@ namespace EncounterGen.Tests.Integration.Tables
         protected IEnumerable<string> GetCollection(string name)
         {
             if (table.ContainsKey(name) == false)
-                throw new ArgumentException($"Table {tableName} does not contain entry {name}");
+                throw new ArgumentException($"Table {tableName} does not contain {name}");
 
             return table[name];
         }
 
         protected IEnumerable<string> GetAllCollections()
         {
-            return table.Values.SelectMany(vv => vv);
+            //INFO: Doing Except(table.Keys) removes subgroups from the list
+            return table.Values.SelectMany(v => v).Except(table.Keys);
         }
 
         protected void AssertEntriesAreComplete(IEnumerable<string> entries)
@@ -45,33 +46,22 @@ namespace EncounterGen.Tests.Integration.Tables
 
         protected void AssertWholeCollection(IEnumerable<string> expected, IEnumerable<string> actual)
         {
-            if (expected.Count() < 10)
-            {
-                Assert.That(actual, Is.EquivalentTo(expected));
-            }
-            else
-            {
-                var missing = expected.Except(actual);
-                Assert.That(missing, Is.Empty, $"{missing.Count()} missing");
+            if (actual.Count() == 1 && expected.Count() == 1)
+                Assert.That(actual.Single(), Is.EqualTo(expected.Single()));
 
-                var extra = actual.Except(expected);
-                Assert.That(extra, Is.Empty, $"{extra.Count()} extra");
-            }
+            var missing = expected.Except(actual);
+            Assert.That(missing, Is.Empty, $"{missing.Count()} missing");
+
+            var extra = actual.Except(expected);
+            Assert.That(extra, Is.Empty, $"{extra.Count()} extra");
 
             Assert.That(actual.Count(), Is.EqualTo(expected.Count()));
         }
 
         protected void AssertContainedCollection(IEnumerable<string> contained, IEnumerable<string> container)
         {
-            if (contained.Count() < 10)
-            {
-                Assert.That(contained, Is.SubsetOf(container));
-            }
-            else
-            {
-                var extra = contained.Except(container);
-                Assert.That(extra, Is.Empty, $"{extra.Count()} extra in contained collection that are not in container");
-            }
+            var extra = contained.Except(container);
+            Assert.That(extra, Is.Empty, $"{extra.Count()} extra in contained collection that are not in container");
         }
 
         public virtual void Collection(string entry, params string[] items)

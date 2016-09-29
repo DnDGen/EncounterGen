@@ -19,7 +19,7 @@ namespace EncounterGen.Tests.Unit.Common
         [TestCase(EnvironmentConstants.Temperatures.Warm, "Warm")]
         [TestCase(EnvironmentConstants.TimesOfDay.Day, "Day")]
         [TestCase(EnvironmentConstants.TimesOfDay.Night, "Night")]
-        public void Constant(string constant, string value)
+        public void EnvironmentConstant(string constant, string value)
         {
             Assert.That(constant, Is.EqualTo(value));
         }

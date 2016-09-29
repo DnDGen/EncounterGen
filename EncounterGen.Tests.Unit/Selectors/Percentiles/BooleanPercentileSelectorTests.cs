@@ -21,7 +21,7 @@ namespace EncounterGen.Tests.Unit.Selectors.Percentiles
         [Test]
         public void SaysTrueIfRollIsLessThanTheshold()
         {
-            mockDice.Setup(d => d.Roll(1).IndividualRolls(100)).Returns(new[] { 49 });
+            mockDice.Setup(d => d.Roll(1).d(100).AsSum()).Returns(49);
 
             var result = booleanPercentileSelector.SelectFrom(.5);
             Assert.That(result, Is.True);
@@ -30,7 +30,7 @@ namespace EncounterGen.Tests.Unit.Selectors.Percentiles
         [Test]
         public void SaysTrueIfRollIsEqualToTheshold()
         {
-            mockDice.Setup(d => d.Roll(1).IndividualRolls(100)).Returns(new[] { 50 });
+            mockDice.Setup(d => d.Roll(1).d(100).AsSum()).Returns(50);
 
             var result = booleanPercentileSelector.SelectFrom(.5);
             Assert.That(result, Is.True);
@@ -39,7 +39,7 @@ namespace EncounterGen.Tests.Unit.Selectors.Percentiles
         [Test]
         public void SaysFalseIfRollIsGreaterThanTheshold()
         {
-            mockDice.Setup(d => d.Roll(1).IndividualRolls(100)).Returns(new[] { 51 });
+            mockDice.Setup(d => d.Roll(1).d(100).AsSum()).Returns(51);
 
             var result = booleanPercentileSelector.SelectFrom(.5);
             Assert.That(result, Is.False);

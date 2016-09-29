@@ -7,6 +7,12 @@
     <item>Light crossbow[Weapon]#Medium#</item>
   </collection>
   <collection>
+    <entry>Aboleth</entry>
+  </collection>
+  <collection>
+    <entry>Aboleth Mage</entry>
+  </collection>
+  <collection>
     <entry>Achaierai</entry>
   </collection>
   <collection>
@@ -145,6 +151,9 @@
     <entry>Dire badger</entry>
   </collection>
   <collection>
+    <entry>Celestial badger</entry>
+  </collection>
+  <collection>
     <entry>Balor</entry>
     <item>Longsword[Weapon](1){Vorpal}</item>
     <item>Whip[Weapon](1){Flaming}</item>
@@ -166,6 +175,9 @@
   </collection>
   <collection>
     <entry>Dire bat</entry>
+  </collection>
+  <collection>
+    <entry>Bat swarm</entry>
   </collection>
   <collection>
     <entry>Bearded Devil</entry>
@@ -271,6 +283,24 @@
     <entry>Tiny monstrous centipede</entry>
   </collection>
   <collection>
+    <entry>Colossal fiendish monstrous centipede</entry>
+  </collection>
+  <collection>
+    <entry>Gargantuan fiendish monstrous centipede</entry>
+  </collection>
+  <collection>
+    <entry>Huge fiendish monstrous centipede</entry>
+  </collection>
+  <collection>
+    <entry>Large fiendish monstrous centipede</entry>
+  </collection>
+  <collection>
+    <entry>Medium fiendish monstrous centipede</entry>
+  </collection>
+  <collection>
+    <entry>Centipede swarm</entry>
+  </collection>
+  <collection>
     <entry>Chaos beast</entry>
   </collection>
   <collection>
@@ -350,6 +380,9 @@
   </collection>
   <collection>
     <entry>Dog</entry>
+  </collection>
+  <collection>
+    <entry>Celestial dog</entry>
   </collection>
   <collection>
     <entry>Donkey</entry>
@@ -718,6 +751,9 @@
     <entry>Great wyrm silver dragon</entry>
   </collection>
   <collection>
+    <entry>Dragon turtle</entry>
+  </collection>
+  <collection>
     <entry>Dragonne</entry>
   </collection>
   <collection>
@@ -865,6 +901,9 @@
     <entry>Giant fire beetle</entry>
   </collection>
   <collection>
+    <entry>Celestial giant fire beetle</entry>
+  </collection>
+  <collection>
     <entry>Formian queen</entry>
   </collection>
   <collection>
@@ -917,10 +956,21 @@
   <collection>
     <entry>Frost giant</entry>
     <item>Greataxe[Weapon]#Large#</item>
+    <item>Chain shirt[Armor]#Large#</item>
+  </collection>
+  <collection>
+    <entry>Frost giant Jarl</entry>
+    <item>Greataxe[Weapon](2){Frost}</item>
+    <item>Full plate[Armor](2)</item>
+    <item>Cloak of charisma[WondrousItem](2)</item>
+    <item>Ring of Minor Fire resistance[Ring]@True@</item>
+    <item>Vial of bloodroot poison[AlchemicalItem]</item>
+    <item>Vial of bloodroot poison[AlchemicalItem]</item>
   </collection>
   <collection>
     <entry>Hill giant</entry>
     <item>Greatclub[Weapon]#Large#</item>
+    <item>Hide armor[Armor]#Large#</item>
   </collection>
   <collection>
     <entry>Stone giant</entry>
@@ -1014,6 +1064,11 @@
     <item>Club[Weapon]#Medium#</item>
   </collection>
   <collection>
+    <entry>Harpy archer</entry>
+    <item>Studded leather armor[Armor](3)</item>
+    <item>Composite longbow[Weapon]#+1 Strength bonus#(1){Frost}</item>
+  </collection>
+  <collection>
     <entry>Hawk</entry>
   </collection>
   <collection>
@@ -1021,6 +1076,9 @@
   </collection>
   <collection>
     <entry>Hellcat</entry>
+  </collection>
+  <collection>
+    <entry>Hellwasp swarm</entry>
   </collection>
   <collection>
     <entry>Hezrou</entry>
@@ -1054,6 +1112,11 @@
   <collection>
     <entry>Hound archon</entry>
     <item>Greatsword[Weapon]#Medium#</item>
+  </collection>
+  <collection>
+    <entry>Hound archon Hero</entry>
+    <item>Greatsword[Weapon]#Cold iron#(2)</item>
+    <item>Full plate[Armor](3)</item>
   </collection>
   <collection>
     <entry>Howler</entry>
@@ -1124,7 +1187,7 @@
     <entry>Dire lion</entry>
   </collection>
   <collection>
-    <entry>Livestock</entry>
+    <entry>Livestock (Noncombatant)</entry>
   </collection>
   <collection>
     <entry>Lizard</entry>
@@ -1133,6 +1196,9 @@
     <entry>Lizardfolk</entry>
     <item>Club[Weapon]#Medium#</item>
     <item>Javelin[Weapon]#Medium#</item>
+  </collection>
+  <collection>
+    <entry>Locust swarm</entry>
   </collection>
   <collection>
     <entry>Magmin</entry>
@@ -1170,6 +1236,12 @@
     <entry>Mind flayer</entry>
   </collection>
   <collection>
+    <entry>Mind flayer Sorcerer</entry>
+    <item>Chain shirt[Armor]#Mithral#(1)</item>
+    <item>Cloak of charisma[WondrousItem](2)</item>
+    <item>Ring of Protection[Ring](2)</item>
+  </collection>
+  <collection>
     <entry>Minotaur</entry>
     <item>Greataxe[Weapon]#Large#</item>
   </collection>
@@ -1183,10 +1255,20 @@
     <entry>Monkey</entry>
   </collection>
   <collection>
+    <entry>Celestial monkey</entry>
+  </collection>
+  <collection>
     <entry>Mule</entry>
   </collection>
   <collection>
     <entry>Mummy</entry>
+  </collection>
+  <collection>
+    <entry>Mummy Lord</entry>
+    <item>Half-plate[Armor](2)</item>
+    <item>Cloak of resistance[WondrousItem](2)</item>
+    <item>Ring of Minor Fire resistance[Ring]@True@</item>
+    <item>Brooch of shielding[WondrousItem]@True@</item>
   </collection>
   <collection>
     <entry>Dark naga</entry>
@@ -1226,6 +1308,11 @@
     <entry>NPC</entry>
   </collection>
   <collection>
+    <entry>Nixie</entry>
+    <item>Short sword[Weapon]#Small#</item>
+    <item>Light crossbow[Weapon]#Small#</item>
+  </collection>
+  <collection>
     <entry>Nymph</entry>
     <item>Dagger[Weapon]#Medium#</item>
   </collection>
@@ -1233,6 +1320,13 @@
     <entry>Ogre</entry>
     <item>Greatclub[Weapon]#Large#</item>
     <item>Javelin[Weapon]#Large#</item>
+  </collection>
+  <collection>
+    <entry>Ogre Barbarian</entry>
+    <item>Greatclub[Weapon](1)</item>
+    <item>Javelin[Weapon]#Large#</item>
+    <item>Hide armor[Armor](1)</item>
+    <item>Ring of Protection[Ring](1)</item>
   </collection>
   <collection>
     <entry>Ogre mage</entry>
@@ -1261,6 +1355,9 @@
   </collection>
   <collection>
     <entry>Giant owl</entry>
+  </collection>
+  <collection>
+    <entry>Celestial owl</entry>
   </collection>
   <collection>
     <entry>Owlbear</entry>
@@ -1323,7 +1420,16 @@
     <entry>Dire rat</entry>
   </collection>
   <collection>
+    <entry>Fiendish dire rat</entry>
+  </collection>
+  <collection>
+    <entry>Rat swarm</entry>
+  </collection>
+  <collection>
     <entry>Raven</entry>
+  </collection>
+  <collection>
+    <entry>Fiendish raven</entry>
   </collection>
   <collection>
     <entry>Ravid</entry>
@@ -1416,6 +1522,9 @@
     <entry>Skeleton</entry>
   </collection>
   <collection>
+    <entry>Skum</entry>
+  </collection>
+  <collection>
     <entry>Blue slaad</entry>
   </collection>
   <collection>
@@ -1481,6 +1590,9 @@
     <entry>Tiny monstrous spider</entry>
   </collection>
   <collection>
+    <entry>Spider swarm</entry>
+  </collection>
+  <collection>
     <entry>Spider eater</entry>
   </collection>
   <collection>
@@ -1518,6 +1630,11 @@
     <entry>Dire tiger</entry>
   </collection>
   <collection>
+    <entry>Titan</entry>
+    <item>Warhammer[Weapon]#Gargantuan,Adamantine#(3)</item>
+    <item>Half-plate[Armor](4)</item>
+  </collection>
+  <collection>
     <entry>Toad</entry>
   </collection>
   <collection>
@@ -1533,6 +1650,11 @@
   </collection>
   <collection>
     <entry>Troll</entry>
+  </collection>
+  <collection>
+    <entry>Troll Hunter</entry>
+    <item>Battleaxe[Weapon](1)</item>
+    <item>Javelin[Weapon]#Medium#</item>
   </collection>
   <collection>
     <entry>Trumpet archon</entry>
@@ -1586,6 +1708,13 @@
     <entry>Wereboar</entry>
     <item>Battleaxe[Weapon]#Medium#</item>
     <item>Javelin[Weapon]#Medium#</item>
+    <item>Scale mail[Armor]#Medium#</item>
+    <item>Heavy wooden shield[Armor]#Medium#</item>
+  </collection>
+  <collection>
+    <entry>Hill giant dire wereboar</entry>
+    <item>Greatclub[Weapon]#Large#</item>
+    <item>Hide armor[Armor]#Large#</item>
   </collection>
   <collection>
     <entry>Wererat</entry>
@@ -1601,6 +1730,11 @@
     <entry>Werewolf</entry>
     <item>Longsword[Weapon]#Medium#</item>
     <item>Light crossbow[Weapon]#Medium#</item>
+  </collection>
+  <collection>
+    <entry>Werewolf Lord</entry>
+    <item>Bastard sword[Weapon](2)</item>
+    <item>Composite longbow[Weapon]#Medium,+4 Strength bonus,Masterwork#</item>
   </collection>
   <collection>
     <entry>Wight</entry>

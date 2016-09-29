@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<collections>
+  <collection>
+    <entry>-7</entry>
+    <item>Very Easy</item>
+  </collection>
+  <collection>
+    <entry>-6</entry>
+    <item>Very Easy</item>
+  </collection>
+  <collection>
+    <entry>-5</entry>
+    <item>Very Easy</item>
+  </collection>
+  <collection>
+    <entry>-4</entry>
+    <item>Easy</item>
+  </collection>
+  <collection>
+    <entry>-3</entry>
+    <item>Easy</item>
+  </collection>
+  <collection>
+    <entry>-2</entry>
+    <item>Easy</item>
+  </collection>
+  <collection>
+    <entry>-1</entry>
+    <item>Easy</item>
+  </collection>
+  <collection>
+    <entry>0</entry>
+    <item>Challenging</item>
+  </collection>
+  <collection>
+    <entry>1</entry>
+    <item>Very Difficult</item>
+  </collection>
+  <collection>
+    <entry>2</entry>
+    <item>Very Difficult</item>
+  </collection>
+  <collection>
+    <entry>3</entry>
+    <item>Very Difficult</item>
+  </collection>
+  <collection>
+    <entry>4</entry>
+    <item>Very Difficult</item>
+  </collection>
+  <collection>
+    <entry>5</entry>
+    <item>Overpowering</item>
+  </collection>
+  <collection>
+    <entry>6</entry>
+    <item>Overpowering</item>
+  </collection>
+</collections>

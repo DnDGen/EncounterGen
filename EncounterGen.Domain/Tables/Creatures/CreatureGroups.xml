@@ -4,12 +4,7 @@
   <collection>
     <entry>Requires Subtype</entry>
     <item>Mephit</item>
-    <item>Celestial creature</item>
-    <item>Fiendish creature</item>
-    <item>Skeleton</item>
-    <item>Zombie</item>
     <item>Dominated creature</item>
-    <item>Charmed creature</item>
   </collection>
   <collection>
     <entry>Undead NPC</entry>
@@ -19,37 +14,112 @@
   </collection>
   <collection>
     <entry>Undead</entry>
-    <item>Lich</item>
-    <item>Ghost</item>
-    <item>Vampire</item>
-    <item>Zombie</item>
-    <item>Skeleton</item>
-    <item>Ghoul</item>
-    <item>Ghast</item>
-    <item>Mummy</item>
-    <item>Bodak</item>
-    <item>Vampire spawn</item>
     <item>Allip</item>
-    <item>Mohrg</item>
+    <item>Bodak</item>
     <item>Devourer</item>
+    <item>Ghast</item>
+    <item>Ghost</item>
+    <item>Ghost[1]</item>
+    <item>Ghost[2]</item>
+    <item>Ghost[3]</item>
+    <item>Ghost[4]</item>
+    <item>Ghost[5]</item>
+    <item>Ghost[6]</item>
+    <item>Ghost[7]</item>
+    <item>Ghost[8]</item>
+    <item>Ghost[9]</item>
+    <item>Ghost[10]</item>
+    <item>Ghost[11]</item>
+    <item>Ghost[12]</item>
+    <item>Ghost[13]</item>
+    <item>Ghost[14]</item>
+    <item>Ghost[15]</item>
+    <item>Ghost[16]</item>
+    <item>Ghost[17]</item>
+    <item>Ghost[18]</item>
+    <item>Ghost[19]</item>
+    <item>Ghost[20]</item>
+    <item>Ghoul</item>
+    <item>Lich</item>
+    <item>Lich[1]</item>
+    <item>Lich[2]</item>
+    <item>Lich[3]</item>
+    <item>Lich[4]</item>
+    <item>Lich[5]</item>
+    <item>Lich[6]</item>
+    <item>Lich[7]</item>
+    <item>Lich[8]</item>
+    <item>Lich[9]</item>
+    <item>Lich[10]</item>
+    <item>Lich[11]</item>
+    <item>Lich[12]</item>
+    <item>Lich[13]</item>
+    <item>Lich[14]</item>
+    <item>Lich[15]</item>
+    <item>Lich[16]</item>
+    <item>Lich[17]</item>
+    <item>Lich[18]</item>
+    <item>Lich[19]</item>
+    <item>Lich[20]</item>
+    <item>Mummy</item>
+    <item>Mummy Lord</item>
+    <item>Mohrg</item>
+    <item>Nightshade</item>
     <item>Nightcrawler</item>
     <item>Nightwalker</item>
     <item>Nightwing</item>
     <item>Shadow</item>
     <item>Greater shadow</item>
-    <item>Skeleton (Hill giant)</item>
+    <item>Skeleton</item>
     <item>Skeleton (Human)</item>
-    <item>Skeleton (Ogre)</item>
-    <item>Zombie (Hill giant)</item>
-    <item>Zombie (Human)</item>
+    <item>Skeleton (Wolf)</item>
+    <item>Skeleton (Owlbear)</item>
+    <item>Skeleton (Troll)</item>
+    <item>Skeleton (Chimera)</item>
+    <item>Skeleton (Ettin)</item>
+    <item>Skeleton (Megaraptor)</item>
+    <item>Skeleton (Cloud giant)</item>
+    <item>Skeleton (Young adult red dragon)</item>
     <item>Spectre</item>
+    <item>Vampire</item>
+    <item>Vampire[1]</item>
+    <item>Vampire[2]</item>
+    <item>Vampire[3]</item>
+    <item>Vampire[4]</item>
+    <item>Vampire[5]</item>
+    <item>Vampire[6]</item>
+    <item>Vampire[7]</item>
+    <item>Vampire[8]</item>
+    <item>Vampire[9]</item>
+    <item>Vampire[10]</item>
+    <item>Vampire[11]</item>
+    <item>Vampire[12]</item>
+    <item>Vampire[13]</item>
+    <item>Vampire[14]</item>
+    <item>Vampire[15]</item>
+    <item>Vampire[16]</item>
+    <item>Vampire[17]</item>
+    <item>Vampire[18]</item>
+    <item>Vampire[19]</item>
+    <item>Vampire[20]</item>
+    <item>Vampire spawn</item>
     <item>Wight</item>
     <item>Wraith</item>
     <item>Dread wraith</item>
+    <item>Zombie</item>
+    <item>Zombie (Kobold)</item>
+    <item>Zombie (Human)</item>
+    <item>Zombie (Troglodyte)</item>
+    <item>Zombie (Bugbear)</item>
+    <item>Zombie (Ogre)</item>
+    <item>Zombie (Minotaur)</item>
+    <item>Zombie (Wyvern)</item>
+    <item>Zombie (Gray render)</item>
   </collection>
   <collection>
     <entry>Aberration</entry>
     <item>Aboleth</item>
+    <item>Aboleth Mage</item>
     <item>Athach</item>
     <item>Choker</item>
     <item>Chuul</item>
@@ -58,6 +128,7 @@
     <item>Destrachan</item>
     <item>Drider</item>
     <item>Mind flayer</item>
+    <item>Mind flayer Sorcerer</item>
     <item>Umber hulk</item>
     <item>Truly horrid umber hulk</item>
     <item>Beholder</item>
@@ -67,6 +138,7 @@
     <item>Gibbering mouther</item>
     <item>Grick</item>
     <item>Mimic</item>
+    <item>Naga</item>
     <item>Dark naga</item>
     <item>Guardian naga</item>
     <item>Spirit naga</item>
@@ -74,6 +146,7 @@
     <item>Otyugh</item>
     <item>Phasm</item>
     <item>Rust monster</item>
+    <item>Skum</item>
     <item>Will-O'-Wisp</item>
   </collection>
   <collection>
@@ -88,6 +161,7 @@
     <item>Dire badger</item>
     <item>Bat</item>
     <item>Dire bat</item>
+    <item>Bat swarm</item>
     <item>Black bear</item>
     <item>Brown bear</item>
     <item>Polar bear</item>
@@ -98,6 +172,7 @@
     <item>Dire lion</item>
     <item>Rat</item>
     <item>Dire rat</item>
+    <item>Rat swarm</item>
     <item>Tiger</item>
     <item>Dire tiger</item>
     <item>Weasel</item>
@@ -110,6 +185,7 @@
     <item>Cat</item>
     <item>Baboon</item>
     <item>Dog</item>
+    <item>Dog (Riding)</item>
     <item>Bison</item>
     <item>Camel</item>
     <item>Cheetah</item>
@@ -119,6 +195,7 @@
     <item>Eagle</item>
     <item>Elephant</item>
     <item>Hawk</item>
+    <item>Horse</item>
     <item>Heavy horse</item>
     <item>Light horse</item>
     <item>Heavy warhorse</item>
@@ -136,18 +213,21 @@
     <item>Rhinoceras</item>
     <item>Constrictor snake</item>
     <item>Giant constrictor snake</item>
+    <item>Viper snake</item>
     <item>Huge viper snake</item>
     <item>Large viper snake</item>
     <item>Medium viper snake</item>
     <item>Small viper snake</item>
     <item>Tiny viper snake</item>
     <item>Toad</item>
+    <item>Livestock (Noncombatant)</item>
     <item>Livestock</item>
   </collection>
   <collection>
     <entry>Plant</entry>
     <item>Assassin vine</item>
     <item>Shrieker</item>
+    <item>Fungus</item>
     <item>Violet fungus</item>
     <item>Phantom fungus</item>
     <item>Shambling mound</item>
@@ -157,61 +237,118 @@
   <collection>
     <entry>Humanoid</entry>
     <item>Aasimar warrior</item>
-    <item>Tiefling warrior</item>
+    <item>Adept</item>
+    <item>Adept (Doctor)</item>
+    <item>Adept (Fortuneteller)</item>
+    <item>Adept (Missionary)</item>
+    <item>Adept (Street performer)</item>
+    <item>Aristocrat</item>
+    <item>Aristocrat (Businessman)</item>
+    <item>Aristocrat (Gentry)</item>
+    <item>Aristocrat (Politician)</item>
+    <item>Barbarian</item>
+    <item>Barbarian (Combat instructor)</item>
+    <item>Barbarian (Student)</item>
+    <item>Barbarian (War hero)</item>
+    <item>Bard</item>
+    <item>Bard (Famous entertainer)</item>
+    <item>Bard (Leader)</item>
+    <item>Bard (Street performer)</item>
     <item>Bugbear</item>
     <item>Character</item>
-    <item>NPC</item>
-    <item>NPC (Traveler)</item>
-    <item>Dwarf warrior</item>
-    <item>Duergar warrior</item>
-    <item>Elf warrior</item>
-    <item>Drow warrior</item>
-    <item>Halfling warrior</item>
-    <item>Gnome warrior</item>
-    <item>Svirfneblin warrior</item>
-    <item>Gnoll</item>
-    <item>Goblin</item>
-    <item>Hobgoblin</item>
-    <item>Kobold</item>
-    <item>Lizardfolk</item>
-    <item>Orc</item>
-    <item>Troglodyte</item>
-    <item>Warrior (Bandit)</item>
-    <item>Warrior (Bandit Leader)</item>
-    <item>Warrior (Captain)</item>
-    <item>Warrior (Guard)</item>
-    <item>Warrior (Hunter)</item>
-    <item>Warrior (Patrol)</item>
+    <item>Character (Retired adventurer)</item>
+    <item>Character (Sellsword)</item>
+    <item>Cleric</item>
+    <item>Cleric (Doctor)</item>
+    <item>Cleric (Famous priest)</item>
+    <item>Cleric (Leader)</item>
+    <item>Cleric (War hero)</item>
+    <item>Commoner</item>
+    <item>Commoner (Beggar)</item>
+    <item>Commoner (Construction worker)</item>
     <item>Commoner (Farmer)</item>
     <item>Commoner (Herder)</item>
     <item>Commoner (Hunter)</item>
     <item>Commoner (Merchant)</item>
     <item>Commoner (Minstrel)</item>
     <item>Commoner (Pilgrim)</item>
-    <item>Expert (Merchant)</item>
-    <item>Adept</item>
-    <item>Bard</item>
-    <item>Barbarian</item>
-    <item>Cleric</item>
+    <item>Commoner (Protestor)</item>
+    <item>Commoner (Servant)</item>
+    <item>Drow warrior</item>
     <item>Druid</item>
-    <item>Aristocrat</item>
-    <item>Monk</item>
-    <item>Paladin</item>
-    <item>Ranger</item>
-    <item>Rogue</item>
-    <item>Sorcerer</item>
-    <item>Wizard</item>
+    <item>Druid (Animal trainer)</item>
+    <item>Druid (Doctor)</item>
+    <item>Druid (Famous priest)</item>
+    <item>Duergar warrior</item>
+    <item>Dwarf warrior</item>
+    <item>Elf warrior</item>
     <item>Expert</item>
-    <item>Commoner</item>
-    <item>Warrior</item>
+    <item>Expert (Adviser)</item>
+    <item>Expert (Architect)</item>
+    <item>Expert (Artisan)</item>
+    <item>Expert (Merchant)</item>
     <item>Expert (Minstrel)</item>
     <item>Fighter</item>
+    <item>Fighter (Captain)</item>
+    <item>Fighter (Combat instructor)</item>
+    <item>Fighter (Hitman)</item>
+    <item>Fighter (Leader)</item>
+    <item>Fighter (Student)</item>
+    <item>Fighter (War hero)</item>
+    <item>Gnoll</item>
+    <item>Gnome warrior</item>
+    <item>Goblin</item>
+    <item>Halfling warrior</item>
+    <item>Hobgoblin</item>
+    <item>Kobold</item>
+    <item>Lizardfolk</item>
+    <item>Monk</item>
+    <item>Monk (Combat instructor)</item>
+    <item>Monk (Scholar)</item>
+    <item>Monk (Student)</item>
+    <item>Monk (War hero)</item>
+    <item>NPC</item>
+    <item>NPC (Traveler)</item>
+    <item>Orc</item>
+    <item>Paladin</item>
+    <item>Paladin (Combat instructor)</item>
+    <item>Paladin (Crusader)</item>
+    <item>Paladin (Student)</item>
+    <item>Paladin (War hero)</item>
+    <item>Ranger</item>
+    <item>Ranger (Animal trainer)</item>
+    <item>Ranger (Combat instructor)</item>
+    <item>Ranger (Hitman)</item>
+    <item>Ranger (Student)</item>
+    <item>Ranger (War hero)</item>
+    <item>Rogue</item>
+    <item>Rogue (Hitman)</item>
+    <item>Rogue (Pickpocket)</item>
+    <item>Rogue (Street performer)</item>
+    <item>Sorcerer</item>
+    <item>Sorcerer (Famous entertainer)</item>
+    <item>Sorcerer (Street performer)</item>
+    <item>Svirfneblin warrior</item>
+    <item>Tiefling warrior</item>
+    <item>Troglodyte</item>
+    <item>Warrior</item>
+    <item>Warrior (Bandit)</item>
+    <item>Warrior (Leader)</item>
+    <item>Warrior (Captain)</item>
+    <item>Warrior (Guard)</item>
+    <item>Warrior (Hunter)</item>
+    <item>Warrior (Patrol)</item>
+    <item>Warrior (Student)</item>
+    <item>Wizard</item>
+    <item>Wizard (Famous researcher)</item>
+    <item>Wizard (Scholar)</item>
   </collection>
   <collection>
     <entry>Monstrous Humanoid</entry>
     <item>Centaur</item>
     <item>Derro</item>
     <item>Doppelganger</item>
+    <item>Yuan-ti</item>
     <item>Yuan-ti Abomination</item>
     <item>Yuan-ti Halfblood</item>
     <item>Yuan-ti Pureblood</item>
@@ -221,26 +358,26 @@
     <item>Green hag</item>
     <item>Sea hag</item>
     <item>Harpy</item>
+    <item>Harpy archer</item>
     <item>Werebear</item>
     <item>Wereboar</item>
     <item>Wererat</item>
     <item>Weretiger</item>
     <item>Werewolf</item>
+    <item>Werewolf Lord</item>
     <item>Medusa</item>
     <item>Minotaur</item>
     <item>Scorpionfolk</item>
   </collection>
   <collection>
     <entry>Vermin</entry>
+    <item>Giant ant</item>
     <item>Giant ant soldier</item>
     <item>Giant ant worker</item>
     <item>Giant ant queen</item>
     <item>Giant bee</item>
     <item>Giant bombardier beetle</item>
-    <item>Giant fire beetle</item>
-    <item>Giant stag beetle</item>
-    <item>Giant praying mantis</item>
-    <item>Giant wasp</item>
+    <item>Monstrous centipede</item>
     <item>Colossal monstrous centipede</item>
     <item>Gargantuan monstrous centipede</item>
     <item>Huge monstrous centipede</item>
@@ -248,6 +385,12 @@
     <item>Medium monstrous centipede</item>
     <item>Small monstrous centipede</item>
     <item>Tiny monstrous centipede</item>
+    <item>Centipede swarm</item>
+    <item>Giant fire beetle</item>
+    <item>Locust</item>
+    <item>Locust swarm</item>
+    <item>Giant praying mantis</item>
+    <item>Monstrous scorpion</item>
     <item>Colossal monstrous scorpion</item>
     <item>Gargantuan monstrous scorpion</item>
     <item>Huge monstrous scorpion</item>
@@ -255,6 +398,7 @@
     <item>Medium monstrous scorpion</item>
     <item>Small monstrous scorpion</item>
     <item>Tiny monstrous scorpion</item>
+    <item>Monstrous spider</item>
     <item>Colossal monstrous spider</item>
     <item>Gargantuan monstrous spider</item>
     <item>Huge monstrous spider</item>
@@ -262,6 +406,9 @@
     <item>Medium monstrous spider</item>
     <item>Small monstrous spider</item>
     <item>Tiny monstrous spider</item>
+    <item>Spider swarm</item>
+    <item>Giant stag beetle</item>
+    <item>Giant wasp</item>
   </collection>
   <collection>
     <entry>Outsider</entry>
@@ -270,6 +417,7 @@
     <item>Titan</item>
     <item>Marut</item>
     <item>Kolyarut</item>
+    <item>Inevitable</item>
     <item>Bralani</item>
     <item>Zelekhut</item>
     <item>Leonal</item>
@@ -278,8 +426,10 @@
     <item>Planetar</item>
     <item>Solar</item>
     <item>Hound archon</item>
+    <item>Hound archon Hero</item>
     <item>Lantern archon</item>
     <item>Trumpet archon</item>
+    <item>Arrowhawk</item>
     <item>Adult arrowhawk</item>
     <item>Elder arrowhawk</item>
     <item>Juvenile arrowhawk</item>
@@ -320,15 +470,18 @@
     <item>Imp</item>
     <item>Lemure</item>
     <item>Pit fiend</item>
+    <item>Slaad</item>
     <item>Blue slaad</item>
     <item>Death slaad</item>
     <item>Gray slaad</item>
     <item>Green slaad</item>
     <item>Red slaad</item>
+    <item>Formian</item>
     <item>Formian myrmarch</item>
     <item>Formian taskmaster</item>
     <item>Formian warrior</item>
     <item>Formian worker</item>
+    <item>Genie</item>
     <item>Djinni</item>
     <item>Noble djinni</item>
     <item>Efreeti</item>
@@ -351,19 +504,27 @@
     <item>Water mephit</item>
     <item>Night hag</item>
     <item>Rast</item>
+    <item>Demon</item>
+    <item>Devil</item>
+    <item>Archon</item>
+    <item>Angel</item>
     <item>Nightmare</item>
     <item>Nightmare (Cauchemar)</item>
     <item>Ravid</item>
+    <item>Salamander</item>
     <item>Average salamander</item>
     <item>Flamebrother salamander</item>
     <item>Noble salamander</item>
     <item>Shadow mastiff</item>
     <item>Vargouille</item>
     <item>Xill</item>
+    <item>Xorn</item>
     <item>Average xorn</item>
     <item>Elder xorn</item>
     <item>Minor xorn</item>
     <item>Yeth hound</item>
+    <item>Hellwasp swarm</item>
+    <item>Hellwasp</item>
   </collection>
   <collection>
     <entry>Dragon</entry>
@@ -518,6 +679,7 @@
     <item>Large water elemental</item>
     <item>Medium water elemental</item>
     <item>Small water elemental</item>
+    <item>Elemental</item>
     <item>Invisible stalker</item>
     <item>Magmin</item>
     <item>Thoqqua</item>
@@ -527,8 +689,12 @@
     <item>Dryad</item>
     <item>Nymph</item>
     <item>Satyr</item>
+    <item>Satyr (with pipes)</item>
     <item>Grig</item>
     <item>Pixie</item>
+    <item>Pixie (with Irresistable Dance)</item>
+    <item>Nixie</item>
+    <item>Sprite</item>
   </collection>
   <collection>
     <entry>Giant</entry>
@@ -536,14 +702,17 @@
     <item>Cloud giant</item>
     <item>Fire giant</item>
     <item>Frost giant</item>
+    <item>Frost giant Jarl</item>
     <item>Hill giant</item>
     <item>Stone giant</item>
+    <item>Stone giant elder</item>
     <item>Storm giant</item>
     <item>Ogre</item>
+    <item>Ogre Barbarian</item>
     <item>Ogre mage</item>
     <item>Troll</item>
-    <item>Frost giant (Jarl)</item>
-    <item>Stone giant elder</item>
+    <item>Troll Hunter</item>
+    <item>Hill giant dire wereboar</item>
   </collection>
   <collection>
     <entry>Ooze</entry>
@@ -562,6 +731,7 @@
     <item>Medium animated object</item>
     <item>Small animated object</item>
     <item>Tiny animated object</item>
+    <item>Golem</item>
     <item>Clay golem</item>
     <item>Flesh golem</item>
     <item>Iron golem</item>
@@ -573,12 +743,11 @@
     <item>Retriever</item>
     <item>Kolyarut</item>
     <item>Zelekhut</item>
+    <item>Animated object</item>
+    <item>Inevitable</item>
   </collection>
   <collection>
     <entry>Use Subtype for Treasure</entry>
-    <item>Celestial creature</item>
-    <item>Fiendish creature</item>
-    <item>Charmed creature</item>
     <item>Dominated creature</item>
   </collection>
   <collection>
@@ -595,47 +764,628 @@
     <item>Water mephit</item>
   </collection>
   <collection>
-    <entry>Celestial creature</entry>
+    <entry>Magical Beast</entry>
     <item>Androsphinx</item>
     <item>Ankheg</item>
-    <item>Giant ant soldier</item>
+    <item>Aranea</item>
+    <item>Celestial creature</item>
+    <item>Celestial badger</item>
+    <item>Celestial dog</item>
+    <item>Celestial giant fire beetle</item>
+    <item>Celestial owl</item>
+    <item>Celestial monkey</item>
+    <item>Displacer beast</item>
+    <item>Displacer beast (Pack lord)</item>
+    <item>Fiendish creature</item>
+    <item>Medium fiendish monstrous centipede</item>
+    <item>Large fiendish monstrous centipede</item>
+    <item>Huge fiendish monstrous centipede</item>
+    <item>Gargantuan fiendish monstrous centipede</item>
+    <item>Colossal fiendish monstrous centipede</item>
+    <item>Fiendish dire rat</item>
+    <item>Fiendish raven</item>
+    <item>Basilisk</item>
+    <item>Behir</item>
+    <item>Blink dog</item>
+    <item>Bulette</item>
+    <item>Cockatrice</item>
+    <item>Criosphinx</item>
+    <item>Cryohydra (5 heads)</item>
+    <item>Cryohydra (6 heads)</item>
+    <item>Cryohydra (7 heads)</item>
+    <item>Cryohydra (8 heads)</item>
+    <item>Cryohydra (9 heads)</item>
+    <item>Cryohydra (10 heads)</item>
+    <item>Cryohydra (11 heads)</item>
+    <item>Cryohydra (12 heads)</item>
+    <item>Darkmantle</item>
+    <item>Digester</item>
+    <item>Cryohydra</item>
+    <item>Pyrohydra</item>
+    <item>Hydra</item>
+    <item>Dragonne</item>
+    <item>Giant eagle</item>
+    <item>Frost worm</item>
+    <item>Girallon</item>
+    <item>Gorgon</item>
+    <item>Gray render</item>
+    <item>Griffon</item>
+    <item>Gynosphinx</item>
+    <item>Hippogriff</item>
+    <item>Hydra (5 heads)</item>
+    <item>Hydra (6 heads)</item>
+    <item>Hydra (7 heads)</item>
+    <item>Hydra (8 heads)</item>
+    <item>Hydra (9 heads)</item>
+    <item>Hydra (10 heads)</item>
+    <item>Hydra (11 heads)</item>
+    <item>Hydra (12 heads)</item>
+    <item>Krenshar</item>
+    <item>Lammasu</item>
+    <item>Lammasu (Golden Protector)</item>
+    <item>Giant owl</item>
+    <item>Owlbear</item>
+    <item>Pegasus</item>
+    <item>Phase spider</item>
+    <item>Purple worm</item>
+    <item>Pyrohydra (5 heads)</item>
+    <item>Pyrohydra (6 heads)</item>
+    <item>Pyrohydra (7 heads)</item>
+    <item>Pyrohydra (8 heads)</item>
+    <item>Pyrohydra (9 heads)</item>
+    <item>Pyrohydra (10 heads)</item>
+    <item>Pyrohydra (11 heads)</item>
+    <item>Pyrohydra (12 heads)</item>
+    <item>Razor boar</item>
+    <item>Remorhaz</item>
+    <item>Shocker lizard</item>
+    <item>Spider eater</item>
+    <item>Stirge</item>
+    <item>Chimera</item>
+    <item>Ethereal marauder</item>
+    <item>Lamia</item>
+    <item>Manticore</item>
+    <item>Roper</item>
+    <item>Hieracosphinx</item>
+    <item>Tarrasque</item>
+    <item>Unicorn</item>
+    <item>Unicorn (Celestial Charger)</item>
+    <item>Winter wolf</item>
+    <item>Worg</item>
+    <item>Yrthak</item>
+  </collection>
+  <collection>
+    <entry>Character</entry>
+    <item>Adept</item>
+    <item>Adept (Doctor)</item>
+    <item>Adept (Fortuneteller)</item>
+    <item>Adept (Missionary)</item>
+    <item>Adept (Street performer)</item>
+    <item>Aristocrat</item>
+    <item>Aristocrat (Businessman)</item>
+    <item>Aristocrat (Gentry)</item>
+    <item>Aristocrat (Politician)</item>
+    <item>Barbarian</item>
+    <item>Barbarian (Combat instructor)</item>
+    <item>Barbarian (Student)</item>
+    <item>Barbarian (War hero)</item>
+    <item>Bard</item>
+    <item>Bard (Famous entertainer)</item>
+    <item>Bard (Leader)</item>
+    <item>Bard (Street performer)</item>
+    <item>Character</item>
+    <item>Character (Retired adventurer)</item>
+    <item>Character (Sellsword)</item>
+    <item>Cleric</item>
+    <item>Cleric (Doctor)</item>
+    <item>Cleric (Famous priest)</item>
+    <item>Cleric (Leader)</item>
+    <item>Cleric (War hero)</item>
+    <item>Commoner</item>
+    <item>Commoner (Beggar)</item>
+    <item>Commoner (Construction worker)</item>
+    <item>Commoner (Farmer)</item>
+    <item>Commoner (Herder)</item>
+    <item>Commoner (Hunter)</item>
+    <item>Commoner (Merchant)</item>
+    <item>Commoner (Minstrel)</item>
+    <item>Commoner (Pilgrim)</item>
+    <item>Commoner (Protestor)</item>
+    <item>Commoner (Servant)</item>
+    <item>Druid</item>
+    <item>Druid (Animal trainer)</item>
+    <item>Druid (Doctor)</item>
+    <item>Druid (Famous priest)</item>
+    <item>Expert</item>
+    <item>Expert (Adviser)</item>
+    <item>Expert (Architect)</item>
+    <item>Expert (Artisan)</item>
+    <item>Expert (Merchant)</item>
+    <item>Expert (Minstrel)</item>
+    <item>Fighter</item>
+    <item>Fighter (Captain)</item>
+    <item>Fighter (Combat instructor)</item>
+    <item>Fighter (Hitman)</item>
+    <item>Fighter (Leader)</item>
+    <item>Fighter (Student)</item>
+    <item>Fighter (War hero)</item>
+    <item>Monk</item>
+    <item>Monk (Combat instructor)</item>
+    <item>Monk (Scholar)</item>
+    <item>Monk (Student)</item>
+    <item>Monk (War hero)</item>
+    <item>NPC</item>
+    <item>NPC (Traveler)</item>
+    <item>Paladin</item>
+    <item>Paladin (Combat instructor)</item>
+    <item>Paladin (Crusader)</item>
+    <item>Paladin (Student)</item>
+    <item>Paladin (War hero)</item>
+    <item>Ranger</item>
+    <item>Ranger (Animal trainer)</item>
+    <item>Ranger (Combat instructor)</item>
+    <item>Ranger (Hitman)</item>
+    <item>Ranger (Student)</item>
+    <item>Ranger (War hero)</item>
+    <item>Rogue</item>
+    <item>Rogue (Hitman)</item>
+    <item>Rogue (Pickpocket)</item>
+    <item>Rogue (Street performer)</item>
+    <item>Sorcerer</item>
+    <item>Sorcerer (Famous entertainer)</item>
+    <item>Sorcerer (Street performer)</item>
+    <item>Warrior</item>
+    <item>Warrior (Bandit)</item>
+    <item>Warrior (Leader)</item>
+    <item>Warrior (Guard)</item>
+    <item>Warrior (Hunter)</item>
+    <item>Warrior (Captain)</item>
+    <item>Warrior (Patrol)</item>
+    <item>Warrior (Student)</item>
+    <item>Wizard</item>
+    <item>Wizard (Famous researcher)</item>
+    <item>Wizard (Scholar)</item>
+  </collection>
+  <collection>
+    <entry>Dominated creature</entry>
+    <item>Aasimar warrior</item>
+    <item>Aboleth</item>
+    <item>Aboleth Mage</item>
+    <item>Achaierai</item>
+    <item>Adept (Doctor)[1]</item>
+    <item>Adept (Doctor)[1d2+1]</item>
+    <item>Adept (Doctor)[1d2+3]</item>
+    <item>Adept (Doctor)[1d2+5]</item>
+    <item>Adept (Doctor)[1d2+7]</item>
+    <item>Adept (Doctor)[1d2+9]</item>
+    <item>Adept (Doctor)[1d2+11]</item>
+    <item>Adept (Doctor)[1d2+13]</item>
+    <item>Adept (Doctor)[1d2+15]</item>
+    <item>Adept (Doctor)[1d2+17]</item>
+    <item>Adept (Doctor)[20]</item>
+    <item>Adept (Fortuneteller)[1]</item>
+    <item>Adept (Fortuneteller)[1d2+1]</item>
+    <item>Adept (Fortuneteller)[1d2+3]</item>
+    <item>Adept (Fortuneteller)[1d2+5]</item>
+    <item>Adept (Fortuneteller)[1d2+7]</item>
+    <item>Adept (Fortuneteller)[1d2+9]</item>
+    <item>Adept (Fortuneteller)[1d2+11]</item>
+    <item>Adept (Fortuneteller)[1d2+13]</item>
+    <item>Adept (Fortuneteller)[1d2+15]</item>
+    <item>Adept (Fortuneteller)[1d2+17]</item>
+    <item>Adept (Fortuneteller)[20]</item>
+    <item>Adept (Missionary)[1]</item>
+    <item>Adept (Missionary)[1d2+1]</item>
+    <item>Adept (Missionary)[1d2+3]</item>
+    <item>Adept (Missionary)[1d2+5]</item>
+    <item>Adept (Missionary)[1d2+7]</item>
+    <item>Adept (Missionary)[1d2+9]</item>
+    <item>Adept (Missionary)[1d2+11]</item>
+    <item>Adept (Missionary)[1d2+13]</item>
+    <item>Adept (Missionary)[1d2+15]</item>
+    <item>Adept (Missionary)[1d2+17]</item>
+    <item>Adept (Missionary)[20]</item>
+    <item>Adept (Street performer)[1]</item>
+    <item>Adept (Street performer)[1d2+1]</item>
+    <item>Adept (Street performer)[1d2+3]</item>
+    <item>Adept (Street performer)[1d2+5]</item>
+    <item>Adept (Street performer)[1d2+7]</item>
+    <item>Adept (Street performer)[1d2+9]</item>
+    <item>Adept (Street performer)[1d2+11]</item>
+    <item>Adept (Street performer)[1d2+13]</item>
+    <item>Adept (Street performer)[1d2+15]</item>
+    <item>Adept (Street performer)[1d2+17]</item>
+    <item>Adept (Street performer)[20]</item>
+    <item>Androsphinx</item>
+    <item>Ankheg</item>
+    <item>Annis</item>
     <item>Giant ant worker</item>
+    <item>Giant ant soldier</item>
     <item>Giant ant queen</item>
     <item>Ape</item>
     <item>Dire ape</item>
     <item>Aranea</item>
-    <item>Assassin vine</item>
+    <item>Aristocrat (Businessman)[1]</item>
+    <item>Aristocrat (Businessman)[1d2+1]</item>
+    <item>Aristocrat (Businessman)[1d2+3]</item>
+    <item>Aristocrat (Businessman)[1d2+5]</item>
+    <item>Aristocrat (Businessman)[1d2+7]</item>
+    <item>Aristocrat (Businessman)[1d2+9]</item>
+    <item>Aristocrat (Businessman)[1d2+11]</item>
+    <item>Aristocrat (Businessman)[1d2+13]</item>
+    <item>Aristocrat (Businessman)[1d2+15]</item>
+    <item>Aristocrat (Businessman)[1d2+17]</item>
+    <item>Aristocrat (Businessman)[20]</item>
+    <item>Aristocrat (Gentry)[1]</item>
+    <item>Aristocrat (Gentry)[1d2+1]</item>
+    <item>Aristocrat (Gentry)[1d2+3]</item>
+    <item>Aristocrat (Gentry)[1d2+5]</item>
+    <item>Aristocrat (Gentry)[1d2+7]</item>
+    <item>Aristocrat (Gentry)[1d2+9]</item>
+    <item>Aristocrat (Gentry)[1d2+11]</item>
+    <item>Aristocrat (Gentry)[1d2+13]</item>
+    <item>Aristocrat (Gentry)[1d2+15]</item>
+    <item>Aristocrat (Gentry)[1d2+17]</item>
+    <item>Aristocrat (Gentry)[20]</item>
+    <item>Aristocrat (Politician)[1]</item>
+    <item>Aristocrat (Politician)[1d2+1]</item>
+    <item>Aristocrat (Politician)[1d2+3]</item>
+    <item>Aristocrat (Politician)[1d2+5]</item>
+    <item>Aristocrat (Politician)[1d2+7]</item>
+    <item>Aristocrat (Politician)[1d2+9]</item>
+    <item>Aristocrat (Politician)[1d2+11]</item>
+    <item>Aristocrat (Politician)[1d2+13]</item>
+    <item>Aristocrat (Politician)[1d2+15]</item>
+    <item>Aristocrat (Politician)[1d2+17]</item>
+    <item>Aristocrat (Politician)[20]</item>
+    <item>Juvenile arrowhawk</item>
+    <item>Adult arrowhawk</item>
+    <item>Elder arrowhawk</item>
+    <item>Astral deva</item>
+    <item>Athach</item>
+    <item>Avoral</item>
+    <item>Azer</item>
+    <item>Babau</item>
     <item>Baboon</item>
     <item>Badger</item>
+    <item>Celestial badger</item>
     <item>Dire badger</item>
+    <item>Balor</item>
+    <item>Barbarian (Combat instructor)[11]</item>
+    <item>Barbarian (Combat instructor)[12]</item>
+    <item>Barbarian (Combat instructor)[13]</item>
+    <item>Barbarian (Combat instructor)[14]</item>
+    <item>Barbarian (Combat instructor)[15]</item>
+    <item>Barbarian (Combat instructor)[16]</item>
+    <item>Barbarian (Combat instructor)[17]</item>
+    <item>Barbarian (Combat instructor)[18]</item>
+    <item>Barbarian (Combat instructor)[19]</item>
+    <item>Barbarian (Combat instructor)[20]</item>
+    <item>Barbarian (Student)[1]</item>
+    <item>Barbarian (Student)[2]</item>
+    <item>Barbarian (Student)[3]</item>
+    <item>Barbarian (Student)[4]</item>
+    <item>Barbarian (Student)[5]</item>
+    <item>Barbarian (Student)[6]</item>
+    <item>Barbarian (Student)[7]</item>
+    <item>Barbarian (Student)[8]</item>
+    <item>Barbarian (Student)[9]</item>
+    <item>Barbarian (Student)[10]</item>
+    <item>Barbarian (War hero)[11]</item>
+    <item>Barbarian (War hero)[12]</item>
+    <item>Barbarian (War hero)[13]</item>
+    <item>Barbarian (War hero)[14]</item>
+    <item>Barbarian (War hero)[15]</item>
+    <item>Barbarian (War hero)[16]</item>
+    <item>Barbarian (War hero)[17]</item>
+    <item>Barbarian (War hero)[18]</item>
+    <item>Barbarian (War hero)[19]</item>
+    <item>Barbarian (War hero)[20]</item>
+    <item>Barbed Devil (Hamatula)</item>
+    <item>Bard (Famous entertainer)[11]</item>
+    <item>Bard (Famous entertainer)[12]</item>
+    <item>Bard (Famous entertainer)[13]</item>
+    <item>Bard (Famous entertainer)[14]</item>
+    <item>Bard (Famous entertainer)[15]</item>
+    <item>Bard (Famous entertainer)[16]</item>
+    <item>Bard (Famous entertainer)[17]</item>
+    <item>Bard (Famous entertainer)[18]</item>
+    <item>Bard (Famous entertainer)[19]</item>
+    <item>Bard (Famous entertainer)[20]</item>
+    <item>Bard (Leader)[1]</item>
+    <item>Bard (Leader)[2]</item>
+    <item>Bard (Leader)[3]</item>
+    <item>Bard (Leader)[4]</item>
+    <item>Bard (Leader)[5]</item>
+    <item>Bard (Leader)[6]</item>
+    <item>Bard (Leader)[7]</item>
+    <item>Bard (Leader)[8]</item>
+    <item>Bard (Leader)[9]</item>
+    <item>Bard (Leader)[10]</item>
+    <item>Bard (Leader)[11]</item>
+    <item>Bard (Street performer)[1]</item>
+    <item>Bard (Street performer)[2]</item>
+    <item>Bard (Street performer)[3]</item>
+    <item>Bard (Street performer)[4]</item>
+    <item>Bard (Street performer)[5]</item>
+    <item>Bard (Street performer)[6]</item>
+    <item>Bard (Street performer)[7]</item>
+    <item>Bard (Street performer)[8]</item>
+    <item>Bard (Street performer)[9]</item>
+    <item>Bard (Street performer)[10]</item>
+    <item>Bard (Street performer)[11]</item>
+    <item>Bard (Street performer)[12]</item>
+    <item>Bard (Street performer)[13]</item>
+    <item>Bard (Street performer)[14]</item>
+    <item>Bard (Street performer)[15]</item>
+    <item>Bard (Street performer)[16]</item>
+    <item>Bard (Street performer)[17]</item>
+    <item>Bard (Street performer)[18]</item>
+    <item>Bard (Street performer)[19]</item>
+    <item>Bard (Street performer)[20]</item>
+    <item>Barghest</item>
+    <item>Greater barghest</item>
     <item>Basilisk</item>
+    <item>Abyssal greater basilisk</item>
     <item>Bat</item>
     <item>Dire bat</item>
+    <item>Bat swarm</item>
     <item>Black bear</item>
     <item>Brown bear</item>
     <item>Dire bear</item>
     <item>Polar bear</item>
+    <item>Bearded Devil (Barbazu)</item>
+    <item>Bebilith</item>
     <item>Giant bee</item>
     <item>Behir</item>
+    <item>Beholder</item>
+    <item>Belker</item>
     <item>Bison</item>
     <item>Blink dog</item>
     <item>Boar</item>
     <item>Dire boar</item>
     <item>Giant bombardier beetle</item>
+    <item>Bone Devil (Osyluth)</item>
+    <item>Bralani</item>
+    <item>Bugbear</item>
     <item>Bulette</item>
     <item>Camel</item>
+    <item>Carrion crawler</item>
     <item>Cat</item>
     <item>Centaur</item>
-    <item>Colossal monstrous centipede</item>
-    <item>Gargantuan monstrous centipede</item>
-    <item>Huge monstrous centipede</item>
-    <item>Large monstrous centipede</item>
-    <item>Medium monstrous centipede</item>
-    <item>Small monstrous centipede</item>
     <item>Tiny monstrous centipede</item>
+    <item>Small monstrous centipede</item>
+    <item>Medium monstrous centipede</item>
+    <item>Medium fiendish monstrous centipede</item>
+    <item>Large monstrous centipede</item>
+    <item>Large fiendish monstrous centipede</item>
+    <item>Huge monstrous centipede</item>
+    <item>Huge fiendish monstrous centipede</item>
+    <item>Gargantuan monstrous centipede</item>
+    <item>Gargantuan fiendish monstrous centipede</item>
+    <item>Colossal monstrous centipede</item>
+    <item>Colossal fiendish monstrous centipede</item>
+    <item>Centipede swarm</item>
+    <item>Chain Devil (Kyton)</item>
+    <item>Chaos beast</item>
+    <item>Character[1]</item>
+    <item>Character[2]</item>
+    <item>Character[3]</item>
+    <item>Character[4]</item>
+    <item>Character[5]</item>
+    <item>Character[6]</item>
+    <item>Character[7]</item>
+    <item>Character[8]</item>
+    <item>Character[9]</item>
+    <item>Character[10]</item>
+    <item>Character[11]</item>
+    <item>Character[12]</item>
+    <item>Character[13]</item>
+    <item>Character[14]</item>
+    <item>Character[15]</item>
+    <item>Character[16]</item>
+    <item>Character[17]</item>
+    <item>Character[18]</item>
+    <item>Character[19]</item>
+    <item>Character[20]</item>
+    <item>Character (Retired adventurer)[11]</item>
+    <item>Character (Retired adventurer)[12]</item>
+    <item>Character (Retired adventurer)[13]</item>
+    <item>Character (Retired adventurer)[14]</item>
+    <item>Character (Retired adventurer)[15]</item>
+    <item>Character (Retired adventurer)[16]</item>
+    <item>Character (Retired adventurer)[17]</item>
+    <item>Character (Retired adventurer)[18]</item>
+    <item>Character (Retired adventurer)[19]</item>
+    <item>Character (Retired adventurer)[20]</item>
+    <item>Character (Sellsword)[1]</item>
+    <item>Character (Sellsword)[2]</item>
+    <item>Character (Sellsword)[3]</item>
+    <item>Character (Sellsword)[4]</item>
+    <item>Character (Sellsword)[5]</item>
+    <item>Character (Sellsword)[6]</item>
+    <item>Character (Sellsword)[7]</item>
+    <item>Character (Sellsword)[8]</item>
+    <item>Character (Sellsword)[9]</item>
+    <item>Character (Sellsword)[10]</item>
+    <item>Character (Sellsword)[11]</item>
+    <item>Character (Sellsword)[12]</item>
+    <item>Character (Sellsword)[13]</item>
+    <item>Character (Sellsword)[14]</item>
+    <item>Character (Sellsword)[15]</item>
+    <item>Character (Sellsword)[16]</item>
+    <item>Character (Sellsword)[17]</item>
+    <item>Character (Sellsword)[18]</item>
+    <item>Character (Sellsword)[19]</item>
+    <item>Character (Sellsword)[20]</item>
     <item>Cheetah</item>
+    <item>Chimera</item>
+    <item>Choker</item>
+    <item>Chuul</item>
+    <item>Cleric (Doctor)[1]</item>
+    <item>Cleric (Doctor)[2]</item>
+    <item>Cleric (Doctor)[3]</item>
+    <item>Cleric (Doctor)[4]</item>
+    <item>Cleric (Doctor)[5]</item>
+    <item>Cleric (Doctor)[6]</item>
+    <item>Cleric (Doctor)[7]</item>
+    <item>Cleric (Doctor)[8]</item>
+    <item>Cleric (Doctor)[9]</item>
+    <item>Cleric (Doctor)[10]</item>
+    <item>Cleric (Doctor)[11]</item>
+    <item>Cleric (Doctor)[12]</item>
+    <item>Cleric (Doctor)[13]</item>
+    <item>Cleric (Doctor)[14]</item>
+    <item>Cleric (Doctor)[15]</item>
+    <item>Cleric (Doctor)[16]</item>
+    <item>Cleric (Doctor)[17]</item>
+    <item>Cleric (Doctor)[18]</item>
+    <item>Cleric (Doctor)[19]</item>
+    <item>Cleric (Doctor)[20]</item>
+    <item>Cleric (Famous priest)[11]</item>
+    <item>Cleric (Famous priest)[12]</item>
+    <item>Cleric (Famous priest)[13]</item>
+    <item>Cleric (Famous priest)[14]</item>
+    <item>Cleric (Famous priest)[15]</item>
+    <item>Cleric (Famous priest)[16]</item>
+    <item>Cleric (Famous priest)[17]</item>
+    <item>Cleric (Famous priest)[18]</item>
+    <item>Cleric (Famous priest)[19]</item>
+    <item>Cleric (Famous priest)[20]</item>
+    <item>Cleric (Leader)[1]</item>
+    <item>Cleric (Leader)[2]</item>
+    <item>Cleric (Leader)[3]</item>
+    <item>Cleric (Leader)[4]</item>
+    <item>Cleric (Leader)[5]</item>
+    <item>Cleric (Leader)[6]</item>
+    <item>Cleric (Leader)[7]</item>
+    <item>Cleric (Leader)[8]</item>
+    <item>Cleric (Leader)[9]</item>
+    <item>Cleric (Leader)[10]</item>
+    <item>Cleric (Leader)[11]</item>
+    <item>Cleric (War hero)[11]</item>
+    <item>Cleric (War hero)[12]</item>
+    <item>Cleric (War hero)[13]</item>
+    <item>Cleric (War hero)[14]</item>
+    <item>Cleric (War hero)[15]</item>
+    <item>Cleric (War hero)[16]</item>
+    <item>Cleric (War hero)[17]</item>
+    <item>Cleric (War hero)[18]</item>
+    <item>Cleric (War hero)[19]</item>
+    <item>Cleric (War hero)[20]</item>
     <item>Cloaker</item>
     <item>Cockatrice</item>
+    <item>Commoner (Beggar)[1]</item>
+    <item>Commoner (Beggar)[1d2+1]</item>
+    <item>Commoner (Beggar)[1d2+3]</item>
+    <item>Commoner (Beggar)[1d2+5]</item>
+    <item>Commoner (Beggar)[1d2+7]</item>
+    <item>Commoner (Beggar)[1d2+9]</item>
+    <item>Commoner (Beggar)[1d2+11]</item>
+    <item>Commoner (Beggar)[1d2+13]</item>
+    <item>Commoner (Beggar)[1d2+15]</item>
+    <item>Commoner (Beggar)[1d2+17]</item>
+    <item>Commoner (Beggar)[20]</item>
+    <item>Commoner (Construction worker)[1]</item>
+    <item>Commoner (Construction worker)[1d2+1]</item>
+    <item>Commoner (Construction worker)[1d2+3]</item>
+    <item>Commoner (Construction worker)[1d2+5]</item>
+    <item>Commoner (Construction worker)[1d2+7]</item>
+    <item>Commoner (Construction worker)[1d2+9]</item>
+    <item>Commoner (Construction worker)[1d2+11]</item>
+    <item>Commoner (Construction worker)[1d2+13]</item>
+    <item>Commoner (Construction worker)[1d2+15]</item>
+    <item>Commoner (Construction worker)[1d2+17]</item>
+    <item>Commoner (Construction worker)[20]</item>
+    <item>Commoner (Farmer)[1]</item>
+    <item>Commoner (Farmer)[1d2+1]</item>
+    <item>Commoner (Farmer)[1d2+3]</item>
+    <item>Commoner (Farmer)[1d2+5]</item>
+    <item>Commoner (Farmer)[1d2+7]</item>
+    <item>Commoner (Farmer)[1d2+9]</item>
+    <item>Commoner (Farmer)[1d2+11]</item>
+    <item>Commoner (Farmer)[1d2+13]</item>
+    <item>Commoner (Farmer)[1d2+15]</item>
+    <item>Commoner (Farmer)[1d2+17]</item>
+    <item>Commoner (Farmer)[20]</item>
+    <item>Commoner (Herder)[1]</item>
+    <item>Commoner (Herder)[1d2+1]</item>
+    <item>Commoner (Herder)[1d2+3]</item>
+    <item>Commoner (Herder)[1d2+5]</item>
+    <item>Commoner (Herder)[1d2+7]</item>
+    <item>Commoner (Herder)[1d2+9]</item>
+    <item>Commoner (Herder)[1d2+11]</item>
+    <item>Commoner (Herder)[1d2+13]</item>
+    <item>Commoner (Herder)[1d2+15]</item>
+    <item>Commoner (Herder)[1d2+17]</item>
+    <item>Commoner (Herder)[20]</item>
+    <item>Commoner (Hunter)[1]</item>
+    <item>Commoner (Hunter)[1d2+1]</item>
+    <item>Commoner (Hunter)[1d2+3]</item>
+    <item>Commoner (Hunter)[1d2+5]</item>
+    <item>Commoner (Hunter)[1d2+7]</item>
+    <item>Commoner (Hunter)[1d2+9]</item>
+    <item>Commoner (Hunter)[1d2+11]</item>
+    <item>Commoner (Hunter)[1d2+13]</item>
+    <item>Commoner (Hunter)[1d2+15]</item>
+    <item>Commoner (Hunter)[1d2+17]</item>
+    <item>Commoner (Hunter)[20]</item>
+    <item>Commoner (Merchant)[1]</item>
+    <item>Commoner (Merchant)[1d2+1]</item>
+    <item>Commoner (Merchant)[1d2+3]</item>
+    <item>Commoner (Merchant)[1d2+5]</item>
+    <item>Commoner (Merchant)[1d2+7]</item>
+    <item>Commoner (Merchant)[1d2+9]</item>
+    <item>Commoner (Merchant)[1d2+11]</item>
+    <item>Commoner (Merchant)[1d2+13]</item>
+    <item>Commoner (Merchant)[1d2+15]</item>
+    <item>Commoner (Merchant)[1d2+17]</item>
+    <item>Commoner (Merchant)[20]</item>
+    <item>Commoner (Minstrel)[1]</item>
+    <item>Commoner (Minstrel)[1d2+1]</item>
+    <item>Commoner (Minstrel)[1d2+3]</item>
+    <item>Commoner (Minstrel)[1d2+5]</item>
+    <item>Commoner (Minstrel)[1d2+7]</item>
+    <item>Commoner (Minstrel)[1d2+9]</item>
+    <item>Commoner (Minstrel)[1d2+11]</item>
+    <item>Commoner (Minstrel)[1d2+13]</item>
+    <item>Commoner (Minstrel)[1d2+15]</item>
+    <item>Commoner (Minstrel)[1d2+17]</item>
+    <item>Commoner (Minstrel)[20]</item>
+    <item>Commoner (Pilgrim)[1]</item>
+    <item>Commoner (Pilgrim)[1d2+1]</item>
+    <item>Commoner (Pilgrim)[1d2+3]</item>
+    <item>Commoner (Pilgrim)[1d2+5]</item>
+    <item>Commoner (Pilgrim)[1d2+7]</item>
+    <item>Commoner (Pilgrim)[1d2+9]</item>
+    <item>Commoner (Pilgrim)[1d2+11]</item>
+    <item>Commoner (Pilgrim)[1d2+13]</item>
+    <item>Commoner (Pilgrim)[1d2+15]</item>
+    <item>Commoner (Pilgrim)[1d2+17]</item>
+    <item>Commoner (Pilgrim)[20]</item>
+    <item>Commoner (Protestor)[1]</item>
+    <item>Commoner (Protestor)[1d2+1]</item>
+    <item>Commoner (Protestor)[1d2+3]</item>
+    <item>Commoner (Protestor)[1d2+5]</item>
+    <item>Commoner (Protestor)[1d2+7]</item>
+    <item>Commoner (Protestor)[1d2+9]</item>
+    <item>Commoner (Protestor)[1d2+11]</item>
+    <item>Commoner (Protestor)[1d2+13]</item>
+    <item>Commoner (Protestor)[1d2+15]</item>
+    <item>Commoner (Protestor)[1d2+17]</item>
+    <item>Commoner (Protestor)[20]</item>
+    <item>Commoner (Servant)[1]</item>
+    <item>Commoner (Servant)[1d2+1]</item>
+    <item>Commoner (Servant)[1d2+3]</item>
+    <item>Commoner (Servant)[1d2+5]</item>
+    <item>Commoner (Servant)[1d2+7]</item>
+    <item>Commoner (Servant)[1d2+9]</item>
+    <item>Commoner (Servant)[1d2+11]</item>
+    <item>Commoner (Servant)[1d2+13]</item>
+    <item>Commoner (Servant)[1d2+15]</item>
+    <item>Commoner (Servant)[1d2+17]</item>
+    <item>Commoner (Servant)[20]</item>
+    <item>Couatl</item>
     <item>Criosphinx</item>
     <item>Crocodile</item>
     <item>Giant crocodile</item>
@@ -648,10 +1398,18 @@
     <item>Cryohydra (11 heads)</item>
     <item>Cryohydra (12 heads)</item>
     <item>Darkmantle</item>
-    <item>Delver</item>
-    <item>Digester</item>
     <item>Deinonychus</item>
+    <item>Delver</item>
+    <item>Derro</item>
+    <item>Destrachan</item>
+    <item>Digester</item>
+    <item>Displacer beast</item>
+    <item>Displacer beast (Pack lord)</item>
+    <item>Djinni</item>
+    <item>Noble djinni</item>
     <item>Dog</item>
+    <item>Celestial dog</item>
+    <item>Dog (Riding)</item>
     <item>Donkey</item>
     <item>Doppelganger</item>
     <item>Wyrmling brass dragon</item>
@@ -714,274 +1472,6 @@
     <item>Ancient silver dragon</item>
     <item>Wyrm silver dragon</item>
     <item>Great wyrm silver dragon</item>
-    <item>Dragonne</item>
-    <item>Dryad</item>
-    <item>Dwarf warrior</item>
-    <item>Eagle</item>
-    <item>Giant eagle</item>
-    <item>Elephant</item>
-    <item>Elf warrior</item>
-    <item>Giant fire beetle</item>
-    <item>Frost worm</item>
-    <item>Cloud giant</item>
-    <item>Stone giant</item>
-    <item>Storm giant</item>
-    <item>Gibbering mouther</item>
-    <item>Girallon</item>
-    <item>Gnome warrior</item>
-    <item>Gorgon</item>
-    <item>Gray render</item>
-    <item>Grick</item>
-    <item>Griffon</item>
-    <item>Grig</item>
-    <item>Gynosphinx</item>
-    <item>Halfling warrior</item>
-    <item>Hawk</item>
-    <item>Heavy horse</item>
-    <item>Heavy warhorse</item>
-    <item>Light horse</item>
-    <item>Light warhorse</item>
-    <item>Hippogriff</item>
-    <item>Hydra (5 heads)</item>
-    <item>Hydra (6 heads)</item>
-    <item>Hydra (7 heads)</item>
-    <item>Hydra (8 heads)</item>
-    <item>Hydra (9 heads)</item>
-    <item>Hydra (10 heads)</item>
-    <item>Hydra (11 heads)</item>
-    <item>Hydra (12 heads)</item>
-    <item>Hyena</item>
-    <item>Krenshar</item>
-    <item>Lammasu</item>
-    <item>Leopard</item>
-    <item>Lion</item>
-    <item>Dire lion</item>
-    <item>Lizard</item>
-    <item>Monitor lizard</item>
-    <item>Lizardfolk</item>
-    <item>Megaraptor</item>
-    <item>Mimic</item>
-    <item>Monkey</item>
-    <item>Mule</item>
-    <item>Guardian naga</item>
-    <item>Nymph</item>
-    <item>Otyugh</item>
-    <item>Owl</item>
-    <item>Giant owl</item>
-    <item>Owlbear</item>
-    <item>Pegasus</item>
-    <item>Phantom fungus</item>
-    <item>Phase spider</item>
-    <item>Phasm</item>
-    <item>Pixie</item>
-    <item>Pony</item>
-    <item>Warpony</item>
-    <item>Giant praying mantis</item>
-    <item>Pseudodragon</item>
-    <item>Purple worm</item>
-    <item>Pyrohydra (5 heads)</item>
-    <item>Pyrohydra (6 heads)</item>
-    <item>Pyrohydra (7 heads)</item>
-    <item>Pyrohydra (8 heads)</item>
-    <item>Pyrohydra (9 heads)</item>
-    <item>Pyrohydra (10 heads)</item>
-    <item>Pyrohydra (11 heads)</item>
-    <item>Pyrohydra (12 heads)</item>
-    <item>Rat</item>
-    <item>Dire rat</item>
-    <item>Raven</item>
-    <item>Razor boar</item>
-    <item>Remorhaz</item>
-    <item>Rhinoceras</item>
-    <item>Roc</item>
-    <item>Rust monster</item>
-    <item>Satyr</item>
-    <item>Colossal monstrous scorpion</item>
-    <item>Gargantuan monstrous scorpion</item>
-    <item>Huge monstrous scorpion</item>
-    <item>Large monstrous scorpion</item>
-    <item>Medium monstrous scorpion</item>
-    <item>Small monstrous scorpion</item>
-    <item>Tiny monstrous scorpion</item>
-    <item>Shambling mound</item>
-    <item>Shocker lizard</item>
-    <item>Shrieker</item>
-    <item>Constrictor snake</item>
-    <item>Giant constrictor snake</item>
-    <item>Huge viper snake</item>
-    <item>Large viper snake</item>
-    <item>Medium viper snake</item>
-    <item>Small viper snake</item>
-    <item>Tiny viper snake</item>
-    <item>Colossal monstrous spider</item>
-    <item>Gargantuan monstrous spider</item>
-    <item>Huge monstrous spider</item>
-    <item>Large monstrous spider</item>
-    <item>Medium monstrous spider</item>
-    <item>Small monstrous spider</item>
-    <item>Tiny monstrous spider</item>
-    <item>Giant stag beetle</item>
-    <item>Spider eater</item>
-    <item>Stirge</item>
-    <item>Triceratops</item>
-    <item>Tendriculos</item>
-    <item>Tiger</item>
-    <item>Dire tiger</item>
-    <item>Toad</item>
-    <item>Treant</item>
-    <item>Tyrannosaurus</item>
-    <item>Unicorn</item>
-    <item>Violet fungus</item>
-    <item>Giant wasp</item>
-    <item>Weasel</item>
-    <item>Dire weasel</item>
-    <item>Wolf</item>
-    <item>Dire wolf</item>
-    <item>Wolverine</item>
-    <item>Dire wolverine</item>
-    <item>Wyvern</item>
-    <item>Yrthak</item>
-  </collection>
-  <collection>
-    <entry>Magical Beast</entry>
-    <item>Androsphinx</item>
-    <item>Ankheg</item>
-    <item>Aranea</item>
-    <item>Celestial creature</item>
-    <item>Fiendish creature</item>
-    <item>Basilisk</item>
-    <item>Behir</item>
-    <item>Blink dog</item>
-    <item>Bulette</item>
-    <item>Cockatrice</item>
-    <item>Criosphinx</item>
-    <item>Cryohydra (5 heads)</item>
-    <item>Cryohydra (6 heads)</item>
-    <item>Cryohydra (7 heads)</item>
-    <item>Cryohydra (8 heads)</item>
-    <item>Cryohydra (9 heads)</item>
-    <item>Cryohydra (10 heads)</item>
-    <item>Cryohydra (11 heads)</item>
-    <item>Cryohydra (12 heads)</item>
-    <item>Darkmantle</item>
-    <item>Digester</item>
-    <item>Cryohydra</item>
-    <item>Pyrohydra</item>
-    <item>Hydra</item>
-    <item>Dragonne</item>
-    <item>Giant eagle</item>
-    <item>Frost worm</item>
-    <item>Girallon</item>
-    <item>Gorgon</item>
-    <item>Gray render</item>
-    <item>Griffon</item>
-    <item>Gynosphinx</item>
-    <item>Hippogriff</item>
-    <item>Hydra (5 heads)</item>
-    <item>Hydra (6 heads)</item>
-    <item>Hydra (7 heads)</item>
-    <item>Hydra (8 heads)</item>
-    <item>Hydra (9 heads)</item>
-    <item>Hydra (10 heads)</item>
-    <item>Hydra (11 heads)</item>
-    <item>Hydra (12 heads)</item>
-    <item>Krenshar</item>
-    <item>Lammasu</item>
-    <item>Giant owl</item>
-    <item>Owlbear</item>
-    <item>Pegasus</item>
-    <item>Phase spider</item>
-    <item>Purple worm</item>
-    <item>Pyrohydra (5 heads)</item>
-    <item>Pyrohydra (6 heads)</item>
-    <item>Pyrohydra (7 heads)</item>
-    <item>Pyrohydra (8 heads)</item>
-    <item>Pyrohydra (9 heads)</item>
-    <item>Pyrohydra (10 heads)</item>
-    <item>Pyrohydra (11 heads)</item>
-    <item>Pyrohydra (12 heads)</item>
-    <item>Razor boar</item>
-    <item>Remorhaz</item>
-    <item>Shocker lizard</item>
-    <item>Spider eater</item>
-    <item>Stirge</item>
-    <item>Unicorn</item>
-    <item>Yrthak</item>
-    <item>Chimera</item>
-    <item>Ethereal marauder</item>
-    <item>Lamia</item>
-    <item>Manticore</item>
-    <item>Roper</item>
-    <item>Hieracosphinx</item>
-    <item>Tarrasque</item>
-    <item>Winter wolf</item>
-    <item>Worg</item>
-    <item>Displacer beast</item>
-  </collection>
-  <collection>
-    <entry>Fiendish creature</entry>
-    <item>Ankheg</item>
-    <item>Annis</item>
-    <item>Giant ant soldier</item>
-    <item>Giant ant worker</item>
-    <item>Giant ant queen</item>
-    <item>Ape</item>
-    <item>Dire ape</item>
-    <item>Aranea</item>
-    <item>Assassin vine</item>
-    <item>Athach</item>
-    <item>Baboon</item>
-    <item>Badger</item>
-    <item>Dire badger</item>
-    <item>Basilisk</item>
-    <item>Bat</item>
-    <item>Dire bat</item>
-    <item>Black bear</item>
-    <item>Brown bear</item>
-    <item>Dire bear</item>
-    <item>Polar bear</item>
-    <item>Giant bee</item>
-    <item>Behir</item>
-    <item>Bison</item>
-    <item>Boar</item>
-    <item>Dire boar</item>
-    <item>Giant bombardier beetle</item>
-    <item>Bugbear</item>
-    <item>Bulette</item>
-    <item>Camel</item>
-    <item>Cat</item>
-    <item>Colossal monstrous centipede</item>
-    <item>Gargantuan monstrous centipede</item>
-    <item>Huge monstrous centipede</item>
-    <item>Large monstrous centipede</item>
-    <item>Medium monstrous centipede</item>
-    <item>Small monstrous centipede</item>
-    <item>Tiny monstrous centipede</item>
-    <item>Cheetah</item>
-    <item>Chimera</item>
-    <item>Choker</item>
-    <item>Cloaker</item>
-    <item>Cockatrice</item>
-    <item>Criosphinx</item>
-    <item>Crocodile</item>
-    <item>Giant crocodile</item>
-    <item>Cryohydra (5 heads)</item>
-    <item>Cryohydra (6 heads)</item>
-    <item>Cryohydra (7 heads)</item>
-    <item>Cryohydra (8 heads)</item>
-    <item>Cryohydra (9 heads)</item>
-    <item>Cryohydra (10 heads)</item>
-    <item>Cryohydra (11 heads)</item>
-    <item>Cryohydra (12 heads)</item>
-    <item>Darkmantle</item>
-    <item>Delver</item>
-    <item>Derro</item>
-    <item>Destrachan</item>
-    <item>Digester</item>
-    <item>Deinonychus</item>
-    <item>Dog</item>
-    <item>Donkey</item>
-    <item>Doppelganger</item>
     <item>Wyrmling black dragon</item>
     <item>Very young black dragon</item>
     <item>Young black dragon</item>
@@ -1042,26 +1532,1589 @@
     <item>Ancient white dragon</item>
     <item>Wyrm white dragon</item>
     <item>Great wyrm white dragon</item>
+    <item>Dragon turtle</item>
     <item>Dragonne</item>
+    <item>Dretch</item>
     <item>Drider</item>
+    <item>Drow warrior</item>
+    <item>Druid (Animal trainer)[1]</item>
+    <item>Druid (Animal trainer)[2]</item>
+    <item>Druid (Animal trainer)[3]</item>
+    <item>Druid (Animal trainer)[4]</item>
+    <item>Druid (Animal trainer)[5]</item>
+    <item>Druid (Animal trainer)[6]</item>
+    <item>Druid (Animal trainer)[7]</item>
+    <item>Druid (Animal trainer)[8]</item>
+    <item>Druid (Animal trainer)[9]</item>
+    <item>Druid (Animal trainer)[10]</item>
+    <item>Druid (Animal trainer)[11]</item>
+    <item>Druid (Animal trainer)[12]</item>
+    <item>Druid (Animal trainer)[13]</item>
+    <item>Druid (Animal trainer)[14]</item>
+    <item>Druid (Animal trainer)[15]</item>
+    <item>Druid (Animal trainer)[16]</item>
+    <item>Druid (Animal trainer)[17]</item>
+    <item>Druid (Animal trainer)[18]</item>
+    <item>Druid (Animal trainer)[19]</item>
+    <item>Druid (Animal trainer)[20]</item>
+    <item>Druid (Doctor)[1]</item>
+    <item>Druid (Doctor)[2]</item>
+    <item>Druid (Doctor)[3]</item>
+    <item>Druid (Doctor)[4]</item>
+    <item>Druid (Doctor)[5]</item>
+    <item>Druid (Doctor)[6]</item>
+    <item>Druid (Doctor)[7]</item>
+    <item>Druid (Doctor)[8]</item>
+    <item>Druid (Doctor)[9]</item>
+    <item>Druid (Doctor)[10]</item>
+    <item>Druid (Doctor)[11]</item>
+    <item>Druid (Doctor)[12]</item>
+    <item>Druid (Doctor)[13]</item>
+    <item>Druid (Doctor)[14]</item>
+    <item>Druid (Doctor)[15]</item>
+    <item>Druid (Doctor)[16]</item>
+    <item>Druid (Doctor)[17]</item>
+    <item>Druid (Doctor)[18]</item>
+    <item>Druid (Doctor)[19]</item>
+    <item>Druid (Doctor)[20]</item>
+    <item>Druid (Famous priest)[11]</item>
+    <item>Druid (Famous priest)[12]</item>
+    <item>Druid (Famous priest)[13]</item>
+    <item>Druid (Famous priest)[14]</item>
+    <item>Druid (Famous priest)[15]</item>
+    <item>Druid (Famous priest)[16]</item>
+    <item>Druid (Famous priest)[17]</item>
+    <item>Druid (Famous priest)[18]</item>
+    <item>Druid (Famous priest)[19]</item>
+    <item>Druid (Famous priest)[20]</item>
+    <item>Dryad</item>
+    <item>Duergar warrior</item>
     <item>Dwarf warrior</item>
     <item>Eagle</item>
+    <item>Giant eagle</item>
+    <item>Efreeti</item>
+    <item>Small air elemental</item>
+    <item>Medium air elemental</item>
+    <item>Large air elemental</item>
+    <item>Huge air elemental</item>
+    <item>Greater air elemental</item>
+    <item>Elder air elemental</item>
+    <item>Small earth elemental</item>
+    <item>Medium earth elemental</item>
+    <item>Large earth elemental</item>
+    <item>Huge earth elemental</item>
+    <item>Greater earth elemental</item>
+    <item>Elder earth elemental</item>
+    <item>Small fire elemental</item>
+    <item>Medium fire elemental</item>
+    <item>Large fire elemental</item>
+    <item>Huge fire elemental</item>
+    <item>Greater fire elemental</item>
+    <item>Elder fire elemental</item>
+    <item>Small water elemental</item>
+    <item>Medium water elemental</item>
+    <item>Large water elemental</item>
+    <item>Huge water elemental</item>
+    <item>Greater water elemental</item>
+    <item>Elder water elemental</item>
     <item>Elephant</item>
     <item>Elf warrior</item>
+    <item>Erinyes</item>
+    <item>Ethereal filcher</item>
+    <item>Ethereal marauder</item>
     <item>Ettercap</item>
     <item>Ettin</item>
+    <item>Expert (Adviser)[1]</item>
+    <item>Expert (Adviser)[1d2+1]</item>
+    <item>Expert (Adviser)[1d2+3]</item>
+    <item>Expert (Adviser)[1d2+5]</item>
+    <item>Expert (Adviser)[1d2+7]</item>
+    <item>Expert (Adviser)[1d2+9]</item>
+    <item>Expert (Adviser)[1d2+11]</item>
+    <item>Expert (Adviser)[1d2+13]</item>
+    <item>Expert (Adviser)[1d2+15]</item>
+    <item>Expert (Adviser)[1d2+17]</item>
+    <item>Expert (Adviser)[20]</item>
+    <item>Expert (Architect)[1]</item>
+    <item>Expert (Architect)[1d2+1]</item>
+    <item>Expert (Architect)[1d2+3]</item>
+    <item>Expert (Architect)[1d2+5]</item>
+    <item>Expert (Architect)[1d2+7]</item>
+    <item>Expert (Architect)[1d2+9]</item>
+    <item>Expert (Architect)[1d2+11]</item>
+    <item>Expert (Architect)[1d2+13]</item>
+    <item>Expert (Architect)[1d2+15]</item>
+    <item>Expert (Architect)[1d2+17]</item>
+    <item>Expert (Architect)[20]</item>
+    <item>Expert (Artisan)[1]</item>
+    <item>Expert (Artisan)[1d2+1]</item>
+    <item>Expert (Artisan)[1d2+3]</item>
+    <item>Expert (Artisan)[1d2+5]</item>
+    <item>Expert (Artisan)[1d2+7]</item>
+    <item>Expert (Artisan)[1d2+9]</item>
+    <item>Expert (Artisan)[1d2+11]</item>
+    <item>Expert (Artisan)[1d2+13]</item>
+    <item>Expert (Artisan)[1d2+15]</item>
+    <item>Expert (Artisan)[1d2+17]</item>
+    <item>Expert (Artisan)[20]</item>
+    <item>Expert (Merchant)[1]</item>
+    <item>Expert (Merchant)[1d2+1]</item>
+    <item>Expert (Merchant)[1d2+3]</item>
+    <item>Expert (Merchant)[1d2+5]</item>
+    <item>Expert (Merchant)[1d2+7]</item>
+    <item>Expert (Merchant)[1d2+9]</item>
+    <item>Expert (Merchant)[1d2+11]</item>
+    <item>Expert (Merchant)[1d2+13]</item>
+    <item>Expert (Merchant)[1d2+15]</item>
+    <item>Expert (Merchant)[1d2+17]</item>
+    <item>Expert (Merchant)[20]</item>
+    <item>Expert (Minstrel)[1]</item>
+    <item>Expert (Minstrel)[1d2+1]</item>
+    <item>Expert (Minstrel)[1d2+3]</item>
+    <item>Expert (Minstrel)[1d2+5]</item>
+    <item>Expert (Minstrel)[1d2+7]</item>
+    <item>Expert (Minstrel)[1d2+9]</item>
+    <item>Expert (Minstrel)[1d2+11]</item>
+    <item>Expert (Minstrel)[1d2+13]</item>
+    <item>Expert (Minstrel)[1d2+15]</item>
+    <item>Expert (Minstrel)[1d2+17]</item>
+    <item>Expert (Minstrel)[20]</item>
+    <item>Fighter (Captain)[1]</item>
+    <item>Fighter (Captain)[2]</item>
+    <item>Fighter (Captain)[3]</item>
+    <item>Fighter (Captain)[4]</item>
+    <item>Fighter (Captain)[5]</item>
+    <item>Fighter (Captain)[6]</item>
+    <item>Fighter (Captain)[7]</item>
+    <item>Fighter (Captain)[8]</item>
+    <item>Fighter (Captain)[9]</item>
+    <item>Fighter (Captain)[10]</item>
+    <item>Fighter (Captain)[11]</item>
+    <item>Fighter (Combat instructor)[11]</item>
+    <item>Fighter (Combat instructor)[12]</item>
+    <item>Fighter (Combat instructor)[13]</item>
+    <item>Fighter (Combat instructor)[14]</item>
+    <item>Fighter (Combat instructor)[15]</item>
+    <item>Fighter (Combat instructor)[16]</item>
+    <item>Fighter (Combat instructor)[17]</item>
+    <item>Fighter (Combat instructor)[18]</item>
+    <item>Fighter (Combat instructor)[19]</item>
+    <item>Fighter (Combat instructor)[20]</item>
+    <item>Fighter (Hitman)[1]</item>
+    <item>Fighter (Hitman)[2]</item>
+    <item>Fighter (Hitman)[3]</item>
+    <item>Fighter (Hitman)[4]</item>
+    <item>Fighter (Hitman)[5]</item>
+    <item>Fighter (Hitman)[6]</item>
+    <item>Fighter (Hitman)[7]</item>
+    <item>Fighter (Hitman)[8]</item>
+    <item>Fighter (Hitman)[9]</item>
+    <item>Fighter (Hitman)[10]</item>
+    <item>Fighter (Hitman)[11]</item>
+    <item>Fighter (Hitman)[12]</item>
+    <item>Fighter (Hitman)[13]</item>
+    <item>Fighter (Hitman)[14]</item>
+    <item>Fighter (Hitman)[15]</item>
+    <item>Fighter (Hitman)[16]</item>
+    <item>Fighter (Hitman)[17]</item>
+    <item>Fighter (Hitman)[18]</item>
+    <item>Fighter (Hitman)[19]</item>
+    <item>Fighter (Hitman)[20]</item>
+    <item>Fighter (Leader)[1]</item>
+    <item>Fighter (Leader)[2]</item>
+    <item>Fighter (Leader)[3]</item>
+    <item>Fighter (Leader)[4]</item>
+    <item>Fighter (Leader)[5]</item>
+    <item>Fighter (Leader)[6]</item>
+    <item>Fighter (Leader)[7]</item>
+    <item>Fighter (Leader)[8]</item>
+    <item>Fighter (Leader)[9]</item>
+    <item>Fighter (Leader)[10]</item>
+    <item>Fighter (Leader)[11]</item>
+    <item>Fighter (Student)[1]</item>
+    <item>Fighter (Student)[2]</item>
+    <item>Fighter (Student)[3]</item>
+    <item>Fighter (Student)[4]</item>
+    <item>Fighter (Student)[5]</item>
+    <item>Fighter (Student)[6]</item>
+    <item>Fighter (Student)[7]</item>
+    <item>Fighter (Student)[8]</item>
+    <item>Fighter (Student)[9]</item>
+    <item>Fighter (Student)[10]</item>
+    <item>Fighter (War hero)[11]</item>
+    <item>Fighter (War hero)[12]</item>
+    <item>Fighter (War hero)[13]</item>
+    <item>Fighter (War hero)[14]</item>
+    <item>Fighter (War hero)[15]</item>
+    <item>Fighter (War hero)[16]</item>
+    <item>Fighter (War hero)[17]</item>
+    <item>Fighter (War hero)[18]</item>
+    <item>Fighter (War hero)[19]</item>
+    <item>Fighter (War hero)[20]</item>
     <item>Giant fire beetle</item>
+    <item>Celestial giant fire beetle</item>
+    <item>Formian worker</item>
+    <item>Formian warrior</item>
+    <item>Formian taskmaster</item>
+    <item>Formian myrmarch</item>
+    <item>Formian queen</item>
     <item>Frost worm</item>
     <item>Gargoyle</item>
+    <item>Ghaele</item>
+    <item>Cloud giant</item>
+    <item>Fire giant</item>
+    <item>Frost giant</item>
+    <item>Frost giant Jarl</item>
+    <item>Hill giant</item>
+    <item>Stone giant</item>
+    <item>Stone giant elder</item>
+    <item>Storm giant</item>
+    <item>Gibbering mouther</item>
+    <item>Girallon</item>
+    <item>Glabrezu</item>
+    <item>Gnome warrior</item>
+    <item>Gnoll</item>
+    <item>Goblin</item>
+    <item>Gorgon</item>
+    <item>Gray render</item>
+    <item>Green hag</item>
+    <item>Grick</item>
+    <item>Griffon</item>
+    <item>Grig</item>
+    <item>Grimlock</item>
+    <item>Gynosphinx</item>
+    <item>Halfling warrior</item>
+    <item>Harpy</item>
+    <item>Harpy archer</item>
+    <item>Hawk</item>
+    <item>Hell hound</item>
+    <item>Hellcat (Bezekira)</item>
+    <item>Hellwasp swarm</item>
+    <item>Hezrou</item>
+    <item>Hieracosphinx</item>
+    <item>Hippogriff</item>
+    <item>Hobgoblin</item>
+    <item>Horned Devil (Cornugon)</item>
+    <item>Light horse</item>
+    <item>Light warhorse</item>
+    <item>Heavy horse</item>
+    <item>Heavy warhorse</item>
+    <item>Hound archon</item>
+    <item>Hound archon Hero</item>
+    <item>Howler</item>
+    <item>Hydra (5 heads)</item>
+    <item>Hydra (6 heads)</item>
+    <item>Hydra (7 heads)</item>
+    <item>Hydra (8 heads)</item>
+    <item>Hydra (9 heads)</item>
+    <item>Hydra (10 heads)</item>
+    <item>Hydra (11 heads)</item>
+    <item>Hydra (12 heads)</item>
+    <item>Hyena</item>
+    <item>Ice Devil (Gelugon)</item>
+    <item>Imp</item>
+    <item>Invisible stalker</item>
+    <item>Janni</item>
+    <item>Kobold</item>
+    <item>Krenshar</item>
+    <item>Lamia</item>
+    <item>Lammasu</item>
+    <item>Lammasu (Golden Protector)</item>
+    <item>Lantern archon</item>
+    <item>Lemure</item>
+    <item>Leonal</item>
+    <item>Leopard</item>
+    <item>Lillend</item>
+    <item>Lion</item>
+    <item>Dire lion</item>
+    <item>Livestock (Noncombatant)</item>
+    <item>Lizard</item>
+    <item>Monitor lizard</item>
+    <item>Lizardfolk</item>
+    <item>Locust swarm</item>
+    <item>Magmin</item>
+    <item>Manticore</item>
+    <item>Marilith</item>
+    <item>Medusa</item>
+    <item>Megaraptor</item>
+    <item>Air mephit</item>
+    <item>Dust mephit</item>
+    <item>Earth mephit</item>
+    <item>Fire mephit</item>
+    <item>Ice mephit</item>
+    <item>Magma mephit</item>
+    <item>Ooze mephit</item>
+    <item>Salt mephit</item>
+    <item>Steam mephit</item>
+    <item>Water mephit</item>
+    <item>Mimic</item>
+    <item>Mind flayer</item>
+    <item>Mind flayer Sorcerer</item>
+    <item>Minotaur</item>
+    <item>Monk (Combat instructor)[11]</item>
+    <item>Monk (Combat instructor)[12]</item>
+    <item>Monk (Combat instructor)[13]</item>
+    <item>Monk (Combat instructor)[14]</item>
+    <item>Monk (Combat instructor)[15]</item>
+    <item>Monk (Combat instructor)[16]</item>
+    <item>Monk (Combat instructor)[17]</item>
+    <item>Monk (Combat instructor)[18]</item>
+    <item>Monk (Combat instructor)[19]</item>
+    <item>Monk (Combat instructor)[20]</item>
+    <item>Monk (Scholar)[1]</item>
+    <item>Monk (Scholar)[2]</item>
+    <item>Monk (Scholar)[3]</item>
+    <item>Monk (Scholar)[4]</item>
+    <item>Monk (Scholar)[5]</item>
+    <item>Monk (Scholar)[6]</item>
+    <item>Monk (Scholar)[7]</item>
+    <item>Monk (Scholar)[8]</item>
+    <item>Monk (Scholar)[9]</item>
+    <item>Monk (Scholar)[10]</item>
+    <item>Monk (Scholar)[11]</item>
+    <item>Monk (Scholar)[12]</item>
+    <item>Monk (Scholar)[13]</item>
+    <item>Monk (Scholar)[14]</item>
+    <item>Monk (Scholar)[15]</item>
+    <item>Monk (Scholar)[16]</item>
+    <item>Monk (Scholar)[17]</item>
+    <item>Monk (Scholar)[18]</item>
+    <item>Monk (Scholar)[19]</item>
+    <item>Monk (Scholar)[20]</item>
+    <item>Monk (Student)[1]</item>
+    <item>Monk (Student)[2]</item>
+    <item>Monk (Student)[3]</item>
+    <item>Monk (Student)[4]</item>
+    <item>Monk (Student)[5]</item>
+    <item>Monk (Student)[6]</item>
+    <item>Monk (Student)[7]</item>
+    <item>Monk (Student)[8]</item>
+    <item>Monk (Student)[9]</item>
+    <item>Monk (Student)[10]</item>
+    <item>Monk (War hero)[11]</item>
+    <item>Monk (War hero)[12]</item>
+    <item>Monk (War hero)[13]</item>
+    <item>Monk (War hero)[14]</item>
+    <item>Monk (War hero)[15]</item>
+    <item>Monk (War hero)[16]</item>
+    <item>Monk (War hero)[17]</item>
+    <item>Monk (War hero)[18]</item>
+    <item>Monk (War hero)[19]</item>
+    <item>Monk (War hero)[20]</item>
+    <item>Monkey</item>
+    <item>Celestial monkey</item>
+    <item>Mule</item>
+    <item>Dark naga</item>
+    <item>Guardian naga</item>
+    <item>Spirit naga</item>
+    <item>Water naga</item>
+    <item>Nalfeshnee</item>
+    <item>Nessian warhound</item>
+    <item>Night hag</item>
+    <item>Nightmare</item>
+    <item>Nightmare (Cauchemar)</item>
+    <item>Nixie</item>
+    <item>NPC (Traveler)[1]</item>
+    <item>NPC (Traveler)[1d2+1]</item>
+    <item>NPC (Traveler)[1d2+3]</item>
+    <item>NPC (Traveler)[1d2+5]</item>
+    <item>NPC (Traveler)[1d2+7]</item>
+    <item>NPC (Traveler)[1d2+9]</item>
+    <item>NPC (Traveler)[1d2+11]</item>
+    <item>NPC (Traveler)[1d2+13]</item>
+    <item>NPC (Traveler)[1d2+15]</item>
+    <item>NPC (Traveler)[1d2+17]</item>
+    <item>NPC (Traveler)[20]</item>
+    <item>NPC[1]</item>
+    <item>NPC[1d2+1]</item>
+    <item>NPC[1d2+3]</item>
+    <item>NPC[1d2+5]</item>
+    <item>NPC[1d2+7]</item>
+    <item>NPC[1d2+9]</item>
+    <item>NPC[1d2+11]</item>
+    <item>NPC[1d2+13]</item>
+    <item>NPC[1d2+15]</item>
+    <item>NPC[1d2+17]</item>
+    <item>NPC[20]</item>
+    <item>Nymph</item>
+    <item>Ogre</item>
+    <item>Ogre Barbarian</item>
+    <item>Ogre mage</item>
+    <item>Orc</item>
+    <item>Otyugh</item>
+    <item>Owl</item>
+    <item>Celestial owl</item>
+    <item>Giant owl</item>
+    <item>Owlbear</item>
+    <item>Paladin (Combat instructor)[11]</item>
+    <item>Paladin (Combat instructor)[12]</item>
+    <item>Paladin (Combat instructor)[13]</item>
+    <item>Paladin (Combat instructor)[14]</item>
+    <item>Paladin (Combat instructor)[15]</item>
+    <item>Paladin (Combat instructor)[16]</item>
+    <item>Paladin (Combat instructor)[17]</item>
+    <item>Paladin (Combat instructor)[18]</item>
+    <item>Paladin (Combat instructor)[19]</item>
+    <item>Paladin (Combat instructor)[20]</item>
+    <item>Paladin (Crusader)[1]</item>
+    <item>Paladin (Crusader)[2]</item>
+    <item>Paladin (Crusader)[3]</item>
+    <item>Paladin (Crusader)[4]</item>
+    <item>Paladin (Crusader)[5]</item>
+    <item>Paladin (Crusader)[6]</item>
+    <item>Paladin (Crusader)[7]</item>
+    <item>Paladin (Crusader)[8]</item>
+    <item>Paladin (Crusader)[9]</item>
+    <item>Paladin (Crusader)[10]</item>
+    <item>Paladin (Crusader)[11]</item>
+    <item>Paladin (Crusader)[12]</item>
+    <item>Paladin (Crusader)[13]</item>
+    <item>Paladin (Crusader)[14]</item>
+    <item>Paladin (Crusader)[15]</item>
+    <item>Paladin (Crusader)[16]</item>
+    <item>Paladin (Crusader)[17]</item>
+    <item>Paladin (Crusader)[18]</item>
+    <item>Paladin (Crusader)[19]</item>
+    <item>Paladin (Crusader)[20]</item>
+    <item>Paladin (Student)[1]</item>
+    <item>Paladin (Student)[2]</item>
+    <item>Paladin (Student)[3]</item>
+    <item>Paladin (Student)[4]</item>
+    <item>Paladin (Student)[5]</item>
+    <item>Paladin (Student)[6]</item>
+    <item>Paladin (Student)[7]</item>
+    <item>Paladin (Student)[8]</item>
+    <item>Paladin (Student)[9]</item>
+    <item>Paladin (Student)[10]</item>
+    <item>Paladin (War hero)[11]</item>
+    <item>Paladin (War hero)[12]</item>
+    <item>Paladin (War hero)[13]</item>
+    <item>Paladin (War hero)[14]</item>
+    <item>Paladin (War hero)[15]</item>
+    <item>Paladin (War hero)[16]</item>
+    <item>Paladin (War hero)[17]</item>
+    <item>Paladin (War hero)[18]</item>
+    <item>Paladin (War hero)[19]</item>
+    <item>Paladin (War hero)[20]</item>
+    <item>Pegasus</item>
+    <item>Phase spider</item>
+    <item>Phasm</item>
+    <item>Pit fiend</item>
+    <item>Pixie</item>
+    <item>Pixie (with Irresistable Dance)</item>
+    <item>Planetar</item>
+    <item>Pony</item>
+    <item>Warpony</item>
+    <item>Giant praying mantis</item>
+    <item>Pseudodragon</item>
+    <item>Purple worm</item>
+    <item>Pyrohydra (5 heads)</item>
+    <item>Pyrohydra (6 heads)</item>
+    <item>Pyrohydra (7 heads)</item>
+    <item>Pyrohydra (8 heads)</item>
+    <item>Pyrohydra (9 heads)</item>
+    <item>Pyrohydra (10 heads)</item>
+    <item>Pyrohydra (11 heads)</item>
+    <item>Pyrohydra (12 heads)</item>
+    <item>Quasit</item>
+    <item>Rakshasa</item>
+    <item>Ranger (Animal trainer)[1]</item>
+    <item>Ranger (Animal trainer)[2]</item>
+    <item>Ranger (Animal trainer)[3]</item>
+    <item>Ranger (Animal trainer)[4]</item>
+    <item>Ranger (Animal trainer)[5]</item>
+    <item>Ranger (Animal trainer)[6]</item>
+    <item>Ranger (Animal trainer)[7]</item>
+    <item>Ranger (Animal trainer)[8]</item>
+    <item>Ranger (Animal trainer)[9]</item>
+    <item>Ranger (Animal trainer)[10]</item>
+    <item>Ranger (Animal trainer)[11]</item>
+    <item>Ranger (Animal trainer)[12]</item>
+    <item>Ranger (Animal trainer)[13]</item>
+    <item>Ranger (Animal trainer)[14]</item>
+    <item>Ranger (Animal trainer)[15]</item>
+    <item>Ranger (Animal trainer)[16]</item>
+    <item>Ranger (Animal trainer)[17]</item>
+    <item>Ranger (Animal trainer)[18]</item>
+    <item>Ranger (Animal trainer)[19]</item>
+    <item>Ranger (Animal trainer)[20]</item>
+    <item>Ranger (Combat instructor)[11]</item>
+    <item>Ranger (Combat instructor)[12]</item>
+    <item>Ranger (Combat instructor)[13]</item>
+    <item>Ranger (Combat instructor)[14]</item>
+    <item>Ranger (Combat instructor)[15]</item>
+    <item>Ranger (Combat instructor)[16]</item>
+    <item>Ranger (Combat instructor)[17]</item>
+    <item>Ranger (Combat instructor)[18]</item>
+    <item>Ranger (Combat instructor)[19]</item>
+    <item>Ranger (Combat instructor)[20]</item>
+    <item>Ranger (Hitman)[1]</item>
+    <item>Ranger (Hitman)[2]</item>
+    <item>Ranger (Hitman)[3]</item>
+    <item>Ranger (Hitman)[4]</item>
+    <item>Ranger (Hitman)[5]</item>
+    <item>Ranger (Hitman)[6]</item>
+    <item>Ranger (Hitman)[7]</item>
+    <item>Ranger (Hitman)[8]</item>
+    <item>Ranger (Hitman)[9]</item>
+    <item>Ranger (Hitman)[10]</item>
+    <item>Ranger (Hitman)[11]</item>
+    <item>Ranger (Hitman)[12]</item>
+    <item>Ranger (Hitman)[13]</item>
+    <item>Ranger (Hitman)[14]</item>
+    <item>Ranger (Hitman)[15]</item>
+    <item>Ranger (Hitman)[16]</item>
+    <item>Ranger (Hitman)[17]</item>
+    <item>Ranger (Hitman)[18]</item>
+    <item>Ranger (Hitman)[19]</item>
+    <item>Ranger (Hitman)[20]</item>
+    <item>Ranger (Student)[1]</item>
+    <item>Ranger (Student)[2]</item>
+    <item>Ranger (Student)[3]</item>
+    <item>Ranger (Student)[4]</item>
+    <item>Ranger (Student)[5]</item>
+    <item>Ranger (Student)[6]</item>
+    <item>Ranger (Student)[7]</item>
+    <item>Ranger (Student)[8]</item>
+    <item>Ranger (Student)[9]</item>
+    <item>Ranger (Student)[10]</item>
+    <item>Ranger (War hero)[11]</item>
+    <item>Ranger (War hero)[12]</item>
+    <item>Ranger (War hero)[13]</item>
+    <item>Ranger (War hero)[14]</item>
+    <item>Ranger (War hero)[15]</item>
+    <item>Ranger (War hero)[16]</item>
+    <item>Ranger (War hero)[17]</item>
+    <item>Ranger (War hero)[18]</item>
+    <item>Ranger (War hero)[19]</item>
+    <item>Ranger (War hero)[20]</item>
+    <item>Rast</item>
+    <item>Rat</item>
+    <item>Dire rat</item>
+    <item>Fiendish dire rat</item>
+    <item>Rat swarm</item>
+    <item>Raven</item>
+    <item>Fiendish raven</item>
+    <item>Ravid</item>
+    <item>Razor boar</item>
+    <item>Remorhaz</item>
+    <item>Rhinoceras</item>
+    <item>Roc</item>
+    <item>Rogue (Hitman)[1]</item>
+    <item>Rogue (Hitman)[2]</item>
+    <item>Rogue (Hitman)[3]</item>
+    <item>Rogue (Hitman)[4]</item>
+    <item>Rogue (Hitman)[5]</item>
+    <item>Rogue (Hitman)[6]</item>
+    <item>Rogue (Hitman)[7]</item>
+    <item>Rogue (Hitman)[8]</item>
+    <item>Rogue (Hitman)[9]</item>
+    <item>Rogue (Hitman)[10]</item>
+    <item>Rogue (Hitman)[11]</item>
+    <item>Rogue (Hitman)[12]</item>
+    <item>Rogue (Hitman)[13]</item>
+    <item>Rogue (Hitman)[14]</item>
+    <item>Rogue (Hitman)[15]</item>
+    <item>Rogue (Hitman)[16]</item>
+    <item>Rogue (Hitman)[17]</item>
+    <item>Rogue (Hitman)[18]</item>
+    <item>Rogue (Hitman)[19]</item>
+    <item>Rogue (Hitman)[20]</item>
+    <item>Rogue (Pickpocket)[1]</item>
+    <item>Rogue (Pickpocket)[2]</item>
+    <item>Rogue (Pickpocket)[3]</item>
+    <item>Rogue (Pickpocket)[4]</item>
+    <item>Rogue (Pickpocket)[5]</item>
+    <item>Rogue (Pickpocket)[6]</item>
+    <item>Rogue (Pickpocket)[7]</item>
+    <item>Rogue (Pickpocket)[8]</item>
+    <item>Rogue (Pickpocket)[9]</item>
+    <item>Rogue (Pickpocket)[10]</item>
+    <item>Rogue (Pickpocket)[11]</item>
+    <item>Rogue (Pickpocket)[12]</item>
+    <item>Rogue (Pickpocket)[13]</item>
+    <item>Rogue (Pickpocket)[14]</item>
+    <item>Rogue (Pickpocket)[15]</item>
+    <item>Rogue (Pickpocket)[16]</item>
+    <item>Rogue (Pickpocket)[17]</item>
+    <item>Rogue (Pickpocket)[18]</item>
+    <item>Rogue (Pickpocket)[19]</item>
+    <item>Rogue (Pickpocket)[20]</item>
+    <item>Rogue (Street performer)[1]</item>
+    <item>Rogue (Street performer)[2]</item>
+    <item>Rogue (Street performer)[3]</item>
+    <item>Rogue (Street performer)[4]</item>
+    <item>Rogue (Street performer)[5]</item>
+    <item>Rogue (Street performer)[6]</item>
+    <item>Rogue (Street performer)[7]</item>
+    <item>Rogue (Street performer)[8]</item>
+    <item>Rogue (Street performer)[9]</item>
+    <item>Rogue (Street performer)[10]</item>
+    <item>Rogue (Street performer)[11]</item>
+    <item>Rogue (Street performer)[12]</item>
+    <item>Rogue (Street performer)[13]</item>
+    <item>Rogue (Street performer)[14]</item>
+    <item>Rogue (Street performer)[15]</item>
+    <item>Rogue (Street performer)[16]</item>
+    <item>Rogue (Street performer)[17]</item>
+    <item>Rogue (Street performer)[18]</item>
+    <item>Rogue (Street performer)[19]</item>
+    <item>Rogue (Street performer)[20]</item>
+    <item>Roper</item>
+    <item>Rust monster</item>
+    <item>Flamebrother salamander</item>
+    <item>Average salamander</item>
+    <item>Noble salamander</item>
+    <item>Satyr</item>
+    <item>Satyr (with pipes)</item>
+    <item>Tiny monstrous scorpion</item>
+    <item>Small monstrous scorpion</item>
+    <item>Medium monstrous scorpion</item>
+    <item>Large monstrous scorpion</item>
+    <item>Huge monstrous scorpion</item>
+    <item>Gargantuan monstrous scorpion</item>
+    <item>Colossal monstrous scorpion</item>
+    <item>Scorpionfolk</item>
+    <item>Sea hag</item>
+    <item>Shadow mastiff</item>
+    <item>Shocker lizard</item>
+    <item>Skum</item>
+    <item>Red slaad</item>
+    <item>Blue slaad</item>
+    <item>Green slaad</item>
+    <item>Gray slaad</item>
+    <item>Death slaad</item>
+    <item>Constrictor snake</item>
+    <item>Giant constrictor snake</item>
+    <item>Tiny viper snake</item>
+    <item>Small viper snake</item>
+    <item>Medium viper snake</item>
+    <item>Large viper snake</item>
+    <item>Huge viper snake</item>
+    <item>Solar</item>
+    <item>Sorcerer (Famous entertainer)[11]</item>
+    <item>Sorcerer (Famous entertainer)[12]</item>
+    <item>Sorcerer (Famous entertainer)[13]</item>
+    <item>Sorcerer (Famous entertainer)[14]</item>
+    <item>Sorcerer (Famous entertainer)[15]</item>
+    <item>Sorcerer (Famous entertainer)[16]</item>
+    <item>Sorcerer (Famous entertainer)[17]</item>
+    <item>Sorcerer (Famous entertainer)[18]</item>
+    <item>Sorcerer (Famous entertainer)[19]</item>
+    <item>Sorcerer (Famous entertainer)[20]</item>
+    <item>Sorcerer (Street performer)[1]</item>
+    <item>Sorcerer (Street performer)[2]</item>
+    <item>Sorcerer (Street performer)[3]</item>
+    <item>Sorcerer (Street performer)[4]</item>
+    <item>Sorcerer (Street performer)[5]</item>
+    <item>Sorcerer (Street performer)[6]</item>
+    <item>Sorcerer (Street performer)[7]</item>
+    <item>Sorcerer (Street performer)[8]</item>
+    <item>Sorcerer (Street performer)[9]</item>
+    <item>Sorcerer (Street performer)[10]</item>
+    <item>Sorcerer (Street performer)[11]</item>
+    <item>Sorcerer (Street performer)[12]</item>
+    <item>Sorcerer (Street performer)[13]</item>
+    <item>Sorcerer (Street performer)[14]</item>
+    <item>Sorcerer (Street performer)[15]</item>
+    <item>Sorcerer (Street performer)[16]</item>
+    <item>Sorcerer (Street performer)[17]</item>
+    <item>Sorcerer (Street performer)[18]</item>
+    <item>Sorcerer (Street performer)[19]</item>
+    <item>Sorcerer (Street performer)[20]</item>
+    <item>Tiny monstrous spider</item>
+    <item>Small monstrous spider</item>
+    <item>Medium monstrous spider</item>
+    <item>Large monstrous spider</item>
+    <item>Huge monstrous spider</item>
+    <item>Gargantuan monstrous spider</item>
+    <item>Colossal monstrous spider</item>
+    <item>Spider swarm</item>
+    <item>Spider eater</item>
+    <item>Giant stag beetle</item>
+    <item>Stirge</item>
+    <item>Succubus</item>
+    <item>Svirfneblin warrior</item>
+    <item>Tarrasque</item>
+    <item>Thoqqua</item>
+    <item>Tiefling warrior</item>
+    <item>Tiger</item>
+    <item>Dire tiger</item>
+    <item>Titan</item>
+    <item>Toad</item>
+    <item>Triceratops</item>
+    <item>Troglodyte</item>
+    <item>Troll</item>
+    <item>Troll Hunter</item>
+    <item>Trumpet archon</item>
+    <item>Tyrannosaurus</item>
+    <item>Umber hulk</item>
+    <item>Truly horrid umber hulk</item>
+    <item>Unicorn</item>
+    <item>Unicorn (Celestial Charger)</item>
+    <item>Vargouille</item>
+    <item>Vrock</item>
+    <item>Warrior (Bandit)[1]</item>
+    <item>Warrior (Bandit)[1d2+1]</item>
+    <item>Warrior (Bandit)[1d2+3]</item>
+    <item>Warrior (Bandit)[1d2+5]</item>
+    <item>Warrior (Bandit)[1d2+7]</item>
+    <item>Warrior (Bandit)[1d2+9]</item>
+    <item>Warrior (Bandit)[1d2+11]</item>
+    <item>Warrior (Bandit)[1d2+13]</item>
+    <item>Warrior (Bandit)[1d2+15]</item>
+    <item>Warrior (Bandit)[1d2+17]</item>
+    <item>Warrior (Bandit)[20]</item>
+    <item>Warrior (Captain)[1d2+1]</item>
+    <item>Warrior (Captain)[1d2+3]</item>
+    <item>Warrior (Captain)[1d2+5]</item>
+    <item>Warrior (Captain)[1d2+7]</item>
+    <item>Warrior (Captain)[1d2+9]</item>
+    <item>Warrior (Captain)[1d2+11]</item>
+    <item>Warrior (Captain)[1d2+13]</item>
+    <item>Warrior (Captain)[1d2+15]</item>
+    <item>Warrior (Captain)[1d2+17]</item>
+    <item>Warrior (Captain)[20]</item>
+    <item>Warrior (Guard)[1]</item>
+    <item>Warrior (Guard)[1d2+1]</item>
+    <item>Warrior (Guard)[1d2+3]</item>
+    <item>Warrior (Guard)[1d2+5]</item>
+    <item>Warrior (Guard)[1d2+7]</item>
+    <item>Warrior (Guard)[1d2+9]</item>
+    <item>Warrior (Guard)[1d2+11]</item>
+    <item>Warrior (Guard)[1d2+13]</item>
+    <item>Warrior (Guard)[1d2+15]</item>
+    <item>Warrior (Guard)[1d2+17]</item>
+    <item>Warrior (Guard)[20]</item>
+    <item>Warrior (Hunter)[1]</item>
+    <item>Warrior (Hunter)[1d2+1]</item>
+    <item>Warrior (Hunter)[1d2+3]</item>
+    <item>Warrior (Hunter)[1d2+5]</item>
+    <item>Warrior (Hunter)[1d2+7]</item>
+    <item>Warrior (Hunter)[1d2+9]</item>
+    <item>Warrior (Hunter)[1d2+11]</item>
+    <item>Warrior (Hunter)[1d2+13]</item>
+    <item>Warrior (Hunter)[1d2+15]</item>
+    <item>Warrior (Hunter)[1d2+17]</item>
+    <item>Warrior (Hunter)[20]</item>
+    <item>Warrior (Leader)[1d2+1]</item>
+    <item>Warrior (Leader)[1d2+3]</item>
+    <item>Warrior (Leader)[1d2+5]</item>
+    <item>Warrior (Leader)[1d2+7]</item>
+    <item>Warrior (Leader)[1d2+9]</item>
+    <item>Warrior (Leader)[1d2+11]</item>
+    <item>Warrior (Leader)[1d2+13]</item>
+    <item>Warrior (Leader)[1d2+15]</item>
+    <item>Warrior (Leader)[1d2+17]</item>
+    <item>Warrior (Leader)[20]</item>
+    <item>Warrior (Patrol)[1]</item>
+    <item>Warrior (Patrol)[1d2+1]</item>
+    <item>Warrior (Patrol)[1d2+3]</item>
+    <item>Warrior (Patrol)[1d2+5]</item>
+    <item>Warrior (Patrol)[1d2+7]</item>
+    <item>Warrior (Patrol)[1d2+9]</item>
+    <item>Warrior (Patrol)[1d2+11]</item>
+    <item>Warrior (Patrol)[1d2+13]</item>
+    <item>Warrior (Patrol)[1d2+15]</item>
+    <item>Warrior (Patrol)[1d2+17]</item>
+    <item>Warrior (Patrol)[20]</item>
+    <item>Warrior (Student)[1]</item>
+    <item>Warrior (Student)[1d2+1]</item>
+    <item>Warrior (Student)[1d2+3]</item>
+    <item>Warrior (Student)[1d2+5]</item>
+    <item>Warrior (Student)[1d2+7]</item>
+    <item>Warrior (Student)[1d2+9]</item>
+    <item>Warrior (Student)[1d2+11]</item>
+    <item>Warrior (Student)[1d2+13]</item>
+    <item>Warrior (Student)[1d2+15]</item>
+    <item>Warrior (Student)[1d2+17]</item>
+    <item>Warrior (Student)[20]</item>
+    <item>Giant wasp</item>
+    <item>Weasel</item>
+    <item>Dire weasel</item>
+    <item>Werebear</item>
+    <item>Wereboar</item>
+    <item>Hill giant dire wereboar</item>
+    <item>Wererat</item>
+    <item>Weretiger</item>
+    <item>Werewolf</item>
+    <item>Werewolf Lord</item>
+    <item>Will-O'-Wisp</item>
+    <item>Winter wolf</item>
+    <item>Wizard (Famous researcher)[11]</item>
+    <item>Wizard (Famous researcher)[12]</item>
+    <item>Wizard (Famous researcher)[13]</item>
+    <item>Wizard (Famous researcher)[14]</item>
+    <item>Wizard (Famous researcher)[15]</item>
+    <item>Wizard (Famous researcher)[16]</item>
+    <item>Wizard (Famous researcher)[17]</item>
+    <item>Wizard (Famous researcher)[18]</item>
+    <item>Wizard (Famous researcher)[19]</item>
+    <item>Wizard (Famous researcher)[20]</item>
+    <item>Wizard (Scholar)[1]</item>
+    <item>Wizard (Scholar)[2]</item>
+    <item>Wizard (Scholar)[3]</item>
+    <item>Wizard (Scholar)[4]</item>
+    <item>Wizard (Scholar)[5]</item>
+    <item>Wizard (Scholar)[6]</item>
+    <item>Wizard (Scholar)[7]</item>
+    <item>Wizard (Scholar)[8]</item>
+    <item>Wizard (Scholar)[9]</item>
+    <item>Wizard (Scholar)[10]</item>
+    <item>Wizard (Scholar)[11]</item>
+    <item>Wizard (Scholar)[12]</item>
+    <item>Wizard (Scholar)[13]</item>
+    <item>Wizard (Scholar)[14]</item>
+    <item>Wizard (Scholar)[15]</item>
+    <item>Wizard (Scholar)[16]</item>
+    <item>Wizard (Scholar)[17]</item>
+    <item>Wizard (Scholar)[18]</item>
+    <item>Wizard (Scholar)[19]</item>
+    <item>Wizard (Scholar)[20]</item>
+    <item>Wolf</item>
+    <item>Dire wolf</item>
+    <item>Wolverine</item>
+    <item>Dire wolverine</item>
+    <item>Worg</item>
+    <item>Wyvern</item>
+    <item>Xill</item>
+    <item>Minor xorn</item>
+    <item>Average xorn</item>
+    <item>Elder xorn</item>
+    <item>Yeth hound</item>
+    <item>Yrthak</item>
+    <item>Yuan-ti Abomination</item>
+    <item>Yuan-ti Halfblood</item>
+    <item>Yuan-ti Pureblood</item>
+  </collection>
+  <collection>
+    <entry>Civilized</entry>
+    <item>Adept (Doctor)</item>
+    <item>Adept (Fortuneteller)</item>
+    <item>Adept (Missionary)</item>
+    <item>Adept (Street performer)</item>
+    <item>Aristocrat (Businessman)</item>
+    <item>Aristocrat (Gentry)</item>
+    <item>Aristocrat (Politician)</item>
+    <item>Barbarian (Combat instructor)</item>
+    <item>Barbarian (War hero)</item>
+    <item>Bard (Famous entertainer)</item>
+    <item>Bard (Street performer)</item>
+    <item>Cat</item>
+    <item>Character (Retired adventurer)</item>
+    <item>Character (Sellsword)</item>
+    <item>Cleric (Doctor)</item>
+    <item>Cleric (Famous priest)</item>
+    <item>Cleric (War hero)</item>
+    <item>Commoner (Beggar)</item>
+    <item>Commoner (Construction worker)</item>
+    <item>Commoner (Merchant)</item>
+    <item>Commoner (Minstrel)</item>
+    <item>Commoner (Protestor)</item>
+    <item>Druid (Doctor)</item>
+    <item>Druid (Animal trainer)</item>
+    <item>Druid (Famous priest)</item>
+    <item>Expert (Artisan)</item>
+    <item>Fighter (Combat instructor)</item>
+    <item>Fighter (Hitman)</item>
+    <item>Fighter (War hero)</item>
+    <item>Monk (Combat instructor)</item>
+    <item>Monk (Scholar)</item>
+    <item>Monk (War hero)</item>
+    <item>NPC</item>
+    <item>Paladin (Combat instructor)</item>
+    <item>Paladin (Crusader)</item>
+    <item>Paladin (War hero)</item>
+    <item>Ranger (Animal trainer)</item>
+    <item>Ranger (Combat instructor)</item>
+    <item>Ranger (Hitman)</item>
+    <item>Ranger (War hero)</item>
+    <item>Rogue (Hitman)</item>
+    <item>Rogue (Pickpocket)</item>
+    <item>Rogue (Street performer)</item>
+    <item>Sorcerer (Famous entertainer)</item>
+    <item>Sorcerer (Street performer)</item>
+    <item>Warrior (Patrol)</item>
+    <item>Wizard (Famous researcher)</item>
+    <item>Wizard (Scholar)</item>
+  </collection>
+  <collection>
+    <entry>Desert</entry>
+    <item>Lamia</item>
+    <item>Mummy</item>
+  </collection>
+  <collection>
+    <entry>Dungeon</entry>
+    <item>Aboleth</item>
+    <item>Black bear</item>
+    <item>Brown bear</item>
+    <item>Dragonne</item>
+    <item>Drider</item>
+    <item>Cloud giant</item>
+    <item>Umber hulk</item>
+    <item>Stone giant</item>
+    <item>Tiger</item>
+    <item>Gynosphinx</item>
+    <item>Destrachan</item>
+    <item>Purple worm</item>
+    <item>Mind flayer</item>
+    <item>Yrthak</item>
+    <item>Couatl</item>
+    <item>Roper</item>
+    <item>Storm giant</item>
+    <item>Darkmantle</item>
+    <item>Krenshar</item>
+    <item>Kobold</item>
+    <item>Giant ant</item>
+    <item>Choker</item>
+    <item>Fungus</item>
+    <item>Lizardfolk</item>
+    <item>Badger</item>
+    <item>Gelatinous cube</item>
+    <item>Giant praying mantis</item>
+    <item>Black pudding</item>
+    <item>Phantom fungus</item>
+    <item>Bugbear</item>
+    <item>Ankheg</item>
+    <item>Troglodyte</item>
+    <item>Weasel</item>
+    <item>Gray ooze</item>
+    <item>Ochre jelly</item>
+    <item>Carrion crawler</item>
+    <item>Rust monster</item>
+    <item>Ettercap</item>
+    <item>Wolverine</item>
+    <item>Constrictor snake</item>
+    <item>Green hag</item>
+    <item>Blink dog</item>
+    <item>Grick</item>
+    <item>Shocker lizard</item>
+    <item>Ape</item>
+    <item>Wolf</item>
+    <item>Giant stag beetle</item>
+    <item>Owlbear</item>
+    <item>Shambling mound</item>
+    <item>Boar</item>
+    <item>Displacer beast</item>
+    <item>Otyugh</item>
+    <item>Ettin</item>
+    <item>Criosphinx</item>
+    <item>Aranea</item>
+    <item>Cloaker</item>
+    <item>Minotaur</item>
+    <item>Bat</item>
+    <item>Girallon</item>
+    <item>Hieracosphinx</item>
+    <item>Lion</item>
+    <item>Lamia</item>
+    <item>Delver</item>
+    <item>Will-O'-Wisp</item>
+    <item>Wyvern</item>
+    <item>Hill giant</item>
+    <item>Hydra</item>
+    <item>Derro</item>
+    <item>Mummy</item>
+    <item>Skum</item>
+    <item>Svirfneblin warrior</item>
+    <item>Drow warrior</item>
+    <item>Duergar warrior</item>
+  </collection>
+  <collection>
+    <entry>Forest</entry>
+    <item>Treant</item>
+    <item>Brown bear</item>
+    <item>Lion</item>
+    <item>Tiger</item>
+    <item>Wolf</item>
+    <item>Eagle</item>
+    <item>Owl</item>
+    <item>Sprite</item>
+    <item>Kobold</item>
+    <item>Stirge</item>
+  </collection>
+  <collection>
+    <entry>Hills</entry>
+    <item>Brown bear</item>
+    <item>Lion</item>
+    <item>Tiger</item>
+    <item>Wolf</item>
+    <item>Eagle</item>
+    <item>Owl</item>
+    <item>Hill giant</item>
+    <item>Lamia</item>
+    <item>Yrthak</item>
+  </collection>
+  <collection>
+    <entry>Marsh</entry>
+    <item>Black pudding</item>
+    <item>Hydra</item>
+    <item>Gray ooze</item>
+    <item>Ochre jelly</item>
+    <item>Will-O'-Wisp</item>
+  </collection>
+  <collection>
+    <entry>Mountain</entry>
+    <item>Brown bear</item>
+    <item>Lion</item>
+    <item>Tiger</item>
+    <item>Wolf</item>
+    <item>Eagle</item>
+    <item>Owl</item>
+    <item>Hill giant</item>
+    <item>Umber hulk</item>
+    <item>Drider</item>
+    <item>Stone giant</item>
+    <item>Grimlock</item>
+    <item>Troglodyte</item>
+    <item>Yrthak</item>
+  </collection>
+  <collection>
+    <entry>Plains</entry>
+    <item>Brown bear</item>
+    <item>Lion</item>
+    <item>Tiger</item>
+    <item>Wolf</item>
+    <item>Eagle</item>
+    <item>Owl</item>
+  </collection>
+  <collection>
+    <entry></entry>
+  </collection>
+  <collection>
+    <entry>Cold</entry>
+    <item>Frost giant</item>
+    <item>Frost worm</item>
+    <item>Remorhaz</item>
+    <item>Winter wolf</item>
+    <item>Polar bear</item>
+  </collection>
+  <collection>
+    <entry>Temperate</entry>
+    <item>Athach</item>
+    <item>Giant bee</item>
+    <item>Giant bombardier beetle</item>
+    <item>Bulette</item>
+    <item>Monstrous centipede</item>
+    <item>Cockatrice</item>
+    <item>Digester</item>
+    <item>Giant fire beetle</item>
+    <item>Gnoll</item>
+    <item>Goblin</item>
+    <item>Gorgon</item>
+    <item>Harpy</item>
+    <item>Hobgoblin</item>
+    <item>Lammasu</item>
+    <item>Manticore</item>
+    <item>Naga</item>
+    <item>Monstrous scorpion</item>
+    <item>Viper snake</item>
+    <item>Monstrous spider</item>
+    <item>Spider eater</item>
+    <item>Giant wasp</item>
+    <item>Yuan-ti</item>
+  </collection>
+  <collection>
+    <entry>Warm</entry>
+    <item>Giant bee</item>
+    <item>Giant bombardier beetle</item>
+    <item>Bulette</item>
+    <item>Monstrous centipede</item>
+    <item>Cockatrice</item>
+    <item>Digester</item>
+    <item>Giant fire beetle</item>
+    <item>Gnoll</item>
+    <item>Goblin</item>
+    <item>Gorgon</item>
+    <item>Harpy</item>
+    <item>Hobgoblin</item>
+    <item>Lammasu</item>
+    <item>Manticore</item>
+    <item>Naga</item>
+    <item>Monstrous scorpion</item>
+    <item>Viper snake</item>
+    <item>Monstrous spider</item>
+    <item>Spider eater</item>
+    <item>Giant wasp</item>
+    <item>Yuan-ti</item>
+  </collection>
+  <collection>
+    <entry>Magic</entry>
+    <item>Achaierai</item>
+    <item>Allip</item>
+    <item>Animated object</item>
+    <item>Arrowhawk</item>
+    <item>Angel</item>
+    <item>Avoral</item>
+    <item>Azer</item>
+    <item>Bralani</item>
+    <item>Barghest</item>
+    <item>Belker</item>
+    <item>Bodak</item>
+    <item>Celestial creature</item>
+    <item>Chaos beast</item>
+    <item>Demon</item>
+    <item>Devil</item>
+    <item>Devourer</item>
+    <item>Genie</item>
+    <item>Elemental</item>
+    <item>Ethereal filcher</item>
+    <item>Ethereal marauder</item>
+    <item>Fiendish creature</item>
+    <item>Formian</item>
+    <item>Ghaele</item>
+    <item>Ghoul</item>
+    <item>Ghost</item>
+    <item>Golem</item>
+    <item>Hell hound</item>
+    <item>Hellwasp</item>
+    <item>Homunculus</item>
+    <item>Archon</item>
+    <item>Howler</item>
+    <item>Inevitable</item>
+    <item>Invisible stalker</item>
+    <item>Leonal</item>
+    <item>Lich</item>
+    <item>Lillend</item>
+    <item>Magmin</item>
+    <item>Mephit</item>
+    <item>Mohrg</item>
+    <item>Nightshade</item>
+    <item>Night hag</item>
+    <item>Nightmare</item>
+    <item>Phase spider</item>
+    <item>Rast</item>
+    <item>Ravid</item>
+    <item>Salamander</item>
+    <item>Shadow</item>
+    <item>Shadow mastiff</item>
+    <item>Shield guardian</item>
+    <item>Skeleton</item>
+    <item>Slaad</item>
+    <item>Spectre</item>
+    <item>Thoqqua</item>
+    <item>Titan</item>
+    <item>Vampire</item>
+    <item>Wight</item>
+    <item>Wraith</item>
+    <item>Xill</item>
+    <item>Xorn</item>
+    <item>Yeth hound</item>
+    <item>Zombie</item>
+  </collection>
+  <collection>
+    <entry>Land</entry>
+    <item>Aasimar warrior</item>
+    <item>Annis</item>
+    <item>Basilisk</item>
+    <item>Behir</item>
+    <item>Beholder</item>
+    <item>Character</item>
+    <item>Chimera</item>
+    <item>Chuul</item>
+    <item>Commoner (Farmer)</item>
+    <item>Commoner (Herder)</item>
+    <item>Commoner (Hunter)</item>
+    <item>Commoner (Pilgrim)</item>
+    <item>Dog</item>
+    <item>Doppelganger</item>
+    <item>Dwarf warrior</item>
+    <item>Elf warrior</item>
+    <item>Gargoyle</item>
+    <item>Fire giant</item>
+    <item>Gibbering mouther</item>
+    <item>Gnome warrior</item>
+    <item>Gray render</item>
+    <item>Halfling warrior</item>
+    <item>Medusa</item>
+    <item>Mimic</item>
+    <item>NPC (Traveler)</item>
+    <item>Nymph</item>
+    <item>Ogre</item>
+    <item>Orc</item>
+    <item>Phasm</item>
+    <item>Rat</item>
+    <item>Tarrasque</item>
+    <item>Tiefling warrior</item>
+    <item>Troll</item>
+    <item>Vargouille</item>
+    <item>Warrior (Bandit)</item>
+  </collection>
+  <collection>
+    <entry>ColdDesert</entry>
+  </collection>
+  <collection>
+    <entry>ColdDungeon</entry>
+  </collection>
+  <collection>
+    <entry>ColdForest</entry>
+  </collection>
+  <collection>
+    <entry>ColdHills</entry>
+    <item>Ettin</item>
+    <item>Wolverine</item>
+  </collection>
+  <collection>
+    <entry>ColdMarsh</entry>
+  </collection>
+  <collection>
+    <entry>ColdMountain</entry>
+    <item>Ettin</item>
+  </collection>
+  <collection>
+    <entry>ColdPlains</entry>
+  </collection>
+  <collection>
+    <entry>TemperateDesert</entry>
+    <item>Giant ant</item>
+    <item>Bat</item>
+    <item>Dragonne</item>
+    <item>Donkey</item>
+  </collection>
+  <collection>
+    <entry>TemperateDungeon</entry>
+  </collection>
+  <collection>
+    <entry>TemperateForest</entry>
+    <item>Ankheg</item>
+    <item>Giant ant</item>
+    <item>Aranea</item>
+    <item>Assassin vine</item>
+    <item>Badger</item>
+    <item>Bat</item>
+    <item>Black bear</item>
+    <item>Boar</item>
+    <item>Centaur</item>
+    <item>Displacer beast</item>
+    <item>Dryad</item>
+    <item>Ettercap</item>
+    <item>Green hag</item>
+    <item>Krenshar</item>
+    <item>Owlbear</item>
+    <item>Pegasus</item>
+    <item>Giant praying mantis</item>
+    <item>Pseudodragon</item>
+    <item>Satyr</item>
+    <item>Shambling mound</item>
+    <item>Giant stag beetle</item>
+    <item>Tendriculos</item>
+    <item>Unicorn</item>
+    <item>Weasel</item>
+    <item>Wolverine</item>
+    <item>Wyvern</item>
+    <item>Razor boar</item>
+    <item>Hawk</item>
+    <item>Raven</item>
+  </collection>
+  <collection>
+    <entry>TemperateHills</entry>
+    <item>Giant ant</item>
+    <item>Badger</item>
+    <item>Bat</item>
+    <item>Black bear</item>
+    <item>Displacer beast</item>
+    <item>Dragonne</item>
+    <item>Ettin</item>
+    <item>Griffon</item>
+    <item>Hippogriff</item>
+    <item>Giant praying mantis</item>
+    <item>Tendriculos</item>
+    <item>Weasel</item>
+    <item>Wolverine</item>
+    <item>Wyvern</item>
+  </collection>
+  <collection>
+    <entry>TemperateMarsh</entry>
+    <item>Green hag</item>
+    <item>Sea hag</item>
+    <item>Lizardfolk</item>
+    <item>Giant praying mantis</item>
+    <item>Shambling mound</item>
+    <item>Tendriculos</item>
+    <item>Toad</item>
+  </collection>
+  <collection>
+    <entry>TemperateMountain</entry>
+    <item>Black bear</item>
+    <item>Bugbear</item>
+    <item>Displacer beast</item>
+    <item>Ettin</item>
+    <item>Cloud giant</item>
+    <item>Storm giant</item>
+    <item>Griffon</item>
+    <item>Roc</item>
+    <item>Weasel</item>
+    <item>Wyvern</item>
+    <item>Razor boar</item>
+  </collection>
+  <collection>
+    <entry>TemperatePlains</entry>
+    <item>Ankheg</item>
+    <item>Giant ant</item>
+    <item>Badger</item>
+    <item>Bat</item>
+    <item>Bison</item>
+    <item>Blink dog</item>
+    <item>Cat</item>
+    <item>Hippogriff</item>
+    <item>Horse</item>
+    <item>Krenshar</item>
+    <item>Locust</item>
+    <item>Pony</item>
+    <item>Giant praying mantis</item>
+    <item>Weasel</item>
+    <item>Wolverine</item>
+  </collection>
+  <collection>
+    <entry>WarmDesert</entry>
+    <item>Androsphinx</item>
+    <item>Giant ant</item>
+    <item>Baboon</item>
+    <item>Bat</item>
+    <item>Camel</item>
+    <item>Criosphinx</item>
+    <item>Dragonne</item>
+    <item>Gynosphinx</item>
+    <item>Hieracosphinx</item>
+    <item>Hyena</item>
+    <item>Scorpionfolk</item>
+  </collection>
+  <collection>
+    <entry>WarmDungeon</entry>
+  </collection>
+  <collection>
+    <entry>WarmForest</entry>
+    <item>Giant ant</item>
+    <item>Ape</item>
+    <item>Aranea</item>
+    <item>Assassin vine</item>
+    <item>Baboon</item>
+    <item>Bat</item>
+    <item>Black bear</item>
+    <item>Boar</item>
+    <item>Couatl</item>
+    <item>Criosphinx</item>
+    <item>Deinonychus</item>
+    <item>Dryad</item>
+    <item>Elephant</item>
+    <item>Ettercap</item>
+    <item>Girallon</item>
+    <item>Green hag</item>
+    <item>Krenshar</item>
+    <item>Leopard</item>
+    <item>Megaraptor</item>
+    <item>Pegasus</item>
+    <item>Giant praying mantis</item>
+    <item>Pseudodragon</item>
+    <item>Rakshasa</item>
+    <item>Shambling mound</item>
+    <item>Constrictor snake</item>
+    <item>Giant stag beetle</item>
+    <item>Tendriculos</item>
+    <item>Wyvern</item>
+    <item>Razor boar</item>
+    <item>Lizard</item>
+    <item>Monkey</item>
+  </collection>
+  <collection>
+    <entry>WarmHills</entry>
+    <item>Giant ant</item>
+    <item>Athach</item>
+    <item>Bat</item>
+    <item>Black bear</item>
+    <item>Deinonychus</item>
+    <item>Dragonne</item>
+    <item>Griffon</item>
+    <item>Hieracosphinx</item>
+    <item>Hippogriff</item>
+    <item>Megaraptor</item>
+    <item>Tendriculos</item>
+    <item>Triceratops</item>
+    <item>Tyrannosaurus</item>
+    <item>Wyvern</item>
+    <item>Scorpionfolk</item>
+  </collection>
+  <collection>
+    <entry>WarmMarsh</entry>
+    <item>Crocodile</item>
+    <item>Criosphinx</item>
+    <item>Deinonychus</item>
+    <item>Green hag</item>
+    <item>Sea hag</item>
+    <item>Lizardfolk</item>
+    <item>Megaraptor</item>
+    <item>Giant praying mantis</item>
+    <item>Rakshasa</item>
+    <item>Shambling mound</item>
+    <item>Shocker lizard</item>
+    <item>Tendriculos</item>
+    <item>Tyrannosaurus</item>
+  </collection>
+  <collection>
+    <entry>WarmMountain</entry>
+    <item>Ape</item>
+    <item>Athach</item>
+    <item>Black bear</item>
+    <item>Girallon</item>
+    <item>Griffon</item>
+    <item>Roc</item>
+    <item>Wyvern</item>
+    <item>Razor boar</item>
+  </collection>
+  <collection>
+    <entry>WarmPlains</entry>
+    <item>Ankheg</item>
+    <item>Giant ant</item>
+    <item>Bat</item>
+    <item>Cheetah</item>
+    <item>Deinonychus</item>
+    <item>Elephant</item>
+    <item>Hippogriff</item>
+    <item>Krenshar</item>
+    <item>Leopard</item>
+    <item>Megaraptor</item>
+    <item>Giant praying mantis</item>
+    <item>Rhinoceras</item>
+    <item>Triceratops</item>
+    <item>Tyrannosaurus</item>
+    <item>Scorpionfolk</item>
+  </collection>
+  <collection>
+    <entry>Day</entry>
+    <item>Aasimar warrior</item>
+    <item>Aboleth</item>
+    <item>Achaierai</item>
+    <item>Adept (Doctor)</item>
+    <item>Adept (Fortuneteller)</item>
+    <item>Adept (Missionary)</item>
+    <item>Adept (Street performer)</item>
+    <item>Allip</item>
+    <item>Androsphinx</item>
+    <item>Angel</item>
+    <item>Animated object</item>
+    <item>Ankheg</item>
+    <item>Annis</item>
+    <item>Giant ant</item>
+    <item>Ape</item>
+    <item>Aranea</item>
+    <item>Archon</item>
+    <item>Aristocrat (Businessman)</item>
+    <item>Aristocrat (Gentry)</item>
+    <item>Aristocrat (Politician)</item>
+    <item>Arrowhawk</item>
+    <item>Assassin vine</item>
+    <item>Athach</item>
+    <item>Avoral</item>
+    <item>Azer</item>
+    <item>Baboon</item>
+    <item>Badger</item>
+    <item>Barbarian (Combat instructor)</item>
+    <item>Barbarian (War hero)</item>
+    <item>Bard (Famous entertainer)</item>
+    <item>Bard (Street performer)</item>
+    <item>Barghest</item>
+    <item>Basilisk</item>
+    <item>Bat</item>
+    <item>Black bear</item>
+    <item>Brown bear</item>
+    <item>Polar bear</item>
+    <item>Giant bee</item>
+    <item>Behir</item>
+    <item>Beholder</item>
+    <item>Belker</item>
+    <item>Bison</item>
+    <item>Black pudding</item>
+    <item>Blink dog</item>
+    <item>Boar</item>
+    <item>Giant bombardier beetle</item>
+    <item>Bralani</item>
+    <item>Bugbear</item>
+    <item>Bulette</item>
+    <item>Camel</item>
+    <item>Carrion crawler</item>
+    <item>Cat</item>
+    <item>Celestial creature</item>
+    <item>Centaur</item>
+    <item>Monstrous centipede</item>
+    <item>Chaos beast</item>
+    <item>Character</item>
+    <item>Character (Retired adventurer)</item>
+    <item>Character (Sellsword)</item>
+    <item>Cheetah</item>
+    <item>Chimera</item>
+    <item>Choker</item>
+    <item>Chuul</item>
+    <item>Cloaker</item>
+    <item>Cleric (Doctor)</item>
+    <item>Cleric (Famous priest)</item>
+    <item>Cleric (War hero)</item>
+    <item>Cockatrice</item>
+    <item>Commoner (Beggar)</item>
+    <item>Commoner (Construction worker)</item>
+    <item>Commoner (Farmer)</item>
+    <item>Commoner (Herder)</item>
+    <item>Commoner (Hunter)</item>
+    <item>Commoner (Merchant)</item>
+    <item>Commoner (Minstrel)</item>
+    <item>Commoner (Pilgrim)</item>
+    <item>Commoner (Protestor)</item>
+    <item>Couatl</item>
+    <item>Criosphinx</item>
+    <item>Crocodile</item>
+    <item>Darkmantle</item>
+    <item>Delver</item>
+    <item>Demon</item>
+    <item>Destrachan</item>
+    <item>Devil</item>
+    <item>Devourer</item>
+    <item>Digester</item>
+    <item>Displacer beast</item>
+    <item>Deinonychus</item>
+    <item>Dog</item>
+    <item>Donkey</item>
+    <item>Doppelganger</item>
+    <item>Dragonne</item>
+    <item>Dragon</item>
+    <item>Drider</item>
+    <item>Druid (Doctor)</item>
+    <item>Druid (Animal trainer)</item>
+    <item>Druid (Famous priest)</item>
+    <item>Dryad</item>
+    <item>Dwarf warrior</item>
+    <item>Eagle</item>
+    <item>Elemental</item>
+    <item>Elephant</item>
+    <item>Elf warrior</item>
+    <item>Ethereal filcher</item>
+    <item>Ethereal marauder</item>
+    <item>Ettercap</item>
+    <item>Ettin</item>
+    <item>Expert (Artisan)</item>
+    <item>Fiendish creature</item>
+    <item>Fighter (Combat instructor)</item>
+    <item>Fighter (Hitman)</item>
+    <item>Fighter (War hero)</item>
+    <item>Giant fire beetle</item>
+    <item>Formian</item>
+    <item>Frost worm</item>
+    <item>Fungus</item>
+    <item>Gargoyle</item>
+    <item>Gelatinous cube</item>
+    <item>Genie</item>
+    <item>Ghaele</item>
+    <item>Ghost</item>
+    <item>Ghoul</item>
     <item>Cloud giant</item>
     <item>Fire giant</item>
     <item>Frost giant</item>
     <item>Hill giant</item>
     <item>Stone giant</item>
+    <item>Storm giant</item>
     <item>Gibbering mouther</item>
     <item>Girallon</item>
     <item>Gnoll</item>
+    <item>Gnome warrior</item>
     <item>Goblin</item>
+    <item>Golem</item>
     <item>Gorgon</item>
     <item>Gray render</item>
     <item>Green hag</item>
@@ -1072,627 +3125,647 @@
     <item>Halfling warrior</item>
     <item>Harpy</item>
     <item>Hawk</item>
+    <item>Hell hound</item>
+    <item>Hellwasp</item>
     <item>Hieracosphinx</item>
     <item>Hippogriff</item>
-    <item>Heavy horse</item>
-    <item>Heavy warhorse</item>
-    <item>Light horse</item>
-    <item>Light warhorse</item>
     <item>Hobgoblin</item>
-    <item>Hydra (5 heads)</item>
-    <item>Hydra (6 heads)</item>
-    <item>Hydra (7 heads)</item>
-    <item>Hydra (8 heads)</item>
-    <item>Hydra (9 heads)</item>
-    <item>Hydra (10 heads)</item>
-    <item>Hydra (11 heads)</item>
-    <item>Hydra (12 heads)</item>
+    <item>Homunculus</item>
+    <item>Horse</item>
+    <item>Howler</item>
+    <item>Hydra</item>
     <item>Hyena</item>
+    <item>Inevitable</item>
+    <item>Invisible stalker</item>
     <item>Kobold</item>
     <item>Krenshar</item>
     <item>Lamia</item>
+    <item>Lammasu</item>
+    <item>Leonal</item>
     <item>Leopard</item>
+    <item>Lich</item>
+    <item>Lillend</item>
     <item>Lion</item>
-    <item>Dire lion</item>
     <item>Lizard</item>
-    <item>Monitor lizard</item>
     <item>Lizardfolk</item>
+    <item>Locust</item>
+    <item>Magmin</item>
     <item>Manticore</item>
     <item>Medusa</item>
     <item>Megaraptor</item>
+    <item>Mephit</item>
     <item>Mimic</item>
     <item>Mind flayer</item>
     <item>Minotaur</item>
+    <item>Mohrg</item>
+    <item>Monk (Combat instructor)</item>
+    <item>Monk (Scholar)</item>
+    <item>Monk (War hero)</item>
     <item>Monkey</item>
-    <item>Mule</item>
-    <item>Dark naga</item>
-    <item>Spirit naga</item>
+    <item>Mummy</item>
+    <item>Naga</item>
+    <item>NPC</item>
+    <item>NPC (Traveler)</item>
+    <item>Nymph</item>
     <item>Ogre</item>
-    <item>Ogre mage</item>
-    <item>Orc</item>
+    <item>Gray ooze</item>
+    <item>Ochre jelly</item>
     <item>Otyugh</item>
     <item>Owl</item>
     <item>Owlbear</item>
+    <item>Paladin (Combat instructor)</item>
+    <item>Paladin (Crusader)</item>
+    <item>Paladin (War hero)</item>
+    <item>Pegasus</item>
     <item>Phantom fungus</item>
     <item>Phase spider</item>
     <item>Phasm</item>
+    <item>Sprite</item>
     <item>Pony</item>
-    <item>Warpony</item>
     <item>Giant praying mantis</item>
+    <item>Pseudodragon</item>
     <item>Purple worm</item>
-    <item>Pyrohydra (5 heads)</item>
-    <item>Pyrohydra (6 heads)</item>
-    <item>Pyrohydra (7 heads)</item>
-    <item>Pyrohydra (8 heads)</item>
-    <item>Pyrohydra (9 heads)</item>
-    <item>Pyrohydra (10 heads)</item>
-    <item>Pyrohydra (11 heads)</item>
-    <item>Pyrohydra (12 heads)</item>
+    <item>Rakshasa</item>
+    <item>Ranger (Animal trainer)</item>
+    <item>Ranger (Combat instructor)</item>
+    <item>Ranger (Hitman)</item>
+    <item>Ranger (War hero)</item>
+    <item>Rogue (Hitman)</item>
+    <item>Rogue (Pickpocket)</item>
+    <item>Rogue (Street performer)</item>
+    <item>Rast</item>
     <item>Rat</item>
-    <item>Dire rat</item>
     <item>Raven</item>
+    <item>Ravid</item>
     <item>Razor boar</item>
     <item>Remorhaz</item>
     <item>Rhinoceras</item>
     <item>Roc</item>
     <item>Roper</item>
     <item>Rust monster</item>
+    <item>Salamander</item>
     <item>Satyr</item>
-    <item>Colossal monstrous scorpion</item>
-    <item>Gargantuan monstrous scorpion</item>
-    <item>Huge monstrous scorpion</item>
-    <item>Large monstrous scorpion</item>
-    <item>Medium monstrous scorpion</item>
-    <item>Small monstrous scorpion</item>
-    <item>Tiny monstrous scorpion</item>
     <item>Scorpionfolk</item>
+    <item>Monstrous scorpion</item>
     <item>Sea hag</item>
     <item>Shambling mound</item>
+    <item>Shield guardian</item>
     <item>Shocker lizard</item>
-    <item>Shrieker</item>
+    <item>Skeleton</item>
+    <item>Skum</item>
+    <item>Slaad</item>
     <item>Constrictor snake</item>
-    <item>Giant constrictor snake</item>
-    <item>Huge viper snake</item>
-    <item>Large viper snake</item>
-    <item>Medium viper snake</item>
-    <item>Small viper snake</item>
-    <item>Tiny viper snake</item>
-    <item>Colossal monstrous spider</item>
-    <item>Gargantuan monstrous spider</item>
-    <item>Huge monstrous spider</item>
-    <item>Large monstrous spider</item>
-    <item>Medium monstrous spider</item>
-    <item>Small monstrous spider</item>
-    <item>Tiny monstrous spider</item>
-    <item>Giant stag beetle</item>
+    <item>Viper snake</item>
+    <item>Sorcerer (Famous entertainer)</item>
+    <item>Sorcerer (Street performer)</item>
     <item>Spider eater</item>
+    <item>Monstrous spider</item>
+    <item>Giant stag beetle</item>
     <item>Stirge</item>
-    <item>Triceratops</item>
+    <item>Tarrasque</item>
     <item>Tendriculos</item>
+    <item>Thoqqua</item>
+    <item>Tiefling warrior</item>
     <item>Tiger</item>
-    <item>Dire tiger</item>
+    <item>Titan</item>
     <item>Toad</item>
-    <item>Tyrannosaurus</item>
+    <item>Treant</item>
+    <item>Triceratops</item>
     <item>Troglodyte</item>
     <item>Troll</item>
+    <item>Tyrannosaurus</item>
     <item>Umber hulk</item>
-    <item>Will-O'-Wisp</item>
-    <item>Winter wolf</item>
-    <item>Worg</item>
-    <item>Violet fungus</item>
+    <item>Unicorn</item>
+    <item>Vargouille</item>
+    <item>Warrior (Bandit)</item>
+    <item>Warrior (Patrol)</item>
     <item>Giant wasp</item>
     <item>Weasel</item>
-    <item>Dire weasel</item>
+    <item>Wight</item>
+    <item>Will-O'-Wisp</item>
+    <item>Winter wolf</item>
+    <item>Wizard (Famous researcher)</item>
+    <item>Wizard (Scholar)</item>
     <item>Wolf</item>
-    <item>Dire wolf</item>
     <item>Wolverine</item>
-    <item>Dire wolverine</item>
     <item>Wyvern</item>
+    <item>Xill</item>
+    <item>Xorn</item>
+    <item>Yeth hound</item>
     <item>Yrthak</item>
-    <item>Yuan-ti Abomination</item>
-    <item>Yuan-ti Halfblood</item>
-    <item>Yuan-ti Pureblood</item>
+    <item>Yuan-ti</item>
+    <item>Zombie</item>
   </collection>
   <collection>
-    <entry>Skeleton</entry>
+    <entry>Night</entry>
+    <item>Aasimar warrior</item>
+    <item>Aboleth</item>
+    <item>Achaierai</item>
+    <item>Adept (Doctor)</item>
+    <item>Adept (Fortuneteller)</item>
+    <item>Adept (Missionary)</item>
+    <item>Adept (Street performer)</item>
+    <item>Allip</item>
     <item>Androsphinx</item>
+    <item>Angel</item>
+    <item>Animated object</item>
+    <item>Ankheg</item>
     <item>Annis</item>
+    <item>Giant ant</item>
     <item>Ape</item>
-    <item>Dire ape</item>
+    <item>Aranea</item>
+    <item>Archon</item>
+    <item>Aristocrat (Businessman)</item>
+    <item>Aristocrat (Gentry)</item>
+    <item>Aristocrat (Politician)</item>
+    <item>Arrowhawk</item>
+    <item>Assassin vine</item>
     <item>Athach</item>
+    <item>Avoral</item>
+    <item>Azer</item>
     <item>Baboon</item>
     <item>Badger</item>
-    <item>Dire badger</item>
+    <item>Barbarian (Combat instructor)</item>
+    <item>Barbarian (War hero)</item>
+    <item>Bard (Famous entertainer)</item>
+    <item>Bard (Street performer)</item>
+    <item>Barghest</item>
     <item>Basilisk</item>
+    <item>Bat</item>
     <item>Black bear</item>
     <item>Brown bear</item>
-    <item>Dire bear</item>
     <item>Polar bear</item>
+    <item>Giant bee</item>
     <item>Behir</item>
+    <item>Beholder</item>
+    <item>Belker</item>
     <item>Bison</item>
+    <item>Black pudding</item>
     <item>Blink dog</item>
     <item>Boar</item>
-    <item>Dire boar</item>
+    <item>Bodak</item>
+    <item>Giant bombardier beetle</item>
+    <item>Bralani</item>
     <item>Bugbear</item>
     <item>Bulette</item>
     <item>Camel</item>
+    <item>Carrion crawler</item>
     <item>Cat</item>
+    <item>Celestial creature</item>
     <item>Centaur</item>
-    <item>Cheetah</item>
-    <item>Chimera</item>
-    <item>Choker</item>
-    <item>Cockatrice</item>
-    <item>Criosphinx</item>
-    <item>Crocodile</item>
-    <item>Giant crocodile</item>
-    <item>Cryohydra (5 heads)</item>
-    <item>Cryohydra (6 heads)</item>
-    <item>Cryohydra (7 heads)</item>
-    <item>Cryohydra (8 heads)</item>
-    <item>Cryohydra (9 heads)</item>
-    <item>Cryohydra (10 heads)</item>
-    <item>Cryohydra (11 heads)</item>
-    <item>Cryohydra (12 heads)</item>
-    <item>Delver</item>
-    <item>Derro</item>
-    <item>Destrachan</item>
-    <item>Digester</item>
-    <item>Deinonychus</item>
-    <item>Dog</item>
-    <item>Donkey</item>
-    <item>Doppelganger</item>
-    <item>Wyrmling brass dragon</item>
-    <item>Very young brass dragon</item>
-    <item>Young brass dragon</item>
-    <item>Juvenile brass dragon</item>
-    <item>Young adult brass dragon</item>
-    <item>Adult brass dragon</item>
-    <item>Wyrmling bronze dragon</item>
-    <item>Very young bronze dragon</item>
-    <item>Young bronze dragon</item>
-    <item>Juvenile bronze dragon</item>
-    <item>Young adult bronze dragon</item>
-    <item>Wyrmling copper dragon</item>
-    <item>Very young copper dragon</item>
-    <item>Young copper dragon</item>
-    <item>Juvenile copper dragon</item>
-    <item>Young adult copper dragon</item>
-    <item>Adult copper dragon</item>
-    <item>Wyrmling gold dragon</item>
-    <item>Very young gold dragon</item>
-    <item>Young gold dragon</item>
-    <item>Juvenile gold dragon</item>
-    <item>Young adult gold dragon</item>
-    <item>Wyrmling silver dragon</item>
-    <item>Very young silver dragon</item>
-    <item>Young silver dragon</item>
-    <item>Juvenile silver dragon</item>
-    <item>Young adult silver dragon</item>
-    <item>Wyrmling black dragon</item>
-    <item>Very young black dragon</item>
-    <item>Young black dragon</item>
-    <item>Juvenile black dragon</item>
-    <item>Young adult black dragon</item>
-    <item>Adult black dragon</item>
-    <item>Wyrmling blue dragon</item>
-    <item>Very young blue dragon</item>
-    <item>Young blue dragon</item>
-    <item>Juvenile blue dragon</item>
-    <item>Young adult blue dragon</item>
-    <item>Wyrmling green dragon</item>
-    <item>Very young green dragon</item>
-    <item>Young green dragon</item>
-    <item>Juvenile green dragon</item>
-    <item>Young adult green dragon</item>
-    <item>Wyrmling red dragon</item>
-    <item>Very young red dragon</item>
-    <item>Young red dragon</item>
-    <item>Juvenile red dragon</item>
-    <item>Young adult red dragon</item>
-    <item>Wyrmling white dragon</item>
-    <item>Very young white dragon</item>
-    <item>Young white dragon</item>
-    <item>Juvenile white dragon</item>
-    <item>Young adult white dragon</item>
-    <item>Adult white dragon</item>
-    <item>Dragonne</item>
-    <item>Dryad</item>
-    <item>Dwarf warrior</item>
-    <item>Elephant</item>
-    <item>Elf warrior</item>
-    <item>Ettercap</item>
-    <item>Ettin</item>
-    <item>Cloud giant</item>
-    <item>Fire giant</item>
-    <item>Frost giant</item>
-    <item>Hill giant</item>
-    <item>Stone giant</item>
-    <item>Storm giant</item>
-    <item>Stone giant elder</item>
-    <item>Girallon</item>
-    <item>Gnoll</item>
-    <item>Gnome warrior</item>
-    <item>Goblin</item>
-    <item>Gorgon</item>
-    <item>Gray render</item>
-    <item>Green hag</item>
-    <item>Griffon</item>
-    <item>Grimlock</item>
-    <item>Gynosphinx</item>
-    <item>Halfling warrior</item>
-    <item>Harpy</item>
-    <item>Hieracosphinx</item>
-    <item>Hobgoblin</item>
-    <item>Heavy horse</item>
-    <item>Heavy warhorse</item>
-    <item>Light horse</item>
-    <item>Light warhorse</item>
-    <item>Hippogriff</item>
-    <item>Hydra (5 heads)</item>
-    <item>Hydra (6 heads)</item>
-    <item>Hydra (7 heads)</item>
-    <item>Hydra (8 heads)</item>
-    <item>Hydra (9 heads)</item>
-    <item>Hydra (10 heads)</item>
-    <item>Hydra (11 heads)</item>
-    <item>Hydra (12 heads)</item>
-    <item>Hyena</item>
-    <item>Kobold</item>
-    <item>Krenshar</item>
-    <item>Lamia</item>
-    <item>Lammasu</item>
-    <item>Leopard</item>
-    <item>Lion</item>
-    <item>Dire lion</item>
-    <item>Lizard</item>
-    <item>Monitor lizard</item>
-    <item>Lizardfolk</item>
-    <item>Manticore</item>
-    <item>Medusa</item>
-    <item>Megaraptor</item>
-    <item>Mind flayer</item>
-    <item>Minotaur</item>
-    <item>Monkey</item>
-    <item>Mule</item>
-    <item>Ogre</item>
-    <item>Ogre mage</item>
-    <item>Orc</item>
-    <item>Otyugh</item>
-    <item>Owlbear</item>
-    <item>Pegasus</item>
-    <item>Pony</item>
-    <item>Warpony</item>
-    <item>Pseudodragon</item>
-    <item>Pyrohydra (5 heads)</item>
-    <item>Pyrohydra (6 heads)</item>
-    <item>Pyrohydra (7 heads)</item>
-    <item>Pyrohydra (8 heads)</item>
-    <item>Pyrohydra (9 heads)</item>
-    <item>Pyrohydra (10 heads)</item>
-    <item>Pyrohydra (11 heads)</item>
-    <item>Pyrohydra (12 heads)</item>
-    <item>Dire rat</item>
-    <item>Razor boar</item>
-    <item>Rhinoceras</item>
-    <item>Satyr</item>
-    <item>Sea hag</item>
-    <item>Shocker lizard</item>
-    <item>Tiger</item>
-    <item>Dire tiger</item>
-    <item>Triceratops</item>
-    <item>Troglodyte</item>
-    <item>Troll</item>
-    <item>Tyrannosaurus</item>
-    <item>Unicorn</item>
-    <item>Weasel</item>
-    <item>Dire weasel</item>
-    <item>Winter wolf</item>
-    <item>Wolf</item>
-    <item>Dire wolf</item>
-    <item>Wolverine</item>
-    <item>Dire wolverine</item>
-    <item>Worg</item>
-    <item>Yuan-ti Abomination</item>
-    <item>Yuan-ti Halfblood</item>
-    <item>Yuan-ti Pureblood</item>
-  </collection>
-  <collection>
-    <entry>Zombie</entry>
-    <item>Androsphinx</item>
-    <item>Annis</item>
-    <item>Ape</item>
-    <item>Dire ape</item>
-    <item>Athach</item>
-    <item>Baboon</item>
-    <item>Badger</item>
-    <item>Dire badger</item>
-    <item>Basilisk</item>
-    <item>Black bear</item>
-    <item>Brown bear</item>
-    <item>Dire bear</item>
-    <item>Polar bear</item>
-    <item>Behir</item>
-    <item>Bison</item>
-    <item>Blink dog</item>
-    <item>Boar</item>
-    <item>Dire boar</item>
-    <item>Bugbear</item>
-    <item>Bulette</item>
-    <item>Camel</item>
-    <item>Cat</item>
-    <item>Centaur</item>
-    <item>Cheetah</item>
-    <item>Chimera</item>
-    <item>Choker</item>
-    <item>Cockatrice</item>
-    <item>Criosphinx</item>
-    <item>Crocodile</item>
-    <item>Giant crocodile</item>
-    <item>Cryohydra (5 heads)</item>
-    <item>Cryohydra (6 heads)</item>
-    <item>Cryohydra (7 heads)</item>
-    <item>Cryohydra (8 heads)</item>
-    <item>Cryohydra (9 heads)</item>
-    <item>Cryohydra (10 heads)</item>
-    <item>Cryohydra (11 heads)</item>
-    <item>Cryohydra (12 heads)</item>
-    <item>Delver</item>
-    <item>Derro</item>
-    <item>Destrachan</item>
-    <item>Digester</item>
-    <item>Deinonychus</item>
-    <item>Dog</item>
-    <item>Donkey</item>
-    <item>Doppelganger</item>
-    <item>Wyrmling brass dragon</item>
-    <item>Very young brass dragon</item>
-    <item>Young brass dragon</item>
-    <item>Wyrmling bronze dragon</item>
-    <item>Very young bronze dragon</item>
-    <item>Wyrmling copper dragon</item>
-    <item>Very young copper dragon</item>
-    <item>Wyrmling gold dragon</item>
-    <item>Wyrmling silver dragon</item>
-    <item>Very young silver dragon</item>
-    <item>Wyrmling black dragon</item>
-    <item>Very young black dragon</item>
-    <item>Young black dragon</item>
-    <item>Wyrmling blue dragon</item>
-    <item>Very young blue dragon</item>
-    <item>Wyrmling green dragon</item>
-    <item>Very young green dragon</item>
-    <item>Wyrmling red dragon</item>
-    <item>Very young red dragon</item>
-    <item>Wyrmling white dragon</item>
-    <item>Very young white dragon</item>
-    <item>Young white dragon</item>
-    <item>Dire bat</item>
-    <item>Cloaker</item>
-    <item>Dragonne</item>
-    <item>Dryad</item>
-    <item>Dwarf warrior</item>
-    <item>Eagle</item>
-    <item>Giant eagle</item>
-    <item>Elephant</item>
-    <item>Elf warrior</item>
-    <item>Ettercap</item>
-    <item>Ettin</item>
-    <item>Girallon</item>
-    <item>Gnoll</item>
-    <item>Gnome warrior</item>
-    <item>Goblin</item>
-    <item>Gorgon</item>
-    <item>Gray render</item>
-    <item>Green hag</item>
-    <item>Griffon</item>
-    <item>Grimlock</item>
-    <item>Gynosphinx</item>
-    <item>Halfling warrior</item>
-    <item>Harpy</item>
-    <item>Hawk</item>
-    <item>Hieracosphinx</item>
-    <item>Hobgoblin</item>
-    <item>Heavy horse</item>
-    <item>Heavy warhorse</item>
-    <item>Light horse</item>
-    <item>Light warhorse</item>
-    <item>Hippogriff</item>
-    <item>Hydra (5 heads)</item>
-    <item>Hydra (6 heads)</item>
-    <item>Hydra (7 heads)</item>
-    <item>Hydra (8 heads)</item>
-    <item>Hydra (9 heads)</item>
-    <item>Hydra (10 heads)</item>
-    <item>Hydra (11 heads)</item>
-    <item>Hydra (12 heads)</item>
-    <item>Hyena</item>
-    <item>Kobold</item>
-    <item>Krenshar</item>
-    <item>Lamia</item>
-    <item>Lammasu</item>
-    <item>Leopard</item>
-    <item>Lion</item>
-    <item>Dire lion</item>
-    <item>Lizard</item>
-    <item>Monitor lizard</item>
-    <item>Lizardfolk</item>
-    <item>Manticore</item>
-    <item>Medusa</item>
-    <item>Megaraptor</item>
-    <item>Mind flayer</item>
-    <item>Minotaur</item>
-    <item>Monkey</item>
-    <item>Mule</item>
-    <item>Ogre</item>
-    <item>Ogre mage</item>
-    <item>Orc</item>
-    <item>Owl</item>
-    <item>Giant owl</item>
-    <item>Owlbear</item>
-    <item>Pegasus</item>
-    <item>Pony</item>
-    <item>Warpony</item>
-    <item>Pseudodragon</item>
-    <item>Pyrohydra (5 heads)</item>
-    <item>Pyrohydra (6 heads)</item>
-    <item>Pyrohydra (7 heads)</item>
-    <item>Pyrohydra (8 heads)</item>
-    <item>Pyrohydra (9 heads)</item>
-    <item>Pyrohydra (10 heads)</item>
-    <item>Pyrohydra (11 heads)</item>
-    <item>Pyrohydra (12 heads)</item>
-    <item>Otyugh</item>
-    <item>Dire rat</item>
-    <item>Razor boar</item>
-    <item>Rhinoceras</item>
-    <item>Satyr</item>
-    <item>Sea hag</item>
-    <item>Shocker lizard</item>
-    <item>Constrictor snake</item>
-    <item>Huge viper snake</item>
-    <item>Large viper snake</item>
-    <item>Medium viper snake</item>
-    <item>Small viper snake</item>
-    <item>Tiger</item>
-    <item>Dire tiger</item>
-    <item>Triceratops</item>
-    <item>Troglodyte</item>
-    <item>Troll</item>
-    <item>Tyrannosaurus</item>
-    <item>Unicorn</item>
-    <item>Weasel</item>
-    <item>Dire weasel</item>
-    <item>Winter wolf</item>
-    <item>Wolf</item>
-    <item>Dire wolf</item>
-    <item>Wolverine</item>
-    <item>Dire wolverine</item>
-    <item>Worg</item>
-    <item>Wyvern</item>
-    <item>Yuan-ti Abomination</item>
-    <item>Yuan-ti Halfblood</item>
-    <item>Yuan-ti Pureblood</item>
-  </collection>
-  <collection>
-    <entry>Character</entry>
+    <item>Monstrous centipede</item>
+    <item>Chaos beast</item>
     <item>Character</item>
-    <item>NPC</item>
-    <item>NPC (Traveler)</item>
-    <item>Adept</item>
-    <item>Aristocrat</item>
-    <item>Barbarian</item>
-    <item>Bard</item>
-    <item>Cleric</item>
-    <item>Druid</item>
-    <item>Fighter</item>
-    <item>Monk</item>
-    <item>Paladin</item>
-    <item>Ranger</item>
-    <item>Rogue</item>
-    <item>Sorcerer</item>
-    <item>Warrior</item>
-    <item>Wizard</item>
-    <item>Expert</item>
-    <item>Commoner</item>
+    <item>Character (Retired adventurer)</item>
+    <item>Character (Sellsword)</item>
+    <item>Cheetah</item>
+    <item>Chimera</item>
+    <item>Choker</item>
+    <item>Chuul</item>
+    <item>Cloaker</item>
+    <item>Cleric (Doctor)</item>
+    <item>Cleric (Famous priest)</item>
+    <item>Cleric (War hero)</item>
+    <item>Cockatrice</item>
+    <item>Commoner (Beggar)</item>
+    <item>Commoner (Construction worker)</item>
     <item>Commoner (Farmer)</item>
     <item>Commoner (Herder)</item>
     <item>Commoner (Hunter)</item>
     <item>Commoner (Merchant)</item>
     <item>Commoner (Minstrel)</item>
     <item>Commoner (Pilgrim)</item>
-    <item>Expert (Merchant)</item>
-    <item>Expert (Minstrel)</item>
-    <item>Warrior (Bandit)</item>
-    <item>Warrior (Bandit Leader)</item>
-    <item>Warrior (Guard)</item>
-    <item>Warrior (Hunter)</item>
-    <item>Warrior (Captain)</item>
-    <item>Warrior (Patrol)</item>
-  </collection>
-  <collection>
-    <entry>Dominated creature</entry>
-    <item>Aranea</item>
-    <item>Hound archon</item>
-    <item>Barghest</item>
-    <item>Displacer beast</item>
-    <item>Gargoyle</item>
-    <item>Giant stag beetle</item>
-    <item>Gray ooze</item>
-    <item>Janni</item>
-    <item>Mimic</item>
-    <item>Pixie</item>
-    <item>Vampire spawn</item>
-    <item>Brown bear</item>
-    <item>Wereboar</item>
-    <item>Celestial creature</item>
-    <item>Fiendish creature</item>
-    <item>Skeleton</item>
-    <item>Zombie</item>
-    <item>Character</item>
-    <item>Dire boar</item>
-    <item>Dire wolverine</item>
-    <item>Giant crocodile</item>
-    <item>Griffon</item>
-    <item>Harpy</item>
-    <item>Hydra (5 heads)</item>
-    <item>Otyugh</item>
-    <item>Owlbear</item>
-    <item>Polar bear</item>
-    <item>Rhinoceras</item>
-    <item>Tiger</item>
-    <item>Minotaur</item>
-    <item>Very young black dragon</item>
-    <item>Very young blue dragon</item>
-    <item>Very young green dragon</item>
-    <item>Wyrmling red dragon</item>
-    <item>Young white dragon</item>
-    <item>Very young brass dragon</item>
-    <item>Wyrmling silver dragon</item>
-  </collection>
-  <collection>
-    <entry>Charmed creature</entry>
-    <item>Cloud giant</item>
-    <item>Colossal monstrous spider</item>
-    <item>Cryohydra (10 heads)</item>
+    <item>Commoner (Protestor)</item>
+    <item>Couatl</item>
+    <item>Criosphinx</item>
+    <item>Crocodile</item>
+    <item>Darkmantle</item>
+    <item>Delver</item>
+    <item>Demon</item>
+    <item>Derro</item>
+    <item>Destrachan</item>
+    <item>Devil</item>
     <item>Devourer</item>
-    <item>Elder air elemental</item>
-    <item>Elder earth elemental</item>
-    <item>Elder fire elemental</item>
-    <item>Elder water elemental</item>
-    <item>Barbed Devil (Hamatula)</item>
-    <item>Hezrou</item>
-    <item>Hydra (12 heads)</item>
-    <item>Pyrohydra (10 heads)</item>
-    <item>Celestial creature</item>
-    <item>Fiendish creature</item>
-    <item>Character</item>
-    <item>Annis</item>
-    <item>Average xorn</item>
-    <item>Average salamander</item>
-    <item>Babau</item>
-    <item>Belker</item>
-    <item>Chain Devil (Kyton)</item>
     <item>Digester</item>
+    <item>Displacer beast</item>
+    <item>Deinonychus</item>
+    <item>Dog</item>
+    <item>Donkey</item>
+    <item>Doppelganger</item>
+    <item>Dragonne</item>
+    <item>Dragon</item>
+    <item>Drider</item>
+    <item>Drow warrior</item>
+    <item>Druid (Doctor)</item>
+    <item>Druid (Animal trainer)</item>
+    <item>Druid (Famous priest)</item>
+    <item>Dryad</item>
+    <item>Duergar warrior</item>
+    <item>Dwarf warrior</item>
+    <item>Eagle</item>
+    <item>Elemental</item>
+    <item>Elephant</item>
+    <item>Elf warrior</item>
+    <item>Ethereal filcher</item>
+    <item>Ethereal marauder</item>
+    <item>Ettercap</item>
     <item>Ettin</item>
-    <item>Hydra (7 heads)</item>
-    <item>Gargantuan monstrous centipede</item>
-    <item>Pyrohydra (5 heads)</item>
-    <item>Cryohydra (5 heads)</item>
+    <item>Expert (Artisan)</item>
+    <item>Fiendish creature</item>
+    <item>Fighter (Combat instructor)</item>
+    <item>Fighter (Hitman)</item>
+    <item>Fighter (War hero)</item>
+    <item>Giant fire beetle</item>
+    <item>Formian</item>
+    <item>Frost worm</item>
+    <item>Fungus</item>
+    <item>Gargoyle</item>
+    <item>Gelatinous cube</item>
+    <item>Genie</item>
+    <item>Ghaele</item>
+    <item>Ghost</item>
+    <item>Ghoul</item>
+    <item>Cloud giant</item>
+    <item>Fire giant</item>
+    <item>Frost giant</item>
+    <item>Hill giant</item>
+    <item>Stone giant</item>
+    <item>Storm giant</item>
+    <item>Gibbering mouther</item>
     <item>Girallon</item>
+    <item>Gnoll</item>
+    <item>Gnome warrior</item>
+    <item>Goblin</item>
+    <item>Golem</item>
+    <item>Gorgon</item>
+    <item>Gray render</item>
+    <item>Green hag</item>
+    <item>Grick</item>
+    <item>Griffon</item>
+    <item>Grimlock</item>
+    <item>Gynosphinx</item>
+    <item>Halfling warrior</item>
+    <item>Harpy</item>
+    <item>Hawk</item>
+    <item>Hell hound</item>
+    <item>Hellwasp</item>
+    <item>Hieracosphinx</item>
+    <item>Hippogriff</item>
+    <item>Hobgoblin</item>
+    <item>Homunculus</item>
+    <item>Horse</item>
+    <item>Howler</item>
+    <item>Hydra</item>
+    <item>Hyena</item>
+    <item>Inevitable</item>
+    <item>Invisible stalker</item>
+    <item>Kobold</item>
+    <item>Krenshar</item>
     <item>Lamia</item>
+    <item>Lammasu</item>
+    <item>Leonal</item>
+    <item>Leopard</item>
+    <item>Lich</item>
+    <item>Lillend</item>
+    <item>Lion</item>
+    <item>Lizard</item>
+    <item>Lizardfolk</item>
+    <item>Locust</item>
+    <item>Magmin</item>
+    <item>Manticore</item>
+    <item>Medusa</item>
     <item>Megaraptor</item>
+    <item>Mephit</item>
+    <item>Mimic</item>
+    <item>Mind flayer</item>
+    <item>Minotaur</item>
+    <item>Mohrg</item>
+    <item>Monk (Combat instructor)</item>
+    <item>Monk (Scholar)</item>
+    <item>Monk (War hero)</item>
+    <item>Monkey</item>
+    <item>Mummy</item>
+    <item>Naga</item>
+    <item>Night hag</item>
+    <item>Nightmare</item>
+    <item>Nightshade</item>
+    <item>NPC</item>
+    <item>NPC (Traveler)</item>
+    <item>Nymph</item>
+    <item>Ogre</item>
+    <item>Gray ooze</item>
+    <item>Ochre jelly</item>
+    <item>Orc</item>
+    <item>Otyugh</item>
+    <item>Owl</item>
+    <item>Owlbear</item>
+    <item>Paladin (Crusader)</item>
+    <item>Paladin (Combat instructor)</item>
+    <item>Paladin (War hero)</item>
+    <item>Pegasus</item>
+    <item>Phantom fungus</item>
+    <item>Phase spider</item>
+    <item>Phasm</item>
+    <item>Sprite</item>
+    <item>Pony</item>
+    <item>Giant praying mantis</item>
+    <item>Pseudodragon</item>
+    <item>Purple worm</item>
+    <item>Rakshasa</item>
+    <item>Ranger (Animal trainer)</item>
+    <item>Ranger (Combat instructor)</item>
+    <item>Ranger (Hitman)</item>
+    <item>Ranger (War hero)</item>
+    <item>Rogue (Hitman)</item>
+    <item>Rogue (Pickpocket)</item>
+    <item>Rogue (Street performer)</item>
+    <item>Rast</item>
+    <item>Rat</item>
+    <item>Raven</item>
+    <item>Ravid</item>
+    <item>Razor boar</item>
+    <item>Remorhaz</item>
+    <item>Rhinoceras</item>
+    <item>Roc</item>
+    <item>Roper</item>
+    <item>Rust monster</item>
+    <item>Salamander</item>
+    <item>Satyr</item>
+    <item>Scorpionfolk</item>
+    <item>Monstrous scorpion</item>
+    <item>Sea hag</item>
+    <item>Shadow</item>
+    <item>Shadow mastiff</item>
     <item>Shambling mound</item>
+    <item>Shield guardian</item>
+    <item>Shocker lizard</item>
+    <item>Skeleton</item>
+    <item>Skum</item>
+    <item>Slaad</item>
+    <item>Constrictor snake</item>
+    <item>Viper snake</item>
+    <item>Sorcerer (Famous entertainer)</item>
+    <item>Sorcerer (Street performer)</item>
+    <item>Spectre</item>
+    <item>Spider eater</item>
+    <item>Monstrous spider</item>
+    <item>Giant stag beetle</item>
+    <item>Stirge</item>
+    <item>Svirfneblin warrior</item>
+    <item>Tarrasque</item>
     <item>Tendriculos</item>
+    <item>Thoqqua</item>
+    <item>Tiefling warrior</item>
+    <item>Tiger</item>
+    <item>Titan</item>
+    <item>Toad</item>
+    <item>Treant</item>
+    <item>Triceratops</item>
+    <item>Troglodyte</item>
+    <item>Troll</item>
+    <item>Tyrannosaurus</item>
+    <item>Umber hulk</item>
+    <item>Unicorn</item>
+    <item>Vampire</item>
+    <item>Vargouille</item>
+    <item>Warrior (Bandit)</item>
+    <item>Warrior (Patrol)</item>
+    <item>Giant wasp</item>
+    <item>Weasel</item>
+    <item>Wight</item>
     <item>Will-O'-Wisp</item>
+    <item>Winter wolf</item>
+    <item>Wizard (Famous researcher)</item>
+    <item>Wizard (Scholar)</item>
+    <item>Wolf</item>
+    <item>Wolverine</item>
+    <item>Wraith</item>
     <item>Wyvern</item>
     <item>Xill</item>
-    <item>Young blue dragon</item>
-    <item>Juvenile white dragon</item>
-    <item>Young brass dragon</item>
-    <item>Adult black dragon</item>
-    <item>Young adult blue dragon</item>
-    <item>Young adult green dragon</item>
-    <item>Young adult copper dragon</item>
-    <item>Juvenile gold dragon</item>
+    <item>Xorn</item>
+    <item>Yeth hound</item>
+    <item>Yrthak</item>
+    <item>Yuan-ti</item>
+    <item>Zombie</item>
+  </collection>
+  <collection>
+    <entry>Wilderness</entry>
+    <item>Aasimar warrior</item>
+    <item>Aboleth</item>
+    <item>Achaierai</item>
+    <item>Allip</item>
+    <item>Androsphinx</item>
+    <item>Angel</item>
+    <item>Ankheg</item>
+    <item>Annis</item>
+    <item>Giant ant</item>
+    <item>Ape</item>
+    <item>Aranea</item>
+    <item>Archon</item>
+    <item>Arrowhawk</item>
+    <item>Assassin vine</item>
+    <item>Athach</item>
+    <item>Avoral</item>
+    <item>Azer</item>
+    <item>Baboon</item>
+    <item>Badger</item>
+    <item>Barghest</item>
+    <item>Basilisk</item>
+    <item>Black bear</item>
+    <item>Brown bear</item>
+    <item>Polar bear</item>
+    <item>Giant bee</item>
+    <item>Behir</item>
+    <item>Beholder</item>
+    <item>Belker</item>
+    <item>Bison</item>
+    <item>Black pudding</item>
+    <item>Blink dog</item>
+    <item>Boar</item>
+    <item>Bodak</item>
+    <item>Giant bombardier beetle</item>
+    <item>Bralani</item>
+    <item>Bugbear</item>
+    <item>Bulette</item>
+    <item>Carrion crawler</item>
+    <item>Celestial creature</item>
+    <item>Centaur</item>
+    <item>Monstrous centipede</item>
+    <item>Chaos beast</item>
+    <item>Cheetah</item>
+    <item>Chimera</item>
+    <item>Choker</item>
+    <item>Chuul</item>
+    <item>Cloaker</item>
+    <item>Cockatrice</item>
+    <item>Couatl</item>
+    <item>Criosphinx</item>
+    <item>Crocodile</item>
+    <item>Darkmantle</item>
+    <item>Delver</item>
+    <item>Demon</item>
+    <item>Derro</item>
+    <item>Destrachan</item>
+    <item>Devil</item>
+    <item>Devourer</item>
+    <item>Digester</item>
+    <item>Displacer beast</item>
+    <item>Deinonychus</item>
+    <item>Doppelganger</item>
+    <item>Dragonne</item>
+    <item>Dragon</item>
+    <item>Drider</item>
+    <item>Dryad</item>
+    <item>Drow warrior</item>
+    <item>Duergar warrior</item>
+    <item>Dwarf warrior</item>
+    <item>Eagle</item>
+    <item>Elemental</item>
+    <item>Elephant</item>
+    <item>Elf warrior</item>
+    <item>Ethereal filcher</item>
+    <item>Ethereal marauder</item>
+    <item>Ettercap</item>
+    <item>Ettin</item>
+    <item>Fiendish creature</item>
+    <item>Giant fire beetle</item>
+    <item>Formian</item>
+    <item>Frost worm</item>
+    <item>Fungus</item>
+    <item>Gelatinous cube</item>
+    <item>Genie</item>
+    <item>Ghaele</item>
+    <item>Ghoul</item>
+    <item>Cloud giant</item>
+    <item>Fire giant</item>
+    <item>Frost giant</item>
+    <item>Hill giant</item>
+    <item>Stone giant</item>
+    <item>Storm giant</item>
+    <item>Gibbering mouther</item>
+    <item>Girallon</item>
+    <item>Gnoll</item>
+    <item>Gnome warrior</item>
+    <item>Goblin</item>
+    <item>Golem</item>
+    <item>Gorgon</item>
+    <item>Gray render</item>
+    <item>Green hag</item>
+    <item>Grick</item>
+    <item>Griffon</item>
+    <item>Grimlock</item>
+    <item>Gynosphinx</item>
+    <item>Halfling warrior</item>
+    <item>Harpy</item>
+    <item>Hawk</item>
+    <item>Hell hound</item>
+    <item>Hellwasp</item>
+    <item>Hieracosphinx</item>
+    <item>Hippogriff</item>
+    <item>Hobgoblin</item>
+    <item>Howler</item>
+    <item>Hydra</item>
+    <item>Hyena</item>
+    <item>Inevitable</item>
+    <item>Invisible stalker</item>
+    <item>Kobold</item>
+    <item>Krenshar</item>
+    <item>Lamia</item>
+    <item>Lammasu</item>
+    <item>Leonal</item>
+    <item>Leopard</item>
+    <item>Lillend</item>
+    <item>Lion</item>
+    <item>Lizard</item>
+    <item>Lizardfolk</item>
+    <item>Locust</item>
+    <item>Magmin</item>
+    <item>Manticore</item>
+    <item>Medusa</item>
+    <item>Megaraptor</item>
+    <item>Mephit</item>
+    <item>Mind flayer</item>
+    <item>Minotaur</item>
+    <item>Mohrg</item>
+    <item>Monkey</item>
+    <item>Mummy</item>
+    <item>Naga</item>
+    <item>Night hag</item>
+    <item>Nightmare</item>
+    <item>Nightshade</item>
+    <item>Nymph</item>
+    <item>Ogre</item>
+    <item>Gray ooze</item>
+    <item>Ochre jelly</item>
+    <item>Orc</item>
+    <item>Otyugh</item>
+    <item>Owlbear</item>
+    <item>Pegasus</item>
+    <item>Phantom fungus</item>
+    <item>Phase spider</item>
+    <item>Phasm</item>
+    <item>Sprite</item>
+    <item>Giant praying mantis</item>
+    <item>Pseudodragon</item>
+    <item>Purple worm</item>
+    <item>Rakshasa</item>
+    <item>Rast</item>
+    <item>Ravid</item>
+    <item>Razor boar</item>
+    <item>Remorhaz</item>
+    <item>Rhinoceras</item>
+    <item>Roc</item>
+    <item>Roper</item>
+    <item>Rust monster</item>
+    <item>Salamander</item>
+    <item>Satyr</item>
+    <item>Scorpionfolk</item>
+    <item>Monstrous scorpion</item>
+    <item>Sea hag</item>
+    <item>Shadow</item>
+    <item>Shadow mastiff</item>
+    <item>Shambling mound</item>
+    <item>Shocker lizard</item>
+    <item>Skeleton</item>
+    <item>Skum</item>
+    <item>Slaad</item>
+    <item>Constrictor snake</item>
+    <item>Viper snake</item>
+    <item>Spectre</item>
+    <item>Spider eater</item>
+    <item>Monstrous spider</item>
+    <item>Giant stag beetle</item>
+    <item>Stirge</item>
+    <item>Svirfneblin warrior</item>
+    <item>Tarrasque</item>
+    <item>Tendriculos</item>
+    <item>Thoqqua</item>
+    <item>Tiefling warrior</item>
+    <item>Tiger</item>
+    <item>Titan</item>
+    <item>Toad</item>
+    <item>Treant</item>
+    <item>Triceratops</item>
+    <item>Troglodyte</item>
+    <item>Troll</item>
+    <item>Tyrannosaurus</item>
+    <item>Umber hulk</item>
+    <item>Unicorn</item>
+    <item>Vargouille</item>
+    <item>Giant wasp</item>
+    <item>Weasel</item>
+    <item>Wight</item>
+    <item>Will-O'-Wisp</item>
+    <item>Winter wolf</item>
+    <item>Wolf</item>
+    <item>Wolverine</item>
+    <item>Wraith</item>
+    <item>Wyvern</item>
+    <item>Xill</item>
+    <item>Xorn</item>
+    <item>Yeth hound</item>
+    <item>Yrthak</item>
+    <item>Yuan-ti</item>
+    <item>Zombie</item>
   </collection>
 </collections>

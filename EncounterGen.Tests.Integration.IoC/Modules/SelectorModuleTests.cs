@@ -1,22 +1,17 @@
 ﻿using EncounterGen.Domain.Selectors;
+using EncounterGen.Domain.Selectors.Collections;
 using EncounterGen.Domain.Selectors.Percentiles;
 using NUnit.Framework;
 
 namespace EncounterGen.Tests.Integration.IoC.Modules
 {
     [TestFixture]
-    public class SelectorModuleTests : BootstrapTests
+    public class SelectorModuleTests : IoCTests
     {
         [Test]
-        public void TypeAndAmountPercentileSelectorIsNotASingleton()
+        public void AmountSelectorIsNotASingleton()
         {
-            AssertNotSingleton<ITypeAndAmountPercentileSelector>();
-        }
-
-        [Test]
-        public void RollSelectorIsNotASingleton()
-        {
-            AssertNotSingleton<IRollSelector>();
+            AssertNotSingleton<IAmountSelector>();
         }
 
         [Test]
@@ -38,15 +33,27 @@ namespace EncounterGen.Tests.Integration.IoC.Modules
         }
 
         [Test]
-        public void CollectionSelectorIsNotASingleton()
+        public void CollectionSelectorIsASingleton()
         {
-            AssertNotSingleton<ICollectionSelector>();
+            AssertSingleton<ICollectionSelector>();
+        }
+
+        [Test]
+        public void CollectionSelectorHasCachingProxy()
+        {
+            AssertInstanceOf<ICollectionSelector, CollectionSelectorCachingProxy>();
         }
 
         [Test]
         public void EncounterCollectionSelectorIsASingleton()
         {
             AssertSingleton<IEncounterCollectionSelector>();
+        }
+
+        [Test]
+        public void EncounterCollectionSelectorHasCachingProxy()
+        {
+            AssertInstanceOf<IEncounterCollectionSelector, EncounterCollectionSelectorCachingProxy>();
         }
     }
 }

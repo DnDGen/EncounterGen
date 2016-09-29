@@ -1,0 +1,6324 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<collections>
+  <collection>
+    <entry>Aasimar warrior</entry>
+    <item>1/2</item>
+  </collection>
+  <collection>
+    <entry>Aboleth</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Aboleth Mage</entry>
+    <item>17</item>
+  </collection>
+  <collection>
+    <entry>Achaierai</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Adept (Doctor)[1]</entry>
+    <item>1/2</item>
+  </collection>
+  <collection>
+    <entry>Adept (Doctor)[1d2+1]</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Adept (Doctor)[1d2+3]</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Adept (Doctor)[1d2+5]</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Adept (Doctor)[1d2+7]</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Adept (Doctor)[1d2+9]</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Adept (Doctor)[1d2+11]</entry>
+    <item>6</item>
+  </collection>
+  <collection>
+    <entry>Adept (Doctor)[1d2+13]</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Adept (Doctor)[1d2+15]</entry>
+    <item>8</item>
+  </collection>
+  <collection>
+    <entry>Adept (Doctor)[1d2+17]</entry>
+    <item>9</item>
+  </collection>
+  <collection>
+    <entry>Adept (Doctor)[20]</entry>
+    <item>10</item>
+  </collection>
+  <collection>
+    <entry>Adept (Fortuneteller)[1]</entry>
+    <item>1/2</item>
+  </collection>
+  <collection>
+    <entry>Adept (Fortuneteller)[1d2+1]</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Adept (Fortuneteller)[1d2+3]</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Adept (Fortuneteller)[1d2+5]</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Adept (Fortuneteller)[1d2+7]</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Adept (Fortuneteller)[1d2+9]</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Adept (Fortuneteller)[1d2+11]</entry>
+    <item>6</item>
+  </collection>
+  <collection>
+    <entry>Adept (Fortuneteller)[1d2+13]</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Adept (Fortuneteller)[1d2+15]</entry>
+    <item>8</item>
+  </collection>
+  <collection>
+    <entry>Adept (Fortuneteller)[1d2+17]</entry>
+    <item>9</item>
+  </collection>
+  <collection>
+    <entry>Adept (Fortuneteller)[20]</entry>
+    <item>10</item>
+  </collection>
+  <collection>
+    <entry>Adept (Missionary)[1]</entry>
+    <item>1/2</item>
+  </collection>
+  <collection>
+    <entry>Adept (Missionary)[1d2+1]</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Adept (Missionary)[1d2+3]</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Adept (Missionary)[1d2+5]</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Adept (Missionary)[1d2+7]</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Adept (Missionary)[1d2+9]</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Adept (Missionary)[1d2+11]</entry>
+    <item>6</item>
+  </collection>
+  <collection>
+    <entry>Adept (Missionary)[1d2+13]</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Adept (Missionary)[1d2+15]</entry>
+    <item>8</item>
+  </collection>
+  <collection>
+    <entry>Adept (Missionary)[1d2+17]</entry>
+    <item>9</item>
+  </collection>
+  <collection>
+    <entry>Adept (Missionary)[20]</entry>
+    <item>10</item>
+  </collection>
+  <collection>
+    <entry>Adept (Street performer)[1]</entry>
+    <item>1/2</item>
+  </collection>
+  <collection>
+    <entry>Adept (Street performer)[1d2+1]</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Adept (Street performer)[1d2+3]</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Adept (Street performer)[1d2+5]</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Adept (Street performer)[1d2+7]</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Adept (Street performer)[1d2+9]</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Adept (Street performer)[1d2+11]</entry>
+    <item>6</item>
+  </collection>
+  <collection>
+    <entry>Adept (Street performer)[1d2+13]</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Adept (Street performer)[1d2+15]</entry>
+    <item>8</item>
+  </collection>
+  <collection>
+    <entry>Adept (Street performer)[1d2+17]</entry>
+    <item>9</item>
+  </collection>
+  <collection>
+    <entry>Adept (Street performer)[20]</entry>
+    <item>10</item>
+  </collection>
+  <collection>
+    <entry>Allip</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Androsphinx</entry>
+    <item>9</item>
+  </collection>
+  <collection>
+    <entry>Tiny animated object</entry>
+    <item>1/2</item>
+  </collection>
+  <collection>
+    <entry>Small animated object</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Medium animated object</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Large animated object</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Huge animated object</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Gargantuan animated object</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Colossal animated object</entry>
+    <item>10</item>
+  </collection>
+  <collection>
+    <entry>Ankheg</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Annis</entry>
+    <item>6</item>
+  </collection>
+  <collection>
+    <entry>Giant ant worker</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Giant ant soldier</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Giant ant queen</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Ape</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Dire ape</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Aranea</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Aristocrat (Businessman)[1]</entry>
+    <item>1/2</item>
+  </collection>
+  <collection>
+    <entry>Aristocrat (Businessman)[1d2+1]</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Aristocrat (Businessman)[1d2+3]</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Aristocrat (Businessman)[1d2+5]</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Aristocrat (Businessman)[1d2+7]</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Aristocrat (Businessman)[1d2+9]</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Aristocrat (Businessman)[1d2+11]</entry>
+    <item>6</item>
+  </collection>
+  <collection>
+    <entry>Aristocrat (Businessman)[1d2+13]</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Aristocrat (Businessman)[1d2+15]</entry>
+    <item>8</item>
+  </collection>
+  <collection>
+    <entry>Aristocrat (Businessman)[1d2+17]</entry>
+    <item>9</item>
+  </collection>
+  <collection>
+    <entry>Aristocrat (Businessman)[20]</entry>
+    <item>10</item>
+  </collection>
+  <collection>
+    <entry>Aristocrat (Gentry)[1]</entry>
+    <item>1/2</item>
+  </collection>
+  <collection>
+    <entry>Aristocrat (Gentry)[1d2+1]</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Aristocrat (Gentry)[1d2+3]</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Aristocrat (Gentry)[1d2+5]</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Aristocrat (Gentry)[1d2+7]</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Aristocrat (Gentry)[1d2+9]</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Aristocrat (Gentry)[1d2+11]</entry>
+    <item>6</item>
+  </collection>
+  <collection>
+    <entry>Aristocrat (Gentry)[1d2+13]</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Aristocrat (Gentry)[1d2+15]</entry>
+    <item>8</item>
+  </collection>
+  <collection>
+    <entry>Aristocrat (Gentry)[1d2+17]</entry>
+    <item>9</item>
+  </collection>
+  <collection>
+    <entry>Aristocrat (Gentry)[20]</entry>
+    <item>10</item>
+  </collection>
+  <collection>
+    <entry>Aristocrat (Politician)[1]</entry>
+    <item>1/2</item>
+  </collection>
+  <collection>
+    <entry>Aristocrat (Politician)[1d2+1]</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Aristocrat (Politician)[1d2+3]</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Aristocrat (Politician)[1d2+5]</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Aristocrat (Politician)[1d2+7]</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Aristocrat (Politician)[1d2+9]</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Aristocrat (Politician)[1d2+11]</entry>
+    <item>6</item>
+  </collection>
+  <collection>
+    <entry>Aristocrat (Politician)[1d2+13]</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Aristocrat (Politician)[1d2+15]</entry>
+    <item>8</item>
+  </collection>
+  <collection>
+    <entry>Aristocrat (Politician)[1d2+17]</entry>
+    <item>9</item>
+  </collection>
+  <collection>
+    <entry>Aristocrat (Politician)[20]</entry>
+    <item>10</item>
+  </collection>
+  <collection>
+    <entry>Juvenile arrowhawk</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Adult arrowhawk</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Elder arrowhawk</entry>
+    <item>8</item>
+  </collection>
+  <collection>
+    <entry>Assassin vine</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Astral deva</entry>
+    <item>14</item>
+  </collection>
+  <collection>
+    <entry>Athach</entry>
+    <item>8</item>
+  </collection>
+  <collection>
+    <entry>Avoral</entry>
+    <item>9</item>
+  </collection>
+  <collection>
+    <entry>Azer</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Babau</entry>
+    <item>6</item>
+  </collection>
+  <collection>
+    <entry>Baboon</entry>
+    <item>1/2</item>
+  </collection>
+  <collection>
+    <entry>Badger</entry>
+    <item>1/2</item>
+  </collection>
+  <collection>
+    <entry>Celestial badger</entry>
+    <item>1/2</item>
+  </collection>
+  <collection>
+    <entry>Dire badger</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Balor</entry>
+    <item>20</item>
+  </collection>
+  <collection>
+    <entry>Barbarian (Combat instructor)[11]</entry>
+    <item>11</item>
+  </collection>
+  <collection>
+    <entry>Barbarian (Combat instructor)[12]</entry>
+    <item>12</item>
+  </collection>
+  <collection>
+    <entry>Barbarian (Combat instructor)[13]</entry>
+    <item>13</item>
+  </collection>
+  <collection>
+    <entry>Barbarian (Combat instructor)[14]</entry>
+    <item>14</item>
+  </collection>
+  <collection>
+    <entry>Barbarian (Combat instructor)[15]</entry>
+    <item>15</item>
+  </collection>
+  <collection>
+    <entry>Barbarian (Combat instructor)[16]</entry>
+    <item>16</item>
+  </collection>
+  <collection>
+    <entry>Barbarian (Combat instructor)[17]</entry>
+    <item>17</item>
+  </collection>
+  <collection>
+    <entry>Barbarian (Combat instructor)[18]</entry>
+    <item>18</item>
+  </collection>
+  <collection>
+    <entry>Barbarian (Combat instructor)[19]</entry>
+    <item>19</item>
+  </collection>
+  <collection>
+    <entry>Barbarian (Combat instructor)[20]</entry>
+    <item>20</item>
+  </collection>
+  <collection>
+    <entry>Barbarian (Student)[1]</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Barbarian (Student)[2]</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Barbarian (Student)[3]</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Barbarian (Student)[4]</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Barbarian (Student)[5]</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Barbarian (Student)[6]</entry>
+    <item>6</item>
+  </collection>
+  <collection>
+    <entry>Barbarian (Student)[7]</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Barbarian (Student)[8]</entry>
+    <item>8</item>
+  </collection>
+  <collection>
+    <entry>Barbarian (Student)[9]</entry>
+    <item>9</item>
+  </collection>
+  <collection>
+    <entry>Barbarian (Student)[10]</entry>
+    <item>10</item>
+  </collection>
+  <collection>
+    <entry>Barbarian (War hero)[11]</entry>
+    <item>11</item>
+  </collection>
+  <collection>
+    <entry>Barbarian (War hero)[12]</entry>
+    <item>12</item>
+  </collection>
+  <collection>
+    <entry>Barbarian (War hero)[13]</entry>
+    <item>13</item>
+  </collection>
+  <collection>
+    <entry>Barbarian (War hero)[14]</entry>
+    <item>14</item>
+  </collection>
+  <collection>
+    <entry>Barbarian (War hero)[15]</entry>
+    <item>15</item>
+  </collection>
+  <collection>
+    <entry>Barbarian (War hero)[16]</entry>
+    <item>16</item>
+  </collection>
+  <collection>
+    <entry>Barbarian (War hero)[17]</entry>
+    <item>17</item>
+  </collection>
+  <collection>
+    <entry>Barbarian (War hero)[18]</entry>
+    <item>18</item>
+  </collection>
+  <collection>
+    <entry>Barbarian (War hero)[19]</entry>
+    <item>19</item>
+  </collection>
+  <collection>
+    <entry>Barbarian (War hero)[20]</entry>
+    <item>20</item>
+  </collection>
+  <collection>
+    <entry>Barbed Devil (Hamatula)</entry>
+    <item>11</item>
+  </collection>
+  <collection>
+    <entry>Bard (Famous entertainer)[11]</entry>
+    <item>11</item>
+  </collection>
+  <collection>
+    <entry>Bard (Famous entertainer)[12]</entry>
+    <item>12</item>
+  </collection>
+  <collection>
+    <entry>Bard (Famous entertainer)[13]</entry>
+    <item>13</item>
+  </collection>
+  <collection>
+    <entry>Bard (Famous entertainer)[14]</entry>
+    <item>14</item>
+  </collection>
+  <collection>
+    <entry>Bard (Famous entertainer)[15]</entry>
+    <item>15</item>
+  </collection>
+  <collection>
+    <entry>Bard (Famous entertainer)[16]</entry>
+    <item>16</item>
+  </collection>
+  <collection>
+    <entry>Bard (Famous entertainer)[17]</entry>
+    <item>17</item>
+  </collection>
+  <collection>
+    <entry>Bard (Famous entertainer)[18]</entry>
+    <item>18</item>
+  </collection>
+  <collection>
+    <entry>Bard (Famous entertainer)[19]</entry>
+    <item>19</item>
+  </collection>
+  <collection>
+    <entry>Bard (Famous entertainer)[20]</entry>
+    <item>20</item>
+  </collection>
+  <collection>
+    <entry>Bard (Leader)[1]</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Bard (Leader)[2]</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Bard (Leader)[3]</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Bard (Leader)[4]</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Bard (Leader)[5]</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Bard (Leader)[6]</entry>
+    <item>6</item>
+  </collection>
+  <collection>
+    <entry>Bard (Leader)[7]</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Bard (Leader)[8]</entry>
+    <item>8</item>
+  </collection>
+  <collection>
+    <entry>Bard (Leader)[9]</entry>
+    <item>9</item>
+  </collection>
+  <collection>
+    <entry>Bard (Leader)[10]</entry>
+    <item>10</item>
+  </collection>
+  <collection>
+    <entry>Bard (Leader)[11]</entry>
+    <item>11</item>
+  </collection>
+  <collection>
+    <entry>Bard (Street performer)[1]</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Bard (Street performer)[2]</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Bard (Street performer)[3]</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Bard (Street performer)[4]</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Bard (Street performer)[5]</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Bard (Street performer)[6]</entry>
+    <item>6</item>
+  </collection>
+  <collection>
+    <entry>Bard (Street performer)[7]</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Bard (Street performer)[8]</entry>
+    <item>8</item>
+  </collection>
+  <collection>
+    <entry>Bard (Street performer)[9]</entry>
+    <item>9</item>
+  </collection>
+  <collection>
+    <entry>Bard (Street performer)[10]</entry>
+    <item>10</item>
+  </collection>
+  <collection>
+    <entry>Bard (Street performer)[11]</entry>
+    <item>11</item>
+  </collection>
+  <collection>
+    <entry>Bard (Street performer)[12]</entry>
+    <item>12</item>
+  </collection>
+  <collection>
+    <entry>Bard (Street performer)[13]</entry>
+    <item>13</item>
+  </collection>
+  <collection>
+    <entry>Bard (Street performer)[14]</entry>
+    <item>14</item>
+  </collection>
+  <collection>
+    <entry>Bard (Street performer)[15]</entry>
+    <item>15</item>
+  </collection>
+  <collection>
+    <entry>Bard (Street performer)[16]</entry>
+    <item>16</item>
+  </collection>
+  <collection>
+    <entry>Bard (Street performer)[17]</entry>
+    <item>17</item>
+  </collection>
+  <collection>
+    <entry>Bard (Street performer)[18]</entry>
+    <item>18</item>
+  </collection>
+  <collection>
+    <entry>Bard (Street performer)[19]</entry>
+    <item>19</item>
+  </collection>
+  <collection>
+    <entry>Bard (Street performer)[20]</entry>
+    <item>20</item>
+  </collection>
+  <collection>
+    <entry>Barghest</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Greater barghest</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Basilisk</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Abyssal greater basilisk</entry>
+    <item>12</item>
+  </collection>
+  <collection>
+    <entry>Bat</entry>
+    <item>1/10</item>
+  </collection>
+  <collection>
+    <entry>Dire bat</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Bat swarm</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Black bear</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Brown bear</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Dire bear</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Polar bear</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Bearded Devil (Barbazu)</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Bebilith</entry>
+    <item>10</item>
+  </collection>
+  <collection>
+    <entry>Giant bee</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Behir</entry>
+    <item>8</item>
+  </collection>
+  <collection>
+    <entry>Beholder</entry>
+    <item>13</item>
+  </collection>
+  <collection>
+    <entry>Belker</entry>
+    <item>6</item>
+  </collection>
+  <collection>
+    <entry>Bison</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Black pudding</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Elder black pudding</entry>
+    <item>12</item>
+  </collection>
+  <collection>
+    <entry>Blink dog</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Boar</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Dire boar</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Bodak</entry>
+    <item>8</item>
+  </collection>
+  <collection>
+    <entry>Giant bombardier beetle</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Bone Devil (Osyluth)</entry>
+    <item>9</item>
+  </collection>
+  <collection>
+    <entry>Bralani</entry>
+    <item>6</item>
+  </collection>
+  <collection>
+    <entry>Bugbear</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Bulette</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Camel</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Carrion crawler</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Cat</entry>
+    <item>1/4</item>
+  </collection>
+  <collection>
+    <entry>Centaur</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Tiny monstrous centipede</entry>
+    <item>1/8</item>
+  </collection>
+  <collection>
+    <entry>Small monstrous centipede</entry>
+    <item>1/4</item>
+  </collection>
+  <collection>
+    <entry>Medium monstrous centipede</entry>
+    <item>1/2</item>
+  </collection>
+  <collection>
+    <entry>Medium fiendish monstrous centipede</entry>
+    <item>1/2</item>
+  </collection>
+  <collection>
+    <entry>Large monstrous centipede</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Large fiendish monstrous centipede</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Huge monstrous centipede</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Huge fiendish monstrous centipede</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Gargantuan monstrous centipede</entry>
+    <item>6</item>
+  </collection>
+  <collection>
+    <entry>Gargantuan fiendish monstrous centipede</entry>
+    <item>8</item>
+  </collection>
+  <collection>
+    <entry>Colossal monstrous centipede</entry>
+    <item>9</item>
+  </collection>
+  <collection>
+    <entry>Colossal fiendish monstrous centipede</entry>
+    <item>11</item>
+  </collection>
+  <collection>
+    <entry>Centipede swarm</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Chain Devil (Kyton)</entry>
+    <item>6</item>
+  </collection>
+  <collection>
+    <entry>Chaos beast</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Character[1]</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Character[2]</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Character[3]</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Character[4]</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Character[5]</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Character[6]</entry>
+    <item>6</item>
+  </collection>
+  <collection>
+    <entry>Character[7]</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Character[8]</entry>
+    <item>8</item>
+  </collection>
+  <collection>
+    <entry>Character[9]</entry>
+    <item>9</item>
+  </collection>
+  <collection>
+    <entry>Character[10]</entry>
+    <item>10</item>
+  </collection>
+  <collection>
+    <entry>Character[11]</entry>
+    <item>11</item>
+  </collection>
+  <collection>
+    <entry>Character[12]</entry>
+    <item>12</item>
+  </collection>
+  <collection>
+    <entry>Character[13]</entry>
+    <item>13</item>
+  </collection>
+  <collection>
+    <entry>Character[14]</entry>
+    <item>14</item>
+  </collection>
+  <collection>
+    <entry>Character[15]</entry>
+    <item>15</item>
+  </collection>
+  <collection>
+    <entry>Character[16]</entry>
+    <item>16</item>
+  </collection>
+  <collection>
+    <entry>Character[17]</entry>
+    <item>17</item>
+  </collection>
+  <collection>
+    <entry>Character[18]</entry>
+    <item>18</item>
+  </collection>
+  <collection>
+    <entry>Character[19]</entry>
+    <item>19</item>
+  </collection>
+  <collection>
+    <entry>Character[20]</entry>
+    <item>20</item>
+  </collection>
+  <collection>
+    <entry>Character (Retired adventurer)[11]</entry>
+    <item>11</item>
+  </collection>
+  <collection>
+    <entry>Character (Retired adventurer)[12]</entry>
+    <item>12</item>
+  </collection>
+  <collection>
+    <entry>Character (Retired adventurer)[13]</entry>
+    <item>13</item>
+  </collection>
+  <collection>
+    <entry>Character (Retired adventurer)[14]</entry>
+    <item>14</item>
+  </collection>
+  <collection>
+    <entry>Character (Retired adventurer)[15]</entry>
+    <item>15</item>
+  </collection>
+  <collection>
+    <entry>Character (Retired adventurer)[16]</entry>
+    <item>16</item>
+  </collection>
+  <collection>
+    <entry>Character (Retired adventurer)[17]</entry>
+    <item>17</item>
+  </collection>
+  <collection>
+    <entry>Character (Retired adventurer)[18]</entry>
+    <item>18</item>
+  </collection>
+  <collection>
+    <entry>Character (Retired adventurer)[19]</entry>
+    <item>19</item>
+  </collection>
+  <collection>
+    <entry>Character (Retired adventurer)[20]</entry>
+    <item>20</item>
+  </collection>
+  <collection>
+    <entry>Character (Sellsword)[1]</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Character (Sellsword)[2]</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Character (Sellsword)[3]</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Character (Sellsword)[4]</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Character (Sellsword)[5]</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Character (Sellsword)[6]</entry>
+    <item>6</item>
+  </collection>
+  <collection>
+    <entry>Character (Sellsword)[7]</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Character (Sellsword)[8]</entry>
+    <item>8</item>
+  </collection>
+  <collection>
+    <entry>Character (Sellsword)[9]</entry>
+    <item>9</item>
+  </collection>
+  <collection>
+    <entry>Character (Sellsword)[10]</entry>
+    <item>10</item>
+  </collection>
+  <collection>
+    <entry>Character (Sellsword)[11]</entry>
+    <item>11</item>
+  </collection>
+  <collection>
+    <entry>Character (Sellsword)[12]</entry>
+    <item>12</item>
+  </collection>
+  <collection>
+    <entry>Character (Sellsword)[13]</entry>
+    <item>13</item>
+  </collection>
+  <collection>
+    <entry>Character (Sellsword)[14]</entry>
+    <item>14</item>
+  </collection>
+  <collection>
+    <entry>Character (Sellsword)[15]</entry>
+    <item>15</item>
+  </collection>
+  <collection>
+    <entry>Character (Sellsword)[16]</entry>
+    <item>16</item>
+  </collection>
+  <collection>
+    <entry>Character (Sellsword)[17]</entry>
+    <item>17</item>
+  </collection>
+  <collection>
+    <entry>Character (Sellsword)[18]</entry>
+    <item>18</item>
+  </collection>
+  <collection>
+    <entry>Character (Sellsword)[19]</entry>
+    <item>19</item>
+  </collection>
+  <collection>
+    <entry>Character (Sellsword)[20]</entry>
+    <item>20</item>
+  </collection>
+  <collection>
+    <entry>Cheetah</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Chimera</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Choker</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Chuul</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Cleric (Doctor)[1]</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Cleric (Doctor)[2]</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Cleric (Doctor)[3]</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Cleric (Doctor)[4]</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Cleric (Doctor)[5]</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Cleric (Doctor)[6]</entry>
+    <item>6</item>
+  </collection>
+  <collection>
+    <entry>Cleric (Doctor)[7]</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Cleric (Doctor)[8]</entry>
+    <item>8</item>
+  </collection>
+  <collection>
+    <entry>Cleric (Doctor)[9]</entry>
+    <item>9</item>
+  </collection>
+  <collection>
+    <entry>Cleric (Doctor)[10]</entry>
+    <item>10</item>
+  </collection>
+  <collection>
+    <entry>Cleric (Doctor)[11]</entry>
+    <item>11</item>
+  </collection>
+  <collection>
+    <entry>Cleric (Doctor)[12]</entry>
+    <item>12</item>
+  </collection>
+  <collection>
+    <entry>Cleric (Doctor)[13]</entry>
+    <item>13</item>
+  </collection>
+  <collection>
+    <entry>Cleric (Doctor)[14]</entry>
+    <item>14</item>
+  </collection>
+  <collection>
+    <entry>Cleric (Doctor)[15]</entry>
+    <item>15</item>
+  </collection>
+  <collection>
+    <entry>Cleric (Doctor)[16]</entry>
+    <item>16</item>
+  </collection>
+  <collection>
+    <entry>Cleric (Doctor)[17]</entry>
+    <item>17</item>
+  </collection>
+  <collection>
+    <entry>Cleric (Doctor)[18]</entry>
+    <item>18</item>
+  </collection>
+  <collection>
+    <entry>Cleric (Doctor)[19]</entry>
+    <item>19</item>
+  </collection>
+  <collection>
+    <entry>Cleric (Doctor)[20]</entry>
+    <item>20</item>
+  </collection>
+  <collection>
+    <entry>Cleric (Famous priest)[11]</entry>
+    <item>11</item>
+  </collection>
+  <collection>
+    <entry>Cleric (Famous priest)[12]</entry>
+    <item>12</item>
+  </collection>
+  <collection>
+    <entry>Cleric (Famous priest)[13]</entry>
+    <item>13</item>
+  </collection>
+  <collection>
+    <entry>Cleric (Famous priest)[14]</entry>
+    <item>14</item>
+  </collection>
+  <collection>
+    <entry>Cleric (Famous priest)[15]</entry>
+    <item>15</item>
+  </collection>
+  <collection>
+    <entry>Cleric (Famous priest)[16]</entry>
+    <item>16</item>
+  </collection>
+  <collection>
+    <entry>Cleric (Famous priest)[17]</entry>
+    <item>17</item>
+  </collection>
+  <collection>
+    <entry>Cleric (Famous priest)[18]</entry>
+    <item>18</item>
+  </collection>
+  <collection>
+    <entry>Cleric (Famous priest)[19]</entry>
+    <item>19</item>
+  </collection>
+  <collection>
+    <entry>Cleric (Famous priest)[20]</entry>
+    <item>20</item>
+  </collection>
+  <collection>
+    <entry>Cleric (Leader)[1]</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Cleric (Leader)[2]</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Cleric (Leader)[3]</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Cleric (Leader)[4]</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Cleric (Leader)[5]</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Cleric (Leader)[6]</entry>
+    <item>6</item>
+  </collection>
+  <collection>
+    <entry>Cleric (Leader)[7]</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Cleric (Leader)[8]</entry>
+    <item>8</item>
+  </collection>
+  <collection>
+    <entry>Cleric (Leader)[9]</entry>
+    <item>9</item>
+  </collection>
+  <collection>
+    <entry>Cleric (Leader)[10]</entry>
+    <item>10</item>
+  </collection>
+  <collection>
+    <entry>Cleric (Leader)[11]</entry>
+    <item>11</item>
+  </collection>
+  <collection>
+    <entry>Cleric (War hero)[11]</entry>
+    <item>11</item>
+  </collection>
+  <collection>
+    <entry>Cleric (War hero)[12]</entry>
+    <item>12</item>
+  </collection>
+  <collection>
+    <entry>Cleric (War hero)[13]</entry>
+    <item>13</item>
+  </collection>
+  <collection>
+    <entry>Cleric (War hero)[14]</entry>
+    <item>14</item>
+  </collection>
+  <collection>
+    <entry>Cleric (War hero)[15]</entry>
+    <item>15</item>
+  </collection>
+  <collection>
+    <entry>Cleric (War hero)[16]</entry>
+    <item>16</item>
+  </collection>
+  <collection>
+    <entry>Cleric (War hero)[17]</entry>
+    <item>17</item>
+  </collection>
+  <collection>
+    <entry>Cleric (War hero)[18]</entry>
+    <item>18</item>
+  </collection>
+  <collection>
+    <entry>Cleric (War hero)[19]</entry>
+    <item>19</item>
+  </collection>
+  <collection>
+    <entry>Cleric (War hero)[20]</entry>
+    <item>20</item>
+  </collection>
+  <collection>
+    <entry>Cloaker</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Cockatrice</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Commoner (Beggar)[1]</entry>
+    <item>1/2</item>
+  </collection>
+  <collection>
+    <entry>Commoner (Beggar)[1d2+1]</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Commoner (Beggar)[1d2+3]</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Commoner (Beggar)[1d2+5]</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Commoner (Beggar)[1d2+7]</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Commoner (Beggar)[1d2+9]</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Commoner (Beggar)[1d2+11]</entry>
+    <item>6</item>
+  </collection>
+  <collection>
+    <entry>Commoner (Beggar)[1d2+13]</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Commoner (Beggar)[1d2+15]</entry>
+    <item>8</item>
+  </collection>
+  <collection>
+    <entry>Commoner (Beggar)[1d2+17]</entry>
+    <item>9</item>
+  </collection>
+  <collection>
+    <entry>Commoner (Beggar)[20]</entry>
+    <item>10</item>
+  </collection>
+  <collection>
+    <entry>Commoner (Construction worker)[1]</entry>
+    <item>1/2</item>
+  </collection>
+  <collection>
+    <entry>Commoner (Construction worker)[1d2+1]</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Commoner (Construction worker)[1d2+3]</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Commoner (Construction worker)[1d2+5]</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Commoner (Construction worker)[1d2+7]</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Commoner (Construction worker)[1d2+9]</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Commoner (Construction worker)[1d2+11]</entry>
+    <item>6</item>
+  </collection>
+  <collection>
+    <entry>Commoner (Construction worker)[1d2+13]</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Commoner (Construction worker)[1d2+15]</entry>
+    <item>8</item>
+  </collection>
+  <collection>
+    <entry>Commoner (Construction worker)[1d2+17]</entry>
+    <item>9</item>
+  </collection>
+  <collection>
+    <entry>Commoner (Construction worker)[20]</entry>
+    <item>10</item>
+  </collection>
+  <collection>
+    <entry>Commoner (Farmer)[1]</entry>
+    <item>1/2</item>
+  </collection>
+  <collection>
+    <entry>Commoner (Farmer)[1d2+1]</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Commoner (Farmer)[1d2+3]</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Commoner (Farmer)[1d2+5]</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Commoner (Farmer)[1d2+7]</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Commoner (Farmer)[1d2+9]</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Commoner (Farmer)[1d2+11]</entry>
+    <item>6</item>
+  </collection>
+  <collection>
+    <entry>Commoner (Farmer)[1d2+13]</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Commoner (Farmer)[1d2+15]</entry>
+    <item>8</item>
+  </collection>
+  <collection>
+    <entry>Commoner (Farmer)[1d2+17]</entry>
+    <item>9</item>
+  </collection>
+  <collection>
+    <entry>Commoner (Farmer)[20]</entry>
+    <item>10</item>
+  </collection>
+  <collection>
+    <entry>Commoner (Herder)[1]</entry>
+    <item>1/2</item>
+  </collection>
+  <collection>
+    <entry>Commoner (Herder)[1d2+1]</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Commoner (Herder)[1d2+3]</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Commoner (Herder)[1d2+5]</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Commoner (Herder)[1d2+7]</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Commoner (Herder)[1d2+9]</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Commoner (Herder)[1d2+11]</entry>
+    <item>6</item>
+  </collection>
+  <collection>
+    <entry>Commoner (Herder)[1d2+13]</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Commoner (Herder)[1d2+15]</entry>
+    <item>8</item>
+  </collection>
+  <collection>
+    <entry>Commoner (Herder)[1d2+17]</entry>
+    <item>9</item>
+  </collection>
+  <collection>
+    <entry>Commoner (Herder)[20]</entry>
+    <item>10</item>
+  </collection>
+  <collection>
+    <entry>Commoner (Hunter)[1]</entry>
+    <item>1/2</item>
+  </collection>
+  <collection>
+    <entry>Commoner (Hunter)[1d2+1]</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Commoner (Hunter)[1d2+3]</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Commoner (Hunter)[1d2+5]</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Commoner (Hunter)[1d2+7]</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Commoner (Hunter)[1d2+9]</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Commoner (Hunter)[1d2+11]</entry>
+    <item>6</item>
+  </collection>
+  <collection>
+    <entry>Commoner (Hunter)[1d2+13]</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Commoner (Hunter)[1d2+15]</entry>
+    <item>8</item>
+  </collection>
+  <collection>
+    <entry>Commoner (Hunter)[1d2+17]</entry>
+    <item>9</item>
+  </collection>
+  <collection>
+    <entry>Commoner (Hunter)[20]</entry>
+    <item>10</item>
+  </collection>
+  <collection>
+    <entry>Commoner (Merchant)[1]</entry>
+    <item>1/2</item>
+  </collection>
+  <collection>
+    <entry>Commoner (Merchant)[1d2+1]</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Commoner (Merchant)[1d2+3]</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Commoner (Merchant)[1d2+5]</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Commoner (Merchant)[1d2+7]</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Commoner (Merchant)[1d2+9]</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Commoner (Merchant)[1d2+11]</entry>
+    <item>6</item>
+  </collection>
+  <collection>
+    <entry>Commoner (Merchant)[1d2+13]</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Commoner (Merchant)[1d2+15]</entry>
+    <item>8</item>
+  </collection>
+  <collection>
+    <entry>Commoner (Merchant)[1d2+17]</entry>
+    <item>9</item>
+  </collection>
+  <collection>
+    <entry>Commoner (Merchant)[20]</entry>
+    <item>10</item>
+  </collection>
+  <collection>
+    <entry>Commoner (Minstrel)[1]</entry>
+    <item>1/2</item>
+  </collection>
+  <collection>
+    <entry>Commoner (Minstrel)[1d2+1]</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Commoner (Minstrel)[1d2+3]</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Commoner (Minstrel)[1d2+5]</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Commoner (Minstrel)[1d2+7]</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Commoner (Minstrel)[1d2+9]</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Commoner (Minstrel)[1d2+11]</entry>
+    <item>6</item>
+  </collection>
+  <collection>
+    <entry>Commoner (Minstrel)[1d2+13]</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Commoner (Minstrel)[1d2+15]</entry>
+    <item>8</item>
+  </collection>
+  <collection>
+    <entry>Commoner (Minstrel)[1d2+17]</entry>
+    <item>9</item>
+  </collection>
+  <collection>
+    <entry>Commoner (Minstrel)[20]</entry>
+    <item>10</item>
+  </collection>
+  <collection>
+    <entry>Commoner (Pilgrim)[1]</entry>
+    <item>1/2</item>
+  </collection>
+  <collection>
+    <entry>Commoner (Pilgrim)[1d2+1]</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Commoner (Pilgrim)[1d2+3]</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Commoner (Pilgrim)[1d2+5]</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Commoner (Pilgrim)[1d2+7]</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Commoner (Pilgrim)[1d2+9]</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Commoner (Pilgrim)[1d2+11]</entry>
+    <item>6</item>
+  </collection>
+  <collection>
+    <entry>Commoner (Pilgrim)[1d2+13]</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Commoner (Pilgrim)[1d2+15]</entry>
+    <item>8</item>
+  </collection>
+  <collection>
+    <entry>Commoner (Pilgrim)[1d2+17]</entry>
+    <item>9</item>
+  </collection>
+  <collection>
+    <entry>Commoner (Pilgrim)[20]</entry>
+    <item>10</item>
+  </collection>
+  <collection>
+    <entry>Commoner (Protestor)[1]</entry>
+    <item>1/2</item>
+  </collection>
+  <collection>
+    <entry>Commoner (Protestor)[1d2+1]</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Commoner (Protestor)[1d2+3]</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Commoner (Protestor)[1d2+5]</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Commoner (Protestor)[1d2+7]</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Commoner (Protestor)[1d2+9]</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Commoner (Protestor)[1d2+11]</entry>
+    <item>6</item>
+  </collection>
+  <collection>
+    <entry>Commoner (Protestor)[1d2+13]</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Commoner (Protestor)[1d2+15]</entry>
+    <item>8</item>
+  </collection>
+  <collection>
+    <entry>Commoner (Protestor)[1d2+17]</entry>
+    <item>9</item>
+  </collection>
+  <collection>
+    <entry>Commoner (Protestor)[20]</entry>
+    <item>10</item>
+  </collection>
+  <collection>
+    <entry>Commoner (Servant)[1]</entry>
+    <item>1/2</item>
+  </collection>
+  <collection>
+    <entry>Commoner (Servant)[1d2+1]</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Commoner (Servant)[1d2+3]</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Commoner (Servant)[1d2+5]</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Commoner (Servant)[1d2+7]</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Commoner (Servant)[1d2+9]</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Commoner (Servant)[1d2+11]</entry>
+    <item>6</item>
+  </collection>
+  <collection>
+    <entry>Commoner (Servant)[1d2+13]</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Commoner (Servant)[1d2+15]</entry>
+    <item>8</item>
+  </collection>
+  <collection>
+    <entry>Commoner (Servant)[1d2+17]</entry>
+    <item>9</item>
+  </collection>
+  <collection>
+    <entry>Commoner (Servant)[20]</entry>
+    <item>10</item>
+  </collection>
+  <collection>
+    <entry>Couatl</entry>
+    <item>10</item>
+  </collection>
+  <collection>
+    <entry>Criosphinx</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Crocodile</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Giant crocodile</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Cryohydra (5 heads)</entry>
+    <item>6</item>
+  </collection>
+  <collection>
+    <entry>Cryohydra (6 heads)</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Cryohydra (7 heads)</entry>
+    <item>8</item>
+  </collection>
+  <collection>
+    <entry>Cryohydra (8 heads)</entry>
+    <item>9</item>
+  </collection>
+  <collection>
+    <entry>Cryohydra (9 heads)</entry>
+    <item>10</item>
+  </collection>
+  <collection>
+    <entry>Cryohydra (10 heads)</entry>
+    <item>11</item>
+  </collection>
+  <collection>
+    <entry>Cryohydra (11 heads)</entry>
+    <item>12</item>
+  </collection>
+  <collection>
+    <entry>Cryohydra (12 heads)</entry>
+    <item>13</item>
+  </collection>
+  <collection>
+    <entry>Darkmantle</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Deinonychus</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Delver</entry>
+    <item>9</item>
+  </collection>
+  <collection>
+    <entry>Derro</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Destrachan</entry>
+    <item>8</item>
+  </collection>
+  <collection>
+    <entry>Devourer</entry>
+    <item>11</item>
+  </collection>
+  <collection>
+    <entry>Digester</entry>
+    <item>6</item>
+  </collection>
+  <collection>
+    <entry>Displacer beast</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Displacer beast (Pack lord)</entry>
+    <item>12</item>
+  </collection>
+  <collection>
+    <entry>Djinni</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Noble djinni</entry>
+    <item>8</item>
+  </collection>
+  <collection>
+    <entry>Dog</entry>
+    <item>1/3</item>
+  </collection>
+  <collection>
+    <entry>Celestial dog</entry>
+    <item>1/3</item>
+  </collection>
+  <collection>
+    <entry>Dog (Riding)</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Dominated creature[1]</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Dominated creature[2]</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Dominated creature[3]</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Dominated creature[4]</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Dominated creature[5]</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Dominated creature[6]</entry>
+    <item>6</item>
+  </collection>
+  <collection>
+    <entry>Dominated creature[7]</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Dominated creature[8]</entry>
+    <item>8</item>
+  </collection>
+  <collection>
+    <entry>Dominated creature[9]</entry>
+    <item>9</item>
+  </collection>
+  <collection>
+    <entry>Dominated creature[10]</entry>
+    <item>10</item>
+  </collection>
+  <collection>
+    <entry>Dominated creature[11]</entry>
+    <item>11</item>
+  </collection>
+  <collection>
+    <entry>Dominated creature[12]</entry>
+    <item>12</item>
+  </collection>
+  <collection>
+    <entry>Dominated creature[13]</entry>
+    <item>13</item>
+  </collection>
+  <collection>
+    <entry>Dominated creature[14]</entry>
+    <item>14</item>
+  </collection>
+  <collection>
+    <entry>Dominated creature[15]</entry>
+    <item>15</item>
+  </collection>
+  <collection>
+    <entry>Dominated creature[16]</entry>
+    <item>16</item>
+  </collection>
+  <collection>
+    <entry>Donkey</entry>
+    <item>1/6</item>
+  </collection>
+  <collection>
+    <entry>Doppelganger</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Wyrmling black dragon</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Very young black dragon</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Young black dragon</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Juvenile black dragon</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Young adult black dragon</entry>
+    <item>9</item>
+  </collection>
+  <collection>
+    <entry>Adult black dragon</entry>
+    <item>11</item>
+  </collection>
+  <collection>
+    <entry>Mature adult black dragon</entry>
+    <item>14</item>
+  </collection>
+  <collection>
+    <entry>Old black dragon</entry>
+    <item>16</item>
+  </collection>
+  <collection>
+    <entry>Very old black dragon</entry>
+    <item>18</item>
+  </collection>
+  <collection>
+    <entry>Ancient black dragon</entry>
+    <item>19</item>
+  </collection>
+  <collection>
+    <entry>Wyrm black dragon</entry>
+    <item>20</item>
+  </collection>
+  <collection>
+    <entry>Great wyrm black dragon</entry>
+    <item>22</item>
+  </collection>
+  <collection>
+    <entry>Wyrmling blue dragon</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Very young blue dragon</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Young blue dragon</entry>
+    <item>6</item>
+  </collection>
+  <collection>
+    <entry>Juvenile blue dragon</entry>
+    <item>8</item>
+  </collection>
+  <collection>
+    <entry>Young adult blue dragon</entry>
+    <item>11</item>
+  </collection>
+  <collection>
+    <entry>Adult blue dragon</entry>
+    <item>14</item>
+  </collection>
+  <collection>
+    <entry>Mature adult blue dragon</entry>
+    <item>16</item>
+  </collection>
+  <collection>
+    <entry>Old blue dragon</entry>
+    <item>18</item>
+  </collection>
+  <collection>
+    <entry>Very old blue dragon</entry>
+    <item>19</item>
+  </collection>
+  <collection>
+    <entry>Ancient blue dragon</entry>
+    <item>21</item>
+  </collection>
+  <collection>
+    <entry>Wyrm blue dragon</entry>
+    <item>23</item>
+  </collection>
+  <collection>
+    <entry>Great wyrm blue dragon</entry>
+    <item>25</item>
+  </collection>
+  <collection>
+    <entry>Wyrmling green dragon</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Very young green dragon</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Young green dragon</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Juvenile green dragon</entry>
+    <item>8</item>
+  </collection>
+  <collection>
+    <entry>Young adult green dragon</entry>
+    <item>11</item>
+  </collection>
+  <collection>
+    <entry>Adult green dragon</entry>
+    <item>13</item>
+  </collection>
+  <collection>
+    <entry>Mature adult green dragon</entry>
+    <item>16</item>
+  </collection>
+  <collection>
+    <entry>Old green dragon</entry>
+    <item>18</item>
+  </collection>
+  <collection>
+    <entry>Very old green dragon</entry>
+    <item>19</item>
+  </collection>
+  <collection>
+    <entry>Ancient green dragon</entry>
+    <item>21</item>
+  </collection>
+  <collection>
+    <entry>Wyrm green dragon</entry>
+    <item>22</item>
+  </collection>
+  <collection>
+    <entry>Great wyrm green dragon</entry>
+    <item>24</item>
+  </collection>
+  <collection>
+    <entry>Wyrmling red dragon</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Very young red dragon</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Young red dragon</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Juvenile red dragon</entry>
+    <item>10</item>
+  </collection>
+  <collection>
+    <entry>Young adult red dragon</entry>
+    <item>13</item>
+  </collection>
+  <collection>
+    <entry>Adult red dragon</entry>
+    <item>15</item>
+  </collection>
+  <collection>
+    <entry>Mature adult red dragon</entry>
+    <item>18</item>
+  </collection>
+  <collection>
+    <entry>Old red dragon</entry>
+    <item>20</item>
+  </collection>
+  <collection>
+    <entry>Very old red dragon</entry>
+    <item>21</item>
+  </collection>
+  <collection>
+    <entry>Ancient red dragon</entry>
+    <item>23</item>
+  </collection>
+  <collection>
+    <entry>Wyrm red dragon</entry>
+    <item>24</item>
+  </collection>
+  <collection>
+    <entry>Great wyrm red dragon</entry>
+    <item>26</item>
+  </collection>
+  <collection>
+    <entry>Wyrmling white dragon</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Very young white dragon</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Young white dragon</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Juvenile white dragon</entry>
+    <item>6</item>
+  </collection>
+  <collection>
+    <entry>Young adult white dragon</entry>
+    <item>8</item>
+  </collection>
+  <collection>
+    <entry>Adult white dragon</entry>
+    <item>10</item>
+  </collection>
+  <collection>
+    <entry>Mature adult white dragon</entry>
+    <item>12</item>
+  </collection>
+  <collection>
+    <entry>Old white dragon</entry>
+    <item>15</item>
+  </collection>
+  <collection>
+    <entry>Very old white dragon</entry>
+    <item>17</item>
+  </collection>
+  <collection>
+    <entry>Ancient white dragon</entry>
+    <item>18</item>
+  </collection>
+  <collection>
+    <entry>Wyrm white dragon</entry>
+    <item>19</item>
+  </collection>
+  <collection>
+    <entry>Great wyrm white dragon</entry>
+    <item>21</item>
+  </collection>
+  <collection>
+    <entry>Wyrmling brass dragon</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Very young brass dragon</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Young brass dragon</entry>
+    <item>6</item>
+  </collection>
+  <collection>
+    <entry>Juvenile brass dragon</entry>
+    <item>8</item>
+  </collection>
+  <collection>
+    <entry>Young adult brass dragon</entry>
+    <item>10</item>
+  </collection>
+  <collection>
+    <entry>Adult brass dragon</entry>
+    <item>12</item>
+  </collection>
+  <collection>
+    <entry>Mature adult brass dragon</entry>
+    <item>15</item>
+  </collection>
+  <collection>
+    <entry>Old brass dragon</entry>
+    <item>17</item>
+  </collection>
+  <collection>
+    <entry>Very old brass dragon</entry>
+    <item>19</item>
+  </collection>
+  <collection>
+    <entry>Ancient brass dragon</entry>
+    <item>20</item>
+  </collection>
+  <collection>
+    <entry>Wyrm brass dragon</entry>
+    <item>21</item>
+  </collection>
+  <collection>
+    <entry>Great wyrm brass dragon</entry>
+    <item>23</item>
+  </collection>
+  <collection>
+    <entry>Wyrmling bronze dragon</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Very young bronze dragon</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Young bronze dragon</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Juvenile bronze dragon</entry>
+    <item>9</item>
+  </collection>
+  <collection>
+    <entry>Young adult bronze dragon</entry>
+    <item>12</item>
+  </collection>
+  <collection>
+    <entry>Adult bronze dragon</entry>
+    <item>15</item>
+  </collection>
+  <collection>
+    <entry>Mature adult bronze dragon</entry>
+    <item>17</item>
+  </collection>
+  <collection>
+    <entry>Old bronze dragon</entry>
+    <item>19</item>
+  </collection>
+  <collection>
+    <entry>Very old bronze dragon</entry>
+    <item>20</item>
+  </collection>
+  <collection>
+    <entry>Ancient bronze dragon</entry>
+    <item>22</item>
+  </collection>
+  <collection>
+    <entry>Wyrm bronze dragon</entry>
+    <item>23</item>
+  </collection>
+  <collection>
+    <entry>Great wyrm bronze dragon</entry>
+    <item>25</item>
+  </collection>
+  <collection>
+    <entry>Wyrmling copper dragon</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Very young copper dragon</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Young copper dragon</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Juvenile copper dragon</entry>
+    <item>9</item>
+  </collection>
+  <collection>
+    <entry>Young adult copper dragon</entry>
+    <item>11</item>
+  </collection>
+  <collection>
+    <entry>Adult copper dragon</entry>
+    <item>14</item>
+  </collection>
+  <collection>
+    <entry>Mature adult copper dragon</entry>
+    <item>16</item>
+  </collection>
+  <collection>
+    <entry>Old copper dragon</entry>
+    <item>19</item>
+  </collection>
+  <collection>
+    <entry>Very old copper dragon</entry>
+    <item>20</item>
+  </collection>
+  <collection>
+    <entry>Ancient copper dragon</entry>
+    <item>22</item>
+  </collection>
+  <collection>
+    <entry>Wyrm copper dragon</entry>
+    <item>23</item>
+  </collection>
+  <collection>
+    <entry>Great wyrm copper dragon</entry>
+    <item>25</item>
+  </collection>
+  <collection>
+    <entry>Wyrmling gold dragon</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Very young gold dragon</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Young gold dragon</entry>
+    <item>9</item>
+  </collection>
+  <collection>
+    <entry>Juvenile gold dragon</entry>
+    <item>11</item>
+  </collection>
+  <collection>
+    <entry>Young adult gold dragon</entry>
+    <item>14</item>
+  </collection>
+  <collection>
+    <entry>Adult gold dragon</entry>
+    <item>16</item>
+  </collection>
+  <collection>
+    <entry>Mature adult gold dragon</entry>
+    <item>19</item>
+  </collection>
+  <collection>
+    <entry>Old gold dragon</entry>
+    <item>21</item>
+  </collection>
+  <collection>
+    <entry>Very old gold dragon</entry>
+    <item>22</item>
+  </collection>
+  <collection>
+    <entry>Ancient gold dragon</entry>
+    <item>24</item>
+  </collection>
+  <collection>
+    <entry>Wyrm gold dragon</entry>
+    <item>25</item>
+  </collection>
+  <collection>
+    <entry>Great wyrm gold dragon</entry>
+    <item>27</item>
+  </collection>
+  <collection>
+    <entry>Wyrmling silver dragon</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Very young silver dragon</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Young silver dragon</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Juvenile silver dragon</entry>
+    <item>10</item>
+  </collection>
+  <collection>
+    <entry>Young adult silver dragon</entry>
+    <item>13</item>
+  </collection>
+  <collection>
+    <entry>Adult silver dragon</entry>
+    <item>15</item>
+  </collection>
+  <collection>
+    <entry>Mature adult silver dragon</entry>
+    <item>18</item>
+  </collection>
+  <collection>
+    <entry>Old silver dragon</entry>
+    <item>20</item>
+  </collection>
+  <collection>
+    <entry>Very old silver dragon</entry>
+    <item>21</item>
+  </collection>
+  <collection>
+    <entry>Ancient silver dragon</entry>
+    <item>23</item>
+  </collection>
+  <collection>
+    <entry>Wyrm silver dragon</entry>
+    <item>24</item>
+  </collection>
+  <collection>
+    <entry>Great wyrm silver dragon</entry>
+    <item>26</item>
+  </collection>
+  <collection>
+    <entry>Dragon turtle</entry>
+    <item>9</item>
+  </collection>
+  <collection>
+    <entry>Dragonne</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Dretch</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Drider</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Drow warrior</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Druid (Animal trainer)[1]</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Druid (Animal trainer)[2]</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Druid (Animal trainer)[3]</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Druid (Animal trainer)[4]</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Druid (Animal trainer)[5]</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Druid (Animal trainer)[6]</entry>
+    <item>6</item>
+  </collection>
+  <collection>
+    <entry>Druid (Animal trainer)[7]</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Druid (Animal trainer)[8]</entry>
+    <item>8</item>
+  </collection>
+  <collection>
+    <entry>Druid (Animal trainer)[9]</entry>
+    <item>9</item>
+  </collection>
+  <collection>
+    <entry>Druid (Animal trainer)[10]</entry>
+    <item>10</item>
+  </collection>
+  <collection>
+    <entry>Druid (Animal trainer)[11]</entry>
+    <item>11</item>
+  </collection>
+  <collection>
+    <entry>Druid (Animal trainer)[12]</entry>
+    <item>12</item>
+  </collection>
+  <collection>
+    <entry>Druid (Animal trainer)[13]</entry>
+    <item>13</item>
+  </collection>
+  <collection>
+    <entry>Druid (Animal trainer)[14]</entry>
+    <item>14</item>
+  </collection>
+  <collection>
+    <entry>Druid (Animal trainer)[15]</entry>
+    <item>15</item>
+  </collection>
+  <collection>
+    <entry>Druid (Animal trainer)[16]</entry>
+    <item>16</item>
+  </collection>
+  <collection>
+    <entry>Druid (Animal trainer)[17]</entry>
+    <item>17</item>
+  </collection>
+  <collection>
+    <entry>Druid (Animal trainer)[18]</entry>
+    <item>18</item>
+  </collection>
+  <collection>
+    <entry>Druid (Animal trainer)[19]</entry>
+    <item>19</item>
+  </collection>
+  <collection>
+    <entry>Druid (Animal trainer)[20]</entry>
+    <item>20</item>
+  </collection>
+  <collection>
+    <entry>Druid (Doctor)[1]</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Druid (Doctor)[2]</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Druid (Doctor)[3]</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Druid (Doctor)[4]</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Druid (Doctor)[5]</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Druid (Doctor)[6]</entry>
+    <item>6</item>
+  </collection>
+  <collection>
+    <entry>Druid (Doctor)[7]</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Druid (Doctor)[8]</entry>
+    <item>8</item>
+  </collection>
+  <collection>
+    <entry>Druid (Doctor)[9]</entry>
+    <item>9</item>
+  </collection>
+  <collection>
+    <entry>Druid (Doctor)[10]</entry>
+    <item>10</item>
+  </collection>
+  <collection>
+    <entry>Druid (Doctor)[11]</entry>
+    <item>11</item>
+  </collection>
+  <collection>
+    <entry>Druid (Doctor)[12]</entry>
+    <item>12</item>
+  </collection>
+  <collection>
+    <entry>Druid (Doctor)[13]</entry>
+    <item>13</item>
+  </collection>
+  <collection>
+    <entry>Druid (Doctor)[14]</entry>
+    <item>14</item>
+  </collection>
+  <collection>
+    <entry>Druid (Doctor)[15]</entry>
+    <item>15</item>
+  </collection>
+  <collection>
+    <entry>Druid (Doctor)[16]</entry>
+    <item>16</item>
+  </collection>
+  <collection>
+    <entry>Druid (Doctor)[17]</entry>
+    <item>17</item>
+  </collection>
+  <collection>
+    <entry>Druid (Doctor)[18]</entry>
+    <item>18</item>
+  </collection>
+  <collection>
+    <entry>Druid (Doctor)[19]</entry>
+    <item>19</item>
+  </collection>
+  <collection>
+    <entry>Druid (Doctor)[20]</entry>
+    <item>20</item>
+  </collection>
+  <collection>
+    <entry>Druid (Famous priest)[11]</entry>
+    <item>11</item>
+  </collection>
+  <collection>
+    <entry>Druid (Famous priest)[12]</entry>
+    <item>12</item>
+  </collection>
+  <collection>
+    <entry>Druid (Famous priest)[13]</entry>
+    <item>13</item>
+  </collection>
+  <collection>
+    <entry>Druid (Famous priest)[14]</entry>
+    <item>14</item>
+  </collection>
+  <collection>
+    <entry>Druid (Famous priest)[15]</entry>
+    <item>15</item>
+  </collection>
+  <collection>
+    <entry>Druid (Famous priest)[16]</entry>
+    <item>16</item>
+  </collection>
+  <collection>
+    <entry>Druid (Famous priest)[17]</entry>
+    <item>17</item>
+  </collection>
+  <collection>
+    <entry>Druid (Famous priest)[18]</entry>
+    <item>18</item>
+  </collection>
+  <collection>
+    <entry>Druid (Famous priest)[19]</entry>
+    <item>19</item>
+  </collection>
+  <collection>
+    <entry>Druid (Famous priest)[20]</entry>
+    <item>20</item>
+  </collection>
+  <collection>
+    <entry>Dryad</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Duergar warrior</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Dwarf warrior</entry>
+    <item>1/2</item>
+  </collection>
+  <collection>
+    <entry>Eagle</entry>
+    <item>1/2</item>
+  </collection>
+  <collection>
+    <entry>Giant eagle</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Efreeti</entry>
+    <item>8</item>
+  </collection>
+  <collection>
+    <entry>Small air elemental</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Medium air elemental</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Large air elemental</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Huge air elemental</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Greater air elemental</entry>
+    <item>9</item>
+  </collection>
+  <collection>
+    <entry>Elder air elemental</entry>
+    <item>11</item>
+  </collection>
+  <collection>
+    <entry>Small earth elemental</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Medium earth elemental</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Large earth elemental</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Huge earth elemental</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Greater earth elemental</entry>
+    <item>9</item>
+  </collection>
+  <collection>
+    <entry>Elder earth elemental</entry>
+    <item>11</item>
+  </collection>
+  <collection>
+    <entry>Small fire elemental</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Medium fire elemental</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Large fire elemental</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Huge fire elemental</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Greater fire elemental</entry>
+    <item>9</item>
+  </collection>
+  <collection>
+    <entry>Elder fire elemental</entry>
+    <item>11</item>
+  </collection>
+  <collection>
+    <entry>Small water elemental</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Medium water elemental</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Large water elemental</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Huge water elemental</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Greater water elemental</entry>
+    <item>9</item>
+  </collection>
+  <collection>
+    <entry>Elder water elemental</entry>
+    <item>11</item>
+  </collection>
+  <collection>
+    <entry>Elephant</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Elf warrior</entry>
+    <item>1/2</item>
+  </collection>
+  <collection>
+    <entry>Erinyes</entry>
+    <item>8</item>
+  </collection>
+  <collection>
+    <entry>Ethereal filcher</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Ethereal marauder</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Ettercap</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Ettin</entry>
+    <item>6</item>
+  </collection>
+  <collection>
+    <entry>Expert (Adviser)[1]</entry>
+    <item>1/2</item>
+  </collection>
+  <collection>
+    <entry>Expert (Adviser)[1d2+1]</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Expert (Adviser)[1d2+3]</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Expert (Adviser)[1d2+5]</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Expert (Adviser)[1d2+7]</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Expert (Adviser)[1d2+9]</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Expert (Adviser)[1d2+11]</entry>
+    <item>6</item>
+  </collection>
+  <collection>
+    <entry>Expert (Adviser)[1d2+13]</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Expert (Adviser)[1d2+15]</entry>
+    <item>8</item>
+  </collection>
+  <collection>
+    <entry>Expert (Adviser)[1d2+17]</entry>
+    <item>9</item>
+  </collection>
+  <collection>
+    <entry>Expert (Adviser)[20]</entry>
+    <item>10</item>
+  </collection>
+  <collection>
+    <entry>Expert (Architect)[1]</entry>
+    <item>1/2</item>
+  </collection>
+  <collection>
+    <entry>Expert (Architect)[1d2+1]</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Expert (Architect)[1d2+3]</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Expert (Architect)[1d2+5]</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Expert (Architect)[1d2+7]</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Expert (Architect)[1d2+9]</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Expert (Architect)[1d2+11]</entry>
+    <item>6</item>
+  </collection>
+  <collection>
+    <entry>Expert (Architect)[1d2+13]</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Expert (Architect)[1d2+15]</entry>
+    <item>8</item>
+  </collection>
+  <collection>
+    <entry>Expert (Architect)[1d2+17]</entry>
+    <item>9</item>
+  </collection>
+  <collection>
+    <entry>Expert (Architect)[20]</entry>
+    <item>10</item>
+  </collection>
+  <collection>
+    <entry>Expert (Artisan)[1]</entry>
+    <item>1/2</item>
+  </collection>
+  <collection>
+    <entry>Expert (Artisan)[1d2+1]</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Expert (Artisan)[1d2+3]</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Expert (Artisan)[1d2+5]</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Expert (Artisan)[1d2+7]</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Expert (Artisan)[1d2+9]</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Expert (Artisan)[1d2+11]</entry>
+    <item>6</item>
+  </collection>
+  <collection>
+    <entry>Expert (Artisan)[1d2+13]</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Expert (Artisan)[1d2+15]</entry>
+    <item>8</item>
+  </collection>
+  <collection>
+    <entry>Expert (Artisan)[1d2+17]</entry>
+    <item>9</item>
+  </collection>
+  <collection>
+    <entry>Expert (Artisan)[20]</entry>
+    <item>10</item>
+  </collection>
+  <collection>
+    <entry>Expert (Merchant)[1]</entry>
+    <item>1/2</item>
+  </collection>
+  <collection>
+    <entry>Expert (Merchant)[1d2+1]</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Expert (Merchant)[1d2+3]</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Expert (Merchant)[1d2+5]</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Expert (Merchant)[1d2+7]</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Expert (Merchant)[1d2+9]</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Expert (Merchant)[1d2+11]</entry>
+    <item>6</item>
+  </collection>
+  <collection>
+    <entry>Expert (Merchant)[1d2+13]</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Expert (Merchant)[1d2+15]</entry>
+    <item>8</item>
+  </collection>
+  <collection>
+    <entry>Expert (Merchant)[1d2+17]</entry>
+    <item>9</item>
+  </collection>
+  <collection>
+    <entry>Expert (Merchant)[20]</entry>
+    <item>10</item>
+  </collection>
+  <collection>
+    <entry>Expert (Minstrel)[1]</entry>
+    <item>1/2</item>
+  </collection>
+  <collection>
+    <entry>Expert (Minstrel)[1d2+1]</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Expert (Minstrel)[1d2+3]</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Expert (Minstrel)[1d2+5]</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Expert (Minstrel)[1d2+7]</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Expert (Minstrel)[1d2+9]</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Expert (Minstrel)[1d2+11]</entry>
+    <item>6</item>
+  </collection>
+  <collection>
+    <entry>Expert (Minstrel)[1d2+13]</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Expert (Minstrel)[1d2+15]</entry>
+    <item>8</item>
+  </collection>
+  <collection>
+    <entry>Expert (Minstrel)[1d2+17]</entry>
+    <item>9</item>
+  </collection>
+  <collection>
+    <entry>Expert (Minstrel)[20]</entry>
+    <item>10</item>
+  </collection>
+  <collection>
+    <entry>Fighter (Captain)[1]</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Fighter (Captain)[2]</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Fighter (Captain)[3]</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Fighter (Captain)[4]</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Fighter (Captain)[5]</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Fighter (Captain)[6]</entry>
+    <item>6</item>
+  </collection>
+  <collection>
+    <entry>Fighter (Captain)[7]</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Fighter (Captain)[8]</entry>
+    <item>8</item>
+  </collection>
+  <collection>
+    <entry>Fighter (Captain)[9]</entry>
+    <item>9</item>
+  </collection>
+  <collection>
+    <entry>Fighter (Captain)[10]</entry>
+    <item>10</item>
+  </collection>
+  <collection>
+    <entry>Fighter (Captain)[11]</entry>
+    <item>11</item>
+  </collection>
+  <collection>
+    <entry>Fighter (Combat instructor)[11]</entry>
+    <item>11</item>
+  </collection>
+  <collection>
+    <entry>Fighter (Combat instructor)[12]</entry>
+    <item>12</item>
+  </collection>
+  <collection>
+    <entry>Fighter (Combat instructor)[13]</entry>
+    <item>13</item>
+  </collection>
+  <collection>
+    <entry>Fighter (Combat instructor)[14]</entry>
+    <item>14</item>
+  </collection>
+  <collection>
+    <entry>Fighter (Combat instructor)[15]</entry>
+    <item>15</item>
+  </collection>
+  <collection>
+    <entry>Fighter (Combat instructor)[16]</entry>
+    <item>16</item>
+  </collection>
+  <collection>
+    <entry>Fighter (Combat instructor)[17]</entry>
+    <item>17</item>
+  </collection>
+  <collection>
+    <entry>Fighter (Combat instructor)[18]</entry>
+    <item>18</item>
+  </collection>
+  <collection>
+    <entry>Fighter (Combat instructor)[19]</entry>
+    <item>19</item>
+  </collection>
+  <collection>
+    <entry>Fighter (Combat instructor)[20]</entry>
+    <item>20</item>
+  </collection>
+  <collection>
+    <entry>Fighter (Hitman)[1]</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Fighter (Hitman)[2]</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Fighter (Hitman)[3]</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Fighter (Hitman)[4]</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Fighter (Hitman)[5]</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Fighter (Hitman)[6]</entry>
+    <item>6</item>
+  </collection>
+  <collection>
+    <entry>Fighter (Hitman)[7]</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Fighter (Hitman)[8]</entry>
+    <item>8</item>
+  </collection>
+  <collection>
+    <entry>Fighter (Hitman)[9]</entry>
+    <item>9</item>
+  </collection>
+  <collection>
+    <entry>Fighter (Hitman)[10]</entry>
+    <item>10</item>
+  </collection>
+  <collection>
+    <entry>Fighter (Hitman)[11]</entry>
+    <item>11</item>
+  </collection>
+  <collection>
+    <entry>Fighter (Hitman)[12]</entry>
+    <item>12</item>
+  </collection>
+  <collection>
+    <entry>Fighter (Hitman)[13]</entry>
+    <item>13</item>
+  </collection>
+  <collection>
+    <entry>Fighter (Hitman)[14]</entry>
+    <item>14</item>
+  </collection>
+  <collection>
+    <entry>Fighter (Hitman)[15]</entry>
+    <item>15</item>
+  </collection>
+  <collection>
+    <entry>Fighter (Hitman)[16]</entry>
+    <item>16</item>
+  </collection>
+  <collection>
+    <entry>Fighter (Hitman)[17]</entry>
+    <item>17</item>
+  </collection>
+  <collection>
+    <entry>Fighter (Hitman)[18]</entry>
+    <item>18</item>
+  </collection>
+  <collection>
+    <entry>Fighter (Hitman)[19]</entry>
+    <item>19</item>
+  </collection>
+  <collection>
+    <entry>Fighter (Hitman)[20]</entry>
+    <item>20</item>
+  </collection>
+  <collection>
+    <entry>Fighter (Leader)[1]</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Fighter (Leader)[2]</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Fighter (Leader)[3]</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Fighter (Leader)[4]</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Fighter (Leader)[5]</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Fighter (Leader)[6]</entry>
+    <item>6</item>
+  </collection>
+  <collection>
+    <entry>Fighter (Leader)[7]</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Fighter (Leader)[8]</entry>
+    <item>8</item>
+  </collection>
+  <collection>
+    <entry>Fighter (Leader)[9]</entry>
+    <item>9</item>
+  </collection>
+  <collection>
+    <entry>Fighter (Leader)[10]</entry>
+    <item>10</item>
+  </collection>
+  <collection>
+    <entry>Fighter (Leader)[11]</entry>
+    <item>11</item>
+  </collection>
+  <collection>
+    <entry>Fighter (Student)[1]</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Fighter (Student)[2]</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Fighter (Student)[3]</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Fighter (Student)[4]</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Fighter (Student)[5]</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Fighter (Student)[6]</entry>
+    <item>6</item>
+  </collection>
+  <collection>
+    <entry>Fighter (Student)[7]</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Fighter (Student)[8]</entry>
+    <item>8</item>
+  </collection>
+  <collection>
+    <entry>Fighter (Student)[9]</entry>
+    <item>9</item>
+  </collection>
+  <collection>
+    <entry>Fighter (Student)[10]</entry>
+    <item>10</item>
+  </collection>
+  <collection>
+    <entry>Fighter (War hero)[11]</entry>
+    <item>11</item>
+  </collection>
+  <collection>
+    <entry>Fighter (War hero)[12]</entry>
+    <item>12</item>
+  </collection>
+  <collection>
+    <entry>Fighter (War hero)[13]</entry>
+    <item>13</item>
+  </collection>
+  <collection>
+    <entry>Fighter (War hero)[14]</entry>
+    <item>14</item>
+  </collection>
+  <collection>
+    <entry>Fighter (War hero)[15]</entry>
+    <item>15</item>
+  </collection>
+  <collection>
+    <entry>Fighter (War hero)[16]</entry>
+    <item>16</item>
+  </collection>
+  <collection>
+    <entry>Fighter (War hero)[17]</entry>
+    <item>17</item>
+  </collection>
+  <collection>
+    <entry>Fighter (War hero)[18]</entry>
+    <item>18</item>
+  </collection>
+  <collection>
+    <entry>Fighter (War hero)[19]</entry>
+    <item>19</item>
+  </collection>
+  <collection>
+    <entry>Fighter (War hero)[20]</entry>
+    <item>20</item>
+  </collection>
+  <collection>
+    <entry>Giant fire beetle</entry>
+    <item>1/3</item>
+  </collection>
+  <collection>
+    <entry>Celestial giant fire beetle</entry>
+    <item>1/3</item>
+  </collection>
+  <collection>
+    <entry>Formian worker</entry>
+    <item>1/2</item>
+  </collection>
+  <collection>
+    <entry>Formian warrior</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Formian taskmaster</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Formian myrmarch</entry>
+    <item>10</item>
+  </collection>
+  <collection>
+    <entry>Formian queen</entry>
+    <item>17</item>
+  </collection>
+  <collection>
+    <entry>Frost worm</entry>
+    <item>12</item>
+  </collection>
+  <collection>
+    <entry>Gargoyle</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Gelatinous cube</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Ghaele</entry>
+    <item>13</item>
+  </collection>
+  <collection>
+    <entry>Ghast</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Ghost[1]</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Ghost[2]</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Ghost[3]</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Ghost[4]</entry>
+    <item>6</item>
+  </collection>
+  <collection>
+    <entry>Ghost[5]</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Ghost[6]</entry>
+    <item>8</item>
+  </collection>
+  <collection>
+    <entry>Ghost[7]</entry>
+    <item>9</item>
+  </collection>
+  <collection>
+    <entry>Ghost[8]</entry>
+    <item>10</item>
+  </collection>
+  <collection>
+    <entry>Ghost[9]</entry>
+    <item>11</item>
+  </collection>
+  <collection>
+    <entry>Ghost[10]</entry>
+    <item>12</item>
+  </collection>
+  <collection>
+    <entry>Ghost[11]</entry>
+    <item>13</item>
+  </collection>
+  <collection>
+    <entry>Ghost[12]</entry>
+    <item>14</item>
+  </collection>
+  <collection>
+    <entry>Ghost[13]</entry>
+    <item>15</item>
+  </collection>
+  <collection>
+    <entry>Ghost[14]</entry>
+    <item>16</item>
+  </collection>
+  <collection>
+    <entry>Ghost[15]</entry>
+    <item>17</item>
+  </collection>
+  <collection>
+    <entry>Ghost[16]</entry>
+    <item>18</item>
+  </collection>
+  <collection>
+    <entry>Ghost[17]</entry>
+    <item>19</item>
+  </collection>
+  <collection>
+    <entry>Ghost[18]</entry>
+    <item>20</item>
+  </collection>
+  <collection>
+    <entry>Ghost[19]</entry>
+    <item>21</item>
+  </collection>
+  <collection>
+    <entry>Ghost[20]</entry>
+    <item>22</item>
+  </collection>
+  <collection>
+    <entry>Ghoul</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Cloud giant</entry>
+    <item>11</item>
+  </collection>
+  <collection>
+    <entry>Fire giant</entry>
+    <item>10</item>
+  </collection>
+  <collection>
+    <entry>Frost giant</entry>
+    <item>9</item>
+  </collection>
+  <collection>
+    <entry>Frost giant Jarl</entry>
+    <item>17</item>
+  </collection>
+  <collection>
+    <entry>Hill giant</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Stone giant</entry>
+    <item>8</item>
+  </collection>
+  <collection>
+    <entry>Stone giant elder</entry>
+    <item>9</item>
+  </collection>
+  <collection>
+    <entry>Storm giant</entry>
+    <item>13</item>
+  </collection>
+  <collection>
+    <entry>Gibbering mouther</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Girallon</entry>
+    <item>6</item>
+  </collection>
+  <collection>
+    <entry>Glabrezu</entry>
+    <item>13</item>
+  </collection>
+  <collection>
+    <entry>Gnoll</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Gnome warrior</entry>
+    <item>1/2</item>
+  </collection>
+  <collection>
+    <entry>Goblin</entry>
+    <item>1/3</item>
+  </collection>
+  <collection>
+    <entry>Clay golem</entry>
+    <item>10</item>
+  </collection>
+  <collection>
+    <entry>Flesh golem</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Iron golem</entry>
+    <item>13</item>
+  </collection>
+  <collection>
+    <entry>Stone golem</entry>
+    <item>11</item>
+  </collection>
+  <collection>
+    <entry>Greater stone golem</entry>
+    <item>16</item>
+  </collection>
+  <collection>
+    <entry>Gorgon</entry>
+    <item>8</item>
+  </collection>
+  <collection>
+    <entry>Gray render</entry>
+    <item>8</item>
+  </collection>
+  <collection>
+    <entry>Green hag</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Grick</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Griffon</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Grig</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Grimlock</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Gynosphinx</entry>
+    <item>8</item>
+  </collection>
+  <collection>
+    <entry>Halfling warrior</entry>
+    <item>1/2</item>
+  </collection>
+  <collection>
+    <entry>Harpy</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Harpy archer</entry>
+    <item>11</item>
+  </collection>
+  <collection>
+    <entry>Hawk</entry>
+    <item>1/3</item>
+  </collection>
+  <collection>
+    <entry>Hell hound</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Hellcat (Bezekira)</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Hellwasp swarm</entry>
+    <item>8</item>
+  </collection>
+  <collection>
+    <entry>Hezrou</entry>
+    <item>11</item>
+  </collection>
+  <collection>
+    <entry>Hieracosphinx</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Hippogriff</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Hobgoblin</entry>
+    <item>1/2</item>
+  </collection>
+  <collection>
+    <entry>Homunculus</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Horned Devil (Cornugon)</entry>
+    <item>16</item>
+  </collection>
+  <collection>
+    <entry>Light horse</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Light warhorse</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Heavy horse</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Heavy warhorse</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Hound archon</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Hound archon Hero</entry>
+    <item>16</item>
+  </collection>
+  <collection>
+    <entry>Howler</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Hydra (5 heads)</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Hydra (6 heads)</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Hydra (7 heads)</entry>
+    <item>6</item>
+  </collection>
+  <collection>
+    <entry>Hydra (8 heads)</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Hydra (9 heads)</entry>
+    <item>8</item>
+  </collection>
+  <collection>
+    <entry>Hydra (10 heads)</entry>
+    <item>9</item>
+  </collection>
+  <collection>
+    <entry>Hydra (11 heads)</entry>
+    <item>10</item>
+  </collection>
+  <collection>
+    <entry>Hydra (12 heads)</entry>
+    <item>11</item>
+  </collection>
+  <collection>
+    <entry>Hyena</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Ice Devil (Gelugon)</entry>
+    <item>13</item>
+  </collection>
+  <collection>
+    <entry>Imp</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Invisible stalker</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Janni</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Kobold</entry>
+    <item>1/4</item>
+  </collection>
+  <collection>
+    <entry>Kolyarut</entry>
+    <item>12</item>
+  </collection>
+  <collection>
+    <entry>Krenshar</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Lamia</entry>
+    <item>6</item>
+  </collection>
+  <collection>
+    <entry>Lammasu</entry>
+    <item>8</item>
+  </collection>
+  <collection>
+    <entry>Lammasu (Golden Protector)</entry>
+    <item>13</item>
+  </collection>
+  <collection>
+    <entry>Lantern archon</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Lemure</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Leonal</entry>
+    <item>12</item>
+  </collection>
+  <collection>
+    <entry>Leopard</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Lich[1]</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Lich[2]</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Lich[3]</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Lich[4]</entry>
+    <item>6</item>
+  </collection>
+  <collection>
+    <entry>Lich[5]</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Lich[6]</entry>
+    <item>8</item>
+  </collection>
+  <collection>
+    <entry>Lich[7]</entry>
+    <item>9</item>
+  </collection>
+  <collection>
+    <entry>Lich[8]</entry>
+    <item>10</item>
+  </collection>
+  <collection>
+    <entry>Lich[9]</entry>
+    <item>11</item>
+  </collection>
+  <collection>
+    <entry>Lich[10]</entry>
+    <item>12</item>
+  </collection>
+  <collection>
+    <entry>Lich[11]</entry>
+    <item>13</item>
+  </collection>
+  <collection>
+    <entry>Lich[12]</entry>
+    <item>14</item>
+  </collection>
+  <collection>
+    <entry>Lich[13]</entry>
+    <item>15</item>
+  </collection>
+  <collection>
+    <entry>Lich[14]</entry>
+    <item>16</item>
+  </collection>
+  <collection>
+    <entry>Lich[15]</entry>
+    <item>17</item>
+  </collection>
+  <collection>
+    <entry>Lich[16]</entry>
+    <item>18</item>
+  </collection>
+  <collection>
+    <entry>Lich[17]</entry>
+    <item>19</item>
+  </collection>
+  <collection>
+    <entry>Lich[18]</entry>
+    <item>20</item>
+  </collection>
+  <collection>
+    <entry>Lich[19]</entry>
+    <item>21</item>
+  </collection>
+  <collection>
+    <entry>Lich[20]</entry>
+    <item>22</item>
+  </collection>
+  <collection>
+    <entry>Lillend</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Lion</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Dire lion</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Lizard</entry>
+    <item>1/6</item>
+  </collection>
+  <collection>
+    <entry>Monitor lizard</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Lizardfolk</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Livestock (Noncombatant)</entry>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Locust swarm</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Magmin</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Manticore</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Marilith</entry>
+    <item>17</item>
+  </collection>
+  <collection>
+    <entry>Marut</entry>
+    <item>15</item>
+  </collection>
+  <collection>
+    <entry>Medusa</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Megaraptor</entry>
+    <item>6</item>
+  </collection>
+  <collection>
+    <entry>Mephit[3]</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Air mephit</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Dust mephit</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Earth mephit</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Fire mephit</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Ice mephit</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Magma mephit</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Ooze mephit</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Salt mephit</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Steam mephit</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Water mephit</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Mimic</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Mind flayer</entry>
+    <item>8</item>
+  </collection>
+  <collection>
+    <entry>Mind flayer Sorcerer</entry>
+    <item>17</item>
+  </collection>
+  <collection>
+    <entry>Minotaur</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Mohrg</entry>
+    <item>8</item>
+  </collection>
+  <collection>
+    <entry>Monk (Combat instructor)[11]</entry>
+    <item>11</item>
+  </collection>
+  <collection>
+    <entry>Monk (Combat instructor)[12]</entry>
+    <item>12</item>
+  </collection>
+  <collection>
+    <entry>Monk (Combat instructor)[13]</entry>
+    <item>13</item>
+  </collection>
+  <collection>
+    <entry>Monk (Combat instructor)[14]</entry>
+    <item>14</item>
+  </collection>
+  <collection>
+    <entry>Monk (Combat instructor)[15]</entry>
+    <item>15</item>
+  </collection>
+  <collection>
+    <entry>Monk (Combat instructor)[16]</entry>
+    <item>16</item>
+  </collection>
+  <collection>
+    <entry>Monk (Combat instructor)[17]</entry>
+    <item>17</item>
+  </collection>
+  <collection>
+    <entry>Monk (Combat instructor)[18]</entry>
+    <item>18</item>
+  </collection>
+  <collection>
+    <entry>Monk (Combat instructor)[19]</entry>
+    <item>19</item>
+  </collection>
+  <collection>
+    <entry>Monk (Combat instructor)[20]</entry>
+    <item>20</item>
+  </collection>
+  <collection>
+    <entry>Monk (Scholar)[1]</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Monk (Scholar)[2]</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Monk (Scholar)[3]</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Monk (Scholar)[4]</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Monk (Scholar)[5]</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Monk (Scholar)[6]</entry>
+    <item>6</item>
+  </collection>
+  <collection>
+    <entry>Monk (Scholar)[7]</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Monk (Scholar)[8]</entry>
+    <item>8</item>
+  </collection>
+  <collection>
+    <entry>Monk (Scholar)[9]</entry>
+    <item>9</item>
+  </collection>
+  <collection>
+    <entry>Monk (Scholar)[10]</entry>
+    <item>10</item>
+  </collection>
+  <collection>
+    <entry>Monk (Scholar)[11]</entry>
+    <item>11</item>
+  </collection>
+  <collection>
+    <entry>Monk (Scholar)[12]</entry>
+    <item>12</item>
+  </collection>
+  <collection>
+    <entry>Monk (Scholar)[13]</entry>
+    <item>13</item>
+  </collection>
+  <collection>
+    <entry>Monk (Scholar)[14]</entry>
+    <item>14</item>
+  </collection>
+  <collection>
+    <entry>Monk (Scholar)[15]</entry>
+    <item>15</item>
+  </collection>
+  <collection>
+    <entry>Monk (Scholar)[16]</entry>
+    <item>16</item>
+  </collection>
+  <collection>
+    <entry>Monk (Scholar)[17]</entry>
+    <item>17</item>
+  </collection>
+  <collection>
+    <entry>Monk (Scholar)[18]</entry>
+    <item>18</item>
+  </collection>
+  <collection>
+    <entry>Monk (Scholar)[19]</entry>
+    <item>19</item>
+  </collection>
+  <collection>
+    <entry>Monk (Scholar)[20]</entry>
+    <item>20</item>
+  </collection>
+  <collection>
+    <entry>Monk (Student)[1]</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Monk (Student)[2]</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Monk (Student)[3]</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Monk (Student)[4]</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Monk (Student)[5]</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Monk (Student)[6]</entry>
+    <item>6</item>
+  </collection>
+  <collection>
+    <entry>Monk (Student)[7]</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Monk (Student)[8]</entry>
+    <item>8</item>
+  </collection>
+  <collection>
+    <entry>Monk (Student)[9]</entry>
+    <item>9</item>
+  </collection>
+  <collection>
+    <entry>Monk (Student)[10]</entry>
+    <item>10</item>
+  </collection>
+  <collection>
+    <entry>Monk (War hero)[11]</entry>
+    <item>11</item>
+  </collection>
+  <collection>
+    <entry>Monk (War hero)[12]</entry>
+    <item>12</item>
+  </collection>
+  <collection>
+    <entry>Monk (War hero)[13]</entry>
+    <item>13</item>
+  </collection>
+  <collection>
+    <entry>Monk (War hero)[14]</entry>
+    <item>14</item>
+  </collection>
+  <collection>
+    <entry>Monk (War hero)[15]</entry>
+    <item>15</item>
+  </collection>
+  <collection>
+    <entry>Monk (War hero)[16]</entry>
+    <item>16</item>
+  </collection>
+  <collection>
+    <entry>Monk (War hero)[17]</entry>
+    <item>17</item>
+  </collection>
+  <collection>
+    <entry>Monk (War hero)[18]</entry>
+    <item>18</item>
+  </collection>
+  <collection>
+    <entry>Monk (War hero)[19]</entry>
+    <item>19</item>
+  </collection>
+  <collection>
+    <entry>Monk (War hero)[20]</entry>
+    <item>20</item>
+  </collection>
+  <collection>
+    <entry>Monkey</entry>
+    <item>1/6</item>
+  </collection>
+  <collection>
+    <entry>Celestial monkey</entry>
+    <item>1/6</item>
+  </collection>
+  <collection>
+    <entry>Mule</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Mummy</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Mummy Lord</entry>
+    <item>15</item>
+  </collection>
+  <collection>
+    <entry>Dark naga</entry>
+    <item>8</item>
+  </collection>
+  <collection>
+    <entry>Guardian naga</entry>
+    <item>10</item>
+  </collection>
+  <collection>
+    <entry>Spirit naga</entry>
+    <item>9</item>
+  </collection>
+  <collection>
+    <entry>Water naga</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Nalfeshnee</entry>
+    <item>14</item>
+  </collection>
+  <collection>
+    <entry>Nessian warhound</entry>
+    <item>9</item>
+  </collection>
+  <collection>
+    <entry>Night hag</entry>
+    <item>9</item>
+  </collection>
+  <collection>
+    <entry>Nightcrawler</entry>
+    <item>18</item>
+  </collection>
+  <collection>
+    <entry>Nightmare</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Nightmare (Cauchemar)</entry>
+    <item>11</item>
+  </collection>
+  <collection>
+    <entry>Nightwalker</entry>
+    <item>16</item>
+  </collection>
+  <collection>
+    <entry>Nightwing</entry>
+    <item>14</item>
+  </collection>
+  <collection>
+    <entry>Nixie</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>NPC (Traveler)[1]</entry>
+    <item>1/2</item>
+  </collection>
+  <collection>
+    <entry>NPC (Traveler)[1d2+1]</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>NPC (Traveler)[1d2+3]</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>NPC (Traveler)[1d2+5]</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>NPC (Traveler)[1d2+7]</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>NPC (Traveler)[1d2+9]</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>NPC (Traveler)[1d2+11]</entry>
+    <item>6</item>
+  </collection>
+  <collection>
+    <entry>NPC (Traveler)[1d2+13]</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>NPC (Traveler)[1d2+15]</entry>
+    <item>8</item>
+  </collection>
+  <collection>
+    <entry>NPC (Traveler)[1d2+17]</entry>
+    <item>9</item>
+  </collection>
+  <collection>
+    <entry>NPC (Traveler)[20]</entry>
+    <item>10</item>
+  </collection>
+  <collection>
+    <entry>NPC[1]</entry>
+    <item>1/2</item>
+  </collection>
+  <collection>
+    <entry>NPC[1d2+1]</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>NPC[1d2+3]</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>NPC[1d2+5]</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>NPC[1d2+7]</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>NPC[1d2+9]</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>NPC[1d2+11]</entry>
+    <item>6</item>
+  </collection>
+  <collection>
+    <entry>NPC[1d2+13]</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>NPC[1d2+15]</entry>
+    <item>8</item>
+  </collection>
+  <collection>
+    <entry>NPC[1d2+17]</entry>
+    <item>9</item>
+  </collection>
+  <collection>
+    <entry>NPC[20]</entry>
+    <item>10</item>
+  </collection>
+  <collection>
+    <entry>Nymph</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Ogre</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Ogre Barbarian</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Ogre mage</entry>
+    <item>8</item>
+  </collection>
+  <collection>
+    <entry>Gray ooze</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Ochre jelly</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Orc</entry>
+    <item>1/2</item>
+  </collection>
+  <collection>
+    <entry>Otyugh</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Owl</entry>
+    <item>1/4</item>
+  </collection>
+  <collection>
+    <entry>Celestial owl</entry>
+    <item>1/4</item>
+  </collection>
+  <collection>
+    <entry>Giant owl</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Owlbear</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Paladin (Combat instructor)[11]</entry>
+    <item>11</item>
+  </collection>
+  <collection>
+    <entry>Paladin (Combat instructor)[12]</entry>
+    <item>12</item>
+  </collection>
+  <collection>
+    <entry>Paladin (Combat instructor)[13]</entry>
+    <item>13</item>
+  </collection>
+  <collection>
+    <entry>Paladin (Combat instructor)[14]</entry>
+    <item>14</item>
+  </collection>
+  <collection>
+    <entry>Paladin (Combat instructor)[15]</entry>
+    <item>15</item>
+  </collection>
+  <collection>
+    <entry>Paladin (Combat instructor)[16]</entry>
+    <item>16</item>
+  </collection>
+  <collection>
+    <entry>Paladin (Combat instructor)[17]</entry>
+    <item>17</item>
+  </collection>
+  <collection>
+    <entry>Paladin (Combat instructor)[18]</entry>
+    <item>18</item>
+  </collection>
+  <collection>
+    <entry>Paladin (Combat instructor)[19]</entry>
+    <item>19</item>
+  </collection>
+  <collection>
+    <entry>Paladin (Combat instructor)[20]</entry>
+    <item>20</item>
+  </collection>
+  <collection>
+    <entry>Paladin (Crusader)[1]</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Paladin (Crusader)[2]</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Paladin (Crusader)[3]</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Paladin (Crusader)[4]</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Paladin (Crusader)[5]</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Paladin (Crusader)[6]</entry>
+    <item>6</item>
+  </collection>
+  <collection>
+    <entry>Paladin (Crusader)[7]</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Paladin (Crusader)[8]</entry>
+    <item>8</item>
+  </collection>
+  <collection>
+    <entry>Paladin (Crusader)[9]</entry>
+    <item>9</item>
+  </collection>
+  <collection>
+    <entry>Paladin (Crusader)[10]</entry>
+    <item>10</item>
+  </collection>
+  <collection>
+    <entry>Paladin (Crusader)[11]</entry>
+    <item>11</item>
+  </collection>
+  <collection>
+    <entry>Paladin (Crusader)[12]</entry>
+    <item>12</item>
+  </collection>
+  <collection>
+    <entry>Paladin (Crusader)[13]</entry>
+    <item>13</item>
+  </collection>
+  <collection>
+    <entry>Paladin (Crusader)[14]</entry>
+    <item>14</item>
+  </collection>
+  <collection>
+    <entry>Paladin (Crusader)[15]</entry>
+    <item>15</item>
+  </collection>
+  <collection>
+    <entry>Paladin (Crusader)[16]</entry>
+    <item>16</item>
+  </collection>
+  <collection>
+    <entry>Paladin (Crusader)[17]</entry>
+    <item>17</item>
+  </collection>
+  <collection>
+    <entry>Paladin (Crusader)[18]</entry>
+    <item>18</item>
+  </collection>
+  <collection>
+    <entry>Paladin (Crusader)[19]</entry>
+    <item>19</item>
+  </collection>
+  <collection>
+    <entry>Paladin (Crusader)[20]</entry>
+    <item>20</item>
+  </collection>
+  <collection>
+    <entry>Paladin (Student)[1]</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Paladin (Student)[2]</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Paladin (Student)[3]</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Paladin (Student)[4]</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Paladin (Student)[5]</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Paladin (Student)[6]</entry>
+    <item>6</item>
+  </collection>
+  <collection>
+    <entry>Paladin (Student)[7]</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Paladin (Student)[8]</entry>
+    <item>8</item>
+  </collection>
+  <collection>
+    <entry>Paladin (Student)[9]</entry>
+    <item>9</item>
+  </collection>
+  <collection>
+    <entry>Paladin (Student)[10]</entry>
+    <item>10</item>
+  </collection>
+  <collection>
+    <entry>Paladin (War hero)[11]</entry>
+    <item>11</item>
+  </collection>
+  <collection>
+    <entry>Paladin (War hero)[12]</entry>
+    <item>12</item>
+  </collection>
+  <collection>
+    <entry>Paladin (War hero)[13]</entry>
+    <item>13</item>
+  </collection>
+  <collection>
+    <entry>Paladin (War hero)[14]</entry>
+    <item>14</item>
+  </collection>
+  <collection>
+    <entry>Paladin (War hero)[15]</entry>
+    <item>15</item>
+  </collection>
+  <collection>
+    <entry>Paladin (War hero)[16]</entry>
+    <item>16</item>
+  </collection>
+  <collection>
+    <entry>Paladin (War hero)[17]</entry>
+    <item>17</item>
+  </collection>
+  <collection>
+    <entry>Paladin (War hero)[18]</entry>
+    <item>18</item>
+  </collection>
+  <collection>
+    <entry>Paladin (War hero)[19]</entry>
+    <item>19</item>
+  </collection>
+  <collection>
+    <entry>Paladin (War hero)[20]</entry>
+    <item>20</item>
+  </collection>
+  <collection>
+    <entry>Pegasus</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Phantom fungus</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Phase spider</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Phasm</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Pit fiend</entry>
+    <item>20</item>
+  </collection>
+  <collection>
+    <entry>Pixie</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Pixie (with Irresistable Dance)</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Planetar</entry>
+    <item>16</item>
+  </collection>
+  <collection>
+    <entry>Pony</entry>
+    <item>1/4</item>
+  </collection>
+  <collection>
+    <entry>Warpony</entry>
+    <item>1/2</item>
+  </collection>
+  <collection>
+    <entry>Giant praying mantis</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Pseudodragon</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Purple worm</entry>
+    <item>12</item>
+  </collection>
+  <collection>
+    <entry>Pyrohydra (5 heads)</entry>
+    <item>6</item>
+  </collection>
+  <collection>
+    <entry>Pyrohydra (6 heads)</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Pyrohydra (7 heads)</entry>
+    <item>8</item>
+  </collection>
+  <collection>
+    <entry>Pyrohydra (8 heads)</entry>
+    <item>9</item>
+  </collection>
+  <collection>
+    <entry>Pyrohydra (9 heads)</entry>
+    <item>10</item>
+  </collection>
+  <collection>
+    <entry>Pyrohydra (10 heads)</entry>
+    <item>11</item>
+  </collection>
+  <collection>
+    <entry>Pyrohydra (11 heads)</entry>
+    <item>12</item>
+  </collection>
+  <collection>
+    <entry>Pyrohydra (12 heads)</entry>
+    <item>13</item>
+  </collection>
+  <collection>
+    <entry>Quasit</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Rakshasa</entry>
+    <item>10</item>
+  </collection>
+  <collection>
+    <entry>Ranger (Animal trainer)[1]</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Ranger (Animal trainer)[2]</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Ranger (Animal trainer)[3]</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Ranger (Animal trainer)[4]</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Ranger (Animal trainer)[5]</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Ranger (Animal trainer)[6]</entry>
+    <item>6</item>
+  </collection>
+  <collection>
+    <entry>Ranger (Animal trainer)[7]</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Ranger (Animal trainer)[8]</entry>
+    <item>8</item>
+  </collection>
+  <collection>
+    <entry>Ranger (Animal trainer)[9]</entry>
+    <item>9</item>
+  </collection>
+  <collection>
+    <entry>Ranger (Animal trainer)[10]</entry>
+    <item>10</item>
+  </collection>
+  <collection>
+    <entry>Ranger (Animal trainer)[11]</entry>
+    <item>11</item>
+  </collection>
+  <collection>
+    <entry>Ranger (Animal trainer)[12]</entry>
+    <item>12</item>
+  </collection>
+  <collection>
+    <entry>Ranger (Animal trainer)[13]</entry>
+    <item>13</item>
+  </collection>
+  <collection>
+    <entry>Ranger (Animal trainer)[14]</entry>
+    <item>14</item>
+  </collection>
+  <collection>
+    <entry>Ranger (Animal trainer)[15]</entry>
+    <item>15</item>
+  </collection>
+  <collection>
+    <entry>Ranger (Animal trainer)[16]</entry>
+    <item>16</item>
+  </collection>
+  <collection>
+    <entry>Ranger (Animal trainer)[17]</entry>
+    <item>17</item>
+  </collection>
+  <collection>
+    <entry>Ranger (Animal trainer)[18]</entry>
+    <item>18</item>
+  </collection>
+  <collection>
+    <entry>Ranger (Animal trainer)[19]</entry>
+    <item>19</item>
+  </collection>
+  <collection>
+    <entry>Ranger (Animal trainer)[20]</entry>
+    <item>20</item>
+  </collection>
+  <collection>
+    <entry>Ranger (Combat instructor)[11]</entry>
+    <item>11</item>
+  </collection>
+  <collection>
+    <entry>Ranger (Combat instructor)[12]</entry>
+    <item>12</item>
+  </collection>
+  <collection>
+    <entry>Ranger (Combat instructor)[13]</entry>
+    <item>13</item>
+  </collection>
+  <collection>
+    <entry>Ranger (Combat instructor)[14]</entry>
+    <item>14</item>
+  </collection>
+  <collection>
+    <entry>Ranger (Combat instructor)[15]</entry>
+    <item>15</item>
+  </collection>
+  <collection>
+    <entry>Ranger (Combat instructor)[16]</entry>
+    <item>16</item>
+  </collection>
+  <collection>
+    <entry>Ranger (Combat instructor)[17]</entry>
+    <item>17</item>
+  </collection>
+  <collection>
+    <entry>Ranger (Combat instructor)[18]</entry>
+    <item>18</item>
+  </collection>
+  <collection>
+    <entry>Ranger (Combat instructor)[19]</entry>
+    <item>19</item>
+  </collection>
+  <collection>
+    <entry>Ranger (Combat instructor)[20]</entry>
+    <item>20</item>
+  </collection>
+  <collection>
+    <entry>Ranger (Hitman)[1]</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Ranger (Hitman)[2]</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Ranger (Hitman)[3]</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Ranger (Hitman)[4]</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Ranger (Hitman)[5]</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Ranger (Hitman)[6]</entry>
+    <item>6</item>
+  </collection>
+  <collection>
+    <entry>Ranger (Hitman)[7]</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Ranger (Hitman)[8]</entry>
+    <item>8</item>
+  </collection>
+  <collection>
+    <entry>Ranger (Hitman)[9]</entry>
+    <item>9</item>
+  </collection>
+  <collection>
+    <entry>Ranger (Hitman)[10]</entry>
+    <item>10</item>
+  </collection>
+  <collection>
+    <entry>Ranger (Hitman)[11]</entry>
+    <item>11</item>
+  </collection>
+  <collection>
+    <entry>Ranger (Hitman)[12]</entry>
+    <item>12</item>
+  </collection>
+  <collection>
+    <entry>Ranger (Hitman)[13]</entry>
+    <item>13</item>
+  </collection>
+  <collection>
+    <entry>Ranger (Hitman)[14]</entry>
+    <item>14</item>
+  </collection>
+  <collection>
+    <entry>Ranger (Hitman)[15]</entry>
+    <item>15</item>
+  </collection>
+  <collection>
+    <entry>Ranger (Hitman)[16]</entry>
+    <item>16</item>
+  </collection>
+  <collection>
+    <entry>Ranger (Hitman)[17]</entry>
+    <item>17</item>
+  </collection>
+  <collection>
+    <entry>Ranger (Hitman)[18]</entry>
+    <item>18</item>
+  </collection>
+  <collection>
+    <entry>Ranger (Hitman)[19]</entry>
+    <item>19</item>
+  </collection>
+  <collection>
+    <entry>Ranger (Hitman)[20]</entry>
+    <item>20</item>
+  </collection>
+  <collection>
+    <entry>Ranger (Student)[1]</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Ranger (Student)[2]</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Ranger (Student)[3]</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Ranger (Student)[4]</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Ranger (Student)[5]</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Ranger (Student)[6]</entry>
+    <item>6</item>
+  </collection>
+  <collection>
+    <entry>Ranger (Student)[7]</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Ranger (Student)[8]</entry>
+    <item>8</item>
+  </collection>
+  <collection>
+    <entry>Ranger (Student)[9]</entry>
+    <item>9</item>
+  </collection>
+  <collection>
+    <entry>Ranger (Student)[10]</entry>
+    <item>10</item>
+  </collection>
+  <collection>
+    <entry>Ranger (War hero)[11]</entry>
+    <item>11</item>
+  </collection>
+  <collection>
+    <entry>Ranger (War hero)[12]</entry>
+    <item>12</item>
+  </collection>
+  <collection>
+    <entry>Ranger (War hero)[13]</entry>
+    <item>13</item>
+  </collection>
+  <collection>
+    <entry>Ranger (War hero)[14]</entry>
+    <item>14</item>
+  </collection>
+  <collection>
+    <entry>Ranger (War hero)[15]</entry>
+    <item>15</item>
+  </collection>
+  <collection>
+    <entry>Ranger (War hero)[16]</entry>
+    <item>16</item>
+  </collection>
+  <collection>
+    <entry>Ranger (War hero)[17]</entry>
+    <item>17</item>
+  </collection>
+  <collection>
+    <entry>Ranger (War hero)[18]</entry>
+    <item>18</item>
+  </collection>
+  <collection>
+    <entry>Ranger (War hero)[19]</entry>
+    <item>19</item>
+  </collection>
+  <collection>
+    <entry>Ranger (War hero)[20]</entry>
+    <item>20</item>
+  </collection>
+  <collection>
+    <entry>Rast</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Rat</entry>
+    <item>1/8</item>
+  </collection>
+  <collection>
+    <entry>Dire rat</entry>
+    <item>1/3</item>
+  </collection>
+  <collection>
+    <entry>Fiendish dire rat</entry>
+    <item>1/3</item>
+  </collection>
+  <collection>
+    <entry>Rat swarm</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Raven</entry>
+    <item>1/6</item>
+  </collection>
+  <collection>
+    <entry>Fiendish raven</entry>
+    <item>1/6</item>
+  </collection>
+  <collection>
+    <entry>Ravid</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Razor boar</entry>
+    <item>10</item>
+  </collection>
+  <collection>
+    <entry>Remorhaz</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Retriever</entry>
+    <item>11</item>
+  </collection>
+  <collection>
+    <entry>Rhinoceras</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Roc</entry>
+    <item>9</item>
+  </collection>
+  <collection>
+    <entry>Rogue (Hitman)[1]</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Rogue (Hitman)[2]</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Rogue (Hitman)[3]</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Rogue (Hitman)[4]</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Rogue (Hitman)[5]</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Rogue (Hitman)[6]</entry>
+    <item>6</item>
+  </collection>
+  <collection>
+    <entry>Rogue (Hitman)[7]</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Rogue (Hitman)[8]</entry>
+    <item>8</item>
+  </collection>
+  <collection>
+    <entry>Rogue (Hitman)[9]</entry>
+    <item>9</item>
+  </collection>
+  <collection>
+    <entry>Rogue (Hitman)[10]</entry>
+    <item>10</item>
+  </collection>
+  <collection>
+    <entry>Rogue (Hitman)[11]</entry>
+    <item>11</item>
+  </collection>
+  <collection>
+    <entry>Rogue (Hitman)[12]</entry>
+    <item>12</item>
+  </collection>
+  <collection>
+    <entry>Rogue (Hitman)[13]</entry>
+    <item>13</item>
+  </collection>
+  <collection>
+    <entry>Rogue (Hitman)[14]</entry>
+    <item>14</item>
+  </collection>
+  <collection>
+    <entry>Rogue (Hitman)[15]</entry>
+    <item>15</item>
+  </collection>
+  <collection>
+    <entry>Rogue (Hitman)[16]</entry>
+    <item>16</item>
+  </collection>
+  <collection>
+    <entry>Rogue (Hitman)[17]</entry>
+    <item>17</item>
+  </collection>
+  <collection>
+    <entry>Rogue (Hitman)[18]</entry>
+    <item>18</item>
+  </collection>
+  <collection>
+    <entry>Rogue (Hitman)[19]</entry>
+    <item>19</item>
+  </collection>
+  <collection>
+    <entry>Rogue (Hitman)[20]</entry>
+    <item>20</item>
+  </collection>
+  <collection>
+    <entry>Rogue (Pickpocket)[1]</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Rogue (Pickpocket)[2]</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Rogue (Pickpocket)[3]</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Rogue (Pickpocket)[4]</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Rogue (Pickpocket)[5]</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Rogue (Pickpocket)[6]</entry>
+    <item>6</item>
+  </collection>
+  <collection>
+    <entry>Rogue (Pickpocket)[7]</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Rogue (Pickpocket)[8]</entry>
+    <item>8</item>
+  </collection>
+  <collection>
+    <entry>Rogue (Pickpocket)[9]</entry>
+    <item>9</item>
+  </collection>
+  <collection>
+    <entry>Rogue (Pickpocket)[10]</entry>
+    <item>10</item>
+  </collection>
+  <collection>
+    <entry>Rogue (Pickpocket)[11]</entry>
+    <item>11</item>
+  </collection>
+  <collection>
+    <entry>Rogue (Pickpocket)[12]</entry>
+    <item>12</item>
+  </collection>
+  <collection>
+    <entry>Rogue (Pickpocket)[13]</entry>
+    <item>13</item>
+  </collection>
+  <collection>
+    <entry>Rogue (Pickpocket)[14]</entry>
+    <item>14</item>
+  </collection>
+  <collection>
+    <entry>Rogue (Pickpocket)[15]</entry>
+    <item>15</item>
+  </collection>
+  <collection>
+    <entry>Rogue (Pickpocket)[16]</entry>
+    <item>16</item>
+  </collection>
+  <collection>
+    <entry>Rogue (Pickpocket)[17]</entry>
+    <item>17</item>
+  </collection>
+  <collection>
+    <entry>Rogue (Pickpocket)[18]</entry>
+    <item>18</item>
+  </collection>
+  <collection>
+    <entry>Rogue (Pickpocket)[19]</entry>
+    <item>19</item>
+  </collection>
+  <collection>
+    <entry>Rogue (Pickpocket)[20]</entry>
+    <item>20</item>
+  </collection>
+  <collection>
+    <entry>Rogue (Street performer)[1]</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Rogue (Street performer)[2]</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Rogue (Street performer)[3]</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Rogue (Street performer)[4]</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Rogue (Street performer)[5]</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Rogue (Street performer)[6]</entry>
+    <item>6</item>
+  </collection>
+  <collection>
+    <entry>Rogue (Street performer)[7]</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Rogue (Street performer)[8]</entry>
+    <item>8</item>
+  </collection>
+  <collection>
+    <entry>Rogue (Street performer)[9]</entry>
+    <item>9</item>
+  </collection>
+  <collection>
+    <entry>Rogue (Street performer)[10]</entry>
+    <item>10</item>
+  </collection>
+  <collection>
+    <entry>Rogue (Street performer)[11]</entry>
+    <item>11</item>
+  </collection>
+  <collection>
+    <entry>Rogue (Street performer)[12]</entry>
+    <item>12</item>
+  </collection>
+  <collection>
+    <entry>Rogue (Street performer)[13]</entry>
+    <item>13</item>
+  </collection>
+  <collection>
+    <entry>Rogue (Street performer)[14]</entry>
+    <item>14</item>
+  </collection>
+  <collection>
+    <entry>Rogue (Street performer)[15]</entry>
+    <item>15</item>
+  </collection>
+  <collection>
+    <entry>Rogue (Street performer)[16]</entry>
+    <item>16</item>
+  </collection>
+  <collection>
+    <entry>Rogue (Street performer)[17]</entry>
+    <item>17</item>
+  </collection>
+  <collection>
+    <entry>Rogue (Street performer)[18]</entry>
+    <item>18</item>
+  </collection>
+  <collection>
+    <entry>Rogue (Street performer)[19]</entry>
+    <item>19</item>
+  </collection>
+  <collection>
+    <entry>Rogue (Street performer)[20]</entry>
+    <item>20</item>
+  </collection>
+  <collection>
+    <entry>Roper</entry>
+    <item>12</item>
+  </collection>
+  <collection>
+    <entry>Rust monster</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Flamebrother salamander</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Average salamander</entry>
+    <item>6</item>
+  </collection>
+  <collection>
+    <entry>Noble salamander</entry>
+    <item>10</item>
+  </collection>
+  <collection>
+    <entry>Satyr</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Satyr (with pipes)</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Tiny monstrous scorpion</entry>
+    <item>1/4</item>
+  </collection>
+  <collection>
+    <entry>Small monstrous scorpion</entry>
+    <item>1/2</item>
+  </collection>
+  <collection>
+    <entry>Medium monstrous scorpion</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Large monstrous scorpion</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Huge monstrous scorpion</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Gargantuan monstrous scorpion</entry>
+    <item>10</item>
+  </collection>
+  <collection>
+    <entry>Colossal monstrous scorpion</entry>
+    <item>12</item>
+  </collection>
+  <collection>
+    <entry>Scorpionfolk</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Sea hag</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Shadow</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Greater shadow</entry>
+    <item>8</item>
+  </collection>
+  <collection>
+    <entry>Shadow mastiff</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Shambling mound</entry>
+    <item>6</item>
+  </collection>
+  <collection>
+    <entry>Shield guardian</entry>
+    <item>8</item>
+  </collection>
+  <collection>
+    <entry>Shocker lizard</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Shrieker</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Skeleton (Human)</entry>
+    <item>1/3</item>
+  </collection>
+  <collection>
+    <entry>Skeleton (Wolf)</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Skeleton (Owlbear)</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Skeleton (Troll)</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Skeleton (Chimera)</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Skeleton (Ettin)</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Skeleton (Megaraptor)</entry>
+    <item>6</item>
+  </collection>
+  <collection>
+    <entry>Skeleton (Cloud giant)</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Skeleton (Young adult red dragon)</entry>
+    <item>8</item>
+  </collection>
+  <collection>
+    <entry>Skum</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Red slaad</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Blue slaad</entry>
+    <item>8</item>
+  </collection>
+  <collection>
+    <entry>Green slaad</entry>
+    <item>9</item>
+  </collection>
+  <collection>
+    <entry>Gray slaad</entry>
+    <item>10</item>
+  </collection>
+  <collection>
+    <entry>Death slaad</entry>
+    <item>13</item>
+  </collection>
+  <collection>
+    <entry>Constrictor snake</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Giant constrictor snake</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Tiny viper snake</entry>
+    <item>1/3</item>
+  </collection>
+  <collection>
+    <entry>Small viper snake</entry>
+    <item>1/2</item>
+  </collection>
+  <collection>
+    <entry>Medium viper snake</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Large viper snake</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Huge viper snake</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Solar</entry>
+    <item>23</item>
+  </collection>
+  <collection>
+    <entry>Sorcerer (Famous entertainer)[11]</entry>
+    <item>11</item>
+  </collection>
+  <collection>
+    <entry>Sorcerer (Famous entertainer)[12]</entry>
+    <item>12</item>
+  </collection>
+  <collection>
+    <entry>Sorcerer (Famous entertainer)[13]</entry>
+    <item>13</item>
+  </collection>
+  <collection>
+    <entry>Sorcerer (Famous entertainer)[14]</entry>
+    <item>14</item>
+  </collection>
+  <collection>
+    <entry>Sorcerer (Famous entertainer)[15]</entry>
+    <item>15</item>
+  </collection>
+  <collection>
+    <entry>Sorcerer (Famous entertainer)[16]</entry>
+    <item>16</item>
+  </collection>
+  <collection>
+    <entry>Sorcerer (Famous entertainer)[17]</entry>
+    <item>17</item>
+  </collection>
+  <collection>
+    <entry>Sorcerer (Famous entertainer)[18]</entry>
+    <item>18</item>
+  </collection>
+  <collection>
+    <entry>Sorcerer (Famous entertainer)[19]</entry>
+    <item>19</item>
+  </collection>
+  <collection>
+    <entry>Sorcerer (Famous entertainer)[20]</entry>
+    <item>20</item>
+  </collection>
+  <collection>
+    <entry>Sorcerer (Street performer)[1]</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Sorcerer (Street performer)[2]</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Sorcerer (Street performer)[3]</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Sorcerer (Street performer)[4]</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Sorcerer (Street performer)[5]</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Sorcerer (Street performer)[6]</entry>
+    <item>6</item>
+  </collection>
+  <collection>
+    <entry>Sorcerer (Street performer)[7]</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Sorcerer (Street performer)[8]</entry>
+    <item>8</item>
+  </collection>
+  <collection>
+    <entry>Sorcerer (Street performer)[9]</entry>
+    <item>9</item>
+  </collection>
+  <collection>
+    <entry>Sorcerer (Street performer)[10]</entry>
+    <item>10</item>
+  </collection>
+  <collection>
+    <entry>Sorcerer (Street performer)[11]</entry>
+    <item>11</item>
+  </collection>
+  <collection>
+    <entry>Sorcerer (Street performer)[12]</entry>
+    <item>12</item>
+  </collection>
+  <collection>
+    <entry>Sorcerer (Street performer)[13]</entry>
+    <item>13</item>
+  </collection>
+  <collection>
+    <entry>Sorcerer (Street performer)[14]</entry>
+    <item>14</item>
+  </collection>
+  <collection>
+    <entry>Sorcerer (Street performer)[15]</entry>
+    <item>15</item>
+  </collection>
+  <collection>
+    <entry>Sorcerer (Street performer)[16]</entry>
+    <item>16</item>
+  </collection>
+  <collection>
+    <entry>Sorcerer (Street performer)[17]</entry>
+    <item>17</item>
+  </collection>
+  <collection>
+    <entry>Sorcerer (Street performer)[18]</entry>
+    <item>18</item>
+  </collection>
+  <collection>
+    <entry>Sorcerer (Street performer)[19]</entry>
+    <item>19</item>
+  </collection>
+  <collection>
+    <entry>Sorcerer (Street performer)[20]</entry>
+    <item>20</item>
+  </collection>
+  <collection>
+    <entry>Spectre</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Tiny monstrous spider</entry>
+    <item>1/4</item>
+  </collection>
+  <collection>
+    <entry>Small monstrous spider</entry>
+    <item>1/2</item>
+  </collection>
+  <collection>
+    <entry>Medium monstrous spider</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Large monstrous spider</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Huge monstrous spider</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Gargantuan monstrous spider</entry>
+    <item>8</item>
+  </collection>
+  <collection>
+    <entry>Colossal monstrous spider</entry>
+    <item>11</item>
+  </collection>
+  <collection>
+    <entry>Spider swarm</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Spider eater</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Giant stag beetle</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Stirge</entry>
+    <item>1/2</item>
+  </collection>
+  <collection>
+    <entry>Succubus</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Svirfneblin warrior</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Tarrasque</entry>
+    <item>20</item>
+  </collection>
+  <collection>
+    <entry>Tendriculos</entry>
+    <item>6</item>
+  </collection>
+  <collection>
+    <entry>Thoqqua</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Tiefling warrior</entry>
+    <item>1/2</item>
+  </collection>
+  <collection>
+    <entry>Tiger</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Dire tiger</entry>
+    <item>8</item>
+  </collection>
+  <collection>
+    <entry>Titan</entry>
+    <item>21</item>
+  </collection>
+  <collection>
+    <entry>Toad</entry>
+    <item>1/10</item>
+  </collection>
+  <collection>
+    <entry>Treant</entry>
+    <item>8</item>
+  </collection>
+  <collection>
+    <entry>Triceratops</entry>
+    <item>9</item>
+  </collection>
+  <collection>
+    <entry>Troglodyte</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Troll</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Troll Hunter</entry>
+    <item>11</item>
+  </collection>
+  <collection>
+    <entry>Trumpet archon</entry>
+    <item>14</item>
+  </collection>
+  <collection>
+    <entry>Tyrannosaurus</entry>
+    <item>8</item>
+  </collection>
+  <collection>
+    <entry>Umber hulk</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Truly horrid umber hulk</entry>
+    <item>14</item>
+  </collection>
+  <collection>
+    <entry>Unicorn</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Unicorn (Celestial Charger)</entry>
+    <item>13</item>
+  </collection>
+  <collection>
+    <entry>Vampire[1]</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Vampire[2]</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Vampire[3]</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Vampire[4]</entry>
+    <item>6</item>
+  </collection>
+  <collection>
+    <entry>Vampire[5]</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Vampire[6]</entry>
+    <item>8</item>
+  </collection>
+  <collection>
+    <entry>Vampire[7]</entry>
+    <item>9</item>
+  </collection>
+  <collection>
+    <entry>Vampire[8]</entry>
+    <item>10</item>
+  </collection>
+  <collection>
+    <entry>Vampire[9]</entry>
+    <item>11</item>
+  </collection>
+  <collection>
+    <entry>Vampire[10]</entry>
+    <item>12</item>
+  </collection>
+  <collection>
+    <entry>Vampire[11]</entry>
+    <item>13</item>
+  </collection>
+  <collection>
+    <entry>Vampire[12]</entry>
+    <item>14</item>
+  </collection>
+  <collection>
+    <entry>Vampire[13]</entry>
+    <item>15</item>
+  </collection>
+  <collection>
+    <entry>Vampire[14]</entry>
+    <item>16</item>
+  </collection>
+  <collection>
+    <entry>Vampire[15]</entry>
+    <item>17</item>
+  </collection>
+  <collection>
+    <entry>Vampire[16]</entry>
+    <item>18</item>
+  </collection>
+  <collection>
+    <entry>Vampire[17]</entry>
+    <item>19</item>
+  </collection>
+  <collection>
+    <entry>Vampire[18]</entry>
+    <item>20</item>
+  </collection>
+  <collection>
+    <entry>Vampire[19]</entry>
+    <item>21</item>
+  </collection>
+  <collection>
+    <entry>Vampire[20]</entry>
+    <item>22</item>
+  </collection>
+  <collection>
+    <entry>Vampire spawn</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Vargouille</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Violet fungus</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Vrock</entry>
+    <item>9</item>
+  </collection>
+  <collection>
+    <entry>Warrior (Bandit)[1]</entry>
+    <item>1/2</item>
+  </collection>
+  <collection>
+    <entry>Warrior (Bandit)[1d2+1]</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Warrior (Bandit)[1d2+3]</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Warrior (Bandit)[1d2+5]</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Warrior (Bandit)[1d2+7]</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Warrior (Bandit)[1d2+9]</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Warrior (Bandit)[1d2+11]</entry>
+    <item>6</item>
+  </collection>
+  <collection>
+    <entry>Warrior (Bandit)[1d2+13]</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Warrior (Bandit)[1d2+15]</entry>
+    <item>8</item>
+  </collection>
+  <collection>
+    <entry>Warrior (Bandit)[1d2+17]</entry>
+    <item>9</item>
+  </collection>
+  <collection>
+    <entry>Warrior (Bandit)[20]</entry>
+    <item>10</item>
+  </collection>
+  <collection>
+    <entry>Warrior (Captain)[1d2+1]</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Warrior (Captain)[1d2+3]</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Warrior (Captain)[1d2+5]</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Warrior (Captain)[1d2+7]</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Warrior (Captain)[1d2+9]</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Warrior (Captain)[1d2+11]</entry>
+    <item>6</item>
+  </collection>
+  <collection>
+    <entry>Warrior (Captain)[1d2+13]</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Warrior (Captain)[1d2+15]</entry>
+    <item>8</item>
+  </collection>
+  <collection>
+    <entry>Warrior (Captain)[1d2+17]</entry>
+    <item>9</item>
+  </collection>
+  <collection>
+    <entry>Warrior (Captain)[20]</entry>
+    <item>10</item>
+  </collection>
+  <collection>
+    <entry>Warrior (Guard)[1]</entry>
+    <item>1/2</item>
+  </collection>
+  <collection>
+    <entry>Warrior (Guard)[1d2+1]</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Warrior (Guard)[1d2+3]</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Warrior (Guard)[1d2+5]</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Warrior (Guard)[1d2+7]</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Warrior (Guard)[1d2+9]</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Warrior (Guard)[1d2+11]</entry>
+    <item>6</item>
+  </collection>
+  <collection>
+    <entry>Warrior (Guard)[1d2+13]</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Warrior (Guard)[1d2+15]</entry>
+    <item>8</item>
+  </collection>
+  <collection>
+    <entry>Warrior (Guard)[1d2+17]</entry>
+    <item>9</item>
+  </collection>
+  <collection>
+    <entry>Warrior (Guard)[20]</entry>
+    <item>10</item>
+  </collection>
+  <collection>
+    <entry>Warrior (Hunter)[1]</entry>
+    <item>1/2</item>
+  </collection>
+  <collection>
+    <entry>Warrior (Hunter)[1d2+1]</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Warrior (Hunter)[1d2+3]</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Warrior (Hunter)[1d2+5]</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Warrior (Hunter)[1d2+7]</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Warrior (Hunter)[1d2+9]</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Warrior (Hunter)[1d2+11]</entry>
+    <item>6</item>
+  </collection>
+  <collection>
+    <entry>Warrior (Hunter)[1d2+13]</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Warrior (Hunter)[1d2+15]</entry>
+    <item>8</item>
+  </collection>
+  <collection>
+    <entry>Warrior (Hunter)[1d2+17]</entry>
+    <item>9</item>
+  </collection>
+  <collection>
+    <entry>Warrior (Hunter)[20]</entry>
+    <item>10</item>
+  </collection>
+  <collection>
+    <entry>Warrior (Leader)[1d2+1]</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Warrior (Leader)[1d2+3]</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Warrior (Leader)[1d2+5]</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Warrior (Leader)[1d2+7]</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Warrior (Leader)[1d2+9]</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Warrior (Leader)[1d2+11]</entry>
+    <item>6</item>
+  </collection>
+  <collection>
+    <entry>Warrior (Leader)[1d2+13]</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Warrior (Leader)[1d2+15]</entry>
+    <item>8</item>
+  </collection>
+  <collection>
+    <entry>Warrior (Leader)[1d2+17]</entry>
+    <item>9</item>
+  </collection>
+  <collection>
+    <entry>Warrior (Leader)[20]</entry>
+    <item>10</item>
+  </collection>
+  <collection>
+    <entry>Warrior (Patrol)[1]</entry>
+    <item>1/2</item>
+  </collection>
+  <collection>
+    <entry>Warrior (Patrol)[1d2+1]</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Warrior (Patrol)[1d2+3]</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Warrior (Patrol)[1d2+5]</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Warrior (Patrol)[1d2+7]</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Warrior (Patrol)[1d2+9]</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Warrior (Patrol)[1d2+11]</entry>
+    <item>6</item>
+  </collection>
+  <collection>
+    <entry>Warrior (Patrol)[1d2+13]</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Warrior (Patrol)[1d2+15]</entry>
+    <item>8</item>
+  </collection>
+  <collection>
+    <entry>Warrior (Patrol)[1d2+17]</entry>
+    <item>9</item>
+  </collection>
+  <collection>
+    <entry>Warrior (Patrol)[20]</entry>
+    <item>10</item>
+  </collection>
+  <collection>
+    <entry>Warrior (Student)[1]</entry>
+    <item>1/2</item>
+  </collection>
+  <collection>
+    <entry>Warrior (Student)[1d2+1]</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Warrior (Student)[1d2+3]</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Warrior (Student)[1d2+5]</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Warrior (Student)[1d2+7]</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Warrior (Student)[1d2+9]</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Warrior (Student)[1d2+11]</entry>
+    <item>6</item>
+  </collection>
+  <collection>
+    <entry>Warrior (Student)[1d2+13]</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Warrior (Student)[1d2+15]</entry>
+    <item>8</item>
+  </collection>
+  <collection>
+    <entry>Warrior (Student)[1d2+17]</entry>
+    <item>9</item>
+  </collection>
+  <collection>
+    <entry>Warrior (Student)[20]</entry>
+    <item>10</item>
+  </collection>
+  <collection>
+    <entry>Giant wasp</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Weasel</entry>
+    <item>1/4</item>
+  </collection>
+  <collection>
+    <entry>Dire weasel</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Werebear</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Wereboar</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Hill giant dire wereboar</entry>
+    <item>11</item>
+  </collection>
+  <collection>
+    <entry>Wererat</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Weretiger</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Werewolf</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Werewolf Lord</entry>
+    <item>14</item>
+  </collection>
+  <collection>
+    <entry>Wight</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Will-O'-Wisp</entry>
+    <item>6</item>
+  </collection>
+  <collection>
+    <entry>Winter wolf</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Wizard (Famous researcher)[11]</entry>
+    <item>11</item>
+  </collection>
+  <collection>
+    <entry>Wizard (Famous researcher)[12]</entry>
+    <item>12</item>
+  </collection>
+  <collection>
+    <entry>Wizard (Famous researcher)[13]</entry>
+    <item>13</item>
+  </collection>
+  <collection>
+    <entry>Wizard (Famous researcher)[14]</entry>
+    <item>14</item>
+  </collection>
+  <collection>
+    <entry>Wizard (Famous researcher)[15]</entry>
+    <item>15</item>
+  </collection>
+  <collection>
+    <entry>Wizard (Famous researcher)[16]</entry>
+    <item>16</item>
+  </collection>
+  <collection>
+    <entry>Wizard (Famous researcher)[17]</entry>
+    <item>17</item>
+  </collection>
+  <collection>
+    <entry>Wizard (Famous researcher)[18]</entry>
+    <item>18</item>
+  </collection>
+  <collection>
+    <entry>Wizard (Famous researcher)[19]</entry>
+    <item>19</item>
+  </collection>
+  <collection>
+    <entry>Wizard (Famous researcher)[20]</entry>
+    <item>20</item>
+  </collection>
+  <collection>
+    <entry>Wizard (Scholar)[1]</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Wizard (Scholar)[2]</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Wizard (Scholar)[3]</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Wizard (Scholar)[4]</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Wizard (Scholar)[5]</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Wizard (Scholar)[6]</entry>
+    <item>6</item>
+  </collection>
+  <collection>
+    <entry>Wizard (Scholar)[7]</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Wizard (Scholar)[8]</entry>
+    <item>8</item>
+  </collection>
+  <collection>
+    <entry>Wizard (Scholar)[9]</entry>
+    <item>9</item>
+  </collection>
+  <collection>
+    <entry>Wizard (Scholar)[10]</entry>
+    <item>10</item>
+  </collection>
+  <collection>
+    <entry>Wizard (Scholar)[11]</entry>
+    <item>11</item>
+  </collection>
+  <collection>
+    <entry>Wizard (Scholar)[12]</entry>
+    <item>12</item>
+  </collection>
+  <collection>
+    <entry>Wizard (Scholar)[13]</entry>
+    <item>13</item>
+  </collection>
+  <collection>
+    <entry>Wizard (Scholar)[14]</entry>
+    <item>14</item>
+  </collection>
+  <collection>
+    <entry>Wizard (Scholar)[15]</entry>
+    <item>15</item>
+  </collection>
+  <collection>
+    <entry>Wizard (Scholar)[16]</entry>
+    <item>16</item>
+  </collection>
+  <collection>
+    <entry>Wizard (Scholar)[17]</entry>
+    <item>17</item>
+  </collection>
+  <collection>
+    <entry>Wizard (Scholar)[18]</entry>
+    <item>18</item>
+  </collection>
+  <collection>
+    <entry>Wizard (Scholar)[19]</entry>
+    <item>19</item>
+  </collection>
+  <collection>
+    <entry>Wizard (Scholar)[20]</entry>
+    <item>20</item>
+  </collection>
+  <collection>
+    <entry>Wolf</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Dire wolf</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Wolverine</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Dire wolverine</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Worg</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Wraith</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Dread wraith</entry>
+    <item>11</item>
+  </collection>
+  <collection>
+    <entry>Wyvern</entry>
+    <item>6</item>
+  </collection>
+  <collection>
+    <entry>Xill</entry>
+    <item>6</item>
+  </collection>
+  <collection>
+    <entry>Minor xorn</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Average xorn</entry>
+    <item>6</item>
+  </collection>
+  <collection>
+    <entry>Elder xorn</entry>
+    <item>8</item>
+  </collection>
+  <collection>
+    <entry>Yeth hound</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Yrthak</entry>
+    <item>9</item>
+  </collection>
+  <collection>
+    <entry>Yuan-ti Abomination</entry>
+    <item>7</item>
+  </collection>
+  <collection>
+    <entry>Yuan-ti Halfblood</entry>
+    <item>5</item>
+  </collection>
+  <collection>
+    <entry>Yuan-ti Pureblood</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Zelekhut</entry>
+    <item>9</item>
+  </collection>
+  <collection>
+    <entry>Zombie (Kobold)</entry>
+    <item>1/2</item>
+  </collection>
+  <collection>
+    <entry>Zombie (Human)</entry>
+    <item>1/2</item>
+  </collection>
+  <collection>
+    <entry>Zombie (Troglodyte)</entry>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Zombie (Bugbear)</entry>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Zombie (Ogre)</entry>
+    <item>3</item>
+  </collection>
+  <collection>
+    <entry>Zombie (Minotaur)</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Zombie (Wyvern)</entry>
+    <item>4</item>
+  </collection>
+  <collection>
+    <entry>Zombie (Gray render)</entry>
+    <item>6</item>
+  </collection>
+</collections>

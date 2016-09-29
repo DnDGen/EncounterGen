@@ -2,7 +2,7 @@
 using EncounterGen.Domain.IoC;
 using Ninject;
 using NUnit.Framework;
-using RollGen.Domain.Ioc;
+using RollGen.Domain.IoC;
 using TreasureGen.Domain.IoC;
 
 namespace EncounterGen.Tests.Integration

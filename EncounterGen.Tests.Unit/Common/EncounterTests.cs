@@ -19,7 +19,11 @@ namespace EncounterGen.Tests.Unit.Common
         {
             Assert.That(encounter.Characters, Is.Empty);
             Assert.That(encounter.Creatures, Is.Empty);
-            Assert.That(encounter.Treasures, Is.Not.Null);
+            Assert.That(encounter.Treasures, Is.Empty);
+            Assert.That(encounter.AverageDifficulty, Is.Empty);
+            Assert.That(encounter.AverageEncounterLevel, Is.EqualTo(0));
+            Assert.That(encounter.ActualDifficulty, Is.Empty);
+            Assert.That(encounter.ActualEncounterLevel, Is.EqualTo(0));
         }
     }
 }

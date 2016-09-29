@@ -4,7 +4,7 @@ namespace EncounterGen.Domain.Selectors.Percentiles
 {
     internal interface IPercentileSelector
     {
-        string SelectFrom(string tableName);
-        IEnumerable<string> SelectAllFrom(string tableName);
+        int SelectFrom(string tableName);
+        IEnumerable<int> SelectAllFrom(string tableName);
     }
 }

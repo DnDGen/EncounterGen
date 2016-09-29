@@ -1,10 +1,10 @@
 ﻿using EncounterGen.Common;
 using EncounterGen.Domain.Selectors;
+using EncounterGen.Domain.Selectors.Collections;
 using EncounterGen.Domain.Selectors.Percentiles;
 using EncounterGen.Domain.Tables;
 using EncounterGen.Generators;
 using EncounterGen.Generators.Exceptions;
-using RollGen;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,85 +15,93 @@ namespace EncounterGen.Domain.Generators
 {
     internal class EncounterGenerator : IEncounterGenerator
     {
-        private const int IterationLimit = 30000;
-
-        private ITypeAndAmountPercentileSelector typeAndAmountPercentileSelector;
-        private IRollSelector rollSelector;
+        private IAmountSelector amountSelector;
         private IPercentileSelector percentileSelector;
         private ICollectionSelector collectionSelector;
         private Regex challengeRatingRegex;
-        private Regex subTypeRegex;
-        private Dice dice;
+        private Regex descriptionRegex;
         private IEncounterCharacterGenerator encounterCharacterGenerator;
         private IEncounterTreasureGenerator encounterTreasureGenerator;
-        private IFilterVerifier filterVerifier;
-        private IEncounterCollectionSelector creatureCollectionSelector;
+        private IEncounterVerifier encounterVerifier;
+        private IEncounterCollectionSelector encounterCollectionSelector;
 
-        public EncounterGenerator(ITypeAndAmountPercentileSelector typeAndAmountPercentileSelector, IRollSelector rollSelector, IPercentileSelector percentileSelector,
-            ICollectionSelector collectionSelector, Dice dice, IEncounterCharacterGenerator encounterCharacterGenerator, IEncounterTreasureGenerator encounterTreasureGenerator,
-            IFilterVerifier filterVerifier, IEncounterCollectionSelector creatureCollectionSelector)
+        public EncounterGenerator(IAmountSelector amountSelector, IPercentileSelector percentileSelector,
+            ICollectionSelector collectionSelector, IEncounterCharacterGenerator encounterCharacterGenerator, IEncounterTreasureGenerator encounterTreasureGenerator,
+            IEncounterVerifier encounterVerifier, IEncounterCollectionSelector encounterCollectionSelector)
         {
-            this.typeAndAmountPercentileSelector = typeAndAmountPercentileSelector;
-            this.rollSelector = rollSelector;
+            this.amountSelector = amountSelector;
             this.percentileSelector = percentileSelector;
             this.collectionSelector = collectionSelector;
-            this.dice = dice;
             this.encounterTreasureGenerator = encounterTreasureGenerator;
             this.encounterCharacterGenerator = encounterCharacterGenerator;
-            this.filterVerifier = filterVerifier;
-            this.creatureCollectionSelector = creatureCollectionSelector;
+            this.encounterVerifier = encounterVerifier;
+            this.encounterCollectionSelector = encounterCollectionSelector;
 
             challengeRatingRegex = new Regex(RegexConstants.ChallengeRatingPattern);
-            subTypeRegex = new Regex(RegexConstants.DescriptionPattern);
+            descriptionRegex = new Regex(RegexConstants.DescriptionPattern);
         }
 
         public Encounter Generate(string environment, int level, string temperature, string timeOfDay, params string[] creatureTypeFilters)
         {
-            var filtersAreValid = filterVerifier.FiltersAreValid(environment, level, temperature, timeOfDay, creatureTypeFilters);
-            if (!filtersAreValid)
+            var validEncounterExists = encounterVerifier.ValidEncounterExistsAtLevel(environment, level, temperature, timeOfDay, creatureTypeFilters);
+            if (!validEncounterExists)
                 throw new ImpossibleEncounterException();
 
-            var tableName = string.Format(TableNameConstants.LevelXEncounterLevel, level);
-            var encounterLevelAndModifier = typeAndAmountPercentileSelector.SelectFrom(tableName).Single();
-            var encounterLevel = Convert.ToInt32(encounterLevelAndModifier.Key);
-            var modifier = Convert.ToInt32(encounterLevelAndModifier.Value);
-            var creatures = new List<Creature>();
+            var encounterLevel = GetEncounterLevel(environment, level, temperature, timeOfDay, creatureTypeFilters);
+            var creatures = Enumerable.Empty<Creature>();
 
-            while (creatures.Any() == false || creatures.Contains(null))
+            do
             {
-                creatures.Clear();
-
-                var encounterCreaturesAndAmounts = creatureCollectionSelector.SelectFrom(encounterLevel, environment, temperature, timeOfDay);
-                var iterations = 0;
-
-                while (!filterVerifier.EncounterIsValid(encounterCreaturesAndAmounts, modifier, creatureTypeFilters) && iterations++ < IterationLimit)
-                {
-                    tableName = string.Format(TableNameConstants.LevelXEncounterLevel, level);
-                    encounterLevelAndModifier = typeAndAmountPercentileSelector.SelectFrom(tableName).Single();
-                    encounterLevel = Convert.ToInt32(encounterLevelAndModifier.Key);
-                    modifier = Convert.ToInt32(encounterLevelAndModifier.Value);
-
-                    encounterCreaturesAndAmounts = creatureCollectionSelector.SelectFrom(encounterLevel, environment, temperature, timeOfDay);
-                }
-
-                if (!filterVerifier.EncounterIsValid(encounterCreaturesAndAmounts, modifier, creatureTypeFilters))
-                    throw new Exception($"Failed to generate level {level} creature for [{string.Join(",", creatureTypeFilters)}] in {temperature} {environment} {timeOfDay} after {iterations} iterations");
-
-                foreach (var kvp in encounterCreaturesAndAmounts)
-                {
-                    var newCreature = GetCreature(kvp.Key, kvp.Value, modifier, level, encounterLevel);
-                    creatures.Add(newCreature);
-                }
+                var creaturesAndAmounts = encounterCollectionSelector.SelectRandomFrom(encounterLevel, environment, temperature, timeOfDay, creatureTypeFilters);
+                creatures = creaturesAndAmounts.SelectMany(kvp => GetCreatures(kvp.Key, kvp.Value)).ToArray(); //INFO: Need to do immediate execution, as delayed causes problems with verification and cleaning
             }
+            while (!encounterVerifier.EncounterIsValid(creatures, creatureTypeFilters));
 
             var encounter = new Encounter();
-            encounter.Characters = encounterCharacterGenerator.GenerateFrom(creatures);
-            encounter.Creatures = EditCreatureTypes(creatures);
+            encounter.AverageEncounterLevel = encounterLevel;
+            encounter.AverageDifficulty = GetDifficulty(level, encounterLevel);
+            encounter.ActualEncounterLevel = amountSelector.SelectEncounterLevel(creatures);
+            encounter.ActualDifficulty = GetDifficulty(level, encounter.ActualEncounterLevel);
 
-            var leadCreature = encounter.Creatures.First();
-            encounter.Treasures = GetTreasures(encounter.Creatures, level);
+            encounter.Characters = encounterCharacterGenerator.GenerateFrom(creatures);
+            encounter.Creatures = CleanCreatures(creatures);
+            //TODO: When undead NPCs become Characters with metaraces (as well as monsters with character classes), this will need to happen before cleaning creatures
+            encounter.Treasures = GetTreasures(encounter.Creatures, encounter.ActualEncounterLevel);
 
             return encounter;
+        }
+
+        private string GetDifficulty(int level, int encounterLevel)
+        {
+            var difference = encounterLevel - level;
+
+            if (difference < -4)
+                return DifficultyConstants.VeryEasy;
+
+            if (difference < 0)
+                return DifficultyConstants.Easy;
+
+            if (difference == 0)
+                return DifficultyConstants.Challenging;
+
+            if (difference < 5)
+                return DifficultyConstants.VeryDifficult;
+
+            return DifficultyConstants.Overpowering;
+        }
+
+        private int GetEncounterLevel(string environment, int level, string temperature, string timeOfDay, params string[] creatureTypeFilters)
+        {
+            var encounterLevel = 0;
+
+            do
+            {
+                var encounterLevelModifier = percentileSelector.SelectFrom(TableNameConstants.EncounterLevelModifiers);
+                encounterLevel = level + encounterLevelModifier;
+            }
+            while (!encounterVerifier.ValidEncounterExistsAtLevel(environment, encounterLevel, temperature, timeOfDay, creatureTypeFilters));
+
+            return encounterLevel;
         }
 
         private IEnumerable<Treasure> GetTreasures(IEnumerable<Creature> creatures, int level)
@@ -111,208 +119,130 @@ namespace EncounterGen.Domain.Generators
             return treasures;
         }
 
-        private IEnumerable<Creature> EditCreatureTypes(IEnumerable<Creature> creatures)
+        private IEnumerable<Creature> CleanCreatures(IEnumerable<Creature> creatures)
         {
-            var newCreatures = new List<Creature>();
-            var creaturesToRemove = new List<Creature>();
-
             foreach (var creature in creatures)
             {
-                creature.Name = GetCreatureType(creature.Name);
-
-                if (dice.ContainsRoll(creature.Description, true) == false)
-                    continue;
-
-                creaturesToRemove.Add(creature);
-
-                while (creature.Quantity-- > 0)
-                {
-                    var rolledCreature = new Creature();
-                    rolledCreature.Quantity = 1;
-                    rolledCreature.Name = creature.Name;
-                    rolledCreature.Description = dice.ReplaceExpressionWithTotal(creature.Description, true);
-
-                    newCreatures.Add(rolledCreature);
-                }
+                creature.Name = GetName(creature.Name);
+                creature.Description = CleanDescription(creature.Description);
             }
 
-            return creatures.Union(newCreatures).Except(creaturesToRemove);
+            return creatures;
         }
 
-        private Creature GetCreature(string fullCreatureType, string amount, int modifier, int level, int effectiveLevel)
+        private IEnumerable<Creature> GetCreatures(string fullCreature, string amount)
         {
-            var creatureType = GetCreatureType(fullCreatureType);
-            var setSubtype = GetSubtype(fullCreatureType, effectiveLevel);
+            var creature = new Creature();
+            creature.Name = fullCreature;
+            creature.Description = GetDescription(fullCreature);
+            creature.Quantity = amountSelector.SelectFrom(amount);
+            creature.ChallengeRating = collectionSelector.SelectFrom(TableNameConstants.ChallengeRatings, fullCreature).Single();
+
+            if (creature.Quantity <= 0)
+                return Enumerable.Empty<Creature>();
+
+            var name = GetName(fullCreature);
             var creaturesRequiringSubtypes = collectionSelector.SelectFrom(TableNameConstants.CreatureGroups, GroupConstants.RequiresSubtype);
 
-            if (creaturesRequiringSubtypes.Contains(creatureType) && string.IsNullOrEmpty(setSubtype))
-                return GetCreatureWithRandomSubtype(fullCreatureType, level, modifier, amount, effectiveLevel);
+            if (creaturesRequiringSubtypes.Contains(name) && string.IsNullOrEmpty(creature.Description))
+                return GetCreaturesWithRandomSubtype(creature);
 
-            var creature = new Creature();
-            creature.Name = fullCreatureType;
-            creature.Description = setSubtype;
-
-            var effectiveRoll = rollSelector.SelectFrom(amount, modifier);
-            creature.Quantity = dice.Roll(effectiveRoll);
-
-            return creature;
+            return new[] { creature };
         }
 
-        private string GetCreatureType(string fullCreatureType)
+        private string GetName(string fullCreature)
         {
-            var creatureType = subTypeRegex.Replace(fullCreatureType, string.Empty);
-            creatureType = challengeRatingRegex.Replace(creatureType, string.Empty);
+            var name = descriptionRegex.Replace(fullCreature, string.Empty);
+            name = challengeRatingRegex.Replace(name, string.Empty);
 
-            return creatureType;
+            return name;
         }
 
-        private string GetSubtype(string fullCreatureType, int effectiveLevel)
+        private string GetDescription(string fullCreature)
         {
-            var subTypeMatch = subTypeRegex.Match(fullCreatureType);
-            if (string.IsNullOrEmpty(subTypeMatch.Value))
+            var descriptionMatch = descriptionRegex.Match(fullCreature);
+            if (string.IsNullOrEmpty(descriptionMatch.Value))
                 return string.Empty;
 
-            var subType = subTypeMatch.Value.Replace(" (", string.Empty).Replace(")", string.Empty);
-            subType = challengeRatingRegex.Replace(subType, string.Empty);
+            var description = descriptionMatch.Value.Replace(" (", string.Empty).Replace(")", string.Empty);
+            description = challengeRatingRegex.Replace(description, string.Empty);
 
-            return subType;
+            return description;
         }
 
-        private Creature GetCreatureWithRandomSubtype(string fullCreatureType, int level, int modifier, string amount, int effectiveLevel)
+        private string CleanDescription(string description)
         {
-            var creature = new Creature();
-            creature.Name = fullCreatureType;
-            creature.Description = GenerateRandomSubtype(fullCreatureType, level, modifier, amount);
+            return challengeRatingRegex.Replace(description, string.Empty);
+        }
 
-            if (creature.Description == null)
-                return null;
+        private IEnumerable<Creature> GetCreaturesWithRandomSubtype(Creature sourceCreature)
+        {
+            var creatures = new List<Creature>();
 
-            var creaturesRequiringSubtypes = collectionSelector.SelectFrom(TableNameConstants.CreatureGroups, GroupConstants.RequiresSubtype);
-
-            if (creaturesRequiringSubtypes.Contains(creature.Description))
+            for (var count = 0; count < sourceCreature.Quantity; count++)
             {
-                var setChallengeRating = GetSetChallengeRating(fullCreatureType);
-                var subSubtype = GenerateRandomSubtype(creature.Description, level, modifier, amount, setChallengeRating);
+                var subtype = GetRandomSubtype(sourceCreature);
+                var creature = new Creature();
 
-                creature.Description = string.Format("{0} ({1})", creature.Description, subSubtype);
+                if (creatures.Any(c => c.Description == subtype))
+                {
+                    creature = creatures.First(c => c.Description == subtype);
+                    creature.Quantity++;
+                    continue;
+                }
+
+                creature.ChallengeRating = sourceCreature.ChallengeRating;
+                creature.Description = subtype;
+                creature.Name = sourceCreature.Name;
+                creature.Quantity = 1;
+
+                creatures.Add(creature);
             }
 
-            creature.Quantity = GetRandomSubtypeQuantity(creature.Description, fullCreatureType, amount, modifier, level);
-
-            return creature;
+            return creatures;
         }
 
-        private string GenerateRandomSubtype(string fullCreatureType, int level, int modifier, string amount, string setChallengeRating = "")
+        private string GetRandomSubtype(Creature sourceCreature)
         {
-            var creatureType = GetCreatureType(fullCreatureType);
+            var setChallengeRating = GetChallengeRating(sourceCreature.Name);
 
             if (string.IsNullOrEmpty(setChallengeRating))
-                setChallengeRating = GetSetChallengeRating(fullCreatureType);
+                throw new InvalidOperationException($"Cannot generate random subtype of {sourceCreature.Name} without a set challenge rating");
 
-            var subtypes = collectionSelector.SelectFrom(TableNameConstants.CreatureGroups, creatureType);
-            var subtype = collectionSelector.SelectRandomFrom(subtypes);
-            var creaturesRequiringSubtypes = collectionSelector.SelectFrom(TableNameConstants.CreatureGroups, GroupConstants.RequiresSubtype);
-
-            if (IsCharacterCreatureType(subtype) || creaturesRequiringSubtypes.Contains(subtype))
-                return subtype;
-
-            var effectiveRoll = GetEffectiveSubtypeRoll(creatureType, subtype, level, amount, modifier, setChallengeRating);
-            var iteration = 1;
-
-            while (effectiveRoll == RollConstants.Reroll && iteration++ < IterationLimit)
-            {
-                subtype = collectionSelector.SelectRandomFrom(subtypes);
-
-                if (IsCharacterCreatureType(subtype) || creaturesRequiringSubtypes.Contains(subtype))
-                    return subtype;
-
-                effectiveRoll = GetEffectiveSubtypeRoll(creatureType, subtype, level, amount, modifier, setChallengeRating);
-            }
-
-            if (effectiveRoll == RollConstants.Reroll)
-                return null;
+            var subtype = GenerateRandomSubtype(sourceCreature.Name, setChallengeRating);
 
             return subtype;
         }
 
-        private string GetEffectiveSubtypeRoll(string creatureType, string subtype, int level, string amount, int modifier, string setChallengeRating)
+        private string GenerateRandomSubtype(string fullCreature, string challengeRating)
         {
-            var tableName = string.Format(TableNameConstants.CREATURESubtypeChallengeRatings, creatureType);
-            var challengeRating = collectionSelector.SelectFrom(tableName, subtype).Single();
+            var name = GetName(fullCreature);
+            var subtypes = collectionSelector.SelectFrom(TableNameConstants.CreatureGroups, name);
 
-            if (string.IsNullOrEmpty(setChallengeRating))
-                return rollSelector.SelectFrom(level, challengeRating);
+            var validSubtypes = subtypes.Where(s => SubtypeIsValid(s, challengeRating));
+            var subtype = collectionSelector.SelectRandomFrom(validSubtypes);
 
-            if (challengeRating != setChallengeRating)
-                return RollConstants.Reroll;
-
-            return rollSelector.SelectFrom(amount, modifier);
-        }
-
-        private int GetRandomSubtypeQuantity(string fullSubtype, string fullCreatureType, string amount, int modifier, int level)
-        {
-            var creatureType = GetCreatureType(fullCreatureType);
-            var subtype = GetCreatureType(fullSubtype);
-            var subSubtype = GetSubtype(fullSubtype, level);
-            var setChallengeRating = GetSetChallengeRating(fullCreatureType);
-            var effectiveRoll = rollSelector.SelectFrom(amount, modifier);
-
-            if (string.IsNullOrEmpty(setChallengeRating) == false)
-                return dice.Roll(effectiveRoll);
-
+            var trimmedSubtype = GetName(subtype);
             var creaturesRequiringSubtypes = collectionSelector.SelectFrom(TableNameConstants.CreatureGroups, GroupConstants.RequiresSubtype);
 
-            if (creaturesRequiringSubtypes.Contains(subtype) == false)
+            if (creaturesRequiringSubtypes.Contains(trimmedSubtype))
             {
-                effectiveRoll = GetEffectiveRoll(creatureType, fullSubtype, level);
-                return dice.Roll(effectiveRoll);
+                var furtherSubtype = GenerateRandomSubtype(subtype, challengeRating);
+                return $"{subtype} ({furtherSubtype})";
             }
 
-            if (string.IsNullOrEmpty(subSubtype))
-            {
-                effectiveRoll = GetEffectiveRoll(creatureType, subtype, level);
-            }
-            else
-            {
-                effectiveRoll = GetEffectiveRoll(subtype, subSubtype, level);
-            }
-
-            return dice.Roll(effectiveRoll);
+            return subtype;
         }
 
-        private string GetEffectiveRoll(string creatureType, string subtype, int level)
+        private bool SubtypeIsValid(string subtype, string challengeRating)
         {
-            var tableName = string.Format(TableNameConstants.CREATURESubtypeChallengeRatings, creatureType);
-            var challengeRating = collectionSelector.SelectFrom(tableName, subtype).Single();
-
-            return rollSelector.SelectFrom(level, challengeRating);
+            var creatureChallengeRating = collectionSelector.SelectFrom(TableNameConstants.ChallengeRatings, subtype).Single();
+            return creatureChallengeRating == challengeRating;
         }
 
-        private bool IsCharacterCreatureType(string fullCreatureType)
+        private string GetChallengeRating(string fullCreature)
         {
-            var characterCreatureType = GetCreatureTypeCharacter(fullCreatureType);
-
-            return string.IsNullOrEmpty(characterCreatureType) == false;
-        }
-
-        private string GetCreatureTypeCharacter(string fullCreatureType)
-        {
-            var creatureType = GetCreatureType(fullCreatureType);
-
-            var undeadNPCCreatures = collectionSelector.SelectFrom(TableNameConstants.CreatureGroups, GroupConstants.UndeadNPC);
-            if (undeadNPCCreatures.Contains(creatureType))
-                return creatureType;
-
-            var classes = collectionSelector.SelectFrom(TableNameConstants.CreatureGroups, CreatureConstants.Character);
-            if (classes.Contains(creatureType))
-                return creatureType;
-
-            return string.Empty;
-        }
-
-        private string GetSetChallengeRating(string creatureType)
-        {
-            var levelMatch = challengeRatingRegex.Match(creatureType);
+            var levelMatch = challengeRatingRegex.Match(fullCreature);
             if (string.IsNullOrEmpty(levelMatch.Value))
                 return string.Empty;
 

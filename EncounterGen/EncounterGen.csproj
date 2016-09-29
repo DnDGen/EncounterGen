@@ -31,7 +31,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="CharacterGen, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\CharacterGen.7.0.0\lib\CharacterGen.dll</HintPath>
+      <HintPath>..\packages\CharacterGen.7.1.0\lib\CharacterGen.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -51,11 +51,12 @@
     <Compile Include="Common\ChallengeRatingConstants.cs" />
     <Compile Include="Common\Creature.cs" />
     <Compile Include="Common\CreatureConstants.cs" />
+    <Compile Include="Common\DifficultyConstants.cs" />
     <Compile Include="Common\Encounter.cs" />
     <Compile Include="Common\EnvironmentConstants.cs" />
     <Compile Include="Generators\Exceptions\ImpossibleEncounterException.cs" />
     <Compile Include="Generators\IEncounterGenerator.cs" />
-    <Compile Include="Generators\IFilterVerifier.cs" />
+    <Compile Include="Generators\IEncounterVerifier.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -6,6 +6,7 @@ namespace EncounterGen.Tests.Unit.Common
     [TestFixture]
     public class ChallengeRatingConstantsTests
     {
+        [TestCase(ChallengeRatingConstants.Zero, "0")]
         [TestCase(ChallengeRatingConstants.OneTenth, "1/10")]
         [TestCase(ChallengeRatingConstants.OneEighth, "1/8")]
         [TestCase(ChallengeRatingConstants.OneSixth, "1/6")]
@@ -42,7 +43,7 @@ namespace EncounterGen.Tests.Unit.Common
         [TestCase(ChallengeRatingConstants.TwentyEight, "28")]
         [TestCase(ChallengeRatingConstants.TwentyNine, "29")]
         [TestCase(ChallengeRatingConstants.Thirty, "30")]
-        public void Constant(string constant, string value)
+        public void ChallengeRatingConstant(string constant, string value)
         {
             Assert.That(constant, Is.EqualTo(value));
         }

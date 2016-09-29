@@ -7,6 +7,6 @@
         public const string UseSubtypeForTreasure = "Use Subtype for Treasure";
         public const string Magic = "Magic";
         public const string Land = "Land";
-        public const string Dragon = "Dragon";
+        public const string Wilderness = "Wilderness";
     }
 }

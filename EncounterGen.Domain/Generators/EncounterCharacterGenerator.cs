@@ -4,7 +4,7 @@ using CharacterGen.Randomizers.CharacterClasses;
 using CharacterGen.Randomizers.Races;
 using CharacterGen.Randomizers.Stats;
 using EncounterGen.Common;
-using EncounterGen.Domain.Selectors;
+using EncounterGen.Domain.Selectors.Collections;
 using EncounterGen.Domain.Tables;
 using RollGen;
 using System;
@@ -28,7 +28,6 @@ namespace EncounterGen.Domain.Generators
         private ICollectionSelector collectionSelector;
         private ISetMetaraceRandomizer setMetaraceRandomizer;
         private Regex challengeRatingRegex;
-        private Regex setCharacterLevelRegex;
         private Regex subTypeRegex;
         private Dice dice;
 
@@ -51,7 +50,6 @@ namespace EncounterGen.Domain.Generators
             this.dice = dice;
 
             challengeRatingRegex = new Regex(RegexConstants.ChallengeRatingPattern);
-            setCharacterLevelRegex = new Regex(RegexConstants.SetCharacterLevelPattern);
             subTypeRegex = new Regex(RegexConstants.DescriptionPattern);
         }
 
@@ -85,7 +83,7 @@ namespace EncounterGen.Domain.Generators
         {
             var characterCreatureType = GetCharacterCreatureType(creature);
 
-            setLevelRandomizer.SetLevel = GetCharacterLevel(creature.Name);
+            setLevelRandomizer.SetLevel = GetCharacterLevel(creature);
             setLevelRandomizer.AllowAdjustments = true;
 
             var undeadNPCCreatures = collectionSelector.SelectFrom(TableNameConstants.CreatureGroups, GroupConstants.UndeadNPC);
@@ -140,16 +138,17 @@ namespace EncounterGen.Domain.Generators
             return creatureType;
         }
 
-        private int GetCharacterLevel(string characterCreatureType)
+        private int GetCharacterLevel(Creature creature)
         {
-            var challengeRating = GetSetChallengeRating(characterCreatureType);
-            if (string.IsNullOrEmpty(challengeRating))
-            {
-                var message = string.Format("Character level was not provided for a character creature type \"{0}\"", characterCreatureType);
-                throw new ArgumentException(message);
-            }
+            var challengeRating = GetSetChallengeRating(creature.Description);
 
-            return dice.Roll(challengeRating);
+            if (string.IsNullOrEmpty(challengeRating))
+                challengeRating = GetSetChallengeRating(creature.Name);
+
+            if (string.IsNullOrEmpty(challengeRating))
+                throw new ArgumentException($"Character level was not provided for a character creature {creature.Name} ({creature.Description})");
+
+            return dice.Roll(challengeRating).AsSum();
         }
 
         private string GetSetChallengeRating(string creatureType)

@@ -5,7 +5,7 @@ using NUnit.Framework;
 namespace EncounterGen.Tests.Integration.IoC.Modules
 {
     [TestFixture]
-    public class GeneratorModuleTests : BootstrapTests
+    public class GeneratorModuleTests : IoCTests
     {
         [Test]
         public void EncounterGeneratorIsNotASingleton()
@@ -28,7 +28,7 @@ namespace EncounterGen.Tests.Integration.IoC.Modules
         [Test]
         public void FilterVerifierIsNotASingleton()
         {
-            AssertNotSingleton<IFilterVerifier>();
+            AssertNotSingleton<IEncounterVerifier>();
         }
     }
 }

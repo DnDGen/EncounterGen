@@ -2,7 +2,7 @@
 {
     public static class ChallengeRatingConstants
     {
-
+        public const string Zero = "0";
         public const string OneTenth = "1/10";
         public const string OneEighth = "1/8";
         public const string OneSixth = "1/6";
