@@ -177,13 +177,9 @@ namespace EncounterGen.Tests.Integration.Stress
 
             foreach (var creature in encounter.Creatures)
             {
-                Assert.That(creature.Name, Is.Not.Empty);
+                AssertCreatureType(creature.Type);
                 Assert.That(creature.Quantity, Is.Positive);
-                Assert.That(creature.Description, Is.Not.Null);
                 Assert.That(creature.ChallengeRating, Is.Not.Empty);
-
-                Assert.That(Dice.ContainsRoll(creature.Name), Is.False);
-                Assert.That(Dice.ContainsRoll(creature.Description), Is.False);
             }
 
             Assert.That(encounter.Treasures, Is.Not.Null);
@@ -194,10 +190,24 @@ namespace EncounterGen.Tests.Integration.Stress
             Assert.That(encounter.Characters.Count, Is.LessThanOrEqualTo(totalCreatures));
             Assert.That(encounter.Treasures.Count, Is.LessThanOrEqualTo(encounter.Creatures.Count()));
 
-            Assert.That(encounter.AverageDifficulty, Is.Not.Empty);
+            Assert.That(encounter.TargetEncounterLevel, Is.Positive);
             Assert.That(encounter.AverageEncounterLevel, Is.Positive);
-            Assert.That(encounter.ActualDifficulty, Is.Not.Empty);
             Assert.That(encounter.ActualEncounterLevel, Is.Positive);
+
+            Assert.That(encounter.AverageDifficulty, Is.Not.Empty);
+            Assert.That(encounter.ActualDifficulty, Is.Not.Empty);
+        }
+
+        private void AssertCreatureType(CreatureType creatureType)
+        {
+            Assert.That(creatureType.Name, Is.Not.Empty);
+            Assert.That(creatureType.Description, Is.Not.Null);
+
+            Assert.That(Dice.ContainsRoll(creatureType.Name), Is.False);
+            Assert.That(Dice.ContainsRoll(creatureType.Description), Is.False);
+
+            if (creatureType.SubType != null)
+                AssertCreatureType(creatureType.SubType);
         }
 
         [TestCase(EnvironmentConstants.Dungeon, EnvironmentConstants.TimesOfDay.Night, EnvironmentConstants.Temperatures.Cold)]
@@ -450,17 +460,6 @@ namespace EncounterGen.Tests.Integration.Stress
             var encounter = GenerateOrFail(() => MakeEncounterInRandomEnvironment(), e => e.ActualEncounterLevel != e.AverageEncounterLevel);
             AssertEncounter(encounter);
             Assert.That(encounter.ActualEncounterLevel, Is.Not.EqualTo(encounter.AverageEncounterLevel));
-        }
-
-        [Test]
-        [Ignore("While this passes in my local environment, on cloud environments such as Travis or Azure, this fails.  Resources are different")]
-        public void GenerationIsFast()
-        {
-            var iterations = new List<bool>();
-            Stress(() => StressGenerationSpeed(iterations));
-
-            var iterationsPerSecond = iterations.Count / Stopwatch.Elapsed.TotalSeconds;
-            Assert.That(iterationsPerSecond, Is.AtLeast(1));
         }
 
         private void StressGenerationSpeed(List<bool> iterations)

@@ -7,7 +7,6 @@ using EncounterGen.Generators;
 using Moq;
 using NUnit.Framework;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace EncounterGen.Tests.Unit.Generators
 {
@@ -38,7 +37,7 @@ namespace EncounterGen.Tests.Unit.Generators
             filterGroup.Add("creature");
             filterGroup.Add("other creature");
 
-            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.CreatureGroups, Filter)).Returns(filterGroup);
+            mockCollectionSelector.Setup(s => s.Explode(TableNameConstants.CreatureGroups, Filter)).Returns(filterGroup);
         }
 
         private void SetupCreaturesAndAmounts(int setupLevel, string creatureName = "creature", params string[] additionalCreaturesAndAmounts)
@@ -145,7 +144,7 @@ namespace EncounterGen.Tests.Unit.Generators
             additionalFilterGroup.Add("creature");
             additionalFilterGroup.Add("other creature");
 
-            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.CreatureGroups, "other filter")).Returns(additionalFilterGroup);
+            mockCollectionSelector.Setup(s => s.Explode(TableNameConstants.CreatureGroups, "other filter")).Returns(additionalFilterGroup);
 
             var encounter = SetUpEncounter("creature", "amount");
 
@@ -177,62 +176,46 @@ namespace EncounterGen.Tests.Unit.Generators
         }
 
         [Test]
-        public void EncounterIsValidIfCreatureWithLevelMatches()
-        {
-            var encounter = SetUpEncounter("creature[600]", "amount");
-            var isValid = encounterVerifier.EncounterIsValid(encounter.Keys, Filter);
-            Assert.That(isValid, Is.True);
-        }
-
-        [Test]
-        public void EncounterIsValidIfCreatureWithDescriptionAndLevelMatches()
-        {
-            var encounter = SetUpEncounter("creature (description)[600]", "amount");
-            filterGroup.Remove("creature");
-            filterGroup.Add("creature (description)");
-
-            var isValid = encounterVerifier.EncounterIsValid(encounter.Keys, Filter);
-            Assert.That(isValid, Is.True);
-        }
-
-        [Test]
         public void EncounterFromCreaturesIsValidIfNoFiltersAreProvided()
         {
-            var creatures = new[]
+            var encounter = new Encounter();
+            encounter.Creatures = new[]
             {
-                new Creature { Name = "creature", Quantity = 9266 },
-                new Creature { Name = "other creature", Quantity = 90210 },
+                new Creature { Type = new CreatureType { Name = "creature" }, Quantity = 9266 },
+                new Creature { Type = new CreatureType { Name = "other creature" }, Quantity = 90210 },
             };
 
-            mockAmountSelector.Setup(s => s.SelectEncounterLevel(creatures)).Returns(15);
+            mockAmountSelector.Setup(s => s.SelectActualEncounterLevel(encounter)).Returns(15);
 
-            var isValid = encounterVerifier.EncounterIsValid(creatures);
+            var isValid = encounterVerifier.EncounterIsValid(encounter);
             Assert.That(isValid, Is.True);
         }
 
         [Test]
         public void EncounterFromCreaturesIsNotValidIfCreatureDoesNotMatchFilter()
         {
-            var creatures = new[]
+            var encounter = new Encounter();
+            encounter.Creatures = new[]
             {
-                new Creature { Name = "bogus creature", Quantity = 9266 },
+                new Creature { Type = new CreatureType { Name = "bogus creature" }, Quantity = 9266 },
             };
 
-            mockAmountSelector.Setup(s => s.SelectEncounterLevel(creatures)).Returns(15);
+            mockAmountSelector.Setup(s => s.SelectActualEncounterLevel(encounter)).Returns(15);
 
-            var isValid = encounterVerifier.EncounterIsValid(creatures, Filter);
+            var isValid = encounterVerifier.EncounterIsValid(encounter, Filter);
             Assert.That(isValid, Is.False);
         }
 
         [Test]
         public void EncounterFromCreaturesIsValidIfCreatureMatchesAnyFilter()
         {
-            var creatures = new[]
+            var encounter = new Encounter();
+            encounter.Creatures = new[]
             {
-                new Creature { Name = "creature", Quantity = 9266 },
+                new Creature { Type = new CreatureType { Name = "creature" }, Quantity = 9266 },
             };
 
-            mockAmountSelector.Setup(s => s.SelectEncounterLevel(creatures)).Returns(15);
+            mockAmountSelector.Setup(s => s.SelectActualEncounterLevel(encounter)).Returns(15);
 
             filterGroup.Remove("creature");
 
@@ -240,9 +223,9 @@ namespace EncounterGen.Tests.Unit.Generators
             additionalFilterGroup.Add("creature");
             additionalFilterGroup.Add("other creature");
 
-            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.CreatureGroups, "other filter")).Returns(additionalFilterGroup);
+            mockCollectionSelector.Setup(s => s.Explode(TableNameConstants.CreatureGroups, "other filter")).Returns(additionalFilterGroup);
 
-            var isValid = encounterVerifier.EncounterIsValid(creatures, Filter, "other filter");
+            var isValid = encounterVerifier.EncounterIsValid(encounter, Filter, "other filter");
             Assert.That(isValid, Is.True);
         }
 
@@ -252,15 +235,16 @@ namespace EncounterGen.Tests.Unit.Generators
             filterGroup.Remove("creature");
             filterGroup.Add("other creature");
 
-            var creatures = new[]
+            var encounter = new Encounter();
+            encounter.Creatures = new[]
             {
-                new Creature { Name = "creature", Quantity = 9266 },
-                new Creature { Name = "other creature", Quantity = 90210 },
+                new Creature { Type = new CreatureType { Name = "creature" }, Quantity = 9266 },
+                new Creature { Type = new CreatureType { Name = "other creature" }, Quantity = 90210 },
             };
 
-            mockAmountSelector.Setup(s => s.SelectEncounterLevel(creatures)).Returns(15);
+            mockAmountSelector.Setup(s => s.SelectActualEncounterLevel(encounter)).Returns(15);
 
-            var isValid = encounterVerifier.EncounterIsValid(creatures, Filter, "other filter");
+            var isValid = encounterVerifier.EncounterIsValid(encounter, Filter, "other filter");
             Assert.That(isValid, Is.True);
         }
 
@@ -270,23 +254,24 @@ namespace EncounterGen.Tests.Unit.Generators
         [TestCase(31)]
         public void EncounterFromCreaturesIsNotValidIfLevelInvalid(int level)
         {
-            var creatures = new[]
+            var encounter = new Encounter();
+            encounter.Creatures = new[]
             {
-                new Creature { Name = "creature", Quantity = 9266 },
-                new Creature { Name = "other creature", Quantity = 90210 },
+                new Creature { Type = new CreatureType { Name = "creature" }, Quantity = 9266 },
+                new Creature { Type = new CreatureType { Name = "other creature" }, Quantity = 90210 },
             };
 
-            mockAmountSelector.Setup(s => s.SelectEncounterLevel(creatures)).Returns(level);
+            mockAmountSelector.Setup(s => s.SelectActualEncounterLevel(encounter)).Returns(level);
 
-            var isValid = encounterVerifier.EncounterIsValid(creatures);
+            var isValid = encounterVerifier.EncounterIsValid(encounter);
             Assert.That(isValid, Is.False);
         }
 
         [Test]
         public void EncounterFromCreaturesIsNotValidIfNoCreatures()
         {
-            var creatures = Enumerable.Empty<Creature>();
-            var isValid = encounterVerifier.EncounterIsValid(creatures);
+            var encounter = new Encounter();
+            var isValid = encounterVerifier.EncounterIsValid(encounter);
             Assert.That(isValid, Is.False);
         }
 
@@ -320,7 +305,7 @@ namespace EncounterGen.Tests.Unit.Generators
             additionalFilterGroup.Add("creature");
             additionalFilterGroup.Add("other creature");
 
-            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.CreatureGroups, "additional filter")).Returns(additionalFilterGroup);
+            mockCollectionSelector.Setup(s => s.Explode(TableNameConstants.CreatureGroups, "additional filter")).Returns(additionalFilterGroup);
 
             var isValid = encounterVerifier.CreatureIsValid("creature", Filter, "additional filter");
             Assert.That(isValid, Is.True);
@@ -335,7 +320,7 @@ namespace EncounterGen.Tests.Unit.Generators
             additionalFilterGroup.Add("creature");
             additionalFilterGroup.Add("other creature");
 
-            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.CreatureGroups, "additional filter")).Returns(additionalFilterGroup);
+            mockCollectionSelector.Setup(s => s.Explode(TableNameConstants.CreatureGroups, "additional filter")).Returns(additionalFilterGroup);
 
             var isValid = encounterVerifier.CreatureIsValid("wrong creature", Filter, "additional filter");
             Assert.That(isValid, Is.False);
@@ -348,23 +333,6 @@ namespace EncounterGen.Tests.Unit.Generators
             filterGroup.Add("creature (description)");
 
             var isValid = encounterVerifier.CreatureIsValid("creature (description)", Filter);
-            Assert.That(isValid, Is.True);
-        }
-
-        [Test]
-        public void CreatureIsValidIfCreatureWithLevelMatches()
-        {
-            var isValid = encounterVerifier.CreatureIsValid("creature[600]", Filter);
-            Assert.That(isValid, Is.True);
-        }
-
-        [Test]
-        public void CreatureIsValidIfCreatureWithDescriptionAndLevelMatches()
-        {
-            filterGroup.Remove("creature");
-            filterGroup.Add("creature (description)");
-
-            var isValid = encounterVerifier.CreatureIsValid("creature (description)[600]", Filter);
             Assert.That(isValid, Is.True);
         }
     }

@@ -57,8 +57,9 @@ namespace EncounterGen.Tests.Unit.Generators
             usesSubtypeForTreasure = new List<string>();
 
             level = 9266;
-            creature.Name = "creature";
-            creature.Description = "subtype";
+            creature.Type.Name = "creature";
+            creature.Type.SubType = new CreatureType();
+            creature.Type.SubType.Name = "subtype";
             creature.Quantity = 1;
             coinMultiplier = 1;
             goodsMultiplier = 1;
@@ -69,9 +70,9 @@ namespace EncounterGen.Tests.Unit.Generators
 
             mockBooleanPercentileSelector.Setup(s => s.SelectFrom(It.IsAny<double>())).Returns((double d) => d > 0);
 
-            mockAdjustmentSelector.Setup(s => s.SelectDouble(TableNameConstants.TreasureAdjustments, creature.Name, TreasureConstants.Coin)).Returns(() => coinMultiplier);
-            mockAdjustmentSelector.Setup(s => s.SelectDouble(TableNameConstants.TreasureAdjustments, creature.Name, TreasureConstants.Goods)).Returns(() => goodsMultiplier);
-            mockAdjustmentSelector.Setup(s => s.SelectDouble(TableNameConstants.TreasureAdjustments, creature.Name, TreasureConstants.Items)).Returns(() => itemsMultiplier);
+            mockAdjustmentSelector.Setup(s => s.SelectDouble(TableNameConstants.TreasureAdjustments, creature.Type.Name, TreasureConstants.Coin)).Returns(() => coinMultiplier);
+            mockAdjustmentSelector.Setup(s => s.SelectDouble(TableNameConstants.TreasureAdjustments, creature.Type.Name, TreasureConstants.Goods)).Returns(() => goodsMultiplier);
+            mockAdjustmentSelector.Setup(s => s.SelectDouble(TableNameConstants.TreasureAdjustments, creature.Type.Name, TreasureConstants.Items)).Returns(() => itemsMultiplier);
 
             mockCoinGenerator.Setup(g => g.GenerateAtLevel(level)).Returns(coin);
             mockGoodsGenerator.Setup(g => g.GenerateAtLevel(level)).Returns(goods);
@@ -307,11 +308,11 @@ namespace EncounterGen.Tests.Unit.Generators
         [Test]
         public void UseSubtypeForTreasure()
         {
-            usesSubtypeForTreasure.Add(creature.Name);
+            usesSubtypeForTreasure.Add(creature.Type.Name);
 
-            mockAdjustmentSelector.Setup(s => s.SelectDouble(TableNameConstants.TreasureAdjustments, creature.Description, TreasureConstants.Coin)).Returns(2);
-            mockAdjustmentSelector.Setup(s => s.SelectDouble(TableNameConstants.TreasureAdjustments, creature.Description, TreasureConstants.Goods)).Returns(2);
-            mockAdjustmentSelector.Setup(s => s.SelectDouble(TableNameConstants.TreasureAdjustments, creature.Description, TreasureConstants.Items)).Returns(2);
+            mockAdjustmentSelector.Setup(s => s.SelectDouble(TableNameConstants.TreasureAdjustments, creature.Type.SubType.Name, TreasureConstants.Coin)).Returns(2);
+            mockAdjustmentSelector.Setup(s => s.SelectDouble(TableNameConstants.TreasureAdjustments, creature.Type.SubType.Name, TreasureConstants.Goods)).Returns(2);
+            mockAdjustmentSelector.Setup(s => s.SelectDouble(TableNameConstants.TreasureAdjustments, creature.Type.SubType.Name, TreasureConstants.Items)).Returns(2);
 
             var secondGoods = new[] { new Good(), new Good() };
             mockGoodsGenerator.SetupSequence(g => g.GenerateAtLevel(level)).Returns(goods).Returns(secondGoods);
@@ -329,13 +330,14 @@ namespace EncounterGen.Tests.Unit.Generators
         [Test]
         public void UseSubtypeWithoutFurtherSubtypeForTreasure()
         {
-            creature.Description = "subtype (further subtype)";
+            creature.Type.SubType.SubType = new CreatureType();
+            creature.Type.SubType.SubType.Name = "further subtype";
 
-            usesSubtypeForTreasure.Add(creature.Name);
+            usesSubtypeForTreasure.Add(creature.Type.Name);
 
-            mockAdjustmentSelector.Setup(s => s.SelectDouble(TableNameConstants.TreasureAdjustments, "subtype", TreasureConstants.Coin)).Returns(2);
-            mockAdjustmentSelector.Setup(s => s.SelectDouble(TableNameConstants.TreasureAdjustments, "subtype", TreasureConstants.Goods)).Returns(2);
-            mockAdjustmentSelector.Setup(s => s.SelectDouble(TableNameConstants.TreasureAdjustments, "subtype", TreasureConstants.Items)).Returns(2);
+            mockAdjustmentSelector.Setup(s => s.SelectDouble(TableNameConstants.TreasureAdjustments, creature.Type.SubType.Name, TreasureConstants.Coin)).Returns(2);
+            mockAdjustmentSelector.Setup(s => s.SelectDouble(TableNameConstants.TreasureAdjustments, creature.Type.SubType.Name, TreasureConstants.Goods)).Returns(2);
+            mockAdjustmentSelector.Setup(s => s.SelectDouble(TableNameConstants.TreasureAdjustments, creature.Type.SubType.Name, TreasureConstants.Items)).Returns(2);
 
             var secondGoods = new[] { new Good(), new Good() };
             mockGoodsGenerator.SetupSequence(g => g.GenerateAtLevel(level)).Returns(goods).Returns(secondGoods);
@@ -353,14 +355,15 @@ namespace EncounterGen.Tests.Unit.Generators
         [Test]
         public void UseFurtherSubtypeForTreasure()
         {
-            creature.Description = "subtype (further subtype)";
+            creature.Type.SubType.SubType = new CreatureType();
+            creature.Type.SubType.SubType.Name = "further subtype";
 
-            usesSubtypeForTreasure.Add(creature.Name);
-            usesSubtypeForTreasure.Add("subtype");
+            usesSubtypeForTreasure.Add(creature.Type.Name);
+            usesSubtypeForTreasure.Add(creature.Type.SubType.Name);
 
-            mockAdjustmentSelector.Setup(s => s.SelectDouble(TableNameConstants.TreasureAdjustments, "further subtype", TreasureConstants.Coin)).Returns(2);
-            mockAdjustmentSelector.Setup(s => s.SelectDouble(TableNameConstants.TreasureAdjustments, "further subtype", TreasureConstants.Goods)).Returns(2);
-            mockAdjustmentSelector.Setup(s => s.SelectDouble(TableNameConstants.TreasureAdjustments, "further subtype", TreasureConstants.Items)).Returns(2);
+            mockAdjustmentSelector.Setup(s => s.SelectDouble(TableNameConstants.TreasureAdjustments, creature.Type.SubType.SubType.Name, TreasureConstants.Coin)).Returns(2);
+            mockAdjustmentSelector.Setup(s => s.SelectDouble(TableNameConstants.TreasureAdjustments, creature.Type.SubType.SubType.Name, TreasureConstants.Goods)).Returns(2);
+            mockAdjustmentSelector.Setup(s => s.SelectDouble(TableNameConstants.TreasureAdjustments, creature.Type.SubType.SubType.Name, TreasureConstants.Items)).Returns(2);
 
             var secondGoods = new[] { new Good(), new Good() };
             mockGoodsGenerator.SetupSequence(g => g.GenerateAtLevel(level)).Returns(goods).Returns(secondGoods);
@@ -379,7 +382,7 @@ namespace EncounterGen.Tests.Unit.Generators
         public void GetSetTreasure()
         {
             var setTreasureItems = new[] { "item 1[item type]", "item 2[other item type]" };
-            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.TreasureGroups, creature.Name)).Returns(setTreasureItems);
+            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.TreasureGroups, creature.Type.Name)).Returns(setTreasureItems);
 
             var mockMundaneItemGenerator = new Mock<MundaneItemGenerator>();
             var mockOtherMundaneItemGenerator = new Mock<MundaneItemGenerator>();
@@ -400,7 +403,7 @@ namespace EncounterGen.Tests.Unit.Generators
         public void GetSetTreasureWithMagicBonus()
         {
             var setTreasureItems = new[] { "item 1[item type](90210)", "item 2[other item type]" };
-            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.TreasureGroups, creature.Name)).Returns(setTreasureItems);
+            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.TreasureGroups, creature.Type.Name)).Returns(setTreasureItems);
 
             var mockMagicalItemGenerator = new Mock<MagicalItemGenerator>();
             var mockMundaneItemGenerator = new Mock<MundaneItemGenerator>();
@@ -421,7 +424,7 @@ namespace EncounterGen.Tests.Unit.Generators
         public void GetSetTreasureWithSpecialAbilities()
         {
             var setTreasureItems = new[] { "item 1[item type](90210)", "item 2[other item type]#Trait#(42){ability 1,ability 2}" };
-            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.TreasureGroups, creature.Name)).Returns(setTreasureItems);
+            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.TreasureGroups, creature.Type.Name)).Returns(setTreasureItems);
 
             var mockMagicalItemGenerator = new Mock<MagicalItemGenerator>();
             var mockOtherMagicalItemGenerator = new Mock<MagicalItemGenerator>();
@@ -444,7 +447,7 @@ namespace EncounterGen.Tests.Unit.Generators
         public void GetSetTreasureWithTraits()
         {
             var setTreasureItems = new[] { "item 1[item type]#size#", "item 2[other item type]#other size,trait#" };
-            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.TreasureGroups, creature.Name)).Returns(setTreasureItems);
+            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.TreasureGroups, creature.Type.Name)).Returns(setTreasureItems);
 
             var mockMundaneItemGenerator = new Mock<MundaneItemGenerator>();
             var mockOtherMundaneItemGenerator = new Mock<MundaneItemGenerator>();
@@ -465,7 +468,7 @@ namespace EncounterGen.Tests.Unit.Generators
         public void GetSetMagicTreasure()
         {
             var setTreasureItems = new[] { "item 1[item type](90210)", "item 2[item type]@True@", "item 3[item type]@False@", "item 4[item type]" };
-            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.TreasureGroups, creature.Name)).Returns(setTreasureItems);
+            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.TreasureGroups, creature.Type.Name)).Returns(setTreasureItems);
 
             var mockMagicalItemGenerator = new Mock<MagicalItemGenerator>();
             var mockOtherMundaneItemGenerator = new Mock<MundaneItemGenerator>();
@@ -492,7 +495,7 @@ namespace EncounterGen.Tests.Unit.Generators
         public void GetSetTreasurePerCreature()
         {
             var setTreasureItems = new[] { "item 1[item type]", "item 2[other item type]" };
-            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.TreasureGroups, creature.Name)).Returns(setTreasureItems);
+            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.TreasureGroups, creature.Type.Name)).Returns(setTreasureItems);
 
             var mockMundaneItemGenerator = new Mock<MundaneItemGenerator>();
             var mockOtherMundaneItemGenerator = new Mock<MundaneItemGenerator>();
@@ -512,11 +515,11 @@ namespace EncounterGen.Tests.Unit.Generators
         [Test]
         public void UseSubtypeForSetTreasure()
         {
-            usesSubtypeForTreasure.Add(creature.Name);
+            usesSubtypeForTreasure.Add(creature.Type.Name);
 
-            mockAdjustmentSelector.Setup(s => s.SelectDouble(TableNameConstants.TreasureAdjustments, creature.Description, TreasureConstants.Coin)).Returns(2);
-            mockAdjustmentSelector.Setup(s => s.SelectDouble(TableNameConstants.TreasureAdjustments, creature.Description, TreasureConstants.Goods)).Returns(2);
-            mockAdjustmentSelector.Setup(s => s.SelectDouble(TableNameConstants.TreasureAdjustments, creature.Description, TreasureConstants.Items)).Returns(2);
+            mockAdjustmentSelector.Setup(s => s.SelectDouble(TableNameConstants.TreasureAdjustments, creature.Type.SubType.Name, TreasureConstants.Coin)).Returns(2);
+            mockAdjustmentSelector.Setup(s => s.SelectDouble(TableNameConstants.TreasureAdjustments, creature.Type.SubType.Name, TreasureConstants.Goods)).Returns(2);
+            mockAdjustmentSelector.Setup(s => s.SelectDouble(TableNameConstants.TreasureAdjustments, creature.Type.SubType.Name, TreasureConstants.Items)).Returns(2);
 
             var secondGoods = new[] { new Good(), new Good() };
             mockGoodsGenerator.SetupSequence(g => g.GenerateAtLevel(level)).Returns(goods).Returns(secondGoods);
@@ -525,7 +528,7 @@ namespace EncounterGen.Tests.Unit.Generators
             mockItemsGenerator.SetupSequence(g => g.GenerateAtLevel(level)).Returns(items).Returns(secondItems);
 
             var setTreasureItems = new[] { "item 1[item type]", "item 2[other item type]" };
-            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.TreasureGroups, creature.Description)).Returns(setTreasureItems);
+            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.TreasureGroups, creature.Type.SubType.Name)).Returns(setTreasureItems);
 
             var mockMundaneItemGenerator = new Mock<MundaneItemGenerator>();
             var mockOtherMundaneItemGenerator = new Mock<MundaneItemGenerator>();
@@ -553,14 +556,15 @@ namespace EncounterGen.Tests.Unit.Generators
         [Test]
         public void UseFurtherSubtypeForSetTreasure()
         {
-            creature.Description = "subtype (further subtype)";
+            creature.Type.SubType.SubType = new CreatureType();
+            creature.Type.SubType.SubType.Name = "further subtype";
 
-            usesSubtypeForTreasure.Add(creature.Name);
-            usesSubtypeForTreasure.Add("subtype");
+            usesSubtypeForTreasure.Add(creature.Type.Name);
+            usesSubtypeForTreasure.Add(creature.Type.SubType.Name);
 
-            mockAdjustmentSelector.Setup(s => s.SelectDouble(TableNameConstants.TreasureAdjustments, "further subtype", TreasureConstants.Coin)).Returns(2);
-            mockAdjustmentSelector.Setup(s => s.SelectDouble(TableNameConstants.TreasureAdjustments, "further subtype", TreasureConstants.Goods)).Returns(2);
-            mockAdjustmentSelector.Setup(s => s.SelectDouble(TableNameConstants.TreasureAdjustments, "further subtype", TreasureConstants.Items)).Returns(2);
+            mockAdjustmentSelector.Setup(s => s.SelectDouble(TableNameConstants.TreasureAdjustments, creature.Type.SubType.SubType.Name, TreasureConstants.Coin)).Returns(2);
+            mockAdjustmentSelector.Setup(s => s.SelectDouble(TableNameConstants.TreasureAdjustments, creature.Type.SubType.SubType.Name, TreasureConstants.Goods)).Returns(2);
+            mockAdjustmentSelector.Setup(s => s.SelectDouble(TableNameConstants.TreasureAdjustments, creature.Type.SubType.SubType.Name, TreasureConstants.Items)).Returns(2);
 
             var secondGoods = new[] { new Good(), new Good() };
             mockGoodsGenerator.SetupSequence(g => g.GenerateAtLevel(level)).Returns(goods).Returns(secondGoods);
@@ -569,7 +573,7 @@ namespace EncounterGen.Tests.Unit.Generators
             mockItemsGenerator.SetupSequence(g => g.GenerateAtLevel(level)).Returns(items).Returns(secondItems);
 
             var setTreasureItems = new[] { "item 1[item type]", "item 2[other item type]" };
-            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.TreasureGroups, "further subtype")).Returns(setTreasureItems);
+            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.TreasureGroups, creature.Type.SubType.SubType.Name)).Returns(setTreasureItems);
 
             var mockMundaneItemGenerator = new Mock<MundaneItemGenerator>();
             var mockOtherMundaneItemGenerator = new Mock<MundaneItemGenerator>();
@@ -592,27 +596,6 @@ namespace EncounterGen.Tests.Unit.Generators
             Assert.That(secondItems, Is.SubsetOf(treasure.Items));
             Assert.That(treasure.Items, Contains.Item(setItem));
             Assert.That(treasure.Items, Contains.Item(otherSetItem));
-        }
-
-        [Test]
-        public void NoncombatantsDoNotGetTreasure()
-        {
-            var setTreasureItems = new[] { "item 1[item type]", "item 2[other item type]" };
-            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.TreasureGroups, creature.Name)).Returns(setTreasureItems);
-
-            var mockMundaneItemGenerator = new Mock<MundaneItemGenerator>();
-            var mockOtherMundaneItemGenerator = new Mock<MundaneItemGenerator>();
-            mockMundaneItemGeneratorFactory.Setup(f => f.CreateGeneratorOf("item type")).Returns(mockMundaneItemGenerator.Object);
-            mockMundaneItemGeneratorFactory.Setup(f => f.CreateGeneratorOf("other item type")).Returns(mockOtherMundaneItemGenerator.Object);
-
-            mockMundaneItemGenerator.Setup(g => g.Generate(It.Is<Item>(i => i.Name == "item 1"), true)).Returns((Item t, bool a) => t.Copy());
-            mockOtherMundaneItemGenerator.Setup(g => g.Generate(It.Is<Item>(i => i.Name == "item 2"), true)).Returns((Item t, bool a) => t.Copy());
-
-            creature.Quantity = 42;
-            creature.Description = CreatureConstants.Noncombatant;
-
-            var treasure = encounterTreasureGenerator.GenerateFor(creature, level);
-            Assert.That(treasure.IsAny, Is.False);
         }
     }
 }

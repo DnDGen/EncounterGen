@@ -55,5 +55,11 @@ namespace EncounterGen.Tests.Integration.IoC.Modules
         {
             AssertInstanceOf<IEncounterCollectionSelector, EncounterCollectionSelectorCachingProxy>();
         }
+
+        [Test]
+        public void EncounterSelectorIsNotASingleton()
+        {
+            AssertNotSingleton<IEncounterSelector>();
+        }
     }
 }

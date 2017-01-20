@@ -1,4 +1,4 @@
-﻿using CharacterGen;
+﻿using CharacterGen.Characters;
 using EncounterGen.Common;
 using System.Collections.Generic;
 

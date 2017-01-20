@@ -1,7 +1,10 @@
-﻿using EncounterGen.Domain.Mappers.Collections;
+﻿using EncounterGen.Common;
+using EncounterGen.Domain.Mappers.Collections;
+using EncounterGen.Domain.Selectors;
+using EncounterGen.Domain.Selectors.Collections;
+using EncounterGen.Domain.Tables;
 using Ninject;
 using NUnit.Framework;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -12,6 +15,10 @@ namespace EncounterGen.Tests.Integration.Tables
     {
         [Inject]
         internal CollectionMapper CollectionMapper { get; set; }
+        [Inject]
+        internal ICollectionSelector CollectionSelector { get; set; }
+        [Inject]
+        internal IEncounterSelector EncounterSelector { get; set; }
 
         private Dictionary<string, IEnumerable<string>> table;
 
@@ -23,25 +30,65 @@ namespace EncounterGen.Tests.Integration.Tables
 
         public abstract void EntriesAreComplete();
 
-        protected IEnumerable<string> GetCollection(string name)
-        {
-            if (table.ContainsKey(name) == false)
-                throw new ArgumentException($"Table {tableName} does not contain {name}");
-
-            return table[name];
-        }
-
-        protected IEnumerable<string> GetAllCollections()
-        {
-            //INFO: Doing Except(table.Keys) removes subgroups from the list
-            return table.Values.SelectMany(v => v).Except(table.Keys);
-        }
-
         protected void AssertEntriesAreComplete(IEnumerable<string> entries)
         {
             AssertNoDuplicates(entries);
             AssertNoDuplicates(table.Keys);
             AssertWholeCollection(entries, table.Keys);
+        }
+
+        protected IEnumerable<string> GetEntries()
+        {
+            return table.Keys;
+        }
+
+        protected IEnumerable<string> GetCollection(string entry)
+        {
+            return table[entry];
+        }
+
+        protected IEnumerable<string> ExplodeCollection(string name)
+        {
+            if (CollectionSelector.IsGroup(tableName, name))
+                return CollectionSelector.Explode(tableName, name);
+
+            return new[] { name };
+        }
+
+        protected IEnumerable<string> GetAllCollections()
+        {
+            return table.Keys.SelectMany(k => CollectionSelector.Explode(tableName, k)).Distinct();
+        }
+
+        protected IEnumerable<string> GetAllCreaturesFromEncounters()
+        {
+            //INFO: Because currently, all encounters can occur at night (not all occur in day)
+            var allEncounters = CollectionSelector.ExplodeInto(TableNameConstants.CreatureGroups, EnvironmentConstants.TimesOfDay.Night, TableNameConstants.EncounterGroups);
+            var allCreatures = allEncounters.SelectMany(e => EncounterSelector.SelectCreaturesAndAmountsFrom(e).Keys);
+
+            //INFO: These are creatues that do not explicitly appear in encounters, but we wish to include them anyway
+            var extraCreatures = new[]
+            {
+                CreatureConstants.DominatedCreature_CR1,
+                CreatureConstants.DominatedCreature_CR2,
+                CreatureConstants.DominatedCreature_CR3,
+                CreatureConstants.DominatedCreature_CR5,
+                CreatureConstants.DominatedCreature_CR6,
+                CreatureConstants.Mephit_Air,
+                CreatureConstants.Mephit_Dust,
+                CreatureConstants.Mephit_Earth,
+                CreatureConstants.Mephit_Fire,
+                CreatureConstants.Mephit_Ice,
+                CreatureConstants.Mephit_Magma,
+                CreatureConstants.Mephit_Ooze,
+                CreatureConstants.Mephit_Salt,
+                CreatureConstants.Mephit_Steam,
+                CreatureConstants.Mephit_Water,
+            };
+
+            allCreatures = allCreatures.Union(extraCreatures);
+
+            return allCreatures;
         }
 
         protected void AssertWholeCollection(IEnumerable<string> expected, IEnumerable<string> actual)
@@ -50,18 +97,21 @@ namespace EncounterGen.Tests.Integration.Tables
                 Assert.That(actual.Single(), Is.EqualTo(expected.Single()));
 
             var missing = expected.Except(actual);
-            Assert.That(missing, Is.Empty, $"{missing.Count()} missing");
+            Assert.That(missing, Is.Empty, $"{missing.Count()} of {expected.Count()} missing");
 
             var extra = actual.Except(expected);
             Assert.That(extra, Is.Empty, $"{extra.Count()} extra");
 
-            Assert.That(actual.Count(), Is.EqualTo(expected.Count()));
+            Assert.That(actual.Count, Is.EqualTo(expected.Count()));
+            Assert.That(actual, Is.EquivalentTo(expected));
         }
 
         protected void AssertContainedCollection(IEnumerable<string> contained, IEnumerable<string> container)
         {
             var extra = contained.Except(container);
             Assert.That(extra, Is.Empty, $"{extra.Count()} extra in contained collection that are not in container");
+
+            Assert.That(contained, Is.SubsetOf(container));
         }
 
         public virtual void Collection(string entry, params string[] items)
@@ -79,13 +129,7 @@ namespace EncounterGen.Tests.Integration.Tables
             AssertWholeCollection(items, table[entry]);
         }
 
-        protected void ContainedCollection(string entry, params string[] items)
-        {
-            Assert.That(table.Keys, Contains.Item(entry));
-            AssertContainedCollection(table[entry], items);
-        }
-
-        protected void AssertNoDuplicates(IEnumerable<string> collection)
+        private void AssertNoDuplicates(IEnumerable<string> collection)
         {
             var duplicates = collection.Where(i => collection.Count(ii => ii == i) > 1).Distinct();
             Assert.That(collection, Is.Unique, $"Duplicates: {string.Join(", ", duplicates)}");

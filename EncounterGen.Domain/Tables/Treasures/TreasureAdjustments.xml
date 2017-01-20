@@ -2,7 +2,7 @@
 
 <collections>
   <collection>
-    <entry>Aasimar warrior</entry>
+    <entry>Character[1]{Aasimar}@Warrior@</entry>
     <item>1</item>
     <item>1</item>
     <item>1</item>
@@ -14,7 +14,7 @@
     <item>2</item>
   </collection>
   <collection>
-    <entry>Aboleth Mage</entry>
+    <entry>Aboleth$Mage$</entry>
     <item>2</item>
     <item>2</item>
     <item>2</item>
@@ -38,43 +38,43 @@
     <item>1</item>
   </collection>
   <collection>
-    <entry>Gargantuan animated object</entry>
+    <entry>Animated object$Gargantuan$</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
   </collection>
   <collection>
-    <entry>Colossal animated object</entry>
+    <entry>Animated object$Colossal$</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
   </collection>
   <collection>
-    <entry>Huge animated object</entry>
+    <entry>Animated object$Huge$</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
   </collection>
   <collection>
-    <entry>Large animated object</entry>
+    <entry>Animated object$Large$</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
   </collection>
   <collection>
-    <entry>Medium animated object</entry>
+    <entry>Animated object$Medium$</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
   </collection>
   <collection>
-    <entry>Small animated object</entry>
+    <entry>Animated object$Small$</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
   </collection>
   <collection>
-    <entry>Tiny animated object</entry>
+    <entry>Animated object$Tiny$</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
@@ -110,19 +110,19 @@
     <item>1</item>
   </collection>
   <collection>
-    <entry>Juvenile arrowhawk</entry>
+    <entry>Arrowhawk$Juvenile$</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
   </collection>
   <collection>
-    <entry>Adult arrowhawk</entry>
+    <entry>Arrowhawk$Adult$</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
   </collection>
   <collection>
-    <entry>Elder arrowhawk</entry>
+    <entry>Arrowhawk$Elder$</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
@@ -158,6 +158,36 @@
     <item>1</item>
   </collection>
   <collection>
+    <entry>Azer$Noncombatant$</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Captain)[7]{Azer}</entry>
+    <item>1</item>
+    <item>2</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Character(Leader)[1d4+2]{Azer}</entry>
+    <item>1</item>
+    <item>2</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Character(Lieutenant)[5]{Azer}</entry>
+    <item>1</item>
+    <item>2</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Character(Sergeant)[3]{Azer}</entry>
+    <item>1</item>
+    <item>2</item>
+    <item>1</item>
+  </collection>
+  <collection>
     <entry>Babau</entry>
     <item>1</item>
     <item>1</item>
@@ -182,7 +212,7 @@
     <item>0</item>
   </collection>
   <collection>
-    <entry>Celestial badger</entry>
+    <entry>Badger$Celestial creature$</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
@@ -200,13 +230,13 @@
     <item>2</item>
   </collection>
   <collection>
-    <entry>Greater barghest</entry>
+    <entry>Barghest$Greater$</entry>
     <item>2</item>
     <item>2</item>
     <item>2</item>
   </collection>
   <collection>
-    <entry>Bearded Devil</entry>
+    <entry>Bearded Devil(Barbazu)</entry>
     <item>1</item>
     <item>1</item>
     <item>1</item>
@@ -218,7 +248,7 @@
     <item>0</item>
   </collection>
   <collection>
-    <entry>Abyssal greater basilisk</entry>
+    <entry>Basilisk$Abyssal Greater$</entry>
     <item>1</item>
     <item>1</item>
     <item>1</item>
@@ -308,7 +338,7 @@
     <item>0</item>
   </collection>
   <collection>
-    <entry>Elder black pudding</entry>
+    <entry>Black pudding$Elder$</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
@@ -344,6 +374,24 @@
     <item>1</item>
   </collection>
   <collection>
+    <entry>Bugbear$Noncombatant$</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Leader)[1d4+1]{Bugbear}</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Character(Sergeant)[2]{Bugbear}</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
     <entry>Bulette</entry>
     <item>0</item>
     <item>0</item>
@@ -368,13 +416,37 @@
     <item>1</item>
   </collection>
   <collection>
-    <entry>Chaos beast</entry>
+    <entry>Centaur$Noncombatant$</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
   </collection>
   <collection>
-    <entry>Character</entry>
+    <entry>Character(Leader)[1d4+1]{Centaur}@Druid@</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Character(Leader)[2d3+3]{Centaur}@Druid@</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Character(Lieutenant)[5]{Centaur}</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Character(Sergeant)[3]{Centaur}</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Chaos beast</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
@@ -392,13 +464,3649 @@
     <item>0</item>
   </collection>
   <collection>
-    <entry>NPC</entry>
+    <entry>Character(Adventurer)[1]</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
   </collection>
   <collection>
-    <entry>Warrior</entry>
+    <entry>Character(Adventurer)[2]</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Adventurer)[3]</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Adventurer)[4]</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Adventurer)[5]</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Adventurer)[6]</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Adventurer)[7]</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Adventurer)[8]</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Adventurer)[9]</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Adventurer)[10]</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Adventurer)[11]</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Adventurer)[12]</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Adventurer)[13]</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Adventurer)[14]</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Adventurer)[15]</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Adventurer)[16]</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Adventurer)[17]</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Adventurer)[18]</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Adventurer)[19]</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Adventurer)[20]</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Adviser)[1]@Expert@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Adviser)[1d2+1]@Expert@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Adviser)[1d2+3]@Expert@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Adviser)[1d2+5]@Expert@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Adviser)[1d2+7]@Expert@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Adviser)[1d2+9]@Expert@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Adviser)[1d2+11]@Expert@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Adviser)[1d2+13]@Expert@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Adviser)[1d2+15]@Expert@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Adviser)[1d2+17]@Expert@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Adviser)[20]@Expert@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Animal trainer)[1]@Druid&amp;Ranger@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Animal trainer)[2]@Druid&amp;Ranger@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Animal trainer)[3]@Druid&amp;Ranger@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Animal trainer)[4]@Druid&amp;Ranger@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Animal trainer)[5]@Druid&amp;Ranger@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Animal trainer)[6]@Druid&amp;Ranger@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Animal trainer)[7]@Druid&amp;Ranger@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Animal trainer)[8]@Druid&amp;Ranger@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Animal trainer)[9]@Druid&amp;Ranger@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Animal trainer)[10]@Druid&amp;Ranger@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Animal trainer)[11]@Druid&amp;Ranger@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Animal trainer)[12]@Druid&amp;Ranger@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Animal trainer)[13]@Druid&amp;Ranger@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Animal trainer)[14]@Druid&amp;Ranger@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Animal trainer)[15]@Druid&amp;Ranger@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Animal trainer)[16]@Druid&amp;Ranger@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Animal trainer)[17]@Druid&amp;Ranger@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Animal trainer)[18]@Druid&amp;Ranger@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Animal trainer)[19]@Druid&amp;Ranger@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Animal trainer)[20]@Druid&amp;Ranger@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Architect)[1]@Expert@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Architect)[1d2+1]@Expert@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Architect)[1d2+3]@Expert@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Architect)[1d2+5]@Expert@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Architect)[1d2+7]@Expert@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Architect)[1d2+9]@Expert@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Architect)[1d2+11]@Expert@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Architect)[1d2+13]@Expert@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Architect)[1d2+15]@Expert@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Architect)[1d2+17]@Expert@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Architect)[20]@Expert@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Artisan)[1]@Expert@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Artisan)[1d2+1]@Expert@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Artisan)[1d2+3]@Expert@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Artisan)[1d2+5]@Expert@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Artisan)[1d2+7]@Expert@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Artisan)[1d2+9]@Expert@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Artisan)[1d2+11]@Expert@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Artisan)[1d2+13]@Expert@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Artisan)[1d2+15]@Expert@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Artisan)[1d2+17]@Expert@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Artisan)[20]@Expert@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Bandit)[1]@Warrior@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Bandit)[1d2+1]@Warrior@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Bandit)[1d2+3]@Warrior@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Bandit)[1d2+5]@Warrior@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Bandit)[1d2+7]@Warrior@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Bandit)[1d2+9]@Warrior@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Bandit)[1d2+11]@Warrior@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Bandit)[1d2+13]@Warrior@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Bandit)[1d2+15]@Warrior@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Bandit)[1d2+17]@Warrior@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Bandit)[20]@Warrior@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Beggar)[1]@Commoner@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Beggar)[1d2+1]@Commoner@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Beggar)[1d2+3]@Commoner@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Beggar)[1d2+5]@Commoner@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Beggar)[1d2+7]@Commoner@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Beggar)[1d2+9]@Commoner@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Beggar)[1d2+11]@Commoner@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Beggar)[1d2+13]@Commoner@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Beggar)[1d2+15]@Commoner@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Beggar)[1d2+17]@Commoner@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Beggar)[20]@Commoner@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Businessman)[1]@Aristocrat@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Businessman)[1d2+1]@Aristocrat@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Businessman)[1d2+3]@Aristocrat@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Businessman)[1d2+5]@Aristocrat@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Businessman)[1d2+7]@Aristocrat@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Businessman)[1d2+9]@Aristocrat@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Businessman)[1d2+11]@Aristocrat@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Businessman)[1d2+13]@Aristocrat@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Businessman)[1d2+15]@Aristocrat@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Businessman)[1d2+17]@Aristocrat@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Businessman)[20]@Aristocrat@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Captain)[1]@Fighter@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Captain)[2]@Fighter@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Captain)[3]@Fighter@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Captain)[4]@Fighter@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Captain)[5]@Fighter@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Captain)[6]@Fighter@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Captain)[7]@Fighter@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Captain)[8]@Fighter@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Captain)[9]@Fighter@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Captain)[10]@Fighter@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Captain)[11]@Fighter@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Captain)[1d2+1]@Warrior@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Captain)[1d2+3]@Warrior@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Captain)[1d2+5]@Warrior@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Captain)[1d2+7]@Warrior@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Captain)[1d2+9]@Warrior@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Captain)[1d2+11]@Warrior@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Captain)[1d2+13]@Warrior@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Captain)[1d2+15]@Warrior@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Captain)[1d2+17]@Warrior@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Captain)[20]@Warrior@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Construction Worker)[1]@Commoner@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Construction Worker)[1d2+1]@Commoner@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Construction Worker)[1d2+3]@Commoner@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Construction Worker)[1d2+5]@Commoner@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Construction Worker)[1d2+7]@Commoner@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Construction Worker)[1d2+9]@Commoner@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Construction Worker)[1d2+11]@Commoner@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Construction Worker)[1d2+13]@Commoner@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Construction Worker)[1d2+15]@Commoner@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Construction Worker)[1d2+17]@Commoner@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Construction Worker)[20]@Commoner@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Crusader)[1]@Paladin@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Crusader)[2]@Paladin@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Crusader)[3]@Paladin@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Crusader)[4]@Paladin@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Crusader)[5]@Paladin@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Crusader)[6]@Paladin@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Crusader)[7]@Paladin@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Crusader)[8]@Paladin@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Crusader)[9]@Paladin@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Crusader)[10]@Paladin@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Crusader)[11]@Paladin@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Crusader)[12]@Paladin@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Crusader)[13]@Paladin@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Crusader)[14]@Paladin@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Crusader)[15]@Paladin@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Crusader)[16]@Paladin@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Crusader)[17]@Paladin@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Crusader)[18]@Paladin@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Crusader)[19]@Paladin@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Crusader)[20]@Paladin@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Doctor)[1]@Adept@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Doctor)[1d2+1]@Adept@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Doctor)[1d2+3]@Adept@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Doctor)[1d2+5]@Adept@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Doctor)[1d2+7]@Adept@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Doctor)[1d2+9]@Adept@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Doctor)[1d2+11]@Adept@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Doctor)[1d2+13]@Adept@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Doctor)[1d2+15]@Adept@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Doctor)[1d2+17]@Adept@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Doctor)[20]@Adept@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Doctor)[1]@Cleric&amp;Druid@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Doctor)[2]@Cleric&amp;Druid@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Doctor)[3]@Cleric&amp;Druid@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Doctor)[4]@Cleric&amp;Druid@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Doctor)[5]@Cleric&amp;Druid@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Doctor)[6]@Cleric&amp;Druid@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Doctor)[7]@Cleric&amp;Druid@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Doctor)[8]@Cleric&amp;Druid@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Doctor)[9]@Cleric&amp;Druid@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Doctor)[10]@Cleric&amp;Druid@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Doctor)[11]@Cleric&amp;Druid@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Doctor)[12]@Cleric&amp;Druid@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Doctor)[13]@Cleric&amp;Druid@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Doctor)[14]@Cleric&amp;Druid@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Doctor)[15]@Cleric&amp;Druid@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Doctor)[16]@Cleric&amp;Druid@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Doctor)[17]@Cleric&amp;Druid@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Doctor)[18]@Cleric&amp;Druid@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Doctor)[19]@Cleric&amp;Druid@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Doctor)[20]@Cleric&amp;Druid@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Famous entertainer)[11]@Bard&amp;Sorcerer@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Famous entertainer)[12]@Bard&amp;Sorcerer@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Famous entertainer)[13]@Bard&amp;Sorcerer@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Famous entertainer)[14]@Bard&amp;Sorcerer@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Famous entertainer)[15]@Bard&amp;Sorcerer@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Famous entertainer)[16]@Bard&amp;Sorcerer@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Famous entertainer)[17]@Bard&amp;Sorcerer@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Famous entertainer)[18]@Bard&amp;Sorcerer@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Famous entertainer)[19]@Bard&amp;Sorcerer@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Famous entertainer)[20]@Bard&amp;Sorcerer@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Famous Priest)[11]@Cleric&amp;Druid&amp;Monk&amp;Paladin@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Famous Priest)[12]@Cleric&amp;Druid&amp;Monk&amp;Paladin@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Famous Priest)[13]@Cleric&amp;Druid&amp;Monk&amp;Paladin@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Famous Priest)[14]@Cleric&amp;Druid&amp;Monk&amp;Paladin@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Famous Priest)[15]@Cleric&amp;Druid&amp;Monk&amp;Paladin@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Famous Priest)[16]@Cleric&amp;Druid&amp;Monk&amp;Paladin@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Famous Priest)[17]@Cleric&amp;Druid&amp;Monk&amp;Paladin@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Famous Priest)[18]@Cleric&amp;Druid&amp;Monk&amp;Paladin@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Famous Priest)[19]@Cleric&amp;Druid&amp;Monk&amp;Paladin@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Famous Priest)[20]@Cleric&amp;Druid&amp;Monk&amp;Paladin@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Famous researcher)[11]@Wizard@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Famous researcher)[12]@Wizard@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Famous researcher)[13]@Wizard@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Famous researcher)[14]@Wizard@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Famous researcher)[15]@Wizard@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Famous researcher)[16]@Wizard@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Famous researcher)[17]@Wizard@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Famous researcher)[18]@Wizard@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Famous researcher)[19]@Wizard@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Famous researcher)[20]@Wizard@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Farmer)[1]@Commoner@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Farmer)[1d2+1]@Commoner@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Farmer)[1d2+3]@Commoner@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Farmer)[1d2+5]@Commoner@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Farmer)[1d2+7]@Commoner@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Farmer)[1d2+9]@Commoner@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Farmer)[1d2+11]@Commoner@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Farmer)[1d2+13]@Commoner@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Farmer)[1d2+15]@Commoner@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Farmer)[1d2+17]@Commoner@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Farmer)[20]@Commoner@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Fortuneteller)[1]@Adept@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Fortuneteller)[1d2+1]@Adept@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Fortuneteller)[1d2+3]@Adept@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Fortuneteller)[1d2+5]@Adept@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Fortuneteller)[1d2+7]@Adept@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Fortuneteller)[1d2+9]@Adept@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Fortuneteller)[1d2+11]@Adept@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Fortuneteller)[1d2+13]@Adept@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Fortuneteller)[1d2+15]@Adept@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Fortuneteller)[1d2+17]@Adept@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Fortuneteller)[20]@Adept@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Gentry)[1]@Aristocrat@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Gentry)[1d2+1]@Aristocrat@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Gentry)[1d2+3]@Aristocrat@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Gentry)[1d2+5]@Aristocrat@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Gentry)[1d2+7]@Aristocrat@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Gentry)[1d2+9]@Aristocrat@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Gentry)[1d2+11]@Aristocrat@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Gentry)[1d2+13]@Aristocrat@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Gentry)[1d2+15]@Aristocrat@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Gentry)[1d2+17]@Aristocrat@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Gentry)[20]@Aristocrat@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Guard)[1]@Warrior@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Guard)[1d2+1]@Warrior@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Guard)[1d2+3]@Warrior@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Guard)[1d2+5]@Warrior@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Guard)[1d2+7]@Warrior@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Guard)[1d2+9]@Warrior@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Guard)[1d2+11]@Warrior@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Guard)[1d2+13]@Warrior@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Guard)[1d2+15]@Warrior@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Guard)[1d2+17]@Warrior@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Guard)[20]@Warrior@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Herder)[1]@Commoner@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Herder)[1d2+1]@Commoner@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Herder)[1d2+3]@Commoner@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Herder)[1d2+5]@Commoner@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Herder)[1d2+7]@Commoner@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Herder)[1d2+9]@Commoner@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Herder)[1d2+11]@Commoner@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Herder)[1d2+13]@Commoner@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Herder)[1d2+15]@Commoner@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Herder)[1d2+17]@Commoner@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Herder)[20]@Commoner@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Hitman)[1]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Hitman)[2]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Hitman)[3]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Hitman)[4]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Hitman)[5]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Hitman)[6]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Hitman)[7]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Hitman)[8]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Hitman)[9]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Hitman)[10]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Hitman)[11]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Hitman)[12]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Hitman)[13]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Hitman)[14]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Hitman)[15]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Hitman)[16]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Hitman)[17]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Hitman)[18]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Hitman)[19]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Hitman)[20]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Hunter)[1]@Commoner&amp;Warrior@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Hunter)[1d2+1]@Commoner&amp;Warrior@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Hunter)[1d2+3]@Commoner&amp;Warrior@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Hunter)[1d2+5]@Commoner&amp;Warrior@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Hunter)[1d2+7]@Commoner&amp;Warrior@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Hunter)[1d2+9]@Commoner&amp;Warrior@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Hunter)[1d2+11]@Commoner&amp;Warrior@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Hunter)[1d2+13]@Commoner&amp;Warrior@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Hunter)[1d2+15]@Commoner&amp;Warrior@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Hunter)[1d2+17]@Commoner&amp;Warrior@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Hunter)[20]@Commoner&amp;Warrior@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Leader)[1]@Bard@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Leader)[2]@Bard@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Leader)[3]@Bard@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Leader)[4]@Bard@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Leader)[5]@Bard@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Leader)[6]@Bard@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Leader)[7]@Bard@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Leader)[8]@Bard@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Leader)[9]@Bard@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Leader)[10]@Bard@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Leader)[11]@Bard@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Leader)[1]@Cleric@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Leader)[2]@Cleric@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Leader)[3]@Cleric@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Leader)[4]@Cleric@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Leader)[5]@Cleric@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Leader)[6]@Cleric@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Leader)[7]@Cleric@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Leader)[8]@Cleric@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Leader)[9]@Cleric@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Leader)[10]@Cleric@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Leader)[11]@Cleric@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Leader)[1]@Fighter@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Leader)[2]@Fighter@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Leader)[3]@Fighter@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Leader)[4]@Fighter@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Leader)[5]@Fighter@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Leader)[6]@Fighter@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Leader)[7]@Fighter@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Leader)[8]@Fighter@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Leader)[9]@Fighter@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Leader)[10]@Fighter@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Leader)[11]@Fighter@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Leader)[1d2+1]@Warrior@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Leader)[1d2+3]@Warrior@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Leader)[1d2+5]@Warrior@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Leader)[1d2+7]@Warrior@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Leader)[1d2+9]@Warrior@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Leader)[1d2+11]@Warrior@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Leader)[1d2+13]@Warrior@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Leader)[1d2+15]@Warrior@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Leader)[1d2+17]@Warrior@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Leader)[20]@Warrior@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Merchant)[1]@Commoner&amp;Expert@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Merchant)[1d2+1]@Commoner&amp;Expert@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Merchant)[1d2+3]@Commoner&amp;Expert@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Merchant)[1d2+5]@Commoner&amp;Expert@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Merchant)[1d2+7]@Commoner&amp;Expert@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Merchant)[1d2+9]@Commoner&amp;Expert@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Merchant)[1d2+11]@Commoner&amp;Expert@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Merchant)[1d2+13]@Commoner&amp;Expert@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Merchant)[1d2+15]@Commoner&amp;Expert@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Merchant)[1d2+17]@Commoner&amp;Expert@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Merchant)[20]@Commoner&amp;Expert@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Minstrel)[1]@Commoner&amp;Expert@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Minstrel)[1d2+1]@Commoner&amp;Expert@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Minstrel)[1d2+3]@Commoner&amp;Expert@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Minstrel)[1d2+5]@Commoner&amp;Expert@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Minstrel)[1d2+7]@Commoner&amp;Expert@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Minstrel)[1d2+9]@Commoner&amp;Expert@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Minstrel)[1d2+11]@Commoner&amp;Expert@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Minstrel)[1d2+13]@Commoner&amp;Expert@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Minstrel)[1d2+15]@Commoner&amp;Expert@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Minstrel)[1d2+17]@Commoner&amp;Expert@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Minstrel)[20]@Commoner&amp;Expert@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Missionary)[1]@Adept@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Missionary)[1d2+1]@Adept@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Missionary)[1d2+3]@Adept@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Missionary)[1d2+5]@Adept@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Missionary)[1d2+7]@Adept@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Missionary)[1d2+9]@Adept@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Missionary)[1d2+11]@Adept@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Missionary)[1d2+13]@Adept@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Missionary)[1d2+15]@Adept@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Missionary)[1d2+17]@Adept@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Missionary)[20]@Adept@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Missionary)[1]@Cleric&amp;Druid&amp;Monk&amp;Paladin@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Missionary)[2]@Cleric&amp;Druid&amp;Monk&amp;Paladin@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Missionary)[3]@Cleric&amp;Druid&amp;Monk&amp;Paladin@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Missionary)[4]@Cleric&amp;Druid&amp;Monk&amp;Paladin@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Missionary)[5]@Cleric&amp;Druid&amp;Monk&amp;Paladin@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Missionary)[6]@Cleric&amp;Druid&amp;Monk&amp;Paladin@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Missionary)[7]@Cleric&amp;Druid&amp;Monk&amp;Paladin@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Missionary)[8]@Cleric&amp;Druid&amp;Monk&amp;Paladin@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Missionary)[9]@Cleric&amp;Druid&amp;Monk&amp;Paladin@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Missionary)[10]@Cleric&amp;Druid&amp;Monk&amp;Paladin@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Missionary)[11]@Cleric&amp;Druid&amp;Monk&amp;Paladin@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Missionary)[12]@Cleric&amp;Druid&amp;Monk&amp;Paladin@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Missionary)[13]@Cleric&amp;Druid&amp;Monk&amp;Paladin@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Missionary)[14]@Cleric&amp;Druid&amp;Monk&amp;Paladin@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Missionary)[15]@Cleric&amp;Druid&amp;Monk&amp;Paladin@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Missionary)[16]@Cleric&amp;Druid&amp;Monk&amp;Paladin@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Missionary)[17]@Cleric&amp;Druid&amp;Monk&amp;Paladin@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Missionary)[18]@Cleric&amp;Druid&amp;Monk&amp;Paladin@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Missionary)[19]@Cleric&amp;Druid&amp;Monk&amp;Paladin@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Missionary)[20]@Cleric&amp;Druid&amp;Monk&amp;Paladin@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Pickpocket)[1]@Rogue@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Pickpocket)[2]@Rogue@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Pickpocket)[3]@Rogue@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Pickpocket)[4]@Rogue@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Pickpocket)[5]@Rogue@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Pickpocket)[6]@Rogue@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Pickpocket)[7]@Rogue@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Pickpocket)[8]@Rogue@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Pickpocket)[9]@Rogue@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Pickpocket)[10]@Rogue@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Pickpocket)[11]@Rogue@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Pickpocket)[12]@Rogue@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Pickpocket)[13]@Rogue@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Pickpocket)[14]@Rogue@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Pickpocket)[15]@Rogue@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Pickpocket)[16]@Rogue@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Pickpocket)[17]@Rogue@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Pickpocket)[18]@Rogue@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Pickpocket)[19]@Rogue@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Pickpocket)[20]@Rogue@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Pilgrim)[1]@Commoner@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Pilgrim)[1d2+1]@Commoner@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Pilgrim)[1d2+3]@Commoner@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Pilgrim)[1d2+5]@Commoner@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Pilgrim)[1d2+7]@Commoner@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Pilgrim)[1d2+9]@Commoner@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Pilgrim)[1d2+11]@Commoner@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Pilgrim)[1d2+13]@Commoner@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Pilgrim)[1d2+15]@Commoner@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Pilgrim)[1d2+17]@Commoner@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Pilgrim)[20]@Commoner@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Politician)[1]@Aristocrat@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Politician)[1d2+1]@Aristocrat@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Politician)[1d2+3]@Aristocrat@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Politician)[1d2+5]@Aristocrat@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Politician)[1d2+7]@Aristocrat@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Politician)[1d2+9]@Aristocrat@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Politician)[1d2+11]@Aristocrat@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Politician)[1d2+13]@Aristocrat@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Politician)[1d2+15]@Aristocrat@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Politician)[1d2+17]@Aristocrat@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Politician)[20]@Aristocrat@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Protestor)[1]@Commoner@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Protestor)[1d2+1]@Commoner@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Protestor)[1d2+3]@Commoner@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Protestor)[1d2+5]@Commoner@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Protestor)[1d2+7]@Commoner@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Protestor)[1d2+9]@Commoner@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Protestor)[1d2+11]@Commoner@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Protestor)[1d2+13]@Commoner@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Protestor)[1d2+15]@Commoner@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Protestor)[1d2+17]@Commoner@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Protestor)[20]@Commoner@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Retired adventurer)[11]</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Retired adventurer)[12]</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Retired adventurer)[13]</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Retired adventurer)[14]</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Retired adventurer)[15]</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Retired adventurer)[16]</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Retired adventurer)[17]</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Retired adventurer)[18]</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Retired adventurer)[19]</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Retired adventurer)[20]</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Scholar)[1]@Monk&amp;Wizard@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Scholar)[2]@Monk&amp;Wizard@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Scholar)[3]@Monk&amp;Wizard@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Scholar)[4]@Monk&amp;Wizard@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Scholar)[5]@Monk&amp;Wizard@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Scholar)[6]@Monk&amp;Wizard@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Scholar)[7]@Monk&amp;Wizard@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Scholar)[8]@Monk&amp;Wizard@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Scholar)[9]@Monk&amp;Wizard@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Scholar)[10]@Monk&amp;Wizard@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Scholar)[11]@Monk&amp;Wizard@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Scholar)[12]@Monk&amp;Wizard@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Scholar)[13]@Monk&amp;Wizard@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Scholar)[14]@Monk&amp;Wizard@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Scholar)[15]@Monk&amp;Wizard@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Scholar)[16]@Monk&amp;Wizard@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Scholar)[17]@Monk&amp;Wizard@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Scholar)[18]@Monk&amp;Wizard@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Scholar)[19]@Monk&amp;Wizard@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Scholar)[20]@Monk&amp;Wizard@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Sellsword)[1]</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Sellsword)[2]</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Sellsword)[3]</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Sellsword)[4]</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Sellsword)[5]</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Sellsword)[6]</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Sellsword)[7]</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Sellsword)[8]</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Sellsword)[9]</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Sellsword)[10]</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Sellsword)[11]</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Sellsword)[12]</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Sellsword)[13]</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Sellsword)[14]</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Sellsword)[15]</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Sellsword)[16]</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Sellsword)[17]</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Sellsword)[18]</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Sellsword)[19]</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Sellsword)[20]</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Servant)[1]@Commoner@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Servant)[1d2+1]@Commoner@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Servant)[1d2+3]@Commoner@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Servant)[1d2+5]@Commoner@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Servant)[1d2+7]@Commoner@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Servant)[1d2+9]@Commoner@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Servant)[1d2+11]@Commoner@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Servant)[1d2+13]@Commoner@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Servant)[1d2+15]@Commoner@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Servant)[1d2+17]@Commoner@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Servant)[20]@Commoner@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Star Student)[1]</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Star Student)[2]</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Star Student)[3]</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Star Student)[4]</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Star Student)[5]</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Star Student)[6]</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Star Student)[7]</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Star Student)[8]</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Star Student)[9]</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Star Student)[10]</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Street performer)[1]@Adept@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Street performer)[1d2+1]@Adept@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Street performer)[1d2+3]@Adept@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Street performer)[1d2+5]@Adept@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Street performer)[1d2+7]@Adept@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Street performer)[1d2+9]@Adept@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Street performer)[1d2+11]@Adept@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Street performer)[1d2+13]@Adept@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Street performer)[1d2+15]@Adept@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Street performer)[1d2+17]@Adept@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Street performer)[20]@Adept@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Street performer)[1]@Bard&amp;Rogue&amp;Sorcerer@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Street performer)[2]@Bard&amp;Rogue&amp;Sorcerer@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Street performer)[3]@Bard&amp;Rogue&amp;Sorcerer@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Street performer)[4]@Bard&amp;Rogue&amp;Sorcerer@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Street performer)[5]@Bard&amp;Rogue&amp;Sorcerer@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Street performer)[6]@Bard&amp;Rogue&amp;Sorcerer@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Street performer)[7]@Bard&amp;Rogue&amp;Sorcerer@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Street performer)[8]@Bard&amp;Rogue&amp;Sorcerer@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Street performer)[9]@Bard&amp;Rogue&amp;Sorcerer@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Street performer)[10]@Bard&amp;Rogue&amp;Sorcerer@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Street performer)[11]@Bard&amp;Rogue&amp;Sorcerer@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Street performer)[12]@Bard&amp;Rogue&amp;Sorcerer@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Street performer)[13]@Bard&amp;Rogue&amp;Sorcerer@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Street performer)[14]@Bard&amp;Rogue&amp;Sorcerer@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Street performer)[15]@Bard&amp;Rogue&amp;Sorcerer@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Street performer)[16]@Bard&amp;Rogue&amp;Sorcerer@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Street performer)[17]@Bard&amp;Rogue&amp;Sorcerer@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Street performer)[18]@Bard&amp;Rogue&amp;Sorcerer@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Street performer)[19]@Bard&amp;Rogue&amp;Sorcerer@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Street performer)[20]@Bard&amp;Rogue&amp;Sorcerer@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Student)[1]@Any NPC@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Student)[1d2+1]@Any NPC@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Student)[1d2+3]@Any NPC@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Student)[1d2+5]@Any NPC@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Student)[1d2+7]@Any NPC@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Student)[1d2+9]@Any NPC@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Student)[1d2+11]@Any NPC@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Student)[1d2+13]@Any NPC@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Student)[1d2+15]@Any NPC@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Student)[1d2+17]@Any NPC@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Teacher)[11]</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Teacher)[12]</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Teacher)[13]</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Teacher)[14]</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Teacher)[15]</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Teacher)[16]</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Teacher)[17]</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Teacher)[18]</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Teacher)[19]</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Teacher)[20]</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Traveler)[1]@Any NPC@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Traveler)[1d2+1]@Any NPC@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Traveler)[1d2+3]@Any NPC@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Traveler)[1d2+5]@Any NPC@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Traveler)[1d2+7]@Any NPC@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Traveler)[1d2+9]@Any NPC@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Traveler)[1d2+11]@Any NPC@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Traveler)[1d2+13]@Any NPC@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Traveler)[1d2+15]@Any NPC@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Traveler)[1d2+17]@Any NPC@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Traveler)[20]@Any NPC@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(War hero)[11]@Barbarian&amp;Cleric&amp;Fighter&amp;Monk&amp;Paladin&amp;Ranger&amp;Sorcerer&amp;Wizard@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(War hero)[12]@Barbarian&amp;Cleric&amp;Fighter&amp;Monk&amp;Paladin&amp;Ranger&amp;Sorcerer&amp;Wizard@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(War hero)[13]@Barbarian&amp;Cleric&amp;Fighter&amp;Monk&amp;Paladin&amp;Ranger&amp;Sorcerer&amp;Wizard@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(War hero)[14]@Barbarian&amp;Cleric&amp;Fighter&amp;Monk&amp;Paladin&amp;Ranger&amp;Sorcerer&amp;Wizard@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(War hero)[15]@Barbarian&amp;Cleric&amp;Fighter&amp;Monk&amp;Paladin&amp;Ranger&amp;Sorcerer&amp;Wizard@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(War hero)[16]@Barbarian&amp;Cleric&amp;Fighter&amp;Monk&amp;Paladin&amp;Ranger&amp;Sorcerer&amp;Wizard@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(War hero)[17]@Barbarian&amp;Cleric&amp;Fighter&amp;Monk&amp;Paladin&amp;Ranger&amp;Sorcerer&amp;Wizard@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(War hero)[18]@Barbarian&amp;Cleric&amp;Fighter&amp;Monk&amp;Paladin&amp;Ranger&amp;Sorcerer&amp;Wizard@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(War hero)[19]@Barbarian&amp;Cleric&amp;Fighter&amp;Monk&amp;Paladin&amp;Ranger&amp;Sorcerer&amp;Wizard@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(War hero)[20]@Barbarian&amp;Cleric&amp;Fighter&amp;Monk&amp;Paladin&amp;Ranger&amp;Sorcerer&amp;Wizard@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character[1]@Any NPC@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character[1d2+1]@Any NPC@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character[1d2+3]@Any NPC@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character[1d2+5]@Any NPC@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character[1d2+7]@Any NPC@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character[1d2+9]@Any NPC@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character[1d2+11]@Any NPC@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character[1d2+13]@Any NPC@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character[1d2+15]@Any NPC@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character[1d2+17]@Any NPC@</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character[20]@Any NPC@</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
@@ -446,133 +4154,55 @@
     <item>2</item>
   </collection>
   <collection>
+    <entry>Character[1d4+3]{Cloud Giant}@Cleric&amp;Sorcerer@</entry>
+    <item>2</item>
+    <item>1</item>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Cloud giant$Noncombatant$</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
     <entry>Cockatrice</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
   </collection>
   <collection>
-    <entry>Commoner</entry>
+    <entry>Monstrous centipede$Colossal$</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
   </collection>
   <collection>
-    <entry>Adept</entry>
+    <entry>Monstrous centipede$Colossal Fiendish creature$</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
   </collection>
   <collection>
-    <entry>Aristocrat</entry>
+    <entry>Monstrous centipede$Gargantuan Fiendish creature$</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
   </collection>
   <collection>
-    <entry>Expert</entry>
+    <entry>Monstrous centipede$Huge Fiendish creature$</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
   </collection>
   <collection>
-    <entry>Barbarian</entry>
+    <entry>Monstrous centipede$Large Fiendish creature$</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
   </collection>
   <collection>
-    <entry>Bard</entry>
-    <item>0</item>
-    <item>0</item>
-    <item>0</item>
-  </collection>
-  <collection>
-    <entry>Cleric</entry>
-    <item>0</item>
-    <item>0</item>
-    <item>0</item>
-  </collection>
-  <collection>
-    <entry>Druid</entry>
-    <item>0</item>
-    <item>0</item>
-    <item>0</item>
-  </collection>
-  <collection>
-    <entry>Fighter</entry>
-    <item>0</item>
-    <item>0</item>
-    <item>0</item>
-  </collection>
-  <collection>
-    <entry>Monk</entry>
-    <item>0</item>
-    <item>0</item>
-    <item>0</item>
-  </collection>
-  <collection>
-    <entry>Paladin</entry>
-    <item>0</item>
-    <item>0</item>
-    <item>0</item>
-  </collection>
-  <collection>
-    <entry>Ranger</entry>
-    <item>0</item>
-    <item>0</item>
-    <item>0</item>
-  </collection>
-  <collection>
-    <entry>Rogue</entry>
-    <item>0</item>
-    <item>0</item>
-    <item>0</item>
-  </collection>
-  <collection>
-    <entry>Sorcerer</entry>
-    <item>0</item>
-    <item>0</item>
-    <item>0</item>
-  </collection>
-  <collection>
-    <entry>Wizard</entry>
-    <item>0</item>
-    <item>0</item>
-    <item>0</item>
-  </collection>
-  <collection>
-    <entry>Colossal monstrous centipede</entry>
-    <item>0</item>
-    <item>0</item>
-    <item>0</item>
-  </collection>
-  <collection>
-    <entry>Colossal fiendish monstrous centipede</entry>
-    <item>0</item>
-    <item>0</item>
-    <item>0</item>
-  </collection>
-  <collection>
-    <entry>Gargantuan fiendish monstrous centipede</entry>
-    <item>0</item>
-    <item>0</item>
-    <item>0</item>
-  </collection>
-  <collection>
-    <entry>Huge fiendish monstrous centipede</entry>
-    <item>0</item>
-    <item>0</item>
-    <item>0</item>
-  </collection>
-  <collection>
-    <entry>Large fiendish monstrous centipede</entry>
-    <item>0</item>
-    <item>0</item>
-    <item>0</item>
-  </collection>
-  <collection>
-    <entry>Medium fiendish monstrous centipede</entry>
+    <entry>Monstrous centipede$Medium Fiendish creature$</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
@@ -584,19 +4214,19 @@
     <item>0</item>
   </collection>
   <collection>
-    <entry>Colossal monstrous scorpion</entry>
+    <entry>Monstrous scorpion$Colossal$</entry>
     <item>0.1</item>
     <item>0.5</item>
     <item>0.5</item>
   </collection>
   <collection>
-    <entry>Colossal monstrous spider</entry>
+    <entry>Monstrous spider$Colossal$</entry>
     <item>0.1</item>
     <item>0.5</item>
     <item>0.5</item>
   </collection>
   <collection>
-    <entry>Horned Devil</entry>
+    <entry>Horned Devil(Cornugon)</entry>
     <item>1</item>
     <item>2</item>
     <item>1</item>
@@ -614,7 +4244,49 @@
     <item>1</item>
   </collection>
   <collection>
-    <entry>Cryohydra</entry>
+    <entry>Cryohydra$5 heads$</entry>
+    <item>0.1</item>
+    <item>0.5</item>
+    <item>0.5</item>
+  </collection>
+  <collection>
+    <entry>Cryohydra$6 heads$</entry>
+    <item>0.1</item>
+    <item>0.5</item>
+    <item>0.5</item>
+  </collection>
+  <collection>
+    <entry>Cryohydra$7 heads$</entry>
+    <item>0.1</item>
+    <item>0.5</item>
+    <item>0.5</item>
+  </collection>
+  <collection>
+    <entry>Cryohydra$8 heads$</entry>
+    <item>0.1</item>
+    <item>0.5</item>
+    <item>0.5</item>
+  </collection>
+  <collection>
+    <entry>Cryohydra$9 heads$</entry>
+    <item>0.1</item>
+    <item>0.5</item>
+    <item>0.5</item>
+  </collection>
+  <collection>
+    <entry>Cryohydra$10 heads$</entry>
+    <item>0.1</item>
+    <item>0.5</item>
+    <item>0.5</item>
+  </collection>
+  <collection>
+    <entry>Cryohydra$11 heads$</entry>
+    <item>0.1</item>
+    <item>0.5</item>
+    <item>0.5</item>
+  </collection>
+  <collection>
+    <entry>Cryohydra$12 heads$</entry>
     <item>0.1</item>
     <item>0.5</item>
     <item>0.5</item>
@@ -650,25 +4322,25 @@
     <item>0</item>
   </collection>
   <collection>
-    <entry>Death slaad</entry>
+    <entry>Slaad$Death$</entry>
     <item>2</item>
     <item>2</item>
     <item>2</item>
   </collection>
   <collection>
-    <entry>Gray slaad</entry>
+    <entry>Slaad$Gray$</entry>
     <item>2</item>
     <item>2</item>
     <item>2</item>
   </collection>
   <collection>
-    <entry>Blue slaad</entry>
+    <entry>Slaad$Blue$</entry>
     <item>1</item>
     <item>1</item>
     <item>1</item>
   </collection>
   <collection>
-    <entry>Red slaad</entry>
+    <entry>Slaad$Red$</entry>
     <item>1</item>
     <item>1</item>
     <item>1</item>
@@ -728,13 +4400,19 @@
     <item>0.5</item>
   </collection>
   <collection>
+    <entry>Displacer beast$Pack Lord$</entry>
+    <item>0.5</item>
+    <item>0.5</item>
+    <item>0.5</item>
+  </collection>
+  <collection>
     <entry>Djinni</entry>
     <item>1</item>
     <item>1</item>
     <item>1</item>
   </collection>
   <collection>
-    <entry>Noble djinni</entry>
+    <entry>Djinni$Noble$</entry>
     <item>1</item>
     <item>1</item>
     <item>1</item>
@@ -746,7 +4424,13 @@
     <item>0</item>
   </collection>
   <collection>
-    <entry>Celestial dog</entry>
+    <entry>Dog$Celestial creature$</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Dog$Riding$</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
@@ -788,721 +4472,721 @@
     <item>2</item>
   </collection>
   <collection>
-    <entry>Ancient black dragon</entry>
+    <entry>Black dragon$Ancient$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Ancient blue dragon</entry>
+    <entry>Blue dragon$Ancient$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Ancient brass dragon</entry>
+    <entry>Brass dragon$Ancient$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Ancient bronze dragon</entry>
+    <entry>Bronze dragon$Ancient$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Ancient copper dragon</entry>
+    <entry>Copper dragon$Ancient$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Ancient green dragon</entry>
+    <entry>Green dragon$Ancient$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Ancient gold dragon</entry>
+    <entry>Gold dragon$Ancient$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Ancient red dragon</entry>
+    <entry>Red dragon$Ancient$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Ancient silver dragon</entry>
+    <entry>Silver dragon$Ancient$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Ancient white dragon</entry>
+    <entry>White dragon$Ancient$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Great wyrm black dragon</entry>
+    <entry>Black dragon$Great wyrm$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Great wyrm blue dragon</entry>
+    <entry>Blue dragon$Great wyrm$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Great wyrm brass dragon</entry>
+    <entry>Brass dragon$Great wyrm$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Great wyrm bronze dragon</entry>
+    <entry>Bronze dragon$Great wyrm$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Great wyrm copper dragon</entry>
+    <entry>Copper dragon$Great wyrm$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Great wyrm green dragon</entry>
+    <entry>Green dragon$Great wyrm$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Great wyrm gold dragon</entry>
+    <entry>Gold dragon$Great wyrm$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Great wyrm red dragon</entry>
+    <entry>Red dragon$Great wyrm$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Great wyrm silver dragon</entry>
+    <entry>Silver dragon$Great wyrm$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Great wyrm white dragon</entry>
+    <entry>White dragon$Great wyrm$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Wyrmling black dragon</entry>
+    <entry>Black dragon$Wyrmling$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Wyrmling blue dragon</entry>
+    <entry>Blue dragon$Wyrmling$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Wyrmling brass dragon</entry>
+    <entry>Brass dragon$Wyrmling$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Wyrmling bronze dragon</entry>
+    <entry>Bronze dragon$Wyrmling$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Wyrmling copper dragon</entry>
+    <entry>Copper dragon$Wyrmling$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Wyrmling green dragon</entry>
+    <entry>Green dragon$Wyrmling$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Wyrmling gold dragon</entry>
+    <entry>Gold dragon$Wyrmling$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Wyrmling red dragon</entry>
+    <entry>Red dragon$Wyrmling$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Wyrmling silver dragon</entry>
+    <entry>Silver dragon$Wyrmling$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Wyrmling white dragon</entry>
+    <entry>White dragon$Wyrmling$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Wyrm black dragon</entry>
+    <entry>Black dragon$Wyrm$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Wyrm blue dragon</entry>
+    <entry>Blue dragon$Wyrm$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Wyrm brass dragon</entry>
+    <entry>Brass dragon$Wyrm$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Wyrm bronze dragon</entry>
+    <entry>Bronze dragon$Wyrm$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Wyrm copper dragon</entry>
+    <entry>Copper dragon$Wyrm$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Wyrm green dragon</entry>
+    <entry>Green dragon$Wyrm$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Wyrm gold dragon</entry>
+    <entry>Gold dragon$Wyrm$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Wyrm red dragon</entry>
+    <entry>Red dragon$Wyrm$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Wyrm silver dragon</entry>
+    <entry>Silver dragon$Wyrm$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Wyrm white dragon</entry>
+    <entry>White dragon$Wyrm$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Very young black dragon</entry>
+    <entry>Black dragon$Very young$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Very young blue dragon</entry>
+    <entry>Blue dragon$Very young$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Very young brass dragon</entry>
+    <entry>Brass dragon$Very young$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Very young bronze dragon</entry>
+    <entry>Bronze dragon$Very young$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Very young copper dragon</entry>
+    <entry>Copper dragon$Very young$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Very young green dragon</entry>
+    <entry>Green dragon$Very young$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Very young gold dragon</entry>
+    <entry>Gold dragon$Very young$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Very young red dragon</entry>
+    <entry>Red dragon$Very young$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Very young silver dragon</entry>
+    <entry>Silver dragon$Very young$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Very young white dragon</entry>
+    <entry>White dragon$Very young$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Young black dragon</entry>
+    <entry>Black dragon$Young$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Young blue dragon</entry>
+    <entry>Blue dragon$Young$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Young brass dragon</entry>
+    <entry>Brass dragon$Young$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Young bronze dragon</entry>
+    <entry>Bronze dragon$Young$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Young copper dragon</entry>
+    <entry>Copper dragon$Young$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Young green dragon</entry>
+    <entry>Green dragon$Young$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Young gold dragon</entry>
+    <entry>Gold dragon$Young$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Young red dragon</entry>
+    <entry>Red dragon$Young$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Young silver dragon</entry>
+    <entry>Silver dragon$Young$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Young white dragon</entry>
+    <entry>White dragon$Young$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Young adult black dragon</entry>
+    <entry>Black dragon$Young adult$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Young adult blue dragon</entry>
+    <entry>Blue dragon$Young adult$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Young adult brass dragon</entry>
+    <entry>Brass dragon$Young adult$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Young adult bronze dragon</entry>
+    <entry>Bronze dragon$Young adult$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Young adult copper dragon</entry>
+    <entry>Copper dragon$Young adult$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Young adult green dragon</entry>
+    <entry>Green dragon$Young adult$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Young adult gold dragon</entry>
+    <entry>Gold dragon$Young adult$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Young adult red dragon</entry>
+    <entry>Red dragon$Young adult$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Young adult silver dragon</entry>
+    <entry>Silver dragon$Young adult$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Young adult white dragon</entry>
+    <entry>White dragon$Young adult$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Adult black dragon</entry>
+    <entry>Black dragon$Adult$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Adult blue dragon</entry>
+    <entry>Blue dragon$Adult$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Adult brass dragon</entry>
+    <entry>Brass dragon$Adult$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Adult bronze dragon</entry>
+    <entry>Bronze dragon$Adult$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Adult copper dragon</entry>
+    <entry>Copper dragon$Adult$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Adult green dragon</entry>
+    <entry>Green dragon$Adult$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Adult gold dragon</entry>
+    <entry>Gold dragon$Adult$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Adult red dragon</entry>
+    <entry>Red dragon$Adult$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Adult silver dragon</entry>
+    <entry>Silver dragon$Adult$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Adult white dragon</entry>
+    <entry>White dragon$Adult$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Mature adult black dragon</entry>
+    <entry>Black dragon$Mature adult$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Mature adult blue dragon</entry>
+    <entry>Blue dragon$Mature adult$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Mature adult brass dragon</entry>
+    <entry>Brass dragon$Mature adult$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Mature adult bronze dragon</entry>
+    <entry>Bronze dragon$Mature adult$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Mature adult copper dragon</entry>
+    <entry>Copper dragon$Mature adult$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Mature adult green dragon</entry>
+    <entry>Green dragon$Mature adult$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Mature adult gold dragon</entry>
+    <entry>Gold dragon$Mature adult$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Mature adult red dragon</entry>
+    <entry>Red dragon$Mature adult$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Mature adult silver dragon</entry>
+    <entry>Silver dragon$Mature adult$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Mature adult white dragon</entry>
+    <entry>White dragon$Mature adult$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Old black dragon</entry>
+    <entry>Black dragon$Old$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Old blue dragon</entry>
+    <entry>Blue dragon$Old$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Old brass dragon</entry>
+    <entry>Brass dragon$Old$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Old bronze dragon</entry>
+    <entry>Bronze dragon$Old$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Old copper dragon</entry>
+    <entry>Copper dragon$Old$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Old green dragon</entry>
+    <entry>Green dragon$Old$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Old gold dragon</entry>
+    <entry>Gold dragon$Old$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Old red dragon</entry>
+    <entry>Red dragon$Old$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Old silver dragon</entry>
+    <entry>Silver dragon$Old$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Old white dragon</entry>
+    <entry>White dragon$Old$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Very old black dragon</entry>
+    <entry>Black dragon$Very old$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Very old blue dragon</entry>
+    <entry>Blue dragon$Very old$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Very old brass dragon</entry>
+    <entry>Brass dragon$Very old$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Very old bronze dragon</entry>
+    <entry>Bronze dragon$Very old$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Very old copper dragon</entry>
+    <entry>Copper dragon$Very old$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Very old green dragon</entry>
+    <entry>Green dragon$Very old$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Very old gold dragon</entry>
+    <entry>Gold dragon$Very old$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Very old red dragon</entry>
+    <entry>Red dragon$Very old$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Very old silver dragon</entry>
+    <entry>Silver dragon$Very old$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Very old white dragon</entry>
+    <entry>White dragon$Very old$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Juvenile black dragon</entry>
+    <entry>Black dragon$Juvenile$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Juvenile blue dragon</entry>
+    <entry>Blue dragon$Juvenile$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Juvenile brass dragon</entry>
+    <entry>Brass dragon$Juvenile$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Juvenile bronze dragon</entry>
+    <entry>Bronze dragon$Juvenile$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Juvenile copper dragon</entry>
+    <entry>Copper dragon$Juvenile$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Juvenile green dragon</entry>
+    <entry>Green dragon$Juvenile$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Juvenile gold dragon</entry>
+    <entry>Gold dragon$Juvenile$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Juvenile red dragon</entry>
+    <entry>Red dragon$Juvenile$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Juvenile silver dragon</entry>
+    <entry>Silver dragon$Juvenile$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
   </collection>
   <collection>
-    <entry>Juvenile white dragon</entry>
+    <entry>White dragon$Juvenile$</entry>
     <item>3</item>
     <item>3</item>
     <item>3</item>
@@ -1532,7 +5216,37 @@
     <item>2</item>
   </collection>
   <collection>
-    <entry>Drow warrior</entry>
+    <entry>Character[1]{Drow}@Warrior@</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Drow$Noncombatant$</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Captain)[9]{Drow}@Warrior@</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Character(Leader)[1d4+2]{Drow}@Warrior@</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Character(Lieutenant)[6]{Drow}@Warrior@</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Character(Sergeant)[2]{Drow}@Warrior@</entry>
     <item>1</item>
     <item>1</item>
     <item>1</item>
@@ -1550,13 +5264,91 @@
     <item>1</item>
   </collection>
   <collection>
-    <entry>Duergar warrior</entry>
+    <entry>Derro$Noncombatant$</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character[1d4+4]{Derro}@Sorcerer@</entry>
     <item>1</item>
     <item>2</item>
     <item>1</item>
   </collection>
   <collection>
-    <entry>Dwarf warrior</entry>
+    <entry>Character[3]{Derro}@Sorcerer@</entry>
+    <item>1</item>
+    <item>2</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Character[1]{Duergar Dwarf}@Warrior@</entry>
+    <item>1</item>
+    <item>2</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Duergar$Noncombatant$</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Captain)[9]{Duergar Dwarf}@Warrior@</entry>
+    <item>1</item>
+    <item>2</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Character(Leader)[1d6+2]{Duergar Dwarf}@Warrior@</entry>
+    <item>1</item>
+    <item>2</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Character(Lieutenant)[6]{Duergar Dwarf}@Warrior@</entry>
+    <item>1</item>
+    <item>2</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Character(Sergeant)[3]{Duergar Dwarf}@Warrior@</entry>
+    <item>1</item>
+    <item>2</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Character[1]{Hill Dwarf}@Warrior@</entry>
+    <item>1</item>
+    <item>2</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Dwarf$Noncombatant$</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Captain)[7]{Hill Dwarf}@Warrior@</entry>
+    <item>1</item>
+    <item>2</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Character(Leader)[1d4+2]{Hill Dwarf}@Warrior@</entry>
+    <item>1</item>
+    <item>2</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Character(Lieutenant)[5]{Hill Dwarf}@Warrior@</entry>
+    <item>1</item>
+    <item>2</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Character(Sergeant)[3]{Hill Dwarf}@Warrior@</entry>
     <item>1</item>
     <item>2</item>
     <item>1</item>
@@ -1580,145 +5372,145 @@
     <item>0</item>
   </collection>
   <collection>
-    <entry>Small air elemental</entry>
+    <entry>Elemental(Air)$Small$</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
   </collection>
   <collection>
-    <entry>Medium air elemental</entry>
+    <entry>Elemental(Air)$Medium$</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
   </collection>
   <collection>
-    <entry>Large air elemental</entry>
+    <entry>Elemental(Air)$Large$</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
   </collection>
   <collection>
-    <entry>Huge air elemental</entry>
+    <entry>Elemental(Air)$Huge$</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
   </collection>
   <collection>
-    <entry>Greater air elemental</entry>
+    <entry>Elemental(Air)$Greater$</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
   </collection>
   <collection>
-    <entry>Elder air elemental</entry>
+    <entry>Elemental(Air)$Elder$</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
   </collection>
   <collection>
-    <entry>Small earth elemental</entry>
+    <entry>Elemental(Earth)$Small$</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
   </collection>
   <collection>
-    <entry>Medium earth elemental</entry>
+    <entry>Elemental(Earth)$Medium$</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
   </collection>
   <collection>
-    <entry>Large earth elemental</entry>
+    <entry>Elemental(Earth)$Large$</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
   </collection>
   <collection>
-    <entry>Huge earth elemental</entry>
+    <entry>Elemental(Earth)$Huge$</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
   </collection>
   <collection>
-    <entry>Greater earth elemental</entry>
+    <entry>Elemental(Earth)$Greater$</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
   </collection>
   <collection>
-    <entry>Elder earth elemental</entry>
+    <entry>Elemental(Earth)$Elder$</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
   </collection>
   <collection>
-    <entry>Small fire elemental</entry>
+    <entry>Elemental(Fire)$Small$</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
   </collection>
   <collection>
-    <entry>Medium fire elemental</entry>
+    <entry>Elemental(Fire)$Medium$</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
   </collection>
   <collection>
-    <entry>Large fire elemental</entry>
+    <entry>Elemental(Fire)$Large$</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
   </collection>
   <collection>
-    <entry>Huge fire elemental</entry>
+    <entry>Elemental(Fire)$Huge$</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
   </collection>
   <collection>
-    <entry>Greater fire elemental</entry>
+    <entry>Elemental(Fire)$Greater$</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
   </collection>
   <collection>
-    <entry>Elder fire elemental</entry>
+    <entry>Elemental(Fire)$Elder$</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
   </collection>
   <collection>
-    <entry>Small water elemental</entry>
+    <entry>Elemental(Water)$Small$</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
   </collection>
   <collection>
-    <entry>Medium water elemental</entry>
+    <entry>Elemental(Water)$Medium$</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
   </collection>
   <collection>
-    <entry>Large water elemental</entry>
+    <entry>Elemental(Water)$Large$</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
   </collection>
   <collection>
-    <entry>Huge water elemental</entry>
+    <entry>Elemental(Water)$Huge$</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
   </collection>
   <collection>
-    <entry>Greater water elemental</entry>
+    <entry>Elemental(Water)$Greater$</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
   </collection>
   <collection>
-    <entry>Elder water elemental</entry>
+    <entry>Elemental(Water)$Elder$</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
@@ -1730,19 +5522,109 @@
     <item>0</item>
   </collection>
   <collection>
-    <entry>Elf warrior</entry>
+    <entry>Character[1]{High Elf}@Warrior@</entry>
     <item>1</item>
     <item>1</item>
     <item>1</item>
   </collection>
   <collection>
-    <entry>Halfling warrior</entry>
+    <entry>Elf$Noncombatant$</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Captain)[7]{High Elf}@Warrior@</entry>
     <item>1</item>
     <item>1</item>
     <item>1</item>
   </collection>
   <collection>
-    <entry>Gnome warrior</entry>
+    <entry>Character(Leader)[1d4+2]{High Elf}@Warrior@</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Character(Lieutenant)[5]{High Elf}@Warrior@</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Character(Sergeant)[3]{High Elf}@Warrior@</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Character[1]{Lightfoot Halfling}@Warrior@</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Halfling$Noncombatant$</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Captain)[7]{Lightfoot Halfling}@Warrior@</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Character(Leader)[1d4+2]{Lightfoot Halfling}@Warrior@</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Character(Lieutenant)[5]{Lightfoot Halfling}@Warrior@</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Character(Sergeant)[3]{Lightfoot Halfling}@Warrior@</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Character[1]{Rock Gnome}@Warrior@</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Character(Captain)[7]{Rock Gnome}@Warrior@</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Character(Leader)[1d4+2]{Rock Gnome}@Warrior@</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Character(Lieutenant)[5]{Rock Gnome}@Warrior@</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Character(Lieutenant)[3]{Rock Gnome}@Warrior@</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Character(Sergeant)[3]{Rock Gnome}@Warrior@</entry>
     <item>1</item>
     <item>1</item>
     <item>1</item>
@@ -1784,31 +5666,73 @@
     <item>1</item>
   </collection>
   <collection>
-    <entry>Formian warrior</entry>
+    <entry>Fire giant$Noncombatant$</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
   </collection>
   <collection>
-    <entry>Formian worker</entry>
-    <item>0</item>
-    <item>0</item>
-    <item>0</item>
-  </collection>
-  <collection>
-    <entry>Formian taskmaster</entry>
+    <entry>Character[1d2]{Fire Giant}@Adept@</entry>
     <item>1</item>
     <item>1</item>
     <item>1</item>
   </collection>
   <collection>
-    <entry>Formian myrmarch</entry>
+    <entry>Character[1d3+2]{Fire Giant}@Adept@</entry>
     <item>1</item>
     <item>1</item>
     <item>1</item>
   </collection>
   <collection>
-    <entry>Formian queen</entry>
+    <entry>Character[1d2+5]{Fire Giant}@Adept@</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Character[1d2]{Fire Giant}@Cleric@</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Character[1d3+2]{Fire Giant}@Sorcerer@</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Character[1d2+5]{Fire Giant}@Cleric&amp;Sorcerer@</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Formian$Warrior$</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Formian$Worker$</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Formian$Taskmaster$</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Formian$Myrmarch$</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Formian$Queen$</entry>
     <item>2</item>
     <item>2</item>
     <item>2</item>
@@ -1820,7 +5744,49 @@
     <item>1</item>
   </collection>
   <collection>
-    <entry>Frost giant Jarl</entry>
+    <entry>Frost giant$Noncombatant$</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character[1d2]{Frost Giant}@Adept@</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Character[1d3+2]{Frost Giant}@Adept@</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Character[1d2+5]{Frost Giant}@Adept@</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Character[1d2]{Frost Giant}@Cleric@</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Character[1d3+2]{Frost Giant}@Sorcerer@</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Character[1d2+5]{Frost Giant}@Cleric&amp;Sorcerer@</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Character(Jarl)[8]{Frost Giant}@Barbarian&amp;Cleric&amp;Fighter&amp;Sorcerer@</entry>
     <item>1</item>
     <item>1</item>
     <item>1</item>
@@ -1832,19 +5798,19 @@
     <item>0</item>
   </collection>
   <collection>
-    <entry>Gargantuan monstrous centipede</entry>
+    <entry>Monstrous centipede$Gargantuan$</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
   </collection>
   <collection>
-    <entry>Gargantuan monstrous scorpion</entry>
+    <entry>Monstrous scorpion$Gargantuan$</entry>
     <item>0.1</item>
     <item>0.5</item>
     <item>0.5</item>
   </collection>
   <collection>
-    <entry>Gargantuan monstrous spider</entry>
+    <entry>Monstrous spider$Gargantuan$</entry>
     <item>0.1</item>
     <item>0.5</item>
     <item>0.5</item>
@@ -1862,7 +5828,7 @@
     <item>0.5</item>
   </collection>
   <collection>
-    <entry>Ice Devil</entry>
+    <entry>Ice Devil(Gelugon)</entry>
     <item>1</item>
     <item>2</item>
     <item>1</item>
@@ -1880,7 +5846,121 @@
     <item>1</item>
   </collection>
   <collection>
-    <entry>Ghost</entry>
+    <entry>Character[1]#Ghost#</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character[2]#Ghost#</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character[3]#Ghost#</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character[4]#Ghost#</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character[5]#Ghost#</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character[6]#Ghost#</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character[7]#Ghost#</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character[8]#Ghost#</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character[9]#Ghost#</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character[10]#Ghost#</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character[11]#Ghost#</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character[12]#Ghost#</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character[13]#Ghost#</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character[14]#Ghost#</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character[15]#Ghost#</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character[16]#Ghost#</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character[17]#Ghost#</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character[18]#Ghost#</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character[19]#Ghost#</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character[20]#Ghost#</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
@@ -1910,7 +5990,7 @@
     <item>0</item>
   </collection>
   <collection>
-    <entry>Celestial giant fire beetle</entry>
+    <entry>Giant fire beetle$Celestial creature$</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
@@ -1928,19 +6008,19 @@
     <item>0</item>
   </collection>
   <collection>
-    <entry>Giant ant soldier</entry>
+    <entry>Giant ant$Soldier$</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
   </collection>
   <collection>
-    <entry>Giant ant worker</entry>
+    <entry>Giant ant$Worker$</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
   </collection>
   <collection>
-    <entry>Giant ant queen</entry>
+    <entry>Giant ant$Queen$</entry>
     <item>0.1</item>
     <item>0.5</item>
     <item>0.5</item>
@@ -1970,7 +6050,67 @@
     <item>1</item>
   </collection>
   <collection>
-    <entry>Goblin</entry>
+    <entry>Gnoll$Noncombatant$</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Leader)[1d3+3]{Gnoll}</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Character(Leader)[1d3+5]{Gnoll}</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Character(Lieutenant)[1d2+3]{Gnoll}</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Character(Sergeant)[3]{Gnoll}</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Character[1]{Goblin}@Warrior@</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Goblin$Noncombatant$</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Leader)[1d3+3]{Goblin}@Warrior@</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Character(Leader)[1d3+5]{Goblin}@Warrior@</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Character(Lieutenant)[1d2+3]{Goblin}@Warrior@</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Character(Sergeant)[3]{Goblin}@Warrior@</entry>
     <item>1</item>
     <item>1</item>
     <item>1</item>
@@ -1994,7 +6134,7 @@
     <item>0</item>
   </collection>
   <collection>
-    <entry>Green slaad</entry>
+    <entry>Slaad$Green$</entry>
     <item>1</item>
     <item>1</item>
     <item>1</item>
@@ -2030,13 +6170,19 @@
     <item>1</item>
   </collection>
   <collection>
+    <entry>Character(Leader)[1d3+2]{Grimlock}</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
     <entry>Gynosphinx</entry>
     <item>2</item>
     <item>2</item>
     <item>2</item>
   </collection>
   <collection>
-    <entry>Barbed Devil</entry>
+    <entry>Barbed Devil(Hamatula)</entry>
     <item>1</item>
     <item>1</item>
     <item>1</item>
@@ -2048,7 +6194,7 @@
     <item>1</item>
   </collection>
   <collection>
-    <entry>Harpy archer</entry>
+    <entry>Character(Archer)[7]{Harpy}@Fighter@</entry>
     <item>1</item>
     <item>1</item>
     <item>1</item>
@@ -2060,7 +6206,7 @@
     <item>0</item>
   </collection>
   <collection>
-    <entry>Hellcat</entry>
+    <entry>Hellcat(Bezekira)</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
@@ -2108,7 +6254,43 @@
     <item>1</item>
   </collection>
   <collection>
-    <entry>Hobgoblin</entry>
+    <entry>Hill giant$Noncombatant$</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character[1]{Hobgoblin}@Warrior@</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Hobgoblin$Noncombatant$</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Leader)[1d3+5]{Hobgoblin}@Warrior@</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Character(Leader)[1d3+3]{Hobgoblin}@Warrior@</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Character(Lieutenant)[1d2+3]{Hobgoblin}@Warrior@</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Character(Sergeant)[3]{Hobgoblin}@Warrior@</entry>
     <item>1</item>
     <item>1</item>
     <item>1</item>
@@ -2120,7 +6302,7 @@
     <item>1</item>
   </collection>
   <collection>
-    <entry>Hound archon Hero</entry>
+    <entry>Character(Hero)[11]{Hound Archon}@Paladin@</entry>
     <item>1</item>
     <item>1</item>
     <item>1</item>
@@ -2132,49 +6314,97 @@
     <item>0</item>
   </collection>
   <collection>
-    <entry>Huge monstrous centipede</entry>
+    <entry>Monstrous centipede$Huge$</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
   </collection>
   <collection>
-    <entry>Huge monstrous scorpion</entry>
+    <entry>Monstrous scorpion$Huge$</entry>
     <item>0.1</item>
     <item>0.5</item>
     <item>0.5</item>
   </collection>
   <collection>
-    <entry>Huge monstrous spider</entry>
+    <entry>Monstrous spider$Huge$</entry>
     <item>0.1</item>
     <item>0.5</item>
     <item>0.5</item>
   </collection>
   <collection>
-    <entry>Huge viper snake</entry>
+    <entry>Viper snake$Huge$</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
   </collection>
   <collection>
-    <entry>Large viper snake</entry>
+    <entry>Viper snake$Large$</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
   </collection>
   <collection>
-    <entry>Medium viper snake</entry>
+    <entry>Viper snake$Medium$</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
   </collection>
   <collection>
-    <entry>Small viper snake</entry>
+    <entry>Viper snake$Small$</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
   </collection>
   <collection>
-    <entry>Skeleton</entry>
+    <entry>Skeleton$Human$</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Skeleton$Chimera$</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Skeleton$Cloud giant$</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Skeleton$Ettin$</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Skeleton$Megaraptor$</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Skeleton$Owlbear$</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Skeleton$Red dragon$Young adult$$</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Skeleton$Troll$</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Skeleton$Wolf$</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
@@ -2186,7 +6416,49 @@
     <item>0</item>
   </collection>
   <collection>
-    <entry>Hydra</entry>
+    <entry>Hydra$5 heads$</entry>
+    <item>0.1</item>
+    <item>0.5</item>
+    <item>0.5</item>
+  </collection>
+  <collection>
+    <entry>Hydra$6 heads$</entry>
+    <item>0.1</item>
+    <item>0.5</item>
+    <item>0.5</item>
+  </collection>
+  <collection>
+    <entry>Hydra$7 heads$</entry>
+    <item>0.1</item>
+    <item>0.5</item>
+    <item>0.5</item>
+  </collection>
+  <collection>
+    <entry>Hydra$8 heads$</entry>
+    <item>0.1</item>
+    <item>0.5</item>
+    <item>0.5</item>
+  </collection>
+  <collection>
+    <entry>Hydra$9 heads$</entry>
+    <item>0.1</item>
+    <item>0.5</item>
+    <item>0.5</item>
+  </collection>
+  <collection>
+    <entry>Hydra$10 heads$</entry>
+    <item>0.1</item>
+    <item>0.5</item>
+    <item>0.5</item>
+  </collection>
+  <collection>
+    <entry>Hydra$11 heads$</entry>
+    <item>0.1</item>
+    <item>0.5</item>
+    <item>0.5</item>
+  </collection>
+  <collection>
+    <entry>Hydra$12 heads$</entry>
     <item>0.1</item>
     <item>0.5</item>
     <item>0.5</item>
@@ -2216,7 +6488,37 @@
     <item>0</item>
   </collection>
   <collection>
-    <entry>Kobold</entry>
+    <entry>Character[1]{Kobold}@Warrior@</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Kobold$Noncombatant$</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Leader)[1d3+3]{Kobold}@Warrior@</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Character(Leader)[1d3+5]{Kobold}@Warrior@</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Character(Lieutenant)[1d2+3]{Kobold}@Warrior@</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Character(Sergeant)[3]{Kobold}@Warrior@</entry>
     <item>1</item>
     <item>1</item>
     <item>1</item>
@@ -2234,7 +6536,7 @@
     <item>0</item>
   </collection>
   <collection>
-    <entry>Chain Devil</entry>
+    <entry>Chain Devil(Kyton)</entry>
     <item>1</item>
     <item>1</item>
     <item>1</item>
@@ -2258,31 +6560,37 @@
     <item>1</item>
   </collection>
   <collection>
+    <entry>Lammasu$Golden Protector$</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
     <entry>Lantern archon</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
   </collection>
   <collection>
-    <entry>Large monstrous centipede</entry>
+    <entry>Monstrous centipede$Large$</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
   </collection>
   <collection>
-    <entry>Large monstrous scorpion</entry>
+    <entry>Monstrous scorpion$Large$</entry>
     <item>0.1</item>
     <item>0.5</item>
     <item>0.5</item>
   </collection>
   <collection>
-    <entry>Large monstrous spider</entry>
+    <entry>Monstrous spider$Large$</entry>
     <item>0.1</item>
     <item>0.5</item>
     <item>0.5</item>
   </collection>
   <collection>
-    <entry>Noble salamander</entry>
+    <entry>Salamander$Noble$</entry>
     <item>2</item>
     <item>2</item>
     <item>2</item>
@@ -2306,7 +6614,121 @@
     <item>0</item>
   </collection>
   <collection>
-    <entry>Lich</entry>
+    <entry>Character[1]#Lich#</entry>
+    <item>1</item>
+    <item>2</item>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Character[2]#Lich#</entry>
+    <item>1</item>
+    <item>2</item>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Character[3]#Lich#</entry>
+    <item>1</item>
+    <item>2</item>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Character[4]#Lich#</entry>
+    <item>1</item>
+    <item>2</item>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Character[5]#Lich#</entry>
+    <item>1</item>
+    <item>2</item>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Character[6]#Lich#</entry>
+    <item>1</item>
+    <item>2</item>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Character[7]#Lich#</entry>
+    <item>1</item>
+    <item>2</item>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Character[8]#Lich#</entry>
+    <item>1</item>
+    <item>2</item>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Character[9]#Lich#</entry>
+    <item>1</item>
+    <item>2</item>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Character[10]#Lich#</entry>
+    <item>1</item>
+    <item>2</item>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Character[11]#Lich#</entry>
+    <item>1</item>
+    <item>2</item>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Character[12]#Lich#</entry>
+    <item>1</item>
+    <item>2</item>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Character[13]#Lich#</entry>
+    <item>1</item>
+    <item>2</item>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Character[14]#Lich#</entry>
+    <item>1</item>
+    <item>2</item>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Character[15]#Lich#</entry>
+    <item>1</item>
+    <item>2</item>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Character[16]#Lich#</entry>
+    <item>1</item>
+    <item>2</item>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Character[17]#Lich#</entry>
+    <item>1</item>
+    <item>2</item>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Character[18]#Lich#</entry>
+    <item>1</item>
+    <item>2</item>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Character[19]#Lich#</entry>
+    <item>1</item>
+    <item>2</item>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Character[20]#Lich#</entry>
     <item>1</item>
     <item>2</item>
     <item>2</item>
@@ -2318,13 +6740,37 @@
     <item>1</item>
   </collection>
   <collection>
-    <entry>Livestock (Noncombatant)</entry>
+    <entry>Livestock$Noncombatant$</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
   </collection>
   <collection>
     <entry>Lizardfolk</entry>
+    <item>0.5</item>
+    <item>0.5</item>
+    <item>0.5</item>
+  </collection>
+  <collection>
+    <entry>Lizardfolk$Noncombatant$</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Leader)[1d4+2]{Lizardfolk}</entry>
+    <item>0.5</item>
+    <item>0.5</item>
+    <item>0.5</item>
+  </collection>
+  <collection>
+    <entry>Character(Leader)[2d4+2]{Lizardfolk}</entry>
+    <item>0.5</item>
+    <item>0.5</item>
+    <item>0.5</item>
+  </collection>
+  <collection>
+    <entry>Character(Lieutenant)[1d4+2]{Lizardfolk}</entry>
     <item>0.5</item>
     <item>0.5</item>
     <item>0.5</item>
@@ -2360,19 +6806,19 @@
     <item>0</item>
   </collection>
   <collection>
-    <entry>Medium monstrous centipede</entry>
+    <entry>Monstrous centipede$Medium$</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
   </collection>
   <collection>
-    <entry>Medium monstrous scorpion</entry>
+    <entry>Monstrous scorpion$Medium$</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
   </collection>
   <collection>
-    <entry>Medium monstrous spider</entry>
+    <entry>Monstrous spider$Medium$</entry>
     <item>0.1</item>
     <item>0.5</item>
     <item>0.5</item>
@@ -2384,7 +6830,67 @@
     <item>2</item>
   </collection>
   <collection>
-    <entry>Mephit</entry>
+    <entry>Mephit[3]</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Mephit(Air)</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Mephit(Dust)</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Mephit(Earth)</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Mephit(Fire)</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Mephit(Ice)</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Mephit(Magma)</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Mephit(Ooze)</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Mephit(Salt)</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Mephit(Steam)</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Mephit(Water)</entry>
     <item>1</item>
     <item>1</item>
     <item>1</item>
@@ -2402,7 +6908,7 @@
     <item>2</item>
   </collection>
   <collection>
-    <entry>Mind flayer Sorcerer</entry>
+    <entry>Character[9]{Mind Flayer}@Sorcerer@</entry>
     <item>2</item>
     <item>2</item>
     <item>2</item>
@@ -2426,7 +6932,7 @@
     <item>0</item>
   </collection>
   <collection>
-    <entry>Celestial monkey</entry>
+    <entry>Monkey$Celestial creature$</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
@@ -2444,31 +6950,31 @@
     <item>1</item>
   </collection>
   <collection>
-    <entry>Mummy Lord</entry>
+    <entry>Character(Lord)[10]#Mummy#@Cleric@</entry>
     <item>1</item>
     <item>1</item>
     <item>1</item>
   </collection>
   <collection>
-    <entry>Dark naga</entry>
+    <entry>Naga$Dark$</entry>
     <item>1</item>
     <item>1</item>
     <item>1</item>
   </collection>
   <collection>
-    <entry>Guardian naga</entry>
+    <entry>Naga$Guardian$</entry>
     <item>1</item>
     <item>1</item>
     <item>1</item>
   </collection>
   <collection>
-    <entry>Spirit naga</entry>
+    <entry>Naga$Spirit$</entry>
     <item>1</item>
     <item>1</item>
     <item>1</item>
   </collection>
   <collection>
-    <entry>Water naga</entry>
+    <entry>Naga$Water$</entry>
     <item>1</item>
     <item>1</item>
     <item>1</item>
@@ -2493,6 +6999,12 @@
   </collection>
   <collection>
     <entry>Nightmare</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Nightmare$Cauchemar$</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
@@ -2534,7 +7046,7 @@
     <item>1</item>
   </collection>
   <collection>
-    <entry>Ogre Barbarian</entry>
+    <entry>Character[4]{Ogre}@Barbarian@</entry>
     <item>1</item>
     <item>1</item>
     <item>1</item>
@@ -2546,13 +7058,43 @@
     <item>2</item>
   </collection>
   <collection>
-    <entry>Orc</entry>
+    <entry>Character[1]{Orc}@Warrior@</entry>
     <item>1</item>
     <item>1</item>
     <item>1</item>
   </collection>
   <collection>
-    <entry>Bone Devil</entry>
+    <entry>Orc$Noncombatant$</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Captain)[7]{Orc}@Warrior@</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Character(Leader)[1d4+2]{Orc}@Warrior@</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Character(Lieutenant)[5]{Orc}@Warrior@</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Character(Sergeant)[3]{Orc}@Warrior@</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Bone Devil(Osyluth)</entry>
     <item>1</item>
     <item>1</item>
     <item>1</item>
@@ -2576,7 +7118,7 @@
     <item>0</item>
   </collection>
   <collection>
-    <entry>Celestial owl</entry>
+    <entry>Owl$Celestial creature$</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
@@ -2624,6 +7166,12 @@
     <item>0.5</item>
   </collection>
   <collection>
+    <entry>Pixie$with Irresistable Dance$</entry>
+    <item>0</item>
+    <item>0.5</item>
+    <item>0.5</item>
+  </collection>
+  <collection>
     <entry>Planetar</entry>
     <item>0</item>
     <item>2</item>
@@ -2654,7 +7202,49 @@
     <item>0</item>
   </collection>
   <collection>
-    <entry>Pyrohydra</entry>
+    <entry>Pyrohydra$5 heads$</entry>
+    <item>0.1</item>
+    <item>0.5</item>
+    <item>0.5</item>
+  </collection>
+  <collection>
+    <entry>Pyrohydra$6 heads$</entry>
+    <item>0.1</item>
+    <item>0.5</item>
+    <item>0.5</item>
+  </collection>
+  <collection>
+    <entry>Pyrohydra$7 heads$</entry>
+    <item>0.1</item>
+    <item>0.5</item>
+    <item>0.5</item>
+  </collection>
+  <collection>
+    <entry>Pyrohydra$8 heads$</entry>
+    <item>0.1</item>
+    <item>0.5</item>
+    <item>0.5</item>
+  </collection>
+  <collection>
+    <entry>Pyrohydra$9 heads$</entry>
+    <item>0.1</item>
+    <item>0.5</item>
+    <item>0.5</item>
+  </collection>
+  <collection>
+    <entry>Pyrohydra$10 heads$</entry>
+    <item>0.1</item>
+    <item>0.5</item>
+    <item>0.5</item>
+  </collection>
+  <collection>
+    <entry>Pyrohydra$11 heads$</entry>
+    <item>0.1</item>
+    <item>0.5</item>
+    <item>0.5</item>
+  </collection>
+  <collection>
+    <entry>Pyrohydra$12 heads$</entry>
     <item>0.1</item>
     <item>0.5</item>
     <item>0.5</item>
@@ -2684,7 +7274,7 @@
     <item>0</item>
   </collection>
   <collection>
-    <entry>Fiendish dire rat</entry>
+    <entry>Dire rat$Fiendish creature$</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
@@ -2696,7 +7286,7 @@
     <item>0</item>
   </collection>
   <collection>
-    <entry>Fiendish raven</entry>
+    <entry>Raven$Fiendish creature$</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
@@ -2756,6 +7346,12 @@
     <item>1</item>
   </collection>
   <collection>
+    <entry>Satyr$with pipes$</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
     <entry>Sea hag</entry>
     <item>1</item>
     <item>1</item>
@@ -2768,7 +7364,7 @@
     <item>0</item>
   </collection>
   <collection>
-    <entry>Greater shadow</entry>
+    <entry>Shadow$Greater$</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
@@ -2804,19 +7400,37 @@
     <item>1</item>
   </collection>
   <collection>
-    <entry>Small monstrous centipede</entry>
+    <entry>Character[1d3+2]{Scorpionfolk}@Ranger@</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Character[1d3+5]{Scorpionfolk}@Cleric@</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Character[1d3+5]{Scorpionfolk}@Ranger@</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Monstrous centipede$Small$</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
   </collection>
   <collection>
-    <entry>Small monstrous scorpion</entry>
+    <entry>Monstrous scorpion$Small$</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
   </collection>
   <collection>
-    <entry>Small monstrous spider</entry>
+    <entry>Monstrous spider$Small$</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
@@ -2864,31 +7478,31 @@
     <item>1</item>
   </collection>
   <collection>
-    <entry>Clay golem</entry>
+    <entry>Golem$Clay$</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
   </collection>
   <collection>
-    <entry>Flesh golem</entry>
+    <entry>Golem$Flesh$</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
   </collection>
   <collection>
-    <entry>Iron golem</entry>
+    <entry>Golem$Iron$</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
   </collection>
   <collection>
-    <entry>Stone golem</entry>
+    <entry>Golem$Stone$</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
   </collection>
   <collection>
-    <entry>Greater stone golem</entry>
+    <entry>Golem$Greater Stone$</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
@@ -2900,7 +7514,13 @@
     <item>1</item>
   </collection>
   <collection>
-    <entry>Stone giant elder</entry>
+    <entry>Stone giant$Noncombatant$</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Stone giant$Elder$</entry>
     <item>1</item>
     <item>1</item>
     <item>1</item>
@@ -2912,13 +7532,25 @@
     <item>2</item>
   </collection>
   <collection>
-    <entry>Flamebrother salamander</entry>
+    <entry>Storm giant$Noncombatant$</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character[1d4+6]{Storm Giant}@Cleric&amp;Sorcerer@</entry>
+    <item>2</item>
+    <item>1</item>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Salamander$Flamebrother$</entry>
     <item>1</item>
     <item>1</item>
     <item>1</item>
   </collection>
   <collection>
-    <entry>Average salamander</entry>
+    <entry>Salamander$Average$</entry>
     <item>1</item>
     <item>1</item>
     <item>1</item>
@@ -2930,7 +7562,37 @@
     <item>0</item>
   </collection>
   <collection>
-    <entry>Svirfneblin warrior</entry>
+    <entry>Character[1]{Svirfneblin}@Warrior@</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Character(Captain)[7]{Svirfneblin}@Warrior@</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Character(Leader)[1d4+2]{Svirfneblin}@Warrior@</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Character(Lieutenant)[5]{Svirfneblin}@Warrior@</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Character(Lieutenant)[3]{Svirfneblin}@Warrior@</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Character(Sergeant)[3]{Svirfneblin}@Warrior@</entry>
     <item>1</item>
     <item>1</item>
     <item>1</item>
@@ -2954,7 +7616,7 @@
     <item>0</item>
   </collection>
   <collection>
-    <entry>Tiefling warrior</entry>
+    <entry>Character[1]{Tiefling}@Warrior@</entry>
     <item>1</item>
     <item>1</item>
     <item>1</item>
@@ -2984,25 +7646,25 @@
     <item>0</item>
   </collection>
   <collection>
-    <entry>Tiny monstrous centipede</entry>
+    <entry>Monstrous centipede$Tiny$</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
   </collection>
   <collection>
-    <entry>Tiny monstrous scorpion</entry>
+    <entry>Monstrous scorpion$Tiny$</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
   </collection>
   <collection>
-    <entry>Tiny monstrous spider</entry>
+    <entry>Monstrous spider$Tiny$</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
   </collection>
   <collection>
-    <entry>Tiny viper snake</entry>
+    <entry>Viper snake$Tiny$</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
@@ -3012,6 +7674,12 @@
     <item>0.5</item>
     <item>0.5</item>
     <item>0.5</item>
+  </collection>
+  <collection>
+    <entry>Troglodyte$Noncombatant$</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
   </collection>
   <collection>
     <entry>Deinonychus</entry>
@@ -3050,7 +7718,7 @@
     <item>1</item>
   </collection>
   <collection>
-    <entry>Troll Hunter</entry>
+    <entry>Character(Hunter)[6]{Troll}@Ranger@</entry>
     <item>1</item>
     <item>1</item>
     <item>1</item>
@@ -3068,7 +7736,7 @@
     <item>1</item>
   </collection>
   <collection>
-    <entry>Truly horrid umber hulk</entry>
+    <entry>Umber hulk$Truly horrid$</entry>
     <item>1</item>
     <item>1</item>
     <item>1</item>
@@ -3080,13 +7748,133 @@
     <item>0</item>
   </collection>
   <collection>
+    <entry>Unicorn$Celestial Charger$</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
     <entry>Vampire spawn</entry>
     <item>1</item>
     <item>1</item>
     <item>1</item>
   </collection>
   <collection>
-    <entry>Vampire</entry>
+    <entry>Character[1]#Vampire#</entry>
+    <item>2</item>
+    <item>2</item>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Character[2]#Vampire#</entry>
+    <item>2</item>
+    <item>2</item>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Character[3]#Vampire#</entry>
+    <item>2</item>
+    <item>2</item>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Character[4]#Vampire#</entry>
+    <item>2</item>
+    <item>2</item>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Character[5]#Vampire#</entry>
+    <item>2</item>
+    <item>2</item>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Character[6]#Vampire#</entry>
+    <item>2</item>
+    <item>2</item>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Character[7]#Vampire#</entry>
+    <item>2</item>
+    <item>2</item>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Character[8]#Vampire#</entry>
+    <item>2</item>
+    <item>2</item>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Character[9]#Vampire#</entry>
+    <item>2</item>
+    <item>2</item>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Character[10]#Vampire#</entry>
+    <item>2</item>
+    <item>2</item>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Character[11]#Vampire#</entry>
+    <item>2</item>
+    <item>2</item>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Character[12]#Vampire#</entry>
+    <item>2</item>
+    <item>2</item>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Character[13]#Vampire#</entry>
+    <item>2</item>
+    <item>2</item>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Character[14]#Vampire#</entry>
+    <item>2</item>
+    <item>2</item>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Character[15]#Vampire#</entry>
+    <item>2</item>
+    <item>2</item>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Character[16]#Vampire#</entry>
+    <item>2</item>
+    <item>2</item>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Character[17]#Vampire#</entry>
+    <item>2</item>
+    <item>2</item>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Character[18]#Vampire#</entry>
+    <item>2</item>
+    <item>2</item>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Character[19]#Vampire#</entry>
+    <item>2</item>
+    <item>2</item>
+    <item>2</item>
+  </collection>
+  <collection>
+    <entry>Character[20]#Vampire#</entry>
     <item>2</item>
     <item>2</item>
     <item>2</item>
@@ -3164,7 +7952,7 @@
     <item>1</item>
   </collection>
   <collection>
-    <entry>Werewolf Lord</entry>
+    <entry>Character(Lord)[10]#Werewolf#@Fighter@</entry>
     <item>1</item>
     <item>1</item>
     <item>1</item>
@@ -3218,7 +8006,7 @@
     <item>0</item>
   </collection>
   <collection>
-    <entry>Dread wraith</entry>
+    <entry>Wraith$Dread$</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
@@ -3236,19 +8024,19 @@
     <item>1</item>
   </collection>
   <collection>
-    <entry>Average xorn</entry>
+    <entry>Xorn$Average$</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
   </collection>
   <collection>
-    <entry>Elder xorn</entry>
+    <entry>Xorn$Elder$</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
   </collection>
   <collection>
-    <entry>Minor xorn</entry>
+    <entry>Xorn$Minor$</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
@@ -3266,19 +8054,19 @@
     <item>0</item>
   </collection>
   <collection>
-    <entry>Yuan-ti Pureblood</entry>
+    <entry>Yuan-ti$Pureblood$</entry>
     <item>2</item>
     <item>2</item>
     <item>2</item>
   </collection>
   <collection>
-    <entry>Yuan-ti Halfblood</entry>
+    <entry>Yuan-ti$Halfblood$</entry>
     <item>2</item>
     <item>2</item>
     <item>2</item>
   </collection>
   <collection>
-    <entry>Yuan-ti Abomination</entry>
+    <entry>Yuan-ti$Abomination$</entry>
     <item>2</item>
     <item>2</item>
     <item>2</item>
@@ -3290,7 +8078,49 @@
     <item>0</item>
   </collection>
   <collection>
-    <entry>Zombie</entry>
+    <entry>Zombie$Human$</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Zombie$Bugbear$</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Zombie$Gray render$</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Zombie$Kobold$</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Zombie$Minotaur$</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Zombie$Ogre$</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Zombie$Troglodyte$</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Zombie$Wyvern$</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>

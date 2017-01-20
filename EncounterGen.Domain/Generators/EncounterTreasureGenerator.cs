@@ -24,7 +24,6 @@ namespace EncounterGen.Domain.Generators
         private IAdjustmentSelector adjustmentSelector;
         private IBooleanPercentileSelector booleanPercentileSelector;
         private ICollectionSelector collectionSelector;
-        private Regex subTypeRegex;
         private IMagicalItemGeneratorRuntimeFactory magicalItemGeneratorRuntimeFactory;
         private IMundaneItemGeneratorRuntimeFactory mundaneItemGeneratorRuntimeFactory;
         private Regex itemTypeRegex;
@@ -45,7 +44,6 @@ namespace EncounterGen.Domain.Generators
             this.magicalItemGeneratorRuntimeFactory = magicalItemGeneratorRuntimeFactory;
             this.mundaneItemGeneratorRuntimeFactory = mundaneItemGeneratorRuntimeFactory;
 
-            subTypeRegex = new Regex(RegexConstants.DescriptionPattern);
             itemTypeRegex = new Regex(RegexConstants.ItemTypePattern);
             itemBonusRegex = new Regex(RegexConstants.ItemBonusPattern);
             specialAbilityRegex = new Regex(RegexConstants.SpecialAbilitiesPattern);
@@ -55,16 +53,12 @@ namespace EncounterGen.Domain.Generators
 
         public Treasure GenerateFor(Creature creature, int level)
         {
-            var treasure = new Treasure();
-
-            if (creature.Description == CreatureConstants.Noncombatant)
-                return treasure;
-
-            var creatureName = GetCreatureNameForTreasure(creature.Name, creature.Description);
+            var creatureName = GetCreatureNameForTreasure(creature.Type);
             var coinMultiplier = adjustmentSelector.SelectDouble(TableNameConstants.TreasureAdjustments, creatureName, TreasureConstants.Coin);
             var goodsMultiplier = adjustmentSelector.SelectDouble(TableNameConstants.TreasureAdjustments, creatureName, TreasureConstants.Goods);
             var itemsMultiplier = adjustmentSelector.SelectDouble(TableNameConstants.TreasureAdjustments, creatureName, TreasureConstants.Items);
 
+            var treasure = new Treasure();
             treasure.Coin = coinGenerator.GenerateAtLevel(level);
 
             var rawQuantity = coinMultiplier * treasure.Coin.Quantity;
@@ -183,37 +177,16 @@ namespace EncounterGen.Domain.Generators
             return matchValue;
         }
 
-        private string GetCreatureNameForTreasure(string name, string description)
+        private string GetCreatureNameForTreasure(CreatureType creatureType)
         {
             var useSubtypeForTreasure = collectionSelector.SelectFrom(TableNameConstants.CreatureGroups, GroupConstants.UseSubtypeForTreasure);
 
-            if (useSubtypeForTreasure.Contains(name))
+            if (useSubtypeForTreasure.Contains(creatureType.Name))
             {
-                var subType = GetCreatureType(description);
-                var subSubType = GetSubtype(description);
-
-                return GetCreatureNameForTreasure(subType, subSubType);
+                return GetCreatureNameForTreasure(creatureType.SubType);
             }
 
-            return name;
-        }
-
-        private string GetCreatureType(string fullCreatureType)
-        {
-            var creatureType = subTypeRegex.Replace(fullCreatureType, string.Empty);
-
-            return creatureType;
-        }
-
-        private string GetSubtype(string fullCreatureType)
-        {
-            var subTypeMatch = subTypeRegex.Match(fullCreatureType);
-            if (string.IsNullOrEmpty(subTypeMatch.Value))
-                return string.Empty;
-
-            var subType = subTypeMatch.Value.Substring(2, subTypeMatch.Value.Length - 3);
-
-            return subType;
+            return creatureType.Name;
         }
     }
 }

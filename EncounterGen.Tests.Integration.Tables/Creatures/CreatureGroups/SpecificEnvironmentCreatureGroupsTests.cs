@@ -4,7 +4,7 @@ using NUnit.Framework;
 namespace EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
 {
     [TestFixture]
-    public class SpecificCreatureGroupsTests : CreatureGroupsTests
+    public class SpecificEnvironmentCreatureGroupsTests : CreatureGroupsTests
     {
         [Test]
         public override void EntriesAreComplete()
@@ -15,48 +15,27 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         [TestCase(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Desert)]
         [TestCase(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Dungeon)]
         [TestCase(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Forest)]
-        [TestCase(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Marsh)]
+        [TestCase(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Hills,
+            CreatureConstants.Beholder,
+            CreatureConstants.Ettin,
+            CreatureConstants.OgreMage,
+            CreatureConstants.Wolverine)]
+        [TestCase(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Marsh,
+            CreatureConstants.Annis)]
+        [TestCase(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain,
+            CreatureConstants.Ettin,
+            CreatureConstants.Troll)]
         [TestCase(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Plains)]
+        [TestCase(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert,
+            CreatureConstants.Ant_Giant,
+            CreatureConstants.Bat,
+            CreatureConstants.Dragonne,
+            CreatureConstants.Donkey)]
         [TestCase(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Dungeon)]
         [TestCase(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Dungeon)]
-        public override void DistinctCollection(string entry, params string[] items)
+        public void SpecificEnvironmentCreatureGroup(string environment, params string[] creatures)
         {
-            base.DistinctCollection(entry, items);
-        }
-
-        [Test]
-        public void TemperateMountainCreatures()
-        {
-            var creatures = new[]
-            {
-                CreatureConstants.Bear_Black,
-                CreatureConstants.Bugbear,
-                CreatureConstants.DisplacerBeast,
-                CreatureConstants.Ettin,
-                CreatureConstants.Giant_Cloud,
-                CreatureConstants.Giant_Storm,
-                CreatureConstants.Griffon,
-                CreatureConstants.Roc,
-                CreatureConstants.Weasel,
-                CreatureConstants.Wyvern,
-                CreatureConstants.RazorBoar,
-            };
-
-            base.DistinctCollection(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain, creatures);
-        }
-
-        [Test]
-        public void TemperateDesertCreatures()
-        {
-            var creatures = new[]
-            {
-                CreatureConstants.Ant_Giant,
-                CreatureConstants.Bat,
-                CreatureConstants.Dragonne,
-                CreatureConstants.Donkey,
-            };
-
-            base.DistinctCollection(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert, creatures);
+            base.DistinctCollection(environment, creatures);
         }
 
         [Test]
@@ -76,8 +55,10 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
                 CreatureConstants.DisplacerBeast,
                 CreatureConstants.Dryad,
                 CreatureConstants.Ettercap,
+                CreatureConstants.Elf,
                 CreatureConstants.GreenHag,
                 CreatureConstants.Krenshar,
+                CreatureConstants.Nymph,
                 CreatureConstants.Owlbear,
                 CreatureConstants.Pegasus,
                 CreatureConstants.PrayingMantis_Giant,
@@ -88,6 +69,7 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
                 CreatureConstants.Tendriculos,
                 CreatureConstants.Unicorn,
                 CreatureConstants.Weasel,
+                CreatureConstants.Wolf,
                 CreatureConstants.Wolverine,
                 CreatureConstants.Wyvern,
                 CreatureConstants.RazorBoar,
@@ -99,13 +81,44 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         }
 
         [Test]
+        public void TemperateHillsCreatures()
+        {
+            var creatures = new[]
+            {
+                CreatureConstants.Ant_Giant,
+                CreatureConstants.Badger,
+                CreatureConstants.Bat,
+                CreatureConstants.Bear_Black,
+                CreatureConstants.Chimera,
+                CreatureConstants.DisplacerBeast,
+                CreatureConstants.Dragonne,
+                CreatureConstants.Ettin,
+                CreatureConstants.Gnome,
+                CreatureConstants.Griffon,
+                CreatureConstants.Hippogriff,
+                CreatureConstants.Ogre,
+                CreatureConstants.Orc,
+                CreatureConstants.PrayingMantis_Giant,
+                CreatureConstants.Tendriculos,
+                CreatureConstants.Weasel,
+                CreatureConstants.Wolverine,
+                CreatureConstants.Wyvern,
+            };
+
+            base.DistinctCollection(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills, creatures);
+        }
+
+        [Test]
         public void TemperateMarshCreatures()
         {
             var creatures = new[]
             {
+                CreatureConstants.Chuul,
+                CreatureConstants.GrayRender,
                 CreatureConstants.GreenHag,
                 CreatureConstants.SeaHag,
                 CreatureConstants.Lizardfolk,
+                CreatureConstants.Medusa,
                 CreatureConstants.PrayingMantis_Giant,
                 CreatureConstants.ShamblingMound,
                 CreatureConstants.Tendriculos,
@@ -116,10 +129,33 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         }
 
         [Test]
+        public void TemperateMountainCreatures()
+        {
+            var creatures = new[]
+            {
+                CreatureConstants.Bear_Black,
+                CreatureConstants.Bugbear,
+                CreatureConstants.DisplacerBeast,
+                CreatureConstants.Dwarf,
+                CreatureConstants.Ettin,
+                CreatureConstants.Giant_Cloud,
+                CreatureConstants.Giant_Storm,
+                CreatureConstants.Griffon,
+                CreatureConstants.Roc,
+                CreatureConstants.Weasel,
+                CreatureConstants.Wyvern,
+                CreatureConstants.RazorBoar,
+            };
+
+            base.DistinctCollection(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain, creatures);
+        }
+
+        [Test]
         public void TemperatePlainsCreatures()
         {
             var creatures = new[]
             {
+                CreatureConstants.Aasimar,
                 CreatureConstants.Ankheg,
                 CreatureConstants.Ant_Giant,
                 CreatureConstants.Badger,
@@ -127,42 +163,20 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
                 CreatureConstants.Bison,
                 CreatureConstants.BlinkDog,
                 CreatureConstants.Cat,
+                CreatureConstants.Dog,
                 CreatureConstants.Hippogriff,
                 CreatureConstants.Horse,
                 CreatureConstants.Krenshar,
                 CreatureConstants.Locust,
                 CreatureConstants.Pony,
                 CreatureConstants.PrayingMantis_Giant,
+                CreatureConstants.Tiefling,
                 CreatureConstants.Weasel,
                 CreatureConstants.Wolverine,
+                CreatureConstants.Worg,
             };
 
             base.DistinctCollection(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains, creatures);
-        }
-
-        [Test]
-        public void WarmPlainsCreatures()
-        {
-            var creatures = new[]
-            {
-                CreatureConstants.Ankheg,
-                CreatureConstants.Ant_Giant,
-                CreatureConstants.Bat,
-                CreatureConstants.Cheetah,
-                CreatureConstants.Deinonychus,
-                CreatureConstants.Elephant,
-                CreatureConstants.Hippogriff,
-                CreatureConstants.Krenshar,
-                CreatureConstants.Leopard,
-                CreatureConstants.Megaraptor,
-                CreatureConstants.PrayingMantis_Giant,
-                CreatureConstants.Rhinoceras,
-                CreatureConstants.Triceratops,
-                CreatureConstants.Tyrannosaurus,
-                CreatureConstants.Scorpionfolk,
-            };
-
-            base.DistinctCollection(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains, creatures);
         }
 
         [Test]
@@ -173,6 +187,7 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
                 CreatureConstants.Androsphinx,
                 CreatureConstants.Ant_Giant,
                 CreatureConstants.Baboon,
+                CreatureConstants.Basilisk,
                 CreatureConstants.Bat,
                 CreatureConstants.Camel,
                 CreatureConstants.Criosphinx,
@@ -228,6 +243,30 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         }
 
         [Test]
+        public void WarmHillsCreatures()
+        {
+            var creatures = new[]
+            {
+                CreatureConstants.Ant_Giant,
+                CreatureConstants.Athach,
+                CreatureConstants.Bat,
+                CreatureConstants.Bear_Black,
+                CreatureConstants.Behir,
+                CreatureConstants.Dinosaur,
+                CreatureConstants.Dragonne,
+                CreatureConstants.Griffon,
+                CreatureConstants.Hieracosphinx,
+                CreatureConstants.Hippogriff,
+                CreatureConstants.PhaseSpider,
+                CreatureConstants.Scorpionfolk,
+                CreatureConstants.Tendriculos,
+                CreatureConstants.Wyvern,
+            };
+
+            base.DistinctCollection(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills, creatures);
+        }
+
+        [Test]
         public void WarmMarshCreatures()
         {
             var creatures = new[]
@@ -251,78 +290,6 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         }
 
         [Test]
-        public void ColdHillsCreatures()
-        {
-            var creatures = new[]
-            {
-                CreatureConstants.Ettin,
-                CreatureConstants.Wolverine,
-            };
-
-            base.DistinctCollection(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Hills, creatures);
-        }
-
-        [Test]
-        public void TemperateHillsCreatures()
-        {
-            var creatures = new[]
-            {
-                CreatureConstants.Ant_Giant,
-                CreatureConstants.Badger,
-                CreatureConstants.Bat,
-                CreatureConstants.Bear_Black,
-                CreatureConstants.DisplacerBeast,
-                CreatureConstants.Dragonne,
-                CreatureConstants.Ettin,
-                CreatureConstants.Griffon,
-                CreatureConstants.Hippogriff,
-                CreatureConstants.PrayingMantis_Giant,
-                CreatureConstants.Tendriculos,
-                CreatureConstants.Weasel,
-                CreatureConstants.Wolverine,
-                CreatureConstants.Wyvern,
-            };
-
-            base.DistinctCollection(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills, creatures);
-        }
-
-        [Test]
-        public void WarmHillsCreatures()
-        {
-            var creatures = new[]
-            {
-                CreatureConstants.Ant_Giant,
-                CreatureConstants.Athach,
-                CreatureConstants.Bat,
-                CreatureConstants.Bear_Black,
-                CreatureConstants.Deinonychus,
-                CreatureConstants.Dragonne,
-                CreatureConstants.Griffon,
-                CreatureConstants.Hieracosphinx,
-                CreatureConstants.Hippogriff,
-                CreatureConstants.Megaraptor,
-                CreatureConstants.Tendriculos,
-                CreatureConstants.Triceratops,
-                CreatureConstants.Tyrannosaurus,
-                CreatureConstants.Wyvern,
-                CreatureConstants.Scorpionfolk,
-            };
-
-            base.DistinctCollection(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills, creatures);
-        }
-
-        [Test]
-        public void ColdMountainCreatures()
-        {
-            var creatures = new[]
-            {
-                CreatureConstants.Ettin,
-            };
-
-            base.DistinctCollection(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain, creatures);
-        }
-
-        [Test]
         public void WarmMountainCreatures()
         {
             var creatures = new[]
@@ -330,6 +297,7 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
                 CreatureConstants.Ape,
                 CreatureConstants.Athach,
                 CreatureConstants.Bear_Black,
+                CreatureConstants.Giant_Fire,
                 CreatureConstants.Girallon,
                 CreatureConstants.Griffon,
                 CreatureConstants.Roc,
@@ -338,6 +306,29 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
             };
 
             base.DistinctCollection(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain, creatures);
+        }
+
+        [Test]
+        public void WarmPlainsCreatures()
+        {
+            var creatures = new[]
+            {
+                CreatureConstants.Ankheg,
+                CreatureConstants.Ant_Giant,
+                CreatureConstants.Bat,
+                CreatureConstants.Cheetah,
+                CreatureConstants.Dinosaur,
+                CreatureConstants.Elephant,
+                CreatureConstants.Halfling,
+                CreatureConstants.Hippogriff,
+                CreatureConstants.Krenshar,
+                CreatureConstants.Leopard,
+                CreatureConstants.PrayingMantis_Giant,
+                CreatureConstants.Rhinoceras,
+                CreatureConstants.Scorpionfolk,
+            };
+
+            base.DistinctCollection(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains, creatures);
         }
     }
 }

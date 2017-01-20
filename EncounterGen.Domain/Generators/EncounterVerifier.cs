@@ -5,7 +5,6 @@ using EncounterGen.Domain.Tables;
 using EncounterGen.Generators;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.RegularExpressions;
 
 namespace EncounterGen.Domain.Generators
 {
@@ -14,7 +13,6 @@ namespace EncounterGen.Domain.Generators
         private ICollectionSelector collectionSelector;
         private IEncounterCollectionSelector encounterCollectionSelector;
         private IAmountSelector amountSelector;
-        private Regex challengeRatingRegex;
 
         public int MinimumLevel
         {
@@ -32,8 +30,6 @@ namespace EncounterGen.Domain.Generators
             this.collectionSelector = collectionSelector;
             this.encounterCollectionSelector = encounterCollectionSelector;
             this.amountSelector = amountSelector;
-
-            challengeRatingRegex = new Regex(RegexConstants.ChallengeRatingPattern);
         }
 
         public bool ValidEncounterExistsAtLevel(string environment, int level, string temperature, string timeOfDay, params string[] creatureTypeFilters)
@@ -62,33 +58,27 @@ namespace EncounterGen.Domain.Generators
                 return true;
 
             var allowedCreatureNames = GetAllowedCreatureNames(creatureTypeFilters);
-            var potentialCreatureName = GetCreatureName(creatureName);
 
-            return allowedCreatureNames.Contains(potentialCreatureName);
+            return allowedCreatureNames.Contains(creatureName);
         }
 
         private IEnumerable<string> GetAllowedCreatureNames(IEnumerable<string> creatureTypeFilters)
         {
-            var creatureNames = Enumerable.Empty<string>();
+            var creatureNames = new List<string>();
 
             foreach (var filter in creatureTypeFilters)
             {
-                var filterCreatures = collectionSelector.SelectFrom(TableNameConstants.CreatureGroups, filter);
-                creatureNames = creatureNames.Union(filterCreatures);
+                var filterCreatures = collectionSelector.Explode(TableNameConstants.CreatureGroups, filter);
+                creatureNames.AddRange(filterCreatures);
             }
 
-            return creatureNames;
+            return creatureNames.Distinct();
         }
 
-        private string GetCreatureName(string fullCreatureName)
+        public bool EncounterIsValid(Encounter encounter, params string[] creatureTypeFilters)
         {
-            return challengeRatingRegex.Replace(fullCreatureName, string.Empty);
-        }
-
-        public bool EncounterIsValid(IEnumerable<Creature> creatures, params string[] creatureTypeFilters)
-        {
-            var creatureNames = creatures.Select(c => c.Name);
-            var level = amountSelector.SelectEncounterLevel(creatures);
+            var creatureNames = encounter.Creatures.Select(c => c.Type.Name);
+            var level = amountSelector.SelectActualEncounterLevel(encounter);
 
             return LevelIsValid(level) && EncounterIsValid(creatureNames, creatureTypeFilters);
         }

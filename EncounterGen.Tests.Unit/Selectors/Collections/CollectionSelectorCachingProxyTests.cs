@@ -70,7 +70,7 @@ namespace EncounterGen.Tests.Unit.Selectors.Collections
         }
 
         [Test]
-        public void ExplodeResultsCachedByUniqueFrom()
+        public void ExplodeIntoResultsCachedByUniqueFrom()
         {
             var collection = new[] { "thing 1", "thing 2" };
             mockInnerSelector.Setup(s => s.ExplodeInto("table name", "entry", "into this")).Returns(collection);
@@ -95,7 +95,7 @@ namespace EncounterGen.Tests.Unit.Selectors.Collections
         }
 
         [Test]
-        public void ExplodeResultsCachedByUniqueName()
+        public void ExplodeIntoResultsCachedByUniqueName()
         {
             var collection = new[] { "thing 1", "thing 2" };
             mockInnerSelector.Setup(s => s.ExplodeInto("table name", "entry", "into this")).Returns(collection);
@@ -120,7 +120,7 @@ namespace EncounterGen.Tests.Unit.Selectors.Collections
         }
 
         [Test]
-        public void ExplodeResultsCachedByUniqueInto()
+        public void ExplodeIntoResultsCachedByUniqueInto()
         {
             var collection = new[] { "thing 1", "thing 2" };
             mockInnerSelector.Setup(s => s.ExplodeInto("table name", "entry", "into this")).Returns(collection);
@@ -142,6 +142,69 @@ namespace EncounterGen.Tests.Unit.Selectors.Collections
             result = cachingProxy.ExplodeInto("table name", "entry", "other into this");
             Assert.That(result, Is.EqualTo(otherCollection));
             mockInnerSelector.Verify(s => s.ExplodeInto(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>()), Times.Exactly(2));
+        }
+
+        [Test]
+        public void CacheExplodeResultsFromInnerSelector()
+        {
+            var collection = new[] { "thing 1", "thing 2" };
+            mockInnerSelector.Setup(s => s.Explode("table name", "entry")).Returns(collection);
+
+            var result = cachingProxy.Explode("table name", "entry");
+            Assert.That(result, Is.EqualTo(collection));
+
+            result = cachingProxy.Explode("table name", "entry");
+            Assert.That(result, Is.EqualTo(collection));
+            mockInnerSelector.Verify(s => s.Explode(It.IsAny<string>(), It.IsAny<string>()), Times.Once);
+        }
+
+        [Test]
+        public void ExplodeResultsCachedByUniqueTable()
+        {
+            var collection = new[] { "thing 1", "thing 2" };
+            mockInnerSelector.Setup(s => s.Explode("table name", "entry")).Returns(collection);
+
+            var otherCollection = new[] { "thing 3", "thing 4" };
+            mockInnerSelector.Setup(s => s.Explode("other table name", "entry")).Returns(otherCollection);
+
+            var result = cachingProxy.Explode("table name", "entry");
+            Assert.That(result, Is.EqualTo(collection));
+
+            result = cachingProxy.Explode("other table name", "entry");
+            Assert.That(result, Is.EqualTo(otherCollection));
+            mockInnerSelector.Verify(s => s.Explode(It.IsAny<string>(), It.IsAny<string>()), Times.Exactly(2));
+
+            result = cachingProxy.Explode("table name", "entry");
+            Assert.That(result, Is.EqualTo(collection));
+            mockInnerSelector.Verify(s => s.Explode(It.IsAny<string>(), It.IsAny<string>()), Times.Exactly(2));
+
+            result = cachingProxy.Explode("other table name", "entry");
+            Assert.That(result, Is.EqualTo(otherCollection));
+            mockInnerSelector.Verify(s => s.Explode(It.IsAny<string>(), It.IsAny<string>()), Times.Exactly(2));
+        }
+        [Test]
+        public void ExplodeResultsCachedByUniqueEntry()
+        {
+            var collection = new[] { "thing 1", "thing 2" };
+            mockInnerSelector.Setup(s => s.Explode("table name", "entry")).Returns(collection);
+
+            var otherCollection = new[] { "thing 3", "thing 4" };
+            mockInnerSelector.Setup(s => s.Explode("table name", "other entry")).Returns(otherCollection);
+
+            var result = cachingProxy.Explode("table name", "entry");
+            Assert.That(result, Is.EqualTo(collection));
+
+            result = cachingProxy.Explode("table name", "other entry");
+            Assert.That(result, Is.EqualTo(otherCollection));
+            mockInnerSelector.Verify(s => s.Explode(It.IsAny<string>(), It.IsAny<string>()), Times.Exactly(2));
+
+            result = cachingProxy.Explode("table name", "entry");
+            Assert.That(result, Is.EqualTo(collection));
+            mockInnerSelector.Verify(s => s.Explode(It.IsAny<string>(), It.IsAny<string>()), Times.Exactly(2));
+
+            result = cachingProxy.Explode("table name", "other entry");
+            Assert.That(result, Is.EqualTo(otherCollection));
+            mockInnerSelector.Verify(s => s.Explode(It.IsAny<string>(), It.IsAny<string>()), Times.Exactly(2));
         }
     }
 }

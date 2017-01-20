@@ -68,7 +68,7 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
                 EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains,
                 GroupConstants.Land,
                 GroupConstants.Magic,
-                CreatureConstants.Dragon,
+                CreatureConstants.Types.Dragon,
             };
 
             foreach (var category in categories)
@@ -91,7 +91,6 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
         [Test]
         public void AllCreaturesFromEncountersHaveType()
         {
-            var allEncounters = GetAllCollections();
             var types = new[]
             {
                 CreatureConstants.Types.Aberration,
@@ -111,41 +110,32 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
                 CreatureConstants.Types.Vermin,
             };
 
-            var excludedCreatures = new[] { CreatureConstants.DominatedCreature, "Noncombatant" };
-            var creatures = allEncounters.SelectMany(e => GetCreaturesWithDescription(e)).Distinct().Except(excludedCreatures);
-
-            var creaturesWithoutType = creatures.Where(c => EncounterVerifier.CreatureIsValid(c, types) == false);
-            Assert.That(creaturesWithoutType, Is.Empty);
-        }
-
-        [Test]
-        public void AllCreaturesWithoutDescriptionFromEncountersHaveType()
-        {
-            var allEncounters = GetAllCollections();
-            var types = new[]
-            {
-                CreatureConstants.Types.Aberration,
-                CreatureConstants.Types.Animal,
-                CreatureConstants.Types.Construct,
-                CreatureConstants.Types.Dragon,
-                CreatureConstants.Types.Elemental,
-                CreatureConstants.Types.Fey,
-                CreatureConstants.Types.Giant,
-                CreatureConstants.Types.Humanoid,
-                CreatureConstants.Types.MagicalBeast,
-                CreatureConstants.Types.MonstrousHumanoid,
-                CreatureConstants.Types.Ooze,
-                CreatureConstants.Types.Outsider,
-                CreatureConstants.Types.Plant,
-                CreatureConstants.Types.Undead,
-                CreatureConstants.Types.Vermin,
+            var excludedCreatures = new[] {
+                CreatureConstants.DominatedCreature,
+                CreatureConstants.DominatedCreature_CR1,
+                CreatureConstants.DominatedCreature_CR10,
+                CreatureConstants.DominatedCreature_CR11,
+                CreatureConstants.DominatedCreature_CR12,
+                CreatureConstants.DominatedCreature_CR13,
+                CreatureConstants.DominatedCreature_CR14,
+                CreatureConstants.DominatedCreature_CR15,
+                CreatureConstants.DominatedCreature_CR16,
+                CreatureConstants.DominatedCreature_CR2,
+                CreatureConstants.DominatedCreature_CR3,
+                CreatureConstants.DominatedCreature_CR4,
+                CreatureConstants.DominatedCreature_CR5,
+                CreatureConstants.DominatedCreature_CR6,
+                CreatureConstants.DominatedCreature_CR7,
+                CreatureConstants.DominatedCreature_CR8,
+                CreatureConstants.DominatedCreature_CR9,
+                CreatureConstants.Noncombatant,
             };
 
-            var excludedCreatures = new[] { CreatureConstants.DominatedCreature, "Noncombatant" };
-            var creatures = allEncounters.SelectMany(e => GetCreaturesWithDescription(e)).Distinct().Select(c => GetCreature(c)).Except(excludedCreatures);
+            var allCreatures = GetAllCreaturesFromEncounters();
+            allCreatures = allCreatures.Except(excludedCreatures);
 
-            var creaturesWithoutType = creatures.Where(c => EncounterVerifier.CreatureIsValid(c, types) == false);
-            Assert.That(creaturesWithoutType, Is.Empty);
+            var creaturesWithType = allCreatures.Where(c => EncounterVerifier.CreatureIsValid(c, types));
+            AssertWholeCollection(allCreatures, creaturesWithType);
         }
 
         [TestCase(EnvironmentConstants.TimesOfDay.Day, 1)]
@@ -188,20 +178,24 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
         [TestCase(EnvironmentConstants.TimesOfDay.Night, 18)]
         [TestCase(EnvironmentConstants.TimesOfDay.Night, 19)]
         [TestCase(EnvironmentConstants.TimesOfDay.Night, 20)]
-        public void BUG_UndeadNPCsAreWeightedMuchLessThanNormalEncountersInCivilizedEnvironment(string timeOfDay, int level)
+        public void BUG_CivilizedUndeadAreRare(string timeOfDay, int level)
         {
-            var undeadNPC = CollectionSelector.SelectFrom(TableNameConstants.CreatureGroups, GroupConstants.UndeadNPC);
-
-            var percentage = GetPercentage(undeadNPC, EnvironmentConstants.Civilized, string.Empty, timeOfDay, level);
-            Assert.That(percentage, Is.LessThanOrEqualTo(.1)); //Even at high levels, the undead should appear as less than 10% of encounters in a civilized environment
+            var percentage = GetPercentage(EnvironmentConstants.Civilized, string.Empty, timeOfDay, level, IsUndead);
+            Assert.That(percentage, Is.LessThanOrEqualTo(.15));
         }
 
-        private double GetPercentage(IEnumerable<string> subgroup, string environment, string temperature, string timeOfDay, int level)
+        private bool IsUndead(string creature)
+        {
+            var undead = CollectionSelector.Explode(TableNameConstants.CreatureGroups, CreatureConstants.Types.Undead);
+            return undead.Contains(creature);
+        }
+
+        private double GetPercentage(string environment, string temperature, string timeOfDay, int level, Func<string, bool> isInSubgroup)
         {
             var encounters = EncounterCollectionSelector.SelectAllWeightedFrom(level, environment, temperature, timeOfDay);
-            var leadCreatures = encounters.Select(e => e.First().Key).Select(c => GetCreature(c));
+            var leadCreatures = encounters.Select(e => e.First().Key);
 
-            var subgroupCreatures = leadCreatures.Where(cr => subgroup.Contains(cr));
+            var subgroupCreatures = leadCreatures.Where(cr => isInSubgroup(cr));
             var percentage = subgroupCreatures.Count() / (double)leadCreatures.Count();
 
             //INFO: These assertions verify that we are working with a valid, weighted collection
@@ -211,6 +205,56 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
             Console.WriteLine("Actual percentage is {0:P}", percentage);
 
             return percentage;
+        }
+
+        [TestCase(EnvironmentConstants.TimesOfDay.Day, 3)]
+        [TestCase(EnvironmentConstants.TimesOfDay.Day, 4)]
+        [TestCase(EnvironmentConstants.TimesOfDay.Day, 5)]
+        [TestCase(EnvironmentConstants.TimesOfDay.Day, 6)]
+        [TestCase(EnvironmentConstants.TimesOfDay.Day, 7)]
+        [TestCase(EnvironmentConstants.TimesOfDay.Day, 8)]
+        [TestCase(EnvironmentConstants.TimesOfDay.Day, 9)]
+        [TestCase(EnvironmentConstants.TimesOfDay.Day, 10)]
+        [TestCase(EnvironmentConstants.TimesOfDay.Day, 11)]
+        [TestCase(EnvironmentConstants.TimesOfDay.Day, 12)]
+        [TestCase(EnvironmentConstants.TimesOfDay.Day, 13)]
+        [TestCase(EnvironmentConstants.TimesOfDay.Day, 14)]
+        [TestCase(EnvironmentConstants.TimesOfDay.Day, 15)]
+        [TestCase(EnvironmentConstants.TimesOfDay.Day, 16)]
+        [TestCase(EnvironmentConstants.TimesOfDay.Day, 17)]
+        [TestCase(EnvironmentConstants.TimesOfDay.Day, 18)]
+        [TestCase(EnvironmentConstants.TimesOfDay.Day, 19)]
+        [TestCase(EnvironmentConstants.TimesOfDay.Day, 20)]
+        [TestCase(EnvironmentConstants.TimesOfDay.Night, 3)]
+        [TestCase(EnvironmentConstants.TimesOfDay.Night, 4)]
+        [TestCase(EnvironmentConstants.TimesOfDay.Night, 5)]
+        [TestCase(EnvironmentConstants.TimesOfDay.Night, 6)]
+        [TestCase(EnvironmentConstants.TimesOfDay.Night, 7)]
+        [TestCase(EnvironmentConstants.TimesOfDay.Night, 8)]
+        [TestCase(EnvironmentConstants.TimesOfDay.Night, 9)]
+        [TestCase(EnvironmentConstants.TimesOfDay.Night, 10)]
+        [TestCase(EnvironmentConstants.TimesOfDay.Night, 11)]
+        [TestCase(EnvironmentConstants.TimesOfDay.Night, 12)]
+        [TestCase(EnvironmentConstants.TimesOfDay.Night, 13)]
+        [TestCase(EnvironmentConstants.TimesOfDay.Night, 14)]
+        [TestCase(EnvironmentConstants.TimesOfDay.Night, 15)]
+        [TestCase(EnvironmentConstants.TimesOfDay.Night, 16)]
+        [TestCase(EnvironmentConstants.TimesOfDay.Night, 17)]
+        [TestCase(EnvironmentConstants.TimesOfDay.Night, 18)]
+        [TestCase(EnvironmentConstants.TimesOfDay.Night, 19)]
+        [TestCase(EnvironmentConstants.TimesOfDay.Night, 20)]
+        public void BUG_CivilizedUndeadCharactersExist(string timeOfDay, int level)
+        {
+            var percentage = GetPercentage(EnvironmentConstants.Civilized, string.Empty, timeOfDay, level, IsUndeadCharacter);
+            Assert.That(percentage, Is.Positive);
+        }
+
+        private bool IsUndeadCharacter(string creature)
+        {
+            var undead = CollectionSelector.Explode(TableNameConstants.CreatureGroups, CreatureConstants.Types.Undead);
+            var name = EncounterSelector.SelectNameFrom(creature);
+
+            return undead.Contains(creature) && name == CreatureConstants.Character;
         }
 
         [TestCase(EnvironmentConstants.Dungeon, EnvironmentConstants.Temperatures.Temperate, EnvironmentConstants.TimesOfDay.Night, 10, CreatureConstants.Types.Fey, false)]
@@ -255,7 +299,7 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
         [TestCase(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
         [TestCase(GroupConstants.Land)]
         [TestCase(GroupConstants.Magic)]
-        [TestCase(CreatureConstants.Dragon)]
+        [TestCase(CreatureConstants.Types.Dragon)]
         public void BUG_NoEncountersHaveMultipleEntriesOfSameCreature(string category)
         {
             var encounters = GetEncountersFromCreatureGroup(category);

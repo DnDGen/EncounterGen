@@ -14,6 +14,12 @@ namespace EncounterGen.Tests.Integration.IoC.Modules
         }
 
         [Test]
+        public void EncounterGeneratorIsDecorated()
+        {
+            AssertInstanceOf<IEncounterGenerator, EncounterGeneratorEventDecorator>();
+        }
+
+        [Test]
         public void EncounterCharacterGeneratorIsNotASingleton()
         {
             AssertNotSingleton<IEncounterCharacterGenerator>();

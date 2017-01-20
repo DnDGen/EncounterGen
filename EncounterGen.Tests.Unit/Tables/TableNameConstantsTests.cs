@@ -6,7 +6,7 @@ namespace EncounterGen.Tests.Unit.Tables
     [TestFixture]
     public class TableNameConstantsTests
     {
-        [TestCase(TableNameConstants.ChallengeRatings, "ChallengeRatings")]
+        [TestCase(TableNameConstants.AverageChallengeRatings, "AverageChallengeRatings")]
         [TestCase(TableNameConstants.CreatureGroups, "CreatureGroups")]
         [TestCase(TableNameConstants.EncounterGroups, "EncounterGroups")]
         [TestCase(TableNameConstants.EncounterLevelModifiers, "EncounterLevelModifiers")]

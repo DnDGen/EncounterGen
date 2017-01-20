@@ -10,7 +10,7 @@ namespace EncounterGen.Generators
 
         bool ValidEncounterExistsAtLevel(string environment, int level, string temperature, string timeOfDay, params string[] creatureTypeFilters);
         bool EncounterIsValid(IEnumerable<string> creatures, params string[] creatureTypeFilters);
-        bool EncounterIsValid(IEnumerable<Creature> creatures, params string[] creatureTypeFilters);
+        bool EncounterIsValid(Encounter encounter, params string[] creatureTypeFilters);
         bool CreatureIsValid(string creatureName, params string[] creatureTypeFilters);
     }
 }

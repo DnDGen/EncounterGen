@@ -18,8 +18,7 @@ namespace EncounterGen.Tests.Unit.Common
         public void CreatureInitialized()
         {
             Assert.That(creature.Quantity, Is.EqualTo(0));
-            Assert.That(creature.Name, Is.Empty);
-            Assert.That(creature.Description, Is.Empty);
+            Assert.That(creature.Type, Is.Not.Null);
             Assert.That(creature.ChallengeRating, Is.Empty);
         }
     }

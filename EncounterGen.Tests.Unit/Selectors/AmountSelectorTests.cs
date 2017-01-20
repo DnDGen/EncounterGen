@@ -1,4 +1,5 @@
-﻿using EncounterGen.Common;
+﻿using CharacterGen.Characters;
+using EncounterGen.Common;
 using EncounterGen.Domain.Selectors;
 using EncounterGen.Domain.Selectors.Collections;
 using EncounterGen.Domain.Tables;
@@ -6,6 +7,7 @@ using Moq;
 using NUnit.Framework;
 using RollGen;
 using System;
+using System.Linq;
 
 namespace EncounterGen.Tests.Unit.Selectors
 {
@@ -15,15 +17,21 @@ namespace EncounterGen.Tests.Unit.Selectors
         private IAmountSelector amountSelector;
         private Mock<Dice> mockDice;
         private Mock<ICollectionSelector> mockCollectionSelector;
+        private Mock<IEncounterSelector> mockEncounterSelector;
+        private Encounter encounter;
 
         [SetUp]
         public void Setup()
         {
             mockDice = new Mock<Dice>();
             mockCollectionSelector = new Mock<ICollectionSelector>();
-            amountSelector = new AmountSelector(mockDice.Object, mockCollectionSelector.Object);
+            mockEncounterSelector = new Mock<IEncounterSelector>();
+            amountSelector = new AmountSelector(mockDice.Object, mockCollectionSelector.Object, mockEncounterSelector.Object);
+
+            encounter = new Encounter();
 
             mockDice.Setup(d => d.Roll(It.IsAny<string>())).Returns((string s) => ParseIntAsAverage(s));
+            mockEncounterSelector.Setup(s => s.SelectNameFrom(It.IsAny<string>())).Returns((string s) => s);
         }
 
         private PartialRoll ParseIntAsAverage(string input)
@@ -62,7 +70,7 @@ namespace EncounterGen.Tests.Unit.Selectors
             var encounter = "creature/amount";
             SetUpAverageRoll("amount", 902.1);
 
-            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.ChallengeRatings, "creature")).Returns(new[] { "42" });
+            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.AverageChallengeRatings, "creature")).Returns(new[] { "42" });
 
             var encounterLevel = amountSelector.SelectAverageEncounterLevel(encounter);
             Assert.That(encounterLevel, Is.EqualTo(62));
@@ -1033,7 +1041,7 @@ namespace EncounterGen.Tests.Unit.Selectors
             var encounter = "creature/amount";
             SetUpAverageRoll("amount", quantity);
 
-            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.ChallengeRatings, "creature")).Returns(new[] { challengeRating });
+            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.AverageChallengeRatings, "creature")).Returns(new[] { challengeRating });
 
             var computedEncounterLevel = amountSelector.SelectAverageEncounterLevel(encounter);
             Assert.That(computedEncounterLevel, Is.EqualTo(encounterLevel));
@@ -1067,7 +1075,7 @@ namespace EncounterGen.Tests.Unit.Selectors
         [TestCase(ChallengeRatingConstants.TwentyEight)]
         [TestCase(ChallengeRatingConstants.TwentyNine)]
         [TestCase(ChallengeRatingConstants.Thirty)]
-        public void ChallengeRatingHigherThan2Follows2EncounterLevel(string challengeRating)
+        public void ChallengeRatingHigherThan2FollowsAverageEncounterLevelForChallengeRating2(string challengeRating)
         {
             var numericChallengeRating = Convert.ToInt32(challengeRating);
             var difference = numericChallengeRating - 2;
@@ -1077,10 +1085,10 @@ namespace EncounterGen.Tests.Unit.Selectors
             {
                 SetUpAverageRoll("amount", quantity);
 
-                mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.ChallengeRatings, "creature")).Returns(new[] { ChallengeRatingConstants.Two });
+                mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.AverageChallengeRatings, "creature")).Returns(new[] { ChallengeRatingConstants.Two });
                 var crTwoEncounterLevel = amountSelector.SelectAverageEncounterLevel(encounter);
 
-                mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.ChallengeRatings, "creature")).Returns(new[] { challengeRating });
+                mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.AverageChallengeRatings, "creature")).Returns(new[] { challengeRating });
 
                 var computedEncounterLevel = amountSelector.SelectAverageEncounterLevel(encounter);
                 Assert.That(computedEncounterLevel, Is.EqualTo(crTwoEncounterLevel + difference), $"Quantity {quantity} failed for challenge rating {challengeRating}");
@@ -1092,8 +1100,8 @@ namespace EncounterGen.Tests.Unit.Selectors
         {
             var encounter = "creature/amount,other creature/other amount";
 
-            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.ChallengeRatings, "creature")).Returns(new[] { "42" });
-            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.ChallengeRatings, "other creature")).Returns(new[] { "600" });
+            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.AverageChallengeRatings, "creature")).Returns(new[] { "42" });
+            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.AverageChallengeRatings, "other creature")).Returns(new[] { "600" });
 
             SetUpAverageRoll("amount", 902.1);
             SetUpAverageRoll("other amount", 13.37);
@@ -1107,8 +1115,8 @@ namespace EncounterGen.Tests.Unit.Selectors
         {
             var encounter = "creature/amount,other creature/other amount";
 
-            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.ChallengeRatings, "creature")).Returns(new[] { "42" });
-            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.ChallengeRatings, "other creature")).Returns(new[] { "42" });
+            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.AverageChallengeRatings, "creature")).Returns(new[] { "42" });
+            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.AverageChallengeRatings, "other creature")).Returns(new[] { "42" });
 
             SetUpAverageRoll("amount+other amount", 902.1 + 13.37);
 
@@ -1121,8 +1129,8 @@ namespace EncounterGen.Tests.Unit.Selectors
         {
             var encounter = "creature/amount,other creature/other amount";
 
-            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.ChallengeRatings, "creature")).Returns(new[] { ChallengeRatingConstants.One });
-            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.ChallengeRatings, "other creature")).Returns(new[] { ChallengeRatingConstants.Zero });
+            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.AverageChallengeRatings, "creature")).Returns(new[] { ChallengeRatingConstants.One });
+            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.AverageChallengeRatings, "other creature")).Returns(new[] { ChallengeRatingConstants.Zero });
 
             SetUpAverageRoll("amount", 1);
             SetUpAverageRoll("other amount", 100);
@@ -1136,8 +1144,8 @@ namespace EncounterGen.Tests.Unit.Selectors
         {
             var encounter = "creature/amount,other creature/other amount";
 
-            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.ChallengeRatings, "creature")).Returns(new[] { ChallengeRatingConstants.One });
-            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.ChallengeRatings, "other creature")).Returns(new[] { "42" });
+            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.AverageChallengeRatings, "creature")).Returns(new[] { ChallengeRatingConstants.One });
+            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.AverageChallengeRatings, "other creature")).Returns(new[] { "42" });
 
             SetUpAverageRoll("amount", 1);
             SetUpAverageRoll("other amount", 0);
@@ -1151,8 +1159,8 @@ namespace EncounterGen.Tests.Unit.Selectors
         {
             var encounter = "creature/amount,other creature/other amount";
 
-            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.ChallengeRatings, "creature")).Returns(new[] { ChallengeRatingConstants.One });
-            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.ChallengeRatings, "other creature")).Returns(new[] { "42" });
+            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.AverageChallengeRatings, "creature")).Returns(new[] { ChallengeRatingConstants.One });
+            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.AverageChallengeRatings, "other creature")).Returns(new[] { "42" });
 
             SetUpAverageRoll("amount", 1);
             SetUpAverageRoll("other amount", -1);
@@ -1164,12 +1172,12 @@ namespace EncounterGen.Tests.Unit.Selectors
         [Test]
         public void SelectEncounterLevelForCreatures()
         {
-            var creatures = new[]
+            encounter.Creatures = new[]
             {
-                new Creature { Name = "creature", Quantity = 90210, ChallengeRating = "42" }
+                new Creature { Type = new CreatureType { Name = "creature" }, Quantity = 90210, ChallengeRating = "42" }
             };
 
-            var encounterLevel = amountSelector.SelectEncounterLevel(creatures);
+            var encounterLevel = amountSelector.SelectActualEncounterLevel(encounter);
             Assert.That(encounterLevel, Is.EqualTo(75));
         }
 
@@ -2133,14 +2141,14 @@ namespace EncounterGen.Tests.Unit.Selectors
         [TestCase(ChallengeRatingConstants.Two, 118, 16)]
         [TestCase(ChallengeRatingConstants.Two, 119, 16)]
         [TestCase(ChallengeRatingConstants.Two, 120, 16)]
-        public void ComputeEncounterLevelForCreatures(string challengeRating, int quantity, int encounterLevel)
+        public void ComputeActualEncounterLevelForCreatures(string challengeRating, int quantity, int encounterLevel)
         {
-            var creatures = new[]
+            encounter.Creatures = new[]
             {
-                new Creature { Name = "creature", Quantity = quantity, ChallengeRating = challengeRating }
+                new Creature { Type = new CreatureType { Name = "creature" }, Quantity = quantity, ChallengeRating = challengeRating }
             };
 
-            var computedEncounterLevel = amountSelector.SelectEncounterLevel(creatures);
+            var computedEncounterLevel = amountSelector.SelectActualEncounterLevel(encounter);
             Assert.That(computedEncounterLevel, Is.EqualTo(encounterLevel));
         }
 
@@ -2172,102 +2180,204 @@ namespace EncounterGen.Tests.Unit.Selectors
         [TestCase(ChallengeRatingConstants.TwentyEight)]
         [TestCase(ChallengeRatingConstants.TwentyNine)]
         [TestCase(ChallengeRatingConstants.Thirty)]
-        public void ChallengeRatingHigherThan2ForCreaturesFollows2EncounterLevel(string challengeRating)
+        public void ChallengeRatingHigherThan2ForCreaturesFollowsActualEncounterLevelForChallengeRating2(string challengeRating)
         {
             var numericChallengeRating = Convert.ToInt32(challengeRating);
             var difference = numericChallengeRating - 2;
 
-            var creatures = new[]
+            encounter.Creatures = new[]
             {
-                new Creature { Name = "creature", Quantity = 0, ChallengeRating = challengeRating }
+                new Creature { Type = new CreatureType { Name = "creature" }, Quantity = 0, ChallengeRating = challengeRating }
             };
 
             for (var quantity = 1; quantity <= 120; quantity++)
             {
-                creatures[0].Quantity = quantity;
-                creatures[0].ChallengeRating = ChallengeRatingConstants.Two;
+                var creature = encounter.Creatures.Single();
+                creature.Quantity = quantity;
+                creature.ChallengeRating = ChallengeRatingConstants.Two;
 
-                var crTwoEncounterLevel = amountSelector.SelectEncounterLevel(creatures);
+                var crTwoEncounterLevel = amountSelector.SelectActualEncounterLevel(encounter);
 
-                creatures[0].ChallengeRating = challengeRating;
+                creature.ChallengeRating = challengeRating;
 
-                var computedEncounterLevel = amountSelector.SelectEncounterLevel(creatures);
+                var computedEncounterLevel = amountSelector.SelectActualEncounterLevel(encounter);
                 Assert.That(computedEncounterLevel, Is.EqualTo(crTwoEncounterLevel + difference), $"Quantity {quantity} failed for challenge rating {challengeRating}");
             }
         }
 
         [Test]
-        public void SelectEncounterLevelFromMultipleCreatueres()
+        public void SelectActualEncounterLevelFromMultipleCreatueres()
         {
-            var creatures = new[]
+            encounter.Creatures = new[]
             {
-                new Creature { Name = "creature", Quantity = 90210, ChallengeRating = "42" },
-                new Creature { Name = "other creature", Quantity = 1337, ChallengeRating = "600" },
+                new Creature { Type = new CreatureType { Name = "creature" }, Quantity = 90210, ChallengeRating = "42" },
+                new Creature { Type = new CreatureType { Name = "other creature" }, Quantity = 1337, ChallengeRating = "600" },
             };
 
-            var encounterLevel = amountSelector.SelectEncounterLevel(creatures);
+            var encounterLevel = amountSelector.SelectActualEncounterLevel(encounter);
             Assert.That(encounterLevel, Is.EqualTo(621));
         }
 
         [Test]
-        public void SelectEncounterLevelFromMultipleCreatueresOfSameChallengeRating()
+        public void SelectActualEncounterLevelFromMultipleCreatueresOfSameChallengeRating()
         {
-            var creatures = new[]
+            encounter.Creatures = new[]
             {
-                new Creature { Name = "creature", Quantity = 90210, ChallengeRating = "42" },
-                new Creature { Name = "other creature", Quantity = 1337, ChallengeRating = "42" },
+                new Creature { Type = new CreatureType { Name = "creature" }, Quantity = 90210, ChallengeRating = "42" },
+                new Creature { Type = new CreatureType { Name = "other creature" }, Quantity = 1337, ChallengeRating = "42" },
             };
 
-            var encounterLevel = amountSelector.SelectEncounterLevel(creatures);
+            var encounterLevel = amountSelector.SelectActualEncounterLevel(encounter);
 
-            creatures = new[]
+            encounter.Creatures = new[]
             {
-                new Creature { Name = "creature", Quantity = 90210 + 1337, ChallengeRating = "42" },
+                new Creature { Type = new CreatureType { Name = "creature" }, Quantity = 90210 + 1337, ChallengeRating = "42" },
             };
 
-            var doubledEncounterLevel = amountSelector.SelectEncounterLevel(creatures);
+            var doubledEncounterLevel = amountSelector.SelectActualEncounterLevel(encounter);
 
             Assert.That(encounterLevel, Is.EqualTo(doubledEncounterLevel));
             Assert.That(encounterLevel, Is.EqualTo(75));
         }
 
         [Test]
-        public void ChallengeRatingOfZeroFromCreatureDoesNotAffectEncounterLevel()
+        public void ChallengeRatingOfZeroFromCreatureDoesNotAffectActualEncounterLevel()
         {
-            var creatures = new[]
+            encounter.Creatures = new[]
             {
-                new Creature { Name = "creature", Quantity = 1, ChallengeRating = ChallengeRatingConstants.One },
-                new Creature { Name = "other creature", Quantity = 100, ChallengeRating = ChallengeRatingConstants.Zero },
+                new Creature { Type = new CreatureType { Name = "creature" }, Quantity = 1, ChallengeRating = ChallengeRatingConstants.One },
+                new Creature { Type = new CreatureType { Name = "other creature" }, Quantity = 100, ChallengeRating = ChallengeRatingConstants.Zero },
             };
 
-            var encounterLevel = amountSelector.SelectEncounterLevel(creatures);
+            var encounterLevel = amountSelector.SelectActualEncounterLevel(encounter);
             Assert.That(encounterLevel, Is.EqualTo(1));
         }
 
         [Test]
-        public void AmountOfZeroFromCreatureDoesNotAffectEncounterLevel()
+        public void AmountOfZeroFromCreatureDoesNotAffectActualEncounterLevel()
         {
-            var creatures = new[]
+            encounter.Creatures = new[]
             {
-                new Creature { Name = "creature", Quantity = 1, ChallengeRating = ChallengeRatingConstants.One },
-                new Creature { Name = "other creature", Quantity = 0, ChallengeRating = "42" },
+                new Creature { Type = new CreatureType { Name = "creature" }, Quantity = 1, ChallengeRating = ChallengeRatingConstants.One },
+                new Creature { Type = new CreatureType { Name = "other creature" }, Quantity = 0, ChallengeRating = "42" },
             };
 
-            var encounterLevel = amountSelector.SelectEncounterLevel(creatures);
+            var encounterLevel = amountSelector.SelectActualEncounterLevel(encounter);
             Assert.That(encounterLevel, Is.EqualTo(1));
         }
 
         [Test]
-        public void NegativeAmountFromCreatureDoesNotAffectEncounterLevel()
+        public void NegativeAmountFromCreatureDoesNotAffectActualEncounterLevel()
         {
-            var creatures = new[]
+            encounter.Creatures = new[]
             {
-                new Creature { Name = "creature", Quantity = 1, ChallengeRating = ChallengeRatingConstants.One },
-                new Creature { Name = "other creature", Quantity = -1, ChallengeRating = "42" },
+                new Creature { Type = new CreatureType { Name = "creature" }, Quantity = 1, ChallengeRating = ChallengeRatingConstants.One },
+                new Creature { Type = new CreatureType { Name = "other creature" }, Quantity = -1, ChallengeRating = "42" },
             };
 
-            var encounterLevel = amountSelector.SelectEncounterLevel(creatures);
+            var encounterLevel = amountSelector.SelectActualEncounterLevel(encounter);
             Assert.That(encounterLevel, Is.EqualTo(1));
+        }
+
+        [Test]
+        public void GetActualEncounterLevelFromCharacters()
+        {
+            encounter.Creatures = new[]
+            {
+                new Creature { Type = new CreatureType { Name = CreatureConstants.Character }, Quantity = 90210, ChallengeRating = "42" },
+                new Creature { Type = new CreatureType { Name = CreatureConstants.Character }, Quantity = 1337, ChallengeRating = "600" },
+            };
+
+            encounter.Characters = new[]
+            {
+                new Character(),
+                new Character(),
+            };
+
+            encounter.Characters.First().Class.Level = 92;
+            encounter.Characters.First().Class.IsNPC = true;
+            encounter.Characters.Last().Class.Level = 66;
+            encounter.Characters.Last().Race.ChallengeRating = 123;
+
+            var encounterLevel = amountSelector.SelectActualEncounterLevel(encounter);
+            Assert.That(encounterLevel, Is.EqualTo(189));
+        }
+
+        [Test]
+        public void GetActualEncounterLevelFromDirtyCharacters()
+        {
+            encounter.Creatures = new[]
+            {
+                new Creature { Type = new CreatureType { Name = "creature" }, Quantity = 90210, ChallengeRating = "42" },
+                new Creature { Type = new CreatureType { Name = "other creature" }, Quantity = 1337, ChallengeRating = "600" },
+            };
+
+            encounter.Characters = new[]
+            {
+                new Character(),
+                new Character(),
+            };
+
+            encounter.Characters.First().Class.Level = 92;
+            encounter.Characters.First().Class.IsNPC = true;
+            encounter.Characters.Last().Class.Level = 66;
+            encounter.Characters.Last().Race.ChallengeRating = 123;
+
+            mockEncounterSelector.Setup(s => s.SelectNameFrom("creature")).Returns(CreatureConstants.Character);
+            mockEncounterSelector.Setup(s => s.SelectNameFrom("other creature")).Returns(CreatureConstants.Character);
+
+            var encounterLevel = amountSelector.SelectActualEncounterLevel(encounter);
+            Assert.That(encounterLevel, Is.EqualTo(189));
+        }
+
+        [Test]
+        public void GetActualEncounterLevelFromCharactersAndCreatures()
+        {
+            encounter.Creatures = new[]
+            {
+                new Creature { Type = new CreatureType { Name = "creature" }, Quantity = 90, ChallengeRating = "21" },
+                new Creature { Type = new CreatureType { Name = "other creature" }, Quantity = 13, ChallengeRating = "37" },
+                new Creature { Type = new CreatureType { Name = CreatureConstants.Character }, Quantity = 12, ChallengeRating = "34" },
+                new Creature { Type = new CreatureType { Name = CreatureConstants.Character }, Quantity = 23, ChallengeRating = "45" },
+            };
+
+            encounter.Characters = new[]
+            {
+                new Character(),
+                new Character(),
+            };
+
+            encounter.Characters.First().Class.Level = 42;
+            encounter.Characters.First().Class.IsNPC = true;
+            encounter.Characters.Last().Class.Level = 60;
+            encounter.Characters.Last().Race.ChallengeRating = 56;
+
+            var encounterLevel = amountSelector.SelectActualEncounterLevel(encounter);
+            Assert.That(encounterLevel, Is.EqualTo(116));
+        }
+
+        [Test]
+        public void GetActualEncounterLevelForCharacterSubtypes()
+        {
+            encounter.Creatures = new[]
+            {
+                new Creature { Type = new CreatureType { Name = "creature", SubType = new CreatureType { Name = CreatureConstants.Character } }, Quantity = 90210, ChallengeRating = "42" },
+                new Creature { Type = new CreatureType { Name = "creature", SubType = new CreatureType { Name = CreatureConstants.Character } }, Quantity = 1337, ChallengeRating = "600" },
+            };
+
+            encounter.Characters = new[]
+            {
+                new Character(),
+                new Character(),
+            };
+
+            encounter.Characters.First().Class.Level = 92;
+            encounter.Characters.First().Class.IsNPC = true;
+            encounter.Characters.Last().Class.Level = 66;
+            encounter.Characters.Last().Race.ChallengeRating = 123;
+
+            var encounterLevel = amountSelector.SelectActualEncounterLevel(encounter);
+            Assert.That(encounterLevel, Is.EqualTo(189));
         }
     }
 }

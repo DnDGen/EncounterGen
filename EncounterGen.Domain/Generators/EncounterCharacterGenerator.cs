@@ -1,16 +1,15 @@
-﻿using CharacterGen;
+﻿using CharacterGen.Characters;
 using CharacterGen.Randomizers.Alignments;
 using CharacterGen.Randomizers.CharacterClasses;
 using CharacterGen.Randomizers.Races;
 using CharacterGen.Randomizers.Stats;
 using EncounterGen.Common;
+using EncounterGen.Domain.Selectors;
 using EncounterGen.Domain.Selectors.Collections;
-using EncounterGen.Domain.Tables;
 using RollGen;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.RegularExpressions;
 
 namespace EncounterGen.Domain.Generators
 {
@@ -22,41 +21,40 @@ namespace EncounterGen.Domain.Generators
         private IClassNameRandomizer anyNPCClassNameRandomizer;
         private ISetClassNameRandomizer setClassNameRandomizer;
         private ISetLevelRandomizer setLevelRandomizer;
-        private RaceRandomizer baseRaceRandomizer;
-        private RaceRandomizer metaraceRandomizer;
+        private RaceRandomizer anyBaseRaceRandomizer;
+        private RaceRandomizer anyMetaraceRandomizer;
         private IStatsRandomizer statsRandomizer;
         private ICollectionSelector collectionSelector;
         private ISetMetaraceRandomizer setMetaraceRandomizer;
-        private Regex challengeRatingRegex;
-        private Regex subTypeRegex;
+        private ISetBaseRaceRandomizer setBaseRaceRandomizer;
         private Dice dice;
+        private IEncounterSelector encounterSelector;
 
         public EncounterCharacterGenerator(ICharacterGenerator characterGenerator, IAlignmentRandomizer alignmentRandomizer, IClassNameRandomizer anyPlayerClassNameRandomizer,
-            ISetLevelRandomizer setLevelRandomizer, RaceRandomizer baseRaceRandomizer, RaceRandomizer metaraceRandomizer, IStatsRandomizer statsRandomizer,
+            ISetLevelRandomizer setLevelRandomizer, RaceRandomizer anyBaseRaceRandomizer, RaceRandomizer anyMetaraceRandomizer, IStatsRandomizer statsRandomizer,
             ICollectionSelector collectionSelector, ISetMetaraceRandomizer setMetaraceRandomizer, IClassNameRandomizer anyNPCClassNameRandomizer,
-            ISetClassNameRandomizer setClassNameRandomizer, Dice dice)
+            ISetClassNameRandomizer setClassNameRandomizer, Dice dice, IEncounterSelector encounterSelector, ISetBaseRaceRandomizer setBaseRaceRandomizer)
         {
             this.characterGenerator = characterGenerator;
             this.alignmentRandomizer = alignmentRandomizer;
             this.anyPlayerClassNameRandomizer = anyPlayerClassNameRandomizer;
             this.setLevelRandomizer = setLevelRandomizer;
-            this.baseRaceRandomizer = baseRaceRandomizer;
-            this.metaraceRandomizer = metaraceRandomizer;
+            this.anyBaseRaceRandomizer = anyBaseRaceRandomizer;
+            this.anyMetaraceRandomizer = anyMetaraceRandomizer;
             this.statsRandomizer = statsRandomizer;
             this.collectionSelector = collectionSelector;
             this.setMetaraceRandomizer = setMetaraceRandomizer;
             this.anyNPCClassNameRandomizer = anyNPCClassNameRandomizer;
             this.setClassNameRandomizer = setClassNameRandomizer;
             this.dice = dice;
-
-            challengeRatingRegex = new Regex(RegexConstants.ChallengeRatingPattern);
-            subTypeRegex = new Regex(RegexConstants.DescriptionPattern);
+            this.encounterSelector = encounterSelector;
+            this.setBaseRaceRandomizer = setBaseRaceRandomizer;
         }
 
         public IEnumerable<Character> GenerateFrom(IEnumerable<Creature> creatures)
         {
             var characters = new List<Character>();
-            var characterCreatures = creatures.Where(c => IsCharacterCreatureType(c.Name) || IsCharacterCreatureType(c.Description));
+            var characterCreatures = creatures.Where(c => IsCharacter(c.Type));
 
             foreach (var characterCreature in characterCreatures)
             {
@@ -72,92 +70,82 @@ namespace EncounterGen.Domain.Generators
             return characters;
         }
 
-        private bool IsCharacterCreatureType(string fullCreatureType)
+        private bool IsCharacter(CreatureType creatureType)
         {
-            var characterCreatureType = GetCreatureTypeCharacter(fullCreatureType);
+            if (IsCharacter(creatureType.Name))
+                return true;
 
-            return string.IsNullOrEmpty(characterCreatureType) == false;
+            if (creatureType.SubType != null)
+                return IsCharacter(creatureType.SubType);
+
+            return false;
+        }
+
+        private bool IsCharacter(string creature)
+        {
+            var name = encounterSelector.SelectNameFrom(creature);
+            return name == CreatureConstants.Character;
         }
 
         private Character GenerateCharacter(Creature creature)
         {
-            var characterCreatureType = GetCharacterCreatureType(creature);
+            var characterTemplate = GetCharacterTemplate(creature.Type);
 
-            setLevelRandomizer.SetLevel = GetCharacterLevel(creature);
-            setLevelRandomizer.AllowAdjustments = true;
+            setBaseRaceRandomizer.SetBaseRace = encounterSelector.SelectBaseRaceFrom(characterTemplate);
+            setMetaraceRandomizer.SetMetarace = encounterSelector.SelectMetaraceFrom(characterTemplate);
+            setLevelRandomizer.SetLevel = GetCharacterLevel(characterTemplate);
+            setLevelRandomizer.AllowAdjustments = string.IsNullOrEmpty(setBaseRaceRandomizer.SetBaseRace) && string.IsNullOrEmpty(setMetaraceRandomizer.SetMetarace);
 
-            var undeadNPCCreatures = collectionSelector.SelectFrom(TableNameConstants.CreatureGroups, GroupConstants.UndeadNPC);
-            if (undeadNPCCreatures.Contains(characterCreatureType))
-            {
-                setMetaraceRandomizer.SetMetarace = characterCreatureType;
-                setLevelRandomizer.AllowAdjustments = false;
+            var classes = encounterSelector.SelectCharacterClassesFrom(characterTemplate);
 
-                return characterGenerator.GenerateWith(alignmentRandomizer, anyPlayerClassNameRandomizer, setLevelRandomizer, baseRaceRandomizer, setMetaraceRandomizer, statsRandomizer);
-            }
+            if (classes.Any())
+                setClassNameRandomizer.SetClassName = collectionSelector.SelectRandomFrom(classes);
+            else
+                setClassNameRandomizer.SetClassName = string.Empty;
 
-            if (characterCreatureType == CreatureConstants.Character)
-                return characterGenerator.GenerateWith(alignmentRandomizer, anyPlayerClassNameRandomizer, setLevelRandomizer, baseRaceRandomizer, metaraceRandomizer, statsRandomizer);
-
-            if (characterCreatureType == CreatureConstants.NPC)
-                return characterGenerator.GenerateWith(alignmentRandomizer, anyNPCClassNameRandomizer, setLevelRandomizer, baseRaceRandomizer, metaraceRandomizer, statsRandomizer);
-
-            setClassNameRandomizer.SetClassName = characterCreatureType;
-            return characterGenerator.GenerateWith(alignmentRandomizer, setClassNameRandomizer, setLevelRandomizer, baseRaceRandomizer, metaraceRandomizer, statsRandomizer);
+            return GenerateCharacter();
         }
 
-        private string GetCharacterCreatureType(Creature creature)
+        private Character GenerateCharacter()
         {
-            var creatureType = GetCreatureTypeCharacter(creature.Name);
+            var chosenClassNameRandomizer = anyPlayerClassNameRandomizer;
+            var chosenBaseRaceRandomizer = anyBaseRaceRandomizer;
+            var chosenMetaraceRandomizer = anyMetaraceRandomizer;
 
-            if (string.IsNullOrEmpty(creatureType))
-                return GetCreatureTypeCharacter(creature.Description);
+            if (!string.IsNullOrEmpty(setClassNameRandomizer.SetClassName))
+                chosenClassNameRandomizer = setClassNameRandomizer;
 
-            return creatureType;
+            if (setClassNameRandomizer.SetClassName == ClassNameRandomizerTypeConstants.AnyNPC)
+                chosenClassNameRandomizer = anyNPCClassNameRandomizer;
+
+            if (!string.IsNullOrEmpty(setBaseRaceRandomizer.SetBaseRace))
+                chosenBaseRaceRandomizer = setBaseRaceRandomizer;
+
+            if (!string.IsNullOrEmpty(setMetaraceRandomizer.SetMetarace))
+                chosenMetaraceRandomizer = setMetaraceRandomizer;
+
+            return characterGenerator.GenerateWith(alignmentRandomizer, chosenClassNameRandomizer, setLevelRandomizer, chosenBaseRaceRandomizer, chosenMetaraceRandomizer, statsRandomizer);
         }
 
-        private string GetCreatureTypeCharacter(string fullCreatureType)
+        private string GetCharacterTemplate(CreatureType creaturetype)
         {
-            var creatureType = GetCreatureType(fullCreatureType);
+            if (IsCharacter(creaturetype.Name))
+                return creaturetype.Name;
 
-            var undeadNPCCreatures = collectionSelector.SelectFrom(TableNameConstants.CreatureGroups, GroupConstants.UndeadNPC);
-            if (undeadNPCCreatures.Contains(creatureType))
-                return creatureType;
-
-            var classes = collectionSelector.SelectFrom(TableNameConstants.CreatureGroups, CreatureConstants.Character);
-            if (classes.Contains(creatureType))
-                return creatureType;
+            if (creaturetype.SubType != null)
+                return GetCharacterTemplate(creaturetype.SubType);
 
             return string.Empty;
         }
 
-        private string GetCreatureType(string fullCreatureType)
+        private int GetCharacterLevel(string characterTemplate)
         {
-            var creatureType = subTypeRegex.Replace(fullCreatureType, string.Empty);
-            creatureType = challengeRatingRegex.Replace(creatureType, string.Empty);
-
-            return creatureType;
-        }
-
-        private int GetCharacterLevel(Creature creature)
-        {
-            var challengeRating = GetSetChallengeRating(creature.Description);
+            var challengeRating = encounterSelector.SelectChallengeRatingFrom(characterTemplate);
 
             if (string.IsNullOrEmpty(challengeRating))
-                challengeRating = GetSetChallengeRating(creature.Name);
-
-            if (string.IsNullOrEmpty(challengeRating))
-                throw new ArgumentException($"Character level was not provided for a character creature {creature.Name} ({creature.Description})");
+                throw new ArgumentException($"Character level was not provided for a character {characterTemplate}");
 
             return dice.Roll(challengeRating).AsSum();
-        }
-
-        private string GetSetChallengeRating(string creatureType)
-        {
-            var levelMatch = challengeRatingRegex.Match(creatureType);
-            if (string.IsNullOrEmpty(levelMatch.Value))
-                return string.Empty;
-
-            return levelMatch.Value.Substring(1, levelMatch.Value.Length - 2);
         }
     }
 }

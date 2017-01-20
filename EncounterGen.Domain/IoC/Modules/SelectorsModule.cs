@@ -10,6 +10,7 @@ namespace EncounterGen.Domain.IoC.Modules
         public override void Load()
         {
             Bind<IAdjustmentSelector>().To<AdjustmentSelector>();
+            Bind<IEncounterSelector>().To<EncounterSelector>();
             Bind<IAmountSelector>().To<AmountSelector>();
             Bind<IPercentileSelector>().To<PercentileSelector>();
             Bind<IBooleanPercentileSelector>().To<BooleanPercentileSelector>();

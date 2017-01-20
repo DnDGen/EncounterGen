@@ -1,9 +1,9 @@
-﻿using CharacterGen.CharacterClasses;
-using EncounterGen.Common;
+﻿using EncounterGen.Common;
 using EncounterGen.Domain.Selectors;
 using EncounterGen.Domain.Tables;
 using NUnit.Framework;
 using System;
+using System.Linq;
 
 namespace EncounterGen.Tests.Integration.Tables.Treasures
 {
@@ -21,563 +21,14 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
         [Test]
         public override void EntriesAreComplete()
         {
-            var entries = new[]
-            {
-                CreatureConstants.AasimarWarrior,
-                CreatureConstants.Aboleth,
-                CreatureConstants.Aboleth_Mage,
-                CreatureConstants.Achaierai,
-                CreatureConstants.Allip,
-                CreatureConstants.Androsphinx,
-                CreatureConstants.Ankheg,
-                CreatureConstants.AnimatedObject_Colossal,
-                CreatureConstants.AnimatedObject_Gargantuan,
-                CreatureConstants.AnimatedObject_Huge,
-                CreatureConstants.AnimatedObject_Large,
-                CreatureConstants.AnimatedObject_Medium,
-                CreatureConstants.AnimatedObject_Small,
-                CreatureConstants.AnimatedObject_Tiny,
-                CreatureConstants.Annis,
-                CreatureConstants.Ant_Giant_Soldier,
-                CreatureConstants.Ant_Giant_Worker,
-                CreatureConstants.Ant_Giant_Queen,
-                CreatureConstants.Ape,
-                CreatureConstants.Ape_Dire,
-                CreatureConstants.Aranea,
-                CreatureConstants.Arrowhawk_Adult,
-                CreatureConstants.Arrowhawk_Elder,
-                CreatureConstants.Arrowhawk_Juvenile,
-                CreatureConstants.AssassinVine,
-                CreatureConstants.AstralDeva,
-                CreatureConstants.Athach,
-                CreatureConstants.Avoral,
-                CreatureConstants.Azer,
-                CreatureConstants.Babau,
-                CreatureConstants.Baboon,
-                CreatureConstants.Badger,
-                CreatureConstants.Badger_Dire,
-                CreatureConstants.Badger_Celestial,
-                CreatureConstants.Balor,
-                CreatureConstants.BeardedDevil,
-                CreatureConstants.Barghest,
-                CreatureConstants.Barghest_Greater,
-                CreatureConstants.Basilisk,
-                CreatureConstants.Basilisk_AbyssalGreater,
-                CreatureConstants.Bat,
-                CreatureConstants.Bat_Dire,
-                CreatureConstants.Bat_Swarm,
-                CreatureConstants.Bee_Giant,
-                CreatureConstants.Bear_Black,
-                CreatureConstants.Bear_Brown,
-                CreatureConstants.Bear_Dire,
-                CreatureConstants.Bear_Polar,
-                CreatureConstants.Bebilith,
-                CreatureConstants.Behir,
-                CreatureConstants.Beholder,
-                CreatureConstants.Belker,
-                CreatureConstants.Bison,
-                CreatureConstants.BlackPudding,
-                CreatureConstants.BlackPudding_Elder,
-                CreatureConstants.BlinkDog,
-                CreatureConstants.Boar,
-                CreatureConstants.Boar_Dire,
-                CreatureConstants.Bodak,
-                CreatureConstants.BombardierBeetle_Giant,
-                CreatureConstants.Bralani,
-                CreatureConstants.Bugbear,
-                CreatureConstants.Bulette,
-                CreatureConstants.Camel,
-                CreatureConstants.CarrionCrawler,
-                CreatureConstants.Cat,
-                CreatureConstants.Centipede_Monstrous_Colossal,
-                CreatureConstants.Centipede_Monstrous_Gargantuan,
-                CreatureConstants.Centipede_Monstrous_Huge,
-                CreatureConstants.Centipede_Monstrous_Large,
-                CreatureConstants.Centipede_Monstrous_Medium,
-                CreatureConstants.Centipede_Monstrous_Small,
-                CreatureConstants.Centipede_Monstrous_Tiny,
-                CreatureConstants.Centipede_Monstrous_Fiendish_Colossal,
-                CreatureConstants.Centipede_Monstrous_Fiendish_Gargantuan,
-                CreatureConstants.Centipede_Monstrous_Fiendish_Huge,
-                CreatureConstants.Centipede_Monstrous_Fiendish_Large,
-                CreatureConstants.Centipede_Monstrous_Fiendish_Medium,
-                CreatureConstants.Centipede_Swarm,
-                CreatureConstants.ChaosBeast,
-                CreatureConstants.Centaur,
-                CreatureConstants.Character,
-                CreatureConstants.Cheetah,
-                CreatureConstants.Chimera,
-                CreatureConstants.Choker,
-                CreatureConstants.Cloaker,
-                CreatureConstants.Cockatrice,
-                CharacterClassConstants.Commoner,
-                CreatureConstants.HornedDevil,
-                CreatureConstants.Couatl,
-                CreatureConstants.Criosphinx,
-                CreatureConstants.Crocodile,
-                CreatureConstants.Crocodile_Giant,
-                CreatureConstants.Cryohydra,
-                CreatureConstants.Chuul,
-                CreatureConstants.Darkmantle,
-                CreatureConstants.Deinonychus,
-                CreatureConstants.Delver,
-                CreatureConstants.Derro,
-                CreatureConstants.Destrachan,
-                CreatureConstants.Devourer,
-                CreatureConstants.Digester,
-                CreatureConstants.DisplacerBeast,
-                CreatureConstants.Djinni,
-                CreatureConstants.Djinni_Noble,
-                CreatureConstants.Dog,
-                CreatureConstants.Dog_Celestial,
-                CreatureConstants.Donkey,
-                CreatureConstants.Doppelganger,
-                CreatureConstants.Dragon_Black_Wyrmling,
-                CreatureConstants.Dragon_Black_VeryYoung,
-                CreatureConstants.Dragon_Black_Young,
-                CreatureConstants.Dragon_Black_Juvenile,
-                CreatureConstants.Dragon_Black_YoungAdult,
-                CreatureConstants.Dragon_Black_Adult,
-                CreatureConstants.Dragon_Black_MatureAdult,
-                CreatureConstants.Dragon_Black_Old,
-                CreatureConstants.Dragon_Black_VeryOld,
-                CreatureConstants.Dragon_Black_Ancient,
-                CreatureConstants.Dragon_Black_Wyrm,
-                CreatureConstants.Dragon_Black_GreatWyrm,
-                CreatureConstants.Dragon_Blue_Wyrmling,
-                CreatureConstants.Dragon_Blue_VeryYoung,
-                CreatureConstants.Dragon_Blue_Young,
-                CreatureConstants.Dragon_Blue_Juvenile,
-                CreatureConstants.Dragon_Blue_YoungAdult,
-                CreatureConstants.Dragon_Blue_Adult,
-                CreatureConstants.Dragon_Blue_MatureAdult,
-                CreatureConstants.Dragon_Blue_Old,
-                CreatureConstants.Dragon_Blue_VeryOld,
-                CreatureConstants.Dragon_Blue_Ancient,
-                CreatureConstants.Dragon_Blue_Wyrm,
-                CreatureConstants.Dragon_Blue_GreatWyrm,
-                CreatureConstants.Dragon_Green_Wyrmling,
-                CreatureConstants.Dragon_Green_VeryYoung,
-                CreatureConstants.Dragon_Green_Young,
-                CreatureConstants.Dragon_Green_Juvenile,
-                CreatureConstants.Dragon_Green_YoungAdult,
-                CreatureConstants.Dragon_Green_Adult,
-                CreatureConstants.Dragon_Green_MatureAdult,
-                CreatureConstants.Dragon_Green_Old,
-                CreatureConstants.Dragon_Green_VeryOld,
-                CreatureConstants.Dragon_Green_Ancient,
-                CreatureConstants.Dragon_Green_Wyrm,
-                CreatureConstants.Dragon_Green_GreatWyrm,
-                CreatureConstants.Dragon_Red_Wyrmling,
-                CreatureConstants.Dragon_Red_VeryYoung,
-                CreatureConstants.Dragon_Red_Young,
-                CreatureConstants.Dragon_Red_Juvenile,
-                CreatureConstants.Dragon_Red_YoungAdult,
-                CreatureConstants.Dragon_Red_Adult,
-                CreatureConstants.Dragon_Red_MatureAdult,
-                CreatureConstants.Dragon_Red_Old,
-                CreatureConstants.Dragon_Red_VeryOld,
-                CreatureConstants.Dragon_Red_Ancient,
-                CreatureConstants.Dragon_Red_Wyrm,
-                CreatureConstants.Dragon_Red_GreatWyrm,
-                CreatureConstants.Dragon_White_Wyrmling,
-                CreatureConstants.Dragon_White_VeryYoung,
-                CreatureConstants.Dragon_White_Young,
-                CreatureConstants.Dragon_White_Juvenile,
-                CreatureConstants.Dragon_White_YoungAdult,
-                CreatureConstants.Dragon_White_Adult,
-                CreatureConstants.Dragon_White_MatureAdult,
-                CreatureConstants.Dragon_White_Old,
-                CreatureConstants.Dragon_White_VeryOld,
-                CreatureConstants.Dragon_White_Ancient,
-                CreatureConstants.Dragon_White_Wyrm,
-                CreatureConstants.Dragon_White_GreatWyrm,
-                CreatureConstants.Dragon_Brass_Wyrmling,
-                CreatureConstants.Dragon_Brass_VeryYoung,
-                CreatureConstants.Dragon_Brass_Young,
-                CreatureConstants.Dragon_Brass_Juvenile,
-                CreatureConstants.Dragon_Brass_YoungAdult,
-                CreatureConstants.Dragon_Brass_Adult,
-                CreatureConstants.Dragon_Brass_MatureAdult,
-                CreatureConstants.Dragon_Brass_Old,
-                CreatureConstants.Dragon_Brass_VeryOld,
-                CreatureConstants.Dragon_Brass_Ancient,
-                CreatureConstants.Dragon_Brass_Wyrm,
-                CreatureConstants.Dragon_Brass_GreatWyrm,
-                CreatureConstants.Dragon_Bronze_Wyrmling,
-                CreatureConstants.Dragon_Bronze_VeryYoung,
-                CreatureConstants.Dragon_Bronze_Young,
-                CreatureConstants.Dragon_Bronze_Juvenile,
-                CreatureConstants.Dragon_Bronze_YoungAdult,
-                CreatureConstants.Dragon_Bronze_Adult,
-                CreatureConstants.Dragon_Bronze_MatureAdult,
-                CreatureConstants.Dragon_Bronze_Old,
-                CreatureConstants.Dragon_Bronze_VeryOld,
-                CreatureConstants.Dragon_Bronze_Ancient,
-                CreatureConstants.Dragon_Bronze_Wyrm,
-                CreatureConstants.Dragon_Bronze_GreatWyrm,
-                CreatureConstants.Dragon_Copper_Wyrmling,
-                CreatureConstants.Dragon_Copper_VeryYoung,
-                CreatureConstants.Dragon_Copper_Young,
-                CreatureConstants.Dragon_Copper_Juvenile,
-                CreatureConstants.Dragon_Copper_YoungAdult,
-                CreatureConstants.Dragon_Copper_Adult,
-                CreatureConstants.Dragon_Copper_MatureAdult,
-                CreatureConstants.Dragon_Copper_Old,
-                CreatureConstants.Dragon_Copper_VeryOld,
-                CreatureConstants.Dragon_Copper_Ancient,
-                CreatureConstants.Dragon_Copper_Wyrm,
-                CreatureConstants.Dragon_Copper_GreatWyrm,
-                CreatureConstants.Dragon_Gold_Wyrmling,
-                CreatureConstants.Dragon_Gold_VeryYoung,
-                CreatureConstants.Dragon_Gold_Young,
-                CreatureConstants.Dragon_Gold_Juvenile,
-                CreatureConstants.Dragon_Gold_YoungAdult,
-                CreatureConstants.Dragon_Gold_Adult,
-                CreatureConstants.Dragon_Gold_MatureAdult,
-                CreatureConstants.Dragon_Gold_Old,
-                CreatureConstants.Dragon_Gold_VeryOld,
-                CreatureConstants.Dragon_Gold_Ancient,
-                CreatureConstants.Dragon_Gold_Wyrm,
-                CreatureConstants.Dragon_Gold_GreatWyrm,
-                CreatureConstants.Dragon_Silver_Wyrmling,
-                CreatureConstants.Dragon_Silver_VeryYoung,
-                CreatureConstants.Dragon_Silver_Young,
-                CreatureConstants.Dragon_Silver_Juvenile,
-                CreatureConstants.Dragon_Silver_YoungAdult,
-                CreatureConstants.Dragon_Silver_Adult,
-                CreatureConstants.Dragon_Silver_MatureAdult,
-                CreatureConstants.Dragon_Silver_Old,
-                CreatureConstants.Dragon_Silver_VeryOld,
-                CreatureConstants.Dragon_Silver_Ancient,
-                CreatureConstants.Dragon_Silver_Wyrm,
-                CreatureConstants.Dragon_Silver_GreatWyrm,
-                CreatureConstants.DragonTurtle,
-                CreatureConstants.Dragonne,
-                CreatureConstants.Dretch,
-                CreatureConstants.Drider,
-                CreatureConstants.DrowWarrior,
-                CreatureConstants.Dryad,
-                CreatureConstants.DuergarWarrior,
-                CreatureConstants.DwarfWarrior,
-                CreatureConstants.Eagle_Giant,
-                CreatureConstants.Eagle,
-                CreatureConstants.Efreeti,
-                CreatureConstants.Elemental_Air_Elder,
-                CreatureConstants.Elemental_Air_Greater,
-                CreatureConstants.Elemental_Air_Huge,
-                CreatureConstants.Elemental_Air_Large,
-                CreatureConstants.Elemental_Air_Medium,
-                CreatureConstants.Elemental_Air_Small,
-                CreatureConstants.Elemental_Earth_Elder,
-                CreatureConstants.Elemental_Earth_Greater,
-                CreatureConstants.Elemental_Earth_Huge,
-                CreatureConstants.Elemental_Earth_Large,
-                CreatureConstants.Elemental_Earth_Medium,
-                CreatureConstants.Elemental_Earth_Small,
-                CreatureConstants.Elemental_Fire_Elder,
-                CreatureConstants.Elemental_Fire_Greater,
-                CreatureConstants.Elemental_Fire_Huge,
-                CreatureConstants.Elemental_Fire_Large,
-                CreatureConstants.Elemental_Fire_Medium,
-                CreatureConstants.Elemental_Fire_Small,
-                CreatureConstants.Elemental_Water_Elder,
-                CreatureConstants.Elemental_Water_Greater,
-                CreatureConstants.Elemental_Water_Huge,
-                CreatureConstants.Elemental_Water_Large,
-                CreatureConstants.Elemental_Water_Medium,
-                CreatureConstants.Elemental_Water_Small,
-                CreatureConstants.Elephant,
-                CreatureConstants.ElfWarrior,
-                CreatureConstants.Erinyes,
-                CreatureConstants.EtherealFilcher,
-                CreatureConstants.EtherealMarauder,
-                CreatureConstants.Ettercap,
-                CreatureConstants.Ettin,
-                CreatureConstants.FireBeetle_Giant,
-                CreatureConstants.FireBeetle_Giant_Celestial,
-                CreatureConstants.FormianWarrior,
-                CreatureConstants.FormianWorker,
-                CreatureConstants.FormianTaskmaster,
-                CreatureConstants.FormianMyrmarch,
-                CreatureConstants.FormianQueen,
-                CreatureConstants.FrostWorm,
-                CreatureConstants.Gargoyle,
-                CreatureConstants.GelatinousCube,
-                CreatureConstants.IceDevil,
-                CreatureConstants.Ghaele,
-                CreatureConstants.Ghast,
-                CreatureConstants.Ghost,
-                CreatureConstants.Ghoul,
-                CreatureConstants.Giant_Cloud,
-                CreatureConstants.Giant_Fire,
-                CreatureConstants.Giant_Frost,
-                CreatureConstants.Giant_Frost_Jarl,
-                CreatureConstants.Giant_Hill,
-                CreatureConstants.Giant_Stone,
-                CreatureConstants.Giant_Stone_Elder,
-                CreatureConstants.Giant_Storm,
-                CreatureConstants.GibberingMouther,
-                CreatureConstants.Girallon,
-                CreatureConstants.Glabrezu,
-                CreatureConstants.Gnoll,
-                CreatureConstants.GnomeWarrior,
-                CreatureConstants.Goblin,
-                CreatureConstants.Golem_Clay,
-                CreatureConstants.Golem_Flesh,
-                CreatureConstants.Golem_Iron,
-                CreatureConstants.Golem_Stone,
-                CreatureConstants.Golem_Stone_Greater,
-                CreatureConstants.Gorgon,
-                CreatureConstants.GrayRender,
-                CreatureConstants.GreenHag,
-                CreatureConstants.Grick,
-                CreatureConstants.Griffon,
-                CreatureConstants.Grig,
-                CreatureConstants.Grimlock,
-                CreatureConstants.Gynosphinx,
-                CreatureConstants.HalflingWarrior,
-                CreatureConstants.BarbedDevil,
-                CreatureConstants.Harpy,
-                CreatureConstants.HarpyArcher,
-                CreatureConstants.Hawk,
-                CreatureConstants.Hellcat,
-                CreatureConstants.HellHound,
-                CreatureConstants.NessianWarhound,
-                CreatureConstants.Hellwasp_Swarm,
-                CreatureConstants.Hezrou,
-                CreatureConstants.Hieracosphinx,
-                CreatureConstants.Hippogriff,
-                CreatureConstants.Hobgoblin,
-                CreatureConstants.Homunculus,
-                CreatureConstants.Horse_Heavy,
-                CreatureConstants.Horse_Heavy_War,
-                CreatureConstants.Horse_Light,
-                CreatureConstants.Horse_Light_War,
-                CreatureConstants.HoundArchon,
-                CreatureConstants.HoundArchon_Hero,
-                CreatureConstants.Howler,
-                CreatureConstants.Hydra,
-                CreatureConstants.Hyena,
-                CreatureConstants.Imp,
-                CreatureConstants.InvisibleStalker,
-                CreatureConstants.Janni,
-                CreatureConstants.Kobold,
-                CreatureConstants.Kolyarut,
-                CreatureConstants.Krenshar,
-                CreatureConstants.ChainDevil,
-                CreatureConstants.Lamia,
-                CreatureConstants.Lammasu,
-                CreatureConstants.LanternArchon,
-                CreatureConstants.Lemure,
-                CreatureConstants.Leonal,
-                CreatureConstants.Leopard,
-                CreatureConstants.Lich,
-                CreatureConstants.Lillend,
-                CreatureConstants.Lion,
-                CreatureConstants.Lion_Dire,
-                CreatureConstants.Livestock_Noncombatant,
-                CreatureConstants.Lizardfolk,
-                CreatureConstants.Lizard,
-                CreatureConstants.Lizard_Monitor,
-                CreatureConstants.Locust_Swarm,
-                CreatureConstants.Magmin,
-                CreatureConstants.Manticore,
-                CreatureConstants.Marilith,
-                CreatureConstants.Marut,
-                CreatureConstants.Medusa,
-                CreatureConstants.Megaraptor,
-                CreatureConstants.Mephit,
-                CreatureConstants.Mimic,
-                CreatureConstants.MindFlayer,
-                CreatureConstants.MindFlayer_Sorcerer,
-                CreatureConstants.Minotaur,
-                CreatureConstants.Mohrg,
-                CreatureConstants.Monkey,
-                CreatureConstants.Monkey_Celestial,
-                CreatureConstants.Mule,
-                CreatureConstants.Mummy,
-                CreatureConstants.MummyLord,
-                CreatureConstants.Naga_Dark,
-                CreatureConstants.Naga_Guardian,
-                CreatureConstants.Naga_Spirit,
-                CreatureConstants.Naga_Water,
-                CreatureConstants.Nalfeshnee,
-                CreatureConstants.NightHag,
-                CreatureConstants.Nightcrawler,
-                CreatureConstants.Nightmare,
-                CreatureConstants.Nightwalker,
-                CreatureConstants.Nightwing,
-                CreatureConstants.Nixie,
-                CreatureConstants.Nymph,
-                CreatureConstants.Ogre,
-                CreatureConstants.Ogre_Barbarian,
-                CreatureConstants.OgreMage,
-                CreatureConstants.Ooze_Gray,
-                CreatureConstants.Ooze_OchreJelly,
-                CreatureConstants.Orc,
-                CreatureConstants.BoneDevil,
-                CreatureConstants.Otyugh,
-                CreatureConstants.Owl,
-                CreatureConstants.Owl_Celestial,
-                CreatureConstants.Owl_Giant,
-                CreatureConstants.Owlbear,
-                CreatureConstants.Pegasus,
-                CreatureConstants.PhantomFungus,
-                CreatureConstants.PhaseSpider,
-                CreatureConstants.Phasm,
-                CreatureConstants.PitFiend,
-                CreatureConstants.Pixie,
-                CreatureConstants.Planetar,
-                CreatureConstants.Pony,
-                CreatureConstants.Pony_War,
-                CreatureConstants.PrayingMantis_Giant,
-                CreatureConstants.Pseudodragon,
-                CreatureConstants.PurpleWorm,
-                CreatureConstants.Pyrohydra,
-                CreatureConstants.Quasit,
-                CreatureConstants.Rakshasa,
-                CreatureConstants.Rast,
-                CreatureConstants.Rat,
-                CreatureConstants.Rat_Dire,
-                CreatureConstants.Rat_Dire_Fiendish,
-                CreatureConstants.Rat_Swarm,
-                CreatureConstants.Raven,
-                CreatureConstants.Raven_Fiendish,
-                CreatureConstants.Ravid,
-                CreatureConstants.RazorBoar,
-                CreatureConstants.Remorhaz,
-                CreatureConstants.Retriever,
-                CreatureConstants.Rhinoceras,
-                CreatureConstants.Roc,
-                CreatureConstants.Roper,
-                CreatureConstants.RustMonster,
-                CreatureConstants.Salamander_Noble,
-                CreatureConstants.Salamander_Average,
-                CreatureConstants.Salamander_Flamebrother,
-                CreatureConstants.Satyr,
-                CreatureConstants.Scorpion_Monstrous_Colossal,
-                CreatureConstants.Scorpion_Monstrous_Gargantuan,
-                CreatureConstants.Scorpion_Monstrous_Huge,
-                CreatureConstants.Scorpion_Monstrous_Large,
-                CreatureConstants.Scorpion_Monstrous_Medium,
-                CreatureConstants.Scorpion_Monstrous_Small,
-                CreatureConstants.Scorpion_Monstrous_Tiny,
-                CreatureConstants.Scorpionfolk,
-                CreatureConstants.SeaHag,
-                CreatureConstants.Shadow,
-                CreatureConstants.Shadow_Greater,
-                CreatureConstants.ShadowMastiff,
-                CreatureConstants.ShamblingMound,
-                CreatureConstants.ShieldGuardian,
-                CreatureConstants.ShockerLizard,
-                CreatureConstants.Shrieker,
-                CreatureConstants.Skeleton,
-                CreatureConstants.Skum,
-                CreatureConstants.Slaad_Death,
-                CreatureConstants.Slaad_Green,
-                CreatureConstants.Slaad_Blue,
-                CreatureConstants.Slaad_Gray,
-                CreatureConstants.Slaad_Red,
-                CreatureConstants.Snake_Constrictor,
-                CreatureConstants.Snake_Constrictor_Giant,
-                CreatureConstants.Snake_Viper_Huge,
-                CreatureConstants.Snake_Viper_Large,
-                CreatureConstants.Snake_Viper_Medium,
-                CreatureConstants.Snake_Viper_Small,
-                CreatureConstants.Snake_Viper_Tiny,
-                CreatureConstants.Solar,
-                CreatureConstants.Spectre,
-                CreatureConstants.SpiderEater,
-                CreatureConstants.Spider_Monstrous_Colossal,
-                CreatureConstants.Spider_Monstrous_Gargantuan,
-                CreatureConstants.Spider_Monstrous_Huge,
-                CreatureConstants.Spider_Monstrous_Large,
-                CreatureConstants.Spider_Monstrous_Medium,
-                CreatureConstants.Spider_Monstrous_Small,
-                CreatureConstants.Spider_Monstrous_Tiny,
-                CreatureConstants.Spider_Swarm,
-                CreatureConstants.StagBeetle_Giant,
-                CreatureConstants.Stirge,
-                CreatureConstants.Succubus,
-                CreatureConstants.SvirfneblinWarrior,
-                CreatureConstants.Tarrasque,
-                CreatureConstants.Tendriculos,
-                CreatureConstants.Thoqqua,
-                CreatureConstants.TieflingWarrior,
-                CreatureConstants.Tiger,
-                CreatureConstants.Tiger_Dire,
-                CreatureConstants.Titan,
-                CreatureConstants.Toad,
-                CreatureConstants.Triceratops,
-                CreatureConstants.Treant,
-                CreatureConstants.Tyrannosaurus,
-                CreatureConstants.Troglodyte,
-                CreatureConstants.Troll,
-                CreatureConstants.Troll_Hunter,
-                CreatureConstants.TrumpetArchon,
-                CreatureConstants.UmberHulk,
-                CreatureConstants.UmberHulk_TrulyHorrid,
-                CreatureConstants.Unicorn,
-                CreatureConstants.VampireSpawn,
-                CreatureConstants.Vampire,
-                CreatureConstants.Vargouille,
-                CreatureConstants.VioletFungus,
-                CreatureConstants.Vrock,
-                CreatureConstants.Wasp_Giant,
-                CreatureConstants.Weasel,
-                CreatureConstants.Weasel_Dire,
-                CreatureConstants.Werebear,
-                CreatureConstants.Wereboar,
-                CreatureConstants.Wereboar_HillGiantDire,
-                CreatureConstants.Wererat,
-                CreatureConstants.Weretiger,
-                CreatureConstants.Werewolf,
-                CreatureConstants.WerewolfLord,
-                CreatureConstants.Wight,
-                CreatureConstants.WillOWisp,
-                CreatureConstants.WinterWolf,
-                CreatureConstants.Wolf,
-                CreatureConstants.Wolf_Dire,
-                CreatureConstants.Wolverine,
-                CreatureConstants.Wolverine_Dire,
-                CreatureConstants.Worg,
-                CreatureConstants.Wraith,
-                CreatureConstants.Wraith_Dread,
-                CreatureConstants.Wyvern,
-                CreatureConstants.Xill,
-                CreatureConstants.Xorn_Average,
-                CreatureConstants.Xorn_Elder,
-                CreatureConstants.Xorn_Minor,
-                CreatureConstants.YethHound,
-                CreatureConstants.Yrthak,
-                CreatureConstants.YuanTi_Abomination,
-                CreatureConstants.YuanTi_Halfblood,
-                CreatureConstants.YuanTi_Pureblood,
-                CreatureConstants.Zelekhut,
-                CreatureConstants.Zombie,
-                CreatureConstants.NPC,
-                CharacterClassConstants.Warrior,
-                CharacterClassConstants.Adept,
-                CharacterClassConstants.Aristocrat,
-                CharacterClassConstants.Barbarian,
-                CharacterClassConstants.Bard,
-                CharacterClassConstants.Cleric,
-                CharacterClassConstants.Druid,
-                CharacterClassConstants.Expert,
-                CharacterClassConstants.Fighter,
-                CharacterClassConstants.Monk,
-                CharacterClassConstants.Paladin,
-                CharacterClassConstants.Ranger,
-                CharacterClassConstants.Rogue,
-                CharacterClassConstants.Sorcerer,
-                CharacterClassConstants.Wizard,
-            };
+            var allCreatures = GetAllCreaturesFromEncounters();
+            var useSubtypeForTreasure = CollectionSelector.Explode(TableNameConstants.CreatureGroups, GroupConstants.UseSubtypeForTreasure);
+            allCreatures = allCreatures.Except(useSubtypeForTreasure);
 
-            AssertEntriesAreComplete(entries);
+            AssertEntriesAreComplete(allCreatures);
         }
 
-        [TestCase(CreatureConstants.AasimarWarrior, 1, 1, 1)]
+        [TestCase(CreatureConstants.Aasimar_Warrior, 1, 1, 1)]
         [TestCase(CreatureConstants.Aboleth, 2, 2, 2)]
         [TestCase(CreatureConstants.Aboleth_Mage, 2, 2, 2)]
         [TestCase(CreatureConstants.Achaierai, 2, 2, 2)]
@@ -606,13 +57,17 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
         [TestCase(CreatureConstants.Athach, TreasureConstants.FiftyPercent, 2, 1)]
         [TestCase(CreatureConstants.Avoral, 0, 2, 1)]
         [TestCase(CreatureConstants.Azer, 1, 2, 1)]
+        [TestCase(CreatureConstants.Azer_Captain, 1, 2, 1)]
+        [TestCase(CreatureConstants.Azer_Leader, 1, 2, 1)]
+        [TestCase(CreatureConstants.Azer_Lieutenant, 1, 2, 1)]
+        [TestCase(CreatureConstants.Azer_Sergeant, 1, 2, 1)]
         [TestCase(CreatureConstants.Babau, 1, 1, 1)]
         [TestCase(CreatureConstants.Baboon, 0, 0, 0)]
         [TestCase(CreatureConstants.Badger, 0, 0, 0)]
         [TestCase(CreatureConstants.Badger_Dire, 0, 0, 0)]
         [TestCase(CreatureConstants.Badger_Celestial, 0, 0, 0)]
         [TestCase(CreatureConstants.Balor, 1, 2, 1)]
-        [TestCase(CreatureConstants.BeardedDevil, 1, 1, 1)]
+        [TestCase(CreatureConstants.BeardedDevil_Barbazu, 1, 1, 1)]
         [TestCase(CreatureConstants.Barghest, 2, 2, 2)]
         [TestCase(CreatureConstants.Barghest_Greater, 2, 2, 2)]
         [TestCase(CreatureConstants.Basilisk, 0, 0, 0)]
@@ -639,6 +94,8 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
         [TestCase(CreatureConstants.BombardierBeetle_Giant, 0, 0, 0)]
         [TestCase(CreatureConstants.Bralani, 0, 2, 1)]
         [TestCase(CreatureConstants.Bugbear, 1, 1, 1)]
+        [TestCase(CreatureConstants.Bugbear_Leader, 1, 1, 1)]
+        [TestCase(CreatureConstants.Bugbear_Sergeant, 1, 1, 1)]
         [TestCase(CreatureConstants.Bulette, 0, 0, 0)]
         [TestCase(CreatureConstants.Camel, 0, 0, 0)]
         [TestCase(CreatureConstants.CarrionCrawler, 0, 0, 0)]
@@ -657,48 +114,45 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
         [TestCase(CreatureConstants.Centipede_Monstrous_Fiendish_Medium, 0, 0, 0)]
         [TestCase(CreatureConstants.Centipede_Swarm, 0, 0, 0)]
         [TestCase(CreatureConstants.Centaur, 1, 1, 1)]
+        [TestCase(CreatureConstants.Centaur_Leader_2ndTo5th, 1, 1, 1)]
+        [TestCase(CreatureConstants.Centaur_Leader_5thTo9th, 1, 1, 1)]
+        [TestCase(CreatureConstants.Centaur_Lieutenant, 1, 1, 1)]
+        [TestCase(CreatureConstants.Centaur_Sergeant, 1, 1, 1)]
         [TestCase(CreatureConstants.ChaosBeast, 0, 0, 0)]
-        [TestCase(CreatureConstants.Character, 0, 0, 0)]
         [TestCase(CreatureConstants.Cheetah, 0, 0, 0)]
-        [TestCase(CreatureConstants.NPC, 0, 0, 0)]
-        [TestCase(CharacterClassConstants.Warrior, 0, 0, 0)]
         [TestCase(CreatureConstants.Chimera, 1, 1, 1)]
         [TestCase(CreatureConstants.Choker, TreasureConstants.TenPercent, TreasureConstants.FiftyPercent, TreasureConstants.FiftyPercent)]
         [TestCase(CreatureConstants.Chuul, TreasureConstants.TenPercent, TreasureConstants.FiftyPercent, 1)]
         [TestCase(CreatureConstants.Cloaker, 1, 1, 1)]
         [TestCase(CreatureConstants.Cockatrice, 0, 0, 0)]
-        [TestCase(CharacterClassConstants.Commoner, 0, 0, 0)]
-        [TestCase(CharacterClassConstants.Adept, 0, 0, 0)]
-        [TestCase(CharacterClassConstants.Expert, 0, 0, 0)]
-        [TestCase(CharacterClassConstants.Aristocrat, 0, 0, 0)]
-        [TestCase(CharacterClassConstants.Barbarian, 0, 0, 0)]
-        [TestCase(CharacterClassConstants.Bard, 0, 0, 0)]
-        [TestCase(CharacterClassConstants.Cleric, 0, 0, 0)]
-        [TestCase(CharacterClassConstants.Druid, 0, 0, 0)]
-        [TestCase(CharacterClassConstants.Fighter, 0, 0, 0)]
-        [TestCase(CharacterClassConstants.Monk, 0, 0, 0)]
-        [TestCase(CharacterClassConstants.Paladin, 0, 0, 0)]
-        [TestCase(CharacterClassConstants.Ranger, 0, 0, 0)]
-        [TestCase(CharacterClassConstants.Rogue, 0, 0, 0)]
-        [TestCase(CharacterClassConstants.Sorcerer, 0, 0, 0)]
-        [TestCase(CharacterClassConstants.Wizard, 0, 0, 0)]
-        [TestCase(CreatureConstants.HornedDevil, 1, 2, 1)]
+        [TestCase(CreatureConstants.HornedDevil_Cornugon, 1, 2, 1)]
         [TestCase(CreatureConstants.Couatl, 1, 1, 1)]
         [TestCase(CreatureConstants.Criosphinx, 1, 1, 1)]
         [TestCase(CreatureConstants.Crocodile, 0, 0, 0)]
         [TestCase(CreatureConstants.Crocodile_Giant, 0, 0, 0)]
-        [TestCase(CreatureConstants.Cryohydra, TreasureConstants.TenPercent, TreasureConstants.FiftyPercent, TreasureConstants.FiftyPercent)]
+        [TestCase(CreatureConstants.Cryohydra_5Heads, TreasureConstants.TenPercent, TreasureConstants.FiftyPercent, TreasureConstants.FiftyPercent)]
+        [TestCase(CreatureConstants.Cryohydra_6Heads, TreasureConstants.TenPercent, TreasureConstants.FiftyPercent, TreasureConstants.FiftyPercent)]
+        [TestCase(CreatureConstants.Cryohydra_7Heads, TreasureConstants.TenPercent, TreasureConstants.FiftyPercent, TreasureConstants.FiftyPercent)]
+        [TestCase(CreatureConstants.Cryohydra_8Heads, TreasureConstants.TenPercent, TreasureConstants.FiftyPercent, TreasureConstants.FiftyPercent)]
+        [TestCase(CreatureConstants.Cryohydra_9Heads, TreasureConstants.TenPercent, TreasureConstants.FiftyPercent, TreasureConstants.FiftyPercent)]
+        [TestCase(CreatureConstants.Cryohydra_10Heads, TreasureConstants.TenPercent, TreasureConstants.FiftyPercent, TreasureConstants.FiftyPercent)]
+        [TestCase(CreatureConstants.Cryohydra_11Heads, TreasureConstants.TenPercent, TreasureConstants.FiftyPercent, TreasureConstants.FiftyPercent)]
+        [TestCase(CreatureConstants.Cryohydra_12Heads, TreasureConstants.TenPercent, TreasureConstants.FiftyPercent, TreasureConstants.FiftyPercent)]
         [TestCase(CreatureConstants.Darkmantle, 0, 0, 0)]
         [TestCase(CreatureConstants.Delver, 0, 0, 0)]
         [TestCase(CreatureConstants.Derro, 1, 2, 1)]
+        [TestCase(CreatureConstants.Derro_Sorcerer_3rd, 1, 2, 1)]
+        [TestCase(CreatureConstants.Derro_Sorcerer_5thTo8th, 1, 2, 1)]
         [TestCase(CreatureConstants.Destrachan, 0, 0, 0)]
         [TestCase(CreatureConstants.Devourer, 0, 0, 0)]
         [TestCase(CreatureConstants.Digester, 0, 0, 0)]
         [TestCase(CreatureConstants.DisplacerBeast, TreasureConstants.FiftyPercent, TreasureConstants.FiftyPercent, TreasureConstants.FiftyPercent)]
+        [TestCase(CreatureConstants.DisplacerBeast_PackLord, TreasureConstants.FiftyPercent, TreasureConstants.FiftyPercent, TreasureConstants.FiftyPercent)]
         [TestCase(CreatureConstants.Djinni, 1, 1, 1)]
         [TestCase(CreatureConstants.Djinni_Noble, 1, 1, 1)]
         [TestCase(CreatureConstants.Dog, 0, 0, 0)]
         [TestCase(CreatureConstants.Dog_Celestial, 0, 0, 0)]
+        [TestCase(CreatureConstants.Dog_Riding, 0, 0, 0)]
         [TestCase(CreatureConstants.Donkey, 0, 0, 0)]
         [TestCase(CreatureConstants.Doppelganger, 2, 2, 2)]
         [TestCase(CreatureConstants.Dragon_Black_Adult, 3, 3, 3)]
@@ -825,10 +279,22 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
         [TestCase(CreatureConstants.Dragonne, 2, 2, 2)]
         [TestCase(CreatureConstants.Dretch, 0, 0, 0)]
         [TestCase(CreatureConstants.Drider, 2, 2, 2)]
-        [TestCase(CreatureConstants.DrowWarrior, 1, 1, 1)]
+        [TestCase(CreatureConstants.Drow_Warrior, 1, 1, 1)]
+        [TestCase(CreatureConstants.Drow_Captain, 1, 1, 1)]
+        [TestCase(CreatureConstants.Drow_Leader, 1, 1, 1)]
+        [TestCase(CreatureConstants.Drow_Lieutenant, 1, 1, 1)]
+        [TestCase(CreatureConstants.Drow_Sergeant, 1, 1, 1)]
         [TestCase(CreatureConstants.Dryad, 1, 1, 1)]
-        [TestCase(CreatureConstants.DuergarWarrior, 1, 2, 1)]
-        [TestCase(CreatureConstants.DwarfWarrior, 1, 2, 1)]
+        [TestCase(CreatureConstants.Duergar_Warrior, 1, 2, 1)]
+        [TestCase(CreatureConstants.Duergar_Captain, 1, 2, 1)]
+        [TestCase(CreatureConstants.Duergar_Leader, 1, 2, 1)]
+        [TestCase(CreatureConstants.Duergar_Lieutenant, 1, 2, 1)]
+        [TestCase(CreatureConstants.Duergar_Sergeant, 1, 2, 1)]
+        [TestCase(CreatureConstants.Dwarf_Captain, 1, 2, 1)]
+        [TestCase(CreatureConstants.Dwarf_Leader, 1, 2, 1)]
+        [TestCase(CreatureConstants.Dwarf_Lieutenant, 1, 2, 1)]
+        [TestCase(CreatureConstants.Dwarf_Sergeant, 1, 2, 1)]
+        [TestCase(CreatureConstants.Dwarf_Warrior, 1, 2, 1)]
         [TestCase(CreatureConstants.Eagle, 0, 0, 0)]
         [TestCase(CreatureConstants.Eagle_Giant, 0, 0, 0)]
         [TestCase(CreatureConstants.Efreeti, 1, 2, 1)]
@@ -857,9 +323,22 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
         [TestCase(CreatureConstants.Elemental_Water_Medium, 0, 0, 0)]
         [TestCase(CreatureConstants.Elemental_Water_Small, 0, 0, 0)]
         [TestCase(CreatureConstants.Elephant, 0, 0, 0)]
-        [TestCase(CreatureConstants.ElfWarrior, 1, 1, 1)]
-        [TestCase(CreatureConstants.HalflingWarrior, 1, 1, 1)]
-        [TestCase(CreatureConstants.GnomeWarrior, 1, 1, 1)]
+        [TestCase(CreatureConstants.Elf_Warrior, 1, 1, 1)]
+        [TestCase(CreatureConstants.Elf_Captain, 1, 1, 1)]
+        [TestCase(CreatureConstants.Elf_Leader, 1, 1, 1)]
+        [TestCase(CreatureConstants.Elf_Lieutenant, 1, 1, 1)]
+        [TestCase(CreatureConstants.Elf_Sergeant, 1, 1, 1)]
+        [TestCase(CreatureConstants.Halfling_Warrior, 1, 1, 1)]
+        [TestCase(CreatureConstants.Halfling_Captain, 1, 1, 1)]
+        [TestCase(CreatureConstants.Halfling_Leader, 1, 1, 1)]
+        [TestCase(CreatureConstants.Halfling_Lieutenant, 1, 1, 1)]
+        [TestCase(CreatureConstants.Halfling_Sergeant, 1, 1, 1)]
+        [TestCase(CreatureConstants.Gnome_Captain, 1, 1, 1)]
+        [TestCase(CreatureConstants.Gnome_Leader, 1, 1, 1)]
+        [TestCase(CreatureConstants.Gnome_Lieutenant_3rd, 1, 1, 1)]
+        [TestCase(CreatureConstants.Gnome_Lieutenant_5th, 1, 1, 1)]
+        [TestCase(CreatureConstants.Gnome_Sergeant, 1, 1, 1)]
+        [TestCase(CreatureConstants.Gnome_Warrior, 1, 1, 1)]
         [TestCase(CreatureConstants.Erinyes, 1, 1, 1)]
         [TestCase(CreatureConstants.EtherealFilcher, 0, 1, 2)]
         [TestCase(CreatureConstants.EtherealMarauder, 0, 0, 0)]
@@ -875,24 +354,65 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
         [TestCase(CreatureConstants.FrostWorm, 0, 0, 0)]
         [TestCase(CreatureConstants.Gargoyle, 1, 1, 1)]
         [TestCase(CreatureConstants.GelatinousCube, TreasureConstants.TenPercent, TreasureConstants.FiftyPercent, TreasureConstants.FiftyPercent)]
-        [TestCase(CreatureConstants.IceDevil, 1, 2, 1)]
+        [TestCase(CreatureConstants.IceDevil_Gelugon, 1, 2, 1)]
         [TestCase(CreatureConstants.Ghaele, 0, 2, 1)]
         [TestCase(CreatureConstants.Ghast, 1, 1, 1)]
-        [TestCase(CreatureConstants.Ghost, 0, 0, 0)]
+        [TestCase(CreatureConstants.Ghost_Level1, 0, 0, 0)]
+        [TestCase(CreatureConstants.Ghost_Level2, 0, 0, 0)]
+        [TestCase(CreatureConstants.Ghost_Level3, 0, 0, 0)]
+        [TestCase(CreatureConstants.Ghost_Level4, 0, 0, 0)]
+        [TestCase(CreatureConstants.Ghost_Level5, 0, 0, 0)]
+        [TestCase(CreatureConstants.Ghost_Level6, 0, 0, 0)]
+        [TestCase(CreatureConstants.Ghost_Level7, 0, 0, 0)]
+        [TestCase(CreatureConstants.Ghost_Level8, 0, 0, 0)]
+        [TestCase(CreatureConstants.Ghost_Level9, 0, 0, 0)]
+        [TestCase(CreatureConstants.Ghost_Level10, 0, 0, 0)]
+        [TestCase(CreatureConstants.Ghost_Level11, 0, 0, 0)]
+        [TestCase(CreatureConstants.Ghost_Level12, 0, 0, 0)]
+        [TestCase(CreatureConstants.Ghost_Level13, 0, 0, 0)]
+        [TestCase(CreatureConstants.Ghost_Level14, 0, 0, 0)]
+        [TestCase(CreatureConstants.Ghost_Level15, 0, 0, 0)]
+        [TestCase(CreatureConstants.Ghost_Level16, 0, 0, 0)]
+        [TestCase(CreatureConstants.Ghost_Level17, 0, 0, 0)]
+        [TestCase(CreatureConstants.Ghost_Level18, 0, 0, 0)]
+        [TestCase(CreatureConstants.Ghost_Level19, 0, 0, 0)]
+        [TestCase(CreatureConstants.Ghost_Level20, 0, 0, 0)]
         [TestCase(CreatureConstants.Ghoul, 0, 0, 0)]
         [TestCase(CreatureConstants.Giant_Cloud, 2, 1, 2)]
+        [TestCase(CreatureConstants.Giant_Cloud_Leader, 2, 1, 2)]
         [TestCase(CreatureConstants.Giant_Fire, 1, 1, 1)]
+        [TestCase(CreatureConstants.Giant_Fire_Adept_1stTo2nd, 1, 1, 1)]
+        [TestCase(CreatureConstants.Giant_Fire_Adept_3rdTo5th, 1, 1, 1)]
+        [TestCase(CreatureConstants.Giant_Fire_Adept_6thTo7th, 1, 1, 1)]
+        [TestCase(CreatureConstants.Giant_Fire_Cleric_1stTo2nd, 1, 1, 1)]
+        [TestCase(CreatureConstants.Giant_Fire_Leader_6thTo7th, 1, 1, 1)]
+        [TestCase(CreatureConstants.Giant_Fire_Sorcerer_3rdTo5th, 1, 1, 1)]
         [TestCase(CreatureConstants.Giant_Frost, 1, 1, 1)]
+        [TestCase(CreatureConstants.Giant_Frost_Adept_1stTo2nd, 1, 1, 1)]
+        [TestCase(CreatureConstants.Giant_Frost_Adept_3rdTo5th, 1, 1, 1)]
+        [TestCase(CreatureConstants.Giant_Frost_Adept_6thTo7th, 1, 1, 1)]
+        [TestCase(CreatureConstants.Giant_Frost_Cleric_1stTo2nd, 1, 1, 1)]
+        [TestCase(CreatureConstants.Giant_Frost_Leader_6thTo7th, 1, 1, 1)]
+        [TestCase(CreatureConstants.Giant_Frost_Sorcerer_3rdTo5th, 1, 1, 1)]
         [TestCase(CreatureConstants.Giant_Frost_Jarl, 1, 1, 1)]
         [TestCase(CreatureConstants.Giant_Hill, 1, 1, 1)]
         [TestCase(CreatureConstants.Giant_Stone, 1, 1, 1)]
         [TestCase(CreatureConstants.Giant_Stone_Elder, 1, 1, 1)]
         [TestCase(CreatureConstants.Giant_Storm, 2, 1, 2)]
+        [TestCase(CreatureConstants.Giant_Storm_Leader, 2, 1, 2)]
         [TestCase(CreatureConstants.GibberingMouther, 0, 0, 0)]
         [TestCase(CreatureConstants.Girallon, 0, 0, 0)]
         [TestCase(CreatureConstants.Glabrezu, 1, 2, 1)]
         [TestCase(CreatureConstants.Gnoll, 1, 1, 1)]
-        [TestCase(CreatureConstants.Goblin, 1, 1, 1)]
+        [TestCase(CreatureConstants.Gnoll_Leader_4thTo6th, 1, 1, 1)]
+        [TestCase(CreatureConstants.Gnoll_Leader_6thTo8th, 1, 1, 1)]
+        [TestCase(CreatureConstants.Gnoll_Lieutenant, 1, 1, 1)]
+        [TestCase(CreatureConstants.Gnoll_Sergeant, 1, 1, 1)]
+        [TestCase(CreatureConstants.Goblin_Warrior, 1, 1, 1)]
+        [TestCase(CreatureConstants.Goblin_Leader_4thTo6th, 1, 1, 1)]
+        [TestCase(CreatureConstants.Goblin_Leader_6thTo8th, 1, 1, 1)]
+        [TestCase(CreatureConstants.Goblin_Lieutenant, 1, 1, 1)]
+        [TestCase(CreatureConstants.Goblin_Sergeant, 1, 1, 1)]
         [TestCase(CreatureConstants.Golem_Clay, 0, 0, 0)]
         [TestCase(CreatureConstants.Golem_Flesh, 0, 0, 0)]
         [TestCase(CreatureConstants.Golem_Iron, 0, 0, 0)]
@@ -905,19 +425,24 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
         [TestCase(CreatureConstants.Griffon, 0, 0, 0)]
         [TestCase(CreatureConstants.Grig, 0, TreasureConstants.FiftyPercent, TreasureConstants.FiftyPercent)]
         [TestCase(CreatureConstants.Grimlock, 1, 1, 1)]
+        [TestCase(CreatureConstants.Grimlock_Leader, 1, 1, 1)]
         [TestCase(CreatureConstants.Gynosphinx, 2, 2, 2)]
-        [TestCase(CreatureConstants.BarbedDevil, 1, 1, 1)]
+        [TestCase(CreatureConstants.BarbedDevil_Hamatula, 1, 1, 1)]
         [TestCase(CreatureConstants.Hawk, 0, 0, 0)]
         [TestCase(CreatureConstants.Harpy, 1, 1, 1)]
         [TestCase(CreatureConstants.HarpyArcher, 1, 1, 1)]
-        [TestCase(CreatureConstants.Hellcat, 0, 0, 0)]
+        [TestCase(CreatureConstants.Hellcat_Bezekira, 0, 0, 0)]
         [TestCase(CreatureConstants.HellHound, 0, 0, 0)]
         [TestCase(CreatureConstants.NessianWarhound, 0, 0, 0)]
         [TestCase(CreatureConstants.Hellwasp_Swarm, 0, 0, 0)]
         [TestCase(CreatureConstants.Hezrou, 1, 1, 1)]
         [TestCase(CreatureConstants.Hieracosphinx, 0, 0, 0)]
         [TestCase(CreatureConstants.Hippogriff, 0, 0, 0)]
-        [TestCase(CreatureConstants.Hobgoblin, 1, 1, 1)]
+        [TestCase(CreatureConstants.Hobgoblin_Warrior, 1, 1, 1)]
+        [TestCase(CreatureConstants.Hobgoblin_Leader_4thTo6th, 1, 1, 1)]
+        [TestCase(CreatureConstants.Hobgoblin_Leader_6thTo8th, 1, 1, 1)]
+        [TestCase(CreatureConstants.Hobgoblin_Lieutenant, 1, 1, 1)]
+        [TestCase(CreatureConstants.Hobgoblin_Sergeant, 1, 1, 1)]
         [TestCase(CreatureConstants.Homunculus, 0, 0, 0)]
         [TestCase(CreatureConstants.Horse_Heavy, 0, 0, 0)]
         [TestCase(CreatureConstants.Horse_Heavy_War, 0, 0, 0)]
@@ -926,27 +451,60 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
         [TestCase(CreatureConstants.HoundArchon, 0, 2, 1)]
         [TestCase(CreatureConstants.HoundArchon_Hero, 1, 1, 1)]
         [TestCase(CreatureConstants.Howler, 0, 0, 0)]
-        [TestCase(CreatureConstants.Hydra, TreasureConstants.TenPercent, TreasureConstants.FiftyPercent, TreasureConstants.FiftyPercent)]
+        [TestCase(CreatureConstants.Hydra_5Heads, TreasureConstants.TenPercent, TreasureConstants.FiftyPercent, TreasureConstants.FiftyPercent)]
+        [TestCase(CreatureConstants.Hydra_6Heads, TreasureConstants.TenPercent, TreasureConstants.FiftyPercent, TreasureConstants.FiftyPercent)]
+        [TestCase(CreatureConstants.Hydra_7Heads, TreasureConstants.TenPercent, TreasureConstants.FiftyPercent, TreasureConstants.FiftyPercent)]
+        [TestCase(CreatureConstants.Hydra_8Heads, TreasureConstants.TenPercent, TreasureConstants.FiftyPercent, TreasureConstants.FiftyPercent)]
+        [TestCase(CreatureConstants.Hydra_9Heads, TreasureConstants.TenPercent, TreasureConstants.FiftyPercent, TreasureConstants.FiftyPercent)]
+        [TestCase(CreatureConstants.Hydra_10Heads, TreasureConstants.TenPercent, TreasureConstants.FiftyPercent, TreasureConstants.FiftyPercent)]
+        [TestCase(CreatureConstants.Hydra_11Heads, TreasureConstants.TenPercent, TreasureConstants.FiftyPercent, TreasureConstants.FiftyPercent)]
+        [TestCase(CreatureConstants.Hydra_12Heads, TreasureConstants.TenPercent, TreasureConstants.FiftyPercent, TreasureConstants.FiftyPercent)]
         [TestCase(CreatureConstants.Hyena, 0, 0, 0)]
         [TestCase(CreatureConstants.Imp, 0, 0, 0)]
         [TestCase(CreatureConstants.InvisibleStalker, 0, 0, 0)]
-        [TestCase(CreatureConstants.Kobold, 1, 1, 1)]
+        [TestCase(CreatureConstants.Kobold_Warrior, 1, 1, 1)]
+        [TestCase(CreatureConstants.Kobold_Leader_4thTo6th, 1, 1, 1)]
+        [TestCase(CreatureConstants.Kobold_Leader_6thTo8th, 1, 1, 1)]
+        [TestCase(CreatureConstants.Kobold_Lieutenant, 1, 1, 1)]
+        [TestCase(CreatureConstants.Kobold_Sergeant, 1, 1, 1)]
         [TestCase(CreatureConstants.Kolyarut, 0, 0, 0)]
         [TestCase(CreatureConstants.Krenshar, 0, 0, 0)]
-        [TestCase(CreatureConstants.ChainDevil, 1, 1, 1)]
+        [TestCase(CreatureConstants.ChainDevil_Kyton, 1, 1, 1)]
         [TestCase(CreatureConstants.Janni, 1, 1, 1)]
         [TestCase(CreatureConstants.Lamia, 1, 1, 1)]
         [TestCase(CreatureConstants.Lammasu, 1, 1, 1)]
+        [TestCase(CreatureConstants.Lammasu_GoldenProtector, 1, 1, 1)]
         [TestCase(CreatureConstants.LanternArchon, 0, 0, 0)]
         [TestCase(CreatureConstants.Lemure, 0, 0, 0)]
         [TestCase(CreatureConstants.Leonal, 0, 2, 1)]
         [TestCase(CreatureConstants.Leopard, 0, 0, 0)]
-        [TestCase(CreatureConstants.Lich, 1, 2, 2)]
-        [TestCase(CreatureConstants.Livestock_Noncombatant, 0, 0, 0)]
+        [TestCase(CreatureConstants.Lich_Level1, 1, 2, 2)]
+        [TestCase(CreatureConstants.Lich_Level2, 1, 2, 2)]
+        [TestCase(CreatureConstants.Lich_Level3, 1, 2, 2)]
+        [TestCase(CreatureConstants.Lich_Level4, 1, 2, 2)]
+        [TestCase(CreatureConstants.Lich_Level5, 1, 2, 2)]
+        [TestCase(CreatureConstants.Lich_Level6, 1, 2, 2)]
+        [TestCase(CreatureConstants.Lich_Level7, 1, 2, 2)]
+        [TestCase(CreatureConstants.Lich_Level8, 1, 2, 2)]
+        [TestCase(CreatureConstants.Lich_Level9, 1, 2, 2)]
+        [TestCase(CreatureConstants.Lich_Level10, 1, 2, 2)]
+        [TestCase(CreatureConstants.Lich_Level11, 1, 2, 2)]
+        [TestCase(CreatureConstants.Lich_Level12, 1, 2, 2)]
+        [TestCase(CreatureConstants.Lich_Level13, 1, 2, 2)]
+        [TestCase(CreatureConstants.Lich_Level14, 1, 2, 2)]
+        [TestCase(CreatureConstants.Lich_Level15, 1, 2, 2)]
+        [TestCase(CreatureConstants.Lich_Level16, 1, 2, 2)]
+        [TestCase(CreatureConstants.Lich_Level17, 1, 2, 2)]
+        [TestCase(CreatureConstants.Lich_Level18, 1, 2, 2)]
+        [TestCase(CreatureConstants.Lich_Level19, 1, 2, 2)]
+        [TestCase(CreatureConstants.Lich_Level20, 1, 2, 2)]
         [TestCase(CreatureConstants.Lillend, 1, 1, 1)]
         [TestCase(CreatureConstants.Lion, 0, 0, 0)]
         [TestCase(CreatureConstants.Lion_Dire, 0, 0, 0)]
         [TestCase(CreatureConstants.Lizardfolk, TreasureConstants.FiftyPercent, TreasureConstants.FiftyPercent, TreasureConstants.FiftyPercent)]
+        [TestCase(CreatureConstants.Lizardfolk_Leader_3rdTo6th, TreasureConstants.FiftyPercent, TreasureConstants.FiftyPercent, TreasureConstants.FiftyPercent)]
+        [TestCase(CreatureConstants.Lizardfolk_Leader_4thTo10th, TreasureConstants.FiftyPercent, TreasureConstants.FiftyPercent, TreasureConstants.FiftyPercent)]
+        [TestCase(CreatureConstants.Lizardfolk_Lieutenant, TreasureConstants.FiftyPercent, TreasureConstants.FiftyPercent, TreasureConstants.FiftyPercent)]
         [TestCase(CreatureConstants.Lizard, 0, 0, 0)]
         [TestCase(CreatureConstants.Lizard_Monitor, 0, 0, 0)]
         [TestCase(CreatureConstants.Locust_Swarm, 0, 0, 0)]
@@ -955,7 +513,17 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
         [TestCase(CreatureConstants.Marilith, 2, 1, 2)]
         [TestCase(CreatureConstants.Marut, 0, 0, 0)]
         [TestCase(CreatureConstants.Medusa, 2, 2, 2)]
-        [TestCase(CreatureConstants.Mephit, 1, 1, 1)]
+        [TestCase(CreatureConstants.Mephit_CR3, 1, 1, 1)]
+        [TestCase(CreatureConstants.Mephit_Air, 1, 1, 1)]
+        [TestCase(CreatureConstants.Mephit_Dust, 1, 1, 1)]
+        [TestCase(CreatureConstants.Mephit_Earth, 1, 1, 1)]
+        [TestCase(CreatureConstants.Mephit_Fire, 1, 1, 1)]
+        [TestCase(CreatureConstants.Mephit_Ice, 1, 1, 1)]
+        [TestCase(CreatureConstants.Mephit_Magma, 1, 1, 1)]
+        [TestCase(CreatureConstants.Mephit_Ooze, 1, 1, 1)]
+        [TestCase(CreatureConstants.Mephit_Salt, 1, 1, 1)]
+        [TestCase(CreatureConstants.Mephit_Steam, 1, 1, 1)]
+        [TestCase(CreatureConstants.Mephit_Water, 1, 1, 1)]
         [TestCase(CreatureConstants.Mimic, TreasureConstants.TenPercent, TreasureConstants.FiftyPercent, TreasureConstants.FiftyPercent)]
         [TestCase(CreatureConstants.MindFlayer, 2, 2, 2)]
         [TestCase(CreatureConstants.MindFlayer_Sorcerer, 2, 2, 2)]
@@ -974,6 +542,7 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
         [TestCase(CreatureConstants.NightHag, 1, 1, 1)]
         [TestCase(CreatureConstants.Nightcrawler, 1, 1, 1)]
         [TestCase(CreatureConstants.Nightmare, 0, 0, 0)]
+        [TestCase(CreatureConstants.Nightmare_Cauchemar, 0, 0, 0)]
         [TestCase(CreatureConstants.Nightwalker, 1, 1, 1)]
         [TestCase(CreatureConstants.Nightwing, 1, 1, 1)]
         [TestCase(CreatureConstants.Nixie, 0, TreasureConstants.FiftyPercent, TreasureConstants.FiftyPercent)]
@@ -983,8 +552,12 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
         [TestCase(CreatureConstants.OgreMage, 2, 2, 2)]
         [TestCase(CreatureConstants.Ooze_Gray, 0, 0, 0)]
         [TestCase(CreatureConstants.Ooze_OchreJelly, 0, 0, 0)]
-        [TestCase(CreatureConstants.Orc, 1, 1, 1)]
-        [TestCase(CreatureConstants.BoneDevil, 1, 1, 1)]
+        [TestCase(CreatureConstants.Orc_Warrior, 1, 1, 1)]
+        [TestCase(CreatureConstants.Orc_Captain, 1, 1, 1)]
+        [TestCase(CreatureConstants.Orc_Leader, 1, 1, 1)]
+        [TestCase(CreatureConstants.Orc_Lieutenant, 1, 1, 1)]
+        [TestCase(CreatureConstants.Orc_Sergeant, 1, 1, 1)]
+        [TestCase(CreatureConstants.BoneDevil_Osyluth, 1, 1, 1)]
         [TestCase(CreatureConstants.Otyugh, 1, 1, 1)]
         [TestCase(CreatureConstants.Owl, 0, 0, 0)]
         [TestCase(CreatureConstants.Owl_Celestial, 0, 0, 0)]
@@ -996,11 +569,19 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
         [TestCase(CreatureConstants.Phasm, 1, 1, 1)]
         [TestCase(CreatureConstants.PitFiend, 2, 1, 2)]
         [TestCase(CreatureConstants.Pixie, 0, TreasureConstants.FiftyPercent, TreasureConstants.FiftyPercent)]
+        [TestCase(CreatureConstants.Pixie_WithIrresistableDance, 0, TreasureConstants.FiftyPercent, TreasureConstants.FiftyPercent)]
         [TestCase(CreatureConstants.Planetar, 0, 2, 1)]
         [TestCase(CreatureConstants.PrayingMantis_Giant, 0, 0, 0)]
         [TestCase(CreatureConstants.Pseudodragon, 0, 0, 0)]
         [TestCase(CreatureConstants.PurpleWorm, 0, TreasureConstants.FiftyPercent, 0)]
-        [TestCase(CreatureConstants.Pyrohydra, TreasureConstants.TenPercent, TreasureConstants.FiftyPercent, TreasureConstants.FiftyPercent)]
+        [TestCase(CreatureConstants.Pyrohydra_5Heads, TreasureConstants.TenPercent, TreasureConstants.FiftyPercent, TreasureConstants.FiftyPercent)]
+        [TestCase(CreatureConstants.Pyrohydra_6Heads, TreasureConstants.TenPercent, TreasureConstants.FiftyPercent, TreasureConstants.FiftyPercent)]
+        [TestCase(CreatureConstants.Pyrohydra_7Heads, TreasureConstants.TenPercent, TreasureConstants.FiftyPercent, TreasureConstants.FiftyPercent)]
+        [TestCase(CreatureConstants.Pyrohydra_8Heads, TreasureConstants.TenPercent, TreasureConstants.FiftyPercent, TreasureConstants.FiftyPercent)]
+        [TestCase(CreatureConstants.Pyrohydra_9Heads, TreasureConstants.TenPercent, TreasureConstants.FiftyPercent, TreasureConstants.FiftyPercent)]
+        [TestCase(CreatureConstants.Pyrohydra_10Heads, TreasureConstants.TenPercent, TreasureConstants.FiftyPercent, TreasureConstants.FiftyPercent)]
+        [TestCase(CreatureConstants.Pyrohydra_11Heads, TreasureConstants.TenPercent, TreasureConstants.FiftyPercent, TreasureConstants.FiftyPercent)]
+        [TestCase(CreatureConstants.Pyrohydra_12Heads, TreasureConstants.TenPercent, TreasureConstants.FiftyPercent, TreasureConstants.FiftyPercent)]
         [TestCase(CreatureConstants.Quasit, 0, 0, 0)]
         [TestCase(CreatureConstants.Rakshasa, 1, 2, 1)]
         [TestCase(CreatureConstants.Rast, 0, 0, 0)]
@@ -1022,6 +603,7 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
         [TestCase(CreatureConstants.Salamander_Average, 1, 1, 1)]
         [TestCase(CreatureConstants.Salamander_Flamebrother, 1, 1, 1)]
         [TestCase(CreatureConstants.Satyr, 1, 1, 1)]
+        [TestCase(CreatureConstants.Satyr_WithPipes, 1, 1, 1)]
         [TestCase(CreatureConstants.Scorpion_Monstrous_Colossal, TreasureConstants.TenPercent, TreasureConstants.FiftyPercent, TreasureConstants.FiftyPercent)]
         [TestCase(CreatureConstants.Scorpion_Monstrous_Gargantuan, TreasureConstants.TenPercent, TreasureConstants.FiftyPercent, TreasureConstants.FiftyPercent)]
         [TestCase(CreatureConstants.Scorpion_Monstrous_Huge, TreasureConstants.TenPercent, TreasureConstants.FiftyPercent, TreasureConstants.FiftyPercent)]
@@ -1030,6 +612,9 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
         [TestCase(CreatureConstants.Scorpion_Monstrous_Small, 0, 0, 0)]
         [TestCase(CreatureConstants.Scorpion_Monstrous_Tiny, 0, 0, 0)]
         [TestCase(CreatureConstants.Scorpionfolk, 1, 1, 1)]
+        [TestCase(CreatureConstants.Scorpionfolk_Cleric, 1, 1, 1)]
+        [TestCase(CreatureConstants.Scorpionfolk_Ranger_3rdTo5th, 1, 1, 1)]
+        [TestCase(CreatureConstants.Scorpionfolk_Ranger_6thTo8th, 1, 1, 1)]
         [TestCase(CreatureConstants.SeaHag, 1, 1, 1)]
         [TestCase(CreatureConstants.Shadow, 0, 0, 0)]
         [TestCase(CreatureConstants.Shadow_Greater, 0, 0, 0)]
@@ -1038,7 +623,15 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
         [TestCase(CreatureConstants.ShieldGuardian, 0, 0, 0)]
         [TestCase(CreatureConstants.ShockerLizard, TreasureConstants.TenPercent, TreasureConstants.FiftyPercent, TreasureConstants.FiftyPercent)]
         [TestCase(CreatureConstants.Shrieker, 0, 0, 0)]
-        [TestCase(CreatureConstants.Skeleton, 0, 0, 0)]
+        [TestCase(CreatureConstants.Skeleton_Chimera, 0, 0, 0)]
+        [TestCase(CreatureConstants.Skeleton_Dragon_Red_YoungAdult, 0, 0, 0)]
+        [TestCase(CreatureConstants.Skeleton_Ettin, 0, 0, 0)]
+        [TestCase(CreatureConstants.Skeleton_Giant_Cloud, 0, 0, 0)]
+        [TestCase(CreatureConstants.Skeleton_Human, 0, 0, 0)]
+        [TestCase(CreatureConstants.Skeleton_Megaraptor, 0, 0, 0)]
+        [TestCase(CreatureConstants.Skeleton_Owlbear, 0, 0, 0)]
+        [TestCase(CreatureConstants.Skeleton_Troll, 0, 0, 0)]
+        [TestCase(CreatureConstants.Skeleton_Wolf, 0, 0, 0)]
         [TestCase(CreatureConstants.Skum, 0, 0, 0)]
         [TestCase(CreatureConstants.Slaad_Death, 2, 2, 2)]
         [TestCase(CreatureConstants.Slaad_Green, 1, 1, 1)]
@@ -1066,11 +659,16 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
         [TestCase(CreatureConstants.StagBeetle_Giant, 0, 0, 0)]
         [TestCase(CreatureConstants.Stirge, 0, 0, 0)]
         [TestCase(CreatureConstants.Succubus, 1, 1, 1)]
-        [TestCase(CreatureConstants.SvirfneblinWarrior, 1, 1, 1)]
+        [TestCase(CreatureConstants.Svirfneblin_Warrior, 1, 1, 1)]
+        [TestCase(CreatureConstants.Svirfneblin_Captain, 1, 1, 1)]
+        [TestCase(CreatureConstants.Svirfneblin_Leader, 1, 1, 1)]
+        [TestCase(CreatureConstants.Svirfneblin_Lieutenant_3rd, 1, 1, 1)]
+        [TestCase(CreatureConstants.Svirfneblin_Lieutenant_5th, 1, 1, 1)]
+        [TestCase(CreatureConstants.Svirfneblin_Sergeant, 1, 1, 1)]
         [TestCase(CreatureConstants.Tarrasque, 0, 0, 0)]
         [TestCase(CreatureConstants.Tendriculos, TreasureConstants.TenPercent, TreasureConstants.FiftyPercent, TreasureConstants.FiftyPercent)]
         [TestCase(CreatureConstants.Thoqqua, 0, 0, 0)]
-        [TestCase(CreatureConstants.TieflingWarrior, 1, 1, 1)]
+        [TestCase(CreatureConstants.Tiefling_Warrior, 1, 1, 1)]
         [TestCase(CreatureConstants.Tiger, 0, 0, 0)]
         [TestCase(CreatureConstants.Tiger_Dire, 0, 0, 0)]
         [TestCase(CreatureConstants.Titan, 2, 2, 2)]
@@ -1086,8 +684,28 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
         [TestCase(CreatureConstants.UmberHulk, 1, 1, 1)]
         [TestCase(CreatureConstants.UmberHulk_TrulyHorrid, 1, 1, 1)]
         [TestCase(CreatureConstants.Unicorn, 0, 0, 0)]
+        [TestCase(CreatureConstants.Unicorn_CelestialCharger, 0, 0, 0)]
         [TestCase(CreatureConstants.VampireSpawn, 1, 1, 1)]
-        [TestCase(CreatureConstants.Vampire, 2, 2, 2)]
+        [TestCase(CreatureConstants.Vampire_Level1, 2, 2, 2)]
+        [TestCase(CreatureConstants.Vampire_Level2, 2, 2, 2)]
+        [TestCase(CreatureConstants.Vampire_Level3, 2, 2, 2)]
+        [TestCase(CreatureConstants.Vampire_Level4, 2, 2, 2)]
+        [TestCase(CreatureConstants.Vampire_Level5, 2, 2, 2)]
+        [TestCase(CreatureConstants.Vampire_Level6, 2, 2, 2)]
+        [TestCase(CreatureConstants.Vampire_Level7, 2, 2, 2)]
+        [TestCase(CreatureConstants.Vampire_Level8, 2, 2, 2)]
+        [TestCase(CreatureConstants.Vampire_Level9, 2, 2, 2)]
+        [TestCase(CreatureConstants.Vampire_Level10, 2, 2, 2)]
+        [TestCase(CreatureConstants.Vampire_Level11, 2, 2, 2)]
+        [TestCase(CreatureConstants.Vampire_Level12, 2, 2, 2)]
+        [TestCase(CreatureConstants.Vampire_Level13, 2, 2, 2)]
+        [TestCase(CreatureConstants.Vampire_Level14, 2, 2, 2)]
+        [TestCase(CreatureConstants.Vampire_Level15, 2, 2, 2)]
+        [TestCase(CreatureConstants.Vampire_Level16, 2, 2, 2)]
+        [TestCase(CreatureConstants.Vampire_Level17, 2, 2, 2)]
+        [TestCase(CreatureConstants.Vampire_Level18, 2, 2, 2)]
+        [TestCase(CreatureConstants.Vampire_Level19, 2, 2, 2)]
+        [TestCase(CreatureConstants.Vampire_Level20, 2, 2, 2)]
         [TestCase(CreatureConstants.Vargouille, 0, 0, 0)]
         [TestCase(CreatureConstants.VioletFungus, 0, 0, 0)]
         [TestCase(CreatureConstants.Vrock, 1, 1, 1)]
@@ -1123,7 +741,14 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
         [TestCase(CreatureConstants.YuanTi_Halfblood, 2, 2, 2)]
         [TestCase(CreatureConstants.YuanTi_Pureblood, 2, 2, 2)]
         [TestCase(CreatureConstants.Zelekhut, 0, 0, 0)]
-        [TestCase(CreatureConstants.Zombie, 0, 0, 0)]
+        [TestCase(CreatureConstants.Zombie_Human, 0, 0, 0)]
+        [TestCase(CreatureConstants.Zombie_Bugbear, 0, 0, 0)]
+        [TestCase(CreatureConstants.Zombie_GrayRender, 0, 0, 0)]
+        [TestCase(CreatureConstants.Zombie_Kobold, 0, 0, 0)]
+        [TestCase(CreatureConstants.Zombie_Minotaur, 0, 0, 0)]
+        [TestCase(CreatureConstants.Zombie_Ogre, 0, 0, 0)]
+        [TestCase(CreatureConstants.Zombie_Troglodyte, 0, 0, 0)]
+        [TestCase(CreatureConstants.Zombie_Wyvern, 0, 0, 0)]
         public void TreasureAdjustments(string entry, double coin, double goods, double items)
         {
             var collection = new[]
@@ -1134,6 +759,54 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
             };
 
             base.OrderedCollection(entry, collection);
+        }
+
+        [Test]
+        public void CharactersWithoutBaseRacesOrMetaracesHaveNoTreasure()
+        {
+            var entries = GetEntries();
+            var characters = entries.Where(e => IsCharacter(e, false, false));
+
+            foreach (var character in characters)
+            {
+                var adjustments = GetCollection(character).Select(a => Convert.ToDouble(a));
+                Assert.That(adjustments, Is.All.EqualTo(0), character);
+            }
+        }
+
+        private bool IsCharacter(string creature, bool hasBaseRace, bool hasMetarace)
+        {
+            var name = EncounterSelector.SelectNameFrom(creature);
+            var baseRace = EncounterSelector.SelectBaseRaceFrom(creature);
+            var metarace = EncounterSelector.SelectMetaraceFrom(creature);
+
+            return name == CreatureConstants.Character && baseRace.Any() == hasBaseRace && metarace.Any() == hasMetarace;
+        }
+
+        [Test]
+        public void CharactersWithBaseRacesHaveTreasure()
+        {
+            var entries = GetEntries();
+            var characters = entries.Where(e => IsCharacter(e, true, false));
+
+            foreach (var character in characters)
+            {
+                var adjustments = GetCollection(character).Select(a => Convert.ToDouble(a));
+                Assert.That(adjustments, Is.All.Positive, character);
+            }
+        }
+
+        [Test]
+        public void NoncombatantsDoNotHaveTreasure()
+        {
+            var entries = GetEntries();
+            var noncombatants = entries.Where(e => e.Contains(CreatureConstants.Noncombatant));
+
+            foreach (var noncombatant in noncombatants)
+            {
+                var adjustments = GetCollection(noncombatant).Select(a => Convert.ToDouble(a));
+                Assert.That(adjustments, Is.All.EqualTo(0), noncombatant);
+            }
         }
     }
 }

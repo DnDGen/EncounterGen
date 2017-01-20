@@ -36,20 +36,24 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Albatross.Expression, Version=1.2.1.100, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Albatross.Expression.1.2.1.100\lib\net40\Albatross.Expression.dll</HintPath>
+    <Reference Include="Albatross.Expression, Version=1.3.6218.36673, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Albatross.Expression.1.3.6218.36673\lib\net40\Albatross.Expression.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="CharacterGen, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\CharacterGen.7.1.0\lib\CharacterGen.dll</HintPath>
+      <HintPath>..\packages\CharacterGen.8.0.0\lib\CharacterGen.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EventGen, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\EventGen.1.0.0\lib\EventGen.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Ninject, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
       <HintPath>..\packages\Ninject.3.2.2.0\lib\net45-full\Ninject.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="RollGen, Version=12.1.6162.15224, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\DnDGen.RollGen.13.1.0\lib\RollGen.dll</HintPath>
+    <Reference Include="RollGen, Version=12.1.6247.28555, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DnDGen.RollGen.13.3.0\lib\RollGen.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -61,13 +65,14 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
     <Reference Include="TreasureGen, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\DnDGen.TreasureGen.5.0.0\lib\TreasureGen.dll</HintPath>
+      <HintPath>..\packages\DnDGen.TreasureGen.6.0.0\lib\TreasureGen.dll</HintPath>
       <Private>True</Private>
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Generators\EncounterCharacterGenerator.cs" />
     <Compile Include="Generators\EncounterGenerator.cs" />
+    <Compile Include="Generators\EncounterGeneratorEventDecorator.cs" />
     <Compile Include="Generators\EncounterTreasureGenerator.cs" />
     <Compile Include="Generators\EncounterVerifier.cs" />
     <Compile Include="Generators\IEncounterCharacterGenerator.cs" />
@@ -95,7 +100,9 @@
     <Compile Include="Selectors\Collections\IAdjustmentSelector.cs" />
     <Compile Include="Selectors\Collections\ICollectionSelector.cs" />
     <Compile Include="Selectors\Collections\IEncounterCollectionSelector.cs" />
+    <Compile Include="Selectors\EncounterSelector.cs" />
     <Compile Include="Selectors\IAmountSelector.cs" />
+    <Compile Include="Selectors\IEncounterSelector.cs" />
     <Compile Include="Selectors\Percentiles\BooleanPercentileSelector.cs" />
     <Compile Include="Selectors\Percentiles\IBooleanPercentileSelector.cs" />
     <Compile Include="Selectors\Percentiles\IPercentileSelector.cs" />
@@ -142,7 +149,7 @@
     <EmbeddedResource Include="Tables\EncounterDifficulty.xml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Tables\Creatures\ChallengeRatings.xml">
+    <EmbeddedResource Include="Tables\Creatures\AverageChallengeRatings.xml">
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>

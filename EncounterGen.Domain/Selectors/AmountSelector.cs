@@ -1,4 +1,5 @@
-﻿using EncounterGen.Common;
+﻿using CharacterGen.Characters;
+using EncounterGen.Common;
 using EncounterGen.Domain.Selectors.Collections;
 using EncounterGen.Domain.Tables;
 using RollGen;
@@ -14,11 +15,13 @@ namespace EncounterGen.Domain.Selectors
 
         private Dice dice;
         private ICollectionSelector collectionSelector;
+        private IEncounterSelector encounterSelector;
 
-        public AmountSelector(Dice dice, ICollectionSelector collectionSelector)
+        public AmountSelector(Dice dice, ICollectionSelector collectionSelector, IEncounterSelector encounterSelector)
         {
             this.dice = dice;
             this.collectionSelector = collectionSelector;
+            this.encounterSelector = encounterSelector;
         }
 
         public int SelectFrom(string amount)
@@ -36,7 +39,7 @@ namespace EncounterGen.Domain.Selectors
                 var sources = creatureAndAmount.Split('/');
                 var creature = sources[0];
                 var amount = sources[1];
-                var challengeRating = collectionSelector.SelectFrom(TableNameConstants.ChallengeRatings, creature).Single();
+                var challengeRating = collectionSelector.SelectFrom(TableNameConstants.AverageChallengeRatings, creature).Single();
 
                 if (challengeRatingsAndAmounts.ContainsKey(challengeRating))
                     challengeRatingsAndAmounts[challengeRating] = $"{challengeRatingsAndAmounts[challengeRating]}+{amount}";
@@ -113,20 +116,53 @@ namespace EncounterGen.Domain.Selectors
             return Convert.ToInt32(encounterLevel);
         }
 
-        public int SelectEncounterLevel(IEnumerable<Creature> creatures)
+        public int SelectActualEncounterLevel(Encounter encounter)
         {
             var challengeRatingsAndAmounts = new Dictionary<string, int>();
 
-            foreach (var creature in creatures)
+            foreach (var creature in encounter.Creatures)
             {
+                if (IsCharacter(creature.Type))
+                    continue;
+
                 if (challengeRatingsAndAmounts.ContainsKey(creature.ChallengeRating))
                     challengeRatingsAndAmounts[creature.ChallengeRating] += creature.Quantity;
                 else
                     challengeRatingsAndAmounts[creature.ChallengeRating] = creature.Quantity;
             }
 
+            foreach (var character in encounter.Characters)
+            {
+                var characterChallengeRating = GetCharacterChallengeRating(character);
+
+                if (challengeRatingsAndAmounts.ContainsKey(characterChallengeRating))
+                    challengeRatingsAndAmounts[characterChallengeRating]++;
+                else
+                    challengeRatingsAndAmounts[characterChallengeRating] = 1;
+            }
+
             var formattedChallengeRatingsAndAmounts = challengeRatingsAndAmounts.ToDictionary(kvp => kvp.Key, kvp => kvp.Value.ToString());
             return ComputeAverageEncounterLevel(formattedChallengeRatingsAndAmounts);
+        }
+
+        private bool IsCharacter(CreatureType creatureType)
+        {
+            if (creatureType == null)
+                return false;
+
+            var name = encounterSelector.SelectNameFrom(creatureType.Name);
+            if (name == CreatureConstants.Character)
+                return true;
+
+            return IsCharacter(creatureType.SubType);
+        }
+
+        private string GetCharacterChallengeRating(Character character)
+        {
+            if (character.ChallengeRating == 0.5)
+                return ChallengeRatingConstants.OneHalf;
+
+            return Convert.ToInt32(character.ChallengeRating).ToString();
         }
     }
 }

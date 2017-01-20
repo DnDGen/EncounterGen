@@ -1,12 +1,12 @@
-﻿using CharacterGen;
+﻿using CharacterGen.Characters;
 using CharacterGen.Randomizers.Alignments;
 using CharacterGen.Randomizers.CharacterClasses;
 using CharacterGen.Randomizers.Races;
 using CharacterGen.Randomizers.Stats;
 using EncounterGen.Common;
 using EncounterGen.Domain.Generators;
+using EncounterGen.Domain.Selectors;
 using EncounterGen.Domain.Selectors.Collections;
-using EncounterGen.Domain.Tables;
 using Moq;
 using NUnit.Framework;
 using RollGen;
@@ -28,12 +28,12 @@ namespace EncounterGen.Tests.Unit.Generators
         private Mock<RaceRandomizer> mockAnyBaseRaceRandomizer;
         private Mock<RaceRandomizer> mockAnyMetaraceRandomizer;
         private Mock<ISetMetaraceRandomizer> mockSetMetaraceRandomizer;
+        private Mock<ISetBaseRaceRandomizer> mockSetBaseRaceRandomizer;
         private Mock<IStatsRandomizer> mockRawStatsRandomizer;
         private Mock<ICollectionSelector> mockCollectionSelector;
         private Mock<ISetClassNameRandomizer> mockSetClassNameRandomizer;
         private Mock<Dice> mockDice;
-        private List<string> undeadNPCs;
-        private List<string> charactersGroup;
+        private Mock<IEncounterSelector> mockEncounterSelector;
         private List<Creature> creatures;
 
         [SetUp]
@@ -51,35 +51,46 @@ namespace EncounterGen.Tests.Unit.Generators
             mockSetClassNameRandomizer = new Mock<ISetClassNameRandomizer>();
             mockAnyNPCClassNameRandomizer = new Mock<IClassNameRandomizer>();
             mockDice = new Mock<Dice>();
+            mockEncounterSelector = new Mock<IEncounterSelector>();
+            mockSetBaseRaceRandomizer = new Mock<ISetBaseRaceRandomizer>();
 
-            encounterCharacterGenerator = new EncounterCharacterGenerator(mockCharacterGenerator.Object, mockAnyAlignmentRandomizer.Object, mockAnyPlayerClassNameRandomizer.Object, mockSetLevelRandomizer.Object,
-                mockAnyBaseRaceRandomizer.Object, mockAnyMetaraceRandomizer.Object, mockRawStatsRandomizer.Object, mockCollectionSelector.Object,
-                mockSetMetaraceRandomizer.Object, mockAnyNPCClassNameRandomizer.Object, mockSetClassNameRandomizer.Object, mockDice.Object);
+            encounterCharacterGenerator = new EncounterCharacterGenerator(
+                mockCharacterGenerator.Object,
+                mockAnyAlignmentRandomizer.Object,
+                mockAnyPlayerClassNameRandomizer.Object,
+                mockSetLevelRandomizer.Object,
+                mockAnyBaseRaceRandomizer.Object,
+                mockAnyMetaraceRandomizer.Object,
+                mockRawStatsRandomizer.Object,
+                mockCollectionSelector.Object,
+                mockSetMetaraceRandomizer.Object,
+                mockAnyNPCClassNameRandomizer.Object,
+                mockSetClassNameRandomizer.Object,
+                mockDice.Object,
+                mockEncounterSelector.Object,
+                mockSetBaseRaceRandomizer.Object);
 
-            undeadNPCs = new List<string>();
-            charactersGroup = new List<string>();
             creatures = new List<Creature>();
-
-            charactersGroup.Add(CreatureConstants.Character);
-            charactersGroup.Add(CreatureConstants.NPC);
 
             creatures.Add(new Creature());
             creatures[0].Quantity = 600;
-            creatures[0].Name = $"{CreatureConstants.Character}[1337]";
-            creatures[0].Description = "character subtype";
+            creatures[0].Type.Name = "creature";
+            creatures[0].Type.Description = "description";
 
             mockSetLevelRandomizer.SetupAllProperties();
             mockSetLevelRandomizer.Object.AllowAdjustments = true;
 
             mockSetMetaraceRandomizer.SetupAllProperties();
+            mockSetBaseRaceRandomizer.SetupAllProperties();
             mockSetClassNameRandomizer.SetupAllProperties();
 
             mockDice.Setup(d => d.Roll(It.IsAny<string>())).Returns((string s) => ParseRoll(s));
             mockDice.Setup(d => d.Roll("effective roll").AsSum()).Returns(42);
 
-            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.CreatureGroups, CreatureConstants.Character)).Returns(charactersGroup);
-            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.CreatureGroups, GroupConstants.UndeadNPC)).Returns(undeadNPCs);
             mockCollectionSelector.Setup(s => s.SelectRandomFrom(It.IsAny<IEnumerable<string>>())).Returns((IEnumerable<string> c) => c.Last());
+
+            mockEncounterSelector.Setup(s => s.SelectNameFrom(creatures[0].Type.Name)).Returns(CreatureConstants.Character);
+            mockEncounterSelector.Setup(s => s.SelectChallengeRatingFrom(creatures[0].Type.Name)).Returns("1337");
         }
 
         private PartialRoll ParseRoll(string roll)
@@ -116,21 +127,30 @@ namespace EncounterGen.Tests.Unit.Generators
             Assert.That(characters.Select(c => c.InterestingTrait), Is.Unique);
         }
 
-        private Character BuildCharacter(int level, string className = "random class name", string metarace = "random metarace")
+        private Character BuildCharacter(int level, string className = "random class name", string metarace = "random metarace", string baseRace = "random base race")
         {
             var character = new Character();
             character.InterestingTrait = Guid.NewGuid().ToString();
             character.Class.Name = className;
             character.Class.Level = level;
             character.Race.Metarace = metarace;
+            character.Race.BaseRace = baseRace;
 
             return character;
         }
 
         [Test]
+        public void DoNotGenerateNonCharacters()
+        {
+            mockEncounterSelector.Setup(s => s.SelectNameFrom(creatures[0].Type.Name)).Returns("not a character");
+            var characters = encounterCharacterGenerator.GenerateFrom(creatures);
+            Assert.That(characters, Is.Empty);
+        }
+
+        [Test]
         public void GenerateCharactersWithVariableLevels()
         {
-            creatures[0].Name = $"{CreatureConstants.Character}[13d37]";
+            mockEncounterSelector.Setup(s => s.SelectChallengeRatingFrom(creatures[0].Type.Name)).Returns("13d37");
             mockDice.Setup(d => d.Roll("13d37").AsSum()).Returns(1337);
 
             mockCharacterGenerator
@@ -149,12 +169,13 @@ namespace EncounterGen.Tests.Unit.Generators
             Assert.That(characters.Count, Is.EqualTo(600));
             Assert.That(characters, Is.Unique);
             Assert.That(characters.Select(c => c.InterestingTrait), Is.Unique);
+            Assert.That(characters.Select(c => c.Class.Level), Is.All.EqualTo(1337));
         }
 
         [Test]
         public void VariableLevelsAreUniquePerCharacter()
         {
-            creatures[0].Name = $"{CreatureConstants.Character}[13d37]";
+            mockEncounterSelector.Setup(s => s.SelectChallengeRatingFrom(creatures[0].Type.Name)).Returns("13d37");
             creatures[0].Quantity = 2;
 
             mockDice.SetupSequence(d => d.Roll("13d37").AsSum()).Returns(1337).Returns(1234);
@@ -163,7 +184,7 @@ namespace EncounterGen.Tests.Unit.Generators
                 .Setup(g => g.GenerateWith(
                     mockAnyAlignmentRandomizer.Object,
                     mockAnyPlayerClassNameRandomizer.Object,
-                    It.Is<ISetLevelRandomizer>(r => r.SetLevel == 1337 && r.AllowAdjustments == true),
+                    It.Is<ISetLevelRandomizer>(r => r.SetLevel == 1337 && r.AllowAdjustments),
                     mockAnyBaseRaceRandomizer.Object,
                     mockAnyMetaraceRandomizer.Object,
                     mockRawStatsRandomizer.Object))
@@ -173,7 +194,7 @@ namespace EncounterGen.Tests.Unit.Generators
                 .Setup(g => g.GenerateWith(
                     mockAnyAlignmentRandomizer.Object,
                     mockAnyPlayerClassNameRandomizer.Object,
-                    It.Is<ISetLevelRandomizer>(r => r.SetLevel == 1234 && r.AllowAdjustments == true),
+                    It.Is<ISetLevelRandomizer>(r => r.SetLevel == 1234 && r.AllowAdjustments),
                     mockAnyBaseRaceRandomizer.Object,
                     mockAnyMetaraceRandomizer.Object,
                     mockRawStatsRandomizer.Object))
@@ -190,22 +211,19 @@ namespace EncounterGen.Tests.Unit.Generators
         }
 
         [Test]
-        public void GenerateUndeadNPCs()
+        public void GenerateWithSetBaseRace()
         {
-            creatures[0].Name = $"creature[1337]";
-
-            undeadNPCs.Add("creature");
-            undeadNPCs.Add("other monster");
+            mockEncounterSelector.Setup(s => s.SelectBaseRaceFrom(creatures[0].Type.Name)).Returns("base race");
 
             mockCharacterGenerator
                 .Setup(g => g.GenerateWith(
                     mockAnyAlignmentRandomizer.Object,
                     mockAnyPlayerClassNameRandomizer.Object,
                     It.Is<ISetLevelRandomizer>(r => r.SetLevel == 1337 && r.AllowAdjustments == false),
-                    mockAnyBaseRaceRandomizer.Object,
-                    It.Is<ISetMetaraceRandomizer>(r => r.SetMetarace == "creature"),
+                    It.Is<ISetBaseRaceRandomizer>(r => r.SetBaseRace == "base race"),
+                    mockAnyMetaraceRandomizer.Object,
                     mockRawStatsRandomizer.Object))
-                .Returns(() => BuildCharacter(1337, metarace: "creature"));
+                .Returns(() => BuildCharacter(1337, baseRace: "base race"));
 
             var characters = encounterCharacterGenerator.GenerateFrom(creatures);
             Assert.That(characters, Is.Not.Null);
@@ -213,17 +231,14 @@ namespace EncounterGen.Tests.Unit.Generators
             Assert.That(characters.Count, Is.EqualTo(600));
             Assert.That(characters, Is.Unique);
             Assert.That(characters.Select(c => c.InterestingTrait), Is.Unique);
-            Assert.That(characters.Select(c => c.Race.Metarace), Is.All.EqualTo("creature"));
+            Assert.That(characters.Select(c => c.Class.Level), Is.All.EqualTo(1337));
+            Assert.That(characters.Select(c => c.Race.BaseRace), Is.All.EqualTo("base race"));
         }
 
         [Test]
-        public void GenerateUndeadNPCsWithVariableLevels()
+        public void GenerateWithSetMetarace()
         {
-            creatures[0].Name = $"creature[13d37]";
-            mockDice.Setup(d => d.Roll("13d37").AsSum()).Returns(1337);
-
-            undeadNPCs.Add("creature");
-            undeadNPCs.Add("other monster");
+            mockEncounterSelector.Setup(s => s.SelectMetaraceFrom(creatures[0].Type.Name)).Returns("metarace");
 
             mockCharacterGenerator
                 .Setup(g => g.GenerateWith(
@@ -231,9 +246,9 @@ namespace EncounterGen.Tests.Unit.Generators
                     mockAnyPlayerClassNameRandomizer.Object,
                     It.Is<ISetLevelRandomizer>(r => r.SetLevel == 1337 && r.AllowAdjustments == false),
                     mockAnyBaseRaceRandomizer.Object,
-                    It.Is<ISetMetaraceRandomizer>(r => r.SetMetarace == "creature"),
+                    It.Is<ISetMetaraceRandomizer>(r => r.SetMetarace == "metarace"),
                     mockRawStatsRandomizer.Object))
-                .Returns(() => BuildCharacter(1337, metarace: "creature"));
+                .Returns(() => BuildCharacter(1337, metarace: "metarace"));
 
             var characters = encounterCharacterGenerator.GenerateFrom(creatures);
             Assert.That(characters, Is.Not.Null);
@@ -241,182 +256,296 @@ namespace EncounterGen.Tests.Unit.Generators
             Assert.That(characters.Count, Is.EqualTo(600));
             Assert.That(characters, Is.Unique);
             Assert.That(characters.Select(c => c.InterestingTrait), Is.Unique);
-            Assert.That(characters.Select(c => c.Race.Metarace), Is.All.EqualTo("creature"));
+            Assert.That(characters.Select(c => c.Class.Level), Is.All.EqualTo(1337));
+            Assert.That(characters.Select(c => c.Race.Metarace), Is.All.EqualTo("metarace"));
         }
 
         [Test]
-        public void VariableLevelsAreUniquePerUndeadNPC()
+        public void GenerateWithSetClassName()
         {
-            creatures[0].Name = $"creature[13d37]";
-            creatures[0].Quantity = 2;
-
-            undeadNPCs.Add("creature");
-            undeadNPCs.Add("other monster");
-
-            mockDice.SetupSequence(d => d.Roll("13d37").AsSum()).Returns(1337).Returns(1234);
+            mockEncounterSelector.Setup(s => s.SelectCharacterClassesFrom(creatures[0].Type.Name)).Returns(new[] { "class name" });
 
             mockCharacterGenerator
                 .Setup(g => g.GenerateWith(
                     mockAnyAlignmentRandomizer.Object,
-                    mockAnyPlayerClassNameRandomizer.Object,
-                    It.Is<ISetLevelRandomizer>(r => r.SetLevel == 1337 && r.AllowAdjustments == false),
+                    It.Is<ISetClassNameRandomizer>(r => r.SetClassName == "class name"),
+                    It.Is<ISetLevelRandomizer>(r => r.SetLevel == 1337 && r.AllowAdjustments),
                     mockAnyBaseRaceRandomizer.Object,
-                    It.Is<ISetMetaraceRandomizer>(r => r.SetMetarace == "creature"),
+                    mockAnyMetaraceRandomizer.Object,
                     mockRawStatsRandomizer.Object))
-                .Returns(() => BuildCharacter(1337, metarace: "creature"));
-
-            mockCharacterGenerator
-                .Setup(g => g.GenerateWith(
-                    mockAnyAlignmentRandomizer.Object,
-                    mockAnyPlayerClassNameRandomizer.Object,
-                    It.Is<ISetLevelRandomizer>(r => r.SetLevel == 1234 && r.AllowAdjustments == false),
-                    mockAnyBaseRaceRandomizer.Object,
-                    It.Is<ISetMetaraceRandomizer>(r => r.SetMetarace == "creature"),
-                    mockRawStatsRandomizer.Object))
-                .Returns(() => BuildCharacter(1234, metarace: "creature"));
+                .Returns(() => BuildCharacter(1337, "class name"));
 
             var characters = encounterCharacterGenerator.GenerateFrom(creatures);
             Assert.That(characters, Is.Not.Null);
             Assert.That(characters, Is.All.Not.Null);
-            Assert.That(characters.Count(), Is.EqualTo(2));
+            Assert.That(characters.Count, Is.EqualTo(600));
             Assert.That(characters, Is.Unique);
             Assert.That(characters.Select(c => c.InterestingTrait), Is.Unique);
-            Assert.That(characters.Select(c => c.Class.Level), Contains.Item(1337));
-            Assert.That(characters.Select(c => c.Class.Level), Contains.Item(1234));
-            Assert.That(characters.Select(c => c.Race.Metarace), Is.All.EqualTo("creature"));
+            Assert.That(characters.Select(c => c.Class.Level), Is.All.EqualTo(1337));
+            Assert.That(characters.Select(c => c.Class.Name), Is.All.EqualTo("class name"));
+        }
+
+        [Test]
+        public void GenerateWithSetClassNames()
+        {
+            mockEncounterSelector.Setup(s => s.SelectCharacterClassesFrom(creatures[0].Type.Name)).Returns(new[] { "class name", "other class name" });
+
+            mockCharacterGenerator
+                .Setup(g => g.GenerateWith(
+                    mockAnyAlignmentRandomizer.Object,
+                    It.Is<ISetClassNameRandomizer>(r => r.SetClassName == "other class name"),
+                    It.Is<ISetLevelRandomizer>(r => r.SetLevel == 1337 && r.AllowAdjustments),
+                    mockAnyBaseRaceRandomizer.Object,
+                    mockAnyMetaraceRandomizer.Object,
+                    mockRawStatsRandomizer.Object))
+                .Returns(() => BuildCharacter(1337, "other class name"));
+
+            var characters = encounterCharacterGenerator.GenerateFrom(creatures);
+            Assert.That(characters, Is.Not.Null);
+            Assert.That(characters, Is.All.Not.Null);
+            Assert.That(characters.Count, Is.EqualTo(600));
+            Assert.That(characters, Is.Unique);
+            Assert.That(characters.Select(c => c.InterestingTrait), Is.Unique);
+            Assert.That(characters.Select(c => c.Class.Level), Is.All.EqualTo(1337));
+            Assert.That(characters.Select(c => c.Class.Name), Is.All.EqualTo("other class name"));
+        }
+
+        [Test]
+        public void GenerateWithRandomSetClassNames()
+        {
+            mockEncounterSelector.Setup(s => s.SelectCharacterClassesFrom(creatures[0].Type.Name)).Returns(new[] { "class name", "other class name" });
+
+            var index = 0;
+            mockCollectionSelector.Setup(s => s.SelectRandomFrom(It.IsAny<IEnumerable<string>>())).Returns((IEnumerable<string> c) => c.ElementAt(index++ % c.Count()));
+
+            mockCharacterGenerator
+                .Setup(g => g.GenerateWith(
+                    mockAnyAlignmentRandomizer.Object,
+                    It.Is<ISetClassNameRandomizer>(r => r.SetClassName == "class name"),
+                    It.Is<ISetLevelRandomizer>(r => r.SetLevel == 1337 && r.AllowAdjustments),
+                    mockAnyBaseRaceRandomizer.Object,
+                    mockAnyMetaraceRandomizer.Object,
+                    mockRawStatsRandomizer.Object))
+                .Returns(() => BuildCharacter(1337, "class name"));
+
+            mockCharacterGenerator
+                .Setup(g => g.GenerateWith(
+                    mockAnyAlignmentRandomizer.Object,
+                    It.Is<ISetClassNameRandomizer>(r => r.SetClassName == "other class name"),
+                    It.Is<ISetLevelRandomizer>(r => r.SetLevel == 1337 && r.AllowAdjustments),
+                    mockAnyBaseRaceRandomizer.Object,
+                    mockAnyMetaraceRandomizer.Object,
+                    mockRawStatsRandomizer.Object))
+                .Returns(() => BuildCharacter(1337, "other class name"));
+
+            var characters = encounterCharacterGenerator.GenerateFrom(creatures);
+            Assert.That(characters, Is.Not.Null);
+            Assert.That(characters, Is.All.Not.Null);
+            Assert.That(characters.Count, Is.EqualTo(600));
+            Assert.That(characters, Is.Unique);
+            Assert.That(characters.Select(c => c.InterestingTrait), Is.Unique);
+            Assert.That(characters.Select(c => c.Class.Level), Is.All.EqualTo(1337));
+            Assert.That(characters.Select(c => c.Class.Name), Contains.Item("class name"));
+            Assert.That(characters.Select(c => c.Class.Name), Contains.Item("other class name"));
+        }
+
+        [Test]
+        public void GenerateSetToAnyNPC()
+        {
+            mockEncounterSelector.Setup(s => s.SelectCharacterClassesFrom(creatures[0].Type.Name)).Returns(new[] { ClassNameRandomizerTypeConstants.AnyNPC });
+
+            mockCharacterGenerator
+                .Setup(g => g.GenerateWith(
+                    mockAnyAlignmentRandomizer.Object,
+                    mockAnyNPCClassNameRandomizer.Object,
+                    It.Is<ISetLevelRandomizer>(r => r.SetLevel == 1337 && r.AllowAdjustments),
+                    mockAnyBaseRaceRandomizer.Object,
+                    mockAnyMetaraceRandomizer.Object,
+                    mockRawStatsRandomizer.Object))
+                .Returns(() => BuildCharacter(1337));
+
+            var characters = encounterCharacterGenerator.GenerateFrom(creatures);
+            Assert.That(characters, Is.Not.Null);
+            Assert.That(characters, Is.All.Not.Null);
+            Assert.That(characters.Count, Is.EqualTo(600));
+            Assert.That(characters, Is.Unique);
+            Assert.That(characters.Select(c => c.InterestingTrait), Is.Unique);
+            Assert.That(characters.Select(c => c.Class.Level), Is.All.EqualTo(1337));
+        }
+
+        [Test]
+        public void GenerateWithEverything()
+        {
+            mockEncounterSelector.Setup(s => s.SelectCharacterClassesFrom(creatures[0].Type.Name)).Returns(new[] { "class name", "other class name" });
+            mockEncounterSelector.Setup(s => s.SelectChallengeRatingFrom(creatures[0].Type.Name)).Returns("13d37");
+            mockEncounterSelector.Setup(s => s.SelectBaseRaceFrom(creatures[0].Type.Name)).Returns("base race");
+            mockEncounterSelector.Setup(s => s.SelectMetaraceFrom(creatures[0].Type.Name)).Returns("metarace");
+
+            var roll = 0;
+            mockDice.Setup(d => d.Roll("13d37").AsSum()).Returns(() => roll++ % 2 + 1);
+
+            var index = 0;
+            mockCollectionSelector.Setup(s => s.SelectRandomFrom(It.IsAny<IEnumerable<string>>())).Returns((IEnumerable<string> c) => c.ElementAt(index++ % c.Count()));
+
+            mockCharacterGenerator
+                .Setup(g => g.GenerateWith(
+                    mockAnyAlignmentRandomizer.Object,
+                    It.Is<ISetClassNameRandomizer>(r => r.SetClassName == "class name"),
+                    It.Is<ISetLevelRandomizer>(r => r.SetLevel == 1 && r.AllowAdjustments == false),
+                    It.Is<ISetBaseRaceRandomizer>(r => r.SetBaseRace == "base race"),
+                    It.Is<ISetMetaraceRandomizer>(r => r.SetMetarace == "metarace"),
+                    mockRawStatsRandomizer.Object))
+                .Returns(() => BuildCharacter(1, "class name", "metarace", "base race"));
+
+            mockCharacterGenerator
+                .Setup(g => g.GenerateWith(
+                    mockAnyAlignmentRandomizer.Object,
+                    It.Is<ISetClassNameRandomizer>(r => r.SetClassName == "other class name"),
+                    It.Is<ISetLevelRandomizer>(r => r.SetLevel == 2 && r.AllowAdjustments == false),
+                    It.Is<ISetBaseRaceRandomizer>(r => r.SetBaseRace == "base race"),
+                    It.Is<ISetMetaraceRandomizer>(r => r.SetMetarace == "metarace"),
+                    mockRawStatsRandomizer.Object))
+                .Returns(() => BuildCharacter(2, "other class name", "metarace", "base race"));
+
+            mockCharacterGenerator
+                .Setup(g => g.GenerateWith(
+                    mockAnyAlignmentRandomizer.Object,
+                    It.Is<ISetClassNameRandomizer>(r => r.SetClassName == "class name"),
+                    It.Is<ISetLevelRandomizer>(r => r.SetLevel == 2 && r.AllowAdjustments == false),
+                    It.Is<ISetBaseRaceRandomizer>(r => r.SetBaseRace == "base race"),
+                    It.Is<ISetMetaraceRandomizer>(r => r.SetMetarace == "metarace"),
+                    mockRawStatsRandomizer.Object))
+                .Returns(() => BuildCharacter(2, "class name", "metarace", "base race"));
+
+            mockCharacterGenerator
+                .Setup(g => g.GenerateWith(
+                    mockAnyAlignmentRandomizer.Object,
+                    It.Is<ISetClassNameRandomizer>(r => r.SetClassName == "other class name"),
+                    It.Is<ISetLevelRandomizer>(r => r.SetLevel == 1 && r.AllowAdjustments == false),
+                    It.Is<ISetBaseRaceRandomizer>(r => r.SetBaseRace == "base race"),
+                    It.Is<ISetMetaraceRandomizer>(r => r.SetMetarace == "metarace"),
+                    mockRawStatsRandomizer.Object))
+                .Returns(() => BuildCharacter(1, "other class name", "metarace", "base race"));
+
+            var characters = encounterCharacterGenerator.GenerateFrom(creatures);
+            Assert.That(characters, Is.Not.Null);
+            Assert.That(characters, Is.All.Not.Null);
+            Assert.That(characters.Count, Is.EqualTo(600));
+            Assert.That(characters, Is.Unique);
+            Assert.That(characters.Select(c => c.InterestingTrait), Is.Unique);
+            Assert.That(characters.Select(c => c.Class.Level), Contains.Item(1));
+            Assert.That(characters.Select(c => c.Class.Level), Contains.Item(2));
+            Assert.That(characters.Select(c => c.Class.Name), Contains.Item("class name"));
+            Assert.That(characters.Select(c => c.Class.Name), Contains.Item("other class name"));
+            Assert.That(characters.Select(c => c.Race.Metarace), Is.All.EqualTo("metarace"));
+            Assert.That(characters.Select(c => c.Race.BaseRace), Is.All.EqualTo("base race"));
+        }
+
+        [Test]
+        public void GenerateWithNothingAfterEverything()
+        {
+            mockEncounterSelector.Setup(s => s.SelectCharacterClassesFrom(creatures[0].Type.Name)).Returns(new[] { "class name", "other class name" });
+            mockEncounterSelector.Setup(s => s.SelectChallengeRatingFrom(creatures[0].Type.Name)).Returns("13d37");
+            mockEncounterSelector.Setup(s => s.SelectBaseRaceFrom(creatures[0].Type.Name)).Returns("base race");
+            mockEncounterSelector.Setup(s => s.SelectMetaraceFrom(creatures[0].Type.Name)).Returns("metarace");
+
+            var roll = 0;
+            mockDice.Setup(d => d.Roll("13d37").AsSum()).Returns(() => roll++ % 2 + 1);
+
+            var index = 0;
+            mockCollectionSelector.Setup(s => s.SelectRandomFrom(It.IsAny<IEnumerable<string>>())).Returns((IEnumerable<string> c) => c.ElementAt(index++ % c.Count()));
+
+            mockCharacterGenerator
+                .Setup(g => g.GenerateWith(
+                    mockAnyAlignmentRandomizer.Object,
+                    It.Is<ISetClassNameRandomizer>(r => r.SetClassName == "class name"),
+                    It.Is<ISetLevelRandomizer>(r => r.SetLevel == 1 && r.AllowAdjustments == false),
+                    It.Is<ISetBaseRaceRandomizer>(r => r.SetBaseRace == "base race"),
+                    It.Is<ISetMetaraceRandomizer>(r => r.SetMetarace == "metarace"),
+                    mockRawStatsRandomizer.Object))
+                .Returns(() => BuildCharacter(1, "class name", "metarace", "base race"));
+
+            mockCharacterGenerator
+                .Setup(g => g.GenerateWith(
+                    mockAnyAlignmentRandomizer.Object,
+                    It.Is<ISetClassNameRandomizer>(r => r.SetClassName == "other class name"),
+                    It.Is<ISetLevelRandomizer>(r => r.SetLevel == 2 && r.AllowAdjustments == false),
+                    It.Is<ISetBaseRaceRandomizer>(r => r.SetBaseRace == "base race"),
+                    It.Is<ISetMetaraceRandomizer>(r => r.SetMetarace == "metarace"),
+                    mockRawStatsRandomizer.Object))
+                .Returns(() => BuildCharacter(2, "other class name", "metarace", "base race"));
+
+            mockCharacterGenerator
+                .Setup(g => g.GenerateWith(
+                    mockAnyAlignmentRandomizer.Object,
+                    It.Is<ISetClassNameRandomizer>(r => r.SetClassName == "class name"),
+                    It.Is<ISetLevelRandomizer>(r => r.SetLevel == 2 && r.AllowAdjustments == false),
+                    It.Is<ISetBaseRaceRandomizer>(r => r.SetBaseRace == "base race"),
+                    It.Is<ISetMetaraceRandomizer>(r => r.SetMetarace == "metarace"),
+                    mockRawStatsRandomizer.Object))
+                .Returns(() => BuildCharacter(2, "class name", "metarace", "base race"));
+
+            mockCharacterGenerator
+                .Setup(g => g.GenerateWith(
+                    mockAnyAlignmentRandomizer.Object,
+                    It.Is<ISetClassNameRandomizer>(r => r.SetClassName == "other class name"),
+                    It.Is<ISetLevelRandomizer>(r => r.SetLevel == 1 && r.AllowAdjustments == false),
+                    It.Is<ISetBaseRaceRandomizer>(r => r.SetBaseRace == "base race"),
+                    It.Is<ISetMetaraceRandomizer>(r => r.SetMetarace == "metarace"),
+                    mockRawStatsRandomizer.Object))
+                .Returns(() => BuildCharacter(1, "other class name", "metarace", "base race"));
+
+            var characters = encounterCharacterGenerator.GenerateFrom(creatures);
+            Assert.That(characters, Is.Not.Null);
+            Assert.That(characters, Is.All.Not.Null);
+            Assert.That(characters.Count, Is.EqualTo(600));
+            Assert.That(characters, Is.Unique);
+            Assert.That(characters.Select(c => c.InterestingTrait), Is.Unique);
+            Assert.That(characters.Select(c => c.Class.Level), Contains.Item(1));
+            Assert.That(characters.Select(c => c.Class.Level), Contains.Item(2));
+            Assert.That(characters.Select(c => c.Class.Name), Contains.Item("class name"));
+            Assert.That(characters.Select(c => c.Class.Name), Contains.Item("other class name"));
+            Assert.That(characters.Select(c => c.Race.Metarace), Is.All.EqualTo("metarace"));
+            Assert.That(characters.Select(c => c.Race.BaseRace), Is.All.EqualTo("base race"));
+
+            mockEncounterSelector.Setup(s => s.SelectCharacterClassesFrom(creatures[0].Type.Name)).Returns(Enumerable.Empty<string>());
+            mockEncounterSelector.Setup(s => s.SelectChallengeRatingFrom(creatures[0].Type.Name)).Returns("1337");
+            mockEncounterSelector.Setup(s => s.SelectBaseRaceFrom(creatures[0].Type.Name)).Returns(string.Empty);
+            mockEncounterSelector.Setup(s => s.SelectMetaraceFrom(creatures[0].Type.Name)).Returns(string.Empty);
+
+            mockCharacterGenerator
+                .Setup(g => g.GenerateWith(
+                    mockAnyAlignmentRandomizer.Object,
+                    mockAnyPlayerClassNameRandomizer.Object,
+                    It.Is<ISetLevelRandomizer>(r => r.SetLevel == 1337 && r.AllowAdjustments),
+                    mockAnyBaseRaceRandomizer.Object,
+                    mockAnyMetaraceRandomizer.Object,
+                    mockRawStatsRandomizer.Object))
+                .Returns(() => BuildCharacter(1337));
+
+            characters = encounterCharacterGenerator.GenerateFrom(creatures);
+            Assert.That(characters, Is.Not.Null);
+            Assert.That(characters, Is.All.Not.Null);
+            Assert.That(characters.Count, Is.EqualTo(600));
+            Assert.That(characters, Is.Unique);
+            Assert.That(characters.Select(c => c.InterestingTrait), Is.Unique);
+            Assert.That(characters.Select(c => c.Class.Level), Is.All.EqualTo(1337));
+            Assert.That(characters.Select(c => c.Class.Name), Is.All.EqualTo("random class name"));
+            Assert.That(characters.Select(c => c.Race.Metarace), Is.All.EqualTo("random metarace"));
+            Assert.That(characters.Select(c => c.Race.BaseRace), Is.All.EqualTo("random base race"));
         }
 
         [Test]
         public void GenerateCharactersFromSubtype()
         {
-            creatures[0].Name = $"creature[1337]";
-            creatures[0].Description = CreatureConstants.Character + "[1234]";
+            creatures[0].Type.Name = "other creature";
+            creatures[0].Type.SubType = new CreatureType();
+            creatures[0].Type.SubType.Name = "creature";
 
             mockCharacterGenerator
                 .Setup(g => g.GenerateWith(
                     mockAnyAlignmentRandomizer.Object,
                     mockAnyPlayerClassNameRandomizer.Object,
-                    It.Is<ISetLevelRandomizer>(r => r.SetLevel == 1234 && r.AllowAdjustments),
-                    mockAnyBaseRaceRandomizer.Object,
-                    mockAnyMetaraceRandomizer.Object,
-                    mockRawStatsRandomizer.Object))
-                .Returns(() => BuildCharacter(1234));
-
-            var characters = encounterCharacterGenerator.GenerateFrom(creatures);
-            Assert.That(characters, Is.Not.Null);
-            Assert.That(characters.Count, Is.EqualTo(600));
-            Assert.That(characters, Is.Unique);
-            Assert.That(characters.Select(c => c.InterestingTrait), Is.Unique);
-        }
-
-        [Test]
-        public void GenerateCharacterClassFromSubtype()
-        {
-            creatures[0].Name = $"creature[1337]";
-            creatures[0].Description = "character class[1234]";
-
-            charactersGroup.Add("character class");
-
-            mockCharacterGenerator
-                .Setup(g => g.GenerateWith(
-                    mockAnyAlignmentRandomizer.Object,
-                    It.Is<ISetClassNameRandomizer>(r => r.SetClassName == "character class"),
-                    It.Is<ISetLevelRandomizer>(r => r.SetLevel == 1234 && r.AllowAdjustments),
-                    mockAnyBaseRaceRandomizer.Object,
-                    mockAnyMetaraceRandomizer.Object,
-                    mockRawStatsRandomizer.Object))
-                .Returns(() => BuildCharacter(1234));
-
-            var characters = encounterCharacterGenerator.GenerateFrom(creatures);
-            Assert.That(characters, Is.Not.Null);
-            Assert.That(characters.Count, Is.EqualTo(600));
-            Assert.That(characters, Is.Unique);
-            Assert.That(characters.Select(c => c.InterestingTrait), Is.Unique);
-        }
-
-        [Test]
-        public void GenerateUndeadNPCFromSubtype()
-        {
-            creatures[0].Name = $"creature[1337]";
-            creatures[0].Description = "undead[1234]";
-
-            undeadNPCs.Add("undead");
-
-            mockCharacterGenerator
-                .Setup(g => g.GenerateWith(
-                    mockAnyAlignmentRandomizer.Object,
-                    mockAnyPlayerClassNameRandomizer.Object,
-                    It.Is<ISetLevelRandomizer>(r => r.SetLevel == 1234 && r.AllowAdjustments == false),
-                    mockAnyBaseRaceRandomizer.Object,
-                    It.Is<ISetMetaraceRandomizer>(r => r.SetMetarace == "undead"),
-                    mockRawStatsRandomizer.Object))
-                .Returns(() => BuildCharacter(1234, metarace: "undead"));
-
-            var characters = encounterCharacterGenerator.GenerateFrom(creatures);
-            Assert.That(characters, Is.Not.Null);
-            Assert.That(characters.Count, Is.EqualTo(600));
-            Assert.That(characters, Is.Unique);
-            Assert.That(characters.Select(c => c.InterestingTrait), Is.Unique);
-        }
-
-        [Test]
-        public void GenerateSpecificClass()
-        {
-            creatures[0].Name = $"character class[1337]";
-            charactersGroup.Add("character class");
-
-            mockCharacterGenerator
-                .Setup(g => g.GenerateWith(
-                    mockAnyAlignmentRandomizer.Object,
-                    It.Is<ISetClassNameRandomizer>(r => r.SetClassName == "character class"),
-                    It.Is<ISetLevelRandomizer>(r => r.SetLevel == 1337 && r.AllowAdjustments),
-                    mockAnyBaseRaceRandomizer.Object, mockAnyMetaraceRandomizer.Object,
-                    mockRawStatsRandomizer.Object))
-                .Returns(() => BuildCharacter(1337, "character class"));
-
-            var characters = encounterCharacterGenerator.GenerateFrom(creatures);
-            Assert.That(characters, Is.Not.Null);
-            Assert.That(characters, Is.All.Not.Null);
-            Assert.That(characters.Count, Is.EqualTo(600));
-            Assert.That(characters, Is.Unique);
-            Assert.That(characters.Select(c => c.InterestingTrait), Is.Unique);
-            Assert.That(characters.Select(c => c.Class.Name), Is.All.EqualTo("character class"));
-        }
-
-        [Test]
-        public void GenerateSpecificNPCClass()
-        {
-            creatures[0].Name = $"npc class[1337]";
-            charactersGroup.Add("npc class");
-
-            mockCharacterGenerator
-                .Setup(g => g.GenerateWith(
-                    mockAnyAlignmentRandomizer.Object,
-                    It.Is<ISetClassNameRandomizer>(r => r.SetClassName == "npc class"),
-                    It.Is<ISetLevelRandomizer>(r => r.SetLevel == 1337 && r.AllowAdjustments),
-                    mockAnyBaseRaceRandomizer.Object,
-                    mockAnyMetaraceRandomizer.Object,
-                    mockRawStatsRandomizer.Object))
-                .Returns(() => BuildCharacter(1337, "npc class"));
-
-            var characters = encounterCharacterGenerator.GenerateFrom(creatures);
-            Assert.That(characters, Is.Not.Null);
-            Assert.That(characters, Is.All.Not.Null);
-            Assert.That(characters.Count, Is.EqualTo(600));
-            Assert.That(characters, Is.Unique);
-            Assert.That(characters.Select(c => c.InterestingTrait), Is.Unique);
-            Assert.That(characters.Select(c => c.Class.Name), Is.All.EqualTo("npc class"));
-        }
-
-        [Test]
-        public void GenerateRandomNPCClass()
-        {
-            creatures[0].Name = $"{CreatureConstants.NPC}[1337]";
-
-            mockCharacterGenerator
-                .Setup(g => g.GenerateWith(
-                    mockAnyAlignmentRandomizer.Object,
-                    mockAnyNPCClassNameRandomizer.Object,
                     It.Is<ISetLevelRandomizer>(r => r.SetLevel == 1337 && r.AllowAdjustments),
                     mockAnyBaseRaceRandomizer.Object,
                     mockAnyMetaraceRandomizer.Object,
@@ -425,55 +554,6 @@ namespace EncounterGen.Tests.Unit.Generators
 
             var characters = encounterCharacterGenerator.GenerateFrom(creatures);
             Assert.That(characters, Is.Not.Null);
-            Assert.That(characters, Is.All.Not.Null);
-            Assert.That(characters.Count, Is.EqualTo(600));
-            Assert.That(characters, Is.Unique);
-            Assert.That(characters.Select(c => c.InterestingTrait), Is.Unique);
-        }
-
-        [Test]
-        public void GenerateSpecificNPCClassDescribedAsSomethingElse()
-        {
-            creatures[0].Name = $"npc class (description)[1337]";
-            charactersGroup.Add("npc class");
-
-            mockCharacterGenerator
-                .Setup(g => g.GenerateWith(
-                    mockAnyAlignmentRandomizer.Object,
-                    It.Is<ISetClassNameRandomizer>(r => r.SetClassName == "npc class"),
-                    It.Is<ISetLevelRandomizer>(r => r.SetLevel == 1337 && r.AllowAdjustments),
-                    mockAnyBaseRaceRandomizer.Object,
-                    mockAnyMetaraceRandomizer.Object,
-                    mockRawStatsRandomizer.Object))
-                .Returns(() => BuildCharacter(1337, "npc class"));
-
-            var characters = encounterCharacterGenerator.GenerateFrom(creatures);
-            Assert.That(characters, Is.Not.Null);
-            Assert.That(characters, Is.All.Not.Null);
-            Assert.That(characters.Count, Is.EqualTo(600));
-            Assert.That(characters, Is.Unique);
-            Assert.That(characters.Select(c => c.InterestingTrait), Is.Unique);
-            Assert.That(characters.Select(c => c.Class.Name), Is.All.EqualTo("npc class"));
-        }
-
-        [Test]
-        public void GenerateRandomNPCClassDescribedAsSomethingElse()
-        {
-            creatures[0].Name = $"{CreatureConstants.NPC} (description)[1337]";
-
-            mockCharacterGenerator
-                .Setup(g => g.GenerateWith(
-                    mockAnyAlignmentRandomizer.Object,
-                    mockAnyNPCClassNameRandomizer.Object,
-                    It.Is<ISetLevelRandomizer>(r => r.SetLevel == 1337 && r.AllowAdjustments),
-                    mockAnyBaseRaceRandomizer.Object,
-                    mockAnyMetaraceRandomizer.Object,
-                    mockRawStatsRandomizer.Object))
-                .Returns(() => BuildCharacter(1337));
-
-            var characters = encounterCharacterGenerator.GenerateFrom(creatures);
-            Assert.That(characters, Is.Not.Null);
-            Assert.That(characters, Is.All.Not.Null);
             Assert.That(characters.Count, Is.EqualTo(600));
             Assert.That(characters, Is.Unique);
             Assert.That(characters.Select(c => c.InterestingTrait), Is.Unique);
@@ -488,26 +568,53 @@ namespace EncounterGen.Tests.Unit.Generators
             creatures.Add(new Creature());
             creatures.Add(new Creature());
             creatures.Add(new Creature());
+            creatures.Add(new Creature());
 
-            creatures[0].Name = "creature[6789]";
-            creatures[1].Name = $"{CreatureConstants.NPC} (description 1)[1337]";
+            creatures[1].Type.Name = "any npc creature";
             creatures[1].Quantity = 12;
-            creatures[2].Name = $"npc class[3456]";
+            creatures[2].Type.Name = "set class creature";
             creatures[2].Quantity = 9;
-            creatures[3].Name = $"npc class (description 2)[1234]";
+            creatures[3].Type.Name = "set base race creature";
             creatures[3].Quantity = 11;
-            creatures[4].Name = $"{CreatureConstants.NPC}[2345]";
+            creatures[4].Type.Name = "set metarace creature";
             creatures[4].Quantity = 10;
-            creatures[5].Name = $"{CreatureConstants.Character}[5678]";
+            creatures[5].Type.Name = "random class creature";
             creatures[5].Quantity = 7;
-            creatures[6].Name = $"character class[4567]";
+            creatures[6].Type.Name = "random level creature";
             creatures[6].Quantity = 8;
+            creatures[7].Type.Name = "not a character";
+            creatures[7].Quantity = 13;
 
-            undeadNPCs.Add("creature");
-            undeadNPCs.Add("other monster");
-            charactersGroup.Add("other character class");
-            charactersGroup.Add("character class");
-            charactersGroup.Add("npc class");
+            mockEncounterSelector.Setup(s => s.SelectNameFrom(creatures[1].Type.Name)).Returns(CreatureConstants.Character);
+            mockEncounterSelector.Setup(s => s.SelectChallengeRatingFrom(creatures[1].Type.Name)).Returns("1337");
+            mockEncounterSelector.Setup(s => s.SelectCharacterClassesFrom(creatures[1].Type.Name)).Returns(new[] { ClassNameRandomizerTypeConstants.AnyNPC });
+
+            mockEncounterSelector.Setup(s => s.SelectNameFrom(creatures[2].Type.Name)).Returns(CreatureConstants.Character);
+            mockEncounterSelector.Setup(s => s.SelectChallengeRatingFrom(creatures[2].Type.Name)).Returns("1337");
+            mockEncounterSelector.Setup(s => s.SelectCharacterClassesFrom(creatures[2].Type.Name)).Returns(new[] { "class name" });
+
+            mockEncounterSelector.Setup(s => s.SelectNameFrom(creatures[3].Type.Name)).Returns(CreatureConstants.Character);
+            mockEncounterSelector.Setup(s => s.SelectChallengeRatingFrom(creatures[3].Type.Name)).Returns("1337");
+            mockEncounterSelector.Setup(s => s.SelectBaseRaceFrom(creatures[3].Type.Name)).Returns("base race");
+
+            mockEncounterSelector.Setup(s => s.SelectNameFrom(creatures[4].Type.Name)).Returns(CreatureConstants.Character);
+            mockEncounterSelector.Setup(s => s.SelectChallengeRatingFrom(creatures[4].Type.Name)).Returns("1337");
+            mockEncounterSelector.Setup(s => s.SelectMetaraceFrom(creatures[4].Type.Name)).Returns("metarace");
+
+            mockEncounterSelector.Setup(s => s.SelectNameFrom(creatures[5].Type.Name)).Returns(CreatureConstants.Character);
+            mockEncounterSelector.Setup(s => s.SelectChallengeRatingFrom(creatures[5].Type.Name)).Returns("1337");
+            mockEncounterSelector.Setup(s => s.SelectCharacterClassesFrom(creatures[5].Type.Name)).Returns(new[] { "class name", "other class name" });
+
+            mockEncounterSelector.Setup(s => s.SelectNameFrom(creatures[6].Type.Name)).Returns(CreatureConstants.Character);
+            mockEncounterSelector.Setup(s => s.SelectChallengeRatingFrom(creatures[6].Type.Name)).Returns("13d37");
+
+            mockEncounterSelector.Setup(s => s.SelectNameFrom(creatures[7].Type.Name)).Returns("really not a character");
+
+            var roll = 0;
+            mockDice.Setup(d => d.Roll("13d37").AsSum()).Returns(() => roll++ % 2 + 1);
+
+            var index = 0;
+            mockCollectionSelector.Setup(s => s.SelectRandomFrom(It.IsAny<IEnumerable<string>>())).Returns((IEnumerable<string> c) => c.ElementAt(index++ % c.Count()));
 
             var level = 1;
             mockCharacterGenerator
@@ -515,7 +622,7 @@ namespace EncounterGen.Tests.Unit.Generators
                     mockAnyAlignmentRandomizer.Object,
                     It.IsAny<IClassNameRandomizer>(),
                     mockSetLevelRandomizer.Object,
-                    mockAnyBaseRaceRandomizer.Object,
+                    It.IsAny<RaceRandomizer>(),
                     It.IsAny<RaceRandomizer>(),
                     mockRawStatsRandomizer.Object))
                 .Returns(() => BuildCharacter(level++));
@@ -526,34 +633,15 @@ namespace EncounterGen.Tests.Unit.Generators
             Assert.That(characters.Count, Is.EqualTo(657));
             Assert.That(characters, Is.Unique);
             Assert.That(characters.Select(c => c.InterestingTrait), Is.Unique);
+
+            var levels = Enumerable.Range(1, 657);
+            Assert.That(characters.Select(c => c.Class.Level), Is.EquivalentTo(levels));
         }
 
         [Test]
         public void WholeCreatureTypeMustMatchToBeCharacter()
         {
-            creatures[0].Name = $"{CreatureConstants.Character} but not really[6789]";
-
-            var characters = encounterCharacterGenerator.GenerateFrom(creatures);
-            Assert.That(characters, Is.Not.Null);
-            Assert.That(characters, Is.Empty);
-        }
-
-        [Test]
-        public void WholeCreatureTypeMustMatchToBeCharacterClass()
-        {
-            creatures[0].Name = $"character class but not really[6789]";
-            charactersGroup.Add("character class");
-
-            var characters = encounterCharacterGenerator.GenerateFrom(creatures);
-            Assert.That(characters, Is.Not.Null);
-            Assert.That(characters, Is.Empty);
-        }
-
-        [Test]
-        public void WholeCreatureTypeMustMatchToBeUndeadNPC()
-        {
-            creatures[0].Name = $"undead but not really[6789]";
-            undeadNPCs.Add("undead");
+            creatures[0].Type.Name = $"{CreatureConstants.Character} but not really[6789]";
 
             var characters = encounterCharacterGenerator.GenerateFrom(creatures);
             Assert.That(characters, Is.Not.Null);
@@ -563,26 +651,8 @@ namespace EncounterGen.Tests.Unit.Generators
         [Test]
         public void NotSpecifyingLevelForCharacterThrowsException()
         {
-            creatures[0].Name = CreatureConstants.Character;
-            Assert.That(() => encounterCharacterGenerator.GenerateFrom(creatures), Throws.InstanceOf<ArgumentException>().With.Message.EqualTo("Character level was not provided for a character creature Character (character subtype)"));
-        }
-
-        [Test]
-        public void NotSpecifyingLevelForCharacterClassThrowsException()
-        {
-            creatures[0].Name = "character class";
-            charactersGroup.Add("character class");
-
-            Assert.That(() => encounterCharacterGenerator.GenerateFrom(creatures), Throws.InstanceOf<ArgumentException>().With.Message.EqualTo("Character level was not provided for a character creature character class (character subtype)"));
-        }
-
-        [Test]
-        public void NotSpecifyingLevelForUndeadNPCThrowsException()
-        {
-            creatures[0].Name = "undead";
-            undeadNPCs.Add("undead");
-
-            Assert.That(() => encounterCharacterGenerator.GenerateFrom(creatures), Throws.InstanceOf<ArgumentException>().With.Message.EqualTo("Character level was not provided for a character creature undead (character subtype)"));
+            mockEncounterSelector.Setup(s => s.SelectChallengeRatingFrom(creatures[0].Type.Name)).Returns(string.Empty);
+            Assert.That(() => encounterCharacterGenerator.GenerateFrom(creatures), Throws.InstanceOf<ArgumentException>().With.Message.EqualTo("Character level was not provided for a character creature"));
         }
     }
 }

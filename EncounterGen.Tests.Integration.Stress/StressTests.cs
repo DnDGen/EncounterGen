@@ -1,4 +1,5 @@
-﻿using Ninject;
+﻿using EventGen;
+using Ninject;
 using NUnit.Framework;
 using System;
 using System.Diagnostics;
@@ -13,6 +14,10 @@ namespace EncounterGen.Tests.Integration.Stress
     {
         [Inject]
         public Stopwatch Stopwatch { get; set; }
+        [Inject]
+        public ClientIDManager ClientIdManager { get; set; }
+        [Inject]
+        public GenEventQueue EventQueue { get; set; }
 
         private const int ConfidentIterations = 1000000;
         private const int TravisJobOutputTimeLimit = 60 * 10;
@@ -21,6 +26,7 @@ namespace EncounterGen.Tests.Integration.Stress
         private readonly int timeLimitInSeconds;
 
         private int iterations;
+        private Guid clientId;
 
         public StressTests()
         {
@@ -53,11 +59,37 @@ namespace EncounterGen.Tests.Integration.Stress
         {
             iterations = 0;
             Stopwatch.Start();
+
+            clientId = Guid.NewGuid();
+            ClientIdManager.SetClientID(clientId);
         }
 
         [TearDown]
         public void StressTearDown()
         {
+            var events = EventQueue.DequeueAll(clientId);
+
+            var message = BuildMessage("All events complete", events.Count(), Stopwatch.Elapsed);
+            Console.WriteLine(message);
+
+            message = BuildMessage("TreasureGen events complete", events.Count(e => e.Source == "TreasureGen"), Stopwatch.Elapsed);
+            Console.WriteLine(message);
+
+            message = BuildMessage("CharacterGen events complete", events.Count(e => e.Source == "CharacterGen"), Stopwatch.Elapsed);
+            Console.WriteLine(message);
+
+            message = BuildMessage("Character generation complete", events.Count(e => e.Message == "Beginning character generation"), Stopwatch.Elapsed);
+            Console.WriteLine(message);
+
+            message = BuildMessage("EncounterGen events complete", events.Count(e => e.Source == "EncounterGen"), Stopwatch.Elapsed);
+            Console.WriteLine(message);
+
+            //INFO: We want to truncate the events to just a summary per second
+            var truncatedEvents = events.GroupBy(e => e.When.Second).Select(g => g.First());
+
+            foreach (var genEvent in truncatedEvents)
+                Console.WriteLine($"[{genEvent.When.ToShortTimeString()}] {genEvent.Source}: {genEvent.Message}");
+
             Stopwatch.Reset();
         }
 
@@ -79,24 +111,9 @@ namespace EncounterGen.Tests.Integration.Stress
         protected T Generate<T>(Func<T> generate, Func<T, bool> isValid)
         {
             T generatedObject;
-            var attempts = 0;
-            var start = Stopwatch.ElapsedTicks;
 
-            do
-            {
-                generatedObject = generate();
-                attempts++;
-            }
-            while (isValid(generatedObject) == false && Stopwatch.Elapsed.TotalSeconds < timeLimitInSeconds + 1); //INFO: Adding 1 second because we want to account for if we make a new iteration attempt near the time limit
-
-            var finish = Stopwatch.ElapsedTicks;
-            var timespan = new TimeSpan(finish - start);
-
-            if (isValid(generatedObject) == false)
-            {
-                var message = BuildMessage("Failed to generate", attempts, timespan);
-                Assert.Fail(message);
-            }
+            do generatedObject = generate();
+            while (!isValid(generatedObject));
 
             return generatedObject;
         }
@@ -108,7 +125,7 @@ namespace EncounterGen.Tests.Integration.Stress
             do generatedObject = generate();
             while (TestShouldKeepRunning() && isValid(generatedObject) == false);
 
-            var message = BuildMessage("Generation complete", iterations, Stopwatch.Elapsed);
+            var message = BuildMessage("Encounter generation complete", iterations, Stopwatch.Elapsed);
             Console.WriteLine(message);
 
             if (TestShouldKeepRunning() == false && isValid(generatedObject) == false)

@@ -56,15 +56,15 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         [TestCase(GroupConstants.Land)]
         public void AllCreaturesArePresentInAtLeastOneTimeOfDay(string source)
         {
-            var sourceCreatures = GetCollection(source);
+            var sourceCreatures = ExplodeCollection(source);
             var allTimesOfDayCreatures = GetTimesOfDayCreatures();
             AssertContainedCollection(sourceCreatures, allTimesOfDayCreatures);
         }
 
         private IEnumerable<string> GetTimesOfDayCreatures()
         {
-            var dayCreatures = GetCollection(EnvironmentConstants.TimesOfDay.Day);
-            var nightCreatures = GetCollection(EnvironmentConstants.TimesOfDay.Night);
+            var dayCreatures = ExplodeCollection(EnvironmentConstants.TimesOfDay.Day);
+            var nightCreatures = ExplodeCollection(EnvironmentConstants.TimesOfDay.Night);
 
             return dayCreatures.Union(nightCreatures);
         }
@@ -72,8 +72,9 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         [Test]
         public void AllCreaturesHaveType()
         {
-            var allCreatures = GetAllCollections();
-            var types = new[]
+            //INFO: Night group includes all creatures, so is effectively an "All" group
+            var allCreatures = ExplodeCollection(EnvironmentConstants.TimesOfDay.Night);
+            var allTypes = new[]
             {
                 CreatureConstants.Types.Aberration,
                 CreatureConstants.Types.Animal,
@@ -92,47 +93,19 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
                 CreatureConstants.Types.Vermin,
             };
 
-            var excludedCreatures = new[] { CreatureConstants.DominatedCreature, "Noncombatant" };
-            var creatures = allCreatures.Distinct().Except(excludedCreatures);
+            var excludedCreatures = new[] { CreatureConstants.DominatedCreature, CreatureConstants.Noncombatant };
+            excludedCreatures = excludedCreatures.SelectMany(c => ExplodeCollection(c)).ToArray();
+            var creatures = allCreatures.Except(excludedCreatures);
 
-            var creaturesWithoutType = creatures.Where(c => EncounterVerifier.CreatureIsValid(c, types) == false);
+            var creaturesWithoutType = creatures.Where(c => EncounterVerifier.CreatureIsValid(c, allTypes) == false);
             Assert.That(creaturesWithoutType, Is.Empty, "Creatures not in a type category");
-        }
-
-        [Test]
-        public void AllCreaturesWithoutDescriptionHaveType()
-        {
-            var allCreatures = GetAllCollections();
-            var types = new[]
-            {
-                CreatureConstants.Types.Aberration,
-                CreatureConstants.Types.Animal,
-                CreatureConstants.Types.Construct,
-                CreatureConstants.Types.Dragon,
-                CreatureConstants.Types.Elemental,
-                CreatureConstants.Types.Fey,
-                CreatureConstants.Types.Giant,
-                CreatureConstants.Types.Humanoid,
-                CreatureConstants.Types.MagicalBeast,
-                CreatureConstants.Types.MonstrousHumanoid,
-                CreatureConstants.Types.Ooze,
-                CreatureConstants.Types.Outsider,
-                CreatureConstants.Types.Plant,
-                CreatureConstants.Types.Undead,
-                CreatureConstants.Types.Vermin,
-            };
-
-            var excludedCreatures = new[] { CreatureConstants.DominatedCreature, "Noncombatant" };
-            var creatures = allCreatures.Distinct().Select(c => GetCreature(c)).Except(excludedCreatures);
-
-            var creaturesWithoutType = creatures.Where(c => EncounterVerifier.CreatureIsValid(c, types) == false);
-            Assert.That(creaturesWithoutType, Is.Empty);
         }
 
         [Test]
         public void NoMissingCreaturesFromDominatedCreatureGroup()
         {
-            var challengeRatings = CollectionMapper.Map(TableNameConstants.ChallengeRatings);
+            //INFO: Currently all creatures appear at night, so is effectively an "All" group
+            var allCreatures = ExplodeCollection(EnvironmentConstants.TimesOfDay.Night);
             var creatureTemplates = new[]
             {
                 CreatureConstants.DominatedCreature_CR1,
@@ -151,23 +124,23 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
                 CreatureConstants.DominatedCreature_CR14,
                 CreatureConstants.DominatedCreature_CR15,
                 CreatureConstants.DominatedCreature_CR16,
-                CreatureConstants.Mephit_CR3
+                CreatureConstants.Mephit_CR3,
             };
 
-            var constructs = GetCollection(CreatureConstants.Types.Construct);
-            var oozes = GetCollection(CreatureConstants.Types.Ooze);
-            var plants = GetCollection(CreatureConstants.Types.Plant);
-            var undead = GetCollection(CreatureConstants.Types.Undead);
+            var constructs = ExplodeCollection(CreatureConstants.Types.Construct);
+            var oozes = ExplodeCollection(CreatureConstants.Types.Ooze);
+            var plants = ExplodeCollection(CreatureConstants.Types.Plant);
+            var undead = ExplodeCollection(CreatureConstants.Types.Undead);
 
-            var creaturesWithBrains = challengeRatings.Keys
+            var creaturesWithBrains = allCreatures
                 .Except(creatureTemplates)
                 .Except(constructs)
                 .Except(oozes)
                 .Except(plants)
                 .Except(undead);
 
-            var dominatedCreatures = GetCollection(CreatureConstants.DominatedCreature);
-            AssertContainedCollection(creaturesWithBrains, dominatedCreatures);
+            var dominatedCreatures = ExplodeCollection(CreatureConstants.DominatedCreature);
+            AssertWholeCollection(creaturesWithBrains, dominatedCreatures);
         }
 
         [TestCase(CreatureConstants.Types.Construct)]
@@ -176,9 +149,41 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         [TestCase(CreatureConstants.Types.Undead)]
         public void SubtypeCannotBeDominated(string subtype)
         {
-            var subtypeCreatures = GetCollection(subtype);
-            var dominatedCreatues = GetCollection(CreatureConstants.DominatedCreature);
+            var subtypeCreatures = ExplodeCollection(subtype);
+            var dominatedCreatues = ExplodeCollection(CreatureConstants.DominatedCreature);
             Assert.That(subtypeCreatures.Intersect(dominatedCreatues), Is.Empty);
+        }
+
+        [Test]
+        public void NoCircularSubgroups()
+        {
+            var table = CollectionMapper.Map(tableName);
+
+            foreach (var kvp in table)
+            {
+                AssertGroupDoesNotContain(kvp.Key, kvp.Key);
+            }
+        }
+
+        private void AssertGroupDoesNotContain(string name, string forbiddenEntry)
+        {
+            var table = CollectionMapper.Map(tableName);
+            var group = table[name];
+
+            if (name != forbiddenEntry)
+                Assert.That(group, Does.Not.Contain(forbiddenEntry));
+
+            var subgroupNames = group.Intersect(table.Keys);
+
+            foreach (var subgroupName in subgroupNames)
+            {
+                //INFO: This is so groups can contain themselves (such as Ape containing Ape and Dire ape)
+                if (subgroupName == name)
+                    continue;
+
+                AssertGroupDoesNotContain(subgroupName, forbiddenEntry);
+                AssertGroupDoesNotContain(subgroupName, subgroupName);
+            }
         }
     }
 }

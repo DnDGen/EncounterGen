@@ -26,24 +26,26 @@ namespace EncounterGen.Domain.Selectors.Collections
             return table[name];
         }
 
-        private bool IsSubgroup(string tableName, string name, string intoTableName)
+        public IEnumerable<string> Explode(string tableName, string name)
         {
-            return IsGroup(tableName, name) && !IsGroup(intoTableName, name);
+            var explodedGroup = SelectFrom(tableName, name).ToList();
+            var subgroupNames = explodedGroup.Where(i => IsGroup(tableName, i) && i != name).ToArray(); //INFO: Doing immediate execution because looping below fails otherwise (modifying the source collection)
+
+            foreach (var subgroupName in subgroupNames)
+            {
+                var explodedSubgroup = Explode(tableName, subgroupName);
+                explodedGroup.Remove(subgroupName);
+                explodedGroup.AddRange(explodedSubgroup);
+            }
+
+            return explodedGroup.Distinct();
         }
 
         public IEnumerable<string> ExplodeInto(string tableName, string name, string intoTableName)
         {
-            var group = SelectFrom(tableName, name);
-            var subgroups = group.Where(c => IsSubgroup(tableName, c, intoTableName));
+            var explodedGroup = Explode(tableName, name);
 
-            while (subgroups.Any())
-            {
-                var subgroup = subgroups.SelectMany(g => SelectFrom(tableName, g));
-                group = group.Union(subgroup).Except(subgroups);
-                subgroups = group.Where(c => IsSubgroup(tableName, c, intoTableName));
-            }
-
-            return group.SelectMany(g => SelectFrom(intoTableName, g));
+            return explodedGroup.SelectMany(g => SelectFrom(intoTableName, g)).Distinct();
         }
 
         public T SelectRandomFrom<T>(IEnumerable<T> collection)

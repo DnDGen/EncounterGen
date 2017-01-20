@@ -20,6 +20,7 @@ namespace EncounterGen.Tests.Unit.Selectors.Collections
         private IEncounterCollectionSelector encounterCollectionSelector;
         private Mock<ICollectionSelector> mockCollectionSelector;
         private Mock<IAmountSelector> mockAmountSelector;
+        private Mock<IEncounterSelector> mockEncounterSelector;
         private List<string> levelEncounters;
         private List<string> environmentEncounters;
         private List<string> temperatureEncounters;
@@ -36,7 +37,8 @@ namespace EncounterGen.Tests.Unit.Selectors.Collections
         {
             mockCollectionSelector = new Mock<ICollectionSelector>();
             mockAmountSelector = new Mock<IAmountSelector>();
-            encounterCollectionSelector = new EncounterCollectionSelector(mockCollectionSelector.Object, mockAmountSelector.Object);
+            mockEncounterSelector = new Mock<IEncounterSelector>();
+            encounterCollectionSelector = new EncounterCollectionSelector(mockCollectionSelector.Object, mockAmountSelector.Object, mockEncounterSelector.Object);
 
             levelEncounters = new List<string>();
             environmentEncounters = new List<string> { "encounter/amount", "environment encounter/environment amount" };
@@ -65,12 +67,19 @@ namespace EncounterGen.Tests.Unit.Selectors.Collections
             mockCollectionSelector.Setup(s => s.ExplodeInto(TableNameConstants.CreatureGroups, temperature + environment, TableNameConstants.EncounterGroups)).Returns(specificEncounters);
             mockCollectionSelector.Setup(s => s.ExplodeInto(TableNameConstants.CreatureGroups, GroupConstants.Land, TableNameConstants.EncounterGroups)).Returns(landEncounters);
             mockCollectionSelector.Setup(s => s.ExplodeInto(TableNameConstants.CreatureGroups, GroupConstants.Wilderness, TableNameConstants.EncounterGroups)).Returns(wildernessEncounters);
-            mockCollectionSelector.Setup(s => s.ExplodeInto(TableNameConstants.CreatureGroups, CreatureConstants.Dragon, TableNameConstants.EncounterGroups)).Returns(dragonEncounters);
+            mockCollectionSelector.Setup(s => s.ExplodeInto(TableNameConstants.CreatureGroups, CreatureConstants.Types.Dragon, TableNameConstants.EncounterGroups)).Returns(dragonEncounters);
 
-            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.CreatureGroups, "filter")).Returns(filters["filter"]);
-            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.CreatureGroups, "other filter")).Returns(filters["other filter"]);
+            mockCollectionSelector.Setup(s => s.Explode(TableNameConstants.CreatureGroups, "filter")).Returns(filters["filter"]);
+            mockCollectionSelector.Setup(s => s.Explode(TableNameConstants.CreatureGroups, "other filter")).Returns(filters["other filter"]);
 
             mockCollectionSelector.Setup(s => s.SelectRandomFrom(It.IsAny<IEnumerable<Dictionary<string, string>>>())).Returns((IEnumerable<Dictionary<string, string>> collection) => collection.Last());
+
+            mockEncounterSelector.Setup(s => s.SelectCreaturesAndAmountsFrom(It.IsAny<string>())).Returns((string e) => ParseCreatureAndAmount(e));
+        }
+
+        private Dictionary<string, string> ParseCreatureAndAmount(string encounter)
+        {
+            return encounter.Split(',').ToDictionary(e => e.Split('/')[0], e => e.Split('/')[1]);
         }
 
         private int GetLevel(string encounter)
@@ -548,25 +557,6 @@ namespace EncounterGen.Tests.Unit.Selectors.Collections
 
             var encounterTypesAndAmounts = encounterCollectionSelector.SelectRandomFrom(level, environment, temperature, timeOfDay, "filter", "other filter");
             AssertTypesAndAmounts(encounterTypesAndAmounts, string.Empty, "other encounter", "other amount");
-        }
-
-        [Test]
-        public void FilterCheckStripsOutChallengeRating()
-        {
-            mockCollectionSelector.Setup(s => s.SelectRandomFrom(It.IsAny<IEnumerable<Dictionary<string, string>>>())).Returns((IEnumerable<Dictionary<string, string>> collection) => collection.ElementAt(1));
-
-            environmentEncounters.Add("wrong encounter/wrong amount");
-            environmentEncounters.Add("other encounter/other amount,encounter (description)[challenge rating]/amount");
-            levelEncounters.Add("wrong encounter/wrong amount");
-            levelEncounters.Add("other encounter/other amount,encounter (description)[challenge rating]/amount");
-            timeOfDayEncounters.Add("wrong encounter/wrong amount");
-            timeOfDayEncounters.Add("other encounter/other amount,encounter (description)[challenge rating]/amount");
-
-            filters["filter"].Add("encounter");
-            filters["filter"].Add("encounter (description)");
-
-            var encounterTypesAndAmounts = encounterCollectionSelector.SelectRandomFrom(level, environment, temperature, timeOfDay, "filter");
-            AssertTypesAndAmounts(encounterTypesAndAmounts, string.Empty, "other encounter", "other amount", "encounter (description)[challenge rating]", "amount");
         }
 
         [Test]

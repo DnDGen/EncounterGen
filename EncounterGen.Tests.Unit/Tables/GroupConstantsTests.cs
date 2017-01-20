@@ -6,7 +6,6 @@ namespace EncounterGen.Tests.Unit.Tables
     [TestFixture]
     public class GroupConstantsTests
     {
-        [TestCase(GroupConstants.UndeadNPC, "Undead NPC")]
         [TestCase(GroupConstants.RequiresSubtype, "Requires Subtype")]
         [TestCase(GroupConstants.UseSubtypeForTreasure, "Use Subtype for Treasure")]
         [TestCase(GroupConstants.Magic, "Magic")]

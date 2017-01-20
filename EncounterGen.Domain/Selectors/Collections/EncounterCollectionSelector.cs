@@ -1,10 +1,8 @@
 ﻿using EncounterGen.Common;
-using EncounterGen.Domain.Generators;
 using EncounterGen.Domain.Tables;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.RegularExpressions;
 
 namespace EncounterGen.Domain.Selectors.Collections
 {
@@ -12,20 +10,19 @@ namespace EncounterGen.Domain.Selectors.Collections
     {
         private readonly ICollectionSelector collectionSelector;
         private readonly IAmountSelector amountSelector;
-        private Regex challengeRatingRegex;
+        private readonly IEncounterSelector encounterSelector;
 
-        public EncounterCollectionSelector(ICollectionSelector collectionSelector, IAmountSelector amountSelector)
+        public EncounterCollectionSelector(ICollectionSelector collectionSelector, IAmountSelector amountSelector, IEncounterSelector encounterSelector)
         {
             this.collectionSelector = collectionSelector;
             this.amountSelector = amountSelector;
-
-            challengeRatingRegex = new Regex(RegexConstants.ChallengeRatingPattern);
+            this.encounterSelector = encounterSelector;
         }
 
         public IEnumerable<Dictionary<string, string>> SelectAllWeightedFrom(int level, string environment, string temperature, string timeOfDay, params string[] creatureTypeFilters)
         {
             var weightedEncounters = GetWeightedEncounters(level, environment, temperature, timeOfDay, creatureTypeFilters);
-            var weightedEncounterTypesAndAmounts = weightedEncounters.Select(e => ParseTypesAndAmounts(e));
+            var weightedEncounterTypesAndAmounts = weightedEncounters.Select(e => encounterSelector.SelectCreaturesAndAmountsFrom(e));
 
             return weightedEncounterTypesAndAmounts;
         }
@@ -54,7 +51,7 @@ namespace EncounterGen.Domain.Selectors.Collections
             }
 
             var magicEncounters = GetValidEncountersFromCreatureGroup(GroupConstants.Magic, level, timeOfDay, isCivilized, creatureTypeFilters);
-            var dragonEncounters = GetValidEncountersFromCreatureGroup(CreatureConstants.Dragon, level, timeOfDay, isCivilized, creatureTypeFilters);
+            var dragonEncounters = GetValidEncountersFromCreatureGroup(CreatureConstants.Types.Dragon, level, timeOfDay, isCivilized, creatureTypeFilters);
             var landEncounters = GetValidEncountersFromCreatureGroup(GroupConstants.Land, level, timeOfDay, isCivilized, creatureTypeFilters);
             var temperatureEncounters = GetValidEncountersFromCreatureGroup(temperature, level, timeOfDay, isCivilized, creatureTypeFilters);
             var environmentEncounters = GetValidEncountersFromCreatureGroup(environment, level, timeOfDay, isCivilized, creatureTypeFilters);
@@ -108,7 +105,8 @@ namespace EncounterGen.Domain.Selectors.Collections
         private IEnumerable<string> GetValidEncounters(IEnumerable<string> source, int level, string timeOfDay, params string[] creatureTypeFilters)
         {
             var validEncounters = source.Where(e => amountSelector.SelectAverageEncounterLevel(e) == level);
-            validEncounters = validEncounters.Where(e => EncounterIsValid(e, creatureTypeFilters));
+            var allowedCreatureNames = GetAllowedCreatureNames(creatureTypeFilters);
+            validEncounters = validEncounters.Where(e => EncounterIsValid(e, allowedCreatureNames));
 
             var timeOfDayEncounters = GetEncountersFromCreatureGroup(timeOfDay);
             if (timeOfDayEncounters.Any())
@@ -117,46 +115,31 @@ namespace EncounterGen.Domain.Selectors.Collections
             return validEncounters;
         }
 
-        private bool EncounterIsValid(string encounter, params string[] creatureTypeFilters)
+        //INFO: This method exists here because we cannot use the EncounterVerifier on the selector level, only the generator level
+        private bool EncounterIsValid(string encounter, IEnumerable<string> allowedCreatureNames)
         {
-            var creatureNames = encounter.Split(',').Select(e => e.Split('/')[0]);
-            return creatureNames.Any(n => CreatureIsValid(n, creatureTypeFilters));
+            var creaturesAndAmounts = encounterSelector.SelectCreaturesAndAmountsFrom(encounter);
+            var creatureNames = creaturesAndAmounts.Keys;
+            return creatureNames.Any(c => CreatureIsValid(c, allowedCreatureNames));
         }
 
-        private bool CreatureIsValid(string creatureName, params string[] creatureTypeFilters)
+        //INFO: This method exists here because we cannot use the EncounterVerifier on the selector level, only the generator level
+        private bool CreatureIsValid(string creatureName, IEnumerable<string> allowedCreatureNames)
         {
-            if (creatureTypeFilters.Any() == false)
-                return true;
-
-            var allowedCreatureNames = GetAllowedCreatureNames(creatureTypeFilters);
-            var potentialCreatureName = GetCreatureName(creatureName);
-
-            return allowedCreatureNames.Contains(potentialCreatureName);
+            return !allowedCreatureNames.Any() || allowedCreatureNames.Contains(creatureName);
         }
 
         private IEnumerable<string> GetAllowedCreatureNames(IEnumerable<string> creatureTypeFilters)
         {
-            var creatureNames = creatureTypeFilters.SelectMany(f => collectionSelector.SelectFrom(TableNameConstants.CreatureGroups, f));
-            return creatureNames;
-        }
+            var creatureNames = new List<string>();
 
-        private string GetCreatureName(string fullCreatureName)
-        {
-            return challengeRatingRegex.Replace(fullCreatureName, string.Empty);
-        }
-
-        private Dictionary<string, string> ParseTypesAndAmounts(string encounter)
-        {
-            var typeAndAmountPairs = encounter.Split(',');
-            var typesAndAmounts = new Dictionary<string, string>();
-
-            foreach (var pair in typeAndAmountPairs)
+            foreach (var filter in creatureTypeFilters)
             {
-                var sections = pair.Split('/');
-                typesAndAmounts[sections[0]] = sections[1];
+                var filterCreatures = collectionSelector.Explode(TableNameConstants.CreatureGroups, filter);
+                creatureNames.AddRange(filterCreatures);
             }
 
-            return typesAndAmounts;
+            return creatureNames.Distinct();
         }
     }
 }

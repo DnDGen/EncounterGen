@@ -14,6 +14,16 @@ namespace EncounterGen.Domain.Selectors.Collections
             cachedCollections = new Dictionary<string, IEnumerable<string>>();
         }
 
+        public IEnumerable<string> Explode(string tableName, string name)
+        {
+            var key = tableName + name;
+
+            if (!cachedCollections.ContainsKey(key))
+                cachedCollections[key] = internalSelector.Explode(tableName, name);
+
+            return cachedCollections[key];
+        }
+
         public IEnumerable<string> ExplodeInto(string tableName, string name, string intoTableName)
         {
             var key = tableName + name + intoTableName;
