@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>EncounterGen</id>
-    <version>1.0.0</version>
+    <version>2.0.0</version>
     <title>EncounterGen</title>
     <authors>Karl M. Speer</authors>
     <owners>cidthecoatrack</owners>
@@ -10,7 +10,7 @@
       This generates encounters for the Dungeons and Dragons 3.5 system.  One can generate encounters of particular levels, times of day, and environments.  One can also filter creature types.  Treasure and equipment are generated.
     </description>
     <releaseNotes>
-      Full release!
+      Bug #33, Features #21, #27, #29
     </releaseNotes>
     <summary>
       This generates encounters for the Dungeons and Dragons 3.5 system.
