@@ -5,12 +5,9 @@ namespace EncounterGen.Generators
 {
     public interface IEncounterVerifier
     {
-        int MinimumLevel { get; }
-        int MaximumLevel { get; }
-
-        bool ValidEncounterExistsAtLevel(string environment, int level, string temperature, string timeOfDay, params string[] creatureTypeFilters);
-        bool EncounterIsValid(IEnumerable<string> creatures, params string[] creatureTypeFilters);
-        bool EncounterIsValid(Encounter encounter, params string[] creatureTypeFilters);
-        bool CreatureIsValid(string creatureName, params string[] creatureTypeFilters);
+        bool ValidEncounterExistsAtLevel(EncounterSpecifications encounterSpecifications);
+        bool EncounterIsValid(IEnumerable<string> creatures, IEnumerable<string> creatureTypeFilters);
+        bool EncounterIsValid(Encounter encounter, IEnumerable<string> creatureTypeFilters);
+        bool CreatureIsValid(string creatureName, IEnumerable<string> creatureTypeFilters);
     }
 }

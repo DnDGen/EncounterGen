@@ -1357,6 +1357,10 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
             EncounterConstants.Eagle_Giant_Solitary,
             EncounterConstants.Eagle_Giant_Pair,
             EncounterConstants.Eagle_Giant_Eyrie)]
+        [TestCase(CreatureConstants.Elasmosaurus,
+            EncounterConstants.Elasmosaurus_Herd,
+            EncounterConstants.Elasmosaurus_Pair,
+            EncounterConstants.Elasmosaurus_Solitary)]
         [TestCase(CreatureConstants.Elephant,
             EncounterConstants.Elephant_Solitary,
             EncounterConstants.Elephant_Herd)]
@@ -1395,6 +1399,17 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
         [TestCase(CreatureConstants.Elf_Lieutenant, EncounterConstants.Elf_Band)]
         [TestCase(CreatureConstants.Elf_Leader, EncounterConstants.Elf_Company)]
         [TestCase(CreatureConstants.Elf_Captain, EncounterConstants.Elf_Band)]
+        [TestCase(CreatureConstants.Elf_Aquatic_Warrior,
+            EncounterConstants.Elf_Aquatic_Squad,
+            EncounterConstants.Elf_Aquatic_Company,
+            EncounterConstants.Elf_Aquatic_Band)]
+        [TestCase(CreatureConstants.Elf_Aquatic_Noncombatant, EncounterConstants.Elf_Aquatic_Band)]
+        [TestCase(CreatureConstants.Elf_Aquatic_Sergeant,
+            EncounterConstants.Elf_Aquatic_Company,
+            EncounterConstants.Elf_Aquatic_Band)]
+        [TestCase(CreatureConstants.Elf_Aquatic_Lieutenant, EncounterConstants.Elf_Aquatic_Band)]
+        [TestCase(CreatureConstants.Elf_Aquatic_Leader, EncounterConstants.Elf_Aquatic_Company)]
+        [TestCase(CreatureConstants.Elf_Aquatic_Captain, EncounterConstants.Elf_Aquatic_Band)]
         [TestCase(CreatureConstants.Erinyes, EncounterConstants.Erinyes_Solitary)]
         [TestCase(CreatureConstants.EtherealFilcher, EncounterConstants.EtherealFilcher_Solitary)]
         [TestCase(CreatureConstants.EtherealMarauder, EncounterConstants.EtherealMarauder_Solitary)]
@@ -1503,6 +1518,10 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
             EncounterConstants.Gargoyle_Solitary,
             EncounterConstants.Gargoyle_Pair,
             EncounterConstants.Gargoyle_Wing)]
+        [TestCase(CreatureConstants.Gargoyle_Kapoacinth,
+            EncounterConstants.Gargoyle_Kapoacinth_Solitary,
+            EncounterConstants.Gargoyle_Kapoacinth_Pair,
+            EncounterConstants.Gargoyle_Kapoacinth_Wing)]
         [TestCase(CreatureConstants.GelatinousCube, EncounterConstants.GelatinousCube_Solitary)]
         [TestCase(CreatureConstants.Djinni,
             EncounterConstants.Djinni_Solitary,
@@ -1526,7 +1545,11 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
             EncounterConstants.Ghoul_Solitary,
             EncounterConstants.Ghoul_Gang,
             EncounterConstants.Ghoul_Pack)]
-        [TestCase(CreatureConstants.Ghast,
+        [TestCase(CreatureConstants.Ghoul_Lacedon,
+            EncounterConstants.Ghoul_Lacedon_Solitary,
+            EncounterConstants.Ghoul_Lacedon_Gang,
+            EncounterConstants.Ghoul_Lacedon_Pack)]
+        [TestCase(CreatureConstants.Ghoul_Ghast,
             EncounterConstants.Ghast_Solitary,
             EncounterConstants.Ghast_Gang,
             EncounterConstants.Ghast_Pack)]
@@ -1910,6 +1933,7 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
             EncounterConstants.Kobold_Band,
             EncounterConstants.Kobold_Warband,
             EncounterConstants.Kobold_Tribe)]
+        [TestCase(CreatureConstants.Kraken, EncounterConstants.Kraken_Solitary)]
         [TestCase(CreatureConstants.Krenshar,
             EncounterConstants.Krenshar_Solitary,
             EncounterConstants.Krenshar_Pair,
@@ -2010,6 +2034,17 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
         [TestCase(CreatureConstants.Lizardfolk_Leader_4thTo10th, EncounterConstants.Lizardfolk_Tribe)]
         [TestCase(CreatureConstants.Lizardfolk_Lieutenant, EncounterConstants.Lizardfolk_Tribe)]
         [TestCase(CreatureConstants.Lizardfolk_Noncombatant, EncounterConstants.Lizardfolk_Band)]
+        [TestCase(CreatureConstants.Locathah_Warrior,
+            EncounterConstants.Locathah_Company,
+            EncounterConstants.Locathah_Patrol,
+            EncounterConstants.Locathah_Tribe)]
+        [TestCase(CreatureConstants.Locathah_Noncombatant, EncounterConstants.Locathah_Tribe)]
+        [TestCase(CreatureConstants.Locathah_Sergeant,
+            EncounterConstants.Locathah_Patrol,
+            EncounterConstants.Locathah_Tribe)]
+        [TestCase(CreatureConstants.Locathah_Lieutenant, EncounterConstants.Locathah_Tribe)]
+        [TestCase(CreatureConstants.Locathah_Leader, EncounterConstants.Locathah_Patrol)]
+        [TestCase(CreatureConstants.Locathah_Captain, EncounterConstants.Locathah_Tribe)]
         [TestCase(CreatureConstants.Locust_Swarm,
             EncounterConstants.Locust_Swarm_Solitary,
             EncounterConstants.Locust_Swarm_Cloud,
@@ -2018,6 +2053,9 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
             EncounterConstants.Magmin_Solitary,
             EncounterConstants.Magmin_Gang,
             EncounterConstants.Magmin_Squad)]
+        [TestCase(CreatureConstants.MantaRay,
+            EncounterConstants.MantaRay_Solitary,
+            EncounterConstants.MantaRay_School)]
         [TestCase(CreatureConstants.Manticore,
             EncounterConstants.Manticore_Solitary,
             EncounterConstants.Manticore_Pair,
@@ -2076,6 +2114,15 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
             EncounterConstants.Mephit_Solitary,
             EncounterConstants.Mephit_Gang,
             EncounterConstants.Mephit_Mob)]
+        [TestCase(CreatureConstants.Merfolk_Warrior,
+            EncounterConstants.Merfolk_Company,
+            EncounterConstants.Merfolk_Patrol,
+            EncounterConstants.Merfolk_Band)]
+        [TestCase(CreatureConstants.Merfolk_Lieutenant_3rd, EncounterConstants.Merfolk_Patrol)]
+        [TestCase(CreatureConstants.Merfolk_Sergeant, EncounterConstants.Merfolk_Band)]
+        [TestCase(CreatureConstants.Merfolk_Lieutenant_5th, EncounterConstants.Merfolk_Band)]
+        [TestCase(CreatureConstants.Merfolk_Leader, EncounterConstants.Merfolk_Patrol)]
+        [TestCase(CreatureConstants.Merfolk_Captain, EncounterConstants.Merfolk_Band)]
         [TestCase(CreatureConstants.Mimic, EncounterConstants.Mimic_Solitary)]
         [TestCase(CreatureConstants.MindFlayer,
             EncounterConstants.MindFlayer_Solitary,
@@ -2156,6 +2203,8 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
         [TestCase(CreatureConstants.NPC_Traveler_Level18To19, EncounterConstants.NPC_Traveler_Level18To19_Group)]
         [TestCase(CreatureConstants.NPC_Traveler_Level20, EncounterConstants.NPC_Traveler_Level20_Group)]
         [TestCase(CreatureConstants.Nymph, EncounterConstants.Nymph_Solitary)]
+        [TestCase(CreatureConstants.Octopus, EncounterConstants.Octopus_Solitary)]
+        [TestCase(CreatureConstants.Octopus_Giant, EncounterConstants.Octopus_Giant_Solitary)]
         [TestCase(CreatureConstants.Ogre,
             EncounterConstants.Ogre_Solitary,
             EncounterConstants.Ogre_Pair,
@@ -2170,6 +2219,20 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
             EncounterConstants.Ogre_Barbarian_Pair,
             EncounterConstants.Ogre_Barbarian_Gang,
             EncounterConstants.Ogre_Barbarian_Band)]
+        [TestCase(CreatureConstants.Ogre_Merrow,
+            EncounterConstants.Ogre_Merrow_Solitary,
+            EncounterConstants.Ogre_Merrow_Pair,
+            EncounterConstants.Ogre_Merrow_Gang,
+            EncounterConstants.Ogre_Merrow_Band,
+            EncounterConstants.Ogre_Merrow_Barbarian_Solitary,
+            EncounterConstants.Ogre_Merrow_Barbarian_Pair,
+            EncounterConstants.Ogre_Merrow_Barbarian_Gang,
+            EncounterConstants.Ogre_Merrow_Barbarian_Band)]
+        [TestCase(CreatureConstants.Ogre_Merrow_Barbarian,
+            EncounterConstants.Ogre_Merrow_Barbarian_Solitary,
+            EncounterConstants.Ogre_Merrow_Barbarian_Pair,
+            EncounterConstants.Ogre_Merrow_Barbarian_Gang,
+            EncounterConstants.Ogre_Merrow_Barbarian_Band)]
         [TestCase(CreatureConstants.OgreMage,
             EncounterConstants.OgreMage_Solitary,
             EncounterConstants.OgreMage_Pair,
@@ -2237,6 +2300,14 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
             EncounterConstants.PitFiend_Troupe)]
         [TestCase(CreatureConstants.Pony, EncounterConstants.Pony_Solitary)]
         [TestCase(CreatureConstants.Pony_War)] //Domesticated
+        [TestCase(CreatureConstants.Porpoise,
+            EncounterConstants.Porpoise_Pair,
+            EncounterConstants.Porpoise_School,
+            EncounterConstants.Porpoise_Solitary)]
+        [TestCase(CreatureConstants.Porpoise_Celestial,
+            EncounterConstants.Porpoise_Celestial_Pair,
+            EncounterConstants.Porpoise_Celestial_School,
+            EncounterConstants.Porpoise_Celestial_Solitary)]
         [TestCase(CreatureConstants.PrayingMantis_Giant, EncounterConstants.PrayingMantis_Giant_Solitary)]
         [TestCase(CreatureConstants.Pseudodragon,
             EncounterConstants.Pseudodragon_Solitary,
@@ -2312,6 +2383,44 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
         [TestCase(CreatureConstants.RustMonster,
             EncounterConstants.RustMonster_Solitary,
             EncounterConstants.RustMonster_Pair)]
+        [TestCase(CreatureConstants.Sahuagin_Baron,
+            EncounterConstants.Sahuagin_Tribe_WithDireSharks,
+            EncounterConstants.Sahuagin_Tribe_WithMediumSharks,
+            EncounterConstants.Sahuagin_Tribe_WithLargeSharks,
+            EncounterConstants.Sahuagin_Tribe_WithHugeSharks)]
+        [TestCase(CreatureConstants.Sahuagin_Chieftan,
+            EncounterConstants.Sahuagin_Band_WithDireSharks,
+            EncounterConstants.Sahuagin_Band_WithMediumSharks,
+            EncounterConstants.Sahuagin_Band_WithLargeSharks,
+            EncounterConstants.Sahuagin_Band_WithHugeSharks,
+            EncounterConstants.Sahuagin_Tribe_WithDireSharks,
+            EncounterConstants.Sahuagin_Tribe_WithMediumSharks,
+            EncounterConstants.Sahuagin_Tribe_WithLargeSharks,
+            EncounterConstants.Sahuagin_Tribe_WithHugeSharks)]
+        [TestCase(CreatureConstants.Sahuagin_Guard,
+            EncounterConstants.Sahuagin_Tribe_WithDireSharks,
+            EncounterConstants.Sahuagin_Tribe_WithMediumSharks,
+            EncounterConstants.Sahuagin_Tribe_WithLargeSharks,
+            EncounterConstants.Sahuagin_Tribe_WithHugeSharks)]
+        [TestCase(CreatureConstants.Sahuagin_Noncombatant,
+            EncounterConstants.Sahuagin_Band_WithDireSharks,
+            EncounterConstants.Sahuagin_Band_WithMediumSharks,
+            EncounterConstants.Sahuagin_Band_WithLargeSharks,
+            EncounterConstants.Sahuagin_Band_WithHugeSharks,
+            EncounterConstants.Sahuagin_Tribe_WithDireSharks,
+            EncounterConstants.Sahuagin_Tribe_WithMediumSharks,
+            EncounterConstants.Sahuagin_Tribe_WithLargeSharks,
+            EncounterConstants.Sahuagin_Tribe_WithHugeSharks)]
+        [TestCase(CreatureConstants.Sahuagin_Priest,
+            EncounterConstants.Sahuagin_Tribe_WithDireSharks,
+            EncounterConstants.Sahuagin_Tribe_WithMediumSharks,
+            EncounterConstants.Sahuagin_Tribe_WithLargeSharks,
+            EncounterConstants.Sahuagin_Tribe_WithHugeSharks)]
+        [TestCase(CreatureConstants.Sahuagin_Underpriest,
+            EncounterConstants.Sahuagin_Tribe_WithDireSharks,
+            EncounterConstants.Sahuagin_Tribe_WithMediumSharks,
+            EncounterConstants.Sahuagin_Tribe_WithLargeSharks,
+            EncounterConstants.Sahuagin_Tribe_WithHugeSharks)]
         [TestCase(CreatureConstants.Salamander_Average,
             EncounterConstants.Salamander_Average_Solitary,
             EncounterConstants.Salamander_Average_Pair,
@@ -2358,6 +2467,10 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
         [TestCase(CreatureConstants.Scorpionfolk_Cleric, EncounterConstants.Scorpionfolk_Troop)]
         [TestCase(CreatureConstants.Scorpionfolk_Ranger_3rdTo5th, EncounterConstants.Scorpionfolk_Patrol)]
         [TestCase(CreatureConstants.Scorpionfolk_Ranger_6thTo8th, EncounterConstants.Scorpionfolk_Troop)]
+        [TestCase(CreatureConstants.SeaCat,
+            EncounterConstants.SeaCat_Solitary,
+            EncounterConstants.SeaCat_Pair,
+            EncounterConstants.SeaCat_Pride)]
         [TestCase(CreatureConstants.SeaHag,
             EncounterConstants.SeaHag_Solitary,
             EncounterConstants.Hag_Covey_WithCloudGiants,
@@ -2375,6 +2488,21 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
             EncounterConstants.ShadowMastiff_Pair,
             EncounterConstants.ShadowMastiff_Pack)]
         [TestCase(CreatureConstants.ShamblingMound, EncounterConstants.ShamblingMound_Solitary)]
+        [TestCase(CreatureConstants.Shark_Dire,
+            EncounterConstants.Shark_Dire_School,
+            EncounterConstants.Shark_Dire_Solitary)]
+        [TestCase(CreatureConstants.Shark_Medium,
+            EncounterConstants.Shark_Medium_School,
+            EncounterConstants.Shark_Medium_Solitary,
+            EncounterConstants.Shark_Medium_Pack)]
+        [TestCase(CreatureConstants.Shark_Large,
+            EncounterConstants.Shark_Large_School,
+            EncounterConstants.Shark_Large_Solitary,
+            EncounterConstants.Shark_Large_Pack)]
+        [TestCase(CreatureConstants.Shark_Huge,
+            EncounterConstants.Shark_Huge_School,
+            EncounterConstants.Shark_Huge_Solitary,
+            EncounterConstants.Shark_Huge_Pack)]
         [TestCase(CreatureConstants.ShieldGuardian, EncounterConstants.ShieldGuardian_Solitary)]
         [TestCase(CreatureConstants.ShockerLizard,
             EncounterConstants.ShockerLizard_Solitary,
@@ -2472,6 +2600,10 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
             EncounterConstants.Spider_Swarm_Tangle,
             EncounterConstants.Spider_Swarm_Colony)]
         [TestCase(CreatureConstants.SpiderEater, EncounterConstants.SpiderEater_Solitary)]
+        [TestCase(CreatureConstants.Squid_Giant, EncounterConstants.Squid_Giant_Solitary)]
+        [TestCase(CreatureConstants.Squid,
+            EncounterConstants.Squid_School,
+            EncounterConstants.Squid_Solitary)]
         [TestCase(CreatureConstants.Grig,
             EncounterConstants.Grig_Gang,
             EncounterConstants.Grig_Band,
@@ -2527,6 +2659,15 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
             EncounterConstants.Titan_Solitary,
             EncounterConstants.Titan_Pair)]
         [TestCase(CreatureConstants.Toad, EncounterConstants.Toad_Swarm)]
+        [TestCase(CreatureConstants.Tojanida_Adult,
+            EncounterConstants.Tojanida_Adult_Solitary,
+            EncounterConstants.Tojanida_Adult_Clutch)]
+        [TestCase(CreatureConstants.Tojanida_Juvenile,
+            EncounterConstants.Tojanida_Juvenile_Solitary,
+            EncounterConstants.Tojanida_Juvenile_Clutch)]
+        [TestCase(CreatureConstants.Tojanida_Elder,
+            EncounterConstants.Tojanida_Elder_Solitary,
+            EncounterConstants.Tojanida_Elder_Clutch)]
         [TestCase(CreatureConstants.Treant,
             EncounterConstants.Treant_Solitary,
             EncounterConstants.Treant_Grove)]
@@ -2534,6 +2675,10 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
             EncounterConstants.Triceratops_Solitary,
             EncounterConstants.Triceratops_Pair,
             EncounterConstants.Triceratops_Herd)]
+        [TestCase(CreatureConstants.Triton,
+            EncounterConstants.Triton_Company,
+            EncounterConstants.Triton_Squad,
+            EncounterConstants.Triton_Band)]
         [TestCase(CreatureConstants.Troglodyte,
             EncounterConstants.Troglodyte_Clutch,
             EncounterConstants.Troglodyte_Squad,
@@ -2545,6 +2690,12 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
             EncounterConstants.Troll_Hunter_Solitary)]
         [TestCase(CreatureConstants.Troll_Hunter,
             EncounterConstants.Troll_Hunter_Solitary)]
+        [TestCase(CreatureConstants.Troll_Scrag,
+            EncounterConstants.Troll_Scrag_Solitary,
+            EncounterConstants.Troll_Scrag_Gang,
+            EncounterConstants.Troll_Scrag_Hunter_Solitary)]
+        [TestCase(CreatureConstants.Troll_Scrag_Hunter,
+            EncounterConstants.Troll_Scrag_Hunter_Solitary)]
         [TestCase(CreatureConstants.Tyrannosaurus,
             EncounterConstants.Tyrannosaurus_Solitary,
             EncounterConstants.Tyrannosaurus_Pair)]
@@ -2760,6 +2911,13 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
         [TestCase(CreatureConstants.Weasel_Dire,
             EncounterConstants.Weasel_Dire_Solitary,
             EncounterConstants.Weasel_Dire_Pair)]
+        [TestCase(CreatureConstants.Whale_Baleen, EncounterConstants.Whale_Baleen_Solitary)]
+        [TestCase(CreatureConstants.Whale_Cachalot,
+            EncounterConstants.Whale_Cachalot_Pod,
+            EncounterConstants.Whale_Cachalot_Solitary)]
+        [TestCase(CreatureConstants.Whale_Orca,
+            EncounterConstants.Whale_Orca_Pod,
+            EncounterConstants.Whale_Orca_Solitary)]
         [TestCase(CreatureConstants.Wight,
             EncounterConstants.Wight_Solitary,
             EncounterConstants.Wight_Pair,
@@ -3636,6 +3794,53 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
             };
 
             CreatureEncounterGroup(CreatureConstants.NPC_Level20, encounters);
+        }
+
+        [Test]
+        public void SahuaginEncounters()
+        {
+            var encounters = new[]
+            {
+                EncounterConstants.Sahuagin_Solitary,
+                EncounterConstants.Sahuagin_Pair,
+                EncounterConstants.Sahuagin_Team,
+                EncounterConstants.Sahuagin_Patrol_WithDireSharks,
+                EncounterConstants.Sahuagin_Patrol_WithMediumSharks,
+                EncounterConstants.Sahuagin_Patrol_WithLargeSharks,
+                EncounterConstants.Sahuagin_Patrol_WithHugeSharks,
+                EncounterConstants.Sahuagin_Band_WithDireSharks,
+                EncounterConstants.Sahuagin_Band_WithMediumSharks,
+                EncounterConstants.Sahuagin_Band_WithLargeSharks,
+                EncounterConstants.Sahuagin_Band_WithHugeSharks,
+                EncounterConstants.Sahuagin_Tribe_WithDireSharks,
+                EncounterConstants.Sahuagin_Tribe_WithMediumSharks,
+                EncounterConstants.Sahuagin_Tribe_WithLargeSharks,
+                EncounterConstants.Sahuagin_Tribe_WithHugeSharks
+            };
+
+            CreatureEncounterGroup(CreatureConstants.Sahuagin, encounters);
+        }
+
+        [Test]
+        public void SahuaginLieutenantEncounters()
+        {
+            var encounters = new[]
+            {
+                EncounterConstants.Sahuagin_Patrol_WithDireSharks,
+                EncounterConstants.Sahuagin_Patrol_WithMediumSharks,
+                EncounterConstants.Sahuagin_Patrol_WithLargeSharks,
+                EncounterConstants.Sahuagin_Patrol_WithHugeSharks,
+                EncounterConstants.Sahuagin_Band_WithDireSharks,
+                EncounterConstants.Sahuagin_Band_WithMediumSharks,
+                EncounterConstants.Sahuagin_Band_WithLargeSharks,
+                EncounterConstants.Sahuagin_Band_WithHugeSharks,
+                EncounterConstants.Sahuagin_Tribe_WithDireSharks,
+                EncounterConstants.Sahuagin_Tribe_WithMediumSharks,
+                EncounterConstants.Sahuagin_Tribe_WithLargeSharks,
+                EncounterConstants.Sahuagin_Tribe_WithHugeSharks
+            };
+
+            CreatureEncounterGroup(CreatureConstants.Sahuagin_Lieutenant, encounters);
         }
 
         [Test]

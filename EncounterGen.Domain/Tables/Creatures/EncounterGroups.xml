@@ -4384,6 +4384,12 @@
     <item>Giant eagle/1d8+4</item>
   </collection>
   <collection>
+    <entry>Elasmosaurus</entry>
+    <item>Elasmosaurus/1</item>
+    <item>Elasmosaurus/2</item>
+    <item>Elasmosaurus/1d4+4</item>
+  </collection>
+  <collection>
     <entry>Elemental(Air)$Small$</entry>
     <item>Elemental(Air)$Small$/1</item>
   </collection>
@@ -4512,6 +4518,33 @@
     <item>Character[1]{High Elf}@Warrior@/10d8+20,Elf$Noncombatant$/2d8+4,Character(Sergeant)[3]{High Elf}@Warrior@/1d8+2,Character(Lieutenant)[5]{High Elf}@Warrior@/5,Character(Captain)[7]{High Elf}@Warrior@/3</item>
   </collection>
   <collection>
+    <entry>Character[1]{Aquatic Elf}@Warrior@</entry>
+    <item>Character[1]{Aquatic Elf}@Warrior@/1d3+1</item>
+    <item>Character[1]{Aquatic Elf}@Warrior@/1d10+10,Character(Sergeant)[3]{Aquatic Elf}@Warrior@/2,Character(Leader)[1d4+2]{Aquatic Elf}@Warrior@/1</item>
+    <item>Character[1]{Aquatic Elf}@Warrior@/10d8+20,Elf$Aquatic$Noncombatant$$/2d8+4,Character(Sergeant)[3]{Aquatic Elf}@Warrior@/1d8+2,Character(Lieutenant)[5]{Aquatic Elf}@Warrior@/5,Character(Captain)[7]{Aquatic Elf}@Warrior@/3</item>
+  </collection>
+  <collection>
+    <entry>Elf$Aquatic$Noncombatant$$</entry>
+    <item>Character[1]{Aquatic Elf}@Warrior@/10d8+20,Elf$Aquatic$Noncombatant$$/2d8+4,Character(Sergeant)[3]{Aquatic Elf}@Warrior@/1d8+2,Character(Lieutenant)[5]{Aquatic Elf}@Warrior@/5,Character(Captain)[7]{Aquatic Elf}@Warrior@/3</item>
+  </collection>
+  <collection>
+    <entry>Character(Sergeant)[3]{Aquatic Elf}@Warrior@</entry>
+    <item>Character[1]{Aquatic Elf}@Warrior@/1d10+10,Character(Sergeant)[3]{Aquatic Elf}@Warrior@/2,Character(Leader)[1d4+2]{Aquatic Elf}@Warrior@/1</item>
+    <item>Character[1]{Aquatic Elf}@Warrior@/10d8+20,Elf$Aquatic$Noncombatant$$/2d8+4,Character(Sergeant)[3]{Aquatic Elf}@Warrior@/1d8+2,Character(Lieutenant)[5]{Aquatic Elf}@Warrior@/5,Character(Captain)[7]{Aquatic Elf}@Warrior@/3</item>
+  </collection>
+  <collection>
+    <entry>Character(Lieutenant)[5]{Aquatic Elf}@Warrior@</entry>
+    <item>Character[1]{Aquatic Elf}@Warrior@/10d8+20,Elf$Aquatic$Noncombatant$$/2d8+4,Character(Sergeant)[3]{Aquatic Elf}@Warrior@/1d8+2,Character(Lieutenant)[5]{Aquatic Elf}@Warrior@/5,Character(Captain)[7]{Aquatic Elf}@Warrior@/3</item>
+  </collection>
+  <collection>
+    <entry>Character(Leader)[1d4+2]{Aquatic Elf}@Warrior@</entry>
+    <item>Character[1]{Aquatic Elf}@Warrior@/1d10+10,Character(Sergeant)[3]{Aquatic Elf}@Warrior@/2,Character(Leader)[1d4+2]{Aquatic Elf}@Warrior@/1</item>
+  </collection>
+  <collection>
+    <entry>Character(Captain)[7]{Aquatic Elf}@Warrior@</entry>
+    <item>Character[1]{Aquatic Elf}@Warrior@/10d8+20,Elf$Aquatic$Noncombatant$$/2d8+4,Character(Sergeant)[3]{Aquatic Elf}@Warrior@/1d8+2,Character(Lieutenant)[5]{Aquatic Elf}@Warrior@/5,Character(Captain)[7]{Aquatic Elf}@Warrior@/3</item>
+  </collection>
+  <collection>
     <entry>Erinyes</entry>
     <item>Erinyes/1</item>
   </collection>
@@ -4609,6 +4642,12 @@
     <item>Gargoyle/1</item>
     <item>Gargoyle/2</item>
     <item>Gargoyle/1d12+4</item>
+  </collection>
+  <collection>
+    <entry>Gargoyle$Kapoacinth$</entry>
+    <item>Gargoyle$Kapoacinth$/1</item>
+    <item>Gargoyle$Kapoacinth$/2</item>
+    <item>Gargoyle$Kapoacinth$/1d12+4</item>
   </collection>
   <collection>
     <entry>Gelatinous cube</entry>
@@ -4770,10 +4809,16 @@
     <item>Ghoul/1d6+6</item>
   </collection>
   <collection>
-    <entry>Ghast</entry>
-    <item>Ghast/1</item>
-    <item>Ghast/1d3+1</item>
-    <item>Ghast/1d3+1,Ghoul/1d6+6</item>
+    <entry>Ghoul$Lacedon$</entry>
+    <item>Ghoul$Lacedon$/1</item>
+    <item>Ghoul$Lacedon$/1d3+1</item>
+    <item>Ghoul$Lacedon$/1d6+6</item>
+  </collection>
+  <collection>
+    <entry>Ghoul$Ghast$</entry>
+    <item>Ghoul$Ghast$/1</item>
+    <item>Ghoul$Ghast$/1d3+1</item>
+    <item>Ghoul$Ghast$/1d3+1,Ghoul/1d6+6</item>
   </collection>
   <collection>
     <entry>Cloud giant</entry>
@@ -5422,6 +5467,10 @@
     <item>Character[1]{Kobold}@Warrior@/40d10,Character(Sergeant)[3]{Kobold}@Warrior@/2d10,Character(Lieutenant)[1d2+3]{Kobold}@Warrior@/1d2,Character(Leader)[1d3+5]{Kobold}@Warrior@/1,Dire weasel/1d4+4</item>
   </collection>
   <collection>
+    <entry>Kraken</entry>
+    <item>Kraken/1</item>
+  </collection>
+  <collection>
     <entry>Krenshar</entry>
     <item>Krenshar/1</item>
     <item>Krenshar/2</item>
@@ -5608,6 +5657,33 @@
     <item>Lizardfolk/6d6+24,Character(Lieutenant)[1d4+2]{Lizardfolk}/2,Character(Leader)[2d4+2]{Lizardfolk}/1</item>
   </collection>
   <collection>
+    <entry>Character[1]{Locathah}@Warrior@</entry>
+    <item>Character[1]{Locathah}@Warrior@/1d3+1</item>
+    <item>Character[1]{Locathah}@Warrior@/1d10+10,Character(Sergeant)[3]{Locathah}@Warrior@/2,Character(Leader)[1d4+2]{Locathah}@Warrior@/1</item>
+    <item>Character[1]{Locathah}@Warrior@/10d8+20,Locathah$Noncombatant$/10d8+20,Character(Sergeant)[3]{Locathah}@Warrior@/1d8+2,Character(Lieutenant)[5]{Locathah}@Warrior@/5,Character(Captain)[7]{Locathah}@Warrior@/3</item>
+  </collection>
+  <collection>
+    <entry>Locathah$Noncombatant$</entry>
+    <item>Character[1]{Locathah}@Warrior@/10d8+20,Locathah$Noncombatant$/10d8+20,Character(Sergeant)[3]{Locathah}@Warrior@/1d8+2,Character(Lieutenant)[5]{Locathah}@Warrior@/5,Character(Captain)[7]{Locathah}@Warrior@/3</item>
+  </collection>
+  <collection>
+    <entry>Character(Sergeant)[3]{Locathah}@Warrior@</entry>
+    <item>Character[1]{Locathah}@Warrior@/1d10+10,Character(Sergeant)[3]{Locathah}@Warrior@/2,Character(Leader)[1d4+2]{Locathah}@Warrior@/1</item>
+    <item>Character[1]{Locathah}@Warrior@/10d8+20,Locathah$Noncombatant$/10d8+20,Character(Sergeant)[3]{Locathah}@Warrior@/1d8+2,Character(Lieutenant)[5]{Locathah}@Warrior@/5,Character(Captain)[7]{Locathah}@Warrior@/3</item>
+  </collection>
+  <collection>
+    <entry>Character(Lieutenant)[5]{Locathah}@Warrior@</entry>
+    <item>Character[1]{Locathah}@Warrior@/10d8+20,Locathah$Noncombatant$/10d8+20,Character(Sergeant)[3]{Locathah}@Warrior@/1d8+2,Character(Lieutenant)[5]{Locathah}@Warrior@/5,Character(Captain)[7]{Locathah}@Warrior@/3</item>
+  </collection>
+  <collection>
+    <entry>Character(Leader)[1d4+2]{Locathah}@Warrior@</entry>
+    <item>Character[1]{Locathah}@Warrior@/1d10+10,Character(Sergeant)[3]{Locathah}@Warrior@/2,Character(Leader)[1d4+2]{Locathah}@Warrior@/1</item>
+  </collection>
+  <collection>
+    <entry>Character(Captain)[7]{Locathah}@Warrior@</entry>
+    <item>Character[1]{Locathah}@Warrior@/10d8+20,Locathah$Noncombatant$/10d8+20,Character(Sergeant)[3]{Locathah}@Warrior@/1d8+2,Character(Lieutenant)[5]{Locathah}@Warrior@/5,Character(Captain)[7]{Locathah}@Warrior@/3</item>
+  </collection>
+  <collection>
     <entry>Locust swarm</entry>
     <item>Locust swarm/1</item>
     <item>Locust swarm/1d6+1</item>
@@ -5618,6 +5694,11 @@
     <item>Magmin/1</item>
     <item>Magmin/1d3+1</item>
     <item>Magmin/2d3+4</item>
+  </collection>
+  <collection>
+    <entry>Manta ray</entry>
+    <item>Manta ray/1</item>
+    <item>Manta ray/1d4+1</item>
   </collection>
   <collection>
     <entry>Manticore</entry>
@@ -5706,6 +5787,32 @@
     <item>Mephit[3]/1</item>
     <item>Mephit[3]/1d3+1</item>
     <item>Mephit[3]/1d8+4</item>
+  </collection>
+  <collection>
+    <entry>Character[1]{Merfolk}@Warrior@</entry>
+    <item>Character[1]{Merfolk}@Warrior@/1d3+1</item>
+    <item>Character[1]{Merfolk}@Warrior@/1d10+10,Character(Lieutenant)[3]{Merfolk}@Warrior@/2,Character(Leader)[1d4+2]{Merfolk}@Warrior@/1</item>
+    <item>Character[1]{Merfolk}@Warrior@/6d6+24,Character(Sergeant)[3]{Merfolk}@Warrior@/1d2+1,Character(Lieutenant)[5]{Merfolk}@Warrior@/5,Character(Captain)[7]{Merfolk}@Warrior@/3,Porpoise/10</item>
+  </collection>
+  <collection>
+    <entry>Character(Lieutenant)[3]{Merfolk}@Warrior@</entry>
+    <item>Character[1]{Merfolk}@Warrior@/1d10+10,Character(Lieutenant)[3]{Merfolk}@Warrior@/2,Character(Leader)[1d4+2]{Merfolk}@Warrior@/1</item>
+  </collection>
+  <collection>
+    <entry>Character(Sergeant)[3]{Merfolk}@Warrior@</entry>
+    <item>Character[1]{Merfolk}@Warrior@/6d6+24,Character(Sergeant)[3]{Merfolk}@Warrior@/1d2+1,Character(Lieutenant)[5]{Merfolk}@Warrior@/5,Character(Captain)[7]{Merfolk}@Warrior@/3,Porpoise/10</item>
+  </collection>
+  <collection>
+    <entry>Character(Lieutenant)[5]{Merfolk}@Warrior@</entry>
+    <item>Character[1]{Merfolk}@Warrior@/6d6+24,Character(Sergeant)[3]{Merfolk}@Warrior@/1d2+1,Character(Lieutenant)[5]{Merfolk}@Warrior@/5,Character(Captain)[7]{Merfolk}@Warrior@/3,Porpoise/10</item>
+  </collection>
+  <collection>
+    <entry>Character(Leader)[1d4+2]{Merfolk}@Warrior@</entry>
+    <item>Character[1]{Merfolk}@Warrior@/1d10+10,Character(Lieutenant)[3]{Merfolk}@Warrior@/2,Character(Leader)[1d4+2]{Merfolk}@Warrior@/1</item>
+  </collection>
+  <collection>
+    <entry>Character(Captain)[7]{Merfolk}@Warrior@</entry>
+    <item>Character[1]{Merfolk}@Warrior@/6d6+24,Character(Sergeant)[3]{Merfolk}@Warrior@/1d2+1,Character(Lieutenant)[5]{Merfolk}@Warrior@/5,Character(Captain)[7]{Merfolk}@Warrior@/3,Porpoise/10</item>
   </collection>
   <collection>
     <entry>Mimic</entry>
@@ -5826,6 +5933,14 @@
     <item>Nymph/1</item>
   </collection>
   <collection>
+    <entry>Octopus</entry>
+    <item>Octopus/1</item>
+  </collection>
+  <collection>
+    <entry>Giant octopus</entry>
+    <item>Giant octopus/1</item>
+  </collection>
+  <collection>
     <entry>Ogre</entry>
     <item>Ogre/1</item>
     <item>Ogre/2</item>
@@ -5842,6 +5957,24 @@
     <item>Character[4]{Ogre}@Barbarian@/2</item>
     <item>Character[4]{Ogre}@Barbarian@/1,Ogre/1d3</item>
     <item>Character[4]{Ogre}@Barbarian@/1,Ogre/1d4+3</item>
+  </collection>
+  <collection>
+    <entry>Ogre$Merrow$</entry>
+    <item>Ogre$Merrow$/1</item>
+    <item>Ogre$Merrow$/2</item>
+    <item>Ogre$Merrow$/1d2+2</item>
+    <item>Ogre$Merrow$/1d4+4</item>
+    <item>Character[4]{Merrow}@Barbarian@/1</item>
+    <item>Character[4]{Merrow}@Barbarian@/2</item>
+    <item>Character[4]{Merrow}@Barbarian@/1,Ogre$Merrow$/1d3</item>
+    <item>Character[4]{Merrow}@Barbarian@/1,Ogre$Merrow$/1d4+3</item>
+  </collection>
+  <collection>
+    <entry>Character[4]{Merrow}@Barbarian@</entry>
+    <item>Character[4]{Merrow}@Barbarian@/1</item>
+    <item>Character[4]{Merrow}@Barbarian@/2</item>
+    <item>Character[4]{Merrow}@Barbarian@/1,Ogre$Merrow$/1d3</item>
+    <item>Character[4]{Merrow}@Barbarian@/1,Ogre$Merrow$/1d4+3</item>
   </collection>
   <collection>
     <entry>Ogre mage</entry>
@@ -5944,6 +6077,18 @@
     <entry>Warpony</entry>
   </collection>
   <collection>
+    <entry>Porpoise</entry>
+    <item>Porpoise/1</item>
+    <item>Porpoise/17d2-14</item>
+    <item>Porpoise/2</item>
+  </collection>
+  <collection>
+    <entry>Porpoise$Celestial creature$</entry>
+    <item>Porpoise$Celestial creature$/1</item>
+    <item>Porpoise$Celestial creature$/2</item>
+    <item>Porpoise$Celestial creature$/17d2-14</item>
+  </collection>
+  <collection>
     <entry>Giant praying mantis</entry>
     <item>Giant praying mantis/1</item>
   </collection>
@@ -6031,6 +6176,89 @@
     <item>Rust monster/2</item>
   </collection>
   <collection>
+    <entry>Sahuagin</entry>
+    <item>Sahuagin/1</item>
+    <item>Sahuagin/2</item>
+    <item>Sahuagin/1d4+4</item>
+    <item>Sahuagin/1d10+10,Character(Lieutenant)[3]{Sahuagin}/1,Dire shark/1d2</item>
+    <item>Sahuagin/1d10+10,Character(Lieutenant)[3]{Sahuagin}/1,Shark$Medium$/1d2</item>
+    <item>Sahuagin/1d10+10,Character(Lieutenant)[3]{Sahuagin}/1,Shark$Large$/1d2</item>
+    <item>Sahuagin/1d10+10,Character(Lieutenant)[3]{Sahuagin}/1,Shark$Huge$/1d2</item>
+    <item>Sahuagin/12d6+8,Sahuagin$Noncombatant$/12d6+8,Character(Lieutenant)[3]{Sahuagin}/1d4,Character(Chieftan)[4]{Sahuagin}/1d4,Dire shark/1d2</item>
+    <item>Sahuagin/12d6+8,Sahuagin$Noncombatant$/12d6+8,Character(Lieutenant)[3]{Sahuagin}/1d4,Character(Chieftan)[4]{Sahuagin}/1d4,Shark$Medium$/1d2</item>
+    <item>Sahuagin/12d6+8,Sahuagin$Noncombatant$/12d6+8,Character(Lieutenant)[3]{Sahuagin}/1d4,Character(Chieftan)[4]{Sahuagin}/1d4,Shark$Large$/1d2</item>
+    <item>Sahuagin/12d6+8,Sahuagin$Noncombatant$/12d6+8,Character(Lieutenant)[3]{Sahuagin}/1d4,Character(Chieftan)[4]{Sahuagin}/1d4,Shark$Huge$/1d2</item>
+    <item>Sahuagin/10d10+60,Sahuagin$Noncombatant$/10d10+60,Character(Lieutenant)[3]{Sahuagin}/2d3+2,Character(Chieftan)[4]{Sahuagin}/1d3+1,Character(Guard)[4]{Sahuagin}/9,Character(Underpriest)[1d4+2]{Sahuagin}@Cleric@/1d4,Character(Priest)[7]{Sahuagin}@Cleric@/1,Character(Baron)[1d3+5]{Sahuagin}/1,Dire shark/1d4+4</item>
+    <item>Sahuagin/10d10+60,Sahuagin$Noncombatant$/10d10+60,Character(Lieutenant)[3]{Sahuagin}/2d3+2,Character(Chieftan)[4]{Sahuagin}/1d3+1,Character(Guard)[4]{Sahuagin}/9,Character(Underpriest)[1d4+2]{Sahuagin}@Cleric@/1d4,Character(Priest)[7]{Sahuagin}@Cleric@/1,Character(Baron)[1d3+5]{Sahuagin}/1,Shark$Medium$/1d4+4</item>
+    <item>Sahuagin/10d10+60,Sahuagin$Noncombatant$/10d10+60,Character(Lieutenant)[3]{Sahuagin}/2d3+2,Character(Chieftan)[4]{Sahuagin}/1d3+1,Character(Guard)[4]{Sahuagin}/9,Character(Underpriest)[1d4+2]{Sahuagin}@Cleric@/1d4,Character(Priest)[7]{Sahuagin}@Cleric@/1,Character(Baron)[1d3+5]{Sahuagin}/1,Shark$Large$/1d4+4</item>
+    <item>Sahuagin/10d10+60,Sahuagin$Noncombatant$/10d10+60,Character(Lieutenant)[3]{Sahuagin}/2d3+2,Character(Chieftan)[4]{Sahuagin}/1d3+1,Character(Guard)[4]{Sahuagin}/9,Character(Underpriest)[1d4+2]{Sahuagin}@Cleric@/1d4,Character(Priest)[7]{Sahuagin}@Cleric@/1,Character(Baron)[1d3+5]{Sahuagin}/1,Shark$Huge$/1d4+4</item>
+  </collection>
+  <collection>
+    <entry>Sahuagin$Noncombatant$</entry>
+    <item>Sahuagin/12d6+8,Sahuagin$Noncombatant$/12d6+8,Character(Lieutenant)[3]{Sahuagin}/1d4,Character(Chieftan)[4]{Sahuagin}/1d4,Dire shark/1d2</item>
+    <item>Sahuagin/12d6+8,Sahuagin$Noncombatant$/12d6+8,Character(Lieutenant)[3]{Sahuagin}/1d4,Character(Chieftan)[4]{Sahuagin}/1d4,Shark$Medium$/1d2</item>
+    <item>Sahuagin/12d6+8,Sahuagin$Noncombatant$/12d6+8,Character(Lieutenant)[3]{Sahuagin}/1d4,Character(Chieftan)[4]{Sahuagin}/1d4,Shark$Large$/1d2</item>
+    <item>Sahuagin/12d6+8,Sahuagin$Noncombatant$/12d6+8,Character(Lieutenant)[3]{Sahuagin}/1d4,Character(Chieftan)[4]{Sahuagin}/1d4,Shark$Huge$/1d2</item>
+    <item>Sahuagin/10d10+60,Sahuagin$Noncombatant$/10d10+60,Character(Lieutenant)[3]{Sahuagin}/2d3+2,Character(Chieftan)[4]{Sahuagin}/1d3+1,Character(Guard)[4]{Sahuagin}/9,Character(Underpriest)[1d4+2]{Sahuagin}@Cleric@/1d4,Character(Priest)[7]{Sahuagin}@Cleric@/1,Character(Baron)[1d3+5]{Sahuagin}/1,Dire shark/1d4+4</item>
+    <item>Sahuagin/10d10+60,Sahuagin$Noncombatant$/10d10+60,Character(Lieutenant)[3]{Sahuagin}/2d3+2,Character(Chieftan)[4]{Sahuagin}/1d3+1,Character(Guard)[4]{Sahuagin}/9,Character(Underpriest)[1d4+2]{Sahuagin}@Cleric@/1d4,Character(Priest)[7]{Sahuagin}@Cleric@/1,Character(Baron)[1d3+5]{Sahuagin}/1,Shark$Medium$/1d4+4</item>
+    <item>Sahuagin/10d10+60,Sahuagin$Noncombatant$/10d10+60,Character(Lieutenant)[3]{Sahuagin}/2d3+2,Character(Chieftan)[4]{Sahuagin}/1d3+1,Character(Guard)[4]{Sahuagin}/9,Character(Underpriest)[1d4+2]{Sahuagin}@Cleric@/1d4,Character(Priest)[7]{Sahuagin}@Cleric@/1,Character(Baron)[1d3+5]{Sahuagin}/1,Shark$Large$/1d4+4</item>
+    <item>Sahuagin/10d10+60,Sahuagin$Noncombatant$/10d10+60,Character(Lieutenant)[3]{Sahuagin}/2d3+2,Character(Chieftan)[4]{Sahuagin}/1d3+1,Character(Guard)[4]{Sahuagin}/9,Character(Underpriest)[1d4+2]{Sahuagin}@Cleric@/1d4,Character(Priest)[7]{Sahuagin}@Cleric@/1,Character(Baron)[1d3+5]{Sahuagin}/1,Shark$Huge$/1d4+4</item>
+  </collection>
+  <collection>
+    <entry>Character(Baron)[1d3+5]{Sahuagin}</entry>
+    <item>Sahuagin/10d10+60,Sahuagin$Noncombatant$/10d10+60,Character(Lieutenant)[3]{Sahuagin}/2d3+2,Character(Chieftan)[4]{Sahuagin}/1d3+1,Character(Guard)[4]{Sahuagin}/9,Character(Underpriest)[1d4+2]{Sahuagin}@Cleric@/1d4,Character(Priest)[7]{Sahuagin}@Cleric@/1,Character(Baron)[1d3+5]{Sahuagin}/1,Dire shark/1d4+4</item>
+    <item>Sahuagin/10d10+60,Sahuagin$Noncombatant$/10d10+60,Character(Lieutenant)[3]{Sahuagin}/2d3+2,Character(Chieftan)[4]{Sahuagin}/1d3+1,Character(Guard)[4]{Sahuagin}/9,Character(Underpriest)[1d4+2]{Sahuagin}@Cleric@/1d4,Character(Priest)[7]{Sahuagin}@Cleric@/1,Character(Baron)[1d3+5]{Sahuagin}/1,Shark$Medium$/1d4+4</item>
+    <item>Sahuagin/10d10+60,Sahuagin$Noncombatant$/10d10+60,Character(Lieutenant)[3]{Sahuagin}/2d3+2,Character(Chieftan)[4]{Sahuagin}/1d3+1,Character(Guard)[4]{Sahuagin}/9,Character(Underpriest)[1d4+2]{Sahuagin}@Cleric@/1d4,Character(Priest)[7]{Sahuagin}@Cleric@/1,Character(Baron)[1d3+5]{Sahuagin}/1,Shark$Large$/1d4+4</item>
+    <item>Sahuagin/10d10+60,Sahuagin$Noncombatant$/10d10+60,Character(Lieutenant)[3]{Sahuagin}/2d3+2,Character(Chieftan)[4]{Sahuagin}/1d3+1,Character(Guard)[4]{Sahuagin}/9,Character(Underpriest)[1d4+2]{Sahuagin}@Cleric@/1d4,Character(Priest)[7]{Sahuagin}@Cleric@/1,Character(Baron)[1d3+5]{Sahuagin}/1,Shark$Huge$/1d4+4</item>
+  </collection>
+  <collection>
+    <entry>Character(Chieftan)[4]{Sahuagin}</entry>
+    <item>Sahuagin/12d6+8,Sahuagin$Noncombatant$/12d6+8,Character(Lieutenant)[3]{Sahuagin}/1d4,Character(Chieftan)[4]{Sahuagin}/1d4,Dire shark/1d2</item>
+    <item>Sahuagin/12d6+8,Sahuagin$Noncombatant$/12d6+8,Character(Lieutenant)[3]{Sahuagin}/1d4,Character(Chieftan)[4]{Sahuagin}/1d4,Shark$Medium$/1d2</item>
+    <item>Sahuagin/12d6+8,Sahuagin$Noncombatant$/12d6+8,Character(Lieutenant)[3]{Sahuagin}/1d4,Character(Chieftan)[4]{Sahuagin}/1d4,Shark$Large$/1d2</item>
+    <item>Sahuagin/12d6+8,Sahuagin$Noncombatant$/12d6+8,Character(Lieutenant)[3]{Sahuagin}/1d4,Character(Chieftan)[4]{Sahuagin}/1d4,Shark$Huge$/1d2</item>
+    <item>Sahuagin/10d10+60,Sahuagin$Noncombatant$/10d10+60,Character(Lieutenant)[3]{Sahuagin}/2d3+2,Character(Chieftan)[4]{Sahuagin}/1d3+1,Character(Guard)[4]{Sahuagin}/9,Character(Underpriest)[1d4+2]{Sahuagin}@Cleric@/1d4,Character(Priest)[7]{Sahuagin}@Cleric@/1,Character(Baron)[1d3+5]{Sahuagin}/1,Dire shark/1d4+4</item>
+    <item>Sahuagin/10d10+60,Sahuagin$Noncombatant$/10d10+60,Character(Lieutenant)[3]{Sahuagin}/2d3+2,Character(Chieftan)[4]{Sahuagin}/1d3+1,Character(Guard)[4]{Sahuagin}/9,Character(Underpriest)[1d4+2]{Sahuagin}@Cleric@/1d4,Character(Priest)[7]{Sahuagin}@Cleric@/1,Character(Baron)[1d3+5]{Sahuagin}/1,Shark$Medium$/1d4+4</item>
+    <item>Sahuagin/10d10+60,Sahuagin$Noncombatant$/10d10+60,Character(Lieutenant)[3]{Sahuagin}/2d3+2,Character(Chieftan)[4]{Sahuagin}/1d3+1,Character(Guard)[4]{Sahuagin}/9,Character(Underpriest)[1d4+2]{Sahuagin}@Cleric@/1d4,Character(Priest)[7]{Sahuagin}@Cleric@/1,Character(Baron)[1d3+5]{Sahuagin}/1,Shark$Large$/1d4+4</item>
+    <item>Sahuagin/10d10+60,Sahuagin$Noncombatant$/10d10+60,Character(Lieutenant)[3]{Sahuagin}/2d3+2,Character(Chieftan)[4]{Sahuagin}/1d3+1,Character(Guard)[4]{Sahuagin}/9,Character(Underpriest)[1d4+2]{Sahuagin}@Cleric@/1d4,Character(Priest)[7]{Sahuagin}@Cleric@/1,Character(Baron)[1d3+5]{Sahuagin}/1,Shark$Huge$/1d4+4</item>
+  </collection>
+  <collection>
+    <entry>Character(Guard)[4]{Sahuagin}</entry>
+    <item>Sahuagin/10d10+60,Sahuagin$Noncombatant$/10d10+60,Character(Lieutenant)[3]{Sahuagin}/2d3+2,Character(Chieftan)[4]{Sahuagin}/1d3+1,Character(Guard)[4]{Sahuagin}/9,Character(Underpriest)[1d4+2]{Sahuagin}@Cleric@/1d4,Character(Priest)[7]{Sahuagin}@Cleric@/1,Character(Baron)[1d3+5]{Sahuagin}/1,Dire shark/1d4+4</item>
+    <item>Sahuagin/10d10+60,Sahuagin$Noncombatant$/10d10+60,Character(Lieutenant)[3]{Sahuagin}/2d3+2,Character(Chieftan)[4]{Sahuagin}/1d3+1,Character(Guard)[4]{Sahuagin}/9,Character(Underpriest)[1d4+2]{Sahuagin}@Cleric@/1d4,Character(Priest)[7]{Sahuagin}@Cleric@/1,Character(Baron)[1d3+5]{Sahuagin}/1,Shark$Medium$/1d4+4</item>
+    <item>Sahuagin/10d10+60,Sahuagin$Noncombatant$/10d10+60,Character(Lieutenant)[3]{Sahuagin}/2d3+2,Character(Chieftan)[4]{Sahuagin}/1d3+1,Character(Guard)[4]{Sahuagin}/9,Character(Underpriest)[1d4+2]{Sahuagin}@Cleric@/1d4,Character(Priest)[7]{Sahuagin}@Cleric@/1,Character(Baron)[1d3+5]{Sahuagin}/1,Shark$Large$/1d4+4</item>
+    <item>Sahuagin/10d10+60,Sahuagin$Noncombatant$/10d10+60,Character(Lieutenant)[3]{Sahuagin}/2d3+2,Character(Chieftan)[4]{Sahuagin}/1d3+1,Character(Guard)[4]{Sahuagin}/9,Character(Underpriest)[1d4+2]{Sahuagin}@Cleric@/1d4,Character(Priest)[7]{Sahuagin}@Cleric@/1,Character(Baron)[1d3+5]{Sahuagin}/1,Shark$Huge$/1d4+4</item>
+  </collection>
+  <collection>
+    <entry>Character(Lieutenant)[3]{Sahuagin}</entry>
+    <item>Sahuagin/1d10+10,Character(Lieutenant)[3]{Sahuagin}/1,Dire shark/1d2</item>
+    <item>Sahuagin/1d10+10,Character(Lieutenant)[3]{Sahuagin}/1,Shark$Medium$/1d2</item>
+    <item>Sahuagin/1d10+10,Character(Lieutenant)[3]{Sahuagin}/1,Shark$Large$/1d2</item>
+    <item>Sahuagin/1d10+10,Character(Lieutenant)[3]{Sahuagin}/1,Shark$Huge$/1d2</item>
+    <item>Sahuagin/12d6+8,Sahuagin$Noncombatant$/12d6+8,Character(Lieutenant)[3]{Sahuagin}/1d4,Character(Chieftan)[4]{Sahuagin}/1d4,Dire shark/1d2</item>
+    <item>Sahuagin/12d6+8,Sahuagin$Noncombatant$/12d6+8,Character(Lieutenant)[3]{Sahuagin}/1d4,Character(Chieftan)[4]{Sahuagin}/1d4,Shark$Medium$/1d2</item>
+    <item>Sahuagin/12d6+8,Sahuagin$Noncombatant$/12d6+8,Character(Lieutenant)[3]{Sahuagin}/1d4,Character(Chieftan)[4]{Sahuagin}/1d4,Shark$Large$/1d2</item>
+    <item>Sahuagin/12d6+8,Sahuagin$Noncombatant$/12d6+8,Character(Lieutenant)[3]{Sahuagin}/1d4,Character(Chieftan)[4]{Sahuagin}/1d4,Shark$Huge$/1d2</item>
+    <item>Sahuagin/10d10+60,Sahuagin$Noncombatant$/10d10+60,Character(Lieutenant)[3]{Sahuagin}/2d3+2,Character(Chieftan)[4]{Sahuagin}/1d3+1,Character(Guard)[4]{Sahuagin}/9,Character(Underpriest)[1d4+2]{Sahuagin}@Cleric@/1d4,Character(Priest)[7]{Sahuagin}@Cleric@/1,Character(Baron)[1d3+5]{Sahuagin}/1,Dire shark/1d4+4</item>
+    <item>Sahuagin/10d10+60,Sahuagin$Noncombatant$/10d10+60,Character(Lieutenant)[3]{Sahuagin}/2d3+2,Character(Chieftan)[4]{Sahuagin}/1d3+1,Character(Guard)[4]{Sahuagin}/9,Character(Underpriest)[1d4+2]{Sahuagin}@Cleric@/1d4,Character(Priest)[7]{Sahuagin}@Cleric@/1,Character(Baron)[1d3+5]{Sahuagin}/1,Shark$Medium$/1d4+4</item>
+    <item>Sahuagin/10d10+60,Sahuagin$Noncombatant$/10d10+60,Character(Lieutenant)[3]{Sahuagin}/2d3+2,Character(Chieftan)[4]{Sahuagin}/1d3+1,Character(Guard)[4]{Sahuagin}/9,Character(Underpriest)[1d4+2]{Sahuagin}@Cleric@/1d4,Character(Priest)[7]{Sahuagin}@Cleric@/1,Character(Baron)[1d3+5]{Sahuagin}/1,Shark$Large$/1d4+4</item>
+    <item>Sahuagin/10d10+60,Sahuagin$Noncombatant$/10d10+60,Character(Lieutenant)[3]{Sahuagin}/2d3+2,Character(Chieftan)[4]{Sahuagin}/1d3+1,Character(Guard)[4]{Sahuagin}/9,Character(Underpriest)[1d4+2]{Sahuagin}@Cleric@/1d4,Character(Priest)[7]{Sahuagin}@Cleric@/1,Character(Baron)[1d3+5]{Sahuagin}/1,Shark$Huge$/1d4+4</item>
+  </collection>
+  <collection>
+    <entry>Character(Priest)[7]{Sahuagin}@Cleric@</entry>
+    <item>Sahuagin/10d10+60,Sahuagin$Noncombatant$/10d10+60,Character(Lieutenant)[3]{Sahuagin}/2d3+2,Character(Chieftan)[4]{Sahuagin}/1d3+1,Character(Guard)[4]{Sahuagin}/9,Character(Underpriest)[1d4+2]{Sahuagin}@Cleric@/1d4,Character(Priest)[7]{Sahuagin}@Cleric@/1,Character(Baron)[1d3+5]{Sahuagin}/1,Dire shark/1d4+4</item>
+    <item>Sahuagin/10d10+60,Sahuagin$Noncombatant$/10d10+60,Character(Lieutenant)[3]{Sahuagin}/2d3+2,Character(Chieftan)[4]{Sahuagin}/1d3+1,Character(Guard)[4]{Sahuagin}/9,Character(Underpriest)[1d4+2]{Sahuagin}@Cleric@/1d4,Character(Priest)[7]{Sahuagin}@Cleric@/1,Character(Baron)[1d3+5]{Sahuagin}/1,Shark$Medium$/1d4+4</item>
+    <item>Sahuagin/10d10+60,Sahuagin$Noncombatant$/10d10+60,Character(Lieutenant)[3]{Sahuagin}/2d3+2,Character(Chieftan)[4]{Sahuagin}/1d3+1,Character(Guard)[4]{Sahuagin}/9,Character(Underpriest)[1d4+2]{Sahuagin}@Cleric@/1d4,Character(Priest)[7]{Sahuagin}@Cleric@/1,Character(Baron)[1d3+5]{Sahuagin}/1,Shark$Large$/1d4+4</item>
+    <item>Sahuagin/10d10+60,Sahuagin$Noncombatant$/10d10+60,Character(Lieutenant)[3]{Sahuagin}/2d3+2,Character(Chieftan)[4]{Sahuagin}/1d3+1,Character(Guard)[4]{Sahuagin}/9,Character(Underpriest)[1d4+2]{Sahuagin}@Cleric@/1d4,Character(Priest)[7]{Sahuagin}@Cleric@/1,Character(Baron)[1d3+5]{Sahuagin}/1,Shark$Huge$/1d4+4</item>
+  </collection>
+  <collection>
+    <entry>Character(Underpriest)[1d4+2]{Sahuagin}@Cleric@</entry>
+    <item>Sahuagin/10d10+60,Sahuagin$Noncombatant$/10d10+60,Character(Lieutenant)[3]{Sahuagin}/2d3+2,Character(Chieftan)[4]{Sahuagin}/1d3+1,Character(Guard)[4]{Sahuagin}/9,Character(Underpriest)[1d4+2]{Sahuagin}@Cleric@/1d4,Character(Priest)[7]{Sahuagin}@Cleric@/1,Character(Baron)[1d3+5]{Sahuagin}/1,Dire shark/1d4+4</item>
+    <item>Sahuagin/10d10+60,Sahuagin$Noncombatant$/10d10+60,Character(Lieutenant)[3]{Sahuagin}/2d3+2,Character(Chieftan)[4]{Sahuagin}/1d3+1,Character(Guard)[4]{Sahuagin}/9,Character(Underpriest)[1d4+2]{Sahuagin}@Cleric@/1d4,Character(Priest)[7]{Sahuagin}@Cleric@/1,Character(Baron)[1d3+5]{Sahuagin}/1,Shark$Medium$/1d4+4</item>
+    <item>Sahuagin/10d10+60,Sahuagin$Noncombatant$/10d10+60,Character(Lieutenant)[3]{Sahuagin}/2d3+2,Character(Chieftan)[4]{Sahuagin}/1d3+1,Character(Guard)[4]{Sahuagin}/9,Character(Underpriest)[1d4+2]{Sahuagin}@Cleric@/1d4,Character(Priest)[7]{Sahuagin}@Cleric@/1,Character(Baron)[1d3+5]{Sahuagin}/1,Shark$Large$/1d4+4</item>
+    <item>Sahuagin/10d10+60,Sahuagin$Noncombatant$/10d10+60,Character(Lieutenant)[3]{Sahuagin}/2d3+2,Character(Chieftan)[4]{Sahuagin}/1d3+1,Character(Guard)[4]{Sahuagin}/9,Character(Underpriest)[1d4+2]{Sahuagin}@Cleric@/1d4,Character(Priest)[7]{Sahuagin}@Cleric@/1,Character(Baron)[1d3+5]{Sahuagin}/1,Shark$Huge$/1d4+4</item>
+  </collection>
+  <collection>
     <entry>Salamander$Flamebrother$</entry>
     <item>Salamander$Flamebrother$/1</item>
     <item>Salamander$Flamebrother$/2</item>
@@ -6115,6 +6343,12 @@
     <item>Scorpionfolk/1d20+20,Monstrous scorpion$Medium$/4d8,Monstrous scorpion$Large$/1d4,Character[1d3+5]{Scorpionfolk}@Cleric@/1,Character[1d3+5]{Scorpionfolk}@Ranger@/1</item>
   </collection>
   <collection>
+    <entry>Sea cat</entry>
+    <item>Sea cat/1</item>
+    <item>Sea cat/2</item>
+    <item>Sea cat/1d8+4</item>
+  </collection>
+  <collection>
     <entry>Sea hag</entry>
     <item>Sea hag/1</item>
     <item>Annis/1,Green hag/1,Sea hag/1,Ogre/1d10-2,Cloud giant/2d3-2</item>
@@ -6142,6 +6376,29 @@
   <collection>
     <entry>Shambling mound</entry>
     <item>Shambling mound/1</item>
+  </collection>
+  <collection>
+    <entry>Dire shark</entry>
+    <item>Dire shark/1</item>
+    <item>Dire shark/1d4+1</item>
+  </collection>
+  <collection>
+    <entry>Shark$Medium$</entry>
+    <item>Shark$Medium$/1</item>
+    <item>Shark$Medium$/1d4+1</item>
+    <item>Shark$Medium$/1d6+5</item>
+  </collection>
+  <collection>
+    <entry>Shark$Large$</entry>
+    <item>Shark$Large$/1</item>
+    <item>Shark$Large$/1d4+1</item>
+    <item>Shark$Large$/1d6+5</item>
+  </collection>
+  <collection>
+    <entry>Shark$Huge$</entry>
+    <item>Shark$Huge$/1</item>
+    <item>Shark$Huge$/1d4+1</item>
+    <item>Shark$Huge$/1d6+5</item>
   </collection>
   <collection>
     <entry>Shield guardian</entry>
@@ -6320,6 +6577,15 @@
     <item>Spider eater/1</item>
   </collection>
   <collection>
+    <entry>Squid</entry>
+    <item>Squid/1</item>
+    <item>Squid/1d6+5</item>
+  </collection>
+  <collection>
+    <entry>Giant squid</entry>
+    <item>Giant squid/1</item>
+  </collection>
+  <collection>
     <entry>Grig</entry>
     <item>Grig/1d3+1</item>
     <item>Grig/1d6+5</item>
@@ -6428,6 +6694,21 @@
     <item>Toad/10d10</item>
   </collection>
   <collection>
+    <entry>Tojanida$Adult$</entry>
+    <item>Tojanida$Adult$/1</item>
+    <item>Tojanida$Adult$/1d3+1</item>
+  </collection>
+  <collection>
+    <entry>Tojanida$Elder$</entry>
+    <item>Tojanida$Elder$/1</item>
+    <item>Tojanida$Elder$/1d3+1</item>
+  </collection>
+  <collection>
+    <entry>Tojanida$Juvenile$</entry>
+    <item>Tojanida$Juvenile$/1</item>
+    <item>Tojanida$Juvenile$/1d3+1</item>
+  </collection>
+  <collection>
     <entry>Treant</entry>
     <item>Treant/1</item>
     <item>Treant/1d4+3</item>
@@ -6437,6 +6718,12 @@
     <item>Triceratops/1</item>
     <item>Triceratops/2</item>
     <item>Triceratops/1d4+4</item>
+  </collection>
+  <collection>
+    <entry>Triton</entry>
+    <item>Triton/1d4+1</item>
+    <item>Triton/1d6+5</item>
+    <item>Triton/12d6+8</item>
   </collection>
   <collection>
     <entry>Troglodyte</entry>
@@ -6457,6 +6744,16 @@
   <collection>
     <entry>Character(Hunter)[6]{Troll}@Ranger@</entry>
     <item>Character(Hunter)[6]{Troll}@Ranger@/1</item>
+  </collection>
+  <collection>
+    <entry>Troll$Scrag$</entry>
+    <item>Troll$Scrag$/1</item>
+    <item>Troll$Scrag$/1d3+1</item>
+    <item>Character(Hunter)[6]{Scrag}@Ranger@/1</item>
+  </collection>
+  <collection>
+    <entry>Character(Hunter)[6]{Scrag}@Ranger@</entry>
+    <item>Character(Hunter)[6]{Scrag}@Ranger@/1</item>
   </collection>
   <collection>
     <entry>Tyrannosaurus</entry>
@@ -6655,6 +6952,20 @@
     <entry>Dire weasel</entry>
     <item>Dire weasel/1</item>
     <item>Dire weasel/2</item>
+  </collection>
+  <collection>
+    <entry>Whale$Baleen$</entry>
+    <item>Whale$Baleen$/1</item>
+  </collection>
+  <collection>
+    <entry>Whale$Cachalot$</entry>
+    <item>Whale$Cachalot$/1</item>
+    <item>Whale$Cachalot$/1d6+5</item>
+  </collection>
+  <collection>
+    <entry>Whale$Orca$</entry>
+    <item>Whale$Orca$/1</item>
+    <item>Whale$Orca$/1d6+5</item>
   </collection>
   <collection>
     <entry>Wight</entry>

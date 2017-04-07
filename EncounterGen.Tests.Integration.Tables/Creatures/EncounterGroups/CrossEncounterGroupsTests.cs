@@ -34,6 +34,7 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
             var allEncounters = new List<string>();
 
             var categories = new[] {
+                EnvironmentConstants.Aquatic,
                 EnvironmentConstants.Civilized,
                 EnvironmentConstants.Desert,
                 EnvironmentConstants.Dungeon,
@@ -45,6 +46,12 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
                 EnvironmentConstants.Temperatures.Cold,
                 EnvironmentConstants.Temperatures.Temperate,
                 EnvironmentConstants.Temperatures.Warm,
+                EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Aquatic,
+                EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic,
+                EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic,
+                EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Civilized,
+                EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Civilized,
+                EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Civilized,
                 EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Desert,
                 EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert,
                 EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert,
@@ -68,6 +75,7 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
                 EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains,
                 GroupConstants.Land,
                 GroupConstants.Magic,
+                GroupConstants.Wilderness,
                 CreatureConstants.Types.Dragon,
             };
 
@@ -192,7 +200,13 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
 
         private double GetPercentage(string environment, string temperature, string timeOfDay, int level, Func<string, bool> isInSubgroup)
         {
-            var encounters = EncounterCollectionSelector.SelectAllWeightedFrom(level, environment, temperature, timeOfDay);
+            var specifications = new EncounterSpecifications();
+            specifications.Environment = environment;
+            specifications.Level = level;
+            specifications.Temperature = temperature;
+            specifications.TimeOfDay = timeOfDay;
+
+            var encounters = EncounterCollectionSelector.SelectAllWeightedFrom(specifications);
             var leadCreatures = encounters.Select(e => e.First().Key);
 
             var subgroupCreatures = leadCreatures.Where(cr => isInSubgroup(cr));
@@ -251,20 +265,26 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
 
         private bool IsUndeadCharacter(string creature)
         {
-            var undead = CollectionSelector.Explode(TableNameConstants.CreatureGroups, CreatureConstants.Types.Undead);
             var name = EncounterSelector.SelectNameFrom(creature);
-
-            return undead.Contains(creature) && name == CreatureConstants.Character;
+            return IsUndead(creature) && name == CreatureConstants.Character;
         }
 
         [TestCase(EnvironmentConstants.Dungeon, EnvironmentConstants.Temperatures.Temperate, EnvironmentConstants.TimesOfDay.Night, 10, CreatureConstants.Types.Fey, false)]
         [TestCase(EnvironmentConstants.Civilized, EnvironmentConstants.Temperatures.Temperate, EnvironmentConstants.TimesOfDay.Day, 4, CreatureConstants.Types.Giant, false)]
         public void BUG_FilterIsValid(string environment, string temperature, string timeOfDay, int level, string filter, bool isValid)
         {
-            var filterIsValid = EncounterVerifier.ValidEncounterExistsAtLevel(environment, level, temperature, timeOfDay, filter);
+            var specifications = new EncounterSpecifications();
+            specifications.Environment = environment;
+            specifications.Level = level;
+            specifications.Temperature = temperature;
+            specifications.TimeOfDay = timeOfDay;
+            specifications.CreatureTypeFilters = new[] { filter };
+
+            var filterIsValid = EncounterVerifier.ValidEncounterExistsAtLevel(specifications);
             Assert.That(filterIsValid, Is.EqualTo(isValid));
         }
 
+        [TestCase(EnvironmentConstants.Aquatic)]
         [TestCase(EnvironmentConstants.Civilized)]
         [TestCase(EnvironmentConstants.Desert)]
         [TestCase(EnvironmentConstants.Dungeon)]
@@ -276,6 +296,12 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
         [TestCase(EnvironmentConstants.Temperatures.Cold)]
         [TestCase(EnvironmentConstants.Temperatures.Temperate)]
         [TestCase(EnvironmentConstants.Temperatures.Warm)]
+        [TestCase(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Aquatic)]
+        [TestCase(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic)]
+        [TestCase(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic)]
+        [TestCase(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Civilized)]
+        [TestCase(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Civilized)]
+        [TestCase(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Civilized)]
         [TestCase(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Desert)]
         [TestCase(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert)]
         [TestCase(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
@@ -299,6 +325,7 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
         [TestCase(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
         [TestCase(GroupConstants.Land)]
         [TestCase(GroupConstants.Magic)]
+        [TestCase(GroupConstants.Wilderness)]
         [TestCase(CreatureConstants.Types.Dragon)]
         public void BUG_NoEncountersHaveMultipleEntriesOfSameCreature(string category)
         {

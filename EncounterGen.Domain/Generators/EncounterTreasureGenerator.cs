@@ -105,7 +105,7 @@ namespace EncounterGen.Domain.Generators
             if (template.IsMagical == false)
             {
                 var mundaneGenerator = mundaneItemGeneratorRuntimeFactory.CreateGeneratorOf(template.ItemType);
-                return mundaneGenerator.Generate(template, true);
+                return mundaneGenerator.GenerateFrom(template, true);
             }
 
             var magicalGenerator = magicalItemGeneratorRuntimeFactory.CreateGeneratorOf(template.ItemType);
@@ -156,9 +156,12 @@ namespace EncounterGen.Domain.Generators
                 {
                     var rawTraits = GetMatchValue(traitRegex, setItemTemplate, "#");
                     var traits = rawTraits.Split(',');
+                    var sizes = TraitConstants.Sizes.All();
 
                     foreach (var trait in traits)
+                    {
                         template.Traits.Add(trait);
+                    }
                 }
 
                 templates.Add(template);

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EncounterGen.Generators;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -18,26 +19,26 @@ namespace EncounterGen.Domain.Selectors.Collections
             cachedCollections = new Dictionary<string, IEnumerable<Dictionary<string, string>>>();
         }
 
-        private string GetKey(int level, string environment, string temperature, string timeOfDay, params string[] creatureTypeFilters)
+        private string GetKey(EncounterSpecifications specifications)
         {
-            return $"{level}{environment}{temperature}{timeOfDay}{string.Join(",", creatureTypeFilters)}";
+            return $"{specifications.Description}";
         }
 
-        public IEnumerable<Dictionary<string, string>> SelectAllWeightedFrom(int level, string environment, string temperature, string timeOfDay, params string[] creatureTypeFilters)
+        public IEnumerable<Dictionary<string, string>> SelectAllWeightedFrom(EncounterSpecifications specifications)
         {
-            var key = GetKey(level, environment, temperature, timeOfDay, creatureTypeFilters);
+            var key = GetKey(specifications);
             if (!cachedCollections.ContainsKey(key))
-                cachedCollections[key] = internalSelector.SelectAllWeightedFrom(level, environment, temperature, timeOfDay, creatureTypeFilters);
+                cachedCollections[key] = internalSelector.SelectAllWeightedFrom(specifications);
 
             return cachedCollections[key];
         }
 
-        public Dictionary<string, string> SelectRandomFrom(int level, string environment, string temperature, string timeOfDay, params string[] creatureTypeFilters)
+        public Dictionary<string, string> SelectRandomFrom(EncounterSpecifications specifications)
         {
-            var weightedEncounters = SelectAllWeightedFrom(level, environment, temperature, timeOfDay, creatureTypeFilters);
+            var weightedEncounters = SelectAllWeightedFrom(specifications);
 
             if (!weightedEncounters.Any())
-                throw new ArgumentException($"No valid level {level} encounters exist for {temperature} {environment} {timeOfDay}");
+                throw new ArgumentException($"No valid encounters exist for {specifications.Description}");
 
             return collectionSelector.SelectRandomFrom(weightedEncounters);
         }

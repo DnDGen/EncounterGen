@@ -55,9 +55,17 @@ namespace EncounterGen.Tests.Integration.Tables
             return new[] { name };
         }
 
-        protected IEnumerable<string> GetAllCollections()
+        protected IEnumerable<string> ExplodeCollections(IEnumerable<string> names)
         {
-            return table.Keys.SelectMany(k => CollectionSelector.Explode(tableName, k)).Distinct();
+            var collection = new List<string>();
+
+            foreach (var name in names)
+            {
+                var explodedCollection = ExplodeCollection(name);
+                collection.AddRange(explodedCollection);
+            }
+
+            return collection.Distinct();
         }
 
         protected IEnumerable<string> GetAllCreaturesFromEncounters()

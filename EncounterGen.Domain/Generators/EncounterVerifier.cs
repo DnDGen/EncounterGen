@@ -10,20 +10,9 @@ namespace EncounterGen.Domain.Generators
 {
     internal class EncounterVerifier : IEncounterVerifier
     {
-        private ICollectionSelector collectionSelector;
-        private IEncounterCollectionSelector encounterCollectionSelector;
-        private IAmountSelector amountSelector;
-
-        public int MinimumLevel
-        {
-            get { return 1; }
-        }
-
-        public int MaximumLevel
-        {
-            //INFO: This is because TreasureGen only supports treasure up to level 30
-            get { return 30; }
-        }
+        private readonly ICollectionSelector collectionSelector;
+        private readonly IEncounterCollectionSelector encounterCollectionSelector;
+        private readonly IAmountSelector amountSelector;
 
         public EncounterVerifier(ICollectionSelector collectionSelector, IEncounterCollectionSelector encounterCollectionSelector, IAmountSelector amountSelector)
         {
@@ -32,27 +21,22 @@ namespace EncounterGen.Domain.Generators
             this.amountSelector = amountSelector;
         }
 
-        public bool ValidEncounterExistsAtLevel(string environment, int level, string temperature, string timeOfDay, params string[] creatureTypeFilters)
+        public bool ValidEncounterExistsAtLevel(EncounterSpecifications encounterSpecifications)
         {
-            if (!LevelIsValid(level))
+            if (!encounterSpecifications.IsValid())
                 return false;
 
-            var allEncounterCreaturesAndAmounts = encounterCollectionSelector.SelectAllWeightedFrom(level, environment, temperature, timeOfDay, creatureTypeFilters);
+            var allEncounterCreaturesAndAmounts = encounterCollectionSelector.SelectAllWeightedFrom(encounterSpecifications);
 
             return allEncounterCreaturesAndAmounts.Any();
         }
 
-        private bool LevelIsValid(int level)
-        {
-            return level <= MaximumLevel && level >= MinimumLevel;
-        }
-
-        public bool EncounterIsValid(IEnumerable<string> creatureNames, params string[] creatureTypeFilters)
+        public bool EncounterIsValid(IEnumerable<string> creatureNames, IEnumerable<string> creatureTypeFilters)
         {
             return creatureNames.Any(c => CreatureIsValid(c, creatureTypeFilters));
         }
 
-        public bool CreatureIsValid(string creatureName, params string[] creatureTypeFilters)
+        public bool CreatureIsValid(string creatureName, IEnumerable<string> creatureTypeFilters)
         {
             if (creatureTypeFilters.Any() == false)
                 return true;
@@ -75,12 +59,12 @@ namespace EncounterGen.Domain.Generators
             return creatureNames.Distinct();
         }
 
-        public bool EncounterIsValid(Encounter encounter, params string[] creatureTypeFilters)
+        public bool EncounterIsValid(Encounter encounter, IEnumerable<string> creatureTypeFilters)
         {
             var creatureNames = encounter.Creatures.Select(c => c.Type.Name);
             var level = amountSelector.SelectActualEncounterLevel(encounter);
 
-            return LevelIsValid(level) && EncounterIsValid(creatureNames, creatureTypeFilters);
+            return EncounterSpecifications.LevelIsValid(level) && EncounterIsValid(creatureNames, creatureTypeFilters);
         }
     }
 }

@@ -71,19 +71,25 @@
     <item>Lion</item>
     <item>Livestock</item>
     <item>Lizard</item>
+    <item>Manta ray</item>
     <item>Monitor lizard</item>
     <item>Monkey</item>
     <item>Mule</item>
+    <item>Octopus</item>
     <item>Owl</item>
     <item>Pony</item>
+    <item>Porpoise</item>
     <item>Rat</item>
     <item>Raven</item>
     <item>Rhinoceras</item>
     <item>Roc</item>
+    <item>Shark</item>
+    <item>Squid</item>
     <item>Tiger</item>
     <item>Toad</item>
     <item>Viper snake</item>
     <item>Weasel</item>
+    <item>Whale</item>
     <item>Wolf</item>
     <item>Wolverine</item>
   </collection>
@@ -101,6 +107,11 @@
     <entry>Ape</entry>
     <item>Ape</item>
     <item>Dire ape</item>
+  </collection>
+  <collection>
+    <entry>Aquatic</entry>
+    <item>Gargoyle$Kapoacinth$</item>
+    <item>Ghoul$Lacedon$</item>
   </collection>
   <collection>
     <entry>Archon</entry>
@@ -239,6 +250,7 @@
     <item>Giant fire beetle$Celestial creature$</item>
     <item>Monkey$Celestial creature$</item>
     <item>Owl$Celestial creature$</item>
+    <item>Porpoise$Celestial creature$</item>
   </collection>
   <collection>
     <entry>Centaur</entry>
@@ -368,6 +380,7 @@
     <item>Character[18]#Vampire#</item>
     <item>Character[19]#Vampire#</item>
     <item>Character[20]#Vampire#</item>
+    <item>Vampire spawn</item>
   </collection>
   <collection>
     <entry>Character(Adventurer)</entry>
@@ -1142,6 +1155,15 @@
     <item>Polar bear</item>
   </collection>
   <collection>
+    <entry>ColdAquatic</entry>
+    <item>Shark</item>
+    <item>Troll$Scrag$</item>
+    <item>Whale$Orca$</item>
+  </collection>
+  <collection>
+    <entry>ColdCivilized</entry>
+  </collection>
+  <collection>
     <entry>ColdDesert</entry>
   </collection>
   <collection>
@@ -1246,14 +1268,16 @@
     <item>Dwarf</item>
     <item>Elemental</item>
     <item>Elf</item>
+    <item>Elf$Aquatic$</item>
     <item>Fey</item>
     <item>Fiendish creature</item>
     <item>Formian</item>
     <item>Gargoyle</item>
+    <item>Gargoyle$Kapoacinth$</item>
     <item>Genie</item>
     <item>Ghaele</item>
-    <item>Ghast</item>
     <item>Ghoul</item>
+    <item>Ghoul$Lacedon$</item>
     <item>Giant</item>
     <item>Gnoll</item>
     <item>Gnome</item>
@@ -1271,11 +1295,13 @@
     <item>Leonal</item>
     <item>Lillend</item>
     <item>Lizardfolk</item>
+    <item>Locathah</item>
     <item>Lycanthrope</item>
     <item>Magical Beast</item>
     <item>Medusa</item>
     <item>Mephit</item>
     <item>Mephit[3]</item>
+    <item>Merfolk</item>
     <item>Minotaur</item>
     <item>Mohrg</item>
     <item>Mummy</item>
@@ -1285,12 +1311,15 @@
     <item>Rakshasa</item>
     <item>Rast</item>
     <item>Ravid</item>
+    <item>Sahuagin</item>
     <item>Salamander</item>
     <item>Scorpionfolk</item>
     <item>Skeleton</item>
     <item>Slaad</item>
     <item>Tiefling</item>
     <item>Titan</item>
+    <item>Tojanida</item>
+    <item>Triton</item>
     <item>Troglodyte</item>
     <item>Vargouille</item>
     <item>Vermin</item>
@@ -1345,6 +1374,7 @@
   <collection>
     <entry>Dinosaur</entry>
     <item>Deinonychus</item>
+    <item>Elasmosaurus</item>
     <item>Megaraptor</item>
     <item>Triceratops</item>
     <item>Tyrannosaurus</item>
@@ -1418,6 +1448,8 @@
     <item>Slaad</item>
     <item>Succubus</item>
     <item>Titan</item>
+    <item>Tojanida</item>
+    <item>Triton</item>
     <item>Vargouille</item>
     <item>Vermin</item>
     <item>Vrock</item>
@@ -1470,7 +1502,6 @@
   </collection>
   <collection>
     <entry>Dungeon</entry>
-    <item>Aboleth</item>
     <item>Ankheg</item>
     <item>Ape</item>
     <item>Aranea</item>
@@ -1610,6 +1641,15 @@
     <item>Elf$Noncombatant$</item>
   </collection>
   <collection>
+    <entry>Elf$Aquatic$</entry>
+    <item>Character(Captain)[7]{Aquatic Elf}@Warrior@</item>
+    <item>Character(Leader)[1d4+2]{Aquatic Elf}@Warrior@</item>
+    <item>Character(Lieutenant)[5]{Aquatic Elf}@Warrior@</item>
+    <item>Character(Sergeant)[3]{Aquatic Elf}@Warrior@</item>
+    <item>Character[1]{Aquatic Elf}@Warrior@</item>
+    <item>Elf$Aquatic$Noncombatant$$</item>
+  </collection>
+  <collection>
     <entry>Fey</entry>
     <item>Dryad</item>
     <item>Nymph</item>
@@ -1646,7 +1686,6 @@
     <item>Wolf</item>
     <item>Eagle</item>
     <item>Owl</item>
-    <item>Sprite</item>
     <item>Kobold</item>
     <item>Stirge</item>
   </collection>
@@ -1682,6 +1721,11 @@
     <item>Janni</item>
   </collection>
   <collection>
+    <entry>Ghoul</entry>
+    <item>Ghoul</item>
+    <item>Ghoul$Ghast$</item>
+  </collection>
+  <collection>
     <entry>Giant</entry>
     <item>Ettin</item>
     <item>Cloud giant</item>
@@ -1691,8 +1735,10 @@
     <item>Stone giant</item>
     <item>Storm giant</item>
     <item>Ogre</item>
+    <item>Ogre$Merrow$</item>
     <item>Ogre mage</item>
     <item>Troll</item>
+    <item>Troll$Scrag$</item>
   </collection>
   <collection>
     <entry>Giant ant</entry>
@@ -1841,6 +1887,7 @@
     <item>Duergar</item>
     <item>Dwarf</item>
     <item>Elf</item>
+    <item>Elf$Aquatic$</item>
     <item>Gnoll</item>
     <item>Gnome</item>
     <item>Goblin</item>
@@ -1848,6 +1895,8 @@
     <item>Hobgoblin</item>
     <item>Kobold</item>
     <item>Lizardfolk</item>
+    <item>Locathah</item>
+    <item>Merfolk</item>
     <item>Orc</item>
     <item>Svirfneblin</item>
     <item>Tiefling</item>
@@ -1918,6 +1967,15 @@
     <item>Character(Lieutenant)[1d4+2]{Lizardfolk}</item>
   </collection>
   <collection>
+    <entry>Locathah</entry>
+    <item>Character[1]{Locathah}@Warrior@</item>
+    <item>Character(Sergeant)[3]{Locathah}@Warrior@</item>
+    <item>Character(Leader)[1d4+2]{Locathah}@Warrior@</item>
+    <item>Character(Lieutenant)[5]{Locathah}@Warrior@</item>
+    <item>Character(Captain)[7]{Locathah}@Warrior@</item>
+    <item>Locathah$Noncombatant$</item>
+  </collection>
+  <collection>
     <entry>Locust</entry>
     <item>Locust swarm</item>
   </collection>
@@ -1966,6 +2024,7 @@
     <item>Hieracosphinx</item>
     <item>Hippogriff</item>
     <item>Hydra</item>
+    <item>Kraken</item>
     <item>Krenshar</item>
     <item>Lamia</item>
     <item>Lammasu</item>
@@ -1977,6 +2036,7 @@
     <item>Razor boar</item>
     <item>Remorhaz</item>
     <item>Roper</item>
+    <item>Sea cat</item>
     <item>Shocker lizard</item>
     <item>Spider eater</item>
     <item>Stirge</item>
@@ -2008,6 +2068,15 @@
     <item>Mephit(Water)</item>
   </collection>
   <collection>
+    <entry>Merfolk</entry>
+    <item>Character[1]{Merfolk}@Warrior@</item>
+    <item>Character(Lieutenant)[3]{Merfolk}@Warrior@</item>
+    <item>Character(Leader)[1d4+2]{Merfolk}@Warrior@</item>
+    <item>Character(Sergeant)[3]{Merfolk}@Warrior@</item>
+    <item>Character(Lieutenant)[5]{Merfolk}@Warrior@</item>
+    <item>Character(Captain)[7]{Merfolk}@Warrior@</item>
+  </collection>
+  <collection>
     <entry>Mind flayer</entry>
     <item>Mind flayer</item>
     <item>Character[9]{Mind Flayer}@Sorcerer@</item>
@@ -2028,12 +2097,14 @@
     <item>Derro</item>
     <item>Doppelganger</item>
     <item>Gargoyle</item>
+    <item>Gargoyle$Kapoacinth$</item>
     <item>Grimlock</item>
     <item>Hag</item>
     <item>Harpy</item>
     <item>Lycanthrope</item>
     <item>Medusa</item>
     <item>Minotaur</item>
+    <item>Sahuagin</item>
     <item>Scorpionfolk</item>
     <item>Yuan-ti</item>
   </collection>
@@ -2114,9 +2185,19 @@
     <item>Nightwing</item>
   </collection>
   <collection>
+    <entry>Octopus</entry>
+    <item>Octopus</item>
+    <item>Giant octopus</item>
+  </collection>
+  <collection>
     <entry>Ogre</entry>
     <item>Ogre</item>
     <item>Character[4]{Ogre}@Barbarian@</item>
+  </collection>
+  <collection>
+    <entry>Ogre$Merrow$</entry>
+    <item>Ogre$Merrow$</item>
+    <item>Character[4]{Merrow}@Barbarian@</item>
   </collection>
   <collection>
     <entry>Ooze</entry>
@@ -2178,6 +2259,8 @@
     <item>Shadow mastiff</item>
     <item>Slaad</item>
     <item>Titan</item>
+    <item>Tojanida</item>
+    <item>Triton</item>
     <item>Vargouille</item>
     <item>Xill</item>
     <item>Xorn</item>
@@ -2265,6 +2348,17 @@
     <item>Dominated creature[16]</item>
   </collection>
   <collection>
+    <entry>Sahuagin</entry>
+    <item>Sahuagin</item>
+    <item>Character(Baron)[1d3+5]{Sahuagin}</item>
+    <item>Character(Chieftan)[4]{Sahuagin}</item>
+    <item>Character(Guard)[4]{Sahuagin}</item>
+    <item>Character(Lieutenant)[3]{Sahuagin}</item>
+    <item>Sahuagin$Noncombatant$</item>
+    <item>Character(Priest)[7]{Sahuagin}@Cleric@</item>
+    <item>Character(Underpriest)[1d4+2]{Sahuagin}@Cleric@</item>
+  </collection>
+  <collection>
     <entry>Salamander</entry>
     <item>Salamander$Flamebrother$</item>
     <item>Salamander$Average$</item>
@@ -2286,6 +2380,13 @@
     <entry>Shadow</entry>
     <item>Shadow</item>
     <item>Shadow$Greater$</item>
+  </collection>
+  <collection>
+    <entry>Shark</entry>
+    <item>Dire shark</item>
+    <item>Shark$Medium$</item>
+    <item>Shark$Large$</item>
+    <item>Shark$Huge$</item>
   </collection>
   <collection>
     <entry>Silver dragon</entry>
@@ -2329,6 +2430,11 @@
     <item>Pixie</item>
   </collection>
   <collection>
+    <entry>Squid</entry>
+    <item>Squid</item>
+    <item>Giant squid</item>
+  </collection>
+  <collection>
     <entry>Stone giant</entry>
     <item>Stone giant</item>
     <item>Stone giant$Noncombatant$</item>
@@ -2366,13 +2472,31 @@
     <item>Hobgoblin</item>
     <item>Lammasu</item>
     <item>Manticore</item>
-    <item>Naga</item>
     <item>Monstrous scorpion</item>
     <item>Viper snake</item>
     <item>Monstrous spider</item>
     <item>Spider eater</item>
     <item>Giant wasp</item>
     <item>Yuan-ti</item>
+  </collection>
+  <collection>
+    <entry>TemperateAquatic</entry>
+    <item>Dragon turtle</item>
+    <item>Elf$Aquatic$</item>
+    <item>Kraken</item>
+    <item>Merfolk</item>
+    <item>Naga$Water$</item>
+    <item>Nixie</item>
+    <item>Ogre$Merrow$</item>
+    <item>Porpoise</item>
+    <item>Sea cat</item>
+    <item>Sea hag</item>
+    <item>Squid</item>
+    <item>Triton</item>
+    <item>Whale$Cachalot$</item>
+  </collection>
+  <collection>
+    <entry>TemperateCivilized</entry>
   </collection>
   <collection>
     <entry>TemperateDesert</entry>
@@ -2402,11 +2526,13 @@
     <item>Giant praying mantis</item>
     <item>Giant stag beetle</item>
     <item>Green hag</item>
+    <item>Grig</item>
     <item>Hawk</item>
     <item>Krenshar</item>
     <item>Nymph</item>
     <item>Owlbear</item>
     <item>Pegasus</item>
+    <item>Pixie</item>
     <item>Pseudodragon</item>
     <item>Raven</item>
     <item>Razor boar</item>
@@ -2433,6 +2559,7 @@
     <item>Griffon</item>
     <item>Gnome</item>
     <item>Hippogriff</item>
+    <item>Naga$Dark$</item>
     <item>Ogre</item>
     <item>Orc</item>
     <item>Tendriculos</item>
@@ -2448,7 +2575,7 @@
     <item>Green hag</item>
     <item>Lizardfolk</item>
     <item>Medusa</item>
-    <item>Sea hag</item>
+    <item>Naga$Spirit$</item>
     <item>Shambling mound</item>
     <item>Tendriculos</item>
     <item>Toad</item>
@@ -2484,6 +2611,7 @@
     <item>Horse</item>
     <item>Krenshar</item>
     <item>Locust</item>
+    <item>Naga$Guardian$</item>
     <item>Pony</item>
     <item>Tiefling</item>
     <item>Weasel</item>
@@ -2501,6 +2629,12 @@
     <item>Weretiger</item>
   </collection>
   <collection>
+    <entry>Tojanida</entry>
+    <item>Tojanida$Juvenile$</item>
+    <item>Tojanida$Adult$</item>
+    <item>Tojanida$Elder$</item>
+  </collection>
+  <collection>
     <entry>Troglodyte</entry>
     <item>Troglodyte</item>
     <item>Troglodyte$Noncombatant$</item>
@@ -2509,6 +2643,11 @@
     <entry>Troll</entry>
     <item>Troll</item>
     <item>Character(Hunter)[6]{Troll}@Ranger@</item>
+  </collection>
+  <collection>
+    <entry>Troll$Scrag$</entry>
+    <item>Troll$Scrag$</item>
+    <item>Character(Hunter)[6]{Scrag}@Ranger@</item>
   </collection>
   <collection>
     <entry>Umber hulk</entry>
@@ -2528,15 +2667,14 @@
     <item>Character#Lich#</item>
     <item>Character#Vampire#</item>
     <item>Devourer</item>
-    <item>Ghast</item>
     <item>Ghoul</item>
+    <item>Ghoul$Lacedon$</item>
     <item>Mummy</item>
     <item>Mohrg</item>
     <item>Nightshade</item>
     <item>Shadow</item>
     <item>Skeleton</item>
     <item>Spectre</item>
-    <item>Vampire spawn</item>
     <item>Wight</item>
     <item>Wraith</item>
     <item>Zombie</item>
@@ -2604,11 +2742,22 @@
     <item>Monstrous centipede</item>
     <item>Monstrous scorpion</item>
     <item>Monstrous spider</item>
-    <item>Naga</item>
     <item>Spider eater</item>
     <item>Spider swarm</item>
     <item>Viper snake</item>
     <item>Yuan-ti</item>
+  </collection>
+  <collection>
+    <entry>WarmAquatic</entry>
+    <item>Elasmosaurus</item>
+    <item>Locathah</item>
+    <item>Manta ray</item>
+    <item>Octopus</item>
+    <item>Sahuagin</item>
+    <item>Whale$Baleen$</item>
+  </collection>
+  <collection>
+    <entry>WarmCivilized</entry>
   </collection>
   <collection>
     <entry>WarmDesert</entry>
@@ -2737,6 +2886,12 @@
     <entry>Werewolf</entry>
     <item>Werewolf</item>
     <item>Character(Lord)[10]#Werewolf#@Fighter@</item>
+  </collection>
+  <collection>
+    <entry>Whale</entry>
+    <item>Whale$Baleen$</item>
+    <item>Whale$Cachalot$</item>
+    <item>Whale$Orca$</item>
   </collection>
   <collection>
     <entry>White dragon</entry>

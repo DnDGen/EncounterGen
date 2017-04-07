@@ -38,10 +38,12 @@
         public const string Range3To9 = "2d4+1";
         public const string Range3To10 = "1d8+2";
         public const string Range3To13 = "2d6+1";
+        public const string Range3To20 = "17d2-14";
         public const string Range4 = "4";
         public const string Range4To5 = "1d2+3";
         public const string Range4To6 = "1d3+3";
         public const string Range4To7 = "1d4+3";
+        public const string Range4To8 = "2d3+2";
         public const string Range4To9 = "1d6+3";
         public const string Range4To10 = "2d4+2";
         public const string Range4To16 = "4d4";
@@ -126,6 +128,7 @@
         public const string Range30To300 = "30d10";
         public const string Range40To400 = "40d10";
         public const string Range45To150 = "15d8+30";
+        public const string Range70To160 = "10d10+60";
         public const string Range100To400 = "60d6+40";
     }
 }

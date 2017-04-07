@@ -1,5 +1,6 @@
 ﻿using EncounterGen.Common;
 using EncounterGen.Domain.Tables;
+using EncounterGen.Generators;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,55 +20,63 @@ namespace EncounterGen.Domain.Selectors.Collections
             this.encounterSelector = encounterSelector;
         }
 
-        public IEnumerable<Dictionary<string, string>> SelectAllWeightedFrom(int level, string environment, string temperature, string timeOfDay, params string[] creatureTypeFilters)
+        public IEnumerable<Dictionary<string, string>> SelectAllWeightedFrom(EncounterSpecifications encounterSpecifications)
         {
-            var weightedEncounters = GetWeightedEncounters(level, environment, temperature, timeOfDay, creatureTypeFilters);
+            var weightedEncounters = GetWeightedEncounters(encounterSpecifications);
             var weightedEncounterTypesAndAmounts = weightedEncounters.Select(e => encounterSelector.SelectCreaturesAndAmountsFrom(e));
 
             return weightedEncounterTypesAndAmounts;
         }
 
-        public Dictionary<string, string> SelectRandomFrom(int level, string environment, string temperature, string timeOfDay, params string[] creatureTypeFilters)
+        public Dictionary<string, string> SelectRandomFrom(EncounterSpecifications encounterSpecifications)
         {
-            var weightedEncounters = SelectAllWeightedFrom(level, environment, temperature, timeOfDay, creatureTypeFilters);
+            var weightedEncounters = SelectAllWeightedFrom(encounterSpecifications);
 
             if (!weightedEncounters.Any())
-                throw new ArgumentException($"No valid level {level} encounters exist for {temperature} {environment} {timeOfDay}");
+                throw new ArgumentException($"No valid encounters exist for {encounterSpecifications.Description}");
 
             return collectionSelector.SelectRandomFrom(weightedEncounters);
         }
 
-        private IEnumerable<string> GetWeightedEncounters(int level, string environment, string temperature, string timeOfDay, params string[] creatureTypeFilters)
+        private IEnumerable<string> GetWeightedEncounters(EncounterSpecifications encounterSpecifications)
         {
-            var isCivilized = environment == EnvironmentConstants.Civilized;
-
-            if (isCivilized)
+            if (encounterSpecifications.Environment == EnvironmentConstants.Dungeon)
             {
-                temperature = string.Empty;
-            }
-            else if (environment == EnvironmentConstants.Dungeon)
-            {
-                timeOfDay = string.Empty;
+                encounterSpecifications.TimeOfDay = EnvironmentConstants.TimesOfDay.Night;
             }
 
-            var magicEncounters = GetValidEncountersFromCreatureGroup(GroupConstants.Magic, level, timeOfDay, isCivilized, creatureTypeFilters);
-            var dragonEncounters = GetValidEncountersFromCreatureGroup(CreatureConstants.Types.Dragon, level, timeOfDay, isCivilized, creatureTypeFilters);
-            var landEncounters = GetValidEncountersFromCreatureGroup(GroupConstants.Land, level, timeOfDay, isCivilized, creatureTypeFilters);
-            var temperatureEncounters = GetValidEncountersFromCreatureGroup(temperature, level, timeOfDay, isCivilized, creatureTypeFilters);
-            var environmentEncounters = GetValidEncountersFromCreatureGroup(environment, level, timeOfDay, isCivilized, creatureTypeFilters);
+            var magicEncounters = GetValidEncountersFromCreatureGroup(GroupConstants.Magic, encounterSpecifications);
+            var dragonEncounters = GetValidEncountersFromCreatureGroup(CreatureConstants.Types.Dragon, encounterSpecifications);
+            var landEncounters = GetValidEncountersFromCreatureGroup(GroupConstants.Land, encounterSpecifications);
+            var temperatureEncounters = GetValidEncountersFromCreatureGroup(encounterSpecifications.Temperature, encounterSpecifications);
+            var environmentEncounters = GetValidEncountersFromCreatureGroup(encounterSpecifications.Environment, encounterSpecifications);
 
-            var specificEnvironmentEncounters = Enumerable.Empty<string>();
-            var specificEnvironment = temperature + environment;
+            var specificEnvironment = encounterSpecifications.Temperature + encounterSpecifications.Environment;
+            var specificEnvironmentEncounters = GetValidEncountersFromCreatureGroup(specificEnvironment, encounterSpecifications);
 
-            if (specificEnvironment != environment && specificEnvironment != temperature)
-                specificEnvironmentEncounters = GetValidEncountersFromCreatureGroup(specificEnvironment, level, timeOfDay, isCivilized, creatureTypeFilters);
+            var aquaticEncounters = GetValidEncountersFromCreatureGroup(EnvironmentConstants.Aquatic, encounterSpecifications);
+            var specificAquaticEnvironment = encounterSpecifications.Temperature + EnvironmentConstants.Aquatic;
+            var specificAquaticEncounters = GetValidEncountersFromCreatureGroup(specificAquaticEnvironment, encounterSpecifications);
 
             //INFO: This is done to remove duplicate encounters from these lists
-            var allEncounters = magicEncounters.Union(dragonEncounters)
-                .Union(landEncounters)
+            var allEncounters = magicEncounters
                 .Union(environmentEncounters)
-                .Union(temperatureEncounters)
                 .Union(specificEnvironmentEncounters);
+
+            if (encounterSpecifications.Environment != EnvironmentConstants.Aquatic)
+            {
+                allEncounters = allEncounters
+                    .Union(dragonEncounters)
+                    .Union(landEncounters)
+                    .Union(temperatureEncounters);
+            }
+
+            if (encounterSpecifications.AllowAquatic)
+            {
+                allEncounters = allEncounters
+                    .Union(aquaticEncounters)
+                    .Union(specificAquaticEncounters);
+            }
 
             var weightedEncounters = new List<string>();
             weightedEncounters.AddRange(allEncounters);
@@ -76,7 +85,15 @@ namespace EncounterGen.Domain.Selectors.Collections
             weightedEncounters.AddRange(commonEncounters);
 
             weightedEncounters.AddRange(environmentEncounters);
-            weightedEncounters.AddRange(temperatureEncounters);
+
+            if (encounterSpecifications.Environment != EnvironmentConstants.Aquatic)
+            {
+                weightedEncounters.AddRange(temperatureEncounters);
+
+                if (encounterSpecifications.AllowAquatic)
+                    weightedEncounters.AddRange(specificAquaticEncounters);
+            }
+
             weightedEncounters.AddRange(specificEnvironmentEncounters);
             weightedEncounters.AddRange(specificEnvironmentEncounters);
 
@@ -88,29 +105,28 @@ namespace EncounterGen.Domain.Selectors.Collections
             return collectionSelector.ExplodeInto(TableNameConstants.CreatureGroups, creatureGroup, TableNameConstants.EncounterGroups);
         }
 
-        private IEnumerable<string> GetValidEncountersFromCreatureGroup(string creatureGroup, int level, string timeOfDay, bool isCivilized, params string[] creatureTypeFilters)
+        private IEnumerable<string> GetValidEncountersFromCreatureGroup(string creatureGroup, EncounterSpecifications specifications)
         {
             var encounters = GetEncountersFromCreatureGroup(creatureGroup);
-            var validEncounters = GetValidEncounters(encounters, level, timeOfDay, creatureTypeFilters);
+            var validEncounters = GetValidEncounters(encounters, specifications);
 
-            if (isCivilized)
+            if (specifications.Environment == EnvironmentConstants.Civilized)
             {
-                var wildlife = GetValidEncountersFromCreatureGroup(GroupConstants.Wilderness, level, timeOfDay, false, creatureTypeFilters);
+                var wildlife = GetEncountersFromCreatureGroup(GroupConstants.Wilderness);
                 validEncounters = validEncounters.Except(wildlife);
             }
 
             return validEncounters;
         }
 
-        private IEnumerable<string> GetValidEncounters(IEnumerable<string> source, int level, string timeOfDay, params string[] creatureTypeFilters)
+        private IEnumerable<string> GetValidEncounters(IEnumerable<string> source, EncounterSpecifications specifications)
         {
-            var validEncounters = source.Where(e => amountSelector.SelectAverageEncounterLevel(e) == level);
-            var allowedCreatureNames = GetAllowedCreatureNames(creatureTypeFilters);
+            var validEncounters = source.Where(e => amountSelector.SelectAverageEncounterLevel(e) == specifications.Level);
+            var allowedCreatureNames = GetAllowedCreatureNames(specifications.CreatureTypeFilters);
             validEncounters = validEncounters.Where(e => EncounterIsValid(e, allowedCreatureNames));
 
-            var timeOfDayEncounters = GetEncountersFromCreatureGroup(timeOfDay);
-            if (timeOfDayEncounters.Any())
-                validEncounters = validEncounters.Intersect(timeOfDayEncounters);
+            var timeOfDayEncounters = GetEncountersFromCreatureGroup(specifications.TimeOfDay);
+            validEncounters = validEncounters.Intersect(timeOfDayEncounters);
 
             return validEncounters;
         }

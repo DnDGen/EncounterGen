@@ -33,13 +33,19 @@ namespace EncounterGen.Tests.Unit.Generators
             encounter.Creatures = new[] { new Creature(), new Creature() };
             encounter.Characters = new[] { new Character(), new Character(), new Character() };
 
-            mockInternalGenerator.Setup(g => g.Generate("environment", 42, "temp", "time of day", "filter")).Returns(encounter);
+            var specifications = new EncounterSpecifications();
+            specifications.Environment = "environment";
+            specifications.Level = 42;
+            specifications.Temperature = "temperature";
+            specifications.TimeOfDay = "time of day";
 
-            var generatedEncounter = eventDecorator.Generate("environment", 42, "temp", "time of day", "filter");
+            mockInternalGenerator.Setup(g => g.Generate(specifications)).Returns(encounter);
+
+            var generatedEncounter = eventDecorator.Generate(specifications);
 
             Assert.That(generatedEncounter, Is.EqualTo(encounter));
             mockEventQueue.Verify(q => q.Enqueue(It.IsAny<string>(), It.IsAny<string>()), Times.Exactly(2));
-            mockEventQueue.Verify(q => q.Enqueue("EncounterGen", "Beginning generation of level 42 encounter in temp environment time of day"), Times.Once);
+            mockEventQueue.Verify(q => q.Enqueue("EncounterGen", $"Beginning generation of encounter in {specifications.Description}"), Times.Once);
             mockEventQueue.Verify(q => q.Enqueue("EncounterGen", "Completed generation of Overpowering encounter with 2 creatures and 3 characters"), Times.Once);
         }
     }

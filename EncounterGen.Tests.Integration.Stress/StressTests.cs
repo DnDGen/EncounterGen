@@ -84,10 +84,13 @@ namespace EncounterGen.Tests.Integration.Stress
             message = BuildMessage("EncounterGen events complete", events.Count(e => e.Source == "EncounterGen"), Stopwatch.Elapsed);
             Console.WriteLine(message);
 
-            //INFO: We want to truncate the events to just a summary per second
-            var truncatedEvents = events.GroupBy(e => e.When.Second).Select(g => g.First());
+            //INFO: Get the 10 most recent events for EncounterGen
+            events = events.Where(e => e.Source == "EncounterGen");
+            events = events.OrderByDescending(e => e.When);
+            events = events.Take(10);
+            events = events.OrderBy(e => e.When);
 
-            foreach (var genEvent in truncatedEvents)
+            foreach (var genEvent in events)
                 Console.WriteLine($"[{genEvent.When.ToShortTimeString()}] {genEvent.Source}: {genEvent.Message}");
 
             Stopwatch.Reset();

@@ -39,10 +39,12 @@ namespace EncounterGen.Tests.Unit.Selectors
         [TestCase(AmountConstants.Range3To9, 3, 9)]
         [TestCase(AmountConstants.Range3To10, 3, 10)]
         [TestCase(AmountConstants.Range3To13, 3, 13)]
+        [TestCase(AmountConstants.Range3To20, 3, 20)]
         [TestCase(AmountConstants.Range4, 4, 4)]
         [TestCase(AmountConstants.Range4To5, 4, 5)]
         [TestCase(AmountConstants.Range4To6, 4, 6)]
         [TestCase(AmountConstants.Range4To7, 4, 7)]
+        [TestCase(AmountConstants.Range4To8, 4, 8)]
         [TestCase(AmountConstants.Range4To9, 4, 9)]
         [TestCase(AmountConstants.Range4To10, 4, 10)]
         [TestCase(AmountConstants.Range4To16, 4, 16)]
@@ -127,6 +129,7 @@ namespace EncounterGen.Tests.Unit.Selectors
         [TestCase(AmountConstants.Range30To300, 30, 300)]
         [TestCase(AmountConstants.Range40To400, 40, 400)]
         [TestCase(AmountConstants.Range45To150, 45, 150)]
+        [TestCase(AmountConstants.Range70To160, 70, 160)]
         [TestCase(AmountConstants.Range100To400, 100, 400)]
         public void AmountConstant(string constant, int lower, int upper)
         {

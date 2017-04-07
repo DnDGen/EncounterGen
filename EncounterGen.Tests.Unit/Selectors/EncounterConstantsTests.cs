@@ -1718,6 +1718,9 @@ namespace EncounterGen.Tests.Unit.Selectors
         [TestCase(EncounterConstants.Efreeti_Solitary, CreatureConstants.Efreeti, AmountConstants.Range1)]
         [TestCase(EncounterConstants.Efreeti_Company, CreatureConstants.Efreeti, AmountConstants.Range2To4)]
         [TestCase(EncounterConstants.Efreeti_Band, CreatureConstants.Efreeti, AmountConstants.Range6To15)]
+        [TestCase(EncounterConstants.Elasmosaurus_Solitary, CreatureConstants.Elasmosaurus, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Elasmosaurus_Pair, CreatureConstants.Elasmosaurus, AmountConstants.Range2)]
+        [TestCase(EncounterConstants.Elasmosaurus_Herd, CreatureConstants.Elasmosaurus, AmountConstants.Range5To8)]
         [TestCase(EncounterConstants.Elemental_Air_Small_Solitary, CreatureConstants.Elemental_Air_Small, AmountConstants.Range1)]
         [TestCase(EncounterConstants.Elemental_Air_Medium_Solitary, CreatureConstants.Elemental_Air_Medium, AmountConstants.Range1)]
         [TestCase(EncounterConstants.Elemental_Air_Large_Solitary, CreatureConstants.Elemental_Air_Large, AmountConstants.Range1)]
@@ -1753,6 +1756,15 @@ namespace EncounterGen.Tests.Unit.Selectors
             CreatureConstants.Elf_Sergeant, AmountConstants.Range3To10,
             CreatureConstants.Elf_Lieutenant, AmountConstants.Range5,
             CreatureConstants.Elf_Captain, AmountConstants.Range3)]
+        [TestCase(EncounterConstants.Elf_Aquatic_Squad, CreatureConstants.Elf_Aquatic_Warrior, AmountConstants.Range2To4)]
+        [TestCase(EncounterConstants.Elf_Aquatic_Company, CreatureConstants.Elf_Aquatic_Warrior, AmountConstants.Range11To20,
+            CreatureConstants.Elf_Aquatic_Sergeant, AmountConstants.Range2,
+            CreatureConstants.Elf_Aquatic_Leader, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Elf_Aquatic_Band, CreatureConstants.Elf_Aquatic_Warrior, AmountConstants.Range30To100,
+            CreatureConstants.Elf_Aquatic_Noncombatant, AmountConstants.Range6To20,
+            CreatureConstants.Elf_Aquatic_Sergeant, AmountConstants.Range3To10,
+            CreatureConstants.Elf_Aquatic_Lieutenant, AmountConstants.Range5,
+            CreatureConstants.Elf_Aquatic_Captain, AmountConstants.Range3)]
         [TestCase(EncounterConstants.Erinyes_Solitary, CreatureConstants.Erinyes, AmountConstants.Range1)]
         [TestCase(EncounterConstants.EtherealFilcher_Solitary, CreatureConstants.EtherealFilcher, AmountConstants.Range1)]
         [TestCase(EncounterConstants.EtherealMarauder_Solitary, CreatureConstants.EtherealMarauder, AmountConstants.Range1)]
@@ -1811,6 +1823,9 @@ namespace EncounterGen.Tests.Unit.Selectors
         [TestCase(EncounterConstants.Gargoyle_Solitary, CreatureConstants.Gargoyle, AmountConstants.Range1)]
         [TestCase(EncounterConstants.Gargoyle_Pair, CreatureConstants.Gargoyle, AmountConstants.Range2)]
         [TestCase(EncounterConstants.Gargoyle_Wing, CreatureConstants.Gargoyle, AmountConstants.Range5To16)]
+        [TestCase(EncounterConstants.Gargoyle_Kapoacinth_Solitary, CreatureConstants.Gargoyle_Kapoacinth, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Gargoyle_Kapoacinth_Pair, CreatureConstants.Gargoyle_Kapoacinth, AmountConstants.Range2)]
+        [TestCase(EncounterConstants.Gargoyle_Kapoacinth_Wing, CreatureConstants.Gargoyle_Kapoacinth, AmountConstants.Range5To16)]
         [TestCase(EncounterConstants.GelatinousCube_Solitary, CreatureConstants.GelatinousCube, AmountConstants.Range1)]
         [TestCase(EncounterConstants.Ghaele_Solitary, CreatureConstants.Ghaele, AmountConstants.Range1)]
         [TestCase(EncounterConstants.Ghaele_Pair, CreatureConstants.Ghaele, AmountConstants.Range2)]
@@ -1818,9 +1833,12 @@ namespace EncounterGen.Tests.Unit.Selectors
         [TestCase(EncounterConstants.Ghoul_Solitary, CreatureConstants.Ghoul, AmountConstants.Range1)]
         [TestCase(EncounterConstants.Ghoul_Gang, CreatureConstants.Ghoul, AmountConstants.Range2To4)]
         [TestCase(EncounterConstants.Ghoul_Pack, CreatureConstants.Ghoul, AmountConstants.Range7To12)]
-        [TestCase(EncounterConstants.Ghast_Solitary, CreatureConstants.Ghast, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.Ghast_Gang, CreatureConstants.Ghast, AmountConstants.Range2To4)]
-        [TestCase(EncounterConstants.Ghast_Pack, CreatureConstants.Ghast, AmountConstants.Range2To4,
+        [TestCase(EncounterConstants.Ghoul_Lacedon_Solitary, CreatureConstants.Ghoul_Lacedon, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Ghoul_Lacedon_Gang, CreatureConstants.Ghoul_Lacedon, AmountConstants.Range2To4)]
+        [TestCase(EncounterConstants.Ghoul_Lacedon_Pack, CreatureConstants.Ghoul_Lacedon, AmountConstants.Range7To12)]
+        [TestCase(EncounterConstants.Ghast_Solitary, CreatureConstants.Ghoul_Ghast, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Ghast_Gang, CreatureConstants.Ghoul_Ghast, AmountConstants.Range2To4)]
+        [TestCase(EncounterConstants.Ghast_Pack, CreatureConstants.Ghoul_Ghast, AmountConstants.Range2To4,
             CreatureConstants.Ghoul, AmountConstants.Range7To12)]
         [TestCase(EncounterConstants.Ghost_Level1_Solitary, CreatureConstants.Ghost_Level1, AmountConstants.Range1)]
         [TestCase(EncounterConstants.Ghost_Level2_Solitary, CreatureConstants.Ghost_Level2, AmountConstants.Range1)]
@@ -2208,6 +2226,7 @@ namespace EncounterGen.Tests.Unit.Selectors
             CreatureConstants.Kobold_Leader_6thTo8th, AmountConstants.Range1,
             CreatureConstants.Weasel_Dire, AmountConstants.Range5To8)]
         [TestCase(EncounterConstants.Kolyarut_Solitary, CreatureConstants.Kolyarut, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Kraken_Solitary, CreatureConstants.Kraken, AmountConstants.Range1)]
         [TestCase(EncounterConstants.Krenshar_Solitary, CreatureConstants.Krenshar, AmountConstants.Range1)]
         [TestCase(EncounterConstants.Krenshar_Pair, CreatureConstants.Krenshar, AmountConstants.Range2)]
         [TestCase(EncounterConstants.Krenshar_Pride, CreatureConstants.Krenshar, AmountConstants.Range6To10)]
@@ -2313,12 +2332,23 @@ namespace EncounterGen.Tests.Unit.Selectors
         [TestCase(EncounterConstants.Lizardfolk_Tribe, CreatureConstants.Lizardfolk, AmountConstants.Range30To60,
             CreatureConstants.Lizardfolk_Lieutenant, AmountConstants.Range2,
             CreatureConstants.Lizardfolk_Leader_4thTo10th, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Locathah_Company, CreatureConstants.Locathah_Warrior, AmountConstants.Range2To4)]
+        [TestCase(EncounterConstants.Locathah_Patrol, CreatureConstants.Locathah_Warrior, AmountConstants.Range11To20,
+            CreatureConstants.Locathah_Sergeant, AmountConstants.Range2,
+            CreatureConstants.Locathah_Leader, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Locathah_Tribe, CreatureConstants.Locathah_Warrior, AmountConstants.Range30To100,
+            CreatureConstants.Locathah_Noncombatant, AmountConstants.Range30To100,
+            CreatureConstants.Locathah_Sergeant, AmountConstants.Range3To10,
+            CreatureConstants.Locathah_Lieutenant, AmountConstants.Range5,
+            CreatureConstants.Locathah_Captain, AmountConstants.Range3)]
         [TestCase(EncounterConstants.Locust_Swarm_Solitary, CreatureConstants.Locust_Swarm, AmountConstants.Range1)]
         [TestCase(EncounterConstants.Locust_Swarm_Cloud, CreatureConstants.Locust_Swarm, AmountConstants.Range2To7)]
         [TestCase(EncounterConstants.Locust_Swarm_Plague, CreatureConstants.Locust_Swarm, AmountConstants.Range11To20)]
         [TestCase(EncounterConstants.Magmin_Solitary, CreatureConstants.Magmin, AmountConstants.Range1)]
         [TestCase(EncounterConstants.Magmin_Gang, CreatureConstants.Magmin, AmountConstants.Range2To4)]
         [TestCase(EncounterConstants.Magmin_Squad, CreatureConstants.Magmin, AmountConstants.Range6To10)]
+        [TestCase(EncounterConstants.MantaRay_Solitary, CreatureConstants.MantaRay, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.MantaRay_School, CreatureConstants.MantaRay, AmountConstants.Range2To5)]
         [TestCase(EncounterConstants.Manticore_Solitary, CreatureConstants.Manticore, AmountConstants.Range1)]
         [TestCase(EncounterConstants.Manticore_Pair, CreatureConstants.Manticore, AmountConstants.Range2)]
         [TestCase(EncounterConstants.Manticore_Pride, CreatureConstants.Manticore, AmountConstants.Range3To6)]
@@ -2333,6 +2363,15 @@ namespace EncounterGen.Tests.Unit.Selectors
         [TestCase(EncounterConstants.Mephit_Solitary, CreatureConstants.Mephit_CR3, AmountConstants.Range1)]
         [TestCase(EncounterConstants.Mephit_Gang, CreatureConstants.Mephit_CR3, AmountConstants.Range2To4)]
         [TestCase(EncounterConstants.Mephit_Mob, CreatureConstants.Mephit_CR3, AmountConstants.Range5To12)]
+        [TestCase(EncounterConstants.Merfolk_Company, CreatureConstants.Merfolk_Warrior, AmountConstants.Range2To4)]
+        [TestCase(EncounterConstants.Merfolk_Patrol, CreatureConstants.Merfolk_Warrior, AmountConstants.Range11To20,
+            CreatureConstants.Merfolk_Lieutenant_3rd, AmountConstants.Range2,
+            CreatureConstants.Merfolk_Leader, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Merfolk_Band, CreatureConstants.Merfolk_Warrior, AmountConstants.Range30To60,
+            CreatureConstants.Merfolk_Sergeant, AmountConstants.Range2To3,
+            CreatureConstants.Merfolk_Lieutenant_5th, AmountConstants.Range5,
+            CreatureConstants.Merfolk_Captain, AmountConstants.Range3,
+            CreatureConstants.Porpoise, AmountConstants.Range10)]
         [TestCase(EncounterConstants.Mimic_Solitary, CreatureConstants.Mimic, AmountConstants.Range1)]
         [TestCase(EncounterConstants.MindFlayer_Solitary, CreatureConstants.MindFlayer, AmountConstants.Range1)]
         [TestCase(EncounterConstants.MindFlayer_Pair, CreatureConstants.MindFlayer, AmountConstants.Range2)]
@@ -2682,6 +2721,8 @@ namespace EncounterGen.Tests.Unit.Selectors
         [TestCase(EncounterConstants.NPC_Level20_Solitary_WithRidingDog, CreatureConstants.NPC_Level20, AmountConstants.Range1,
             CreatureConstants.Dog_Riding, AmountConstants.Range1)]
         [TestCase(EncounterConstants.Nymph_Solitary, CreatureConstants.Nymph, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Octopus_Solitary, CreatureConstants.Octopus, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Octopus_Giant_Solitary, CreatureConstants.Octopus_Giant, AmountConstants.Range1)]
         [TestCase(EncounterConstants.Ogre_Solitary, CreatureConstants.Ogre, AmountConstants.Range1)]
         [TestCase(EncounterConstants.Ogre_Pair, CreatureConstants.Ogre, AmountConstants.Range2)]
         [TestCase(EncounterConstants.Ogre_Gang, CreatureConstants.Ogre, AmountConstants.Range3To4)]
@@ -2692,6 +2733,16 @@ namespace EncounterGen.Tests.Unit.Selectors
             CreatureConstants.Ogre, AmountConstants.Range1To3)]
         [TestCase(EncounterConstants.Ogre_Barbarian_Band, CreatureConstants.Ogre_Barbarian, AmountConstants.Range1,
             CreatureConstants.Ogre, AmountConstants.Range4To7)]
+        [TestCase(EncounterConstants.Ogre_Merrow_Solitary, CreatureConstants.Ogre_Merrow, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Ogre_Merrow_Pair, CreatureConstants.Ogre_Merrow, AmountConstants.Range2)]
+        [TestCase(EncounterConstants.Ogre_Merrow_Gang, CreatureConstants.Ogre_Merrow, AmountConstants.Range3To4)]
+        [TestCase(EncounterConstants.Ogre_Merrow_Band, CreatureConstants.Ogre_Merrow, AmountConstants.Range5To8)]
+        [TestCase(EncounterConstants.Ogre_Merrow_Barbarian_Solitary, CreatureConstants.Ogre_Merrow_Barbarian, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Ogre_Merrow_Barbarian_Pair, CreatureConstants.Ogre_Merrow_Barbarian, AmountConstants.Range2)]
+        [TestCase(EncounterConstants.Ogre_Merrow_Barbarian_Gang, CreatureConstants.Ogre_Merrow_Barbarian, AmountConstants.Range1,
+            CreatureConstants.Ogre_Merrow, AmountConstants.Range1To3)]
+        [TestCase(EncounterConstants.Ogre_Merrow_Barbarian_Band, CreatureConstants.Ogre_Merrow_Barbarian, AmountConstants.Range1,
+            CreatureConstants.Ogre_Merrow, AmountConstants.Range4To7)]
         [TestCase(EncounterConstants.OgreMage_Solitary, CreatureConstants.OgreMage, AmountConstants.Range1)]
         [TestCase(EncounterConstants.OgreMage_Pair, CreatureConstants.OgreMage, AmountConstants.Range2)]
         [TestCase(EncounterConstants.OgreMage_Troupe, CreatureConstants.OgreMage, AmountConstants.Range1To2,
@@ -2761,6 +2812,12 @@ namespace EncounterGen.Tests.Unit.Selectors
         [TestCase(EncounterConstants.Planetar_Solitary, CreatureConstants.Planetar, AmountConstants.Range1)]
         [TestCase(EncounterConstants.Planetar_Pair, CreatureConstants.Planetar, AmountConstants.Range2)]
         [TestCase(EncounterConstants.Pony_Solitary, CreatureConstants.Pony, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Porpoise_Solitary, CreatureConstants.Porpoise, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Porpoise_Pair, CreatureConstants.Porpoise, AmountConstants.Range2)]
+        [TestCase(EncounterConstants.Porpoise_School, CreatureConstants.Porpoise, AmountConstants.Range3To20)]
+        [TestCase(EncounterConstants.Porpoise_Celestial_Solitary, CreatureConstants.Porpoise_Celestial, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Porpoise_Celestial_Pair, CreatureConstants.Porpoise_Celestial, AmountConstants.Range2)]
+        [TestCase(EncounterConstants.Porpoise_Celestial_School, CreatureConstants.Porpoise_Celestial, AmountConstants.Range3To20)]
         [TestCase(EncounterConstants.PrayingMantis_Giant_Solitary, CreatureConstants.PrayingMantis_Giant, AmountConstants.Range1)]
         [TestCase(EncounterConstants.Pseudodragon_Solitary, CreatureConstants.Pseudodragon, AmountConstants.Range1)]
         [TestCase(EncounterConstants.Pseudodragon_Pair, CreatureConstants.Pseudodragon, AmountConstants.Range2)]
@@ -2829,6 +2886,77 @@ namespace EncounterGen.Tests.Unit.Selectors
         [TestCase(EncounterConstants.Roper_Cluster, CreatureConstants.Roper, AmountConstants.Range3To6)]
         [TestCase(EncounterConstants.RustMonster_Solitary, CreatureConstants.RustMonster, AmountConstants.Range1)]
         [TestCase(EncounterConstants.RustMonster_Pair, CreatureConstants.RustMonster, AmountConstants.Range2)]
+        [TestCase(EncounterConstants.Sahuagin_Solitary, CreatureConstants.Sahuagin, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Sahuagin_Pair, CreatureConstants.Sahuagin, AmountConstants.Range2)]
+        [TestCase(EncounterConstants.Sahuagin_Team, CreatureConstants.Sahuagin, AmountConstants.Range5To8)]
+        [TestCase(EncounterConstants.Sahuagin_Patrol_WithDireSharks, CreatureConstants.Sahuagin, AmountConstants.Range11To20,
+            CreatureConstants.Sahuagin_Lieutenant, AmountConstants.Range1,
+            CreatureConstants.Shark_Dire, AmountConstants.Range1To2)]
+        [TestCase(EncounterConstants.Sahuagin_Patrol_WithMediumSharks, CreatureConstants.Sahuagin, AmountConstants.Range11To20,
+            CreatureConstants.Sahuagin_Lieutenant, AmountConstants.Range1,
+            CreatureConstants.Shark_Medium, AmountConstants.Range1To2)]
+        [TestCase(EncounterConstants.Sahuagin_Patrol_WithLargeSharks, CreatureConstants.Sahuagin, AmountConstants.Range11To20,
+            CreatureConstants.Sahuagin_Lieutenant, AmountConstants.Range1,
+            CreatureConstants.Shark_Large, AmountConstants.Range1To2)]
+        [TestCase(EncounterConstants.Sahuagin_Patrol_WithHugeSharks, CreatureConstants.Sahuagin, AmountConstants.Range11To20,
+            CreatureConstants.Sahuagin_Lieutenant, AmountConstants.Range1,
+            CreatureConstants.Shark_Huge, AmountConstants.Range1To2)]
+        [TestCase(EncounterConstants.Sahuagin_Band_WithDireSharks, CreatureConstants.Sahuagin, AmountConstants.Range20To80,
+            CreatureConstants.Sahuagin_Noncombatant, AmountConstants.Range20To80,
+            CreatureConstants.Sahuagin_Lieutenant, AmountConstants.Range1To4,
+            CreatureConstants.Sahuagin_Chieftan, AmountConstants.Range1To4,
+            CreatureConstants.Shark_Dire, AmountConstants.Range1To2)]
+        [TestCase(EncounterConstants.Sahuagin_Band_WithMediumSharks, CreatureConstants.Sahuagin, AmountConstants.Range20To80,
+            CreatureConstants.Sahuagin_Noncombatant, AmountConstants.Range20To80,
+            CreatureConstants.Sahuagin_Lieutenant, AmountConstants.Range1To4,
+            CreatureConstants.Sahuagin_Chieftan, AmountConstants.Range1To4,
+            CreatureConstants.Shark_Medium, AmountConstants.Range1To2)]
+        [TestCase(EncounterConstants.Sahuagin_Band_WithLargeSharks, CreatureConstants.Sahuagin, AmountConstants.Range20To80,
+            CreatureConstants.Sahuagin_Noncombatant, AmountConstants.Range20To80,
+            CreatureConstants.Sahuagin_Lieutenant, AmountConstants.Range1To4,
+            CreatureConstants.Sahuagin_Chieftan, AmountConstants.Range1To4,
+            CreatureConstants.Shark_Large, AmountConstants.Range1To2)]
+        [TestCase(EncounterConstants.Sahuagin_Band_WithHugeSharks, CreatureConstants.Sahuagin, AmountConstants.Range20To80,
+            CreatureConstants.Sahuagin_Noncombatant, AmountConstants.Range20To80,
+            CreatureConstants.Sahuagin_Lieutenant, AmountConstants.Range1To4,
+            CreatureConstants.Sahuagin_Chieftan, AmountConstants.Range1To4,
+            CreatureConstants.Shark_Huge, AmountConstants.Range1To2)]
+        [TestCase(EncounterConstants.Sahuagin_Tribe_WithDireSharks, CreatureConstants.Sahuagin, AmountConstants.Range70To160,
+            CreatureConstants.Sahuagin_Noncombatant, AmountConstants.Range70To160,
+            CreatureConstants.Sahuagin_Lieutenant, AmountConstants.Range4To8,
+            CreatureConstants.Sahuagin_Chieftan, AmountConstants.Range2To4,
+            CreatureConstants.Sahuagin_Guard, AmountConstants.Range9,
+            CreatureConstants.Sahuagin_Underpriest, AmountConstants.Range1To4,
+            CreatureConstants.Sahuagin_Priest, AmountConstants.Range1,
+            CreatureConstants.Sahuagin_Baron, AmountConstants.Range1,
+            CreatureConstants.Shark_Dire, AmountConstants.Range5To8)]
+        [TestCase(EncounterConstants.Sahuagin_Tribe_WithMediumSharks, CreatureConstants.Sahuagin, AmountConstants.Range70To160,
+            CreatureConstants.Sahuagin_Noncombatant, AmountConstants.Range70To160,
+            CreatureConstants.Sahuagin_Lieutenant, AmountConstants.Range4To8,
+            CreatureConstants.Sahuagin_Chieftan, AmountConstants.Range2To4,
+            CreatureConstants.Sahuagin_Guard, AmountConstants.Range9,
+            CreatureConstants.Sahuagin_Underpriest, AmountConstants.Range1To4,
+            CreatureConstants.Sahuagin_Priest, AmountConstants.Range1,
+            CreatureConstants.Sahuagin_Baron, AmountConstants.Range1,
+            CreatureConstants.Shark_Medium, AmountConstants.Range5To8)]
+        [TestCase(EncounterConstants.Sahuagin_Tribe_WithLargeSharks, CreatureConstants.Sahuagin, AmountConstants.Range70To160,
+            CreatureConstants.Sahuagin_Noncombatant, AmountConstants.Range70To160,
+            CreatureConstants.Sahuagin_Lieutenant, AmountConstants.Range4To8,
+            CreatureConstants.Sahuagin_Chieftan, AmountConstants.Range2To4,
+            CreatureConstants.Sahuagin_Guard, AmountConstants.Range9,
+            CreatureConstants.Sahuagin_Underpriest, AmountConstants.Range1To4,
+            CreatureConstants.Sahuagin_Priest, AmountConstants.Range1,
+            CreatureConstants.Sahuagin_Baron, AmountConstants.Range1,
+            CreatureConstants.Shark_Large, AmountConstants.Range5To8)]
+        [TestCase(EncounterConstants.Sahuagin_Tribe_WithHugeSharks, CreatureConstants.Sahuagin, AmountConstants.Range70To160,
+            CreatureConstants.Sahuagin_Noncombatant, AmountConstants.Range70To160,
+            CreatureConstants.Sahuagin_Lieutenant, AmountConstants.Range4To8,
+            CreatureConstants.Sahuagin_Chieftan, AmountConstants.Range2To4,
+            CreatureConstants.Sahuagin_Guard, AmountConstants.Range9,
+            CreatureConstants.Sahuagin_Underpriest, AmountConstants.Range1To4,
+            CreatureConstants.Sahuagin_Priest, AmountConstants.Range1,
+            CreatureConstants.Sahuagin_Baron, AmountConstants.Range1,
+            CreatureConstants.Shark_Huge, AmountConstants.Range5To8)]
         [TestCase(EncounterConstants.Salamander_Flamebrother_Solitary, CreatureConstants.Salamander_Flamebrother, AmountConstants.Range1)]
         [TestCase(EncounterConstants.Salamander_Flamebrother_Pair, CreatureConstants.Salamander_Flamebrother, AmountConstants.Range2)]
         [TestCase(EncounterConstants.Salamander_Flamebrother_Cluster, CreatureConstants.Salamander_Flamebrother, AmountConstants.Range3To5)]
@@ -2867,6 +2995,9 @@ namespace EncounterGen.Tests.Unit.Selectors
             CreatureConstants.Scorpion_Monstrous_Large, AmountConstants.Range1To4,
             CreatureConstants.Scorpionfolk_Cleric, AmountConstants.Range1,
             CreatureConstants.Scorpionfolk_Ranger_6thTo8th, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.SeaCat_Solitary, CreatureConstants.SeaCat, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.SeaCat_Pair, CreatureConstants.SeaCat, AmountConstants.Range2)]
+        [TestCase(EncounterConstants.SeaCat_Pride, CreatureConstants.SeaCat, AmountConstants.Range5To12)]
         [TestCase(EncounterConstants.SeaHag_Solitary, CreatureConstants.SeaHag, AmountConstants.Range1)]
         [TestCase(EncounterConstants.Shadow_Solitary, CreatureConstants.Shadow, AmountConstants.Range1)]
         [TestCase(EncounterConstants.Shadow_Gang, CreatureConstants.Shadow, AmountConstants.Range2To5)]
@@ -2876,6 +3007,17 @@ namespace EncounterGen.Tests.Unit.Selectors
         [TestCase(EncounterConstants.ShadowMastiff_Pair, CreatureConstants.ShadowMastiff, AmountConstants.Range2)]
         [TestCase(EncounterConstants.ShadowMastiff_Pack, CreatureConstants.ShadowMastiff, AmountConstants.Range5To12)]
         [TestCase(EncounterConstants.ShamblingMound_Solitary, CreatureConstants.ShamblingMound, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Shark_Dire_Solitary, CreatureConstants.Shark_Dire, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Shark_Dire_School, CreatureConstants.Shark_Dire, AmountConstants.Range2To5)]
+        [TestCase(EncounterConstants.Shark_Medium_Solitary, CreatureConstants.Shark_Medium, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Shark_Medium_School, CreatureConstants.Shark_Medium, AmountConstants.Range2To5)]
+        [TestCase(EncounterConstants.Shark_Medium_Pack, CreatureConstants.Shark_Medium, AmountConstants.Range6To11)]
+        [TestCase(EncounterConstants.Shark_Large_Solitary, CreatureConstants.Shark_Large, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Shark_Large_School, CreatureConstants.Shark_Large, AmountConstants.Range2To5)]
+        [TestCase(EncounterConstants.Shark_Large_Pack, CreatureConstants.Shark_Large, AmountConstants.Range6To11)]
+        [TestCase(EncounterConstants.Shark_Huge_Solitary, CreatureConstants.Shark_Huge, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Shark_Huge_School, CreatureConstants.Shark_Huge, AmountConstants.Range2To5)]
+        [TestCase(EncounterConstants.Shark_Huge_Pack, CreatureConstants.Shark_Huge, AmountConstants.Range6To11)]
         [TestCase(EncounterConstants.ShieldGuardian_Solitary, CreatureConstants.ShieldGuardian, AmountConstants.Range1)]
         [TestCase(EncounterConstants.ShockerLizard_Solitary, CreatureConstants.ShockerLizard, AmountConstants.Range1)]
         [TestCase(EncounterConstants.ShockerLizard_Pair, CreatureConstants.ShockerLizard, AmountConstants.Range2)]
@@ -2953,6 +3095,9 @@ namespace EncounterGen.Tests.Unit.Selectors
         [TestCase(EncounterConstants.Spider_Swarm_Tangle, CreatureConstants.Spider_Swarm, AmountConstants.Range2To4)]
         [TestCase(EncounterConstants.Spider_Swarm_Colony, CreatureConstants.Spider_Swarm, AmountConstants.Range7To12)]
         [TestCase(EncounterConstants.SpiderEater_Solitary, CreatureConstants.SpiderEater, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Squid_Solitary, CreatureConstants.Squid, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Squid_School, CreatureConstants.Squid, AmountConstants.Range6To11)]
+        [TestCase(EncounterConstants.Squid_Giant_Solitary, CreatureConstants.Squid_Giant, AmountConstants.Range1)]
         [TestCase(EncounterConstants.StagBeetle_Giant_Cluster, CreatureConstants.StagBeetle_Giant, AmountConstants.Range2To5)]
         [TestCase(EncounterConstants.StagBeetle_Giant_Mass, CreatureConstants.StagBeetle_Giant, AmountConstants.Range6To11)]
         [TestCase(EncounterConstants.Stirge_Colony, CreatureConstants.Stirge, AmountConstants.Range2To4)]
@@ -2981,11 +3126,20 @@ namespace EncounterGen.Tests.Unit.Selectors
         [TestCase(EncounterConstants.Titan_Solitary, CreatureConstants.Titan, AmountConstants.Range1)]
         [TestCase(EncounterConstants.Titan_Pair, CreatureConstants.Titan, AmountConstants.Range2)]
         [TestCase(EncounterConstants.Toad_Swarm, CreatureConstants.Toad, AmountConstants.Range10To100)]
+        [TestCase(EncounterConstants.Tojanida_Adult_Solitary, CreatureConstants.Tojanida_Adult, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Tojanida_Adult_Clutch, CreatureConstants.Tojanida_Adult, AmountConstants.Range2To4)]
+        [TestCase(EncounterConstants.Tojanida_Elder_Solitary, CreatureConstants.Tojanida_Elder, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Tojanida_Elder_Clutch, CreatureConstants.Tojanida_Elder, AmountConstants.Range2To4)]
+        [TestCase(EncounterConstants.Tojanida_Juvenile_Solitary, CreatureConstants.Tojanida_Juvenile, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Tojanida_Juvenile_Clutch, CreatureConstants.Tojanida_Juvenile, AmountConstants.Range2To4)]
         [TestCase(EncounterConstants.Treant_Solitary, CreatureConstants.Treant, AmountConstants.Range1)]
         [TestCase(EncounterConstants.Treant_Grove, CreatureConstants.Treant, AmountConstants.Range4To7)]
         [TestCase(EncounterConstants.Triceratops_Solitary, CreatureConstants.Triceratops, AmountConstants.Range1)]
         [TestCase(EncounterConstants.Triceratops_Pair, CreatureConstants.Triceratops, AmountConstants.Range2)]
         [TestCase(EncounterConstants.Triceratops_Herd, CreatureConstants.Triceratops, AmountConstants.Range5To8)]
+        [TestCase(EncounterConstants.Triton_Company, CreatureConstants.Triton, AmountConstants.Range2To5)]
+        [TestCase(EncounterConstants.Triton_Squad, CreatureConstants.Triton, AmountConstants.Range6To11)]
+        [TestCase(EncounterConstants.Triton_Band, CreatureConstants.Triton, AmountConstants.Range20To80)]
         [TestCase(EncounterConstants.Troglodyte_Clutch, CreatureConstants.Troglodyte, AmountConstants.Range2To5)]
         [TestCase(EncounterConstants.Troglodyte_Squad, CreatureConstants.Troglodyte, AmountConstants.Range6To11,
             CreatureConstants.Lizard_Monitor, AmountConstants.Range1To2)]
@@ -2995,6 +3149,9 @@ namespace EncounterGen.Tests.Unit.Selectors
         [TestCase(EncounterConstants.Troll_Solitary, CreatureConstants.Troll, AmountConstants.Range1)]
         [TestCase(EncounterConstants.Troll_Gang, CreatureConstants.Troll, AmountConstants.Range2To4)]
         [TestCase(EncounterConstants.Troll_Hunter_Solitary, CreatureConstants.Troll_Hunter, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Troll_Scrag_Solitary, CreatureConstants.Troll_Scrag, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Troll_Scrag_Gang, CreatureConstants.Troll_Scrag, AmountConstants.Range2To4)]
+        [TestCase(EncounterConstants.Troll_Scrag_Hunter_Solitary, CreatureConstants.Troll_Scrag_Hunter, AmountConstants.Range1)]
         [TestCase(EncounterConstants.TrumpetArchon_Solitary, CreatureConstants.TrumpetArchon, AmountConstants.Range1)]
         [TestCase(EncounterConstants.TrumpetArchon_Pair, CreatureConstants.TrumpetArchon, AmountConstants.Range2)]
         [TestCase(EncounterConstants.TrumpetArchon_Squad, CreatureConstants.TrumpetArchon, AmountConstants.Range3To5)]
@@ -3241,6 +3398,11 @@ namespace EncounterGen.Tests.Unit.Selectors
         [TestCase(EncounterConstants.WerewolfLord_Pack, CreatureConstants.WerewolfLord, AmountConstants.Range1To2,
             CreatureConstants.Werewolf, AmountConstants.Range2To4,
             CreatureConstants.Wolf, AmountConstants.Range5To8)]
+        [TestCase(EncounterConstants.Whale_Baleen_Solitary, CreatureConstants.Whale_Baleen, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Whale_Cachalot_Solitary, CreatureConstants.Whale_Cachalot, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Whale_Cachalot_Pod, CreatureConstants.Whale_Cachalot, AmountConstants.Range6To11)]
+        [TestCase(EncounterConstants.Whale_Orca_Solitary, CreatureConstants.Whale_Orca, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Whale_Orca_Pod, CreatureConstants.Whale_Orca, AmountConstants.Range6To11)]
         [TestCase(EncounterConstants.Wight_Solitary, CreatureConstants.Wight, AmountConstants.Range1)]
         [TestCase(EncounterConstants.Wight_Pair, CreatureConstants.Wight, AmountConstants.Range2)]
         [TestCase(EncounterConstants.Wight_Gang, CreatureConstants.Wight, AmountConstants.Range3To5)]

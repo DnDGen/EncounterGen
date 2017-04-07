@@ -4,7 +4,7 @@ using NUnit.Framework;
 namespace EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
 {
     [TestFixture]
-    public class CreatureSubgroupsTests : CreatureGroupsTests
+    public class CreatureSubgroupsTests : CreatureGroupsTableTests
     {
         [Test]
         public override void EntriesAreComplete()
@@ -113,7 +113,8 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
             CreatureConstants.Dog_Celestial,
             CreatureConstants.FireBeetle_Giant_Celestial,
             CreatureConstants.Monkey_Celestial,
-            CreatureConstants.Owl_Celestial)]
+            CreatureConstants.Owl_Celestial,
+            CreatureConstants.Porpoise_Celestial)]
         [TestCase(CreatureConstants.Centaur,
             CreatureConstants.Centaur,
             CreatureConstants.Centaur_Leader_2ndTo5th,
@@ -229,6 +230,7 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
             CreatureConstants.PitFiend)]
         [TestCase(CreatureConstants.Dinosaur,
             CreatureConstants.Deinonychus,
+            CreatureConstants.Elasmosaurus,
             CreatureConstants.Megaraptor,
             CreatureConstants.Triceratops,
             CreatureConstants.Tyrannosaurus)]
@@ -430,6 +432,13 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
             CreatureConstants.Elf_Noncombatant,
             CreatureConstants.Elf_Sergeant,
             CreatureConstants.Elf_Warrior)]
+        [TestCase(CreatureConstants.Elf_Aquatic,
+            CreatureConstants.Elf_Aquatic_Captain,
+            CreatureConstants.Elf_Aquatic_Leader,
+            CreatureConstants.Elf_Aquatic_Lieutenant,
+            CreatureConstants.Elf_Aquatic_Noncombatant,
+            CreatureConstants.Elf_Aquatic_Sergeant,
+            CreatureConstants.Elf_Aquatic_Warrior)]
         [TestCase(CreatureConstants.Expert_Adviser,
             CreatureConstants.Expert_Adviser_Level1,
             CreatureConstants.Expert_Adviser_Level10To11,
@@ -499,6 +508,9 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
             CreatureConstants.Djinni,
             CreatureConstants.Efreeti,
             CreatureConstants.Janni)]
+        [TestCase(CreatureConstants.Ghoul,
+            CreatureConstants.Ghoul,
+            CreatureConstants.Ghoul_Ghast)]
         [TestCase(CreatureConstants.Giant_Cloud,
             CreatureConstants.Giant_Cloud,
             CreatureConstants.Giant_Cloud_Leader,
@@ -631,6 +643,13 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
             CreatureConstants.Lizardfolk_Leader_4thTo10th,
             CreatureConstants.Lizardfolk_Lieutenant,
             CreatureConstants.Lizardfolk_Noncombatant)]
+        [TestCase(CreatureConstants.Locathah,
+            CreatureConstants.Locathah_Warrior,
+            CreatureConstants.Locathah_Sergeant,
+            CreatureConstants.Locathah_Leader,
+            CreatureConstants.Locathah_Noncombatant,
+            CreatureConstants.Locathah_Lieutenant,
+            CreatureConstants.Locathah_Captain)]
         [TestCase(CreatureConstants.Locust,
             CreatureConstants.Locust_Swarm)]
         [TestCase(CreatureConstants.Lycanthrope,
@@ -650,6 +669,13 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
             CreatureConstants.Mephit_Salt,
             CreatureConstants.Mephit_Steam,
             CreatureConstants.Mephit_Water)]
+        [TestCase(CreatureConstants.Merfolk,
+            CreatureConstants.Merfolk_Warrior,
+            CreatureConstants.Merfolk_Lieutenant_3rd,
+            CreatureConstants.Merfolk_Leader,
+            CreatureConstants.Merfolk_Sergeant,
+            CreatureConstants.Merfolk_Lieutenant_5th,
+            CreatureConstants.Merfolk_Captain)]
         [TestCase(CreatureConstants.MindFlayer,
             CreatureConstants.MindFlayer,
             CreatureConstants.MindFlayer_Sorcerer)]
@@ -680,9 +706,15 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
             CreatureConstants.NPC_Level4To5,
             CreatureConstants.NPC_Level6To7,
             CreatureConstants.NPC_Level8To9)]
+        [TestCase(CreatureConstants.Octopus,
+            CreatureConstants.Octopus,
+            CreatureConstants.Octopus_Giant)]
         [TestCase(CreatureConstants.Ogre,
             CreatureConstants.Ogre,
             CreatureConstants.Ogre_Barbarian)]
+        [TestCase(CreatureConstants.Ogre_Merrow,
+            CreatureConstants.Ogre_Merrow,
+            CreatureConstants.Ogre_Merrow_Barbarian)]
         [TestCase(CreatureConstants.Orc,
             CreatureConstants.Orc_Captain,
             CreatureConstants.Orc_Leader,
@@ -713,6 +745,15 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
             CreatureConstants.Rat_Dire,
             CreatureConstants.Rat_Swarm,
             CreatureConstants.Wererat)]
+        [TestCase(CreatureConstants.Sahuagin,
+            CreatureConstants.Sahuagin,
+            CreatureConstants.Sahuagin_Baron,
+            CreatureConstants.Sahuagin_Chieftan,
+            CreatureConstants.Sahuagin_Guard,
+            CreatureConstants.Sahuagin_Lieutenant,
+            CreatureConstants.Sahuagin_Noncombatant,
+            CreatureConstants.Sahuagin_Priest,
+            CreatureConstants.Sahuagin_Underpriest)]
         [TestCase(CreatureConstants.Salamander,
             CreatureConstants.Salamander_Average,
             CreatureConstants.Salamander_Flamebrother,
@@ -736,6 +777,11 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         [TestCase(CreatureConstants.Shadow,
             CreatureConstants.Shadow,
             CreatureConstants.Shadow_Greater)]
+        [TestCase(CreatureConstants.Shark,
+            CreatureConstants.Shark_Dire,
+            CreatureConstants.Shark_Medium,
+            CreatureConstants.Shark_Large,
+            CreatureConstants.Shark_Huge)]
         [TestCase(CreatureConstants.Skeleton,
             CreatureConstants.Skeleton_Chimera,
             CreatureConstants.Skeleton_Dragon_Red_YoungAdult,
@@ -773,6 +819,9 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
             CreatureConstants.Grig,
             CreatureConstants.Pixie,
             CreatureConstants.Nixie)]
+        [TestCase(CreatureConstants.Squid,
+            CreatureConstants.Squid,
+            CreatureConstants.Squid_Giant)]
         [TestCase(CreatureConstants.Svirfneblin,
             CreatureConstants.Svirfneblin_Captain,
             CreatureConstants.Svirfneblin_Leader,
@@ -786,12 +835,19 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
             CreatureConstants.Tiger,
             CreatureConstants.Tiger_Dire,
             CreatureConstants.Weretiger)]
+        [TestCase(CreatureConstants.Tojanida,
+            CreatureConstants.Tojanida_Juvenile,
+            CreatureConstants.Tojanida_Adult,
+            CreatureConstants.Tojanida_Elder)]
         [TestCase(CreatureConstants.Troglodyte,
             CreatureConstants.Troglodyte,
             CreatureConstants.Troglodyte_Noncombatant)]
         [TestCase(CreatureConstants.Troll,
             CreatureConstants.Troll,
             CreatureConstants.Troll_Hunter)]
+        [TestCase(CreatureConstants.Troll_Scrag,
+            CreatureConstants.Troll_Scrag,
+            CreatureConstants.Troll_Scrag_Hunter)]
         [TestCase(CreatureConstants.UmberHulk,
             CreatureConstants.UmberHulk,
             CreatureConstants.UmberHulk_TrulyHorrid)]
@@ -853,6 +909,10 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         [TestCase(CreatureConstants.Werewolf,
             CreatureConstants.Werewolf,
             CreatureConstants.WerewolfLord)]
+        [TestCase(CreatureConstants.Whale,
+            CreatureConstants.Whale_Baleen,
+            CreatureConstants.Whale_Cachalot,
+            CreatureConstants.Whale_Orca)]
         [TestCase(CreatureConstants.Wolf,
             CreatureConstants.Werewolf,
             CreatureConstants.Wolf,
@@ -1628,6 +1688,8 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
                 CreatureConstants.ShadowMastiff,
                 CreatureConstants.Slaad,
                 CreatureConstants.Titan,
+                CreatureConstants.Tojanida,
+                CreatureConstants.Triton,
                 CreatureConstants.Vargouille,
                 CreatureConstants.Xill,
                 CreatureConstants.Xorn,
@@ -1835,7 +1897,8 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
                 CreatureConstants.Vampire_Level17,
                 CreatureConstants.Vampire_Level18,
                 CreatureConstants.Vampire_Level19,
-                CreatureConstants.Vampire_Level20
+                CreatureConstants.Vampire_Level20,
+                CreatureConstants.VampireSpawn,
             };
 
             base.DistinctCollection(CreatureConstants.Vampire, items);

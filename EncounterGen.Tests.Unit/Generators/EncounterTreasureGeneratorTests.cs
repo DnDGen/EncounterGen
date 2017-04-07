@@ -391,8 +391,8 @@ namespace EncounterGen.Tests.Unit.Generators
 
             var setItem = new Item();
             var otherSetItem = new Item();
-            mockMundaneItemGenerator.Setup(g => g.Generate(It.Is<Item>(i => i.Name == "item 1"), true)).Returns(setItem);
-            mockOtherMundaneItemGenerator.Setup(g => g.Generate(It.Is<Item>(i => i.Name == "item 2"), true)).Returns(otherSetItem);
+            mockMundaneItemGenerator.Setup(g => g.GenerateFrom(It.Is<Item>(i => i.Name == "item 1"), true)).Returns(setItem);
+            mockOtherMundaneItemGenerator.Setup(g => g.GenerateFrom(It.Is<Item>(i => i.Name == "item 2"), true)).Returns(otherSetItem);
 
             var treasure = encounterTreasureGenerator.GenerateFor(creature, level);
             Assert.That(treasure.Items, Contains.Item(setItem));
@@ -413,7 +413,7 @@ namespace EncounterGen.Tests.Unit.Generators
             var setItem = new Item();
             var otherSetItem = new Item();
             mockMagicalItemGenerator.Setup(g => g.Generate(It.Is<Item>(i => i.Name == "item 1" && i.Magic.Bonus == 90210), true)).Returns(setItem);
-            mockMundaneItemGenerator.Setup(g => g.Generate(It.Is<Item>(i => i.Name == "item 2" && i.IsMagical == false), true)).Returns(otherSetItem);
+            mockMundaneItemGenerator.Setup(g => g.GenerateFrom(It.Is<Item>(i => i.Name == "item 2" && i.IsMagical == false), true)).Returns(otherSetItem);
 
             var treasure = encounterTreasureGenerator.GenerateFor(creature, level);
             Assert.That(treasure.Items, Contains.Item(setItem));
@@ -456,8 +456,8 @@ namespace EncounterGen.Tests.Unit.Generators
 
             var setItem = new Item();
             var otherSetItem = new Item();
-            mockMundaneItemGenerator.Setup(g => g.Generate(It.Is<Item>(i => i.Name == "item 1" && i.Traits.Single() == "size"), true)).Returns(setItem);
-            mockOtherMundaneItemGenerator.Setup(g => g.Generate(It.Is<Item>(i => i.Name == "item 2" && i.Traits.First() == "other size" && i.Traits.Last() == "trait" && i.Traits.Count() == 2), true)).Returns(otherSetItem);
+            mockMundaneItemGenerator.Setup(g => g.GenerateFrom(It.Is<Item>(i => i.Name == "item 1" && i.Traits.Single() == "size"), true)).Returns(setItem);
+            mockOtherMundaneItemGenerator.Setup(g => g.GenerateFrom(It.Is<Item>(i => i.Name == "item 2" && i.Traits.First() == "other size" && i.Traits.Last() == "trait" && i.Traits.Count() == 2), true)).Returns(otherSetItem);
 
             var treasure = encounterTreasureGenerator.GenerateFor(creature, level);
             Assert.That(treasure.Items, Contains.Item(setItem));
@@ -481,8 +481,8 @@ namespace EncounterGen.Tests.Unit.Generators
             var fourthItem = new Item();
             mockMagicalItemGenerator.Setup(g => g.Generate(It.Is<Item>(i => i.Name == "item 1" && i.IsMagical), true)).Returns(firstItem);
             mockMagicalItemGenerator.Setup(g => g.Generate(It.Is<Item>(i => i.Name == "item 2" && i.IsMagical), true)).Returns(secondItem);
-            mockOtherMundaneItemGenerator.Setup(g => g.Generate(It.Is<Item>(i => i.Name == "item 3" && !i.IsMagical), true)).Returns(thirdItem);
-            mockOtherMundaneItemGenerator.Setup(g => g.Generate(It.Is<Item>(i => i.Name == "item 4" && !i.IsMagical), true)).Returns(fourthItem);
+            mockOtherMundaneItemGenerator.Setup(g => g.GenerateFrom(It.Is<Item>(i => i.Name == "item 3" && !i.IsMagical), true)).Returns(thirdItem);
+            mockOtherMundaneItemGenerator.Setup(g => g.GenerateFrom(It.Is<Item>(i => i.Name == "item 4" && !i.IsMagical), true)).Returns(fourthItem);
 
             var treasure = encounterTreasureGenerator.GenerateFor(creature, level);
             Assert.That(treasure.Items, Contains.Item(firstItem));
@@ -502,8 +502,8 @@ namespace EncounterGen.Tests.Unit.Generators
             mockMundaneItemGeneratorFactory.Setup(f => f.CreateGeneratorOf("item type")).Returns(mockMundaneItemGenerator.Object);
             mockMundaneItemGeneratorFactory.Setup(f => f.CreateGeneratorOf("other item type")).Returns(mockOtherMundaneItemGenerator.Object);
 
-            mockMundaneItemGenerator.Setup(g => g.Generate(It.Is<Item>(i => i.Name == "item 1"), true)).Returns((Item t, bool a) => t.Copy());
-            mockOtherMundaneItemGenerator.Setup(g => g.Generate(It.Is<Item>(i => i.Name == "item 2"), true)).Returns((Item t, bool a) => t.Copy());
+            mockMundaneItemGenerator.Setup(g => g.GenerateFrom(It.Is<Item>(i => i.Name == "item 1"), true)).Returns((Item t, bool a) => t.Clone());
+            mockOtherMundaneItemGenerator.Setup(g => g.GenerateFrom(It.Is<Item>(i => i.Name == "item 2"), true)).Returns((Item t, bool a) => t.Clone());
 
             creature.Quantity = 42;
 
@@ -537,8 +537,8 @@ namespace EncounterGen.Tests.Unit.Generators
 
             var setItem = new Item();
             var otherSetItem = new Item();
-            mockMundaneItemGenerator.Setup(g => g.Generate(It.Is<Item>(i => i.Name == "item 1"), true)).Returns(setItem);
-            mockOtherMundaneItemGenerator.Setup(g => g.Generate(It.Is<Item>(i => i.Name == "item 2"), true)).Returns(otherSetItem);
+            mockMundaneItemGenerator.Setup(g => g.GenerateFrom(It.Is<Item>(i => i.Name == "item 1"), true)).Returns(setItem);
+            mockOtherMundaneItemGenerator.Setup(g => g.GenerateFrom(It.Is<Item>(i => i.Name == "item 2"), true)).Returns(otherSetItem);
 
             var treasure = encounterTreasureGenerator.GenerateFor(creature, level);
             Assert.That(treasure.Coin.Currency, Is.EqualTo("currency"));
@@ -582,8 +582,8 @@ namespace EncounterGen.Tests.Unit.Generators
 
             var setItem = new Item();
             var otherSetItem = new Item();
-            mockMundaneItemGenerator.Setup(g => g.Generate(It.Is<Item>(i => i.Name == "item 1"), true)).Returns(setItem);
-            mockOtherMundaneItemGenerator.Setup(g => g.Generate(It.Is<Item>(i => i.Name == "item 2"), true)).Returns(otherSetItem);
+            mockMundaneItemGenerator.Setup(g => g.GenerateFrom(It.Is<Item>(i => i.Name == "item 1"), true)).Returns(setItem);
+            mockOtherMundaneItemGenerator.Setup(g => g.GenerateFrom(It.Is<Item>(i => i.Name == "item 2"), true)).Returns(otherSetItem);
 
             var treasure = encounterTreasureGenerator.GenerateFor(creature, level);
             Assert.That(treasure.Coin.Currency, Is.EqualTo("currency"));

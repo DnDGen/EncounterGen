@@ -33,27 +33,28 @@ namespace EncounterGen.Tests.Integration.Stress
         {
             allEnvironments = new[]
             {
-                EnvironmentConstants.Forest,
-                EnvironmentConstants.Marsh,
-                EnvironmentConstants.Mountain,
-                EnvironmentConstants.Hills,
+                EnvironmentConstants.Aquatic,
                 EnvironmentConstants.Civilized,
                 EnvironmentConstants.Desert,
                 EnvironmentConstants.Dungeon,
-                EnvironmentConstants.Plains
+                EnvironmentConstants.Forest,
+                EnvironmentConstants.Hills,
+                EnvironmentConstants.Marsh,
+                EnvironmentConstants.Mountain,
+                EnvironmentConstants.Plains,
             };
 
             allTemperatures = new[]
             {
                 EnvironmentConstants.Temperatures.Cold,
                 EnvironmentConstants.Temperatures.Temperate,
-                EnvironmentConstants.Temperatures.Warm
+                EnvironmentConstants.Temperatures.Warm,
             };
 
             allTimesOfDay = new[]
             {
                 EnvironmentConstants.TimesOfDay.Day,
-                EnvironmentConstants.TimesOfDay.Night
+                EnvironmentConstants.TimesOfDay.Night,
             };
 
             allFilters = new[]
@@ -109,35 +110,36 @@ namespace EncounterGen.Tests.Integration.Stress
 
         private Encounter MakeEncounterInRandomEnvironment(int level = 0, string environment = "", string temperature = "", string timeOfDay = "", string filter = "", bool useFilter = false)
         {
-            var parameters = Generate(
-                () => RandomizeParameters(level, environment, temperature, timeOfDay, filter, useFilter),
-                p => EncounterVerifier.ValidEncounterExistsAtLevel(p.Environment, p.Level, p.Temperature, p.TimeOfDay, p.Filters));
+            var specifications = Generate(
+                () => RandomizeSpecifications(level, environment, temperature, timeOfDay, filter, useFilter),
+                s => EncounterVerifier.ValidEncounterExistsAtLevel(s));
 
-            if (parameters.Filters.Any())
-                usedFilters.Add(parameters.Filters.Single());
+            if (specifications.CreatureTypeFilters.Any())
+                usedFilters.Add(specifications.CreatureTypeFilters.Single());
 
-            return EncounterGenerator.Generate(parameters.Environment, parameters.Level, parameters.Temperature, parameters.TimeOfDay, parameters.Filters);
+            return EncounterGenerator.Generate(specifications);
         }
 
-        private EncounterGeneratorParameters RandomizeParameters(int level = 0, string environment = "", string temperature = "", string timeOfDay = "", string filter = "", bool useFilter = false)
+        private EncounterSpecifications RandomizeSpecifications(int level = 0, string environment = "", string temperature = "", string timeOfDay = "", string filter = "", bool useFilter = false)
         {
-            var parameters = new EncounterGeneratorParameters();
-            parameters.Environment = string.IsNullOrEmpty(environment) ? GetRandomFrom(allEnvironments) : environment;
-            parameters.Temperature = string.IsNullOrEmpty(temperature) ? GetRandomFrom(allTemperatures) : temperature;
-            parameters.TimeOfDay = string.IsNullOrEmpty(timeOfDay) ? GetRandomFrom(allTimesOfDay) : timeOfDay;
-            parameters.Level = level > 0 ? level : Random.Next(EncounterVerifier.MaximumLevel) + EncounterVerifier.MinimumLevel;
+            var specifications = new EncounterSpecifications();
+            specifications.Environment = string.IsNullOrEmpty(environment) ? GetRandomFrom(allEnvironments) : environment;
+            specifications.Temperature = string.IsNullOrEmpty(temperature) ? GetRandomFrom(allTemperatures) : temperature;
+            specifications.TimeOfDay = string.IsNullOrEmpty(timeOfDay) ? GetRandomFrom(allTimesOfDay) : timeOfDay;
+            specifications.Level = level > 0 ? level : Random.Next(EncounterSpecifications.MaximumLevel) + EncounterSpecifications.MinimumLevel;
+            specifications.AllowAquatic = Convert.ToBoolean(Random.Next(2));
 
             if (!string.IsNullOrEmpty(filter))
             {
-                parameters.EditableFilters.Add(filter);
+                specifications.CreatureTypeFilters = new[] { filter };
             }
             else if (useFilter)
             {
                 var randomFilter = GetRandomFrom(allFilters);
-                parameters.EditableFilters.Add(randomFilter);
+                specifications.CreatureTypeFilters = new[] { randomFilter };
             }
 
-            return parameters;
+            return specifications;
         }
 
         private string GetRandomFrom(IEnumerable<string> collection)
@@ -147,25 +149,6 @@ namespace EncounterGen.Tests.Integration.Stress
             var randomValue = collection.ElementAt(randomIndex);
 
             return randomValue;
-        }
-
-        private class EncounterGeneratorParameters
-        {
-            public string Environment { get; set; }
-            public string Temperature { get; set; }
-            public string TimeOfDay { get; set; }
-            public int Level { get; set; }
-            public List<string> EditableFilters { get; set; }
-
-            public string[] Filters
-            {
-                get { return EditableFilters.ToArray(); }
-            }
-
-            public EncounterGeneratorParameters()
-            {
-                EditableFilters = new List<string>();
-            }
         }
 
         private void AssertEncounter(Encounter encounter)

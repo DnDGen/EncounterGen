@@ -260,6 +260,7 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
         [TestCase(CreatureConstants.Eagle)]
         [TestCase(CreatureConstants.Eagle_Giant)]
         [TestCase(CreatureConstants.Efreeti)]
+        [TestCase(CreatureConstants.Elasmosaurus)]
         [TestCase(CreatureConstants.Elephant)]
         [TestCase(CreatureConstants.Elemental_Air_Elder)]
         [TestCase(CreatureConstants.Elemental_Air_Greater)]
@@ -296,9 +297,11 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
         [TestCase(CreatureConstants.FormianWorker)]
         [TestCase(CreatureConstants.FrostWorm)]
         [TestCase(CreatureConstants.Gargoyle)]
+        [TestCase(CreatureConstants.Gargoyle_Kapoacinth)]
         [TestCase(CreatureConstants.GelatinousCube)]//Stone and metal only
-        [TestCase(CreatureConstants.Ghast)]
         [TestCase(CreatureConstants.Ghoul)]
+        [TestCase(CreatureConstants.Ghoul_Lacedon)]
+        [TestCase(CreatureConstants.Ghoul_Ghast)]
         [TestCase(CreatureConstants.GibberingMouther)]
         [TestCase(CreatureConstants.Girallon)]
         [TestCase(CreatureConstants.Glabrezu)]
@@ -338,6 +341,7 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
         [TestCase(CreatureConstants.Hyena)]
         [TestCase(CreatureConstants.Imp)]
         [TestCase(CreatureConstants.InvisibleStalker)]
+        [TestCase(CreatureConstants.Kraken)]
         [TestCase(CreatureConstants.Krenshar)]
         [TestCase(CreatureConstants.Lammasu)]
         [TestCase(CreatureConstants.Lammasu_GoldenProtector)]
@@ -351,6 +355,7 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
         [TestCase(CreatureConstants.Lizard_Monitor)]
         [TestCase(CreatureConstants.Locust_Swarm)]
         [TestCase(CreatureConstants.Magmin)] //Nonflammable
+        [TestCase(CreatureConstants.MantaRay)]
         [TestCase(CreatureConstants.Manticore)]
         [TestCase(CreatureConstants.Marut)]
         [TestCase(CreatureConstants.Megaraptor)]
@@ -383,6 +388,8 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
         [TestCase(CreatureConstants.Nightmare_Cauchemar)]
         [TestCase(CreatureConstants.Nightwalker)]
         [TestCase(CreatureConstants.Nightwing)]
+        [TestCase(CreatureConstants.Octopus)]
+        [TestCase(CreatureConstants.Octopus_Giant)]
         [TestCase(CreatureConstants.Ooze_Gray)]
         [TestCase(CreatureConstants.Ooze_OchreJelly)]
         [TestCase(CreatureConstants.Otyugh)]
@@ -398,6 +405,8 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
         [TestCase(CreatureConstants.PitFiend)]
         [TestCase(CreatureConstants.Pony)]
         [TestCase(CreatureConstants.Pony_War)]
+        [TestCase(CreatureConstants.Porpoise)]
+        [TestCase(CreatureConstants.Porpoise_Celestial)]
         [TestCase(CreatureConstants.PrayingMantis_Giant)]
         [TestCase(CreatureConstants.Pseudodragon)]
         [TestCase(CreatureConstants.PurpleWorm)]//Only stone goods
@@ -433,10 +442,15 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
         [TestCase(CreatureConstants.Scorpion_Monstrous_Medium)]
         [TestCase(CreatureConstants.Scorpion_Monstrous_Small)]
         [TestCase(CreatureConstants.Scorpion_Monstrous_Tiny)]
+        [TestCase(CreatureConstants.SeaCat)]
         [TestCase(CreatureConstants.Shadow)]
         [TestCase(CreatureConstants.Shadow_Greater)]
         [TestCase(CreatureConstants.ShadowMastiff)]
         [TestCase(CreatureConstants.ShamblingMound)]
+        [TestCase(CreatureConstants.Shark_Dire)]
+        [TestCase(CreatureConstants.Shark_Huge)]
+        [TestCase(CreatureConstants.Shark_Large)]
+        [TestCase(CreatureConstants.Shark_Medium)]
         [TestCase(CreatureConstants.ShieldGuardian)]
         [TestCase(CreatureConstants.ShockerLizard)]
         [TestCase(CreatureConstants.Shrieker)]
@@ -472,6 +486,8 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
         [TestCase(CreatureConstants.Spider_Monstrous_Tiny)]
         [TestCase(CreatureConstants.Spider_Swarm)]
         [TestCase(CreatureConstants.SpiderEater)]
+        [TestCase(CreatureConstants.Squid)]
+        [TestCase(CreatureConstants.Squid_Giant)]
         [TestCase(CreatureConstants.StagBeetle_Giant)]
         [TestCase(CreatureConstants.Stirge)]
         [TestCase(CreatureConstants.Succubus)]
@@ -481,9 +497,13 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
         [TestCase(CreatureConstants.Tiger)]
         [TestCase(CreatureConstants.Tiger_Dire)]
         [TestCase(CreatureConstants.Toad)]
+        [TestCase(CreatureConstants.Tojanida_Adult)]
+        [TestCase(CreatureConstants.Tojanida_Elder)]
+        [TestCase(CreatureConstants.Tojanida_Juvenile)]
         [TestCase(CreatureConstants.Treant)]
         [TestCase(CreatureConstants.Triceratops)]
         [TestCase(CreatureConstants.Troll)]
+        [TestCase(CreatureConstants.Troll_Scrag)]
         [TestCase(CreatureConstants.Tyrannosaurus)]
         [TestCase(CreatureConstants.UmberHulk)]
         [TestCase(CreatureConstants.UmberHulk_TrulyHorrid)]
@@ -496,6 +516,9 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
         [TestCase(CreatureConstants.Wasp_Giant)]
         [TestCase(CreatureConstants.Weasel)]
         [TestCase(CreatureConstants.Weasel_Dire)]
+        [TestCase(CreatureConstants.Whale_Baleen)]
+        [TestCase(CreatureConstants.Whale_Cachalot)]
+        [TestCase(CreatureConstants.Whale_Orca)]
         [TestCase(CreatureConstants.Wight)]
         [TestCase(CreatureConstants.WillOWisp)]
         [TestCase(CreatureConstants.WinterWolf)]
@@ -764,6 +787,15 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
         }
 
         [Test]
+        public void OgreMerrowItems()
+        {
+            var longspear = FormatSetItem(WeaponConstants.Longspear, ItemTypeConstants.Weapon, 0, string.Empty, false, TraitConstants.Sizes.Large);
+            var javelin = FormatSetItem(WeaponConstants.Javelin, ItemTypeConstants.Weapon, 0, string.Empty, false, TraitConstants.Sizes.Large);
+
+            base.DistinctCollection(CreatureConstants.Ogre_Merrow, new[] { longspear, javelin });
+        }
+
+        [Test]
         public void OgreMageItems()
         {
             var greatsword = FormatSetItem(WeaponConstants.Greatsword, ItemTypeConstants.Weapon, 0, string.Empty, false, TraitConstants.Sizes.Large);
@@ -788,6 +820,15 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
             var longbow = FormatSetItem(WeaponConstants.Longbow, ItemTypeConstants.Weapon, 0, string.Empty, false, TraitConstants.Sizes.Small);
 
             base.DistinctCollection(CreatureConstants.Pixie_WithIrresistableDance, new[] { shortSword, longbow });
+        }
+
+        [Test]
+        public void SahuaginItems()
+        {
+            var trident = FormatSetItem(WeaponConstants.Trident, ItemTypeConstants.Weapon, 0, string.Empty, false, TraitConstants.Sizes.Medium);
+            var crossbow = FormatSetItem(WeaponConstants.HeavyCrossbow, ItemTypeConstants.Weapon, 0, string.Empty, false, TraitConstants.Sizes.Medium);
+
+            base.DistinctCollection(CreatureConstants.Sahuagin, new[] { trident, crossbow });
         }
 
         [Test]
@@ -836,6 +877,15 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
             var armor = FormatSetItem(ArmorConstants.HalfPlate, ItemTypeConstants.Armor, 4);
 
             base.DistinctCollection(CreatureConstants.Titan, new[] { warhammer, armor });
+        }
+
+        [Test]
+        public void TritonItems()
+        {
+            var trident = FormatSetItem(WeaponConstants.Trident, ItemTypeConstants.Weapon, 0, string.Empty, false, TraitConstants.Sizes.Medium);
+            var crossbow = FormatSetItem(WeaponConstants.HeavyCrossbow, ItemTypeConstants.Weapon, 0, string.Empty, false, TraitConstants.Sizes.Medium);
+
+            base.DistinctCollection(CreatureConstants.Triton, new[] { trident, crossbow });
         }
 
         [Test]

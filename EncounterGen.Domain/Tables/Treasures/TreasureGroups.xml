@@ -2662,6 +2662,9 @@
     <entry>Efreeti</entry>
   </collection>
   <collection>
+    <entry>Elasmosaurus</entry>
+  </collection>
+  <collection>
     <entry>Elephant</entry>
   </collection>
   <collection>
@@ -2755,6 +2758,24 @@
     <entry>Character(Lieutenant)[5]{High Elf}@Warrior@</entry>
   </collection>
   <collection>
+    <entry>Character(Captain)[7]{Aquatic Elf}@Warrior@</entry>
+  </collection>
+  <collection>
+    <entry>Elf$Aquatic$Noncombatant$$</entry>
+  </collection>
+  <collection>
+    <entry>Character[1]{Aquatic Elf}@Warrior@</entry>
+  </collection>
+  <collection>
+    <entry>Character(Sergeant)[3]{Aquatic Elf}@Warrior@</entry>
+  </collection>
+  <collection>
+    <entry>Character(Leader)[1d4+2]{Aquatic Elf}@Warrior@</entry>
+  </collection>
+  <collection>
+    <entry>Character(Lieutenant)[5]{Aquatic Elf}@Warrior@</entry>
+  </collection>
+  <collection>
     <entry>Erinyes</entry>
     <item>Longsword[Weapon]#Medium#</item>
     <item>Composite longbow[Weapon]#+5 Strength bonus#(1){Flaming}</item>
@@ -2807,14 +2828,14 @@
     <entry>Gargoyle</entry>
   </collection>
   <collection>
+    <entry>Gargoyle$Kapoacinth$</entry>
+  </collection>
+  <collection>
     <entry>Gelatinous cube</entry>
   </collection>
   <collection>
     <entry>Ghaele</entry>
     <item>Greatsword[Weapon](4){Holy}</item>
-  </collection>
-  <collection>
-    <entry>Ghast</entry>
   </collection>
   <collection>
     <entry>Character[1]#Ghost#</entry>
@@ -2878,6 +2899,12 @@
   </collection>
   <collection>
     <entry>Ghoul</entry>
+  </collection>
+  <collection>
+    <entry>Ghoul$Lacedon$</entry>
+  </collection>
+  <collection>
+    <entry>Ghoul$Ghast$</entry>
   </collection>
   <collection>
     <entry>Cloud giant</entry>
@@ -3288,6 +3315,9 @@
     <item>Longsword[Weapon](2)</item>
   </collection>
   <collection>
+    <entry>Kraken</entry>
+  </collection>
+  <collection>
     <entry>Krenshar</entry>
   </collection>
   <collection>
@@ -3406,10 +3436,31 @@
     <entry>Character(Lieutenant)[1d4+2]{Lizardfolk}</entry>
   </collection>
   <collection>
+    <entry>Character(Captain)[7]{Locathah}@Warrior@</entry>
+  </collection>
+  <collection>
+    <entry>Locathah$Noncombatant$</entry>
+  </collection>
+  <collection>
+    <entry>Character[1]{Locathah}@Warrior@</entry>
+  </collection>
+  <collection>
+    <entry>Character(Sergeant)[3]{Locathah}@Warrior@</entry>
+  </collection>
+  <collection>
+    <entry>Character(Leader)[1d4+2]{Locathah}@Warrior@</entry>
+  </collection>
+  <collection>
+    <entry>Character(Lieutenant)[5]{Locathah}@Warrior@</entry>
+  </collection>
+  <collection>
     <entry>Locust swarm</entry>
   </collection>
   <collection>
     <entry>Magmin</entry>
+  </collection>
+  <collection>
+    <entry>Manta ray</entry>
   </collection>
   <collection>
     <entry>Manticore</entry>
@@ -3466,6 +3517,24 @@
   </collection>
   <collection>
     <entry>Mephit(Water)</entry>
+  </collection>
+  <collection>
+    <entry>Character(Captain)[7]{Merfolk}@Warrior@</entry>
+  </collection>
+  <collection>
+    <entry>Character(Lieutenant)[3]{Merfolk}@Warrior@</entry>
+  </collection>
+  <collection>
+    <entry>Character[1]{Merfolk}@Warrior@</entry>
+  </collection>
+  <collection>
+    <entry>Character(Sergeant)[3]{Merfolk}@Warrior@</entry>
+  </collection>
+  <collection>
+    <entry>Character(Leader)[1d4+2]{Merfolk}@Warrior@</entry>
+  </collection>
+  <collection>
+    <entry>Character(Lieutenant)[5]{Merfolk}@Warrior@</entry>
   </collection>
   <collection>
     <entry>Mimic</entry>
@@ -3548,12 +3617,26 @@
     <item>Dagger[Weapon]#Medium#</item>
   </collection>
   <collection>
+    <entry>Octopus</entry>
+  </collection>
+  <collection>
+    <entry>Giant octopus</entry>
+  </collection>
+  <collection>
     <entry>Ogre</entry>
     <item>Greatclub[Weapon]#Large#</item>
     <item>Javelin[Weapon]#Large#</item>
   </collection>
   <collection>
     <entry>Character[4]{Ogre}@Barbarian@</entry>
+  </collection>
+  <collection>
+    <entry>Ogre$Merrow$</entry>
+    <item>Longspear[Weapon]#Large#</item>
+    <item>Javelin[Weapon]#Large#</item>
+  </collection>
+  <collection>
+    <entry>Character[4]{Merrow}@Barbarian@</entry>
   </collection>
   <collection>
     <entry>Ogre mage</entry>
@@ -3638,6 +3721,12 @@
     <entry>Warpony</entry>
   </collection>
   <collection>
+    <entry>Porpoise</entry>
+  </collection>
+  <collection>
+    <entry>Porpoise$Celestial creature$</entry>
+  </collection>
+  <collection>
     <entry>Giant praying mantis</entry>
   </collection>
   <collection>
@@ -3698,6 +3787,32 @@
     <entry>Rust monster</entry>
   </collection>
   <collection>
+    <entry>Sahuagin</entry>
+    <item>Trident[Weapon]#Medium#</item>
+    <item>Heavy crossbow[Weapon]#Medium#</item>
+  </collection>
+  <collection>
+    <entry>Sahuagin$Noncombatant$</entry>
+  </collection>
+  <collection>
+    <entry>Character(Baron)[1d3+5]{Sahuagin}</entry>
+  </collection>
+  <collection>
+    <entry>Character(Lieutenant)[3]{Sahuagin}</entry>
+  </collection>
+  <collection>
+    <entry>Character(Guard)[4]{Sahuagin}</entry>
+  </collection>
+  <collection>
+    <entry>Character(Chieftan)[4]{Sahuagin}</entry>
+  </collection>
+  <collection>
+    <entry>Character(Priest)[7]{Sahuagin}@Cleric@</entry>
+  </collection>
+  <collection>
+    <entry>Character(Underpriest)[1d4+2]{Sahuagin}@Cleric@</entry>
+  </collection>
+  <collection>
     <entry>Salamander$Flamebrother$</entry>
     <item>Shortspear[Weapon]#Small#</item>
   </collection>
@@ -3755,6 +3870,9 @@
     <entry>Character[1d3+5]{Scorpionfolk}@Cleric@</entry>
   </collection>
   <collection>
+    <entry>Sea cat</entry>
+  </collection>
+  <collection>
     <entry>Shadow</entry>
   </collection>
   <collection>
@@ -3765,6 +3883,18 @@
   </collection>
   <collection>
     <entry>Shambling mound</entry>
+  </collection>
+  <collection>
+    <entry>Dire shark</entry>
+  </collection>
+  <collection>
+    <entry>Shark$Medium$</entry>
+  </collection>
+  <collection>
+    <entry>Shark$Large$</entry>
+  </collection>
+  <collection>
+    <entry>Shark$Huge$</entry>
   </collection>
   <collection>
     <entry>Shield guardian</entry>
@@ -3877,6 +4007,12 @@
     <entry>Spider eater</entry>
   </collection>
   <collection>
+    <entry>Squid</entry>
+  </collection>
+  <collection>
+    <entry>Giant squid</entry>
+  </collection>
+  <collection>
     <entry>Giant stag beetle</entry>
   </collection>
   <collection>
@@ -3930,10 +4066,24 @@
     <entry>Toad</entry>
   </collection>
   <collection>
+    <entry>Tojanida$Adult$</entry>
+  </collection>
+  <collection>
+    <entry>Tojanida$Elder$</entry>
+  </collection>
+  <collection>
+    <entry>Tojanida$Juvenile$</entry>
+  </collection>
+  <collection>
     <entry>Treant</entry>
   </collection>
   <collection>
     <entry>Triceratops</entry>
+  </collection>
+  <collection>
+    <entry>Triton</entry>
+    <item>Trident[Weapon]#Medium#</item>
+    <item>Heavy crossbow[Weapon]#Medium#</item>
   </collection>
   <collection>
     <entry>Troglodyte</entry>
@@ -3948,6 +4098,12 @@
   </collection>
   <collection>
     <entry>Character(Hunter)[6]{Troll}@Ranger@</entry>
+  </collection>
+  <collection>
+    <entry>Troll$Scrag$</entry>
+  </collection>
+  <collection>
+    <entry>Character(Hunter)[6]{Scrag}@Ranger@</entry>
   </collection>
   <collection>
     <entry>Trumpet archon</entry>
@@ -4083,6 +4239,15 @@
   </collection>
   <collection>
     <entry>Character(Lord)[10]#Werewolf#@Fighter@</entry>
+  </collection>
+  <collection>
+    <entry>Whale$Baleen$</entry>
+  </collection>
+  <collection>
+    <entry>Whale$Cachalot$</entry>
+  </collection>
+  <collection>
+    <entry>Whale$Orca$</entry>
   </collection>
   <collection>
     <entry>Wight</entry>

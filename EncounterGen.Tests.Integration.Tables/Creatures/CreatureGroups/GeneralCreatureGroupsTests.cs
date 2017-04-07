@@ -5,7 +5,7 @@ using NUnit.Framework;
 namespace EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
 {
     [TestFixture]
-    public class GeneralCreatureGroupsTests : CreatureGroupsTests
+    public class GeneralCreatureGroupsTests : CreatureGroupsTableTests
     {
         [Test]
         public override void EntriesAreComplete()
@@ -56,27 +56,6 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         public void CreatureGroup(string entry, params string[] items)
         {
             base.DistinctCollection(entry, items);
-        }
-
-        [Test]
-        public void LandCreatures()
-        {
-            var creatures = new[]
-            {
-                CreatureConstants.Character_Adventurer,
-                CreatureConstants.Character_Hunter,
-                CreatureConstants.Commoner_Farmer,
-                CreatureConstants.Commoner_Herder,
-                CreatureConstants.Commoner_Pilgrim,
-                CreatureConstants.Doppelganger,
-                CreatureConstants.Gargoyle,
-                CreatureConstants.NPC_Traveler,
-                CreatureConstants.Rat,
-                CreatureConstants.Tarrasque,
-                CreatureConstants.Warrior_Bandit,
-            };
-
-            base.DistinctCollection(GroupConstants.Land, creatures);
         }
 
         //INFO: This is a group of creatures that would not appear in a civilized environment

@@ -1,4 +1,5 @@
 ﻿using EncounterGen.Domain.Selectors.Collections;
+using EncounterGen.Generators;
 using Moq;
 using NUnit.Framework;
 using System.Collections.Generic;
@@ -12,6 +13,7 @@ namespace EncounterGen.Tests.Unit.Selectors.Collections
         private IEncounterCollectionSelector cachingProxy;
         private Mock<IEncounterCollectionSelector> mockInnerSelector;
         private Mock<ICollectionSelector> mockCollectionSelector;
+        private EncounterSpecifications specifications;
 
         [SetUp]
         public void Setup()
@@ -19,6 +21,12 @@ namespace EncounterGen.Tests.Unit.Selectors.Collections
             mockInnerSelector = new Mock<IEncounterCollectionSelector>();
             mockCollectionSelector = new Mock<ICollectionSelector>();
             cachingProxy = new EncounterCollectionSelectorCachingProxy(mockInnerSelector.Object, mockCollectionSelector.Object);
+            specifications = new EncounterSpecifications();
+
+            specifications.Level = 9266;
+            specifications.Environment = "environment";
+            specifications.Temperature = "temperature";
+            specifications.TimeOfDay = "time of day";
         }
 
         [Test]
@@ -30,14 +38,36 @@ namespace EncounterGen.Tests.Unit.Selectors.Collections
                 new Dictionary<string, string>(),
             };
 
-            mockInnerSelector.Setup(s => s.SelectAllWeightedFrom(9266, "environment", "temperature", "time of day")).Returns(collection);
+            mockInnerSelector.Setup(s => s.SelectAllWeightedFrom(specifications)).Returns(collection);
 
-            var result = cachingProxy.SelectAllWeightedFrom(9266, "environment", "temperature", "time of day");
+            var result = cachingProxy.SelectAllWeightedFrom(specifications);
             Assert.That(result, Is.EqualTo(collection));
 
-            result = cachingProxy.SelectAllWeightedFrom(9266, "environment", "temperature", "time of day");
+            result = cachingProxy.SelectAllWeightedFrom(specifications);
             Assert.That(result, Is.EqualTo(collection));
-            mockInnerSelector.Verify(s => s.SelectAllWeightedFrom(It.IsAny<int>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string[]>()), Times.Once);
+            mockInnerSelector.Verify(s => s.SelectAllWeightedFrom(It.IsAny<EncounterSpecifications>()), Times.Once);
+        }
+
+        [Test]
+        public void CacheSimilarResultsFromSelectingAllWeighted()
+        {
+            var collection = new[]
+            {
+                new Dictionary<string, string>(),
+                new Dictionary<string, string>(),
+            };
+
+            mockInnerSelector.Setup(s => s.SelectAllWeightedFrom(specifications)).Returns(collection);
+
+            var result = cachingProxy.SelectAllWeightedFrom(specifications);
+            Assert.That(result, Is.EqualTo(collection));
+
+            var clone = specifications.Clone();
+
+            result = cachingProxy.SelectAllWeightedFrom(clone);
+
+            Assert.That(result, Is.EqualTo(collection));
+            mockInnerSelector.Verify(s => s.SelectAllWeightedFrom(It.IsAny<EncounterSpecifications>()), Times.Once);
         }
 
         [Test]
@@ -49,7 +79,7 @@ namespace EncounterGen.Tests.Unit.Selectors.Collections
                 new Dictionary<string, string>(),
             };
 
-            mockInnerSelector.Setup(s => s.SelectAllWeightedFrom(9266, "environment", "temperature", "time of day")).Returns(collection);
+            mockInnerSelector.Setup(s => s.SelectAllWeightedFrom(specifications)).Returns(collection);
 
             var otherCollection = new[]
             {
@@ -57,22 +87,25 @@ namespace EncounterGen.Tests.Unit.Selectors.Collections
                 new Dictionary<string, string>(),
             };
 
-            mockInnerSelector.Setup(s => s.SelectAllWeightedFrom(90210, "environment", "temperature", "time of day")).Returns(otherCollection);
+            var otherSpecs = specifications.Clone();
+            otherSpecs.Level = 90210;
 
-            var result = cachingProxy.SelectAllWeightedFrom(9266, "environment", "temperature", "time of day");
+            mockInnerSelector.Setup(s => s.SelectAllWeightedFrom(otherSpecs)).Returns(otherCollection);
+
+            var result = cachingProxy.SelectAllWeightedFrom(specifications);
             Assert.That(result, Is.EqualTo(collection));
 
-            result = cachingProxy.SelectAllWeightedFrom(90210, "environment", "temperature", "time of day");
+            result = cachingProxy.SelectAllWeightedFrom(otherSpecs);
             Assert.That(result, Is.EqualTo(otherCollection));
-            mockInnerSelector.Verify(s => s.SelectAllWeightedFrom(It.IsAny<int>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string[]>()), Times.Exactly(2));
+            mockInnerSelector.Verify(s => s.SelectAllWeightedFrom(It.IsAny<EncounterSpecifications>()), Times.Exactly(2));
 
-            result = cachingProxy.SelectAllWeightedFrom(9266, "environment", "temperature", "time of day");
+            result = cachingProxy.SelectAllWeightedFrom(specifications);
             Assert.That(result, Is.EqualTo(collection));
-            mockInnerSelector.Verify(s => s.SelectAllWeightedFrom(It.IsAny<int>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string[]>()), Times.Exactly(2));
+            mockInnerSelector.Verify(s => s.SelectAllWeightedFrom(It.IsAny<EncounterSpecifications>()), Times.Exactly(2));
 
-            result = cachingProxy.SelectAllWeightedFrom(90210, "environment", "temperature", "time of day");
+            result = cachingProxy.SelectAllWeightedFrom(otherSpecs);
             Assert.That(result, Is.EqualTo(otherCollection));
-            mockInnerSelector.Verify(s => s.SelectAllWeightedFrom(It.IsAny<int>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string[]>()), Times.Exactly(2));
+            mockInnerSelector.Verify(s => s.SelectAllWeightedFrom(It.IsAny<EncounterSpecifications>()), Times.Exactly(2));
         }
 
         [Test]
@@ -84,7 +117,7 @@ namespace EncounterGen.Tests.Unit.Selectors.Collections
                 new Dictionary<string, string>(),
             };
 
-            mockInnerSelector.Setup(s => s.SelectAllWeightedFrom(9266, "environment", "temperature", "time of day")).Returns(collection);
+            mockInnerSelector.Setup(s => s.SelectAllWeightedFrom(specifications)).Returns(collection);
 
             var otherCollection = new[]
             {
@@ -92,22 +125,25 @@ namespace EncounterGen.Tests.Unit.Selectors.Collections
                 new Dictionary<string, string>(),
             };
 
-            mockInnerSelector.Setup(s => s.SelectAllWeightedFrom(9266, "other environment", "temperature", "time of day")).Returns(otherCollection);
+            var otherSpecs = specifications.Clone();
+            otherSpecs.Environment = "other environment";
 
-            var result = cachingProxy.SelectAllWeightedFrom(9266, "environment", "temperature", "time of day");
+            mockInnerSelector.Setup(s => s.SelectAllWeightedFrom(otherSpecs)).Returns(otherCollection);
+
+            var result = cachingProxy.SelectAllWeightedFrom(specifications);
             Assert.That(result, Is.EqualTo(collection));
 
-            result = cachingProxy.SelectAllWeightedFrom(9266, "other environment", "temperature", "time of day");
+            result = cachingProxy.SelectAllWeightedFrom(otherSpecs);
             Assert.That(result, Is.EqualTo(otherCollection));
-            mockInnerSelector.Verify(s => s.SelectAllWeightedFrom(It.IsAny<int>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string[]>()), Times.Exactly(2));
+            mockInnerSelector.Verify(s => s.SelectAllWeightedFrom(It.IsAny<EncounterSpecifications>()), Times.Exactly(2));
 
-            result = cachingProxy.SelectAllWeightedFrom(9266, "environment", "temperature", "time of day");
+            result = cachingProxy.SelectAllWeightedFrom(specifications);
             Assert.That(result, Is.EqualTo(collection));
-            mockInnerSelector.Verify(s => s.SelectAllWeightedFrom(It.IsAny<int>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string[]>()), Times.Exactly(2));
+            mockInnerSelector.Verify(s => s.SelectAllWeightedFrom(It.IsAny<EncounterSpecifications>()), Times.Exactly(2));
 
-            result = cachingProxy.SelectAllWeightedFrom(9266, "other environment", "temperature", "time of day");
+            result = cachingProxy.SelectAllWeightedFrom(otherSpecs);
             Assert.That(result, Is.EqualTo(otherCollection));
-            mockInnerSelector.Verify(s => s.SelectAllWeightedFrom(It.IsAny<int>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string[]>()), Times.Exactly(2));
+            mockInnerSelector.Verify(s => s.SelectAllWeightedFrom(It.IsAny<EncounterSpecifications>()), Times.Exactly(2));
         }
 
         [Test]
@@ -119,7 +155,7 @@ namespace EncounterGen.Tests.Unit.Selectors.Collections
                 new Dictionary<string, string>(),
             };
 
-            mockInnerSelector.Setup(s => s.SelectAllWeightedFrom(9266, "environment", "temperature", "time of day")).Returns(collection);
+            mockInnerSelector.Setup(s => s.SelectAllWeightedFrom(specifications)).Returns(collection);
 
             var otherCollection = new[]
             {
@@ -127,22 +163,25 @@ namespace EncounterGen.Tests.Unit.Selectors.Collections
                 new Dictionary<string, string>(),
             };
 
-            mockInnerSelector.Setup(s => s.SelectAllWeightedFrom(9266, "environment", "other temperature", "time of day")).Returns(otherCollection);
+            var otherSpecs = specifications.Clone();
+            otherSpecs.TimeOfDay = "other time of day";
 
-            var result = cachingProxy.SelectAllWeightedFrom(9266, "environment", "temperature", "time of day");
+            mockInnerSelector.Setup(s => s.SelectAllWeightedFrom(otherSpecs)).Returns(otherCollection);
+
+            var result = cachingProxy.SelectAllWeightedFrom(specifications);
             Assert.That(result, Is.EqualTo(collection));
 
-            result = cachingProxy.SelectAllWeightedFrom(9266, "environment", "other temperature", "time of day");
+            result = cachingProxy.SelectAllWeightedFrom(otherSpecs);
             Assert.That(result, Is.EqualTo(otherCollection));
-            mockInnerSelector.Verify(s => s.SelectAllWeightedFrom(It.IsAny<int>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string[]>()), Times.Exactly(2));
+            mockInnerSelector.Verify(s => s.SelectAllWeightedFrom(It.IsAny<EncounterSpecifications>()), Times.Exactly(2));
 
-            result = cachingProxy.SelectAllWeightedFrom(9266, "environment", "temperature", "time of day");
+            result = cachingProxy.SelectAllWeightedFrom(specifications);
             Assert.That(result, Is.EqualTo(collection));
-            mockInnerSelector.Verify(s => s.SelectAllWeightedFrom(It.IsAny<int>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string[]>()), Times.Exactly(2));
+            mockInnerSelector.Verify(s => s.SelectAllWeightedFrom(It.IsAny<EncounterSpecifications>()), Times.Exactly(2));
 
-            result = cachingProxy.SelectAllWeightedFrom(9266, "environment", "other temperature", "time of day");
+            result = cachingProxy.SelectAllWeightedFrom(otherSpecs);
             Assert.That(result, Is.EqualTo(otherCollection));
-            mockInnerSelector.Verify(s => s.SelectAllWeightedFrom(It.IsAny<int>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string[]>()), Times.Exactly(2));
+            mockInnerSelector.Verify(s => s.SelectAllWeightedFrom(It.IsAny<EncounterSpecifications>()), Times.Exactly(2));
         }
 
         [Test]
@@ -154,7 +193,7 @@ namespace EncounterGen.Tests.Unit.Selectors.Collections
                 new Dictionary<string, string>(),
             };
 
-            mockInnerSelector.Setup(s => s.SelectAllWeightedFrom(9266, "environment", "temperature", "time of day")).Returns(collection);
+            mockInnerSelector.Setup(s => s.SelectAllWeightedFrom(specifications)).Returns(collection);
 
             var otherCollection = new[]
             {
@@ -162,22 +201,25 @@ namespace EncounterGen.Tests.Unit.Selectors.Collections
                 new Dictionary<string, string>(),
             };
 
-            mockInnerSelector.Setup(s => s.SelectAllWeightedFrom(9266, "environment", "temperature", "other time of day")).Returns(otherCollection);
+            var otherSpecs = specifications.Clone();
+            otherSpecs.Temperature = "other temperature";
 
-            var result = cachingProxy.SelectAllWeightedFrom(9266, "environment", "temperature", "time of day");
+            mockInnerSelector.Setup(s => s.SelectAllWeightedFrom(otherSpecs)).Returns(otherCollection);
+
+            var result = cachingProxy.SelectAllWeightedFrom(specifications);
             Assert.That(result, Is.EqualTo(collection));
 
-            result = cachingProxy.SelectAllWeightedFrom(9266, "environment", "temperature", "other time of day");
+            result = cachingProxy.SelectAllWeightedFrom(otherSpecs);
             Assert.That(result, Is.EqualTo(otherCollection));
-            mockInnerSelector.Verify(s => s.SelectAllWeightedFrom(It.IsAny<int>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string[]>()), Times.Exactly(2));
+            mockInnerSelector.Verify(s => s.SelectAllWeightedFrom(It.IsAny<EncounterSpecifications>()), Times.Exactly(2));
 
-            result = cachingProxy.SelectAllWeightedFrom(9266, "environment", "temperature", "time of day");
+            result = cachingProxy.SelectAllWeightedFrom(specifications);
             Assert.That(result, Is.EqualTo(collection));
-            mockInnerSelector.Verify(s => s.SelectAllWeightedFrom(It.IsAny<int>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string[]>()), Times.Exactly(2));
+            mockInnerSelector.Verify(s => s.SelectAllWeightedFrom(It.IsAny<EncounterSpecifications>()), Times.Exactly(2));
 
-            result = cachingProxy.SelectAllWeightedFrom(9266, "environment", "temperature", "other time of day");
+            result = cachingProxy.SelectAllWeightedFrom(otherSpecs);
             Assert.That(result, Is.EqualTo(otherCollection));
-            mockInnerSelector.Verify(s => s.SelectAllWeightedFrom(It.IsAny<int>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string[]>()), Times.Exactly(2));
+            mockInnerSelector.Verify(s => s.SelectAllWeightedFrom(It.IsAny<EncounterSpecifications>()), Times.Exactly(2));
         }
 
         [Test]
@@ -189,7 +231,7 @@ namespace EncounterGen.Tests.Unit.Selectors.Collections
                 new Dictionary<string, string>(),
             };
 
-            mockInnerSelector.Setup(s => s.SelectAllWeightedFrom(9266, "environment", "temperature", "time of day")).Returns(collection);
+            mockInnerSelector.Setup(s => s.SelectAllWeightedFrom(specifications)).Returns(collection);
 
             var otherCollection = new[]
             {
@@ -197,34 +239,39 @@ namespace EncounterGen.Tests.Unit.Selectors.Collections
                 new Dictionary<string, string>(),
             };
 
-            mockInnerSelector.Setup(s => s.SelectAllWeightedFrom(9266, "environment", "temperature", "time of day", "filter")).Returns(otherCollection);
+            var otherSpecs = specifications.Clone();
+            otherSpecs.CreatureTypeFilters = new[] { "filter" };
 
-            var result = cachingProxy.SelectAllWeightedFrom(9266, "environment", "temperature", "time of day");
+            mockInnerSelector.Setup(s => s.SelectAllWeightedFrom(otherSpecs)).Returns(otherCollection);
+
+            var result = cachingProxy.SelectAllWeightedFrom(specifications);
             Assert.That(result, Is.EqualTo(collection));
 
-            result = cachingProxy.SelectAllWeightedFrom(9266, "environment", "temperature", "time of day", "filter");
+            result = cachingProxy.SelectAllWeightedFrom(otherSpecs);
             Assert.That(result, Is.EqualTo(otherCollection));
-            mockInnerSelector.Verify(s => s.SelectAllWeightedFrom(It.IsAny<int>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string[]>()), Times.Exactly(2));
+            mockInnerSelector.Verify(s => s.SelectAllWeightedFrom(It.IsAny<EncounterSpecifications>()), Times.Exactly(2));
 
-            result = cachingProxy.SelectAllWeightedFrom(9266, "environment", "temperature", "time of day");
+            result = cachingProxy.SelectAllWeightedFrom(specifications);
             Assert.That(result, Is.EqualTo(collection));
-            mockInnerSelector.Verify(s => s.SelectAllWeightedFrom(It.IsAny<int>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string[]>()), Times.Exactly(2));
+            mockInnerSelector.Verify(s => s.SelectAllWeightedFrom(It.IsAny<EncounterSpecifications>()), Times.Exactly(2));
 
-            result = cachingProxy.SelectAllWeightedFrom(9266, "environment", "temperature", "time of day", "filter");
+            result = cachingProxy.SelectAllWeightedFrom(otherSpecs);
             Assert.That(result, Is.EqualTo(otherCollection));
-            mockInnerSelector.Verify(s => s.SelectAllWeightedFrom(It.IsAny<int>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string[]>()), Times.Exactly(2));
+            mockInnerSelector.Verify(s => s.SelectAllWeightedFrom(It.IsAny<EncounterSpecifications>()), Times.Exactly(2));
         }
 
         [Test]
         public void CacheKeyIsUniqueBetweenFilters()
         {
+            specifications.CreatureTypeFilters = new[] { "filter" };
+
             var collection = new[]
             {
                 new Dictionary<string, string>(),
                 new Dictionary<string, string>(),
             };
 
-            mockInnerSelector.Setup(s => s.SelectAllWeightedFrom(9266, "environment", "temperature", "time of day", "filter")).Returns(collection);
+            mockInnerSelector.Setup(s => s.SelectAllWeightedFrom(specifications)).Returns(collection);
 
             var otherCollection = new[]
             {
@@ -232,34 +279,39 @@ namespace EncounterGen.Tests.Unit.Selectors.Collections
                 new Dictionary<string, string>(),
             };
 
-            mockInnerSelector.Setup(s => s.SelectAllWeightedFrom(9266, "environment", "temperature", "time of day", "other filter")).Returns(otherCollection);
+            var otherSpecs = specifications.Clone();
+            otherSpecs.CreatureTypeFilters = new[] { "other filter" };
 
-            var result = cachingProxy.SelectAllWeightedFrom(9266, "environment", "temperature", "time of day", "filter");
+            mockInnerSelector.Setup(s => s.SelectAllWeightedFrom(otherSpecs)).Returns(otherCollection);
+
+            var result = cachingProxy.SelectAllWeightedFrom(specifications);
             Assert.That(result, Is.EqualTo(collection));
 
-            result = cachingProxy.SelectAllWeightedFrom(9266, "environment", "temperature", "time of day", "other filter");
+            result = cachingProxy.SelectAllWeightedFrom(otherSpecs);
             Assert.That(result, Is.EqualTo(otherCollection));
-            mockInnerSelector.Verify(s => s.SelectAllWeightedFrom(It.IsAny<int>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string[]>()), Times.Exactly(2));
+            mockInnerSelector.Verify(s => s.SelectAllWeightedFrom(It.IsAny<EncounterSpecifications>()), Times.Exactly(2));
 
-            result = cachingProxy.SelectAllWeightedFrom(9266, "environment", "temperature", "time of day", "filter");
+            result = cachingProxy.SelectAllWeightedFrom(specifications);
             Assert.That(result, Is.EqualTo(collection));
-            mockInnerSelector.Verify(s => s.SelectAllWeightedFrom(It.IsAny<int>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string[]>()), Times.Exactly(2));
+            mockInnerSelector.Verify(s => s.SelectAllWeightedFrom(It.IsAny<EncounterSpecifications>()), Times.Exactly(2));
 
-            result = cachingProxy.SelectAllWeightedFrom(9266, "environment", "temperature", "time of day", "other filter");
+            result = cachingProxy.SelectAllWeightedFrom(otherSpecs);
             Assert.That(result, Is.EqualTo(otherCollection));
-            mockInnerSelector.Verify(s => s.SelectAllWeightedFrom(It.IsAny<int>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string[]>()), Times.Exactly(2));
+            mockInnerSelector.Verify(s => s.SelectAllWeightedFrom(It.IsAny<EncounterSpecifications>()), Times.Exactly(2));
         }
 
         [Test]
         public void CacheKeyIsUniqueWithMultipleFilters()
         {
+            specifications.CreatureTypeFilters = new[] { "filter" };
+
             var collection = new[]
             {
                 new Dictionary<string, string>(),
                 new Dictionary<string, string>(),
             };
 
-            mockInnerSelector.Setup(s => s.SelectAllWeightedFrom(9266, "environment", "temperature", "time of day", "filter")).Returns(collection);
+            mockInnerSelector.Setup(s => s.SelectAllWeightedFrom(specifications)).Returns(collection);
 
             var otherCollection = new[]
             {
@@ -267,22 +319,25 @@ namespace EncounterGen.Tests.Unit.Selectors.Collections
                 new Dictionary<string, string>(),
             };
 
-            mockInnerSelector.Setup(s => s.SelectAllWeightedFrom(9266, "environment", "temperature", "time of day", "filter", "other filter")).Returns(otherCollection);
+            var otherSpecs = specifications.Clone();
+            otherSpecs.CreatureTypeFilters = new[] { "filter", "other filter" };
 
-            var result = cachingProxy.SelectAllWeightedFrom(9266, "environment", "temperature", "time of day", "filter");
+            mockInnerSelector.Setup(s => s.SelectAllWeightedFrom(otherSpecs)).Returns(otherCollection);
+
+            var result = cachingProxy.SelectAllWeightedFrom(specifications);
             Assert.That(result, Is.EqualTo(collection));
 
-            result = cachingProxy.SelectAllWeightedFrom(9266, "environment", "temperature", "time of day", "filter", "other filter");
+            result = cachingProxy.SelectAllWeightedFrom(otherSpecs);
             Assert.That(result, Is.EqualTo(otherCollection));
-            mockInnerSelector.Verify(s => s.SelectAllWeightedFrom(It.IsAny<int>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string[]>()), Times.Exactly(2));
+            mockInnerSelector.Verify(s => s.SelectAllWeightedFrom(It.IsAny<EncounterSpecifications>()), Times.Exactly(2));
 
-            result = cachingProxy.SelectAllWeightedFrom(9266, "environment", "temperature", "time of day", "filter");
+            result = cachingProxy.SelectAllWeightedFrom(specifications);
             Assert.That(result, Is.EqualTo(collection));
-            mockInnerSelector.Verify(s => s.SelectAllWeightedFrom(It.IsAny<int>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string[]>()), Times.Exactly(2));
+            mockInnerSelector.Verify(s => s.SelectAllWeightedFrom(It.IsAny<EncounterSpecifications>()), Times.Exactly(2));
 
-            result = cachingProxy.SelectAllWeightedFrom(9266, "environment", "temperature", "time of day", "filter", "other filter");
+            result = cachingProxy.SelectAllWeightedFrom(otherSpecs);
             Assert.That(result, Is.EqualTo(otherCollection));
-            mockInnerSelector.Verify(s => s.SelectAllWeightedFrom(It.IsAny<int>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string[]>()), Times.Exactly(2));
+            mockInnerSelector.Verify(s => s.SelectAllWeightedFrom(It.IsAny<EncounterSpecifications>()), Times.Exactly(2));
         }
 
         [Test]
@@ -294,17 +349,17 @@ namespace EncounterGen.Tests.Unit.Selectors.Collections
                 new Dictionary<string, string>(),
             };
 
-            mockInnerSelector.Setup(s => s.SelectAllWeightedFrom(9266, "environment", "temperature", "time of day")).Returns(collection);
+            mockInnerSelector.Setup(s => s.SelectAllWeightedFrom(specifications)).Returns(collection);
 
             mockCollectionSelector.SetupSequence(s => s.SelectRandomFrom(collection)).Returns(collection.First()).Returns(collection.Last());
 
-            var result = cachingProxy.SelectRandomFrom(9266, "environment", "temperature", "time of day");
+            var result = cachingProxy.SelectRandomFrom(specifications);
             Assert.That(result, Is.EqualTo(collection.First()));
 
-            result = cachingProxy.SelectRandomFrom(9266, "environment", "temperature", "time of day");
+            result = cachingProxy.SelectRandomFrom(specifications);
             Assert.That(result, Is.EqualTo(collection.Last()));
-            mockInnerSelector.Verify(s => s.SelectAllWeightedFrom(It.IsAny<int>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string[]>()), Times.Once);
-            mockInnerSelector.Verify(s => s.SelectRandomFrom(It.IsAny<int>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string[]>()), Times.Never);
+            mockInnerSelector.Verify(s => s.SelectAllWeightedFrom(It.IsAny<EncounterSpecifications>()), Times.Once);
+            mockInnerSelector.Verify(s => s.SelectRandomFrom(It.IsAny<EncounterSpecifications>()), Times.Never);
         }
 
         [Test]
@@ -312,9 +367,9 @@ namespace EncounterGen.Tests.Unit.Selectors.Collections
         {
             var collection = Enumerable.Empty<Dictionary<string, string>>();
 
-            mockInnerSelector.Setup(s => s.SelectAllWeightedFrom(9266, "environment", "temperature", "time of day")).Returns(collection);
+            mockInnerSelector.Setup(s => s.SelectAllWeightedFrom(specifications)).Returns(collection);
 
-            Assert.That(() => cachingProxy.SelectRandomFrom(9266, "environment", "temperature", "time of day"), Throws.ArgumentException.With.Message.EqualTo("No valid level 9266 encounters exist for temperature environment time of day"));
+            Assert.That(() => cachingProxy.SelectRandomFrom(specifications), Throws.ArgumentException.With.Message.EqualTo($"No valid encounters exist for {specifications.Description}"));
         }
     }
 }

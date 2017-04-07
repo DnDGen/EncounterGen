@@ -16,10 +16,10 @@ namespace EncounterGen.Domain.Generators
             this.eventQueue = eventQueue;
         }
 
-        public Encounter Generate(string environment, int level, string temperature, string timeOfDay, params string[] creatureTypeFilters)
+        public Encounter Generate(EncounterSpecifications specifications)
         {
-            eventQueue.Enqueue("EncounterGen", $"Beginning generation of level {level} encounter in {temperature} {environment} {timeOfDay}");
-            var encounter = internalGenerator.Generate(environment, level, temperature, timeOfDay, creatureTypeFilters);
+            eventQueue.Enqueue("EncounterGen", $"Beginning generation of encounter in {specifications.Description}");
+            var encounter = internalGenerator.Generate(specifications);
 
             eventQueue.Enqueue("EncounterGen", $"Completed generation of {encounter.ActualDifficulty} encounter with {encounter.Creatures.Count()} creatures and {encounter.Characters.Count()} characters");
 

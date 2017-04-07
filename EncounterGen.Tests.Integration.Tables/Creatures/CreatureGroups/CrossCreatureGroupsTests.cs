@@ -9,7 +9,7 @@ using System.Linq;
 namespace EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
 {
     [TestFixture]
-    public class CrossCreatureGroupsTests : CreatureGroupsTests
+    public class CrossCreatureGroupsTests : CreatureGroupsTableTests
     {
         [Inject]
         public IEncounterVerifier EncounterVerifier { get; set; }
@@ -20,6 +20,7 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
             AssertCreatureGroupEntriesAreComplete();
         }
 
+        [TestCase(EnvironmentConstants.Aquatic)]
         [TestCase(EnvironmentConstants.Civilized)]
         [TestCase(EnvironmentConstants.Desert)]
         [TestCase(EnvironmentConstants.Dungeon)]
@@ -31,6 +32,9 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         [TestCase(EnvironmentConstants.Temperatures.Cold)]
         [TestCase(EnvironmentConstants.Temperatures.Temperate)]
         [TestCase(EnvironmentConstants.Temperatures.Warm)]
+        [TestCase(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Aquatic)]
+        [TestCase(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic)]
+        [TestCase(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic)]
         [TestCase(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Desert)]
         [TestCase(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert)]
         [TestCase(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
@@ -54,6 +58,8 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         [TestCase(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
         [TestCase(GroupConstants.Magic)]
         [TestCase(GroupConstants.Land)]
+        [TestCase(GroupConstants.Wilderness)]
+        [TestCase(CreatureConstants.Types.Dragon)]
         public void AllCreaturesArePresentInAtLeastOneTimeOfDay(string source)
         {
             var sourceCreatures = ExplodeCollection(source);
@@ -61,19 +67,49 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
             AssertContainedCollection(sourceCreatures, allTimesOfDayCreatures);
         }
 
-        private IEnumerable<string> GetTimesOfDayCreatures()
+        [TestCase(EnvironmentConstants.Aquatic)]
+        [TestCase(EnvironmentConstants.Civilized)]
+        [TestCase(EnvironmentConstants.Desert)]
+        [TestCase(EnvironmentConstants.Dungeon)]
+        [TestCase(EnvironmentConstants.Forest)]
+        [TestCase(EnvironmentConstants.Hills)]
+        [TestCase(EnvironmentConstants.Marsh)]
+        [TestCase(EnvironmentConstants.Mountain)]
+        [TestCase(EnvironmentConstants.Plains)]
+        [TestCase(EnvironmentConstants.Temperatures.Cold)]
+        [TestCase(EnvironmentConstants.Temperatures.Temperate)]
+        [TestCase(EnvironmentConstants.Temperatures.Warm)]
+        [TestCase(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Aquatic)]
+        [TestCase(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic)]
+        [TestCase(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic)]
+        [TestCase(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Desert)]
+        [TestCase(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert)]
+        [TestCase(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
+        [TestCase(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Dungeon)]
+        [TestCase(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Dungeon)]
+        [TestCase(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Dungeon)]
+        [TestCase(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Forest)]
+        [TestCase(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
+        [TestCase(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest)]
+        [TestCase(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Hills)]
+        [TestCase(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
+        [TestCase(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
+        [TestCase(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Marsh)]
+        [TestCase(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh)]
+        [TestCase(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh)]
+        [TestCase(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain)]
+        [TestCase(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
+        [TestCase(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain)]
+        [TestCase(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Plains)]
+        [TestCase(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains)]
+        [TestCase(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
+        [TestCase(GroupConstants.Magic)]
+        [TestCase(GroupConstants.Land)]
+        [TestCase(GroupConstants.Wilderness)]
+        [TestCase(CreatureConstants.Types.Dragon)]
+        public void AllCreaturesHaveType(string source)
         {
-            var dayCreatures = ExplodeCollection(EnvironmentConstants.TimesOfDay.Day);
-            var nightCreatures = ExplodeCollection(EnvironmentConstants.TimesOfDay.Night);
-
-            return dayCreatures.Union(nightCreatures);
-        }
-
-        [Test]
-        public void AllCreaturesHaveType()
-        {
-            //INFO: Night group includes all creatures, so is effectively an "All" group
-            var allCreatures = ExplodeCollection(EnvironmentConstants.TimesOfDay.Night);
+            var sourceCreatures = ExplodeCollection(source);
             var allTypes = new[]
             {
                 CreatureConstants.Types.Aberration,
@@ -94,11 +130,19 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
             };
 
             var excludedCreatures = new[] { CreatureConstants.DominatedCreature, CreatureConstants.Noncombatant };
-            excludedCreatures = excludedCreatures.SelectMany(c => ExplodeCollection(c)).ToArray();
-            var creatures = allCreatures.Except(excludedCreatures);
+            var explodedExcludedCreatures = ExplodeCollections(excludedCreatures);
+            var creatures = sourceCreatures.Except(explodedExcludedCreatures);
 
             var creaturesWithoutType = creatures.Where(c => EncounterVerifier.CreatureIsValid(c, allTypes) == false);
             Assert.That(creaturesWithoutType, Is.Empty, "Creatures not in a type category");
+        }
+
+        private IEnumerable<string> GetTimesOfDayCreatures()
+        {
+            var dayCreatures = ExplodeCollection(EnvironmentConstants.TimesOfDay.Day);
+            var nightCreatures = ExplodeCollection(EnvironmentConstants.TimesOfDay.Night);
+
+            return dayCreatures.Union(nightCreatures);
         }
 
         [Test]

@@ -4,7 +4,7 @@ using NUnit.Framework;
 namespace EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
 {
     [TestFixture]
-    public class CreatureTypeGroupsTests : CreatureGroupsTests
+    public class CreatureTypeGroupsTests : CreatureGroupsTableTests
     {
         [Test]
         public override void EntriesAreComplete()
@@ -74,19 +74,25 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
                 CreatureConstants.Livestock,
                 CreatureConstants.Lizard,
                 CreatureConstants.Lizard_Monitor,
+                CreatureConstants.MantaRay,
                 CreatureConstants.Monkey,
                 CreatureConstants.Mule,
+                CreatureConstants.Octopus,
                 CreatureConstants.Owl,
                 CreatureConstants.Pony,
+                CreatureConstants.Porpoise,
                 CreatureConstants.Rat,
                 CreatureConstants.Raven,
                 CreatureConstants.Rhinoceras,
                 CreatureConstants.Roc,
                 CreatureConstants.Snake_Constrictor,
                 CreatureConstants.Snake_Viper,
+                CreatureConstants.Shark,
+                CreatureConstants.Squid,
                 CreatureConstants.Tiger,
                 CreatureConstants.Toad,
                 CreatureConstants.Weasel,
+                CreatureConstants.Whale,
                 CreatureConstants.Wolf,
                 CreatureConstants.Wolverine,
             };
@@ -178,8 +184,10 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
                 CreatureConstants.Giant_Stone,
                 CreatureConstants.Giant_Storm,
                 CreatureConstants.Ogre,
+                CreatureConstants.Ogre_Merrow,
                 CreatureConstants.OgreMage,
                 CreatureConstants.Troll,
+                CreatureConstants.Troll_Scrag,
             };
 
             base.DistinctCollection(CreatureConstants.Types.Giant, creatures);
@@ -197,6 +205,7 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
                 CreatureConstants.Duergar,
                 CreatureConstants.Dwarf,
                 CreatureConstants.Elf,
+                CreatureConstants.Elf_Aquatic,
                 CreatureConstants.Gnoll,
                 CreatureConstants.Gnome,
                 CreatureConstants.Goblin,
@@ -204,6 +213,8 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
                 CreatureConstants.Hobgoblin,
                 CreatureConstants.Kobold,
                 CreatureConstants.Lizardfolk,
+                CreatureConstants.Locathah,
+                CreatureConstants.Merfolk,
                 CreatureConstants.Orc,
                 CreatureConstants.Svirfneblin,
                 CreatureConstants.Tiefling,
@@ -241,6 +252,7 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
                 CreatureConstants.Griffon,
                 CreatureConstants.Hippogriff,
                 CreatureConstants.Hydra,
+                CreatureConstants.Kraken,
                 CreatureConstants.Krenshar,
                 CreatureConstants.Lamia,
                 CreatureConstants.Lammasu,
@@ -253,6 +265,7 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
                 CreatureConstants.RazorBoar,
                 CreatureConstants.Remorhaz,
                 CreatureConstants.Roper,
+                CreatureConstants.SeaCat,
                 CreatureConstants.ShockerLizard,
                 CreatureConstants.Androsphinx,
                 CreatureConstants.Criosphinx,
@@ -279,12 +292,14 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
                 CreatureConstants.Derro,
                 CreatureConstants.Doppelganger,
                 CreatureConstants.Gargoyle,
+                CreatureConstants.Gargoyle_Kapoacinth,
                 CreatureConstants.Grimlock,
                 CreatureConstants.Hag,
                 CreatureConstants.Harpy,
                 CreatureConstants.Lycanthrope,
                 CreatureConstants.Medusa,
                 CreatureConstants.Minotaur,
+                CreatureConstants.Sahuagin,
                 CreatureConstants.Scorpionfolk,
                 CreatureConstants.YuanTi,
             };
@@ -348,6 +363,8 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
                 CreatureConstants.ShadowMastiff,
                 CreatureConstants.Slaad,
                 CreatureConstants.Titan,
+                CreatureConstants.Tojanida,
+                CreatureConstants.Triton,
                 CreatureConstants.Vargouille,
                 CreatureConstants.Xill,
                 CreatureConstants.Xorn,
@@ -381,9 +398,9 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
                 CreatureConstants.Allip,
                 CreatureConstants.Bodak,
                 CreatureConstants.Devourer,
-                CreatureConstants.Ghast,
                 CreatureConstants.Ghost,
                 CreatureConstants.Ghoul,
+                CreatureConstants.Ghoul_Lacedon,
                 CreatureConstants.Lich,
                 CreatureConstants.Mohrg,
                 CreatureConstants.Mummy,
@@ -392,7 +409,6 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
                 CreatureConstants.Skeleton,
                 CreatureConstants.Spectre,
                 CreatureConstants.Vampire,
-                CreatureConstants.VampireSpawn,
                 CreatureConstants.Wight,
                 CreatureConstants.Wraith,
                 CreatureConstants.Zombie,

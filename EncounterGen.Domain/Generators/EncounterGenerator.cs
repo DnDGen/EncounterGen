@@ -23,9 +23,14 @@ namespace EncounterGen.Domain.Generators
         private IEncounterCollectionSelector encounterCollectionSelector;
         private IEncounterSelector encounterSelector;
 
-        public EncounterGenerator(IAmountSelector amountSelector, IPercentileSelector percentileSelector,
-            ICollectionSelector collectionSelector, IEncounterCharacterGenerator encounterCharacterGenerator, IEncounterTreasureGenerator encounterTreasureGenerator,
-            IEncounterVerifier encounterVerifier, IEncounterCollectionSelector encounterCollectionSelector, IEncounterSelector encounterSelector)
+        public EncounterGenerator(IAmountSelector amountSelector,
+            IPercentileSelector percentileSelector,
+            ICollectionSelector collectionSelector,
+            IEncounterCharacterGenerator encounterCharacterGenerator,
+            IEncounterTreasureGenerator encounterTreasureGenerator,
+            IEncounterVerifier encounterVerifier,
+            IEncounterCollectionSelector encounterCollectionSelector,
+            IEncounterSelector encounterSelector)
         {
             this.amountSelector = amountSelector;
             this.percentileSelector = percentileSelector;
@@ -37,15 +42,15 @@ namespace EncounterGen.Domain.Generators
             this.encounterSelector = encounterSelector;
         }
 
-        public Encounter Generate(string environment, int level, string temperature, string timeOfDay, params string[] creatureTypeFilters)
+        public Encounter Generate(EncounterSpecifications encounterSpecifications)
         {
-            var validEncounterExists = encounterVerifier.ValidEncounterExistsAtLevel(environment, level, temperature, timeOfDay, creatureTypeFilters);
+            var validEncounterExists = encounterVerifier.ValidEncounterExistsAtLevel(encounterSpecifications);
             if (!validEncounterExists)
                 throw new ImpossibleEncounterException();
 
-            var encounter = GenerateEncounter(environment, level, temperature, timeOfDay, creatureTypeFilters);
-            while (!encounterVerifier.EncounterIsValid(encounter, creatureTypeFilters))
-                encounter = GenerateEncounter(environment, level, temperature, timeOfDay, creatureTypeFilters);
+            var encounter = GenerateEncounter(encounterSpecifications);
+            while (!encounterVerifier.EncounterIsValid(encounter, encounterSpecifications.CreatureTypeFilters))
+                encounter = GenerateEncounter(encounterSpecifications);
 
             encounter.Treasures = GetTreasures(encounter.Creatures, encounter.ActualEncounterLevel);
             encounter.Creatures = CleanCreatures(encounter.Creatures);
@@ -53,34 +58,34 @@ namespace EncounterGen.Domain.Generators
             return encounter;
         }
 
-        private Encounter GenerateEncounter(string environment, int level, string temperature, string timeOfDay, params string[] creatureTypeFilters)
+        private Encounter GenerateEncounter(EncounterSpecifications encounterSpecifications)
         {
-            var encounterLevel = GetEncounterLevel(environment, level, temperature, timeOfDay, creatureTypeFilters);
-            var creaturesAndAmounts = encounterCollectionSelector.SelectRandomFrom(encounterLevel, environment, temperature, timeOfDay, creatureTypeFilters);
+            var modifiedSpecifications = ModifySpecificationsWithEncounterLevel(encounterSpecifications);
+            var creaturesAndAmounts = encounterCollectionSelector.SelectRandomFrom(modifiedSpecifications);
             var encounter = new Encounter();
 
             encounter.Creatures = creaturesAndAmounts.SelectMany(kvp => GetCreatures(kvp.Key, kvp.Value)).ToArray(); //INFO: Need to do immediate execution, as delayed causes problems with verification and cleaning
             encounter.Characters = encounterCharacterGenerator.GenerateFrom(encounter.Creatures);
 
-            encounter.TargetEncounterLevel = level;
-            encounter.AverageEncounterLevel = encounterLevel;
+            encounter.TargetEncounterLevel = encounterSpecifications.Level;
+            encounter.AverageEncounterLevel = modifiedSpecifications.Level;
             encounter.ActualEncounterLevel = amountSelector.SelectActualEncounterLevel(encounter);
 
             return encounter;
         }
 
-        private int GetEncounterLevel(string environment, int level, string temperature, string timeOfDay, params string[] creatureTypeFilters)
+        private EncounterSpecifications ModifySpecificationsWithEncounterLevel(EncounterSpecifications source)
         {
-            var encounterLevel = 0;
+            var modifiedSpecifications = source.Clone();
 
             do
             {
                 var encounterLevelModifier = percentileSelector.SelectFrom(TableNameConstants.EncounterLevelModifiers);
-                encounterLevel = level + encounterLevelModifier;
+                modifiedSpecifications.Level = source.Level + encounterLevelModifier;
             }
-            while (!encounterVerifier.ValidEncounterExistsAtLevel(environment, encounterLevel, temperature, timeOfDay, creatureTypeFilters));
+            while (!encounterVerifier.ValidEncounterExistsAtLevel(modifiedSpecifications));
 
-            return encounterLevel;
+            return modifiedSpecifications;
         }
 
         private IEnumerable<Treasure> GetTreasures(IEnumerable<Creature> creatures, int level)

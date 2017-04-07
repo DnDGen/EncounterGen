@@ -2,6 +2,7 @@
 using EncounterGen.Domain.Selectors;
 using EncounterGen.Domain.Selectors.Collections;
 using EncounterGen.Domain.Tables;
+using EncounterGen.Generators;
 using Moq;
 using NUnit.Framework;
 using System.Collections.Generic;
@@ -26,11 +27,12 @@ namespace EncounterGen.Tests.Unit.Selectors.Collections
         private List<string> temperatureEncounters;
         private List<string> timeOfDayEncounters;
         private List<string> magicEncounters;
-        private List<string> specificEncounters;
+        private List<string> specificEnvironmentEncounters;
         private List<string> landEncounters;
         private List<string> dragonEncounters;
         private Dictionary<string, List<string>> filters;
         private List<string> wildernessEncounters;
+        private EncounterSpecifications specifications;
 
         [SetUp]
         public void Setup()
@@ -41,21 +43,30 @@ namespace EncounterGen.Tests.Unit.Selectors.Collections
             encounterCollectionSelector = new EncounterCollectionSelector(mockCollectionSelector.Object, mockAmountSelector.Object, mockEncounterSelector.Object);
 
             levelEncounters = new List<string>();
-            environmentEncounters = new List<string> { "encounter/amount", "environment encounter/environment amount" };
-            temperatureEncounters = new List<string> { "encounter/amount", "temperature encounter/temperature amount" };
-            timeOfDayEncounters = new List<string> { "encounter/amount", "time of day encounter/time of day amount" };
-            magicEncounters = new List<string> { "encounter/amount", "magic encounter/magic amount" };
-            specificEncounters = new List<string> { "specific encounter/specific amount", "other specific encounter/other specific amount" };
-            landEncounters = new List<string> { "encounter/amount", "land encounter/land amount" };
-            dragonEncounters = new List<string> { "encounter/amount", "dragon encounter/dragon amount" };
+            timeOfDayEncounters = new List<string>();
+            environmentEncounters = new List<string> { "environment encounter/environment amount", "other environment encounter/other environment amount" };
+            temperatureEncounters = new List<string> { "temperature encounter/temperature amount", "other temperature encounter/other temperature amount" };
+            magicEncounters = new List<string> { "magic encounter/magic amount", "other magic encounter/other magic amount" };
+            specificEnvironmentEncounters = new List<string> { "specific environment encounter/specific environment amount", "other specific environment encounter/other specific environment amount" };
+            landEncounters = new List<string> { "land encounter/land amount", "other land encounter/other land amount" };
+            dragonEncounters = new List<string> { "dragon encounter/dragon amount", "other dragon encounter/other dragon amount" };
             filters = new Dictionary<string, List<string>>();
             wildernessEncounters = new List<string>();
+            specifications = new EncounterSpecifications();
 
-            levelEncounters.Add("encounter/amount");
-            levelEncounters.Add("encounter/level amount");
+            levelEncounters.Add(environmentEncounters[0]);
+            levelEncounters.Add("level encounter/level amount");
+
+            timeOfDayEncounters.Add(environmentEncounters[0]);
+            timeOfDayEncounters.Add("time of day encounter/time of day amount");
 
             filters["filter"] = new List<string>();
             filters["other filter"] = new List<string>();
+
+            specifications.Environment = environment;
+            specifications.Level = level;
+            specifications.Temperature = temperature;
+            specifications.TimeOfDay = timeOfDay;
 
             mockAmountSelector.Setup(s => s.SelectAverageEncounterLevel(It.IsAny<string>())).Returns((string e) => GetLevel(e));
 
@@ -64,7 +75,7 @@ namespace EncounterGen.Tests.Unit.Selectors.Collections
             mockCollectionSelector.Setup(s => s.ExplodeInto(TableNameConstants.CreatureGroups, timeOfDay, TableNameConstants.EncounterGroups)).Returns(timeOfDayEncounters);
             mockCollectionSelector.Setup(s => s.ExplodeInto(TableNameConstants.CreatureGroups, GroupConstants.Magic, TableNameConstants.EncounterGroups)).Returns(magicEncounters);
             mockCollectionSelector.Setup(s => s.ExplodeInto(TableNameConstants.CreatureGroups, string.Empty, TableNameConstants.EncounterGroups)).Returns(Enumerable.Empty<string>());
-            mockCollectionSelector.Setup(s => s.ExplodeInto(TableNameConstants.CreatureGroups, temperature + environment, TableNameConstants.EncounterGroups)).Returns(specificEncounters);
+            mockCollectionSelector.Setup(s => s.ExplodeInto(TableNameConstants.CreatureGroups, temperature + environment, TableNameConstants.EncounterGroups)).Returns(specificEnvironmentEncounters);
             mockCollectionSelector.Setup(s => s.ExplodeInto(TableNameConstants.CreatureGroups, GroupConstants.Land, TableNameConstants.EncounterGroups)).Returns(landEncounters);
             mockCollectionSelector.Setup(s => s.ExplodeInto(TableNameConstants.CreatureGroups, GroupConstants.Wilderness, TableNameConstants.EncounterGroups)).Returns(wildernessEncounters);
             mockCollectionSelector.Setup(s => s.ExplodeInto(TableNameConstants.CreatureGroups, CreatureConstants.Types.Dragon, TableNameConstants.EncounterGroups)).Returns(dragonEncounters);
@@ -91,19 +102,19 @@ namespace EncounterGen.Tests.Unit.Selectors.Collections
         }
 
         [Test]
-        public void GetEncounterTypesAndAmountsFromSelector()
+        public void SelectingRandomGetsEncounterTypesAndAmountsFromSelector()
         {
-            var encounterTypesAndAmounts = encounterCollectionSelector.SelectRandomFrom(level, environment, temperature, timeOfDay);
-            AssertTypesAndAmounts(encounterTypesAndAmounts, string.Empty, "encounter", "amount");
+            var encounterTypesAndAmounts = encounterCollectionSelector.SelectRandomFrom(specifications);
+            AssertTypesAndAmounts(encounterTypesAndAmounts, string.Empty, "environment encounter", "environment amount");
         }
 
         [Test]
-        public void ThrowExceptionIfNoEncountersExist()
+        public void IfSelectingRandomAndNoEncountersExist_ThrowException()
         {
             levelEncounters.Clear();
 
-            Assert.That(() => encounterCollectionSelector.SelectRandomFrom(level, environment, temperature, timeOfDay),
-                Throws.ArgumentException.With.Message.EqualTo($"No valid level {level} encounters exist for {temperature} {environment} {timeOfDay}"));
+            Assert.That(() => encounterCollectionSelector.SelectRandomFrom(specifications),
+                Throws.ArgumentException.With.Message.EqualTo($"No valid encounters exist for {specifications.Description}"));
         }
 
         private void AssertTypesAndAmounts(Dictionary<string, string> actual, string failureMessage, params string[] expected)
@@ -125,61 +136,51 @@ namespace EncounterGen.Tests.Unit.Selectors.Collections
         {
             mockCollectionSelector.Setup(s => s.SelectRandomFrom(It.IsAny<IEnumerable<Dictionary<string, string>>>())).Returns((IEnumerable<Dictionary<string, string>> collection) => collection.ElementAt(1));
 
-            environmentEncounters.Add("other encounter/other amount");
             environmentEncounters.Add("wrong encounter/wrong amount");
-            levelEncounters.Add("other encounter/other amount");
-            levelEncounters.Add("wrong encounter/wrong amount");
-            timeOfDayEncounters.Add("other encounter/other amount");
-            timeOfDayEncounters.Add("wrong encounter/wrong amount");
+            levelEncounters.Add(environmentEncounters[1]);
+            levelEncounters.Add(environmentEncounters[2]);
+            timeOfDayEncounters.Add(environmentEncounters[1]);
+            timeOfDayEncounters.Add(environmentEncounters[2]);
 
-            var encounterTypesAndAmounts = encounterCollectionSelector.SelectRandomFrom(level, environment, temperature, timeOfDay);
-            AssertTypesAndAmounts(encounterTypesAndAmounts, string.Empty, "other encounter", "other amount");
+            var encounterTypesAndAmounts = encounterCollectionSelector.SelectRandomFrom(specifications);
+            AssertTypesAndAmounts(encounterTypesAndAmounts, string.Empty, "other environment encounter", "other environment amount");
         }
 
         [Test]
-        public void GetMultipleEncounterTypesAndAmountsFromSelector()
+        public void GetMultipleRandomEncounterTypesAndAmountsFromSelector()
         {
-            levelEncounters.Add("other encounter/other amount,encounter/amount");
-            levelEncounters.Add("other encounter/level amount");
             environmentEncounters.Add("other encounter/other amount,encounter/amount");
-            environmentEncounters.Add("environment encounter/other amount");
-            temperatureEncounters.Add("other encounter/other amount,encounter/amount");
-            temperatureEncounters.Add("temperature encounter/other amount");
+            levelEncounters.Add("other encounter/other amount,encounter/amount");
             timeOfDayEncounters.Add("other encounter/other amount,encounter/amount");
-            timeOfDayEncounters.Add("time of day encounter/other amount");
 
-            var encounterTypesAndAmounts = encounterCollectionSelector.SelectRandomFrom(level, environment, temperature, timeOfDay);
+            var encounterTypesAndAmounts = encounterCollectionSelector.SelectRandomFrom(specifications);
             AssertTypesAndAmounts(encounterTypesAndAmounts, string.Empty, "encounter", "amount", "other encounter", "other amount");
-        }
-
-        [Test]
-        public void SelectRandomThrowsExceptionIfNoEncounters()
-        {
-            levelEncounters.Clear();
-            Assert.That(() => encounterCollectionSelector.SelectRandomFrom(level, environment, temperature, timeOfDay), Throws.Exception);
         }
 
         [Test]
         public void SingleWeightMagicalEncounters()
         {
-            levelEncounters.Add(magicEncounters[1]);
-            timeOfDayEncounters.Add(magicEncounters[1]);
+            levelEncounters.Add(magicEncounters[0]);
+            timeOfDayEncounters.Add(magicEncounters[0]);
 
             var expectedEncounters = new[]
             {
-                "encounter", "amount",
                 "magic encounter", "magic amount",
-                "encounter", "amount",
-                "encounter", "amount"
+                "environment encounter", "environment amount",
+                "environment encounter", "environment amount",
+                "environment encounter", "environment amount"
             };
 
             AssertEncounterWeight(expectedEncounters);
         }
 
-        private void AssertEncounterWeight(IEnumerable<string> expectedEncounters, string targetEnvironment = environment)
+        private void AssertEncounterWeight(IEnumerable<string> expectedEncounters, string targetEnvironment = environment, bool allowAquatic = false)
         {
+            specifications.Environment = targetEnvironment;
+            specifications.AllowAquatic = allowAquatic;
+
             var expectedArray = expectedEncounters.ToArray();
-            var weightedEncounters = encounterCollectionSelector.SelectAllWeightedFrom(level, targetEnvironment, temperature, timeOfDay).ToArray();
+            var weightedEncounters = encounterCollectionSelector.SelectAllWeightedFrom(specifications).ToArray();
 
             for (var i = 0; i < expectedArray.Length; i += 2)
             {
@@ -195,15 +196,15 @@ namespace EncounterGen.Tests.Unit.Selectors.Collections
         [Test]
         public void SingleWeightDragonEncounters()
         {
-            levelEncounters.Add(dragonEncounters[1]);
-            timeOfDayEncounters.Add(dragonEncounters[1]);
+            levelEncounters.Add(dragonEncounters[0]);
+            timeOfDayEncounters.Add(dragonEncounters[0]);
 
             var expectedEncounters = new[]
             {
-                "encounter", "amount",
+                "environment encounter", "environment amount",
                 "dragon encounter", "dragon amount",
-                "encounter", "amount",
-                "encounter", "amount"
+                "environment encounter", "environment amount",
+                "environment encounter", "environment amount"
             };
 
             AssertEncounterWeight(expectedEncounters);
@@ -212,35 +213,76 @@ namespace EncounterGen.Tests.Unit.Selectors.Collections
         [Test]
         public void DoubleWeightLandEncounters()
         {
-            levelEncounters.Add(landEncounters[1]);
-            timeOfDayEncounters.Add(landEncounters[1]);
+            levelEncounters.Add(landEncounters[0]);
+            timeOfDayEncounters.Add(landEncounters[0]);
 
             var expectedEncounters = new[]
             {
-                "encounter", "amount",
+                "environment encounter", "environment amount",
                 "land encounter", "land amount",
+                "environment encounter", "environment amount",
                 "land encounter", "land amount",
-                "encounter", "amount",
-                "encounter", "amount",
+                "environment encounter", "environment amount",
             };
 
             AssertEncounterWeight(expectedEncounters);
         }
 
         [Test]
-        public void TripleWeightEnvironmentEncounters()
+        public void DoubleWeightAdditionalAquaticEncounters()
         {
-            levelEncounters.Add(environmentEncounters[1]);
-            timeOfDayEncounters.Add(environmentEncounters[1]);
+            var aquaticEncounters = new[] { "aquatic encounter/amount", "other aquatic encounter/other amount" };
+            var specificAquaticEncounters = new[] { "specific aquatic encounter/amount", "other specific aquatic encounter/other amount" };
+            mockCollectionSelector.Setup(s => s.ExplodeInto(TableNameConstants.CreatureGroups, EnvironmentConstants.Aquatic, TableNameConstants.EncounterGroups)).Returns(aquaticEncounters);
+            mockCollectionSelector.Setup(s => s.ExplodeInto(TableNameConstants.CreatureGroups, temperature + EnvironmentConstants.Aquatic, TableNameConstants.EncounterGroups)).Returns(specificAquaticEncounters);
+
+            levelEncounters.Add(aquaticEncounters[0]);
+            timeOfDayEncounters.Add(aquaticEncounters[0]);
 
             var expectedEncounters = new[]
             {
-                "encounter", "amount",
+                "environment encounter", "environment amount",
+                "aquatic encounter", "amount",
+                "environment encounter", "environment amount",
+                "aquatic encounter", "amount",
+                "environment encounter", "environment amount",
+            };
+
+            AssertEncounterWeight(expectedEncounters, allowAquatic: true);
+        }
+
+        [Test]
+        public void TripleWeightAdditionalSpecificAquaticEncounters()
+        {
+            var aquaticEncounters = new[] { "aquatic encounter/amount", "other aquatic encounter/other amount" };
+            var specificAquaticEncounters = new[] { "specific aquatic encounter/amount", "other specific aquatic encounter/other amount" };
+            mockCollectionSelector.Setup(s => s.ExplodeInto(TableNameConstants.CreatureGroups, EnvironmentConstants.Aquatic, TableNameConstants.EncounterGroups)).Returns(aquaticEncounters);
+            mockCollectionSelector.Setup(s => s.ExplodeInto(TableNameConstants.CreatureGroups, temperature + EnvironmentConstants.Aquatic, TableNameConstants.EncounterGroups)).Returns(specificAquaticEncounters);
+
+            levelEncounters.Add(specificAquaticEncounters[0]);
+            timeOfDayEncounters.Add(specificAquaticEncounters[0]);
+
+            var expectedEncounters = new[]
+            {
+                "environment encounter", "environment amount",
+                "specific aquatic encounter", "amount",
+                "environment encounter", "environment amount",
+                "specific aquatic encounter", "amount",
+                "environment encounter", "environment amount",
+                "specific aquatic encounter", "amount",
+            };
+
+            AssertEncounterWeight(expectedEncounters, allowAquatic: true);
+        }
+
+        [Test]
+        public void TripleWeightEnvironmentEncounters()
+        {
+            var expectedEncounters = new[]
+            {
                 "environment encounter", "environment amount",
                 "environment encounter", "environment amount",
-                "encounter", "amount",
                 "environment encounter", "environment amount",
-                "encounter", "amount",
             };
 
             AssertEncounterWeight(expectedEncounters);
@@ -249,16 +291,16 @@ namespace EncounterGen.Tests.Unit.Selectors.Collections
         [Test]
         public void TripleWeightTemperatureEncounters()
         {
-            levelEncounters.Add(temperatureEncounters[1]);
-            timeOfDayEncounters.Add(temperatureEncounters[1]);
+            levelEncounters.Add(temperatureEncounters[0]);
+            timeOfDayEncounters.Add(temperatureEncounters[0]);
 
             var expectedEncounters = new[]
             {
-                "encounter", "amount",
+                "environment encounter", "environment amount",
                 "temperature encounter", "temperature amount",
+                "environment encounter", "environment amount",
                 "temperature encounter", "temperature amount",
-                "encounter", "amount",
-                "encounter", "amount",
+                "environment encounter", "environment amount",
                 "temperature encounter", "temperature amount",
             };
 
@@ -268,18 +310,18 @@ namespace EncounterGen.Tests.Unit.Selectors.Collections
         [Test]
         public void QuadrupleWeightSpecificEncounters()
         {
-            levelEncounters.Add(specificEncounters[0]);
-            timeOfDayEncounters.Add(specificEncounters[0]);
+            levelEncounters.Add(specificEnvironmentEncounters[0]);
+            timeOfDayEncounters.Add(specificEnvironmentEncounters[0]);
 
             var expectedEncounters = new[]
             {
-                "encounter", "amount",
-                "specific encounter", "specific amount",
-                "specific encounter", "specific amount",
-                "encounter", "amount",
-                "encounter", "amount",
-                "specific encounter", "specific amount",
-                "specific encounter", "specific amount",
+                "environment encounter", "environment amount",
+                "specific environment encounter", "specific environment amount",
+                "environment encounter", "environment amount",
+                "specific environment encounter", "specific environment amount",
+                "environment encounter", "environment amount",
+                "specific environment encounter", "specific environment amount",
+                "specific environment encounter", "specific environment amount",
             };
 
             AssertEncounterWeight(expectedEncounters);
@@ -293,105 +335,96 @@ namespace EncounterGen.Tests.Unit.Selectors.Collections
             mockCollectionSelector.Setup(s => s.ExplodeInto(TableNameConstants.CreatureGroups, EnvironmentConstants.Civilized, TableNameConstants.EncounterGroups)).Returns(civilizedEncounters);
             mockCollectionSelector.Setup(s => s.ExplodeInto(TableNameConstants.CreatureGroups, temperature + EnvironmentConstants.Civilized, TableNameConstants.EncounterGroups)).Returns(specificCivilizedEncounters);
 
+            levelEncounters.Add(magicEncounters[0]);
             levelEncounters.Add(magicEncounters[1]);
+            levelEncounters.Add(landEncounters[0]);
             levelEncounters.Add(landEncounters[1]);
+            levelEncounters.Add(dragonEncounters[0]);
             levelEncounters.Add(dragonEncounters[1]);
+            levelEncounters.Add(temperatureEncounters[0]);
             levelEncounters.Add(temperatureEncounters[1]);
             levelEncounters.Add(civilizedEncounters[0]);
             levelEncounters.Add(specificCivilizedEncounters[0]);
 
+            timeOfDayEncounters.Add(magicEncounters[0]);
             timeOfDayEncounters.Add(magicEncounters[1]);
+            timeOfDayEncounters.Add(landEncounters[0]);
             timeOfDayEncounters.Add(landEncounters[1]);
+            timeOfDayEncounters.Add(dragonEncounters[0]);
             timeOfDayEncounters.Add(dragonEncounters[1]);
+            timeOfDayEncounters.Add(temperatureEncounters[0]);
             timeOfDayEncounters.Add(temperatureEncounters[1]);
             timeOfDayEncounters.Add(civilizedEncounters[0]);
             timeOfDayEncounters.Add(specificCivilizedEncounters[0]);
 
             wildernessEncounters.Add(magicEncounters[0]);
-            wildernessEncounters.Add(magicEncounters[1]);
-            wildernessEncounters.Add(landEncounters[1]);
-            wildernessEncounters.Add(dragonEncounters[1]);
-            wildernessEncounters.Add(temperatureEncounters[1]);
+            wildernessEncounters.Add(landEncounters[0]);
+            wildernessEncounters.Add(dragonEncounters[0]);
+            wildernessEncounters.Add(temperatureEncounters[0]);
 
             var expectedEncounters = new[]
             {
+                "other magic encounter", "other magic amount",
                 "civilized encounter", "amount",
+                "specific civilized encounter", "amount",
+                "other dragon encounter", "other dragon amount",
+                "other land encounter", "other land amount",
+                "other temperature encounter", "other temperature amount",
                 "civilized encounter", "amount",
+                "specific civilized encounter", "amount",
+                "other land encounter", "other land amount",
+                "other temperature encounter", "other temperature amount",
                 "civilized encounter", "amount",
+                "other temperature encounter", "other temperature amount",
+                "specific civilized encounter", "amount",
+                "specific civilized encounter", "amount",
             };
 
             AssertEncounterWeight(expectedEncounters, EnvironmentConstants.Civilized);
         }
 
         [Test]
-        public void IfCivilized_WeightNonWildernessEncountersAppropriately()
-        {
-            var civilizedEncounters = new[] { "civilized encounter/amount", "other civilized encounter/other amount" };
-            var specificCivilizedEncounters = new[] { "specific civilized encounter/amount", "other specific civilized encounter/other amount" };
-            mockCollectionSelector.Setup(s => s.ExplodeInto(TableNameConstants.CreatureGroups, EnvironmentConstants.Civilized, TableNameConstants.EncounterGroups)).Returns(civilizedEncounters);
-            mockCollectionSelector.Setup(s => s.ExplodeInto(TableNameConstants.CreatureGroups, temperature + EnvironmentConstants.Civilized, TableNameConstants.EncounterGroups)).Returns(specificCivilizedEncounters);
-
-            levelEncounters.Add(magicEncounters[1]);
-            levelEncounters.Add(landEncounters[1]);
-            levelEncounters.Add(dragonEncounters[1]);
-            levelEncounters.Add(temperatureEncounters[1]);
-            levelEncounters.Add(civilizedEncounters[0]);
-            levelEncounters.Add(specificCivilizedEncounters[0]);
-
-            timeOfDayEncounters.Add(magicEncounters[1]);
-            timeOfDayEncounters.Add(landEncounters[1]);
-            timeOfDayEncounters.Add(dragonEncounters[1]);
-            timeOfDayEncounters.Add(temperatureEncounters[1]);
-            timeOfDayEncounters.Add(civilizedEncounters[0]);
-            timeOfDayEncounters.Add(specificCivilizedEncounters[0]);
-
-            wildernessEncounters.Add(magicEncounters[0]);
-            wildernessEncounters.Add(dragonEncounters[1]);
-            wildernessEncounters.Add(temperatureEncounters[1]);
-
-            var expectedEncounters = new[]
-            {
-                "magic encounter", "magic amount",
-                "land encounter", "land amount",
-                "civilized encounter", "amount",
-                "land encounter", "land amount",
-                "civilized encounter", "amount",
-                "civilized encounter", "amount",
-            };
-
-            AssertEncounterWeight(expectedEncounters, EnvironmentConstants.Civilized);
-        }
-
-        [Test]
-        public void IfDungeon_IgnoreTimeOfDayFilter()
+        public void IfDungeon_SetTimeOfDayToNight()
         {
             var dungeonEncounters = new[] { "dungeon encounter/amount", "other dungeon encounter/other amount" };
             var specificDungeonEncounters = new[] { "specific dungeon encounter/amount", "other specific dungeon encounter/other amount" };
             mockCollectionSelector.Setup(s => s.ExplodeInto(TableNameConstants.CreatureGroups, EnvironmentConstants.Dungeon, TableNameConstants.EncounterGroups)).Returns(dungeonEncounters);
             mockCollectionSelector.Setup(s => s.ExplodeInto(TableNameConstants.CreatureGroups, temperature + EnvironmentConstants.Dungeon, TableNameConstants.EncounterGroups)).Returns(specificDungeonEncounters);
 
+            levelEncounters.Add(magicEncounters[0]);
             levelEncounters.Add(magicEncounters[1]);
+            levelEncounters.Add(landEncounters[0]);
             levelEncounters.Add(landEncounters[1]);
+            levelEncounters.Add(dragonEncounters[0]);
             levelEncounters.Add(dragonEncounters[1]);
+            levelEncounters.Add(temperatureEncounters[0]);
             levelEncounters.Add(temperatureEncounters[1]);
             levelEncounters.Add(dungeonEncounters[0]);
             levelEncounters.Add(specificDungeonEncounters[0]);
 
+            var nightEncounters = new List<string>();
+            nightEncounters.Add(magicEncounters[0]);
+            nightEncounters.Add(landEncounters[0]);
+            nightEncounters.Add(dragonEncounters[0]);
+            nightEncounters.Add(temperatureEncounters[0]);
+            nightEncounters.Add(dungeonEncounters[0]);
+            nightEncounters.Add(specificDungeonEncounters[0]);
+
+            mockCollectionSelector.Setup(s => s.ExplodeInto(TableNameConstants.CreatureGroups, EnvironmentConstants.TimesOfDay.Night, TableNameConstants.EncounterGroups)).Returns(nightEncounters);
+
             var expectedEncounters = new[]
             {
-                "encounter", "amount",
                 "magic encounter", "magic amount",
+                "dungeon encounter", "amount",
+                "specific dungeon encounter", "amount",
                 "dragon encounter", "dragon amount",
                 "land encounter", "land amount",
-                "dungeon encounter", "amount",
                 "temperature encounter", "temperature amount",
+                "dungeon encounter", "amount",
                 "specific dungeon encounter", "amount",
                 "land encounter", "land amount",
-                "dungeon encounter", "amount",
                 "temperature encounter", "temperature amount",
-                "specific dungeon encounter", "amount",
                 "dungeon encounter", "amount",
-                "encounter", "amount",
                 "temperature encounter", "temperature amount",
                 "specific dungeon encounter", "amount",
                 "specific dungeon encounter", "amount",
@@ -403,24 +436,37 @@ namespace EncounterGen.Tests.Unit.Selectors.Collections
         [Test]
         public void GetAllPossibleWeightedEncounters()
         {
-            levelEncounters.Add("other encounter/other amount");
-            levelEncounters.Add("other encounter/level amount");
-            environmentEncounters.Add("other encounter/other amount");
-            temperatureEncounters.Add("temperature encounter/other amount");
-            timeOfDayEncounters.Add("other encounter/other amount");
+            levelEncounters.Add(magicEncounters[0]);
+            levelEncounters.Add(landEncounters[0]);
+            levelEncounters.Add(dragonEncounters[0]);
+            levelEncounters.Add(temperatureEncounters[0]);
+            levelEncounters.Add(specificEnvironmentEncounters[0]);
 
-            var allEncounterTypesAndAmounts = encounterCollectionSelector.SelectAllWeightedFrom(level, environment, temperature, timeOfDay);
-            Assert.That(allEncounterTypesAndAmounts, Is.Not.Null);
-            Assert.That(allEncounterTypesAndAmounts, Is.Not.Empty);
-            Assert.That(allEncounterTypesAndAmounts.Count, Is.EqualTo(6));
+            timeOfDayEncounters.Add(magicEncounters[0]);
+            timeOfDayEncounters.Add(landEncounters[0]);
+            timeOfDayEncounters.Add(dragonEncounters[0]);
+            timeOfDayEncounters.Add(temperatureEncounters[0]);
+            timeOfDayEncounters.Add(specificEnvironmentEncounters[0]);
 
-            var array = allEncounterTypesAndAmounts.ToArray();
-            AssertTypesAndAmounts(array[0], "Index 0", "encounter", "amount");
-            AssertTypesAndAmounts(array[1], "Index 1", "other encounter", "other amount");
-            AssertTypesAndAmounts(array[2], "Index 2", "other encounter", "other amount");
-            AssertTypesAndAmounts(array[3], "Index 3", "encounter", "amount");
-            AssertTypesAndAmounts(array[4], "Index 4", "other encounter", "other amount");
-            AssertTypesAndAmounts(array[5], "Index 5", "encounter", "amount");
+            var expectedEncounters = new[]
+            {
+                "magic encounter", "magic amount",
+                "environment encounter", "environment amount",
+                "specific environment encounter", "specific environment amount",
+                "dragon encounter", "dragon amount",
+                "land encounter", "land amount",
+                "temperature encounter", "temperature amount",
+                "environment encounter", "environment amount",
+                "specific environment encounter", "specific environment amount",
+                "land encounter", "land amount",
+                "temperature encounter", "temperature amount",
+                "environment encounter", "environment amount",
+                "temperature encounter", "temperature amount",
+                "specific environment encounter", "specific environment amount",
+                "specific environment encounter", "specific environment amount",
+            };
+
+            AssertEncounterWeight(expectedEncounters);
         }
 
         [Test]
@@ -431,36 +477,52 @@ namespace EncounterGen.Tests.Unit.Selectors.Collections
             mockCollectionSelector.Setup(s => s.ExplodeInto(TableNameConstants.CreatureGroups, EnvironmentConstants.Civilized, TableNameConstants.EncounterGroups)).Returns(civilizedEncounters);
             mockCollectionSelector.Setup(s => s.ExplodeInto(TableNameConstants.CreatureGroups, temperature + EnvironmentConstants.Civilized, TableNameConstants.EncounterGroups)).Returns(specificCivilizedEncounters);
 
+            levelEncounters.Add(magicEncounters[0]);
             levelEncounters.Add(magicEncounters[1]);
+            levelEncounters.Add(landEncounters[0]);
             levelEncounters.Add(landEncounters[1]);
+            levelEncounters.Add(dragonEncounters[0]);
             levelEncounters.Add(dragonEncounters[1]);
             levelEncounters.Add(temperatureEncounters[0]);
+            levelEncounters.Add(temperatureEncounters[1]);
             levelEncounters.Add(civilizedEncounters[0]);
-            levelEncounters.Add(civilizedEncounters[1]);
             levelEncounters.Add(specificCivilizedEncounters[0]);
 
+            timeOfDayEncounters.Add(magicEncounters[0]);
             timeOfDayEncounters.Add(magicEncounters[1]);
+            timeOfDayEncounters.Add(landEncounters[0]);
             timeOfDayEncounters.Add(landEncounters[1]);
+            timeOfDayEncounters.Add(dragonEncounters[0]);
             timeOfDayEncounters.Add(dragonEncounters[1]);
+            timeOfDayEncounters.Add(temperatureEncounters[0]);
             timeOfDayEncounters.Add(temperatureEncounters[1]);
             timeOfDayEncounters.Add(civilizedEncounters[0]);
             timeOfDayEncounters.Add(specificCivilizedEncounters[0]);
 
             wildernessEncounters.Add(magicEncounters[0]);
-            wildernessEncounters.Add(magicEncounters[1]);
-            wildernessEncounters.Add(landEncounters[1]);
-            wildernessEncounters.Add(dragonEncounters[1]);
-            wildernessEncounters.Add(temperatureEncounters[1]);
+            wildernessEncounters.Add(landEncounters[0]);
+            wildernessEncounters.Add(dragonEncounters[0]);
+            wildernessEncounters.Add(temperatureEncounters[0]);
 
-            var allEncounterTypesAndAmounts = encounterCollectionSelector.SelectAllWeightedFrom(level, EnvironmentConstants.Civilized, temperature, timeOfDay);
-            Assert.That(allEncounterTypesAndAmounts, Is.Not.Null);
-            Assert.That(allEncounterTypesAndAmounts, Is.Not.Empty);
-            Assert.That(allEncounterTypesAndAmounts.Count, Is.EqualTo(3));
+            var expectedEncounters = new[]
+            {
+                "other magic encounter", "other magic amount",
+                "civilized encounter", "amount",
+                "specific civilized encounter", "amount",
+                "other dragon encounter", "other dragon amount",
+                "other land encounter", "other land amount",
+                "other temperature encounter", "other temperature amount",
+                "civilized encounter", "amount",
+                "specific civilized encounter", "amount",
+                "other land encounter", "other land amount",
+                "other temperature encounter", "other temperature amount",
+                "civilized encounter", "amount",
+                "other temperature encounter", "other temperature amount",
+                "specific civilized encounter", "amount",
+                "specific civilized encounter", "amount",
+            };
 
-            var array = allEncounterTypesAndAmounts.ToArray();
-            AssertTypesAndAmounts(array[0], "Index 0", "civilized encounter", "amount");
-            AssertTypesAndAmounts(array[1], "Index 1", "civilized encounter", "amount");
-            AssertTypesAndAmounts(array[2], "Index 2", "civilized encounter", "amount");
+            AssertEncounterWeight(expectedEncounters, EnvironmentConstants.Civilized);
         }
 
         [Test]
@@ -471,28 +533,40 @@ namespace EncounterGen.Tests.Unit.Selectors.Collections
             mockCollectionSelector.Setup(s => s.ExplodeInto(TableNameConstants.CreatureGroups, EnvironmentConstants.Dungeon, TableNameConstants.EncounterGroups)).Returns(dungeonEncounters);
             mockCollectionSelector.Setup(s => s.ExplodeInto(TableNameConstants.CreatureGroups, temperature + EnvironmentConstants.Dungeon, TableNameConstants.EncounterGroups)).Returns(specificDungeonEncounters);
 
+            levelEncounters.Add(magicEncounters[0]);
             levelEncounters.Add(magicEncounters[1]);
+            levelEncounters.Add(landEncounters[0]);
             levelEncounters.Add(landEncounters[1]);
+            levelEncounters.Add(dragonEncounters[0]);
             levelEncounters.Add(dragonEncounters[1]);
+            levelEncounters.Add(temperatureEncounters[0]);
             levelEncounters.Add(temperatureEncounters[1]);
             levelEncounters.Add(dungeonEncounters[0]);
             levelEncounters.Add(specificDungeonEncounters[0]);
 
+            var nightEncounters = new List<string>();
+            nightEncounters.Add(magicEncounters[0]);
+            nightEncounters.Add(landEncounters[0]);
+            nightEncounters.Add(dragonEncounters[0]);
+            nightEncounters.Add(temperatureEncounters[0]);
+            nightEncounters.Add(dungeonEncounters[0]);
+            nightEncounters.Add(specificDungeonEncounters[0]);
+
+            mockCollectionSelector.Setup(s => s.ExplodeInto(TableNameConstants.CreatureGroups, EnvironmentConstants.TimesOfDay.Night, TableNameConstants.EncounterGroups)).Returns(nightEncounters);
+
             var expectedEncounters = new[]
             {
-                "encounter", "amount",
                 "magic encounter", "magic amount",
+                "dungeon encounter", "amount",
+                "specific dungeon encounter", "amount",
                 "dragon encounter", "dragon amount",
                 "land encounter", "land amount",
-                "dungeon encounter", "amount",
                 "temperature encounter", "temperature amount",
+                "dungeon encounter", "amount",
                 "specific dungeon encounter", "amount",
                 "land encounter", "land amount",
-                "dungeon encounter", "amount",
                 "temperature encounter", "temperature amount",
-                "specific dungeon encounter", "amount",
                 "dungeon encounter", "amount",
-                "encounter", "amount",
                 "temperature encounter", "temperature amount",
                 "specific dungeon encounter", "amount",
                 "specific dungeon encounter", "amount",
@@ -505,7 +579,7 @@ namespace EncounterGen.Tests.Unit.Selectors.Collections
         public void SelectAllWeightedReturnsNoEncounters()
         {
             levelEncounters.Clear();
-            var allEncounterTypesAndAmounts = encounterCollectionSelector.SelectAllWeightedFrom(level, environment, temperature, timeOfDay);
+            var allEncounterTypesAndAmounts = encounterCollectionSelector.SelectAllWeightedFrom(specifications);
             Assert.That(allEncounterTypesAndAmounts, Is.Empty);
         }
 
@@ -516,10 +590,12 @@ namespace EncounterGen.Tests.Unit.Selectors.Collections
             levelEncounters.Add("wrong encounter/wrong amount");
             timeOfDayEncounters.Add("wrong encounter/wrong amount");
 
-            filters["filter"].Add("encounter");
+            filters["filter"].Add("environment encounter");
 
-            var encounterTypesAndAmounts = encounterCollectionSelector.SelectRandomFrom(level, environment, temperature, timeOfDay, "filter");
-            AssertTypesAndAmounts(encounterTypesAndAmounts, string.Empty, "encounter", "amount");
+            specifications.CreatureTypeFilters = new[] { "filter" };
+
+            var encounterTypesAndAmounts = encounterCollectionSelector.SelectRandomFrom(specifications);
+            AssertTypesAndAmounts(encounterTypesAndAmounts, string.Empty, "environment encounter", "environment amount");
         }
 
         [Test]
@@ -536,7 +612,9 @@ namespace EncounterGen.Tests.Unit.Selectors.Collections
 
             filters["filter"].Add("encounter");
 
-            var encounterTypesAndAmounts = encounterCollectionSelector.SelectRandomFrom(level, environment, temperature, timeOfDay, "filter");
+            specifications.CreatureTypeFilters = new[] { "filter" };
+
+            var encounterTypesAndAmounts = encounterCollectionSelector.SelectRandomFrom(specifications);
             AssertTypesAndAmounts(encounterTypesAndAmounts, string.Empty, "other encounter", "other amount", "encounter", "amount");
         }
 
@@ -555,7 +633,9 @@ namespace EncounterGen.Tests.Unit.Selectors.Collections
             filters["filter"].Add("encounter");
             filters["other filter"].Add("other encounter");
 
-            var encounterTypesAndAmounts = encounterCollectionSelector.SelectRandomFrom(level, environment, temperature, timeOfDay, "filter", "other filter");
+            specifications.CreatureTypeFilters = new[] { "filter", "other filter" };
+
+            var encounterTypesAndAmounts = encounterCollectionSelector.SelectRandomFrom(specifications);
             AssertTypesAndAmounts(encounterTypesAndAmounts, string.Empty, "other encounter", "other amount");
         }
 
@@ -566,14 +646,279 @@ namespace EncounterGen.Tests.Unit.Selectors.Collections
             levelEncounters.Add("wrong encounter/wrong amount");
             timeOfDayEncounters.Add("wrong encounter/wrong amount");
 
-            filters["filter"].Add("encounter");
+            filters["filter"].Add("environment encounter");
 
-            var allEncounterTypesAndAmounts = encounterCollectionSelector.SelectAllWeightedFrom(level, environment, temperature, timeOfDay, "filter").ToArray();
+            specifications.CreatureTypeFilters = new[] { "filter" };
+
+            var allEncounterTypesAndAmounts = encounterCollectionSelector.SelectAllWeightedFrom(specifications).ToArray();
             Assert.That(allEncounterTypesAndAmounts.Count, Is.EqualTo(3));
 
-            AssertTypesAndAmounts(allEncounterTypesAndAmounts[0], "Index 0", "encounter", "amount");
-            AssertTypesAndAmounts(allEncounterTypesAndAmounts[1], "Index 1", "encounter", "amount");
-            AssertTypesAndAmounts(allEncounterTypesAndAmounts[2], "Index 2", "encounter", "amount");
+            AssertTypesAndAmounts(allEncounterTypesAndAmounts[0], "Index 0", "environment encounter", "environment amount");
+            AssertTypesAndAmounts(allEncounterTypesAndAmounts[1], "Index 1", "environment encounter", "environment amount");
+            AssertTypesAndAmounts(allEncounterTypesAndAmounts[2], "Index 2", "environment encounter", "environment amount");
+        }
+
+        [Test]
+        public void AquaticEnvironmentDoesNotHaveNonAquaticEncounters()
+        {
+            var aquaticEncounters = new[] { "aquatic encounter/amount", "other aquatic encounter/other amount" };
+            var specificAquaticEncounters = new[] { "specific aquatic encounter/amount", "other specific aquatic encounter/other amount" };
+            mockCollectionSelector.Setup(s => s.ExplodeInto(TableNameConstants.CreatureGroups, EnvironmentConstants.Aquatic, TableNameConstants.EncounterGroups)).Returns(aquaticEncounters);
+            mockCollectionSelector.Setup(s => s.ExplodeInto(TableNameConstants.CreatureGroups, temperature + EnvironmentConstants.Aquatic, TableNameConstants.EncounterGroups)).Returns(specificAquaticEncounters);
+
+            levelEncounters.Add(magicEncounters[0]);
+            levelEncounters.Add(landEncounters[0]);
+            levelEncounters.Add(dragonEncounters[0]);
+            levelEncounters.Add(temperatureEncounters[0]);
+            levelEncounters.Add(aquaticEncounters[0]);
+            levelEncounters.Add(specificAquaticEncounters[0]);
+
+            timeOfDayEncounters.Add(magicEncounters[0]);
+            timeOfDayEncounters.Add(landEncounters[0]);
+            timeOfDayEncounters.Add(dragonEncounters[0]);
+            timeOfDayEncounters.Add(temperatureEncounters[0]);
+            timeOfDayEncounters.Add(aquaticEncounters[0]);
+            timeOfDayEncounters.Add(specificAquaticEncounters[0]);
+
+            var expectedEncounters = new[]
+            {
+                "magic encounter", "magic amount",
+                "aquatic encounter", "amount",
+                "specific aquatic encounter", "amount",
+                "aquatic encounter", "amount",
+                "specific aquatic encounter", "amount",
+                "aquatic encounter", "amount",
+                "specific aquatic encounter", "amount",
+                "specific aquatic encounter", "amount",
+            };
+
+            AssertEncounterWeight(expectedEncounters, EnvironmentConstants.Aquatic);
+        }
+
+        [Test]
+        public void CanAddAquaticToAnEnvironment()
+        {
+            var aquaticEncounters = new[] { "aquatic encounter/amount", "other aquatic encounter/other amount" };
+            var specificAquaticEncounters = new[] { "specific aquatic encounter/amount", "other specific aquatic encounter/other amount" };
+            mockCollectionSelector.Setup(s => s.ExplodeInto(TableNameConstants.CreatureGroups, EnvironmentConstants.Aquatic, TableNameConstants.EncounterGroups)).Returns(aquaticEncounters);
+            mockCollectionSelector.Setup(s => s.ExplodeInto(TableNameConstants.CreatureGroups, temperature + EnvironmentConstants.Aquatic, TableNameConstants.EncounterGroups)).Returns(specificAquaticEncounters);
+
+            levelEncounters.Add(magicEncounters[0]);
+            levelEncounters.Add(landEncounters[0]);
+            levelEncounters.Add(dragonEncounters[0]);
+            levelEncounters.Add(temperatureEncounters[0]);
+            levelEncounters.Add(specificEnvironmentEncounters[0]);
+            levelEncounters.Add(aquaticEncounters[0]);
+            levelEncounters.Add(specificAquaticEncounters[0]);
+
+            timeOfDayEncounters.Add(magicEncounters[0]);
+            timeOfDayEncounters.Add(landEncounters[0]);
+            timeOfDayEncounters.Add(dragonEncounters[0]);
+            timeOfDayEncounters.Add(temperatureEncounters[0]);
+            timeOfDayEncounters.Add(specificEnvironmentEncounters[0]);
+            timeOfDayEncounters.Add(aquaticEncounters[0]);
+            timeOfDayEncounters.Add(specificAquaticEncounters[0]);
+
+            var encounterTypesAndAmounts = encounterCollectionSelector.SelectAllWeightedFrom(specifications);
+
+            var expectedEncounters = new[]
+            {
+                "magic encounter", "magic amount",
+                "environment encounter", "environment amount",
+                "specific environment encounter", "specific environment amount",
+                "dragon encounter", "dragon amount",
+                "land encounter", "land amount",
+                "temperature encounter", "temperature amount",
+                "aquatic encounter", "amount",
+                "specific aquatic encounter", "amount",
+                "environment encounter", "environment amount",
+                "specific environment encounter", "specific environment amount",
+                "land encounter", "land amount",
+                "temperature encounter", "temperature amount",
+                "aquatic encounter", "amount",
+                "specific aquatic encounter", "amount",
+                "environment encounter", "environment amount",
+                "temperature encounter", "temperature amount",
+                "specific aquatic encounter", "amount",
+                "specific environment encounter", "specific environment amount",
+                "specific environment encounter", "specific environment amount",
+            };
+
+            AssertEncounterWeight(expectedEncounters, allowAquatic: true);
+        }
+
+        [Test]
+        public void AddingAquaticToAquatic()
+        {
+            var aquaticEncounters = new[] { "aquatic encounter/amount", "other aquatic encounter/other amount" };
+            var specificAquaticEncounters = new[] { "specific aquatic encounter/amount", "other specific aquatic encounter/other amount" };
+            mockCollectionSelector.Setup(s => s.ExplodeInto(TableNameConstants.CreatureGroups, EnvironmentConstants.Aquatic, TableNameConstants.EncounterGroups)).Returns(aquaticEncounters);
+            mockCollectionSelector.Setup(s => s.ExplodeInto(TableNameConstants.CreatureGroups, temperature + EnvironmentConstants.Aquatic, TableNameConstants.EncounterGroups)).Returns(specificAquaticEncounters);
+
+            levelEncounters.Add(magicEncounters[0]);
+            levelEncounters.Add(landEncounters[0]);
+            levelEncounters.Add(dragonEncounters[0]);
+            levelEncounters.Add(temperatureEncounters[0]);
+            levelEncounters.Add(aquaticEncounters[0]);
+            levelEncounters.Add(specificAquaticEncounters[0]);
+
+            timeOfDayEncounters.Add(magicEncounters[0]);
+            timeOfDayEncounters.Add(landEncounters[0]);
+            timeOfDayEncounters.Add(dragonEncounters[0]);
+            timeOfDayEncounters.Add(temperatureEncounters[0]);
+            timeOfDayEncounters.Add(aquaticEncounters[0]);
+            timeOfDayEncounters.Add(specificAquaticEncounters[0]);
+
+            var expectedEncounters = new[]
+            {
+                "magic encounter", "magic amount",
+                "aquatic encounter", "amount",
+                "specific aquatic encounter", "amount",
+                "aquatic encounter", "amount",
+                "specific aquatic encounter", "amount",
+                "aquatic encounter", "amount",
+                "specific aquatic encounter", "amount",
+                "specific aquatic encounter", "amount",
+            };
+
+            AssertEncounterWeight(expectedEncounters, EnvironmentConstants.Aquatic, true);
+        }
+
+        [Test]
+        public void AddAquaticToDungeon()
+        {
+            var dungeonEncounters = new[] { "dungeon encounter/amount", "other dungeon encounter/other amount" };
+            var specificDungeonEncounters = new[] { "specific dungeon encounter/amount", "other specific dungeon encounter/other amount" };
+            mockCollectionSelector.Setup(s => s.ExplodeInto(TableNameConstants.CreatureGroups, EnvironmentConstants.Dungeon, TableNameConstants.EncounterGroups)).Returns(dungeonEncounters);
+            mockCollectionSelector.Setup(s => s.ExplodeInto(TableNameConstants.CreatureGroups, temperature + EnvironmentConstants.Dungeon, TableNameConstants.EncounterGroups)).Returns(specificDungeonEncounters);
+
+            var aquaticEncounters = new[] { "aquatic encounter/amount", "other aquatic encounter/other amount" };
+            var specificAquaticEncounters = new[] { "specific aquatic encounter/amount", "other specific aquatic encounter/other amount" };
+            mockCollectionSelector.Setup(s => s.ExplodeInto(TableNameConstants.CreatureGroups, EnvironmentConstants.Aquatic, TableNameConstants.EncounterGroups)).Returns(aquaticEncounters);
+            mockCollectionSelector.Setup(s => s.ExplodeInto(TableNameConstants.CreatureGroups, temperature + EnvironmentConstants.Aquatic, TableNameConstants.EncounterGroups)).Returns(specificAquaticEncounters);
+
+            levelEncounters.Add(magicEncounters[0]);
+            levelEncounters.Add(magicEncounters[1]);
+            levelEncounters.Add(landEncounters[0]);
+            levelEncounters.Add(landEncounters[1]);
+            levelEncounters.Add(dragonEncounters[0]);
+            levelEncounters.Add(dragonEncounters[1]);
+            levelEncounters.Add(temperatureEncounters[0]);
+            levelEncounters.Add(temperatureEncounters[1]);
+            levelEncounters.Add(dungeonEncounters[0]);
+            levelEncounters.Add(specificDungeonEncounters[0]);
+            levelEncounters.Add(aquaticEncounters[0]);
+            levelEncounters.Add(aquaticEncounters[1]);
+            levelEncounters.Add(specificAquaticEncounters[0]);
+            levelEncounters.Add(specificAquaticEncounters[1]);
+
+            var nightEncounters = new List<string>();
+            nightEncounters.Add(magicEncounters[0]);
+            nightEncounters.Add(landEncounters[0]);
+            nightEncounters.Add(dragonEncounters[0]);
+            nightEncounters.Add(temperatureEncounters[0]);
+            nightEncounters.Add(dungeonEncounters[0]);
+            nightEncounters.Add(specificDungeonEncounters[0]);
+            nightEncounters.Add(aquaticEncounters[0]);
+            nightEncounters.Add(specificAquaticEncounters[0]);
+
+            mockCollectionSelector.Setup(s => s.ExplodeInto(TableNameConstants.CreatureGroups, EnvironmentConstants.TimesOfDay.Night, TableNameConstants.EncounterGroups)).Returns(nightEncounters);
+
+            var expectedEncounters = new[]
+            {
+                "magic encounter", "magic amount",
+                "dungeon encounter", "amount",
+                "specific dungeon encounter", "amount",
+                "dragon encounter", "dragon amount",
+                "land encounter", "land amount",
+                "temperature encounter", "temperature amount",
+                "aquatic encounter", "amount",
+                "specific aquatic encounter", "amount",
+                "dungeon encounter", "amount",
+                "specific dungeon encounter", "amount",
+                "land encounter", "land amount",
+                "temperature encounter", "temperature amount",
+                "aquatic encounter", "amount",
+                "specific aquatic encounter", "amount",
+                "dungeon encounter", "amount",
+                "temperature encounter", "temperature amount",
+                "specific aquatic encounter", "amount",
+                "specific dungeon encounter", "amount",
+                "specific dungeon encounter", "amount",
+            };
+
+            AssertEncounterWeight(expectedEncounters, EnvironmentConstants.Dungeon, true);
+        }
+
+        [Test]
+        public void AddAquaticToCivilized()
+        {
+            var civilizedEncounters = new[] { "civilized encounter/amount", "other civilized encounter/other amount" };
+            var specificCivilizedEncounters = new[] { "specific civilized encounter/amount", "other specific civilized encounter/other amount" };
+            mockCollectionSelector.Setup(s => s.ExplodeInto(TableNameConstants.CreatureGroups, EnvironmentConstants.Civilized, TableNameConstants.EncounterGroups)).Returns(civilizedEncounters);
+            mockCollectionSelector.Setup(s => s.ExplodeInto(TableNameConstants.CreatureGroups, temperature + EnvironmentConstants.Civilized, TableNameConstants.EncounterGroups)).Returns(specificCivilizedEncounters);
+
+            var aquaticEncounters = new[] { "aquatic encounter/amount", "other aquatic encounter/other amount" };
+            var specificAquaticEncounters = new[] { "specific aquatic encounter/amount", "other specific aquatic encounter/other amount" };
+            mockCollectionSelector.Setup(s => s.ExplodeInto(TableNameConstants.CreatureGroups, EnvironmentConstants.Aquatic, TableNameConstants.EncounterGroups)).Returns(aquaticEncounters);
+            mockCollectionSelector.Setup(s => s.ExplodeInto(TableNameConstants.CreatureGroups, temperature + EnvironmentConstants.Aquatic, TableNameConstants.EncounterGroups)).Returns(specificAquaticEncounters);
+
+            levelEncounters.Add(magicEncounters[0]);
+            levelEncounters.Add(magicEncounters[1]);
+            levelEncounters.Add(landEncounters[0]);
+            levelEncounters.Add(landEncounters[1]);
+            levelEncounters.Add(dragonEncounters[0]);
+            levelEncounters.Add(dragonEncounters[1]);
+            levelEncounters.Add(temperatureEncounters[0]);
+            levelEncounters.Add(temperatureEncounters[1]);
+            levelEncounters.Add(civilizedEncounters[0]);
+            levelEncounters.Add(specificCivilizedEncounters[0]);
+            levelEncounters.Add(aquaticEncounters[0]);
+            levelEncounters.Add(aquaticEncounters[1]);
+            levelEncounters.Add(specificAquaticEncounters[0]);
+            levelEncounters.Add(specificAquaticEncounters[1]);
+
+            timeOfDayEncounters.Add(magicEncounters[0]);
+            timeOfDayEncounters.Add(magicEncounters[1]);
+            timeOfDayEncounters.Add(landEncounters[0]);
+            timeOfDayEncounters.Add(landEncounters[1]);
+            timeOfDayEncounters.Add(dragonEncounters[0]);
+            timeOfDayEncounters.Add(dragonEncounters[1]);
+            timeOfDayEncounters.Add(temperatureEncounters[0]);
+            timeOfDayEncounters.Add(temperatureEncounters[1]);
+            timeOfDayEncounters.Add(civilizedEncounters[0]);
+            timeOfDayEncounters.Add(specificCivilizedEncounters[0]);
+            timeOfDayEncounters.Add(aquaticEncounters[0]);
+            timeOfDayEncounters.Add(aquaticEncounters[1]);
+            timeOfDayEncounters.Add(specificAquaticEncounters[0]);
+            timeOfDayEncounters.Add(specificAquaticEncounters[1]);
+
+            wildernessEncounters.Add(magicEncounters[0]);
+            wildernessEncounters.Add(landEncounters[0]);
+            wildernessEncounters.Add(dragonEncounters[0]);
+            wildernessEncounters.Add(temperatureEncounters[0]);
+            wildernessEncounters.Add(aquaticEncounters[0]);
+            wildernessEncounters.Add(specificAquaticEncounters[0]);
+
+            var expectedEncounters = new[]
+            {
+                "other magic encounter", "other magic amount",
+                "civilized encounter", "amount",
+                "specific civilized encounter", "amount",
+                "other dragon encounter", "other dragon amount",
+                "other land encounter", "other land amount",
+                "other temperature encounter", "other temperature amount",
+                "civilized encounter", "amount",
+                "specific civilized encounter", "amount",
+                "other land encounter", "other land amount",
+                "other temperature encounter", "other temperature amount",
+                "civilized encounter", "amount",
+                "other temperature encounter", "other temperature amount",
+                "specific civilized encounter", "amount",
+                "specific civilized encounter", "amount",
+            };
+
+            AssertEncounterWeight(expectedEncounters, EnvironmentConstants.Civilized);
         }
     }
 }

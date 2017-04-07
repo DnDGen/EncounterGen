@@ -5372,6 +5372,12 @@
     <item>0</item>
   </collection>
   <collection>
+    <entry>Elasmosaurus</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
     <entry>Elemental(Air)$Small$</entry>
     <item>0</item>
     <item>0</item>
@@ -5553,6 +5559,42 @@
   </collection>
   <collection>
     <entry>Character(Sergeant)[3]{High Elf}@Warrior@</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Character[1]{Aquatic Elf}@Warrior@</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Elf$Aquatic$Noncombatant$$</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Captain)[7]{Aquatic Elf}@Warrior@</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Character(Leader)[1d4+2]{Aquatic Elf}@Warrior@</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Character(Lieutenant)[5]{Aquatic Elf}@Warrior@</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Character(Sergeant)[3]{Aquatic Elf}@Warrior@</entry>
     <item>1</item>
     <item>1</item>
     <item>1</item>
@@ -5822,6 +5864,12 @@
     <item>1</item>
   </collection>
   <collection>
+    <entry>Gargoyle$Kapoacinth$</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
     <entry>Gelatinous cube</entry>
     <item>0.1</item>
     <item>0.5</item>
@@ -5837,12 +5885,6 @@
     <entry>Ghaele</entry>
     <item>0</item>
     <item>2</item>
-    <item>1</item>
-  </collection>
-  <collection>
-    <entry>Ghast</entry>
-    <item>1</item>
-    <item>1</item>
     <item>1</item>
   </collection>
   <collection>
@@ -5970,6 +6012,18 @@
     <item>0</item>
     <item>0</item>
     <item>0</item>
+  </collection>
+  <collection>
+    <entry>Ghoul$Lacedon$</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Ghoul$Ghast$</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
   </collection>
   <collection>
     <entry>Constrictor snake</entry>
@@ -6530,6 +6584,12 @@
     <item>0</item>
   </collection>
   <collection>
+    <entry>Kraken</entry>
+    <item>3</item>
+    <item>3</item>
+    <item>3</item>
+  </collection>
+  <collection>
     <entry>Krenshar</entry>
     <item>0</item>
     <item>0</item>
@@ -6776,6 +6836,42 @@
     <item>0.5</item>
   </collection>
   <collection>
+    <entry>Character[1]{Locathah}@Warrior@</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Locathah$Noncombatant$</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Captain)[7]{Locathah}@Warrior@</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Character(Leader)[1d4+2]{Locathah}@Warrior@</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Character(Lieutenant)[5]{Locathah}@Warrior@</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Character(Sergeant)[3]{Locathah}@Warrior@</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
     <entry>Locust swarm</entry>
     <item>0</item>
     <item>0</item>
@@ -6786,6 +6882,12 @@
     <item>1</item>
     <item>1</item>
     <item>1</item>
+  </collection>
+  <collection>
+    <entry>Manta ray</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
   </collection>
   <collection>
     <entry>Manticore</entry>
@@ -6891,6 +6993,42 @@
   </collection>
   <collection>
     <entry>Mephit(Water)</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Character[1]{Merfolk}@Warrior@</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Character(Captain)[7]{Merfolk}@Warrior@</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Character(Leader)[1d4+2]{Merfolk}@Warrior@</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Character(Lieutenant)[3]{Merfolk}@Warrior@</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Character(Lieutenant)[5]{Merfolk}@Warrior@</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Character(Sergeant)[3]{Merfolk}@Warrior@</entry>
     <item>1</item>
     <item>1</item>
     <item>1</item>
@@ -7040,6 +7178,18 @@
     <item>0</item>
   </collection>
   <collection>
+    <entry>Octopus</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Giant octopus</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
     <entry>Ogre</entry>
     <item>1</item>
     <item>1</item>
@@ -7047,6 +7197,18 @@
   </collection>
   <collection>
     <entry>Character[4]{Ogre}@Barbarian@</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Ogre$Merrow$</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Character[4]{Merrow}@Barbarian@</entry>
     <item>1</item>
     <item>1</item>
     <item>1</item>
@@ -7179,6 +7341,18 @@
   </collection>
   <collection>
     <entry>Pony</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Porpoise</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Porpoise$Celestial creature$</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
@@ -7340,6 +7514,54 @@
     <item>0</item>
   </collection>
   <collection>
+    <entry>Sahuagin</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Sahuagin$Noncombatant$</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Character(Baron)[1d3+5]{Sahuagin}</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Character(Chieftan)[4]{Sahuagin}</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Character(Guard)[4]{Sahuagin}</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Character(Lieutenant)[3]{Sahuagin}</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Character(Priest)[7]{Sahuagin}@Cleric@</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Character(Underpriest)[1d4+2]{Sahuagin}@Cleric@</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
     <entry>Satyr</entry>
     <item>1</item>
     <item>1</item>
@@ -7350,6 +7572,12 @@
     <item>1</item>
     <item>1</item>
     <item>1</item>
+  </collection>
+  <collection>
+    <entry>Sea cat</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
   </collection>
   <collection>
     <entry>Sea hag</entry>
@@ -7380,6 +7608,30 @@
     <item>0.1</item>
     <item>0.5</item>
     <item>0.5</item>
+  </collection>
+  <collection>
+    <entry>Dire shark</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Shark$Medium$</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Shark$Large$</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Shark$Huge$</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
   </collection>
   <collection>
     <entry>Shocker lizard</entry>
@@ -7455,6 +7707,18 @@
   </collection>
   <collection>
     <entry>Spider swarm</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Squid</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Giant squid</entry>
     <item>0</item>
     <item>0</item>
     <item>0</item>
@@ -7670,6 +7934,30 @@
     <item>0</item>
   </collection>
   <collection>
+    <entry>Tojanida$Adult$</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Tojanida$Elder$</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Tojanida$Juvenile$</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Triton</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
     <entry>Troglodyte</entry>
     <item>0.5</item>
     <item>0.5</item>
@@ -7719,6 +8007,18 @@
   </collection>
   <collection>
     <entry>Character(Hunter)[6]{Troll}@Ranger@</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Troll$Scrag$</entry>
+    <item>1</item>
+    <item>1</item>
+    <item>1</item>
+  </collection>
+  <collection>
+    <entry>Character(Hunter)[6]{Scrag}@Ranger@</entry>
     <item>1</item>
     <item>1</item>
     <item>1</item>
@@ -7956,6 +8256,24 @@
     <item>1</item>
     <item>1</item>
     <item>1</item>
+  </collection>
+  <collection>
+    <entry>Whale$Baleen$</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Whale$Cachalot$</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
+  </collection>
+  <collection>
+    <entry>Whale$Orca$</entry>
+    <item>0</item>
+    <item>0</item>
+    <item>0</item>
   </collection>
   <collection>
     <entry>Wight</entry>
