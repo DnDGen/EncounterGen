@@ -4343,23 +4343,50 @@
     <item>Character[1]{Duergar Dwarf}@Warrior@/12d6+8,Duergar$Noncombatant$/3d6+2,Character(Sergeant)[3]{Duergar Dwarf}@Warrior@/4d4,Character(Lieutenant)[6]{Duergar Dwarf}@Warrior@/1d4+2,Character(Captain)[9]{Duergar Dwarf}@Warrior@/1d4</item>
   </collection>
   <collection>
+    <entry>Character[1]{Deep Dwarf}@Warrior@</entry>
+    <item>Character[1]{Deep Dwarf}@Warrior@/1d3+1</item>
+    <item>Character[1]{Deep Dwarf}@Warrior@/1d10+10,Character(Sergeant)[3]{Deep Dwarf}@Warrior@/2,Character(Leader)[1d4+2]{Deep Dwarf}@Warrior@/1</item>
+    <item>Character[1]{Deep Dwarf}@Warrior@/10d8+20,Deep Dwarf$Noncombatant$/3d8+6,Character(Sergeant)[3]{Deep Dwarf}@Warrior@/1d8+2,Character(Lieutenant)[5]{Deep Dwarf}@Warrior@/5,Character(Captain)[7]{Deep Dwarf}@Warrior@/3</item>
+  </collection>
+  <collection>
+    <entry>Deep Dwarf$Noncombatant$</entry>
+    <item>Character[1]{Deep Dwarf}@Warrior@/10d8+20,Deep Dwarf$Noncombatant$/3d8+6,Character(Sergeant)[3]{Deep Dwarf}@Warrior@/1d8+2,Character(Lieutenant)[5]{Deep Dwarf}@Warrior@/5,Character(Captain)[7]{Deep Dwarf}@Warrior@/3</item>
+  </collection>
+  <collection>
+    <entry>Character(Sergeant)[3]{Deep Dwarf}@Warrior@</entry>
+    <item>Character[1]{Deep Dwarf}@Warrior@/1d10+10,Character(Sergeant)[3]{Deep Dwarf}@Warrior@/2,Character(Leader)[1d4+2]{Deep Dwarf}@Warrior@/1</item>
+    <item>Character[1]{Deep Dwarf}@Warrior@/10d8+20,Deep Dwarf$Noncombatant$/3d8+6,Character(Sergeant)[3]{Deep Dwarf}@Warrior@/1d8+2,Character(Lieutenant)[5]{Deep Dwarf}@Warrior@/5,Character(Captain)[7]{Deep Dwarf}@Warrior@/3</item>
+  </collection>
+  <collection>
+    <entry>Character(Lieutenant)[5]{Deep Dwarf}@Warrior@</entry>
+    <item>Character[1]{Deep Dwarf}@Warrior@/10d8+20,Deep Dwarf$Noncombatant$/3d8+6,Character(Sergeant)[3]{Deep Dwarf}@Warrior@/1d8+2,Character(Lieutenant)[5]{Deep Dwarf}@Warrior@/5,Character(Captain)[7]{Deep Dwarf}@Warrior@/3</item>
+  </collection>
+  <collection>
+    <entry>Character(Leader)[1d4+2]{Deep Dwarf}@Warrior@</entry>
+    <item>Character[1]{Deep Dwarf}@Warrior@/1d10+10,Character(Sergeant)[3]{Deep Dwarf}@Warrior@/2,Character(Leader)[1d4+2]{Deep Dwarf}@Warrior@/1</item>
+  </collection>
+  <collection>
+    <entry>Character(Captain)[7]{Deep Dwarf}@Warrior@</entry>
+    <item>Character[1]{Deep Dwarf}@Warrior@/10d8+20,Deep Dwarf$Noncombatant$/3d8+6,Character(Sergeant)[3]{Deep Dwarf}@Warrior@/1d8+2,Character(Lieutenant)[5]{Deep Dwarf}@Warrior@/5,Character(Captain)[7]{Deep Dwarf}@Warrior@/3</item>
+  </collection>
+  <collection>
     <entry>Character[1]{Hill Dwarf}@Warrior@</entry>
     <item>Character[1]{Hill Dwarf}@Warrior@/1d3+1</item>
     <item>Character[1]{Hill Dwarf}@Warrior@/1d10+10,Character(Sergeant)[3]{Hill Dwarf}@Warrior@/2,Character(Leader)[1d4+2]{Hill Dwarf}@Warrior@/1</item>
-    <item>Character[1]{Hill Dwarf}@Warrior@/10d8+20,Dwarf$Noncombatant$/3d8+6,Character(Sergeant)[3]{Hill Dwarf}@Warrior@/1d8+2,Character(Lieutenant)[5]{Hill Dwarf}@Warrior@/5,Character(Captain)[7]{Hill Dwarf}@Warrior@/3</item>
+    <item>Character[1]{Hill Dwarf}@Warrior@/10d8+20,Hill Dwarf$Noncombatant$/3d8+6,Character(Sergeant)[3]{Hill Dwarf}@Warrior@/1d8+2,Character(Lieutenant)[5]{Hill Dwarf}@Warrior@/5,Character(Captain)[7]{Hill Dwarf}@Warrior@/3</item>
   </collection>
   <collection>
-    <entry>Dwarf$Noncombatant$</entry>
-    <item>Character[1]{Hill Dwarf}@Warrior@/10d8+20,Dwarf$Noncombatant$/3d8+6,Character(Sergeant)[3]{Hill Dwarf}@Warrior@/1d8+2,Character(Lieutenant)[5]{Hill Dwarf}@Warrior@/5,Character(Captain)[7]{Hill Dwarf}@Warrior@/3</item>
+    <entry>Hill Dwarf$Noncombatant$</entry>
+    <item>Character[1]{Hill Dwarf}@Warrior@/10d8+20,Hill Dwarf$Noncombatant$/3d8+6,Character(Sergeant)[3]{Hill Dwarf}@Warrior@/1d8+2,Character(Lieutenant)[5]{Hill Dwarf}@Warrior@/5,Character(Captain)[7]{Hill Dwarf}@Warrior@/3</item>
   </collection>
   <collection>
     <entry>Character(Sergeant)[3]{Hill Dwarf}@Warrior@</entry>
     <item>Character[1]{Hill Dwarf}@Warrior@/1d10+10,Character(Sergeant)[3]{Hill Dwarf}@Warrior@/2,Character(Leader)[1d4+2]{Hill Dwarf}@Warrior@/1</item>
-    <item>Character[1]{Hill Dwarf}@Warrior@/10d8+20,Dwarf$Noncombatant$/3d8+6,Character(Sergeant)[3]{Hill Dwarf}@Warrior@/1d8+2,Character(Lieutenant)[5]{Hill Dwarf}@Warrior@/5,Character(Captain)[7]{Hill Dwarf}@Warrior@/3</item>
+    <item>Character[1]{Hill Dwarf}@Warrior@/10d8+20,Hill Dwarf$Noncombatant$/3d8+6,Character(Sergeant)[3]{Hill Dwarf}@Warrior@/1d8+2,Character(Lieutenant)[5]{Hill Dwarf}@Warrior@/5,Character(Captain)[7]{Hill Dwarf}@Warrior@/3</item>
   </collection>
   <collection>
     <entry>Character(Lieutenant)[5]{Hill Dwarf}@Warrior@</entry>
-    <item>Character[1]{Hill Dwarf}@Warrior@/10d8+20,Dwarf$Noncombatant$/3d8+6,Character(Sergeant)[3]{Hill Dwarf}@Warrior@/1d8+2,Character(Lieutenant)[5]{Hill Dwarf}@Warrior@/5,Character(Captain)[7]{Hill Dwarf}@Warrior@/3</item>
+    <item>Character[1]{Hill Dwarf}@Warrior@/10d8+20,Hill Dwarf$Noncombatant$/3d8+6,Character(Sergeant)[3]{Hill Dwarf}@Warrior@/1d8+2,Character(Lieutenant)[5]{Hill Dwarf}@Warrior@/5,Character(Captain)[7]{Hill Dwarf}@Warrior@/3</item>
   </collection>
   <collection>
     <entry>Character(Leader)[1d4+2]{Hill Dwarf}@Warrior@</entry>
@@ -4367,7 +4394,34 @@
   </collection>
   <collection>
     <entry>Character(Captain)[7]{Hill Dwarf}@Warrior@</entry>
-    <item>Character[1]{Hill Dwarf}@Warrior@/10d8+20,Dwarf$Noncombatant$/3d8+6,Character(Sergeant)[3]{Hill Dwarf}@Warrior@/1d8+2,Character(Lieutenant)[5]{Hill Dwarf}@Warrior@/5,Character(Captain)[7]{Hill Dwarf}@Warrior@/3</item>
+    <item>Character[1]{Hill Dwarf}@Warrior@/10d8+20,Hill Dwarf$Noncombatant$/3d8+6,Character(Sergeant)[3]{Hill Dwarf}@Warrior@/1d8+2,Character(Lieutenant)[5]{Hill Dwarf}@Warrior@/5,Character(Captain)[7]{Hill Dwarf}@Warrior@/3</item>
+  </collection>
+  <collection>
+    <entry>Character[1]{Mountain Dwarf}@Warrior@</entry>
+    <item>Character[1]{Mountain Dwarf}@Warrior@/1d3+1</item>
+    <item>Character[1]{Mountain Dwarf}@Warrior@/1d10+10,Character(Sergeant)[3]{Mountain Dwarf}@Warrior@/2,Character(Leader)[1d4+2]{Mountain Dwarf}@Warrior@/1</item>
+    <item>Character[1]{Mountain Dwarf}@Warrior@/10d8+20,Mountain Dwarf$Noncombatant$/3d8+6,Character(Sergeant)[3]{Mountain Dwarf}@Warrior@/1d8+2,Character(Lieutenant)[5]{Mountain Dwarf}@Warrior@/5,Character(Captain)[7]{Mountain Dwarf}@Warrior@/3</item>
+  </collection>
+  <collection>
+    <entry>Mountain Dwarf$Noncombatant$</entry>
+    <item>Character[1]{Mountain Dwarf}@Warrior@/10d8+20,Mountain Dwarf$Noncombatant$/3d8+6,Character(Sergeant)[3]{Mountain Dwarf}@Warrior@/1d8+2,Character(Lieutenant)[5]{Mountain Dwarf}@Warrior@/5,Character(Captain)[7]{Mountain Dwarf}@Warrior@/3</item>
+  </collection>
+  <collection>
+    <entry>Character(Sergeant)[3]{Mountain Dwarf}@Warrior@</entry>
+    <item>Character[1]{Mountain Dwarf}@Warrior@/1d10+10,Character(Sergeant)[3]{Mountain Dwarf}@Warrior@/2,Character(Leader)[1d4+2]{Mountain Dwarf}@Warrior@/1</item>
+    <item>Character[1]{Mountain Dwarf}@Warrior@/10d8+20,Mountain Dwarf$Noncombatant$/3d8+6,Character(Sergeant)[3]{Mountain Dwarf}@Warrior@/1d8+2,Character(Lieutenant)[5]{Mountain Dwarf}@Warrior@/5,Character(Captain)[7]{Mountain Dwarf}@Warrior@/3</item>
+  </collection>
+  <collection>
+    <entry>Character(Lieutenant)[5]{Mountain Dwarf}@Warrior@</entry>
+    <item>Character[1]{Mountain Dwarf}@Warrior@/10d8+20,Mountain Dwarf$Noncombatant$/3d8+6,Character(Sergeant)[3]{Mountain Dwarf}@Warrior@/1d8+2,Character(Lieutenant)[5]{Mountain Dwarf}@Warrior@/5,Character(Captain)[7]{Mountain Dwarf}@Warrior@/3</item>
+  </collection>
+  <collection>
+    <entry>Character(Leader)[1d4+2]{Mountain Dwarf}@Warrior@</entry>
+    <item>Character[1]{Mountain Dwarf}@Warrior@/1d10+10,Character(Sergeant)[3]{Mountain Dwarf}@Warrior@/2,Character(Leader)[1d4+2]{Mountain Dwarf}@Warrior@/1</item>
+  </collection>
+  <collection>
+    <entry>Character(Captain)[7]{Mountain Dwarf}@Warrior@</entry>
+    <item>Character[1]{Mountain Dwarf}@Warrior@/10d8+20,Mountain Dwarf$Noncombatant$/3d8+6,Character(Sergeant)[3]{Mountain Dwarf}@Warrior@/1d8+2,Character(Lieutenant)[5]{Mountain Dwarf}@Warrior@/5,Character(Captain)[7]{Mountain Dwarf}@Warrior@/3</item>
   </collection>
   <collection>
     <entry>Eagle</entry>
@@ -4491,50 +4545,23 @@
     <item>Elephant/8d4-2</item>
   </collection>
   <collection>
-    <entry>Character[1]{High Elf}@Warrior@</entry>
-    <item>Character[1]{High Elf}@Warrior@/1d3+1</item>
-    <item>Character[1]{High Elf}@Warrior@/1d10+10,Character(Sergeant)[3]{High Elf}@Warrior@/2,Character(Leader)[1d4+2]{High Elf}@Warrior@/1</item>
-    <item>Character[1]{High Elf}@Warrior@/10d8+20,Elf$Noncombatant$/2d8+4,Character(Sergeant)[3]{High Elf}@Warrior@/1d8+2,Character(Lieutenant)[5]{High Elf}@Warrior@/5,Character(Captain)[7]{High Elf}@Warrior@/3</item>
-  </collection>
-  <collection>
-    <entry>Elf$Noncombatant$</entry>
-    <item>Character[1]{High Elf}@Warrior@/10d8+20,Elf$Noncombatant$/2d8+4,Character(Sergeant)[3]{High Elf}@Warrior@/1d8+2,Character(Lieutenant)[5]{High Elf}@Warrior@/5,Character(Captain)[7]{High Elf}@Warrior@/3</item>
-  </collection>
-  <collection>
-    <entry>Character(Sergeant)[3]{High Elf}@Warrior@</entry>
-    <item>Character[1]{High Elf}@Warrior@/1d10+10,Character(Sergeant)[3]{High Elf}@Warrior@/2,Character(Leader)[1d4+2]{High Elf}@Warrior@/1</item>
-    <item>Character[1]{High Elf}@Warrior@/10d8+20,Elf$Noncombatant$/2d8+4,Character(Sergeant)[3]{High Elf}@Warrior@/1d8+2,Character(Lieutenant)[5]{High Elf}@Warrior@/5,Character(Captain)[7]{High Elf}@Warrior@/3</item>
-  </collection>
-  <collection>
-    <entry>Character(Lieutenant)[5]{High Elf}@Warrior@</entry>
-    <item>Character[1]{High Elf}@Warrior@/10d8+20,Elf$Noncombatant$/2d8+4,Character(Sergeant)[3]{High Elf}@Warrior@/1d8+2,Character(Lieutenant)[5]{High Elf}@Warrior@/5,Character(Captain)[7]{High Elf}@Warrior@/3</item>
-  </collection>
-  <collection>
-    <entry>Character(Leader)[1d4+2]{High Elf}@Warrior@</entry>
-    <item>Character[1]{High Elf}@Warrior@/1d10+10,Character(Sergeant)[3]{High Elf}@Warrior@/2,Character(Leader)[1d4+2]{High Elf}@Warrior@/1</item>
-  </collection>
-  <collection>
-    <entry>Character(Captain)[7]{High Elf}@Warrior@</entry>
-    <item>Character[1]{High Elf}@Warrior@/10d8+20,Elf$Noncombatant$/2d8+4,Character(Sergeant)[3]{High Elf}@Warrior@/1d8+2,Character(Lieutenant)[5]{High Elf}@Warrior@/5,Character(Captain)[7]{High Elf}@Warrior@/3</item>
-  </collection>
-  <collection>
     <entry>Character[1]{Aquatic Elf}@Warrior@</entry>
     <item>Character[1]{Aquatic Elf}@Warrior@/1d3+1</item>
     <item>Character[1]{Aquatic Elf}@Warrior@/1d10+10,Character(Sergeant)[3]{Aquatic Elf}@Warrior@/2,Character(Leader)[1d4+2]{Aquatic Elf}@Warrior@/1</item>
-    <item>Character[1]{Aquatic Elf}@Warrior@/10d8+20,Elf$Aquatic$Noncombatant$$/2d8+4,Character(Sergeant)[3]{Aquatic Elf}@Warrior@/1d8+2,Character(Lieutenant)[5]{Aquatic Elf}@Warrior@/5,Character(Captain)[7]{Aquatic Elf}@Warrior@/3</item>
+    <item>Character[1]{Aquatic Elf}@Warrior@/10d8+20,Aquatic Elf$Noncombatant$/2d8+4,Character(Sergeant)[3]{Aquatic Elf}@Warrior@/1d8+2,Character(Lieutenant)[5]{Aquatic Elf}@Warrior@/5,Character(Captain)[7]{Aquatic Elf}@Warrior@/3</item>
   </collection>
   <collection>
-    <entry>Elf$Aquatic$Noncombatant$$</entry>
-    <item>Character[1]{Aquatic Elf}@Warrior@/10d8+20,Elf$Aquatic$Noncombatant$$/2d8+4,Character(Sergeant)[3]{Aquatic Elf}@Warrior@/1d8+2,Character(Lieutenant)[5]{Aquatic Elf}@Warrior@/5,Character(Captain)[7]{Aquatic Elf}@Warrior@/3</item>
+    <entry>Aquatic Elf$Noncombatant$</entry>
+    <item>Character[1]{Aquatic Elf}@Warrior@/10d8+20,Aquatic Elf$Noncombatant$/2d8+4,Character(Sergeant)[3]{Aquatic Elf}@Warrior@/1d8+2,Character(Lieutenant)[5]{Aquatic Elf}@Warrior@/5,Character(Captain)[7]{Aquatic Elf}@Warrior@/3</item>
   </collection>
   <collection>
     <entry>Character(Sergeant)[3]{Aquatic Elf}@Warrior@</entry>
     <item>Character[1]{Aquatic Elf}@Warrior@/1d10+10,Character(Sergeant)[3]{Aquatic Elf}@Warrior@/2,Character(Leader)[1d4+2]{Aquatic Elf}@Warrior@/1</item>
-    <item>Character[1]{Aquatic Elf}@Warrior@/10d8+20,Elf$Aquatic$Noncombatant$$/2d8+4,Character(Sergeant)[3]{Aquatic Elf}@Warrior@/1d8+2,Character(Lieutenant)[5]{Aquatic Elf}@Warrior@/5,Character(Captain)[7]{Aquatic Elf}@Warrior@/3</item>
+    <item>Character[1]{Aquatic Elf}@Warrior@/10d8+20,Aquatic Elf$Noncombatant$/2d8+4,Character(Sergeant)[3]{Aquatic Elf}@Warrior@/1d8+2,Character(Lieutenant)[5]{Aquatic Elf}@Warrior@/5,Character(Captain)[7]{Aquatic Elf}@Warrior@/3</item>
   </collection>
   <collection>
     <entry>Character(Lieutenant)[5]{Aquatic Elf}@Warrior@</entry>
-    <item>Character[1]{Aquatic Elf}@Warrior@/10d8+20,Elf$Aquatic$Noncombatant$$/2d8+4,Character(Sergeant)[3]{Aquatic Elf}@Warrior@/1d8+2,Character(Lieutenant)[5]{Aquatic Elf}@Warrior@/5,Character(Captain)[7]{Aquatic Elf}@Warrior@/3</item>
+    <item>Character[1]{Aquatic Elf}@Warrior@/10d8+20,Aquatic Elf$Noncombatant$/2d8+4,Character(Sergeant)[3]{Aquatic Elf}@Warrior@/1d8+2,Character(Lieutenant)[5]{Aquatic Elf}@Warrior@/5,Character(Captain)[7]{Aquatic Elf}@Warrior@/3</item>
   </collection>
   <collection>
     <entry>Character(Leader)[1d4+2]{Aquatic Elf}@Warrior@</entry>
@@ -4542,7 +4569,142 @@
   </collection>
   <collection>
     <entry>Character(Captain)[7]{Aquatic Elf}@Warrior@</entry>
-    <item>Character[1]{Aquatic Elf}@Warrior@/10d8+20,Elf$Aquatic$Noncombatant$$/2d8+4,Character(Sergeant)[3]{Aquatic Elf}@Warrior@/1d8+2,Character(Lieutenant)[5]{Aquatic Elf}@Warrior@/5,Character(Captain)[7]{Aquatic Elf}@Warrior@/3</item>
+    <item>Character[1]{Aquatic Elf}@Warrior@/10d8+20,Aquatic Elf$Noncombatant$/2d8+4,Character(Sergeant)[3]{Aquatic Elf}@Warrior@/1d8+2,Character(Lieutenant)[5]{Aquatic Elf}@Warrior@/5,Character(Captain)[7]{Aquatic Elf}@Warrior@/3</item>
+  </collection>
+  <collection>
+    <entry>Character[1]{Gray Elf}@Warrior@</entry>
+    <item>Character[1]{Gray Elf}@Warrior@/1d3+1</item>
+    <item>Character[1]{Gray Elf}@Warrior@/1d10+10,Character(Sergeant)[3]{Gray Elf}@Warrior@/2,Character(Leader)[1d4+2]{Gray Elf}@Warrior@/1</item>
+    <item>Character[1]{Gray Elf}@Warrior@/10d8+20,Gray Elf$Noncombatant$/2d8+4,Character(Sergeant)[3]{Gray Elf}@Warrior@/1d8+2,Character(Lieutenant)[5]{Gray Elf}@Warrior@/5,Character(Captain)[7]{Gray Elf}@Warrior@/3</item>
+  </collection>
+  <collection>
+    <entry>Gray Elf$Noncombatant$</entry>
+    <item>Character[1]{Gray Elf}@Warrior@/10d8+20,Gray Elf$Noncombatant$/2d8+4,Character(Sergeant)[3]{Gray Elf}@Warrior@/1d8+2,Character(Lieutenant)[5]{Gray Elf}@Warrior@/5,Character(Captain)[7]{Gray Elf}@Warrior@/3</item>
+  </collection>
+  <collection>
+    <entry>Character(Sergeant)[3]{Gray Elf}@Warrior@</entry>
+    <item>Character[1]{Gray Elf}@Warrior@/1d10+10,Character(Sergeant)[3]{Gray Elf}@Warrior@/2,Character(Leader)[1d4+2]{Gray Elf}@Warrior@/1</item>
+    <item>Character[1]{Gray Elf}@Warrior@/10d8+20,Gray Elf$Noncombatant$/2d8+4,Character(Sergeant)[3]{Gray Elf}@Warrior@/1d8+2,Character(Lieutenant)[5]{Gray Elf}@Warrior@/5,Character(Captain)[7]{Gray Elf}@Warrior@/3</item>
+  </collection>
+  <collection>
+    <entry>Character(Lieutenant)[5]{Gray Elf}@Warrior@</entry>
+    <item>Character[1]{Gray Elf}@Warrior@/10d8+20,Gray Elf$Noncombatant$/2d8+4,Character(Sergeant)[3]{Gray Elf}@Warrior@/1d8+2,Character(Lieutenant)[5]{Gray Elf}@Warrior@/5,Character(Captain)[7]{Gray Elf}@Warrior@/3</item>
+  </collection>
+  <collection>
+    <entry>Character(Leader)[1d4+2]{Gray Elf}@Warrior@</entry>
+    <item>Character[1]{Gray Elf}@Warrior@/1d10+10,Character(Sergeant)[3]{Gray Elf}@Warrior@/2,Character(Leader)[1d4+2]{Gray Elf}@Warrior@/1</item>
+  </collection>
+  <collection>
+    <entry>Character(Captain)[7]{Gray Elf}@Warrior@</entry>
+    <item>Character[1]{Gray Elf}@Warrior@/10d8+20,Gray Elf$Noncombatant$/2d8+4,Character(Sergeant)[3]{Gray Elf}@Warrior@/1d8+2,Character(Lieutenant)[5]{Gray Elf}@Warrior@/5,Character(Captain)[7]{Gray Elf}@Warrior@/3</item>
+  </collection>
+  <collection>
+    <entry>Character[1]{Half-Elf}@Warrior@</entry>
+    <item>Character[1]{Half-Elf}@Warrior@/1d3+1</item>
+    <item>Character[1]{Half-Elf}@Warrior@/1d10+10,Character(Sergeant)[3]{Half-Elf}@Warrior@/2,Character(Leader)[1d4+2]{Half-Elf}@Warrior@/1</item>
+    <item>Character[1]{Half-Elf}@Warrior@/10d8+20,Half-Elf$Noncombatant$/2d8+4,Character(Sergeant)[3]{Half-Elf}@Warrior@/1d8+2,Character(Lieutenant)[5]{Half-Elf}@Warrior@/5,Character(Captain)[7]{Half-Elf}@Warrior@/3</item>
+  </collection>
+  <collection>
+    <entry>Half-Elf$Noncombatant$</entry>
+    <item>Character[1]{Half-Elf}@Warrior@/10d8+20,Half-Elf$Noncombatant$/2d8+4,Character(Sergeant)[3]{Half-Elf}@Warrior@/1d8+2,Character(Lieutenant)[5]{Half-Elf}@Warrior@/5,Character(Captain)[7]{Half-Elf}@Warrior@/3</item>
+  </collection>
+  <collection>
+    <entry>Character(Sergeant)[3]{Half-Elf}@Warrior@</entry>
+    <item>Character[1]{Half-Elf}@Warrior@/1d10+10,Character(Sergeant)[3]{Half-Elf}@Warrior@/2,Character(Leader)[1d4+2]{Half-Elf}@Warrior@/1</item>
+    <item>Character[1]{Half-Elf}@Warrior@/10d8+20,Half-Elf$Noncombatant$/2d8+4,Character(Sergeant)[3]{Half-Elf}@Warrior@/1d8+2,Character(Lieutenant)[5]{Half-Elf}@Warrior@/5,Character(Captain)[7]{Half-Elf}@Warrior@/3</item>
+  </collection>
+  <collection>
+    <entry>Character(Lieutenant)[5]{Half-Elf}@Warrior@</entry>
+    <item>Character[1]{Half-Elf}@Warrior@/10d8+20,Half-Elf$Noncombatant$/2d8+4,Character(Sergeant)[3]{Half-Elf}@Warrior@/1d8+2,Character(Lieutenant)[5]{Half-Elf}@Warrior@/5,Character(Captain)[7]{Half-Elf}@Warrior@/3</item>
+  </collection>
+  <collection>
+    <entry>Character(Leader)[1d4+2]{Half-Elf}@Warrior@</entry>
+    <item>Character[1]{Half-Elf}@Warrior@/1d10+10,Character(Sergeant)[3]{Half-Elf}@Warrior@/2,Character(Leader)[1d4+2]{Half-Elf}@Warrior@/1</item>
+  </collection>
+  <collection>
+    <entry>Character(Captain)[7]{Half-Elf}@Warrior@</entry>
+    <item>Character[1]{Half-Elf}@Warrior@/10d8+20,Half-Elf$Noncombatant$/2d8+4,Character(Sergeant)[3]{Half-Elf}@Warrior@/1d8+2,Character(Lieutenant)[5]{Half-Elf}@Warrior@/5,Character(Captain)[7]{Half-Elf}@Warrior@/3</item>
+  </collection>
+  <collection>
+    <entry>Character[1]{High Elf}@Warrior@</entry>
+    <item>Character[1]{High Elf}@Warrior@/1d3+1</item>
+    <item>Character[1]{High Elf}@Warrior@/1d10+10,Character(Sergeant)[3]{High Elf}@Warrior@/2,Character(Leader)[1d4+2]{High Elf}@Warrior@/1</item>
+    <item>Character[1]{High Elf}@Warrior@/10d8+20,High Elf$Noncombatant$/2d8+4,Character(Sergeant)[3]{High Elf}@Warrior@/1d8+2,Character(Lieutenant)[5]{High Elf}@Warrior@/5,Character(Captain)[7]{High Elf}@Warrior@/3</item>
+  </collection>
+  <collection>
+    <entry>High Elf$Noncombatant$</entry>
+    <item>Character[1]{High Elf}@Warrior@/10d8+20,High Elf$Noncombatant$/2d8+4,Character(Sergeant)[3]{High Elf}@Warrior@/1d8+2,Character(Lieutenant)[5]{High Elf}@Warrior@/5,Character(Captain)[7]{High Elf}@Warrior@/3</item>
+  </collection>
+  <collection>
+    <entry>Character(Sergeant)[3]{High Elf}@Warrior@</entry>
+    <item>Character[1]{High Elf}@Warrior@/1d10+10,Character(Sergeant)[3]{High Elf}@Warrior@/2,Character(Leader)[1d4+2]{High Elf}@Warrior@/1</item>
+    <item>Character[1]{High Elf}@Warrior@/10d8+20,High Elf$Noncombatant$/2d8+4,Character(Sergeant)[3]{High Elf}@Warrior@/1d8+2,Character(Lieutenant)[5]{High Elf}@Warrior@/5,Character(Captain)[7]{High Elf}@Warrior@/3</item>
+  </collection>
+  <collection>
+    <entry>Character(Lieutenant)[5]{High Elf}@Warrior@</entry>
+    <item>Character[1]{High Elf}@Warrior@/10d8+20,High Elf$Noncombatant$/2d8+4,Character(Sergeant)[3]{High Elf}@Warrior@/1d8+2,Character(Lieutenant)[5]{High Elf}@Warrior@/5,Character(Captain)[7]{High Elf}@Warrior@/3</item>
+  </collection>
+  <collection>
+    <entry>Character(Leader)[1d4+2]{High Elf}@Warrior@</entry>
+    <item>Character[1]{High Elf}@Warrior@/1d10+10,Character(Sergeant)[3]{High Elf}@Warrior@/2,Character(Leader)[1d4+2]{High Elf}@Warrior@/1</item>
+  </collection>
+  <collection>
+    <entry>Character(Captain)[7]{High Elf}@Warrior@</entry>
+    <item>Character[1]{High Elf}@Warrior@/10d8+20,High Elf$Noncombatant$/2d8+4,Character(Sergeant)[3]{High Elf}@Warrior@/1d8+2,Character(Lieutenant)[5]{High Elf}@Warrior@/5,Character(Captain)[7]{High Elf}@Warrior@/3</item>
+  </collection>
+  <collection>
+    <entry>Character[1]{Wild Elf}@Warrior@</entry>
+    <item>Character[1]{Wild Elf}@Warrior@/1d3+1</item>
+    <item>Character[1]{Wild Elf}@Warrior@/1d10+10,Character(Sergeant)[3]{Wild Elf}@Warrior@/2,Character(Leader)[1d4+2]{Wild Elf}@Warrior@/1</item>
+    <item>Character[1]{Wild Elf}@Warrior@/10d8+20,Wild Elf$Noncombatant$/2d8+4,Character(Sergeant)[3]{Wild Elf}@Warrior@/1d8+2,Character(Lieutenant)[5]{Wild Elf}@Warrior@/5,Character(Captain)[7]{Wild Elf}@Warrior@/3</item>
+  </collection>
+  <collection>
+    <entry>Wild Elf$Noncombatant$</entry>
+    <item>Character[1]{Wild Elf}@Warrior@/10d8+20,Wild Elf$Noncombatant$/2d8+4,Character(Sergeant)[3]{Wild Elf}@Warrior@/1d8+2,Character(Lieutenant)[5]{Wild Elf}@Warrior@/5,Character(Captain)[7]{Wild Elf}@Warrior@/3</item>
+  </collection>
+  <collection>
+    <entry>Character(Sergeant)[3]{Wild Elf}@Warrior@</entry>
+    <item>Character[1]{Wild Elf}@Warrior@/1d10+10,Character(Sergeant)[3]{Wild Elf}@Warrior@/2,Character(Leader)[1d4+2]{Wild Elf}@Warrior@/1</item>
+    <item>Character[1]{Wild Elf}@Warrior@/10d8+20,Wild Elf$Noncombatant$/2d8+4,Character(Sergeant)[3]{Wild Elf}@Warrior@/1d8+2,Character(Lieutenant)[5]{Wild Elf}@Warrior@/5,Character(Captain)[7]{Wild Elf}@Warrior@/3</item>
+  </collection>
+  <collection>
+    <entry>Character(Lieutenant)[5]{Wild Elf}@Warrior@</entry>
+    <item>Character[1]{Wild Elf}@Warrior@/10d8+20,Wild Elf$Noncombatant$/2d8+4,Character(Sergeant)[3]{Wild Elf}@Warrior@/1d8+2,Character(Lieutenant)[5]{Wild Elf}@Warrior@/5,Character(Captain)[7]{Wild Elf}@Warrior@/3</item>
+  </collection>
+  <collection>
+    <entry>Character(Leader)[1d4+2]{Wild Elf}@Warrior@</entry>
+    <item>Character[1]{Wild Elf}@Warrior@/1d10+10,Character(Sergeant)[3]{Wild Elf}@Warrior@/2,Character(Leader)[1d4+2]{Wild Elf}@Warrior@/1</item>
+  </collection>
+  <collection>
+    <entry>Character(Captain)[7]{Wild Elf}@Warrior@</entry>
+    <item>Character[1]{Wild Elf}@Warrior@/10d8+20,Wild Elf$Noncombatant$/2d8+4,Character(Sergeant)[3]{Wild Elf}@Warrior@/1d8+2,Character(Lieutenant)[5]{Wild Elf}@Warrior@/5,Character(Captain)[7]{Wild Elf}@Warrior@/3</item>
+  </collection>
+  <collection>
+    <entry>Character[1]{Wood Elf}@Warrior@</entry>
+    <item>Character[1]{Wood Elf}@Warrior@/1d3+1</item>
+    <item>Character[1]{Wood Elf}@Warrior@/1d10+10,Character(Sergeant)[3]{Wood Elf}@Warrior@/2,Character(Leader)[1d4+2]{Wood Elf}@Warrior@/1</item>
+    <item>Character[1]{Wood Elf}@Warrior@/10d8+20,Wood Elf$Noncombatant$/2d8+4,Character(Sergeant)[3]{Wood Elf}@Warrior@/1d8+2,Character(Lieutenant)[5]{Wood Elf}@Warrior@/5,Character(Captain)[7]{Wood Elf}@Warrior@/3</item>
+  </collection>
+  <collection>
+    <entry>Wood Elf$Noncombatant$</entry>
+    <item>Character[1]{Wood Elf}@Warrior@/10d8+20,Wood Elf$Noncombatant$/2d8+4,Character(Sergeant)[3]{Wood Elf}@Warrior@/1d8+2,Character(Lieutenant)[5]{Wood Elf}@Warrior@/5,Character(Captain)[7]{Wood Elf}@Warrior@/3</item>
+  </collection>
+  <collection>
+    <entry>Character(Sergeant)[3]{Wood Elf}@Warrior@</entry>
+    <item>Character[1]{Wood Elf}@Warrior@/1d10+10,Character(Sergeant)[3]{Wood Elf}@Warrior@/2,Character(Leader)[1d4+2]{Wood Elf}@Warrior@/1</item>
+    <item>Character[1]{Wood Elf}@Warrior@/10d8+20,Wood Elf$Noncombatant$/2d8+4,Character(Sergeant)[3]{Wood Elf}@Warrior@/1d8+2,Character(Lieutenant)[5]{Wood Elf}@Warrior@/5,Character(Captain)[7]{Wood Elf}@Warrior@/3</item>
+  </collection>
+  <collection>
+    <entry>Character(Lieutenant)[5]{Wood Elf}@Warrior@</entry>
+    <item>Character[1]{Wood Elf}@Warrior@/10d8+20,Wood Elf$Noncombatant$/2d8+4,Character(Sergeant)[3]{Wood Elf}@Warrior@/1d8+2,Character(Lieutenant)[5]{Wood Elf}@Warrior@/5,Character(Captain)[7]{Wood Elf}@Warrior@/3</item>
+  </collection>
+  <collection>
+    <entry>Character(Leader)[1d4+2]{Wood Elf}@Warrior@</entry>
+    <item>Character[1]{Wood Elf}@Warrior@/1d10+10,Character(Sergeant)[3]{Wood Elf}@Warrior@/2,Character(Leader)[1d4+2]{Wood Elf}@Warrior@/1</item>
+  </collection>
+  <collection>
+    <entry>Character(Captain)[7]{Wood Elf}@Warrior@</entry>
+    <item>Character[1]{Wood Elf}@Warrior@/10d8+20,Wood Elf$Noncombatant$/2d8+4,Character(Sergeant)[3]{Wood Elf}@Warrior@/1d8+2,Character(Lieutenant)[5]{Wood Elf}@Warrior@/5,Character(Captain)[7]{Wood Elf}@Warrior@/3</item>
   </collection>
   <collection>
     <entry>Erinyes</entry>
@@ -4995,6 +5157,54 @@
     <item>Girallon/1d4+4</item>
   </collection>
   <collection>
+    <entry>Character(Captain)[9]{Githyanki}</entry>
+    <item>Character[3]{Githyanki}@Fighter@/1d10+10,Character(Sergeant)[7]{Githyanki}/2,Character(Captain)[9]{Githyanki}/1,Red dragon$Young$/1</item>
+    <item>Character[3]{Githyanki}@Fighter@/10d8+20,Character(Sergeant)[7]{Githyanki}/1d8+2,Character(Lieutenant)[7]{Githyanki}/5,Character(Captain)[9]{Githyanki}/3,Character(Supreme Leader)[16]{Githyanki}/1,Red dragon$Young$/1d4</item>
+  </collection>
+  <collection>
+    <entry>Character(Lieutenant)[7]{Githyanki}</entry>
+    <item>Character[3]{Githyanki}@Fighter@/10d8+20,Character(Sergeant)[7]{Githyanki}/1d8+2,Character(Lieutenant)[7]{Githyanki}/5,Character(Captain)[9]{Githyanki}/3,Character(Supreme Leader)[16]{Githyanki}/1,Red dragon$Young$/1d4</item>
+  </collection>
+  <collection>
+    <entry>Character(Sergeant)[7]{Githyanki}</entry>
+    <item>Character[3]{Githyanki}@Fighter@/1d10+10,Character(Sergeant)[7]{Githyanki}/2,Character(Captain)[9]{Githyanki}/1,Red dragon$Young$/1</item>
+    <item>Character[3]{Githyanki}@Fighter@/10d8+20,Character(Sergeant)[7]{Githyanki}/1d8+2,Character(Lieutenant)[7]{Githyanki}/5,Character(Captain)[9]{Githyanki}/3,Character(Supreme Leader)[16]{Githyanki}/1,Red dragon$Young$/1d4</item>
+  </collection>
+  <collection>
+    <entry>Character(Supreme Leader)[16]{Githyanki}</entry>
+    <item>Character[3]{Githyanki}@Fighter@/10d8+20,Character(Sergeant)[7]{Githyanki}/1d8+2,Character(Lieutenant)[7]{Githyanki}/5,Character(Captain)[9]{Githyanki}/3,Character(Supreme Leader)[16]{Githyanki}/1,Red dragon$Young$/1d4</item>
+  </collection>
+  <collection>
+    <entry>Character[3]{Githyanki}@Fighter@</entry>
+    <item>Character[3]{Githyanki}@Fighter@/1d3+1</item>
+    <item>Character[3]{Githyanki}@Fighter@/1d10+10,Character(Sergeant)[7]{Githyanki}/2,Character(Captain)[9]{Githyanki}/1,Red dragon$Young$/1</item>
+    <item>Character[3]{Githyanki}@Fighter@/10d8+20,Character(Sergeant)[7]{Githyanki}/1d8+2,Character(Lieutenant)[7]{Githyanki}/5,Character(Captain)[9]{Githyanki}/3,Character(Supreme Leader)[16]{Githyanki}/1,Red dragon$Young$/1d4</item>
+  </collection>
+  <collection>
+    <entry>Character(Master)[13]{Githzerai}</entry>
+    <item>Character(Student)[3]{Githzerai}/10d8+20,Character(Teacher)[7]{Githzerai}/1d8+2,Character(Mentor)[9]{Githzerai}/5,Character(Master)[13]{Githzerai}/2,Character(Sensei)[16]{Githzerai}/1</item>
+  </collection>
+  <collection>
+    <entry>Character(Mentor)[9]{Githzerai}</entry>
+    <item>Character(Student)[3]{Githzerai}/4d4+8,Character(Teacher)[7]{Githzerai}/2,Character(Mentor)[9]{Githzerai}/1</item>
+    <item>Character(Student)[3]{Githzerai}/10d8+20,Character(Teacher)[7]{Githzerai}/1d8+2,Character(Mentor)[9]{Githzerai}/5,Character(Master)[13]{Githzerai}/2,Character(Sensei)[16]{Githzerai}/1</item>
+  </collection>
+  <collection>
+    <entry>Character(Sensei)[16]{Githzerai}</entry>
+    <item>Character(Student)[3]{Githzerai}/10d8+20,Character(Teacher)[7]{Githzerai}/1d8+2,Character(Mentor)[9]{Githzerai}/5,Character(Master)[13]{Githzerai}/2,Character(Sensei)[16]{Githzerai}/1</item>
+  </collection>
+  <collection>
+    <entry>Character(Student)[3]{Githzerai}</entry>
+    <item>Character(Student)[3]{Githzerai}/1d10+2</item>
+    <item>Character(Student)[3]{Githzerai}/4d4+8,Character(Teacher)[7]{Githzerai}/2,Character(Mentor)[9]{Githzerai}/1</item>
+    <item>Character(Student)[3]{Githzerai}/10d8+20,Character(Teacher)[7]{Githzerai}/1d8+2,Character(Mentor)[9]{Githzerai}/5,Character(Master)[13]{Githzerai}/2,Character(Sensei)[16]{Githzerai}/1</item>
+  </collection>
+  <collection>
+    <entry>Character(Teacher)[7]{Githzerai}</entry>
+    <item>Character(Student)[3]{Githzerai}/4d4+8,Character(Teacher)[7]{Githzerai}/2,Character(Mentor)[9]{Githzerai}/1</item>
+    <item>Character(Student)[3]{Githzerai}/10d8+20,Character(Teacher)[7]{Githzerai}/1d8+2,Character(Mentor)[9]{Githzerai}/5,Character(Master)[13]{Githzerai}/2,Character(Sensei)[16]{Githzerai}/1</item>
+  </collection>
+  <collection>
     <entry>Gnoll</entry>
     <item>Gnoll/1</item>
     <item>Gnoll/2</item>
@@ -5026,6 +5236,32 @@
     <entry>Character(Leader)[1d3+5]{Gnoll}</entry>
     <item>Gnoll/20d10,Character(Sergeant)[3]{Gnoll}/1d10,Character(Lieutenant)[1d2+3]{Gnoll}/1d2,Character(Leader)[1d3+5]{Gnoll}/1,Hyena/1d6+6</item>
     <item>Gnoll/20d10,Character(Sergeant)[3]{Gnoll}/1d10,Character(Lieutenant)[1d2+3]{Gnoll}/1d2,Character(Leader)[1d3+5]{Gnoll}/1,Hyena/1d6+6,Troll/1d3</item>
+  </collection>
+  <collection>
+    <entry>Character[1]{Forest Gnome}@Warrior@</entry>
+    <item>Character[1]{Forest Gnome}@Warrior@/1d3+1</item>
+    <item>Character[1]{Forest Gnome}@Warrior@/1d10+10,Character(Leader)[1d4+2]{Forest Gnome}@Warrior@/1,Character(Lieutenant)[3]{Forest Gnome}@Warrior@/2</item>
+    <item>Character[1]{Forest Gnome}@Warrior@/4d6+26,Character(Sergeant)[3]{Forest Gnome}@Warrior@/1d2+1,Character(Lieutenant)[5]{Forest Gnome}@Warrior@/5,Character(Captain)[7]{Forest Gnome}@Warrior@/3,Dire badger/1d4+1</item>
+  </collection>
+  <collection>
+    <entry>Character(Leader)[1d4+2]{Forest Gnome}@Warrior@</entry>
+    <item>Character[1]{Forest Gnome}@Warrior@/1d10+10,Character(Leader)[1d4+2]{Forest Gnome}@Warrior@/1,Character(Lieutenant)[3]{Forest Gnome}@Warrior@/2</item>
+  </collection>
+  <collection>
+    <entry>Character(Captain)[7]{Forest Gnome}@Warrior@</entry>
+    <item>Character[1]{Forest Gnome}@Warrior@/4d6+26,Character(Sergeant)[3]{Forest Gnome}@Warrior@/1d2+1,Character(Lieutenant)[5]{Forest Gnome}@Warrior@/5,Character(Captain)[7]{Forest Gnome}@Warrior@/3,Dire badger/1d4+1</item>
+  </collection>
+  <collection>
+    <entry>Character(Lieutenant)[3]{Forest Gnome}@Warrior@</entry>
+    <item>Character[1]{Forest Gnome}@Warrior@/1d10+10,Character(Leader)[1d4+2]{Forest Gnome}@Warrior@/1,Character(Lieutenant)[3]{Forest Gnome}@Warrior@/2</item>
+  </collection>
+  <collection>
+    <entry>Character(Lieutenant)[5]{Forest Gnome}@Warrior@</entry>
+    <item>Character[1]{Forest Gnome}@Warrior@/4d6+26,Character(Sergeant)[3]{Forest Gnome}@Warrior@/1d2+1,Character(Lieutenant)[5]{Forest Gnome}@Warrior@/5,Character(Captain)[7]{Forest Gnome}@Warrior@/3,Dire badger/1d4+1</item>
+  </collection>
+  <collection>
+    <entry>Character(Sergeant)[3]{Forest Gnome}@Warrior@</entry>
+    <item>Character[1]{Forest Gnome}@Warrior@/4d6+26,Character(Sergeant)[3]{Forest Gnome}@Warrior@/1d2+1,Character(Lieutenant)[5]{Forest Gnome}@Warrior@/5,Character(Captain)[7]{Forest Gnome}@Warrior@/3,Dire badger/1d4+1</item>
   </collection>
   <collection>
     <entry>Character[1]{Rock Gnome}@Warrior@</entry>
@@ -5160,18 +5396,45 @@
     <item>Gynosphinx/1d3+1</item>
   </collection>
   <collection>
-    <entry>Halfling$Noncombatant$</entry>
-    <item>Character[1]{Lightfoot Halfling}@Warrior@/10d8+20,Halfling$Noncombatant$/10d8+20,Character(Sergeant)[3]{Lightfoot Halfling}@Warrior@/1d4+1,Character(Lieutenant)[5]{Lightfoot Halfling}@Warrior@/5,Character(Captain)[7]{Lightfoot Halfling}@Warrior@/3,Dog/2d3+4,Dog$Riding$/1d4+1</item>
+    <entry>Deep Halfling$Noncombatant$</entry>
+    <item>Character[1]{Deep Halfling}@Warrior@/10d8+20,Deep Halfling$Noncombatant$/10d8+20,Character(Sergeant)[3]{Deep Halfling}@Warrior@/1d4+1,Character(Lieutenant)[5]{Deep Halfling}@Warrior@/5,Character(Captain)[7]{Deep Halfling}@Warrior@/3,Dog/2d3+4,Dog$Riding$/1d4+1</item>
+  </collection>
+  <collection>
+    <entry>Character[1]{Deep Halfling}@Warrior@</entry>
+    <item>Character[1]{Deep Halfling}@Warrior@/1d3+1</item>
+    <item>Character[1]{Deep Halfling}@Warrior@/1d10+10,Character(Sergeant)[3]{Deep Halfling}@Warrior@/2,Character(Leader)[1d4+2]{Deep Halfling}@Warrior@/1</item>
+    <item>Character[1]{Deep Halfling}@Warrior@/10d8+20,Deep Halfling$Noncombatant$/10d8+20,Character(Sergeant)[3]{Deep Halfling}@Warrior@/1d4+1,Character(Lieutenant)[5]{Deep Halfling}@Warrior@/5,Character(Captain)[7]{Deep Halfling}@Warrior@/3,Dog/2d3+4,Dog$Riding$/1d4+1</item>
+  </collection>
+  <collection>
+    <entry>Character(Captain)[7]{Deep Halfling}@Warrior@</entry>
+    <item>Character[1]{Deep Halfling}@Warrior@/10d8+20,Deep Halfling$Noncombatant$/10d8+20,Character(Sergeant)[3]{Deep Halfling}@Warrior@/1d4+1,Character(Lieutenant)[5]{Deep Halfling}@Warrior@/5,Character(Captain)[7]{Deep Halfling}@Warrior@/3,Dog/2d3+4,Dog$Riding$/1d4+1</item>
+  </collection>
+  <collection>
+    <entry>Character(Leader)[1d4+2]{Deep Halfling}@Warrior@</entry>
+    <item>Character[1]{Deep Halfling}@Warrior@/1d10+10,Character(Sergeant)[3]{Deep Halfling}@Warrior@/2,Character(Leader)[1d4+2]{Deep Halfling}@Warrior@/1</item>
+  </collection>
+  <collection>
+    <entry>Character(Lieutenant)[5]{Deep Halfling}@Warrior@</entry>
+    <item>Character[1]{Deep Halfling}@Warrior@/10d8+20,Deep Halfling$Noncombatant$/10d8+20,Character(Sergeant)[3]{Deep Halfling}@Warrior@/1d4+1,Character(Lieutenant)[5]{Deep Halfling}@Warrior@/5,Character(Captain)[7]{Deep Halfling}@Warrior@/3,Dog/2d3+4,Dog$Riding$/1d4+1</item>
+  </collection>
+  <collection>
+    <entry>Character(Sergeant)[3]{Deep Halfling}@Warrior@</entry>
+    <item>Character[1]{Deep Halfling}@Warrior@/1d10+10,Character(Sergeant)[3]{Deep Halfling}@Warrior@/2,Character(Leader)[1d4+2]{Deep Halfling}@Warrior@/1</item>
+    <item>Character[1]{Deep Halfling}@Warrior@/10d8+20,Deep Halfling$Noncombatant$/10d8+20,Character(Sergeant)[3]{Deep Halfling}@Warrior@/1d4+1,Character(Lieutenant)[5]{Deep Halfling}@Warrior@/5,Character(Captain)[7]{Deep Halfling}@Warrior@/3,Dog/2d3+4,Dog$Riding$/1d4+1</item>
+  </collection>
+  <collection>
+    <entry>Lightfoot Halfling$Noncombatant$</entry>
+    <item>Character[1]{Lightfoot Halfling}@Warrior@/10d8+20,Lightfoot Halfling$Noncombatant$/10d8+20,Character(Sergeant)[3]{Lightfoot Halfling}@Warrior@/1d4+1,Character(Lieutenant)[5]{Lightfoot Halfling}@Warrior@/5,Character(Captain)[7]{Lightfoot Halfling}@Warrior@/3,Dog/2d3+4,Dog$Riding$/1d4+1</item>
   </collection>
   <collection>
     <entry>Character[1]{Lightfoot Halfling}@Warrior@</entry>
     <item>Character[1]{Lightfoot Halfling}@Warrior@/1d3+1</item>
     <item>Character[1]{Lightfoot Halfling}@Warrior@/1d10+10,Character(Sergeant)[3]{Lightfoot Halfling}@Warrior@/2,Character(Leader)[1d4+2]{Lightfoot Halfling}@Warrior@/1</item>
-    <item>Character[1]{Lightfoot Halfling}@Warrior@/10d8+20,Halfling$Noncombatant$/10d8+20,Character(Sergeant)[3]{Lightfoot Halfling}@Warrior@/1d4+1,Character(Lieutenant)[5]{Lightfoot Halfling}@Warrior@/5,Character(Captain)[7]{Lightfoot Halfling}@Warrior@/3,Dog/2d3+4,Dog$Riding$/1d4+1</item>
+    <item>Character[1]{Lightfoot Halfling}@Warrior@/10d8+20,Lightfoot Halfling$Noncombatant$/10d8+20,Character(Sergeant)[3]{Lightfoot Halfling}@Warrior@/1d4+1,Character(Lieutenant)[5]{Lightfoot Halfling}@Warrior@/5,Character(Captain)[7]{Lightfoot Halfling}@Warrior@/3,Dog/2d3+4,Dog$Riding$/1d4+1</item>
   </collection>
   <collection>
     <entry>Character(Captain)[7]{Lightfoot Halfling}@Warrior@</entry>
-    <item>Character[1]{Lightfoot Halfling}@Warrior@/10d8+20,Halfling$Noncombatant$/10d8+20,Character(Sergeant)[3]{Lightfoot Halfling}@Warrior@/1d4+1,Character(Lieutenant)[5]{Lightfoot Halfling}@Warrior@/5,Character(Captain)[7]{Lightfoot Halfling}@Warrior@/3,Dog/2d3+4,Dog$Riding$/1d4+1</item>
+    <item>Character[1]{Lightfoot Halfling}@Warrior@/10d8+20,Lightfoot Halfling$Noncombatant$/10d8+20,Character(Sergeant)[3]{Lightfoot Halfling}@Warrior@/1d4+1,Character(Lieutenant)[5]{Lightfoot Halfling}@Warrior@/5,Character(Captain)[7]{Lightfoot Halfling}@Warrior@/3,Dog/2d3+4,Dog$Riding$/1d4+1</item>
   </collection>
   <collection>
     <entry>Character(Leader)[1d4+2]{Lightfoot Halfling}@Warrior@</entry>
@@ -5179,12 +5442,39 @@
   </collection>
   <collection>
     <entry>Character(Lieutenant)[5]{Lightfoot Halfling}@Warrior@</entry>
-    <item>Character[1]{Lightfoot Halfling}@Warrior@/10d8+20,Halfling$Noncombatant$/10d8+20,Character(Sergeant)[3]{Lightfoot Halfling}@Warrior@/1d4+1,Character(Lieutenant)[5]{Lightfoot Halfling}@Warrior@/5,Character(Captain)[7]{Lightfoot Halfling}@Warrior@/3,Dog/2d3+4,Dog$Riding$/1d4+1</item>
+    <item>Character[1]{Lightfoot Halfling}@Warrior@/10d8+20,Lightfoot Halfling$Noncombatant$/10d8+20,Character(Sergeant)[3]{Lightfoot Halfling}@Warrior@/1d4+1,Character(Lieutenant)[5]{Lightfoot Halfling}@Warrior@/5,Character(Captain)[7]{Lightfoot Halfling}@Warrior@/3,Dog/2d3+4,Dog$Riding$/1d4+1</item>
   </collection>
   <collection>
     <entry>Character(Sergeant)[3]{Lightfoot Halfling}@Warrior@</entry>
     <item>Character[1]{Lightfoot Halfling}@Warrior@/1d10+10,Character(Sergeant)[3]{Lightfoot Halfling}@Warrior@/2,Character(Leader)[1d4+2]{Lightfoot Halfling}@Warrior@/1</item>
-    <item>Character[1]{Lightfoot Halfling}@Warrior@/10d8+20,Halfling$Noncombatant$/10d8+20,Character(Sergeant)[3]{Lightfoot Halfling}@Warrior@/1d4+1,Character(Lieutenant)[5]{Lightfoot Halfling}@Warrior@/5,Character(Captain)[7]{Lightfoot Halfling}@Warrior@/3,Dog/2d3+4,Dog$Riding$/1d4+1</item>
+    <item>Character[1]{Lightfoot Halfling}@Warrior@/10d8+20,Lightfoot Halfling$Noncombatant$/10d8+20,Character(Sergeant)[3]{Lightfoot Halfling}@Warrior@/1d4+1,Character(Lieutenant)[5]{Lightfoot Halfling}@Warrior@/5,Character(Captain)[7]{Lightfoot Halfling}@Warrior@/3,Dog/2d3+4,Dog$Riding$/1d4+1</item>
+  </collection>
+  <collection>
+    <entry>Tallfellow Halfling$Noncombatant$</entry>
+    <item>Character[1]{Tallfellow Halfling}@Warrior@/10d8+20,Tallfellow Halfling$Noncombatant$/10d8+20,Character(Sergeant)[3]{Tallfellow Halfling}@Warrior@/1d4+1,Character(Lieutenant)[5]{Tallfellow Halfling}@Warrior@/5,Character(Captain)[7]{Tallfellow Halfling}@Warrior@/3,Dog/2d3+4,Dog$Riding$/1d4+1</item>
+  </collection>
+  <collection>
+    <entry>Character[1]{Tallfellow Halfling}@Warrior@</entry>
+    <item>Character[1]{Tallfellow Halfling}@Warrior@/1d3+1</item>
+    <item>Character[1]{Tallfellow Halfling}@Warrior@/1d10+10,Character(Sergeant)[3]{Tallfellow Halfling}@Warrior@/2,Character(Leader)[1d4+2]{Tallfellow Halfling}@Warrior@/1</item>
+    <item>Character[1]{Tallfellow Halfling}@Warrior@/10d8+20,Tallfellow Halfling$Noncombatant$/10d8+20,Character(Sergeant)[3]{Tallfellow Halfling}@Warrior@/1d4+1,Character(Lieutenant)[5]{Tallfellow Halfling}@Warrior@/5,Character(Captain)[7]{Tallfellow Halfling}@Warrior@/3,Dog/2d3+4,Dog$Riding$/1d4+1</item>
+  </collection>
+  <collection>
+    <entry>Character(Captain)[7]{Tallfellow Halfling}@Warrior@</entry>
+    <item>Character[1]{Tallfellow Halfling}@Warrior@/10d8+20,Tallfellow Halfling$Noncombatant$/10d8+20,Character(Sergeant)[3]{Tallfellow Halfling}@Warrior@/1d4+1,Character(Lieutenant)[5]{Tallfellow Halfling}@Warrior@/5,Character(Captain)[7]{Tallfellow Halfling}@Warrior@/3,Dog/2d3+4,Dog$Riding$/1d4+1</item>
+  </collection>
+  <collection>
+    <entry>Character(Leader)[1d4+2]{Tallfellow Halfling}@Warrior@</entry>
+    <item>Character[1]{Tallfellow Halfling}@Warrior@/1d10+10,Character(Sergeant)[3]{Tallfellow Halfling}@Warrior@/2,Character(Leader)[1d4+2]{Tallfellow Halfling}@Warrior@/1</item>
+  </collection>
+  <collection>
+    <entry>Character(Lieutenant)[5]{Tallfellow Halfling}@Warrior@</entry>
+    <item>Character[1]{Tallfellow Halfling}@Warrior@/10d8+20,Tallfellow Halfling$Noncombatant$/10d8+20,Character(Sergeant)[3]{Tallfellow Halfling}@Warrior@/1d4+1,Character(Lieutenant)[5]{Tallfellow Halfling}@Warrior@/5,Character(Captain)[7]{Tallfellow Halfling}@Warrior@/3,Dog/2d3+4,Dog$Riding$/1d4+1</item>
+  </collection>
+  <collection>
+    <entry>Character(Sergeant)[3]{Tallfellow Halfling}@Warrior@</entry>
+    <item>Character[1]{Tallfellow Halfling}@Warrior@/1d10+10,Character(Sergeant)[3]{Tallfellow Halfling}@Warrior@/2,Character(Leader)[1d4+2]{Tallfellow Halfling}@Warrior@/1</item>
+    <item>Character[1]{Tallfellow Halfling}@Warrior@/10d8+20,Tallfellow Halfling$Noncombatant$/10d8+20,Character(Sergeant)[3]{Tallfellow Halfling}@Warrior@/1d4+1,Character(Lieutenant)[5]{Tallfellow Halfling}@Warrior@/5,Character(Captain)[7]{Tallfellow Halfling}@Warrior@/3,Dog/2d3+4,Dog$Riding$/1d4+1</item>
   </collection>
   <collection>
     <entry>Harpy</entry>
@@ -5475,6 +5765,44 @@
     <item>Krenshar/1</item>
     <item>Krenshar/2</item>
     <item>Krenshar/2d3+4</item>
+  </collection>
+  <collection>
+    <entry>Kuo-toa</entry>
+    <item>Kuo-toa/1d3+1,Character(Whip)[3]{Kuo-toa}@Cleric@/1</item>
+    <item>Kuo-toa/1d6+5,Character(Whip)[3]{Kuo-toa}@Cleric@/1d2,Character(Monitor)[4]{Kuo-toa}@Monk@/1d2,Character[8]{Kuo-toa}@Fighter@/1</item>
+    <item>Kuo-toa/6d6+14,Kuo-toa$Noncombatant$/6d6+14,Character(Whip)[3]{Kuo-toa}@Cleric@/2,Character[8]{Kuo-toa}@Fighter@/2,Character[10]{Kuo-toa}@Fighter@/1</item>
+    <item>Kuo-toa/40d10,Character(Whip)[3]{Kuo-toa}@Cleric@/2d10,Character(Monitor)[4]{Kuo-toa}@Monk@/1,Character[8]{Kuo-toa}@Fighter@/4,Character(Whip)[10]{Kuo-toa}@Cleric@/1,Character[10]{Kuo-toa}@Fighter@/2</item>
+  </collection>
+  <collection>
+    <entry>Kuo-toa$Noncombatant$</entry>
+    <item>Kuo-toa/6d6+14,Kuo-toa$Noncombatant$/6d6+14,Character(Whip)[3]{Kuo-toa}@Cleric@/2,Character[8]{Kuo-toa}@Fighter@/2,Character[10]{Kuo-toa}@Fighter@/1</item>
+  </collection>
+  <collection>
+    <entry>Character(Whip)[10]{Kuo-toa}@Cleric@</entry>
+    <item>Kuo-toa/40d10,Character(Whip)[3]{Kuo-toa}@Cleric@/2d10,Character(Monitor)[4]{Kuo-toa}@Monk@/1,Character[8]{Kuo-toa}@Fighter@/4,Character(Whip)[10]{Kuo-toa}@Cleric@/1,Character[10]{Kuo-toa}@Fighter@/2</item>
+  </collection>
+  <collection>
+    <entry>Character(Whip)[3]{Kuo-toa}@Cleric@</entry>
+    <item>Kuo-toa/1d3+1,Character(Whip)[3]{Kuo-toa}@Cleric@/1</item>
+    <item>Kuo-toa/1d6+5,Character(Whip)[3]{Kuo-toa}@Cleric@/1d2,Character(Monitor)[4]{Kuo-toa}@Monk@/1d2,Character[8]{Kuo-toa}@Fighter@/1</item>
+    <item>Kuo-toa/6d6+14,Kuo-toa$Noncombatant$/6d6+14,Character(Whip)[3]{Kuo-toa}@Cleric@/2,Character[8]{Kuo-toa}@Fighter@/2,Character[10]{Kuo-toa}@Fighter@/1</item>
+    <item>Kuo-toa/40d10,Character(Whip)[3]{Kuo-toa}@Cleric@/2d10,Character(Monitor)[4]{Kuo-toa}@Monk@/1,Character[8]{Kuo-toa}@Fighter@/4,Character(Whip)[10]{Kuo-toa}@Cleric@/1,Character[10]{Kuo-toa}@Fighter@/2</item>
+  </collection>
+  <collection>
+    <entry>Character(Monitor)[4]{Kuo-toa}@Monk@</entry>
+    <item>Kuo-toa/1d6+5,Character(Whip)[3]{Kuo-toa}@Cleric@/1d2,Character(Monitor)[4]{Kuo-toa}@Monk@/1d2,Character[8]{Kuo-toa}@Fighter@/1</item>
+    <item>Kuo-toa/40d10,Character(Whip)[3]{Kuo-toa}@Cleric@/2d10,Character(Monitor)[4]{Kuo-toa}@Monk@/1,Character[8]{Kuo-toa}@Fighter@/4,Character(Whip)[10]{Kuo-toa}@Cleric@/1,Character[10]{Kuo-toa}@Fighter@/2</item>
+  </collection>
+  <collection>
+    <entry>Character[8]{Kuo-toa}@Fighter@</entry>
+    <item>Kuo-toa/1d6+5,Character(Whip)[3]{Kuo-toa}@Cleric@/1d2,Character(Monitor)[4]{Kuo-toa}@Monk@/1d2,Character[8]{Kuo-toa}@Fighter@/1</item>
+    <item>Kuo-toa/6d6+14,Kuo-toa$Noncombatant$/6d6+14,Character(Whip)[3]{Kuo-toa}@Cleric@/2,Character[8]{Kuo-toa}@Fighter@/2,Character[10]{Kuo-toa}@Fighter@/1</item>
+    <item>Kuo-toa/40d10,Character(Whip)[3]{Kuo-toa}@Cleric@/2d10,Character(Monitor)[4]{Kuo-toa}@Monk@/1,Character[8]{Kuo-toa}@Fighter@/4,Character(Whip)[10]{Kuo-toa}@Cleric@/1,Character[10]{Kuo-toa}@Fighter@/2</item>
+  </collection>
+  <collection>
+    <entry>Character[10]{Kuo-toa}@Fighter@</entry>
+    <item>Kuo-toa/6d6+14,Kuo-toa$Noncombatant$/6d6+14,Character(Whip)[3]{Kuo-toa}@Cleric@/2,Character[8]{Kuo-toa}@Fighter@/2,Character[10]{Kuo-toa}@Fighter@/1</item>
+    <item>Kuo-toa/40d10,Character(Whip)[3]{Kuo-toa}@Cleric@/2d10,Character(Monitor)[4]{Kuo-toa}@Monk@/1,Character[8]{Kuo-toa}@Fighter@/4,Character(Whip)[10]{Kuo-toa}@Cleric@/1,Character[10]{Kuo-toa}@Fighter@/2</item>
   </collection>
   <collection>
     <entry>Lamia</entry>
@@ -6016,6 +6344,33 @@
   <collection>
     <entry>Character(Captain)[7]{Orc}@Warrior@</entry>
     <item>Character[1]{Orc}@Warrior@/10d8+20,Orc$Noncombatant$/15d8+30,Character(Sergeant)[3]{Orc}@Warrior@/1d8+2,Character(Lieutenant)[5]{Orc}@Warrior@/5,Character(Captain)[7]{Orc}@Warrior@/3</item>
+  </collection>
+  <collection>
+    <entry>Half-Orc$Noncombatant$</entry>
+    <item>Character[1]{Half-Orc}@Warrior@/10d8+20,Half-Orc$Noncombatant$/15d8+30,Character(Sergeant)[3]{Half-Orc}@Warrior@/1d8+2,Character(Lieutenant)[5]{Half-Orc}@Warrior@/5,Character(Captain)[7]{Half-Orc}@Warrior@/3</item>
+  </collection>
+  <collection>
+    <entry>Character[1]{Half-Orc}@Warrior@</entry>
+    <item>Character[1]{Half-Orc}@Warrior@/1d3+1</item>
+    <item>Character[1]{Half-Orc}@Warrior@/1d10+10,Character(Sergeant)[3]{Half-Orc}@Warrior@/2,Character(Leader)[1d4+2]{Half-Orc}@Warrior@/1</item>
+    <item>Character[1]{Half-Orc}@Warrior@/10d8+20,Half-Orc$Noncombatant$/15d8+30,Character(Sergeant)[3]{Half-Orc}@Warrior@/1d8+2,Character(Lieutenant)[5]{Half-Orc}@Warrior@/5,Character(Captain)[7]{Half-Orc}@Warrior@/3</item>
+  </collection>
+  <collection>
+    <entry>Character(Sergeant)[3]{Half-Orc}@Warrior@</entry>
+    <item>Character[1]{Half-Orc}@Warrior@/1d10+10,Character(Sergeant)[3]{Half-Orc}@Warrior@/2,Character(Leader)[1d4+2]{Half-Orc}@Warrior@/1</item>
+    <item>Character[1]{Half-Orc}@Warrior@/10d8+20,Half-Orc$Noncombatant$/15d8+30,Character(Sergeant)[3]{Half-Orc}@Warrior@/1d8+2,Character(Lieutenant)[5]{Half-Orc}@Warrior@/5,Character(Captain)[7]{Half-Orc}@Warrior@/3</item>
+  </collection>
+  <collection>
+    <entry>Character(Lieutenant)[5]{Half-Orc}@Warrior@</entry>
+    <item>Character[1]{Half-Orc}@Warrior@/10d8+20,Half-Orc$Noncombatant$/15d8+30,Character(Sergeant)[3]{Half-Orc}@Warrior@/1d8+2,Character(Lieutenant)[5]{Half-Orc}@Warrior@/5,Character(Captain)[7]{Half-Orc}@Warrior@/3</item>
+  </collection>
+  <collection>
+    <entry>Character(Leader)[1d4+2]{Half-Orc}@Warrior@</entry>
+    <item>Character[1]{Half-Orc}@Warrior@/1d10+10,Character(Sergeant)[3]{Half-Orc}@Warrior@/2,Character(Leader)[1d4+2]{Half-Orc}@Warrior@/1</item>
+  </collection>
+  <collection>
+    <entry>Character(Captain)[7]{Half-Orc}@Warrior@</entry>
+    <item>Character[1]{Half-Orc}@Warrior@/10d8+20,Half-Orc$Noncombatant$/15d8+30,Character(Sergeant)[3]{Half-Orc}@Warrior@/1d8+2,Character(Lieutenant)[5]{Half-Orc}@Warrior@/5,Character(Captain)[7]{Half-Orc}@Warrior@/3</item>
   </collection>
   <collection>
     <entry>Otyugh</entry>

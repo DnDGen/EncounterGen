@@ -21,6 +21,7 @@ namespace EncounterGen.Tests.Unit.Generators
         public void EncounterSpecificationsInitialized()
         {
             Assert.That(encounterSpecifications.AllowAquatic, Is.False);
+            Assert.That(encounterSpecifications.AllowUnderground, Is.False);
             Assert.That(encounterSpecifications.CreatureTypeFilters, Is.Empty);
             Assert.That(encounterSpecifications.Environment, Is.Empty);
             Assert.That(encounterSpecifications.Level, Is.EqualTo(0));
@@ -143,9 +144,10 @@ namespace EncounterGen.Tests.Unit.Generators
             encounterSpecifications.Temperature = "temperature";
             encounterSpecifications.TimeOfDay = "time of day";
             encounterSpecifications.AllowAquatic = true;
+            encounterSpecifications.AllowUnderground = true;
             encounterSpecifications.CreatureTypeFilters = new[] { "filter 1", "filter 2" };
 
-            Assert.That(encounterSpecifications.Description, Is.EqualTo("Level 15 temperature environment time of day, allowing aquatic, allowing [filter 1, filter 2]"));
+            Assert.That(encounterSpecifications.Description, Is.EqualTo("Level 15 temperature environment time of day, allowing aquatic, allowing underground, allowing [filter 1, filter 2]"));
         }
 
         [Test]
@@ -173,6 +175,7 @@ namespace EncounterGen.Tests.Unit.Generators
         public void CloneSpecifications()
         {
             encounterSpecifications.AllowAquatic = Convert.ToBoolean(random.Next(2));
+            encounterSpecifications.AllowUnderground = Convert.ToBoolean(random.Next(2));
             encounterSpecifications.CreatureTypeFilters = new[] { Guid.NewGuid().ToString(), Guid.NewGuid().ToString() };
             encounterSpecifications.Environment = Guid.NewGuid().ToString();
             encounterSpecifications.Level = random.Next();
@@ -182,12 +185,22 @@ namespace EncounterGen.Tests.Unit.Generators
             var clone = encounterSpecifications.Clone();
             Assert.That(clone, Is.Not.EqualTo(encounterSpecifications));
             Assert.That(clone.AllowAquatic, Is.EqualTo(encounterSpecifications.AllowAquatic));
+            Assert.That(clone.AllowUnderground, Is.EqualTo(encounterSpecifications.AllowUnderground));
             Assert.That(clone.Environment, Is.EqualTo(encounterSpecifications.Environment));
             Assert.That(clone.Level, Is.EqualTo(encounterSpecifications.Level));
             Assert.That(clone.Temperature, Is.EqualTo(encounterSpecifications.Temperature));
             Assert.That(clone.TimeOfDay, Is.EqualTo(encounterSpecifications.TimeOfDay));
             Assert.That(clone.CreatureTypeFilters, Is.EquivalentTo(encounterSpecifications.CreatureTypeFilters));
             Assert.That(clone.CreatureTypeFilters, Is.Not.SameAs(encounterSpecifications.CreatureTypeFilters));
+        }
+
+        [Test]
+        public void SpecificEnvironmentIsTemperatureAndEnvironment()
+        {
+            encounterSpecifications.Temperature = "temp";
+            encounterSpecifications.Environment = "environment";
+
+            Assert.That(encounterSpecifications.SpecificEnvironment, Is.EqualTo("tempenvironment"));
         }
     }
 }

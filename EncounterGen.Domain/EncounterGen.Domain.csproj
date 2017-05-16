@@ -41,7 +41,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="CharacterGen, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\CharacterGen.8.1.0\lib\CharacterGen.dll</HintPath>
+      <HintPath>..\packages\CharacterGen.9.0.0\lib\CharacterGen.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="EventGen, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -103,6 +103,8 @@
     <Compile Include="Selectors\EncounterSelector.cs" />
     <Compile Include="Selectors\IAmountSelector.cs" />
     <Compile Include="Selectors\IEncounterSelector.cs" />
+    <Compile Include="Selectors\IItemSelector.cs" />
+    <Compile Include="Selectors\ItemSelector.cs" />
     <Compile Include="Selectors\Percentiles\BooleanPercentileSelector.cs" />
     <Compile Include="Selectors\Percentiles\IBooleanPercentileSelector.cs" />
     <Compile Include="Selectors\Percentiles\IPercentileSelector.cs" />
@@ -124,7 +126,9 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Tables\Treasures\TreasureAdjustments.xml" />
+    <EmbeddedResource Include="Tables\Treasures\TreasureAdjustments.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\EncounterGen\EncounterGen.csproj">

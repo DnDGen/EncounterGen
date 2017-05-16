@@ -21,26 +21,13 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         }
 
         [TestCase(EnvironmentConstants.Aquatic)]
-        [TestCase(EnvironmentConstants.Civilized)]
-        [TestCase(EnvironmentConstants.Desert)]
-        [TestCase(EnvironmentConstants.Dungeon)]
-        [TestCase(EnvironmentConstants.Forest)]
-        [TestCase(EnvironmentConstants.Hills)]
-        [TestCase(EnvironmentConstants.Marsh)]
-        [TestCase(EnvironmentConstants.Mountain)]
-        [TestCase(EnvironmentConstants.Plains)]
-        [TestCase(EnvironmentConstants.Temperatures.Cold)]
-        [TestCase(EnvironmentConstants.Temperatures.Temperate)]
-        [TestCase(EnvironmentConstants.Temperatures.Warm)]
+        [TestCase(EnvironmentConstants.Underground)]
         [TestCase(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Aquatic)]
         [TestCase(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic)]
         [TestCase(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic)]
         [TestCase(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Desert)]
         [TestCase(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert)]
         [TestCase(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
-        [TestCase(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Dungeon)]
-        [TestCase(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Dungeon)]
-        [TestCase(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Dungeon)]
         [TestCase(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Forest)]
         [TestCase(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
         [TestCase(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest)]
@@ -56,10 +43,12 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         [TestCase(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Plains)]
         [TestCase(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains)]
         [TestCase(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
+        [TestCase(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Underground)]
+        [TestCase(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Underground)]
+        [TestCase(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Underground)]
         [TestCase(GroupConstants.Magic)]
         [TestCase(GroupConstants.Land)]
         [TestCase(GroupConstants.Wilderness)]
-        [TestCase(CreatureConstants.Types.Dragon)]
         public void AllCreaturesArePresentInAtLeastOneTimeOfDay(string source)
         {
             var sourceCreatures = ExplodeCollection(source);
@@ -68,26 +57,13 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         }
 
         [TestCase(EnvironmentConstants.Aquatic)]
-        [TestCase(EnvironmentConstants.Civilized)]
-        [TestCase(EnvironmentConstants.Desert)]
-        [TestCase(EnvironmentConstants.Dungeon)]
-        [TestCase(EnvironmentConstants.Forest)]
-        [TestCase(EnvironmentConstants.Hills)]
-        [TestCase(EnvironmentConstants.Marsh)]
-        [TestCase(EnvironmentConstants.Mountain)]
-        [TestCase(EnvironmentConstants.Plains)]
-        [TestCase(EnvironmentConstants.Temperatures.Cold)]
-        [TestCase(EnvironmentConstants.Temperatures.Temperate)]
-        [TestCase(EnvironmentConstants.Temperatures.Warm)]
+        [TestCase(EnvironmentConstants.Underground)]
         [TestCase(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Aquatic)]
         [TestCase(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic)]
         [TestCase(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic)]
         [TestCase(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Desert)]
         [TestCase(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert)]
         [TestCase(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
-        [TestCase(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Dungeon)]
-        [TestCase(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Dungeon)]
-        [TestCase(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Dungeon)]
         [TestCase(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Forest)]
         [TestCase(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
         [TestCase(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest)]
@@ -103,10 +79,12 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         [TestCase(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Plains)]
         [TestCase(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains)]
         [TestCase(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
+        [TestCase(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Underground)]
+        [TestCase(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Underground)]
+        [TestCase(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Underground)]
         [TestCase(GroupConstants.Magic)]
         [TestCase(GroupConstants.Land)]
         [TestCase(GroupConstants.Wilderness)]
-        [TestCase(CreatureConstants.Types.Dragon)]
         public void AllCreaturesHaveType(string source)
         {
             var sourceCreatures = ExplodeCollection(source);
@@ -148,8 +126,7 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         [Test]
         public void NoMissingCreaturesFromDominatedCreatureGroup()
         {
-            //INFO: Currently all creatures appear at night, so is effectively an "All" group
-            var allCreatures = ExplodeCollection(EnvironmentConstants.TimesOfDay.Night);
+            var allCreatures = GetAllCreatures();
             var creatureTemplates = new[]
             {
                 CreatureConstants.DominatedCreature_CR1,

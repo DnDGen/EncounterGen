@@ -1,4 +1,5 @@
 ﻿using EncounterGen.Domain.Tables;
+using System;
 using System.Collections.Generic;
 using System.Xml;
 
@@ -31,6 +32,10 @@ namespace EncounterGen.Domain.Mappers.Collections
                     items.Add(itemNode.InnerText);
 
                 var name = node.SelectSingleNode("entry").InnerText;
+
+                if (results.ContainsKey(name))
+                    throw new ArgumentException($"Cannot insert {name} more than once into table {tableName}");
+
                 results.Add(name, items);
             }
 

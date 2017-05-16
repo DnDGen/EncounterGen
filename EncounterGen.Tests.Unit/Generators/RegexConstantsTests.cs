@@ -12,6 +12,7 @@ namespace EncounterGen.Tests.Unit.Generators
         [TestCase(RegexConstants.ItemBonusPattern, "\\(\\d+\\)")]
         [TestCase(RegexConstants.SetCharacterLevelPattern, "\\d+")]
         [TestCase(RegexConstants.SpecialAbilitiesPattern, "\\{.+\\}")]
+        [TestCase(RegexConstants.SpecialAbilitiesBonusPattern, "\\$\\d+\\$")]
         [TestCase(RegexConstants.TraitPattern, "#.+#")]
         public void RegexConstant(string constant, string value)
         {

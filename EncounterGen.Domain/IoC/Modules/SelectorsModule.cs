@@ -14,6 +14,7 @@ namespace EncounterGen.Domain.IoC.Modules
             Bind<IAmountSelector>().To<AmountSelector>();
             Bind<IPercentileSelector>().To<PercentileSelector>();
             Bind<IBooleanPercentileSelector>().To<BooleanPercentileSelector>();
+            Bind<IItemSelector>().To<ItemSelector>();
 
             Bind<ICollectionSelector>().To<CollectionSelector>().WhenInjectedInto<CollectionSelectorCachingProxy>();
             Bind<ICollectionSelector>().To<CollectionSelectorCachingProxy>().InSingletonScope();

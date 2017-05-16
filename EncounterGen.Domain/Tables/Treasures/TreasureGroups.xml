@@ -78,7 +78,7 @@
   </collection>
   <collection>
     <entry>Astral deva</entry>
-    <item>Heavy mace[Weapon](3){Disruption}</item>
+    <item>Heavy mace[Weapon]#Medium#(3){Disruption}@True@</item>
   </collection>
   <collection>
     <entry>Assassin vine</entry>
@@ -129,8 +129,8 @@
   </collection>
   <collection>
     <entry>Balor</entry>
-    <item>Longsword[Weapon](1){Vorpal}</item>
-    <item>Whip[Weapon](1){Flaming}</item>
+    <item>Longsword[Weapon]#Large#(1){Vorpal}@True@</item>
+    <item>Whip[Weapon]#Large#(1){Flaming}@True@</item>
   </collection>
   <collection>
     <entry>Barghest</entry>
@@ -210,8 +210,8 @@
   </collection>
   <collection>
     <entry>Bralani</entry>
-    <item>Scimitar[Weapon](1){Holy}</item>
-    <item>Composite longbow[Weapon]#+4 Strength bonus#(1){Holy}</item>
+    <item>Scimitar[Weapon]#Medium#(1){Holy}@True@</item>
+    <item>Composite longbow[Weapon]#+4 Strength bonus,Medium#(1){Holy}@True@</item>
   </collection>
   <collection>
     <entry>Bugbear</entry>
@@ -2635,10 +2635,28 @@
     <entry>Character(Lieutenant)[6]{Duergar Dwarf}@Warrior@</entry>
   </collection>
   <collection>
+    <entry>Character(Captain)[7]{Deep Dwarf}@Warrior@</entry>
+  </collection>
+  <collection>
+    <entry>Deep Dwarf$Noncombatant$</entry>
+  </collection>
+  <collection>
+    <entry>Character[1]{Deep Dwarf}@Warrior@</entry>
+  </collection>
+  <collection>
+    <entry>Character(Sergeant)[3]{Deep Dwarf}@Warrior@</entry>
+  </collection>
+  <collection>
+    <entry>Character(Leader)[1d4+2]{Deep Dwarf}@Warrior@</entry>
+  </collection>
+  <collection>
+    <entry>Character(Lieutenant)[5]{Deep Dwarf}@Warrior@</entry>
+  </collection>
+  <collection>
     <entry>Character(Captain)[7]{Hill Dwarf}@Warrior@</entry>
   </collection>
   <collection>
-    <entry>Dwarf$Noncombatant$</entry>
+    <entry>Hill Dwarf$Noncombatant$</entry>
   </collection>
   <collection>
     <entry>Character[1]{Hill Dwarf}@Warrior@</entry>
@@ -2651,6 +2669,24 @@
   </collection>
   <collection>
     <entry>Character(Lieutenant)[5]{Hill Dwarf}@Warrior@</entry>
+  </collection>
+  <collection>
+    <entry>Character(Captain)[7]{Mountain Dwarf}@Warrior@</entry>
+  </collection>
+  <collection>
+    <entry>Mountain Dwarf$Noncombatant$</entry>
+  </collection>
+  <collection>
+    <entry>Character[1]{Mountain Dwarf}@Warrior@</entry>
+  </collection>
+  <collection>
+    <entry>Character(Sergeant)[3]{Mountain Dwarf}@Warrior@</entry>
+  </collection>
+  <collection>
+    <entry>Character(Leader)[1d4+2]{Mountain Dwarf}@Warrior@</entry>
+  </collection>
+  <collection>
+    <entry>Character(Lieutenant)[5]{Mountain Dwarf}@Warrior@</entry>
   </collection>
   <collection>
     <entry>Eagle</entry>
@@ -2740,28 +2776,10 @@
     <entry>Elemental(Water)$Small$</entry>
   </collection>
   <collection>
-    <entry>Character(Captain)[7]{High Elf}@Warrior@</entry>
-  </collection>
-  <collection>
-    <entry>Elf$Noncombatant$</entry>
-  </collection>
-  <collection>
-    <entry>Character[1]{High Elf}@Warrior@</entry>
-  </collection>
-  <collection>
-    <entry>Character(Sergeant)[3]{High Elf}@Warrior@</entry>
-  </collection>
-  <collection>
-    <entry>Character(Leader)[1d4+2]{High Elf}@Warrior@</entry>
-  </collection>
-  <collection>
-    <entry>Character(Lieutenant)[5]{High Elf}@Warrior@</entry>
-  </collection>
-  <collection>
     <entry>Character(Captain)[7]{Aquatic Elf}@Warrior@</entry>
   </collection>
   <collection>
-    <entry>Elf$Aquatic$Noncombatant$$</entry>
+    <entry>Aquatic Elf$Noncombatant$</entry>
   </collection>
   <collection>
     <entry>Character[1]{Aquatic Elf}@Warrior@</entry>
@@ -2776,9 +2794,99 @@
     <entry>Character(Lieutenant)[5]{Aquatic Elf}@Warrior@</entry>
   </collection>
   <collection>
+    <entry>Character(Captain)[7]{Gray Elf}@Warrior@</entry>
+  </collection>
+  <collection>
+    <entry>Gray Elf$Noncombatant$</entry>
+  </collection>
+  <collection>
+    <entry>Character[1]{Gray Elf}@Warrior@</entry>
+  </collection>
+  <collection>
+    <entry>Character(Sergeant)[3]{Gray Elf}@Warrior@</entry>
+  </collection>
+  <collection>
+    <entry>Character(Leader)[1d4+2]{Gray Elf}@Warrior@</entry>
+  </collection>
+  <collection>
+    <entry>Character(Lieutenant)[5]{Gray Elf}@Warrior@</entry>
+  </collection>
+  <collection>
+    <entry>Character(Captain)[7]{Half-Elf}@Warrior@</entry>
+  </collection>
+  <collection>
+    <entry>Half-Elf$Noncombatant$</entry>
+  </collection>
+  <collection>
+    <entry>Character[1]{Half-Elf}@Warrior@</entry>
+  </collection>
+  <collection>
+    <entry>Character(Sergeant)[3]{Half-Elf}@Warrior@</entry>
+  </collection>
+  <collection>
+    <entry>Character(Leader)[1d4+2]{Half-Elf}@Warrior@</entry>
+  </collection>
+  <collection>
+    <entry>Character(Lieutenant)[5]{Half-Elf}@Warrior@</entry>
+  </collection>
+  <collection>
+    <entry>Character(Captain)[7]{High Elf}@Warrior@</entry>
+  </collection>
+  <collection>
+    <entry>High Elf$Noncombatant$</entry>
+  </collection>
+  <collection>
+    <entry>Character[1]{High Elf}@Warrior@</entry>
+  </collection>
+  <collection>
+    <entry>Character(Sergeant)[3]{High Elf}@Warrior@</entry>
+  </collection>
+  <collection>
+    <entry>Character(Leader)[1d4+2]{High Elf}@Warrior@</entry>
+  </collection>
+  <collection>
+    <entry>Character(Lieutenant)[5]{High Elf}@Warrior@</entry>
+  </collection>
+  <collection>
+    <entry>Character(Captain)[7]{Wild Elf}@Warrior@</entry>
+  </collection>
+  <collection>
+    <entry>Wild Elf$Noncombatant$</entry>
+  </collection>
+  <collection>
+    <entry>Character[1]{Wild Elf}@Warrior@</entry>
+  </collection>
+  <collection>
+    <entry>Character(Sergeant)[3]{Wild Elf}@Warrior@</entry>
+  </collection>
+  <collection>
+    <entry>Character(Leader)[1d4+2]{Wild Elf}@Warrior@</entry>
+  </collection>
+  <collection>
+    <entry>Character(Lieutenant)[5]{Wild Elf}@Warrior@</entry>
+  </collection>
+  <collection>
+    <entry>Character(Captain)[7]{Wood Elf}@Warrior@</entry>
+  </collection>
+  <collection>
+    <entry>Wood Elf$Noncombatant$</entry>
+  </collection>
+  <collection>
+    <entry>Character[1]{Wood Elf}@Warrior@</entry>
+  </collection>
+  <collection>
+    <entry>Character(Sergeant)[3]{Wood Elf}@Warrior@</entry>
+  </collection>
+  <collection>
+    <entry>Character(Leader)[1d4+2]{Wood Elf}@Warrior@</entry>
+  </collection>
+  <collection>
+    <entry>Character(Lieutenant)[5]{Wood Elf}@Warrior@</entry>
+  </collection>
+  <collection>
     <entry>Erinyes</entry>
     <item>Longsword[Weapon]#Medium#</item>
-    <item>Composite longbow[Weapon]#+5 Strength bonus#(1){Flaming}</item>
+    <item>Composite longbow[Weapon]#+5 Strength bonus,Medium#(1){Flaming}@True@</item>
     <item>Rope, 50 ft.[Tool]</item>
   </collection>
   <collection>
@@ -2835,7 +2943,7 @@
   </collection>
   <collection>
     <entry>Ghaele</entry>
-    <item>Greatsword[Weapon](4){Holy}</item>
+    <item>Greatsword[Weapon]#Medium#(4){Holy}@True@</item>
   </collection>
   <collection>
     <entry>Character[1]#Ghost#</entry>
@@ -3007,6 +3115,36 @@
     <entry>Girallon</entry>
   </collection>
   <collection>
+    <entry>Character[3]{Githyanki}@Fighter@</entry>
+  </collection>
+  <collection>
+    <entry>Character(Sergeant)[7]{Githyanki}</entry>
+  </collection>
+  <collection>
+    <entry>Character(Lieutenant)[7]{Githyanki}</entry>
+  </collection>
+  <collection>
+    <entry>Character(Captain)[9]{Githyanki}</entry>
+  </collection>
+  <collection>
+    <entry>Character(Supreme Leader)[16]{Githyanki}</entry>
+  </collection>
+  <collection>
+    <entry>Character(Student)[3]{Githzerai}</entry>
+  </collection>
+  <collection>
+    <entry>Character(Teacher)[7]{Githzerai}</entry>
+  </collection>
+  <collection>
+    <entry>Character(Mentor)[9]{Githzerai}</entry>
+  </collection>
+  <collection>
+    <entry>Character(Master)[13]{Githzerai}</entry>
+  </collection>
+  <collection>
+    <entry>Character(Sensei)[16]{Githzerai}</entry>
+  </collection>
+  <collection>
     <entry>Glabrezu</entry>
   </collection>
   <collection>
@@ -3028,6 +3166,24 @@
   </collection>
   <collection>
     <entry>Character(Lieutenant)[1d2+3]{Gnoll}</entry>
+  </collection>
+  <collection>
+    <entry>Character(Captain)[7]{Forest Gnome}@Warrior@</entry>
+  </collection>
+  <collection>
+    <entry>Character[1]{Forest Gnome}@Warrior@</entry>
+  </collection>
+  <collection>
+    <entry>Character(Sergeant)[3]{Forest Gnome}@Warrior@</entry>
+  </collection>
+  <collection>
+    <entry>Character(Leader)[1d4+2]{Forest Gnome}@Warrior@</entry>
+  </collection>
+  <collection>
+    <entry>Character(Lieutenant)[5]{Forest Gnome}@Warrior@</entry>
+  </collection>
+  <collection>
+    <entry>Character(Lieutenant)[3]{Forest Gnome}@Warrior@</entry>
   </collection>
   <collection>
     <entry>Character(Captain)[7]{Rock Gnome}@Warrior@</entry>
@@ -3114,10 +3270,28 @@
     <entry>Barbed Devil(Hamatula)</entry>
   </collection>
   <collection>
+    <entry>Character(Captain)[7]{Deep Halfling}@Warrior@</entry>
+  </collection>
+  <collection>
+    <entry>Deep Halfling$Noncombatant$</entry>
+  </collection>
+  <collection>
+    <entry>Character[1]{Deep Halfling}@Warrior@</entry>
+  </collection>
+  <collection>
+    <entry>Character(Sergeant)[3]{Deep Halfling}@Warrior@</entry>
+  </collection>
+  <collection>
+    <entry>Character(Leader)[1d4+2]{Deep Halfling}@Warrior@</entry>
+  </collection>
+  <collection>
+    <entry>Character(Lieutenant)[5]{Deep Halfling}@Warrior@</entry>
+  </collection>
+  <collection>
     <entry>Character(Captain)[7]{Lightfoot Halfling}@Warrior@</entry>
   </collection>
   <collection>
-    <entry>Halfling$Noncombatant$</entry>
+    <entry>Lightfoot Halfling$Noncombatant$</entry>
   </collection>
   <collection>
     <entry>Character[1]{Lightfoot Halfling}@Warrior@</entry>
@@ -3130,6 +3304,24 @@
   </collection>
   <collection>
     <entry>Character(Lieutenant)[5]{Lightfoot Halfling}@Warrior@</entry>
+  </collection>
+  <collection>
+    <entry>Character(Captain)[7]{Tallfellow Halfling}@Warrior@</entry>
+  </collection>
+  <collection>
+    <entry>Tallfellow Halfling$Noncombatant$</entry>
+  </collection>
+  <collection>
+    <entry>Character[1]{Tallfellow Halfling}@Warrior@</entry>
+  </collection>
+  <collection>
+    <entry>Character(Sergeant)[3]{Tallfellow Halfling}@Warrior@</entry>
+  </collection>
+  <collection>
+    <entry>Character(Leader)[1d4+2]{Tallfellow Halfling}@Warrior@</entry>
+  </collection>
+  <collection>
+    <entry>Character(Lieutenant)[5]{Tallfellow Halfling}@Warrior@</entry>
   </collection>
   <collection>
     <entry>Harpy</entry>
@@ -3312,13 +3504,35 @@
   </collection>
   <collection>
     <entry>Kolyarut</entry>
-    <item>Longsword[Weapon](2)</item>
+    <item>Longsword[Weapon]#Medium#(2)@True@</item>
   </collection>
   <collection>
     <entry>Kraken</entry>
   </collection>
   <collection>
     <entry>Krenshar</entry>
+  </collection>
+  <collection>
+    <entry>Kuo-toa</entry>
+    <item>Shortspear[Weapon]#Medium#</item>
+  </collection>
+  <collection>
+    <entry>Kuo-toa$Noncombatant$</entry>
+  </collection>
+  <collection>
+    <entry>Character[8]{Kuo-toa}@Fighter@</entry>
+  </collection>
+  <collection>
+    <entry>Character[10]{Kuo-toa}@Fighter@</entry>
+  </collection>
+  <collection>
+    <entry>Character(Monitor)[4]{Kuo-toa}@Monk@</entry>
+  </collection>
+  <collection>
+    <entry>Character(Whip)[3]{Kuo-toa}@Cleric@</entry>
+  </collection>
+  <collection>
+    <entry>Character(Whip)[10]{Kuo-toa}@Cleric@</entry>
   </collection>
   <collection>
     <entry>Lamia</entry>
@@ -3587,7 +3801,7 @@
   </collection>
   <collection>
     <entry>Nessian warhound</entry>
-    <item>Chain shirt[Armor]#Barding#(2)</item>
+    <item>Chain shirt[Armor]#Barding,Large#(2)@True@</item>
   </collection>
   <collection>
     <entry>Night hag</entry>
@@ -3668,6 +3882,24 @@
     <entry>Character(Sergeant)[3]{Orc}@Warrior@</entry>
   </collection>
   <collection>
+    <entry>Half-Orc$Noncombatant$</entry>
+  </collection>
+  <collection>
+    <entry>Character[1]{Half-Orc}@Warrior@</entry>
+  </collection>
+  <collection>
+    <entry>Character(Leader)[1d4+2]{Half-Orc}@Warrior@</entry>
+  </collection>
+  <collection>
+    <entry>Character(Captain)[7]{Half-Orc}@Warrior@</entry>
+  </collection>
+  <collection>
+    <entry>Character(Lieutenant)[5]{Half-Orc}@Warrior@</entry>
+  </collection>
+  <collection>
+    <entry>Character(Sergeant)[3]{Half-Orc}@Warrior@</entry>
+  </collection>
+  <collection>
     <entry>Otyugh</entry>
   </collection>
   <collection>
@@ -3712,7 +3944,7 @@
   </collection>
   <collection>
     <entry>Planetar</entry>
-    <item>Greatsword[Weapon](3)</item>
+    <item>Greatsword[Weapon]#Large#(3)@True@</item>
   </collection>
   <collection>
     <entry>Pony</entry>
@@ -3822,7 +4054,7 @@
   </collection>
   <collection>
     <entry>Salamander$Noble$</entry>
-    <item>Longspear[Weapon](3)</item>
+    <item>Longspear[Weapon]#Large#(3)@True@</item>
   </collection>
   <collection>
     <entry>Satyr</entry>
@@ -3952,8 +4184,8 @@
   </collection>
   <collection>
     <entry>Solar</entry>
-    <item>Greatsword[Weapon](5){Dancing}</item>
-    <item>Composite longbow[Weapon]#+5 Strength bonus,Creates slaying arrows keyed to any creature type or subtype#(2)</item>
+    <item>Greatsword[Weapon]#Large#(5){Dancing}@True@</item>
+    <item>Composite longbow[Weapon]#+5 Strength bonus,Large#(2){Creates slaying arrows keyed to any creature type or subtype$5$}@True@</item>
   </collection>
   <collection>
     <entry>Constrictor snake</entry>
@@ -4059,8 +4291,8 @@
   </collection>
   <collection>
     <entry>Titan</entry>
-    <item>Warhammer[Weapon]#Gargantuan,Adamantine#(3)</item>
-    <item>Half-plate[Armor](4)</item>
+    <item>Warhammer[Weapon]#Gargantuan,Adamantine#(3)@True@</item>
+    <item>Half-plate[Armor]#Huge#(4)@True@</item>
   </collection>
   <collection>
     <entry>Toad</entry>
@@ -4107,7 +4339,7 @@
   </collection>
   <collection>
     <entry>Trumpet archon</entry>
-    <item>Greatsword[Weapon](4)</item>
+    <item>Greatsword[Weapon]#Medium#(4)@True@</item>
   </collection>
   <collection>
     <entry>Tyrannosaurus</entry>

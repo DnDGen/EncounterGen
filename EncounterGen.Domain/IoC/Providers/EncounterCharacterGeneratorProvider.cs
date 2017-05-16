@@ -1,8 +1,8 @@
 ﻿using CharacterGen.Characters;
+using CharacterGen.Randomizers.Abilities;
 using CharacterGen.Randomizers.Alignments;
 using CharacterGen.Randomizers.CharacterClasses;
 using CharacterGen.Randomizers.Races;
-using CharacterGen.Randomizers.Stats;
 using EncounterGen.Domain.Generators;
 using EncounterGen.Domain.Selectors;
 using EncounterGen.Domain.Selectors.Collections;
@@ -24,7 +24,7 @@ namespace EncounterGen.Domain.IoC.Providers
             var setLevelRandomizer = context.Kernel.Get<ISetLevelRandomizer>();
             var anyBaseRaceRandomizer = context.Kernel.Get<RaceRandomizer>(RaceRandomizerTypeConstants.BaseRace.AnyBase);
             var anyMetaraceRandomizer = context.Kernel.Get<RaceRandomizer>(RaceRandomizerTypeConstants.Metarace.AnyMeta);
-            var rawStatsRandomizer = context.Kernel.Get<IStatsRandomizer>(StatsRandomizerTypeConstants.Raw);
+            var rawAbilitiesRandomizer = context.Kernel.Get<IAbilitiesRandomizer>(AbilitiesRandomizerTypeConstants.Raw);
             var collectionSelector = context.Kernel.Get<ICollectionSelector>();
             var setMetaraceRandomizer = context.Kernel.Get<ISetMetaraceRandomizer>();
             var dice = context.Kernel.Get<Dice>();
@@ -38,7 +38,7 @@ namespace EncounterGen.Domain.IoC.Providers
                 setLevelRandomizer,
                 anyBaseRaceRandomizer,
                 anyMetaraceRandomizer,
-                rawStatsRandomizer,
+                rawAbilitiesRandomizer,
                 collectionSelector,
                 setMetaraceRandomizer,
                 anyNPCClassNameRandomizer,

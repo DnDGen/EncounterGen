@@ -1,6 +1,7 @@
 ﻿using EncounterGen.Common;
 using EncounterGen.Domain.Tables;
 using NUnit.Framework;
+using System.Collections.Generic;
 
 namespace EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
 {
@@ -98,6 +99,9 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
                 CreatureConstants.Drow,
                 CreatureConstants.Duergar,
                 CreatureConstants.Dwarf,
+                CreatureConstants.Dwarf_Deep,
+                CreatureConstants.Dwarf_Hill,
+                CreatureConstants.Dwarf_Mountain,
                 CreatureConstants.Eagle,
                 CreatureConstants.Elemental_Air,
                 CreatureConstants.Elemental_Earth,
@@ -105,6 +109,11 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
                 CreatureConstants.Elemental_Water,
                 CreatureConstants.Elf,
                 CreatureConstants.Elf_Aquatic,
+                CreatureConstants.Elf_Gray,
+                CreatureConstants.Elf_Half,
+                CreatureConstants.Elf_High,
+                CreatureConstants.Elf_Wild,
+                CreatureConstants.Elf_Wood,
                 CreatureConstants.Expert_Adviser,
                 CreatureConstants.Expert_Architect,
                 CreatureConstants.Expert_Artisan,
@@ -122,13 +131,20 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
                 CreatureConstants.Giant_Hill,
                 CreatureConstants.Giant_Stone,
                 CreatureConstants.Giant_Storm,
+                CreatureConstants.Githyanki,
+                CreatureConstants.Githzerai,
                 CreatureConstants.Gnoll,
                 CreatureConstants.Gnome,
+                CreatureConstants.Gnome_Forest,
+                CreatureConstants.Gnome_Rock,
                 CreatureConstants.Goblin,
                 CreatureConstants.Golem,
                 CreatureConstants.Grimlock,
                 CreatureConstants.Hag,
                 CreatureConstants.Halfling,
+                CreatureConstants.Halfling_Deep,
+                CreatureConstants.Halfling_Lightfoot,
+                CreatureConstants.Halfling_Tallfellow,
                 CreatureConstants.Harpy,
                 CreatureConstants.Hellwasp,
                 CreatureConstants.Hobgoblin,
@@ -137,10 +153,12 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
                 CreatureConstants.Hydra,
                 CreatureConstants.Inevitable,
                 CreatureConstants.Kobold,
+                CreatureConstants.KuoToa,
                 CreatureConstants.Lammasu,
                 CreatureConstants.Lich,
                 CreatureConstants.Lion,
                 CreatureConstants.Livestock,
+                CreatureConstants.Lizard,
                 CreatureConstants.Lizardfolk,
                 CreatureConstants.Locathah,
                 CreatureConstants.Locust,
@@ -158,6 +176,7 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
                 CreatureConstants.Ogre,
                 CreatureConstants.Ogre_Merrow,
                 CreatureConstants.Orc,
+                CreatureConstants.Orc_Half,
                 CreatureConstants.Owl,
                 CreatureConstants.Paladin_Crusader,
                 CreatureConstants.Pixie,
@@ -220,44 +239,35 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
                 CreatureConstants.Types.Undead,
                 CreatureConstants.Types.Vermin,
                 EnvironmentConstants.Aquatic,
-                EnvironmentConstants.Civilized,
-                EnvironmentConstants.Desert,
-                EnvironmentConstants.Dungeon,
-                EnvironmentConstants.Forest,
-                EnvironmentConstants.Hills,
-                EnvironmentConstants.Marsh,
-                EnvironmentConstants.Mountain,
-                EnvironmentConstants.Plains,
-                EnvironmentConstants.Temperatures.Cold,
-                EnvironmentConstants.Temperatures.Temperate,
-                EnvironmentConstants.Temperatures.Warm,
+                EnvironmentConstants.Underground,
+                EnvironmentConstants.Underground + EnvironmentConstants.Aquatic,
                 EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Aquatic,
                 EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Civilized,
                 EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Desert,
-                EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Dungeon,
                 EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Forest,
                 EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Hills,
                 EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Marsh,
                 EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain,
                 EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Plains,
+                EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Underground,
                 EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic,
                 EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Civilized,
                 EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert,
-                EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Dungeon,
                 EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest,
                 EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills,
                 EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh,
                 EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain,
                 EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains,
+                EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Underground,
                 EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic,
                 EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Civilized,
                 EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert,
-                EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Dungeon,
                 EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest,
                 EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills,
                 EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh,
                 EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain,
                 EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains,
+                EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Underground,
                 EnvironmentConstants.TimesOfDay.Day,
                 EnvironmentConstants.TimesOfDay.Night,
                 GroupConstants.Land,
@@ -268,6 +278,12 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
             };
 
             AssertEntriesAreComplete(entries);
+        }
+
+        protected IEnumerable<string> GetAllCreatures()
+        {
+            //INFO: Currently, night contains all creatures and acts as an "all" group
+            return ExplodeCollection(EnvironmentConstants.TimesOfDay.Night);
         }
     }
 }

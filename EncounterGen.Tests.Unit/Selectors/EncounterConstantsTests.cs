@@ -1701,15 +1701,33 @@ namespace EncounterGen.Tests.Unit.Selectors
             CreatureConstants.Duergar_Sergeant, AmountConstants.Range4To16,
             CreatureConstants.Duergar_Lieutenant, AmountConstants.Range3To6,
             CreatureConstants.Duergar_Captain, AmountConstants.Range1To4)]
-        [TestCase(EncounterConstants.Dwarf_Team, CreatureConstants.Dwarf_Warrior, AmountConstants.Range2To4)]
-        [TestCase(EncounterConstants.Dwarf_Squad, CreatureConstants.Dwarf_Warrior, AmountConstants.Range11To20,
-            CreatureConstants.Dwarf_Sergeant, AmountConstants.Range2,
-            CreatureConstants.Dwarf_Leader, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.Dwarf_Clan, CreatureConstants.Dwarf_Warrior, AmountConstants.Range30To100,
-            CreatureConstants.Dwarf_Noncombatant, AmountConstants.Range9To30,
-            CreatureConstants.Dwarf_Sergeant, AmountConstants.Range3To10,
-            CreatureConstants.Dwarf_Lieutenant, AmountConstants.Range5,
-            CreatureConstants.Dwarf_Captain, AmountConstants.Range3)]
+        [TestCase(EncounterConstants.Dwarf_Deep_Team, CreatureConstants.Dwarf_Deep_Warrior, AmountConstants.Range2To4)]
+        [TestCase(EncounterConstants.Dwarf_Deep_Squad, CreatureConstants.Dwarf_Deep_Warrior, AmountConstants.Range11To20,
+            CreatureConstants.Dwarf_Deep_Sergeant, AmountConstants.Range2,
+            CreatureConstants.Dwarf_Deep_Leader, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Dwarf_Deep_Clan, CreatureConstants.Dwarf_Deep_Warrior, AmountConstants.Range30To100,
+            CreatureConstants.Dwarf_Deep_Noncombatant, AmountConstants.Range9To30,
+            CreatureConstants.Dwarf_Deep_Sergeant, AmountConstants.Range3To10,
+            CreatureConstants.Dwarf_Deep_Lieutenant, AmountConstants.Range5,
+            CreatureConstants.Dwarf_Deep_Captain, AmountConstants.Range3)]
+        [TestCase(EncounterConstants.Dwarf_Hill_Team, CreatureConstants.Dwarf_Hill_Warrior, AmountConstants.Range2To4)]
+        [TestCase(EncounterConstants.Dwarf_Hill_Squad, CreatureConstants.Dwarf_Hill_Warrior, AmountConstants.Range11To20,
+            CreatureConstants.Dwarf_Hill_Sergeant, AmountConstants.Range2,
+            CreatureConstants.Dwarf_Hill_Leader, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Dwarf_Hill_Clan, CreatureConstants.Dwarf_Hill_Warrior, AmountConstants.Range30To100,
+            CreatureConstants.Dwarf_Hill_Noncombatant, AmountConstants.Range9To30,
+            CreatureConstants.Dwarf_Hill_Sergeant, AmountConstants.Range3To10,
+            CreatureConstants.Dwarf_Hill_Lieutenant, AmountConstants.Range5,
+            CreatureConstants.Dwarf_Hill_Captain, AmountConstants.Range3)]
+        [TestCase(EncounterConstants.Dwarf_Mountain_Team, CreatureConstants.Dwarf_Mountain_Warrior, AmountConstants.Range2To4)]
+        [TestCase(EncounterConstants.Dwarf_Mountain_Squad, CreatureConstants.Dwarf_Mountain_Warrior, AmountConstants.Range11To20,
+            CreatureConstants.Dwarf_Mountain_Sergeant, AmountConstants.Range2,
+            CreatureConstants.Dwarf_Mountain_Leader, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Dwarf_Mountain_Clan, CreatureConstants.Dwarf_Mountain_Warrior, AmountConstants.Range30To100,
+            CreatureConstants.Dwarf_Mountain_Noncombatant, AmountConstants.Range9To30,
+            CreatureConstants.Dwarf_Mountain_Sergeant, AmountConstants.Range3To10,
+            CreatureConstants.Dwarf_Mountain_Lieutenant, AmountConstants.Range5,
+            CreatureConstants.Dwarf_Mountain_Captain, AmountConstants.Range3)]
         [TestCase(EncounterConstants.Eagle_Solitary, CreatureConstants.Eagle, AmountConstants.Range1)]
         [TestCase(EncounterConstants.Eagle_Pair, CreatureConstants.Eagle, AmountConstants.Range2)]
         [TestCase(EncounterConstants.Eagle_Giant_Solitary, CreatureConstants.Eagle_Giant, AmountConstants.Range1)]
@@ -1747,15 +1765,6 @@ namespace EncounterGen.Tests.Unit.Selectors
         [TestCase(EncounterConstants.Elemental_Water_Elder_Solitary, CreatureConstants.Elemental_Water_Elder, AmountConstants.Range1)]
         [TestCase(EncounterConstants.Elephant_Solitary, CreatureConstants.Elephant, AmountConstants.Range1)]
         [TestCase(EncounterConstants.Elephant_Herd, CreatureConstants.Elephant, AmountConstants.Range6To30)]
-        [TestCase(EncounterConstants.Elf_Squad, CreatureConstants.Elf_Warrior, AmountConstants.Range2To4)]
-        [TestCase(EncounterConstants.Elf_Company, CreatureConstants.Elf_Warrior, AmountConstants.Range11To20,
-            CreatureConstants.Elf_Sergeant, AmountConstants.Range2,
-            CreatureConstants.Elf_Leader, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.Elf_Band, CreatureConstants.Elf_Warrior, AmountConstants.Range30To100,
-            CreatureConstants.Elf_Noncombatant, AmountConstants.Range6To20,
-            CreatureConstants.Elf_Sergeant, AmountConstants.Range3To10,
-            CreatureConstants.Elf_Lieutenant, AmountConstants.Range5,
-            CreatureConstants.Elf_Captain, AmountConstants.Range3)]
         [TestCase(EncounterConstants.Elf_Aquatic_Squad, CreatureConstants.Elf_Aquatic_Warrior, AmountConstants.Range2To4)]
         [TestCase(EncounterConstants.Elf_Aquatic_Company, CreatureConstants.Elf_Aquatic_Warrior, AmountConstants.Range11To20,
             CreatureConstants.Elf_Aquatic_Sergeant, AmountConstants.Range2,
@@ -1765,6 +1774,51 @@ namespace EncounterGen.Tests.Unit.Selectors
             CreatureConstants.Elf_Aquatic_Sergeant, AmountConstants.Range3To10,
             CreatureConstants.Elf_Aquatic_Lieutenant, AmountConstants.Range5,
             CreatureConstants.Elf_Aquatic_Captain, AmountConstants.Range3)]
+        [TestCase(EncounterConstants.Elf_Gray_Squad, CreatureConstants.Elf_Gray_Warrior, AmountConstants.Range2To4)]
+        [TestCase(EncounterConstants.Elf_Gray_Company, CreatureConstants.Elf_Gray_Warrior, AmountConstants.Range11To20,
+            CreatureConstants.Elf_Gray_Sergeant, AmountConstants.Range2,
+            CreatureConstants.Elf_Gray_Leader, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Elf_Gray_Band, CreatureConstants.Elf_Gray_Warrior, AmountConstants.Range30To100,
+            CreatureConstants.Elf_Gray_Noncombatant, AmountConstants.Range6To20,
+            CreatureConstants.Elf_Gray_Sergeant, AmountConstants.Range3To10,
+            CreatureConstants.Elf_Gray_Lieutenant, AmountConstants.Range5,
+            CreatureConstants.Elf_Gray_Captain, AmountConstants.Range3)]
+        [TestCase(EncounterConstants.Elf_Half_Squad, CreatureConstants.Elf_Half_Warrior, AmountConstants.Range2To4)]
+        [TestCase(EncounterConstants.Elf_Half_Company, CreatureConstants.Elf_Half_Warrior, AmountConstants.Range11To20,
+            CreatureConstants.Elf_Half_Sergeant, AmountConstants.Range2,
+            CreatureConstants.Elf_Half_Leader, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Elf_Half_Band, CreatureConstants.Elf_Half_Warrior, AmountConstants.Range30To100,
+            CreatureConstants.Elf_Half_Noncombatant, AmountConstants.Range6To20,
+            CreatureConstants.Elf_Half_Sergeant, AmountConstants.Range3To10,
+            CreatureConstants.Elf_Half_Lieutenant, AmountConstants.Range5,
+            CreatureConstants.Elf_Half_Captain, AmountConstants.Range3)]
+        [TestCase(EncounterConstants.Elf_High_Squad, CreatureConstants.Elf_High_Warrior, AmountConstants.Range2To4)]
+        [TestCase(EncounterConstants.Elf_High_Company, CreatureConstants.Elf_High_Warrior, AmountConstants.Range11To20,
+            CreatureConstants.Elf_High_Sergeant, AmountConstants.Range2,
+            CreatureConstants.Elf_High_Leader, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Elf_High_Band, CreatureConstants.Elf_High_Warrior, AmountConstants.Range30To100,
+            CreatureConstants.Elf_High_Noncombatant, AmountConstants.Range6To20,
+            CreatureConstants.Elf_High_Sergeant, AmountConstants.Range3To10,
+            CreatureConstants.Elf_High_Lieutenant, AmountConstants.Range5,
+            CreatureConstants.Elf_High_Captain, AmountConstants.Range3)]
+        [TestCase(EncounterConstants.Elf_Wild_Squad, CreatureConstants.Elf_Wild_Warrior, AmountConstants.Range2To4)]
+        [TestCase(EncounterConstants.Elf_Wild_Company, CreatureConstants.Elf_Wild_Warrior, AmountConstants.Range11To20,
+            CreatureConstants.Elf_Wild_Sergeant, AmountConstants.Range2,
+            CreatureConstants.Elf_Wild_Leader, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Elf_Wild_Band, CreatureConstants.Elf_Wild_Warrior, AmountConstants.Range30To100,
+            CreatureConstants.Elf_Wild_Noncombatant, AmountConstants.Range6To20,
+            CreatureConstants.Elf_Wild_Sergeant, AmountConstants.Range3To10,
+            CreatureConstants.Elf_Wild_Lieutenant, AmountConstants.Range5,
+            CreatureConstants.Elf_Wild_Captain, AmountConstants.Range3)]
+        [TestCase(EncounterConstants.Elf_Wood_Squad, CreatureConstants.Elf_Wood_Warrior, AmountConstants.Range2To4)]
+        [TestCase(EncounterConstants.Elf_Wood_Company, CreatureConstants.Elf_Wood_Warrior, AmountConstants.Range11To20,
+            CreatureConstants.Elf_Wood_Sergeant, AmountConstants.Range2,
+            CreatureConstants.Elf_Wood_Leader, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Elf_Wood_Band, CreatureConstants.Elf_Wood_Warrior, AmountConstants.Range30To100,
+            CreatureConstants.Elf_Wood_Noncombatant, AmountConstants.Range6To20,
+            CreatureConstants.Elf_Wood_Sergeant, AmountConstants.Range3To10,
+            CreatureConstants.Elf_Wood_Lieutenant, AmountConstants.Range5,
+            CreatureConstants.Elf_Wood_Captain, AmountConstants.Range3)]
         [TestCase(EncounterConstants.Erinyes_Solitary, CreatureConstants.Erinyes, AmountConstants.Range1)]
         [TestCase(EncounterConstants.EtherealFilcher_Solitary, CreatureConstants.EtherealFilcher, AmountConstants.Range1)]
         [TestCase(EncounterConstants.EtherealMarauder_Solitary, CreatureConstants.EtherealMarauder, AmountConstants.Range1)]
@@ -2026,6 +2080,30 @@ namespace EncounterGen.Tests.Unit.Selectors
         [TestCase(EncounterConstants.GibberingMouther_Solitary, CreatureConstants.GibberingMouther, AmountConstants.Range1)]
         [TestCase(EncounterConstants.Girallon_Solitary, CreatureConstants.Girallon, AmountConstants.Range1)]
         [TestCase(EncounterConstants.Girallon_Company, CreatureConstants.Girallon, AmountConstants.Range5To8)]
+        [TestCase(EncounterConstants.Githyanki_Company, CreatureConstants.Githyanki_Fighter, AmountConstants.Range2To4)]
+        [TestCase(EncounterConstants.Githyanki_Squad,
+            CreatureConstants.Githyanki_Fighter, AmountConstants.Range11To20,
+            CreatureConstants.Githyanki_Sergeant, AmountConstants.Range2,
+            CreatureConstants.Githyanki_Captain, AmountConstants.Range1,
+            CreatureConstants.Dragon_Red_Young, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Githyanki_Regiment,
+            CreatureConstants.Githyanki_Fighter, AmountConstants.Range30To100,
+            CreatureConstants.Githyanki_Sergeant, AmountConstants.Range3To10,
+            CreatureConstants.Githyanki_Lieutenant, AmountConstants.Range5,
+            CreatureConstants.Githyanki_Captain, AmountConstants.Range3,
+            CreatureConstants.Githyanki_SupremeLeader, AmountConstants.Range1,
+            CreatureConstants.Dragon_Red_Young, AmountConstants.Range1To4)]
+        [TestCase(EncounterConstants.Githzerai_Fellowship, CreatureConstants.Githzerai_Student, AmountConstants.Range3To12)]
+        [TestCase(EncounterConstants.Githzerai_Sect,
+            CreatureConstants.Githzerai_Student, AmountConstants.Range12To24,
+            CreatureConstants.Githzerai_Teacher, AmountConstants.Range2,
+            CreatureConstants.Githzerai_Mentor, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Githzerai_Order,
+            CreatureConstants.Githzerai_Student, AmountConstants.Range30To100,
+            CreatureConstants.Githzerai_Teacher, AmountConstants.Range3To10,
+            CreatureConstants.Githzerai_Mentor, AmountConstants.Range5,
+            CreatureConstants.Githzerai_Master, AmountConstants.Range2,
+            CreatureConstants.Githzerai_Sensei, AmountConstants.Range1)]
         [TestCase(EncounterConstants.Glabrezu_Solitary, CreatureConstants.Glabrezu, AmountConstants.Range1)]
         [TestCase(EncounterConstants.Glabrezu_Troupe, CreatureConstants.Glabrezu, AmountConstants.Range1,
             CreatureConstants.Succubus, AmountConstants.Range1,
@@ -2050,14 +2128,23 @@ namespace EncounterGen.Tests.Unit.Selectors
             CreatureConstants.Gnoll_Leader_6thTo8th, AmountConstants.Range1,
             CreatureConstants.Hyena, AmountConstants.Range7To12,
             CreatureConstants.Troll, AmountConstants.Range1To3)]
-        [TestCase(EncounterConstants.Gnome_Company, CreatureConstants.Gnome_Warrior, AmountConstants.Range2To4)]
-        [TestCase(EncounterConstants.Gnome_Squad, CreatureConstants.Gnome_Warrior, AmountConstants.Range11To20,
-            CreatureConstants.Gnome_Leader, AmountConstants.Range1,
-            CreatureConstants.Gnome_Lieutenant_3rd, AmountConstants.Range2)]
-        [TestCase(EncounterConstants.Gnome_Band, CreatureConstants.Gnome_Warrior, AmountConstants.Range30To50,
-            CreatureConstants.Gnome_Sergeant, AmountConstants.Range2To3,
-            CreatureConstants.Gnome_Lieutenant_5th, AmountConstants.Range5,
-            CreatureConstants.Gnome_Captain, AmountConstants.Range3,
+        [TestCase(EncounterConstants.Gnome_Forest_Company, CreatureConstants.Gnome_Forest_Warrior, AmountConstants.Range2To4)]
+        [TestCase(EncounterConstants.Gnome_Forest_Squad, CreatureConstants.Gnome_Forest_Warrior, AmountConstants.Range11To20,
+            CreatureConstants.Gnome_Forest_Leader, AmountConstants.Range1,
+            CreatureConstants.Gnome_Forest_Lieutenant_3rd, AmountConstants.Range2)]
+        [TestCase(EncounterConstants.Gnome_Forest_Band, CreatureConstants.Gnome_Forest_Warrior, AmountConstants.Range30To50,
+            CreatureConstants.Gnome_Forest_Sergeant, AmountConstants.Range2To3,
+            CreatureConstants.Gnome_Forest_Lieutenant_5th, AmountConstants.Range5,
+            CreatureConstants.Gnome_Forest_Captain, AmountConstants.Range3,
+            CreatureConstants.Badger_Dire, AmountConstants.Range2To5)]
+        [TestCase(EncounterConstants.Gnome_Rock_Company, CreatureConstants.Gnome_Rock_Warrior, AmountConstants.Range2To4)]
+        [TestCase(EncounterConstants.Gnome_Rock_Squad, CreatureConstants.Gnome_Rock_Warrior, AmountConstants.Range11To20,
+            CreatureConstants.Gnome_Rock_Leader, AmountConstants.Range1,
+            CreatureConstants.Gnome_Rock_Lieutenant_3rd, AmountConstants.Range2)]
+        [TestCase(EncounterConstants.Gnome_Rock_Band, CreatureConstants.Gnome_Rock_Warrior, AmountConstants.Range30To50,
+            CreatureConstants.Gnome_Rock_Sergeant, AmountConstants.Range2To3,
+            CreatureConstants.Gnome_Rock_Lieutenant_5th, AmountConstants.Range5,
+            CreatureConstants.Gnome_Rock_Captain, AmountConstants.Range3,
             CreatureConstants.Badger_Dire, AmountConstants.Range2To5)]
         [TestCase(EncounterConstants.Goblin_Gang, CreatureConstants.Goblin_Warrior, AmountConstants.Range4To9)]
         [TestCase(EncounterConstants.Goblin_Band, CreatureConstants.Goblin_Warrior, AmountConstants.Range10To100,
@@ -2123,15 +2210,37 @@ namespace EncounterGen.Tests.Unit.Selectors
             CreatureConstants.SeaHag, AmountConstants.Range1,
             CreatureConstants.Ogre, AmountConstants.Range80PercentTo8,
             CreatureConstants.Giant_Hill, AmountConstants.Range0To4)]
-        [TestCase(EncounterConstants.Halfling_Company, CreatureConstants.Halfling_Warrior, AmountConstants.Range2To4)]
-        [TestCase(EncounterConstants.Halfling_Squad, CreatureConstants.Halfling_Warrior, AmountConstants.Range11To20,
-            CreatureConstants.Halfling_Sergeant, AmountConstants.Range2,
-            CreatureConstants.Halfling_Leader, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.Halfling_Band, CreatureConstants.Halfling_Warrior, AmountConstants.Range30To100,
-            CreatureConstants.Halfling_Noncombatant, AmountConstants.Range30To100,
-            CreatureConstants.Halfling_Sergeant, AmountConstants.Range2To5,
-            CreatureConstants.Halfling_Lieutenant, AmountConstants.Range5,
-            CreatureConstants.Halfling_Captain, AmountConstants.Range3,
+        [TestCase(EncounterConstants.Halfling_Deep_Company, CreatureConstants.Halfling_Deep_Warrior, AmountConstants.Range2To4)]
+        [TestCase(EncounterConstants.Halfling_Deep_Squad, CreatureConstants.Halfling_Deep_Warrior, AmountConstants.Range11To20,
+            CreatureConstants.Halfling_Deep_Sergeant, AmountConstants.Range2,
+            CreatureConstants.Halfling_Deep_Leader, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Halfling_Deep_Band, CreatureConstants.Halfling_Deep_Warrior, AmountConstants.Range30To100,
+            CreatureConstants.Halfling_Deep_Noncombatant, AmountConstants.Range30To100,
+            CreatureConstants.Halfling_Deep_Sergeant, AmountConstants.Range2To5,
+            CreatureConstants.Halfling_Deep_Lieutenant, AmountConstants.Range5,
+            CreatureConstants.Halfling_Deep_Captain, AmountConstants.Range3,
+            CreatureConstants.Dog, AmountConstants.Range6To10,
+            CreatureConstants.Dog_Riding, AmountConstants.Range2To5)]
+        [TestCase(EncounterConstants.Halfling_Lightfoot_Company, CreatureConstants.Halfling_Lightfoot_Warrior, AmountConstants.Range2To4)]
+        [TestCase(EncounterConstants.Halfling_Lightfoot_Squad, CreatureConstants.Halfling_Lightfoot_Warrior, AmountConstants.Range11To20,
+            CreatureConstants.Halfling_Lightfoot_Sergeant, AmountConstants.Range2,
+            CreatureConstants.Halfling_Lightfoot_Leader, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Halfling_Lightfoot_Band, CreatureConstants.Halfling_Lightfoot_Warrior, AmountConstants.Range30To100,
+            CreatureConstants.Halfling_Lightfoot_Noncombatant, AmountConstants.Range30To100,
+            CreatureConstants.Halfling_Lightfoot_Sergeant, AmountConstants.Range2To5,
+            CreatureConstants.Halfling_Lightfoot_Lieutenant, AmountConstants.Range5,
+            CreatureConstants.Halfling_Lightfoot_Captain, AmountConstants.Range3,
+            CreatureConstants.Dog, AmountConstants.Range6To10,
+            CreatureConstants.Dog_Riding, AmountConstants.Range2To5)]
+        [TestCase(EncounterConstants.Halfling_Tallfellow_Company, CreatureConstants.Halfling_Tallfellow_Warrior, AmountConstants.Range2To4)]
+        [TestCase(EncounterConstants.Halfling_Tallfellow_Squad, CreatureConstants.Halfling_Tallfellow_Warrior, AmountConstants.Range11To20,
+            CreatureConstants.Halfling_Tallfellow_Sergeant, AmountConstants.Range2,
+            CreatureConstants.Halfling_Tallfellow_Leader, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Halfling_Tallfellow_Band, CreatureConstants.Halfling_Tallfellow_Warrior, AmountConstants.Range30To100,
+            CreatureConstants.Halfling_Tallfellow_Noncombatant, AmountConstants.Range30To100,
+            CreatureConstants.Halfling_Tallfellow_Sergeant, AmountConstants.Range2To5,
+            CreatureConstants.Halfling_Tallfellow_Lieutenant, AmountConstants.Range5,
+            CreatureConstants.Halfling_Tallfellow_Captain, AmountConstants.Range3,
             CreatureConstants.Dog, AmountConstants.Range6To10,
             CreatureConstants.Dog_Riding, AmountConstants.Range2To5)]
         [TestCase(EncounterConstants.Harpy_Solitary, CreatureConstants.Harpy, AmountConstants.Range1)]
@@ -2230,6 +2339,27 @@ namespace EncounterGen.Tests.Unit.Selectors
         [TestCase(EncounterConstants.Krenshar_Solitary, CreatureConstants.Krenshar, AmountConstants.Range1)]
         [TestCase(EncounterConstants.Krenshar_Pair, CreatureConstants.Krenshar, AmountConstants.Range2)]
         [TestCase(EncounterConstants.Krenshar_Pride, CreatureConstants.Krenshar, AmountConstants.Range6To10)]
+        [TestCase(EncounterConstants.KuoToa_Patrol,
+            CreatureConstants.KuoToa, AmountConstants.Range2To4,
+            CreatureConstants.KuoToa_Whip_3rd, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.KuoToa_Squad,
+            CreatureConstants.KuoToa, AmountConstants.Range6To11,
+            CreatureConstants.KuoToa_Whip_3rd, AmountConstants.Range1To2,
+            CreatureConstants.KuoToa_Monitor, AmountConstants.Range1To2,
+            CreatureConstants.KuoToa_Fighter_8th, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.KuoToa_Band,
+            CreatureConstants.KuoToa, AmountConstants.Range20To50,
+            CreatureConstants.KuoToa_Noncombatant, AmountConstants.Range20To50,
+            CreatureConstants.KuoToa_Whip_3rd, AmountConstants.Range2,
+            CreatureConstants.KuoToa_Fighter_8th, AmountConstants.Range2,
+            CreatureConstants.KuoToa_Fighter_10th, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.KuoToa_Tribe,
+            CreatureConstants.KuoToa, AmountConstants.Range40To400,
+            CreatureConstants.KuoToa_Whip_3rd, AmountConstants.Range2To20,
+            CreatureConstants.KuoToa_Monitor, AmountConstants.Range1,
+            CreatureConstants.KuoToa_Fighter_8th, AmountConstants.Range4,
+            CreatureConstants.KuoToa_Whip_10th, AmountConstants.Range1,
+            CreatureConstants.KuoToa_Fighter_10th, AmountConstants.Range2)]
         [TestCase(EncounterConstants.Lamia_Solitary, CreatureConstants.Lamia, AmountConstants.Range1)]
         [TestCase(EncounterConstants.Lamia_Pair, CreatureConstants.Lamia, AmountConstants.Range2)]
         [TestCase(EncounterConstants.Lamia_Gang, CreatureConstants.Lamia, AmountConstants.Range3To4)]
@@ -2758,6 +2888,15 @@ namespace EncounterGen.Tests.Unit.Selectors
             CreatureConstants.Orc_Sergeant, AmountConstants.Range3To10,
             CreatureConstants.Orc_Lieutenant, AmountConstants.Range5,
             CreatureConstants.Orc_Captain, AmountConstants.Range3)]
+        [TestCase(EncounterConstants.Orc_Half_Gang, CreatureConstants.Orc_Half_Warrior, AmountConstants.Range2To4)]
+        [TestCase(EncounterConstants.Orc_Half_Squad, CreatureConstants.Orc_Half_Warrior, AmountConstants.Range11To20,
+            CreatureConstants.Orc_Half_Sergeant, AmountConstants.Range2,
+            CreatureConstants.Orc_Half_Leader, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Orc_Half_Band, CreatureConstants.Orc_Half_Warrior, AmountConstants.Range30To100,
+            CreatureConstants.Orc_Half_Noncombatant, AmountConstants.Range45To150,
+            CreatureConstants.Orc_Half_Sergeant, AmountConstants.Range3To10,
+            CreatureConstants.Orc_Half_Lieutenant, AmountConstants.Range5,
+            CreatureConstants.Orc_Half_Captain, AmountConstants.Range3)]
         [TestCase(EncounterConstants.Otyugh_Solitary, CreatureConstants.Otyugh, AmountConstants.Range1)]
         [TestCase(EncounterConstants.Otyugh_Pair, CreatureConstants.Otyugh, AmountConstants.Range2)]
         [TestCase(EncounterConstants.Otyugh_Cluster, CreatureConstants.Otyugh, AmountConstants.Range3To4)]

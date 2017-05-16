@@ -1135,24 +1135,10 @@
     <item>Character[20]@Any NPC@</item>
   </collection>
   <collection>
-    <entry>Civilized</entry>
-    <item>Cat</item>
-    <item>Character</item>
-    <item>Dog</item>
-  </collection>
-  <collection>
     <entry>Cloud giant</entry>
     <item>Cloud giant</item>
     <item>Cloud giant$Noncombatant$</item>
     <item>Character[1d4+3]{Cloud Giant}@Cleric&amp;Sorcerer@</item>
-  </collection>
-  <collection>
-    <entry>Cold</entry>
-    <item>Frost giant</item>
-    <item>Frost worm</item>
-    <item>Remorhaz</item>
-    <item>Winter wolf</item>
-    <item>Polar bear</item>
   </collection>
   <collection>
     <entry>ColdAquatic</entry>
@@ -1162,34 +1148,45 @@
   </collection>
   <collection>
     <entry>ColdCivilized</entry>
+    <item>Cat</item>
+    <item>Character</item>
+    <item>Dog</item>
   </collection>
   <collection>
     <entry>ColdDesert</entry>
+    <item>Remorhaz</item>
   </collection>
   <collection>
-    <entry>ColdDungeon</entry>
+    <entry>ColdUnderground</entry>
   </collection>
   <collection>
     <entry>ColdForest</entry>
+    <item>Brown bear</item>
+    <item>Winter wolf</item>
+    <item>Wolverine</item>
   </collection>
   <collection>
     <entry>ColdHills</entry>
     <item>Beholder</item>
     <item>Ettin</item>
     <item>Ogre mage</item>
-    <item>Wolverine</item>
   </collection>
   <collection>
     <entry>ColdMarsh</entry>
     <item>Annis</item>
+    <item>Cryohydra</item>
+    <item>Gray ooze</item>
   </collection>
   <collection>
     <entry>ColdMountain</entry>
-    <item>Ettin</item>
     <item>Troll</item>
+    <item>White dragon</item>
+    <item>Frost giant</item>
   </collection>
   <collection>
     <entry>ColdPlains</entry>
+    <item>Polar bear</item>
+    <item>Frost worm</item>
   </collection>
   <collection>
     <entry>Constrictor snake</entry>
@@ -1268,7 +1265,7 @@
     <item>Dwarf</item>
     <item>Elemental</item>
     <item>Elf</item>
-    <item>Elf$Aquatic$</item>
+    <item>Aquatic Elf</item>
     <item>Fey</item>
     <item>Fiendish creature</item>
     <item>Formian</item>
@@ -1279,11 +1276,14 @@
     <item>Ghoul</item>
     <item>Ghoul$Lacedon$</item>
     <item>Giant</item>
+    <item>Githyanki</item>
+    <item>Githzerai</item>
     <item>Gnoll</item>
     <item>Gnome</item>
     <item>Goblin</item>
     <item>Grimlock</item>
     <item>Hag</item>
+    <item>Half-Orc</item>
     <item>Halfling</item>
     <item>Harpy</item>
     <item>Hell hound</item>
@@ -1292,6 +1292,7 @@
     <item>Howler</item>
     <item>Inevitable</item>
     <item>Kobold</item>
+    <item>Kuo-toa</item>
     <item>Leonal</item>
     <item>Lillend</item>
     <item>Lizardfolk</item>
@@ -1351,11 +1352,6 @@
     <item>Derro$Noncombatant$</item>
     <item>Character[3]{Derro}@Sorcerer@</item>
     <item>Character[1d4+4]{Derro}@Sorcerer@</item>
-  </collection>
-  <collection>
-    <entry>Desert</entry>
-    <item>Lamia</item>
-    <item>Mummy</item>
   </collection>
   <collection>
     <entry>Devil</entry>
@@ -1423,6 +1419,8 @@
     <item>Genie</item>
     <item>Ghaele</item>
     <item>Giant</item>
+    <item>Githyanki</item>
+    <item>Githzerai</item>
     <item>Glabrezu</item>
     <item>Hell hound</item>
     <item>Hellwasp</item>
@@ -1493,91 +1491,36 @@
   </collection>
   <collection>
     <entry>Dwarf</entry>
+    <item>Deep Dwarf</item>
+    <item>Hill Dwarf</item>
+    <item>Mountain Dwarf</item>
+  </collection>
+  <collection>
+    <entry>Deep Dwarf</entry>
+    <item>Character(Captain)[7]{Deep Dwarf}@Warrior@</item>
+    <item>Character(Leader)[1d4+2]{Deep Dwarf}@Warrior@</item>
+    <item>Character(Lieutenant)[5]{Deep Dwarf}@Warrior@</item>
+    <item>Character(Sergeant)[3]{Deep Dwarf}@Warrior@</item>
+    <item>Character[1]{Deep Dwarf}@Warrior@</item>
+    <item>Deep Dwarf$Noncombatant$</item>
+  </collection>
+  <collection>
+    <entry>Hill Dwarf</entry>
     <item>Character(Captain)[7]{Hill Dwarf}@Warrior@</item>
     <item>Character(Leader)[1d4+2]{Hill Dwarf}@Warrior@</item>
     <item>Character(Lieutenant)[5]{Hill Dwarf}@Warrior@</item>
     <item>Character(Sergeant)[3]{Hill Dwarf}@Warrior@</item>
     <item>Character[1]{Hill Dwarf}@Warrior@</item>
-    <item>Dwarf$Noncombatant$</item>
+    <item>Hill Dwarf$Noncombatant$</item>
   </collection>
   <collection>
-    <entry>Dungeon</entry>
-    <item>Ankheg</item>
-    <item>Ape</item>
-    <item>Aranea</item>
-    <item>Badger</item>
-    <item>Bat</item>
-    <item>Black bear</item>
-    <item>Black pudding</item>
-    <item>Blink dog</item>
-    <item>Boar</item>
-    <item>Brown bear</item>
-    <item>Bugbear</item>
-    <item>Carrion crawler</item>
-    <item>Choker</item>
-    <item>Cloaker</item>
-    <item>Cloud giant</item>
-    <item>Constrictor snake</item>
-    <item>Couatl</item>
-    <item>Criosphinx</item>
-    <item>Darkmantle</item>
-    <item>Delver</item>
-    <item>Derro</item>
-    <item>Destrachan</item>
-    <item>Displacer beast</item>
-    <item>Dragonne</item>
-    <item>Drider</item>
-    <item>Drow</item>
-    <item>Duergar</item>
-    <item>Ethereal filcher</item>
-    <item>Ettercap</item>
-    <item>Ettin</item>
-    <item>Fungus</item>
-    <item>Gelatinous cube</item>
-    <item>Giant ant</item>
-    <item>Giant praying mantis</item>
-    <item>Giant stag beetle</item>
-    <item>Gibbering mouther</item>
-    <item>Girallon</item>
-    <item>Gray ooze</item>
-    <item>Green hag</item>
-    <item>Grick</item>
-    <item>Gynosphinx</item>
-    <item>Hieracosphinx</item>
-    <item>Hill giant</item>
-    <item>Hydra</item>
-    <item>Krenshar</item>
-    <item>Kobold</item>
-    <item>Lamia</item>
-    <item>Lion</item>
-    <item>Lizardfolk</item>
-    <item>Mimic</item>
-    <item>Mind flayer</item>
-    <item>Minotaur</item>
-    <item>Mummy</item>
-    <item>Ochre jelly</item>
-    <item>Otyugh</item>
-    <item>Owlbear</item>
-    <item>Phantom fungus</item>
-    <item>Phasm</item>
-    <item>Purple worm</item>
-    <item>Roper</item>
-    <item>Rust monster</item>
-    <item>Shambling mound</item>
-    <item>Shocker lizard</item>
-    <item>Skum</item>
-    <item>Stone giant</item>
-    <item>Storm giant</item>
-    <item>Svirfneblin</item>
-    <item>Tiger</item>
-    <item>Troglodyte</item>
-    <item>Umber hulk</item>
-    <item>Weasel</item>
-    <item>Will-O'-Wisp</item>
-    <item>Wolf</item>
-    <item>Wolverine</item>
-    <item>Wyvern</item>
-    <item>Yrthak</item>
+    <entry>Mountain Dwarf</entry>
+    <item>Character(Captain)[7]{Mountain Dwarf}@Warrior@</item>
+    <item>Character(Leader)[1d4+2]{Mountain Dwarf}@Warrior@</item>
+    <item>Character(Lieutenant)[5]{Mountain Dwarf}@Warrior@</item>
+    <item>Character(Sergeant)[3]{Mountain Dwarf}@Warrior@</item>
+    <item>Character[1]{Mountain Dwarf}@Warrior@</item>
+    <item>Mountain Dwarf$Noncombatant$</item>
   </collection>
   <collection>
     <entry>Eagle</entry>
@@ -1632,22 +1575,66 @@
     <item>Elemental(Water)$Small$</item>
   </collection>
   <collection>
-    <entry>Elf</entry>
-    <item>Character(Captain)[7]{High Elf}@Warrior@</item>
-    <item>Character(Leader)[1d4+2]{High Elf}@Warrior@</item>
-    <item>Character(Lieutenant)[5]{High Elf}@Warrior@</item>
-    <item>Character(Sergeant)[3]{High Elf}@Warrior@</item>
-    <item>Character[1]{High Elf}@Warrior@</item>
-    <item>Elf$Noncombatant$</item>
-  </collection>
-  <collection>
-    <entry>Elf$Aquatic$</entry>
+    <entry>Aquatic Elf</entry>
     <item>Character(Captain)[7]{Aquatic Elf}@Warrior@</item>
     <item>Character(Leader)[1d4+2]{Aquatic Elf}@Warrior@</item>
     <item>Character(Lieutenant)[5]{Aquatic Elf}@Warrior@</item>
     <item>Character(Sergeant)[3]{Aquatic Elf}@Warrior@</item>
     <item>Character[1]{Aquatic Elf}@Warrior@</item>
-    <item>Elf$Aquatic$Noncombatant$$</item>
+    <item>Aquatic Elf$Noncombatant$</item>
+  </collection>
+  <collection>
+    <entry>Elf</entry>
+    <item>Gray Elf</item>
+    <item>Half-Elf</item>
+    <item>High Elf</item>
+    <item>Wild Elf</item>
+    <item>Wood Elf</item>
+  </collection>
+  <collection>
+    <entry>Gray Elf</entry>
+    <item>Character(Captain)[7]{Gray Elf}@Warrior@</item>
+    <item>Character(Leader)[1d4+2]{Gray Elf}@Warrior@</item>
+    <item>Character(Lieutenant)[5]{Gray Elf}@Warrior@</item>
+    <item>Character(Sergeant)[3]{Gray Elf}@Warrior@</item>
+    <item>Character[1]{Gray Elf}@Warrior@</item>
+    <item>Gray Elf$Noncombatant$</item>
+  </collection>
+  <collection>
+    <entry>Half-Elf</entry>
+    <item>Character(Captain)[7]{Half-Elf}@Warrior@</item>
+    <item>Character(Leader)[1d4+2]{Half-Elf}@Warrior@</item>
+    <item>Character(Lieutenant)[5]{Half-Elf}@Warrior@</item>
+    <item>Character(Sergeant)[3]{Half-Elf}@Warrior@</item>
+    <item>Character[1]{Half-Elf}@Warrior@</item>
+    <item>Half-Elf$Noncombatant$</item>
+  </collection>
+  <collection>
+    <entry>High Elf</entry>
+    <item>Character(Captain)[7]{High Elf}@Warrior@</item>
+    <item>Character(Leader)[1d4+2]{High Elf}@Warrior@</item>
+    <item>Character(Lieutenant)[5]{High Elf}@Warrior@</item>
+    <item>Character(Sergeant)[3]{High Elf}@Warrior@</item>
+    <item>Character[1]{High Elf}@Warrior@</item>
+    <item>High Elf$Noncombatant$</item>
+  </collection>
+  <collection>
+    <entry>Wild Elf</entry>
+    <item>Character(Captain)[7]{Wild Elf}@Warrior@</item>
+    <item>Character(Leader)[1d4+2]{Wild Elf}@Warrior@</item>
+    <item>Character(Lieutenant)[5]{Wild Elf}@Warrior@</item>
+    <item>Character(Sergeant)[3]{Wild Elf}@Warrior@</item>
+    <item>Character[1]{Wild Elf}@Warrior@</item>
+    <item>Wild Elf$Noncombatant$</item>
+  </collection>
+  <collection>
+    <entry>Wood Elf</entry>
+    <item>Character(Captain)[7]{Wood Elf}@Warrior@</item>
+    <item>Character(Leader)[1d4+2]{Wood Elf}@Warrior@</item>
+    <item>Character(Lieutenant)[5]{Wood Elf}@Warrior@</item>
+    <item>Character(Sergeant)[3]{Wood Elf}@Warrior@</item>
+    <item>Character[1]{Wood Elf}@Warrior@</item>
+    <item>Wood Elf$Noncombatant$</item>
   </collection>
   <collection>
     <entry>Fey</entry>
@@ -1676,18 +1663,6 @@
     <item>Character[1d2]{Fire Giant}@Cleric@</item>
     <item>Character[1d3+2]{Fire Giant}@Sorcerer@</item>
     <item>Character[1d2+5]{Fire Giant}@Cleric&amp;Sorcerer@</item>
-  </collection>
-  <collection>
-    <entry>Forest</entry>
-    <item>Treant</item>
-    <item>Brown bear</item>
-    <item>Lion</item>
-    <item>Tiger</item>
-    <item>Wolf</item>
-    <item>Eagle</item>
-    <item>Owl</item>
-    <item>Kobold</item>
-    <item>Stirge</item>
   </collection>
   <collection>
     <entry>Formian</entry>
@@ -1747,6 +1722,22 @@
     <item>Giant ant$Worker$</item>
   </collection>
   <collection>
+    <entry>Githyanki</entry>
+    <item>Character[3]{Githyanki}@Fighter@</item>
+    <item>Character(Sergeant)[7]{Githyanki}</item>
+    <item>Character(Captain)[9]{Githyanki}</item>
+    <item>Character(Lieutenant)[7]{Githyanki}</item>
+    <item>Character(Supreme Leader)[16]{Githyanki}</item>
+  </collection>
+  <collection>
+    <entry>Githzerai</entry>
+    <item>Character(Student)[3]{Githzerai}</item>
+    <item>Character(Teacher)[7]{Githzerai}</item>
+    <item>Character(Mentor)[9]{Githzerai}</item>
+    <item>Character(Master)[13]{Githzerai}</item>
+    <item>Character(Sensei)[16]{Githzerai}</item>
+  </collection>
+  <collection>
     <entry>Gnoll</entry>
     <item>Gnoll</item>
     <item>Gnoll$Noncombatant$</item>
@@ -1757,6 +1748,20 @@
   </collection>
   <collection>
     <entry>Gnome</entry>
+    <item>Forest Gnome</item>
+    <item>Rock Gnome</item>
+  </collection>
+  <collection>
+    <entry>Forest Gnome</entry>
+    <item>Character(Captain)[7]{Forest Gnome}@Warrior@</item>
+    <item>Character(Leader)[1d4+2]{Forest Gnome}@Warrior@</item>
+    <item>Character(Lieutenant)[5]{Forest Gnome}@Warrior@</item>
+    <item>Character(Lieutenant)[3]{Forest Gnome}@Warrior@</item>
+    <item>Character(Sergeant)[3]{Forest Gnome}@Warrior@</item>
+    <item>Character[1]{Forest Gnome}@Warrior@</item>
+  </collection>
+  <collection>
+    <entry>Rock Gnome</entry>
     <item>Character(Captain)[7]{Rock Gnome}@Warrior@</item>
     <item>Character(Leader)[1d4+2]{Rock Gnome}@Warrior@</item>
     <item>Character(Lieutenant)[5]{Rock Gnome}@Warrior@</item>
@@ -1824,12 +1829,36 @@
   </collection>
   <collection>
     <entry>Halfling</entry>
+    <item>Deep Halfling</item>
+    <item>Lightfoot Halfling</item>
+    <item>Tallfellow Halfling</item>
+  </collection>
+  <collection>
+    <entry>Deep Halfling</entry>
+    <item>Character(Captain)[7]{Deep Halfling}@Warrior@</item>
+    <item>Character(Leader)[1d4+2]{Deep Halfling}@Warrior@</item>
+    <item>Character(Lieutenant)[5]{Deep Halfling}@Warrior@</item>
+    <item>Character(Sergeant)[3]{Deep Halfling}@Warrior@</item>
+    <item>Character[1]{Deep Halfling}@Warrior@</item>
+    <item>Deep Halfling$Noncombatant$</item>
+  </collection>
+  <collection>
+    <entry>Lightfoot Halfling</entry>
     <item>Character(Captain)[7]{Lightfoot Halfling}@Warrior@</item>
     <item>Character(Leader)[1d4+2]{Lightfoot Halfling}@Warrior@</item>
     <item>Character(Lieutenant)[5]{Lightfoot Halfling}@Warrior@</item>
     <item>Character(Sergeant)[3]{Lightfoot Halfling}@Warrior@</item>
     <item>Character[1]{Lightfoot Halfling}@Warrior@</item>
-    <item>Halfling$Noncombatant$</item>
+    <item>Lightfoot Halfling$Noncombatant$</item>
+  </collection>
+  <collection>
+    <entry>Tallfellow Halfling</entry>
+    <item>Character(Captain)[7]{Tallfellow Halfling}@Warrior@</item>
+    <item>Character(Leader)[1d4+2]{Tallfellow Halfling}@Warrior@</item>
+    <item>Character(Lieutenant)[5]{Tallfellow Halfling}@Warrior@</item>
+    <item>Character(Sergeant)[3]{Tallfellow Halfling}@Warrior@</item>
+    <item>Character[1]{Tallfellow Halfling}@Warrior@</item>
+    <item>Tallfellow Halfling$Noncombatant$</item>
   </collection>
   <collection>
     <entry>Harpy</entry>
@@ -1845,17 +1874,6 @@
     <item>Hill giant</item>
     <item>Hill giant$Noncombatant$</item>
     <item>Hill giant dire wereboar</item>
-  </collection>
-  <collection>
-    <entry>Hills</entry>
-    <item>Brown bear</item>
-    <item>Eagle</item>
-    <item>Hill giant</item>
-    <item>Lamia</item>
-    <item>Lion</item>
-    <item>Owl</item>
-    <item>Tiger</item>
-    <item>Yrthak</item>
   </collection>
   <collection>
     <entry>Hobgoblin</entry>
@@ -1881,19 +1899,21 @@
   <collection>
     <entry>Humanoid</entry>
     <item>Aasimar</item>
+    <item>Aquatic Elf</item>
     <item>Bugbear</item>
     <item>Character</item>
     <item>Drow</item>
     <item>Duergar</item>
     <item>Dwarf</item>
     <item>Elf</item>
-    <item>Elf$Aquatic$</item>
     <item>Gnoll</item>
     <item>Gnome</item>
     <item>Goblin</item>
+    <item>Half-Orc</item>
     <item>Halfling</item>
     <item>Hobgoblin</item>
     <item>Kobold</item>
+    <item>Kuo-toa</item>
     <item>Lizardfolk</item>
     <item>Locathah</item>
     <item>Merfolk</item>
@@ -1931,6 +1951,16 @@
     <item>Kobold$Noncombatant$</item>
   </collection>
   <collection>
+    <entry>Kuo-toa</entry>
+    <item>Kuo-toa</item>
+    <item>Kuo-toa$Noncombatant$</item>
+    <item>Character(Whip)[3]{Kuo-toa}@Cleric@</item>
+    <item>Character(Monitor)[4]{Kuo-toa}@Monk@</item>
+    <item>Character[8]{Kuo-toa}@Fighter@</item>
+    <item>Character[10]{Kuo-toa}@Fighter@</item>
+    <item>Character(Whip)[10]{Kuo-toa}@Cleric@</item>
+  </collection>
+  <collection>
     <entry>Lammasu</entry>
     <item>Lammasu</item>
     <item>Lammasu$Golden Protector$</item>
@@ -1957,6 +1987,11 @@
   <collection>
     <entry>Livestock</entry>
     <item>Livestock$Noncombatant$</item>
+  </collection>
+  <collection>
+    <entry>Lizard</entry>
+    <item>Lizard</item>
+    <item>Monitor lizard</item>
   </collection>
   <collection>
     <entry>Lizardfolk</entry>
@@ -2047,14 +2082,6 @@
     <item>Yrthak</item>
   </collection>
   <collection>
-    <entry>Marsh</entry>
-    <item>Black pudding</item>
-    <item>Hydra</item>
-    <item>Gray ooze</item>
-    <item>Ochre jelly</item>
-    <item>Will-O'-Wisp</item>
-  </collection>
-  <collection>
     <entry>Mephit</entry>
     <item>Mephit(Air)</item>
     <item>Mephit(Dust)</item>
@@ -2129,21 +2156,6 @@
     <item>Monstrous spider$Colossal$</item>
   </collection>
   <collection>
-    <entry>Mountain</entry>
-    <item>Brown bear</item>
-    <item>Drider</item>
-    <item>Eagle</item>
-    <item>Grimlock</item>
-    <item>Hill giant</item>
-    <item>Lion</item>
-    <item>Owl</item>
-    <item>Stone giant</item>
-    <item>Tiger</item>
-    <item>Troglodyte</item>
-    <item>Umber hulk</item>
-    <item>Yrthak</item>
-  </collection>
-  <collection>
     <entry>Mummy</entry>
     <item>Mummy</item>
     <item>Character(Lord)[10]#Mummy#@Cleric@</item>
@@ -2216,6 +2228,15 @@
     <item>Orc$Noncombatant$</item>
   </collection>
   <collection>
+    <entry>Half-Orc</entry>
+    <item>Character(Captain)[7]{Half-Orc}@Warrior@</item>
+    <item>Character(Leader)[1d4+2]{Half-Orc}@Warrior@</item>
+    <item>Character(Lieutenant)[5]{Half-Orc}@Warrior@</item>
+    <item>Character(Sergeant)[3]{Half-Orc}@Warrior@</item>
+    <item>Character[1]{Half-Orc}@Warrior@</item>
+    <item>Half-Orc$Noncombatant$</item>
+  </collection>
+  <collection>
     <entry>Owl</entry>
     <item>Owl</item>
     <item>Giant owl</item>
@@ -2241,6 +2262,8 @@
     <item>Formian</item>
     <item>Genie</item>
     <item>Ghaele</item>
+    <item>Githyanki</item>
+    <item>Githzerai</item>
     <item>Hell hound</item>
     <item>Hellwasp</item>
     <item>Howler</item>
@@ -2265,15 +2288,6 @@
     <item>Xill</item>
     <item>Xorn</item>
     <item>Yeth hound</item>
-  </collection>
-  <collection>
-    <entry>Plains</entry>
-    <item>Brown bear</item>
-    <item>Lion</item>
-    <item>Tiger</item>
-    <item>Wolf</item>
-    <item>Eagle</item>
-    <item>Owl</item>
   </collection>
   <collection>
     <entry>Plant</entry>
@@ -2456,34 +2470,11 @@
     <item>Character[1]{Svirfneblin}@Warrior@</item>
   </collection>
   <collection>
-    <entry>Temperate</entry>
-    <item>Athach</item>
-    <item>Giant bee</item>
-    <item>Giant bombardier beetle</item>
-    <item>Bulette</item>
-    <item>Monstrous centipede</item>
-    <item>Cockatrice</item>
-    <item>Digester</item>
-    <item>Giant fire beetle</item>
-    <item>Gnoll</item>
-    <item>Goblin</item>
-    <item>Gorgon</item>
-    <item>Harpy</item>
-    <item>Hobgoblin</item>
-    <item>Lammasu</item>
-    <item>Manticore</item>
-    <item>Monstrous scorpion</item>
-    <item>Viper snake</item>
-    <item>Monstrous spider</item>
-    <item>Spider eater</item>
-    <item>Giant wasp</item>
-    <item>Yuan-ti</item>
-  </collection>
-  <collection>
     <entry>TemperateAquatic</entry>
     <item>Dragon turtle</item>
-    <item>Elf$Aquatic$</item>
+    <item>Aquatic Elf</item>
     <item>Kraken</item>
+    <item>Kuo-toa</item>
     <item>Merfolk</item>
     <item>Naga$Water$</item>
     <item>Nixie</item>
@@ -2497,39 +2488,45 @@
   </collection>
   <collection>
     <entry>TemperateCivilized</entry>
+    <item>Cat</item>
+    <item>Character</item>
+    <item>Dog</item>
   </collection>
   <collection>
     <entry>TemperateDesert</entry>
-    <item>Giant ant</item>
     <item>Bat</item>
     <item>Dragonne</item>
     <item>Donkey</item>
+    <item>Blue dragon</item>
+    <item>Lamia</item>
+    <item>Lammasu</item>
   </collection>
   <collection>
-    <entry>TemperateDungeon</entry>
+    <entry>TemperateUnderground</entry>
   </collection>
   <collection>
     <entry>TemperateForest</entry>
-    <item>Ankheg</item>
     <item>Aranea</item>
     <item>Assassin vine</item>
     <item>Badger</item>
-    <item>Bat</item>
     <item>Black bear</item>
     <item>Boar</item>
     <item>Centaur</item>
-    <item>Displacer beast</item>
     <item>Dryad</item>
-    <item>Elf</item>
-    <item>Ettercap</item>
-    <item>Giant ant</item>
+    <item>Forest Gnome</item>
     <item>Giant praying mantis</item>
     <item>Giant stag beetle</item>
-    <item>Green hag</item>
+    <item>Giant wasp</item>
+    <item>Green dragon</item>
     <item>Grig</item>
+    <item>Half-Elf</item>
     <item>Hawk</item>
+    <item>High Elf</item>
+    <item>Kobold</item>
     <item>Krenshar</item>
+    <item>Monstrous spider</item>
     <item>Nymph</item>
+    <item>Owl</item>
     <item>Owlbear</item>
     <item>Pegasus</item>
     <item>Pixie</item>
@@ -2537,85 +2534,79 @@
     <item>Raven</item>
     <item>Razor boar</item>
     <item>Satyr</item>
-    <item>Shambling mound</item>
+    <item>Spider eater</item>
+    <item>Tallfellow Halfling</item>
     <item>Tendriculos</item>
+    <item>Treant</item>
     <item>Unicorn</item>
-    <item>Weasel</item>
     <item>Wolf</item>
-    <item>Wolverine</item>
-    <item>Wyvern</item>
+    <item>Wood Elf</item>
   </collection>
   <collection>
     <entry>TemperateHills</entry>
-    <item>Giant ant</item>
-    <item>Badger</item>
-    <item>Bat</item>
-    <item>Black bear</item>
+    <item>Athach</item>
+    <item>Bronze dragon</item>
+    <item>Bulette</item>
     <item>Chimera</item>
     <item>Displacer beast</item>
-    <item>Dragonne</item>
-    <item>Ettin</item>
-    <item>Giant praying mantis</item>
     <item>Griffon</item>
-    <item>Gnome</item>
+    <item>Half-Orc</item>
+    <item>Hill giant</item>
+    <item>Hill giant dire wereboar</item>
     <item>Hippogriff</item>
     <item>Naga$Dark$</item>
+    <item>Rock Gnome</item>
     <item>Ogre</item>
     <item>Orc</item>
-    <item>Tendriculos</item>
     <item>Weasel</item>
-    <item>Wolverine</item>
-    <item>Wyvern</item>
   </collection>
   <collection>
     <entry>TemperateMarsh</entry>
     <item>Chuul</item>
-    <item>Giant praying mantis</item>
     <item>Gray render</item>
     <item>Green hag</item>
+    <item>Harpy</item>
+    <item>Hydra</item>
     <item>Lizardfolk</item>
     <item>Medusa</item>
     <item>Naga$Spirit$</item>
+    <item>Ochre jelly</item>
     <item>Shambling mound</item>
-    <item>Tendriculos</item>
     <item>Toad</item>
+    <item>Viper snake</item>
+    <item>Will-O'-Wisp</item>
   </collection>
   <collection>
     <entry>TemperateMountain</entry>
-    <item>Black bear</item>
     <item>Bugbear</item>
     <item>Cloud giant</item>
-    <item>Displacer beast</item>
-    <item>Dwarf</item>
-    <item>Ettin</item>
-    <item>Griffon</item>
-    <item>Roc</item>
-    <item>Storm giant</item>
-    <item>Weasel</item>
-    <item>Wyvern</item>
+    <item>Eagle</item>
+    <item>Gray Elf</item>
+    <item>Hill Dwarf</item>
+    <item>Mountain Dwarf</item>
     <item>Razor boar</item>
+    <item>Silver dragon</item>
+    <item>Stone giant</item>
+    <item>Yrthak</item>
   </collection>
   <collection>
     <entry>TemperatePlains</entry>
     <item>Aasimar</item>
-    <item>Ankheg</item>
-    <item>Badger</item>
-    <item>Bat</item>
     <item>Bison</item>
     <item>Blink dog</item>
     <item>Cat</item>
+    <item>Cockatrice</item>
     <item>Dog</item>
     <item>Giant ant</item>
-    <item>Giant praying mantis</item>
-    <item>Hippogriff</item>
+    <item>Giant bee</item>
+    <item>Goblin</item>
+    <item>Gorgon</item>
     <item>Horse</item>
-    <item>Krenshar</item>
     <item>Locust</item>
     <item>Naga$Guardian$</item>
     <item>Pony</item>
     <item>Tiefling</item>
-    <item>Weasel</item>
-    <item>Wolverine</item>
+    <item>Triceratops</item>
     <item>Worg</item>
   </collection>
   <collection>
@@ -2680,6 +2671,47 @@
     <item>Zombie</item>
   </collection>
   <collection>
+    <entry>Underground</entry>
+    <item>Black pudding</item>
+    <item>Carrion crawler</item>
+    <item>Centipede swarm</item>
+    <item>Choker</item>
+    <item>Cloaker</item>
+    <item>Darkmantle</item>
+    <item>Deep Dwarf</item>
+    <item>Delver</item>
+    <item>Derro</item>
+    <item>Destrachan</item>
+    <item>Drider</item>
+    <item>Drow</item>
+    <item>Duergar</item>
+    <item>Ethereal filcher</item>
+    <item>Fungus</item>
+    <item>Gelatinous cube</item>
+    <item>Gibbering mouther</item>
+    <item>Grick</item>
+    <item>Grimlock</item>
+    <item>Mimic</item>
+    <item>Mind flayer</item>
+    <item>Minotaur</item>
+    <item>Monstrous centipede</item>
+    <item>Otyugh</item>
+    <item>Phantom fungus</item>
+    <item>Phasm</item>
+    <item>Purple worm</item>
+    <item>Roper</item>
+    <item>Rust monster</item>
+    <item>Skum</item>
+    <item>Svirfneblin</item>
+    <item>Troglodyte</item>
+    <item>Umber hulk</item>
+  </collection>
+  <collection>
+    <entry>UndergroundAquatic</entry>
+    <item>Aboleth</item>
+    <item>Skum</item>
+  </collection>
+  <collection>
     <entry>Use Subtype for Treasure</entry>
     <item>Dominated creature[1]</item>
     <item>Dominated creature[2]</item>
@@ -2723,31 +2755,6 @@
     <item>Viper snake$Tiny$</item>
   </collection>
   <collection>
-    <entry>Warm</entry>
-    <item>Bulette</item>
-    <item>Centipede swarm</item>
-    <item>Cockatrice</item>
-    <item>Digester</item>
-    <item>Giant bee</item>
-    <item>Giant bombardier beetle</item>
-    <item>Giant fire beetle</item>
-    <item>Giant wasp</item>
-    <item>Gnoll</item>
-    <item>Goblin</item>
-    <item>Gorgon</item>
-    <item>Harpy</item>
-    <item>Hobgoblin</item>
-    <item>Lammasu</item>
-    <item>Manticore</item>
-    <item>Monstrous centipede</item>
-    <item>Monstrous scorpion</item>
-    <item>Monstrous spider</item>
-    <item>Spider eater</item>
-    <item>Spider swarm</item>
-    <item>Viper snake</item>
-    <item>Yuan-ti</item>
-  </collection>
-  <collection>
     <entry>WarmAquatic</entry>
     <item>Elasmosaurus</item>
     <item>Locathah</item>
@@ -2758,119 +2765,88 @@
   </collection>
   <collection>
     <entry>WarmCivilized</entry>
+    <item>Cat</item>
+    <item>Character</item>
+    <item>Dog</item>
   </collection>
   <collection>
     <entry>WarmDesert</entry>
     <item>Androsphinx</item>
-    <item>Giant ant</item>
-    <item>Baboon</item>
+    <item>Brass dragon</item>
     <item>Basilisk</item>
-    <item>Bat</item>
     <item>Camel</item>
     <item>Criosphinx</item>
-    <item>Dragonne</item>
     <item>Gynosphinx</item>
     <item>Hieracosphinx</item>
     <item>Hyena</item>
+    <item>Monstrous scorpion</item>
     <item>Scorpionfolk</item>
   </collection>
   <collection>
-    <entry>WarmDungeon</entry>
+    <entry>WarmUnderground</entry>
   </collection>
   <collection>
     <entry>WarmForest</entry>
-    <item>Giant ant</item>
     <item>Ape</item>
-    <item>Aranea</item>
-    <item>Assassin vine</item>
-    <item>Baboon</item>
-    <item>Bat</item>
-    <item>Black bear</item>
-    <item>Boar</item>
     <item>Couatl</item>
-    <item>Criosphinx</item>
-    <item>Deinonychus</item>
-    <item>Dryad</item>
-    <item>Elephant</item>
-    <item>Ettercap</item>
-    <item>Girallon</item>
-    <item>Green hag</item>
-    <item>Krenshar</item>
-    <item>Leopard</item>
-    <item>Megaraptor</item>
-    <item>Pegasus</item>
-    <item>Giant praying mantis</item>
-    <item>Pseudodragon</item>
-    <item>Rakshasa</item>
-    <item>Shambling mound</item>
     <item>Constrictor snake</item>
-    <item>Giant stag beetle</item>
-    <item>Tendriculos</item>
-    <item>Wyvern</item>
-    <item>Razor boar</item>
+    <item>Deinonychus</item>
+    <item>Digester</item>
+    <item>Ettercap</item>
+    <item>Giant bombardier beetle</item>
+    <item>Girallon</item>
+    <item>Leopard</item>
     <item>Lizard</item>
+    <item>Megaraptor</item>
     <item>Monkey</item>
+    <item>Razor boar</item>
+    <item>Spider swarm</item>
+    <item>Tiger</item>
+    <item>Wild Elf</item>
+    <item>Yuan-ti</item>
   </collection>
   <collection>
     <entry>WarmHills</entry>
-    <item>Giant ant</item>
-    <item>Athach</item>
-    <item>Bat</item>
     <item>Behir</item>
-    <item>Black bear</item>
-    <item>Dinosaur</item>
-    <item>Dragonne</item>
-    <item>Griffon</item>
-    <item>Hieracosphinx</item>
-    <item>Hippogriff</item>
+    <item>Copper dragon</item>
+    <item>Deep Halfling</item>
+    <item>Hobgoblin</item>
     <item>Phase spider</item>
     <item>Scorpionfolk</item>
-    <item>Tendriculos</item>
     <item>Wyvern</item>
   </collection>
   <collection>
     <entry>WarmMarsh</entry>
+    <item>Black dragon</item>
     <item>Crocodile</item>
-    <item>Criosphinx</item>
-    <item>Deinonychus</item>
-    <item>Green hag</item>
-    <item>Sea hag</item>
-    <item>Lizardfolk</item>
-    <item>Megaraptor</item>
-    <item>Giant praying mantis</item>
+    <item>Manticore</item>
+    <item>Pyrohydra</item>
     <item>Rakshasa</item>
-    <item>Shambling mound</item>
     <item>Shocker lizard</item>
-    <item>Tendriculos</item>
-    <item>Tyrannosaurus</item>
+    <item>Stirge</item>
   </collection>
   <collection>
     <entry>WarmMountain</entry>
-    <item>Ape</item>
-    <item>Athach</item>
-    <item>Black bear</item>
     <item>Fire giant</item>
-    <item>Girallon</item>
-    <item>Griffon</item>
+    <item>Red dragon</item>
     <item>Razor boar</item>
     <item>Roc</item>
-    <item>Wyvern</item>
+    <item>Storm giant</item>
   </collection>
   <collection>
     <entry>WarmPlains</entry>
     <item>Ankheg</item>
-    <item>Bat</item>
+    <item>Baboon</item>
     <item>Cheetah</item>
-    <item>Dinosaur</item>
     <item>Elephant</item>
-    <item>Giant ant</item>
-    <item>Giant praying mantis</item>
-    <item>Halfling</item>
-    <item>Hippogriff</item>
-    <item>Krenshar</item>
-    <item>Leopard</item>
+    <item>Giant fire beetle</item>
+    <item>Gold dragon</item>
+    <item>Gnoll</item>
+    <item>Lightfoot Halfling</item>
+    <item>Lion</item>
     <item>Rhinoceras</item>
     <item>Scorpionfolk</item>
+    <item>Tyrannosaurus</item>
   </collection>
   <collection>
     <entry>Weasel</entry>
@@ -2910,7 +2886,6 @@
   </collection>
   <collection>
     <entry>Wilderness</entry>
-    <item>Aasimar</item>
     <item>Aberration</item>
     <item>Ape</item>
     <item>Baboon</item>
@@ -2924,22 +2899,17 @@
     <item>Crocodile</item>
     <item>Deinonychus</item>
     <item>Dragon</item>
-    <item>Drow</item>
-    <item>Duergar</item>
-    <item>Dwarf</item>
     <item>Eagle</item>
     <item>Elemental</item>
     <item>Elephant</item>
-    <item>Elf</item>
     <item>Fey</item>
     <item>Giant</item>
     <item>Gnoll</item>
-    <item>Gnome</item>
     <item>Goblin</item>
-    <item>Halfling</item>
     <item>Hobgoblin</item>
     <item>Hyena</item>
     <item>Kobold</item>
+    <item>Kuo-toa</item>
     <item>Leopard</item>
     <item>Lion</item>
     <item>Lizardfolk</item>
@@ -2954,8 +2924,6 @@
     <item>Plant</item>
     <item>Rhinoceras</item>
     <item>Roc</item>
-    <item>Svirfneblin</item>
-    <item>Tiefling</item>
     <item>Tiger</item>
     <item>Triceratops</item>
     <item>Troglodyte</item>

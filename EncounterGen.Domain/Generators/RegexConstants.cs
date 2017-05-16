@@ -9,6 +9,7 @@
         public const string ItemTypePattern = "\\[.+\\]";
         public const string SetCharacterLevelPattern = "\\d+";
         public const string SpecialAbilitiesPattern = "\\{.+\\}";
+        public const string SpecialAbilitiesBonusPattern = "\\$\\d+\\$";
         public const string TraitPattern = "#.+#";
     }
 }

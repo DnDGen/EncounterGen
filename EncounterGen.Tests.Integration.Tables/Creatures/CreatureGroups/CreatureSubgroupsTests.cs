@@ -388,12 +388,30 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
             CreatureConstants.Duergar_Sergeant,
             CreatureConstants.Duergar_Warrior)]
         [TestCase(CreatureConstants.Dwarf,
-            CreatureConstants.Dwarf_Captain,
-            CreatureConstants.Dwarf_Leader,
-            CreatureConstants.Dwarf_Lieutenant,
-            CreatureConstants.Dwarf_Noncombatant,
-            CreatureConstants.Dwarf_Sergeant,
-            CreatureConstants.Dwarf_Warrior)]
+            CreatureConstants.Dwarf_Deep,
+            CreatureConstants.Dwarf_Hill,
+            CreatureConstants.Dwarf_Mountain)]
+        [TestCase(CreatureConstants.Dwarf_Deep,
+            CreatureConstants.Dwarf_Deep_Captain,
+            CreatureConstants.Dwarf_Deep_Leader,
+            CreatureConstants.Dwarf_Deep_Lieutenant,
+            CreatureConstants.Dwarf_Deep_Noncombatant,
+            CreatureConstants.Dwarf_Deep_Sergeant,
+            CreatureConstants.Dwarf_Deep_Warrior)]
+        [TestCase(CreatureConstants.Dwarf_Hill,
+            CreatureConstants.Dwarf_Hill_Captain,
+            CreatureConstants.Dwarf_Hill_Leader,
+            CreatureConstants.Dwarf_Hill_Lieutenant,
+            CreatureConstants.Dwarf_Hill_Noncombatant,
+            CreatureConstants.Dwarf_Hill_Sergeant,
+            CreatureConstants.Dwarf_Hill_Warrior)]
+        [TestCase(CreatureConstants.Dwarf_Mountain,
+            CreatureConstants.Dwarf_Mountain_Captain,
+            CreatureConstants.Dwarf_Mountain_Leader,
+            CreatureConstants.Dwarf_Mountain_Lieutenant,
+            CreatureConstants.Dwarf_Mountain_Noncombatant,
+            CreatureConstants.Dwarf_Mountain_Sergeant,
+            CreatureConstants.Dwarf_Mountain_Warrior)]
         [TestCase(CreatureConstants.Eagle,
             CreatureConstants.Eagle,
             CreatureConstants.Eagle_Giant)]
@@ -426,12 +444,11 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
             CreatureConstants.Elemental_Water_Medium,
             CreatureConstants.Elemental_Water_Small)]
         [TestCase(CreatureConstants.Elf,
-            CreatureConstants.Elf_Captain,
-            CreatureConstants.Elf_Leader,
-            CreatureConstants.Elf_Lieutenant,
-            CreatureConstants.Elf_Noncombatant,
-            CreatureConstants.Elf_Sergeant,
-            CreatureConstants.Elf_Warrior)]
+            CreatureConstants.Elf_Gray,
+            CreatureConstants.Elf_Half,
+            CreatureConstants.Elf_High,
+            CreatureConstants.Elf_Wild,
+            CreatureConstants.Elf_Wood)]
         [TestCase(CreatureConstants.Elf_Aquatic,
             CreatureConstants.Elf_Aquatic_Captain,
             CreatureConstants.Elf_Aquatic_Leader,
@@ -439,6 +456,41 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
             CreatureConstants.Elf_Aquatic_Noncombatant,
             CreatureConstants.Elf_Aquatic_Sergeant,
             CreatureConstants.Elf_Aquatic_Warrior)]
+        [TestCase(CreatureConstants.Elf_Gray,
+            CreatureConstants.Elf_Gray_Captain,
+            CreatureConstants.Elf_Gray_Leader,
+            CreatureConstants.Elf_Gray_Lieutenant,
+            CreatureConstants.Elf_Gray_Noncombatant,
+            CreatureConstants.Elf_Gray_Sergeant,
+            CreatureConstants.Elf_Gray_Warrior)]
+        [TestCase(CreatureConstants.Elf_Half,
+            CreatureConstants.Elf_Half_Captain,
+            CreatureConstants.Elf_Half_Leader,
+            CreatureConstants.Elf_Half_Lieutenant,
+            CreatureConstants.Elf_Half_Noncombatant,
+            CreatureConstants.Elf_Half_Sergeant,
+            CreatureConstants.Elf_Half_Warrior)]
+        [TestCase(CreatureConstants.Elf_High,
+            CreatureConstants.Elf_High_Captain,
+            CreatureConstants.Elf_High_Leader,
+            CreatureConstants.Elf_High_Lieutenant,
+            CreatureConstants.Elf_High_Noncombatant,
+            CreatureConstants.Elf_High_Sergeant,
+            CreatureConstants.Elf_High_Warrior)]
+        [TestCase(CreatureConstants.Elf_Wild,
+            CreatureConstants.Elf_Wild_Captain,
+            CreatureConstants.Elf_Wild_Leader,
+            CreatureConstants.Elf_Wild_Lieutenant,
+            CreatureConstants.Elf_Wild_Noncombatant,
+            CreatureConstants.Elf_Wild_Sergeant,
+            CreatureConstants.Elf_Wild_Warrior)]
+        [TestCase(CreatureConstants.Elf_Wood,
+            CreatureConstants.Elf_Wood_Captain,
+            CreatureConstants.Elf_Wood_Leader,
+            CreatureConstants.Elf_Wood_Lieutenant,
+            CreatureConstants.Elf_Wood_Noncombatant,
+            CreatureConstants.Elf_Wood_Sergeant,
+            CreatureConstants.Elf_Wood_Warrior)]
         [TestCase(CreatureConstants.Expert_Adviser,
             CreatureConstants.Expert_Adviser_Level1,
             CreatureConstants.Expert_Adviser_Level10To11,
@@ -546,6 +598,18 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
             CreatureConstants.Giant_Storm,
             CreatureConstants.Giant_Storm_Leader,
             CreatureConstants.Giant_Storm_Noncombatant)]
+        [TestCase(CreatureConstants.Githyanki,
+            CreatureConstants.Githyanki_Fighter,
+            CreatureConstants.Githyanki_Sergeant,
+            CreatureConstants.Githyanki_Captain,
+            CreatureConstants.Githyanki_Lieutenant,
+            CreatureConstants.Githyanki_SupremeLeader)]
+        [TestCase(CreatureConstants.Githzerai,
+            CreatureConstants.Githzerai_Student,
+            CreatureConstants.Githzerai_Teacher,
+            CreatureConstants.Githzerai_Mentor,
+            CreatureConstants.Githzerai_Master,
+            CreatureConstants.Githzerai_Sensei)]
         [TestCase(CreatureConstants.Gnoll,
             CreatureConstants.Gnoll,
             CreatureConstants.Gnoll_Leader_4thTo6th,
@@ -554,12 +618,22 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
             CreatureConstants.Gnoll_Noncombatant,
             CreatureConstants.Gnoll_Sergeant)]
         [TestCase(CreatureConstants.Gnome,
-            CreatureConstants.Gnome_Captain,
-            CreatureConstants.Gnome_Leader,
-            CreatureConstants.Gnome_Lieutenant_3rd,
-            CreatureConstants.Gnome_Lieutenant_5th,
-            CreatureConstants.Gnome_Sergeant,
-            CreatureConstants.Gnome_Warrior)]
+            CreatureConstants.Gnome_Forest,
+            CreatureConstants.Gnome_Rock)]
+        [TestCase(CreatureConstants.Gnome_Forest,
+            CreatureConstants.Gnome_Forest_Captain,
+            CreatureConstants.Gnome_Forest_Leader,
+            CreatureConstants.Gnome_Forest_Lieutenant_3rd,
+            CreatureConstants.Gnome_Forest_Lieutenant_5th,
+            CreatureConstants.Gnome_Forest_Sergeant,
+            CreatureConstants.Gnome_Forest_Warrior)]
+        [TestCase(CreatureConstants.Gnome_Rock,
+            CreatureConstants.Gnome_Rock_Captain,
+            CreatureConstants.Gnome_Rock_Leader,
+            CreatureConstants.Gnome_Rock_Lieutenant_3rd,
+            CreatureConstants.Gnome_Rock_Lieutenant_5th,
+            CreatureConstants.Gnome_Rock_Sergeant,
+            CreatureConstants.Gnome_Rock_Warrior)]
         [TestCase(CreatureConstants.Goblin,
             CreatureConstants.Goblin_Leader_4thTo6th,
             CreatureConstants.Goblin_Leader_6thTo8th,
@@ -581,12 +655,30 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
             CreatureConstants.GreenHag,
             CreatureConstants.SeaHag)]
         [TestCase(CreatureConstants.Halfling,
-            CreatureConstants.Halfling_Captain,
-            CreatureConstants.Halfling_Leader,
-            CreatureConstants.Halfling_Lieutenant,
-            CreatureConstants.Halfling_Noncombatant,
-            CreatureConstants.Halfling_Sergeant,
-            CreatureConstants.Halfling_Warrior)]
+            CreatureConstants.Halfling_Deep,
+            CreatureConstants.Halfling_Lightfoot,
+            CreatureConstants.Halfling_Tallfellow)]
+        [TestCase(CreatureConstants.Halfling_Deep,
+            CreatureConstants.Halfling_Deep_Captain,
+            CreatureConstants.Halfling_Deep_Leader,
+            CreatureConstants.Halfling_Deep_Lieutenant,
+            CreatureConstants.Halfling_Deep_Noncombatant,
+            CreatureConstants.Halfling_Deep_Sergeant,
+            CreatureConstants.Halfling_Deep_Warrior)]
+        [TestCase(CreatureConstants.Halfling_Lightfoot,
+            CreatureConstants.Halfling_Lightfoot_Captain,
+            CreatureConstants.Halfling_Lightfoot_Leader,
+            CreatureConstants.Halfling_Lightfoot_Lieutenant,
+            CreatureConstants.Halfling_Lightfoot_Noncombatant,
+            CreatureConstants.Halfling_Lightfoot_Sergeant,
+            CreatureConstants.Halfling_Lightfoot_Warrior)]
+        [TestCase(CreatureConstants.Halfling_Tallfellow,
+            CreatureConstants.Halfling_Tallfellow_Captain,
+            CreatureConstants.Halfling_Tallfellow_Leader,
+            CreatureConstants.Halfling_Tallfellow_Lieutenant,
+            CreatureConstants.Halfling_Tallfellow_Noncombatant,
+            CreatureConstants.Halfling_Tallfellow_Sergeant,
+            CreatureConstants.Halfling_Tallfellow_Warrior)]
         [TestCase(CreatureConstants.Harpy,
             CreatureConstants.Harpy,
             CreatureConstants.HarpyArcher)]
@@ -629,6 +721,14 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
             CreatureConstants.Kobold_Noncombatant,
             CreatureConstants.Kobold_Sergeant,
             CreatureConstants.Kobold_Warrior)]
+        [TestCase(CreatureConstants.KuoToa,
+            CreatureConstants.KuoToa,
+            CreatureConstants.KuoToa_Whip_3rd,
+            CreatureConstants.KuoToa_Monitor,
+            CreatureConstants.KuoToa_Fighter_8th,
+            CreatureConstants.KuoToa_Noncombatant,
+            CreatureConstants.KuoToa_Fighter_10th,
+            CreatureConstants.KuoToa_Whip_10th)]
         [TestCase(CreatureConstants.Lammasu,
             CreatureConstants.Lammasu,
             CreatureConstants.Lammasu_GoldenProtector)]
@@ -637,6 +737,9 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
             CreatureConstants.Lion_Dire)]
         [TestCase(CreatureConstants.Livestock,
             CreatureConstants.Livestock_Noncombatant)]
+        [TestCase(CreatureConstants.Lizard,
+            CreatureConstants.Lizard,
+            CreatureConstants.Lizard_Monitor)]
         [TestCase(CreatureConstants.Lizardfolk,
             CreatureConstants.Lizardfolk,
             CreatureConstants.Lizardfolk_Leader_3rdTo6th,
@@ -722,6 +825,13 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
             CreatureConstants.Orc_Noncombatant,
             CreatureConstants.Orc_Sergeant,
             CreatureConstants.Orc_Warrior)]
+        [TestCase(CreatureConstants.Orc_Half,
+            CreatureConstants.Orc_Half_Captain,
+            CreatureConstants.Orc_Half_Leader,
+            CreatureConstants.Orc_Half_Lieutenant,
+            CreatureConstants.Orc_Half_Noncombatant,
+            CreatureConstants.Orc_Half_Sergeant,
+            CreatureConstants.Orc_Half_Warrior)]
         [TestCase(CreatureConstants.Owl,
             CreatureConstants.Owl,
             CreatureConstants.Owl_Giant)]
@@ -1672,6 +1782,8 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
                 CreatureConstants.Formian,
                 CreatureConstants.Genie,
                 CreatureConstants.Ghaele,
+                CreatureConstants.Githyanki,
+                CreatureConstants.Githzerai,
                 CreatureConstants.HellHound,
                 CreatureConstants.Hellwasp,
                 CreatureConstants.Howler,

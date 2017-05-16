@@ -37,6 +37,7 @@
         public const string Range3To8 = "1d6+2";
         public const string Range3To9 = "2d4+1";
         public const string Range3To10 = "1d8+2";
+        public const string Range3To12 = "1d10+2";
         public const string Range3To13 = "2d6+1";
         public const string Range3To20 = "17d2-14";
         public const string Range4 = "4";
@@ -99,6 +100,7 @@
         public const string Range12 = "12";
         public const string Range12To13 = "1d2+11";
         public const string Range12To22 = "2d6+10";
+        public const string Range12To24 = "4d4+8";
         public const string Range12To30 = "2d10+10";
         public const string Range13 = "13";
         public const string Range14 = "14";

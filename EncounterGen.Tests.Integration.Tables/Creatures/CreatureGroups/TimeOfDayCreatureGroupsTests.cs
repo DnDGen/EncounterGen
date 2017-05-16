@@ -42,9 +42,11 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
                 CreatureConstants.Halfling,
                 CreatureConstants.Hobgoblin,
                 CreatureConstants.Kobold,
+                CreatureConstants.KuoToa,
                 CreatureConstants.Lizardfolk,
                 CreatureConstants.Locathah,
                 CreatureConstants.Merfolk,
+                CreatureConstants.Orc_Half,
                 CreatureConstants.Tiefling,
                 CreatureConstants.Troglodyte,
                 //Monstrous Humanoids
@@ -80,6 +82,8 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
                 CreatureConstants.Formian,
                 CreatureConstants.Genie,
                 CreatureConstants.Ghaele,
+                CreatureConstants.Githyanki,
+                CreatureConstants.Githzerai,
                 CreatureConstants.HellHound,
                 CreatureConstants.Hellwasp,
                 CreatureConstants.Howler,
@@ -192,15 +196,9 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
             };
 
             var explodedSensitiveToSunlight = ExplodeCollections(sensitiveToSunlight);
-
-            //HACK: Bug where Travis thinks these should appear in the day
-            Assert.That(explodedSensitiveToSunlight, Is.All.Not.Null);
-            Assert.That(explodedSensitiveToSunlight, Contains.Item(CreatureConstants.Svirfneblin_Leader));
-            Assert.That(explodedSensitiveToSunlight, Contains.Item(CreatureConstants.Svirfneblin_Captain));
-            Assert.That(explodedSensitiveToSunlight, Contains.Item(CreatureConstants.Svirfneblin_Lieutenant_5th));
-
             var dayCreatures = ExplodeCollection(EnvironmentConstants.TimesOfDay.Day);
             var dayCreaturesSensitiveToSunlight = dayCreatures.Intersect(explodedSensitiveToSunlight);
+
             Assert.That(dayCreaturesSensitiveToSunlight, Is.Empty);
         }
 
@@ -227,33 +225,7 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
 
             var explodedSensitiveToSunlight = ExplodeCollections(sensitiveToSunlight);
 
-            //HACK: Bug where Travis thinks these should appear in the day
-            Assert.That(explodedSensitiveToSunlight, Is.All.Not.Null);
-            Assert.That(explodedSensitiveToSunlight, Contains.Item(CreatureConstants.Svirfneblin_Leader));
-            Assert.That(explodedSensitiveToSunlight, Contains.Item(CreatureConstants.Svirfneblin_Captain));
-            Assert.That(explodedSensitiveToSunlight, Contains.Item(CreatureConstants.Svirfneblin_Lieutenant_5th));
-
-            var allCreatures = GetAllCreaturesFromEncounters();
-            allCreatures = allCreatures.Except(new[]
-            {
-                CreatureConstants.DominatedCreature_CR1,
-                CreatureConstants.DominatedCreature_CR2,
-                CreatureConstants.DominatedCreature_CR3,
-                CreatureConstants.DominatedCreature_CR4,
-                CreatureConstants.DominatedCreature_CR5,
-                CreatureConstants.DominatedCreature_CR6,
-                CreatureConstants.DominatedCreature_CR7,
-                CreatureConstants.DominatedCreature_CR8,
-                CreatureConstants.DominatedCreature_CR9,
-                CreatureConstants.DominatedCreature_CR10,
-                CreatureConstants.DominatedCreature_CR11,
-                CreatureConstants.DominatedCreature_CR12,
-                CreatureConstants.DominatedCreature_CR13,
-                CreatureConstants.DominatedCreature_CR14,
-                CreatureConstants.DominatedCreature_CR15,
-                CreatureConstants.DominatedCreature_CR16,
-            });
-
+            var allCreatures = GetAllCreatures();
             var notSensitiveToSunlight = allCreatures.Except(explodedSensitiveToSunlight);
             var dayCreatures = ExplodeCollection(EnvironmentConstants.TimesOfDay.Day);
 

@@ -5,12 +5,12 @@
         public const string Aquatic = "Aquatic";
         public const string Civilized = "Civilized";
         public const string Desert = "Desert";
-        public const string Dungeon = "Dungeon";
         public const string Forest = "Forest";
         public const string Hills = "Hills";
         public const string Marsh = "Marsh";
         public const string Mountain = "Mountain";
         public const string Plains = "Plains";
+        public const string Underground = "Underground";
 
         public static class Temperatures
         {

@@ -40,64 +40,94 @@ namespace EncounterGen.Domain.Selectors.Collections
 
         private IEnumerable<string> GetWeightedEncounters(EncounterSpecifications encounterSpecifications)
         {
-            if (encounterSpecifications.Environment == EnvironmentConstants.Dungeon)
+            if (ShouldGetUnderground(encounterSpecifications))
             {
                 encounterSpecifications.TimeOfDay = EnvironmentConstants.TimesOfDay.Night;
             }
 
             var magicEncounters = GetValidEncountersFromCreatureGroup(GroupConstants.Magic, encounterSpecifications);
-            var dragonEncounters = GetValidEncountersFromCreatureGroup(CreatureConstants.Types.Dragon, encounterSpecifications);
             var landEncounters = GetValidEncountersFromCreatureGroup(GroupConstants.Land, encounterSpecifications);
-            var temperatureEncounters = GetValidEncountersFromCreatureGroup(encounterSpecifications.Temperature, encounterSpecifications);
-            var environmentEncounters = GetValidEncountersFromCreatureGroup(encounterSpecifications.Environment, encounterSpecifications);
-
-            var specificEnvironment = encounterSpecifications.Temperature + encounterSpecifications.Environment;
-            var specificEnvironmentEncounters = GetValidEncountersFromCreatureGroup(specificEnvironment, encounterSpecifications);
+            var specificEnvironmentEncounters = GetValidEncountersFromCreatureGroup(encounterSpecifications.SpecificEnvironment, encounterSpecifications);
 
             var aquaticEncounters = GetValidEncountersFromCreatureGroup(EnvironmentConstants.Aquatic, encounterSpecifications);
-            var specificAquaticEnvironment = encounterSpecifications.Temperature + EnvironmentConstants.Aquatic;
-            var specificAquaticEncounters = GetValidEncountersFromCreatureGroup(specificAquaticEnvironment, encounterSpecifications);
+
+            var aquaticSpecifications = encounterSpecifications.Clone();
+            aquaticSpecifications.Environment = EnvironmentConstants.Aquatic;
+            var specificAquaticEncounters = GetValidEncountersFromCreatureGroup(aquaticSpecifications.SpecificEnvironment, encounterSpecifications);
+
+            var undergroundEncounters = GetValidEncountersFromCreatureGroup(EnvironmentConstants.Underground, encounterSpecifications);
+            var undergroundAquaticEncounters = GetValidEncountersFromCreatureGroup(EnvironmentConstants.Underground + EnvironmentConstants.Aquatic, encounterSpecifications);
 
             //INFO: This is done to remove duplicate encounters from these lists
-            var allEncounters = magicEncounters
-                .Union(environmentEncounters)
-                .Union(specificEnvironmentEncounters);
+            var allEncounters = magicEncounters.Union(specificEnvironmentEncounters);
 
             if (encounterSpecifications.Environment != EnvironmentConstants.Aquatic)
             {
-                allEncounters = allEncounters
-                    .Union(dragonEncounters)
-                    .Union(landEncounters)
-                    .Union(temperatureEncounters);
+                allEncounters = allEncounters.Union(landEncounters);
             }
 
-            if (encounterSpecifications.AllowAquatic)
+            if (ShouldGetAquatic(encounterSpecifications))
             {
                 allEncounters = allEncounters
                     .Union(aquaticEncounters)
                     .Union(specificAquaticEncounters);
             }
 
+            if (ShouldGetUnderground(encounterSpecifications))
+            {
+                allEncounters = allEncounters.Union(undergroundEncounters);
+            }
+
+            if (ShouldGetUndergroundAquatic(encounterSpecifications))
+            {
+                allEncounters = allEncounters.Union(undergroundAquaticEncounters);
+            }
+
+            //INFO: Single weight
             var weightedEncounters = new List<string>();
             weightedEncounters.AddRange(allEncounters);
 
-            var commonEncounters = allEncounters.Except(magicEncounters).Except(dragonEncounters);
-            weightedEncounters.AddRange(commonEncounters);
-
-            weightedEncounters.AddRange(environmentEncounters);
+            //INFO: Double weight
+            var commonEncounters = allEncounters.Except(magicEncounters);
 
             if (encounterSpecifications.Environment != EnvironmentConstants.Aquatic)
-            {
-                weightedEncounters.AddRange(temperatureEncounters);
+                commonEncounters = commonEncounters.Except(aquaticEncounters);
 
-                if (encounterSpecifications.AllowAquatic)
-                    weightedEncounters.AddRange(specificAquaticEncounters);
+            if (encounterSpecifications.Environment != EnvironmentConstants.Underground)
+                commonEncounters = commonEncounters.Except(undergroundEncounters);
+
+            weightedEncounters.AddRange(commonEncounters);
+
+            //INFO: Triple weight
+            weightedEncounters.AddRange(specificEnvironmentEncounters);
+
+            if (ShouldTripleWeightUndergroundAquatic(encounterSpecifications))
+            {
+                weightedEncounters.AddRange(undergroundAquaticEncounters);
             }
 
-            weightedEncounters.AddRange(specificEnvironmentEncounters);
-            weightedEncounters.AddRange(specificEnvironmentEncounters);
-
             return weightedEncounters;
+        }
+
+        private bool ShouldTripleWeightUndergroundAquatic(EncounterSpecifications specifications)
+        {
+            return ShouldGetUnderground(specifications) && ShouldGetAquatic(specifications)
+                && (specifications.Environment == EnvironmentConstants.Aquatic || specifications.Environment == EnvironmentConstants.Underground);
+        }
+
+        private bool ShouldGetUndergroundAquatic(EncounterSpecifications specifications)
+        {
+            return ShouldGetUnderground(specifications) && ShouldGetAquatic(specifications);
+        }
+
+        private bool ShouldGetUnderground(EncounterSpecifications specifications)
+        {
+            return (specifications.Environment == EnvironmentConstants.Underground || specifications.AllowUnderground);
+        }
+
+        private bool ShouldGetAquatic(EncounterSpecifications specifications)
+        {
+            return (specifications.Environment == EnvironmentConstants.Aquatic || specifications.AllowAquatic);
         }
 
         private IEnumerable<string> GetEncountersFromCreatureGroup(string creatureGroup)

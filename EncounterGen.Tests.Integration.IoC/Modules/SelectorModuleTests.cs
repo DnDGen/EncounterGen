@@ -61,5 +61,11 @@ namespace EncounterGen.Tests.Integration.IoC.Modules
         {
             AssertNotSingleton<IEncounterSelector>();
         }
+
+        [Test]
+        public void ItemSelectorIsNotASingleton()
+        {
+            AssertNotSingleton<IItemSelector>();
+        }
     }
 }

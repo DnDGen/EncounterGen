@@ -13,7 +13,13 @@ namespace EncounterGen.Generators
         public string TimeOfDay { get; set; }
         public string Temperature { get; set; }
         public bool AllowAquatic { get; set; }
+        public bool AllowUnderground { get; set; }
         public IEnumerable<string> CreatureTypeFilters { get; set; }
+
+        public string SpecificEnvironment
+        {
+            get { return Temperature + Environment; }
+        }
 
         public string Description
         {
@@ -23,6 +29,9 @@ namespace EncounterGen.Generators
 
                 if (AllowAquatic)
                     description += $", allowing aquatic";
+
+                if (AllowUnderground)
+                    description += $", allowing underground";
 
                 if (CreatureTypeFilters.Any())
                     description += $", allowing [{string.Join(", ", CreatureTypeFilters)}]";
@@ -57,6 +66,7 @@ namespace EncounterGen.Generators
         {
             var clone = new EncounterSpecifications();
             clone.AllowAquatic = AllowAquatic;
+            clone.AllowUnderground = AllowUnderground;
             clone.CreatureTypeFilters = CreatureTypeFilters.ToArray();
             clone.Environment = Environment;
             clone.Level = Level;

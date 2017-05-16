@@ -1,8 +1,8 @@
 ﻿using CharacterGen.Characters;
+using CharacterGen.Randomizers.Abilities;
 using CharacterGen.Randomizers.Alignments;
 using CharacterGen.Randomizers.CharacterClasses;
 using CharacterGen.Randomizers.Races;
-using CharacterGen.Randomizers.Stats;
 using EncounterGen.Common;
 using EncounterGen.Domain.Generators;
 using EncounterGen.Domain.Selectors;
@@ -29,7 +29,7 @@ namespace EncounterGen.Tests.Unit.Generators
         private Mock<RaceRandomizer> mockAnyMetaraceRandomizer;
         private Mock<ISetMetaraceRandomizer> mockSetMetaraceRandomizer;
         private Mock<ISetBaseRaceRandomizer> mockSetBaseRaceRandomizer;
-        private Mock<IStatsRandomizer> mockRawStatsRandomizer;
+        private Mock<IAbilitiesRandomizer> mockRawAbilitiesRandomizer;
         private Mock<ICollectionSelector> mockCollectionSelector;
         private Mock<ISetClassNameRandomizer> mockSetClassNameRandomizer;
         private Mock<Dice> mockDice;
@@ -45,7 +45,7 @@ namespace EncounterGen.Tests.Unit.Generators
             mockSetLevelRandomizer = new Mock<ISetLevelRandomizer>();
             mockAnyBaseRaceRandomizer = new Mock<RaceRandomizer>();
             mockAnyMetaraceRandomizer = new Mock<RaceRandomizer>();
-            mockRawStatsRandomizer = new Mock<IStatsRandomizer>();
+            mockRawAbilitiesRandomizer = new Mock<IAbilitiesRandomizer>();
             mockCollectionSelector = new Mock<ICollectionSelector>();
             mockSetMetaraceRandomizer = new Mock<ISetMetaraceRandomizer>();
             mockSetClassNameRandomizer = new Mock<ISetClassNameRandomizer>();
@@ -61,7 +61,7 @@ namespace EncounterGen.Tests.Unit.Generators
                 mockSetLevelRandomizer.Object,
                 mockAnyBaseRaceRandomizer.Object,
                 mockAnyMetaraceRandomizer.Object,
-                mockRawStatsRandomizer.Object,
+                mockRawAbilitiesRandomizer.Object,
                 mockCollectionSelector.Object,
                 mockSetMetaraceRandomizer.Object,
                 mockAnyNPCClassNameRandomizer.Object,
@@ -115,7 +115,7 @@ namespace EncounterGen.Tests.Unit.Generators
                     It.Is<ISetLevelRandomizer>(r => r.SetLevel == 1337 && r.AllowAdjustments),
                     mockAnyBaseRaceRandomizer.Object,
                     mockAnyMetaraceRandomizer.Object,
-                    mockRawStatsRandomizer.Object))
+                    mockRawAbilitiesRandomizer.Object))
                 .Returns(() => BuildCharacter(1337));
 
             var characters = encounterCharacterGenerator.GenerateFrom(creatures);
@@ -160,7 +160,7 @@ namespace EncounterGen.Tests.Unit.Generators
                     It.Is<ISetLevelRandomizer>(r => r.SetLevel == 1337 && r.AllowAdjustments),
                     mockAnyBaseRaceRandomizer.Object,
                     mockAnyMetaraceRandomizer.Object,
-                    mockRawStatsRandomizer.Object))
+                    mockRawAbilitiesRandomizer.Object))
                 .Returns(() => BuildCharacter(1337));
 
             var characters = encounterCharacterGenerator.GenerateFrom(creatures);
@@ -187,7 +187,7 @@ namespace EncounterGen.Tests.Unit.Generators
                     It.Is<ISetLevelRandomizer>(r => r.SetLevel == 1337 && r.AllowAdjustments),
                     mockAnyBaseRaceRandomizer.Object,
                     mockAnyMetaraceRandomizer.Object,
-                    mockRawStatsRandomizer.Object))
+                    mockRawAbilitiesRandomizer.Object))
                 .Returns(() => BuildCharacter(1337));
 
             mockCharacterGenerator
@@ -197,7 +197,7 @@ namespace EncounterGen.Tests.Unit.Generators
                     It.Is<ISetLevelRandomizer>(r => r.SetLevel == 1234 && r.AllowAdjustments),
                     mockAnyBaseRaceRandomizer.Object,
                     mockAnyMetaraceRandomizer.Object,
-                    mockRawStatsRandomizer.Object))
+                    mockRawAbilitiesRandomizer.Object))
                 .Returns(() => BuildCharacter(1234));
 
             var characters = encounterCharacterGenerator.GenerateFrom(creatures);
@@ -222,7 +222,7 @@ namespace EncounterGen.Tests.Unit.Generators
                     It.Is<ISetLevelRandomizer>(r => r.SetLevel == 1337 && r.AllowAdjustments == false),
                     It.Is<ISetBaseRaceRandomizer>(r => r.SetBaseRace == "base race"),
                     mockAnyMetaraceRandomizer.Object,
-                    mockRawStatsRandomizer.Object))
+                    mockRawAbilitiesRandomizer.Object))
                 .Returns(() => BuildCharacter(1337, baseRace: "base race"));
 
             var characters = encounterCharacterGenerator.GenerateFrom(creatures);
@@ -247,7 +247,7 @@ namespace EncounterGen.Tests.Unit.Generators
                     It.Is<ISetLevelRandomizer>(r => r.SetLevel == 1337 && r.AllowAdjustments == false),
                     mockAnyBaseRaceRandomizer.Object,
                     It.Is<ISetMetaraceRandomizer>(r => r.SetMetarace == "metarace"),
-                    mockRawStatsRandomizer.Object))
+                    mockRawAbilitiesRandomizer.Object))
                 .Returns(() => BuildCharacter(1337, metarace: "metarace"));
 
             var characters = encounterCharacterGenerator.GenerateFrom(creatures);
@@ -272,7 +272,7 @@ namespace EncounterGen.Tests.Unit.Generators
                     It.Is<ISetLevelRandomizer>(r => r.SetLevel == 1337 && r.AllowAdjustments),
                     mockAnyBaseRaceRandomizer.Object,
                     mockAnyMetaraceRandomizer.Object,
-                    mockRawStatsRandomizer.Object))
+                    mockRawAbilitiesRandomizer.Object))
                 .Returns(() => BuildCharacter(1337, "class name"));
 
             var characters = encounterCharacterGenerator.GenerateFrom(creatures);
@@ -297,7 +297,7 @@ namespace EncounterGen.Tests.Unit.Generators
                     It.Is<ISetLevelRandomizer>(r => r.SetLevel == 1337 && r.AllowAdjustments),
                     mockAnyBaseRaceRandomizer.Object,
                     mockAnyMetaraceRandomizer.Object,
-                    mockRawStatsRandomizer.Object))
+                    mockRawAbilitiesRandomizer.Object))
                 .Returns(() => BuildCharacter(1337, "other class name"));
 
             var characters = encounterCharacterGenerator.GenerateFrom(creatures);
@@ -325,7 +325,7 @@ namespace EncounterGen.Tests.Unit.Generators
                     It.Is<ISetLevelRandomizer>(r => r.SetLevel == 1337 && r.AllowAdjustments),
                     mockAnyBaseRaceRandomizer.Object,
                     mockAnyMetaraceRandomizer.Object,
-                    mockRawStatsRandomizer.Object))
+                    mockRawAbilitiesRandomizer.Object))
                 .Returns(() => BuildCharacter(1337, "class name"));
 
             mockCharacterGenerator
@@ -335,7 +335,7 @@ namespace EncounterGen.Tests.Unit.Generators
                     It.Is<ISetLevelRandomizer>(r => r.SetLevel == 1337 && r.AllowAdjustments),
                     mockAnyBaseRaceRandomizer.Object,
                     mockAnyMetaraceRandomizer.Object,
-                    mockRawStatsRandomizer.Object))
+                    mockRawAbilitiesRandomizer.Object))
                 .Returns(() => BuildCharacter(1337, "other class name"));
 
             var characters = encounterCharacterGenerator.GenerateFrom(creatures);
@@ -361,7 +361,7 @@ namespace EncounterGen.Tests.Unit.Generators
                     It.Is<ISetLevelRandomizer>(r => r.SetLevel == 1337 && r.AllowAdjustments),
                     mockAnyBaseRaceRandomizer.Object,
                     mockAnyMetaraceRandomizer.Object,
-                    mockRawStatsRandomizer.Object))
+                    mockRawAbilitiesRandomizer.Object))
                 .Returns(() => BuildCharacter(1337));
 
             var characters = encounterCharacterGenerator.GenerateFrom(creatures);
@@ -394,7 +394,7 @@ namespace EncounterGen.Tests.Unit.Generators
                     It.Is<ISetLevelRandomizer>(r => r.SetLevel == 1 && r.AllowAdjustments == false),
                     It.Is<ISetBaseRaceRandomizer>(r => r.SetBaseRace == "base race"),
                     It.Is<ISetMetaraceRandomizer>(r => r.SetMetarace == "metarace"),
-                    mockRawStatsRandomizer.Object))
+                    mockRawAbilitiesRandomizer.Object))
                 .Returns(() => BuildCharacter(1, "class name", "metarace", "base race"));
 
             mockCharacterGenerator
@@ -404,7 +404,7 @@ namespace EncounterGen.Tests.Unit.Generators
                     It.Is<ISetLevelRandomizer>(r => r.SetLevel == 2 && r.AllowAdjustments == false),
                     It.Is<ISetBaseRaceRandomizer>(r => r.SetBaseRace == "base race"),
                     It.Is<ISetMetaraceRandomizer>(r => r.SetMetarace == "metarace"),
-                    mockRawStatsRandomizer.Object))
+                    mockRawAbilitiesRandomizer.Object))
                 .Returns(() => BuildCharacter(2, "other class name", "metarace", "base race"));
 
             mockCharacterGenerator
@@ -414,7 +414,7 @@ namespace EncounterGen.Tests.Unit.Generators
                     It.Is<ISetLevelRandomizer>(r => r.SetLevel == 2 && r.AllowAdjustments == false),
                     It.Is<ISetBaseRaceRandomizer>(r => r.SetBaseRace == "base race"),
                     It.Is<ISetMetaraceRandomizer>(r => r.SetMetarace == "metarace"),
-                    mockRawStatsRandomizer.Object))
+                    mockRawAbilitiesRandomizer.Object))
                 .Returns(() => BuildCharacter(2, "class name", "metarace", "base race"));
 
             mockCharacterGenerator
@@ -424,7 +424,7 @@ namespace EncounterGen.Tests.Unit.Generators
                     It.Is<ISetLevelRandomizer>(r => r.SetLevel == 1 && r.AllowAdjustments == false),
                     It.Is<ISetBaseRaceRandomizer>(r => r.SetBaseRace == "base race"),
                     It.Is<ISetMetaraceRandomizer>(r => r.SetMetarace == "metarace"),
-                    mockRawStatsRandomizer.Object))
+                    mockRawAbilitiesRandomizer.Object))
                 .Returns(() => BuildCharacter(1, "other class name", "metarace", "base race"));
 
             var characters = encounterCharacterGenerator.GenerateFrom(creatures);
@@ -462,7 +462,7 @@ namespace EncounterGen.Tests.Unit.Generators
                     It.Is<ISetLevelRandomizer>(r => r.SetLevel == 1 && r.AllowAdjustments == false),
                     It.Is<ISetBaseRaceRandomizer>(r => r.SetBaseRace == "base race"),
                     It.Is<ISetMetaraceRandomizer>(r => r.SetMetarace == "metarace"),
-                    mockRawStatsRandomizer.Object))
+                    mockRawAbilitiesRandomizer.Object))
                 .Returns(() => BuildCharacter(1, "class name", "metarace", "base race"));
 
             mockCharacterGenerator
@@ -472,7 +472,7 @@ namespace EncounterGen.Tests.Unit.Generators
                     It.Is<ISetLevelRandomizer>(r => r.SetLevel == 2 && r.AllowAdjustments == false),
                     It.Is<ISetBaseRaceRandomizer>(r => r.SetBaseRace == "base race"),
                     It.Is<ISetMetaraceRandomizer>(r => r.SetMetarace == "metarace"),
-                    mockRawStatsRandomizer.Object))
+                    mockRawAbilitiesRandomizer.Object))
                 .Returns(() => BuildCharacter(2, "other class name", "metarace", "base race"));
 
             mockCharacterGenerator
@@ -482,7 +482,7 @@ namespace EncounterGen.Tests.Unit.Generators
                     It.Is<ISetLevelRandomizer>(r => r.SetLevel == 2 && r.AllowAdjustments == false),
                     It.Is<ISetBaseRaceRandomizer>(r => r.SetBaseRace == "base race"),
                     It.Is<ISetMetaraceRandomizer>(r => r.SetMetarace == "metarace"),
-                    mockRawStatsRandomizer.Object))
+                    mockRawAbilitiesRandomizer.Object))
                 .Returns(() => BuildCharacter(2, "class name", "metarace", "base race"));
 
             mockCharacterGenerator
@@ -492,7 +492,7 @@ namespace EncounterGen.Tests.Unit.Generators
                     It.Is<ISetLevelRandomizer>(r => r.SetLevel == 1 && r.AllowAdjustments == false),
                     It.Is<ISetBaseRaceRandomizer>(r => r.SetBaseRace == "base race"),
                     It.Is<ISetMetaraceRandomizer>(r => r.SetMetarace == "metarace"),
-                    mockRawStatsRandomizer.Object))
+                    mockRawAbilitiesRandomizer.Object))
                 .Returns(() => BuildCharacter(1, "other class name", "metarace", "base race"));
 
             var characters = encounterCharacterGenerator.GenerateFrom(creatures);
@@ -520,7 +520,7 @@ namespace EncounterGen.Tests.Unit.Generators
                     It.Is<ISetLevelRandomizer>(r => r.SetLevel == 1337 && r.AllowAdjustments),
                     mockAnyBaseRaceRandomizer.Object,
                     mockAnyMetaraceRandomizer.Object,
-                    mockRawStatsRandomizer.Object))
+                    mockRawAbilitiesRandomizer.Object))
                 .Returns(() => BuildCharacter(1337));
 
             characters = encounterCharacterGenerator.GenerateFrom(creatures);
@@ -549,7 +549,7 @@ namespace EncounterGen.Tests.Unit.Generators
                     It.Is<ISetLevelRandomizer>(r => r.SetLevel == 1337 && r.AllowAdjustments),
                     mockAnyBaseRaceRandomizer.Object,
                     mockAnyMetaraceRandomizer.Object,
-                    mockRawStatsRandomizer.Object))
+                    mockRawAbilitiesRandomizer.Object))
                 .Returns(() => BuildCharacter(1337));
 
             var characters = encounterCharacterGenerator.GenerateFrom(creatures);
@@ -624,7 +624,7 @@ namespace EncounterGen.Tests.Unit.Generators
                     mockSetLevelRandomizer.Object,
                     It.IsAny<RaceRandomizer>(),
                     It.IsAny<RaceRandomizer>(),
-                    mockRawStatsRandomizer.Object))
+                    mockRawAbilitiesRandomizer.Object))
                 .Returns(() => BuildCharacter(level++));
 
             var characters = encounterCharacterGenerator.GenerateFrom(creatures);

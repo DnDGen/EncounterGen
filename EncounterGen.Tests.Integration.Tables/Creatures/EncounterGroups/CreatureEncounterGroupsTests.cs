@@ -1336,17 +1336,39 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
         [TestCase(CreatureConstants.Duergar_Lieutenant, EncounterConstants.Duergar_Clan)]
         [TestCase(CreatureConstants.Duergar_Leader, EncounterConstants.Duergar_Squad)]
         [TestCase(CreatureConstants.Duergar_Captain, EncounterConstants.Duergar_Clan)]
-        [TestCase(CreatureConstants.Dwarf_Warrior,
-            EncounterConstants.Dwarf_Team,
-            EncounterConstants.Dwarf_Squad,
-            EncounterConstants.Dwarf_Clan)]
-        [TestCase(CreatureConstants.Dwarf_Noncombatant, EncounterConstants.Dwarf_Clan)]
-        [TestCase(CreatureConstants.Dwarf_Sergeant,
-            EncounterConstants.Dwarf_Squad,
-            EncounterConstants.Dwarf_Clan)]
-        [TestCase(CreatureConstants.Dwarf_Lieutenant, EncounterConstants.Dwarf_Clan)]
-        [TestCase(CreatureConstants.Dwarf_Leader, EncounterConstants.Dwarf_Squad)]
-        [TestCase(CreatureConstants.Dwarf_Captain, EncounterConstants.Dwarf_Clan)]
+        [TestCase(CreatureConstants.Dwarf_Deep_Warrior,
+            EncounterConstants.Dwarf_Deep_Team,
+            EncounterConstants.Dwarf_Deep_Squad,
+            EncounterConstants.Dwarf_Deep_Clan)]
+        [TestCase(CreatureConstants.Dwarf_Deep_Noncombatant, EncounterConstants.Dwarf_Deep_Clan)]
+        [TestCase(CreatureConstants.Dwarf_Deep_Sergeant,
+            EncounterConstants.Dwarf_Deep_Squad,
+            EncounterConstants.Dwarf_Deep_Clan)]
+        [TestCase(CreatureConstants.Dwarf_Deep_Lieutenant, EncounterConstants.Dwarf_Deep_Clan)]
+        [TestCase(CreatureConstants.Dwarf_Deep_Leader, EncounterConstants.Dwarf_Deep_Squad)]
+        [TestCase(CreatureConstants.Dwarf_Deep_Captain, EncounterConstants.Dwarf_Deep_Clan)]
+        [TestCase(CreatureConstants.Dwarf_Hill_Warrior,
+            EncounterConstants.Dwarf_Hill_Team,
+            EncounterConstants.Dwarf_Hill_Squad,
+            EncounterConstants.Dwarf_Hill_Clan)]
+        [TestCase(CreatureConstants.Dwarf_Hill_Noncombatant, EncounterConstants.Dwarf_Hill_Clan)]
+        [TestCase(CreatureConstants.Dwarf_Hill_Sergeant,
+            EncounterConstants.Dwarf_Hill_Squad,
+            EncounterConstants.Dwarf_Hill_Clan)]
+        [TestCase(CreatureConstants.Dwarf_Hill_Lieutenant, EncounterConstants.Dwarf_Hill_Clan)]
+        [TestCase(CreatureConstants.Dwarf_Hill_Leader, EncounterConstants.Dwarf_Hill_Squad)]
+        [TestCase(CreatureConstants.Dwarf_Hill_Captain, EncounterConstants.Dwarf_Hill_Clan)]
+        [TestCase(CreatureConstants.Dwarf_Mountain_Warrior,
+            EncounterConstants.Dwarf_Mountain_Team,
+            EncounterConstants.Dwarf_Mountain_Squad,
+            EncounterConstants.Dwarf_Mountain_Clan)]
+        [TestCase(CreatureConstants.Dwarf_Mountain_Noncombatant, EncounterConstants.Dwarf_Mountain_Clan)]
+        [TestCase(CreatureConstants.Dwarf_Mountain_Sergeant,
+            EncounterConstants.Dwarf_Mountain_Squad,
+            EncounterConstants.Dwarf_Mountain_Clan)]
+        [TestCase(CreatureConstants.Dwarf_Mountain_Lieutenant, EncounterConstants.Dwarf_Mountain_Clan)]
+        [TestCase(CreatureConstants.Dwarf_Mountain_Leader, EncounterConstants.Dwarf_Mountain_Squad)]
+        [TestCase(CreatureConstants.Dwarf_Mountain_Captain, EncounterConstants.Dwarf_Mountain_Clan)]
         [TestCase(CreatureConstants.Eagle,
             EncounterConstants.Eagle_Solitary,
             EncounterConstants.Eagle_Pair,
@@ -1388,17 +1410,6 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
         [TestCase(CreatureConstants.Elemental_Water_Large, EncounterConstants.Elemental_Water_Large_Solitary)]
         [TestCase(CreatureConstants.Elemental_Water_Medium, EncounterConstants.Elemental_Water_Medium_Solitary)]
         [TestCase(CreatureConstants.Elemental_Water_Small, EncounterConstants.Elemental_Water_Small_Solitary)]
-        [TestCase(CreatureConstants.Elf_Warrior,
-            EncounterConstants.Elf_Squad,
-            EncounterConstants.Elf_Company,
-            EncounterConstants.Elf_Band)]
-        [TestCase(CreatureConstants.Elf_Noncombatant, EncounterConstants.Elf_Band)]
-        [TestCase(CreatureConstants.Elf_Sergeant,
-            EncounterConstants.Elf_Company,
-            EncounterConstants.Elf_Band)]
-        [TestCase(CreatureConstants.Elf_Lieutenant, EncounterConstants.Elf_Band)]
-        [TestCase(CreatureConstants.Elf_Leader, EncounterConstants.Elf_Company)]
-        [TestCase(CreatureConstants.Elf_Captain, EncounterConstants.Elf_Band)]
         [TestCase(CreatureConstants.Elf_Aquatic_Warrior,
             EncounterConstants.Elf_Aquatic_Squad,
             EncounterConstants.Elf_Aquatic_Company,
@@ -1410,6 +1421,61 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
         [TestCase(CreatureConstants.Elf_Aquatic_Lieutenant, EncounterConstants.Elf_Aquatic_Band)]
         [TestCase(CreatureConstants.Elf_Aquatic_Leader, EncounterConstants.Elf_Aquatic_Company)]
         [TestCase(CreatureConstants.Elf_Aquatic_Captain, EncounterConstants.Elf_Aquatic_Band)]
+        [TestCase(CreatureConstants.Elf_Gray_Warrior,
+            EncounterConstants.Elf_Gray_Squad,
+            EncounterConstants.Elf_Gray_Company,
+            EncounterConstants.Elf_Gray_Band)]
+        [TestCase(CreatureConstants.Elf_Gray_Noncombatant, EncounterConstants.Elf_Gray_Band)]
+        [TestCase(CreatureConstants.Elf_Gray_Sergeant,
+            EncounterConstants.Elf_Gray_Company,
+            EncounterConstants.Elf_Gray_Band)]
+        [TestCase(CreatureConstants.Elf_Gray_Lieutenant, EncounterConstants.Elf_Gray_Band)]
+        [TestCase(CreatureConstants.Elf_Gray_Leader, EncounterConstants.Elf_Gray_Company)]
+        [TestCase(CreatureConstants.Elf_Gray_Captain, EncounterConstants.Elf_Gray_Band)]
+        [TestCase(CreatureConstants.Elf_Half_Warrior,
+            EncounterConstants.Elf_Half_Squad,
+            EncounterConstants.Elf_Half_Company,
+            EncounterConstants.Elf_Half_Band)]
+        [TestCase(CreatureConstants.Elf_Half_Noncombatant, EncounterConstants.Elf_Half_Band)]
+        [TestCase(CreatureConstants.Elf_Half_Sergeant,
+            EncounterConstants.Elf_Half_Company,
+            EncounterConstants.Elf_Half_Band)]
+        [TestCase(CreatureConstants.Elf_Half_Lieutenant, EncounterConstants.Elf_Half_Band)]
+        [TestCase(CreatureConstants.Elf_Half_Leader, EncounterConstants.Elf_Half_Company)]
+        [TestCase(CreatureConstants.Elf_Half_Captain, EncounterConstants.Elf_Half_Band)]
+        [TestCase(CreatureConstants.Elf_High_Warrior,
+            EncounterConstants.Elf_High_Squad,
+            EncounterConstants.Elf_High_Company,
+            EncounterConstants.Elf_High_Band)]
+        [TestCase(CreatureConstants.Elf_High_Noncombatant, EncounterConstants.Elf_High_Band)]
+        [TestCase(CreatureConstants.Elf_High_Sergeant,
+            EncounterConstants.Elf_High_Company,
+            EncounterConstants.Elf_High_Band)]
+        [TestCase(CreatureConstants.Elf_High_Lieutenant, EncounterConstants.Elf_High_Band)]
+        [TestCase(CreatureConstants.Elf_High_Leader, EncounterConstants.Elf_High_Company)]
+        [TestCase(CreatureConstants.Elf_High_Captain, EncounterConstants.Elf_High_Band)]
+        [TestCase(CreatureConstants.Elf_Wild_Warrior,
+            EncounterConstants.Elf_Wild_Squad,
+            EncounterConstants.Elf_Wild_Company,
+            EncounterConstants.Elf_Wild_Band)]
+        [TestCase(CreatureConstants.Elf_Wild_Noncombatant, EncounterConstants.Elf_Wild_Band)]
+        [TestCase(CreatureConstants.Elf_Wild_Sergeant,
+            EncounterConstants.Elf_Wild_Company,
+            EncounterConstants.Elf_Wild_Band)]
+        [TestCase(CreatureConstants.Elf_Wild_Lieutenant, EncounterConstants.Elf_Wild_Band)]
+        [TestCase(CreatureConstants.Elf_Wild_Leader, EncounterConstants.Elf_Wild_Company)]
+        [TestCase(CreatureConstants.Elf_Wild_Captain, EncounterConstants.Elf_Wild_Band)]
+        [TestCase(CreatureConstants.Elf_Wood_Warrior,
+            EncounterConstants.Elf_Wood_Squad,
+            EncounterConstants.Elf_Wood_Company,
+            EncounterConstants.Elf_Wood_Band)]
+        [TestCase(CreatureConstants.Elf_Wood_Noncombatant, EncounterConstants.Elf_Wood_Band)]
+        [TestCase(CreatureConstants.Elf_Wood_Sergeant,
+            EncounterConstants.Elf_Wood_Company,
+            EncounterConstants.Elf_Wood_Band)]
+        [TestCase(CreatureConstants.Elf_Wood_Lieutenant, EncounterConstants.Elf_Wood_Band)]
+        [TestCase(CreatureConstants.Elf_Wood_Leader, EncounterConstants.Elf_Wood_Company)]
+        [TestCase(CreatureConstants.Elf_Wood_Captain, EncounterConstants.Elf_Wood_Band)]
         [TestCase(CreatureConstants.Erinyes, EncounterConstants.Erinyes_Solitary)]
         [TestCase(CreatureConstants.EtherealFilcher, EncounterConstants.EtherealFilcher_Solitary)]
         [TestCase(CreatureConstants.EtherealMarauder, EncounterConstants.EtherealMarauder_Solitary)]
@@ -1726,6 +1792,30 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
         [TestCase(CreatureConstants.Girallon,
             EncounterConstants.Girallon_Solitary,
             EncounterConstants.Girallon_Company)]
+        [TestCase(CreatureConstants.Githyanki_Captain,
+            EncounterConstants.Githyanki_Regiment,
+            EncounterConstants.Githyanki_Squad)]
+        [TestCase(CreatureConstants.Githyanki_Fighter,
+            EncounterConstants.Githyanki_Company,
+            EncounterConstants.Githyanki_Regiment,
+            EncounterConstants.Githyanki_Squad)]
+        [TestCase(CreatureConstants.Githyanki_Lieutenant, EncounterConstants.Githyanki_Regiment)]
+        [TestCase(CreatureConstants.Githyanki_Sergeant,
+            EncounterConstants.Githyanki_Regiment,
+            EncounterConstants.Githyanki_Squad)]
+        [TestCase(CreatureConstants.Githyanki_SupremeLeader, EncounterConstants.Githyanki_Regiment)]
+        [TestCase(CreatureConstants.Githzerai_Master, EncounterConstants.Githzerai_Order)]
+        [TestCase(CreatureConstants.Githzerai_Mentor,
+            EncounterConstants.Githzerai_Order,
+            EncounterConstants.Githzerai_Sect)]
+        [TestCase(CreatureConstants.Githzerai_Sensei, EncounterConstants.Githzerai_Order)]
+        [TestCase(CreatureConstants.Githzerai_Student,
+            EncounterConstants.Githzerai_Fellowship,
+            EncounterConstants.Githzerai_Order,
+            EncounterConstants.Githzerai_Sect)]
+        [TestCase(CreatureConstants.Githzerai_Teacher,
+            EncounterConstants.Githzerai_Order,
+            EncounterConstants.Githzerai_Sect)]
         [TestCase(CreatureConstants.Glabrezu,
             EncounterConstants.Glabrezu_Solitary,
             EncounterConstants.Glabrezu_Troupe)]
@@ -1748,15 +1838,24 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
             EncounterConstants.Gnoll_Band,
             EncounterConstants.Gnoll_Tribe,
             EncounterConstants.Gnoll_Tribe_WithTrolls)]
-        [TestCase(CreatureConstants.Gnome_Warrior,
-            EncounterConstants.Gnome_Company,
-            EncounterConstants.Gnome_Squad,
-            EncounterConstants.Gnome_Band)]
-        [TestCase(CreatureConstants.Gnome_Captain, EncounterConstants.Gnome_Band)]
-        [TestCase(CreatureConstants.Gnome_Leader, EncounterConstants.Gnome_Squad)]
-        [TestCase(CreatureConstants.Gnome_Lieutenant_3rd, EncounterConstants.Gnome_Squad)]
-        [TestCase(CreatureConstants.Gnome_Lieutenant_5th, EncounterConstants.Gnome_Band)]
-        [TestCase(CreatureConstants.Gnome_Sergeant, EncounterConstants.Gnome_Band)]
+        [TestCase(CreatureConstants.Gnome_Forest_Captain, EncounterConstants.Gnome_Forest_Band)]
+        [TestCase(CreatureConstants.Gnome_Forest_Leader, EncounterConstants.Gnome_Forest_Squad)]
+        [TestCase(CreatureConstants.Gnome_Forest_Lieutenant_3rd, EncounterConstants.Gnome_Forest_Squad)]
+        [TestCase(CreatureConstants.Gnome_Forest_Lieutenant_5th, EncounterConstants.Gnome_Forest_Band)]
+        [TestCase(CreatureConstants.Gnome_Forest_Sergeant, EncounterConstants.Gnome_Forest_Band)]
+        [TestCase(CreatureConstants.Gnome_Forest_Warrior,
+            EncounterConstants.Gnome_Forest_Company,
+            EncounterConstants.Gnome_Forest_Squad,
+            EncounterConstants.Gnome_Forest_Band)]
+        [TestCase(CreatureConstants.Gnome_Rock_Captain, EncounterConstants.Gnome_Rock_Band)]
+        [TestCase(CreatureConstants.Gnome_Rock_Leader, EncounterConstants.Gnome_Rock_Squad)]
+        [TestCase(CreatureConstants.Gnome_Rock_Lieutenant_3rd, EncounterConstants.Gnome_Rock_Squad)]
+        [TestCase(CreatureConstants.Gnome_Rock_Lieutenant_5th, EncounterConstants.Gnome_Rock_Band)]
+        [TestCase(CreatureConstants.Gnome_Rock_Sergeant, EncounterConstants.Gnome_Rock_Band)]
+        [TestCase(CreatureConstants.Gnome_Rock_Warrior,
+            EncounterConstants.Gnome_Rock_Company,
+            EncounterConstants.Gnome_Rock_Squad,
+            EncounterConstants.Gnome_Rock_Band)]
         [TestCase(CreatureConstants.Goblin_Leader_4thTo6th, EncounterConstants.Goblin_Band)]
         [TestCase(CreatureConstants.Goblin_Leader_6thTo8th, EncounterConstants.Goblin_Tribe)]
         [TestCase(CreatureConstants.Goblin_Lieutenant, EncounterConstants.Goblin_Tribe)]
@@ -1815,17 +1914,39 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
         [TestCase(CreatureConstants.Gynosphinx,
             EncounterConstants.Gynosphinx_Solitary,
             EncounterConstants.Gynosphinx_Covey)]
-        [TestCase(CreatureConstants.Halfling_Captain, EncounterConstants.Halfling_Band)]
-        [TestCase(CreatureConstants.Halfling_Leader, EncounterConstants.Halfling_Squad)]
-        [TestCase(CreatureConstants.Halfling_Lieutenant, EncounterConstants.Halfling_Band)]
-        [TestCase(CreatureConstants.Halfling_Noncombatant, EncounterConstants.Halfling_Band)]
-        [TestCase(CreatureConstants.Halfling_Sergeant,
-            EncounterConstants.Halfling_Squad,
-            EncounterConstants.Halfling_Band)]
-        [TestCase(CreatureConstants.Halfling_Warrior,
-            EncounterConstants.Halfling_Company,
-            EncounterConstants.Halfling_Squad,
-            EncounterConstants.Halfling_Band)]
+        [TestCase(CreatureConstants.Halfling_Deep_Captain, EncounterConstants.Halfling_Deep_Band)]
+        [TestCase(CreatureConstants.Halfling_Deep_Leader, EncounterConstants.Halfling_Deep_Squad)]
+        [TestCase(CreatureConstants.Halfling_Deep_Lieutenant, EncounterConstants.Halfling_Deep_Band)]
+        [TestCase(CreatureConstants.Halfling_Deep_Noncombatant, EncounterConstants.Halfling_Deep_Band)]
+        [TestCase(CreatureConstants.Halfling_Deep_Sergeant,
+            EncounterConstants.Halfling_Deep_Squad,
+            EncounterConstants.Halfling_Deep_Band)]
+        [TestCase(CreatureConstants.Halfling_Deep_Warrior,
+            EncounterConstants.Halfling_Deep_Company,
+            EncounterConstants.Halfling_Deep_Squad,
+            EncounterConstants.Halfling_Deep_Band)]
+        [TestCase(CreatureConstants.Halfling_Lightfoot_Captain, EncounterConstants.Halfling_Lightfoot_Band)]
+        [TestCase(CreatureConstants.Halfling_Lightfoot_Leader, EncounterConstants.Halfling_Lightfoot_Squad)]
+        [TestCase(CreatureConstants.Halfling_Lightfoot_Lieutenant, EncounterConstants.Halfling_Lightfoot_Band)]
+        [TestCase(CreatureConstants.Halfling_Lightfoot_Noncombatant, EncounterConstants.Halfling_Lightfoot_Band)]
+        [TestCase(CreatureConstants.Halfling_Lightfoot_Sergeant,
+            EncounterConstants.Halfling_Lightfoot_Squad,
+            EncounterConstants.Halfling_Lightfoot_Band)]
+        [TestCase(CreatureConstants.Halfling_Lightfoot_Warrior,
+            EncounterConstants.Halfling_Lightfoot_Company,
+            EncounterConstants.Halfling_Lightfoot_Squad,
+            EncounterConstants.Halfling_Lightfoot_Band)]
+        [TestCase(CreatureConstants.Halfling_Tallfellow_Captain, EncounterConstants.Halfling_Tallfellow_Band)]
+        [TestCase(CreatureConstants.Halfling_Tallfellow_Leader, EncounterConstants.Halfling_Tallfellow_Squad)]
+        [TestCase(CreatureConstants.Halfling_Tallfellow_Lieutenant, EncounterConstants.Halfling_Tallfellow_Band)]
+        [TestCase(CreatureConstants.Halfling_Tallfellow_Noncombatant, EncounterConstants.Halfling_Tallfellow_Band)]
+        [TestCase(CreatureConstants.Halfling_Tallfellow_Sergeant,
+            EncounterConstants.Halfling_Tallfellow_Squad,
+            EncounterConstants.Halfling_Tallfellow_Band)]
+        [TestCase(CreatureConstants.Halfling_Tallfellow_Warrior,
+            EncounterConstants.Halfling_Tallfellow_Company,
+            EncounterConstants.Halfling_Tallfellow_Squad,
+            EncounterConstants.Halfling_Tallfellow_Band)]
         [TestCase(CreatureConstants.Harpy,
             EncounterConstants.Harpy_Solitary,
             EncounterConstants.Harpy_Pair,
@@ -1938,6 +2059,28 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
             EncounterConstants.Krenshar_Solitary,
             EncounterConstants.Krenshar_Pair,
             EncounterConstants.Krenshar_Pride)]
+        [TestCase(CreatureConstants.KuoToa,
+            EncounterConstants.KuoToa_Band,
+            EncounterConstants.KuoToa_Patrol,
+            EncounterConstants.KuoToa_Squad,
+            EncounterConstants.KuoToa_Tribe)]
+        [TestCase(CreatureConstants.KuoToa_Fighter_10th,
+            EncounterConstants.KuoToa_Band,
+            EncounterConstants.KuoToa_Tribe)]
+        [TestCase(CreatureConstants.KuoToa_Fighter_8th,
+            EncounterConstants.KuoToa_Band,
+            EncounterConstants.KuoToa_Squad,
+            EncounterConstants.KuoToa_Tribe)]
+        [TestCase(CreatureConstants.KuoToa_Monitor,
+            EncounterConstants.KuoToa_Squad,
+            EncounterConstants.KuoToa_Tribe)]
+        [TestCase(CreatureConstants.KuoToa_Noncombatant, EncounterConstants.KuoToa_Band)]
+        [TestCase(CreatureConstants.KuoToa_Whip_10th, EncounterConstants.KuoToa_Tribe)]
+        [TestCase(CreatureConstants.KuoToa_Whip_3rd,
+            EncounterConstants.KuoToa_Band,
+            EncounterConstants.KuoToa_Patrol,
+            EncounterConstants.KuoToa_Squad,
+            EncounterConstants.KuoToa_Tribe)]
         [TestCase(CreatureConstants.Lamia,
             EncounterConstants.Lamia_Solitary,
             EncounterConstants.Lamia_Pair,
@@ -2250,6 +2393,17 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
             EncounterConstants.Orc_Gang,
             EncounterConstants.Orc_Squad,
             EncounterConstants.Orc_Band)]
+        [TestCase(CreatureConstants.Orc_Half_Captain, EncounterConstants.Orc_Half_Band)]
+        [TestCase(CreatureConstants.Orc_Half_Leader, EncounterConstants.Orc_Half_Squad)]
+        [TestCase(CreatureConstants.Orc_Half_Lieutenant, EncounterConstants.Orc_Half_Band)]
+        [TestCase(CreatureConstants.Orc_Half_Noncombatant, EncounterConstants.Orc_Half_Band)]
+        [TestCase(CreatureConstants.Orc_Half_Sergeant,
+            EncounterConstants.Orc_Half_Squad,
+            EncounterConstants.Orc_Half_Band)]
+        [TestCase(CreatureConstants.Orc_Half_Warrior,
+            EncounterConstants.Orc_Half_Gang,
+            EncounterConstants.Orc_Half_Squad,
+            EncounterConstants.Orc_Half_Band)]
         [TestCase(CreatureConstants.Otyugh,
             EncounterConstants.Otyugh_Solitary,
             EncounterConstants.Otyugh_Pair,

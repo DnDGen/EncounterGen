@@ -13,6 +13,7 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
             AssertCreatureGroupEntriesAreComplete();
         }
 
+        [TestCase("")]
         [TestCase(GroupConstants.Magic,
             CreatureConstants.Types.Undead,
             CreatureConstants.Types.Outsider,
@@ -103,22 +104,14 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
                 CreatureConstants.Wolf,
                 CreatureConstants.Wolverine,
                 //Humanoids
-                CreatureConstants.Aasimar,
                 CreatureConstants.Bugbear,
-                CreatureConstants.Drow,
-                CreatureConstants.Duergar,
-                CreatureConstants.Dwarf,
-                CreatureConstants.Elf,
                 CreatureConstants.Gnoll,
-                CreatureConstants.Gnome,
                 CreatureConstants.Goblin,
-                CreatureConstants.Halfling,
                 CreatureConstants.Hobgoblin,
                 CreatureConstants.Kobold,
+                CreatureConstants.KuoToa,
                 CreatureConstants.Lizardfolk,
                 CreatureConstants.Orc,
-                CreatureConstants.Svirfneblin,
-                CreatureConstants.Tiefling,
                 CreatureConstants.Troglodyte,
             };
 

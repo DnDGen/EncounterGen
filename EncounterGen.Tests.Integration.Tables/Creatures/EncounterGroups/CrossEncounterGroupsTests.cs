@@ -35,17 +35,7 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
 
             var categories = new[] {
                 EnvironmentConstants.Aquatic,
-                EnvironmentConstants.Civilized,
-                EnvironmentConstants.Desert,
-                EnvironmentConstants.Dungeon,
-                EnvironmentConstants.Forest,
-                EnvironmentConstants.Hills,
-                EnvironmentConstants.Marsh,
-                EnvironmentConstants.Mountain,
-                EnvironmentConstants.Plains,
-                EnvironmentConstants.Temperatures.Cold,
-                EnvironmentConstants.Temperatures.Temperate,
-                EnvironmentConstants.Temperatures.Warm,
+                EnvironmentConstants.Underground,
                 EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Aquatic,
                 EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic,
                 EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic,
@@ -55,9 +45,6 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
                 EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Desert,
                 EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert,
                 EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert,
-                EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Dungeon,
-                EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Dungeon,
-                EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Dungeon,
                 EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Forest,
                 EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest,
                 EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest,
@@ -73,10 +60,12 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
                 EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Plains,
                 EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains,
                 EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains,
+                EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Underground,
+                EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Underground,
+                EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Underground,
                 GroupConstants.Land,
                 GroupConstants.Magic,
                 GroupConstants.Wilderness,
-                CreatureConstants.Types.Dragon,
             };
 
             foreach (var category in categories)
@@ -146,49 +135,129 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
             AssertWholeCollection(allCreatures, creaturesWithType);
         }
 
-        [TestCase(EnvironmentConstants.TimesOfDay.Day, 1)]
-        [TestCase(EnvironmentConstants.TimesOfDay.Day, 2)]
-        [TestCase(EnvironmentConstants.TimesOfDay.Day, 3)]
-        [TestCase(EnvironmentConstants.TimesOfDay.Day, 4)]
-        [TestCase(EnvironmentConstants.TimesOfDay.Day, 5)]
-        [TestCase(EnvironmentConstants.TimesOfDay.Day, 6)]
-        [TestCase(EnvironmentConstants.TimesOfDay.Day, 7)]
-        [TestCase(EnvironmentConstants.TimesOfDay.Day, 8)]
-        [TestCase(EnvironmentConstants.TimesOfDay.Day, 9)]
-        [TestCase(EnvironmentConstants.TimesOfDay.Day, 10)]
-        [TestCase(EnvironmentConstants.TimesOfDay.Day, 11)]
-        [TestCase(EnvironmentConstants.TimesOfDay.Day, 12)]
-        [TestCase(EnvironmentConstants.TimesOfDay.Day, 13)]
-        [TestCase(EnvironmentConstants.TimesOfDay.Day, 14)]
-        [TestCase(EnvironmentConstants.TimesOfDay.Day, 15)]
-        [TestCase(EnvironmentConstants.TimesOfDay.Day, 16)]
-        [TestCase(EnvironmentConstants.TimesOfDay.Day, 17)]
-        [TestCase(EnvironmentConstants.TimesOfDay.Day, 18)]
-        [TestCase(EnvironmentConstants.TimesOfDay.Day, 19)]
-        [TestCase(EnvironmentConstants.TimesOfDay.Day, 20)]
-        [TestCase(EnvironmentConstants.TimesOfDay.Night, 1)]
-        [TestCase(EnvironmentConstants.TimesOfDay.Night, 2)]
-        [TestCase(EnvironmentConstants.TimesOfDay.Night, 3)]
-        [TestCase(EnvironmentConstants.TimesOfDay.Night, 4)]
-        [TestCase(EnvironmentConstants.TimesOfDay.Night, 5)]
-        [TestCase(EnvironmentConstants.TimesOfDay.Night, 6)]
-        [TestCase(EnvironmentConstants.TimesOfDay.Night, 7)]
-        [TestCase(EnvironmentConstants.TimesOfDay.Night, 8)]
-        [TestCase(EnvironmentConstants.TimesOfDay.Night, 9)]
-        [TestCase(EnvironmentConstants.TimesOfDay.Night, 10)]
-        [TestCase(EnvironmentConstants.TimesOfDay.Night, 11)]
-        [TestCase(EnvironmentConstants.TimesOfDay.Night, 12)]
-        [TestCase(EnvironmentConstants.TimesOfDay.Night, 13)]
-        [TestCase(EnvironmentConstants.TimesOfDay.Night, 14)]
-        [TestCase(EnvironmentConstants.TimesOfDay.Night, 15)]
-        [TestCase(EnvironmentConstants.TimesOfDay.Night, 16)]
-        [TestCase(EnvironmentConstants.TimesOfDay.Night, 17)]
-        [TestCase(EnvironmentConstants.TimesOfDay.Night, 18)]
-        [TestCase(EnvironmentConstants.TimesOfDay.Night, 19)]
-        [TestCase(EnvironmentConstants.TimesOfDay.Night, 20)]
-        public void BUG_CivilizedUndeadAreRare(string timeOfDay, int level)
+        [TestCase(EnvironmentConstants.Temperatures.Cold, EnvironmentConstants.TimesOfDay.Day, 1)]
+        [TestCase(EnvironmentConstants.Temperatures.Cold, EnvironmentConstants.TimesOfDay.Day, 2)]
+        [TestCase(EnvironmentConstants.Temperatures.Cold, EnvironmentConstants.TimesOfDay.Day, 3)]
+        [TestCase(EnvironmentConstants.Temperatures.Cold, EnvironmentConstants.TimesOfDay.Day, 4)]
+        [TestCase(EnvironmentConstants.Temperatures.Cold, EnvironmentConstants.TimesOfDay.Day, 5)]
+        [TestCase(EnvironmentConstants.Temperatures.Cold, EnvironmentConstants.TimesOfDay.Day, 6)]
+        [TestCase(EnvironmentConstants.Temperatures.Cold, EnvironmentConstants.TimesOfDay.Day, 7)]
+        [TestCase(EnvironmentConstants.Temperatures.Cold, EnvironmentConstants.TimesOfDay.Day, 8)]
+        [TestCase(EnvironmentConstants.Temperatures.Cold, EnvironmentConstants.TimesOfDay.Day, 9)]
+        [TestCase(EnvironmentConstants.Temperatures.Cold, EnvironmentConstants.TimesOfDay.Day, 10)]
+        [TestCase(EnvironmentConstants.Temperatures.Cold, EnvironmentConstants.TimesOfDay.Day, 11)]
+        [TestCase(EnvironmentConstants.Temperatures.Cold, EnvironmentConstants.TimesOfDay.Day, 12)]
+        [TestCase(EnvironmentConstants.Temperatures.Cold, EnvironmentConstants.TimesOfDay.Day, 13)]
+        [TestCase(EnvironmentConstants.Temperatures.Cold, EnvironmentConstants.TimesOfDay.Day, 14)]
+        [TestCase(EnvironmentConstants.Temperatures.Cold, EnvironmentConstants.TimesOfDay.Day, 15)]
+        [TestCase(EnvironmentConstants.Temperatures.Cold, EnvironmentConstants.TimesOfDay.Day, 16)]
+        [TestCase(EnvironmentConstants.Temperatures.Cold, EnvironmentConstants.TimesOfDay.Day, 17)]
+        [TestCase(EnvironmentConstants.Temperatures.Cold, EnvironmentConstants.TimesOfDay.Day, 18)]
+        [TestCase(EnvironmentConstants.Temperatures.Cold, EnvironmentConstants.TimesOfDay.Day, 19)]
+        [TestCase(EnvironmentConstants.Temperatures.Cold, EnvironmentConstants.TimesOfDay.Day, 20)]
+        [TestCase(EnvironmentConstants.Temperatures.Cold, EnvironmentConstants.TimesOfDay.Night, 1)]
+        [TestCase(EnvironmentConstants.Temperatures.Cold, EnvironmentConstants.TimesOfDay.Night, 2)]
+        [TestCase(EnvironmentConstants.Temperatures.Cold, EnvironmentConstants.TimesOfDay.Night, 3)]
+        [TestCase(EnvironmentConstants.Temperatures.Cold, EnvironmentConstants.TimesOfDay.Night, 4)]
+        [TestCase(EnvironmentConstants.Temperatures.Cold, EnvironmentConstants.TimesOfDay.Night, 5)]
+        [TestCase(EnvironmentConstants.Temperatures.Cold, EnvironmentConstants.TimesOfDay.Night, 6)]
+        [TestCase(EnvironmentConstants.Temperatures.Cold, EnvironmentConstants.TimesOfDay.Night, 7)]
+        [TestCase(EnvironmentConstants.Temperatures.Cold, EnvironmentConstants.TimesOfDay.Night, 8)]
+        [TestCase(EnvironmentConstants.Temperatures.Cold, EnvironmentConstants.TimesOfDay.Night, 9)]
+        [TestCase(EnvironmentConstants.Temperatures.Cold, EnvironmentConstants.TimesOfDay.Night, 10)]
+        [TestCase(EnvironmentConstants.Temperatures.Cold, EnvironmentConstants.TimesOfDay.Night, 11)]
+        [TestCase(EnvironmentConstants.Temperatures.Cold, EnvironmentConstants.TimesOfDay.Night, 12)]
+        [TestCase(EnvironmentConstants.Temperatures.Cold, EnvironmentConstants.TimesOfDay.Night, 13)]
+        [TestCase(EnvironmentConstants.Temperatures.Cold, EnvironmentConstants.TimesOfDay.Night, 14)]
+        [TestCase(EnvironmentConstants.Temperatures.Cold, EnvironmentConstants.TimesOfDay.Night, 15)]
+        [TestCase(EnvironmentConstants.Temperatures.Cold, EnvironmentConstants.TimesOfDay.Night, 16)]
+        [TestCase(EnvironmentConstants.Temperatures.Cold, EnvironmentConstants.TimesOfDay.Night, 17)]
+        [TestCase(EnvironmentConstants.Temperatures.Cold, EnvironmentConstants.TimesOfDay.Night, 18)]
+        [TestCase(EnvironmentConstants.Temperatures.Cold, EnvironmentConstants.TimesOfDay.Night, 19)]
+        [TestCase(EnvironmentConstants.Temperatures.Cold, EnvironmentConstants.TimesOfDay.Night, 20)]
+        [TestCase(EnvironmentConstants.Temperatures.Temperate, EnvironmentConstants.TimesOfDay.Day, 1)]
+        [TestCase(EnvironmentConstants.Temperatures.Temperate, EnvironmentConstants.TimesOfDay.Day, 2)]
+        [TestCase(EnvironmentConstants.Temperatures.Temperate, EnvironmentConstants.TimesOfDay.Day, 3)]
+        [TestCase(EnvironmentConstants.Temperatures.Temperate, EnvironmentConstants.TimesOfDay.Day, 4)]
+        [TestCase(EnvironmentConstants.Temperatures.Temperate, EnvironmentConstants.TimesOfDay.Day, 5)]
+        [TestCase(EnvironmentConstants.Temperatures.Temperate, EnvironmentConstants.TimesOfDay.Day, 6)]
+        [TestCase(EnvironmentConstants.Temperatures.Temperate, EnvironmentConstants.TimesOfDay.Day, 7)]
+        [TestCase(EnvironmentConstants.Temperatures.Temperate, EnvironmentConstants.TimesOfDay.Day, 8)]
+        [TestCase(EnvironmentConstants.Temperatures.Temperate, EnvironmentConstants.TimesOfDay.Day, 9)]
+        [TestCase(EnvironmentConstants.Temperatures.Temperate, EnvironmentConstants.TimesOfDay.Day, 10)]
+        [TestCase(EnvironmentConstants.Temperatures.Temperate, EnvironmentConstants.TimesOfDay.Day, 11)]
+        [TestCase(EnvironmentConstants.Temperatures.Temperate, EnvironmentConstants.TimesOfDay.Day, 12)]
+        [TestCase(EnvironmentConstants.Temperatures.Temperate, EnvironmentConstants.TimesOfDay.Day, 13)]
+        [TestCase(EnvironmentConstants.Temperatures.Temperate, EnvironmentConstants.TimesOfDay.Day, 14)]
+        [TestCase(EnvironmentConstants.Temperatures.Temperate, EnvironmentConstants.TimesOfDay.Day, 15)]
+        [TestCase(EnvironmentConstants.Temperatures.Temperate, EnvironmentConstants.TimesOfDay.Day, 16)]
+        [TestCase(EnvironmentConstants.Temperatures.Temperate, EnvironmentConstants.TimesOfDay.Day, 17)]
+        [TestCase(EnvironmentConstants.Temperatures.Temperate, EnvironmentConstants.TimesOfDay.Day, 18)]
+        [TestCase(EnvironmentConstants.Temperatures.Temperate, EnvironmentConstants.TimesOfDay.Day, 19)]
+        [TestCase(EnvironmentConstants.Temperatures.Temperate, EnvironmentConstants.TimesOfDay.Day, 20)]
+        [TestCase(EnvironmentConstants.Temperatures.Temperate, EnvironmentConstants.TimesOfDay.Night, 1)]
+        [TestCase(EnvironmentConstants.Temperatures.Temperate, EnvironmentConstants.TimesOfDay.Night, 2)]
+        [TestCase(EnvironmentConstants.Temperatures.Temperate, EnvironmentConstants.TimesOfDay.Night, 3)]
+        [TestCase(EnvironmentConstants.Temperatures.Temperate, EnvironmentConstants.TimesOfDay.Night, 4)]
+        [TestCase(EnvironmentConstants.Temperatures.Temperate, EnvironmentConstants.TimesOfDay.Night, 5)]
+        [TestCase(EnvironmentConstants.Temperatures.Temperate, EnvironmentConstants.TimesOfDay.Night, 6)]
+        [TestCase(EnvironmentConstants.Temperatures.Temperate, EnvironmentConstants.TimesOfDay.Night, 7)]
+        [TestCase(EnvironmentConstants.Temperatures.Temperate, EnvironmentConstants.TimesOfDay.Night, 8)]
+        [TestCase(EnvironmentConstants.Temperatures.Temperate, EnvironmentConstants.TimesOfDay.Night, 9)]
+        [TestCase(EnvironmentConstants.Temperatures.Temperate, EnvironmentConstants.TimesOfDay.Night, 10)]
+        [TestCase(EnvironmentConstants.Temperatures.Temperate, EnvironmentConstants.TimesOfDay.Night, 11)]
+        [TestCase(EnvironmentConstants.Temperatures.Temperate, EnvironmentConstants.TimesOfDay.Night, 12)]
+        [TestCase(EnvironmentConstants.Temperatures.Temperate, EnvironmentConstants.TimesOfDay.Night, 13)]
+        [TestCase(EnvironmentConstants.Temperatures.Temperate, EnvironmentConstants.TimesOfDay.Night, 14)]
+        [TestCase(EnvironmentConstants.Temperatures.Temperate, EnvironmentConstants.TimesOfDay.Night, 15)]
+        [TestCase(EnvironmentConstants.Temperatures.Temperate, EnvironmentConstants.TimesOfDay.Night, 16)]
+        [TestCase(EnvironmentConstants.Temperatures.Temperate, EnvironmentConstants.TimesOfDay.Night, 17)]
+        [TestCase(EnvironmentConstants.Temperatures.Temperate, EnvironmentConstants.TimesOfDay.Night, 18)]
+        [TestCase(EnvironmentConstants.Temperatures.Temperate, EnvironmentConstants.TimesOfDay.Night, 19)]
+        [TestCase(EnvironmentConstants.Temperatures.Temperate, EnvironmentConstants.TimesOfDay.Night, 20)]
+        [TestCase(EnvironmentConstants.Temperatures.Warm, EnvironmentConstants.TimesOfDay.Day, 1)]
+        [TestCase(EnvironmentConstants.Temperatures.Warm, EnvironmentConstants.TimesOfDay.Day, 2)]
+        [TestCase(EnvironmentConstants.Temperatures.Warm, EnvironmentConstants.TimesOfDay.Day, 3)]
+        [TestCase(EnvironmentConstants.Temperatures.Warm, EnvironmentConstants.TimesOfDay.Day, 4)]
+        [TestCase(EnvironmentConstants.Temperatures.Warm, EnvironmentConstants.TimesOfDay.Day, 5)]
+        [TestCase(EnvironmentConstants.Temperatures.Warm, EnvironmentConstants.TimesOfDay.Day, 6)]
+        [TestCase(EnvironmentConstants.Temperatures.Warm, EnvironmentConstants.TimesOfDay.Day, 7)]
+        [TestCase(EnvironmentConstants.Temperatures.Warm, EnvironmentConstants.TimesOfDay.Day, 8)]
+        [TestCase(EnvironmentConstants.Temperatures.Warm, EnvironmentConstants.TimesOfDay.Day, 9)]
+        [TestCase(EnvironmentConstants.Temperatures.Warm, EnvironmentConstants.TimesOfDay.Day, 10)]
+        [TestCase(EnvironmentConstants.Temperatures.Warm, EnvironmentConstants.TimesOfDay.Day, 11)]
+        [TestCase(EnvironmentConstants.Temperatures.Warm, EnvironmentConstants.TimesOfDay.Day, 12)]
+        [TestCase(EnvironmentConstants.Temperatures.Warm, EnvironmentConstants.TimesOfDay.Day, 13)]
+        [TestCase(EnvironmentConstants.Temperatures.Warm, EnvironmentConstants.TimesOfDay.Day, 14)]
+        [TestCase(EnvironmentConstants.Temperatures.Warm, EnvironmentConstants.TimesOfDay.Day, 15)]
+        [TestCase(EnvironmentConstants.Temperatures.Warm, EnvironmentConstants.TimesOfDay.Day, 16)]
+        [TestCase(EnvironmentConstants.Temperatures.Warm, EnvironmentConstants.TimesOfDay.Day, 17)]
+        [TestCase(EnvironmentConstants.Temperatures.Warm, EnvironmentConstants.TimesOfDay.Day, 18)]
+        [TestCase(EnvironmentConstants.Temperatures.Warm, EnvironmentConstants.TimesOfDay.Day, 19)]
+        [TestCase(EnvironmentConstants.Temperatures.Warm, EnvironmentConstants.TimesOfDay.Day, 20)]
+        [TestCase(EnvironmentConstants.Temperatures.Warm, EnvironmentConstants.TimesOfDay.Night, 1)]
+        [TestCase(EnvironmentConstants.Temperatures.Warm, EnvironmentConstants.TimesOfDay.Night, 2)]
+        [TestCase(EnvironmentConstants.Temperatures.Warm, EnvironmentConstants.TimesOfDay.Night, 3)]
+        [TestCase(EnvironmentConstants.Temperatures.Warm, EnvironmentConstants.TimesOfDay.Night, 4)]
+        [TestCase(EnvironmentConstants.Temperatures.Warm, EnvironmentConstants.TimesOfDay.Night, 5)]
+        [TestCase(EnvironmentConstants.Temperatures.Warm, EnvironmentConstants.TimesOfDay.Night, 6)]
+        [TestCase(EnvironmentConstants.Temperatures.Warm, EnvironmentConstants.TimesOfDay.Night, 7)]
+        [TestCase(EnvironmentConstants.Temperatures.Warm, EnvironmentConstants.TimesOfDay.Night, 8)]
+        [TestCase(EnvironmentConstants.Temperatures.Warm, EnvironmentConstants.TimesOfDay.Night, 9)]
+        [TestCase(EnvironmentConstants.Temperatures.Warm, EnvironmentConstants.TimesOfDay.Night, 10)]
+        [TestCase(EnvironmentConstants.Temperatures.Warm, EnvironmentConstants.TimesOfDay.Night, 11)]
+        [TestCase(EnvironmentConstants.Temperatures.Warm, EnvironmentConstants.TimesOfDay.Night, 12)]
+        [TestCase(EnvironmentConstants.Temperatures.Warm, EnvironmentConstants.TimesOfDay.Night, 13)]
+        [TestCase(EnvironmentConstants.Temperatures.Warm, EnvironmentConstants.TimesOfDay.Night, 14)]
+        [TestCase(EnvironmentConstants.Temperatures.Warm, EnvironmentConstants.TimesOfDay.Night, 15)]
+        [TestCase(EnvironmentConstants.Temperatures.Warm, EnvironmentConstants.TimesOfDay.Night, 16)]
+        [TestCase(EnvironmentConstants.Temperatures.Warm, EnvironmentConstants.TimesOfDay.Night, 17)]
+        [TestCase(EnvironmentConstants.Temperatures.Warm, EnvironmentConstants.TimesOfDay.Night, 18)]
+        [TestCase(EnvironmentConstants.Temperatures.Warm, EnvironmentConstants.TimesOfDay.Night, 19)]
+        [TestCase(EnvironmentConstants.Temperatures.Warm, EnvironmentConstants.TimesOfDay.Night, 20)]
+        public void BUG_CivilizedUndeadAreRare(string temperature, string timeOfDay, int level)
         {
-            var percentage = GetPercentage(EnvironmentConstants.Civilized, string.Empty, timeOfDay, level, IsUndead);
+            var percentage = GetPercentage(EnvironmentConstants.Civilized, temperature, timeOfDay, level, IsUndead);
             Assert.That(percentage, Is.LessThanOrEqualTo(.15));
         }
 
@@ -216,50 +285,122 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
             Assert.That(encounters, Is.Not.Unique);
             Assert.That(leadCreatures, Is.Not.Unique);
 
-            Console.WriteLine("Actual percentage is {0:P}", percentage);
+            Console.WriteLine($"Actual percentage for {specifications.Description} is {{0:P}}", percentage);
 
             return percentage;
         }
 
-        [TestCase(EnvironmentConstants.TimesOfDay.Day, 3)]
-        [TestCase(EnvironmentConstants.TimesOfDay.Day, 4)]
-        [TestCase(EnvironmentConstants.TimesOfDay.Day, 5)]
-        [TestCase(EnvironmentConstants.TimesOfDay.Day, 6)]
-        [TestCase(EnvironmentConstants.TimesOfDay.Day, 7)]
-        [TestCase(EnvironmentConstants.TimesOfDay.Day, 8)]
-        [TestCase(EnvironmentConstants.TimesOfDay.Day, 9)]
-        [TestCase(EnvironmentConstants.TimesOfDay.Day, 10)]
-        [TestCase(EnvironmentConstants.TimesOfDay.Day, 11)]
-        [TestCase(EnvironmentConstants.TimesOfDay.Day, 12)]
-        [TestCase(EnvironmentConstants.TimesOfDay.Day, 13)]
-        [TestCase(EnvironmentConstants.TimesOfDay.Day, 14)]
-        [TestCase(EnvironmentConstants.TimesOfDay.Day, 15)]
-        [TestCase(EnvironmentConstants.TimesOfDay.Day, 16)]
-        [TestCase(EnvironmentConstants.TimesOfDay.Day, 17)]
-        [TestCase(EnvironmentConstants.TimesOfDay.Day, 18)]
-        [TestCase(EnvironmentConstants.TimesOfDay.Day, 19)]
-        [TestCase(EnvironmentConstants.TimesOfDay.Day, 20)]
-        [TestCase(EnvironmentConstants.TimesOfDay.Night, 3)]
-        [TestCase(EnvironmentConstants.TimesOfDay.Night, 4)]
-        [TestCase(EnvironmentConstants.TimesOfDay.Night, 5)]
-        [TestCase(EnvironmentConstants.TimesOfDay.Night, 6)]
-        [TestCase(EnvironmentConstants.TimesOfDay.Night, 7)]
-        [TestCase(EnvironmentConstants.TimesOfDay.Night, 8)]
-        [TestCase(EnvironmentConstants.TimesOfDay.Night, 9)]
-        [TestCase(EnvironmentConstants.TimesOfDay.Night, 10)]
-        [TestCase(EnvironmentConstants.TimesOfDay.Night, 11)]
-        [TestCase(EnvironmentConstants.TimesOfDay.Night, 12)]
-        [TestCase(EnvironmentConstants.TimesOfDay.Night, 13)]
-        [TestCase(EnvironmentConstants.TimesOfDay.Night, 14)]
-        [TestCase(EnvironmentConstants.TimesOfDay.Night, 15)]
-        [TestCase(EnvironmentConstants.TimesOfDay.Night, 16)]
-        [TestCase(EnvironmentConstants.TimesOfDay.Night, 17)]
-        [TestCase(EnvironmentConstants.TimesOfDay.Night, 18)]
-        [TestCase(EnvironmentConstants.TimesOfDay.Night, 19)]
-        [TestCase(EnvironmentConstants.TimesOfDay.Night, 20)]
-        public void BUG_CivilizedUndeadCharactersExist(string timeOfDay, int level)
+        [TestCase(EnvironmentConstants.Temperatures.Cold, EnvironmentConstants.TimesOfDay.Day, 3)]
+        [TestCase(EnvironmentConstants.Temperatures.Cold, EnvironmentConstants.TimesOfDay.Day, 4)]
+        [TestCase(EnvironmentConstants.Temperatures.Cold, EnvironmentConstants.TimesOfDay.Day, 5)]
+        [TestCase(EnvironmentConstants.Temperatures.Cold, EnvironmentConstants.TimesOfDay.Day, 6)]
+        [TestCase(EnvironmentConstants.Temperatures.Cold, EnvironmentConstants.TimesOfDay.Day, 7)]
+        [TestCase(EnvironmentConstants.Temperatures.Cold, EnvironmentConstants.TimesOfDay.Day, 8)]
+        [TestCase(EnvironmentConstants.Temperatures.Cold, EnvironmentConstants.TimesOfDay.Day, 9)]
+        [TestCase(EnvironmentConstants.Temperatures.Cold, EnvironmentConstants.TimesOfDay.Day, 10)]
+        [TestCase(EnvironmentConstants.Temperatures.Cold, EnvironmentConstants.TimesOfDay.Day, 11)]
+        [TestCase(EnvironmentConstants.Temperatures.Cold, EnvironmentConstants.TimesOfDay.Day, 12)]
+        [TestCase(EnvironmentConstants.Temperatures.Cold, EnvironmentConstants.TimesOfDay.Day, 13)]
+        [TestCase(EnvironmentConstants.Temperatures.Cold, EnvironmentConstants.TimesOfDay.Day, 14)]
+        [TestCase(EnvironmentConstants.Temperatures.Cold, EnvironmentConstants.TimesOfDay.Day, 15)]
+        [TestCase(EnvironmentConstants.Temperatures.Cold, EnvironmentConstants.TimesOfDay.Day, 16)]
+        [TestCase(EnvironmentConstants.Temperatures.Cold, EnvironmentConstants.TimesOfDay.Day, 17)]
+        [TestCase(EnvironmentConstants.Temperatures.Cold, EnvironmentConstants.TimesOfDay.Day, 18)]
+        [TestCase(EnvironmentConstants.Temperatures.Cold, EnvironmentConstants.TimesOfDay.Day, 19)]
+        [TestCase(EnvironmentConstants.Temperatures.Cold, EnvironmentConstants.TimesOfDay.Day, 20)]
+        [TestCase(EnvironmentConstants.Temperatures.Cold, EnvironmentConstants.TimesOfDay.Night, 3)]
+        [TestCase(EnvironmentConstants.Temperatures.Cold, EnvironmentConstants.TimesOfDay.Night, 4)]
+        [TestCase(EnvironmentConstants.Temperatures.Cold, EnvironmentConstants.TimesOfDay.Night, 5)]
+        [TestCase(EnvironmentConstants.Temperatures.Cold, EnvironmentConstants.TimesOfDay.Night, 6)]
+        [TestCase(EnvironmentConstants.Temperatures.Cold, EnvironmentConstants.TimesOfDay.Night, 7)]
+        [TestCase(EnvironmentConstants.Temperatures.Cold, EnvironmentConstants.TimesOfDay.Night, 8)]
+        [TestCase(EnvironmentConstants.Temperatures.Cold, EnvironmentConstants.TimesOfDay.Night, 9)]
+        [TestCase(EnvironmentConstants.Temperatures.Cold, EnvironmentConstants.TimesOfDay.Night, 10)]
+        [TestCase(EnvironmentConstants.Temperatures.Cold, EnvironmentConstants.TimesOfDay.Night, 11)]
+        [TestCase(EnvironmentConstants.Temperatures.Cold, EnvironmentConstants.TimesOfDay.Night, 12)]
+        [TestCase(EnvironmentConstants.Temperatures.Cold, EnvironmentConstants.TimesOfDay.Night, 13)]
+        [TestCase(EnvironmentConstants.Temperatures.Cold, EnvironmentConstants.TimesOfDay.Night, 14)]
+        [TestCase(EnvironmentConstants.Temperatures.Cold, EnvironmentConstants.TimesOfDay.Night, 15)]
+        [TestCase(EnvironmentConstants.Temperatures.Cold, EnvironmentConstants.TimesOfDay.Night, 16)]
+        [TestCase(EnvironmentConstants.Temperatures.Cold, EnvironmentConstants.TimesOfDay.Night, 17)]
+        [TestCase(EnvironmentConstants.Temperatures.Cold, EnvironmentConstants.TimesOfDay.Night, 18)]
+        [TestCase(EnvironmentConstants.Temperatures.Cold, EnvironmentConstants.TimesOfDay.Night, 19)]
+        [TestCase(EnvironmentConstants.Temperatures.Cold, EnvironmentConstants.TimesOfDay.Night, 20)]
+        [TestCase(EnvironmentConstants.Temperatures.Temperate, EnvironmentConstants.TimesOfDay.Day, 3)]
+        [TestCase(EnvironmentConstants.Temperatures.Temperate, EnvironmentConstants.TimesOfDay.Day, 4)]
+        [TestCase(EnvironmentConstants.Temperatures.Temperate, EnvironmentConstants.TimesOfDay.Day, 5)]
+        [TestCase(EnvironmentConstants.Temperatures.Temperate, EnvironmentConstants.TimesOfDay.Day, 6)]
+        [TestCase(EnvironmentConstants.Temperatures.Temperate, EnvironmentConstants.TimesOfDay.Day, 7)]
+        [TestCase(EnvironmentConstants.Temperatures.Temperate, EnvironmentConstants.TimesOfDay.Day, 8)]
+        [TestCase(EnvironmentConstants.Temperatures.Temperate, EnvironmentConstants.TimesOfDay.Day, 9)]
+        [TestCase(EnvironmentConstants.Temperatures.Temperate, EnvironmentConstants.TimesOfDay.Day, 10)]
+        [TestCase(EnvironmentConstants.Temperatures.Temperate, EnvironmentConstants.TimesOfDay.Day, 11)]
+        [TestCase(EnvironmentConstants.Temperatures.Temperate, EnvironmentConstants.TimesOfDay.Day, 12)]
+        [TestCase(EnvironmentConstants.Temperatures.Temperate, EnvironmentConstants.TimesOfDay.Day, 13)]
+        [TestCase(EnvironmentConstants.Temperatures.Temperate, EnvironmentConstants.TimesOfDay.Day, 14)]
+        [TestCase(EnvironmentConstants.Temperatures.Temperate, EnvironmentConstants.TimesOfDay.Day, 15)]
+        [TestCase(EnvironmentConstants.Temperatures.Temperate, EnvironmentConstants.TimesOfDay.Day, 16)]
+        [TestCase(EnvironmentConstants.Temperatures.Temperate, EnvironmentConstants.TimesOfDay.Day, 17)]
+        [TestCase(EnvironmentConstants.Temperatures.Temperate, EnvironmentConstants.TimesOfDay.Day, 18)]
+        [TestCase(EnvironmentConstants.Temperatures.Temperate, EnvironmentConstants.TimesOfDay.Day, 19)]
+        [TestCase(EnvironmentConstants.Temperatures.Temperate, EnvironmentConstants.TimesOfDay.Day, 20)]
+        [TestCase(EnvironmentConstants.Temperatures.Temperate, EnvironmentConstants.TimesOfDay.Night, 3)]
+        [TestCase(EnvironmentConstants.Temperatures.Temperate, EnvironmentConstants.TimesOfDay.Night, 4)]
+        [TestCase(EnvironmentConstants.Temperatures.Temperate, EnvironmentConstants.TimesOfDay.Night, 5)]
+        [TestCase(EnvironmentConstants.Temperatures.Temperate, EnvironmentConstants.TimesOfDay.Night, 6)]
+        [TestCase(EnvironmentConstants.Temperatures.Temperate, EnvironmentConstants.TimesOfDay.Night, 7)]
+        [TestCase(EnvironmentConstants.Temperatures.Temperate, EnvironmentConstants.TimesOfDay.Night, 8)]
+        [TestCase(EnvironmentConstants.Temperatures.Temperate, EnvironmentConstants.TimesOfDay.Night, 9)]
+        [TestCase(EnvironmentConstants.Temperatures.Temperate, EnvironmentConstants.TimesOfDay.Night, 10)]
+        [TestCase(EnvironmentConstants.Temperatures.Temperate, EnvironmentConstants.TimesOfDay.Night, 11)]
+        [TestCase(EnvironmentConstants.Temperatures.Temperate, EnvironmentConstants.TimesOfDay.Night, 12)]
+        [TestCase(EnvironmentConstants.Temperatures.Temperate, EnvironmentConstants.TimesOfDay.Night, 13)]
+        [TestCase(EnvironmentConstants.Temperatures.Temperate, EnvironmentConstants.TimesOfDay.Night, 14)]
+        [TestCase(EnvironmentConstants.Temperatures.Temperate, EnvironmentConstants.TimesOfDay.Night, 15)]
+        [TestCase(EnvironmentConstants.Temperatures.Temperate, EnvironmentConstants.TimesOfDay.Night, 16)]
+        [TestCase(EnvironmentConstants.Temperatures.Temperate, EnvironmentConstants.TimesOfDay.Night, 17)]
+        [TestCase(EnvironmentConstants.Temperatures.Temperate, EnvironmentConstants.TimesOfDay.Night, 18)]
+        [TestCase(EnvironmentConstants.Temperatures.Temperate, EnvironmentConstants.TimesOfDay.Night, 19)]
+        [TestCase(EnvironmentConstants.Temperatures.Temperate, EnvironmentConstants.TimesOfDay.Night, 20)]
+        [TestCase(EnvironmentConstants.Temperatures.Warm, EnvironmentConstants.TimesOfDay.Day, 3)]
+        [TestCase(EnvironmentConstants.Temperatures.Warm, EnvironmentConstants.TimesOfDay.Day, 4)]
+        [TestCase(EnvironmentConstants.Temperatures.Warm, EnvironmentConstants.TimesOfDay.Day, 5)]
+        [TestCase(EnvironmentConstants.Temperatures.Warm, EnvironmentConstants.TimesOfDay.Day, 6)]
+        [TestCase(EnvironmentConstants.Temperatures.Warm, EnvironmentConstants.TimesOfDay.Day, 7)]
+        [TestCase(EnvironmentConstants.Temperatures.Warm, EnvironmentConstants.TimesOfDay.Day, 8)]
+        [TestCase(EnvironmentConstants.Temperatures.Warm, EnvironmentConstants.TimesOfDay.Day, 9)]
+        [TestCase(EnvironmentConstants.Temperatures.Warm, EnvironmentConstants.TimesOfDay.Day, 10)]
+        [TestCase(EnvironmentConstants.Temperatures.Warm, EnvironmentConstants.TimesOfDay.Day, 11)]
+        [TestCase(EnvironmentConstants.Temperatures.Warm, EnvironmentConstants.TimesOfDay.Day, 12)]
+        [TestCase(EnvironmentConstants.Temperatures.Warm, EnvironmentConstants.TimesOfDay.Day, 13)]
+        [TestCase(EnvironmentConstants.Temperatures.Warm, EnvironmentConstants.TimesOfDay.Day, 14)]
+        [TestCase(EnvironmentConstants.Temperatures.Warm, EnvironmentConstants.TimesOfDay.Day, 15)]
+        [TestCase(EnvironmentConstants.Temperatures.Warm, EnvironmentConstants.TimesOfDay.Day, 16)]
+        [TestCase(EnvironmentConstants.Temperatures.Warm, EnvironmentConstants.TimesOfDay.Day, 17)]
+        [TestCase(EnvironmentConstants.Temperatures.Warm, EnvironmentConstants.TimesOfDay.Day, 18)]
+        [TestCase(EnvironmentConstants.Temperatures.Warm, EnvironmentConstants.TimesOfDay.Day, 19)]
+        [TestCase(EnvironmentConstants.Temperatures.Warm, EnvironmentConstants.TimesOfDay.Day, 20)]
+        [TestCase(EnvironmentConstants.Temperatures.Warm, EnvironmentConstants.TimesOfDay.Night, 3)]
+        [TestCase(EnvironmentConstants.Temperatures.Warm, EnvironmentConstants.TimesOfDay.Night, 4)]
+        [TestCase(EnvironmentConstants.Temperatures.Warm, EnvironmentConstants.TimesOfDay.Night, 5)]
+        [TestCase(EnvironmentConstants.Temperatures.Warm, EnvironmentConstants.TimesOfDay.Night, 6)]
+        [TestCase(EnvironmentConstants.Temperatures.Warm, EnvironmentConstants.TimesOfDay.Night, 7)]
+        [TestCase(EnvironmentConstants.Temperatures.Warm, EnvironmentConstants.TimesOfDay.Night, 8)]
+        [TestCase(EnvironmentConstants.Temperatures.Warm, EnvironmentConstants.TimesOfDay.Night, 9)]
+        [TestCase(EnvironmentConstants.Temperatures.Warm, EnvironmentConstants.TimesOfDay.Night, 10)]
+        [TestCase(EnvironmentConstants.Temperatures.Warm, EnvironmentConstants.TimesOfDay.Night, 11)]
+        [TestCase(EnvironmentConstants.Temperatures.Warm, EnvironmentConstants.TimesOfDay.Night, 12)]
+        [TestCase(EnvironmentConstants.Temperatures.Warm, EnvironmentConstants.TimesOfDay.Night, 13)]
+        [TestCase(EnvironmentConstants.Temperatures.Warm, EnvironmentConstants.TimesOfDay.Night, 14)]
+        [TestCase(EnvironmentConstants.Temperatures.Warm, EnvironmentConstants.TimesOfDay.Night, 15)]
+        [TestCase(EnvironmentConstants.Temperatures.Warm, EnvironmentConstants.TimesOfDay.Night, 16)]
+        [TestCase(EnvironmentConstants.Temperatures.Warm, EnvironmentConstants.TimesOfDay.Night, 17)]
+        [TestCase(EnvironmentConstants.Temperatures.Warm, EnvironmentConstants.TimesOfDay.Night, 18)]
+        [TestCase(EnvironmentConstants.Temperatures.Warm, EnvironmentConstants.TimesOfDay.Night, 19)]
+        [TestCase(EnvironmentConstants.Temperatures.Warm, EnvironmentConstants.TimesOfDay.Night, 20)]
+        public void BUG_CivilizedUndeadCharactersExist(string temperature, string timeOfDay, int level)
         {
-            var percentage = GetPercentage(EnvironmentConstants.Civilized, string.Empty, timeOfDay, level, IsUndeadCharacter);
+            var percentage = GetPercentage(EnvironmentConstants.Civilized, temperature, timeOfDay, level, IsUndeadCharacter);
             Assert.That(percentage, Is.Positive);
         }
 
@@ -269,7 +410,7 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
             return IsUndead(creature) && name == CreatureConstants.Character;
         }
 
-        [TestCase(EnvironmentConstants.Dungeon, EnvironmentConstants.Temperatures.Temperate, EnvironmentConstants.TimesOfDay.Night, 10, CreatureConstants.Types.Fey, false)]
+        [TestCase(EnvironmentConstants.Underground, EnvironmentConstants.Temperatures.Temperate, EnvironmentConstants.TimesOfDay.Night, 10, CreatureConstants.Types.Fey, false)]
         [TestCase(EnvironmentConstants.Civilized, EnvironmentConstants.Temperatures.Temperate, EnvironmentConstants.TimesOfDay.Day, 4, CreatureConstants.Types.Giant, false)]
         public void BUG_FilterIsValid(string environment, string temperature, string timeOfDay, int level, string filter, bool isValid)
         {
@@ -285,17 +426,7 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
         }
 
         [TestCase(EnvironmentConstants.Aquatic)]
-        [TestCase(EnvironmentConstants.Civilized)]
-        [TestCase(EnvironmentConstants.Desert)]
-        [TestCase(EnvironmentConstants.Dungeon)]
-        [TestCase(EnvironmentConstants.Forest)]
-        [TestCase(EnvironmentConstants.Hills)]
-        [TestCase(EnvironmentConstants.Marsh)]
-        [TestCase(EnvironmentConstants.Mountain)]
-        [TestCase(EnvironmentConstants.Plains)]
-        [TestCase(EnvironmentConstants.Temperatures.Cold)]
-        [TestCase(EnvironmentConstants.Temperatures.Temperate)]
-        [TestCase(EnvironmentConstants.Temperatures.Warm)]
+        [TestCase(EnvironmentConstants.Underground)]
         [TestCase(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Aquatic)]
         [TestCase(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic)]
         [TestCase(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic)]
@@ -305,9 +436,6 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
         [TestCase(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Desert)]
         [TestCase(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert)]
         [TestCase(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
-        [TestCase(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Dungeon)]
-        [TestCase(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Dungeon)]
-        [TestCase(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Dungeon)]
         [TestCase(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Forest)]
         [TestCase(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
         [TestCase(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest)]
@@ -323,10 +451,12 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
         [TestCase(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Plains)]
         [TestCase(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains)]
         [TestCase(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
+        [TestCase(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Underground)]
+        [TestCase(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Underground)]
+        [TestCase(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Underground)]
         [TestCase(GroupConstants.Land)]
         [TestCase(GroupConstants.Magic)]
         [TestCase(GroupConstants.Wilderness)]
-        [TestCase(CreatureConstants.Types.Dragon)]
         public void BUG_NoEncountersHaveMultipleEntriesOfSameCreature(string category)
         {
             var encounters = GetEncountersFromCreatureGroup(category);

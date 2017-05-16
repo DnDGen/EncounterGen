@@ -113,7 +113,7 @@ namespace EncounterGen.Tests.Unit.Mappers.Collections
                              </object>
                          </collections>";
 
-            Assert.That(() => mapper.Map(tableName), Throws.ArgumentException);
+            Assert.That(() => mapper.Map(tableName), Throws.ArgumentException.With.Message.EqualTo($"Cannot insert first name more than once into table {tableName}"));
         }
     }
 }

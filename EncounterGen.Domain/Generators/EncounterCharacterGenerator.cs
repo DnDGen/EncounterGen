@@ -1,8 +1,8 @@
 ﻿using CharacterGen.Characters;
+using CharacterGen.Randomizers.Abilities;
 using CharacterGen.Randomizers.Alignments;
 using CharacterGen.Randomizers.CharacterClasses;
 using CharacterGen.Randomizers.Races;
-using CharacterGen.Randomizers.Stats;
 using EncounterGen.Common;
 using EncounterGen.Domain.Selectors;
 using EncounterGen.Domain.Selectors.Collections;
@@ -23,7 +23,7 @@ namespace EncounterGen.Domain.Generators
         private ISetLevelRandomizer setLevelRandomizer;
         private RaceRandomizer anyBaseRaceRandomizer;
         private RaceRandomizer anyMetaraceRandomizer;
-        private IStatsRandomizer statsRandomizer;
+        private IAbilitiesRandomizer abilitiesRandomizer;
         private ICollectionSelector collectionSelector;
         private ISetMetaraceRandomizer setMetaraceRandomizer;
         private ISetBaseRaceRandomizer setBaseRaceRandomizer;
@@ -31,7 +31,7 @@ namespace EncounterGen.Domain.Generators
         private IEncounterSelector encounterSelector;
 
         public EncounterCharacterGenerator(ICharacterGenerator characterGenerator, IAlignmentRandomizer alignmentRandomizer, IClassNameRandomizer anyPlayerClassNameRandomizer,
-            ISetLevelRandomizer setLevelRandomizer, RaceRandomizer anyBaseRaceRandomizer, RaceRandomizer anyMetaraceRandomizer, IStatsRandomizer statsRandomizer,
+            ISetLevelRandomizer setLevelRandomizer, RaceRandomizer anyBaseRaceRandomizer, RaceRandomizer anyMetaraceRandomizer, IAbilitiesRandomizer abilitiesRandomizer,
             ICollectionSelector collectionSelector, ISetMetaraceRandomizer setMetaraceRandomizer, IClassNameRandomizer anyNPCClassNameRandomizer,
             ISetClassNameRandomizer setClassNameRandomizer, Dice dice, IEncounterSelector encounterSelector, ISetBaseRaceRandomizer setBaseRaceRandomizer)
         {
@@ -41,7 +41,7 @@ namespace EncounterGen.Domain.Generators
             this.setLevelRandomizer = setLevelRandomizer;
             this.anyBaseRaceRandomizer = anyBaseRaceRandomizer;
             this.anyMetaraceRandomizer = anyMetaraceRandomizer;
-            this.statsRandomizer = statsRandomizer;
+            this.abilitiesRandomizer = abilitiesRandomizer;
             this.collectionSelector = collectionSelector;
             this.setMetaraceRandomizer = setMetaraceRandomizer;
             this.anyNPCClassNameRandomizer = anyNPCClassNameRandomizer;
@@ -124,7 +124,7 @@ namespace EncounterGen.Domain.Generators
             if (!string.IsNullOrEmpty(setMetaraceRandomizer.SetMetarace))
                 chosenMetaraceRandomizer = setMetaraceRandomizer;
 
-            return characterGenerator.GenerateWith(alignmentRandomizer, chosenClassNameRandomizer, setLevelRandomizer, chosenBaseRaceRandomizer, chosenMetaraceRandomizer, statsRandomizer);
+            return characterGenerator.GenerateWith(alignmentRandomizer, chosenClassNameRandomizer, setLevelRandomizer, chosenBaseRaceRandomizer, chosenMetaraceRandomizer, abilitiesRandomizer);
         }
 
         private string GetCharacterTemplate(CreatureType creaturetype)

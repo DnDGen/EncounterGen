@@ -6,7 +6,6 @@ using EncounterGen.Domain.Tables;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.RegularExpressions;
 using TreasureGen;
 using TreasureGen.Coins;
 using TreasureGen.Goods;
@@ -18,22 +17,26 @@ namespace EncounterGen.Domain.Generators
 {
     internal class EncounterTreasureGenerator : IEncounterTreasureGenerator
     {
-        private ICoinGenerator coinGenerator;
-        private IGoodsGenerator goodsGenerator;
-        private IItemsGenerator itemsGenerator;
-        private IAdjustmentSelector adjustmentSelector;
-        private IBooleanPercentileSelector booleanPercentileSelector;
-        private ICollectionSelector collectionSelector;
-        private IMagicalItemGeneratorRuntimeFactory magicalItemGeneratorRuntimeFactory;
-        private IMundaneItemGeneratorRuntimeFactory mundaneItemGeneratorRuntimeFactory;
-        private Regex itemTypeRegex;
-        private Regex itemBonusRegex;
-        private Regex specialAbilityRegex;
-        private Regex traitRegex;
-        private Regex isMagicRegex;
+        private readonly ICoinGenerator coinGenerator;
+        private readonly IGoodsGenerator goodsGenerator;
+        private readonly IItemsGenerator itemsGenerator;
+        private readonly IAdjustmentSelector adjustmentSelector;
+        private readonly IBooleanPercentileSelector booleanPercentileSelector;
+        private readonly ICollectionSelector collectionSelector;
+        private readonly IMagicalItemGeneratorRuntimeFactory magicalItemGeneratorRuntimeFactory;
+        private readonly IMundaneItemGeneratorRuntimeFactory mundaneItemGeneratorRuntimeFactory;
+        private readonly IItemSelector itemSelector;
 
-        public EncounterTreasureGenerator(ICoinGenerator coinGenerator, IGoodsGenerator goodsGenerator, IItemsGenerator itemsGenerator, IAdjustmentSelector adjustmentSelector,
-            IBooleanPercentileSelector booleanPercentileSelector, ICollectionSelector collectionSelector, IMagicalItemGeneratorRuntimeFactory magicalItemGeneratorRuntimeFactory, IMundaneItemGeneratorRuntimeFactory mundaneItemGeneratorRuntimeFactory)
+        public EncounterTreasureGenerator(
+            ICoinGenerator coinGenerator,
+            IGoodsGenerator goodsGenerator,
+            IItemsGenerator itemsGenerator,
+            IAdjustmentSelector adjustmentSelector,
+            IBooleanPercentileSelector booleanPercentileSelector,
+            ICollectionSelector collectionSelector,
+            IMagicalItemGeneratorRuntimeFactory magicalItemGeneratorRuntimeFactory,
+            IMundaneItemGeneratorRuntimeFactory mundaneItemGeneratorRuntimeFactory,
+            IItemSelector itemSelector)
         {
             this.coinGenerator = coinGenerator;
             this.goodsGenerator = goodsGenerator;
@@ -43,12 +46,7 @@ namespace EncounterGen.Domain.Generators
             this.collectionSelector = collectionSelector;
             this.magicalItemGeneratorRuntimeFactory = magicalItemGeneratorRuntimeFactory;
             this.mundaneItemGeneratorRuntimeFactory = mundaneItemGeneratorRuntimeFactory;
-
-            itemTypeRegex = new Regex(RegexConstants.ItemTypePattern);
-            itemBonusRegex = new Regex(RegexConstants.ItemBonusPattern);
-            specialAbilityRegex = new Regex(RegexConstants.SpecialAbilitiesPattern);
-            traitRegex = new Regex(RegexConstants.TraitPattern);
-            isMagicRegex = new Regex(RegexConstants.IsMagicPattern);
+            this.itemSelector = itemSelector;
         }
 
         public Treasure GenerateFor(Creature creature, int level)
@@ -118,66 +116,11 @@ namespace EncounterGen.Domain.Generators
 
             foreach (var setItemTemplate in setTreasure)
             {
-                var template = new Item();
-                template.Name = setItemTemplate;
-                template.Name = itemTypeRegex.Replace(template.Name, string.Empty);
-                template.Name = itemBonusRegex.Replace(template.Name, string.Empty);
-                template.Name = specialAbilityRegex.Replace(template.Name, string.Empty);
-                template.Name = traitRegex.Replace(template.Name, string.Empty);
-                template.Name = isMagicRegex.Replace(template.Name, string.Empty);
-
-                template.ItemType = GetMatchValue(itemTypeRegex, setItemTemplate, "[", "]");
-
-                if (isMagicRegex.IsMatch(setItemTemplate))
-                {
-                    var rawIsMagic = GetMatchValue(isMagicRegex, setItemTemplate, "@", "@");
-                    template.IsMagical = Convert.ToBoolean(rawIsMagic);
-                }
-
-                if (itemBonusRegex.IsMatch(setItemTemplate))
-                {
-                    var rawBonus = GetMatchValue(itemBonusRegex, setItemTemplate, "(", ")");
-                    template.Magic.Bonus = Convert.ToInt32(rawBonus);
-                }
-
-                if (specialAbilityRegex.IsMatch(setItemTemplate))
-                {
-                    var rawSpecialAbilities = GetMatchValue(specialAbilityRegex, setItemTemplate, "{", "}");
-                    var specialAbilityNamees = rawSpecialAbilities.Split(',');
-
-                    foreach (var specialAbilityName in specialAbilityNamees)
-                    {
-                        var specialAbility = new SpecialAbility { Name = specialAbilityName };
-                        template.Magic.SpecialAbilities = template.Magic.SpecialAbilities.Union(new[] { specialAbility });
-                    }
-                }
-
-                if (traitRegex.IsMatch(setItemTemplate))
-                {
-                    var rawTraits = GetMatchValue(traitRegex, setItemTemplate, "#");
-                    var traits = rawTraits.Split(',');
-                    var sizes = TraitConstants.Sizes.All();
-
-                    foreach (var trait in traits)
-                    {
-                        template.Traits.Add(trait);
-                    }
-                }
-
+                var template = itemSelector.SelectFrom(setItemTemplate);
                 templates.Add(template);
             }
 
             return templates;
-        }
-
-        private string GetMatchValue(Regex regex, string source, params string[] wrappers)
-        {
-            var matchValue = regex.Match(source).Value;
-
-            foreach (var wrapper in wrappers)
-                matchValue = matchValue.Replace(wrapper, string.Empty);
-
-            return matchValue;
         }
 
         private string GetCreatureNameForTreasure(CreatureType creatureType)

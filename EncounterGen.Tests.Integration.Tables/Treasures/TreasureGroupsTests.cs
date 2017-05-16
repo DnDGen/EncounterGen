@@ -1,5 +1,7 @@
 ﻿using EncounterGen.Common;
+using EncounterGen.Domain.Selectors;
 using EncounterGen.Domain.Tables;
+using Ninject;
 using NUnit.Framework;
 using System.Linq;
 using TreasureGen.Items;
@@ -10,6 +12,9 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
     [TestFixture]
     public class TreasureGroupsTests : CollectionTests
     {
+        [Inject]
+        internal IItemSelector ItemSelector { get; set; }
+
         protected override string tableName
         {
             get
@@ -549,11 +554,11 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
             base.DistinctCollection(entry);
         }
 
-        [TestCase(CreatureConstants.AstralDeva, WeaponConstants.HeavyMace, ItemTypeConstants.Weapon, 3, SpecialAbilityConstants.Disruption)]
+        [TestCase(CreatureConstants.AstralDeva, WeaponConstants.HeavyMace, ItemTypeConstants.Weapon, 3, SpecialAbilityConstants.Disruption, TraitConstants.Sizes.Medium)]
         [TestCase(CreatureConstants.BeardedDevil_Barbazu, WeaponConstants.Glaive, ItemTypeConstants.Weapon, 0, "", TraitConstants.Sizes.Medium)]
         [TestCase(CreatureConstants.ChainDevil_Kyton, WeaponConstants.SpikedChain, ItemTypeConstants.Weapon, 0, "", TraitConstants.Sizes.Medium)]
         [TestCase(CreatureConstants.FormianMyrmarch, WeaponConstants.Javelin, ItemTypeConstants.Weapon, 0, "", TraitConstants.Sizes.Large)]
-        [TestCase(CreatureConstants.Ghaele, WeaponConstants.Greatsword, ItemTypeConstants.Weapon, 4, SpecialAbilityConstants.Holy)]
+        [TestCase(CreatureConstants.Ghaele, WeaponConstants.Greatsword, ItemTypeConstants.Weapon, 4, SpecialAbilityConstants.Holy, TraitConstants.Sizes.Medium)]
         [TestCase(CreatureConstants.Giant_Cloud, WeaponConstants.Morningstar, ItemTypeConstants.Weapon, 0, "", TraitConstants.Sizes.Gargantuan)]
         [TestCase(CreatureConstants.Giant_Fire, WeaponConstants.Greatsword, ItemTypeConstants.Weapon, 0, "", TraitConstants.Sizes.Large)]
         [TestCase(CreatureConstants.Giant_Stone, WeaponConstants.Greatclub, ItemTypeConstants.Weapon, 0, "", TraitConstants.Sizes.Large)]
@@ -563,47 +568,53 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
         [TestCase(CreatureConstants.HornedDevil_Cornugon, WeaponConstants.SpikedChain, ItemTypeConstants.Weapon, 0, "", TraitConstants.Sizes.Large)]
         [TestCase(CreatureConstants.HoundArchon, WeaponConstants.Greatsword, ItemTypeConstants.Weapon, 0, "", TraitConstants.Sizes.Medium)]
         [TestCase(CreatureConstants.IceDevil_Gelugon, WeaponConstants.Longspear, ItemTypeConstants.Weapon, 0, "", TraitConstants.Sizes.Large)]
-        [TestCase(CreatureConstants.Kolyarut, WeaponConstants.Longsword, ItemTypeConstants.Weapon, 2, "")]
+        [TestCase(CreatureConstants.Kolyarut, WeaponConstants.Longsword, ItemTypeConstants.Weapon, 2, "", TraitConstants.Sizes.Medium)]
+        [TestCase(CreatureConstants.KuoToa, WeaponConstants.Shortspear, ItemTypeConstants.Weapon, 0, "", TraitConstants.Sizes.Medium)]
         [TestCase(CreatureConstants.Lamia, WeaponConstants.Dagger, ItemTypeConstants.Weapon, 0, "", TraitConstants.Sizes.Large)]
         [TestCase(CreatureConstants.Lillend, WeaponConstants.ShortSword, ItemTypeConstants.Weapon, 0, "", TraitConstants.Sizes.Large)]
         [TestCase(CreatureConstants.Minotaur, WeaponConstants.Greataxe, ItemTypeConstants.Weapon, 0, "", TraitConstants.Sizes.Large)]
-        [TestCase(CreatureConstants.NessianWarhound, ArmorConstants.ChainShirt, ItemTypeConstants.Armor, 2, "", "Barding")]
+        [TestCase(CreatureConstants.NessianWarhound, ArmorConstants.ChainShirt, ItemTypeConstants.Armor, 2, "", "Barding", TraitConstants.Sizes.Large)]
         [TestCase(CreatureConstants.Nymph, WeaponConstants.Dagger, ItemTypeConstants.Weapon, 0, "", TraitConstants.Sizes.Medium)]
-        [TestCase(CreatureConstants.Planetar, WeaponConstants.Greatsword, ItemTypeConstants.Weapon, 3, "")]
+        [TestCase(CreatureConstants.Planetar, WeaponConstants.Greatsword, ItemTypeConstants.Weapon, 3, "", TraitConstants.Sizes.Large)]
         [TestCase(CreatureConstants.Salamander_Average, WeaponConstants.Shortspear, ItemTypeConstants.Weapon, 0, "", TraitConstants.Sizes.Medium)] //Non-flammable
         [TestCase(CreatureConstants.Salamander_Flamebrother, WeaponConstants.Shortspear, ItemTypeConstants.Weapon, 0, "", TraitConstants.Sizes.Small)]//Non-flammable
-        [TestCase(CreatureConstants.Salamander_Noble, WeaponConstants.Longspear, ItemTypeConstants.Weapon, 3, "")]//Non-flammable
+        [TestCase(CreatureConstants.Salamander_Noble, WeaponConstants.Longspear, ItemTypeConstants.Weapon, 3, "", TraitConstants.Sizes.Large)]//Non-flammable
         [TestCase(CreatureConstants.Scorpionfolk, WeaponConstants.Lance, ItemTypeConstants.Weapon, 0, "", TraitConstants.Sizes.Large)]
-        [TestCase(CreatureConstants.TrumpetArchon, WeaponConstants.Greatsword, ItemTypeConstants.Weapon, 4, "")]
+        [TestCase(CreatureConstants.TrumpetArchon, WeaponConstants.Greatsword, ItemTypeConstants.Weapon, 4, "", TraitConstants.Sizes.Medium)]
         public void TreasureGroupOfOnePresetItem(string entry, string itemName, string itemType, int itemBonus, string abilityName, params string[] traits)
         {
-            var setItem = FormatSetItem(itemName, itemType, itemBonus, abilityName, false, traits);
+            var setItem = FormatSetItem(itemName, itemType, itemBonus, abilityName, 0, false, traits);
             base.DistinctCollection(entry, new[] { setItem });
         }
 
-        private string FormatSetItem(string itemName, string itemType, int itemBonus = 0, string abilityName = "", bool isMagic = false, params string[] traits)
+        private string FormatSetItem(string itemName, string itemType, int itemBonus = 0, string abilityName = "", int abilityBonus = 0, bool isMagic = false, params string[] traits)
         {
-            var setItem = $"{itemName}[{itemType}]";
+            var item = new Item();
+            item.Name = itemName;
+            item.ItemType = itemType;
+            item.Magic.Bonus = itemBonus;
 
-            if (traits.Any())
-                setItem += $"#{string.Join(",", traits)}#";
+            if (!string.IsNullOrEmpty(abilityName))
+            {
+                var ability = new SpecialAbility();
+                ability.Name = abilityName;
+                ability.BonusEquivalent = abilityBonus;
 
-            if (itemBonus > 0)
-                setItem += $"({itemBonus})";
+                item.Magic.SpecialAbilities = new[] { ability };
+            }
 
-            if (string.IsNullOrEmpty(abilityName) == false)
-                setItem += $"{{{abilityName}}}";
+            item.IsMagical = isMagic;
 
-            if (isMagic)
-                setItem += $"@{isMagic}@";
+            foreach (var trait in traits)
+                item.Traits.Add(trait);
 
-            return setItem;
+            return ItemSelector.SelectFrom(item);
         }
 
         [Test]
         public void AthachItems()
         {
-            var morningstar = FormatSetItem(WeaponConstants.Morningstar, ItemTypeConstants.Weapon, 0, string.Empty, false, TraitConstants.Sizes.Huge);
+            var morningstar = FormatSetItem(WeaponConstants.Morningstar, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Huge);
 
             base.Collection(CreatureConstants.Athach, new[] { morningstar, morningstar, morningstar });
         }
@@ -611,8 +622,8 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
         [Test]
         public void AzerItems()
         {
-            var warhammer = FormatSetItem(WeaponConstants.Warhammer, ItemTypeConstants.Weapon, 0, string.Empty, false, TraitConstants.Sizes.Medium);
-            var spear = FormatSetItem(WeaponConstants.Shortspear, ItemTypeConstants.Weapon, 0, string.Empty, false, TraitConstants.Sizes.Medium);
+            var warhammer = FormatSetItem(WeaponConstants.Warhammer, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Medium);
+            var spear = FormatSetItem(WeaponConstants.Shortspear, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Medium);
 
             base.DistinctCollection(CreatureConstants.Azer, new[] { warhammer, spear });
         }
@@ -620,8 +631,8 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
         [Test]
         public void BalorItems()
         {
-            var longsword = FormatSetItem(WeaponConstants.Longsword, ItemTypeConstants.Weapon, 1, SpecialAbilityConstants.Vorpal);
-            var whip = FormatSetItem(WeaponConstants.Whip, ItemTypeConstants.Weapon, 1, SpecialAbilityConstants.Flaming);
+            var longsword = FormatSetItem(WeaponConstants.Longsword, ItemTypeConstants.Weapon, 1, SpecialAbilityConstants.Vorpal, 0, false, TraitConstants.Sizes.Large);
+            var whip = FormatSetItem(WeaponConstants.Whip, ItemTypeConstants.Weapon, 1, SpecialAbilityConstants.Flaming, 0, false, TraitConstants.Sizes.Large);
 
             base.DistinctCollection(CreatureConstants.Balor, new[] { longsword, whip });
         }
@@ -629,16 +640,16 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
         [Test]
         public void BralaniItems()
         {
-            var scimitar = FormatSetItem(WeaponConstants.Scimitar, ItemTypeConstants.Weapon, 1, SpecialAbilityConstants.Holy);
-            var longbow = FormatSetItem(WeaponConstants.CompositeLongbow, ItemTypeConstants.Weapon, 1, SpecialAbilityConstants.Holy, false, "+4 Strength bonus");
+            var scimitar = FormatSetItem(WeaponConstants.Scimitar, ItemTypeConstants.Weapon, 1, SpecialAbilityConstants.Holy, 0, false, TraitConstants.Sizes.Medium);
+            var longbow = FormatSetItem(WeaponConstants.CompositeLongbow, ItemTypeConstants.Weapon, 1, SpecialAbilityConstants.Holy, 0, false, "+4 Strength bonus", TraitConstants.Sizes.Medium);
             base.DistinctCollection(CreatureConstants.Bralani, new[] { scimitar, longbow });
         }
 
         [Test]
         public void BugbearItems()
         {
-            var morningstar = FormatSetItem(WeaponConstants.Morningstar, ItemTypeConstants.Weapon, 0, string.Empty, false, TraitConstants.Sizes.Medium);
-            var javelin = FormatSetItem(WeaponConstants.Javelin, ItemTypeConstants.Weapon, 0, string.Empty, false, TraitConstants.Sizes.Medium);
+            var morningstar = FormatSetItem(WeaponConstants.Morningstar, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Medium);
+            var javelin = FormatSetItem(WeaponConstants.Javelin, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Medium);
 
             base.DistinctCollection(CreatureConstants.Bugbear, new[] { morningstar, javelin });
         }
@@ -646,8 +657,8 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
         [Test]
         public void CentaurItems()
         {
-            var longsword = FormatSetItem(WeaponConstants.Longsword, ItemTypeConstants.Weapon, 0, string.Empty, false, TraitConstants.Sizes.Large);
-            var longbow = FormatSetItem(WeaponConstants.CompositeLongbow, ItemTypeConstants.Weapon, 0, string.Empty, false, TraitConstants.Sizes.Large, "+4 Strength bonus");
+            var longsword = FormatSetItem(WeaponConstants.Longsword, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Large);
+            var longbow = FormatSetItem(WeaponConstants.CompositeLongbow, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Large, "+4 Strength bonus");
 
             base.DistinctCollection(CreatureConstants.Centaur, new[] { longsword, longbow });
         }
@@ -655,16 +666,16 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
         [Test]
         public void DerroItems()
         {
-            var shortSword = FormatSetItem(WeaponConstants.ShortSword, ItemTypeConstants.Weapon, 0, string.Empty, false, TraitConstants.Sizes.Small);
-            var crossbow = FormatSetItem(WeaponConstants.LightRepeatingCrossbow, ItemTypeConstants.Weapon, 0, string.Empty, false, TraitConstants.Sizes.Small);
+            var shortSword = FormatSetItem(WeaponConstants.ShortSword, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Small);
+            var crossbow = FormatSetItem(WeaponConstants.LightRepeatingCrossbow, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Small);
             base.DistinctCollection(CreatureConstants.Derro, new[] { shortSword, crossbow });
         }
 
         [Test]
         public void DriderItems()
         {
-            var dagger = FormatSetItem(WeaponConstants.Dagger, ItemTypeConstants.Weapon, 0, string.Empty, false, TraitConstants.Sizes.Large);
-            var shortbow = FormatSetItem(WeaponConstants.Shortbow, ItemTypeConstants.Weapon, 0, string.Empty, false, TraitConstants.Sizes.Large);
+            var dagger = FormatSetItem(WeaponConstants.Dagger, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Large);
+            var shortbow = FormatSetItem(WeaponConstants.Shortbow, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Large);
 
             base.Collection(CreatureConstants.Drider, new[] { dagger, dagger, shortbow });
         }
@@ -672,8 +683,8 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
         [Test]
         public void DryadItems()
         {
-            var dagger = FormatSetItem(WeaponConstants.Dagger, ItemTypeConstants.Weapon, 0, string.Empty, false, TraitConstants.Sizes.Medium);
-            var longbow = FormatSetItem(WeaponConstants.Longbow, ItemTypeConstants.Weapon, 0, string.Empty, false, TraitConstants.Sizes.Medium, TraitConstants.Masterwork);
+            var dagger = FormatSetItem(WeaponConstants.Dagger, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Medium);
+            var longbow = FormatSetItem(WeaponConstants.Longbow, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Medium, TraitConstants.Masterwork);
 
             base.DistinctCollection(CreatureConstants.Dryad, new[] { dagger, longbow });
         }
@@ -681,8 +692,8 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
         [Test]
         public void ErinyesItems()
         {
-            var longsword = FormatSetItem(WeaponConstants.Longsword, ItemTypeConstants.Weapon, 0, string.Empty, false, TraitConstants.Sizes.Medium);
-            var longbow = FormatSetItem(WeaponConstants.CompositeLongbow, ItemTypeConstants.Weapon, 1, SpecialAbilityConstants.Flaming, false, "+5 Strength bonus");
+            var longsword = FormatSetItem(WeaponConstants.Longsword, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Medium);
+            var longbow = FormatSetItem(WeaponConstants.CompositeLongbow, ItemTypeConstants.Weapon, 1, SpecialAbilityConstants.Flaming, 0, false, "+5 Strength bonus", TraitConstants.Sizes.Medium);
             var rope = FormatSetItem("Rope, 50 ft.", ItemTypeConstants.Tool);
 
             base.DistinctCollection(CreatureConstants.Erinyes, new[] { longsword, longbow, rope });
@@ -691,8 +702,8 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
         [Test]
         public void EttinItems()
         {
-            var morningstar = FormatSetItem(WeaponConstants.Morningstar, ItemTypeConstants.Weapon, 0, string.Empty, false, TraitConstants.Sizes.Large);
-            var javelin = FormatSetItem(WeaponConstants.Javelin, ItemTypeConstants.Weapon, 0, string.Empty, false, TraitConstants.Sizes.Large);
+            var morningstar = FormatSetItem(WeaponConstants.Morningstar, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Large);
+            var javelin = FormatSetItem(WeaponConstants.Javelin, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Large);
 
             base.DistinctCollection(CreatureConstants.Ettin, new[] { morningstar, javelin });
         }
@@ -700,8 +711,8 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
         [Test]
         public void FrostGiantItems()
         {
-            var greataxe = FormatSetItem(WeaponConstants.Greataxe, ItemTypeConstants.Weapon, 0, string.Empty, false, TraitConstants.Sizes.Large);
-            var armor = FormatSetItem(ArmorConstants.ChainShirt, ItemTypeConstants.Armor, 0, string.Empty, false, TraitConstants.Sizes.Large);
+            var greataxe = FormatSetItem(WeaponConstants.Greataxe, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Large);
+            var armor = FormatSetItem(ArmorConstants.ChainShirt, ItemTypeConstants.Armor, 0, string.Empty, 0, false, TraitConstants.Sizes.Large);
 
             base.DistinctCollection(CreatureConstants.Giant_Frost, new[] { greataxe, armor });
         }
@@ -709,8 +720,8 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
         [Test]
         public void HillGiantItems()
         {
-            var greatclub = FormatSetItem(WeaponConstants.Greatclub, ItemTypeConstants.Weapon, 0, string.Empty, false, TraitConstants.Sizes.Large);
-            var armor = FormatSetItem(ArmorConstants.HideArmor, ItemTypeConstants.Armor, 0, string.Empty, false, TraitConstants.Sizes.Large);
+            var greatclub = FormatSetItem(WeaponConstants.Greatclub, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Large);
+            var armor = FormatSetItem(ArmorConstants.HideArmor, ItemTypeConstants.Armor, 0, string.Empty, 0, false, TraitConstants.Sizes.Large);
 
             base.DistinctCollection(CreatureConstants.Giant_Hill, new[] { greatclub, armor });
         }
@@ -718,8 +729,8 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
         [Test]
         public void GnollItems()
         {
-            var battleaxe = FormatSetItem(WeaponConstants.Battleaxe, ItemTypeConstants.Weapon, 0, string.Empty, false, TraitConstants.Sizes.Medium);
-            var shortbow = FormatSetItem(WeaponConstants.Shortbow, ItemTypeConstants.Weapon, 0, string.Empty, false, TraitConstants.Sizes.Medium);
+            var battleaxe = FormatSetItem(WeaponConstants.Battleaxe, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Medium);
+            var shortbow = FormatSetItem(WeaponConstants.Shortbow, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Medium);
 
             base.DistinctCollection(CreatureConstants.Gnoll, new[] { battleaxe, shortbow });
         }
@@ -727,8 +738,8 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
         [Test]
         public void GrigItems()
         {
-            var shortSword = FormatSetItem(WeaponConstants.ShortSword, ItemTypeConstants.Weapon, 0, string.Empty, false, TraitConstants.Sizes.Tiny);
-            var longbow = FormatSetItem(WeaponConstants.Longbow, ItemTypeConstants.Weapon, 0, string.Empty, false, TraitConstants.Sizes.Tiny);
+            var shortSword = FormatSetItem(WeaponConstants.ShortSword, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Tiny);
+            var longbow = FormatSetItem(WeaponConstants.Longbow, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Tiny);
 
             base.DistinctCollection(CreatureConstants.Grig, new[] { shortSword, longbow });
         }
@@ -736,8 +747,8 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
         [Test]
         public void JanniItems()
         {
-            var scimitar = FormatSetItem(WeaponConstants.Scimitar, ItemTypeConstants.Weapon, 0, string.Empty, false, TraitConstants.Sizes.Medium);
-            var longbow = FormatSetItem(WeaponConstants.Longbow, ItemTypeConstants.Weapon, 0, string.Empty, false, TraitConstants.Sizes.Medium);
+            var scimitar = FormatSetItem(WeaponConstants.Scimitar, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Medium);
+            var longbow = FormatSetItem(WeaponConstants.Longbow, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Medium);
 
             base.DistinctCollection(CreatureConstants.Janni, new[] { scimitar, longbow });
         }
@@ -745,8 +756,8 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
         [Test]
         public void LizardfolkItems()
         {
-            var club = FormatSetItem(WeaponConstants.Club, ItemTypeConstants.Weapon, 0, string.Empty, false, TraitConstants.Sizes.Medium);
-            var javelin = FormatSetItem(WeaponConstants.Javelin, ItemTypeConstants.Weapon, 0, string.Empty, false, TraitConstants.Sizes.Medium);
+            var club = FormatSetItem(WeaponConstants.Club, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Medium);
+            var javelin = FormatSetItem(WeaponConstants.Javelin, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Medium);
 
             base.DistinctCollection(CreatureConstants.Lizardfolk, new[] { club, javelin });
         }
@@ -754,7 +765,7 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
         [Test]
         public void MarilithItems()
         {
-            var longsword = FormatSetItem(WeaponConstants.Longsword, ItemTypeConstants.Weapon, 0, string.Empty, false, TraitConstants.Sizes.Large);
+            var longsword = FormatSetItem(WeaponConstants.Longsword, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Large);
 
             base.Collection(CreatureConstants.Marilith, new[] { longsword, longsword, longsword, longsword, longsword, longsword });
         }
@@ -762,8 +773,8 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
         [Test]
         public void MedusaItems()
         {
-            var dagger = FormatSetItem(WeaponConstants.Dagger, ItemTypeConstants.Weapon, 0, string.Empty, false, TraitConstants.Sizes.Medium);
-            var shortbow = FormatSetItem(WeaponConstants.Shortbow, ItemTypeConstants.Weapon, 0, string.Empty, false, TraitConstants.Sizes.Medium);
+            var dagger = FormatSetItem(WeaponConstants.Dagger, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Medium);
+            var shortbow = FormatSetItem(WeaponConstants.Shortbow, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Medium);
 
             base.DistinctCollection(CreatureConstants.Medusa, new[] { dagger, shortbow });
         }
@@ -771,8 +782,8 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
         [Test]
         public void NixieItems()
         {
-            var shortSword = FormatSetItem(WeaponConstants.ShortSword, ItemTypeConstants.Weapon, 0, string.Empty, false, TraitConstants.Sizes.Small);
-            var crossbow = FormatSetItem(WeaponConstants.LightCrossbow, ItemTypeConstants.Weapon, 0, string.Empty, false, TraitConstants.Sizes.Small);
+            var shortSword = FormatSetItem(WeaponConstants.ShortSword, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Small);
+            var crossbow = FormatSetItem(WeaponConstants.LightCrossbow, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Small);
 
             base.DistinctCollection(CreatureConstants.Nixie, new[] { shortSword, crossbow });
         }
@@ -780,8 +791,8 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
         [Test]
         public void OgreItems()
         {
-            var greatclub = FormatSetItem(WeaponConstants.Greatclub, ItemTypeConstants.Weapon, 0, string.Empty, false, TraitConstants.Sizes.Large);
-            var javelin = FormatSetItem(WeaponConstants.Javelin, ItemTypeConstants.Weapon, 0, string.Empty, false, TraitConstants.Sizes.Large);
+            var greatclub = FormatSetItem(WeaponConstants.Greatclub, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Large);
+            var javelin = FormatSetItem(WeaponConstants.Javelin, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Large);
 
             base.DistinctCollection(CreatureConstants.Ogre, new[] { greatclub, javelin });
         }
@@ -789,8 +800,8 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
         [Test]
         public void OgreMerrowItems()
         {
-            var longspear = FormatSetItem(WeaponConstants.Longspear, ItemTypeConstants.Weapon, 0, string.Empty, false, TraitConstants.Sizes.Large);
-            var javelin = FormatSetItem(WeaponConstants.Javelin, ItemTypeConstants.Weapon, 0, string.Empty, false, TraitConstants.Sizes.Large);
+            var longspear = FormatSetItem(WeaponConstants.Longspear, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Large);
+            var javelin = FormatSetItem(WeaponConstants.Javelin, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Large);
 
             base.DistinctCollection(CreatureConstants.Ogre_Merrow, new[] { longspear, javelin });
         }
@@ -798,8 +809,8 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
         [Test]
         public void OgreMageItems()
         {
-            var greatsword = FormatSetItem(WeaponConstants.Greatsword, ItemTypeConstants.Weapon, 0, string.Empty, false, TraitConstants.Sizes.Large);
-            var longbow = FormatSetItem(WeaponConstants.Longbow, ItemTypeConstants.Weapon, 0, string.Empty, false, TraitConstants.Sizes.Large);
+            var greatsword = FormatSetItem(WeaponConstants.Greatsword, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Large);
+            var longbow = FormatSetItem(WeaponConstants.Longbow, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Large);
 
             base.DistinctCollection(CreatureConstants.OgreMage, new[] { greatsword, longbow });
         }
@@ -807,8 +818,8 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
         [Test]
         public void PixieItems()
         {
-            var shortSword = FormatSetItem(WeaponConstants.ShortSword, ItemTypeConstants.Weapon, 0, string.Empty, false, TraitConstants.Sizes.Small);
-            var longbow = FormatSetItem(WeaponConstants.Longbow, ItemTypeConstants.Weapon, 0, string.Empty, false, TraitConstants.Sizes.Small);
+            var shortSword = FormatSetItem(WeaponConstants.ShortSword, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Small);
+            var longbow = FormatSetItem(WeaponConstants.Longbow, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Small);
 
             base.DistinctCollection(CreatureConstants.Pixie, new[] { shortSword, longbow });
         }
@@ -816,8 +827,8 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
         [Test]
         public void PixieWithIrresistableDanceItems()
         {
-            var shortSword = FormatSetItem(WeaponConstants.ShortSword, ItemTypeConstants.Weapon, 0, string.Empty, false, TraitConstants.Sizes.Small);
-            var longbow = FormatSetItem(WeaponConstants.Longbow, ItemTypeConstants.Weapon, 0, string.Empty, false, TraitConstants.Sizes.Small);
+            var shortSword = FormatSetItem(WeaponConstants.ShortSword, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Small);
+            var longbow = FormatSetItem(WeaponConstants.Longbow, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Small);
 
             base.DistinctCollection(CreatureConstants.Pixie_WithIrresistableDance, new[] { shortSword, longbow });
         }
@@ -825,8 +836,8 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
         [Test]
         public void SahuaginItems()
         {
-            var trident = FormatSetItem(WeaponConstants.Trident, ItemTypeConstants.Weapon, 0, string.Empty, false, TraitConstants.Sizes.Medium);
-            var crossbow = FormatSetItem(WeaponConstants.HeavyCrossbow, ItemTypeConstants.Weapon, 0, string.Empty, false, TraitConstants.Sizes.Medium);
+            var trident = FormatSetItem(WeaponConstants.Trident, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Medium);
+            var crossbow = FormatSetItem(WeaponConstants.HeavyCrossbow, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Medium);
 
             base.DistinctCollection(CreatureConstants.Sahuagin, new[] { trident, crossbow });
         }
@@ -834,8 +845,8 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
         [Test]
         public void SatyrItems()
         {
-            var dagger = FormatSetItem(WeaponConstants.Dagger, ItemTypeConstants.Weapon, 0, string.Empty, false, TraitConstants.Sizes.Medium);
-            var shortbow = FormatSetItem(WeaponConstants.Shortbow, ItemTypeConstants.Weapon, 0, string.Empty, false, TraitConstants.Sizes.Medium);
+            var dagger = FormatSetItem(WeaponConstants.Dagger, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Medium);
+            var shortbow = FormatSetItem(WeaponConstants.Shortbow, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Medium);
 
             base.DistinctCollection(CreatureConstants.Satyr, new[] { dagger, shortbow });
         }
@@ -843,8 +854,8 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
         [Test]
         public void SatyrWithPipesItems()
         {
-            var dagger = FormatSetItem(WeaponConstants.Dagger, ItemTypeConstants.Weapon, 0, string.Empty, false, TraitConstants.Sizes.Medium);
-            var shortbow = FormatSetItem(WeaponConstants.Shortbow, ItemTypeConstants.Weapon, 0, string.Empty, false, TraitConstants.Sizes.Medium);
+            var dagger = FormatSetItem(WeaponConstants.Dagger, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Medium);
+            var shortbow = FormatSetItem(WeaponConstants.Shortbow, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Medium);
             var pipes = FormatSetItem("Pipes", ItemTypeConstants.Tool);
 
             base.DistinctCollection(CreatureConstants.Satyr_WithPipes, new[] { dagger, shortbow, pipes });
@@ -853,10 +864,8 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
         [Test]
         public void SolarItems()
         {
-            var greatsword = FormatSetItem(WeaponConstants.Greatsword, ItemTypeConstants.Weapon, 5, SpecialAbilityConstants.Dancing);
-            //HACK: The slaying arrow trait should really be a special ability, but TreasureGen does not support custom special abilities.
-            //This is because it does not know how to compute the bonus equivalent of such an ability, which would factor into intelligence ego.
-            var longbow = FormatSetItem(WeaponConstants.CompositeLongbow, ItemTypeConstants.Weapon, 2, string.Empty, false, "+5 Strength bonus", "Creates slaying arrows keyed to any creature type or subtype");
+            var greatsword = FormatSetItem(WeaponConstants.Greatsword, ItemTypeConstants.Weapon, 5, SpecialAbilityConstants.Dancing, 0, false, TraitConstants.Sizes.Large);
+            var longbow = FormatSetItem(WeaponConstants.CompositeLongbow, ItemTypeConstants.Weapon, 2, "Creates slaying arrows keyed to any creature type or subtype", 5, false, "+5 Strength bonus", TraitConstants.Sizes.Large);
 
             base.DistinctCollection(CreatureConstants.Solar, new[] { greatsword, longbow });
         }
@@ -864,8 +873,8 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
         [Test]
         public void StormGiantItems()
         {
-            var greatsword = FormatSetItem(WeaponConstants.Greatsword, ItemTypeConstants.Weapon, 0, string.Empty, false, TraitConstants.Sizes.Huge);
-            var longbow = FormatSetItem(WeaponConstants.CompositeLongbow, ItemTypeConstants.Weapon, 0, string.Empty, false, TraitConstants.Sizes.Huge, "+14 Strength bonus");
+            var greatsword = FormatSetItem(WeaponConstants.Greatsword, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Huge);
+            var longbow = FormatSetItem(WeaponConstants.CompositeLongbow, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Huge, "+14 Strength bonus");
 
             base.DistinctCollection(CreatureConstants.Giant_Storm, new[] { greatsword, longbow });
         }
@@ -873,8 +882,8 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
         [Test]
         public void TitanItems()
         {
-            var warhammer = FormatSetItem(WeaponConstants.Warhammer, ItemTypeConstants.Weapon, 3, string.Empty, false, TraitConstants.Sizes.Gargantuan, TraitConstants.SpecialMaterials.Adamantine);
-            var armor = FormatSetItem(ArmorConstants.HalfPlate, ItemTypeConstants.Armor, 4);
+            var warhammer = FormatSetItem(WeaponConstants.Warhammer, ItemTypeConstants.Weapon, 3, string.Empty, 0, false, TraitConstants.Sizes.Gargantuan, TraitConstants.SpecialMaterials.Adamantine);
+            var armor = FormatSetItem(ArmorConstants.HalfPlate, ItemTypeConstants.Armor, 4, string.Empty, 0, false, TraitConstants.Sizes.Huge);
 
             base.DistinctCollection(CreatureConstants.Titan, new[] { warhammer, armor });
         }
@@ -882,8 +891,8 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
         [Test]
         public void TritonItems()
         {
-            var trident = FormatSetItem(WeaponConstants.Trident, ItemTypeConstants.Weapon, 0, string.Empty, false, TraitConstants.Sizes.Medium);
-            var crossbow = FormatSetItem(WeaponConstants.HeavyCrossbow, ItemTypeConstants.Weapon, 0, string.Empty, false, TraitConstants.Sizes.Medium);
+            var trident = FormatSetItem(WeaponConstants.Trident, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Medium);
+            var crossbow = FormatSetItem(WeaponConstants.HeavyCrossbow, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Medium);
 
             base.DistinctCollection(CreatureConstants.Triton, new[] { trident, crossbow });
         }
@@ -891,8 +900,8 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
         [Test]
         public void TroglodyteItems()
         {
-            var club = FormatSetItem(WeaponConstants.Club, ItemTypeConstants.Weapon, 0, string.Empty, false, TraitConstants.Sizes.Medium);
-            var javelin = FormatSetItem(WeaponConstants.Javelin, ItemTypeConstants.Weapon, 0, string.Empty, false, TraitConstants.Sizes.Medium);
+            var club = FormatSetItem(WeaponConstants.Club, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Medium);
+            var javelin = FormatSetItem(WeaponConstants.Javelin, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Medium);
 
             base.DistinctCollection(CreatureConstants.Troglodyte, new[] { club, javelin });
         }
@@ -900,8 +909,8 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
         [Test]
         public void WerebearItems()
         {
-            var greataxe = FormatSetItem(WeaponConstants.Greataxe, ItemTypeConstants.Weapon, 0, string.Empty, false, TraitConstants.Sizes.Medium);
-            var throwingAxe = FormatSetItem(WeaponConstants.ThrowingAxe, ItemTypeConstants.Weapon, 0, string.Empty, false, TraitConstants.Sizes.Medium);
+            var greataxe = FormatSetItem(WeaponConstants.Greataxe, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Medium);
+            var throwingAxe = FormatSetItem(WeaponConstants.ThrowingAxe, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Medium);
 
             base.DistinctCollection(CreatureConstants.Werebear, new[] { greataxe, throwingAxe });
         }
@@ -909,10 +918,10 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
         [Test]
         public void WereboarItems()
         {
-            var battleaxe = FormatSetItem(WeaponConstants.Battleaxe, ItemTypeConstants.Weapon, 0, string.Empty, false, TraitConstants.Sizes.Medium);
-            var javelin = FormatSetItem(WeaponConstants.Javelin, ItemTypeConstants.Weapon, 0, string.Empty, false, TraitConstants.Sizes.Medium);
-            var armor = FormatSetItem(ArmorConstants.ScaleMail, ItemTypeConstants.Armor, 0, string.Empty, false, TraitConstants.Sizes.Medium);
-            var shield = FormatSetItem(ArmorConstants.HeavyWoodenShield, ItemTypeConstants.Armor, 0, string.Empty, false, TraitConstants.Sizes.Medium);
+            var battleaxe = FormatSetItem(WeaponConstants.Battleaxe, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Medium);
+            var javelin = FormatSetItem(WeaponConstants.Javelin, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Medium);
+            var armor = FormatSetItem(ArmorConstants.ScaleMail, ItemTypeConstants.Armor, 0, string.Empty, 0, false, TraitConstants.Sizes.Medium);
+            var shield = FormatSetItem(ArmorConstants.HeavyWoodenShield, ItemTypeConstants.Armor, 0, string.Empty, 0, false, TraitConstants.Sizes.Medium);
 
             base.DistinctCollection(CreatureConstants.Wereboar, new[] { battleaxe, javelin, armor, shield });
         }
@@ -920,16 +929,16 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
         [Test]
         public void HillGiantDireWereboarItems()
         {
-            var greatclub = FormatSetItem(WeaponConstants.Greatclub, ItemTypeConstants.Weapon, 0, string.Empty, false, TraitConstants.Sizes.Large);
-            var armor = FormatSetItem(ArmorConstants.HideArmor, ItemTypeConstants.Armor, 0, string.Empty, false, TraitConstants.Sizes.Large);
+            var greatclub = FormatSetItem(WeaponConstants.Greatclub, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Large);
+            var armor = FormatSetItem(ArmorConstants.HideArmor, ItemTypeConstants.Armor, 0, string.Empty, 0, false, TraitConstants.Sizes.Large);
             base.DistinctCollection(CreatureConstants.Wereboar_HillGiantDire, new[] { greatclub, armor });
         }
 
         [Test]
         public void WereratItems()
         {
-            var rapier = FormatSetItem(WeaponConstants.Rapier, ItemTypeConstants.Weapon, 0, string.Empty, false, TraitConstants.Sizes.Medium);
-            var lightCrossbow = FormatSetItem(WeaponConstants.LightCrossbow, ItemTypeConstants.Weapon, 0, string.Empty, false, TraitConstants.Sizes.Medium);
+            var rapier = FormatSetItem(WeaponConstants.Rapier, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Medium);
+            var lightCrossbow = FormatSetItem(WeaponConstants.LightCrossbow, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Medium);
 
             base.DistinctCollection(CreatureConstants.Wererat, new[] { rapier, lightCrossbow });
         }
@@ -937,8 +946,8 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
         [Test]
         public void WeretigerItems()
         {
-            var glaive = FormatSetItem(WeaponConstants.Glaive, ItemTypeConstants.Weapon, 0, string.Empty, false, TraitConstants.Sizes.Medium);
-            var longbow = FormatSetItem(WeaponConstants.CompositeLongbow, ItemTypeConstants.Weapon, 0, string.Empty, false, TraitConstants.Sizes.Medium, "+1 Strength bonus");
+            var glaive = FormatSetItem(WeaponConstants.Glaive, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Medium);
+            var longbow = FormatSetItem(WeaponConstants.CompositeLongbow, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Medium, "+1 Strength bonus");
 
             base.DistinctCollection(CreatureConstants.Weretiger, new[] { glaive, longbow });
         }
@@ -946,8 +955,8 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
         [Test]
         public void WerewolfItems()
         {
-            var longsword = FormatSetItem(WeaponConstants.Longsword, ItemTypeConstants.Weapon, 0, string.Empty, false, TraitConstants.Sizes.Medium);
-            var lightCrossbow = FormatSetItem(WeaponConstants.LightCrossbow, ItemTypeConstants.Weapon, 0, string.Empty, false, TraitConstants.Sizes.Medium);
+            var longsword = FormatSetItem(WeaponConstants.Longsword, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Medium);
+            var lightCrossbow = FormatSetItem(WeaponConstants.LightCrossbow, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Medium);
 
             base.DistinctCollection(CreatureConstants.Werewolf, new[] { longsword, lightCrossbow });
         }
@@ -955,8 +964,8 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
         [Test]
         public void YuanTiPurebloodItems()
         {
-            var scimitar = FormatSetItem(WeaponConstants.Scimitar, ItemTypeConstants.Weapon, 0, string.Empty, false, TraitConstants.Sizes.Medium);
-            var longbow = FormatSetItem(WeaponConstants.Longbow, ItemTypeConstants.Weapon, 0, string.Empty, false, TraitConstants.Sizes.Medium);
+            var scimitar = FormatSetItem(WeaponConstants.Scimitar, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Medium);
+            var longbow = FormatSetItem(WeaponConstants.Longbow, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Medium);
 
             base.DistinctCollection(CreatureConstants.YuanTi_Pureblood, new[] { scimitar, longbow });
         }
@@ -964,8 +973,8 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
         [Test]
         public void YuanTiHalfbloodItems()
         {
-            var scimitar = FormatSetItem(WeaponConstants.Scimitar, ItemTypeConstants.Weapon, 0, string.Empty, false, TraitConstants.Sizes.Medium);
-            var longbow = FormatSetItem(WeaponConstants.CompositeLongbow, ItemTypeConstants.Weapon, 0, string.Empty, false, TraitConstants.Sizes.Medium, "+2 Strength bonus");
+            var scimitar = FormatSetItem(WeaponConstants.Scimitar, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Medium);
+            var longbow = FormatSetItem(WeaponConstants.CompositeLongbow, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Medium, "+2 Strength bonus");
 
             base.DistinctCollection(CreatureConstants.YuanTi_Halfblood, new[] { scimitar, longbow });
         }
@@ -973,8 +982,8 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
         [Test]
         public void YuanTiAbominationItems()
         {
-            var scimitar = FormatSetItem(WeaponConstants.Scimitar, ItemTypeConstants.Weapon, 0, string.Empty, false, TraitConstants.Sizes.Large);
-            var longbow = FormatSetItem(WeaponConstants.CompositeLongbow, ItemTypeConstants.Weapon, 0, string.Empty, false, TraitConstants.Sizes.Large, "+4 Strength bonus");
+            var scimitar = FormatSetItem(WeaponConstants.Scimitar, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Large);
+            var longbow = FormatSetItem(WeaponConstants.CompositeLongbow, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Large, "+4 Strength bonus");
 
             base.DistinctCollection(CreatureConstants.YuanTi_Abomination, new[] { scimitar, longbow });
         }
@@ -982,7 +991,7 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
         [Test]
         public void ZelekhutItems()
         {
-            var chain = FormatSetItem(WeaponConstants.SpikedChain, ItemTypeConstants.Weapon, 0, string.Empty, false, TraitConstants.Sizes.Large);
+            var chain = FormatSetItem(WeaponConstants.SpikedChain, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Large);
 
             base.Collection(CreatureConstants.Zelekhut, new[] { chain, chain });
         }
@@ -1008,6 +1017,26 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
             foreach (var noncombatant in noncombatants)
             {
                 DistinctCollection(noncombatant);
+            }
+        }
+
+        [Test]
+        public void AllWeaponsAndArmorHaveSize()
+        {
+            var entries = GetEntries();
+            var sizes = TraitConstants.Sizes.All();
+
+            foreach (var entry in entries)
+            {
+                var items = GetCollection(entry);
+
+                var weapons = items.Where(i => i.Contains(ItemTypeConstants.Weapon));
+                foreach (var weapon in weapons)
+                    Assert.That(sizes.Any(s => weapon.Contains(s)), Is.True, $"Item {weapon} for {entry}");
+
+                var armors = items.Where(i => i.Contains(ItemTypeConstants.Armor));
+                foreach (var armor in armors)
+                    Assert.That(sizes.Any(s => armor.Contains(s)), Is.True, $"Item {armor} for {entry}");
             }
         }
     }

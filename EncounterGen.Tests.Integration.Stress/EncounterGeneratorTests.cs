@@ -36,12 +36,12 @@ namespace EncounterGen.Tests.Integration.Stress
                 EnvironmentConstants.Aquatic,
                 EnvironmentConstants.Civilized,
                 EnvironmentConstants.Desert,
-                EnvironmentConstants.Dungeon,
                 EnvironmentConstants.Forest,
                 EnvironmentConstants.Hills,
                 EnvironmentConstants.Marsh,
                 EnvironmentConstants.Mountain,
                 EnvironmentConstants.Plains,
+                EnvironmentConstants.Underground,
             };
 
             allTemperatures = new[]
@@ -128,6 +128,7 @@ namespace EncounterGen.Tests.Integration.Stress
             specifications.TimeOfDay = string.IsNullOrEmpty(timeOfDay) ? GetRandomFrom(allTimesOfDay) : timeOfDay;
             specifications.Level = level > 0 ? level : Random.Next(EncounterSpecifications.MaximumLevel) + EncounterSpecifications.MinimumLevel;
             specifications.AllowAquatic = Convert.ToBoolean(Random.Next(2));
+            specifications.AllowUnderground = Convert.ToBoolean(Random.Next(2));
 
             if (!string.IsNullOrEmpty(filter))
             {
@@ -193,12 +194,12 @@ namespace EncounterGen.Tests.Integration.Stress
                 AssertCreatureType(creatureType.SubType);
         }
 
-        [TestCase(EnvironmentConstants.Dungeon, EnvironmentConstants.TimesOfDay.Night, EnvironmentConstants.Temperatures.Cold)]
-        [TestCase(EnvironmentConstants.Dungeon, EnvironmentConstants.TimesOfDay.Night, EnvironmentConstants.Temperatures.Temperate)]
-        [TestCase(EnvironmentConstants.Dungeon, EnvironmentConstants.TimesOfDay.Night, EnvironmentConstants.Temperatures.Warm)]
-        [TestCase(EnvironmentConstants.Dungeon, EnvironmentConstants.TimesOfDay.Day, EnvironmentConstants.Temperatures.Cold)]
-        [TestCase(EnvironmentConstants.Dungeon, EnvironmentConstants.TimesOfDay.Day, EnvironmentConstants.Temperatures.Temperate)]
-        [TestCase(EnvironmentConstants.Dungeon, EnvironmentConstants.TimesOfDay.Day, EnvironmentConstants.Temperatures.Warm)]
+        [TestCase(EnvironmentConstants.Aquatic, EnvironmentConstants.TimesOfDay.Night, EnvironmentConstants.Temperatures.Cold)]
+        [TestCase(EnvironmentConstants.Aquatic, EnvironmentConstants.TimesOfDay.Night, EnvironmentConstants.Temperatures.Temperate)]
+        [TestCase(EnvironmentConstants.Aquatic, EnvironmentConstants.TimesOfDay.Night, EnvironmentConstants.Temperatures.Warm)]
+        [TestCase(EnvironmentConstants.Aquatic, EnvironmentConstants.TimesOfDay.Day, EnvironmentConstants.Temperatures.Cold)]
+        [TestCase(EnvironmentConstants.Aquatic, EnvironmentConstants.TimesOfDay.Day, EnvironmentConstants.Temperatures.Temperate)]
+        [TestCase(EnvironmentConstants.Aquatic, EnvironmentConstants.TimesOfDay.Day, EnvironmentConstants.Temperatures.Warm)]
         [TestCase(EnvironmentConstants.Civilized, EnvironmentConstants.TimesOfDay.Night, EnvironmentConstants.Temperatures.Cold)]
         [TestCase(EnvironmentConstants.Civilized, EnvironmentConstants.TimesOfDay.Night, EnvironmentConstants.Temperatures.Temperate)]
         [TestCase(EnvironmentConstants.Civilized, EnvironmentConstants.TimesOfDay.Night, EnvironmentConstants.Temperatures.Warm)]
@@ -211,6 +212,12 @@ namespace EncounterGen.Tests.Integration.Stress
         [TestCase(EnvironmentConstants.Desert, EnvironmentConstants.TimesOfDay.Day, EnvironmentConstants.Temperatures.Cold)]
         [TestCase(EnvironmentConstants.Desert, EnvironmentConstants.TimesOfDay.Day, EnvironmentConstants.Temperatures.Warm)]
         [TestCase(EnvironmentConstants.Desert, EnvironmentConstants.TimesOfDay.Day, EnvironmentConstants.Temperatures.Temperate)]
+        [TestCase(EnvironmentConstants.Forest, EnvironmentConstants.TimesOfDay.Night, EnvironmentConstants.Temperatures.Cold)]
+        [TestCase(EnvironmentConstants.Forest, EnvironmentConstants.TimesOfDay.Night, EnvironmentConstants.Temperatures.Warm)]
+        [TestCase(EnvironmentConstants.Forest, EnvironmentConstants.TimesOfDay.Night, EnvironmentConstants.Temperatures.Temperate)]
+        [TestCase(EnvironmentConstants.Forest, EnvironmentConstants.TimesOfDay.Day, EnvironmentConstants.Temperatures.Cold)]
+        [TestCase(EnvironmentConstants.Forest, EnvironmentConstants.TimesOfDay.Day, EnvironmentConstants.Temperatures.Warm)]
+        [TestCase(EnvironmentConstants.Forest, EnvironmentConstants.TimesOfDay.Day, EnvironmentConstants.Temperatures.Temperate)]
         [TestCase(EnvironmentConstants.Hills, EnvironmentConstants.TimesOfDay.Night, EnvironmentConstants.Temperatures.Cold)]
         [TestCase(EnvironmentConstants.Hills, EnvironmentConstants.TimesOfDay.Night, EnvironmentConstants.Temperatures.Warm)]
         [TestCase(EnvironmentConstants.Hills, EnvironmentConstants.TimesOfDay.Night, EnvironmentConstants.Temperatures.Temperate)]
@@ -223,24 +230,24 @@ namespace EncounterGen.Tests.Integration.Stress
         [TestCase(EnvironmentConstants.Marsh, EnvironmentConstants.TimesOfDay.Day, EnvironmentConstants.Temperatures.Cold)]
         [TestCase(EnvironmentConstants.Marsh, EnvironmentConstants.TimesOfDay.Day, EnvironmentConstants.Temperatures.Warm)]
         [TestCase(EnvironmentConstants.Marsh, EnvironmentConstants.TimesOfDay.Day, EnvironmentConstants.Temperatures.Temperate)]
-        [TestCase(EnvironmentConstants.Forest, EnvironmentConstants.TimesOfDay.Night, EnvironmentConstants.Temperatures.Cold)]
-        [TestCase(EnvironmentConstants.Forest, EnvironmentConstants.TimesOfDay.Night, EnvironmentConstants.Temperatures.Warm)]
-        [TestCase(EnvironmentConstants.Forest, EnvironmentConstants.TimesOfDay.Night, EnvironmentConstants.Temperatures.Temperate)]
-        [TestCase(EnvironmentConstants.Forest, EnvironmentConstants.TimesOfDay.Day, EnvironmentConstants.Temperatures.Cold)]
-        [TestCase(EnvironmentConstants.Forest, EnvironmentConstants.TimesOfDay.Day, EnvironmentConstants.Temperatures.Warm)]
-        [TestCase(EnvironmentConstants.Forest, EnvironmentConstants.TimesOfDay.Day, EnvironmentConstants.Temperatures.Temperate)]
-        [TestCase(EnvironmentConstants.Plains, EnvironmentConstants.TimesOfDay.Night, EnvironmentConstants.Temperatures.Cold)]
-        [TestCase(EnvironmentConstants.Plains, EnvironmentConstants.TimesOfDay.Night, EnvironmentConstants.Temperatures.Warm)]
-        [TestCase(EnvironmentConstants.Plains, EnvironmentConstants.TimesOfDay.Night, EnvironmentConstants.Temperatures.Temperate)]
-        [TestCase(EnvironmentConstants.Plains, EnvironmentConstants.TimesOfDay.Day, EnvironmentConstants.Temperatures.Cold)]
-        [TestCase(EnvironmentConstants.Plains, EnvironmentConstants.TimesOfDay.Day, EnvironmentConstants.Temperatures.Warm)]
-        [TestCase(EnvironmentConstants.Plains, EnvironmentConstants.TimesOfDay.Day, EnvironmentConstants.Temperatures.Temperate)]
         [TestCase(EnvironmentConstants.Mountain, EnvironmentConstants.TimesOfDay.Night, EnvironmentConstants.Temperatures.Cold)]
         [TestCase(EnvironmentConstants.Mountain, EnvironmentConstants.TimesOfDay.Night, EnvironmentConstants.Temperatures.Warm)]
         [TestCase(EnvironmentConstants.Mountain, EnvironmentConstants.TimesOfDay.Night, EnvironmentConstants.Temperatures.Temperate)]
         [TestCase(EnvironmentConstants.Mountain, EnvironmentConstants.TimesOfDay.Day, EnvironmentConstants.Temperatures.Cold)]
         [TestCase(EnvironmentConstants.Mountain, EnvironmentConstants.TimesOfDay.Day, EnvironmentConstants.Temperatures.Warm)]
         [TestCase(EnvironmentConstants.Mountain, EnvironmentConstants.TimesOfDay.Day, EnvironmentConstants.Temperatures.Temperate)]
+        [TestCase(EnvironmentConstants.Plains, EnvironmentConstants.TimesOfDay.Night, EnvironmentConstants.Temperatures.Cold)]
+        [TestCase(EnvironmentConstants.Plains, EnvironmentConstants.TimesOfDay.Night, EnvironmentConstants.Temperatures.Warm)]
+        [TestCase(EnvironmentConstants.Plains, EnvironmentConstants.TimesOfDay.Night, EnvironmentConstants.Temperatures.Temperate)]
+        [TestCase(EnvironmentConstants.Plains, EnvironmentConstants.TimesOfDay.Day, EnvironmentConstants.Temperatures.Cold)]
+        [TestCase(EnvironmentConstants.Plains, EnvironmentConstants.TimesOfDay.Day, EnvironmentConstants.Temperatures.Warm)]
+        [TestCase(EnvironmentConstants.Plains, EnvironmentConstants.TimesOfDay.Day, EnvironmentConstants.Temperatures.Temperate)]
+        [TestCase(EnvironmentConstants.Underground, EnvironmentConstants.TimesOfDay.Night, EnvironmentConstants.Temperatures.Cold)]
+        [TestCase(EnvironmentConstants.Underground, EnvironmentConstants.TimesOfDay.Night, EnvironmentConstants.Temperatures.Temperate)]
+        [TestCase(EnvironmentConstants.Underground, EnvironmentConstants.TimesOfDay.Night, EnvironmentConstants.Temperatures.Warm)]
+        [TestCase(EnvironmentConstants.Underground, EnvironmentConstants.TimesOfDay.Day, EnvironmentConstants.Temperatures.Cold)]
+        [TestCase(EnvironmentConstants.Underground, EnvironmentConstants.TimesOfDay.Day, EnvironmentConstants.Temperatures.Temperate)]
+        [TestCase(EnvironmentConstants.Underground, EnvironmentConstants.TimesOfDay.Day, EnvironmentConstants.Temperatures.Warm)]
         [Ignore("Stressing specific environments causes too many tests for random generation to have sufficient time to succeed")]
         public void StressEnvironment(string environment, string timeOfDay, string temperature)
         {
