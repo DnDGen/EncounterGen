@@ -2,6 +2,7 @@
 using EncounterGen.Domain.Selectors;
 using EncounterGen.Domain.Selectors.Collections;
 using EncounterGen.Domain.Selectors.Percentiles;
+using EncounterGen.Domain.Selectors.Selections;
 using EncounterGen.Domain.Tables;
 using System;
 using System.Collections.Generic;
@@ -20,7 +21,7 @@ namespace EncounterGen.Domain.Generators
         private readonly ICoinGenerator coinGenerator;
         private readonly IGoodsGenerator goodsGenerator;
         private readonly IItemsGenerator itemsGenerator;
-        private readonly IAdjustmentSelector adjustmentSelector;
+        private readonly ITreasureAdjustmentSelector treasureAdjustmentSelector;
         private readonly IBooleanPercentileSelector booleanPercentileSelector;
         private readonly ICollectionSelector collectionSelector;
         private readonly IMagicalItemGeneratorRuntimeFactory magicalItemGeneratorRuntimeFactory;
@@ -31,7 +32,7 @@ namespace EncounterGen.Domain.Generators
             ICoinGenerator coinGenerator,
             IGoodsGenerator goodsGenerator,
             IItemsGenerator itemsGenerator,
-            IAdjustmentSelector adjustmentSelector,
+            ITreasureAdjustmentSelector treasureAdjustmentSelector,
             IBooleanPercentileSelector booleanPercentileSelector,
             ICollectionSelector collectionSelector,
             IMagicalItemGeneratorRuntimeFactory magicalItemGeneratorRuntimeFactory,
@@ -41,7 +42,7 @@ namespace EncounterGen.Domain.Generators
             this.coinGenerator = coinGenerator;
             this.goodsGenerator = goodsGenerator;
             this.itemsGenerator = itemsGenerator;
-            this.adjustmentSelector = adjustmentSelector;
+            this.treasureAdjustmentSelector = treasureAdjustmentSelector;
             this.booleanPercentileSelector = booleanPercentileSelector;
             this.collectionSelector = collectionSelector;
             this.magicalItemGeneratorRuntimeFactory = magicalItemGeneratorRuntimeFactory;
@@ -49,38 +50,74 @@ namespace EncounterGen.Domain.Generators
             this.itemSelector = itemSelector;
         }
 
-        public Treasure GenerateFor(Creature creature, int level)
+        public IEnumerable<Treasure> GenerateFor(IEnumerable<Creature> creatures, int level)
+        {
+            var treasures = new List<Treasure>();
+
+            foreach (var creature in creatures)
+            {
+                var treasure = GenerateFor(creature, level);
+
+                if (treasure.IsAny)
+                    treasures.Add(treasure);
+            }
+
+            return treasures;
+        }
+
+        private Treasure GenerateFor(Creature creature, int level)
         {
             var creatureName = GetCreatureNameForTreasure(creature.Type);
-            var coinMultiplier = adjustmentSelector.SelectDouble(TableNameConstants.TreasureAdjustments, creatureName, TreasureConstants.Coin);
-            var goodsMultiplier = adjustmentSelector.SelectDouble(TableNameConstants.TreasureAdjustments, creatureName, TreasureConstants.Goods);
-            var itemsMultiplier = adjustmentSelector.SelectDouble(TableNameConstants.TreasureAdjustments, creatureName, TreasureConstants.Items);
+            var treasureRates = treasureAdjustmentSelector.SelectFor(creatureName);
 
             var treasure = new Treasure();
-            treasure.Coin = coinGenerator.GenerateAtLevel(level);
-
-            var rawQuantity = coinMultiplier * treasure.Coin.Quantity;
-            treasure.Coin.Quantity = Convert.ToInt32(rawQuantity);
-
-            while (booleanPercentileSelector.SelectFrom(goodsMultiplier--))
-            {
-                var goods = goodsGenerator.GenerateAtLevel(level);
-                treasure.Goods = treasure.Goods.Union(goods);
-            }
-
-            while (booleanPercentileSelector.SelectFrom(itemsMultiplier--))
-            {
-                var items = itemsGenerator.GenerateAtLevel(level);
-                treasure.Items = treasure.Items.Union(items);
-            }
-
-            var setTreasure = GetSetTreasure(creatureName, creature.Quantity);
-            treasure.Items = treasure.Items.Union(setTreasure);
+            treasure.Coin = GetCoin(treasureRates, level);
+            treasure.Goods = GetGoods(treasureRates, level);
+            treasure.Items = GetItems(treasureRates, level, creatureName, creature.Quantity);
 
             return treasure;
         }
 
-        private IEnumerable<Item> GetSetTreasure(string creatureName, int quantity)
+        private Coin GetCoin(TreasureRatesSelection treasureRates, int level)
+        {
+            var coin = coinGenerator.GenerateAtLevel(level);
+
+            var rawQuantity = treasureRates.Coin * coin.Quantity;
+            coin.Quantity = Convert.ToInt32(rawQuantity);
+
+            return coin;
+        }
+
+        private IEnumerable<Good> GetGoods(TreasureRatesSelection treasureRates, int level)
+        {
+            var goods = new List<Good>();
+
+            while (booleanPercentileSelector.SelectFrom(treasureRates.Goods--))
+            {
+                var generatedGoods = goodsGenerator.GenerateAtLevel(level);
+                goods.AddRange(generatedGoods);
+            }
+
+            return goods;
+        }
+
+        private IEnumerable<Item> GetItems(TreasureRatesSelection treasureRates, int level, string creatureName, int quantity)
+        {
+            var items = new List<Item>();
+
+            while (booleanPercentileSelector.SelectFrom(treasureRates.Items--))
+            {
+                var generatedItems = itemsGenerator.GenerateAtLevel(level);
+                items.AddRange(generatedItems);
+            }
+
+            var setItems = GetSetItems(creatureName, quantity);
+            items.AddRange(setItems);
+
+            return items;
+        }
+
+        private IEnumerable<Item> GetSetItems(string creatureName, int quantity)
         {
             var setItems = new List<Item>();
             var setTreasure = collectionSelector.SelectFrom(TableNameConstants.TreasureGroups, creatureName);

@@ -41,7 +41,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="CharacterGen, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\CharacterGen.9.0.0\lib\CharacterGen.dll</HintPath>
+      <HintPath>..\packages\CharacterGen.9.0.2\lib\CharacterGen.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="EventGen, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -70,14 +70,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Generators\CreatureGenerator.cs" />
     <Compile Include="Generators\EncounterCharacterGenerator.cs" />
+    <Compile Include="Generators\CreatureGeneratorEventDecorator.cs" />
     <Compile Include="Generators\EncounterGenerator.cs" />
+    <Compile Include="Generators\EncounterCharacterGeneratorEventDecorator.cs" />
+    <Compile Include="Generators\EncounterTreasureGeneratorEventDecorator.cs" />
     <Compile Include="Generators\EncounterGeneratorEventDecorator.cs" />
     <Compile Include="Generators\EncounterTreasureGenerator.cs" />
     <Compile Include="Generators\EncounterVerifier.cs" />
+    <Compile Include="Generators\ICreatureGenerator.cs" />
     <Compile Include="Generators\IEncounterCharacterGenerator.cs" />
     <Compile Include="Generators\IEncounterTreasureGenerator.cs" />
-    <Compile Include="Generators\RegexConstants.cs" />
+    <Compile Include="Selectors\RegexConstants.cs" />
     <Compile Include="IoC\EncounterGenModuleLoader.cs" />
     <Compile Include="IoC\Modules\GeneratorsModule.cs" />
     <Compile Include="IoC\Modules\MappersModule.cs" />
@@ -91,13 +96,15 @@
     <Compile Include="Mappers\Percentiles\PercentileMapperCachingProxy.cs" />
     <Compile Include="Mappers\Percentiles\PercentileXmlMapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Selectors\Collections\AdjustmentSelector.cs" />
     <Compile Include="Selectors\Collections\CollectionSelector.cs" />
+    <Compile Include="Selectors\Collections\CollectionSelectorEventDecorator.cs" />
     <Compile Include="Selectors\Collections\CollectionSelectorCachingProxy.cs" />
     <Compile Include="Selectors\Collections\EncounterCollectionSelector.cs" />
     <Compile Include="Selectors\Collections\EncounterCollectionSelectorCachingProxy.cs" />
+    <Compile Include="Selectors\Collections\EncounterCollectionSelectorEventDecorator.cs" />
+    <Compile Include="Selectors\Collections\ITreasureAdjustmentSelector.cs" />
+    <Compile Include="Selectors\Collections\TreasureAdjustmentSelector.cs" />
     <Compile Include="Selectors\EncounterConstants.cs" />
-    <Compile Include="Selectors\Collections\IAdjustmentSelector.cs" />
     <Compile Include="Selectors\Collections\ICollectionSelector.cs" />
     <Compile Include="Selectors\Collections\IEncounterCollectionSelector.cs" />
     <Compile Include="Selectors\EncounterSelector.cs" />
@@ -111,6 +118,7 @@
     <Compile Include="Selectors\Percentiles\PercentileSelector.cs" />
     <Compile Include="Selectors\AmountConstants.cs" />
     <Compile Include="Selectors\AmountSelector.cs" />
+    <Compile Include="Selectors\Selections\TreasureRatesSelection.cs" />
     <Compile Include="Selectors\TreasureConstants.cs" />
     <Compile Include="Tables\EmbeddedResourceStreamLoader.cs" />
     <Compile Include="Tables\GroupConstants.cs" />

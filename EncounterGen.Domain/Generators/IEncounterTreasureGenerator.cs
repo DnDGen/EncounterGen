@@ -1,10 +1,11 @@
 ﻿using EncounterGen.Common;
+using System.Collections.Generic;
 using TreasureGen;
 
 namespace EncounterGen.Domain.Generators
 {
     internal interface IEncounterTreasureGenerator
     {
-        Treasure GenerateFor(Creature creature, int level);
+        IEnumerable<Treasure> GenerateFor(IEnumerable<Creature> creatures, int level);
     }
 }

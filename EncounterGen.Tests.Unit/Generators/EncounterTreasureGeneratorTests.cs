@@ -3,6 +3,7 @@ using EncounterGen.Domain.Generators;
 using EncounterGen.Domain.Selectors;
 using EncounterGen.Domain.Selectors.Collections;
 using EncounterGen.Domain.Selectors.Percentiles;
+using EncounterGen.Domain.Selectors.Selections;
 using EncounterGen.Domain.Tables;
 using Moq;
 using NUnit.Framework;
@@ -23,14 +24,13 @@ namespace EncounterGen.Tests.Unit.Generators
         private Mock<ICoinGenerator> mockCoinGenerator;
         private Mock<IGoodsGenerator> mockGoodsGenerator;
         private Mock<IItemsGenerator> mockItemsGenerator;
-        private Mock<IAdjustmentSelector> mockAdjustmentSelector;
+        private Mock<ITreasureAdjustmentSelector> mockTreasureAdjustmentSelector;
         private Mock<IBooleanPercentileSelector> mockBooleanPercentileSelector;
         private Mock<ICollectionSelector> mockCollectionSelector;
         private int level;
+        private List<Creature> creatures;
         private Creature creature;
-        private double coinMultiplier;
-        private double goodsMultiplier;
-        private double itemsMultiplier;
+        private TreasureRatesSelection treasureRates;
         private List<Good> goods;
         private List<Item> items;
         private Coin coin;
@@ -45,7 +45,7 @@ namespace EncounterGen.Tests.Unit.Generators
             mockCoinGenerator = new Mock<ICoinGenerator>();
             mockGoodsGenerator = new Mock<IGoodsGenerator>();
             mockItemsGenerator = new Mock<IItemsGenerator>();
-            mockAdjustmentSelector = new Mock<IAdjustmentSelector>();
+            mockTreasureAdjustmentSelector = new Mock<ITreasureAdjustmentSelector>();
             mockBooleanPercentileSelector = new Mock<IBooleanPercentileSelector>();
             mockCollectionSelector = new Mock<ICollectionSelector>();
             mockMagicalItemGeneratorFactory = new Mock<IMagicalItemGeneratorRuntimeFactory>();
@@ -56,7 +56,7 @@ namespace EncounterGen.Tests.Unit.Generators
                 mockCoinGenerator.Object,
                 mockGoodsGenerator.Object,
                 mockItemsGenerator.Object,
-                mockAdjustmentSelector.Object,
+                mockTreasureAdjustmentSelector.Object,
                 mockBooleanPercentileSelector.Object,
                 mockCollectionSelector.Object,
                 mockMagicalItemGeneratorFactory.Object,
@@ -65,24 +65,24 @@ namespace EncounterGen.Tests.Unit.Generators
 
             creature = new Creature();
             usesSubtypeForTreasure = new List<string>();
+            creatures = new List<Creature>();
+            treasureRates = new TreasureRatesSelection();
+            goods = new List<Good>() { new Good(), new Good() };
+            items = new List<Item>() { new Item(), new Item() };
+            coin = new Coin { Currency = "currency", Quantity = 600 };
 
             level = 9266;
             creature.Type.Name = "creature";
             creature.Type.SubType = new CreatureType();
             creature.Type.SubType.Name = "subtype";
             creature.Quantity = 1;
-            coinMultiplier = 1;
-            goodsMultiplier = 1;
-            itemsMultiplier = 1;
-            goods = new List<Good>() { new Good(), new Good() };
-            items = new List<Item>() { new Item(), new Item() };
-            coin = new Coin { Currency = "currency", Quantity = 600 };
+            creatures.Add(creature);
+            treasureRates.Coin = 1;
+            treasureRates.Goods = 1;
+            treasureRates.Items = 1;
 
             mockBooleanPercentileSelector.Setup(s => s.SelectFrom(It.IsAny<double>())).Returns((double d) => d > 0);
-
-            mockAdjustmentSelector.Setup(s => s.SelectDouble(TableNameConstants.TreasureAdjustments, creature.Type.Name, TreasureConstants.Coin)).Returns(() => coinMultiplier);
-            mockAdjustmentSelector.Setup(s => s.SelectDouble(TableNameConstants.TreasureAdjustments, creature.Type.Name, TreasureConstants.Goods)).Returns(() => goodsMultiplier);
-            mockAdjustmentSelector.Setup(s => s.SelectDouble(TableNameConstants.TreasureAdjustments, creature.Type.Name, TreasureConstants.Items)).Returns(() => itemsMultiplier);
+            mockTreasureAdjustmentSelector.Setup(s => s.SelectFor(creature.Type.Name)).Returns(treasureRates);
 
             mockCoinGenerator.Setup(g => g.GenerateAtLevel(level)).Returns(coin);
             mockGoodsGenerator.Setup(g => g.GenerateAtLevel(level)).Returns(goods);
@@ -92,24 +92,103 @@ namespace EncounterGen.Tests.Unit.Generators
         }
 
         [Test]
-        public void GetTreasure()
+        public void GetTreasures()
         {
-            var treasure = encounterTreasureGenerator.GenerateFor(creature, level);
-            Assert.That(treasure, Is.Not.Null);
+            var treasures = encounterTreasureGenerator.GenerateFor(creatures, level);
+            Assert.That(treasures, Is.Not.Null);
+            Assert.That(treasures, Is.Not.Empty);
+
+            var treasure = treasures.Single();
             Assert.That(treasure.Coin.Currency, Is.EqualTo("currency"));
             Assert.That(treasure.Coin.Quantity, Is.EqualTo(600));
-            Assert.That(goods, Is.SubsetOf(treasure.Goods));
+            Assert.That(treasure.Goods, Is.SupersetOf(goods));
             Assert.That(treasure.Goods.Count, Is.EqualTo(2));
-            Assert.That(items, Is.SubsetOf(treasure.Items));
+            Assert.That(treasure.Items, Is.SupersetOf(items));
             Assert.That(treasure.Items.Count, Is.EqualTo(2));
         }
 
         [Test]
-        public void GetDifferentLevelsOfTreasure()
+        public void GetTreasuresForMultipleCreatures()
         {
-            coinMultiplier = 0;
-            goodsMultiplier = 2;
-            itemsMultiplier = 1;
+            var otherCreature = new Creature();
+            otherCreature.Type.Name = "other creature";
+            otherCreature.Quantity = 90210;
+            creatures.Add(otherCreature);
+
+            var otherTreasureRates = new TreasureRatesSelection();
+            otherTreasureRates.Coin = 1;
+            otherTreasureRates.Goods = 1;
+            otherTreasureRates.Items = 1;
+
+            mockTreasureAdjustmentSelector.Setup(s => s.SelectFor(otherCreature.Type.Name)).Returns(otherTreasureRates);
+
+            var otherGoods = new List<Good>() { new Good(), new Good() };
+            var otherItems = new List<Item>() { new Item(), new Item() };
+            var otherCoin = new Coin { Currency = "other currency", Quantity = 42 };
+
+            mockCoinGenerator.SetupSequence(g => g.GenerateAtLevel(level)).Returns(coin).Returns(otherCoin);
+            mockGoodsGenerator.SetupSequence(g => g.GenerateAtLevel(level)).Returns(goods).Returns(otherGoods);
+            mockItemsGenerator.SetupSequence(g => g.GenerateAtLevel(level)).Returns(items).Returns(otherItems);
+
+            var treasures = encounterTreasureGenerator.GenerateFor(creatures, level);
+            Assert.That(treasures, Is.Not.Null);
+            Assert.That(treasures, Is.Not.Empty);
+            Assert.That(treasures.Count, Is.EqualTo(2));
+
+            var firstTreasure = treasures.First();
+            Assert.That(firstTreasure.Coin.Currency, Is.EqualTo("currency"));
+            Assert.That(firstTreasure.Coin.Quantity, Is.EqualTo(600));
+            Assert.That(firstTreasure.Goods, Is.SupersetOf(goods));
+            Assert.That(firstTreasure.Goods.Count, Is.EqualTo(2));
+            Assert.That(firstTreasure.Items, Is.SupersetOf(items));
+            Assert.That(firstTreasure.Items.Count, Is.EqualTo(2));
+
+            var lastTreasure = treasures.Last();
+            Assert.That(lastTreasure.Coin.Currency, Is.EqualTo("other currency"));
+            Assert.That(lastTreasure.Coin.Quantity, Is.EqualTo(42));
+            Assert.That(lastTreasure.Goods, Is.SupersetOf(otherGoods));
+            Assert.That(lastTreasure.Goods.Count, Is.EqualTo(2));
+            Assert.That(lastTreasure.Items, Is.SupersetOf(otherItems));
+            Assert.That(lastTreasure.Items.Count, Is.EqualTo(2));
+        }
+
+        [Test]
+        public void DoNotGetEmptyTreasures()
+        {
+            var otherCreature = new Creature();
+            otherCreature.Type.Name = "other creature";
+            otherCreature.Quantity = 90210;
+            creatures.Add(otherCreature);
+
+            mockTreasureAdjustmentSelector.Setup(s => s.SelectFor(otherCreature.Type.Name)).Returns(treasureRates);
+
+            var otherGoods = new List<Good>();
+            var otherItems = new List<Item>();
+            var otherCoin = new Coin { Currency = "other currency", Quantity = 0 };
+
+            mockCoinGenerator.SetupSequence(g => g.GenerateAtLevel(level)).Returns(coin).Returns(otherCoin);
+            mockGoodsGenerator.SetupSequence(g => g.GenerateAtLevel(level)).Returns(goods).Returns(otherGoods);
+            mockItemsGenerator.SetupSequence(g => g.GenerateAtLevel(level)).Returns(items).Returns(otherItems);
+
+            var treasures = encounterTreasureGenerator.GenerateFor(creatures, level);
+            Assert.That(treasures, Is.Not.Null);
+            Assert.That(treasures, Is.Not.Empty);
+
+            var treasure = treasures.Single();
+            Assert.That(treasure.Coin.Currency, Is.EqualTo("currency"));
+            Assert.That(treasure.Coin.Quantity, Is.EqualTo(600));
+            Assert.That(treasure.Goods, Is.SupersetOf(goods));
+            Assert.That(treasure.Goods.Count, Is.EqualTo(2));
+            Assert.That(treasure.Items, Is.SupersetOf(items));
+            Assert.That(treasure.Items.Count, Is.EqualTo(2));
+        }
+
+        [Test]
+        public void GetDifferentQuantitiesOfTreasure()
+        {
+            treasureRates.Coin = 0;
+            treasureRates.Goods = 2;
+            treasureRates.Items = 1;
 
             var secondGoods = new[] { new Good(), new Good() };
             mockGoodsGenerator.SetupSequence(g => g.GenerateAtLevel(level)).Returns(goods).Returns(secondGoods);
@@ -117,23 +196,26 @@ namespace EncounterGen.Tests.Unit.Generators
             var secondItems = new[] { new Item(), new Item() };
             mockItemsGenerator.SetupSequence(g => g.GenerateAtLevel(level)).Returns(items).Returns(secondItems);
 
-            var treasure = encounterTreasureGenerator.GenerateFor(creature, level);
-            Assert.That(treasure, Is.Not.Null);
+            var treasures = encounterTreasureGenerator.GenerateFor(creatures, level);
+            Assert.That(treasures, Is.Not.Null);
+            Assert.That(treasures, Is.Not.Empty);
+
+            var treasure = treasures.Single();
+            Assert.That(treasure.Coin.Currency, Is.EqualTo("currency"));
             Assert.That(treasure.Coin.Quantity, Is.EqualTo(0));
-            Assert.That(goods, Is.SubsetOf(treasure.Goods));
-            Assert.That(secondGoods, Is.SubsetOf(treasure.Goods));
+            Assert.That(treasure.Goods, Is.SupersetOf(goods));
+            Assert.That(treasure.Goods, Is.SupersetOf(secondGoods));
             Assert.That(treasure.Goods.Count, Is.EqualTo(4));
-            Assert.That(items, Is.SubsetOf(treasure.Items));
-            Assert.That(secondItems, Is.Not.SubsetOf(treasure.Items));
+            Assert.That(treasure.Items, Is.SupersetOf(items));
             Assert.That(treasure.Items.Count, Is.EqualTo(2));
         }
 
         [Test]
         public void GetMoreTreasure()
         {
-            coinMultiplier = 2;
-            goodsMultiplier = 2;
-            itemsMultiplier = 2;
+            treasureRates.Coin = 2;
+            treasureRates.Goods = 2;
+            treasureRates.Items = 2;
 
             mockCoinGenerator.SetupSequence(g => g.GenerateAtLevel(level)).Returns(coin)
                 .Returns(new Coin { Currency = "wrong currency", Quantity = 666 });
@@ -144,94 +226,110 @@ namespace EncounterGen.Tests.Unit.Generators
             var secondItems = new[] { new Item(), new Item() };
             mockItemsGenerator.SetupSequence(g => g.GenerateAtLevel(level)).Returns(items).Returns(secondItems);
 
-            var treasure = encounterTreasureGenerator.GenerateFor(creature, level);
-            Assert.That(treasure, Is.Not.Null);
+            var treasures = encounterTreasureGenerator.GenerateFor(creatures, level);
+            Assert.That(treasures, Is.Not.Null);
+            Assert.That(treasures, Is.Not.Empty);
+
+            var treasure = treasures.Single();
             Assert.That(treasure.Coin.Currency, Is.EqualTo("currency"));
             Assert.That(treasure.Coin.Quantity, Is.EqualTo(1200));
-            Assert.That(goods, Is.SubsetOf(treasure.Goods));
-            Assert.That(items, Is.SubsetOf(treasure.Items));
-            Assert.That(secondGoods, Is.SubsetOf(treasure.Goods));
-            Assert.That(secondItems, Is.SubsetOf(treasure.Items));
+            Assert.That(treasure.Goods, Is.SupersetOf(goods));
+            Assert.That(treasure.Goods, Is.SupersetOf(secondGoods));
             Assert.That(treasure.Goods.Count, Is.EqualTo(4));
+            Assert.That(treasure.Items, Is.SupersetOf(items));
+            Assert.That(treasure.Items, Is.SupersetOf(secondItems));
             Assert.That(treasure.Items.Count, Is.EqualTo(4));
         }
 
         [Test]
         public void GetNoTreasureByChance()
         {
-            coinMultiplier = 2;
-            goodsMultiplier = 2;
-            itemsMultiplier = 2;
+            treasureRates.Coin = 2;
+            treasureRates.Goods = 2;
+            treasureRates.Items = 2;
 
-            mockCoinGenerator.SetupSequence(g => g.GenerateAtLevel(level)).Returns(coin)
+            mockCoinGenerator.SetupSequence(g => g.GenerateAtLevel(level))
+                .Returns(coin)
                 .Returns(new Coin { Currency = "wrong currency", Quantity = 666 });
 
             goods.Clear();
             items.Clear();
             coin.Quantity = 0;
 
-            var treasure = encounterTreasureGenerator.GenerateFor(creature, level);
-            Assert.That(treasure, Is.Not.Null);
-            Assert.That(treasure.IsAny, Is.False);
+            var treasures = encounterTreasureGenerator.GenerateFor(creatures, level);
+            Assert.That(treasures, Is.Not.Null);
+            Assert.That(treasures, Is.Empty);
         }
 
         [Test]
         public void GetNoTreasureIntentionally()
         {
-            coinMultiplier = 0;
-            goodsMultiplier = 0;
-            itemsMultiplier = 0;
+            treasureRates.Coin = 0;
+            treasureRates.Goods = 0;
+            treasureRates.Items = 0;
 
-            var treasure = encounterTreasureGenerator.GenerateFor(creature, level);
-            Assert.That(treasure, Is.Not.Null);
-            Assert.That(treasure.IsAny, Is.False);
+            var treasures = encounterTreasureGenerator.GenerateFor(creatures, level);
+            Assert.That(treasures, Is.Not.Null);
+            Assert.That(treasures, Is.Empty);
         }
 
         [Test]
         public void GetPartialTreasureWithGoodsAndItems()
         {
-            coinMultiplier = .5;
-            goodsMultiplier = .5;
-            itemsMultiplier = .5;
+            treasureRates.Coin = .5;
+            treasureRates.Goods = .5;
+            treasureRates.Items = .5;
 
-            var treasure = encounterTreasureGenerator.GenerateFor(creature, level);
+            var treasures = encounterTreasureGenerator.GenerateFor(creatures, level);
+            Assert.That(treasures, Is.Not.Null);
+            Assert.That(treasures, Is.Not.Empty);
+
+            var treasure = treasures.Single();
             Assert.That(treasure.Coin.Currency, Is.EqualTo("currency"));
             Assert.That(treasure.Coin.Quantity, Is.EqualTo(300));
-            Assert.That(goods, Is.SubsetOf(treasure.Goods));
-            Assert.That(items, Is.SubsetOf(treasure.Items));
+            Assert.That(treasure.Goods, Is.SupersetOf(goods));
             Assert.That(treasure.Goods.Count, Is.EqualTo(2));
+            Assert.That(treasure.Items, Is.SupersetOf(items));
             Assert.That(treasure.Items.Count, Is.EqualTo(2));
         }
 
         [Test]
         public void GetDifferentPartialTreasureWithGoodsAndItems()
         {
-            coinMultiplier = .1;
-            goodsMultiplier = .2;
-            itemsMultiplier = .3;
+            treasureRates.Coin = .1;
+            treasureRates.Goods = .2;
+            treasureRates.Items = .3;
 
-            var treasure = encounterTreasureGenerator.GenerateFor(creature, level);
+            var treasures = encounterTreasureGenerator.GenerateFor(creatures, level);
+            Assert.That(treasures, Is.Not.Null);
+            Assert.That(treasures, Is.Not.Empty);
+
+            var treasure = treasures.Single();
             Assert.That(treasure.Coin.Currency, Is.EqualTo("currency"));
             Assert.That(treasure.Coin.Quantity, Is.EqualTo(60));
-            Assert.That(goods, Is.SubsetOf(treasure.Goods));
-            Assert.That(items, Is.SubsetOf(treasure.Items));
+            Assert.That(treasure.Goods, Is.SupersetOf(goods));
             Assert.That(treasure.Goods.Count, Is.EqualTo(2));
+            Assert.That(treasure.Items, Is.SupersetOf(items));
             Assert.That(treasure.Items.Count, Is.EqualTo(2));
         }
 
         [Test]
         public void GetPartialTreasureWithGoods()
         {
-            coinMultiplier = .1;
-            goodsMultiplier = .2;
-            itemsMultiplier = .3;
+            treasureRates.Coin = .1;
+            treasureRates.Goods = .2;
+            treasureRates.Items = .3;
 
             mockBooleanPercentileSelector.Setup(s => s.SelectFrom(.3)).Returns(false);
 
-            var treasure = encounterTreasureGenerator.GenerateFor(creature, level);
+            var treasures = encounterTreasureGenerator.GenerateFor(creatures, level);
+            Assert.That(treasures, Is.Not.Null);
+            Assert.That(treasures, Is.Not.Empty);
+
+            var treasure = treasures.Single();
             Assert.That(treasure.Coin.Currency, Is.EqualTo("currency"));
             Assert.That(treasure.Coin.Quantity, Is.EqualTo(60));
-            Assert.That(goods, Is.SubsetOf(treasure.Goods));
+            Assert.That(treasure.Goods, Is.SupersetOf(goods));
             Assert.That(treasure.Goods.Count, Is.EqualTo(2));
             Assert.That(treasure.Items, Is.Empty);
         }
@@ -239,31 +337,39 @@ namespace EncounterGen.Tests.Unit.Generators
         [Test]
         public void GetPartialTreasureWithItems()
         {
-            coinMultiplier = .1;
-            goodsMultiplier = .2;
-            itemsMultiplier = .3;
+            treasureRates.Coin = .1;
+            treasureRates.Goods = .2;
+            treasureRates.Items = .3;
 
             mockBooleanPercentileSelector.Setup(s => s.SelectFrom(.2)).Returns(false);
 
-            var treasure = encounterTreasureGenerator.GenerateFor(creature, level);
+            var treasures = encounterTreasureGenerator.GenerateFor(creatures, level);
+            Assert.That(treasures, Is.Not.Null);
+            Assert.That(treasures, Is.Not.Empty);
+
+            var treasure = treasures.Single();
             Assert.That(treasure.Coin.Currency, Is.EqualTo("currency"));
             Assert.That(treasure.Coin.Quantity, Is.EqualTo(60));
             Assert.That(treasure.Goods, Is.Empty);
-            Assert.That(items, Is.SubsetOf(treasure.Items));
+            Assert.That(treasure.Items, Is.SupersetOf(items));
             Assert.That(treasure.Items.Count, Is.EqualTo(2));
         }
 
         [Test]
         public void GetPartialTreasureWithNoGoodsOrItems()
         {
-            coinMultiplier = .1;
-            goodsMultiplier = .2;
-            itemsMultiplier = .3;
+            treasureRates.Coin = .1;
+            treasureRates.Goods = .2;
+            treasureRates.Items = .3;
 
             mockBooleanPercentileSelector.Setup(s => s.SelectFrom(.2)).Returns(false);
             mockBooleanPercentileSelector.Setup(s => s.SelectFrom(.3)).Returns(false);
 
-            var treasure = encounterTreasureGenerator.GenerateFor(creature, level);
+            var treasures = encounterTreasureGenerator.GenerateFor(creatures, level);
+            Assert.That(treasures, Is.Not.Null);
+            Assert.That(treasures, Is.Not.Empty);
+
+            var treasure = treasures.Single();
             Assert.That(treasure.Coin.Currency, Is.EqualTo("currency"));
             Assert.That(treasure.Coin.Quantity, Is.EqualTo(60));
             Assert.That(treasure.Goods, Is.Empty);
@@ -273,9 +379,9 @@ namespace EncounterGen.Tests.Unit.Generators
         [Test]
         public void GetMoreAndPartialTreasure()
         {
-            coinMultiplier = 2.1;
-            goodsMultiplier = 2.2;
-            itemsMultiplier = 2.3;
+            treasureRates.Coin = 2.1;
+            treasureRates.Goods = 2.2;
+            treasureRates.Items = 2.3;
 
             var secondGoods = new[] { new Good(), new Good() };
             var thirdGoods = new[] { new Good(), new Good() };
@@ -285,22 +391,31 @@ namespace EncounterGen.Tests.Unit.Generators
             var thirdItems = new[] { new Item(), new Item() };
             mockItemsGenerator.SetupSequence(g => g.GenerateAtLevel(level)).Returns(items).Returns(secondItems).Returns(thirdItems);
 
-            var treasure = encounterTreasureGenerator.GenerateFor(creature, level);
+            var treasures = encounterTreasureGenerator.GenerateFor(creatures, level);
+            Assert.That(treasures, Is.Not.Null);
+            Assert.That(treasures, Is.Not.Empty);
+
+            var treasure = treasures.Single();
             Assert.That(treasure.Coin.Currency, Is.EqualTo("currency"));
             Assert.That(treasure.Coin.Quantity, Is.EqualTo(1260));
+            Assert.That(treasure.Goods, Is.SupersetOf(goods));
+            Assert.That(treasure.Goods, Is.SupersetOf(secondGoods));
+            Assert.That(treasure.Goods, Is.SupersetOf(thirdGoods));
             Assert.That(treasure.Goods.Count, Is.EqualTo(6));
+            Assert.That(treasure.Items, Is.SupersetOf(items));
+            Assert.That(treasure.Items, Is.SupersetOf(secondItems));
+            Assert.That(treasure.Items, Is.SupersetOf(thirdItems));
             Assert.That(treasure.Items.Count, Is.EqualTo(6));
         }
 
         [Test]
         public void GetMoreAndNoPartialTreasure()
         {
-            coinMultiplier = 2.1;
-            goodsMultiplier = 2.2;
-            itemsMultiplier = 2.3;
+            treasureRates.Coin = 2.1;
+            treasureRates.Goods = 2.2;
+            treasureRates.Items = 2.3;
 
-            mockBooleanPercentileSelector.Setup(s => s.SelectFrom(.2)).Returns(false);
-            mockBooleanPercentileSelector.Setup(s => s.SelectFrom(.3)).Returns(false);
+            mockBooleanPercentileSelector.Setup(s => s.SelectFrom(It.Is<double>(p => p < 1))).Returns(false);
 
             var secondGoods = new[] { new Good(), new Good() };
             mockGoodsGenerator.SetupSequence(g => g.GenerateAtLevel(level)).Returns(goods).Returns(secondGoods);
@@ -308,10 +423,18 @@ namespace EncounterGen.Tests.Unit.Generators
             var secondItems = new[] { new Item(), new Item() };
             mockItemsGenerator.SetupSequence(g => g.GenerateAtLevel(level)).Returns(items).Returns(secondItems);
 
-            var treasure = encounterTreasureGenerator.GenerateFor(creature, level);
+            var treasures = encounterTreasureGenerator.GenerateFor(creatures, level);
+            Assert.That(treasures, Is.Not.Null);
+            Assert.That(treasures, Is.Not.Empty);
+
+            var treasure = treasures.Single();
             Assert.That(treasure.Coin.Currency, Is.EqualTo("currency"));
             Assert.That(treasure.Coin.Quantity, Is.EqualTo(1260));
+            Assert.That(treasure.Goods, Is.SupersetOf(goods));
+            Assert.That(treasure.Goods, Is.SupersetOf(secondGoods));
             Assert.That(treasure.Goods.Count, Is.EqualTo(4));
+            Assert.That(treasure.Items, Is.SupersetOf(items));
+            Assert.That(treasure.Items, Is.SupersetOf(secondItems));
             Assert.That(treasure.Items.Count, Is.EqualTo(4));
         }
 
@@ -320,9 +443,12 @@ namespace EncounterGen.Tests.Unit.Generators
         {
             usesSubtypeForTreasure.Add(creature.Type.Name);
 
-            mockAdjustmentSelector.Setup(s => s.SelectDouble(TableNameConstants.TreasureAdjustments, creature.Type.SubType.Name, TreasureConstants.Coin)).Returns(2);
-            mockAdjustmentSelector.Setup(s => s.SelectDouble(TableNameConstants.TreasureAdjustments, creature.Type.SubType.Name, TreasureConstants.Goods)).Returns(2);
-            mockAdjustmentSelector.Setup(s => s.SelectDouble(TableNameConstants.TreasureAdjustments, creature.Type.SubType.Name, TreasureConstants.Items)).Returns(2);
+            var subtypeTreasureRates = new TreasureRatesSelection();
+            subtypeTreasureRates.Coin = 2;
+            subtypeTreasureRates.Goods = 2;
+            subtypeTreasureRates.Items = 2;
+
+            mockTreasureAdjustmentSelector.Setup(s => s.SelectFor(creature.Type.SubType.Name)).Returns(subtypeTreasureRates);
 
             var secondGoods = new[] { new Good(), new Good() };
             mockGoodsGenerator.SetupSequence(g => g.GenerateAtLevel(level)).Returns(goods).Returns(secondGoods);
@@ -330,10 +456,18 @@ namespace EncounterGen.Tests.Unit.Generators
             var secondItems = new[] { new Item(), new Item() };
             mockItemsGenerator.SetupSequence(g => g.GenerateAtLevel(level)).Returns(items).Returns(secondItems);
 
-            var treasure = encounterTreasureGenerator.GenerateFor(creature, level);
+            var treasures = encounterTreasureGenerator.GenerateFor(creatures, level);
+            Assert.That(treasures, Is.Not.Null);
+            Assert.That(treasures, Is.Not.Empty);
+
+            var treasure = treasures.Single();
             Assert.That(treasure.Coin.Currency, Is.EqualTo("currency"));
             Assert.That(treasure.Coin.Quantity, Is.EqualTo(1200));
+            Assert.That(treasure.Goods, Is.SupersetOf(goods));
+            Assert.That(treasure.Goods, Is.SupersetOf(secondGoods));
             Assert.That(treasure.Goods.Count, Is.EqualTo(4));
+            Assert.That(treasure.Items, Is.SupersetOf(items));
+            Assert.That(treasure.Items, Is.SupersetOf(secondItems));
             Assert.That(treasure.Items.Count, Is.EqualTo(4));
         }
 
@@ -345,9 +479,12 @@ namespace EncounterGen.Tests.Unit.Generators
 
             usesSubtypeForTreasure.Add(creature.Type.Name);
 
-            mockAdjustmentSelector.Setup(s => s.SelectDouble(TableNameConstants.TreasureAdjustments, creature.Type.SubType.Name, TreasureConstants.Coin)).Returns(2);
-            mockAdjustmentSelector.Setup(s => s.SelectDouble(TableNameConstants.TreasureAdjustments, creature.Type.SubType.Name, TreasureConstants.Goods)).Returns(2);
-            mockAdjustmentSelector.Setup(s => s.SelectDouble(TableNameConstants.TreasureAdjustments, creature.Type.SubType.Name, TreasureConstants.Items)).Returns(2);
+            var subtypeTreasureRates = new TreasureRatesSelection();
+            subtypeTreasureRates.Coin = 2;
+            subtypeTreasureRates.Goods = 2;
+            subtypeTreasureRates.Items = 2;
+
+            mockTreasureAdjustmentSelector.Setup(s => s.SelectFor(creature.Type.SubType.Name)).Returns(subtypeTreasureRates);
 
             var secondGoods = new[] { new Good(), new Good() };
             mockGoodsGenerator.SetupSequence(g => g.GenerateAtLevel(level)).Returns(goods).Returns(secondGoods);
@@ -355,10 +492,18 @@ namespace EncounterGen.Tests.Unit.Generators
             var secondItems = new[] { new Item(), new Item() };
             mockItemsGenerator.SetupSequence(g => g.GenerateAtLevel(level)).Returns(items).Returns(secondItems);
 
-            var treasure = encounterTreasureGenerator.GenerateFor(creature, level);
+            var treasures = encounterTreasureGenerator.GenerateFor(creatures, level);
+            Assert.That(treasures, Is.Not.Null);
+            Assert.That(treasures, Is.Not.Empty);
+
+            var treasure = treasures.Single();
             Assert.That(treasure.Coin.Currency, Is.EqualTo("currency"));
             Assert.That(treasure.Coin.Quantity, Is.EqualTo(1200));
+            Assert.That(treasure.Goods, Is.SupersetOf(goods));
+            Assert.That(treasure.Goods, Is.SupersetOf(secondGoods));
             Assert.That(treasure.Goods.Count, Is.EqualTo(4));
+            Assert.That(treasure.Items, Is.SupersetOf(items));
+            Assert.That(treasure.Items, Is.SupersetOf(secondItems));
             Assert.That(treasure.Items.Count, Is.EqualTo(4));
         }
 
@@ -371,9 +516,12 @@ namespace EncounterGen.Tests.Unit.Generators
             usesSubtypeForTreasure.Add(creature.Type.Name);
             usesSubtypeForTreasure.Add(creature.Type.SubType.Name);
 
-            mockAdjustmentSelector.Setup(s => s.SelectDouble(TableNameConstants.TreasureAdjustments, creature.Type.SubType.SubType.Name, TreasureConstants.Coin)).Returns(2);
-            mockAdjustmentSelector.Setup(s => s.SelectDouble(TableNameConstants.TreasureAdjustments, creature.Type.SubType.SubType.Name, TreasureConstants.Goods)).Returns(2);
-            mockAdjustmentSelector.Setup(s => s.SelectDouble(TableNameConstants.TreasureAdjustments, creature.Type.SubType.SubType.Name, TreasureConstants.Items)).Returns(2);
+            var subSubtypeTreasureRates = new TreasureRatesSelection();
+            subSubtypeTreasureRates.Coin = 2;
+            subSubtypeTreasureRates.Goods = 2;
+            subSubtypeTreasureRates.Items = 2;
+
+            mockTreasureAdjustmentSelector.Setup(s => s.SelectFor(creature.Type.SubType.SubType.Name)).Returns(subSubtypeTreasureRates);
 
             var secondGoods = new[] { new Good(), new Good() };
             mockGoodsGenerator.SetupSequence(g => g.GenerateAtLevel(level)).Returns(goods).Returns(secondGoods);
@@ -381,10 +529,18 @@ namespace EncounterGen.Tests.Unit.Generators
             var secondItems = new[] { new Item(), new Item() };
             mockItemsGenerator.SetupSequence(g => g.GenerateAtLevel(level)).Returns(items).Returns(secondItems);
 
-            var treasure = encounterTreasureGenerator.GenerateFor(creature, level);
+            var treasures = encounterTreasureGenerator.GenerateFor(creatures, level);
+            Assert.That(treasures, Is.Not.Null);
+            Assert.That(treasures, Is.Not.Empty);
+
+            var treasure = treasures.Single();
             Assert.That(treasure.Coin.Currency, Is.EqualTo("currency"));
             Assert.That(treasure.Coin.Quantity, Is.EqualTo(1200));
+            Assert.That(treasure.Goods, Is.SupersetOf(goods));
+            Assert.That(treasure.Goods, Is.SupersetOf(secondGoods));
             Assert.That(treasure.Goods.Count, Is.EqualTo(4));
+            Assert.That(treasure.Items, Is.SupersetOf(items));
+            Assert.That(treasure.Items, Is.SupersetOf(secondItems));
             Assert.That(treasure.Items.Count, Is.EqualTo(4));
         }
 
@@ -413,9 +569,19 @@ namespace EncounterGen.Tests.Unit.Generators
             mockMundaneItemGenerator.Setup(g => g.GenerateFrom(template1, true)).Returns(setItem);
             mockOtherMundaneItemGenerator.Setup(g => g.GenerateFrom(template2, true)).Returns(otherSetItem);
 
-            var treasure = encounterTreasureGenerator.GenerateFor(creature, level);
+            var treasures = encounterTreasureGenerator.GenerateFor(creatures, level);
+            Assert.That(treasures, Is.Not.Null);
+            Assert.That(treasures, Is.Not.Empty);
+
+            var treasure = treasures.Single();
+            Assert.That(treasure.Coin.Currency, Is.EqualTo("currency"));
+            Assert.That(treasure.Coin.Quantity, Is.EqualTo(600));
+            Assert.That(treasure.Goods, Is.SupersetOf(goods));
+            Assert.That(treasure.Goods.Count, Is.EqualTo(2));
+            Assert.That(treasure.Items, Is.SupersetOf(items));
             Assert.That(treasure.Items, Contains.Item(setItem));
             Assert.That(treasure.Items, Contains.Item(otherSetItem));
+            Assert.That(treasure.Items.Count, Is.EqualTo(4));
         }
 
         [Test]
@@ -445,9 +611,19 @@ namespace EncounterGen.Tests.Unit.Generators
             mockMagicalItemGenerator.Setup(g => g.Generate(template1, true)).Returns(setItem);
             mockOtherMagicalItemGenerator.Setup(g => g.Generate(template2, true)).Returns(otherSetItem);
 
-            var treasure = encounterTreasureGenerator.GenerateFor(creature, level);
+            var treasures = encounterTreasureGenerator.GenerateFor(creatures, level);
+            Assert.That(treasures, Is.Not.Null);
+            Assert.That(treasures, Is.Not.Empty);
+
+            var treasure = treasures.Single();
+            Assert.That(treasure.Coin.Currency, Is.EqualTo("currency"));
+            Assert.That(treasure.Coin.Quantity, Is.EqualTo(600));
+            Assert.That(treasure.Goods, Is.SupersetOf(goods));
+            Assert.That(treasure.Goods.Count, Is.EqualTo(2));
+            Assert.That(treasure.Items, Is.SupersetOf(items));
             Assert.That(treasure.Items, Contains.Item(setItem));
             Assert.That(treasure.Items, Contains.Item(otherSetItem));
+            Assert.That(treasure.Items.Count, Is.EqualTo(4));
         }
 
         [Test]
@@ -475,9 +651,19 @@ namespace EncounterGen.Tests.Unit.Generators
 
             creature.Quantity = 42;
 
-            var treasure = encounterTreasureGenerator.GenerateFor(creature, level);
+            var treasures = encounterTreasureGenerator.GenerateFor(creatures, level);
+            Assert.That(treasures, Is.Not.Null);
+            Assert.That(treasures, Is.Not.Empty);
+
+            var treasure = treasures.Single();
+            Assert.That(treasure.Coin.Currency, Is.EqualTo("currency"));
+            Assert.That(treasure.Coin.Quantity, Is.EqualTo(600));
+            Assert.That(treasure.Goods, Is.SupersetOf(goods));
+            Assert.That(treasure.Goods.Count, Is.EqualTo(2));
+            Assert.That(treasure.Items, Is.SupersetOf(items));
             Assert.That(treasure.Items.Count(i => i.ItemType == "item type"), Is.EqualTo(42));
             Assert.That(treasure.Items.Count(i => i.ItemType == "other item type"), Is.EqualTo(42));
+            Assert.That(treasure.Items.Count, Is.EqualTo(86));
         }
 
         [Test]
@@ -485,9 +671,12 @@ namespace EncounterGen.Tests.Unit.Generators
         {
             usesSubtypeForTreasure.Add(creature.Type.Name);
 
-            mockAdjustmentSelector.Setup(s => s.SelectDouble(TableNameConstants.TreasureAdjustments, creature.Type.SubType.Name, TreasureConstants.Coin)).Returns(2);
-            mockAdjustmentSelector.Setup(s => s.SelectDouble(TableNameConstants.TreasureAdjustments, creature.Type.SubType.Name, TreasureConstants.Goods)).Returns(2);
-            mockAdjustmentSelector.Setup(s => s.SelectDouble(TableNameConstants.TreasureAdjustments, creature.Type.SubType.Name, TreasureConstants.Items)).Returns(2);
+            var subtypeTreasureRates = new TreasureRatesSelection();
+            subtypeTreasureRates.Coin = 2;
+            subtypeTreasureRates.Goods = 2;
+            subtypeTreasureRates.Items = 2;
+
+            mockTreasureAdjustmentSelector.Setup(s => s.SelectFor(creature.Type.SubType.Name)).Returns(subtypeTreasureRates);
 
             var secondGoods = new[] { new Good(), new Good() };
             mockGoodsGenerator.SetupSequence(g => g.GenerateAtLevel(level)).Returns(goods).Returns(secondGoods);
@@ -517,17 +706,21 @@ namespace EncounterGen.Tests.Unit.Generators
             mockMundaneItemGenerator.Setup(g => g.GenerateFrom(template1, true)).Returns(setItem);
             mockOtherMundaneItemGenerator.Setup(g => g.GenerateFrom(template2, true)).Returns(otherSetItem);
 
-            var treasure = encounterTreasureGenerator.GenerateFor(creature, level);
+            var treasures = encounterTreasureGenerator.GenerateFor(creatures, level);
+            Assert.That(treasures, Is.Not.Null);
+            Assert.That(treasures, Is.Not.Empty);
+
+            var treasure = treasures.Single();
             Assert.That(treasure.Coin.Currency, Is.EqualTo("currency"));
             Assert.That(treasure.Coin.Quantity, Is.EqualTo(1200));
+            Assert.That(treasure.Goods, Is.SupersetOf(goods));
+            Assert.That(treasure.Goods, Is.SupersetOf(secondGoods));
             Assert.That(treasure.Goods.Count, Is.EqualTo(4));
-            Assert.That(treasure.Items.Count, Is.EqualTo(6));
-            Assert.That(secondGoods, Is.SubsetOf(treasure.Goods));
-            Assert.That(goods, Is.SubsetOf(treasure.Goods));
-            Assert.That(items, Is.SubsetOf(treasure.Items));
-            Assert.That(secondItems, Is.SubsetOf(treasure.Items));
+            Assert.That(treasure.Items, Is.SupersetOf(items));
+            Assert.That(treasure.Items, Is.SupersetOf(secondItems));
             Assert.That(treasure.Items, Contains.Item(setItem));
             Assert.That(treasure.Items, Contains.Item(otherSetItem));
+            Assert.That(treasure.Items.Count, Is.EqualTo(6));
         }
 
         [Test]
@@ -539,9 +732,12 @@ namespace EncounterGen.Tests.Unit.Generators
             usesSubtypeForTreasure.Add(creature.Type.Name);
             usesSubtypeForTreasure.Add(creature.Type.SubType.Name);
 
-            mockAdjustmentSelector.Setup(s => s.SelectDouble(TableNameConstants.TreasureAdjustments, creature.Type.SubType.SubType.Name, TreasureConstants.Coin)).Returns(2);
-            mockAdjustmentSelector.Setup(s => s.SelectDouble(TableNameConstants.TreasureAdjustments, creature.Type.SubType.SubType.Name, TreasureConstants.Goods)).Returns(2);
-            mockAdjustmentSelector.Setup(s => s.SelectDouble(TableNameConstants.TreasureAdjustments, creature.Type.SubType.SubType.Name, TreasureConstants.Items)).Returns(2);
+            var subSubtypeTreasureRates = new TreasureRatesSelection();
+            subSubtypeTreasureRates.Coin = 2;
+            subSubtypeTreasureRates.Goods = 2;
+            subSubtypeTreasureRates.Items = 2;
+
+            mockTreasureAdjustmentSelector.Setup(s => s.SelectFor(creature.Type.SubType.SubType.Name)).Returns(subSubtypeTreasureRates);
 
             var secondGoods = new[] { new Good(), new Good() };
             mockGoodsGenerator.SetupSequence(g => g.GenerateAtLevel(level)).Returns(goods).Returns(secondGoods);
@@ -570,17 +766,22 @@ namespace EncounterGen.Tests.Unit.Generators
             var otherSetItem = new Item();
             mockMundaneItemGenerator.Setup(g => g.GenerateFrom(template1, true)).Returns(setItem);
             mockOtherMundaneItemGenerator.Setup(g => g.GenerateFrom(template2, true)).Returns(otherSetItem);
-            var treasure = encounterTreasureGenerator.GenerateFor(creature, level);
+
+            var treasures = encounterTreasureGenerator.GenerateFor(creatures, level);
+            Assert.That(treasures, Is.Not.Null);
+            Assert.That(treasures, Is.Not.Empty);
+
+            var treasure = treasures.Single();
             Assert.That(treasure.Coin.Currency, Is.EqualTo("currency"));
             Assert.That(treasure.Coin.Quantity, Is.EqualTo(1200));
+            Assert.That(treasure.Goods, Is.SupersetOf(goods));
+            Assert.That(treasure.Goods, Is.SupersetOf(secondGoods));
             Assert.That(treasure.Goods.Count, Is.EqualTo(4));
-            Assert.That(treasure.Items.Count, Is.EqualTo(6));
-            Assert.That(secondGoods, Is.SubsetOf(treasure.Goods));
-            Assert.That(goods, Is.SubsetOf(treasure.Goods));
-            Assert.That(items, Is.SubsetOf(treasure.Items));
-            Assert.That(secondItems, Is.SubsetOf(treasure.Items));
+            Assert.That(treasure.Items, Is.SupersetOf(items));
+            Assert.That(treasure.Items, Is.SupersetOf(secondItems));
             Assert.That(treasure.Items, Contains.Item(setItem));
             Assert.That(treasure.Items, Contains.Item(otherSetItem));
+            Assert.That(treasure.Items.Count, Is.EqualTo(6));
         }
     }
 }

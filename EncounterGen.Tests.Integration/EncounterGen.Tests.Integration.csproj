@@ -41,11 +41,11 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="CharacterGen, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\CharacterGen.9.0.0\lib\CharacterGen.dll</HintPath>
+      <HintPath>..\packages\CharacterGen.9.0.2\lib\CharacterGen.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="CharacterGen.Domain, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\CharacterGen.Domain.9.0.0\lib\CharacterGen.Domain.dll</HintPath>
+      <HintPath>..\packages\CharacterGen.Domain.9.0.2\lib\CharacterGen.Domain.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="EventGen, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">

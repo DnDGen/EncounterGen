@@ -12,8 +12,15 @@ namespace EncounterGen.Domain.IoC.Modules
             Bind<IEncounterGenerator>().To<EncounterGenerator>().WhenInjectedInto<EncounterGeneratorEventDecorator>();
             Bind<IEncounterGenerator>().To<EncounterGeneratorEventDecorator>();
 
-            Bind<IEncounterCharacterGenerator>().ToProvider<EncounterCharacterGeneratorProvider>();
-            Bind<IEncounterTreasureGenerator>().To<EncounterTreasureGenerator>();
+            Bind<ICreatureGenerator>().To<CreatureGenerator>().WhenInjectedInto<CreatureGeneratorEventDecorator>();
+            Bind<ICreatureGenerator>().To<CreatureGeneratorEventDecorator>();
+
+            Bind<IEncounterCharacterGenerator>().ToProvider<EncounterCharacterGeneratorProvider>().WhenInjectedInto<EncounterCharacterGeneratorEventDecorator>();
+            Bind<IEncounterCharacterGenerator>().To<EncounterCharacterGeneratorEventDecorator>();
+
+            Bind<IEncounterTreasureGenerator>().To<EncounterTreasureGenerator>().WhenInjectedInto<EncounterTreasureGeneratorEventDecorator>();
+            Bind<IEncounterTreasureGenerator>().To<EncounterTreasureGeneratorEventDecorator>();
+
             Bind<IEncounterVerifier>().To<EncounterVerifier>();
         }
     }

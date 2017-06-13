@@ -20,9 +20,27 @@ namespace EncounterGen.Tests.Integration.IoC.Modules
         }
 
         [Test]
+        public void CreatureGeneratorIsNotASingleton()
+        {
+            AssertNotSingleton<ICreatureGenerator>();
+        }
+
+        [Test]
+        public void CreatureGeneratorIsDecorated()
+        {
+            AssertInstanceOf<ICreatureGenerator, CreatureGeneratorEventDecorator>();
+        }
+
+        [Test]
         public void EncounterCharacterGeneratorIsNotASingleton()
         {
             AssertNotSingleton<IEncounterCharacterGenerator>();
+        }
+
+        [Test]
+        public void EncounterCharacterGeneratorIsDecorated()
+        {
+            AssertInstanceOf<IEncounterCharacterGenerator, EncounterCharacterGeneratorEventDecorator>();
         }
 
         [Test]
@@ -32,7 +50,13 @@ namespace EncounterGen.Tests.Integration.IoC.Modules
         }
 
         [Test]
-        public void FilterVerifierIsNotASingleton()
+        public void EncounterTreasureGeneratorIsDecorated()
+        {
+            AssertInstanceOf<IEncounterTreasureGenerator, EncounterTreasureGeneratorEventDecorator>();
+        }
+
+        [Test]
+        public void EncounterVerifierIsNotASingleton()
         {
             AssertNotSingleton<IEncounterVerifier>();
         }

@@ -11,14 +11,14 @@ namespace EncounterGen.Tests.Unit.Generators
     [TestFixture]
     public class EncounterGeneratorEventDecoratorTests
     {
-        private IEncounterGenerator eventDecorator;
-        private Mock<IEncounterGenerator> mockInternalGenerator;
+        private EncounterGen.Generators.IEncounterGenerator eventDecorator;
+        private Mock<EncounterGen.Generators.IEncounterGenerator> mockInternalGenerator;
         private Mock<GenEventQueue> mockEventQueue;
 
         [SetUp]
         public void Setup()
         {
-            mockInternalGenerator = new Mock<IEncounterGenerator>();
+            mockInternalGenerator = new Mock<EncounterGen.Generators.IEncounterGenerator>();
             mockEventQueue = new Mock<GenEventQueue>();
 
             eventDecorator = new EncounterGeneratorEventDecorator(mockInternalGenerator.Object, mockEventQueue.Object);

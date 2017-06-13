@@ -5,12 +5,12 @@ using System.Linq;
 
 namespace EncounterGen.Domain.Generators
 {
-    internal class EncounterGeneratorEventDecorator : IEncounterGenerator
+    internal class EncounterGeneratorEventDecorator : EncounterGen.Generators.IEncounterGenerator
     {
-        private readonly IEncounterGenerator internalGenerator;
+        private readonly EncounterGen.Generators.IEncounterGenerator internalGenerator;
         private readonly GenEventQueue eventQueue;
 
-        public EncounterGeneratorEventDecorator(IEncounterGenerator internalGenerator, GenEventQueue eventQueue)
+        public EncounterGeneratorEventDecorator(EncounterGen.Generators.IEncounterGenerator internalGenerator, GenEventQueue eventQueue)
         {
             this.internalGenerator = internalGenerator;
             this.eventQueue = eventQueue;

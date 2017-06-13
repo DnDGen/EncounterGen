@@ -27,9 +27,9 @@ namespace EncounterGen.Tests.Integration.IoC.Modules
         }
 
         [Test]
-        public void AdjustmentSelectorIsNotASingleton()
+        public void TreasureAdjustmentSelectorIsNotASingleton()
         {
-            AssertNotSingleton<IAdjustmentSelector>();
+            AssertNotSingleton<ITreasureAdjustmentSelector>();
         }
 
         [Test]

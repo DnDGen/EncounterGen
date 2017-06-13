@@ -395,7 +395,7 @@ namespace EncounterGen.Tests.Integration.Stress
         [TestCase(DifficultyConstants.Challenging)]
         [TestCase(DifficultyConstants.VeryDifficult)]
         [TestCase(DifficultyConstants.Overpowering)]
-        [Ignore("Stressing specific average difficulties causes too many tests for random generation to have sufficient time to consistently succeed")]
+        [Ignore("Stressing specific average difficulties, notably Very Easy and Overpowering, are too rare to occur within the time limit")]
         public void AverageEncounterDifficultyHappens(string difficulty)
         {
             var encounter = GenerateOrFail(() => MakeEncounterInRandomEnvironment(), e => e.AverageDifficulty == difficulty);
@@ -408,7 +408,7 @@ namespace EncounterGen.Tests.Integration.Stress
         [TestCase(DifficultyConstants.Challenging)]
         [TestCase(DifficultyConstants.VeryDifficult)]
         [TestCase(DifficultyConstants.Overpowering)]
-        [Ignore("Stressing specific actual difficulties causes too many tests for random generation to have sufficient time to consistently succeed")]
+        [Ignore("Stressing specific actual difficulties, notably Very Easy and Overpowering, are too rare to occur within the time limit")]
         public void ActualEncounterDifficultyHappens(string difficulty)
         {
             var encounter = GenerateOrFail(() => MakeEncounterInRandomEnvironment(), e => e.ActualDifficulty == difficulty);

@@ -9,17 +9,19 @@ namespace EncounterGen.Domain.IoC.Modules
     {
         public override void Load()
         {
-            Bind<IAdjustmentSelector>().To<AdjustmentSelector>();
+            Bind<ITreasureAdjustmentSelector>().To<TreasureAdjustmentSelector>();
             Bind<IEncounterSelector>().To<EncounterSelector>();
             Bind<IAmountSelector>().To<AmountSelector>();
             Bind<IPercentileSelector>().To<PercentileSelector>();
             Bind<IBooleanPercentileSelector>().To<BooleanPercentileSelector>();
             Bind<IItemSelector>().To<ItemSelector>();
 
-            Bind<ICollectionSelector>().To<CollectionSelector>().WhenInjectedInto<CollectionSelectorCachingProxy>();
+            Bind<ICollectionSelector>().To<CollectionSelector>().WhenInjectedInto<CollectionSelectorEventDecorator>();
+            Bind<ICollectionSelector>().To<CollectionSelectorEventDecorator>().WhenInjectedInto<CollectionSelectorCachingProxy>();
             Bind<ICollectionSelector>().To<CollectionSelectorCachingProxy>().InSingletonScope();
 
-            Bind<IEncounterCollectionSelector>().To<EncounterCollectionSelector>().WhenInjectedInto<EncounterCollectionSelectorCachingProxy>();
+            Bind<IEncounterCollectionSelector>().To<EncounterCollectionSelector>().WhenInjectedInto<EncounterCollectionSelectorEventDecorator>();
+            Bind<IEncounterCollectionSelector>().To<EncounterCollectionSelectorEventDecorator>().WhenInjectedInto<EncounterCollectionSelectorCachingProxy>();
             Bind<IEncounterCollectionSelector>().To<EncounterCollectionSelectorCachingProxy>().InSingletonScope();
         }
     }
