@@ -1,16 +1,16 @@
 <?xml version="1.0"?>
 <package >
   <metadata>
-    <id>EncounterGen.Domain</id>
-    <version>2.0.0</version>
-    <title>EncounterGen.Domain</title>
+    <id>EncounterGen</id>
+    <version>3.0.1</version>
+    <title>EncounterGen</title>
     <authors>Karl M. Speer</authors>
     <owners>cidthecoatrack</owners>
     <description>
-      This is the Ninject-based bootstrapper for EncounterGen
+      This generates encounters for the Dungeons and Dragons 3.5 system.  One can generate encounters of particular levels, times of day, and environments.  One can also filter creature types.  Treasure and equipment are generated.
     </description>
     <releaseNotes>
-      Bug #33, Features #21, #27, #29
+      Bug #41, Features #16, #22, #23, #37
     </releaseNotes>
     <summary>
       This generates encounters for the Dungeons and Dragons 3.5 system.
@@ -22,16 +22,13 @@
     <licenseUrl>http://opensource.org/licenses/Apache-2.0</licenseUrl>
     <copyright>Copyright 2016</copyright>
     <dependencies>
-      <dependency id="EncounterGen" version="2.0.0" />
-      <dependency id="CharacterGen" version="7.0.0" />
-      <dependency id="DnDGen.TreasureGen" version="5.0.0" />
-      <dependency id="DnDGen.RollGen" version="12.2.0" />
-      <dependency id="Ninject" version="3.2.2" />
+      <dependency id="CharacterGen" version="9.0.0" />
+      <dependency id="DnDGen.TreasureGen" version="7.1.0" />
     </dependencies>
     <references></references>
     <tags> encounter npc character equipment treasure generator dice dungeons dragons d20 dnd 3.5 gen </tags>
   </metadata>
   <files>
-    <file src="..\EncounterGen.Domain\bin\Debug\EncounterGen.Domain.dll" target="lib" />
+    <file src="bin/Debug/EncounterGen.dll" target="lib" />
   </files>
 </package>

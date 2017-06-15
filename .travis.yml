@@ -9,3 +9,9 @@ script:
   - mono ./testrunner/NUnit.ConsoleRunner.*/tools/nunit3-console.exe ./EncounterGen.Tests.Integration.IoC/bin/Stress/EncounterGen.Tests.Integration.IoC.dll
   - mono ./testrunner/NUnit.ConsoleRunner.*/tools/nunit3-console.exe ./EncounterGen.Tests.Integration.Tables/bin/Stress/EncounterGen.Tests.Integration.Tables.dll
   - mono ./testrunner/NUnit.ConsoleRunner.*/tools/nunit3-console.exe ./EncounterGen.Tests.Integration.Stress/bin/Stress/EncounterGen.Tests.Integration.Stress.dll
+deploy:
+  skip_cleanup: true
+  provider: script
+  script: chmod +x ./deploy/deploy.sh && ./deploy/deploy.sh $NUGET_API_KEY $NUGET_SOURCE
+  on:
+    branch: master
