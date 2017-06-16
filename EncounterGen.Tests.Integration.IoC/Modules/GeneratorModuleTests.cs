@@ -1,6 +1,13 @@
-﻿using EncounterGen.Domain.Generators;
+﻿using CharacterGen.Characters;
+using EncounterGen.Domain.Generators;
 using EncounterGen.Generators;
 using NUnit.Framework;
+using TreasureGen.Coins;
+using TreasureGen.Generators;
+using TreasureGen.Goods;
+using TreasureGen.Items;
+using TreasureGen.Items.Magical;
+using TreasureGen.Items.Mundane;
 
 namespace EncounterGen.Tests.Integration.IoC.Modules
 {
@@ -59,6 +66,48 @@ namespace EncounterGen.Tests.Integration.IoC.Modules
         public void EncounterVerifierIsNotASingleton()
         {
             AssertNotSingleton<IEncounterVerifier>();
+        }
+
+        [Test]
+        public void EXTERNAL_CharacterGeneratorIsInjected()
+        {
+            AssertNotSingleton<ICharacterGenerator>();
+        }
+
+        [Test]
+        public void EXTERNAL_TreasureGeneratorIsInjected()
+        {
+            AssertNotSingleton<ITreasureGenerator>();
+        }
+
+        [Test]
+        public void EXTERNAL_CoinGeneratorIsInjected()
+        {
+            AssertNotSingleton<ICoinGenerator>();
+        }
+
+        [Test]
+        public void EXTERNAL_GoodsGeneratorIsInjected()
+        {
+            AssertNotSingleton<IGoodsGenerator>();
+        }
+
+        [Test]
+        public void EXTERNAL_ItemsGeneratorIsInjected()
+        {
+            AssertNotSingleton<IItemsGenerator>();
+        }
+
+        [Test]
+        public void EXTERNAL_MagicalItemGeneratorFactoryIsInjected()
+        {
+            AssertNotSingleton<IMagicalItemGeneratorFactory>();
+        }
+
+        [Test]
+        public void EXTERNAL_MundaneItemGeneratorFactoryIsInjected()
+        {
+            AssertNotSingleton<IMundaneItemGeneratorFactory>();
         }
     }
 }

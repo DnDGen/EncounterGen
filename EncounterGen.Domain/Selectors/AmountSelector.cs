@@ -13,9 +13,9 @@ namespace EncounterGen.Domain.Selectors
     {
         private const double EncounterLevelCoefficient = 2.885;
 
-        private Dice dice;
-        private ICollectionSelector collectionSelector;
-        private IEncounterSelector encounterSelector;
+        private readonly Dice dice;
+        private readonly ICollectionSelector collectionSelector;
+        private readonly IEncounterSelector encounterSelector;
 
         public AmountSelector(Dice dice, ICollectionSelector collectionSelector, IEncounterSelector encounterSelector)
         {
@@ -31,14 +31,13 @@ namespace EncounterGen.Domain.Selectors
 
         public int SelectAverageEncounterLevel(string encounter)
         {
-            var encounterCreaturesAndAmounts = encounter.Split(',');
+            var creaturesAndAmounts = encounterSelector.SelectCreaturesAndAmountsFrom(encounter);
             var challengeRatingsAndAmounts = new Dictionary<string, string>();
 
-            foreach (var creatureAndAmount in encounterCreaturesAndAmounts)
+            foreach (var kvp in creaturesAndAmounts)
             {
-                var sources = creatureAndAmount.Split('/');
-                var creature = sources[0];
-                var amount = sources[1];
+                var creature = kvp.Key;
+                var amount = kvp.Value;
                 var challengeRating = collectionSelector.SelectFrom(TableNameConstants.AverageChallengeRatings, creature).Single();
 
                 if (challengeRatingsAndAmounts.ContainsKey(challengeRating))
@@ -120,25 +119,24 @@ namespace EncounterGen.Domain.Selectors
         {
             var challengeRatingsAndAmounts = new Dictionary<string, int>();
 
-            foreach (var creature in encounter.Creatures)
-            {
-                if (IsCharacter(creature.Type))
-                    continue;
+            var nonCharacterCreatures = encounter.Creatures.Where(c => !IsCharacter(c.Type));
 
-                if (challengeRatingsAndAmounts.ContainsKey(creature.ChallengeRating))
-                    challengeRatingsAndAmounts[creature.ChallengeRating] += creature.Quantity;
-                else
-                    challengeRatingsAndAmounts[creature.ChallengeRating] = creature.Quantity;
+            foreach (var creature in nonCharacterCreatures)
+            {
+                if (!challengeRatingsAndAmounts.ContainsKey(creature.ChallengeRating))
+                    challengeRatingsAndAmounts[creature.ChallengeRating] = 0;
+
+                challengeRatingsAndAmounts[creature.ChallengeRating] += creature.Quantity;
             }
 
             foreach (var character in encounter.Characters)
             {
                 var characterChallengeRating = GetCharacterChallengeRating(character);
 
-                if (challengeRatingsAndAmounts.ContainsKey(characterChallengeRating))
-                    challengeRatingsAndAmounts[characterChallengeRating]++;
-                else
-                    challengeRatingsAndAmounts[characterChallengeRating] = 1;
+                if (!challengeRatingsAndAmounts.ContainsKey(characterChallengeRating))
+                    challengeRatingsAndAmounts[characterChallengeRating] = 0;
+
+                challengeRatingsAndAmounts[characterChallengeRating]++;
             }
 
             var formattedChallengeRatingsAndAmounts = challengeRatingsAndAmounts.ToDictionary(kvp => kvp.Key, kvp => kvp.Value.ToString());

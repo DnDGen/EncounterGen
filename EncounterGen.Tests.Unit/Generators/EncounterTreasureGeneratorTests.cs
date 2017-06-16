@@ -1,5 +1,6 @@
 ﻿using EncounterGen.Common;
 using EncounterGen.Domain.Generators;
+using EncounterGen.Domain.Generators.Factories;
 using EncounterGen.Domain.Selectors;
 using EncounterGen.Domain.Selectors.Collections;
 using EncounterGen.Domain.Selectors.Percentiles;
@@ -35,9 +36,10 @@ namespace EncounterGen.Tests.Unit.Generators
         private List<Item> items;
         private Coin coin;
         private List<string> usesSubtypeForTreasure;
-        private Mock<IMagicalItemGeneratorRuntimeFactory> mockMagicalItemGeneratorFactory;
-        private Mock<IMundaneItemGeneratorRuntimeFactory> mockMundaneItemGeneratorFactory;
+        private Mock<IMagicalItemGeneratorFactory> mockMagicalItemGeneratorFactory;
+        private Mock<IMundaneItemGeneratorFactory> mockMundaneItemGeneratorFactory;
         private Mock<IItemSelector> mockItemSelector;
+        private Mock<JustInTimeFactory> mockJustInTimeFactory;
 
         [SetUp]
         public void Setup()
@@ -48,20 +50,12 @@ namespace EncounterGen.Tests.Unit.Generators
             mockTreasureAdjustmentSelector = new Mock<ITreasureAdjustmentSelector>();
             mockBooleanPercentileSelector = new Mock<IBooleanPercentileSelector>();
             mockCollectionSelector = new Mock<ICollectionSelector>();
-            mockMagicalItemGeneratorFactory = new Mock<IMagicalItemGeneratorRuntimeFactory>();
-            mockMundaneItemGeneratorFactory = new Mock<IMundaneItemGeneratorRuntimeFactory>();
+            mockMagicalItemGeneratorFactory = new Mock<IMagicalItemGeneratorFactory>();
+            mockMundaneItemGeneratorFactory = new Mock<IMundaneItemGeneratorFactory>();
             mockItemSelector = new Mock<IItemSelector>();
+            mockJustInTimeFactory = new Mock<JustInTimeFactory>();
 
-            encounterTreasureGenerator = new EncounterTreasureGenerator(
-                mockCoinGenerator.Object,
-                mockGoodsGenerator.Object,
-                mockItemsGenerator.Object,
-                mockTreasureAdjustmentSelector.Object,
-                mockBooleanPercentileSelector.Object,
-                mockCollectionSelector.Object,
-                mockMagicalItemGeneratorFactory.Object,
-                mockMundaneItemGeneratorFactory.Object,
-                mockItemSelector.Object);
+            encounterTreasureGenerator = new EncounterTreasureGenerator(mockTreasureAdjustmentSelector.Object, mockBooleanPercentileSelector.Object, mockCollectionSelector.Object, mockItemSelector.Object, mockJustInTimeFactory.Object);
 
             creature = new Creature();
             usesSubtypeForTreasure = new List<string>();
@@ -89,6 +83,12 @@ namespace EncounterGen.Tests.Unit.Generators
             mockItemsGenerator.Setup(g => g.GenerateAtLevel(level)).Returns(items);
 
             mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.CreatureGroups, GroupConstants.UseSubtypeForTreasure)).Returns(usesSubtypeForTreasure);
+
+            mockJustInTimeFactory.Setup(f => f.Build<ICoinGenerator>()).Returns(mockCoinGenerator.Object);
+            mockJustInTimeFactory.Setup(f => f.Build<IGoodsGenerator>()).Returns(mockGoodsGenerator.Object);
+            mockJustInTimeFactory.Setup(f => f.Build<IItemsGenerator>()).Returns(mockItemsGenerator.Object);
+            mockJustInTimeFactory.Setup(f => f.Build<IMundaneItemGeneratorFactory>()).Returns(mockMundaneItemGeneratorFactory.Object);
+            mockJustInTimeFactory.Setup(f => f.Build<IMagicalItemGeneratorFactory>()).Returns(mockMagicalItemGeneratorFactory.Object);
         }
 
         [Test]

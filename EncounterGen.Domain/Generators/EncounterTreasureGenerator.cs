@@ -1,4 +1,5 @@
 ﻿using EncounterGen.Common;
+using EncounterGen.Domain.Generators.Factories;
 using EncounterGen.Domain.Selectors;
 using EncounterGen.Domain.Selectors.Collections;
 using EncounterGen.Domain.Selectors.Percentiles;
@@ -18,36 +19,19 @@ namespace EncounterGen.Domain.Generators
 {
     internal class EncounterTreasureGenerator : IEncounterTreasureGenerator
     {
-        private readonly ICoinGenerator coinGenerator;
-        private readonly IGoodsGenerator goodsGenerator;
-        private readonly IItemsGenerator itemsGenerator;
         private readonly ITreasureAdjustmentSelector treasureAdjustmentSelector;
         private readonly IBooleanPercentileSelector booleanPercentileSelector;
         private readonly ICollectionSelector collectionSelector;
-        private readonly IMagicalItemGeneratorRuntimeFactory magicalItemGeneratorRuntimeFactory;
-        private readonly IMundaneItemGeneratorRuntimeFactory mundaneItemGeneratorRuntimeFactory;
         private readonly IItemSelector itemSelector;
+        private readonly JustInTimeFactory justInTimeFactory;
 
-        public EncounterTreasureGenerator(
-            ICoinGenerator coinGenerator,
-            IGoodsGenerator goodsGenerator,
-            IItemsGenerator itemsGenerator,
-            ITreasureAdjustmentSelector treasureAdjustmentSelector,
-            IBooleanPercentileSelector booleanPercentileSelector,
-            ICollectionSelector collectionSelector,
-            IMagicalItemGeneratorRuntimeFactory magicalItemGeneratorRuntimeFactory,
-            IMundaneItemGeneratorRuntimeFactory mundaneItemGeneratorRuntimeFactory,
-            IItemSelector itemSelector)
+        public EncounterTreasureGenerator(ITreasureAdjustmentSelector treasureAdjustmentSelector, IBooleanPercentileSelector booleanPercentileSelector, ICollectionSelector collectionSelector, IItemSelector itemSelector, JustInTimeFactory justInTimeFactory)
         {
-            this.coinGenerator = coinGenerator;
-            this.goodsGenerator = goodsGenerator;
-            this.itemsGenerator = itemsGenerator;
             this.treasureAdjustmentSelector = treasureAdjustmentSelector;
             this.booleanPercentileSelector = booleanPercentileSelector;
             this.collectionSelector = collectionSelector;
-            this.magicalItemGeneratorRuntimeFactory = magicalItemGeneratorRuntimeFactory;
-            this.mundaneItemGeneratorRuntimeFactory = mundaneItemGeneratorRuntimeFactory;
             this.itemSelector = itemSelector;
+            this.justInTimeFactory = justInTimeFactory;
         }
 
         public IEnumerable<Treasure> GenerateFor(IEnumerable<Creature> creatures, int level)
@@ -80,6 +64,7 @@ namespace EncounterGen.Domain.Generators
 
         private Coin GetCoin(TreasureRatesSelection treasureRates, int level)
         {
+            var coinGenerator = justInTimeFactory.Build<ICoinGenerator>();
             var coin = coinGenerator.GenerateAtLevel(level);
 
             var rawQuantity = treasureRates.Coin * coin.Quantity;
@@ -91,6 +76,7 @@ namespace EncounterGen.Domain.Generators
         private IEnumerable<Good> GetGoods(TreasureRatesSelection treasureRates, int level)
         {
             var goods = new List<Good>();
+            var goodsGenerator = justInTimeFactory.Build<IGoodsGenerator>();
 
             while (booleanPercentileSelector.SelectFrom(treasureRates.Goods--))
             {
@@ -104,6 +90,7 @@ namespace EncounterGen.Domain.Generators
         private IEnumerable<Item> GetItems(TreasureRatesSelection treasureRates, int level, string creatureName, int quantity)
         {
             var items = new List<Item>();
+            var itemsGenerator = justInTimeFactory.Build<IItemsGenerator>();
 
             while (booleanPercentileSelector.SelectFrom(treasureRates.Items--))
             {
@@ -137,14 +124,16 @@ namespace EncounterGen.Domain.Generators
 
         private Item GetItemFrom(Item template)
         {
-            if (template.IsMagical == false)
+            if (template.IsMagical)
             {
-                var mundaneGenerator = mundaneItemGeneratorRuntimeFactory.CreateGeneratorOf(template.ItemType);
-                return mundaneGenerator.GenerateFrom(template, true);
+                var magicalItemGeneratorFactory = justInTimeFactory.Build<IMagicalItemGeneratorFactory>();
+                var magicalGenerator = magicalItemGeneratorFactory.CreateGeneratorOf(template.ItemType);
+                return magicalGenerator.Generate(template, true);
             }
 
-            var magicalGenerator = magicalItemGeneratorRuntimeFactory.CreateGeneratorOf(template.ItemType);
-            return magicalGenerator.Generate(template, true);
+            var mundaneItemGeneratorFactory = justInTimeFactory.Build<IMundaneItemGeneratorFactory>();
+            var mundaneGenerator = mundaneItemGeneratorFactory.CreateGeneratorOf(template.ItemType);
+            return mundaneGenerator.GenerateFrom(template, true);
         }
 
         private IEnumerable<Item> GetTemplates(IEnumerable<string> setTreasure)

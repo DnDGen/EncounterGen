@@ -5,6 +5,7 @@ using CharacterGen.Randomizers.CharacterClasses;
 using CharacterGen.Randomizers.Races;
 using EncounterGen.Common;
 using EncounterGen.Domain.Generators;
+using EncounterGen.Domain.Generators.Factories;
 using EncounterGen.Domain.Selectors;
 using EncounterGen.Domain.Selectors.Collections;
 using Moq;
@@ -35,6 +36,7 @@ namespace EncounterGen.Tests.Unit.Generators
         private Mock<Dice> mockDice;
         private Mock<IEncounterSelector> mockEncounterSelector;
         private List<Creature> creatures;
+        private Mock<JustInTimeFactory> mockJustInTimeFactory;
 
         [SetUp]
         public void Setup()
@@ -53,22 +55,9 @@ namespace EncounterGen.Tests.Unit.Generators
             mockDice = new Mock<Dice>();
             mockEncounterSelector = new Mock<IEncounterSelector>();
             mockSetBaseRaceRandomizer = new Mock<ISetBaseRaceRandomizer>();
+            mockJustInTimeFactory = new Mock<JustInTimeFactory>();
 
-            encounterCharacterGenerator = new EncounterCharacterGenerator(
-                mockCharacterGenerator.Object,
-                mockAnyAlignmentRandomizer.Object,
-                mockAnyPlayerClassNameRandomizer.Object,
-                mockSetLevelRandomizer.Object,
-                mockAnyBaseRaceRandomizer.Object,
-                mockAnyMetaraceRandomizer.Object,
-                mockRawAbilitiesRandomizer.Object,
-                mockCollectionSelector.Object,
-                mockSetMetaraceRandomizer.Object,
-                mockAnyNPCClassNameRandomizer.Object,
-                mockSetClassNameRandomizer.Object,
-                mockDice.Object,
-                mockEncounterSelector.Object,
-                mockSetBaseRaceRandomizer.Object);
+            encounterCharacterGenerator = new EncounterCharacterGenerator(mockCollectionSelector.Object, mockDice.Object, mockEncounterSelector.Object, mockJustInTimeFactory.Object);
 
             creatures = new List<Creature>();
 
@@ -77,20 +66,31 @@ namespace EncounterGen.Tests.Unit.Generators
             creatures[0].Type.Name = "creature";
             creatures[0].Type.Description = "description";
 
-            mockSetLevelRandomizer.SetupAllProperties();
-            mockSetLevelRandomizer.Object.AllowAdjustments = true;
-
             mockSetMetaraceRandomizer.SetupAllProperties();
             mockSetBaseRaceRandomizer.SetupAllProperties();
             mockSetClassNameRandomizer.SetupAllProperties();
+            mockSetLevelRandomizer.SetupAllProperties();
+
+            mockSetLevelRandomizer.Object.AllowAdjustments = true;
 
             mockDice.Setup(d => d.Roll(It.IsAny<string>())).Returns((string s) => ParseRoll(s));
-            mockDice.Setup(d => d.Roll("effective roll").AsSum()).Returns(42);
 
             mockCollectionSelector.Setup(s => s.SelectRandomFrom(It.IsAny<IEnumerable<string>>())).Returns((IEnumerable<string> c) => c.Last());
 
             mockEncounterSelector.Setup(s => s.SelectNameFrom(creatures[0].Type.Name)).Returns(CreatureConstants.Character);
             mockEncounterSelector.Setup(s => s.SelectChallengeRatingFrom(creatures[0].Type.Name)).Returns("1337");
+
+            mockJustInTimeFactory.Setup(f => f.Build<ICharacterGenerator>()).Returns(mockCharacterGenerator.Object);
+            mockJustInTimeFactory.Setup(f => f.Build<IAlignmentRandomizer>(AlignmentRandomizerTypeConstants.Any)).Returns(mockAnyAlignmentRandomizer.Object);
+            mockJustInTimeFactory.Setup(f => f.Build<IClassNameRandomizer>(ClassNameRandomizerTypeConstants.AnyPlayer)).Returns(mockAnyPlayerClassNameRandomizer.Object);
+            mockJustInTimeFactory.Setup(f => f.Build<IClassNameRandomizer>(ClassNameRandomizerTypeConstants.AnyNPC)).Returns(mockAnyNPCClassNameRandomizer.Object);
+            mockJustInTimeFactory.Setup(f => f.Build<ISetClassNameRandomizer>()).Returns(mockSetClassNameRandomizer.Object);
+            mockJustInTimeFactory.Setup(f => f.Build<ISetLevelRandomizer>()).Returns(mockSetLevelRandomizer.Object);
+            mockJustInTimeFactory.Setup(f => f.Build<RaceRandomizer>(RaceRandomizerTypeConstants.BaseRace.AnyBase)).Returns(mockAnyBaseRaceRandomizer.Object);
+            mockJustInTimeFactory.Setup(f => f.Build<RaceRandomizer>(RaceRandomizerTypeConstants.Metarace.AnyMeta)).Returns(mockAnyMetaraceRandomizer.Object);
+            mockJustInTimeFactory.Setup(f => f.Build<ISetBaseRaceRandomizer>()).Returns(mockSetBaseRaceRandomizer.Object);
+            mockJustInTimeFactory.Setup(f => f.Build<ISetMetaraceRandomizer>()).Returns(mockSetMetaraceRandomizer.Object);
+            mockJustInTimeFactory.Setup(f => f.Build<IAbilitiesRandomizer>(AbilitiesRandomizerTypeConstants.Raw)).Returns(mockRawAbilitiesRandomizer.Object);
         }
 
         private PartialRoll ParseRoll(string roll)

@@ -7,6 +7,7 @@ using Moq;
 using NUnit.Framework;
 using RollGen;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace EncounterGen.Tests.Unit.Selectors
@@ -69,6 +70,11 @@ namespace EncounterGen.Tests.Unit.Selectors
         {
             var encounter = "creature/amount";
             SetUpAverageRoll("amount", 902.1);
+
+            var creaturesAndAmounts = new Dictionary<string, string>();
+            creaturesAndAmounts["creature"] = "amount";
+
+            mockEncounterSelector.Setup(s => s.SelectCreaturesAndAmountsFrom(encounter)).Returns(creaturesAndAmounts);
 
             mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.AverageChallengeRatings, "creature")).Returns(new[] { "42" });
 
@@ -1041,6 +1047,11 @@ namespace EncounterGen.Tests.Unit.Selectors
             var encounter = "creature/amount";
             SetUpAverageRoll("amount", quantity);
 
+            var creaturesAndAmounts = new Dictionary<string, string>();
+            creaturesAndAmounts["creature"] = "amount";
+
+            mockEncounterSelector.Setup(s => s.SelectCreaturesAndAmountsFrom(encounter)).Returns(creaturesAndAmounts);
+
             mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.AverageChallengeRatings, "creature")).Returns(new[] { challengeRating });
 
             var computedEncounterLevel = amountSelector.SelectAverageEncounterLevel(encounter);
@@ -1081,6 +1092,11 @@ namespace EncounterGen.Tests.Unit.Selectors
             var difference = numericChallengeRating - 2;
             var encounter = "creature/amount";
 
+            var creaturesAndAmounts = new Dictionary<string, string>();
+            creaturesAndAmounts["creature"] = "amount";
+
+            mockEncounterSelector.Setup(s => s.SelectCreaturesAndAmountsFrom(encounter)).Returns(creaturesAndAmounts);
+
             for (var quantity = 1; quantity <= 120; quantity++)
             {
                 SetUpAverageRoll("amount", quantity);
@@ -1106,6 +1122,12 @@ namespace EncounterGen.Tests.Unit.Selectors
             SetUpAverageRoll("amount", 902.1);
             SetUpAverageRoll("other amount", 13.37);
 
+            var creaturesAndAmounts = new Dictionary<string, string>();
+            creaturesAndAmounts["creature"] = "amount";
+            creaturesAndAmounts["other creature"] = "other amount";
+
+            mockEncounterSelector.Setup(s => s.SelectCreaturesAndAmountsFrom(encounter)).Returns(creaturesAndAmounts);
+
             var encounterLevel = amountSelector.SelectAverageEncounterLevel(encounter);
             Assert.That(encounterLevel, Is.EqualTo(607));
         }
@@ -1119,6 +1141,12 @@ namespace EncounterGen.Tests.Unit.Selectors
             mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.AverageChallengeRatings, "other creature")).Returns(new[] { "42" });
 
             SetUpAverageRoll("amount+other amount", 902.1 + 13.37);
+
+            var creaturesAndAmounts = new Dictionary<string, string>();
+            creaturesAndAmounts["creature"] = "amount";
+            creaturesAndAmounts["other creature"] = "other amount";
+
+            mockEncounterSelector.Setup(s => s.SelectCreaturesAndAmountsFrom(encounter)).Returns(creaturesAndAmounts);
 
             var encounterLevel = amountSelector.SelectAverageEncounterLevel(encounter);
             Assert.That(encounterLevel, Is.EqualTo(62));
@@ -1135,6 +1163,12 @@ namespace EncounterGen.Tests.Unit.Selectors
             SetUpAverageRoll("amount", 1);
             SetUpAverageRoll("other amount", 100);
 
+            var creaturesAndAmounts = new Dictionary<string, string>();
+            creaturesAndAmounts["creature"] = "amount";
+            creaturesAndAmounts["other creature"] = "other amount";
+
+            mockEncounterSelector.Setup(s => s.SelectCreaturesAndAmountsFrom(encounter)).Returns(creaturesAndAmounts);
+
             var encounterLevel = amountSelector.SelectAverageEncounterLevel(encounter);
             Assert.That(encounterLevel, Is.EqualTo(1));
         }
@@ -1150,6 +1184,12 @@ namespace EncounterGen.Tests.Unit.Selectors
             SetUpAverageRoll("amount", 1);
             SetUpAverageRoll("other amount", 0);
 
+            var creaturesAndAmounts = new Dictionary<string, string>();
+            creaturesAndAmounts["creature"] = "amount";
+            creaturesAndAmounts["other creature"] = "other amount";
+
+            mockEncounterSelector.Setup(s => s.SelectCreaturesAndAmountsFrom(encounter)).Returns(creaturesAndAmounts);
+
             var encounterLevel = amountSelector.SelectAverageEncounterLevel(encounter);
             Assert.That(encounterLevel, Is.EqualTo(1));
         }
@@ -1164,6 +1204,12 @@ namespace EncounterGen.Tests.Unit.Selectors
 
             SetUpAverageRoll("amount", 1);
             SetUpAverageRoll("other amount", -1);
+
+            var creaturesAndAmounts = new Dictionary<string, string>();
+            creaturesAndAmounts["creature"] = "amount";
+            creaturesAndAmounts["other creature"] = "other amount";
+
+            mockEncounterSelector.Setup(s => s.SelectCreaturesAndAmountsFrom(encounter)).Returns(creaturesAndAmounts);
 
             var encounterLevel = amountSelector.SelectAverageEncounterLevel(encounter);
             Assert.That(encounterLevel, Is.EqualTo(1));

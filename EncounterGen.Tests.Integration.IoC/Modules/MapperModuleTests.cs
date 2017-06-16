@@ -1,4 +1,5 @@
-﻿using EncounterGen.Domain.Mappers.Collections;
+﻿using EncounterGen.Domain.Generators.Factories;
+using EncounterGen.Domain.Mappers.Collections;
 using EncounterGen.Domain.Mappers.Percentiles;
 using NUnit.Framework;
 
@@ -29,6 +30,12 @@ namespace EncounterGen.Tests.Integration.IoC.Modules
         public void CollectionMapperHasCachingProxy()
         {
             AssertInstanceOf<CollectionMapper, CollectionMapperCachingProxy>();
+        }
+
+        [Test]
+        public void JustInTimeFactoryIsNotASingleton()
+        {
+            AssertNotSingleton<JustInTimeFactory>();
         }
     }
 }
