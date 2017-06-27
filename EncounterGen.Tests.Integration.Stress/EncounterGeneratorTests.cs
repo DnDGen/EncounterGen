@@ -21,18 +21,17 @@ namespace EncounterGen.Tests.Integration.Stress
         [Inject]
         public Dice Dice { get; set; }
 
-        private IEnumerable<string> allEnvironments;
-        private IEnumerable<string> allTemperatures;
-        private IEnumerable<string> allTimesOfDay;
-        private IEnumerable<string> allFilters;
+        private readonly IEnumerable<string> allEnvironments;
+        private readonly IEnumerable<string> allTemperatures;
+        private readonly IEnumerable<string> allTimesOfDay;
+        private readonly IEnumerable<string> allFilters;
 
         private HashSet<string> usedFilters;
 
-        [OneTimeSetUp]
-        public void OneTimeSetup()
+        public EncounterGeneratorTests()
         {
             allEnvironments = new[]
-            {
+               {
                 EnvironmentConstants.Aquatic,
                 EnvironmentConstants.Civilized,
                 EnvironmentConstants.Desert,
@@ -197,7 +196,8 @@ namespace EncounterGen.Tests.Integration.Stress
         [Test]
         public void TreasureDoesNotHappen()
         {
-            var encounter = GenerateOrFail(() => MakeEncounterInRandomEnvironment(), e => !e.Treasures.Any());
+            //INFO: Setting the level to 1, so that the encounters take less time to generate, allowing more iterations for randomness
+            var encounter = GenerateOrFail(() => MakeEncounterInRandomEnvironment(1), e => !e.Treasures.Any());
             AssertEncounter(encounter);
             Assert.That(encounter.Treasures, Is.Empty);
         }
@@ -205,7 +205,8 @@ namespace EncounterGen.Tests.Integration.Stress
         [Test]
         public void TreasureHappens()
         {
-            var encounter = GenerateOrFail(() => MakeEncounterInRandomEnvironment(), e => e.Treasures.Any());
+            //INFO: Setting the level to 1, so that the encounters take less time to generate, allowing more iterations for randomness
+            var encounter = GenerateOrFail(() => MakeEncounterInRandomEnvironment(1), e => e.Treasures.Any());
             AssertEncounter(encounter);
             Assert.That(encounter.Treasures, Is.Not.Empty);
         }
@@ -213,7 +214,8 @@ namespace EncounterGen.Tests.Integration.Stress
         [Test]
         public void CoinHappens()
         {
-            var encounter = GenerateOrFail(() => MakeEncounterInRandomEnvironment(), e => e.Treasures.Any(t => t.Coin.Quantity > 0));
+            //INFO: Setting the level to 1, so that the encounters take less time to generate, allowing more iterations for randomness
+            var encounter = GenerateOrFail(() => MakeEncounterInRandomEnvironment(1), e => e.Treasures.Any(t => t.Coin.Quantity > 0));
             AssertEncounter(encounter);
 
             var coinTreasure = encounter.Treasures.First(t => t.Coin.Quantity > 0);
@@ -224,7 +226,8 @@ namespace EncounterGen.Tests.Integration.Stress
         [Test]
         public void GoodsHappen()
         {
-            var encounter = GenerateOrFail(() => MakeEncounterInRandomEnvironment(), e => e.Treasures.Any(t => t.Goods.Any()));
+            //INFO: Setting the level to 1, so that the encounters take less time to generate, allowing more iterations for randomness
+            var encounter = GenerateOrFail(() => MakeEncounterInRandomEnvironment(1), e => e.Treasures.Any(t => t.Goods.Any()));
             AssertEncounter(encounter);
 
             var goodsTreasure = encounter.Treasures.First(t => t.Goods.Any());
@@ -234,7 +237,8 @@ namespace EncounterGen.Tests.Integration.Stress
         [Test]
         public void ItemsHappen()
         {
-            var encounter = GenerateOrFail(() => MakeEncounterInRandomEnvironment(), e => e.Treasures.Any(t => t.Items.Any()));
+            //INFO: Setting the level to 1, so that the encounters take less time to generate, allowing more iterations for randomness
+            var encounter = GenerateOrFail(() => MakeEncounterInRandomEnvironment(1), e => e.Treasures.Any(t => t.Items.Any()));
             AssertEncounter(encounter);
 
             var itemsTreasure = encounter.Treasures.First(t => t.Items.Any());
@@ -244,7 +248,8 @@ namespace EncounterGen.Tests.Integration.Stress
         [Test]
         public void CharactersHappen()
         {
-            var encounter = GenerateOrFail(() => MakeEncounterInRandomEnvironment(), e => e.Characters.Any());
+            //INFO: Setting the level to 1, so that the encounters take less time to generate, allowing more iterations for randomness
+            var encounter = GenerateOrFail(() => MakeEncounterInRandomEnvironment(1), e => e.Characters.Any());
             AssertEncounter(encounter);
             Assert.That(encounter.Characters, Is.Not.Empty);
         }
@@ -252,7 +257,8 @@ namespace EncounterGen.Tests.Integration.Stress
         [Test]
         public void CharactersDoNotHappen()
         {
-            var encounter = GenerateOrFail(() => MakeEncounterInRandomEnvironment(), e => e.Characters.Any() == false);
+            //INFO: Setting the level to 1, so that the encounters take less time to generate, allowing more iterations for randomness
+            var encounter = GenerateOrFail(() => MakeEncounterInRandomEnvironment(1), e => e.Characters.Any() == false);
             AssertEncounter(encounter);
             Assert.That(encounter.Characters, Is.Empty);
         }
@@ -260,7 +266,8 @@ namespace EncounterGen.Tests.Integration.Stress
         [Test]
         public void SingleCreatureHappens()
         {
-            var encounter = GenerateOrFail(() => MakeEncounterInRandomEnvironment(), e => e.Creatures.Count() == 1);
+            //INFO: Setting the level to 1, so that the encounters take less time to generate, allowing more iterations for randomness
+            var encounter = GenerateOrFail(() => MakeEncounterInRandomEnvironment(1), e => e.Creatures.Count() == 1);
             AssertEncounter(encounter);
             Assert.That(encounter.Creatures.Count(), Is.EqualTo(1));
         }
@@ -268,7 +275,8 @@ namespace EncounterGen.Tests.Integration.Stress
         [Test]
         public void MultipleCreaturesHappen()
         {
-            var encounter = GenerateOrFail(() => MakeEncounterInRandomEnvironment(), e => e.Creatures.Count() > 1);
+            //INFO: Setting the level to 1, so that the encounters take less time to generate, allowing more iterations for randomness
+            var encounter = GenerateOrFail(() => MakeEncounterInRandomEnvironment(1), e => e.Creatures.Count() > 1);
             AssertEncounter(encounter);
             Assert.That(encounter.Creatures.Count(), Is.GreaterThan(1));
         }
@@ -276,7 +284,8 @@ namespace EncounterGen.Tests.Integration.Stress
         [Test]
         public void ActualDifficultySameAsAverageDifficultyHappens()
         {
-            var encounter = GenerateOrFail(() => MakeEncounterInRandomEnvironment(), e => e.ActualDifficulty == e.AverageDifficulty);
+            //INFO: Setting the level to 1, so that the encounters take less time to generate, allowing more iterations for randomness
+            var encounter = GenerateOrFail(() => MakeEncounterInRandomEnvironment(1), e => e.ActualDifficulty == e.AverageDifficulty);
             AssertEncounter(encounter);
             Assert.That(encounter.ActualDifficulty, Is.EqualTo(encounter.AverageDifficulty));
         }
@@ -284,7 +293,8 @@ namespace EncounterGen.Tests.Integration.Stress
         [Test]
         public void ActualDifficultyDifferentThanAverageDifficultyHappens()
         {
-            var encounter = GenerateOrFail(() => MakeEncounterInRandomEnvironment(), e => e.ActualDifficulty != e.AverageDifficulty);
+            //INFO: Setting the level to 1, so that the encounters take less time to generate, allowing more iterations for randomness
+            var encounter = GenerateOrFail(() => MakeEncounterInRandomEnvironment(1), e => e.ActualDifficulty != e.AverageDifficulty);
             AssertEncounter(encounter);
 
             Assert.That(encounter.ActualDifficulty, Is.Not.EqualTo(encounter.AverageDifficulty));
@@ -294,7 +304,8 @@ namespace EncounterGen.Tests.Integration.Stress
         [Test]
         public void ActualEncounterLevelSameAsAverageEncounterLevelHappens()
         {
-            var encounter = GenerateOrFail(() => MakeEncounterInRandomEnvironment(), e => e.ActualEncounterLevel == e.AverageEncounterLevel);
+            //INFO: Setting the level to 1, so that the encounters take less time to generate, allowing more iterations for randomness
+            var encounter = GenerateOrFail(() => MakeEncounterInRandomEnvironment(1), e => e.ActualEncounterLevel == e.AverageEncounterLevel);
             AssertEncounter(encounter);
 
             Assert.That(encounter.ActualEncounterLevel, Is.EqualTo(encounter.AverageEncounterLevel));
@@ -304,7 +315,8 @@ namespace EncounterGen.Tests.Integration.Stress
         [Test]
         public void ActualEncounterLevelDifferentThanAverageEncounterLevelHappens()
         {
-            var encounter = GenerateOrFail(() => MakeEncounterInRandomEnvironment(), e => e.ActualEncounterLevel != e.AverageEncounterLevel);
+            //INFO: Setting the level to 1, so that the encounters take less time to generate, allowing more iterations for randomness
+            var encounter = GenerateOrFail(() => MakeEncounterInRandomEnvironment(1), e => e.ActualEncounterLevel != e.AverageEncounterLevel);
             AssertEncounter(encounter);
             Assert.That(encounter.ActualEncounterLevel, Is.Not.EqualTo(encounter.AverageEncounterLevel));
         }
