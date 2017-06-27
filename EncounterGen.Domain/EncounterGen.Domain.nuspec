@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>EncounterGen.Domain</id>
-    <version>3.0.3</version>
+    <version>3.0.4</version>
     <title>EncounterGen.Domain</title>
     <authors>Karl M. Speer</authors>
     <owners>cidthecoatrack</owners>
@@ -10,7 +10,7 @@
       This is the Ninject-based bootstrapper for EncounterGen
     </description>
     <releaseNotes>
-      Bug #41, Features #16, #22, #23, #37
+      Bug #44
     </releaseNotes>
     <summary>
       This generates encounters for the Dungeons and Dragons 3.5 system.
