@@ -15,66 +15,11 @@ namespace EncounterGen.Tests.Integration.Stress
         [Inject]
         public IEncounterGenerator EncounterGenerator { get; set; }
         [Inject]
-        public Random Random { get; set; }
-        [Inject]
         public IEncounterVerifier EncounterVerifier { get; set; }
-        [Inject]
-        public Dice Dice { get; set; }
 
-        private readonly IEnumerable<string> allEnvironments;
-        private readonly IEnumerable<string> allTemperatures;
-        private readonly IEnumerable<string> allTimesOfDay;
-        private readonly IEnumerable<string> allFilters;
+        private const int PresetLevel = 7;
 
         private HashSet<string> usedFilters;
-
-        public EncounterGeneratorTests()
-        {
-            allEnvironments = new[]
-               {
-                EnvironmentConstants.Aquatic,
-                EnvironmentConstants.Civilized,
-                EnvironmentConstants.Desert,
-                EnvironmentConstants.Forest,
-                EnvironmentConstants.Hills,
-                EnvironmentConstants.Marsh,
-                EnvironmentConstants.Mountain,
-                EnvironmentConstants.Plains,
-                EnvironmentConstants.Underground,
-            };
-
-            allTemperatures = new[]
-            {
-                EnvironmentConstants.Temperatures.Cold,
-                EnvironmentConstants.Temperatures.Temperate,
-                EnvironmentConstants.Temperatures.Warm,
-            };
-
-            allTimesOfDay = new[]
-            {
-                EnvironmentConstants.TimesOfDay.Day,
-                EnvironmentConstants.TimesOfDay.Night,
-            };
-
-            allFilters = new[]
-            {
-                CreatureConstants.Types.Aberration,
-                CreatureConstants.Types.Animal,
-                CreatureConstants.Types.Construct,
-                CreatureConstants.Types.Dragon,
-                CreatureConstants.Types.Elemental,
-                CreatureConstants.Types.Fey,
-                CreatureConstants.Types.Giant,
-                CreatureConstants.Types.Humanoid,
-                CreatureConstants.Types.MagicalBeast,
-                CreatureConstants.Types.MonstrousHumanoid,
-                CreatureConstants.Types.Ooze,
-                CreatureConstants.Types.Outsider,
-                CreatureConstants.Types.Plant,
-                CreatureConstants.Types.Undead,
-                CreatureConstants.Types.Vermin,
-            };
-        }
 
         [SetUp]
         public void Setup()
@@ -85,13 +30,13 @@ namespace EncounterGen.Tests.Integration.Stress
         [Test]
         public void StressEncounterGenerator()
         {
-            Stress(() => AssertEncounterInRandomEnvironment());
+            stressor.Stress(() => AssertEncounterInRandomEnvironment());
         }
 
         [Test]
         public void StressEncounterGeneratorWithFilter()
         {
-            Stress(() => AssertEncounterInRandomEnvironment(useFilter: true));
+            stressor.Stress(() => AssertEncounterInRandomEnvironment(useFilter: true));
 
             Console.WriteLine($"Stressed the following filters: {string.Join(", ", usedFilters.OrderBy(f => f))}");
             Assert.That(usedFilters.Count, Is.GreaterThan(1));
@@ -99,6 +44,19 @@ namespace EncounterGen.Tests.Integration.Stress
             var untestedFilters = allFilters.Except(usedFilters);
             Console.WriteLine($"Did not stress the following filters: {string.Join(", ", untestedFilters.OrderBy(f => f))}");
             Assert.That(untestedFilters.Count, Is.LessThan(allFilters.Count()));
+        }
+
+        [Test]
+        public void BUG_StressCivilizedEncounter()
+        {
+            stressor.Stress(() => AssertEncounterInRandomEnvironment(EnvironmentConstants.Civilized, level: PresetLevel));
+        }
+
+        //INFO: We want to stress this because random subtypes (such as Dominated Creatures that Formians Taskmasters have) have sometimes failed in the event spacing
+        [Test]
+        public void BUG_StressOutsiders()
+        {
+            stressor.Stress(() => AssertEncounterInRandomEnvironment(level: PresetLevel, filter: CreatureConstants.Types.Outsider));
         }
 
         private void AssertEncounterInRandomEnvironment(string environment = "", string temperature = "", string timeOfDay = "", int level = 0, string filter = "", bool useFilter = false)
@@ -109,7 +67,7 @@ namespace EncounterGen.Tests.Integration.Stress
 
         private Encounter MakeEncounterInRandomEnvironment(int level = 0, string environment = "", string temperature = "", string timeOfDay = "", string filter = "", bool useFilter = false)
         {
-            var specifications = Generate(
+            var specifications = stressor.Generate(
                 () => RandomizeSpecifications(level, environment, temperature, timeOfDay, filter, useFilter),
                 s => EncounterVerifier.ValidEncounterExistsAtLevel(s));
 
@@ -117,38 +75,6 @@ namespace EncounterGen.Tests.Integration.Stress
                 usedFilters.Add(specifications.CreatureTypeFilters.Single());
 
             return EncounterGenerator.Generate(specifications);
-        }
-
-        private EncounterSpecifications RandomizeSpecifications(int level = 0, string environment = "", string temperature = "", string timeOfDay = "", string filter = "", bool useFilter = false)
-        {
-            var specifications = new EncounterSpecifications();
-            specifications.Environment = string.IsNullOrEmpty(environment) ? GetRandomFrom(allEnvironments) : environment;
-            specifications.Temperature = string.IsNullOrEmpty(temperature) ? GetRandomFrom(allTemperatures) : temperature;
-            specifications.TimeOfDay = string.IsNullOrEmpty(timeOfDay) ? GetRandomFrom(allTimesOfDay) : timeOfDay;
-            specifications.Level = level > 0 ? level : Random.Next(EncounterSpecifications.MaximumLevel) + EncounterSpecifications.MinimumLevel;
-            specifications.AllowAquatic = Convert.ToBoolean(Random.Next(2));
-            specifications.AllowUnderground = Convert.ToBoolean(Random.Next(2));
-
-            if (!string.IsNullOrEmpty(filter))
-            {
-                specifications.CreatureTypeFilters = new[] { filter };
-            }
-            else if (useFilter)
-            {
-                var randomFilter = GetRandomFrom(allFilters);
-                specifications.CreatureTypeFilters = new[] { randomFilter };
-            }
-
-            return specifications;
-        }
-
-        private string GetRandomFrom(IEnumerable<string> collection)
-        {
-            var total = collection.Count();
-            var randomIndex = Random.Next(total);
-            var randomValue = collection.ElementAt(randomIndex);
-
-            return randomValue;
         }
 
         private void AssertEncounter(Encounter encounter)
@@ -196,8 +122,7 @@ namespace EncounterGen.Tests.Integration.Stress
         [Test]
         public void TreasureDoesNotHappen()
         {
-            //INFO: Setting the level to 1, so that the encounters take less time to generate, allowing more iterations for randomness
-            var encounter = GenerateOrFail(() => MakeEncounterInRandomEnvironment(1), e => !e.Treasures.Any());
+            var encounter = stressor.GenerateOrFail(() => MakeEncounterInRandomEnvironment(PresetLevel), e => !e.Treasures.Any());
             AssertEncounter(encounter);
             Assert.That(encounter.Treasures, Is.Empty);
         }
@@ -205,51 +130,15 @@ namespace EncounterGen.Tests.Integration.Stress
         [Test]
         public void TreasureHappens()
         {
-            //INFO: Setting the level to 1, so that the encounters take less time to generate, allowing more iterations for randomness
-            var encounter = GenerateOrFail(() => MakeEncounterInRandomEnvironment(1), e => e.Treasures.Any());
+            var encounter = stressor.GenerateOrFail(() => MakeEncounterInRandomEnvironment(PresetLevel), e => e.Treasures.Any());
             AssertEncounter(encounter);
             Assert.That(encounter.Treasures, Is.Not.Empty);
         }
 
         [Test]
-        public void CoinHappens()
-        {
-            //INFO: Setting the level to 1, so that the encounters take less time to generate, allowing more iterations for randomness
-            var encounter = GenerateOrFail(() => MakeEncounterInRandomEnvironment(1), e => e.Treasures.Any(t => t.Coin.Quantity > 0));
-            AssertEncounter(encounter);
-
-            var coinTreasure = encounter.Treasures.First(t => t.Coin.Quantity > 0);
-            Assert.That(coinTreasure.Coin.Quantity, Is.Positive);
-            Assert.That(coinTreasure.Coin.Currency, Is.Not.Empty);
-        }
-
-        [Test]
-        public void GoodsHappen()
-        {
-            //INFO: Setting the level to 1, so that the encounters take less time to generate, allowing more iterations for randomness
-            var encounter = GenerateOrFail(() => MakeEncounterInRandomEnvironment(1), e => e.Treasures.Any(t => t.Goods.Any()));
-            AssertEncounter(encounter);
-
-            var goodsTreasure = encounter.Treasures.First(t => t.Goods.Any());
-            Assert.That(goodsTreasure.Goods, Is.Not.Empty);
-        }
-
-        [Test]
-        public void ItemsHappen()
-        {
-            //INFO: Setting the level to 1, so that the encounters take less time to generate, allowing more iterations for randomness
-            var encounter = GenerateOrFail(() => MakeEncounterInRandomEnvironment(1), e => e.Treasures.Any(t => t.Items.Any()));
-            AssertEncounter(encounter);
-
-            var itemsTreasure = encounter.Treasures.First(t => t.Items.Any());
-            Assert.That(itemsTreasure.Items, Is.Not.Empty);
-        }
-
-        [Test]
         public void CharactersHappen()
         {
-            //INFO: Setting the level to 1, so that the encounters take less time to generate, allowing more iterations for randomness
-            var encounter = GenerateOrFail(() => MakeEncounterInRandomEnvironment(1), e => e.Characters.Any());
+            var encounter = stressor.GenerateOrFail(() => MakeEncounterInRandomEnvironment(PresetLevel), e => e.Characters.Any());
             AssertEncounter(encounter);
             Assert.That(encounter.Characters, Is.Not.Empty);
         }
@@ -257,8 +146,7 @@ namespace EncounterGen.Tests.Integration.Stress
         [Test]
         public void CharactersDoNotHappen()
         {
-            //INFO: Setting the level to 1, so that the encounters take less time to generate, allowing more iterations for randomness
-            var encounter = GenerateOrFail(() => MakeEncounterInRandomEnvironment(1), e => e.Characters.Any() == false);
+            var encounter = stressor.GenerateOrFail(() => MakeEncounterInRandomEnvironment(PresetLevel), e => e.Characters.Any() == false);
             AssertEncounter(encounter);
             Assert.That(encounter.Characters, Is.Empty);
         }
@@ -266,8 +154,7 @@ namespace EncounterGen.Tests.Integration.Stress
         [Test]
         public void SingleCreatureHappens()
         {
-            //INFO: Setting the level to 1, so that the encounters take less time to generate, allowing more iterations for randomness
-            var encounter = GenerateOrFail(() => MakeEncounterInRandomEnvironment(1), e => e.Creatures.Count() == 1);
+            var encounter = stressor.GenerateOrFail(() => MakeEncounterInRandomEnvironment(PresetLevel), e => e.Creatures.Count() == 1);
             AssertEncounter(encounter);
             Assert.That(encounter.Creatures.Count(), Is.EqualTo(1));
         }
@@ -275,8 +162,7 @@ namespace EncounterGen.Tests.Integration.Stress
         [Test]
         public void MultipleCreaturesHappen()
         {
-            //INFO: Setting the level to 1, so that the encounters take less time to generate, allowing more iterations for randomness
-            var encounter = GenerateOrFail(() => MakeEncounterInRandomEnvironment(1), e => e.Creatures.Count() > 1);
+            var encounter = stressor.GenerateOrFail(() => MakeEncounterInRandomEnvironment(PresetLevel), e => e.Creatures.Count() > 1);
             AssertEncounter(encounter);
             Assert.That(encounter.Creatures.Count(), Is.GreaterThan(1));
         }
@@ -284,8 +170,7 @@ namespace EncounterGen.Tests.Integration.Stress
         [Test]
         public void ActualDifficultySameAsAverageDifficultyHappens()
         {
-            //INFO: Setting the level to 1, so that the encounters take less time to generate, allowing more iterations for randomness
-            var encounter = GenerateOrFail(() => MakeEncounterInRandomEnvironment(1), e => e.ActualDifficulty == e.AverageDifficulty);
+            var encounter = stressor.GenerateOrFail(() => MakeEncounterInRandomEnvironment(PresetLevel), e => e.ActualDifficulty == e.AverageDifficulty);
             AssertEncounter(encounter);
             Assert.That(encounter.ActualDifficulty, Is.EqualTo(encounter.AverageDifficulty));
         }
@@ -293,8 +178,7 @@ namespace EncounterGen.Tests.Integration.Stress
         [Test]
         public void ActualDifficultyDifferentThanAverageDifficultyHappens()
         {
-            //INFO: Setting the level to 1, so that the encounters take less time to generate, allowing more iterations for randomness
-            var encounter = GenerateOrFail(() => MakeEncounterInRandomEnvironment(1), e => e.ActualDifficulty != e.AverageDifficulty);
+            var encounter = stressor.GenerateOrFail(() => MakeEncounterInRandomEnvironment(PresetLevel), e => e.ActualDifficulty != e.AverageDifficulty);
             AssertEncounter(encounter);
 
             Assert.That(encounter.ActualDifficulty, Is.Not.EqualTo(encounter.AverageDifficulty));
@@ -304,8 +188,7 @@ namespace EncounterGen.Tests.Integration.Stress
         [Test]
         public void ActualEncounterLevelSameAsAverageEncounterLevelHappens()
         {
-            //INFO: Setting the level to 1, so that the encounters take less time to generate, allowing more iterations for randomness
-            var encounter = GenerateOrFail(() => MakeEncounterInRandomEnvironment(1), e => e.ActualEncounterLevel == e.AverageEncounterLevel);
+            var encounter = stressor.GenerateOrFail(() => MakeEncounterInRandomEnvironment(PresetLevel), e => e.ActualEncounterLevel == e.AverageEncounterLevel);
             AssertEncounter(encounter);
 
             Assert.That(encounter.ActualEncounterLevel, Is.EqualTo(encounter.AverageEncounterLevel));
@@ -315,8 +198,7 @@ namespace EncounterGen.Tests.Integration.Stress
         [Test]
         public void ActualEncounterLevelDifferentThanAverageEncounterLevelHappens()
         {
-            //INFO: Setting the level to 1, so that the encounters take less time to generate, allowing more iterations for randomness
-            var encounter = GenerateOrFail(() => MakeEncounterInRandomEnvironment(1), e => e.ActualEncounterLevel != e.AverageEncounterLevel);
+            var encounter = stressor.GenerateOrFail(() => MakeEncounterInRandomEnvironment(PresetLevel), e => e.ActualEncounterLevel != e.AverageEncounterLevel);
             AssertEncounter(encounter);
             Assert.That(encounter.ActualEncounterLevel, Is.Not.EqualTo(encounter.AverageEncounterLevel));
         }

@@ -1,6 +1,4 @@
 ﻿using EncounterGen.Domain.Generators;
-using EncounterGen.Domain.Generators.Factories;
-using EncounterGen.Domain.IoC.Providers;
 using EncounterGen.Generators;
 using Ninject.Modules;
 
@@ -23,8 +21,6 @@ namespace EncounterGen.Domain.IoC.Modules
             Bind<IEncounterTreasureGenerator>().To<EncounterTreasureGeneratorEventDecorator>();
 
             Bind<IEncounterVerifier>().To<EncounterVerifier>();
-
-            Bind<JustInTimeFactory>().ToProvider<JustInTimeFactoryProvider>();
         }
     }
 }

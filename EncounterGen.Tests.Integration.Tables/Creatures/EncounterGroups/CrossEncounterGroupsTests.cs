@@ -135,6 +135,49 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
             AssertWholeCollection(allCreatures, creaturesWithType);
         }
 
+        [TestCase(EnvironmentConstants.Aquatic)]
+        [TestCase(EnvironmentConstants.Underground)]
+        [TestCase(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Aquatic)]
+        [TestCase(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Civilized)]
+        [TestCase(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Desert)]
+        [TestCase(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Forest)]
+        [TestCase(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Hills)]
+        [TestCase(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Marsh)]
+        [TestCase(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain)]
+        [TestCase(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Plains)]
+        [TestCase(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Underground)]
+        [TestCase(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic)]
+        [TestCase(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Civilized)]
+        [TestCase(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert)]
+        [TestCase(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
+        [TestCase(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
+        [TestCase(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh)]
+        [TestCase(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
+        [TestCase(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains)]
+        [TestCase(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Underground)]
+        [TestCase(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic)]
+        [TestCase(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Civilized)]
+        [TestCase(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
+        [TestCase(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest)]
+        [TestCase(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
+        [TestCase(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh)]
+        [TestCase(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain)]
+        [TestCase(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
+        [TestCase(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Underground)]
+        [TestCase(GroupConstants.Land)]
+        [TestCase(GroupConstants.Magic)]
+        [TestCase(GroupConstants.Wilderness)]
+        public void BUG_NoEncountersHaveMultipleEntriesOfSameCreature(string category)
+        {
+            var encounters = GetEncountersFromCreatureGroup(category);
+
+            foreach (var encounter in encounters)
+            {
+                var creatures = EncounterFormatter.SelectCreaturesAndAmountsFrom(encounter).Keys;
+                Assert.That(creatures, Is.Unique, encounter);
+            }
+        }
+
         [TestCase(EnvironmentConstants.Temperatures.Cold, EnvironmentConstants.TimesOfDay.Day, 1)]
         [TestCase(EnvironmentConstants.Temperatures.Cold, EnvironmentConstants.TimesOfDay.Day, 2)]
         [TestCase(EnvironmentConstants.Temperatures.Cold, EnvironmentConstants.TimesOfDay.Day, 3)]
@@ -285,6 +328,8 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
             Assert.That(encounters, Is.Not.Unique);
             Assert.That(leadCreatures, Is.Not.Unique);
 
+            AssertEventSpacing();
+
             Console.WriteLine($"Actual percentage for {specifications.Description} is {{0:P}}", percentage);
 
             return percentage;
@@ -406,66 +451,8 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
 
         private bool IsUndeadCharacter(string creature)
         {
-            var name = EncounterSelector.SelectNameFrom(creature);
+            var name = EncounterFormatter.SelectNameFrom(creature);
             return IsUndead(creature) && name == CreatureConstants.Character;
-        }
-
-        [TestCase(EnvironmentConstants.Underground, EnvironmentConstants.Temperatures.Temperate, EnvironmentConstants.TimesOfDay.Night, 10, CreatureConstants.Types.Fey, false)]
-        [TestCase(EnvironmentConstants.Civilized, EnvironmentConstants.Temperatures.Temperate, EnvironmentConstants.TimesOfDay.Day, 4, CreatureConstants.Types.Giant, false)]
-        public void BUG_FilterIsValid(string environment, string temperature, string timeOfDay, int level, string filter, bool isValid)
-        {
-            var specifications = new EncounterSpecifications();
-            specifications.Environment = environment;
-            specifications.Level = level;
-            specifications.Temperature = temperature;
-            specifications.TimeOfDay = timeOfDay;
-            specifications.CreatureTypeFilters = new[] { filter };
-
-            var filterIsValid = EncounterVerifier.ValidEncounterExistsAtLevel(specifications);
-            Assert.That(filterIsValid, Is.EqualTo(isValid));
-        }
-
-        [TestCase(EnvironmentConstants.Aquatic)]
-        [TestCase(EnvironmentConstants.Underground)]
-        [TestCase(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Aquatic)]
-        [TestCase(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic)]
-        [TestCase(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic)]
-        [TestCase(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Civilized)]
-        [TestCase(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Civilized)]
-        [TestCase(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Civilized)]
-        [TestCase(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Desert)]
-        [TestCase(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert)]
-        [TestCase(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
-        [TestCase(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Forest)]
-        [TestCase(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest)]
-        [TestCase(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Hills)]
-        [TestCase(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
-        [TestCase(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
-        [TestCase(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Marsh)]
-        [TestCase(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh)]
-        [TestCase(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh)]
-        [TestCase(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain)]
-        [TestCase(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
-        [TestCase(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain)]
-        [TestCase(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Plains)]
-        [TestCase(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains)]
-        [TestCase(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
-        [TestCase(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Underground)]
-        [TestCase(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Underground)]
-        [TestCase(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Underground)]
-        [TestCase(GroupConstants.Land)]
-        [TestCase(GroupConstants.Magic)]
-        [TestCase(GroupConstants.Wilderness)]
-        public void BUG_NoEncountersHaveMultipleEntriesOfSameCreature(string category)
-        {
-            var encounters = GetEncountersFromCreatureGroup(category);
-
-            foreach (var encounter in encounters)
-            {
-                var creatures = encounter.Split(',').Select(e => e.Split('/')[0]);
-                Assert.That(creatures, Is.Unique, encounter);
-            }
         }
     }
 }

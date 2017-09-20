@@ -1,8 +1,8 @@
 ﻿using CharacterGen.Characters;
+using DnDGen.Core.Selectors.Percentiles;
 using EncounterGen.Common;
 using EncounterGen.Domain.Generators;
 using EncounterGen.Domain.Selectors;
-using EncounterGen.Domain.Selectors.Percentiles;
 using EncounterGen.Domain.Tables;
 using EncounterGen.Generators;
 using Moq;
@@ -17,7 +17,7 @@ namespace EncounterGen.Tests.Unit.Generators
     public class EncounterGeneratorTests
     {
         private IEncounterGenerator encounterGenerator;
-        private Mock<IAmountSelector> mockAmountSelector;
+        private Mock<IEncounterLevelSelector> mockAmountSelector;
         private Mock<IPercentileSelector> mockPercentileSelector;
         private Mock<IEncounterCharacterGenerator> mockEncounterCharacterGenerator;
         private Mock<IEncounterTreasureGenerator> mockEncounterTreasureGenerator;
@@ -41,7 +41,7 @@ namespace EncounterGen.Tests.Unit.Generators
         [SetUp]
         public void Setup()
         {
-            mockAmountSelector = new Mock<IAmountSelector>();
+            mockAmountSelector = new Mock<IEncounterLevelSelector>();
             mockPercentileSelector = new Mock<IPercentileSelector>();
             mockEncounterCharacterGenerator = new Mock<IEncounterCharacterGenerator>();
             mockEncounterTreasureGenerator = new Mock<IEncounterTreasureGenerator>();
@@ -77,10 +77,10 @@ namespace EncounterGen.Tests.Unit.Generators
             creature.ChallengeRating = "challenge rating";
             creatures.Add(creature);
 
-            mockPercentileSelector.Setup(s => s.SelectFrom(TableNameConstants.EncounterLevelModifiers)).Returns(() => levelModifier);
+            mockPercentileSelector.Setup(s => s.SelectFrom<int>(TableNameConstants.EncounterLevelModifiers)).Returns(() => levelModifier);
             mockCreatureGenerator.Setup(g => g.GenerateFor(It.Is<EncounterSpecifications>(es => es.Level == encounterLevel))).Returns(creatures);
             mockCreatureGenerator.Setup(g => g.CleanCreatures(It.IsAny<IEnumerable<Creature>>())).Returns((IEnumerable<Creature> cc) => cc);
-            mockAmountSelector.Setup(d => d.SelectActualEncounterLevel(It.IsAny<Encounter>())).Returns(actualEncounterLevel);
+            mockAmountSelector.Setup(d => d.Select(It.IsAny<Encounter>())).Returns(actualEncounterLevel);
 
             mockEncounterVerifier.Setup(v => v.ValidEncounterExistsAtLevel(specifications)).Returns(true);
             mockEncounterVerifier.Setup(v => v.ValidEncounterExistsAtLevel(It.Is<EncounterSpecifications>(es => es.Level == encounterLevel))).Returns(true);
@@ -114,7 +114,7 @@ namespace EncounterGen.Tests.Unit.Generators
         [Test]
         public void EncounterLevelMustBeValid()
         {
-            mockPercentileSelector.SetupSequence(s => s.SelectFrom(TableNameConstants.EncounterLevelModifiers)).Returns(9999).Returns(levelModifier);
+            mockPercentileSelector.SetupSequence(s => s.SelectFrom<int>(TableNameConstants.EncounterLevelModifiers)).Returns(9999).Returns(levelModifier);
             mockEncounterVerifier.Setup(v => v.ValidEncounterExistsAtLevel(It.Is<EncounterSpecifications>(s => s.Level == 10009))).Returns(false);
 
             var encounter = encounterGenerator.Generate(specifications);
@@ -282,7 +282,7 @@ namespace EncounterGen.Tests.Unit.Generators
             otherCreatures[0].Type.Name = "other creature";
             otherCreatures[0].Quantity = 600;
 
-            mockPercentileSelector.SetupSequence(s => s.SelectFrom(TableNameConstants.EncounterLevelModifiers))
+            mockPercentileSelector.SetupSequence(s => s.SelectFrom<int>(TableNameConstants.EncounterLevelModifiers))
                 .Returns(-4)
                 .Returns(4);
 

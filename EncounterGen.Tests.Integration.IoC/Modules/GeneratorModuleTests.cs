@@ -1,4 +1,5 @@
 ﻿using CharacterGen.Characters;
+using DnDGen.Core.Generators;
 using EncounterGen.Domain.Generators;
 using EncounterGen.Generators;
 using NUnit.Framework;
@@ -6,8 +7,6 @@ using TreasureGen.Coins;
 using TreasureGen.Generators;
 using TreasureGen.Goods;
 using TreasureGen.Items;
-using TreasureGen.Items.Magical;
-using TreasureGen.Items.Mundane;
 
 namespace EncounterGen.Tests.Integration.IoC.Modules
 {
@@ -99,15 +98,9 @@ namespace EncounterGen.Tests.Integration.IoC.Modules
         }
 
         [Test]
-        public void EXTERNAL_MagicalItemGeneratorFactoryIsInjected()
+        public void EXTERNAL_JustInTimeFactoryIsInjected()
         {
-            AssertNotSingleton<IMagicalItemGeneratorFactory>();
-        }
-
-        [Test]
-        public void EXTERNAL_MundaneItemGeneratorFactoryIsInjected()
-        {
-            AssertNotSingleton<IMundaneItemGeneratorFactory>();
+            AssertNotSingleton<JustInTimeFactory>();
         }
     }
 }

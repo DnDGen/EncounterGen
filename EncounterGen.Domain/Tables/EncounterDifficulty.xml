@@ -2,59 +2,59 @@
 
 <collections>
   <collection>
-    <entry>-7</entry>
-    <item>Very Easy</item>
+    <name>-7</name>
+    <entry>Very Easy</entry>
   </collection>
   <collection>
-    <entry>-6</entry>
-    <item>Very Easy</item>
+    <name>-6</name>
+    <entry>Very Easy</entry>
   </collection>
   <collection>
-    <entry>-5</entry>
-    <item>Very Easy</item>
+    <name>-5</name>
+    <entry>Very Easy</entry>
   </collection>
   <collection>
-    <entry>-4</entry>
-    <item>Easy</item>
+    <name>-4</name>
+    <entry>Easy</entry>
   </collection>
   <collection>
-    <entry>-3</entry>
-    <item>Easy</item>
+    <name>-3</name>
+    <entry>Easy</entry>
   </collection>
   <collection>
-    <entry>-2</entry>
-    <item>Easy</item>
+    <name>-2</name>
+    <entry>Easy</entry>
   </collection>
   <collection>
-    <entry>-1</entry>
-    <item>Easy</item>
+    <name>-1</name>
+    <entry>Easy</entry>
   </collection>
   <collection>
-    <entry>0</entry>
-    <item>Challenging</item>
+    <name>0</name>
+    <entry>Challenging</entry>
   </collection>
   <collection>
-    <entry>1</entry>
-    <item>Very Difficult</item>
+    <name>1</name>
+    <entry>Very Difficult</entry>
   </collection>
   <collection>
-    <entry>2</entry>
-    <item>Very Difficult</item>
+    <name>2</name>
+    <entry>Very Difficult</entry>
   </collection>
   <collection>
-    <entry>3</entry>
-    <item>Very Difficult</item>
+    <name>3</name>
+    <entry>Very Difficult</entry>
   </collection>
   <collection>
-    <entry>4</entry>
-    <item>Very Difficult</item>
+    <name>4</name>
+    <entry>Very Difficult</entry>
   </collection>
   <collection>
-    <entry>5</entry>
-    <item>Overpowering</item>
+    <name>5</name>
+    <entry>Overpowering</entry>
   </collection>
   <collection>
-    <entry>6</entry>
-    <item>Overpowering</item>
+    <name>6</name>
+    <entry>Overpowering</entry>
   </collection>
 </collections>

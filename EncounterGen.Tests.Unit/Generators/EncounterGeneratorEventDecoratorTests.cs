@@ -45,8 +45,8 @@ namespace EncounterGen.Tests.Unit.Generators
 
             Assert.That(generatedEncounter, Is.EqualTo(encounter));
             mockEventQueue.Verify(q => q.Enqueue(It.IsAny<string>(), It.IsAny<string>()), Times.Exactly(2));
-            mockEventQueue.Verify(q => q.Enqueue("EncounterGen", $"Beginning generation of encounter in {specifications.Description}"), Times.Once);
-            mockEventQueue.Verify(q => q.Enqueue("EncounterGen", "Completed generation of Overpowering encounter with 2 creatures and 3 characters"), Times.Once);
+            mockEventQueue.Verify(q => q.Enqueue("EncounterGen", $"Generating encounter in {specifications.Description}"), Times.Once);
+            mockEventQueue.Verify(q => q.Enqueue("EncounterGen", "Generated Overpowering encounter with 2 creatures and 3 characters"), Times.Once);
         }
     }
 }

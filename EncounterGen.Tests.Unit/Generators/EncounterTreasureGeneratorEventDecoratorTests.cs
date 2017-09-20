@@ -50,8 +50,8 @@ namespace EncounterGen.Tests.Unit.Generators
 
             Assert.That(generatedTreasures, Is.EqualTo(treasures));
             mockEventQueue.Verify(q => q.Enqueue(It.IsAny<string>(), It.IsAny<string>()), Times.Exactly(2));
-            mockEventQueue.Verify(q => q.Enqueue("EncounterGen", $"Beginning generation of level 9266 treasure for 2 creatures"), Times.Once);
-            mockEventQueue.Verify(q => q.Enqueue("EncounterGen", "Completed generation of 3 treasures"), Times.Once);
+            mockEventQueue.Verify(q => q.Enqueue("EncounterGen", $"Generating level 9266 treasure for 2 creatures"), Times.Once);
+            mockEventQueue.Verify(q => q.Enqueue("EncounterGen", "Generated 3 treasures"), Times.Once);
         }
     }
 }

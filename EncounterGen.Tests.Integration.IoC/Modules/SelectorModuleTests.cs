@@ -1,6 +1,5 @@
 ﻿using EncounterGen.Domain.Selectors;
 using EncounterGen.Domain.Selectors.Collections;
-using EncounterGen.Domain.Selectors.Percentiles;
 using NUnit.Framework;
 
 namespace EncounterGen.Tests.Integration.IoC.Modules
@@ -9,39 +8,15 @@ namespace EncounterGen.Tests.Integration.IoC.Modules
     public class SelectorModuleTests : IoCTests
     {
         [Test]
-        public void AmountSelectorIsNotASingleton()
+        public void EncounterLevelSelectorIsNotASingleton()
         {
-            AssertNotSingleton<IAmountSelector>();
-        }
-
-        [Test]
-        public void PercentileSelectorIsNotASingleton()
-        {
-            AssertNotSingleton<IPercentileSelector>();
-        }
-
-        [Test]
-        public void BooleanPercentileSelectorIsNotASingleton()
-        {
-            AssertNotSingleton<IBooleanPercentileSelector>();
+            AssertNotSingleton<IEncounterLevelSelector>();
         }
 
         [Test]
         public void TreasureAdjustmentSelectorIsNotASingleton()
         {
-            AssertNotSingleton<ITreasureAdjustmentSelector>();
-        }
-
-        [Test]
-        public void CollectionSelectorIsASingleton()
-        {
-            AssertSingleton<ICollectionSelector>();
-        }
-
-        [Test]
-        public void CollectionSelectorHasCachingProxy()
-        {
-            AssertInstanceOf<ICollectionSelector, CollectionSelectorCachingProxy>();
+            AssertNotSingleton<ITreasureRatesSelector>();
         }
 
         [Test]
@@ -51,21 +26,27 @@ namespace EncounterGen.Tests.Integration.IoC.Modules
         }
 
         [Test]
-        public void EncounterCollectionSelectorHasCachingProxy()
+        public void EncounterCollectionSelectorIsDecorated()
         {
             AssertInstanceOf<IEncounterCollectionSelector, EncounterCollectionSelectorCachingProxy>();
         }
 
         [Test]
-        public void EncounterSelectorIsNotASingleton()
+        public void EncounterFormatterIsNotASingleton()
         {
-            AssertNotSingleton<IEncounterSelector>();
+            AssertNotSingleton<IEncounterFormatter>();
         }
 
         [Test]
         public void ItemSelectorIsNotASingleton()
         {
             AssertNotSingleton<IItemSelector>();
+        }
+
+        [Test]
+        public void ChallengeRatingSelectorIsNotASingleton()
+        {
+            AssertNotSingleton<IChallengeRatingSelector>();
         }
     }
 }

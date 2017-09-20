@@ -1,6 +1,8 @@
-﻿using EncounterGen.Common;
+﻿using DnDGen.Core.Selectors.Collections;
+using EncounterGen.Common;
 using EncounterGen.Domain.Tables;
 using EncounterGen.Generators;
+using EventGen;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,20 +12,26 @@ namespace EncounterGen.Domain.Selectors.Collections
     internal class EncounterCollectionSelector : IEncounterCollectionSelector
     {
         private readonly ICollectionSelector collectionSelector;
-        private readonly IAmountSelector amountSelector;
-        private readonly IEncounterSelector encounterSelector;
+        private readonly IEncounterLevelSelector amountSelector;
+        private readonly IEncounterFormatter encounterFormatter;
+        private readonly IChallengeRatingSelector challengeRatingSelector;
+        private readonly GenEventQueue eventQueue;
 
-        public EncounterCollectionSelector(ICollectionSelector collectionSelector, IAmountSelector amountSelector, IEncounterSelector encounterSelector)
+        public EncounterCollectionSelector(ICollectionSelector collectionSelector, IEncounterLevelSelector amountSelector, IEncounterFormatter encounterFormatter, IChallengeRatingSelector challengeRatingSelector, GenEventQueue eventQueue)
         {
             this.collectionSelector = collectionSelector;
             this.amountSelector = amountSelector;
-            this.encounterSelector = encounterSelector;
+            this.encounterFormatter = encounterFormatter;
+            this.challengeRatingSelector = challengeRatingSelector;
+
+            //INFO: Using event queue here as well as in a decorator in order to capture events while weighting collections
+            this.eventQueue = eventQueue;
         }
 
         public IEnumerable<Dictionary<string, string>> SelectAllWeightedFrom(EncounterSpecifications encounterSpecifications)
         {
             var weightedEncounters = GetWeightedEncounters(encounterSpecifications);
-            var weightedEncounterTypesAndAmounts = weightedEncounters.Select(e => encounterSelector.SelectCreaturesAndAmountsFrom(e));
+            var weightedEncounterTypesAndAmounts = weightedEncounters.Select(e => encounterFormatter.SelectCreaturesAndAmountsFrom(e));
 
             return weightedEncounterTypesAndAmounts;
         }
@@ -45,32 +53,34 @@ namespace EncounterGen.Domain.Selectors.Collections
                 encounterSpecifications.TimeOfDay = EnvironmentConstants.TimesOfDay.Night;
             }
 
-            var magicEncounters = GetValidEncountersFromCreatureGroup(GroupConstants.Magic, encounterSpecifications);
-            var landEncounters = GetValidEncountersFromCreatureGroup(GroupConstants.Land, encounterSpecifications);
-            var specificEnvironmentEncounters = GetValidEncountersFromCreatureGroup(encounterSpecifications.SpecificEnvironment, encounterSpecifications);
+            var magicEncounters = GetEncountersFromCreatureGroup(GroupConstants.Magic);
+            var specificEnvironmentEncounters = GetEncountersFromCreatureGroup(encounterSpecifications.SpecificEnvironment);
+            var aquaticEncounters = GetEncountersFromCreatureGroup(EnvironmentConstants.Aquatic);
+            var undergroundEncounters = GetEncountersFromCreatureGroup(EnvironmentConstants.Underground);
+            var undergroundAquaticEncounters = GetEncountersFromCreatureGroup(EnvironmentConstants.Underground + EnvironmentConstants.Aquatic);
 
-            var aquaticEncounters = GetValidEncountersFromCreatureGroup(EnvironmentConstants.Aquatic, encounterSpecifications);
-
-            var aquaticSpecifications = encounterSpecifications.Clone();
-            aquaticSpecifications.Environment = EnvironmentConstants.Aquatic;
-            var specificAquaticEncounters = GetValidEncountersFromCreatureGroup(aquaticSpecifications.SpecificEnvironment, encounterSpecifications);
-
-            var undergroundEncounters = GetValidEncountersFromCreatureGroup(EnvironmentConstants.Underground, encounterSpecifications);
-            var undergroundAquaticEncounters = GetValidEncountersFromCreatureGroup(EnvironmentConstants.Underground + EnvironmentConstants.Aquatic, encounterSpecifications);
-
-            //INFO: This is done to remove duplicate encounters from these lists
+            //INFO: Using unions instead of adding to the weighted list is done to remove duplicate encounters from these collections
             var allEncounters = magicEncounters.Union(specificEnvironmentEncounters);
 
             if (encounterSpecifications.Environment != EnvironmentConstants.Aquatic)
             {
+                var landEncounters = GetEncountersFromCreatureGroup(GroupConstants.Land);
                 allEncounters = allEncounters.Union(landEncounters);
             }
 
             if (ShouldGetAquatic(encounterSpecifications))
             {
-                allEncounters = allEncounters
-                    .Union(aquaticEncounters)
-                    .Union(specificAquaticEncounters);
+                allEncounters = allEncounters.Union(aquaticEncounters);
+
+                //INFO: If the environment is aquatic, we already have these encounters as the specific environment
+                if (encounterSpecifications.Environment != EnvironmentConstants.Aquatic)
+                {
+                    var aquaticSpecifications = encounterSpecifications.Clone();
+                    aquaticSpecifications.Environment = EnvironmentConstants.Aquatic;
+                    var specificAquaticEncounters = GetEncountersFromCreatureGroup(aquaticSpecifications.SpecificEnvironment);
+
+                    allEncounters = allEncounters.Union(specificAquaticEncounters);
+                }
             }
 
             if (ShouldGetUnderground(encounterSpecifications))
@@ -83,27 +93,44 @@ namespace EncounterGen.Domain.Selectors.Collections
                 allEncounters = allEncounters.Union(undergroundAquaticEncounters);
             }
 
+            var validEncounters = GetValidEncounters(allEncounters, encounterSpecifications);
+
+            if (!validEncounters.Any())
+            {
+                eventQueue.Enqueue("EncounterGen", $"{encounterSpecifications.Description} has no valid encounters");
+                return Enumerable.Empty<string>();
+            }
+
             //INFO: Single weight
-            var weightedEncounters = new List<string>();
-            weightedEncounters.AddRange(allEncounters);
+            //INFO: Initializing capacity to be 3x all valid encounters, to prevent resizing while adding
+            var weightedEncounters = new List<string>(validEncounters.Count() * 3);
+            eventQueue.Enqueue("EncounterGen", $"Single-weighting all {validEncounters.Count()} encounters");
+            weightedEncounters.AddRange(validEncounters);
 
             //INFO: Double weight
-            var commonEncounters = allEncounters.Except(magicEncounters);
+            var commonValidEncounters = validEncounters.Except(magicEncounters);
 
             if (encounterSpecifications.Environment != EnvironmentConstants.Aquatic)
-                commonEncounters = commonEncounters.Except(aquaticEncounters);
+                commonValidEncounters = commonValidEncounters.Except(aquaticEncounters);
 
             if (encounterSpecifications.Environment != EnvironmentConstants.Underground)
-                commonEncounters = commonEncounters.Except(undergroundEncounters);
+                commonValidEncounters = commonValidEncounters.Except(undergroundEncounters);
 
-            weightedEncounters.AddRange(commonEncounters);
+            eventQueue.Enqueue("EncounterGen", $"Double-weighting {commonValidEncounters.Count()} common encounters");
+            weightedEncounters.AddRange(commonValidEncounters);
 
             //INFO: Triple weight
-            weightedEncounters.AddRange(specificEnvironmentEncounters);
+            var validSpecificEnvironmentEncounters = validEncounters.Intersect(specificEnvironmentEncounters);
+
+            eventQueue.Enqueue("EncounterGen", $"Triple-weighting {validSpecificEnvironmentEncounters.Count()} encounters in {encounterSpecifications.SpecificEnvironment}");
+            weightedEncounters.AddRange(validSpecificEnvironmentEncounters);
 
             if (ShouldTripleWeightUndergroundAquatic(encounterSpecifications))
             {
-                weightedEncounters.AddRange(undergroundAquaticEncounters);
+                var validUndergroundAquaticEncounters = validEncounters.Intersect(undergroundAquaticEncounters);
+
+                eventQueue.Enqueue("EncounterGen", $"Triple-weighting {validUndergroundAquaticEncounters.Count()} underground aquatic encounters");
+                weightedEncounters.AddRange(validUndergroundAquaticEncounters);
             }
 
             return weightedEncounters;
@@ -111,7 +138,8 @@ namespace EncounterGen.Domain.Selectors.Collections
 
         private bool ShouldTripleWeightUndergroundAquatic(EncounterSpecifications specifications)
         {
-            return ShouldGetUnderground(specifications) && ShouldGetAquatic(specifications)
+            return ShouldGetUnderground(specifications)
+                && ShouldGetAquatic(specifications)
                 && (specifications.Environment == EnvironmentConstants.Aquatic || specifications.Environment == EnvironmentConstants.Underground);
         }
 
@@ -132,31 +160,70 @@ namespace EncounterGen.Domain.Selectors.Collections
 
         private IEnumerable<string> GetEncountersFromCreatureGroup(string creatureGroup)
         {
-            return collectionSelector.ExplodeInto(TableNameConstants.CreatureGroups, creatureGroup, TableNameConstants.EncounterGroups);
-        }
+            eventQueue.Enqueue("EncounterGen", $"Getting encounters for {creatureGroup}");
 
-        private IEnumerable<string> GetValidEncountersFromCreatureGroup(string creatureGroup, EncounterSpecifications specifications)
-        {
-            var encounters = GetEncountersFromCreatureGroup(creatureGroup);
-            var validEncounters = GetValidEncounters(encounters, specifications);
+            var creatures = collectionSelector.Explode(TableNameConstants.CreatureGroups, creatureGroup);
+            var allEncounters = collectionSelector.SelectAllFrom(TableNameConstants.EncounterGroups);
+            var encounters = collectionSelector.Flatten(allEncounters, creatures);
 
-            if (specifications.Environment == EnvironmentConstants.Civilized)
-            {
-                var wildlife = GetEncountersFromCreatureGroup(GroupConstants.Wilderness);
-                validEncounters = validEncounters.Except(wildlife);
-            }
+            //INFO: Causing immediate execution for better event spacing
+            encounters = encounters.ToArray();
+            eventQueue.Enqueue("EncounterGen", $"{creatureGroup} has {encounters.Count()} encounters");
 
-            return validEncounters;
+            return encounters;
         }
 
         private IEnumerable<string> GetValidEncounters(IEnumerable<string> source, EncounterSpecifications specifications)
         {
-            var validEncounters = source.Where(e => amountSelector.SelectAverageEncounterLevel(e) == specifications.Level);
-            var allowedCreatureNames = GetAllowedCreatureNames(specifications.CreatureTypeFilters);
-            validEncounters = validEncounters.Where(e => EncounterIsValid(e, allowedCreatureNames));
+            eventQueue.Enqueue("EncounterGen", $"Validating {source.Count()} encounters");
+            var validEncounters = source.ToArray();
+
+            if (!validEncounters.Any())
+                return Enumerable.Empty<string>();
+
+            eventQueue.Enqueue("EncounterGen", $"Filtering out all encounters that are not (on overage) level {specifications.Level}");
+
+            var encounterLevels = collectionSelector.SelectAllFrom(TableNameConstants.AverageEncounterLevels);
+            var levelString = specifications.Level.ToString();
+            validEncounters = validEncounters.Where(e => encounterLevels[e].Single() == levelString).ToArray();
+
+            eventQueue.Enqueue("EncounterGen", $"Filtered down to {validEncounters.Length} encounters");
+
+            if (!validEncounters.Any())
+                return Enumerable.Empty<string>();
+
+            if (specifications.CreatureTypeFilters.Any())
+            {
+                eventQueue.Enqueue("EncounterGen", $"Filtering out all encounters that do not have at least one of the following creature types: {string.Join(", ", specifications.CreatureTypeFilters)}");
+
+                var allowedCreatureNames = GetAllowedCreatureNames(specifications.CreatureTypeFilters);
+                validEncounters = validEncounters.Where(e => EncounterIsValid(e, allowedCreatureNames)).ToArray();
+
+                eventQueue.Enqueue("EncounterGen", $"Filtered down to {validEncounters.Length} encounters");
+            }
+
+            if (!validEncounters.Any())
+                return Enumerable.Empty<string>();
+
+            if (specifications.Environment == EnvironmentConstants.Civilized)
+            {
+                eventQueue.Enqueue("EncounterGen", $"Filtering out all wilderness encounters because the environment is civilized");
+
+                var wildlife = GetEncountersFromCreatureGroup(GroupConstants.Wilderness);
+                validEncounters = validEncounters.Except(wildlife).ToArray();
+
+                eventQueue.Enqueue("EncounterGen", $"Filtered down to {validEncounters.Length} encounters");
+            }
+
+            if (!validEncounters.Any())
+                return Enumerable.Empty<string>();
+
+            eventQueue.Enqueue("EncounterGen", $"Filtering out all encounters that cannot occur in the {specifications.TimeOfDay}");
 
             var timeOfDayEncounters = GetEncountersFromCreatureGroup(specifications.TimeOfDay);
-            validEncounters = validEncounters.Intersect(timeOfDayEncounters);
+            validEncounters = validEncounters.Intersect(timeOfDayEncounters).ToArray();
+
+            eventQueue.Enqueue("EncounterGen", $"Filtered down to {validEncounters.Length} encounters");
 
             return validEncounters;
         }
@@ -164,7 +231,7 @@ namespace EncounterGen.Domain.Selectors.Collections
         //INFO: This method exists here because we cannot use the EncounterVerifier on the selector level, only the generator level
         private bool EncounterIsValid(string encounter, IEnumerable<string> allowedCreatureNames)
         {
-            var creaturesAndAmounts = encounterSelector.SelectCreaturesAndAmountsFrom(encounter);
+            var creaturesAndAmounts = encounterFormatter.SelectCreaturesAndAmountsFrom(encounter);
             var creatureNames = creaturesAndAmounts.Keys;
             return creatureNames.Any(c => CreatureIsValid(c, allowedCreatureNames));
         }
@@ -172,7 +239,7 @@ namespace EncounterGen.Domain.Selectors.Collections
         //INFO: This method exists here because we cannot use the EncounterVerifier on the selector level, only the generator level
         private bool CreatureIsValid(string creatureName, IEnumerable<string> allowedCreatureNames)
         {
-            return !allowedCreatureNames.Any() || allowedCreatureNames.Contains(creatureName);
+            return allowedCreatureNames.Contains(creatureName);
         }
 
         private IEnumerable<string> GetAllowedCreatureNames(IEnumerable<string> creatureTypeFilters)

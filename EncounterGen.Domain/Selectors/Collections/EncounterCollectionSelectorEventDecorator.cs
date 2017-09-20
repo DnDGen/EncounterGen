@@ -1,6 +1,7 @@
 ﻿using EncounterGen.Generators;
 using EventGen;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace EncounterGen.Domain.Selectors.Collections
 {
@@ -19,7 +20,7 @@ namespace EncounterGen.Domain.Selectors.Collections
         {
             eventQueue.Enqueue("EncounterGen", $"Selecting encounter table for {encounterSpecifications.Description}");
             var encounterCollection = innerSelector.SelectAllWeightedFrom(encounterSpecifications);
-            eventQueue.Enqueue("EncounterGen", $"Finished selecting encounter table for {encounterSpecifications.Description}");
+            eventQueue.Enqueue("EncounterGen", $"Selected {encounterCollection.Count()} weighted encounters");
 
             return encounterCollection;
         }
@@ -28,7 +29,7 @@ namespace EncounterGen.Domain.Selectors.Collections
         {
             eventQueue.Enqueue("EncounterGen", $"Selecting a random encounter from the encounter table for {encounterSpecifications.Description}");
             var encounter = innerSelector.SelectRandomFrom(encounterSpecifications);
-            eventQueue.Enqueue("EncounterGen", $"Finished selecting a random encounter from the encounter table for {encounterSpecifications.Description}");
+            eventQueue.Enqueue("EncounterGen", $"Selected a random encounter with {encounter.Count} different creatures");
 
             return encounter;
         }

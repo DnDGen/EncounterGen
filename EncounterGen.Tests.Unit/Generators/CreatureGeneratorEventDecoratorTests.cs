@@ -58,8 +58,8 @@ namespace EncounterGen.Tests.Unit.Generators
 
             Assert.That(generatedCreatures, Is.EqualTo(creatures));
             mockEventQueue.Verify(q => q.Enqueue(It.IsAny<string>(), It.IsAny<string>()), Times.Exactly(2));
-            mockEventQueue.Verify(q => q.Enqueue("EncounterGen", $"Beginning generation of creatures for {specifications.Description}"), Times.Once);
-            mockEventQueue.Verify(q => q.Enqueue("EncounterGen", "Completed generation of 2 creatures"), Times.Once);
+            mockEventQueue.Verify(q => q.Enqueue("EncounterGen", $"Generating creatures for {specifications.Description}"), Times.Once);
+            mockEventQueue.Verify(q => q.Enqueue("EncounterGen", "Generated 2 creatures"), Times.Once);
         }
 
         [Test]
@@ -88,7 +88,7 @@ namespace EncounterGen.Tests.Unit.Generators
             Assert.That(cleanedCreatures, Is.Not.EqualTo(creatures));
             mockEventQueue.Verify(q => q.Enqueue(It.IsAny<string>(), It.IsAny<string>()), Times.Exactly(2));
             mockEventQueue.Verify(q => q.Enqueue("EncounterGen", $"Cleaning 2 creatures"), Times.Once);
-            mockEventQueue.Verify(q => q.Enqueue("EncounterGen", "Completed cleaning of 2 creatures"), Times.Once);
+            mockEventQueue.Verify(q => q.Enqueue("EncounterGen", "Cleaned 2 creatures"), Times.Once);
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿using EncounterGen.Domain.Mappers.Percentiles;
+﻿using DnDGen.Core.Mappers.Percentiles;
 using Ninject;
 using NUnit.Framework;
 using System.Collections.Generic;

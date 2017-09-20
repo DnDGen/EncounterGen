@@ -1,4 +1,5 @@
-﻿using EncounterGen.Common;
+﻿using DnDGen.Core.Selectors.Collections;
+using EncounterGen.Common;
 using EncounterGen.Domain.Generators;
 using EncounterGen.Domain.Selectors;
 using EncounterGen.Domain.Selectors.Collections;
@@ -6,6 +7,7 @@ using EncounterGen.Domain.Tables;
 using EncounterGen.Generators;
 using Moq;
 using NUnit.Framework;
+using RollGen;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,54 +18,64 @@ namespace EncounterGen.Tests.Unit.Generators
     public class CreatureGeneratorTests
     {
         private ICreatureGenerator creatureGenerator;
-        private Mock<IAmountSelector> mockAmountSelector;
+        private Mock<Dice> mockDice;
         private Mock<ICollectionSelector> mockCollectionSelector;
-        private Mock<IEncounterSelector> mockEncounterSelector;
+        private Mock<IEncounterFormatter> mockEncounterFormatter;
         private Mock<IEncounterCollectionSelector> mockEncounterCollectionSelector;
         private Dictionary<string, string> creaturesAndAmounts;
         private List<string> requiresSubtype;
         private EncounterSpecifications specifications;
+        private Mock<IChallengeRatingSelector> mockChallengeRatingSelector;
+        private Dictionary<string, IEnumerable<string>> challengeRatings;
 
         [SetUp]
         public void Setup()
         {
-            mockAmountSelector = new Mock<IAmountSelector>();
+            mockDice = new Mock<Dice>();
             mockCollectionSelector = new Mock<ICollectionSelector>();
             mockEncounterCollectionSelector = new Mock<IEncounterCollectionSelector>();
-            mockEncounterSelector = new Mock<IEncounterSelector>();
+            mockEncounterFormatter = new Mock<IEncounterFormatter>();
+            mockChallengeRatingSelector = new Mock<IChallengeRatingSelector>();
 
-            creatureGenerator = new CreatureGenerator(mockAmountSelector.Object, mockCollectionSelector.Object, mockEncounterCollectionSelector.Object, mockEncounterSelector.Object);
+            creatureGenerator = new CreatureGenerator(mockDice.Object, mockCollectionSelector.Object, mockEncounterCollectionSelector.Object, mockEncounterFormatter.Object, mockChallengeRatingSelector.Object);
 
             creaturesAndAmounts = new Dictionary<string, string>();
             requiresSubtype = new List<string>();
             specifications = new EncounterSpecifications();
+            challengeRatings = new Dictionary<string, IEnumerable<string>>();
 
             specifications.Level = 10;
             specifications.Environment = "environment";
             specifications.Temperature = "temperature";
             specifications.TimeOfDay = "time of day";
             creaturesAndAmounts["creature"] = "creature amount";
+            challengeRatings["creature"] = new[] { "challenge rating" };
 
             mockEncounterCollectionSelector.Setup(s => s.SelectRandomFrom(specifications)).Returns(creaturesAndAmounts);
 
-            mockAmountSelector.Setup(d => d.SelectFrom(It.IsAny<string>())).Returns((string s) => ParseRoll(s));
-            mockAmountSelector.Setup(d => d.SelectFrom("creature amount")).Returns(42);
+            mockDice.Setup(d => d.Roll(It.IsAny<string>())).Returns((string s) => ParseRoll(s));
+            mockDice.Setup(d => d.Roll("creature amount")).Returns(ParseRoll("42"));
 
+            mockCollectionSelector.Setup(s => s.SelectAllFrom(TableNameConstants.AverageChallengeRatings)).Returns(challengeRatings);
             mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.CreatureGroups, GroupConstants.RequiresSubtype)).Returns(requiresSubtype);
             mockCollectionSelector.Setup(s => s.SelectRandomFrom(It.IsAny<IEnumerable<string>>())).Returns((IEnumerable<string> c) => c.Last());
 
-            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.AverageChallengeRatings, It.IsAny<string>())).Returns(new[] { "default challenge rating" });
-            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.AverageChallengeRatings, "creature")).Returns(new[] { "challenge rating" });
+            mockChallengeRatingSelector.Setup(s => s.SelectAverageForCreature(It.IsAny<string>())).Returns((string s) => challengeRatings[s].Single());
 
-            mockEncounterSelector.Setup(s => s.SelectNameFrom(It.IsAny<string>())).Returns((string s) => s);
-            mockEncounterSelector.Setup(s => s.SelectDescriptionFrom(It.IsAny<string>())).Returns(string.Empty);
+            mockEncounterFormatter.Setup(s => s.SelectNameFrom(It.IsAny<string>())).Returns((string s) => s);
+            mockEncounterFormatter.Setup(s => s.SelectDescriptionFrom(It.IsAny<string>())).Returns(string.Empty);
         }
 
-        private int ParseRoll(string roll)
+        private PartialRoll ParseRoll(string roll)
         {
+            var mockPartialRoll = new Mock<PartialRoll>();
             var value = 0;
+
             if (int.TryParse(roll, out value))
-                return value;
+            {
+                mockPartialRoll.Setup(r => r.AsSum()).Returns(value);
+                return mockPartialRoll.Object;
+            }
 
             throw new ArgumentException("This roll was not set up to be parsed: " + roll);
         }
@@ -88,13 +100,12 @@ namespace EncounterGen.Tests.Unit.Generators
         {
             creaturesAndAmounts["other creature"] = "other amount";
             creaturesAndAmounts["another creature"] = "another amount";
+            challengeRatings["other creature"] = new[] { "other challenge rating" };
+            challengeRatings["another creature"] = new[] { "another challenge rating" };
 
-            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.AverageChallengeRatings, "other creature")).Returns(new[] { "other challenge rating" });
-            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.AverageChallengeRatings, "another creature")).Returns(new[] { "another challenge rating" });
-
-            mockAmountSelector.Setup(d => d.SelectFrom("creature amount")).Returns(0);
-            mockAmountSelector.Setup(d => d.SelectFrom("another amount")).Returns(-42);
-            mockAmountSelector.Setup(d => d.SelectFrom("other amount")).Returns(69);
+            mockDice.Setup(d => d.Roll("creature amount")).Returns(ParseRoll("0"));
+            mockDice.Setup(d => d.Roll("another amount")).Returns(ParseRoll("-42"));
+            mockDice.Setup(d => d.Roll("other amount")).Returns(ParseRoll("69"));
 
             var creatures = creatureGenerator.GenerateFor(specifications);
             Assert.That(creatures, Is.Not.Null);
@@ -111,8 +122,8 @@ namespace EncounterGen.Tests.Unit.Generators
         [Test]
         public void GenerateCreatureWithDescription()
         {
-            mockEncounterSelector.Setup(s => s.SelectNameFrom(creaturesAndAmounts.First().Key)).Returns("creature name");
-            mockEncounterSelector.Setup(s => s.SelectDescriptionFrom(creaturesAndAmounts.First().Key)).Returns("creature description");
+            mockEncounterFormatter.Setup(s => s.SelectNameFrom(creaturesAndAmounts.First().Key)).Returns("creature name");
+            mockEncounterFormatter.Setup(s => s.SelectDescriptionFrom(creaturesAndAmounts.First().Key)).Returns("creature description");
 
             var creatures = creatureGenerator.GenerateFor(specifications);
             Assert.That(creatures, Is.Not.Null);
@@ -129,8 +140,8 @@ namespace EncounterGen.Tests.Unit.Generators
         [Test]
         public void GenerateCreatureWithSetSubtype()
         {
-            mockEncounterSelector.Setup(s => s.SelectNameFrom(creaturesAndAmounts.First().Key)).Returns("creature name");
-            mockEncounterSelector.Setup(s => s.SelectSubtypeFrom(creaturesAndAmounts.First().Key)).Returns("subtype");
+            mockEncounterFormatter.Setup(s => s.SelectNameFrom(creaturesAndAmounts.First().Key)).Returns("creature name");
+            mockEncounterFormatter.Setup(s => s.SelectSubtypeFrom(creaturesAndAmounts.First().Key)).Returns("subtype");
 
             var creatures = creatureGenerator.GenerateFor(specifications);
             Assert.That(creatures, Is.Not.Null);
@@ -149,7 +160,7 @@ namespace EncounterGen.Tests.Unit.Generators
         [Test]
         public void CreatureWithRandomSubTypeShouldUseSetAmountAndSetChallengeRating()
         {
-            mockEncounterSelector.Setup(s => s.SelectChallengeRatingFrom(creaturesAndAmounts.First().Key)).Returns("challenge rating");
+            mockEncounterFormatter.Setup(s => s.SelectChallengeRatingFrom(creaturesAndAmounts.First().Key)).Returns("challenge rating");
 
             requiresSubtype.Add("creature");
 
@@ -158,9 +169,9 @@ namespace EncounterGen.Tests.Unit.Generators
 
             mockCollectionSelector.SetupSequence(s => s.SelectRandomFrom(subtypes)).Returns(subtypes.First()).Returns(subtypes.Last());
 
-            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.AverageChallengeRatings, "other creature")).Returns(new[] { "challenge rating" });
-            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.AverageChallengeRatings, "wrong creature")).Returns(new[] { "wrong challenge rating" });
-            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.AverageChallengeRatings, creaturesAndAmounts.First().Key)).Returns(new[] { "specific challenge rating" });
+            challengeRatings["other creature"] = new[] { "challenge rating" };
+            challengeRatings["wrong creature"] = new[] { "wrong challenge rating" };
+            challengeRatings[creaturesAndAmounts.Keys.First()] = new[] { "specific challenge rating" };
 
             var creatures = creatureGenerator.GenerateFor(specifications);
             Assert.That(creatures, Is.Not.Null);
@@ -176,7 +187,7 @@ namespace EncounterGen.Tests.Unit.Generators
         [Test]
         public void CreatureWithRandomSubTypeShouldPickNewSubtypeForEachInQuantity()
         {
-            mockEncounterSelector.Setup(s => s.SelectChallengeRatingFrom(creaturesAndAmounts.First().Key)).Returns("challenge rating");
+            mockEncounterFormatter.Setup(s => s.SelectChallengeRatingFrom(creaturesAndAmounts.First().Key)).Returns("challenge rating");
 
             requiresSubtype.Add("creature");
 
@@ -186,10 +197,10 @@ namespace EncounterGen.Tests.Unit.Generators
             var count = 0;
             mockCollectionSelector.Setup(s => s.SelectRandomFrom(subtypes)).Returns((IEnumerable<string> c) => c.ElementAt(GetIndex(count++)));
 
-            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.AverageChallengeRatings, "other creature")).Returns(new[] { "challenge rating" });
-            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.AverageChallengeRatings, "random creature")).Returns(new[] { "challenge rating" });
-            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.AverageChallengeRatings, "wrong creature")).Returns(new[] { "wrong challenge rating" });
-            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.AverageChallengeRatings, creaturesAndAmounts.First().Key)).Returns(new[] { "specific challenge rating" });
+            challengeRatings["other creature"] = new[] { "challenge rating" };
+            challengeRatings["wrong creature"] = new[] { "wrong challenge rating" };
+            challengeRatings["random creature"] = new[] { "challenge rating" };
+            challengeRatings[creaturesAndAmounts.Keys.First()] = new[] { "specific challenge rating" };
 
             var creatures = creatureGenerator.GenerateFor(specifications);
             Assert.That(creatures, Is.Not.Null);
@@ -219,8 +230,8 @@ namespace EncounterGen.Tests.Unit.Generators
 
             mockCollectionSelector.SetupSequence(s => s.SelectRandomFrom(subtypes)).Returns(subtypes.First()).Returns(subtypes.Last());
 
-            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.AverageChallengeRatings, "other creature")).Returns(new[] { "challenge rating" });
-            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.AverageChallengeRatings, "wrong creature")).Returns(new[] { "wrong challenge rating" });
+            challengeRatings["other creature"] = new[] { "challenge rating" };
+            challengeRatings["wrong creature"] = new[] { "wrong challenge rating" };
 
             Assert.That(() => creatureGenerator.GenerateFor(specifications), Throws.InvalidOperationException.With.Message.EqualTo("Cannot generate random subtype of creature without a set challenge rating"));
         }
@@ -228,8 +239,8 @@ namespace EncounterGen.Tests.Unit.Generators
         [Test]
         public void CreatureWithRandomSubTypeWithFurtherSubtypeShouldUseSetAmountAndSetChallengeRating()
         {
-            mockEncounterSelector.Setup(s => s.SelectChallengeRatingFrom(creaturesAndAmounts.First().Key)).Returns("challenge rating");
-            mockEncounterSelector.Setup(s => s.SelectSubtypeFrom("other creature")).Returns("subtype");
+            mockEncounterFormatter.Setup(s => s.SelectChallengeRatingFrom(creaturesAndAmounts.First().Key)).Returns("challenge rating");
+            mockEncounterFormatter.Setup(s => s.SelectSubtypeFrom("other creature")).Returns("subtype");
 
             requiresSubtype.Add("creature");
 
@@ -238,9 +249,9 @@ namespace EncounterGen.Tests.Unit.Generators
 
             mockCollectionSelector.SetupSequence(s => s.SelectRandomFrom(subtypes)).Returns(subtypes.First()).Returns(subtypes.Last());
 
-            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.AverageChallengeRatings, "other creature")).Returns(new[] { "challenge rating" });
-            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.AverageChallengeRatings, "wrong creature")).Returns(new[] { "wrong challenge rating" });
-            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.AverageChallengeRatings, creaturesAndAmounts.First().Key)).Returns(new[] { "specific challenge rating" });
+            challengeRatings["other creature"] = new[] { "challenge rating" };
+            challengeRatings["wrong creature"] = new[] { "wrong challenge rating" };
+            challengeRatings[creaturesAndAmounts.Keys.First()] = new[] { "specific challenge rating" };
 
             var creatures = creatureGenerator.GenerateFor(specifications);
             Assert.That(creatures, Is.Not.Null);
@@ -258,9 +269,9 @@ namespace EncounterGen.Tests.Unit.Generators
         [Test]
         public void CreatureWithRandomSubtypeHasFurtherRandomSubtype()
         {
-            mockEncounterSelector.Setup(s => s.SelectChallengeRatingFrom(creaturesAndAmounts.First().Key)).Returns("challenge rating");
-            mockEncounterSelector.Setup(s => s.SelectSubtypeFrom("other creature")).Returns("subtype");
-            mockEncounterSelector.Setup(s => s.SelectChallengeRatingFrom("other creature")).Returns("other challenge rating");
+            mockEncounterFormatter.Setup(s => s.SelectChallengeRatingFrom(creaturesAndAmounts.First().Key)).Returns("challenge rating");
+            mockEncounterFormatter.Setup(s => s.SelectSubtypeFrom("other creature")).Returns("subtype");
+            mockEncounterFormatter.Setup(s => s.SelectChallengeRatingFrom("other creature")).Returns("other challenge rating");
 
             requiresSubtype.Add("creature");
             requiresSubtype.Add("other creature");
@@ -271,11 +282,11 @@ namespace EncounterGen.Tests.Unit.Generators
 
             mockCollectionSelector.SetupSequence(s => s.SelectRandomFrom(subSubtypes)).Returns(subSubtypes.First()).Returns(subSubtypes.Last());
 
-            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.AverageChallengeRatings, "other creature")).Returns(new[] { "challenge rating" });
-            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.AverageChallengeRatings, "subtype")).Returns(new[] { "other challenge rating" });
-            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.AverageChallengeRatings, "wrong subtype")).Returns(new[] { "wrong challenge rating" });
-            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.AverageChallengeRatings, "wrong creature")).Returns(new[] { "wrong challenge rating" });
-            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.AverageChallengeRatings, creaturesAndAmounts.First().Key)).Returns(new[] { "specific challenge rating" });
+            challengeRatings["other creature"] = new[] { "challenge rating" };
+            challengeRatings["subtype"] = new[] { "other challenge rating" };
+            challengeRatings["wrong creature"] = new[] { "wrong challenge rating" };
+            challengeRatings["wrong subtype"] = new[] { "wrong challenge rating" };
+            challengeRatings[creaturesAndAmounts.Keys.First()] = new[] { "specific challenge rating" };
 
             var creatures = creatureGenerator.GenerateFor(specifications);
             Assert.That(creatures, Is.Not.Null);
@@ -293,8 +304,8 @@ namespace EncounterGen.Tests.Unit.Generators
         [Test]
         public void CreatureWithRandomSubtypeAndFurtherRandomSubtypeSelectsRandomEachTime()
         {
-            mockEncounterSelector.Setup(s => s.SelectChallengeRatingFrom(creaturesAndAmounts.First().Key)).Returns("challenge rating");
-            mockEncounterSelector.Setup(s => s.SelectChallengeRatingFrom("other creature")).Returns("other challenge rating");
+            mockEncounterFormatter.Setup(s => s.SelectChallengeRatingFrom(creaturesAndAmounts.First().Key)).Returns("challenge rating");
+            mockEncounterFormatter.Setup(s => s.SelectChallengeRatingFrom("other creature")).Returns("other challenge rating");
 
             requiresSubtype.Add("creature");
             requiresSubtype.Add("other creature");
@@ -308,15 +319,13 @@ namespace EncounterGen.Tests.Unit.Generators
             var count = 0;
             mockCollectionSelector.Setup(s => s.SelectRandomFrom(It.IsAny<IEnumerable<string>>())).Returns((IEnumerable<string> c) => c.ElementAt(GetIndex(count++)));
 
-            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.AverageChallengeRatings, "other creature")).Returns(new[] { "challenge rating" });
-            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.AverageChallengeRatings, "random creature")).Returns(new[] { "challenge rating" });
-            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.AverageChallengeRatings, "subtype")).Returns(new[] { "other challenge rating" });
-            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.AverageChallengeRatings, "other subtype")).Returns(new[] { "other challenge rating" });
-
-            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.AverageChallengeRatings, "wrong subtype")).Returns(new[] { "wrong challenge rating" });
-            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.AverageChallengeRatings, "wrong creature")).Returns(new[] { "wrong challenge rating" });
-
-            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.AverageChallengeRatings, creaturesAndAmounts.First().Key)).Returns(new[] { "specific challenge rating" });
+            challengeRatings["other creature"] = new[] { "challenge rating" };
+            challengeRatings["random creature"] = new[] { "challenge rating" };
+            challengeRatings["subtype"] = new[] { "other challenge rating" };
+            challengeRatings["other subtype"] = new[] { "other challenge rating" };
+            challengeRatings["wrong creature"] = new[] { "wrong challenge rating" };
+            challengeRatings["wrong subtype"] = new[] { "wrong challenge rating" };
+            challengeRatings[creaturesAndAmounts.Keys.First()] = new[] { "specific challenge rating" };
 
             var creatures = creatureGenerator.GenerateFor(specifications).ToArray();
             Assert.That(creatures, Is.Not.Null);
@@ -358,17 +367,17 @@ namespace EncounterGen.Tests.Unit.Generators
         [Test]
         public void DoNotGetRandomSubtypeIfSet()
         {
-            mockEncounterSelector.Setup(s => s.SelectNameFrom(creaturesAndAmounts.First().Key)).Returns("creature name");
-            mockEncounterSelector.Setup(s => s.SelectDescriptionFrom(creaturesAndAmounts.First().Key)).Returns("creature description");
-            mockEncounterSelector.Setup(s => s.SelectSubtypeFrom(creaturesAndAmounts.First().Key)).Returns("subtype");
-            mockEncounterSelector.Setup(s => s.SelectChallengeRatingFrom(creaturesAndAmounts.First().Key)).Returns("creature challenge rating");
-            mockEncounterSelector.Setup(s => s.SelectNameFrom("subtype")).Returns("subtype name");
-            mockEncounterSelector.Setup(s => s.SelectDescriptionFrom("subtype")).Returns("subtype description");
+            mockEncounterFormatter.Setup(s => s.SelectNameFrom(creaturesAndAmounts.First().Key)).Returns("creature name");
+            mockEncounterFormatter.Setup(s => s.SelectDescriptionFrom(creaturesAndAmounts.First().Key)).Returns("creature description");
+            mockEncounterFormatter.Setup(s => s.SelectSubtypeFrom(creaturesAndAmounts.First().Key)).Returns("subtype");
+            mockEncounterFormatter.Setup(s => s.SelectChallengeRatingFrom(creaturesAndAmounts.First().Key)).Returns("creature challenge rating");
+            mockEncounterFormatter.Setup(s => s.SelectNameFrom("subtype")).Returns("subtype name");
+            mockEncounterFormatter.Setup(s => s.SelectDescriptionFrom("subtype")).Returns("subtype description");
 
             requiresSubtype.Add("creature");
             mockCollectionSelector.Setup(s => s.Explode(TableNameConstants.CreatureGroups, "creature")).Returns(new[] { "wrong subtype" });
 
-            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.AverageChallengeRatings, "wrong subtype")).Returns(new[] { "creature challenge rating" });
+            challengeRatings["wrong subtype"] = new[] { "creature challenge rating" };
 
             var creatures = creatureGenerator.GenerateFor(specifications).ToArray();
             Assert.That(creatures, Is.Not.Null);
@@ -386,25 +395,25 @@ namespace EncounterGen.Tests.Unit.Generators
         [Test]
         public void DeepRecursiveTypesAreOkay()
         {
-            mockEncounterSelector.Setup(s => s.SelectNameFrom(creaturesAndAmounts.First().Key)).Returns("creature name");
-            mockEncounterSelector.Setup(s => s.SelectDescriptionFrom(creaturesAndAmounts.First().Key)).Returns("creature description");
-            mockEncounterSelector.Setup(s => s.SelectChallengeRatingFrom(creaturesAndAmounts.First().Key)).Returns("creature challenge rating");
-            mockEncounterSelector.Setup(s => s.SelectNameFrom("subtype")).Returns("subtype name");
-            mockEncounterSelector.Setup(s => s.SelectDescriptionFrom("subtype")).Returns("subtype description");
-            mockEncounterSelector.Setup(s => s.SelectChallengeRatingFrom("subtype")).Returns("subtype challenge rating");
-            mockEncounterSelector.Setup(s => s.SelectNameFrom("further subtype")).Returns("further subtype name");
-            mockEncounterSelector.Setup(s => s.SelectDescriptionFrom("further subtype")).Returns("further subtype description");
-            mockEncounterSelector.Setup(s => s.SelectSubtypeFrom("further subtype")).Returns("last subtype");
-            mockEncounterSelector.Setup(s => s.SelectNameFrom("last subtype")).Returns("last subtype name");
-            mockEncounterSelector.Setup(s => s.SelectDescriptionFrom("last subtype")).Returns("last subtype description");
+            mockEncounterFormatter.Setup(s => s.SelectNameFrom(creaturesAndAmounts.First().Key)).Returns("creature name");
+            mockEncounterFormatter.Setup(s => s.SelectDescriptionFrom(creaturesAndAmounts.First().Key)).Returns("creature description");
+            mockEncounterFormatter.Setup(s => s.SelectChallengeRatingFrom(creaturesAndAmounts.First().Key)).Returns("creature challenge rating");
+            mockEncounterFormatter.Setup(s => s.SelectNameFrom("subtype")).Returns("subtype name");
+            mockEncounterFormatter.Setup(s => s.SelectDescriptionFrom("subtype")).Returns("subtype description");
+            mockEncounterFormatter.Setup(s => s.SelectChallengeRatingFrom("subtype")).Returns("subtype challenge rating");
+            mockEncounterFormatter.Setup(s => s.SelectNameFrom("further subtype")).Returns("further subtype name");
+            mockEncounterFormatter.Setup(s => s.SelectDescriptionFrom("further subtype")).Returns("further subtype description");
+            mockEncounterFormatter.Setup(s => s.SelectSubtypeFrom("further subtype")).Returns("last subtype");
+            mockEncounterFormatter.Setup(s => s.SelectNameFrom("last subtype")).Returns("last subtype name");
+            mockEncounterFormatter.Setup(s => s.SelectDescriptionFrom("last subtype")).Returns("last subtype description");
 
             requiresSubtype.Add(creaturesAndAmounts.First().Key);
             requiresSubtype.Add("subtype");
             mockCollectionSelector.Setup(s => s.Explode(TableNameConstants.CreatureGroups, "creature name")).Returns(new[] { "subtype" });
             mockCollectionSelector.Setup(s => s.Explode(TableNameConstants.CreatureGroups, "subtype name")).Returns(new[] { "further subtype" });
 
-            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.AverageChallengeRatings, "further subtype")).Returns(new[] { "subtype challenge rating" });
-            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.AverageChallengeRatings, "subtype")).Returns(new[] { "creature challenge rating" });
+            challengeRatings["further subtype"] = new[] { "subtype challenge rating" };
+            challengeRatings["subtype"] = new[] { "creature challenge rating" };
 
             var creatures = creatureGenerator.GenerateFor(specifications);
             Assert.That(creatures, Is.Not.Null);
@@ -426,9 +435,9 @@ namespace EncounterGen.Tests.Unit.Generators
         public void GetMultipleCreatures()
         {
             creaturesAndAmounts["other creature"] = "other creature amount";
-            mockAmountSelector.Setup(d => d.SelectFrom("other creature amount")).Returns(600);
+            mockDice.Setup(d => d.Roll("other creature amount")).Returns(ParseRoll("600"));
 
-            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.AverageChallengeRatings, "other creature")).Returns(new[] { "other challenge rating" });
+            challengeRatings["other creature"] = new[] { "other challenge rating" };
 
             var creatures = creatureGenerator.GenerateFor(specifications);
             Assert.That(creatures, Is.Not.Null);
@@ -452,8 +461,8 @@ namespace EncounterGen.Tests.Unit.Generators
 
             creatures[0].Type.Name = "creature";
 
-            mockEncounterSelector.Setup(s => s.SelectNameFrom(creatures[0].Type.Name)).Returns("creature name");
-            mockEncounterSelector.Setup(s => s.SelectDescriptionFrom(creatures[0].Type.Name)).Returns("creature description");
+            mockEncounterFormatter.Setup(s => s.SelectNameFrom(creatures[0].Type.Name)).Returns("creature name");
+            mockEncounterFormatter.Setup(s => s.SelectDescriptionFrom(creatures[0].Type.Name)).Returns("creature description");
 
             var cleanedCreatures = creatureGenerator.CleanCreatures(creatures);
             Assert.That(cleanedCreatures, Is.Not.Null);
@@ -477,8 +486,8 @@ namespace EncounterGen.Tests.Unit.Generators
             creatures[0].Type.Name = "creature";
             creatures[0].Type.Description = "description";
 
-            mockEncounterSelector.Setup(s => s.SelectNameFrom(creatures[0].Type.Name)).Returns("creature name");
-            mockEncounterSelector.Setup(s => s.SelectDescriptionFrom(creatures[0].Type.Name)).Returns("wrong description");
+            mockEncounterFormatter.Setup(s => s.SelectNameFrom(creatures[0].Type.Name)).Returns("creature name");
+            mockEncounterFormatter.Setup(s => s.SelectDescriptionFrom(creatures[0].Type.Name)).Returns("wrong description");
 
             var cleanedCreatures = creatureGenerator.CleanCreatures(creatures);
             Assert.That(cleanedCreatures, Is.Not.Null);
@@ -503,11 +512,11 @@ namespace EncounterGen.Tests.Unit.Generators
             creatures[0].Type.SubType = new CreatureType();
             creatures[0].Type.SubType.Name = "subtype";
 
-            mockEncounterSelector.Setup(s => s.SelectNameFrom(creatures[0].Type.Name)).Returns("creature name");
-            mockEncounterSelector.Setup(s => s.SelectDescriptionFrom(creatures[0].Type.Name)).Returns("creature description");
-            mockEncounterSelector.Setup(s => s.SelectChallengeRatingFrom(creatures[0].Type.Name)).Returns("creature challenge rating");
-            mockEncounterSelector.Setup(s => s.SelectNameFrom("subtype")).Returns("subtype name");
-            mockEncounterSelector.Setup(s => s.SelectDescriptionFrom("subtype")).Returns("subtype description");
+            mockEncounterFormatter.Setup(s => s.SelectNameFrom(creatures[0].Type.Name)).Returns("creature name");
+            mockEncounterFormatter.Setup(s => s.SelectDescriptionFrom(creatures[0].Type.Name)).Returns("creature description");
+            mockEncounterFormatter.Setup(s => s.SelectChallengeRatingFrom(creatures[0].Type.Name)).Returns("creature challenge rating");
+            mockEncounterFormatter.Setup(s => s.SelectNameFrom("subtype")).Returns("subtype name");
+            mockEncounterFormatter.Setup(s => s.SelectDescriptionFrom("subtype")).Returns("subtype description");
 
             var cleanedCreatures = creatureGenerator.CleanCreatures(creatures);
             Assert.That(cleanedCreatures, Is.Not.Null);
@@ -532,11 +541,11 @@ namespace EncounterGen.Tests.Unit.Generators
 
             creatures[0].Type.Name = "creature";
 
-            mockEncounterSelector.Setup(s => s.SelectNameFrom(creatures[0].Type.Name)).Returns("creature name");
-            mockEncounterSelector.Setup(s => s.SelectDescriptionFrom(creatures[0].Type.Name)).Returns("creature description");
-            mockEncounterSelector.Setup(s => s.SelectSubtypeFrom(creatures[0].Type.Name)).Returns("subtype");
-            mockEncounterSelector.Setup(s => s.SelectNameFrom("subtype")).Returns("subtype name");
-            mockEncounterSelector.Setup(s => s.SelectDescriptionFrom("subtype")).Returns("subtype description");
+            mockEncounterFormatter.Setup(s => s.SelectNameFrom(creatures[0].Type.Name)).Returns("creature name");
+            mockEncounterFormatter.Setup(s => s.SelectDescriptionFrom(creatures[0].Type.Name)).Returns("creature description");
+            mockEncounterFormatter.Setup(s => s.SelectSubtypeFrom(creatures[0].Type.Name)).Returns("subtype");
+            mockEncounterFormatter.Setup(s => s.SelectNameFrom("subtype")).Returns("subtype name");
+            mockEncounterFormatter.Setup(s => s.SelectDescriptionFrom("subtype")).Returns("subtype description");
 
             var cleanedCreatures = creatureGenerator.CleanCreatures(creatures);
             Assert.That(cleanedCreatures, Is.Not.Null);
@@ -563,13 +572,13 @@ namespace EncounterGen.Tests.Unit.Generators
             creatures[0].Type.SubType = new CreatureType();
             creatures[0].Type.SubType.Name = "existing subtype";
 
-            mockEncounterSelector.Setup(s => s.SelectNameFrom(creatures[0].Type.Name)).Returns("creature name");
-            mockEncounterSelector.Setup(s => s.SelectDescriptionFrom(creatures[0].Type.Name)).Returns("creature description");
-            mockEncounterSelector.Setup(s => s.SelectSubtypeFrom(creatures[0].Type.Name)).Returns("subtype");
-            mockEncounterSelector.Setup(s => s.SelectNameFrom("subtype")).Returns("subtype name");
-            mockEncounterSelector.Setup(s => s.SelectDescriptionFrom("subtype")).Returns("subtype description");
-            mockEncounterSelector.Setup(s => s.SelectNameFrom("existing subtype")).Returns("existing subtype name");
-            mockEncounterSelector.Setup(s => s.SelectDescriptionFrom("existing subtype")).Returns("existing subtype description");
+            mockEncounterFormatter.Setup(s => s.SelectNameFrom(creatures[0].Type.Name)).Returns("creature name");
+            mockEncounterFormatter.Setup(s => s.SelectDescriptionFrom(creatures[0].Type.Name)).Returns("creature description");
+            mockEncounterFormatter.Setup(s => s.SelectSubtypeFrom(creatures[0].Type.Name)).Returns("subtype");
+            mockEncounterFormatter.Setup(s => s.SelectNameFrom("subtype")).Returns("subtype name");
+            mockEncounterFormatter.Setup(s => s.SelectDescriptionFrom("subtype")).Returns("subtype description");
+            mockEncounterFormatter.Setup(s => s.SelectNameFrom("existing subtype")).Returns("existing subtype name");
+            mockEncounterFormatter.Setup(s => s.SelectDescriptionFrom("existing subtype")).Returns("existing subtype description");
 
             var cleanedCreatures = creatureGenerator.CleanCreatures(creatures);
             Assert.That(cleanedCreatures, Is.Not.Null);
@@ -598,14 +607,14 @@ namespace EncounterGen.Tests.Unit.Generators
             creatures[0].Type.SubType.SubType = new CreatureType();
             creatures[0].Type.SubType.SubType.Name = "further subtype";
 
-            mockEncounterSelector.Setup(s => s.SelectNameFrom(creatures[0].Type.Name)).Returns("creature name");
-            mockEncounterSelector.Setup(s => s.SelectDescriptionFrom(creatures[0].Type.Name)).Returns("creature description");
-            mockEncounterSelector.Setup(s => s.SelectChallengeRatingFrom(creatures[0].Type.Name)).Returns("creature challenge rating");
-            mockEncounterSelector.Setup(s => s.SelectNameFrom("subtype")).Returns("subtype name");
-            mockEncounterSelector.Setup(s => s.SelectDescriptionFrom("subtype")).Returns("subtype description");
-            mockEncounterSelector.Setup(s => s.SelectChallengeRatingFrom("subtype")).Returns("subtype challenge rating");
-            mockEncounterSelector.Setup(s => s.SelectNameFrom("further subtype")).Returns("further subtype name");
-            mockEncounterSelector.Setup(s => s.SelectDescriptionFrom("further subtype")).Returns("further subtype description");
+            mockEncounterFormatter.Setup(s => s.SelectNameFrom(creatures[0].Type.Name)).Returns("creature name");
+            mockEncounterFormatter.Setup(s => s.SelectDescriptionFrom(creatures[0].Type.Name)).Returns("creature description");
+            mockEncounterFormatter.Setup(s => s.SelectChallengeRatingFrom(creatures[0].Type.Name)).Returns("creature challenge rating");
+            mockEncounterFormatter.Setup(s => s.SelectNameFrom("subtype")).Returns("subtype name");
+            mockEncounterFormatter.Setup(s => s.SelectDescriptionFrom("subtype")).Returns("subtype description");
+            mockEncounterFormatter.Setup(s => s.SelectChallengeRatingFrom("subtype")).Returns("subtype challenge rating");
+            mockEncounterFormatter.Setup(s => s.SelectNameFrom("further subtype")).Returns("further subtype name");
+            mockEncounterFormatter.Setup(s => s.SelectDescriptionFrom("further subtype")).Returns("further subtype description");
 
             var cleanedCreatures = creatureGenerator.CleanCreatures(creatures);
             Assert.That(cleanedCreatures, Is.Not.Null);
@@ -634,14 +643,14 @@ namespace EncounterGen.Tests.Unit.Generators
             creatures[0].Type.SubType = new CreatureType();
             creatures[0].Type.SubType.Name = "subtype";
 
-            mockEncounterSelector.Setup(s => s.SelectNameFrom(creatures[0].Type.Name)).Returns("creature name");
-            mockEncounterSelector.Setup(s => s.SelectDescriptionFrom(creatures[0].Type.Name)).Returns("creature description");
-            mockEncounterSelector.Setup(s => s.SelectChallengeRatingFrom(creatures[0].Type.Name)).Returns("creature challenge rating");
-            mockEncounterSelector.Setup(s => s.SelectNameFrom("subtype")).Returns("subtype name");
-            mockEncounterSelector.Setup(s => s.SelectDescriptionFrom("subtype")).Returns("subtype description");
-            mockEncounterSelector.Setup(s => s.SelectSubtypeFrom("subtype")).Returns("further subtype");
-            mockEncounterSelector.Setup(s => s.SelectNameFrom("further subtype")).Returns("further subtype name");
-            mockEncounterSelector.Setup(s => s.SelectDescriptionFrom("further subtype")).Returns("further subtype description");
+            mockEncounterFormatter.Setup(s => s.SelectNameFrom(creatures[0].Type.Name)).Returns("creature name");
+            mockEncounterFormatter.Setup(s => s.SelectDescriptionFrom(creatures[0].Type.Name)).Returns("creature description");
+            mockEncounterFormatter.Setup(s => s.SelectChallengeRatingFrom(creatures[0].Type.Name)).Returns("creature challenge rating");
+            mockEncounterFormatter.Setup(s => s.SelectNameFrom("subtype")).Returns("subtype name");
+            mockEncounterFormatter.Setup(s => s.SelectDescriptionFrom("subtype")).Returns("subtype description");
+            mockEncounterFormatter.Setup(s => s.SelectSubtypeFrom("subtype")).Returns("further subtype");
+            mockEncounterFormatter.Setup(s => s.SelectNameFrom("further subtype")).Returns("further subtype name");
+            mockEncounterFormatter.Setup(s => s.SelectDescriptionFrom("further subtype")).Returns("further subtype description");
 
             var cleanedCreatures = creatureGenerator.CleanCreatures(creatures);
             Assert.That(cleanedCreatures, Is.Not.Null);
@@ -668,14 +677,14 @@ namespace EncounterGen.Tests.Unit.Generators
 
             creatures[0].Type.Name = "creature";
 
-            mockEncounterSelector.Setup(s => s.SelectNameFrom(creatures[0].Type.Name)).Returns("creature name");
-            mockEncounterSelector.Setup(s => s.SelectDescriptionFrom(creatures[0].Type.Name)).Returns("creature description");
-            mockEncounterSelector.Setup(s => s.SelectSubtypeFrom(creatures[0].Type.Name)).Returns("subtype");
-            mockEncounterSelector.Setup(s => s.SelectNameFrom("subtype")).Returns("subtype name");
-            mockEncounterSelector.Setup(s => s.SelectDescriptionFrom("subtype")).Returns("subtype description");
-            mockEncounterSelector.Setup(s => s.SelectSubtypeFrom("subtype")).Returns("further subtype");
-            mockEncounterSelector.Setup(s => s.SelectNameFrom("further subtype")).Returns("further subtype name");
-            mockEncounterSelector.Setup(s => s.SelectDescriptionFrom("further subtype")).Returns("further subtype description");
+            mockEncounterFormatter.Setup(s => s.SelectNameFrom(creatures[0].Type.Name)).Returns("creature name");
+            mockEncounterFormatter.Setup(s => s.SelectDescriptionFrom(creatures[0].Type.Name)).Returns("creature description");
+            mockEncounterFormatter.Setup(s => s.SelectSubtypeFrom(creatures[0].Type.Name)).Returns("subtype");
+            mockEncounterFormatter.Setup(s => s.SelectNameFrom("subtype")).Returns("subtype name");
+            mockEncounterFormatter.Setup(s => s.SelectDescriptionFrom("subtype")).Returns("subtype description");
+            mockEncounterFormatter.Setup(s => s.SelectSubtypeFrom("subtype")).Returns("further subtype");
+            mockEncounterFormatter.Setup(s => s.SelectNameFrom("further subtype")).Returns("further subtype name");
+            mockEncounterFormatter.Setup(s => s.SelectDescriptionFrom("further subtype")).Returns("further subtype description");
 
             var cleanedCreatures = creatureGenerator.CleanCreatures(creatures);
             Assert.That(cleanedCreatures, Is.Not.Null);
@@ -702,8 +711,8 @@ namespace EncounterGen.Tests.Unit.Generators
 
             creatures[0].Type.Name = "creature";
 
-            mockEncounterSelector.Setup(s => s.SelectMetaraceFrom(creatures[0].Type.Name)).Returns("metarace");
-            mockEncounterSelector.Setup(s => s.SelectDescriptionFrom(creatures[0].Type.Name)).Returns("description");
+            mockEncounterFormatter.Setup(s => s.SelectMetaraceFrom(creatures[0].Type.Name)).Returns("metarace");
+            mockEncounterFormatter.Setup(s => s.SelectDescriptionFrom(creatures[0].Type.Name)).Returns("description");
 
             var cleanedCreatures = creatureGenerator.CleanCreatures(creatures);
             Assert.That(cleanedCreatures, Is.Not.Null);
@@ -726,8 +735,8 @@ namespace EncounterGen.Tests.Unit.Generators
 
             creatures[0].Type.Name = "creature";
 
-            mockEncounterSelector.Setup(s => s.SelectBaseRaceFrom(creatures[0].Type.Name)).Returns("base race");
-            mockEncounterSelector.Setup(s => s.SelectDescriptionFrom(creatures[0].Type.Name)).Returns("description");
+            mockEncounterFormatter.Setup(s => s.SelectBaseRaceFrom(creatures[0].Type.Name)).Returns("base race");
+            mockEncounterFormatter.Setup(s => s.SelectDescriptionFrom(creatures[0].Type.Name)).Returns("description");
 
             var cleanedCreatures = creatureGenerator.CleanCreatures(creatures);
             Assert.That(cleanedCreatures, Is.Not.Null);

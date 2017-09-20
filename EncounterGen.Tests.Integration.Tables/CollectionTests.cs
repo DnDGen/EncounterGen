@@ -1,7 +1,7 @@
-﻿using EncounterGen.Common;
-using EncounterGen.Domain.Mappers.Collections;
+﻿using DnDGen.Core.Mappers.Collections;
+using DnDGen.Core.Selectors.Collections;
+using EncounterGen.Common;
 using EncounterGen.Domain.Selectors;
-using EncounterGen.Domain.Selectors.Collections;
 using EncounterGen.Domain.Tables;
 using Ninject;
 using NUnit.Framework;
@@ -18,7 +18,7 @@ namespace EncounterGen.Tests.Integration.Tables
         [Inject]
         internal ICollectionSelector CollectionSelector { get; set; }
         [Inject]
-        internal IEncounterSelector EncounterSelector { get; set; }
+        internal IEncounterFormatter EncounterFormatter { get; set; }
 
         private Dictionary<string, IEnumerable<string>> table;
 
@@ -49,7 +49,7 @@ namespace EncounterGen.Tests.Integration.Tables
 
         protected IEnumerable<string> ExplodeCollection(string name)
         {
-            if (CollectionSelector.IsGroup(tableName, name))
+            if (CollectionSelector.IsCollection(tableName, name))
                 return CollectionSelector.Explode(tableName, name);
 
             return new[] { name };
@@ -70,9 +70,8 @@ namespace EncounterGen.Tests.Integration.Tables
 
         protected IEnumerable<string> GetAllCreaturesFromEncounters()
         {
-            //INFO: Because currently, all encounters can occur at night (not all occur in day)
-            var allEncounters = CollectionSelector.ExplodeInto(TableNameConstants.CreatureGroups, EnvironmentConstants.TimesOfDay.Night, TableNameConstants.EncounterGroups);
-            var allCreatures = allEncounters.SelectMany(e => EncounterSelector.SelectCreaturesAndAmountsFrom(e).Keys);
+            var allEncounters = CollectionSelector.SelectAllFrom(TableNameConstants.EncounterGroups).Values.SelectMany(v => v);
+            var allCreatures = allEncounters.SelectMany(e => EncounterFormatter.SelectCreaturesAndAmountsFrom(e).Keys);
 
             //INFO: These are creatues that do not explicitly appear in encounters, but we wish to include them anyway
             var extraCreatures = new[]

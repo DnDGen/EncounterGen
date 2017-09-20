@@ -1,4 +1,5 @@
-﻿using EncounterGen.Common;
+﻿using DnDGen.Core.Selectors.Collections;
+using EncounterGen.Common;
 using EncounterGen.Domain.Selectors;
 using EncounterGen.Domain.Selectors.Collections;
 using EncounterGen.Domain.Tables;
@@ -12,9 +13,9 @@ namespace EncounterGen.Domain.Generators
     {
         private readonly ICollectionSelector collectionSelector;
         private readonly IEncounterCollectionSelector encounterCollectionSelector;
-        private readonly IAmountSelector amountSelector;
+        private readonly IEncounterLevelSelector amountSelector;
 
-        public EncounterVerifier(ICollectionSelector collectionSelector, IEncounterCollectionSelector encounterCollectionSelector, IAmountSelector amountSelector)
+        public EncounterVerifier(ICollectionSelector collectionSelector, IEncounterCollectionSelector encounterCollectionSelector, IEncounterLevelSelector amountSelector)
         {
             this.collectionSelector = collectionSelector;
             this.encounterCollectionSelector = encounterCollectionSelector;
@@ -31,6 +32,14 @@ namespace EncounterGen.Domain.Generators
             return allEncounterCreaturesAndAmounts.Any();
         }
 
+        public bool EncounterIsValid(Encounter encounter, IEnumerable<string> creatureTypeFilters)
+        {
+            var creatureNames = encounter.Creatures.Select(c => c.Type.Name);
+            var level = amountSelector.Select(encounter);
+
+            return EncounterSpecifications.LevelIsValid(level) && EncounterIsValid(creatureNames, creatureTypeFilters);
+        }
+
         public bool EncounterIsValid(IEnumerable<string> creatureNames, IEnumerable<string> creatureTypeFilters)
         {
             return creatureNames.Any(c => CreatureIsValid(c, creatureTypeFilters));
@@ -38,7 +47,7 @@ namespace EncounterGen.Domain.Generators
 
         public bool CreatureIsValid(string creatureName, IEnumerable<string> creatureTypeFilters)
         {
-            if (creatureTypeFilters.Any() == false)
+            if (!creatureTypeFilters.Any())
                 return true;
 
             var allowedCreatureNames = GetAllowedCreatureNames(creatureTypeFilters);
@@ -57,14 +66,6 @@ namespace EncounterGen.Domain.Generators
             }
 
             return creatureNames.Distinct();
-        }
-
-        public bool EncounterIsValid(Encounter encounter, IEnumerable<string> creatureTypeFilters)
-        {
-            var creatureNames = encounter.Creatures.Select(c => c.Type.Name);
-            var level = amountSelector.SelectActualEncounterLevel(encounter);
-
-            return EncounterSpecifications.LevelIsValid(level) && EncounterIsValid(creatureNames, creatureTypeFilters);
         }
     }
 }

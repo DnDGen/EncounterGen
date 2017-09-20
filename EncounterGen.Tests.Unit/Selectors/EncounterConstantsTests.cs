@@ -9,12 +9,12 @@ namespace EncounterGen.Tests.Unit.Selectors
     [TestFixture]
     public class EncounterConstantsTests
     {
-        private IEncounterSelector encounterSelector;
+        private IEncounterFormatter encounterFormatter;
 
         [SetUp]
         public void Setup()
         {
-            encounterSelector = new EncounterSelector();
+            encounterFormatter = new EncounterFormatter();
         }
 
         [TestCase(EncounterConstants.Aasimar_Solitary, CreatureConstants.Aasimar_Warrior, AmountConstants.Range1)]
@@ -3785,7 +3785,7 @@ namespace EncounterGen.Tests.Unit.Selectors
             for (var i = 0; i < creaturesAndAmounts.Length; i += 2)
                 formattedTypesAndAmounts[creaturesAndAmounts[i]] = creaturesAndAmounts[i + 1];
 
-            return encounterSelector.BuildEncounter(formattedTypesAndAmounts);
+            return encounterFormatter.BuildEncounter(formattedTypesAndAmounts);
         }
     }
 }

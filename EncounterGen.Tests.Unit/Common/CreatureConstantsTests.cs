@@ -11,12 +11,12 @@ namespace EncounterGen.Tests.Unit.Common
     [TestFixture]
     public class CreatureConstantsTests
     {
-        private IEncounterSelector encounterSelector;
+        private IEncounterFormatter encounterFormatter;
 
         [SetUp]
         public void Setup()
         {
-            encounterSelector = new EncounterSelector();
+            encounterFormatter = new EncounterFormatter();
         }
 
         [TestCase(CreatureConstants.Aasimar, "Aasimar")]
@@ -387,7 +387,7 @@ namespace EncounterGen.Tests.Unit.Common
         [TestCase(CreatureConstants.Zombie, "Zombie")]
         public void CreatureConstant(string constant, string name)
         {
-            var value = encounterSelector.BuildCreature(name, string.Empty, string.Empty, string.Empty, string.Empty, string.Empty);
+            var value = encounterFormatter.BuildCreature(name, string.Empty, string.Empty, string.Empty, string.Empty, string.Empty);
             Assert.That(constant, Is.EqualTo(value));
         }
 
@@ -736,7 +736,7 @@ namespace EncounterGen.Tests.Unit.Common
         [TestCase(CreatureConstants.Zombie_GrayRender, CreatureConstants.Zombie, "", CreatureConstants.GrayRender)]
         public void CreatureConstantForSubtype(string constant, string name, string description, string subtype)
         {
-            var value = encounterSelector.BuildCreature(name, description, subtype, string.Empty, string.Empty, string.Empty);
+            var value = encounterFormatter.BuildCreature(name, description, subtype, string.Empty, string.Empty, string.Empty);
             Assert.That(constant, Is.EqualTo(value));
         }
 
@@ -759,7 +759,7 @@ namespace EncounterGen.Tests.Unit.Common
         [TestCase(CreatureConstants.Mephit_CR3, CreatureConstants.Mephit, AmountConstants.Range3)]
         public void CreatureConstantForChallengeRating(string constant, string name, string challengeRating)
         {
-            var value = encounterSelector.BuildCreature(name, string.Empty, string.Empty, challengeRating, string.Empty, string.Empty);
+            var value = encounterFormatter.BuildCreature(name, string.Empty, string.Empty, challengeRating, string.Empty, string.Empty);
             Assert.That(constant, Is.EqualTo(value));
         }
 
@@ -1678,7 +1678,7 @@ namespace EncounterGen.Tests.Unit.Common
         [TestCase(CreatureConstants.Wizard_FamousResearcher_Level20, CreatureConstants.Character, "Famous researcher", "", AmountConstants.Range20, "", "", CharacterClassConstants.Wizard)]
         public void CreatureConstantForCharacter(string constant, string name, string description, string subtype, string challengeRating, string baseRace, string metarace, params string[] classNames)
         {
-            var value = encounterSelector.BuildCreature(name, description, subtype, challengeRating, baseRace, metarace, classNames);
+            var value = encounterFormatter.BuildCreature(name, description, subtype, challengeRating, baseRace, metarace, classNames);
             Assert.That(constant, Is.EqualTo(value));
         }
 

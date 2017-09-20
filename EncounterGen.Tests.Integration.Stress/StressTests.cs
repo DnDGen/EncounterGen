@@ -1,9 +1,13 @@
-﻿using EventGen;
+﻿using DnDGen.Core.Selectors.Collections;
+using DnDGen.Stress;
+using DnDGen.Stress.Events;
+using EncounterGen.Common;
+using EncounterGen.Generators;
+using EventGen;
 using Ninject;
 using NUnit.Framework;
-using System;
-using System.Diagnostics;
-using System.Linq;
+using RollGen;
+using System.Collections.Generic;
 using System.Reflection;
 
 namespace EncounterGen.Tests.Integration.Stress
@@ -13,168 +17,110 @@ namespace EncounterGen.Tests.Integration.Stress
     public abstract class StressTests : IntegrationTests
     {
         [Inject]
-        public Stopwatch Stopwatch { get; set; }
+        public Dice Dice { get; set; }
         [Inject]
-        public ClientIDManager ClientIdManager { get; set; }
-        [Inject]
-        public GenEventQueue EventQueue { get; set; }
+        public ICollectionSelector CollectionSelector { get; set; }
 
-        private const int ConfidentIterations = 1000000;
-        private const int TravisJobOutputTimeLimit = 60 * 10;
-        private const int TravisJobBuildTimeLimit = 60 * 50;
+        protected Stressor stressor;
 
-        private readonly int timeLimitInSeconds;
-
-        private int iterations;
-        private Guid clientId;
-        private DateTime eventCheckpoint;
+        protected readonly IEnumerable<string> allEnvironments;
+        protected readonly IEnumerable<string> allTemperatures;
+        protected readonly IEnumerable<string> allTimesOfDay;
+        protected readonly IEnumerable<string> allFilters;
 
         public StressTests()
         {
-            var assembly = Assembly.GetExecutingAssembly();
-            var types = assembly.GetTypes();
+            allEnvironments = new[]
+            {
+                EnvironmentConstants.Aquatic,
+                EnvironmentConstants.Civilized,
+                EnvironmentConstants.Desert,
+                EnvironmentConstants.Forest,
+                EnvironmentConstants.Hills,
+                EnvironmentConstants.Marsh,
+                EnvironmentConstants.Mountain,
+                EnvironmentConstants.Plains,
+                EnvironmentConstants.Underground,
+            };
 
-            var methods = types.Where(t => t.GetCustomAttributes<StressAttribute>().Any()).SelectMany(t => t.GetMethods());
-            methods = methods.Where(m => m.GetCustomAttributes<IgnoreAttribute>().Any() == false);
+            allTemperatures = new[]
+            {
+                EnvironmentConstants.Temperatures.Cold,
+                EnvironmentConstants.Temperatures.Temperate,
+                EnvironmentConstants.Temperatures.Warm,
+            };
 
-            var stressTestsCount = methods.Sum(m => m.GetCustomAttributes<TestAttribute>(true).Count());
-            var stressTestCasesCount = methods.Sum(m => m.GetCustomAttributes<TestCaseAttribute>().Count());
-            var stressTestsTotal = stressTestsCount + stressTestCasesCount;
+            allTimesOfDay = new[]
+            {
+                EnvironmentConstants.TimesOfDay.Day,
+                EnvironmentConstants.TimesOfDay.Night,
+            };
 
-            var perTestTimeLimit = TravisJobBuildTimeLimit / stressTestsTotal;
-            Assert.That(perTestTimeLimit, Is.AtLeast(20));
-
-#if STRESS
-            timeLimitInSeconds = Math.Min(perTestTimeLimit, TravisJobOutputTimeLimit - 10);
-#else
-            timeLimitInSeconds = 1;
-#endif
+            allFilters = new[]
+            {
+                CreatureConstants.Types.Aberration,
+                CreatureConstants.Types.Animal,
+                CreatureConstants.Types.Construct,
+                CreatureConstants.Types.Dragon,
+                CreatureConstants.Types.Elemental,
+                CreatureConstants.Types.Fey,
+                CreatureConstants.Types.Giant,
+                CreatureConstants.Types.Humanoid,
+                CreatureConstants.Types.MagicalBeast,
+                CreatureConstants.Types.MonstrousHumanoid,
+                CreatureConstants.Types.Ooze,
+                CreatureConstants.Types.Outsider,
+                CreatureConstants.Types.Plant,
+                CreatureConstants.Types.Undead,
+                CreatureConstants.Types.Vermin,
+            };
         }
 
-        [SetUp]
+        [OneTimeSetUp]
         public void StressSetup()
         {
-            clientId = Guid.NewGuid();
-            ClientIdManager.SetClientID(clientId);
+            var options = new StressorWithEventsOptions();
+            options.RunningAssembly = Assembly.GetExecutingAssembly();
 
-            iterations = 0;
-            eventCheckpoint = new DateTime();
+#if STRESS
+            options.IsFullStress = true;
+#else
+            options.IsFullStress = false;
+#endif
 
-            Stopwatch.Start();
+            options.ClientIdManager = GetNewInstanceOf<ClientIDManager>();
+            options.EventQueue = GetNewInstanceOf<GenEventQueue>();
+            options.Source = "EncounterGen";
+
+            stressor = new StressorWithEvents(options);
         }
 
-        [TearDown]
-        public void StressTearDown()
+        protected EncounterSpecifications RandomizeSpecifications(int level = 0, string environment = "", string temperature = "", string timeOfDay = "", string filter = "", bool useFilter = false)
         {
-            WriteStressSummary();
-            WriteEventSummary();
+            var specifications = new EncounterSpecifications();
+            specifications.Environment = string.IsNullOrEmpty(environment) ? GetRandomFrom(allEnvironments) : environment;
+            specifications.Temperature = string.IsNullOrEmpty(temperature) ? GetRandomFrom(allTemperatures) : temperature;
+            specifications.TimeOfDay = string.IsNullOrEmpty(timeOfDay) ? GetRandomFrom(allTimesOfDay) : timeOfDay;
+            specifications.Level = level > 0 ? level : Dice.Roll().d(EncounterSpecifications.MaximumLevel).AsSum() + EncounterSpecifications.MinimumLevel - 1;
+            specifications.AllowAquatic = Dice.Roll().d2().AsTrueOrFalse();
+            specifications.AllowUnderground = Dice.Roll().d2().AsTrueOrFalse();
 
-            Stopwatch.Reset();
-        }
-
-        private void WriteStressSummary()
-        {
-            var message = BuildMessage("Stress test complete");
-            Console.WriteLine(message);
-        }
-
-        private void WriteEventSummary()
-        {
-            var events = EventQueue.DequeueAll(clientId);
-
-            //INFO: Get the 10 most recent events for EncounterGen.  We assume the events are ordered chronologically already
-            events = events.Where(e => e.Source == "EncounterGen");
-            events = events.Reverse();
-            events = events.Take(10);
-            events = events.Reverse();
-
-            foreach (var genEvent in events)
-                Console.WriteLine(GetEventMessage(genEvent));
-        }
-
-        private string GetEventMessage(GenEvent genEvent)
-        {
-            return $"[{genEvent.When.ToLongTimeString()}] {genEvent.Source}: {genEvent.Message}";
-        }
-
-        protected void Stress(Action makeAssertions)
-        {
-            do
+            if (!string.IsNullOrEmpty(filter))
             {
-                makeAssertions();
-                AssertEventSpacing();
+                specifications.CreatureTypeFilters = new[] { filter };
             }
-            while (TestShouldKeepRunning());
-        }
-
-        private void AssertEventSpacing()
-        {
-            var events = EventQueue.DequeueAll(clientId);
-
-            //INFO: Have to put the events back in the queue for the summary at the end of the test
-            foreach (var genEvent in events)
-                EventQueue.Enqueue(genEvent);
-
-            Assert.That(events, Is.Ordered.By("When"));
-
-            var newEvents = events.Where(e => e.When > eventCheckpoint).ToArray();
-
-            Assert.That(newEvents, Is.Ordered.By("When"));
-
-            for (var i = 1; i < newEvents.Length; i++)
+            else if (useFilter)
             {
-                var failureMessage = $"{GetEventMessage(newEvents[i - 1])}\n{GetEventMessage(newEvents[i])}";
-                Assert.That(newEvents[i].When, Is.EqualTo(newEvents[i - 1].When).Within(1).Seconds, failureMessage);
+                var randomFilter = GetRandomFrom(allFilters);
+                specifications.CreatureTypeFilters = new[] { randomFilter };
             }
 
-            if (newEvents.Any())
-                eventCheckpoint = newEvents.Last().When;
+            return specifications;
         }
 
-        private string BuildMessage(string baseMessage)
+        private string GetRandomFrom(IEnumerable<string> collection)
         {
-            var iterationsPerSecond = Math.Round(iterations / Stopwatch.Elapsed.TotalSeconds, 2);
-            return $"{baseMessage} after {Stopwatch.Elapsed} and {iterations} iterations, or {iterationsPerSecond} iterations/second";
-        }
-
-        protected T Generate<T>(Func<T> generate, Func<T, bool> isValid)
-        {
-            T generatedObject;
-
-            do
-            {
-                generatedObject = generate();
-                AssertEventSpacing();
-            }
-            while (!isValid(generatedObject));
-
-            return generatedObject;
-        }
-
-        protected T GenerateOrFail<T>(Func<T> generate, Func<T, bool> isValid)
-        {
-            T generatedObject;
-
-            do
-            {
-                generatedObject = generate();
-                AssertEventSpacing();
-            }
-            while (TestShouldKeepRunning() && isValid(generatedObject) == false);
-
-            if (TestShouldKeepRunning() == false && isValid(generatedObject) == false)
-            {
-                var message = BuildMessage("Failed to generate");
-                Assert.Fail(message);
-            }
-
-            return generatedObject;
-        }
-
-        private bool TestShouldKeepRunning()
-        {
-            iterations++;
-            return Stopwatch.Elapsed.TotalSeconds < timeLimitInSeconds && iterations < ConfidentIterations;
+            return CollectionSelector.SelectRandomFrom(collection);
         }
     }
 }

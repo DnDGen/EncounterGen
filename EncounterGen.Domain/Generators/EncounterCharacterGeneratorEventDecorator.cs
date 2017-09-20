@@ -19,9 +19,9 @@ namespace EncounterGen.Domain.Generators
 
         public IEnumerable<Character> GenerateFrom(IEnumerable<Creature> creatures)
         {
-            eventQueue.Enqueue("EncounterGen", $"Beginning generation of characters from {creatures.Count()} creatures");
+            eventQueue.Enqueue("EncounterGen", $"Generating characters from {creatures.Count()} creatures");
             var characters = internalGenerator.GenerateFrom(creatures);
-            eventQueue.Enqueue("EncounterGen", $"Completed generation of {characters.Count()} characters");
+            eventQueue.Enqueue("EncounterGen", $"Generated {characters.Count()} characters");
 
             return characters;
         }

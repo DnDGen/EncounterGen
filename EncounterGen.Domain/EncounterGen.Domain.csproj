@@ -41,19 +41,23 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="CharacterGen, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\CharacterGen.9.0.3\lib\CharacterGen.dll</HintPath>
+      <HintPath>..\packages\CharacterGen.10.0.2\lib\CharacterGen.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DnDGen.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DnDGen.Core.3.1.1\lib\DnDGen.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="EventGen, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\EventGen.1.0.0\lib\EventGen.dll</HintPath>
+      <HintPath>..\packages\EventGen.2.0.1\lib\EventGen.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Ninject, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
       <HintPath>..\packages\Ninject.3.2.2.0\lib\net45-full\Ninject.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="RollGen, Version=12.1.6247.28555, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\DnDGen.RollGen.13.3.0\lib\RollGen.dll</HintPath>
+    <Reference Include="RollGen, Version=12.1.6474.27172, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DnDGen.RollGen.13.4.2\lib\RollGen.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -65,7 +69,7 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
     <Reference Include="TreasureGen, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\DnDGen.TreasureGen.7.1.2\lib\TreasureGen.dll</HintPath>
+      <HintPath>..\packages\DnDGen.TreasureGen.8.1.2\lib\TreasureGen.dll</HintPath>
       <Private>True</Private>
     </Reference>
   </ItemGroup>
@@ -79,52 +83,33 @@
     <Compile Include="Generators\EncounterGeneratorEventDecorator.cs" />
     <Compile Include="Generators\EncounterTreasureGenerator.cs" />
     <Compile Include="Generators\EncounterVerifier.cs" />
-    <Compile Include="Generators\Factories\JustInTimeFactory.cs" />
-    <Compile Include="Generators\Factories\NinjectJustInTimeFactory.cs" />
     <Compile Include="Generators\ICreatureGenerator.cs" />
     <Compile Include="Generators\IEncounterCharacterGenerator.cs" />
     <Compile Include="Generators\IEncounterTreasureGenerator.cs" />
-    <Compile Include="IoC\Providers\JustInTimeFactoryProvider.cs" />
+    <Compile Include="Selectors\ChallengeRatingSelector.cs" />
+    <Compile Include="Selectors\IChallengeRatingSelector.cs" />
     <Compile Include="Selectors\RegexConstants.cs" />
     <Compile Include="IoC\EncounterGenModuleLoader.cs" />
     <Compile Include="IoC\Modules\GeneratorsModule.cs" />
-    <Compile Include="IoC\Modules\MappersModule.cs" />
     <Compile Include="IoC\Modules\SelectorsModule.cs" />
-    <Compile Include="IoC\Modules\TablesModule.cs" />
-    <Compile Include="Mappers\Collections\CollectionMapper.cs" />
-    <Compile Include="Mappers\Collections\CollectionMapperCachingProxy.cs" />
-    <Compile Include="Mappers\Collections\CollectionXmlMapper.cs" />
-    <Compile Include="Mappers\Percentiles\PercentileMapper.cs" />
-    <Compile Include="Mappers\Percentiles\PercentileMapperCachingProxy.cs" />
-    <Compile Include="Mappers\Percentiles\PercentileXmlMapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Selectors\Collections\CollectionSelector.cs" />
-    <Compile Include="Selectors\Collections\CollectionSelectorEventDecorator.cs" />
-    <Compile Include="Selectors\Collections\CollectionSelectorCachingProxy.cs" />
     <Compile Include="Selectors\Collections\EncounterCollectionSelector.cs" />
     <Compile Include="Selectors\Collections\EncounterCollectionSelectorCachingProxy.cs" />
     <Compile Include="Selectors\Collections\EncounterCollectionSelectorEventDecorator.cs" />
-    <Compile Include="Selectors\Collections\ITreasureAdjustmentSelector.cs" />
-    <Compile Include="Selectors\Collections\TreasureAdjustmentSelector.cs" />
+    <Compile Include="Selectors\Collections\ITreasureRatesSelector.cs" />
+    <Compile Include="Selectors\Collections\TreasureRatesSelector.cs" />
     <Compile Include="Selectors\EncounterConstants.cs" />
-    <Compile Include="Selectors\Collections\ICollectionSelector.cs" />
     <Compile Include="Selectors\Collections\IEncounterCollectionSelector.cs" />
-    <Compile Include="Selectors\EncounterSelector.cs" />
-    <Compile Include="Selectors\IAmountSelector.cs" />
-    <Compile Include="Selectors\IEncounterSelector.cs" />
+    <Compile Include="Selectors\EncounterFormatter.cs" />
+    <Compile Include="Selectors\IEncounterLevelSelector.cs" />
+    <Compile Include="Selectors\IEncounterFormatter.cs" />
     <Compile Include="Selectors\IItemSelector.cs" />
     <Compile Include="Selectors\ItemSelector.cs" />
-    <Compile Include="Selectors\Percentiles\BooleanPercentileSelector.cs" />
-    <Compile Include="Selectors\Percentiles\IBooleanPercentileSelector.cs" />
-    <Compile Include="Selectors\Percentiles\IPercentileSelector.cs" />
-    <Compile Include="Selectors\Percentiles\PercentileSelector.cs" />
     <Compile Include="Selectors\AmountConstants.cs" />
-    <Compile Include="Selectors\AmountSelector.cs" />
+    <Compile Include="Selectors\EncounterLevelSelector.cs" />
     <Compile Include="Selectors\Selections\TreasureRatesSelection.cs" />
     <Compile Include="Selectors\TreasureConstants.cs" />
-    <Compile Include="Tables\EmbeddedResourceStreamLoader.cs" />
     <Compile Include="Tables\GroupConstants.cs" />
-    <Compile Include="Tables\StreamLoader.cs" />
     <Compile Include="Tables\TableNameConstants.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -136,7 +121,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Tables\Treasures\TreasureAdjustments.xml">
+    <EmbeddedResource Include="Tables\Treasures\TreasureRates.xml">
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
@@ -167,7 +152,11 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Creatures\AverageEncounterLevels.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

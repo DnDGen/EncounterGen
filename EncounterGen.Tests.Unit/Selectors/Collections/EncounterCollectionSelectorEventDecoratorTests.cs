@@ -63,7 +63,7 @@ namespace EncounterGen.Tests.Unit.Selectors.Collections
             Assert.That(generatedEncounter, Is.EqualTo(encounter));
             mockEventQueue.Verify(q => q.Enqueue(It.IsAny<string>(), It.IsAny<string>()), Times.Exactly(2));
             mockEventQueue.Verify(q => q.Enqueue("EncounterGen", $"Selecting a random encounter from the encounter table for {specifications.Description}"), Times.Once);
-            mockEventQueue.Verify(q => q.Enqueue("EncounterGen", $"Finished selecting a random encounter from the encounter table for {specifications.Description}"), Times.Once);
+            mockEventQueue.Verify(q => q.Enqueue("EncounterGen", $"Selected a random encounter with 2 different creatures"), Times.Once);
         }
 
         [Test]
@@ -99,11 +99,13 @@ namespace EncounterGen.Tests.Unit.Selectors.Collections
             {
                 new Dictionary<string, string>(),
                 new Dictionary<string, string>(),
+                new Dictionary<string, string>(),
             };
 
             encounters[0]["creature"] = "amount";
             encounters[0]["other creature"] = "other amount";
             encounters[1]["another creature"] = "another amount";
+            encounters[2]["yet another creature"] = "yet another amount";
 
             var specifications = new EncounterSpecifications();
             specifications.Environment = "environment";
@@ -118,7 +120,7 @@ namespace EncounterGen.Tests.Unit.Selectors.Collections
             Assert.That(generatedEncounters, Is.EqualTo(encounters));
             mockEventQueue.Verify(q => q.Enqueue(It.IsAny<string>(), It.IsAny<string>()), Times.Exactly(2));
             mockEventQueue.Verify(q => q.Enqueue("EncounterGen", $"Selecting encounter table for {specifications.Description}"), Times.Once);
-            mockEventQueue.Verify(q => q.Enqueue("EncounterGen", $"Finished selecting encounter table for {specifications.Description}"), Times.Once);
+            mockEventQueue.Verify(q => q.Enqueue("EncounterGen", $"Selected 3 weighted encounters"), Times.Once);
         }
     }
 }

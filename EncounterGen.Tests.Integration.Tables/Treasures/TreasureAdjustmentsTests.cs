@@ -14,7 +14,7 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
         {
             get
             {
-                return TableNameConstants.TreasureAdjustments;
+                return TableNameConstants.TreasureRates;
             }
         }
 
@@ -894,9 +894,9 @@ namespace EncounterGen.Tests.Integration.Tables.Treasures
 
         private bool IsCharacter(string creature, bool hasBaseRace, bool hasMetarace)
         {
-            var name = EncounterSelector.SelectNameFrom(creature);
-            var baseRace = EncounterSelector.SelectBaseRaceFrom(creature);
-            var metarace = EncounterSelector.SelectMetaraceFrom(creature);
+            var name = EncounterFormatter.SelectNameFrom(creature);
+            var baseRace = EncounterFormatter.SelectBaseRaceFrom(creature);
+            var metarace = EncounterFormatter.SelectMetaraceFrom(creature);
 
             return name == CreatureConstants.Character && baseRace.Any() == hasBaseRace && metarace.Any() == hasMetarace;
         }

@@ -19,9 +19,9 @@ namespace EncounterGen.Domain.Generators
 
         public IEnumerable<Treasure> GenerateFor(IEnumerable<Creature> creatures, int level)
         {
-            eventQueue.Enqueue("EncounterGen", $"Beginning generation of level {level} treasure for {creatures.Count()} creatures");
+            eventQueue.Enqueue("EncounterGen", $"Generating level {level} treasure for {creatures.Count()} creatures");
             var treasures = internalGenerator.GenerateFor(creatures, level);
-            eventQueue.Enqueue("EncounterGen", $"Completed generation of {treasures.Count()} treasures");
+            eventQueue.Enqueue("EncounterGen", $"Generated {treasures.Count()} treasures");
 
             return treasures;
         }

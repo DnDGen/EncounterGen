@@ -19,9 +19,9 @@ namespace EncounterGen.Domain.Generators
 
         public IEnumerable<Creature> GenerateFor(EncounterSpecifications encounterSpecifications)
         {
-            eventQueue.Enqueue("EncounterGen", $"Beginning generation of creatures for {encounterSpecifications.Description}");
+            eventQueue.Enqueue("EncounterGen", $"Generating creatures for {encounterSpecifications.Description}");
             var creatures = internalGenerator.GenerateFor(encounterSpecifications);
-            eventQueue.Enqueue("EncounterGen", $"Completed generation of {creatures.Count()} creatures");
+            eventQueue.Enqueue("EncounterGen", $"Generated {creatures.Count()} creatures");
 
             return creatures;
         }
@@ -30,7 +30,7 @@ namespace EncounterGen.Domain.Generators
         {
             eventQueue.Enqueue("EncounterGen", $"Cleaning {creatures.Count()} creatures");
             var cleanedCreatures = internalGenerator.CleanCreatures(creatures);
-            eventQueue.Enqueue("EncounterGen", $"Completed cleaning of {cleanedCreatures.Count()} creatures");
+            eventQueue.Enqueue("EncounterGen", $"Cleaned {cleanedCreatures.Count()} creatures");
 
             return cleanedCreatures;
         }

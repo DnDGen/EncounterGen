@@ -30,7 +30,13 @@ namespace EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
 
         protected IEnumerable<string> GetEncountersFromCreatureGroup(string creatureGroup)
         {
-            return CollectionSelector.ExplodeInto(TableNameConstants.CreatureGroups, creatureGroup, TableNameConstants.EncounterGroups);
+            var creatures = CollectionSelector.Explode(TableNameConstants.CreatureGroups, creatureGroup);
+            var allEncounters = CollectionSelector.SelectAllFrom(TableNameConstants.EncounterGroups);
+            var encounters = CollectionSelector.Flatten(allEncounters, creatures);
+
+            AssertEventSpacing();
+
+            return encounters;
         }
     }
 }

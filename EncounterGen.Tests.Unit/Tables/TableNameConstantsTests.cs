@@ -7,11 +7,12 @@ namespace EncounterGen.Tests.Unit.Tables
     public class TableNameConstantsTests
     {
         [TestCase(TableNameConstants.AverageChallengeRatings, "AverageChallengeRatings")]
+        [TestCase(TableNameConstants.AverageEncounterLevels, "AverageEncounterLevels")]
         [TestCase(TableNameConstants.CreatureGroups, "CreatureGroups")]
         [TestCase(TableNameConstants.EncounterGroups, "EncounterGroups")]
         [TestCase(TableNameConstants.EncounterLevelModifiers, "EncounterLevelModifiers")]
-        [TestCase(TableNameConstants.TreasureAdjustments, "TreasureAdjustments")]
         [TestCase(TableNameConstants.TreasureGroups, "TreasureGroups")]
+        [TestCase(TableNameConstants.TreasureRates, "TreasureRates")]
         public void Constant(string constant, string value)
         {
             Assert.That(constant, Is.EqualTo(value));

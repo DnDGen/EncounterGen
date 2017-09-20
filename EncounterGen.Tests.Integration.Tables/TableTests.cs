@@ -1,4 +1,5 @@
-﻿using EventGen;
+﻿using DnDGen.Core.IoC;
+using EventGen;
 using Ninject;
 using NUnit.Framework;
 using System;
@@ -17,6 +18,13 @@ namespace EncounterGen.Tests.Integration.Tables
         protected abstract string tableName { get; }
 
         private Guid clientId;
+
+        [OneTimeSetUp]
+        public void TableOneTimeSetup()
+        {
+            var coreLoader = new CoreModuleLoader();
+            coreLoader.ReplaceAssemblyLoaderWith<EncounterGenAssemblyLoader>(kernel);
+        }
 
         [SetUp]
         public void TableSetup()

@@ -1,6 +1,6 @@
-﻿using EncounterGen.Common;
+﻿using DnDGen.Core.Selectors.Percentiles;
+using EncounterGen.Common;
 using EncounterGen.Domain.Selectors;
-using EncounterGen.Domain.Selectors.Percentiles;
 using EncounterGen.Domain.Tables;
 using EncounterGen.Generators;
 using EncounterGen.Generators.Exceptions;
@@ -9,14 +9,14 @@ namespace EncounterGen.Domain.Generators
 {
     internal class EncounterGenerator : IEncounterGenerator
     {
-        private readonly IAmountSelector amountSelector;
+        private readonly IEncounterLevelSelector amountSelector;
         private readonly IPercentileSelector percentileSelector;
         private readonly IEncounterCharacterGenerator encounterCharacterGenerator;
         private readonly IEncounterTreasureGenerator encounterTreasureGenerator;
         private readonly IEncounterVerifier encounterVerifier;
         private readonly ICreatureGenerator creatureGenerator;
 
-        public EncounterGenerator(IAmountSelector amountSelector,
+        public EncounterGenerator(IEncounterLevelSelector amountSelector,
             IPercentileSelector percentileSelector,
             IEncounterCharacterGenerator encounterCharacterGenerator,
             IEncounterTreasureGenerator encounterTreasureGenerator,
@@ -57,7 +57,7 @@ namespace EncounterGen.Domain.Generators
 
             encounter.TargetEncounterLevel = encounterSpecifications.Level;
             encounter.AverageEncounterLevel = modifiedSpecifications.Level;
-            encounter.ActualEncounterLevel = amountSelector.SelectActualEncounterLevel(encounter);
+            encounter.ActualEncounterLevel = amountSelector.Select(encounter);
 
             return encounter;
         }
@@ -68,7 +68,7 @@ namespace EncounterGen.Domain.Generators
 
             do
             {
-                var encounterLevelModifier = percentileSelector.SelectFrom(TableNameConstants.EncounterLevelModifiers);
+                var encounterLevelModifier = percentileSelector.SelectFrom<int>(TableNameConstants.EncounterLevelModifiers);
                 modifiedSpecifications.Level = source.Level + encounterLevelModifier;
             }
             while (!encounterVerifier.ValidEncounterExistsAtLevel(modifiedSpecifications));

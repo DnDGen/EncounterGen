@@ -1,4 +1,5 @@
-﻿using EncounterGen.Generators;
+﻿using DnDGen.Core.Selectors.Collections;
+using EncounterGen.Generators;
 using System;
 using System.Collections.Generic;
 using System.Linq;

@@ -1,4 +1,5 @@
-﻿using EncounterGen.Domain.Selectors.Collections;
+﻿using DnDGen.Core.Selectors.Collections;
+using EncounterGen.Domain.Selectors.Collections;
 using EncounterGen.Generators;
 using Moq;
 using NUnit.Framework;

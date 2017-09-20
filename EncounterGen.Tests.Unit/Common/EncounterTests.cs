@@ -77,7 +77,9 @@ namespace EncounterGen.Tests.Unit.Common
         [TestCase(8, DifficultyConstants.Overpowering)]
         [TestCase(9, DifficultyConstants.Overpowering)]
         [TestCase(10, DifficultyConstants.Overpowering)]
+        [TestCase(42, DifficultyConstants.Overpowering)]
         [TestCase(9999, DifficultyConstants.Overpowering)]
+        [TestCase(90210, DifficultyConstants.Overpowering)]
         public void ActualEncounterDifficulty(int levelModifier, string difficulty)
         {
             encounter.TargetEncounterLevel = 9266;

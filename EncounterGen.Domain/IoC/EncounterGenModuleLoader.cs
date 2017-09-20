@@ -9,8 +9,6 @@ namespace EncounterGen.Domain.IoC
         {
             kernel.Load<GeneratorsModule>();
             kernel.Load<SelectorsModule>();
-            kernel.Load<MappersModule>();
-            kernel.Load<TablesModule>();
         }
     }
 }

@@ -6,9 +6,9 @@ namespace EncounterGen.Tests.Unit.Selectors
     [TestFixture]
     public class TreasureConstantsTests
     {
-        [TestCase(TreasureConstants.Coin, 0)]
-        [TestCase(TreasureConstants.Goods, 1)]
-        [TestCase(TreasureConstants.Items, 2)]
+        [TestCase(TreasureConstants.CoinIndex, 0)]
+        [TestCase(TreasureConstants.GoodsIndex, 1)]
+        [TestCase(TreasureConstants.ItemsIndex, 2)]
         [TestCase(TreasureConstants.FiftyPercent, .5)]
         [TestCase(TreasureConstants.TenPercent, .1)]
         [TestCase(TreasureConstants.TwentyFivePercent, .25)]
