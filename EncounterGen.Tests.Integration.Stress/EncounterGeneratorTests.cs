@@ -19,12 +19,12 @@ namespace EncounterGen.Tests.Integration.Stress
 
         private const int PresetLevel = 7;
 
-        private HashSet<string> usedFilters;
+        private HashSet<string> testedFilters;
 
         [SetUp]
         public void Setup()
         {
-            usedFilters = new HashSet<string>();
+            testedFilters = new HashSet<string>();
         }
 
         [Test]
@@ -38,12 +38,10 @@ namespace EncounterGen.Tests.Integration.Stress
         {
             stressor.Stress(() => AssertEncounterInRandomEnvironment(useFilter: true));
 
-            Console.WriteLine($"Stressed the following filters: {string.Join(", ", usedFilters.OrderBy(f => f))}");
-            Assert.That(usedFilters.Count, Is.GreaterThan(1));
+            Console.WriteLine($"Stressed the following filters: {string.Join(", ", testedFilters.OrderBy(f => f))}");
 
-            var untestedFilters = allFilters.Except(usedFilters);
+            var untestedFilters = allFilters.Except(testedFilters);
             Console.WriteLine($"Did not stress the following filters: {string.Join(", ", untestedFilters.OrderBy(f => f))}");
-            Assert.That(untestedFilters.Count, Is.LessThan(allFilters.Count()));
         }
 
         [Test]
@@ -72,7 +70,7 @@ namespace EncounterGen.Tests.Integration.Stress
                 s => EncounterVerifier.ValidEncounterExistsAtLevel(s));
 
             if (specifications.CreatureTypeFilters.Any())
-                usedFilters.Add(specifications.CreatureTypeFilters.Single());
+                testedFilters.Add(specifications.CreatureTypeFilters.Single());
 
             return EncounterGenerator.Generate(specifications);
         }
