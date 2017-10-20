@@ -81,6 +81,7 @@ namespace EncounterGen.Tests.Integration.Stress
         {
             var options = new StressorWithEventsOptions();
             options.RunningAssembly = Assembly.GetExecutingAssembly();
+            options.TimeLimitPercentage = .65;
 
 #if STRESS
             options.IsFullStress = true;

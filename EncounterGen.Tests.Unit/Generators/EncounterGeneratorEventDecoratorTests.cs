@@ -5,20 +5,21 @@ using EncounterGen.Generators;
 using EventGen;
 using Moq;
 using NUnit.Framework;
+using TreasureGen;
 
 namespace EncounterGen.Tests.Unit.Generators
 {
     [TestFixture]
     public class EncounterGeneratorEventDecoratorTests
     {
-        private EncounterGen.Generators.IEncounterGenerator eventDecorator;
-        private Mock<EncounterGen.Generators.IEncounterGenerator> mockInternalGenerator;
+        private IEncounterGenerator eventDecorator;
+        private Mock<IEncounterGenerator> mockInternalGenerator;
         private Mock<GenEventQueue> mockEventQueue;
 
         [SetUp]
         public void Setup()
         {
-            mockInternalGenerator = new Mock<EncounterGen.Generators.IEncounterGenerator>();
+            mockInternalGenerator = new Mock<IEncounterGenerator>();
             mockEventQueue = new Mock<GenEventQueue>();
 
             eventDecorator = new EncounterGeneratorEventDecorator(mockInternalGenerator.Object, mockEventQueue.Object);
@@ -32,6 +33,7 @@ namespace EncounterGen.Tests.Unit.Generators
             encounter.ActualEncounterLevel = 90210;
             encounter.Creatures = new[] { new Creature(), new Creature() };
             encounter.Characters = new[] { new Character(), new Character(), new Character() };
+            encounter.Treasures = new[] { new Treasure(), new Treasure(), new Treasure(), new Treasure() };
 
             var specifications = new EncounterSpecifications();
             specifications.Environment = "environment";
@@ -46,7 +48,7 @@ namespace EncounterGen.Tests.Unit.Generators
             Assert.That(generatedEncounter, Is.EqualTo(encounter));
             mockEventQueue.Verify(q => q.Enqueue(It.IsAny<string>(), It.IsAny<string>()), Times.Exactly(2));
             mockEventQueue.Verify(q => q.Enqueue("EncounterGen", $"Generating encounter in {specifications.Description}"), Times.Once);
-            mockEventQueue.Verify(q => q.Enqueue("EncounterGen", "Generated Overpowering encounter with 2 creatures and 3 characters"), Times.Once);
+            mockEventQueue.Verify(q => q.Enqueue("EncounterGen", "Generated Overpowering encounter with 2 creatures, 3 characters, and 4 treasures"), Times.Once);
         }
     }
 }

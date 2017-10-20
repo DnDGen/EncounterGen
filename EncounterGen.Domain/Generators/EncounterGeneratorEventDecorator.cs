@@ -21,7 +21,7 @@ namespace EncounterGen.Domain.Generators
             eventQueue.Enqueue("EncounterGen", $"Generating encounter in {specifications.Description}");
             var encounter = internalGenerator.Generate(specifications);
 
-            eventQueue.Enqueue("EncounterGen", $"Generated {encounter.ActualDifficulty} encounter with {encounter.Creatures.Count()} creatures and {encounter.Characters.Count()} characters");
+            eventQueue.Enqueue("EncounterGen", $"Generated {encounter.ActualDifficulty} encounter with {encounter.Creatures.Count()} creatures, {encounter.Characters.Count()} characters, and {encounter.Treasures.Count()} treasures");
 
             return encounter;
         }

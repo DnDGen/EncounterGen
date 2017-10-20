@@ -164,41 +164,5 @@ namespace EncounterGen.Tests.Integration.Stress
             AssertEncounter(encounter);
             Assert.That(encounter.Creatures.Count(), Is.GreaterThan(1));
         }
-
-        [Test]
-        public void ActualDifficultySameAsAverageDifficultyHappens()
-        {
-            var encounter = stressor.GenerateOrFail(() => MakeEncounterInRandomEnvironment(PresetLevel), e => e.ActualDifficulty == e.AverageDifficulty);
-            AssertEncounter(encounter);
-            Assert.That(encounter.ActualDifficulty, Is.EqualTo(encounter.AverageDifficulty));
-        }
-
-        [Test]
-        public void ActualDifficultyDifferentThanAverageDifficultyHappens()
-        {
-            var encounter = stressor.GenerateOrFail(() => MakeEncounterInRandomEnvironment(PresetLevel), e => e.ActualDifficulty != e.AverageDifficulty);
-            AssertEncounter(encounter);
-
-            Assert.That(encounter.ActualDifficulty, Is.Not.EqualTo(encounter.AverageDifficulty));
-            Assert.That(encounter.ActualEncounterLevel, Is.Not.EqualTo(encounter.AverageEncounterLevel));
-        }
-
-        [Test]
-        public void ActualEncounterLevelSameAsAverageEncounterLevelHappens()
-        {
-            var encounter = stressor.GenerateOrFail(() => MakeEncounterInRandomEnvironment(PresetLevel), e => e.ActualEncounterLevel == e.AverageEncounterLevel);
-            AssertEncounter(encounter);
-
-            Assert.That(encounter.ActualEncounterLevel, Is.EqualTo(encounter.AverageEncounterLevel));
-            Assert.That(encounter.ActualDifficulty, Is.EqualTo(encounter.AverageDifficulty));
-        }
-
-        [Test]
-        public void ActualEncounterLevelDifferentThanAverageEncounterLevelHappens()
-        {
-            var encounter = stressor.GenerateOrFail(() => MakeEncounterInRandomEnvironment(PresetLevel), e => e.ActualEncounterLevel != e.AverageEncounterLevel);
-            AssertEncounter(encounter);
-            Assert.That(encounter.ActualEncounterLevel, Is.Not.EqualTo(encounter.AverageEncounterLevel));
-        }
     }
 }

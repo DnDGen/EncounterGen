@@ -102,12 +102,10 @@ namespace EncounterGen.Domain.Selectors.Collections
             }
 
             //INFO: Single weight
-            //INFO: Initializing capacity to be 3x all valid encounters, to prevent resizing while adding
-            var weightedEncounters = new List<string>(validEncounters.Count() * 3);
-            eventQueue.Enqueue("EncounterGen", $"Single-weighting all {validEncounters.Count()} encounters");
-            weightedEncounters.AddRange(validEncounters);
+            var weightedEncounters = new List<string>();
+            weightedEncounters = WeightEncounters(weightedEncounters, validEncounters, 1, string.Empty);
 
-            //INFO: Double weight
+            //INFO: Common weight
             var commonValidEncounters = validEncounters.Except(magicEncounters);
 
             if (encounterSpecifications.Environment != EnvironmentConstants.Aquatic)
@@ -116,30 +114,53 @@ namespace EncounterGen.Domain.Selectors.Collections
             if (encounterSpecifications.Environment != EnvironmentConstants.Underground)
                 commonValidEncounters = commonValidEncounters.Except(undergroundEncounters);
 
-            eventQueue.Enqueue("EncounterGen", $"Double-weighting {commonValidEncounters.Count()} common encounters");
-            weightedEncounters.AddRange(commonValidEncounters);
+            var uncommonEncounters = validEncounters.Except(commonValidEncounters);
 
-            //INFO: Triple weight
+            if (commonValidEncounters.Any())
+            {
+                var commonWeight = ComputeWeight(uncommonEncounters, commonValidEncounters);
+                weightedEncounters = WeightEncounters(weightedEncounters, commonValidEncounters, commonWeight, "common");
+            }
+
+            //INFO: Specific weight
             var validSpecificEnvironmentEncounters = validEncounters.Intersect(specificEnvironmentEncounters);
 
-            eventQueue.Enqueue("EncounterGen", $"Triple-weighting {validSpecificEnvironmentEncounters.Count()} encounters in {encounterSpecifications.SpecificEnvironment}");
-            weightedEncounters.AddRange(validSpecificEnvironmentEncounters);
-
-            if (ShouldTripleWeightUndergroundAquatic(encounterSpecifications))
+            if (validSpecificEnvironmentEncounters.Any())
             {
-                var validUndergroundAquaticEncounters = validEncounters.Intersect(undergroundAquaticEncounters);
+                var specificWeight = ComputeWeight(uncommonEncounters, validSpecificEnvironmentEncounters);
+                weightedEncounters = WeightEncounters(weightedEncounters, validSpecificEnvironmentEncounters, specificWeight, encounterSpecifications.SpecificEnvironment);
+            }
 
-                eventQueue.Enqueue("EncounterGen", $"Triple-weighting {validUndergroundAquaticEncounters.Count()} underground aquatic encounters");
-                weightedEncounters.AddRange(validUndergroundAquaticEncounters);
+            var validUndergroundAquaticEncounters = validEncounters.Intersect(undergroundAquaticEncounters);
+
+            if (ShouldSpecificWeightUndergroundAquatic(encounterSpecifications) && validUndergroundAquaticEncounters.Any())
+            {
+                var undergroundAquaticWeight = ComputeWeight(uncommonEncounters, validUndergroundAquaticEncounters);
+                weightedEncounters = WeightEncounters(weightedEncounters, validUndergroundAquaticEncounters, undergroundAquaticWeight, "underground aquatic");
             }
 
             return weightedEncounters;
         }
 
-        private bool ShouldTripleWeightUndergroundAquatic(EncounterSpecifications specifications)
+        private int ComputeWeight(IEnumerable<string> uncommonEncounters, IEnumerable<string> encountersToWeight)
         {
-            return ShouldGetUnderground(specifications)
-                && ShouldGetAquatic(specifications)
+            return Math.Max(uncommonEncounters.Count() / encountersToWeight.Count(), 1);
+        }
+
+        private List<string> WeightEncounters(List<string> weightedEncounters, IEnumerable<string> encounters, int weight, string description)
+        {
+            var spacer = string.IsNullOrEmpty(description) ? string.Empty : " ";
+            eventQueue.Enqueue("EncounterGen", $"{weight}x-weighting {encounters.Count()}{spacer}{description} encounters");
+
+            while (weight-- > 0)
+                weightedEncounters.AddRange(encounters);
+
+            return weightedEncounters;
+        }
+
+        private bool ShouldSpecificWeightUndergroundAquatic(EncounterSpecifications specifications)
+        {
+            return ShouldGetUndergroundAquatic(specifications)
                 && (specifications.Environment == EnvironmentConstants.Aquatic || specifications.Environment == EnvironmentConstants.Underground);
         }
 
