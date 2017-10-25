@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>EncounterGen.Domain</id>
-    <version>3.0.4</version>
+    <version>3.0.5</version>
     <title>EncounterGen.Domain</title>
     <authors>Karl M. Speer</authors>
     <owners>cidthecoatrack</owners>
@@ -10,7 +10,7 @@
       This is the Ninject-based bootstrapper for EncounterGen
     </description>
     <releaseNotes>
-      Bug #44
+      Bug #46
     </releaseNotes>
     <summary>
       This generates encounters for the Dungeons and Dragons 3.5 system.
@@ -22,11 +22,13 @@
     <licenseUrl>http://opensource.org/licenses/Apache-2.0</licenseUrl>
     <copyright>Copyright 2016</copyright>
     <dependencies>
-      <dependency id="EncounterGen" version="3.0.3" />
-      <dependency id="CharacterGen" version="9.0.0" />
-      <dependency id="DnDGen.TreasureGen" version="7.1.0" />
-      <dependency id="DnDGen.RollGen" version="13.3.0" />
-      <dependency id="Ninject" version="3.2.2" />
+      <dependency id="EncounterGen" version="3.0.5" />
+      <dependency id="DnDGen.RollGen" version="13.4.2" />
+      <dependency id="DnDGen.Core" version="3.1.1" />
+      <dependency id="EventGen" version="2.0.1" />
+      <dependency id="DnDGen.TreasureGen" version="8.2.0" />
+      <dependency id="CharacterGen" version="10.0.3" />
+      <dependency id="Ninject" version="3.3.3" />
     </dependencies>
     <references></references>
     <tags> encounter npc character equipment treasure generator dice dungeons dragons d20 dnd 3.5 gen </tags>
