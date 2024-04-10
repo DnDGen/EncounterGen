@@ -1,12 +1,12 @@
-﻿using EncounterGen.Common;
-using EncounterGen.Domain.Tables;
-using EncounterGen.Generators;
+﻿using DnDGen.EncounterGen.Models;
+using DnDGen.EncounterGen.Tables;
+using DnDGen.EncounterGen.Generators;
 using Ninject;
 using NUnit.Framework;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
+namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
 {
     [TestFixture]
     public class CrossCreatureGroupsTests : CreatureGroupsTableTests

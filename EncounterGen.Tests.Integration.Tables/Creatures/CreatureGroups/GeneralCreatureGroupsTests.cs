@@ -1,8 +1,8 @@
-﻿using EncounterGen.Common;
-using EncounterGen.Domain.Tables;
+﻿using DnDGen.EncounterGen.Models;
+using DnDGen.EncounterGen.Tables;
 using NUnit.Framework;
 
-namespace EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
+namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
 {
     [TestFixture]
     public class GeneralCreatureGroupsTests : CreatureGroupsTableTests

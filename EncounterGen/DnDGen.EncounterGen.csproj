@@ -1,0 +1,53 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <OutputType>Library</OutputType>
+    <RootNamespace>DnDGen.EncounterGen</RootNamespace>
+    <AssemblyName>DnDGen.EncounterGen</AssemblyName>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <AssemblyTitle>DnDGen.EncounterGen</AssemblyTitle>
+    <Product>DnDGen.EncounterGen</Product>
+    <Copyright>Copyright ©  2016</Copyright>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <FileVersion>1.0.0.0</FileVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="Tables\Creatures\AverageChallengeRatings.xml" />
+    <None Remove="Tables\Creatures\AverageEncounterLevels.xml" />
+    <None Remove="Tables\Creatures\CreatureGroups.xml" />
+    <None Remove="Tables\Creatures\EncounterGroups.xml" />
+    <None Remove="Tables\EncounterDifficulty.xml" />
+    <None Remove="Tables\EncounterLevelModifiers.xml" />
+    <None Remove="Tables\Treasures\TreasureGroups.xml" />
+    <None Remove="Tables\Treasures\TreasureRates.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Creatures\AverageChallengeRatings.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\Creatures\AverageEncounterLevels.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\Creatures\CreatureGroups.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\Creatures\EncounterGroups.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\EncounterDifficulty.xml" />
+    <EmbeddedResource Include="Tables\EncounterLevelModifiers.xml" />
+    <EmbeddedResource Include="Tables\Treasures\TreasureGroups.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\Treasures\TreasureRates.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="DnDGen.CharacterGen" Version="11.0.4" />
+    <PackageReference Include="DnDGen.Infrastructure" Version="4.4.3" />
+    <PackageReference Include="DnDGen.RollGen" Version="15.5.7" />
+    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+    <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
+  </ItemGroup>
+</Project>

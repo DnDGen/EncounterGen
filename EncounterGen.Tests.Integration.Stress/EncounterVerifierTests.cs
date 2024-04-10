@@ -1,8 +1,8 @@
-﻿using EncounterGen.Generators;
+﻿using DnDGen.EncounterGen.Generators;
 using Ninject;
 using NUnit.Framework;
 
-namespace EncounterGen.Tests.Integration.Stress
+namespace DnDGen.EncounterGen.Tests.Integration.Stress
 {
     [TestFixture]
     public class EncounterVerifierTests : StressTests

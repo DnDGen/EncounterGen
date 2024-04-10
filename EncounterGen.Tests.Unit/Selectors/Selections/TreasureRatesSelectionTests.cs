@@ -1,7 +1,7 @@
-﻿using EncounterGen.Domain.Selectors.Selections;
+﻿using DnDGen.EncounterGen.Selectors.Selections;
 using NUnit.Framework;
 
-namespace EncounterGen.Tests.Unit.Selectors.Selections
+namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Selections
 {
     [TestFixture]
     public class TreasureRatesSelectionTests

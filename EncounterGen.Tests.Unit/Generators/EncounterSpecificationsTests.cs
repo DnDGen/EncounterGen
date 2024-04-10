@@ -1,8 +1,8 @@
-﻿using EncounterGen.Generators;
+﻿using DnDGen.EncounterGen.Generators;
 using NUnit.Framework;
 using System;
 
-namespace EncounterGen.Tests.Unit.Generators
+namespace DnDGen.EncounterGen.Tests.Unit.Generators
 {
     [TestFixture]
     public class EncounterSpecificationsTests

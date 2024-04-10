@@ -3,7 +3,7 @@ using Ninject;
 using NUnit.Framework;
 using System.Collections.Generic;
 
-namespace EncounterGen.Tests.Integration.Tables
+namespace DnDGen.EncounterGen.Tests.Integration.Tables
 {
     [TestFixture]
     public abstract class PercentileTests : TableTests

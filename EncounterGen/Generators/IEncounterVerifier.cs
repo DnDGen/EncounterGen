@@ -1,7 +1,7 @@
-﻿using EncounterGen.Common;
+﻿using DnDGen.EncounterGen.Models;
 using System.Collections.Generic;
 
-namespace EncounterGen.Generators
+namespace DnDGen.EncounterGen.Generators
 {
     public interface IEncounterVerifier
     {

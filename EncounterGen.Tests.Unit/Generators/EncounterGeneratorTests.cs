@@ -1,17 +1,16 @@
-﻿using CharacterGen.Characters;
-using DnDGen.Core.Selectors.Percentiles;
-using EncounterGen.Common;
-using EncounterGen.Domain.Generators;
-using EncounterGen.Domain.Selectors;
-using EncounterGen.Domain.Tables;
-using EncounterGen.Generators;
+﻿using DnDGen.CharacterGen.Characters;
+using DnDGen.EncounterGen.Generators;
+using DnDGen.EncounterGen.Models;
+using DnDGen.EncounterGen.Selectors;
+using DnDGen.EncounterGen.Tables;
+using DnDGen.Infrastructure.Selectors.Percentiles;
+using DnDGen.TreasureGen;
 using Moq;
 using NUnit.Framework;
 using System.Collections.Generic;
 using System.Linq;
-using TreasureGen;
 
-namespace EncounterGen.Tests.Unit.Generators
+namespace DnDGen.EncounterGen.Tests.Unit.Generators
 {
     [TestFixture]
     public class EncounterGeneratorTests

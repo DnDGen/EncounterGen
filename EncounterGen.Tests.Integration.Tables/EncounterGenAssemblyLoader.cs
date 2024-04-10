@@ -1,8 +1,8 @@
 ﻿using DnDGen.Core.Tables;
-using EncounterGen.Domain.Tables;
+using DnDGen.EncounterGen.Tables;
 using System.Reflection;
 
-namespace EncounterGen.Tests.Integration.Tables
+namespace DnDGen.EncounterGen.Tests.Integration.Tables
 {
     public class EncounterGenAssemblyLoader : AssemblyLoader
     {

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace EncounterGen.Generators.Exceptions
+namespace DnDGen.EncounterGen.Generators.Exceptions
 {
     public class ImpossibleEncounterException : Exception
     {

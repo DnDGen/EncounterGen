@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace EncounterGen.Generators
+namespace DnDGen.EncounterGen.Generators
 {
     public class EncounterSpecifications
     {

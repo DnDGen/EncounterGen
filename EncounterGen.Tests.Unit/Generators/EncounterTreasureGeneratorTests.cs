@@ -1,23 +1,23 @@
-﻿using DnDGen.Core.Generators;
-using DnDGen.Core.Selectors.Collections;
-using DnDGen.Core.Selectors.Percentiles;
-using EncounterGen.Common;
-using EncounterGen.Domain.Generators;
-using EncounterGen.Domain.Selectors;
-using EncounterGen.Domain.Selectors.Collections;
-using EncounterGen.Domain.Selectors.Selections;
-using EncounterGen.Domain.Tables;
+﻿using DnDGen.EncounterGen.Generators;
+using DnDGen.EncounterGen.Models;
+using DnDGen.EncounterGen.Selectors;
+using DnDGen.EncounterGen.Selectors.Collections;
+using DnDGen.EncounterGen.Selectors.Selections;
+using DnDGen.EncounterGen.Tables;
+using DnDGen.Infrastructure.Generators;
+using DnDGen.Infrastructure.Selectors.Collections;
+using DnDGen.Infrastructure.Selectors.Percentiles;
+using DnDGen.TreasureGen.Coins;
+using DnDGen.TreasureGen.Goods;
+using DnDGen.TreasureGen.Items;
+using DnDGen.TreasureGen.Items.Magical;
+using DnDGen.TreasureGen.Items.Mundane;
 using Moq;
 using NUnit.Framework;
 using System.Collections.Generic;
 using System.Linq;
-using TreasureGen.Coins;
-using TreasureGen.Goods;
-using TreasureGen.Items;
-using TreasureGen.Items.Magical;
-using TreasureGen.Items.Mundane;
 
-namespace EncounterGen.Tests.Unit.Generators
+namespace DnDGen.EncounterGen.Tests.Unit.Generators
 {
     [TestFixture]
     public class EncounterTreasureGeneratorTests
@@ -77,7 +77,7 @@ namespace EncounterGen.Tests.Unit.Generators
 
             mockCoinGenerator.Setup(g => g.GenerateAtLevel(level)).Returns(coin);
             mockGoodsGenerator.Setup(g => g.GenerateAtLevel(level)).Returns(goods);
-            mockItemsGenerator.Setup(g => g.GenerateAtLevel(level)).Returns(items);
+            mockItemsGenerator.Setup(g => g.GenerateRandomAtLevel(level)).Returns(items);
 
             mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.CreatureGroups, GroupConstants.UseSubtypeForTreasure)).Returns(usesSubtypeForTreasure);
         }
@@ -119,7 +119,7 @@ namespace EncounterGen.Tests.Unit.Generators
 
             mockCoinGenerator.SetupSequence(g => g.GenerateAtLevel(level)).Returns(coin).Returns(otherCoin);
             mockGoodsGenerator.SetupSequence(g => g.GenerateAtLevel(level)).Returns(goods).Returns(otherGoods);
-            mockItemsGenerator.SetupSequence(g => g.GenerateAtLevel(level)).Returns(items).Returns(otherItems);
+            mockItemsGenerator.SetupSequence(g => g.GenerateRandomAtLevel(level)).Returns(items).Returns(otherItems);
 
             var treasures = encounterTreasureGenerator.GenerateFor(creatures, level);
             Assert.That(treasures, Is.Not.Null);
@@ -159,7 +159,7 @@ namespace EncounterGen.Tests.Unit.Generators
 
             mockCoinGenerator.SetupSequence(g => g.GenerateAtLevel(level)).Returns(coin).Returns(otherCoin);
             mockGoodsGenerator.SetupSequence(g => g.GenerateAtLevel(level)).Returns(goods).Returns(otherGoods);
-            mockItemsGenerator.SetupSequence(g => g.GenerateAtLevel(level)).Returns(items).Returns(otherItems);
+            mockItemsGenerator.SetupSequence(g => g.GenerateRandomAtLevel(level)).Returns(items).Returns(otherItems);
 
             var treasures = encounterTreasureGenerator.GenerateFor(creatures, level);
             Assert.That(treasures, Is.Not.Null);
@@ -185,7 +185,7 @@ namespace EncounterGen.Tests.Unit.Generators
             mockGoodsGenerator.SetupSequence(g => g.GenerateAtLevel(level)).Returns(goods).Returns(secondGoods);
 
             var secondItems = new[] { new Item(), new Item() };
-            mockItemsGenerator.SetupSequence(g => g.GenerateAtLevel(level)).Returns(items).Returns(secondItems);
+            mockItemsGenerator.SetupSequence(g => g.GenerateRandomAtLevel(level)).Returns(items).Returns(secondItems);
 
             var treasures = encounterTreasureGenerator.GenerateFor(creatures, level);
             Assert.That(treasures, Is.Not.Null);
@@ -215,7 +215,7 @@ namespace EncounterGen.Tests.Unit.Generators
             mockGoodsGenerator.SetupSequence(g => g.GenerateAtLevel(level)).Returns(goods).Returns(secondGoods);
 
             var secondItems = new[] { new Item(), new Item() };
-            mockItemsGenerator.SetupSequence(g => g.GenerateAtLevel(level)).Returns(items).Returns(secondItems);
+            mockItemsGenerator.SetupSequence(g => g.GenerateRandomAtLevel(level)).Returns(items).Returns(secondItems);
 
             var treasures = encounterTreasureGenerator.GenerateFor(creatures, level);
             Assert.That(treasures, Is.Not.Null);
@@ -380,7 +380,7 @@ namespace EncounterGen.Tests.Unit.Generators
 
             var secondItems = new[] { new Item(), new Item() };
             var thirdItems = new[] { new Item(), new Item() };
-            mockItemsGenerator.SetupSequence(g => g.GenerateAtLevel(level)).Returns(items).Returns(secondItems).Returns(thirdItems);
+            mockItemsGenerator.SetupSequence(g => g.GenerateRandomAtLevel(level)).Returns(items).Returns(secondItems).Returns(thirdItems);
 
             var treasures = encounterTreasureGenerator.GenerateFor(creatures, level);
             Assert.That(treasures, Is.Not.Null);
@@ -412,7 +412,7 @@ namespace EncounterGen.Tests.Unit.Generators
             mockGoodsGenerator.SetupSequence(g => g.GenerateAtLevel(level)).Returns(goods).Returns(secondGoods);
 
             var secondItems = new[] { new Item(), new Item() };
-            mockItemsGenerator.SetupSequence(g => g.GenerateAtLevel(level)).Returns(items).Returns(secondItems);
+            mockItemsGenerator.SetupSequence(g => g.GenerateRandomAtLevel(level)).Returns(items).Returns(secondItems);
 
             var treasures = encounterTreasureGenerator.GenerateFor(creatures, level);
             Assert.That(treasures, Is.Not.Null);
@@ -445,7 +445,7 @@ namespace EncounterGen.Tests.Unit.Generators
             mockGoodsGenerator.SetupSequence(g => g.GenerateAtLevel(level)).Returns(goods).Returns(secondGoods);
 
             var secondItems = new[] { new Item(), new Item() };
-            mockItemsGenerator.SetupSequence(g => g.GenerateAtLevel(level)).Returns(items).Returns(secondItems);
+            mockItemsGenerator.SetupSequence(g => g.GenerateRandomAtLevel(level)).Returns(items).Returns(secondItems);
 
             var treasures = encounterTreasureGenerator.GenerateFor(creatures, level);
             Assert.That(treasures, Is.Not.Null);
@@ -481,7 +481,7 @@ namespace EncounterGen.Tests.Unit.Generators
             mockGoodsGenerator.SetupSequence(g => g.GenerateAtLevel(level)).Returns(goods).Returns(secondGoods);
 
             var secondItems = new[] { new Item(), new Item() };
-            mockItemsGenerator.SetupSequence(g => g.GenerateAtLevel(level)).Returns(items).Returns(secondItems);
+            mockItemsGenerator.SetupSequence(g => g.GenerateRandomAtLevel(level)).Returns(items).Returns(secondItems);
 
             var treasures = encounterTreasureGenerator.GenerateFor(creatures, level);
             Assert.That(treasures, Is.Not.Null);
@@ -518,7 +518,7 @@ namespace EncounterGen.Tests.Unit.Generators
             mockGoodsGenerator.SetupSequence(g => g.GenerateAtLevel(level)).Returns(goods).Returns(secondGoods);
 
             var secondItems = new[] { new Item(), new Item() };
-            mockItemsGenerator.SetupSequence(g => g.GenerateAtLevel(level)).Returns(items).Returns(secondItems);
+            mockItemsGenerator.SetupSequence(g => g.GenerateRandomAtLevel(level)).Returns(items).Returns(secondItems);
 
             var treasures = encounterTreasureGenerator.GenerateFor(creatures, level);
             Assert.That(treasures, Is.Not.Null);
@@ -557,8 +557,8 @@ namespace EncounterGen.Tests.Unit.Generators
 
             var setItem = new Item();
             var otherSetItem = new Item();
-            mockMundaneItemGenerator.Setup(g => g.GenerateFrom(template1, true)).Returns(setItem);
-            mockOtherMundaneItemGenerator.Setup(g => g.GenerateFrom(template2, true)).Returns(otherSetItem);
+            mockMundaneItemGenerator.Setup(g => g.Generate(template1, true)).Returns(setItem);
+            mockOtherMundaneItemGenerator.Setup(g => g.Generate(template2, true)).Returns(otherSetItem);
 
             var treasures = encounterTreasureGenerator.GenerateFor(creatures, level);
             Assert.That(treasures, Is.Not.Null);
@@ -599,8 +599,8 @@ namespace EncounterGen.Tests.Unit.Generators
 
             var setItem = new Item();
             var otherSetItem = new Item();
-            mockMagicalItemGenerator.Setup(g => g.GenerateFrom(template1, true)).Returns(setItem);
-            mockOtherMagicalItemGenerator.Setup(g => g.GenerateFrom(template2, true)).Returns(otherSetItem);
+            mockMagicalItemGenerator.Setup(g => g.Generate(template1, true)).Returns(setItem);
+            mockOtherMagicalItemGenerator.Setup(g => g.Generate(template2, true)).Returns(otherSetItem);
 
             var treasures = encounterTreasureGenerator.GenerateFor(creatures, level);
             Assert.That(treasures, Is.Not.Null);
@@ -637,8 +637,8 @@ namespace EncounterGen.Tests.Unit.Generators
             mockJustInTimeFactory.Setup(f => f.Build<MundaneItemGenerator>("item type")).Returns(mockMundaneItemGenerator.Object);
             mockJustInTimeFactory.Setup(f => f.Build<MundaneItemGenerator>("other item type")).Returns(mockOtherMundaneItemGenerator.Object);
 
-            mockMundaneItemGenerator.Setup(g => g.GenerateFrom(template1, true)).Returns((Item t, bool a) => t.Clone());
-            mockOtherMundaneItemGenerator.Setup(g => g.GenerateFrom(template2, true)).Returns((Item t, bool a) => t.Clone());
+            mockMundaneItemGenerator.Setup(g => g.Generate(template1, true)).Returns((Item t, bool a) => t.Clone());
+            mockOtherMundaneItemGenerator.Setup(g => g.Generate(template2, true)).Returns((Item t, bool a) => t.Clone());
 
             creature.Quantity = 42;
 
@@ -673,7 +673,7 @@ namespace EncounterGen.Tests.Unit.Generators
             mockGoodsGenerator.SetupSequence(g => g.GenerateAtLevel(level)).Returns(goods).Returns(secondGoods);
 
             var secondItems = new[] { new Item(), new Item() };
-            mockItemsGenerator.SetupSequence(g => g.GenerateAtLevel(level)).Returns(items).Returns(secondItems);
+            mockItemsGenerator.SetupSequence(g => g.GenerateRandomAtLevel(level)).Returns(items).Returns(secondItems);
 
             var setTreasureItems = new[] { "item 1", "item 2" };
             mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.TreasureGroups, creature.Type.SubType.Name)).Returns(setTreasureItems);
@@ -694,8 +694,8 @@ namespace EncounterGen.Tests.Unit.Generators
 
             var setItem = new Item();
             var otherSetItem = new Item();
-            mockMundaneItemGenerator.Setup(g => g.GenerateFrom(template1, true)).Returns(setItem);
-            mockOtherMundaneItemGenerator.Setup(g => g.GenerateFrom(template2, true)).Returns(otherSetItem);
+            mockMundaneItemGenerator.Setup(g => g.Generate(template1, true)).Returns(setItem);
+            mockOtherMundaneItemGenerator.Setup(g => g.Generate(template2, true)).Returns(otherSetItem);
 
             var treasures = encounterTreasureGenerator.GenerateFor(creatures, level);
             Assert.That(treasures, Is.Not.Null);
@@ -734,7 +734,7 @@ namespace EncounterGen.Tests.Unit.Generators
             mockGoodsGenerator.SetupSequence(g => g.GenerateAtLevel(level)).Returns(goods).Returns(secondGoods);
 
             var secondItems = new[] { new Item(), new Item() };
-            mockItemsGenerator.SetupSequence(g => g.GenerateAtLevel(level)).Returns(items).Returns(secondItems);
+            mockItemsGenerator.SetupSequence(g => g.GenerateRandomAtLevel(level)).Returns(items).Returns(secondItems);
 
             var setTreasureItems = new[] { "item 1", "item 2" };
             mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.TreasureGroups, creature.Type.SubType.SubType.Name)).Returns(setTreasureItems);
@@ -755,8 +755,8 @@ namespace EncounterGen.Tests.Unit.Generators
 
             var setItem = new Item();
             var otherSetItem = new Item();
-            mockMundaneItemGenerator.Setup(g => g.GenerateFrom(template1, true)).Returns(setItem);
-            mockOtherMundaneItemGenerator.Setup(g => g.GenerateFrom(template2, true)).Returns(otherSetItem);
+            mockMundaneItemGenerator.Setup(g => g.Generate(template1, true)).Returns(setItem);
+            mockOtherMundaneItemGenerator.Setup(g => g.Generate(template2, true)).Returns(otherSetItem);
 
             var treasures = encounterTreasureGenerator.GenerateFor(creatures, level);
             Assert.That(treasures, Is.Not.Null);

@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
 
-namespace EncounterGen.Tests.Integration.Tables
+namespace DnDGen.EncounterGen.Tests.Integration.Tables
 {
     public class TableAttribute : CategoryAttribute
     {

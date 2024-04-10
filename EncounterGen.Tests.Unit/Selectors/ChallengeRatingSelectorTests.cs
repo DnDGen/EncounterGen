@@ -1,27 +1,25 @@
-﻿using DnDGen.Core.Selectors.Collections;
-using EncounterGen.Common;
-using EncounterGen.Domain.Selectors;
-using EncounterGen.Domain.Tables;
+﻿using DnDGen.EncounterGen.Models;
+using DnDGen.EncounterGen.Selectors;
+using DnDGen.EncounterGen.Tables;
+using DnDGen.Infrastructure.Selectors.Collections;
 using Moq;
 using NUnit.Framework;
 using System;
 using System.Linq;
 
-namespace EncounterGen.Tests.Unit.Selectors
+namespace DnDGen.EncounterGen.Tests.Unit.Selectors
 {
     [TestFixture]
     public class ChallengeRatingSelectorTests
     {
         private IChallengeRatingSelector challengeRatingSelector;
         private Mock<ICollectionSelector> mockCollectionSelector;
-        private Mock<IEncounterFormatter> mockEncounterFormatter;
 
         [SetUp]
         public void Setup()
         {
             mockCollectionSelector = new Mock<ICollectionSelector>();
-            mockEncounterFormatter = new Mock<IEncounterFormatter>();
-            challengeRatingSelector = new ChallengeRatingSelector(mockCollectionSelector.Object, mockEncounterFormatter.Object);
+            challengeRatingSelector = new ChallengeRatingSelector(mockCollectionSelector.Object);
         }
 
         [Test]

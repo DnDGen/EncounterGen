@@ -1,5 +1,5 @@
-﻿using EncounterGen.Common;
-using EncounterGen.Generators;
+﻿using DnDGen.EncounterGen.Models;
+using DnDGen.EncounterGen.Generators;
 using Ninject;
 using NUnit.Framework;
 using RollGen;
@@ -7,7 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace EncounterGen.Tests.Integration.Stress
+namespace DnDGen.EncounterGen.Tests.Integration.Stress
 {
     [TestFixture]
     public class EncounterGeneratorTests : StressTests

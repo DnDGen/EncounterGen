@@ -1,12 +1,12 @@
-﻿using CharacterGen.Characters;
-using EncounterGen.Common;
-using EncounterGen.Domain.Selectors;
+﻿using DnDGen.CharacterGen.Characters;
+using DnDGen.EncounterGen.Models;
+using DnDGen.EncounterGen.Selectors;
 using Moq;
 using NUnit.Framework;
 using System;
 using System.Linq;
 
-namespace EncounterGen.Tests.Unit.Selectors
+namespace DnDGen.EncounterGen.Tests.Unit.Selectors
 {
     [TestFixture]
     public class EncounterLevelSelectorTests

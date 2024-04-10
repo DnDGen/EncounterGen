@@ -1,7 +1,7 @@
-﻿using EncounterGen.Domain.Tables;
+﻿using DnDGen.EncounterGen.Tables;
 using NUnit.Framework;
 
-namespace EncounterGen.Tests.Unit.Tables
+namespace DnDGen.EncounterGen.Tests.Unit.Tables
 {
     [TestFixture]
     public class TableNameConstantsTests

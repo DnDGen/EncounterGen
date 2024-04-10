@@ -1,8 +1,8 @@
-﻿using EncounterGen.Domain.Selectors;
-using EncounterGen.Domain.Selectors.Collections;
+﻿using DnDGen.EncounterGen.Selectors;
+using DnDGen.EncounterGen.Selectors.Collections;
 using NUnit.Framework;
 
-namespace EncounterGen.Tests.Integration.IoC.Modules
+namespace DnDGen.EncounterGen.Tests.Integration.IoC.Modules
 {
     [TestFixture]
     public class SelectorModuleTests : IoCTests

@@ -5,7 +5,7 @@ using NUnit.Framework;
 using System;
 using System.Linq;
 
-namespace EncounterGen.Tests.Integration.Tables
+namespace DnDGen.EncounterGen.Tests.Integration.Tables
 {
     [TestFixture, Table]
     public abstract class TableTests : IntegrationTests

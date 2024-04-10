@@ -1,13 +1,13 @@
-﻿using EncounterGen.Common;
-using EncounterGen.Domain.Selectors;
-using EncounterGen.Domain.Tables;
+﻿using DnDGen.EncounterGen.Models;
+using DnDGen.EncounterGen.Selectors;
+using DnDGen.EncounterGen.Tables;
 using Ninject;
 using NUnit.Framework;
 using System.Linq;
 using TreasureGen.Items;
 using TreasureGen.Items.Magical;
 
-namespace EncounterGen.Tests.Integration.Tables.Treasures
+namespace DnDGen.EncounterGen.Tests.Integration.Tables.Treasures
 {
     [TestFixture]
     public class TreasureGroupsTests : CollectionTests

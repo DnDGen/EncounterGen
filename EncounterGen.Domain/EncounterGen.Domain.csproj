@@ -127,9 +127,9 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\EncounterGen\EncounterGen.csproj">
+    <ProjectReference Include="..\EncounterGen\DnDGen.EncounterGen.csproj">
       <Project>{79ca8727-5e80-4da4-84c0-c9e620884362}</Project>
-      <Name>EncounterGen</Name>
+      <Name>DnDGen.EncounterGen</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

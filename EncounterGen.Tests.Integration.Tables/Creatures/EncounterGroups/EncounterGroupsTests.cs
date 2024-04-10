@@ -1,11 +1,11 @@
-﻿using EncounterGen.Common;
-using EncounterGen.Domain.Selectors.Collections;
-using EncounterGen.Domain.Tables;
+﻿using DnDGen.EncounterGen.Models;
+using DnDGen.EncounterGen.Selectors.Collections;
+using DnDGen.EncounterGen.Tables;
 using Ninject;
 using NUnit.Framework;
 using System.Collections.Generic;
 
-namespace EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
+namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
 {
     [TestFixture]
     public abstract class EncounterGroupsTests : CollectionTests

@@ -1,10 +1,10 @@
-﻿using DnDGen.Core.Selectors.Collections;
-using EncounterGen.Domain.Selectors.Collections;
-using EncounterGen.Domain.Tables;
+﻿using DnDGen.EncounterGen.Selectors.Collections;
+using DnDGen.EncounterGen.Tables;
+using DnDGen.Infrastructure.Selectors.Collections;
 using Moq;
 using NUnit.Framework;
 
-namespace EncounterGen.Tests.Unit.Selectors.Collections
+namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
 {
     [TestFixture]
     public class TreasureRatesSelectorTests

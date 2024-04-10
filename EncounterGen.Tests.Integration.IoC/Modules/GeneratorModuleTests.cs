@@ -1,14 +1,14 @@
 ﻿using CharacterGen.Characters;
 using DnDGen.Core.Generators;
-using EncounterGen.Domain.Generators;
-using EncounterGen.Generators;
+using DnDGen.EncounterGen.Generators;
+using DnDGen.EncounterGen.Generators;
 using NUnit.Framework;
 using TreasureGen.Coins;
 using TreasureGen.Generators;
 using TreasureGen.Goods;
 using TreasureGen.Items;
 
-namespace EncounterGen.Tests.Integration.IoC.Modules
+namespace DnDGen.EncounterGen.Tests.Integration.IoC.Modules
 {
     [TestFixture]
     public class GeneratorModuleTests : IoCTests

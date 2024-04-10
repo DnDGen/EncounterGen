@@ -1,12 +1,12 @@
-﻿using CharacterGen.CharacterClasses;
-using CharacterGen.Races;
-using CharacterGen.Randomizers.CharacterClasses;
-using EncounterGen.Common;
-using EncounterGen.Domain.Selectors;
+﻿using DnDGen.CharacterGen.CharacterClasses;
+using DnDGen.CharacterGen.Races;
+using DnDGen.CharacterGen.Randomizers.CharacterClasses;
+using DnDGen.EncounterGen.Models;
+using DnDGen.EncounterGen.Selectors;
+using DnDGen.TreasureGen.Items;
 using NUnit.Framework;
-using TreasureGen.Items;
 
-namespace EncounterGen.Tests.Unit.Common
+namespace DnDGen.EncounterGen.Tests.Unit.Common
 {
     [TestFixture]
     public class CreatureConstantsTests

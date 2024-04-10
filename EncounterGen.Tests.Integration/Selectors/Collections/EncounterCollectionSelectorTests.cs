@@ -1,17 +1,21 @@
-﻿using EncounterGen.Common;
-using EncounterGen.Domain.Selectors.Collections;
-using EncounterGen.Generators;
-using Ninject;
+﻿using DnDGen.EncounterGen.Generators;
+using DnDGen.EncounterGen.Models;
+using DnDGen.EncounterGen.Selectors.Collections;
 using NUnit.Framework;
 using System.Collections.Generic;
 
-namespace EncounterGen.Tests.Integration.Selectors.Collections
+namespace DnDGen.EncounterGen.Tests.Integration.Selectors.Collections
 {
     [TestFixture]
     public class EncounterCollectionSelectorTests : IntegrationTests
     {
-        [Inject]
-        internal IEncounterCollectionSelector EncounterCollectionSelector { get; set; }
+        private IEncounterCollectionSelector encounterCollectionSelector;
+
+        [SetUp]
+        public void Setup()
+        {
+            encounterCollectionSelector = GetNewInstanceOf<IEncounterCollectionSelector>();
+        }
 
         [TestCase(1, EnvironmentConstants.Temperatures.Cold, EnvironmentConstants.Forest, EnvironmentConstants.TimesOfDay.Night, false, true)]
         [TestCase(1, EnvironmentConstants.Temperatures.Cold, EnvironmentConstants.Plains, EnvironmentConstants.TimesOfDay.Night, true, false)]
@@ -35,10 +39,9 @@ namespace EncounterGen.Tests.Integration.Selectors.Collections
             specifications.AllowUnderground = allowUnderground;
             specifications.CreatureTypeFilters = filters;
 
-            var encounter = EncounterCollectionSelector.SelectRandomFrom(specifications);
+            var encounter = encounterCollectionSelector.SelectRandomFrom(specifications);
 
             AssertEncounter(encounter);
-            AssertEventSpacing();
         }
 
         private void AssertEncounter(Dictionary<string, string> encounter)
@@ -70,14 +73,12 @@ namespace EncounterGen.Tests.Integration.Selectors.Collections
             specifications.AllowUnderground = allowUnderground;
             specifications.CreatureTypeFilters = filters;
 
-            var collection = EncounterCollectionSelector.SelectAllWeightedFrom(specifications);
+            var collection = encounterCollectionSelector.SelectAllWeightedFrom(specifications);
 
             Assert.That(collection, Is.Not.Empty);
 
             foreach (var encounter in collection)
                 AssertEncounter(encounter);
-
-            AssertEventSpacing();
         }
     }
 }

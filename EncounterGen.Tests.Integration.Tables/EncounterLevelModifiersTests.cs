@@ -1,7 +1,7 @@
-﻿using EncounterGen.Domain.Tables;
+﻿using DnDGen.EncounterGen.Tables;
 using NUnit.Framework;
 
-namespace EncounterGen.Tests.Integration.Tables
+namespace DnDGen.EncounterGen.Tests.Integration.Tables
 {
     [TestFixture]
     public class EncounterLevelModifiersTests : PercentileTests

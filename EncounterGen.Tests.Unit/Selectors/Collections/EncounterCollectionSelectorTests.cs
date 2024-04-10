@@ -1,17 +1,16 @@
-﻿using DnDGen.Core.Selectors.Collections;
-using EncounterGen.Common;
-using EncounterGen.Domain.Selectors;
-using EncounterGen.Domain.Selectors.Collections;
-using EncounterGen.Domain.Tables;
-using EncounterGen.Generators;
-using EventGen;
+﻿using DnDGen.EncounterGen.Generators;
+using DnDGen.EncounterGen.Models;
+using DnDGen.EncounterGen.Selectors;
+using DnDGen.EncounterGen.Selectors.Collections;
+using DnDGen.EncounterGen.Tables;
+using DnDGen.Infrastructure.Selectors.Collections;
 using Moq;
 using NUnit.Framework;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace EncounterGen.Tests.Unit.Selectors.Collections
+namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
 {
     [TestFixture]
     public class EncounterCollectionSelectorTests
@@ -23,9 +22,7 @@ namespace EncounterGen.Tests.Unit.Selectors.Collections
 
         private IEncounterCollectionSelector encounterCollectionSelector;
         private Mock<ICollectionSelector> mockCollectionSelector;
-        private Mock<IEncounterLevelSelector> mockEncounterLevelSelector;
         private Mock<IEncounterFormatter> mockEncounterSelector;
-        private Mock<IChallengeRatingSelector> mockChallengeRatingSelector;
         private List<string> levelEncounters;
         private List<string> timeOfDayEncounters;
         private List<string> magicEncounters;
@@ -35,17 +32,13 @@ namespace EncounterGen.Tests.Unit.Selectors.Collections
         private List<string> wildernessEncounters;
         private EncounterSpecifications specifications;
         private Dictionary<string, IEnumerable<string>> encounterGroups;
-        private Mock<GenEventQueue> mockEventQueue;
 
         [SetUp]
         public void Setup()
         {
             mockCollectionSelector = new Mock<ICollectionSelector>();
-            mockEncounterLevelSelector = new Mock<IEncounterLevelSelector>();
             mockEncounterSelector = new Mock<IEncounterFormatter>();
-            mockEventQueue = new Mock<GenEventQueue>();
-            mockChallengeRatingSelector = new Mock<IChallengeRatingSelector>();
-            encounterCollectionSelector = new EncounterCollectionSelector(mockCollectionSelector.Object, mockEncounterLevelSelector.Object, mockEncounterSelector.Object, mockChallengeRatingSelector.Object, mockEventQueue.Object);
+            encounterCollectionSelector = new EncounterCollectionSelector(mockCollectionSelector.Object, mockEncounterSelector.Object);
 
             levelEncounters = new List<string>();
             timeOfDayEncounters = new List<string>();
@@ -122,8 +115,6 @@ namespace EncounterGen.Tests.Unit.Selectors.Collections
         {
             var encounterTypesAndAmounts = encounterCollectionSelector.SelectRandomFrom(specifications);
             AssertTypesAndAmounts(encounterTypesAndAmounts, string.Empty, "specific environment encounter", "specific environment amount");
-
-            AssertEvents();
         }
 
         [Test]
@@ -133,8 +124,6 @@ namespace EncounterGen.Tests.Unit.Selectors.Collections
 
             Assert.That(() => encounterCollectionSelector.SelectRandomFrom(specifications),
                 Throws.ArgumentException.With.Message.EqualTo($"No valid encounters exist for {specifications.Description}"));
-
-            AssertEvents();
         }
 
         private void AssertTypesAndAmounts(Dictionary<string, string> actual, string failureMessage, params string[] expected)
@@ -164,8 +153,6 @@ namespace EncounterGen.Tests.Unit.Selectors.Collections
 
             var encounterTypesAndAmounts = encounterCollectionSelector.SelectRandomFrom(specifications);
             AssertTypesAndAmounts(encounterTypesAndAmounts, string.Empty, "other specific environment encounter", "other specific environment amount");
-
-            AssertEvents();
         }
 
         [Test]
@@ -177,8 +164,6 @@ namespace EncounterGen.Tests.Unit.Selectors.Collections
 
             var encounterTypesAndAmounts = encounterCollectionSelector.SelectRandomFrom(specifications);
             AssertTypesAndAmounts(encounterTypesAndAmounts, string.Empty, "encounter", "amount", "other encounter", "other amount");
-
-            AssertEvents();
         }
 
         [Test]
@@ -189,7 +174,6 @@ namespace EncounterGen.Tests.Unit.Selectors.Collections
             var expectedEncounters = Enumerable.Empty<string>();
 
             AssertEncounterWeight(expectedEncounters);
-            AssertEvents();
         }
 
         [Test]
@@ -200,7 +184,6 @@ namespace EncounterGen.Tests.Unit.Selectors.Collections
             var expectedEncounters = Enumerable.Empty<string>();
 
             AssertEncounterWeight(expectedEncounters);
-            AssertEvents();
         }
 
         [Test]
@@ -216,7 +199,6 @@ namespace EncounterGen.Tests.Unit.Selectors.Collections
             var expectedEncounters = Enumerable.Empty<string>();
 
             AssertEncounterWeight(expectedEncounters, EnvironmentConstants.Civilized);
-            AssertEvents();
         }
 
         [Test]
@@ -227,7 +209,6 @@ namespace EncounterGen.Tests.Unit.Selectors.Collections
             var expectedEncounters = Enumerable.Empty<string>();
 
             AssertEncounterWeight(expectedEncounters);
-            AssertEvents();
         }
 
         [Test]
@@ -245,7 +226,6 @@ namespace EncounterGen.Tests.Unit.Selectors.Collections
             };
 
             AssertEncounterWeight(expectedEncounters);
-            AssertEvents();
         }
 
         [Test]
@@ -263,7 +243,6 @@ namespace EncounterGen.Tests.Unit.Selectors.Collections
             };
 
             AssertEncounterWeight(expectedEncounters);
-            AssertEvents();
         }
 
         [Test]
@@ -287,7 +266,6 @@ namespace EncounterGen.Tests.Unit.Selectors.Collections
             };
 
             AssertEncounterWeight(expectedEncounters);
-            AssertEvents();
         }
 
         [Test]
@@ -312,7 +290,6 @@ namespace EncounterGen.Tests.Unit.Selectors.Collections
             };
 
             AssertEncounterWeight(expectedEncounters);
-            AssertEvents();
         }
 
         [Test]
@@ -332,7 +309,6 @@ namespace EncounterGen.Tests.Unit.Selectors.Collections
             };
 
             AssertEncounterWeight(expectedEncounters);
-            AssertEvents();
         }
 
         private void AssertEncounterWeight(IEnumerable<string> expectedEncounters, string targetEnvironment = environment, bool allowAquatic = false, bool allowUnderground = false)
@@ -362,174 +338,9 @@ namespace EncounterGen.Tests.Unit.Selectors.Collections
             }
         }
 
-        private void AssertEvents(
-            IEnumerable<string> timeOfDayEncounters = null,
-            IEnumerable<string> aquaticEncounters = null,
-            IEnumerable<string> specificAquaticEncounters = null,
-            IEnumerable<string> undergroundEncounters = null,
-            IEnumerable<string> undergroundAquaticEncounters = null,
-            IEnumerable<string> overrideSpecificEnvironmentEncounters = null)
-        {
-            aquaticEncounters = aquaticEncounters ?? Enumerable.Empty<string>();
-            specificAquaticEncounters = specificAquaticEncounters ?? Enumerable.Empty<string>();
-            undergroundEncounters = undergroundEncounters ?? Enumerable.Empty<string>();
-            undergroundAquaticEncounters = undergroundAquaticEncounters ?? Enumerable.Empty<string>();
-            timeOfDayEncounters = timeOfDayEncounters ?? this.timeOfDayEncounters;
-            overrideSpecificEnvironmentEncounters = overrideSpecificEnvironmentEncounters ?? specificEnvironmentEncounters;
-
-            if (specifications.Environment == EnvironmentConstants.Aquatic)
-                overrideSpecificEnvironmentEncounters = specificAquaticEncounters;
-
-            var totalEventCount = 0;
-            totalEventCount += VerifyEvent($"Getting encounters for Magic");
-            totalEventCount += VerifyEvent($"Magic has {magicEncounters.Count} encounters");
-            totalEventCount += VerifyEvent($"Getting encounters for {specifications.SpecificEnvironment}");
-            totalEventCount += VerifyEvent($"{specifications.SpecificEnvironment} has {overrideSpecificEnvironmentEncounters.Count()} encounters");
-            totalEventCount += VerifyEvent($"Getting encounters for Aquatic");
-            totalEventCount += VerifyEvent($"Aquatic has {aquaticEncounters.Count()} encounters");
-            totalEventCount += VerifyEvent($"Getting encounters for Underground");
-            totalEventCount += VerifyEvent($"Underground has {undergroundEncounters.Count()} encounters");
-            totalEventCount += VerifyEvent($"Getting encounters for UndergroundAquatic");
-            totalEventCount += VerifyEvent($"UndergroundAquatic has {undergroundAquaticEncounters.Count()} encounters");
-
-            var validEncounters = new List<string>();
-            validEncounters.AddRange(magicEncounters);
-            validEncounters.AddRange(overrideSpecificEnvironmentEncounters);
-
-            if (specifications.Environment != EnvironmentConstants.Aquatic)
-            {
-                totalEventCount += VerifyEvent($"Getting encounters for Land");
-                totalEventCount += VerifyEvent($"Land has {landEncounters.Count} encounters");
-
-                validEncounters.AddRange(landEncounters);
-            }
-
-            if (specifications.Environment == EnvironmentConstants.Aquatic || specifications.AllowAquatic)
-            {
-                validEncounters.AddRange(aquaticEncounters);
-
-                //INFO: If environment is aquatic, we will already have the sepcific aquatic encounters as part of the specific environment encounters
-                if (specifications.Environment != EnvironmentConstants.Aquatic)
-                {
-                    totalEventCount += VerifyEvent($"Getting encounters for temperatureAquatic");
-                    totalEventCount += VerifyEvent($"temperatureAquatic has {specificAquaticEncounters.Count()} encounters");
-
-                    validEncounters.AddRange(specificAquaticEncounters);
-                }
-            }
-
-            if (ShouldGetUnderground(specifications))
-            {
-                validEncounters.AddRange(undergroundEncounters);
-            }
-
-            if (ShouldGetUndergroundAquatic(specifications))
-            {
-                validEncounters.AddRange(undergroundAquaticEncounters);
-            }
-
-            totalEventCount += VerifyEvent($"Validating {validEncounters.Count} encounters");
-
-            if (validEncounters.Any())
-            {
-                totalEventCount += VerifyEvent($"Filtering out all encounters that are not (on overage) level {specifications.Level}");
-
-                validEncounters = validEncounters.Intersect(levelEncounters).ToList();
-
-                totalEventCount++;
-                mockEventQueue.Verify(q => q.Enqueue("EncounterGen", $"Filtered down to {validEncounters.Count} encounters"), Times.AtLeastOnce);
-            }
-
-            if (specifications.CreatureTypeFilters.Any() && validEncounters.Any())
-            {
-                totalEventCount += VerifyEvent($"Filtering out all encounters that do not have at least one of the following creature types: {string.Join(", ", specifications.CreatureTypeFilters)}");
-
-                var filteredCreatures = filters.Where(kvp => specifications.CreatureTypeFilters.Contains(kvp.Key)).SelectMany(kvp => kvp.Value);
-                validEncounters = validEncounters.Where(e => filteredCreatures.Contains(ParseCreatureAndAmount(e).Keys.First())).ToList();
-
-                totalEventCount++;
-                mockEventQueue.Verify(q => q.Enqueue("EncounterGen", $"Filtered down to {validEncounters.Count} encounters"), Times.AtLeastOnce);
-            }
-
-            if (specifications.Environment == EnvironmentConstants.Civilized && validEncounters.Any())
-            {
-                totalEventCount += VerifyEvent($"Filtering out all wilderness encounters because the environment is civilized");
-                totalEventCount += VerifyEvent($"Getting encounters for Wilderness");
-                totalEventCount += VerifyEvent($"Wilderness has {wildernessEncounters.Count} encounters");
-
-                validEncounters = validEncounters.Except(wildernessEncounters).ToList();
-
-                totalEventCount++;
-                mockEventQueue.Verify(q => q.Enqueue("EncounterGen", $"Filtered down to {validEncounters.Count} encounters"), Times.AtLeastOnce);
-            }
-
-            if (validEncounters.Any())
-            {
-                totalEventCount += VerifyEvent($"Filtering out all encounters that cannot occur in the {specifications.TimeOfDay}");
-                totalEventCount += VerifyEvent($"Getting encounters for {specifications.TimeOfDay}");
-                totalEventCount += VerifyEvent($"{specifications.TimeOfDay} has {timeOfDayEncounters.Count()} encounters");
-
-                validEncounters = validEncounters.Intersect(timeOfDayEncounters).ToList();
-
-                totalEventCount++;
-                mockEventQueue.Verify(q => q.Enqueue("EncounterGen", $"Filtered down to {validEncounters.Count} encounters"), Times.AtLeastOnce);
-            }
-
-            if (!validEncounters.Any())
-            {
-                totalEventCount += VerifyEvent($"{specifications.Description} has no valid encounters");
-            }
-            else
-            {
-                totalEventCount += VerifyEvent($"1x-weighting {validEncounters.Count} encounters");
-
-                var commonValidEncounters = validEncounters.Except(magicEncounters);
-
-                if (specifications.Environment != EnvironmentConstants.Aquatic)
-                    commonValidEncounters = commonValidEncounters.Except(aquaticEncounters);
-
-                if (specifications.Environment != EnvironmentConstants.Underground)
-                    commonValidEncounters = commonValidEncounters.Except(undergroundEncounters);
-
-                var uncommonEncounters = validEncounters.Except(commonValidEncounters);
-
-                if (commonValidEncounters.Any())
-                {
-                    var weight = ComputeWeight(uncommonEncounters, commonValidEncounters);
-                    totalEventCount += VerifyEvent($"{weight}x-weighting {commonValidEncounters.Count()} common encounters");
-                }
-
-                var validSpecificEncounters = overrideSpecificEnvironmentEncounters.Intersect(validEncounters);
-
-                if (validSpecificEncounters.Any())
-                {
-                    var weight = ComputeWeight(uncommonEncounters, validSpecificEncounters);
-                    totalEventCount += VerifyEvent($"{weight}x-weighting {validSpecificEncounters.Count()} {specifications.SpecificEnvironment} encounters");
-                }
-
-                var validUndergroundAquaticEncounters = validEncounters.Intersect(undergroundAquaticEncounters);
-
-                if (ShouldSpecificWeightUndergroundAquatic(specifications) && validUndergroundAquaticEncounters.Any())
-                {
-                    var weight = ComputeWeight(uncommonEncounters, validUndergroundAquaticEncounters);
-                    totalEventCount += VerifyEvent($"{weight}x-weighting {validUndergroundAquaticEncounters.Count()} underground aquatic encounters");
-                }
-            }
-
-            mockEventQueue.Verify(q => q.Enqueue(It.IsAny<string>(), It.IsAny<string>()), Times.Exactly(totalEventCount));
-
-            Console.WriteLine($"{totalEventCount} events were logged for {specifications.Description}");
-        }
-
         private int ComputeWeight(IEnumerable<string> uncommonEncounters, IEnumerable<string> encountersToWeight)
         {
             return Math.Max(uncommonEncounters.Count() / encountersToWeight.Count(), 1);
-        }
-
-        private int VerifyEvent(string message)
-        {
-            mockEventQueue.Verify(q => q.Enqueue("EncounterGen", message), Times.Once);
-            return 1;
         }
 
         private bool ShouldSpecificWeightUndergroundAquatic(EncounterSpecifications specifications)
@@ -576,7 +387,6 @@ namespace EncounterGen.Tests.Unit.Selectors.Collections
             };
 
             AssertEncounterWeight(expectedEncounters, allowAquatic: true);
-            AssertEvents(aquaticEncounters: aquaticEncounters, specificAquaticEncounters: specificAquaticEncounters);
         }
 
         [Test]
@@ -593,7 +403,6 @@ namespace EncounterGen.Tests.Unit.Selectors.Collections
             };
 
             AssertEncounterWeight(expectedEncounters);
-            AssertEvents();
         }
 
         [Test]
@@ -625,7 +434,6 @@ namespace EncounterGen.Tests.Unit.Selectors.Collections
             };
 
             AssertEncounterWeight(expectedEncounters, allowAquatic: true, allowUnderground: true);
-            AssertEvents(timeOfDayEncounters: nightEncounters, undergroundAquaticEncounters: undergroundAquaticEncounters);
         }
 
         [Test]
@@ -657,7 +465,6 @@ namespace EncounterGen.Tests.Unit.Selectors.Collections
             };
 
             AssertEncounterWeight(expectedEncounters, allowAquatic: true, allowUnderground: true);
-            AssertEvents(timeOfDayEncounters: nightEncounters, undergroundAquaticEncounters: undergroundAquaticEncounters);
         }
 
         [Test]
@@ -685,7 +492,6 @@ namespace EncounterGen.Tests.Unit.Selectors.Collections
             };
 
             AssertEncounterWeight(expectedEncounters, allowUnderground: true);
-            AssertEvents(timeOfDayEncounters: nightEncounters, undergroundEncounters: undergroundEncounters);
         }
 
         [Test]
@@ -706,7 +512,6 @@ namespace EncounterGen.Tests.Unit.Selectors.Collections
             };
 
             AssertEncounterWeight(expectedEncounters);
-            AssertEvents();
         }
 
         [TestCase(0, 0, 0)]
@@ -868,8 +673,6 @@ namespace EncounterGen.Tests.Unit.Selectors.Collections
             {
                 Assert.That(weightedEncounters.Count(e => e.First().Key == encounter.Split('/')[0]), Is.EqualTo(expectedWeighting), "land encounter");
             }
-
-            AssertEvents();
         }
 
         [Test]
@@ -898,7 +701,6 @@ namespace EncounterGen.Tests.Unit.Selectors.Collections
             };
 
             AssertEncounterWeight(expectedEncounters, targetEnvironment: EnvironmentConstants.Aquatic);
-            AssertEvents(aquaticEncounters: aquaticEncounters, specificAquaticEncounters: specificAquaticEncounters);
         }
 
         [TestCase(0, 0, 0)]
@@ -1067,8 +869,6 @@ namespace EncounterGen.Tests.Unit.Selectors.Collections
             {
                 Assert.That(weightedEncounters.Count(e => e.First().Key == encounter.Split('/')[0]), Is.EqualTo(expectedWeighting), "aquatic encounter");
             }
-
-            AssertEvents(aquaticEncounters: aquaticEncounters, specificAquaticEncounters: specificAquaticEncounters);
         }
 
         [Test]
@@ -1101,7 +901,6 @@ namespace EncounterGen.Tests.Unit.Selectors.Collections
             };
 
             AssertEncounterWeight(expectedEncounters, targetEnvironment: EnvironmentConstants.Underground);
-            AssertEvents(timeOfDayEncounters: nightEncounters, undergroundEncounters: undergroundEncounters);
         }
 
         [TestCase(0, 0, 0)]
@@ -1272,8 +1071,6 @@ namespace EncounterGen.Tests.Unit.Selectors.Collections
             {
                 Assert.That(weightedEncounters.Count(e => e.First().Key == encounter.Split('/')[0]), Is.EqualTo(expectedWeighting), "underground encounter");
             }
-
-            AssertEvents(timeOfDayEncounters: nightEncounters, undergroundEncounters: undergroundEncounters, overrideSpecificEnvironmentEncounters: specificUndergroundEncounters);
         }
 
         [Test]
@@ -1300,7 +1097,6 @@ namespace EncounterGen.Tests.Unit.Selectors.Collections
             };
 
             AssertEncounterWeight(expectedEncounters, allowAquatic: true);
-            AssertEvents(aquaticEncounters: aquaticEncounters, specificAquaticEncounters: specificAquaticEncounters);
         }
 
         [TestCase(0, 0, 0)]
@@ -1469,8 +1265,6 @@ namespace EncounterGen.Tests.Unit.Selectors.Collections
             {
                 Assert.That(weightedEncounters.Count(e => e.First().Key == encounter.Split('/')[0]), Is.EqualTo(expectedWeighting), "specific aquatic encounter");
             }
-
-            AssertEvents(aquaticEncounters: aquaticEncounters, specificAquaticEncounters: specificAquaticEncounters);
         }
 
         [Test]
@@ -1506,7 +1300,6 @@ namespace EncounterGen.Tests.Unit.Selectors.Collections
             };
 
             AssertEncounterWeight(expectedEncounters, allowAquatic: true, allowUnderground: true);
-            AssertEvents(timeOfDayEncounters: nightEncounters, aquaticEncounters: aquaticEncounters, specificAquaticEncounters: specificAquaticEncounters, undergroundEncounters: undergroundEncounters, undergroundAquaticEncounters: undergroundAquaticEncounters);
         }
 
         [TestCase(0, 0, 0)]
@@ -1682,8 +1475,6 @@ namespace EncounterGen.Tests.Unit.Selectors.Collections
             {
                 Assert.That(weightedEncounters.Count(e => e.First().Key == encounter.Split('/')[0]), Is.EqualTo(expectedWeighting), "underground aquatic encounter");
             }
-
-            AssertEvents(timeOfDayEncounters: nightEncounters, aquaticEncounters: aquaticEncounters, specificAquaticEncounters: specificAquaticEncounters, undergroundEncounters: undergroundEncounters, undergroundAquaticEncounters: undergroundAquaticEncounters);
         }
 
         [Test]
@@ -1699,7 +1490,6 @@ namespace EncounterGen.Tests.Unit.Selectors.Collections
             };
 
             AssertEncounterWeight(expectedEncounters);
-            AssertEvents();
         }
 
         [TestCase(0, 0, 0)]
@@ -1860,8 +1650,6 @@ namespace EncounterGen.Tests.Unit.Selectors.Collections
             {
                 Assert.That(weightedEncounters.Count(e => e.First().Key == encounter.Split('/')[0]), Is.EqualTo(expectedWeighting), "specific environment encounter");
             }
-
-            AssertEvents();
         }
 
         [Test]
@@ -1886,7 +1674,6 @@ namespace EncounterGen.Tests.Unit.Selectors.Collections
             };
 
             AssertEncounterWeight(expectedEncounters, targetEnvironment: EnvironmentConstants.Aquatic);
-            AssertEvents(aquaticEncounters: aquaticEncounters, specificAquaticEncounters: specificAquaticEncounters);
         }
 
         [TestCase(0, 0, 0)]
@@ -2055,8 +1842,6 @@ namespace EncounterGen.Tests.Unit.Selectors.Collections
             {
                 Assert.That(weightedEncounters.Count(e => e.First().Key == encounter.Split('/')[0]), Is.EqualTo(expectedWeighting), "specific aquatic encounter");
             }
-
-            AssertEvents(aquaticEncounters: aquaticEncounters, specificAquaticEncounters: specificAquaticEncounters);
         }
 
         [TestCase(EnvironmentConstants.Aquatic, false, true)]
@@ -2095,7 +1880,6 @@ namespace EncounterGen.Tests.Unit.Selectors.Collections
             };
 
             AssertEncounterWeight(expectedEncounters, environment, allowAquatic, allowUnderground);
-            AssertEvents(nightEncounters, aquaticEncounters, specificAquaticEncounters, undergroundEncounters, undergroundAquaticEncounters);
         }
 
         [TestCase(0, 0, 0)]
@@ -2271,8 +2055,6 @@ namespace EncounterGen.Tests.Unit.Selectors.Collections
             {
                 Assert.That(weightedEncounters.Count(e => e.First().Key == encounter.Split('/')[0]), Is.EqualTo(expectedWeighting), "underground aquatic encounter");
             }
-
-            AssertEvents(timeOfDayEncounters: nightEncounters, aquaticEncounters: aquaticEncounters, specificAquaticEncounters: specificAquaticEncounters, undergroundEncounters: undergroundEncounters, undergroundAquaticEncounters: undergroundAquaticEncounters);
         }
 
         [TestCase("environment", false, false, false)]
@@ -2365,7 +2147,6 @@ namespace EncounterGen.Tests.Unit.Selectors.Collections
             };
 
             AssertEncounterWeight(expectedEncounters, targetEnvironment: EnvironmentConstants.Civilized);
-            AssertEvents();
         }
 
         [Test]
@@ -2407,7 +2188,6 @@ namespace EncounterGen.Tests.Unit.Selectors.Collections
             };
 
             AssertEncounterWeight(expectedEncounters, targetEnvironment: EnvironmentConstants.Underground);
-            AssertEvents(timeOfDayEncounters: nightEncounters, undergroundEncounters: undergroundEncounters, overrideSpecificEnvironmentEncounters: specificUndergroundEncounters);
         }
 
         [Test]
@@ -2446,7 +2226,6 @@ namespace EncounterGen.Tests.Unit.Selectors.Collections
             };
 
             AssertEncounterWeight(expectedEncounters, allowUnderground: true);
-            AssertEvents(timeOfDayEncounters: nightEncounters, undergroundEncounters: undergroundEncounters);
         }
 
         [Test]
@@ -2473,7 +2252,6 @@ namespace EncounterGen.Tests.Unit.Selectors.Collections
             };
 
             AssertEncounterWeight(expectedEncounters);
-            AssertEvents();
         }
 
         [Test]
@@ -2514,7 +2292,6 @@ namespace EncounterGen.Tests.Unit.Selectors.Collections
             };
 
             AssertEncounterWeight(expectedEncounters, targetEnvironment: EnvironmentConstants.Civilized);
-            AssertEvents();
         }
 
         [Test]
@@ -2632,7 +2409,6 @@ namespace EncounterGen.Tests.Unit.Selectors.Collections
             };
 
             AssertEncounterWeight(expectedEncounters, targetEnvironment: EnvironmentConstants.Aquatic);
-            AssertEvents(aquaticEncounters: aquaticEncounters, specificAquaticEncounters: specificAquaticEncounters);
         }
 
         [Test]
@@ -2673,7 +2449,6 @@ namespace EncounterGen.Tests.Unit.Selectors.Collections
             };
 
             AssertEncounterWeight(expectedEncounters, allowAquatic: true);
-            AssertEvents(aquaticEncounters: aquaticEncounters, specificAquaticEncounters: specificAquaticEncounters);
         }
 
         [Test]
@@ -2708,7 +2483,6 @@ namespace EncounterGen.Tests.Unit.Selectors.Collections
             };
 
             AssertEncounterWeight(expectedEncounters, targetEnvironment: EnvironmentConstants.Aquatic, allowAquatic: true);
-            AssertEvents(aquaticEncounters: aquaticEncounters, specificAquaticEncounters: specificAquaticEncounters);
         }
 
         [Test]
@@ -2773,7 +2547,6 @@ namespace EncounterGen.Tests.Unit.Selectors.Collections
             };
 
             AssertEncounterWeight(expectedEncounters, EnvironmentConstants.Underground, true);
-            AssertEvents(nightEncounters, aquaticEncounters, specificAquaticEncounters, undergroundEncounters, undergroundAquaticEncounters, specificUndergroundEncounters);
         }
 
         [Test]
@@ -2829,7 +2602,6 @@ namespace EncounterGen.Tests.Unit.Selectors.Collections
             };
 
             AssertEncounterWeight(expectedEncounters, targetEnvironment: EnvironmentConstants.Civilized, allowAquatic: true);
-            AssertEvents(aquaticEncounters: aquaticEncounters, specificAquaticEncounters: specificAquaticEncounters);
         }
 
         [Test]
@@ -2869,7 +2641,6 @@ namespace EncounterGen.Tests.Unit.Selectors.Collections
             };
 
             AssertEncounterWeight(expectedEncounters, allowUnderground: true);
-            AssertEvents(timeOfDayEncounters: nightEncounters, undergroundEncounters: undergroundEncounters);
         }
 
         [Test]
@@ -2909,7 +2680,6 @@ namespace EncounterGen.Tests.Unit.Selectors.Collections
             };
 
             AssertEncounterWeight(expectedEncounters, targetEnvironment: EnvironmentConstants.Underground, allowUnderground: true);
-            AssertEvents(timeOfDayEncounters: nightEncounters, undergroundEncounters: undergroundEncounters, overrideSpecificEnvironmentEncounters: specificUndergroundEncounters);
         }
 
         [Test]
@@ -2969,7 +2739,6 @@ namespace EncounterGen.Tests.Unit.Selectors.Collections
             };
 
             AssertEncounterWeight(expectedEncounters, allowAquatic: true, allowUnderground: true);
-            AssertEvents(nightEncounters, aquaticEncounters, specificAquaticEncounters, undergroundEncounters, undergroundAquaticEncounters);
         }
 
         [Test]
@@ -3019,7 +2788,6 @@ namespace EncounterGen.Tests.Unit.Selectors.Collections
             };
 
             AssertEncounterWeight(expectedEncounters, targetEnvironment: EnvironmentConstants.Civilized, allowUnderground: true);
-            AssertEvents(timeOfDayEncounters: nightEncounters, undergroundEncounters: undergroundEncounters, overrideSpecificEnvironmentEncounters: specificCivilizedEncounters);
         }
 
         [Test]
@@ -3096,7 +2864,6 @@ namespace EncounterGen.Tests.Unit.Selectors.Collections
             };
 
             AssertEncounterWeight(expectedEncounters, targetEnvironment: EnvironmentConstants.Civilized, allowAquatic: true, allowUnderground: true);
-            AssertEvents(nightEncounters, aquaticEncounters, specificAquaticEncounters, undergroundEncounters, undergroundAquaticEncounters, specificCivilizedEncounters);
         }
     }
 }

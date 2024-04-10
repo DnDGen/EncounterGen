@@ -1,12 +1,12 @@
-﻿using DnDGen.Core.Selectors.Collections;
-using EncounterGen.Domain.Selectors.Collections;
-using EncounterGen.Generators;
+﻿using DnDGen.EncounterGen.Generators;
+using DnDGen.EncounterGen.Selectors.Collections;
+using DnDGen.Infrastructure.Selectors.Collections;
 using Moq;
 using NUnit.Framework;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace EncounterGen.Tests.Unit.Selectors.Collections
+namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
 {
     [TestFixture]
     public class EncounterCollectionSelectorCachingProxyTests

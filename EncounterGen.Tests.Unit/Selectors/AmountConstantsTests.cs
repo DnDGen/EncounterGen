@@ -1,9 +1,9 @@
-﻿using EncounterGen.Domain.Selectors;
+﻿using DnDGen.EncounterGen.Selectors;
 using NUnit.Framework;
 using System;
 using System.Linq;
 
-namespace EncounterGen.Tests.Unit.Selectors
+namespace DnDGen.EncounterGen.Tests.Unit.Selectors
 {
     [TestFixture]
     public class AmountConstantsTests

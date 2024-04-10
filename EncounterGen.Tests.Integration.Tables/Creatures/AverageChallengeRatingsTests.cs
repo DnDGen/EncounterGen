@@ -1,9 +1,9 @@
-﻿using EncounterGen.Common;
-using EncounterGen.Domain.Tables;
+﻿using DnDGen.EncounterGen.Models;
+using DnDGen.EncounterGen.Tables;
 using NUnit.Framework;
 using System.Linq;
 
-namespace EncounterGen.Tests.Integration.Tables.Creatures
+namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures
 {
     [TestFixture]
     public class AverageChallengeRatingsTests : CollectionTests

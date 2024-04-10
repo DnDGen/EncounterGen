@@ -1,18 +1,17 @@
-﻿using DnDGen.Core.Selectors.Collections;
-using EncounterGen.Common;
-using EncounterGen.Domain.Generators;
-using EncounterGen.Domain.Selectors;
-using EncounterGen.Domain.Selectors.Collections;
-using EncounterGen.Domain.Tables;
-using EncounterGen.Generators;
+﻿using DnDGen.EncounterGen.Generators;
+using DnDGen.EncounterGen.Models;
+using DnDGen.EncounterGen.Selectors;
+using DnDGen.EncounterGen.Selectors.Collections;
+using DnDGen.EncounterGen.Tables;
+using DnDGen.Infrastructure.Selectors.Collections;
+using DnDGen.RollGen;
 using Moq;
 using NUnit.Framework;
-using RollGen;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace EncounterGen.Tests.Unit.Generators
+namespace DnDGen.EncounterGen.Tests.Unit.Generators
 {
     [TestFixture]
     public class CreatureGeneratorTests

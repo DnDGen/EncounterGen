@@ -1,8 +1,8 @@
 ﻿using DnDGen.Core.Selectors.Collections;
 using DnDGen.Stress;
 using DnDGen.Stress.Events;
-using EncounterGen.Common;
-using EncounterGen.Generators;
+using DnDGen.EncounterGen.Models;
+using DnDGen.EncounterGen.Generators;
 using EventGen;
 using Ninject;
 using NUnit.Framework;
@@ -10,7 +10,7 @@ using RollGen;
 using System.Collections.Generic;
 using System.Reflection;
 
-namespace EncounterGen.Tests.Integration.Stress
+namespace DnDGen.EncounterGen.Tests.Integration.Stress
 {
     [TestFixture]
     [Stress]

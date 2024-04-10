@@ -1,8 +1,8 @@
-﻿using EncounterGen.Common;
+﻿using DnDGen.EncounterGen.Models;
 using NUnit.Framework;
 using System;
 
-namespace EncounterGen.Tests.Unit.Common
+namespace DnDGen.EncounterGen.Tests.Unit.Common
 {
     [TestFixture]
     public class CreatureTypeTests

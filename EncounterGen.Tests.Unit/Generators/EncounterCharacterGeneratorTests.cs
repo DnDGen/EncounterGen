@@ -1,21 +1,22 @@
-﻿using CharacterGen.Characters;
-using CharacterGen.Randomizers.Abilities;
-using CharacterGen.Randomizers.Alignments;
-using CharacterGen.Randomizers.CharacterClasses;
-using CharacterGen.Randomizers.Races;
-using DnDGen.Core.Generators;
-using DnDGen.Core.Selectors.Collections;
-using EncounterGen.Common;
-using EncounterGen.Domain.Generators;
-using EncounterGen.Domain.Selectors;
+﻿using DnDGen.CharacterGen.Characters;
+using DnDGen.CharacterGen.Generators.Characters;
+using DnDGen.CharacterGen.Randomizers.Abilities;
+using DnDGen.CharacterGen.Randomizers.Alignments;
+using DnDGen.CharacterGen.Randomizers.CharacterClasses;
+using DnDGen.CharacterGen.Randomizers.Races;
+using DnDGen.EncounterGen.Generators;
+using DnDGen.EncounterGen.Models;
+using DnDGen.EncounterGen.Selectors;
+using DnDGen.Infrastructure.Generators;
+using DnDGen.Infrastructure.Selectors.Collections;
+using DnDGen.RollGen;
 using Moq;
 using NUnit.Framework;
-using RollGen;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace EncounterGen.Tests.Unit.Generators
+namespace DnDGen.EncounterGen.Tests.Unit.Generators
 {
     [TestFixture]
     public class EncounterCharacterGeneratorTests

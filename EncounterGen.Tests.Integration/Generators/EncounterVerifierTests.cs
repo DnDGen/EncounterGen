@@ -1,15 +1,19 @@
-﻿using EncounterGen.Common;
-using EncounterGen.Generators;
-using Ninject;
+﻿using DnDGen.EncounterGen.Generators;
+using DnDGen.EncounterGen.Models;
 using NUnit.Framework;
 
-namespace EncounterGen.Tests.Integration.Generators
+namespace DnDGen.EncounterGen.Tests.Integration.Generators
 {
     [TestFixture]
     public class EncounterVerifierTests : IntegrationTests
     {
-        [Inject]
-        public IEncounterVerifier EncounterVerifier { get; set; }
+        private IEncounterVerifier encounterVerifier;
+
+        [SetUp]
+        public void Setup()
+        {
+            encounterVerifier = GetNewInstanceOf<IEncounterVerifier>();
+        }
 
         [TestCase(1, EnvironmentConstants.Temperatures.Temperate, EnvironmentConstants.Civilized, EnvironmentConstants.TimesOfDay.Day, false, false, true)]
         [TestCase(1, EnvironmentConstants.Temperatures.Temperate, EnvironmentConstants.Underground, EnvironmentConstants.TimesOfDay.Night, false, false, true)]
@@ -43,7 +47,7 @@ namespace EncounterGen.Tests.Integration.Generators
             specifications.AllowUnderground = allowUnderground;
             specifications.CreatureTypeFilters = filters;
 
-            var filterIsValid = EncounterVerifier.ValidEncounterExistsAtLevel(specifications);
+            var filterIsValid = encounterVerifier.ValidEncounterExistsAtLevel(specifications);
 
             Assert.That(filterIsValid, Is.EqualTo(isValid));
             AssertEventSpacing();
