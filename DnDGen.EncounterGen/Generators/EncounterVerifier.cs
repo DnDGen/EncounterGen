@@ -21,7 +21,7 @@ namespace DnDGen.EncounterGen.Generators
             this.amountSelector = amountSelector;
         }
 
-        public bool ValidEncounterExistsAtLevel(EncounterSpecifications encounterSpecifications)
+        public bool ValidEncounterExists(EncounterSpecifications encounterSpecifications)
         {
             if (!encounterSpecifications.IsValid())
                 return false;
@@ -65,6 +65,42 @@ namespace DnDGen.EncounterGen.Generators
             }
 
             return creatureNames.Distinct();
+        }
+
+        public bool ValidEncounterExists(string environment = "", string temperature = "", string timeOfDay = "", int level = 0, bool allowAquatic = true, bool allowUnderground = true, params string[] filters)
+        {
+            var possibleEncounters = encounterCollectionSelector.SelectPossibleFrom(environment, temperature, timeOfDay, level, allowAquatic, allowUnderground, filters);
+            return possibleEncounters.Any();
+        }
+
+        public IEnumerable<string> GetValidTemperatues(string environment)
+        {
+            return encounterCollectionSelector.SelectPossibleTemperatures(environment);
+        }
+
+        public IEnumerable<string> GetValidTimesOfDay(string environment, string temperature)
+        {
+            return encounterCollectionSelector.SelectPossibleTimesOfDay(environment, temperature);
+        }
+
+        public IEnumerable<int> GetValidLevels(string environment, string temperature, string timeOfDay)
+        {
+            return encounterCollectionSelector.SelectPossibleLevels(environment, temperature, timeOfDay);
+        }
+
+        public IEnumerable<bool> GetValidAllowAquatic(string environment, string temperature, string timeOfDay, int level)
+        {
+            return encounterCollectionSelector.SelectPossibleAllowAquatic(environment, temperature, timeOfDay, level);
+        }
+
+        public IEnumerable<bool> GetValidAllowUnderground(string environment, string temperature, string timeOfDay, int level, bool allowAquatic)
+        {
+            return encounterCollectionSelector.SelectPossibleAllowUnderground(environment, temperature, timeOfDay, level, allowAquatic);
+        }
+
+        public IEnumerable<string> GetValidFilters(string environment, string temperature, string timeOfDay, int level, bool allowAquatic, bool allowUnderground)
+        {
+            return encounterCollectionSelector.SelectPossibleFilters(environment, temperature, timeOfDay, level, allowAquatic, allowUnderground);
         }
     }
 }

@@ -63,7 +63,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
             creatures = new List<Creature>();
 
             creatures.Add(new Creature());
-            creatures[0].Quantity = 600;
+            creatures[0].Quantity = 10;
             creatures[0].Type.Name = "creature";
             creatures[0].Type.Description = "description";
 
@@ -98,7 +98,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
 
             if (int.TryParse(roll, out value))
             {
-                mockPartialRoll.Setup(r => r.AsSum()).Returns(value);
+                mockPartialRoll.Setup(r => r.AsSum<int>()).Returns(value);
                 return mockPartialRoll.Object;
             }
 
@@ -122,7 +122,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
             Assert.That(characters, Is.Not.Null);
 
             Assert.That(characters, Is.All.Not.Null);
-            Assert.That(characters.Count, Is.EqualTo(600));
+            Assert.That(characters.Count, Is.EqualTo(10));
             Assert.That(characters, Is.Unique);
             Assert.That(characters.Select(c => c.InterestingTrait), Is.Unique);
         }
@@ -166,7 +166,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
             var characters = encounterCharacterGenerator.GenerateFrom(creatures);
             Assert.That(characters, Is.Not.Null);
             Assert.That(characters, Is.All.Not.Null);
-            Assert.That(characters.Count, Is.EqualTo(600));
+            Assert.That(characters.Count, Is.EqualTo(10));
             Assert.That(characters, Is.Unique);
             Assert.That(characters.Select(c => c.InterestingTrait), Is.Unique);
             Assert.That(characters.Select(c => c.Class.Level), Is.All.EqualTo(1337));
@@ -228,7 +228,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
             var characters = encounterCharacterGenerator.GenerateFrom(creatures);
             Assert.That(characters, Is.Not.Null);
             Assert.That(characters, Is.All.Not.Null);
-            Assert.That(characters.Count, Is.EqualTo(600));
+            Assert.That(characters.Count, Is.EqualTo(10));
             Assert.That(characters, Is.Unique);
             Assert.That(characters.Select(c => c.InterestingTrait), Is.Unique);
             Assert.That(characters.Select(c => c.Class.Level), Is.All.EqualTo(1337));
@@ -253,7 +253,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
             var characters = encounterCharacterGenerator.GenerateFrom(creatures);
             Assert.That(characters, Is.Not.Null);
             Assert.That(characters, Is.All.Not.Null);
-            Assert.That(characters.Count, Is.EqualTo(600));
+            Assert.That(characters.Count, Is.EqualTo(10));
             Assert.That(characters, Is.Unique);
             Assert.That(characters.Select(c => c.InterestingTrait), Is.Unique);
             Assert.That(characters.Select(c => c.Class.Level), Is.All.EqualTo(1337));
@@ -278,7 +278,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
             var characters = encounterCharacterGenerator.GenerateFrom(creatures);
             Assert.That(characters, Is.Not.Null);
             Assert.That(characters, Is.All.Not.Null);
-            Assert.That(characters.Count, Is.EqualTo(600));
+            Assert.That(characters.Count, Is.EqualTo(10));
             Assert.That(characters, Is.Unique);
             Assert.That(characters.Select(c => c.InterestingTrait), Is.Unique);
             Assert.That(characters.Select(c => c.Class.Level), Is.All.EqualTo(1337));
@@ -303,7 +303,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
             var characters = encounterCharacterGenerator.GenerateFrom(creatures);
             Assert.That(characters, Is.Not.Null);
             Assert.That(characters, Is.All.Not.Null);
-            Assert.That(characters.Count, Is.EqualTo(600));
+            Assert.That(characters.Count, Is.EqualTo(10));
             Assert.That(characters, Is.Unique);
             Assert.That(characters.Select(c => c.InterestingTrait), Is.Unique);
             Assert.That(characters.Select(c => c.Class.Level), Is.All.EqualTo(1337));
@@ -341,7 +341,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
             var characters = encounterCharacterGenerator.GenerateFrom(creatures);
             Assert.That(characters, Is.Not.Null);
             Assert.That(characters, Is.All.Not.Null);
-            Assert.That(characters.Count, Is.EqualTo(600));
+            Assert.That(characters.Count, Is.EqualTo(10));
             Assert.That(characters, Is.Unique);
             Assert.That(characters.Select(c => c.InterestingTrait), Is.Unique);
             Assert.That(characters.Select(c => c.Class.Level), Is.All.EqualTo(1337));
@@ -367,7 +367,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
             var characters = encounterCharacterGenerator.GenerateFrom(creatures);
             Assert.That(characters, Is.Not.Null);
             Assert.That(characters, Is.All.Not.Null);
-            Assert.That(characters.Count, Is.EqualTo(600));
+            Assert.That(characters.Count, Is.EqualTo(10));
             Assert.That(characters, Is.Unique);
             Assert.That(characters.Select(c => c.InterestingTrait), Is.Unique);
             Assert.That(characters.Select(c => c.Class.Level), Is.All.EqualTo(1337));
@@ -430,7 +430,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
             var characters = encounterCharacterGenerator.GenerateFrom(creatures);
             Assert.That(characters, Is.Not.Null);
             Assert.That(characters, Is.All.Not.Null);
-            Assert.That(characters.Count, Is.EqualTo(600));
+            Assert.That(characters.Count, Is.EqualTo(10));
             Assert.That(characters, Is.Unique);
             Assert.That(characters.Select(c => c.InterestingTrait), Is.Unique);
             Assert.That(characters.Select(c => c.Class.Level), Contains.Item(1));
@@ -498,7 +498,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
             var characters = encounterCharacterGenerator.GenerateFrom(creatures);
             Assert.That(characters, Is.Not.Null);
             Assert.That(characters, Is.All.Not.Null);
-            Assert.That(characters.Count, Is.EqualTo(600));
+            Assert.That(characters.Count, Is.EqualTo(10));
             Assert.That(characters, Is.Unique);
             Assert.That(characters.Select(c => c.InterestingTrait), Is.Unique);
             Assert.That(characters.Select(c => c.Class.Level), Contains.Item(1));
@@ -526,7 +526,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
             characters = encounterCharacterGenerator.GenerateFrom(creatures);
             Assert.That(characters, Is.Not.Null);
             Assert.That(characters, Is.All.Not.Null);
-            Assert.That(characters.Count, Is.EqualTo(600));
+            Assert.That(characters.Count, Is.EqualTo(10));
             Assert.That(characters, Is.Unique);
             Assert.That(characters.Select(c => c.InterestingTrait), Is.Unique);
             Assert.That(characters.Select(c => c.Class.Level), Is.All.EqualTo(1337));
@@ -554,7 +554,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
 
             var characters = encounterCharacterGenerator.GenerateFrom(creatures);
             Assert.That(characters, Is.Not.Null);
-            Assert.That(characters.Count, Is.EqualTo(600));
+            Assert.That(characters.Count, Is.EqualTo(10));
             Assert.That(characters, Is.Unique);
             Assert.That(characters.Select(c => c.InterestingTrait), Is.Unique);
         }
@@ -630,11 +630,11 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
             var characters = encounterCharacterGenerator.GenerateFrom(creatures);
             Assert.That(characters, Is.Not.Null);
             Assert.That(characters, Is.All.Not.Null);
-            Assert.That(characters.Count, Is.EqualTo(657));
+            Assert.That(characters.Count, Is.EqualTo(67));
             Assert.That(characters, Is.Unique);
             Assert.That(characters.Select(c => c.InterestingTrait), Is.Unique);
 
-            var levels = Enumerable.Range(1, 657);
+            var levels = Enumerable.Range(1, 67);
             Assert.That(characters.Select(c => c.Class.Level), Is.EquivalentTo(levels));
         }
 

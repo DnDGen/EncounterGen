@@ -5,6 +5,7 @@ using DnDGen.RollGen;
 using DnDGen.Stress;
 using NUnit.Framework;
 using System.Collections.Generic;
+using System.Linq;
 using System.Reflection;
 
 namespace DnDGen.EncounterGen.Tests.Integration.Stress
@@ -15,6 +16,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Stress
     {
         protected Dice dice;
         protected ICollectionSelector collectionSelector;
+        protected IEncounterVerifier encounterVerifier;
 
         protected Stressor stressor;
 
@@ -92,26 +94,82 @@ namespace DnDGen.EncounterGen.Tests.Integration.Stress
         {
             dice = GetNewInstanceOf<Dice>();
             collectionSelector = GetNewInstanceOf<ICollectionSelector>();
+            encounterVerifier = GetNewInstanceOf<IEncounterVerifier>();
         }
 
         protected EncounterSpecifications RandomizeSpecifications(int level = 0, string environment = "", string temperature = "", string timeOfDay = "", string filter = "", bool useFilter = false)
         {
-            var specifications = new EncounterSpecifications();
-            specifications.Environment = string.IsNullOrEmpty(environment) ? GetRandomFrom(allEnvironments) : environment;
-            specifications.Temperature = string.IsNullOrEmpty(temperature) ? GetRandomFrom(allTemperatures) : temperature;
-            specifications.TimeOfDay = string.IsNullOrEmpty(timeOfDay) ? GetRandomFrom(allTimesOfDay) : timeOfDay;
-            specifications.Level = level > 0 ? level : dice.Roll().d(EncounterSpecifications.MaximumLevel).AsSum() + EncounterSpecifications.MinimumLevel - 1;
-            specifications.AllowAquatic = dice.Roll().d2().AsTrueOrFalse();
-            specifications.AllowUnderground = dice.Roll().d2().AsTrueOrFalse();
-
+            var validPresets = encounterVerifier.ValidEncounterExists(environment, temperature, timeOfDay, level, true, true);
             if (!string.IsNullOrEmpty(filter))
+                validPresets = encounterVerifier.ValidEncounterExists(environment, temperature, timeOfDay, level, true, true, filter);
+
+            if (!validPresets)
+                Assert.Fail($"Presets are not valid: {environment}, {temperature}, {timeOfDay}, {level}, {filter}");
+
+            var specifications = new EncounterSpecifications();
+            var isValid = false;
+
+            while (!isValid)
             {
-                specifications.CreatureTypeFilters = new[] { filter };
-            }
-            else if (useFilter)
-            {
-                var randomFilter = GetRandomFrom(allFilters);
-                specifications.CreatureTypeFilters = new[] { randomFilter };
+                specifications.Environment = string.IsNullOrEmpty(environment) ? GetRandomFrom(allEnvironments) : environment;
+
+                var validTemperatures = encounterVerifier.GetValidTemperatues(specifications.Environment);
+                if (!validTemperatures.Any() || (!string.IsNullOrEmpty(temperature) && !validTemperatures.Contains(temperature)))
+                    continue;
+
+                specifications.Temperature = string.IsNullOrEmpty(temperature) ? GetRandomFrom(validTemperatures) : temperature;
+
+                var validTimesOfDay = encounterVerifier.GetValidTimesOfDay(specifications.Environment, specifications.Temperature);
+                if (!validTimesOfDay.Any() || (!string.IsNullOrEmpty(timeOfDay) && !validTimesOfDay.Contains(timeOfDay)))
+                    continue;
+
+                specifications.TimeOfDay = string.IsNullOrEmpty(timeOfDay) ? GetRandomFrom(validTimesOfDay) : timeOfDay;
+
+                var validLevels = encounterVerifier.GetValidLevels(specifications.Environment, specifications.Temperature, specifications.TimeOfDay);
+                if (!validLevels.Any() || (level > 0 && !validLevels.Contains(level)))
+                    continue;
+
+                specifications.Level = level > 0 ? level : collectionSelector.SelectRandomFrom(validLevels);
+
+                var validAquatic = encounterVerifier.GetValidAllowAquatic(
+                    specifications.Environment,
+                    specifications.Temperature,
+                    specifications.TimeOfDay,
+                    specifications.Level);
+
+                specifications.AllowAquatic = collectionSelector.SelectRandomFrom(validAquatic);
+
+                var validUnderground = encounterVerifier.GetValidAllowUnderground(
+                    specifications.Environment,
+                    specifications.Temperature,
+                    specifications.TimeOfDay,
+                    specifications.Level,
+                    specifications.AllowAquatic);
+
+                specifications.AllowUnderground = collectionSelector.SelectRandomFrom(validUnderground);
+
+
+                var validFilters = encounterVerifier.GetValidFilters(
+                    specifications.Environment,
+                    specifications.Temperature,
+                    specifications.TimeOfDay,
+                    specifications.Level,
+                    specifications.AllowAquatic,
+                    specifications.AllowUnderground);
+                if ((useFilter && !validFilters.Any()) || (!string.IsNullOrEmpty(filter) && !validFilters.Contains(filter)))
+                    continue;
+
+                if (!string.IsNullOrEmpty(filter))
+                {
+                    specifications.CreatureTypeFilters = new[] { filter };
+                }
+                else if (useFilter)
+                {
+                    var randomFilter = GetRandomFrom(validFilters);
+                    specifications.CreatureTypeFilters = new[] { randomFilter };
+                }
+
+                isValid = specifications.IsValid() && encounterVerifier.ValidEncounterExists(specifications);
             }
 
             return specifications;

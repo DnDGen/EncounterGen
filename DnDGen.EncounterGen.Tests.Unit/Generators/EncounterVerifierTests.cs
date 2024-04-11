@@ -86,7 +86,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
         public void ValidEncounterExistsIfAnyCreaturesInEncounter()
         {
             SetupCreaturesAndAmounts(Level);
-            var isValid = encounterVerifier.ValidEncounterExistsAtLevel(specifications);
+            var isValid = encounterVerifier.ValidEncounterExists(specifications);
             Assert.That(isValid, Is.True);
         }
 
@@ -96,7 +96,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
             specifications.CreatureTypeFilters = new[] { Filter };
             SetupCreaturesAndAmountsWithFilters(Level);
 
-            var isValid = encounterVerifier.ValidEncounterExistsAtLevel(specifications);
+            var isValid = encounterVerifier.ValidEncounterExists(specifications);
             Assert.That(isValid, Is.True);
         }
 
@@ -109,7 +109,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
             specifications.CreatureTypeFilters = new[] { Filter };
             SetupCreaturesAndAmounts(level);
 
-            var isValid = encounterVerifier.ValidEncounterExistsAtLevel(specifications);
+            var isValid = encounterVerifier.ValidEncounterExists(specifications);
             Assert.That(isValid, Is.False);
         }
 
@@ -119,7 +119,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
             specifications.CreatureTypeFilters = new[] { Filter };
             SetupCreaturesAndAmounts(Level - 1);
 
-            var isValid = encounterVerifier.ValidEncounterExistsAtLevel(specifications);
+            var isValid = encounterVerifier.ValidEncounterExists(specifications);
             Assert.That(isValid, Is.False);
         }
 

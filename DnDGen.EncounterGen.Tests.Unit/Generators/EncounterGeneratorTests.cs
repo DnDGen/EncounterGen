@@ -81,8 +81,8 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
             mockCreatureGenerator.Setup(g => g.CleanCreatures(It.IsAny<IEnumerable<Creature>>())).Returns((IEnumerable<Creature> cc) => cc);
             mockAmountSelector.Setup(d => d.Select(It.IsAny<Encounter>())).Returns(actualEncounterLevel);
 
-            mockEncounterVerifier.Setup(v => v.ValidEncounterExistsAtLevel(specifications)).Returns(true);
-            mockEncounterVerifier.Setup(v => v.ValidEncounterExistsAtLevel(It.Is<EncounterSpecifications>(es => es.Level == encounterLevel))).Returns(true);
+            mockEncounterVerifier.Setup(v => v.ValidEncounterExists(specifications)).Returns(true);
+            mockEncounterVerifier.Setup(v => v.ValidEncounterExists(It.Is<EncounterSpecifications>(es => es.Level == encounterLevel))).Returns(true);
             mockEncounterVerifier.Setup(v => v.EncounterIsValid(It.IsAny<Encounter>(), specifications.CreatureTypeFilters)).Returns(true);
 
             mockEncounterTreasureGenerator.Setup(g => g.GenerateFor(It.IsAny<IEnumerable<Creature>>(), It.IsAny<int>())).Returns(Enumerable.Empty<Treasure>());
@@ -114,7 +114,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
         public void EncounterLevelMustBeValid()
         {
             mockPercentileSelector.SetupSequence(s => s.SelectFrom<int>(TableNameConstants.EncounterLevelModifiers)).Returns(9999).Returns(levelModifier);
-            mockEncounterVerifier.Setup(v => v.ValidEncounterExistsAtLevel(It.Is<EncounterSpecifications>(s => s.Level == 10009))).Returns(false);
+            mockEncounterVerifier.Setup(v => v.ValidEncounterExists(It.Is<EncounterSpecifications>(s => s.Level == 10009))).Returns(false);
 
             var encounter = encounterGenerator.Generate(specifications);
             Assert.That(encounter, Is.Not.Null);
@@ -288,8 +288,8 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
             mockCreatureGenerator.Setup(s => s.GenerateFor(It.Is<EncounterSpecifications>(es => es.Level == specifications.Level + 4))).Returns(otherCreatures);
             mockCreatureGenerator.Setup(s => s.GenerateFor(It.Is<EncounterSpecifications>(es => es.Level == specifications.Level - 4))).Returns(wrongCreatures);
 
-            mockEncounterVerifier.Setup(v => v.ValidEncounterExistsAtLevel(It.Is<EncounterSpecifications>(es => es.Level == specifications.Level + 4))).Returns(true);
-            mockEncounterVerifier.Setup(v => v.ValidEncounterExistsAtLevel(It.Is<EncounterSpecifications>(es => es.Level == specifications.Level - 4))).Returns(false);
+            mockEncounterVerifier.Setup(v => v.ValidEncounterExists(It.Is<EncounterSpecifications>(es => es.Level == specifications.Level + 4))).Returns(true);
+            mockEncounterVerifier.Setup(v => v.ValidEncounterExists(It.Is<EncounterSpecifications>(es => es.Level == specifications.Level - 4))).Returns(false);
 
             mockEncounterVerifier.Setup(v => v.EncounterIsValid(It.Is<Encounter>(e => e.Creatures.Any(c => c.Type.Name == "other creature")), specifications.CreatureTypeFilters)).Returns(true);
             mockEncounterVerifier.Setup(v => v.EncounterIsValid(It.Is<Encounter>(e => e.Creatures.Any(c => c.Type.Name == "wrong creature")), specifications.CreatureTypeFilters)).Returns(false);

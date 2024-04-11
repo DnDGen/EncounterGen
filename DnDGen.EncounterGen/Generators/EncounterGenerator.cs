@@ -32,7 +32,7 @@ namespace DnDGen.EncounterGen.Generators
 
         public Encounter Generate(EncounterSpecifications encounterSpecifications)
         {
-            var validEncounterExists = encounterVerifier.ValidEncounterExistsAtLevel(encounterSpecifications);
+            var validEncounterExists = encounterVerifier.ValidEncounterExists(encounterSpecifications);
             if (!validEncounterExists)
                 throw new ImpossibleEncounterException();
 
@@ -70,7 +70,7 @@ namespace DnDGen.EncounterGen.Generators
                 var encounterLevelModifier = percentileSelector.SelectFrom<int>(TableNameConstants.EncounterLevelModifiers);
                 modifiedSpecifications.Level = source.Level + encounterLevelModifier;
             }
-            while (!encounterVerifier.ValidEncounterExistsAtLevel(modifiedSpecifications));
+            while (!encounterVerifier.ValidEncounterExists(modifiedSpecifications));
 
             return modifiedSpecifications;
         }

@@ -72,7 +72,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
 
             if (int.TryParse(roll, out value))
             {
-                mockPartialRoll.Setup(r => r.AsSum()).Returns(value);
+                mockPartialRoll.Setup(r => r.AsSum<int>()).Returns(value);
                 return mockPartialRoll.Object;
             }
 

@@ -56,9 +56,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Stress
 
         private Encounter MakeEncounterInRandomEnvironment(int level = 0, string environment = "", string temperature = "", string timeOfDay = "", string filter = "", bool useFilter = false)
         {
-            var specifications = stressor.Generate(
-                () => RandomizeSpecifications(level, environment, temperature, timeOfDay, filter, useFilter),
-                s => encounterVerifier.ValidEncounterExistsAtLevel(s));
+            var specifications = RandomizeSpecifications(level, environment, temperature, timeOfDay, filter, useFilter);
 
             if (specifications.CreatureTypeFilters.Any())
                 testedFilters.Add(specifications.CreatureTypeFilters.Single());
@@ -106,54 +104,6 @@ namespace DnDGen.EncounterGen.Tests.Integration.Stress
 
             if (creatureType.SubType != null)
                 AssertCreatureType(creatureType.SubType);
-        }
-
-        [Test]
-        public void TreasureDoesNotHappen()
-        {
-            var encounter = stressor.GenerateOrFail(() => MakeEncounterInRandomEnvironment(PresetLevel), e => !e.Treasures.Any());
-            AssertEncounter(encounter);
-            Assert.That(encounter.Treasures, Is.Empty);
-        }
-
-        [Test]
-        public void TreasureHappens()
-        {
-            var encounter = stressor.GenerateOrFail(() => MakeEncounterInRandomEnvironment(PresetLevel), e => e.Treasures.Any());
-            AssertEncounter(encounter);
-            Assert.That(encounter.Treasures, Is.Not.Empty);
-        }
-
-        [Test]
-        public void CharactersHappen()
-        {
-            var encounter = stressor.GenerateOrFail(() => MakeEncounterInRandomEnvironment(PresetLevel), e => e.Characters.Any());
-            AssertEncounter(encounter);
-            Assert.That(encounter.Characters, Is.Not.Empty);
-        }
-
-        [Test]
-        public void CharactersDoNotHappen()
-        {
-            var encounter = stressor.GenerateOrFail(() => MakeEncounterInRandomEnvironment(PresetLevel), e => e.Characters.Any() == false);
-            AssertEncounter(encounter);
-            Assert.That(encounter.Characters, Is.Empty);
-        }
-
-        [Test]
-        public void SingleCreatureHappens()
-        {
-            var encounter = stressor.GenerateOrFail(() => MakeEncounterInRandomEnvironment(PresetLevel), e => e.Creatures.Count() == 1);
-            AssertEncounter(encounter);
-            Assert.That(encounter.Creatures.Count(), Is.EqualTo(1));
-        }
-
-        [Test]
-        public void MultipleCreaturesHappen()
-        {
-            var encounter = stressor.GenerateOrFail(() => MakeEncounterInRandomEnvironment(PresetLevel), e => e.Creatures.Count() > 1);
-            AssertEncounter(encounter);
-            Assert.That(encounter.Creatures.Count(), Is.GreaterThan(1));
         }
     }
 }

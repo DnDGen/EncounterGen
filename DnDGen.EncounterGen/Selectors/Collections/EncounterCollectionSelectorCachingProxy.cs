@@ -43,5 +43,40 @@ namespace DnDGen.EncounterGen.Selectors.Collections
 
             return collectionSelector.SelectRandomFrom(weightedEncounters);
         }
+
+        public IEnumerable<Dictionary<string, string>> SelectPossibleFrom(string environment = "", string temperature = "", string timeOfDay = "", int level = 0, bool? allowAquatic = null, bool? allowUnderground = null, params string[] filters)
+        {
+            return internalSelector.SelectPossibleFrom(environment, temperature, timeOfDay, level, allowAquatic, allowUnderground, filters);
+        }
+
+        public IEnumerable<string> SelectPossibleTemperatures(string environment)
+        {
+            return internalSelector.SelectPossibleTemperatures(environment);
+        }
+
+        public IEnumerable<string> SelectPossibleTimesOfDay(string environment, string temperature)
+        {
+            return internalSelector.SelectPossibleTimesOfDay(environment, temperature);
+        }
+
+        public IEnumerable<int> SelectPossibleLevels(string environment, string temperature, string timeOfDay)
+        {
+            return internalSelector.SelectPossibleLevels(environment, temperature, timeOfDay);
+        }
+
+        public IEnumerable<bool> SelectPossibleAllowAquatic(string environment, string temperature, string timeOfDay, int level)
+        {
+            return internalSelector.SelectPossibleAllowAquatic(environment, temperature, timeOfDay, level);
+        }
+
+        public IEnumerable<bool> SelectPossibleAllowUnderground(string environment, string temperature, string timeOfDay, int level, bool allowAquatic)
+        {
+            return internalSelector.SelectPossibleAllowUnderground(environment, temperature, timeOfDay, level, allowAquatic);
+        }
+
+        public IEnumerable<string> SelectPossibleFilters(string environment, string temperature, string timeOfDay, int level, bool allowAquatic, bool allowUnderground)
+        {
+            return internalSelector.SelectPossibleFilters(environment, temperature, timeOfDay, level, allowAquatic, allowUnderground);
+        }
     }
 }
