@@ -1,9 +1,8 @@
 ﻿using DnDGen.EncounterGen.Models;
 using DnDGen.EncounterGen.Selectors;
 using DnDGen.EncounterGen.Tables;
-using Ninject;
+using DnDGen.RollGen;
 using NUnit.Framework;
-using RollGen;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,12 +12,17 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures
     [TestFixture]
     public class AverageEncounterLevelsTests : CollectionTests
     {
-        [Inject]
-        internal IEncounterLevelSelector EncounterLevelSelector { get; set; }
-        [Inject]
-        internal IChallengeRatingSelector ChallengeRatingSelector { get; set; }
-        [Inject]
-        public Dice Dice { get; set; }
+        internal IEncounterLevelSelector encounterLevelSelector;
+        internal IChallengeRatingSelector challengeRatingSelector;
+        private Dice dice;
+
+        [SetUp]
+        public void Setup()
+        {
+            encounterLevelSelector = GetNewInstanceOf<IEncounterLevelSelector>();
+            challengeRatingSelector = GetNewInstanceOf<IChallengeRatingSelector>();
+            dice = GetNewInstanceOf<Dice>();
+        }
 
         protected override string tableName
         {
@@ -31,7 +35,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures
         [Test]
         public override void EntriesAreComplete()
         {
-            var allEncounters = CollectionSelector.SelectAllFrom(TableNameConstants.EncounterGroups).Values.SelectMany(v => v).Distinct();
+            var allEncounters = collectionSelector.SelectAllFrom(TableNameConstants.EncounterGroups).Values.SelectMany(v => v).Distinct();
             AssertEntriesAreComplete(allEncounters);
         }
 
@@ -2575,7 +2579,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures
         [TestCase(EncounterConstants.Zombie_GrayRender_LargeGroup)]
         public void AverageEncounterLevel(string encounterConstant)
         {
-            var creaturesAndAmounts = EncounterFormatter.SelectCreaturesAndAmountsFrom(encounterConstant);
+            var creaturesAndAmounts = encounterFormatter.SelectCreaturesAndAmountsFrom(encounterConstant);
             var encounter = new Encounter();
             var creatures = new List<Creature>();
             encounter.Creatures = creatures;
@@ -2585,17 +2589,17 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures
                 var creatureName = kvp.Key;
                 var amount = kvp.Value;
                 var creature = new Creature();
-                var averageQuantity = Dice.Roll(amount).AsPotentialAverage();
+                var averageQuantity = dice.Roll(amount).AsPotentialAverage();
 
                 //INFO: Using a GUID and not the actual creature name so that characters are computed like other creatures
                 creature.Type.Name = Guid.NewGuid().ToString();
-                creature.ChallengeRating = ChallengeRatingSelector.SelectAverageForCreature(creatureName);
+                creature.ChallengeRating = challengeRatingSelector.SelectAverageForCreature(creatureName);
                 creature.Quantity = Convert.ToInt32(Math.Round(averageQuantity, MidpointRounding.AwayFromZero));
 
                 creatures.Add(creature);
             }
 
-            var averageEncounterLevel = EncounterLevelSelector.Select(encounter);
+            var averageEncounterLevel = encounterLevelSelector.Select(encounter);
 
             DistinctCollection(encounterConstant, averageEncounterLevel.ToString());
         }

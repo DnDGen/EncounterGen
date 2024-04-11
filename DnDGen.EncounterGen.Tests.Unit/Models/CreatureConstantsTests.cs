@@ -6,7 +6,7 @@ using DnDGen.EncounterGen.Selectors;
 using DnDGen.TreasureGen.Items;
 using NUnit.Framework;
 
-namespace DnDGen.EncounterGen.Tests.Unit.Common
+namespace DnDGen.EncounterGen.Tests.Unit.Models
 {
     [TestFixture]
     public class CreatureConstantsTests

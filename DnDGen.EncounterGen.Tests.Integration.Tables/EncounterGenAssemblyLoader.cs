@@ -1,5 +1,5 @@
-﻿using DnDGen.Core.Tables;
-using DnDGen.EncounterGen.Tables;
+﻿using DnDGen.EncounterGen.Tables;
+using DnDGen.Infrastructure.Tables;
 using System.Reflection;
 
 namespace DnDGen.EncounterGen.Tests.Integration.Tables

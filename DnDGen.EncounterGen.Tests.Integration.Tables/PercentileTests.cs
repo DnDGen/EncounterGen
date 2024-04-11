@@ -1,5 +1,4 @@
-﻿using DnDGen.Core.Mappers.Percentiles;
-using Ninject;
+﻿using DnDGen.Infrastructure.Mappers.Percentiles;
 using NUnit.Framework;
 using System.Collections.Generic;
 
@@ -8,15 +7,16 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables
     [TestFixture]
     public abstract class PercentileTests : TableTests
     {
-        [Inject]
-        internal PercentileMapper PercentileMapper { get; set; }
+        internal PercentileMapper percentileMapper;
 
         private Dictionary<int, string> table;
 
         [SetUp]
         public void PercentileSetup()
         {
-            table = PercentileMapper.Map(tableName);
+            percentileMapper = GetNewInstanceOf<PercentileMapper>();
+
+            table = percentileMapper.Map(tableName);
         }
 
         public abstract void TableIsComplete();

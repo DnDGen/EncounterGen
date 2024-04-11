@@ -1,7 +1,7 @@
 ﻿using DnDGen.EncounterGen.Models;
 using NUnit.Framework;
 
-namespace DnDGen.EncounterGen.Tests.Unit.Common
+namespace DnDGen.EncounterGen.Tests.Unit.Models
 {
     [TestFixture]
     public class EncounterTests

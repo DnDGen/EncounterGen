@@ -1,12 +1,11 @@
-﻿using CharacterGen.Characters;
-using DnDGen.Core.Generators;
+﻿using DnDGen.CharacterGen.Generators.Characters;
 using DnDGen.EncounterGen.Generators;
-using DnDGen.EncounterGen.Generators;
+using DnDGen.Infrastructure.Generators;
+using DnDGen.TreasureGen.Coins;
+using DnDGen.TreasureGen.Generators;
+using DnDGen.TreasureGen.Goods;
+using DnDGen.TreasureGen.Items;
 using NUnit.Framework;
-using TreasureGen.Coins;
-using TreasureGen.Generators;
-using TreasureGen.Goods;
-using TreasureGen.Items;
 
 namespace DnDGen.EncounterGen.Tests.Integration.IoC.Modules
 {
@@ -20,21 +19,9 @@ namespace DnDGen.EncounterGen.Tests.Integration.IoC.Modules
         }
 
         [Test]
-        public void EncounterGeneratorIsDecorated()
-        {
-            AssertInstanceOf<IEncounterGenerator, EncounterGeneratorEventDecorator>();
-        }
-
-        [Test]
         public void CreatureGeneratorIsNotASingleton()
         {
             AssertNotSingleton<ICreatureGenerator>();
-        }
-
-        [Test]
-        public void CreatureGeneratorIsDecorated()
-        {
-            AssertInstanceOf<ICreatureGenerator, CreatureGeneratorEventDecorator>();
         }
 
         [Test]
@@ -44,21 +31,9 @@ namespace DnDGen.EncounterGen.Tests.Integration.IoC.Modules
         }
 
         [Test]
-        public void EncounterCharacterGeneratorIsDecorated()
-        {
-            AssertInstanceOf<IEncounterCharacterGenerator, EncounterCharacterGeneratorEventDecorator>();
-        }
-
-        [Test]
         public void EncounterTreasureGeneratorIsNotASingleton()
         {
             AssertNotSingleton<IEncounterTreasureGenerator>();
-        }
-
-        [Test]
-        public void EncounterTreasureGeneratorIsDecorated()
-        {
-            AssertInstanceOf<IEncounterTreasureGenerator, EncounterTreasureGeneratorEventDecorator>();
         }
 
         [Test]

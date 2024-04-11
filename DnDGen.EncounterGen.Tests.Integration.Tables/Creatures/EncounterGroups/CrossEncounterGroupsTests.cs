@@ -1,7 +1,6 @@
-﻿using DnDGen.EncounterGen.Models;
+﻿using DnDGen.EncounterGen.Generators;
+using DnDGen.EncounterGen.Models;
 using DnDGen.EncounterGen.Tables;
-using DnDGen.EncounterGen.Generators;
-using Ninject;
 using NUnit.Framework;
 using System;
 using System.Collections.Generic;
@@ -12,8 +11,13 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
     [TestFixture]
     public class CrossEncounterGroupsTests : EncounterGroupsTests
     {
-        [Inject]
-        public IEncounterVerifier EncounterVerifier { get; set; }
+        private IEncounterVerifier encounterVerifier;
+
+        [SetUp]
+        public void Setup()
+        {
+            encounterVerifier = GetNewInstanceOf<IEncounterVerifier>();
+        }
 
         [Test]
         public override void EntriesAreComplete()
@@ -131,7 +135,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
             var allCreatures = GetAllCreaturesFromEncounters();
             allCreatures = allCreatures.Except(excludedCreatures);
 
-            var creaturesWithType = allCreatures.Where(c => EncounterVerifier.CreatureIsValid(c, types));
+            var creaturesWithType = allCreatures.Where(c => encounterVerifier.CreatureIsValid(c, types));
             AssertWholeCollection(allCreatures, creaturesWithType);
         }
 
@@ -173,7 +177,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
 
             foreach (var encounter in encounters)
             {
-                var creatures = EncounterFormatter.SelectCreaturesAndAmountsFrom(encounter).Keys;
+                var creatures = encounterFormatter.SelectCreaturesAndAmountsFrom(encounter).Keys;
                 Assert.That(creatures, Is.Unique, encounter);
             }
         }
@@ -306,7 +310,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
 
         private bool IsUndead(string creature)
         {
-            var undead = CollectionSelector.Explode(TableNameConstants.CreatureGroups, CreatureConstants.Types.Undead);
+            var undead = collectionSelector.Explode(TableNameConstants.CreatureGroups, CreatureConstants.Types.Undead);
             return undead.Contains(creature);
         }
 
@@ -318,8 +322,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
             specifications.Temperature = temperature;
             specifications.TimeOfDay = timeOfDay;
 
-            var encounters = EncounterCollectionSelector.SelectAllWeightedFrom(specifications);
-            AssertEventSpacing();
+            var encounters = encounterCollectionSelector.SelectAllWeightedFrom(specifications);
 
             var leadCreatures = encounters.Select(e => e.First().Key);
             var subgroupCreatures = leadCreatures.Where(cr => isInSubgroup(cr));
@@ -446,7 +449,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
 
         private bool IsUndeadCharacter(string creature)
         {
-            var name = EncounterFormatter.SelectNameFrom(creature);
+            var name = encounterFormatter.SelectNameFrom(creature);
             return IsUndead(creature) && name == CreatureConstants.Character;
         }
 
@@ -522,7 +525,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
 
         private bool IsMagicCreature(string creature)
         {
-            var magicCreatures = CollectionSelector.Explode(TableNameConstants.CreatureGroups, GroupConstants.Magic);
+            var magicCreatures = collectionSelector.Explode(TableNameConstants.CreatureGroups, GroupConstants.Magic);
 
             return magicCreatures.Contains(creature);
         }

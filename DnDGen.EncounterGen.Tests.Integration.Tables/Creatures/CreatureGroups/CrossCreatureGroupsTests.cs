@@ -1,7 +1,6 @@
-﻿using DnDGen.EncounterGen.Models;
+﻿using DnDGen.EncounterGen.Generators;
+using DnDGen.EncounterGen.Models;
 using DnDGen.EncounterGen.Tables;
-using DnDGen.EncounterGen.Generators;
-using Ninject;
 using NUnit.Framework;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,8 +10,13 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
     [TestFixture]
     public class CrossCreatureGroupsTests : CreatureGroupsTableTests
     {
-        [Inject]
-        public IEncounterVerifier EncounterVerifier { get; set; }
+        private IEncounterVerifier encounterVerifier;
+
+        [SetUp]
+        public void Setup()
+        {
+            encounterVerifier = GetNewInstanceOf<IEncounterVerifier>();
+        }
 
         [Test]
         public override void EntriesAreComplete()
@@ -111,7 +115,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
             var explodedExcludedCreatures = ExplodeCollections(excludedCreatures);
             var creatures = sourceCreatures.Except(explodedExcludedCreatures);
 
-            var creaturesWithoutType = creatures.Where(c => EncounterVerifier.CreatureIsValid(c, allTypes) == false);
+            var creaturesWithoutType = creatures.Where(c => encounterVerifier.CreatureIsValid(c, allTypes) == false);
             Assert.That(creaturesWithoutType, Is.Empty, "Creatures not in a type category");
         }
 
@@ -178,7 +182,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         [Test]
         public void NoCircularSubgroups()
         {
-            var table = CollectionMapper.Map(tableName);
+            var table = collectionMapper.Map(tableName);
 
             foreach (var kvp in table)
             {
@@ -188,7 +192,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
 
         private void AssertGroupDoesNotContain(string name, string forbiddenEntry)
         {
-            var table = CollectionMapper.Map(tableName);
+            var table = collectionMapper.Map(tableName);
             var group = table[name];
 
             if (name != forbiddenEntry)

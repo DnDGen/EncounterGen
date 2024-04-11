@@ -1,9 +1,8 @@
-﻿using DnDGen.Core.Mappers.Collections;
-using DnDGen.Core.Selectors.Collections;
-using DnDGen.EncounterGen.Models;
+﻿using DnDGen.EncounterGen.Models;
 using DnDGen.EncounterGen.Selectors;
 using DnDGen.EncounterGen.Tables;
-using Ninject;
+using DnDGen.Infrastructure.Mappers.Collections;
+using DnDGen.Infrastructure.Selectors.Collections;
 using NUnit.Framework;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,19 +12,20 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables
     [TestFixture]
     public abstract class CollectionTests : TableTests
     {
-        [Inject]
-        internal CollectionMapper CollectionMapper { get; set; }
-        [Inject]
-        internal ICollectionSelector CollectionSelector { get; set; }
-        [Inject]
-        internal IEncounterFormatter EncounterFormatter { get; set; }
+        internal CollectionMapper collectionMapper;
+        internal ICollectionSelector collectionSelector;
+        internal IEncounterFormatter encounterFormatter;
 
         private Dictionary<string, IEnumerable<string>> table;
 
         [SetUp]
         public void CollectionSetup()
         {
-            table = CollectionMapper.Map(tableName);
+            collectionMapper = GetNewInstanceOf<CollectionMapper>();
+            collectionSelector = GetNewInstanceOf<ICollectionSelector>();
+            encounterFormatter = GetNewInstanceOf<IEncounterFormatter>();
+
+            table = collectionMapper.Map(tableName);
         }
 
         public abstract void EntriesAreComplete();
@@ -49,8 +49,8 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables
 
         protected IEnumerable<string> ExplodeCollection(string name)
         {
-            if (CollectionSelector.IsCollection(tableName, name))
-                return CollectionSelector.Explode(tableName, name);
+            if (collectionSelector.IsCollection(tableName, name))
+                return collectionSelector.Explode(tableName, name);
 
             return new[] { name };
         }
@@ -70,8 +70,8 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables
 
         protected IEnumerable<string> GetAllCreaturesFromEncounters()
         {
-            var allEncounters = CollectionSelector.SelectAllFrom(TableNameConstants.EncounterGroups).Values.SelectMany(v => v);
-            var allCreatures = allEncounters.SelectMany(e => EncounterFormatter.SelectCreaturesAndAmountsFrom(e).Keys);
+            var allEncounters = collectionSelector.SelectAllFrom(TableNameConstants.EncounterGroups).Values.SelectMany(v => v);
+            var allCreatures = allEncounters.SelectMany(e => encounterFormatter.SelectCreaturesAndAmountsFrom(e).Keys);
 
             //INFO: These are creatues that do not explicitly appear in encounters, but we wish to include them anyway
             var extraCreatures = new[]

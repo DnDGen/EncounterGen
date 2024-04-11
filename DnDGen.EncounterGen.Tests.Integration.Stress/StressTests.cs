@@ -1,12 +1,9 @@
-﻿using DnDGen.Core.Selectors.Collections;
-using DnDGen.Stress;
-using DnDGen.Stress.Events;
+﻿using DnDGen.EncounterGen.Generators;
 using DnDGen.EncounterGen.Models;
-using DnDGen.EncounterGen.Generators;
-using EventGen;
-using Ninject;
+using DnDGen.Infrastructure.Selectors.Collections;
+using DnDGen.RollGen;
+using DnDGen.Stress;
 using NUnit.Framework;
-using RollGen;
 using System.Collections.Generic;
 using System.Reflection;
 
@@ -16,10 +13,8 @@ namespace DnDGen.EncounterGen.Tests.Integration.Stress
     [Stress]
     public abstract class StressTests : IntegrationTests
     {
-        [Inject]
-        public Dice Dice { get; set; }
-        [Inject]
-        public ICollectionSelector CollectionSelector { get; set; }
+        protected Dice dice;
+        protected ICollectionSelector collectionSelector;
 
         protected Stressor stressor;
 
@@ -77,9 +72,9 @@ namespace DnDGen.EncounterGen.Tests.Integration.Stress
         }
 
         [OneTimeSetUp]
-        public void StressSetup()
+        public void OneTimeStressSetup()
         {
-            var options = new StressorWithEventsOptions();
+            var options = new StressorOptions();
             options.RunningAssembly = Assembly.GetExecutingAssembly();
             options.TimeLimitPercentage = .55;
 
@@ -89,11 +84,14 @@ namespace DnDGen.EncounterGen.Tests.Integration.Stress
             options.IsFullStress = false;
 #endif
 
-            options.ClientIdManager = GetNewInstanceOf<ClientIDManager>();
-            options.EventQueue = GetNewInstanceOf<GenEventQueue>();
-            options.Source = "EncounterGen";
+            stressor = new Stressor(options);
+        }
 
-            stressor = new StressorWithEvents(options);
+        [SetUp]
+        public void StressSetup()
+        {
+            dice = GetNewInstanceOf<Dice>();
+            collectionSelector = GetNewInstanceOf<ICollectionSelector>();
         }
 
         protected EncounterSpecifications RandomizeSpecifications(int level = 0, string environment = "", string temperature = "", string timeOfDay = "", string filter = "", bool useFilter = false)
@@ -102,9 +100,9 @@ namespace DnDGen.EncounterGen.Tests.Integration.Stress
             specifications.Environment = string.IsNullOrEmpty(environment) ? GetRandomFrom(allEnvironments) : environment;
             specifications.Temperature = string.IsNullOrEmpty(temperature) ? GetRandomFrom(allTemperatures) : temperature;
             specifications.TimeOfDay = string.IsNullOrEmpty(timeOfDay) ? GetRandomFrom(allTimesOfDay) : timeOfDay;
-            specifications.Level = level > 0 ? level : Dice.Roll().d(EncounterSpecifications.MaximumLevel).AsSum() + EncounterSpecifications.MinimumLevel - 1;
-            specifications.AllowAquatic = Dice.Roll().d2().AsTrueOrFalse();
-            specifications.AllowUnderground = Dice.Roll().d2().AsTrueOrFalse();
+            specifications.Level = level > 0 ? level : dice.Roll().d(EncounterSpecifications.MaximumLevel).AsSum() + EncounterSpecifications.MinimumLevel - 1;
+            specifications.AllowAquatic = dice.Roll().d2().AsTrueOrFalse();
+            specifications.AllowUnderground = dice.Roll().d2().AsTrueOrFalse();
 
             if (!string.IsNullOrEmpty(filter))
             {
@@ -121,7 +119,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Stress
 
         private string GetRandomFrom(IEnumerable<string> collection)
         {
-            return CollectionSelector.SelectRandomFrom(collection);
+            return collectionSelector.SelectRandomFrom(collection);
         }
     }
 }

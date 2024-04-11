@@ -1,8 +1,6 @@
-﻿using DnDGen.EncounterGen.Models;
-using DnDGen.EncounterGen.Generators;
-using Ninject;
+﻿using DnDGen.EncounterGen.Generators;
+using DnDGen.EncounterGen.Models;
 using NUnit.Framework;
-using RollGen;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,10 +10,8 @@ namespace DnDGen.EncounterGen.Tests.Integration.Stress
     [TestFixture]
     public class EncounterGeneratorTests : StressTests
     {
-        [Inject]
-        public IEncounterGenerator EncounterGenerator { get; set; }
-        [Inject]
-        public IEncounterVerifier EncounterVerifier { get; set; }
+        private IEncounterGenerator encounterGenerator;
+        private IEncounterVerifier encounterVerifier;
 
         private const int PresetLevel = 7;
 
@@ -25,6 +21,8 @@ namespace DnDGen.EncounterGen.Tests.Integration.Stress
         public void Setup()
         {
             testedFilters = new HashSet<string>();
+            encounterGenerator = GetNewInstanceOf<IEncounterGenerator>();
+            encounterVerifier = GetNewInstanceOf<IEncounterVerifier>();
         }
 
         [Test]
@@ -50,13 +48,6 @@ namespace DnDGen.EncounterGen.Tests.Integration.Stress
             stressor.Stress(() => AssertEncounterInRandomEnvironment(EnvironmentConstants.Civilized, level: PresetLevel));
         }
 
-        //INFO: We want to stress this because random subtypes (such as Dominated Creatures that Formians Taskmasters have) have sometimes failed in the event spacing
-        [Test]
-        public void BUG_StressOutsiders()
-        {
-            stressor.Stress(() => AssertEncounterInRandomEnvironment(level: PresetLevel, filter: CreatureConstants.Types.Outsider));
-        }
-
         private void AssertEncounterInRandomEnvironment(string environment = "", string temperature = "", string timeOfDay = "", int level = 0, string filter = "", bool useFilter = false)
         {
             var encounter = MakeEncounterInRandomEnvironment(level, environment, temperature, timeOfDay, filter, useFilter);
@@ -67,12 +58,12 @@ namespace DnDGen.EncounterGen.Tests.Integration.Stress
         {
             var specifications = stressor.Generate(
                 () => RandomizeSpecifications(level, environment, temperature, timeOfDay, filter, useFilter),
-                s => EncounterVerifier.ValidEncounterExistsAtLevel(s));
+                s => encounterVerifier.ValidEncounterExistsAtLevel(s));
 
             if (specifications.CreatureTypeFilters.Any())
                 testedFilters.Add(specifications.CreatureTypeFilters.Single());
 
-            return EncounterGenerator.Generate(specifications);
+            return encounterGenerator.Generate(specifications);
         }
 
         private void AssertEncounter(Encounter encounter)
@@ -110,8 +101,8 @@ namespace DnDGen.EncounterGen.Tests.Integration.Stress
             Assert.That(creatureType.Name, Is.Not.Empty);
             Assert.That(creatureType.Description, Is.Not.Null);
 
-            Assert.That(Dice.ContainsRoll(creatureType.Name), Is.False);
-            Assert.That(Dice.ContainsRoll(creatureType.Description), Is.False);
+            Assert.That(dice.ContainsRoll(creatureType.Name), Is.False);
+            Assert.That(dice.ContainsRoll(creatureType.Description), Is.False);
 
             if (creatureType.SubType != null)
                 AssertCreatureType(creatureType.SubType);

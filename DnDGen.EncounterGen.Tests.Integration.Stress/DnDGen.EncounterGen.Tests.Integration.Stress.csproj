@@ -17,16 +17,19 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="..\EncounterGen\DnDGen.EncounterGen.csproj" />
-    <ProjectReference Include="..\EncounterGen.Tests.Integration\DnDGen.EncounterGen.Tests.Integration.csproj" />
+    <ProjectReference Include="..\DnDGen.EncounterGen\DnDGen.EncounterGen.csproj" />
+    <ProjectReference Include="..\DnDGen.EncounterGen.Tests.Integration\DnDGen.EncounterGen.Tests.Integration.csproj" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Albatross.Expression" Version="3.0.13" />
+    <PackageReference Include="DnDGen.Stress" Version="3.5.1" />
     <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.9.0" />
     <PackageReference Include="NUnit" Version="4.1.0" />
+    <PackageReference Include="NUnit3TestAdapter" Version="4.5.0" />
     <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
   </ItemGroup>
 </Project>

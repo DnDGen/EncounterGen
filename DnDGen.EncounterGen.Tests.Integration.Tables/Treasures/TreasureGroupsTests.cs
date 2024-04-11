@@ -1,19 +1,17 @@
 ﻿using DnDGen.EncounterGen.Models;
 using DnDGen.EncounterGen.Selectors;
 using DnDGen.EncounterGen.Tables;
-using Ninject;
+using DnDGen.TreasureGen.Items;
+using DnDGen.TreasureGen.Items.Magical;
 using NUnit.Framework;
 using System.Linq;
-using TreasureGen.Items;
-using TreasureGen.Items.Magical;
 
 namespace DnDGen.EncounterGen.Tests.Integration.Tables.Treasures
 {
     [TestFixture]
     public class TreasureGroupsTests : CollectionTests
     {
-        [Inject]
-        internal IItemSelector ItemSelector { get; set; }
+        internal IItemSelector itemSelector;
 
         protected override string tableName
         {
@@ -23,11 +21,17 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Treasures
             }
         }
 
+        [SetUp]
+        public void Setup()
+        {
+            itemSelector = GetNewInstanceOf<IItemSelector>();
+        }
+
         [Test]
         public override void EntriesAreComplete()
         {
             var allCreatures = GetAllCreaturesFromEncounters();
-            var useSubtypeForTreasure = CollectionSelector.Explode(TableNameConstants.CreatureGroups, GroupConstants.UseSubtypeForTreasure);
+            var useSubtypeForTreasure = collectionSelector.Explode(TableNameConstants.CreatureGroups, GroupConstants.UseSubtypeForTreasure);
             allCreatures = allCreatures.Except(useSubtypeForTreasure);
 
             AssertEntriesAreComplete(allCreatures);
@@ -608,7 +612,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Treasures
             foreach (var trait in traits)
                 item.Traits.Add(trait);
 
-            return ItemSelector.SelectFrom(item);
+            return itemSelector.SelectFrom(item);
         }
 
         [Test]

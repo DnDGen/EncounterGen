@@ -22,7 +22,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Treasures
         public override void EntriesAreComplete()
         {
             var allCreatures = GetAllCreaturesFromEncounters();
-            var useSubtypeForTreasure = CollectionSelector.Explode(TableNameConstants.CreatureGroups, GroupConstants.UseSubtypeForTreasure);
+            var useSubtypeForTreasure = collectionSelector.Explode(TableNameConstants.CreatureGroups, GroupConstants.UseSubtypeForTreasure);
             allCreatures = allCreatures.Except(useSubtypeForTreasure);
 
             AssertEntriesAreComplete(allCreatures);
@@ -894,9 +894,9 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Treasures
 
         private bool IsCharacter(string creature, bool hasBaseRace, bool hasMetarace)
         {
-            var name = EncounterFormatter.SelectNameFrom(creature);
-            var baseRace = EncounterFormatter.SelectBaseRaceFrom(creature);
-            var metarace = EncounterFormatter.SelectMetaraceFrom(creature);
+            var name = encounterFormatter.SelectNameFrom(creature);
+            var baseRace = encounterFormatter.SelectBaseRaceFrom(creature);
+            var metarace = encounterFormatter.SelectMetaraceFrom(creature);
 
             return name == CreatureConstants.Character && baseRace.Any() == hasBaseRace && metarace.Any() == hasMetarace;
         }

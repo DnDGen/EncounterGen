@@ -1,5 +1,4 @@
 ﻿using DnDGen.EncounterGen.Generators;
-using Ninject;
 using NUnit.Framework;
 
 namespace DnDGen.EncounterGen.Tests.Integration.Stress
@@ -7,8 +6,13 @@ namespace DnDGen.EncounterGen.Tests.Integration.Stress
     [TestFixture]
     public class EncounterVerifierTests : StressTests
     {
-        [Inject]
-        public IEncounterVerifier EncounterVerifier { get; set; }
+        private IEncounterVerifier encounterVerifier;
+
+        [SetUp]
+        public void Setup()
+        {
+            encounterVerifier = GetNewInstanceOf<IEncounterVerifier>();
+        }
 
         [Test]
         public void StressEncounterVerification()
@@ -25,7 +29,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Stress
         private void VerifyRandomEncounter(bool withFilter)
         {
             var specifications = RandomizeSpecifications(useFilter: withFilter);
-            var isValid = EncounterVerifier.ValidEncounterExistsAtLevel(specifications);
+            var isValid = encounterVerifier.ValidEncounterExistsAtLevel(specifications);
             Assert.That(isValid, Is.True.Or.False);
         }
     }

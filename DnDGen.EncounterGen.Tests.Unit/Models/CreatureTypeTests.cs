@@ -2,7 +2,7 @@
 using NUnit.Framework;
 using System;
 
-namespace DnDGen.EncounterGen.Tests.Unit.Common
+namespace DnDGen.EncounterGen.Tests.Unit.Models
 {
     [TestFixture]
     public class CreatureTypeTests
