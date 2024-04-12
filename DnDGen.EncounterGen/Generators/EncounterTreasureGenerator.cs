@@ -83,10 +83,20 @@ namespace DnDGen.EncounterGen.Generators
         {
             var goods = new List<Good>();
 
-            while (percentileSelector.SelectFrom(treasureRates.Goods--))
+            while (treasureRates.Goods > 0)
             {
-                var generatedGoods = goodsGenerator.GenerateAtLevel(level);
-                goods.AddRange(generatedGoods);
+                //INFO: The rate here might be 25%, meaning only 25% of creatures should have treasure.
+                //The percentile selector wants a threshold, where above is true. So 25% likelihood would translate to threshold of 75%
+                var threshold = 1 - treasureRates.Goods;
+                var hasGoods = percentileSelector.SelectFrom(threshold);
+
+                if (hasGoods)
+                {
+                    var generatedGoods = goodsGenerator.GenerateAtLevel(level);
+                    goods.AddRange(generatedGoods);
+                }
+
+                treasureRates.Goods--;
             }
 
             return goods;
@@ -96,10 +106,20 @@ namespace DnDGen.EncounterGen.Generators
         {
             var items = new List<Item>();
 
-            while (percentileSelector.SelectFrom(treasureRates.Items--))
+            while (treasureRates.Items > 0)
             {
-                var generatedItems = itemsGenerator.GenerateRandomAtLevel(level);
-                items.AddRange(generatedItems);
+                //INFO: The rate here might be 25%, meaning only 25% of creatures should have treasure.
+                //The percentile selector wants a threshold, where above is true. So 25% likelihood would translate to threshold of 75%
+                var threshold = 1 - treasureRates.Items;
+                var hasItems = percentileSelector.SelectFrom(threshold);
+
+                if (hasItems)
+                {
+                    var generatedItems = itemsGenerator.GenerateRandomAtLevel(level);
+                    items.AddRange(generatedItems);
+                }
+
+                treasureRates.Items--;
             }
 
             var setItems = GetSetItems(creatureName, quantity);

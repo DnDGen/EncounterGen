@@ -72,7 +72,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
             treasureRates.Goods = 1;
             treasureRates.Items = 1;
 
-            mockPercentileSelector.Setup(s => s.SelectFrom(It.IsAny<double>())).Returns((double d) => d > 0);
+            mockPercentileSelector.Setup(s => s.SelectFrom(It.IsAny<double>())).Returns((double d) => d < 1);
             mockTreasureAdjustmentSelector.Setup(s => s.SelectFor(creature.Type.Name)).Returns(treasureRates);
 
             mockCoinGenerator.Setup(g => g.GenerateAtLevel(level)).Returns(coin);
@@ -311,7 +311,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
             treasureRates.Goods = .2;
             treasureRates.Items = .3;
 
-            mockPercentileSelector.Setup(s => s.SelectFrom(.3)).Returns(false);
+            mockPercentileSelector.Setup(s => s.SelectFrom(.7)).Returns(false);
 
             var treasures = encounterTreasureGenerator.GenerateFor(creatures, level);
             Assert.That(treasures, Is.Not.Null);
@@ -332,7 +332,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
             treasureRates.Goods = .2;
             treasureRates.Items = .3;
 
-            mockPercentileSelector.Setup(s => s.SelectFrom(.2)).Returns(false);
+            mockPercentileSelector.Setup(s => s.SelectFrom(.8)).Returns(false);
 
             var treasures = encounterTreasureGenerator.GenerateFor(creatures, level);
             Assert.That(treasures, Is.Not.Null);
@@ -353,8 +353,8 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
             treasureRates.Goods = .2;
             treasureRates.Items = .3;
 
-            mockPercentileSelector.Setup(s => s.SelectFrom(.2)).Returns(false);
-            mockPercentileSelector.Setup(s => s.SelectFrom(.3)).Returns(false);
+            mockPercentileSelector.Setup(s => s.SelectFrom(.8)).Returns(false);
+            mockPercentileSelector.Setup(s => s.SelectFrom(.7)).Returns(false);
 
             var treasures = encounterTreasureGenerator.GenerateFor(creatures, level);
             Assert.That(treasures, Is.Not.Null);
@@ -406,7 +406,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
             treasureRates.Goods = 2.2;
             treasureRates.Items = 2.3;
 
-            mockPercentileSelector.Setup(s => s.SelectFrom(It.Is<double>(p => p < 1))).Returns(false);
+            mockPercentileSelector.Setup(s => s.SelectFrom(It.Is<double>(p => p > 0))).Returns(false);
 
             var secondGoods = new[] { new Good(), new Good() };
             mockGoodsGenerator.SetupSequence(g => g.GenerateAtLevel(level)).Returns(goods).Returns(secondGoods);
