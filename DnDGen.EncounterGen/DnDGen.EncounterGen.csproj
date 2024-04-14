@@ -1,0 +1,62 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+	  <TargetFramework>net6.0</TargetFramework>
+	  <Version>4.0.0</Version>
+	  <Authors>Karl M. Speer</Authors>
+	  <Company>DnDGen</Company>
+	  <Product>EncounterGen</Product>
+	  <Description>This generates encounters for the Dungeons and Dragons 3.5 system.  One can generate encounters of particular levels, times of day, and environments.  One can also filter creature types.  Treasure and equipment are generated.</Description>
+	  <PackageReleaseNotes>
+		  4.0.0: .Net 6, consolidated nuget packages, removed EventGen, removed iterative generators, dependency-compatible Ninject module loading
+	  </PackageReleaseNotes>
+	  <PackageProjectUrl>https://github.com/DnDGen/EncounterGen</PackageProjectUrl>
+	  <RepositoryUrl>https://github.com/DnDGen/EncounterGen</RepositoryUrl>
+	  <PackageTags>encounter npc character equipment treasure generator dice dungeons dragons d20 dnd 3.5 gen</PackageTags>
+	  <PackageIcon>18531-twenty-sided-dice-vector-thumb.png</PackageIcon>
+	  <PackageIconUrl />
+	  <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+	  <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="Tables\Creatures\AverageChallengeRatings.xml" />
+    <None Remove="Tables\Creatures\AverageEncounterLevels.xml" />
+    <None Remove="Tables\Creatures\CreatureGroups.xml" />
+    <None Remove="Tables\Creatures\EncounterGroups.xml" />
+    <None Remove="Tables\EncounterDifficulty.xml" />
+    <None Remove="Tables\EncounterLevelModifiers.xml" />
+    <None Remove="Tables\Treasures\TreasureGroups.xml" />
+    <None Remove="Tables\Treasures\TreasureRates.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Tables\Creatures\AverageChallengeRatings.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\Creatures\AverageEncounterLevels.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\Creatures\CreatureGroups.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\Creatures\EncounterGroups.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\EncounterDifficulty.xml" />
+    <EmbeddedResource Include="Tables\EncounterLevelModifiers.xml" />
+    <EmbeddedResource Include="Tables\Treasures\TreasureGroups.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\Treasures\TreasureRates.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="DnDGen.CharacterGen" Version="11.0.4" />
+    <PackageReference Include="DnDGen.Infrastructure" Version="4.4.3" />
+    <PackageReference Include="DnDGen.RollGen" Version="15.5.7" />
+    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+    <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
+  </ItemGroup>
+	<ItemGroup>
+		<None Include="18531-twenty-sided-dice-vector-thumb.png" Pack="true" PackagePath=""/>
+	</ItemGroup>
+</Project>
