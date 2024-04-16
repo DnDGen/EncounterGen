@@ -25,9 +25,10 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
         private Mock<IEncounterFormatter> mockEncounterSelector;
         private List<string> levelEncounters;
         private List<string> timeOfDayEncounters;
-        private List<string> magicEncounters;
         private List<string> specificEnvironmentEncounters;
         private List<string> landEncounters;
+        private List<string> extraplanarEncounters;
+        private List<string> anyEncounters;
         private Dictionary<string, List<string>> filters;
         private List<string> wildernessEncounters;
         private EncounterSpecifications specifications;
@@ -42,8 +43,13 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
 
             levelEncounters = new List<string>();
             timeOfDayEncounters = new List<string>();
-            magicEncounters = new List<string> { "magic encounter/magic amount", "other magic encounter/other magic amount" };
-            specificEnvironmentEncounters = new List<string> { "specific environment encounter/specific environment amount", "other specific environment encounter/other specific environment amount" };
+            extraplanarEncounters = new List<string> { "extraplanar encounter/extraplanar amount", "other extraplanar encounter/other extraplanar amount" };
+            anyEncounters = new List<string> { "any encounter/any amount", "other any encounter/other any amount" };
+            specificEnvironmentEncounters = new List<string>
+            {
+                "specific environment encounter/specific environment amount",
+                "other specific environment encounter/other specific environment amount"
+            };
             landEncounters = new List<string> { "land encounter/land amount", "other land encounter/other land amount" };
             filters = new Dictionary<string, List<string>>();
             wildernessEncounters = new List<string>();
@@ -65,19 +71,48 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
             specifications.TimeOfDay = timeOfDay;
 
             SetUpEncounterGroup(timeOfDay, timeOfDayEncounters);
-            SetUpEncounterGroup(GroupConstants.Magic, magicEncounters);
+            SetUpEncounterGroup(GroupConstants.Extraplanar, extraplanarEncounters);
             SetUpEncounterGroup(string.Empty, Enumerable.Empty<string>());
             SetUpEncounterGroup(specifications.SpecificEnvironment, specificEnvironmentEncounters);
-            SetUpEncounterGroup(GroupConstants.Land, landEncounters);
+            SetUpEncounterGroup(EnvironmentConstants.Land, landEncounters);
+            SetUpEncounterGroup(EnvironmentConstants.Any, anyEncounters);
             SetUpEncounterGroup(GroupConstants.Wilderness, wildernessEncounters);
 
             mockCollectionSelector.Setup(s => s.Explode(TableNameConstants.CreatureGroups, "filter")).Returns(filters["filter"]);
             mockCollectionSelector.Setup(s => s.Explode(TableNameConstants.CreatureGroups, "other filter")).Returns(filters["other filter"]);
             mockCollectionSelector.Setup(s => s.SelectAllFrom(TableNameConstants.EncounterGroups)).Returns(encounterGroups);
             mockCollectionSelector.Setup(s => s.SelectAllFrom(TableNameConstants.AverageEncounterLevels)).Returns(() => GetEncounterLevels());
-            mockCollectionSelector.Setup(s => s.SelectRandomFrom(It.IsAny<IEnumerable<Dictionary<string, string>>>())).Returns((IEnumerable<Dictionary<string, string>> collection) => collection.Last());
+            mockCollectionSelector
+                .Setup(s => s.SelectRandomFrom(It.IsAny<IEnumerable<Dictionary<string, string>>>()))
+                .Returns((IEnumerable<Dictionary<string, string>> collection) => collection.Last());
+            mockCollectionSelector
+                .Setup(s => s.CreateWeighted(
+                    It.IsAny<IEnumerable<string>>(),
+                    It.IsAny<IEnumerable<string>>(),
+                    It.IsAny<IEnumerable<string>>(),
+                    It.IsAny<IEnumerable<string>>()))
+                .Returns(CreateWeighted);
 
             mockEncounterSelector.Setup(s => s.SelectCreaturesAndAmountsFrom(It.IsAny<string>())).Returns((string e) => ParseCreatureAndAmount(e));
+        }
+
+        private IEnumerable<string> CreateWeighted(IEnumerable<string> common, IEnumerable<string> uncommon, IEnumerable<string> rare, IEnumerable<string> veryRare)
+        {
+            var weighted = Enumerable.Empty<string>();
+
+            if (common?.Any() == true)
+                weighted = weighted.Concat(common).Concat(common).Concat(common).Concat(common);
+
+            if (uncommon?.Any() == true)
+                weighted = weighted.Concat(uncommon).Concat(uncommon).Concat(uncommon);
+
+            if (rare?.Any() == true)
+                weighted = weighted.Concat(rare).Concat(rare);
+
+            if (veryRare?.Any() == true)
+                weighted = weighted.Concat(veryRare);
+
+            return weighted;
         }
 
         private Dictionary<string, IEnumerable<string>> GetEncounterLevels()
@@ -114,7 +149,8 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
         public void SelectingRandomGetsEncounterTypesAndAmountsFromSelector()
         {
             var encounterTypesAndAmounts = encounterCollectionSelector.SelectRandomFrom(specifications);
-            AssertTypesAndAmounts(encounterTypesAndAmounts, string.Empty, "specific environment encounter", "specific environment amount");
+            AssertTypesAndAmounts(encounterTypesAndAmounts, string.Empty,
+                ("specific environment encounter", "specific environment amount"));
         }
 
         [Test]
@@ -126,18 +162,18 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
                 Throws.ArgumentException.With.Message.EqualTo($"No valid encounters exist for {specifications.Description}"));
         }
 
-        private void AssertTypesAndAmounts(Dictionary<string, string> actual, string failureMessage, params string[] expected)
+        private void AssertTypesAndAmounts(Dictionary<string, string> actual, string failureMessage, params (string Creature, string Amount)[] expected)
         {
-            Assert.That(expected.Length % 2, Is.EqualTo(0), failureMessage);
             Assert.That(actual, Is.Not.Null, failureMessage);
             Assert.That(actual, Is.Not.Empty, failureMessage);
-            Assert.That(actual.Count, Is.EqualTo(expected.Length / 2), failureMessage);
 
-            for (var i = 0; i < expected.Length; i += 2)
+            for (var i = 0; i < expected.Length; i++)
             {
-                Assert.That(actual.Keys, Contains.Item(expected[i]), failureMessage);
-                Assert.That(actual[expected[i]], Is.EqualTo(expected[i + 1]), failureMessage);
+                Assert.That(actual.Keys, Contains.Item(expected[i].Creature), failureMessage);
+                Assert.That(actual[expected[i].Creature], Is.EqualTo(expected[i].Amount), failureMessage);
             }
+
+            Assert.That(actual.Count, Is.EqualTo(expected.Length), failureMessage);
         }
 
         [Test]
@@ -152,7 +188,8 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
             timeOfDayEncounters.Add(specificEnvironmentEncounters[2]);
 
             var encounterTypesAndAmounts = encounterCollectionSelector.SelectRandomFrom(specifications);
-            AssertTypesAndAmounts(encounterTypesAndAmounts, string.Empty, "other specific environment encounter", "other specific environment amount");
+            AssertTypesAndAmounts(encounterTypesAndAmounts, string.Empty,
+                ("other specific environment encounter", "other specific environment amount"));
         }
 
         [Test]
@@ -163,7 +200,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
             timeOfDayEncounters.Add("other encounter/other amount,encounter/amount");
 
             var encounterTypesAndAmounts = encounterCollectionSelector.SelectRandomFrom(specifications);
-            AssertTypesAndAmounts(encounterTypesAndAmounts, string.Empty, "encounter", "amount", "other encounter", "other amount");
+            AssertTypesAndAmounts(encounterTypesAndAmounts, string.Empty, ("encounter", "amount"), ("other encounter", "other amount"));
         }
 
         [Test]
@@ -171,7 +208,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
         {
             levelEncounters.Clear();
 
-            var expectedEncounters = Enumerable.Empty<string>();
+            var expectedEncounters = Enumerable.Empty<(string, string)>();
 
             AssertEncounterWeight(expectedEncounters);
         }
@@ -181,7 +218,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
         {
             specifications.CreatureTypeFilters = new[] { "filter" };
 
-            var expectedEncounters = Enumerable.Empty<string>();
+            var expectedEncounters = Enumerable.Empty<(string, string)>();
 
             AssertEncounterWeight(expectedEncounters);
         }
@@ -196,7 +233,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
             timeOfDayEncounters.Add(specificCivilizedEncounters[0]);
             wildernessEncounters.AddRange(levelEncounters);
 
-            var expectedEncounters = Enumerable.Empty<string>();
+            var expectedEncounters = Enumerable.Empty<(string, string)>();
 
             AssertEncounterWeight(expectedEncounters, EnvironmentConstants.Civilized);
         }
@@ -206,7 +243,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
         {
             timeOfDayEncounters.Clear();
 
-            var expectedEncounters = Enumerable.Empty<string>();
+            var expectedEncounters = Enumerable.Empty<(string, string)>();
 
             AssertEncounterWeight(expectedEncounters);
         }
@@ -214,15 +251,13 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
         [Test]
         public void FilterOutEncountersThatDoNotMatchLevel()
         {
-            timeOfDayEncounters.Add(magicEncounters[0]);
+            timeOfDayEncounters.Add(extraplanarEncounters[0]);
 
             var expectedEncounters = new[]
             {
-                "specific environment encounter", "specific environment amount",
-
-                "specific environment encounter", "specific environment amount",
-
-                "specific environment encounter", "specific environment amount",
+                ("specific environment encounter", "specific environment amount"),
+                ("specific environment encounter", "specific environment amount"),
+                ("specific environment encounter", "specific environment amount"),
             };
 
             AssertEncounterWeight(expectedEncounters);
@@ -231,15 +266,13 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
         [Test]
         public void FilterOutEncountersThatDoNotMatchTimeOfDay()
         {
-            levelEncounters.Add(magicEncounters[0]);
+            levelEncounters.Add(extraplanarEncounters[0]);
 
             var expectedEncounters = new[]
             {
-                "specific environment encounter", "specific environment amount",
-
-                "specific environment encounter", "specific environment amount",
-
-                "specific environment encounter", "specific environment amount",
+                ("specific environment encounter", "specific environment amount"),
+                ("specific environment encounter", "specific environment amount"),
+                ("specific environment encounter", "specific environment amount"),
             };
 
             AssertEncounterWeight(expectedEncounters);
@@ -248,8 +281,8 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
         [Test]
         public void FilterOutEncountersThatDoNotMatchFilter()
         {
-            levelEncounters.Add(magicEncounters[0]);
-            timeOfDayEncounters.Add(magicEncounters[0]);
+            levelEncounters.Add(extraplanarEncounters[0]);
+            timeOfDayEncounters.Add(extraplanarEncounters[0]);
 
             filters["filter"].Add("specific environment encounter");
             filters["other filter"].Add("magic encounter");
@@ -258,11 +291,9 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
 
             var expectedEncounters = new[]
             {
-                "specific environment encounter", "specific environment amount",
-
-                "specific environment encounter", "specific environment amount",
-
-                "specific environment encounter", "specific environment amount",
+                ("specific environment encounter", "specific environment amount"),
+                ("specific environment encounter", "specific environment amount"),
+                ("specific environment encounter", "specific environment amount"),
             };
 
             AssertEncounterWeight(expectedEncounters);
@@ -271,8 +302,8 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
         [Test]
         public void DoNotFilterOutEncountersThatMatchFilter()
         {
-            levelEncounters.Add(magicEncounters[0]);
-            timeOfDayEncounters.Add(magicEncounters[0]);
+            levelEncounters.Add(extraplanarEncounters[0]);
+            timeOfDayEncounters.Add(extraplanarEncounters[0]);
 
             filters["filter"].Add("specific environment encounter");
             filters["filter"].Add("magic encounter");
@@ -281,12 +312,10 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
 
             var expectedEncounters = new[]
             {
-                "magic encounter", "magic amount",
-                "specific environment encounter", "specific environment amount",
-
-                "specific environment encounter", "specific environment amount",
-
-                "specific environment encounter", "specific environment amount",
+                ("magic encounter", "magic amount"),
+                ("specific environment encounter", "specific environment amount"),
+                ("specific environment encounter", "specific environment amount"),
+                ("specific environment encounter", "specific environment amount"),
             };
 
             AssertEncounterWeight(expectedEncounters);
@@ -295,23 +324,25 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
         [Test]
         public void SingleWeightMagicalEncounters()
         {
-            levelEncounters.Add(magicEncounters[0]);
-            timeOfDayEncounters.Add(magicEncounters[0]);
+            levelEncounters.Add(extraplanarEncounters[0]);
+            timeOfDayEncounters.Add(extraplanarEncounters[0]);
 
             var expectedEncounters = new[]
             {
-                "magic encounter", "magic amount",
-                "specific environment encounter", "specific environment amount",
-
-                "specific environment encounter", "specific environment amount",
-
-                "specific environment encounter", "specific environment amount",
+                ("magic encounter", "magic amount"),
+                ("specific environment encounter", "specific environment amount"),
+                ("specific environment encounter", "specific environment amount"),
+                ("specific environment encounter", "specific environment amount"),
             };
 
             AssertEncounterWeight(expectedEncounters);
         }
 
-        private void AssertEncounterWeight(IEnumerable<string> expectedEncounters, string targetEnvironment = environment, bool allowAquatic = false, bool allowUnderground = false)
+        private void AssertEncounterWeight(
+            IEnumerable<(string Creature, string Amount)> expectedEncounters,
+            string targetEnvironment = environment,
+            bool allowAquatic = false,
+            bool allowUnderground = false)
         {
             specifications.Environment = targetEnvironment;
             specifications.AllowAquatic = allowAquatic;
@@ -325,43 +356,14 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
             else
                 Assert.That(weightedEncounters, Is.Empty);
 
-            var extras = weightedEncounters.Skip(expectedArray.Length / 2);
-            Assert.That(extras, Is.Empty, "Extra encounters");
-            Assert.That(weightedEncounters.Length, Is.EqualTo(expectedArray.Length / 2));
-
-            for (var i = 0; i < expectedArray.Length; i += 2)
+            for (var i = 0; i < expectedArray.Length && i < weightedEncounters.Length; i++)
             {
-                var index = i / 2;
-                var failureMessage = $"Index {index}";
+                var failureMessage = $"Index {i}";
 
-                AssertTypesAndAmounts(weightedEncounters[index], failureMessage, expectedArray[i], expectedArray[i + 1]);
+                AssertTypesAndAmounts(weightedEncounters[i], failureMessage, (expectedArray[i].Creature, expectedArray[i].Amount));
             }
-        }
 
-        private int ComputeWeight(IEnumerable<string> uncommonEncounters, IEnumerable<string> encountersToWeight)
-        {
-            return Math.Max(uncommonEncounters.Count() / encountersToWeight.Count(), 1);
-        }
-
-        private bool ShouldSpecificWeightUndergroundAquatic(EncounterSpecifications specifications)
-        {
-            return ShouldGetUndergroundAquatic(specifications)
-                && (specifications.Environment == EnvironmentConstants.Aquatic || specifications.Environment == EnvironmentConstants.Underground);
-        }
-
-        private bool ShouldGetUndergroundAquatic(EncounterSpecifications specifications)
-        {
-            return ShouldGetUnderground(specifications) && ShouldGetAquatic(specifications);
-        }
-
-        private bool ShouldGetUnderground(EncounterSpecifications specifications)
-        {
-            return (specifications.Environment == EnvironmentConstants.Underground || specifications.AllowUnderground);
-        }
-
-        private bool ShouldGetAquatic(EncounterSpecifications specifications)
-        {
-            return (specifications.Environment == EnvironmentConstants.Aquatic || specifications.AllowAquatic);
+            Assert.That(weightedEncounters.Length, Is.EqualTo(expectedArray.Length));
         }
 
         [Test]
@@ -378,12 +380,10 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
 
             var expectedEncounters = new[]
             {
-                "specific environment encounter", "specific environment amount",
-                "aquatic encounter", "amount",
-
-                "specific environment encounter", "specific environment amount",
-
-                "specific environment encounter", "specific environment amount",
+                ("specific environment encounter", "specific environment amount"),
+                ("aquatic encounter", "amount"),
+                ("specific environment encounter", "specific environment amount"),
+                ("specific environment encounter", "specific environment amount"),
             };
 
             AssertEncounterWeight(expectedEncounters, allowAquatic: true);
@@ -392,14 +392,14 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
         [Test]
         public void DoNotWeightCommonEncountersIfNone()
         {
-            levelEncounters.Add(magicEncounters[0]);
-            timeOfDayEncounters.Add(magicEncounters[0]);
+            levelEncounters.Add(extraplanarEncounters[0]);
+            timeOfDayEncounters.Add(extraplanarEncounters[0]);
 
             specificEnvironmentEncounters.Clear();
 
             var expectedEncounters = new[]
             {
-                "magic encounter", "magic amount",
+                ("magic encounter", "magic amount"),
             };
 
             AssertEncounterWeight(expectedEncounters);
@@ -414,10 +414,10 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
             SetUpEncounterGroup(EnvironmentConstants.Underground + EnvironmentConstants.Aquatic, undergroundAquaticEncounters);
             SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Night, nightEncounters);
 
-            levelEncounters.Add(magicEncounters[0]);
+            levelEncounters.Add(extraplanarEncounters[0]);
             levelEncounters.Add(landEncounters[0]);
             levelEncounters.Add(undergroundAquaticEncounters[0]);
-            nightEncounters.Add(magicEncounters[0]);
+            nightEncounters.Add(extraplanarEncounters[0]);
             nightEncounters.Add(landEncounters[0]);
             nightEncounters.Add(undergroundAquaticEncounters[0]);
 
@@ -425,12 +425,12 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
 
             var expectedEncounters = new[]
             {
-                "magic encounter", "magic amount",
-                "land encounter", "land amount",
-                "underground aquatic encounter", "amount",
+                ("magic encounter", "magic amount"),
+                ("land encounter", "land amount"),
+                ("underground aquatic encounter", "amount"),
 
-                "land encounter", "land amount",
-                "underground aquatic encounter", "amount",
+                ("land encounter", "land amount"),
+                ("underground aquatic encounter", "amount"),
             };
 
             AssertEncounterWeight(expectedEncounters, allowAquatic: true, allowUnderground: true);
@@ -445,23 +445,23 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
             SetUpEncounterGroup(EnvironmentConstants.Underground + EnvironmentConstants.Aquatic, undergroundAquaticEncounters);
             SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Night, nightEncounters);
 
-            levelEncounters.Add(magicEncounters[0]);
+            levelEncounters.Add(extraplanarEncounters[0]);
             levelEncounters.Add(landEncounters[0]);
-            nightEncounters.Add(magicEncounters[0]);
+            nightEncounters.Add(extraplanarEncounters[0]);
             nightEncounters.Add(landEncounters[0]);
             nightEncounters.Add(undergroundAquaticEncounters[0]);
             nightEncounters.Add(specificEnvironmentEncounters[0]);
 
             var expectedEncounters = new[]
             {
-                "magic encounter", "magic amount",
-                "specific environment encounter", "specific environment amount",
-                "land encounter", "land amount",
+                ("magic encounter", "magic amount"),
+                ("specific environment encounter", "specific environment amount"),
+                ("land encounter", "land amount"),
 
-                "specific environment encounter", "specific environment amount",
-                "land encounter", "land amount",
+                ("specific environment encounter", "specific environment amount"),
+                ("land encounter", "land amount"),
 
-                "specific environment encounter", "specific environment amount",
+                ("specific environment encounter", "specific environment amount"),
             };
 
             AssertEncounterWeight(expectedEncounters, allowAquatic: true, allowUnderground: true);
@@ -483,12 +483,12 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
 
             var expectedEncounters = new[]
             {
-                "specific environment encounter", "specific environment amount",
-                "underground encounter", "amount",
+                ("specific environment encounter", "specific environment amount"),
+                ("underground encounter", "amount"),
 
-                "specific environment encounter", "specific environment amount",
+                ("specific environment encounter", "specific environment amount"),
 
-                "specific environment encounter", "specific environment amount",
+                ("specific environment encounter", "specific environment amount"),
             };
 
             AssertEncounterWeight(expectedEncounters, allowUnderground: true);
@@ -502,13 +502,13 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
 
             var expectedEncounters = new[]
             {
-                "specific environment encounter", "specific environment amount",
-                "land encounter", "land amount",
+                ("specific environment encounter", "specific environment amount"),
+                ("land encounter", "land amount"),
 
-                "specific environment encounter", "specific environment amount",
-                "land encounter", "land amount",
+                ("specific environment encounter", "specific environment amount"),
+                ("land encounter", "land amount"),
 
-                "specific environment encounter", "specific environment amount",
+                ("specific environment encounter", "specific environment amount"),
             };
 
             AssertEncounterWeight(expectedEncounters);
@@ -642,13 +642,13 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
                 Assert.That(landCount * (expectedWeighting - 1), Is.LessThanOrEqualTo(magicCount));
 
             specificEnvironmentEncounters.Clear();
-            magicEncounters.Clear();
+            extraplanarEncounters.Clear();
             landEncounters.Clear();
 
-            while (magicEncounters.Count < magicCount)
+            while (extraplanarEncounters.Count < magicCount)
             {
                 var encounter = $"{Guid.NewGuid().ToString()}/{Guid.NewGuid().ToString()}";
-                magicEncounters.Add(encounter);
+                extraplanarEncounters.Add(encounter);
                 levelEncounters.Add(encounter);
                 timeOfDayEncounters.Add(encounter);
             }
@@ -662,9 +662,9 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
             }
 
             var weightedEncounters = encounterCollectionSelector.SelectAllWeightedFrom(specifications);
-            Assert.That(magicEncounters.Count, Is.LessThan(weightedEncounters.Count() / 2d).Or.EqualTo(weightedEncounters.Count()));
+            Assert.That(extraplanarEncounters.Count, Is.LessThan(weightedEncounters.Count() / 2d).Or.EqualTo(weightedEncounters.Count()));
 
-            foreach (var encounter in magicEncounters)
+            foreach (var encounter in extraplanarEncounters)
             {
                 Assert.That(weightedEncounters.Count(e => e.First().Key == encounter.Split('/')[0]), Is.EqualTo(1), "magic encounter");
             }
@@ -691,13 +691,13 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
 
             var expectedEncounters = new[]
             {
-                "specific aquatic encounter", "amount",
-                "aquatic encounter", "amount",
+                ("specific aquatic encounter", "amount"),
+                ("aquatic encounter", "amount"),
 
-                "specific aquatic encounter", "amount",
-                "aquatic encounter", "amount",
+                ("specific aquatic encounter", "amount"),
+                ("aquatic encounter", "amount"),
 
-                "specific aquatic encounter", "amount",
+                ("specific aquatic encounter", "amount"),
             };
 
             AssertEncounterWeight(expectedEncounters, targetEnvironment: EnvironmentConstants.Aquatic);
@@ -831,7 +831,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
                 Assert.That(aquaticCount * (expectedWeighting - 1), Is.LessThanOrEqualTo(magicCount));
 
             specificEnvironmentEncounters.Clear();
-            magicEncounters.Clear();
+            extraplanarEncounters.Clear();
 
             var aquaticEncounters = new List<string>();
             var specificAquaticEncounters = new List<string>();
@@ -839,10 +839,10 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
             SetUpEncounterGroup(EnvironmentConstants.Aquatic, aquaticEncounters);
             SetUpEncounterGroup(temperature + EnvironmentConstants.Aquatic, specificAquaticEncounters);
 
-            while (magicEncounters.Count < magicCount)
+            while (extraplanarEncounters.Count < magicCount)
             {
                 var encounter = $"{Guid.NewGuid().ToString()}/{Guid.NewGuid().ToString()}";
-                magicEncounters.Add(encounter);
+                extraplanarEncounters.Add(encounter);
                 levelEncounters.Add(encounter);
                 timeOfDayEncounters.Add(encounter);
             }
@@ -858,9 +858,9 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
             specifications.Environment = EnvironmentConstants.Aquatic;
 
             var weightedEncounters = encounterCollectionSelector.SelectAllWeightedFrom(specifications);
-            Assert.That(magicEncounters.Count, Is.LessThan(weightedEncounters.Count() / 2d).Or.EqualTo(weightedEncounters.Count()));
+            Assert.That(extraplanarEncounters.Count, Is.LessThan(weightedEncounters.Count() / 2d).Or.EqualTo(weightedEncounters.Count()));
 
-            foreach (var encounter in magicEncounters)
+            foreach (var encounter in extraplanarEncounters)
             {
                 Assert.That(weightedEncounters.Count(e => e.First().Key == encounter.Split('/')[0]), Is.EqualTo(1), "magic encounter");
             }
@@ -891,13 +891,13 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
 
             var expectedEncounters = new[]
             {
-                "specific underground encounter", "amount",
-                "underground encounter", "amount",
+                ("specific underground encounter", "amount"),
+                ("underground encounter", "amount"),
 
-                "specific underground encounter", "amount",
-                "underground encounter", "amount",
+                ("specific underground encounter", "amount"),
+                ("underground encounter", "amount"),
 
-                "specific underground encounter", "amount",
+                ("specific underground encounter", "amount"),
             };
 
             AssertEncounterWeight(expectedEncounters, targetEnvironment: EnvironmentConstants.Underground);
@@ -1031,7 +1031,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
                 Assert.That(undergroundCount * (expectedWeighting - 1), Is.LessThanOrEqualTo(magicCount));
 
             specificEnvironmentEncounters.Clear();
-            magicEncounters.Clear();
+            extraplanarEncounters.Clear();
 
             var undergroundEncounters = new List<string>();
             var specificUndergroundEncounters = new List<string>();
@@ -1041,10 +1041,10 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
             SetUpEncounterGroup(temperature + EnvironmentConstants.Underground, specificUndergroundEncounters);
             SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Night, nightEncounters);
 
-            while (magicEncounters.Count < magicCount)
+            while (extraplanarEncounters.Count < magicCount)
             {
                 var encounter = $"{Guid.NewGuid().ToString()}/{Guid.NewGuid().ToString()}";
-                magicEncounters.Add(encounter);
+                extraplanarEncounters.Add(encounter);
                 levelEncounters.Add(encounter);
                 nightEncounters.Add(encounter);
             }
@@ -1060,9 +1060,9 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
             specifications.Environment = EnvironmentConstants.Underground;
 
             var weightedEncounters = encounterCollectionSelector.SelectAllWeightedFrom(specifications);
-            Assert.That(magicEncounters.Count, Is.LessThan(weightedEncounters.Count() / 2d).Or.EqualTo(weightedEncounters.Count()));
+            Assert.That(extraplanarEncounters.Count, Is.LessThan(weightedEncounters.Count() / 2d).Or.EqualTo(weightedEncounters.Count()));
 
-            foreach (var encounter in magicEncounters)
+            foreach (var encounter in extraplanarEncounters)
             {
                 Assert.That(weightedEncounters.Count(e => e.First().Key == encounter.Split('/')[0]), Is.EqualTo(1), "magic encounter");
             }
@@ -1087,13 +1087,13 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
 
             var expectedEncounters = new[]
             {
-                "specific environment encounter", "specific environment amount",
-                "specific aquatic encounter", "amount",
+                ("specific environment encounter", "specific environment amount"),
+                ("specific aquatic encounter", "amount"),
 
-                "specific environment encounter", "specific environment amount",
-                "specific aquatic encounter", "amount",
+                ("specific environment encounter", "specific environment amount"),
+                ("specific aquatic encounter", "amount"),
 
-                "specific environment encounter", "specific environment amount",
+                ("specific environment encounter", "specific environment amount"),
             };
 
             AssertEncounterWeight(expectedEncounters, allowAquatic: true);
@@ -1227,7 +1227,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
                 Assert.That(specificAquaticCount * (expectedWeighting - 1), Is.LessThanOrEqualTo(magicCount));
 
             specificEnvironmentEncounters.Clear();
-            magicEncounters.Clear();
+            extraplanarEncounters.Clear();
 
             var aquaticEncounters = new List<string>();
             var specificAquaticEncounters = new List<string>();
@@ -1235,10 +1235,10 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
             SetUpEncounterGroup(EnvironmentConstants.Aquatic, aquaticEncounters);
             SetUpEncounterGroup(temperature + EnvironmentConstants.Aquatic, specificAquaticEncounters);
 
-            while (magicEncounters.Count < magicCount)
+            while (extraplanarEncounters.Count < magicCount)
             {
                 var encounter = $"{Guid.NewGuid().ToString()}/{Guid.NewGuid().ToString()}";
-                magicEncounters.Add(encounter);
+                extraplanarEncounters.Add(encounter);
                 levelEncounters.Add(encounter);
                 timeOfDayEncounters.Add(encounter);
             }
@@ -1254,9 +1254,9 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
             specifications.AllowAquatic = true;
 
             var weightedEncounters = encounterCollectionSelector.SelectAllWeightedFrom(specifications);
-            Assert.That(magicEncounters.Count, Is.LessThan(weightedEncounters.Count() / 2d).Or.EqualTo(weightedEncounters.Count()));
+            Assert.That(extraplanarEncounters.Count, Is.LessThan(weightedEncounters.Count() / 2d).Or.EqualTo(weightedEncounters.Count()));
 
-            foreach (var encounter in magicEncounters)
+            foreach (var encounter in extraplanarEncounters)
             {
                 Assert.That(weightedEncounters.Count(e => e.First().Key == encounter.Split('/')[0]), Is.EqualTo(1), "magic encounter");
             }
@@ -1290,13 +1290,13 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
 
             var expectedEncounters = new[]
             {
-                "specific environment encounter", "specific environment amount",
-                "underground aquatic encounter", "amount",
+                ("specific environment encounter", "specific environment amount"),
+                ("underground aquatic encounter", "amount"),
 
-                "specific environment encounter", "specific environment amount",
-                "underground aquatic encounter", "amount",
+                ("specific environment encounter", "specific environment amount"),
+                ("underground aquatic encounter", "amount"),
 
-                "specific environment encounter", "specific environment amount",
+                ("specific environment encounter", "specific environment amount"),
             };
 
             AssertEncounterWeight(expectedEncounters, allowAquatic: true, allowUnderground: true);
@@ -1430,7 +1430,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
                 Assert.That(undergroundAquaticCount * (expectedWeighting - 1), Is.LessThanOrEqualTo(magicCount));
 
             specificEnvironmentEncounters.Clear();
-            magicEncounters.Clear();
+            extraplanarEncounters.Clear();
 
             var aquaticEncounters = new List<string>();
             var specificAquaticEncounters = new List<string>();
@@ -1444,10 +1444,10 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
             SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Night, nightEncounters);
             SetUpEncounterGroup(EnvironmentConstants.Underground + EnvironmentConstants.Aquatic, undergroundAquaticEncounters);
 
-            while (magicEncounters.Count < magicCount)
+            while (extraplanarEncounters.Count < magicCount)
             {
                 var encounter = $"{Guid.NewGuid().ToString()}/{Guid.NewGuid().ToString()}";
-                magicEncounters.Add(encounter);
+                extraplanarEncounters.Add(encounter);
                 levelEncounters.Add(encounter);
                 nightEncounters.Add(encounter);
             }
@@ -1464,9 +1464,9 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
             specifications.AllowUnderground = true;
 
             var weightedEncounters = encounterCollectionSelector.SelectAllWeightedFrom(specifications);
-            Assert.That(magicEncounters.Count, Is.LessThan(weightedEncounters.Count() / 2d).Or.EqualTo(weightedEncounters.Count()));
+            Assert.That(extraplanarEncounters.Count, Is.LessThan(weightedEncounters.Count() / 2d).Or.EqualTo(weightedEncounters.Count()));
 
-            foreach (var encounter in magicEncounters)
+            foreach (var encounter in extraplanarEncounters)
             {
                 Assert.That(weightedEncounters.Count(e => e.First().Key == encounter.Split('/')[0]), Is.EqualTo(1), "magic encounter");
             }
@@ -1482,11 +1482,9 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
         {
             var expectedEncounters = new[]
             {
-                "specific environment encounter", "specific environment amount",
-
-                "specific environment encounter", "specific environment amount",
-
-                "specific environment encounter", "specific environment amount",
+                ("specific environment encounter", "specific environment amount"),
+                ("specific environment encounter", "specific environment amount"),
+                ("specific environment encounter", "specific environment amount"),
             };
 
             AssertEncounterWeight(expectedEncounters);
@@ -1620,12 +1618,12 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
                 Assert.That(specificCount * ((expectedWeighting - 1) / 2 - 1), Is.LessThanOrEqualTo(magicCount));
 
             specificEnvironmentEncounters.Clear();
-            magicEncounters.Clear();
+            extraplanarEncounters.Clear();
 
-            while (magicEncounters.Count < magicCount)
+            while (extraplanarEncounters.Count < magicCount)
             {
                 var encounter = $"{Guid.NewGuid().ToString()}/{Guid.NewGuid().ToString()}";
-                magicEncounters.Add(encounter);
+                extraplanarEncounters.Add(encounter);
                 levelEncounters.Add(encounter);
                 timeOfDayEncounters.Add(encounter);
             }
@@ -1639,9 +1637,9 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
             }
 
             var weightedEncounters = encounterCollectionSelector.SelectAllWeightedFrom(specifications);
-            Assert.That(magicEncounters.Count, Is.LessThan(weightedEncounters.Count() / 2d).Or.EqualTo(weightedEncounters.Count()));
+            Assert.That(extraplanarEncounters.Count, Is.LessThan(weightedEncounters.Count() / 2d).Or.EqualTo(weightedEncounters.Count()));
 
-            foreach (var encounter in magicEncounters)
+            foreach (var encounter in extraplanarEncounters)
             {
                 Assert.That(weightedEncounters.Count(e => e.First().Key == encounter.Split('/')[0]), Is.EqualTo(1), "magic encounter");
             }
@@ -1666,11 +1664,9 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
 
             var expectedEncounters = new[]
             {
-                "specific aquatic encounter", "amount",
-
-                "specific aquatic encounter", "amount",
-
-                "specific aquatic encounter", "amount",
+                ("specific aquatic encounter", "amount"),
+                ("specific aquatic encounter", "amount"),
+                ("specific aquatic encounter", "amount"),
             };
 
             AssertEncounterWeight(expectedEncounters, targetEnvironment: EnvironmentConstants.Aquatic);
@@ -1804,7 +1800,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
                 Assert.That(specificAquaticCount * ((expectedWeighting - 1) / 2 - 1), Is.LessThanOrEqualTo(magicCount));
 
             specificEnvironmentEncounters.Clear();
-            magicEncounters.Clear();
+            extraplanarEncounters.Clear();
 
             var aquaticEncounters = new List<string>();
             var specificAquaticEncounters = new List<string>();
@@ -1812,10 +1808,10 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
             SetUpEncounterGroup(EnvironmentConstants.Aquatic, aquaticEncounters);
             SetUpEncounterGroup(temperature + EnvironmentConstants.Aquatic, specificAquaticEncounters);
 
-            while (magicEncounters.Count < magicCount)
+            while (extraplanarEncounters.Count < magicCount)
             {
                 var encounter = $"{Guid.NewGuid().ToString()}/{Guid.NewGuid().ToString()}";
-                magicEncounters.Add(encounter);
+                extraplanarEncounters.Add(encounter);
                 levelEncounters.Add(encounter);
                 timeOfDayEncounters.Add(encounter);
             }
@@ -1831,9 +1827,9 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
             specifications.Environment = EnvironmentConstants.Aquatic;
 
             var weightedEncounters = encounterCollectionSelector.SelectAllWeightedFrom(specifications);
-            Assert.That(magicEncounters.Count, Is.LessThan(weightedEncounters.Count() / 2d).Or.EqualTo(weightedEncounters.Count()));
+            Assert.That(extraplanarEncounters.Count, Is.LessThan(weightedEncounters.Count() / 2d).Or.EqualTo(weightedEncounters.Count()));
 
-            foreach (var encounter in magicEncounters)
+            foreach (var encounter in extraplanarEncounters)
             {
                 Assert.That(weightedEncounters.Count(e => e.First().Key == encounter.Split('/')[0]), Is.EqualTo(1), "magic encounter");
             }
@@ -1872,11 +1868,9 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
 
             var expectedEncounters = new[]
             {
-                "underground aquatic encounter", "amount",
-
-                "underground aquatic encounter", "amount",
-
-                "underground aquatic encounter", "amount",
+                ("underground aquatic encounter", "amount"),
+                ("underground aquatic encounter", "amount"),
+                ("underground aquatic encounter", "amount"),
             };
 
             AssertEncounterWeight(expectedEncounters, environment, allowAquatic, allowUnderground);
@@ -2010,7 +2004,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
                 Assert.That(undergroundAquaticCount * ((expectedWeighting - 1) / 2 - 1), Is.LessThanOrEqualTo(magicCount));
 
             specificEnvironmentEncounters.Clear();
-            magicEncounters.Clear();
+            extraplanarEncounters.Clear();
 
             var aquaticEncounters = new List<string>();
             var specificAquaticEncounters = new List<string>();
@@ -2024,10 +2018,10 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
             SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Night, nightEncounters);
             SetUpEncounterGroup(EnvironmentConstants.Underground + EnvironmentConstants.Aquatic, undergroundAquaticEncounters);
 
-            while (magicEncounters.Count < magicCount)
+            while (extraplanarEncounters.Count < magicCount)
             {
                 var encounter = $"{Guid.NewGuid().ToString()}/{Guid.NewGuid().ToString()}";
-                magicEncounters.Add(encounter);
+                extraplanarEncounters.Add(encounter);
                 levelEncounters.Add(encounter);
                 nightEncounters.Add(encounter);
             }
@@ -2044,9 +2038,9 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
             specifications.Environment = EnvironmentConstants.Aquatic;
 
             var weightedEncounters = encounterCollectionSelector.SelectAllWeightedFrom(specifications);
-            Assert.That(magicEncounters.Count, Is.LessThan(weightedEncounters.Count() / 2).Or.EqualTo(weightedEncounters.Count()));
+            Assert.That(extraplanarEncounters.Count, Is.LessThan(weightedEncounters.Count() / 2).Or.EqualTo(weightedEncounters.Count()));
 
-            foreach (var encounter in magicEncounters)
+            foreach (var encounter in extraplanarEncounters)
             {
                 Assert.That(weightedEncounters.Count(e => e.First().Key == encounter.Split('/')[0]), Is.EqualTo(1), "magic encounter");
             }
@@ -2119,31 +2113,31 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
             var specificCivilizedEncounters = new[] { "specific civilized encounter/amount", "other specific civilized encounter/other amount" };
             SetUpEncounterGroup(temperature + EnvironmentConstants.Civilized, specificCivilizedEncounters);
 
-            levelEncounters.Add(magicEncounters[0]);
-            levelEncounters.Add(magicEncounters[1]);
+            levelEncounters.Add(extraplanarEncounters[0]);
+            levelEncounters.Add(extraplanarEncounters[1]);
             levelEncounters.Add(landEncounters[0]);
             levelEncounters.Add(landEncounters[1]);
             levelEncounters.Add(specificCivilizedEncounters[0]);
 
-            timeOfDayEncounters.Add(magicEncounters[0]);
-            timeOfDayEncounters.Add(magicEncounters[1]);
+            timeOfDayEncounters.Add(extraplanarEncounters[0]);
+            timeOfDayEncounters.Add(extraplanarEncounters[1]);
             timeOfDayEncounters.Add(landEncounters[0]);
             timeOfDayEncounters.Add(landEncounters[1]);
             timeOfDayEncounters.Add(specificCivilizedEncounters[0]);
 
-            wildernessEncounters.Add(magicEncounters[0]);
+            wildernessEncounters.Add(extraplanarEncounters[0]);
             wildernessEncounters.Add(landEncounters[0]);
 
             var expectedEncounters = new[]
             {
-                "other magic encounter", "other magic amount",
-                "specific civilized encounter", "amount",
-                "other land encounter", "other land amount",
+                ("other magic encounter", "other magic amount"),
+                ("specific civilized encounter", "amount"),
+                ("other land encounter", "other land amount"),
 
-                "specific civilized encounter", "amount",
-                "other land encounter", "other land amount",
+                ("specific civilized encounter", "amount"),
+                ("other land encounter", "other land amount"),
 
-                "specific civilized encounter", "amount",
+                ("specific civilized encounter", "amount"),
             };
 
             AssertEncounterWeight(expectedEncounters, targetEnvironment: EnvironmentConstants.Civilized);
@@ -2158,15 +2152,15 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
             SetUpEncounterGroup(EnvironmentConstants.Underground, undergroundEncounters);
             SetUpEncounterGroup(temperature + EnvironmentConstants.Underground, specificUndergroundEncounters);
 
-            levelEncounters.Add(magicEncounters[0]);
-            levelEncounters.Add(magicEncounters[1]);
+            levelEncounters.Add(extraplanarEncounters[0]);
+            levelEncounters.Add(extraplanarEncounters[1]);
             levelEncounters.Add(landEncounters[0]);
             levelEncounters.Add(landEncounters[1]);
             levelEncounters.Add(undergroundEncounters[0]);
             levelEncounters.Add(specificUndergroundEncounters[0]);
 
             var nightEncounters = new List<string>();
-            nightEncounters.Add(magicEncounters[0]);
+            nightEncounters.Add(extraplanarEncounters[0]);
             nightEncounters.Add(landEncounters[0]);
             nightEncounters.Add(undergroundEncounters[0]);
             nightEncounters.Add(specificUndergroundEncounters[0]);
@@ -2175,16 +2169,16 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
 
             var expectedEncounters = new[]
             {
-                "magic encounter", "magic amount",
-                "specific underground encounter", "amount",
-                "land encounter", "land amount",
-                "underground encounter", "amount",
+                ("magic encounter", "magic amount"),
+                ("specific underground encounter", "amount"),
+                ("land encounter", "land amount"),
+                ("underground encounter", "amount"),
 
-                "specific underground encounter", "amount",
-                "land encounter", "land amount",
-                "underground encounter", "amount",
+                ("specific underground encounter", "amount"),
+                ("land encounter", "land amount"),
+                ("underground encounter", "amount"),
 
-                "specific underground encounter", "amount",
+                ("specific underground encounter", "amount"),
             };
 
             AssertEncounterWeight(expectedEncounters, targetEnvironment: EnvironmentConstants.Underground);
@@ -2196,15 +2190,15 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
             var undergroundEncounters = new[] { "underground encounter/amount", "other underground encounter/other amount" };
             SetUpEncounterGroup(EnvironmentConstants.Underground, undergroundEncounters);
 
-            levelEncounters.Add(magicEncounters[0]);
-            levelEncounters.Add(magicEncounters[1]);
+            levelEncounters.Add(extraplanarEncounters[0]);
+            levelEncounters.Add(extraplanarEncounters[1]);
             levelEncounters.Add(landEncounters[0]);
             levelEncounters.Add(landEncounters[1]);
             levelEncounters.Add(specificEnvironmentEncounters[0]);
             levelEncounters.Add(undergroundEncounters[0]);
 
             var nightEncounters = new List<string>();
-            nightEncounters.Add(magicEncounters[0]);
+            nightEncounters.Add(extraplanarEncounters[0]);
             nightEncounters.Add(landEncounters[0]);
             nightEncounters.Add(undergroundEncounters[0]);
             nightEncounters.Add(specificEnvironmentEncounters[0]);
@@ -2213,16 +2207,16 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
 
             var expectedEncounters = new[]
             {
-                "magic encounter", "magic amount",
-                "specific environment encounter", "specific environment amount",
-                "land encounter", "land amount",
-                "underground encounter", "amount",
+                ("magic encounter", "magic amount"),
+                ("specific environment encounter", "specific environment amount"),
+                ("land encounter", "land amount"),
+                ("underground encounter", "amount"),
 
-                "specific environment encounter", "specific environment amount",
-                "land encounter", "land amount",
+                ("specific environment encounter", "specific environment amount"),
+                ("land encounter", "land amount"),
 
-                "specific environment encounter", "specific environment amount",
-                "specific environment encounter", "specific environment amount",
+                ("specific environment encounter", "specific environment amount"),
+                ("specific environment encounter", "specific environment amount"),
             };
 
             AssertEncounterWeight(expectedEncounters, allowUnderground: true);
@@ -2231,24 +2225,24 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
         [Test]
         public void GetAllPossibleWeightedEncounters()
         {
-            levelEncounters.Add(magicEncounters[0]);
+            levelEncounters.Add(extraplanarEncounters[0]);
             levelEncounters.Add(landEncounters[0]);
             levelEncounters.Add(specificEnvironmentEncounters[0]);
 
-            timeOfDayEncounters.Add(magicEncounters[0]);
+            timeOfDayEncounters.Add(extraplanarEncounters[0]);
             timeOfDayEncounters.Add(landEncounters[0]);
             timeOfDayEncounters.Add(specificEnvironmentEncounters[0]);
 
             var expectedEncounters = new[]
             {
-                "magic encounter", "magic amount",
-                "specific environment encounter", "specific environment amount",
-                "land encounter", "land amount",
+                ("magic encounter", "magic amount"),
+                ("specific environment encounter", "specific environment amount"),
+                ("land encounter", "land amount"),
 
-                "specific environment encounter", "specific environment amount",
-                "land encounter", "land amount",
+                ("specific environment encounter", "specific environment amount"),
+                ("land encounter", "land amount"),
 
-                "specific environment encounter", "specific environment amount",
+                ("specific environment encounter", "specific environment amount"),
             };
 
             AssertEncounterWeight(expectedEncounters);
@@ -2262,33 +2256,33 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
             SetUpEncounterGroup(EnvironmentConstants.Civilized, civilizedEncounters);
             SetUpEncounterGroup(temperature + EnvironmentConstants.Civilized, specificCivilizedEncounters);
 
-            levelEncounters.Add(magicEncounters[0]);
-            levelEncounters.Add(magicEncounters[1]);
+            levelEncounters.Add(extraplanarEncounters[0]);
+            levelEncounters.Add(extraplanarEncounters[1]);
             levelEncounters.Add(landEncounters[0]);
             levelEncounters.Add(landEncounters[1]);
             levelEncounters.Add(civilizedEncounters[0]);
             levelEncounters.Add(specificCivilizedEncounters[0]);
 
-            timeOfDayEncounters.Add(magicEncounters[0]);
-            timeOfDayEncounters.Add(magicEncounters[1]);
+            timeOfDayEncounters.Add(extraplanarEncounters[0]);
+            timeOfDayEncounters.Add(extraplanarEncounters[1]);
             timeOfDayEncounters.Add(landEncounters[0]);
             timeOfDayEncounters.Add(landEncounters[1]);
             timeOfDayEncounters.Add(civilizedEncounters[0]);
             timeOfDayEncounters.Add(specificCivilizedEncounters[0]);
 
-            wildernessEncounters.Add(magicEncounters[0]);
+            wildernessEncounters.Add(extraplanarEncounters[0]);
             wildernessEncounters.Add(landEncounters[0]);
 
             var expectedEncounters = new[]
             {
-                "other magic encounter", "other magic amount",
-                "specific civilized encounter", "amount",
-                "other land encounter", "other land amount",
+                ("other magic encounter", "other magic amount"),
+                ("specific civilized encounter", "amount"),
+                ("other land encounter", "other land amount"),
 
-                "specific civilized encounter", "amount",
-                "other land encounter", "other land amount",
+                ("specific civilized encounter", "amount"),
+                ("other land encounter", "other land amount"),
 
-                "specific civilized encounter", "amount",
+                ("specific civilized encounter", "amount"),
             };
 
             AssertEncounterWeight(expectedEncounters, targetEnvironment: EnvironmentConstants.Civilized);
@@ -2314,7 +2308,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
             specifications.CreatureTypeFilters = new[] { "filter" };
 
             var encounterTypesAndAmounts = encounterCollectionSelector.SelectRandomFrom(specifications);
-            AssertTypesAndAmounts(encounterTypesAndAmounts, string.Empty, "specific environment encounter", "specific environment amount");
+            AssertTypesAndAmounts(encounterTypesAndAmounts, string.Empty, ("specific environment encounter", "specific environment amount"));
         }
 
         [Test]
@@ -2334,7 +2328,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
             specifications.CreatureTypeFilters = new[] { "filter" };
 
             var encounterTypesAndAmounts = encounterCollectionSelector.SelectRandomFrom(specifications);
-            AssertTypesAndAmounts(encounterTypesAndAmounts, string.Empty, "other encounter", "other amount", "encounter", "amount");
+            AssertTypesAndAmounts(encounterTypesAndAmounts, string.Empty, ("other encounter", "other amount"), ("encounter", "amount"));
         }
 
         [Test]
@@ -2355,7 +2349,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
             specifications.CreatureTypeFilters = new[] { "filter", "other filter" };
 
             var encounterTypesAndAmounts = encounterCollectionSelector.SelectRandomFrom(specifications);
-            AssertTypesAndAmounts(encounterTypesAndAmounts, string.Empty, "other encounter", "other amount");
+            AssertTypesAndAmounts(encounterTypesAndAmounts, string.Empty, ("other encounter", "other amount"));
         }
 
         [Test]
@@ -2372,9 +2366,9 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
             var allEncounterTypesAndAmounts = encounterCollectionSelector.SelectAllWeightedFrom(specifications).ToArray();
             Assert.That(allEncounterTypesAndAmounts.Count, Is.EqualTo(3));
 
-            AssertTypesAndAmounts(allEncounterTypesAndAmounts[0], "Index 0", "specific environment encounter", "specific environment amount");
-            AssertTypesAndAmounts(allEncounterTypesAndAmounts[1], "Index 1", "specific environment encounter", "specific environment amount");
-            AssertTypesAndAmounts(allEncounterTypesAndAmounts[2], "Index 2", "specific environment encounter", "specific environment amount");
+            AssertTypesAndAmounts(allEncounterTypesAndAmounts[0], "Index 0", ("specific environment encounter", "specific environment amount"));
+            AssertTypesAndAmounts(allEncounterTypesAndAmounts[1], "Index 1", ("specific environment encounter", "specific environment amount"));
+            AssertTypesAndAmounts(allEncounterTypesAndAmounts[2], "Index 2", ("specific environment encounter", "specific environment amount"));
         }
 
         [Test]
@@ -2386,26 +2380,26 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
             SetUpEncounterGroup(EnvironmentConstants.Aquatic, aquaticEncounters);
             SetUpEncounterGroup(temperature + EnvironmentConstants.Aquatic, specificAquaticEncounters);
 
-            levelEncounters.Add(magicEncounters[0]);
+            levelEncounters.Add(extraplanarEncounters[0]);
             levelEncounters.Add(landEncounters[0]);
             levelEncounters.Add(aquaticEncounters[0]);
             levelEncounters.Add(specificAquaticEncounters[0]);
 
-            timeOfDayEncounters.Add(magicEncounters[0]);
+            timeOfDayEncounters.Add(extraplanarEncounters[0]);
             timeOfDayEncounters.Add(landEncounters[0]);
             timeOfDayEncounters.Add(aquaticEncounters[0]);
             timeOfDayEncounters.Add(specificAquaticEncounters[0]);
 
             var expectedEncounters = new[]
             {
-                "magic encounter", "magic amount",
-                "specific aquatic encounter", "amount",
-                "aquatic encounter", "amount",
+                ("magic encounter", "magic amount"),
+                ("specific aquatic encounter", "amount"),
+                ("aquatic encounter", "amount"),
 
-                "specific aquatic encounter", "amount",
-                "aquatic encounter", "amount",
+                ("specific aquatic encounter", "amount"),
+                ("aquatic encounter", "amount"),
 
-                "specific aquatic encounter", "amount",
+                ("specific aquatic encounter", "amount"),
             };
 
             AssertEncounterWeight(expectedEncounters, targetEnvironment: EnvironmentConstants.Aquatic);
@@ -2420,13 +2414,13 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
             SetUpEncounterGroup(EnvironmentConstants.Aquatic, aquaticEncounters);
             SetUpEncounterGroup(temperature + EnvironmentConstants.Aquatic, specificAquaticEncounters);
 
-            levelEncounters.Add(magicEncounters[0]);
+            levelEncounters.Add(extraplanarEncounters[0]);
             levelEncounters.Add(landEncounters[0]);
             levelEncounters.Add(specificEnvironmentEncounters[0]);
             levelEncounters.Add(aquaticEncounters[0]);
             levelEncounters.Add(specificAquaticEncounters[0]);
 
-            timeOfDayEncounters.Add(magicEncounters[0]);
+            timeOfDayEncounters.Add(extraplanarEncounters[0]);
             timeOfDayEncounters.Add(landEncounters[0]);
             timeOfDayEncounters.Add(specificEnvironmentEncounters[0]);
             timeOfDayEncounters.Add(aquaticEncounters[0]);
@@ -2434,18 +2428,18 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
 
             var expectedEncounters = new[]
             {
-                "magic encounter", "magic amount",
-                "specific environment encounter", "specific environment amount",
-                "land encounter", "land amount",
-                "aquatic encounter", "amount",
-                "specific aquatic encounter", "amount",
+                ("magic encounter", "magic amount"),
+                ("specific environment encounter", "specific environment amount"),
+                ("land encounter", "land amount"),
+                ("aquatic encounter", "amount"),
+                ("specific aquatic encounter", "amount"),
 
-                "specific environment encounter", "specific environment amount",
-                "land encounter", "land amount",
-                "specific aquatic encounter", "amount",
+                ("specific environment encounter", "specific environment amount"),
+                ("land encounter", "land amount"),
+                ("specific aquatic encounter", "amount"),
 
-                "specific environment encounter", "specific environment amount",
-                "specific environment encounter", "specific environment amount",
+                ("specific environment encounter", "specific environment amount"),
+                ("specific environment encounter", "specific environment amount"),
             };
 
             AssertEncounterWeight(expectedEncounters, allowAquatic: true);
@@ -2460,26 +2454,26 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
             SetUpEncounterGroup(EnvironmentConstants.Aquatic, aquaticEncounters);
             SetUpEncounterGroup(temperature + EnvironmentConstants.Aquatic, specificAquaticEncounters);
 
-            levelEncounters.Add(magicEncounters[0]);
+            levelEncounters.Add(extraplanarEncounters[0]);
             levelEncounters.Add(landEncounters[0]);
             levelEncounters.Add(aquaticEncounters[0]);
             levelEncounters.Add(specificAquaticEncounters[0]);
 
-            timeOfDayEncounters.Add(magicEncounters[0]);
+            timeOfDayEncounters.Add(extraplanarEncounters[0]);
             timeOfDayEncounters.Add(landEncounters[0]);
             timeOfDayEncounters.Add(aquaticEncounters[0]);
             timeOfDayEncounters.Add(specificAquaticEncounters[0]);
 
             var expectedEncounters = new[]
             {
-                "magic encounter", "magic amount",
-                "specific aquatic encounter", "amount",
-                "aquatic encounter", "amount",
+                ("magic encounter", "magic amount"),
+                ("specific aquatic encounter", "amount"),
+                ("aquatic encounter", "amount"),
 
-                "specific aquatic encounter", "amount",
-                "aquatic encounter", "amount",
+                ("specific aquatic encounter", "amount"),
+                ("aquatic encounter", "amount"),
 
-                "specific aquatic encounter", "amount",
+                ("specific aquatic encounter", "amount"),
             };
 
             AssertEncounterWeight(expectedEncounters, targetEnvironment: EnvironmentConstants.Aquatic, allowAquatic: true);
@@ -2500,8 +2494,8 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
             SetUpEncounterGroup(temperature + EnvironmentConstants.Aquatic, specificAquaticEncounters);
             SetUpEncounterGroup(EnvironmentConstants.Underground + EnvironmentConstants.Aquatic, undergroundAquaticEncounters);
 
-            levelEncounters.Add(magicEncounters[0]);
-            levelEncounters.Add(magicEncounters[1]);
+            levelEncounters.Add(extraplanarEncounters[0]);
+            levelEncounters.Add(extraplanarEncounters[1]);
             levelEncounters.Add(landEncounters[0]);
             levelEncounters.Add(landEncounters[1]);
             levelEncounters.Add(undergroundEncounters[0]);
@@ -2514,7 +2508,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
             levelEncounters.Add(undergroundAquaticEncounters[1]);
 
             var nightEncounters = new List<string>();
-            nightEncounters.Add(magicEncounters[0]);
+            nightEncounters.Add(extraplanarEncounters[0]);
             nightEncounters.Add(landEncounters[0]);
             nightEncounters.Add(undergroundEncounters[0]);
             nightEncounters.Add(specificUndergroundEncounters[0]);
@@ -2526,24 +2520,24 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
 
             var expectedEncounters = new[]
             {
-                "magic encounter", "magic amount",
-                "specific underground encounter", "amount",
-                "land encounter", "land amount",
-                "aquatic encounter", "amount",
-                "specific aquatic encounter", "amount",
-                "underground encounter", "amount",
-                "underground aquatic encounter", "amount",
+                ("magic encounter", "magic amount"),
+                ("specific underground encounter", "amount"),
+                ("land encounter", "land amount"),
+                ("aquatic encounter", "amount"),
+                ("specific aquatic encounter", "amount"),
+                ("underground encounter", "amount"),
+                ("underground aquatic encounter", "amount"),
 
-                "specific underground encounter", "amount",
-                "land encounter", "land amount",
-                "specific aquatic encounter", "amount",
-                "underground encounter", "amount",
-                "underground aquatic encounter", "amount",
+                ("specific underground encounter", "amount"),
+                ("land encounter", "land amount"),
+                ("specific aquatic encounter", "amount"),
+                ("underground encounter", "amount"),
+                ("underground aquatic encounter", "amount"),
 
-                "specific underground encounter", "amount",
-                "specific underground encounter", "amount",
-                "underground aquatic encounter", "amount",
-                "underground aquatic encounter", "amount",
+                ("specific underground encounter", "amount"),
+                ("specific underground encounter", "amount"),
+                ("underground aquatic encounter", "amount"),
+                ("underground aquatic encounter", "amount"),
             };
 
             AssertEncounterWeight(expectedEncounters, EnvironmentConstants.Underground, true);
@@ -2552,53 +2546,58 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
         [Test]
         public void AddAquaticToCivilized()
         {
-            var specificCivilizedEncounters = new[] { "specific civilized encounter/amount", "other specific civilized encounter/other amount" };
+            var civilizedEncounters = new[] { "civilized encounter/amount", "other civilized encounter/other amount" };
             var aquaticEncounters = new[] { "aquatic encounter/amount", "other aquatic encounter/other amount" };
             var specificAquaticEncounters = new[] { "specific aquatic encounter/amount", "other specific aquatic encounter/other amount" };
 
             SetUpEncounterGroup(EnvironmentConstants.Aquatic, aquaticEncounters);
             SetUpEncounterGroup(temperature + EnvironmentConstants.Aquatic, specificAquaticEncounters);
-            SetUpEncounterGroup(temperature + EnvironmentConstants.Civilized, specificCivilizedEncounters);
+            SetUpEncounterGroup(EnvironmentConstants.Civilized, civilizedEncounters);
 
-            levelEncounters.Add(magicEncounters[0]);
-            levelEncounters.Add(magicEncounters[1]);
+            levelEncounters.Add(extraplanarEncounters[0]);
+            levelEncounters.Add(extraplanarEncounters[1]);
             levelEncounters.Add(landEncounters[0]);
             levelEncounters.Add(landEncounters[1]);
-            levelEncounters.Add(specificCivilizedEncounters[0]);
+            levelEncounters.Add(anyEncounters[0]);
+            levelEncounters.Add(anyEncounters[1]);
+            levelEncounters.Add(civilizedEncounters[0]);
             levelEncounters.Add(aquaticEncounters[0]);
             levelEncounters.Add(aquaticEncounters[1]);
             levelEncounters.Add(specificAquaticEncounters[0]);
             levelEncounters.Add(specificAquaticEncounters[1]);
 
-            timeOfDayEncounters.Add(magicEncounters[0]);
-            timeOfDayEncounters.Add(magicEncounters[1]);
+            timeOfDayEncounters.Add(extraplanarEncounters[0]);
+            timeOfDayEncounters.Add(extraplanarEncounters[1]);
             timeOfDayEncounters.Add(landEncounters[0]);
             timeOfDayEncounters.Add(landEncounters[1]);
-            timeOfDayEncounters.Add(specificCivilizedEncounters[0]);
+            timeOfDayEncounters.Add(anyEncounters[0]);
+            timeOfDayEncounters.Add(anyEncounters[1]);
+            timeOfDayEncounters.Add(civilizedEncounters[0]);
             timeOfDayEncounters.Add(aquaticEncounters[0]);
             timeOfDayEncounters.Add(aquaticEncounters[1]);
             timeOfDayEncounters.Add(specificAquaticEncounters[0]);
             timeOfDayEncounters.Add(specificAquaticEncounters[1]);
 
-            wildernessEncounters.Add(magicEncounters[0]);
+            wildernessEncounters.Add(extraplanarEncounters[0]);
             wildernessEncounters.Add(landEncounters[0]);
+            wildernessEncounters.Add(anyEncounters[0]);
             wildernessEncounters.Add(aquaticEncounters[0]);
             wildernessEncounters.Add(specificAquaticEncounters[0]);
 
             var expectedEncounters = new[]
             {
-                "other magic encounter", "other magic amount",
-                "specific civilized encounter", "amount",
-                "other land encounter", "other land amount",
-                "other aquatic encounter", "other amount",
-                "other specific aquatic encounter", "other amount",
+                ("other extraplanar encounter", "other extraplanar amount"),
+                ("civilized encounter", "amount"),
+                ("other land encounter", "other land amount"),
+                ("other aquatic encounter", "other amount"),
+                ("other specific aquatic encounter", "other amount"),
 
-                "specific civilized encounter", "amount",
-                "other land encounter", "other land amount",
-                "other specific aquatic encounter", "other amount",
+                ("civilized encounter", "amount"),
+                ("other land encounter", "other land amount"),
+                ("other specific aquatic encounter", "other amount"),
 
-                "specific civilized encounter", "amount",
-                "specific civilized encounter", "amount",
+                ("civilized encounter", "amount"),
+                ("civilized encounter", "amount"),
             };
 
             AssertEncounterWeight(expectedEncounters, targetEnvironment: EnvironmentConstants.Civilized, allowAquatic: true);
@@ -2610,14 +2609,14 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
             var undergroundEncounters = new[] { "underground encounter/amount", "other underground encounter/other amount" };
             SetUpEncounterGroup(EnvironmentConstants.Underground, undergroundEncounters);
 
-            levelEncounters.Add(magicEncounters[0]);
+            levelEncounters.Add(extraplanarEncounters[0]);
             levelEncounters.Add(landEncounters[0]);
             levelEncounters.Add(specificEnvironmentEncounters[0]);
             levelEncounters.Add(undergroundEncounters[0]);
 
             var nightEncounters = new List<string>();
-            nightEncounters.Add(magicEncounters[0]);
-            nightEncounters.Add(magicEncounters[1]);
+            nightEncounters.Add(extraplanarEncounters[0]);
+            nightEncounters.Add(extraplanarEncounters[1]);
             nightEncounters.Add(landEncounters[0]);
             nightEncounters.Add(landEncounters[1]);
             nightEncounters.Add(undergroundEncounters[0]);
@@ -2628,16 +2627,16 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
 
             var expectedEncounters = new[]
             {
-                "magic encounter", "magic amount",
-                "specific environment encounter", "specific environment amount",
-                "land encounter", "land amount",
-                "underground encounter", "amount",
+                ("magic encounter", "magic amount"),
+                ("specific environment encounter", "specific environment amount"),
+                ("land encounter", "land amount"),
+                ("underground encounter", "amount"),
 
-                "specific environment encounter", "specific environment amount",
-                "land encounter", "land amount",
+                ("specific environment encounter", "specific environment amount"),
+                ("land encounter", "land amount"),
 
-                "specific environment encounter", "specific environment amount",
-                "specific environment encounter", "specific environment amount",
+                ("specific environment encounter", "specific environment amount"),
+                ("specific environment encounter", "specific environment amount"),
             };
 
             AssertEncounterWeight(expectedEncounters, allowUnderground: true);
@@ -2652,13 +2651,13 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
             SetUpEncounterGroup(EnvironmentConstants.Underground, undergroundEncounters);
             SetUpEncounterGroup(temperature + EnvironmentConstants.Underground, specificUndergroundEncounters);
 
-            levelEncounters.Add(magicEncounters[0]);
+            levelEncounters.Add(extraplanarEncounters[0]);
             levelEncounters.Add(landEncounters[0]);
             levelEncounters.Add(undergroundEncounters[0]);
             levelEncounters.Add(specificUndergroundEncounters[0]);
 
             var nightEncounters = new List<string>();
-            nightEncounters.Add(magicEncounters[0]);
+            nightEncounters.Add(extraplanarEncounters[0]);
             nightEncounters.Add(landEncounters[0]);
             nightEncounters.Add(undergroundEncounters[0]);
             nightEncounters.Add(specificUndergroundEncounters[0]);
@@ -2667,16 +2666,16 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
 
             var expectedEncounters = new[]
             {
-                "magic encounter", "magic amount",
-                "specific underground encounter", "amount",
-                "land encounter", "land amount",
-                "underground encounter", "amount",
+                ("magic encounter", "magic amount"),
+                ("specific underground encounter", "amount"),
+                ("land encounter", "land amount"),
+                ("underground encounter", "amount"),
 
-                "specific underground encounter", "amount",
-                "land encounter", "land amount",
-                "underground encounter", "amount",
+                ("specific underground encounter", "amount"),
+                ("land encounter", "land amount"),
+                ("underground encounter", "amount"),
 
-                "specific underground encounter", "amount",
+                ("specific underground encounter", "amount"),
             };
 
             AssertEncounterWeight(expectedEncounters, targetEnvironment: EnvironmentConstants.Underground, allowUnderground: true);
@@ -2695,8 +2694,8 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
             SetUpEncounterGroup(EnvironmentConstants.Aquatic, aquaticEncounters);
             SetUpEncounterGroup(temperature + EnvironmentConstants.Aquatic, specificAquaticEncounters);
 
-            levelEncounters.Add(magicEncounters[0]);
-            levelEncounters.Add(magicEncounters[1]);
+            levelEncounters.Add(extraplanarEncounters[0]);
+            levelEncounters.Add(extraplanarEncounters[1]);
             levelEncounters.Add(landEncounters[0]);
             levelEncounters.Add(landEncounters[1]);
             levelEncounters.Add(undergroundEncounters[0]);
@@ -2708,7 +2707,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
             levelEncounters.Add(undergroundAquaticEncounters[0]);
 
             var nightEncounters = new List<string>();
-            nightEncounters.Add(magicEncounters[0]);
+            nightEncounters.Add(extraplanarEncounters[0]);
             nightEncounters.Add(landEncounters[0]);
             nightEncounters.Add(specificEnvironmentEncounters[0]);
             nightEncounters.Add(undergroundEncounters[0]);
@@ -2720,22 +2719,22 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
 
             var expectedEncounters = new[]
             {
-                "magic encounter", "magic amount",
-                "specific environment encounter", "specific environment amount",
-                "land encounter", "land amount",
-                "aquatic encounter", "amount",
-                "specific aquatic encounter", "amount",
-                "underground encounter", "amount",
-                "underground aquatic encounter", "amount",
+                ("magic encounter", "magic amount"),
+                ("specific environment encounter", "specific environment amount"),
+                ("land encounter", "land amount"),
+                ("aquatic encounter", "amount"),
+                ("specific aquatic encounter", "amount"),
+                ("underground encounter", "amount"),
+                ("underground aquatic encounter", "amount"),
 
-                "specific environment encounter", "specific environment amount",
-                "land encounter", "land amount",
-                "specific aquatic encounter", "amount",
-                "underground aquatic encounter", "amount",
+                ("specific environment encounter", "specific environment amount"),
+                ("land encounter", "land amount"),
+                ("specific aquatic encounter", "amount"),
+                ("underground aquatic encounter", "amount"),
 
-                "specific environment encounter", "specific environment amount",
-                "specific environment encounter", "specific environment amount",
-                "specific environment encounter", "specific environment amount",
+                ("specific environment encounter", "specific environment amount"),
+                ("specific environment encounter", "specific environment amount"),
+                ("specific environment encounter", "specific environment amount"),
             };
 
             AssertEncounterWeight(expectedEncounters, allowAquatic: true, allowUnderground: true);
@@ -2750,8 +2749,8 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
             SetUpEncounterGroup(temperature + EnvironmentConstants.Civilized, specificCivilizedEncounters);
             SetUpEncounterGroup(EnvironmentConstants.Underground, undergroundEncounters);
 
-            levelEncounters.Add(magicEncounters[0]);
-            levelEncounters.Add(magicEncounters[1]);
+            levelEncounters.Add(extraplanarEncounters[0]);
+            levelEncounters.Add(extraplanarEncounters[1]);
             levelEncounters.Add(landEncounters[0]);
             levelEncounters.Add(landEncounters[1]);
             levelEncounters.Add(specificCivilizedEncounters[0]);
@@ -2759,8 +2758,8 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
             levelEncounters.Add(undergroundEncounters[1]);
 
             var nightEncounters = new List<string>();
-            nightEncounters.Add(magicEncounters[0]);
-            nightEncounters.Add(magicEncounters[1]);
+            nightEncounters.Add(extraplanarEncounters[0]);
+            nightEncounters.Add(extraplanarEncounters[1]);
             nightEncounters.Add(landEncounters[0]);
             nightEncounters.Add(landEncounters[1]);
             nightEncounters.Add(specificCivilizedEncounters[0]);
@@ -2769,22 +2768,22 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
 
             SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Night, nightEncounters);
 
-            wildernessEncounters.Add(magicEncounters[0]);
+            wildernessEncounters.Add(extraplanarEncounters[0]);
             wildernessEncounters.Add(landEncounters[0]);
             wildernessEncounters.Add(undergroundEncounters[0]);
 
             var expectedEncounters = new[]
             {
-                "other magic encounter", "other magic amount",
-                "specific civilized encounter", "amount",
-                "other land encounter", "other land amount",
-                "other underground encounter", "other amount",
+                ("other magic encounter", "other magic amount"),
+                ("specific civilized encounter", "amount"),
+                ("other land encounter", "other land amount"),
+                ("other underground encounter", "other amount"),
 
-                "specific civilized encounter", "amount",
-                "other land encounter", "other land amount",
+                ("specific civilized encounter", "amount"),
+                ("other land encounter", "other land amount"),
 
-                "specific civilized encounter", "amount",
-                "specific civilized encounter", "amount",
+                ("specific civilized encounter", "amount"),
+                ("specific civilized encounter", "amount"),
             };
 
             AssertEncounterWeight(expectedEncounters, targetEnvironment: EnvironmentConstants.Civilized, allowUnderground: true);
@@ -2805,8 +2804,8 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
             SetUpEncounterGroup(EnvironmentConstants.Aquatic, aquaticEncounters);
             SetUpEncounterGroup(temperature + EnvironmentConstants.Aquatic, specificAquaticEncounters);
 
-            levelEncounters.Add(magicEncounters[0]);
-            levelEncounters.Add(magicEncounters[1]);
+            levelEncounters.Add(extraplanarEncounters[0]);
+            levelEncounters.Add(extraplanarEncounters[1]);
             levelEncounters.Add(landEncounters[0]);
             levelEncounters.Add(landEncounters[1]);
             levelEncounters.Add(specificCivilizedEncounters[0]);
@@ -2820,8 +2819,8 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
             levelEncounters.Add(specificAquaticEncounters[1]);
 
             var nightEncounters = new List<string>();
-            nightEncounters.Add(magicEncounters[0]);
-            nightEncounters.Add(magicEncounters[1]);
+            nightEncounters.Add(extraplanarEncounters[0]);
+            nightEncounters.Add(extraplanarEncounters[1]);
             nightEncounters.Add(landEncounters[0]);
             nightEncounters.Add(landEncounters[1]);
             nightEncounters.Add(specificCivilizedEncounters[0]);
@@ -2836,7 +2835,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
 
             SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Night, nightEncounters);
 
-            wildernessEncounters.Add(magicEncounters[0]);
+            wildernessEncounters.Add(extraplanarEncounters[0]);
             wildernessEncounters.Add(landEncounters[0]);
             wildernessEncounters.Add(undergroundEncounters[0]);
             wildernessEncounters.Add(undergroundAquaticEncounters[0]);
@@ -2845,22 +2844,22 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
 
             var expectedEncounters = new[]
             {
-                "other magic encounter", "other magic amount",
-                "specific civilized encounter", "amount",
-                "other land encounter", "other land amount",
-                "other aquatic encounter", "other amount",
-                "other specific aquatic encounter", "other amount",
-                "other underground encounter", "other amount",
-                "other underground aquatic encounter", "other amount",
+                ("other magic encounter", "other magic amount"),
+                ("specific civilized encounter", "amount"),
+                ("other land encounter", "other land amount"),
+                ("other aquatic encounter", "other amount"),
+                ("other specific aquatic encounter", "other amount"),
+                ("other underground encounter", "other amount"),
+                ("other underground aquatic encounter", "other amount"),
 
-                "specific civilized encounter", "amount",
-                "other land encounter", "other land amount",
-                "other specific aquatic encounter", "other amount",
-                "other underground aquatic encounter", "other amount",
+                ("specific civilized encounter", "amount"),
+                ("other land encounter", "other land amount"),
+                ("other specific aquatic encounter", "other amount"),
+                ("other underground aquatic encounter", "other amount"),
 
-                "specific civilized encounter", "amount",
-                "specific civilized encounter", "amount",
-                "specific civilized encounter", "amount",
+                ("specific civilized encounter", "amount"),
+                ("specific civilized encounter", "amount"),
+                ("specific civilized encounter", "amount"),
             };
 
             AssertEncounterWeight(expectedEncounters, targetEnvironment: EnvironmentConstants.Civilized, allowAquatic: true, allowUnderground: true);

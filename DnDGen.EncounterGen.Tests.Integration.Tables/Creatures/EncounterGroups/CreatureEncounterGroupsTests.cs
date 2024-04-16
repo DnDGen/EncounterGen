@@ -2101,28 +2101,6 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
         [TestCase(CreatureConstants.Leopard,
             EncounterConstants.Leopard_Solitary,
             EncounterConstants.Leopard_Pair)]
-        [TestCase(CreatureConstants.Lich_Level1, EncounterConstants.Lich_Level1_Solitary)]
-        [TestCase(CreatureConstants.Lich_Level2, EncounterConstants.Lich_Level2_Solitary)]
-        [TestCase(CreatureConstants.Lich_Level3, EncounterConstants.Lich_Level3_Solitary)]
-        [TestCase(CreatureConstants.Lich_Level4, EncounterConstants.Lich_Level4_Solitary)]
-        [TestCase(CreatureConstants.Lich_Level5,
-            EncounterConstants.Lich_Level5_Solitary,
-            EncounterConstants.Lich_Level5_Troupe)]
-        [TestCase(CreatureConstants.Lich_Level6,
-            EncounterConstants.Lich_Level6_Solitary,
-            EncounterConstants.Lich_Level6_Troupe)]
-        [TestCase(CreatureConstants.Lich_Level7,
-            EncounterConstants.Lich_Level7_Solitary,
-            EncounterConstants.Lich_Level7_Troupe)]
-        [TestCase(CreatureConstants.Lich_Level8,
-            EncounterConstants.Lich_Level8_Solitary,
-            EncounterConstants.Lich_Level8_Troupe)]
-        [TestCase(CreatureConstants.Lich_Level9,
-            EncounterConstants.Lich_Level9_Solitary,
-            EncounterConstants.Lich_Level9_Troupe)]
-        [TestCase(CreatureConstants.Lich_Level10,
-            EncounterConstants.Lich_Level10_Solitary,
-            EncounterConstants.Lich_Level10_Troupe)]
         [TestCase(CreatureConstants.Lich_Level11,
             EncounterConstants.Lich_Level11_Solitary,
             EncounterConstants.Lich_Level11_Troupe)]

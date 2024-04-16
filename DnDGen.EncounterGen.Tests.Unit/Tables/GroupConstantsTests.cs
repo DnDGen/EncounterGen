@@ -8,9 +8,8 @@ namespace DnDGen.EncounterGen.Tests.Unit.Tables
     {
         [TestCase(GroupConstants.RequiresSubtype, "Requires Subtype")]
         [TestCase(GroupConstants.UseSubtypeForTreasure, "Use Subtype for Treasure")]
-        [TestCase(GroupConstants.Magic, "Magic")]
-        [TestCase(GroupConstants.Land, "Land")]
         [TestCase(GroupConstants.Wilderness, "Wilderness")]
+        [TestCase(GroupConstants.Extraplanar, "Extraplanar")]
         public void Constant(string constant, string value)
         {
             Assert.That(constant, Is.EqualTo(value));

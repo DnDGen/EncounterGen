@@ -98,6 +98,8 @@ namespace DnDGen.EncounterGen.Selectors.Collections
             var extraplanarEncounters = GetEncountersFromCreatureGroup(GroupConstants.Extraplanar);
             var aquaticEncounters = GetEncountersFromCreatureGroup(EnvironmentConstants.Aquatic);
             var undergroundEncounters = GetEncountersFromCreatureGroup(EnvironmentConstants.Underground);
+            var landEncounters = GetEncountersFromCreatureGroup(EnvironmentConstants.Land);
+            var anyEncounters = GetEncountersFromCreatureGroup(EnvironmentConstants.Any);
 
             var commonEncounters = validEncounters.Except(extraplanarEncounters);
 
@@ -107,7 +109,14 @@ namespace DnDGen.EncounterGen.Selectors.Collections
             if (encounterSpecifications.Environment != EnvironmentConstants.Underground)
                 commonEncounters = commonEncounters.Except(undergroundEncounters);
 
+            if (encounterSpecifications.Environment == EnvironmentConstants.Civilized)
+                commonEncounters = commonEncounters.Except(landEncounters).Except(anyEncounters);
+
             var uncommonEncounters = validEncounters.Intersect(aquaticEncounters.Union(undergroundEncounters));
+
+            if (encounterSpecifications.Environment == EnvironmentConstants.Civilized)
+                uncommonEncounters = uncommonEncounters.Union(validEncounters.Intersect(landEncounters.Union(anyEncounters)));
+
             var rareEncounters = validEncounters.Intersect(extraplanarEncounters);
 
             var weightedEncounters = collectionSelector.CreateWeighted(common: commonEncounters, uncommon: uncommonEncounters, rare: rareEncounters);
@@ -130,8 +139,14 @@ namespace DnDGen.EncounterGen.Selectors.Collections
 
             if (encounterSpecifications.Environment != EnvironmentConstants.Aquatic)
             {
-                var landEncounters = GetEncountersFromCreatureGroup(GroupConstants.Land);
+                var landEncounters = GetEncountersFromCreatureGroup(EnvironmentConstants.Land);
                 allEncounters = allEncounters.Union(landEncounters);
+            }
+
+            if (ShouldGetCivilized(encounterSpecifications))
+            {
+                var civilizedEncounters = GetEncountersFromCreatureGroup(EnvironmentConstants.Civilized);
+                allEncounters = allEncounters.Union(civilizedEncounters);
             }
 
             if (ShouldGetAquatic(encounterSpecifications))
@@ -167,20 +182,15 @@ namespace DnDGen.EncounterGen.Selectors.Collections
             return validEncounters;
         }
 
-        private bool ShouldGetUndergroundAquatic(EncounterSpecifications specifications)
-        {
-            return ShouldGetUnderground(specifications) && ShouldGetAquatic(specifications);
-        }
+        private bool ShouldGetUndergroundAquatic(EncounterSpecifications specifications) => ShouldGetUnderground(specifications) && ShouldGetAquatic(specifications);
 
-        private bool ShouldGetUnderground(EncounterSpecifications specifications)
-        {
-            return (specifications.Environment == EnvironmentConstants.Underground || specifications.AllowUnderground);
-        }
+        private bool ShouldGetCivilized(EncounterSpecifications specifications) => specifications.Environment == EnvironmentConstants.Civilized;
 
-        private bool ShouldGetAquatic(EncounterSpecifications specifications)
-        {
-            return (specifications.Environment == EnvironmentConstants.Aquatic || specifications.AllowAquatic);
-        }
+        private bool ShouldGetUnderground(EncounterSpecifications specifications) =>
+            specifications.Environment == EnvironmentConstants.Underground || specifications.AllowUnderground;
+
+        private bool ShouldGetAquatic(EncounterSpecifications specifications) =>
+            specifications.Environment == EnvironmentConstants.Aquatic || specifications.AllowAquatic;
 
         private IEnumerable<string> GetEncountersFromCreatureGroup(string creatureGroup)
         {
