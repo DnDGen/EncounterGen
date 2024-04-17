@@ -67,7 +67,14 @@ namespace DnDGen.EncounterGen.Generators
             return creatureNames.Distinct();
         }
 
-        public bool ValidEncounterExists(string environment = "", string temperature = "", string timeOfDay = "", int level = 0, bool allowAquatic = true, bool allowUnderground = true, params string[] filters)
+        public bool ValidEncounterExists(
+            string environment = "",
+            string temperature = "",
+            string timeOfDay = "",
+            int level = 0,
+            bool allowAquatic = true,
+            bool allowUnderground = true,
+            params string[] filters)
         {
             var possibleEncounters = encounterCollectionSelector.SelectPossibleFrom(environment, temperature, timeOfDay, level, allowAquatic, allowUnderground, filters);
             return possibleEncounters.Any();
