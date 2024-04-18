@@ -123,16 +123,16 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
             var weighted = Enumerable.Empty<string>();
 
             if (common?.Any() == true)
-                weighted = weighted.Concat(common).Concat(common).Concat(common).Concat(common);
+                weighted = weighted.Concat(Enumerable.Repeat(common, commonWeight).SelectMany(e => e));
 
             if (uncommon?.Any() == true)
-                weighted = weighted.Concat(uncommon).Concat(uncommon).Concat(uncommon);
+                weighted = weighted.Concat(Enumerable.Repeat(uncommon, uncommonWeight).SelectMany(e => e));
 
             if (rare?.Any() == true)
-                weighted = weighted.Concat(rare).Concat(rare);
+                weighted = weighted.Concat(Enumerable.Repeat(rare, rareWeight).SelectMany(e => e));
 
             if (veryRare?.Any() == true)
-                weighted = weighted.Concat(veryRare);
+                weighted = weighted.Concat(Enumerable.Repeat(veryRare, veryRareWeight).SelectMany(e => e));
 
             return weighted;
         }
@@ -1740,21 +1740,847 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
         }
 
         [Test]
-        public void SelectPossibleFrom_()
+        public void SelectPossibleFrom_ReturnsPossibleEncounters_AllDefaults_Some()
         {
             Assert.Fail("not yet written");
         }
 
         [Test]
-        public void SelectPossibleTemperatures_()
+        public void SelectPossibleFrom_ReturnsPossibleEncounters_AllDefaults_None()
         {
             Assert.Fail("not yet written");
         }
 
         [Test]
-        public void SelectPossibleTimesOfDay_()
+        public void SelectPossibleFrom_ReturnsPossibleEncounters_FromSetEnvironment_Some()
         {
             Assert.Fail("not yet written");
+        }
+
+        [Test]
+        public void SelectPossibleFrom_ReturnsPossibleEncounters_FromSetEnvironment_None()
+        {
+            Assert.Fail("not yet written");
+        }
+
+        [Test]
+        public void SelectPossibleFrom_ReturnsPossibleEncounters_FromSetTemperature_Some()
+        {
+            Assert.Fail("not yet written");
+        }
+
+        [Test]
+        public void SelectPossibleFrom_ReturnsPossibleEncounters_FromSetTemperature_None()
+        {
+            Assert.Fail("not yet written");
+        }
+
+        [Test]
+        public void SelectPossibleFrom_ReturnsPossibleEncounters_FromSetTimeOfDay_Some()
+        {
+            Assert.Fail("not yet written");
+        }
+
+        [Test]
+        public void SelectPossibleFrom_ReturnsPossibleEncounters_FromSetTimeOfDay_None()
+        {
+            Assert.Fail("not yet written");
+        }
+
+        [Test]
+        public void SelectPossibleFrom_ReturnsPossibleEncounters_FromSetLevel_Some()
+        {
+            Assert.Fail("not yet written");
+        }
+
+        [Test]
+        public void SelectPossibleFrom_ReturnsPossibleEncounters_FromSetLevel_None()
+        {
+            Assert.Fail("not yet written");
+        }
+
+        [TestCase(true)]
+        [TestCase(false)]
+        public void SelectPossibleFrom_ReturnsPossibleEncounters_FromSetAllowAquatic_Some(bool aquatic)
+        {
+            Assert.Fail("not yet written");
+        }
+
+        [TestCase(true)]
+        [TestCase(false)]
+        public void SelectPossibleFrom_ReturnsPossibleEncounters_FromSetAllowAquatic_None(bool aquatic)
+        {
+            Assert.Fail("not yet written");
+        }
+
+        [TestCase(true)]
+        [TestCase(false)]
+        public void SelectPossibleFrom_ReturnsPossibleEncounters_FromSetAllowUnderground_Some(bool underground)
+        {
+            Assert.Fail("not yet written");
+        }
+
+        [TestCase(true)]
+        [TestCase(false)]
+        public void SelectPossibleFrom_ReturnsPossibleEncounters_FromSetAllowUnderground_None(bool underground)
+        {
+            Assert.Fail("not yet written");
+        }
+
+        [Test]
+        public void SelectPossibleFrom_ReturnsPossibleEncounters_FromSetFilter_Some()
+        {
+            Assert.Fail("not yet written");
+        }
+
+        [Test]
+        public void SelectPossibleFrom_ReturnsPossibleEncounters_FromSetFilter_None()
+        {
+            Assert.Fail("not yet written");
+        }
+
+        [Test]
+        public void SelectPossibleFrom_ReturnsPossibleEncounters_FromSetFilters_Some()
+        {
+            Assert.Fail("not yet written");
+        }
+
+        [Test]
+        public void SelectPossibleFrom_ReturnsPossibleEncounters_FromSetFilters_None()
+        {
+            Assert.Fail("not yet written");
+        }
+
+        [Test]
+        public void SelectPossibleFrom_ReturnsPossibleEncounters_FromSomeSetValues_Some()
+        {
+            Assert.Fail("not yet written");
+        }
+
+        [Test]
+        public void SelectPossibleFrom_ReturnsPossibleEncounters_FromSomeSetValues_None()
+        {
+            Assert.Fail("not yet written");
+        }
+
+        [Test]
+        public void SelectPossibleFrom_ReturnsPossibleEncounters_FromAllSetValues_Some()
+        {
+            Assert.Fail("not yet written");
+        }
+
+        [Test]
+        public void SelectPossibleFrom_ReturnsPossibleEncounters_FromAllSetValues_None()
+        {
+            Assert.Fail("not yet written");
+        }
+
+        [Test]
+        public void SelectPossibleTemperatures_ReturnsValidTemperatures()
+        {
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Warm + "environment", new[] { "my encounter/my amount", "my wrong encounter/my wrong amount" });
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Cold + "environment", new[] { "my wrong encounter/my amount", "my other encounter/my other amount" });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Day, new[]
+            {
+                "my encounter/my amount",
+                "my wrong encounter/my wrong amount",
+                "my day encounter/my day amount" });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[]
+            {
+                "my night encounter/my night amount",
+                "my wrong encounter/my wrong amount",
+                "my other encounter/my other amount" });
+
+            SetupEncounterLevel("my encounter/my amount", 9);
+            SetupEncounterLevel("my other encounter/my other amount", 26);
+
+            var possibleTemps = encounterCollectionSelector.SelectPossibleTemperatures("environment");
+            Assert.That(possibleTemps, Is.EquivalentTo(new[] { EnvironmentConstants.Temperatures.Warm, EnvironmentConstants.Temperatures.Cold }));
+        }
+
+        [Test]
+        public void SelectPossibleTemperatures_ReturnsValidTemperatures_FromLand()
+        {
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Warm + "environment", new[] { "my warm encounter/my warm amount", "my wrong encounter/my wrong amount" });
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Temperate + "environment", new[]
+            {
+                "my wrong encounter/my amount",
+                "my temperate encounter/my temperate amount"
+            });
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Cold + "environment", new[] { "my wrong encounter/my amount", "my cold encounter/my cold amount" });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Day, new[]
+            {
+                "my encounter/my amount",
+                "my wrong encounter/my wrong amount",
+                "my day encounter/my day amount",
+                "my land encounter/my land amount"
+            });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[]
+            {
+                "my night encounter/my night amount",
+                "my wrong encounter/my wrong amount",
+                "my other encounter/my other amount"
+            });
+
+            SetupEncounterLevel("my encounter/my amount", 9);
+            SetupEncounterLevel("my other encounter/my other amount", 26);
+
+            landEncounters.Add("my land encounter/my land amount");
+            SetupEncounterLevel("my land encounter/my land amount", 6);
+
+            var possibleTemps = encounterCollectionSelector.SelectPossibleTemperatures("environment");
+            Assert.That(possibleTemps, Is.EquivalentTo(new[]
+            {
+                EnvironmentConstants.Temperatures.Warm,
+                EnvironmentConstants.Temperatures.Temperate,
+                EnvironmentConstants.Temperatures.Cold
+            }));
+        }
+
+        [Test]
+        public void SelectPossibleTemperatures_ReturnsValidTemperatures_FromAny()
+        {
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Warm + "environment", new[] { "my warm encounter/my warm amount", "my wrong encounter/my wrong amount" });
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Temperate + "environment", new[]
+            {
+                "my wrong encounter/my amount",
+                "my temperate encounter/my temperate amount"
+            });
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Cold + "environment", new[] { "my wrong encounter/my amount", "my cold encounter/my cold amount" });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Day, new[]
+            {
+                "my encounter/my amount",
+                "my wrong encounter/my wrong amount",
+                "my day encounter/my day amount",
+                "my any encounter/my any amount"
+            });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[]
+            {
+                "my night encounter/my night amount",
+                "my wrong encounter/my wrong amount",
+                "my other encounter/my other amount"
+            });
+
+            SetupEncounterLevel("my encounter/my amount", 9);
+            SetupEncounterLevel("my other encounter/my other amount", 26);
+
+            anyEncounters.Add("my any encounter/my any amount");
+            SetupEncounterLevel("my any encounter/my any amount", 6);
+
+            var possibleTemps = encounterCollectionSelector.SelectPossibleTemperatures("environment");
+            Assert.That(possibleTemps, Is.EquivalentTo(new[]
+            {
+                EnvironmentConstants.Temperatures.Warm,
+                EnvironmentConstants.Temperatures.Temperate,
+                EnvironmentConstants.Temperatures.Cold
+            }));
+        }
+
+        [Test]
+        public void SelectPossibleTemperatures_ReturnsValidTemperatures_FromExtraplanar()
+        {
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Warm + "environment", new[] { "my warm encounter/my warm amount", "my wrong encounter/my wrong amount" });
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Temperate + "environment", new[]
+            {
+                "my wrong encounter/my amount",
+                "my temperate encounter/my temperate amount"
+            });
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Cold + "environment", new[] { "my wrong encounter/my amount", "my cold encounter/my cold amount" });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Day, new[]
+            {
+                "my encounter/my amount",
+                "my wrong encounter/my wrong amount",
+                "my day encounter/my day amount",
+                "my extraplanar encounter/my extraplanar amount"
+            });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[]
+            {
+                "my night encounter/my night amount",
+                "my wrong encounter/my wrong amount",
+                "my other encounter/my other amount"
+            });
+
+            SetupEncounterLevel("my encounter/my amount", 9);
+            SetupEncounterLevel("my other encounter/my other amount", 26);
+
+            extraplanarEncounters.Add("my extraplanar encounter/my extraplanar amount");
+            SetupEncounterLevel("my extraplanar encounter/my extraplanar amount", 6);
+
+            var possibleTemps = encounterCollectionSelector.SelectPossibleTemperatures("environment");
+            Assert.That(possibleTemps, Is.EquivalentTo(new[]
+            {
+                EnvironmentConstants.Temperatures.Warm,
+                EnvironmentConstants.Temperatures.Temperate,
+                EnvironmentConstants.Temperatures.Cold
+            }));
+        }
+
+        [Test]
+        public void SelectPossibleTemperatures_ReturnsValidTemperatures_FromCivilized()
+        {
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Civilized, new[]
+            {
+                "my warm encounter/my warm amount",
+                "my wrong encounter/my wrong amount"
+            });
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Civilized, new[]
+            {
+                "my wrong encounter/my amount",
+                "my temperate encounter/my temperate amount"
+            });
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Civilized, new[]
+            {
+                "my wrong encounter/my amount",
+                "my cold encounter/my cold amount"
+            });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Day, new[]
+            {
+                "my encounter/my amount",
+                "my wrong encounter/my wrong amount",
+                "my day encounter/my day amount",
+                "my civilized encounter/my civilized amount"
+            });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[]
+            {
+                "my night encounter/my night amount",
+                "my wrong encounter/my wrong amount",
+                "my other encounter/my other amount"
+            });
+
+            SetupEncounterLevel("my encounter/my amount", 9);
+            SetupEncounterLevel("my other encounter/my other amount", 26);
+
+            civilizedEncounters.Add("my civilized encounter/my civilized amount");
+            SetupEncounterLevel("my civilized encounter/my civilized amount", 6);
+
+            var possibleTemps = encounterCollectionSelector.SelectPossibleTemperatures(EnvironmentConstants.Civilized);
+            Assert.That(possibleTemps, Is.EquivalentTo(new[]
+            {
+                EnvironmentConstants.Temperatures.Warm,
+                EnvironmentConstants.Temperatures.Temperate,
+                EnvironmentConstants.Temperatures.Cold
+            }));
+        }
+
+        [Test]
+        public void SelectPossibleTemperatures_ReturnsValidTemperatures_FromAquatic()
+        {
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Warm + "environment", new[] { "my warm encounter/my warm amount", "my wrong encounter/my wrong amount" });
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Temperate + "environment", new[]
+            {
+                "my wrong encounter/my amount",
+                "my temperate encounter/my temperate amount"
+            });
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Cold + "environment", new[] { "my wrong encounter/my amount", "my cold encounter/my cold amount" });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Day, new[]
+            {
+                "my encounter/my amount",
+                "my wrong encounter/my wrong amount",
+                "my day encounter/my day amount",
+                "my aquatic encounter/my aquatic amount"
+            });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[]
+            {
+                "my night encounter/my night amount",
+                "my wrong encounter/my wrong amount",
+                "my other encounter/my other amount"
+            });
+
+            SetupEncounterLevel("my encounter/my amount", 9);
+            SetupEncounterLevel("my other encounter/my other amount", 26);
+            SetupEncounterLevel("my aquatic encounter/my aquatic amount", 6);
+
+            var aquaticEncounters = new[] { "my aquatic encounter/my aquatic amount", "aquatic encounter/amount", "other aquatic encounter/other amount" };
+
+            SetUpEncounterGroup(EnvironmentConstants.Aquatic, aquaticEncounters);
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic, new[]
+            {
+                "my warm aquatic encounter/my warm aquatic amount",
+                "my wrong encounter/my wrong amount"
+            });
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic, new[]
+            {
+                "my wrong encounter/my amount",
+                "my temperate aquatic encounter/my temperate aquatic amount"
+            });
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Aquatic, new[]
+            {
+                "my wrong encounter/my amount",
+                "my cold aquatic encounter/my cold aquatic amount"
+            });
+
+            var possibleTemps = encounterCollectionSelector.SelectPossibleTemperatures("environment");
+            Assert.That(possibleTemps, Is.EquivalentTo(new[]
+            {
+                EnvironmentConstants.Temperatures.Warm,
+                EnvironmentConstants.Temperatures.Temperate,
+                EnvironmentConstants.Temperatures.Cold
+            }));
+        }
+
+        [TestCase(EnvironmentConstants.Temperatures.Warm)]
+        [TestCase(EnvironmentConstants.Temperatures.Temperate)]
+        [TestCase(EnvironmentConstants.Temperatures.Cold)]
+        public void SelectPossibleTemperatures_ReturnsValidTemperatures_FromSpecificAquatic(string temp)
+        {
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Warm + "environment", new[] { "my warm encounter/my warm amount", "my wrong encounter/my wrong amount" });
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Temperate + "environment", new[]
+            {
+                "my wrong encounter/my amount",
+                "my temperate encounter/my temperate amount"
+            });
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Cold + "environment", new[] { "my wrong encounter/my amount", "my cold encounter/my cold amount" });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Day, new[]
+            {
+                "my encounter/my amount",
+                "my wrong encounter/my wrong amount",
+                "my day encounter/my day amount",
+                "my specific aquatic encounter/my specific aquatic amount"
+            });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[]
+            {
+                "my night encounter/my night amount",
+                "my wrong encounter/my wrong amount",
+                "my other encounter/my other amount"
+            });
+
+            SetupEncounterLevel("my encounter/my amount", 9);
+            SetupEncounterLevel("my other encounter/my other amount", 26);
+            SetupEncounterLevel("my specific aquatic encounter/my specific aquatic amount", 6);
+
+            var aquaticEncounters = new[] { "aquatic encounter/amount", "other aquatic encounter/other amount" };
+            var specificAquaticEncounters = new[]
+            {
+                "specific aquatic encounter/amount",
+                "my specific aquatic encounter/my specific aquatic amount",
+                "other specific aquatic encounter/other amount"
+            };
+
+            SetUpEncounterGroup(EnvironmentConstants.Aquatic, aquaticEncounters);
+            SetUpEncounterGroup(temp + EnvironmentConstants.Aquatic, specificAquaticEncounters);
+
+            var possibleTemps = encounterCollectionSelector.SelectPossibleTemperatures("environment");
+            Assert.That(possibleTemps, Is.EquivalentTo(new[] { temp }));
+        }
+
+        [Test]
+        public void SelectPossibleTemperatures_ReturnsValidTemperatures_FromUnderground()
+        {
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Warm + "environment", new[] { "my warm encounter/my warm amount", "my wrong encounter/my wrong amount" });
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Temperate + "environment", new[]
+            {
+                "my wrong encounter/my amount",
+                "my temperate encounter/my temperate amount"
+            });
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Cold + "environment", new[] { "my wrong encounter/my amount", "my cold encounter/my cold amount" });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Day, new[]
+            {
+                "my encounter/my amount",
+                "my wrong encounter/my wrong amount",
+                "my day encounter/my day amount",
+            });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[]
+            {
+                "my night encounter/my night amount",
+                "my wrong encounter/my wrong amount",
+                "my other encounter/my other amount",
+                "my underground encounter/my underground amount"
+            });
+
+            SetupEncounterLevel("my encounter/my amount", 9);
+            SetupEncounterLevel("my other encounter/my other amount", 26);
+            SetupEncounterLevel("my underground encounter/my underground amount", 6);
+
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[]
+            {
+                "my encounter/my amount",
+                "my wrong encounter/my wrong amount",
+                "my other encounter/my other amount",
+                "my underground encounter/my underground amount"
+            });
+
+            var undergroundEncounters = new[]
+            {
+                "underground encounter/amount",
+                "my underground encounter/my underground amount",
+                "other underground encounter/other amount"
+            };
+            SetUpEncounterGroup(EnvironmentConstants.Underground, undergroundEncounters);
+
+            var possibleTemps = encounterCollectionSelector.SelectPossibleTemperatures("environment");
+            Assert.That(possibleTemps, Is.EquivalentTo(new[]
+            {
+                EnvironmentConstants.Temperatures.Warm,
+                EnvironmentConstants.Temperatures.Temperate,
+                EnvironmentConstants.Temperatures.Cold
+            }));
+        }
+
+        [Test]
+        public void SelectPossibleTemperatures_ReturnsValidTemperatures_FromUndergroundAquatic()
+        {
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Warm + "environment", new[] { "my warm encounter/my warm amount", "my wrong encounter/my wrong amount" });
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Temperate + "environment", new[]
+            {
+                "my wrong encounter/my amount",
+                "my temperate encounter/my temperate amount"
+            });
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Cold + "environment", new[] { "my wrong encounter/my amount", "my cold encounter/my cold amount" });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Day, new[]
+            {
+                "my encounter/my amount",
+                "my wrong encounter/my wrong amount",
+                "my day encounter/my day amount",
+            });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[]
+            {
+                "my night encounter/my night amount",
+                "my wrong encounter/my wrong amount",
+                "my other encounter/my other amount",
+                "my underground aquatic encounter/my underground aquatic amount"
+            });
+
+            SetupEncounterLevel("my encounter/my amount", 9);
+            SetupEncounterLevel("my other encounter/my other amount", 26);
+            SetupEncounterLevel("my underground aquatic encounter/my underground aquatic amount", 6);
+
+            var undergroundAquaticEncounters = new[]
+            {
+                "underground aquatic encounter/amount",
+                "my underground aquatic encounter/my underground aquatic amount",
+                "other underground aquatic encounter/other amount"
+            };
+
+            SetUpEncounterGroup(EnvironmentConstants.Underground + EnvironmentConstants.Aquatic, undergroundAquaticEncounters);
+
+            var possibleTemps = encounterCollectionSelector.SelectPossibleTemperatures("environment");
+            Assert.That(possibleTemps, Is.EquivalentTo(new[]
+            {
+                EnvironmentConstants.Temperatures.Warm,
+                EnvironmentConstants.Temperatures.Temperate,
+                EnvironmentConstants.Temperatures.Cold
+            }));
+        }
+
+        [TestCase(EnvironmentConstants.Temperatures.Warm)]
+        [TestCase(EnvironmentConstants.Temperatures.Temperate)]
+        [TestCase(EnvironmentConstants.Temperatures.Cold)]
+        public void SelectPossibleTemperatures_ReturnsValidTemperatures_ForTemperature(string temperature)
+        {
+            SetUpEncounterGroup(temperature + "environment", new[] { "my encounter/my amount", "my other encounter/my other amount" });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Day, new[]
+            {
+                "my encounter/my amount",
+                "my wrong encounter/my wrong amount",
+                "my day encounter/my day amount",
+            });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[]
+            {
+                "my night encounter/my night amount",
+                "my wrong encounter/my wrong amount",
+                "my other encounter/my other amount",
+            });
+
+            SetupEncounterLevel("my encounter/my amount", 9);
+
+            var possibleTemps = encounterCollectionSelector.SelectPossibleTemperatures("environment");
+            Assert.That(possibleTemps, Is.EquivalentTo(new[] { temperature }));
+        }
+
+        [Test]
+        public void SelectPossibleTemperatures_ReturnsValidTemperatures_None()
+        {
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Warm + "environment", new[] { "my warm encounter/my warm amount", "my wrong encounter/my wrong amount" });
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Temperate + "environment", new[]
+            {
+                "my wrong encounter/my amount",
+                "my temperate encounter/my temperate amount"
+            });
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Cold + "environment", new[] { "my wrong encounter/my amount", "my cold encounter/my cold amount" });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Day, new[]
+{
+                "my encounter/my amount",
+                "my wrong encounter/my wrong amount",
+                "my day encounter/my day amount",
+            });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[]
+            {
+                "my night encounter/my night amount",
+                "my wrong encounter/my wrong amount",
+                "my other encounter/my other amount",
+            });
+
+            SetupEncounterLevel("my encounter/my amount", 9);
+
+            var possibleTemps = encounterCollectionSelector.SelectPossibleTemperatures("environment");
+            Assert.That(possibleTemps, Is.Empty);
+        }
+
+        [Test]
+        public void SelectPossibleTimesOfDay_ReturnsValidTimesOfDay()
+        {
+            SetUpEncounterGroup("temperatureenvironment", new[] { "my encounter/my amount", "my other encounter/my other amount" });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Day, new[]
+            {
+                "my encounter/my amount",
+                "my wrong encounter/my wrong amount",
+                "my day encounter/my day amount" });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[]
+            {
+                "my night encounter/my night amount",
+                "my wrong encounter/my wrong amount",
+                "my other encounter/my other amount" });
+
+            SetupEncounterLevel("my encounter/my amount", 9);
+            SetupEncounterLevel("my other encounter/my other amount", 26);
+
+            var possibleTimesOfDay = encounterCollectionSelector.SelectPossibleTimesOfDay("environment", "temperature");
+            Assert.That(possibleTimesOfDay, Is.EquivalentTo(new[] { EnvironmentConstants.TimesOfDay.Day, EnvironmentConstants.TimesOfDay.Night }));
+        }
+
+        [Test]
+        public void SelectPossibleTimesOfDay_ReturnsValidTimesOfDay_FromLand()
+        {
+            SetUpEncounterGroup("temperatureenvironment", new[] { "my encounter/my amount", "my other encounter/my other amount" });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Day, new[]
+            {
+                "my wrong encounter/my wrong amount",
+                "my land encounter/my land amount"
+            });
+
+            SetupEncounterLevel("my encounter/my amount", 9);
+            SetupEncounterLevel("my other encounter/my other amount", 26);
+
+            landEncounters.Add("my land encounter/my land amount");
+            SetupEncounterLevel("my land encounter/my land amount", 6);
+
+            var possibleTimesOfDay = encounterCollectionSelector.SelectPossibleTimesOfDay("environment", "temperature");
+            Assert.That(possibleTimesOfDay, Is.EquivalentTo(new[] { EnvironmentConstants.TimesOfDay.Day }));
+        }
+
+        [Test]
+        public void SelectPossibleTimesOfDay_ReturnsValidTimesOfDay_FromAny()
+        {
+            SetUpEncounterGroup("temperatureenvironment", new[] { "my encounter/my amount", "my other encounter/my other amount" });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Day, new[]
+            {
+                "my wrong encounter/my wrong amount",
+                "my any encounter/my any amount"
+            });
+
+            SetupEncounterLevel("my encounter/my amount", 9);
+            SetupEncounterLevel("my other encounter/my other amount", 26);
+
+            anyEncounters.Add("my any encounter/my any amount");
+            SetupEncounterLevel("my any encounter/my any amount", 6);
+
+            var possibleTimesOfDay = encounterCollectionSelector.SelectPossibleTimesOfDay("environment", "temperature");
+            Assert.That(possibleTimesOfDay, Is.EquivalentTo(new[] { EnvironmentConstants.TimesOfDay.Day }));
+        }
+
+        [Test]
+        public void SelectPossibleTimesOfDay_ReturnsValidTimesOfDay_FromExtraplanar()
+        {
+            SetUpEncounterGroup("temperatureenvironment", new[] { "my encounter/my amount", "my other encounter/my other amount" });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Day, new[]
+            {
+                "my wrong encounter/my wrong amount",
+                "my extraplanar encounter/my extraplanar amount"
+            });
+
+            SetupEncounterLevel("my encounter/my amount", 9);
+            SetupEncounterLevel("my other encounter/my other amount", 26);
+
+            extraplanarEncounters.Add("my extraplanar encounter/my extraplanar amount");
+            SetupEncounterLevel("my extraplanar encounter/my extraplanar amount", 6);
+
+            var possibleTimesOfDay = encounterCollectionSelector.SelectPossibleTimesOfDay("environment", "temperature");
+            Assert.That(possibleTimesOfDay, Is.EquivalentTo(new[] { EnvironmentConstants.TimesOfDay.Day }));
+        }
+
+        [Test]
+        public void SelectPossibleTimesOfDay_ReturnsValidTimesOfDay_FromCivilized()
+        {
+            SetUpEncounterGroup("temperatureCivilized", new[] { "my encounter/my amount", "my other encounter/my other amount" });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Day, new[]
+            {
+                "my wrong encounter/my wrong amount",
+                "my civilized encounter/my civilized amount"
+            });
+
+            SetupEncounterLevel("my encounter/my amount", 9);
+            SetupEncounterLevel("my other encounter/my other amount", 26);
+
+            civilizedEncounters.Add("my civilized encounter/my civilized amount");
+            SetupEncounterLevel("my civilized encounter/my civilized amount", 6);
+
+            var possibleTimesOfDay = encounterCollectionSelector.SelectPossibleTimesOfDay(EnvironmentConstants.Civilized, "temperature");
+            Assert.That(possibleTimesOfDay, Is.EquivalentTo(new[] { EnvironmentConstants.TimesOfDay.Day }));
+        }
+
+        [Test]
+        public void SelectPossibleTimesOfDay_ReturnsValidTimesOfDay_FromAquatic()
+        {
+            SetUpEncounterGroup("temperatureenvironment", new[] { "my encounter/my amount", "my other encounter/my other amount" });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Day, new[]
+            {
+                "my wrong encounter/my wrong amount",
+                "my aquatic encounter/my aquatic amount"
+            });
+
+            SetupEncounterLevel("my encounter/my amount", 9);
+            SetupEncounterLevel("my other encounter/my other amount", 26);
+            SetupEncounterLevel("my aquatic encounter/my aquatic amount", 6);
+
+            var aquaticEncounters = new[] { "my aquatic encounter/my aquatic amount", "aquatic encounter/amount", "other aquatic encounter/other amount" };
+            var specificAquaticEncounters = new[] { "specific aquatic encounter/amount", "other specific aquatic encounter/other amount" };
+
+            SetUpEncounterGroup(EnvironmentConstants.Aquatic, aquaticEncounters);
+            SetUpEncounterGroup("temperature" + EnvironmentConstants.Aquatic, specificAquaticEncounters);
+
+            var possibleTimesOfDay = encounterCollectionSelector.SelectPossibleTimesOfDay("environment", "temperature");
+            Assert.That(possibleTimesOfDay, Is.EquivalentTo(new[] { EnvironmentConstants.TimesOfDay.Day }));
+        }
+
+        [Test]
+        public void SelectPossibleTimesOfDay_ReturnsValidTimesOfDay_FromSpecificAquatic()
+        {
+            SetUpEncounterGroup("temperatureenvironment", new[] { "my encounter/my amount", "my other encounter/my other amount" });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Day, new[]
+            {
+                "my wrong encounter/my wrong amount",
+                "my specific aquatic encounter/my specific aquatic amount"
+            });
+
+            SetupEncounterLevel("my encounter/my amount", 9);
+            SetupEncounterLevel("my other encounter/my other amount", 26);
+            SetupEncounterLevel("my specific aquatic encounter/my specific aquatic amount", 6);
+
+            var aquaticEncounters = new[] { "aquatic encounter/amount", "other aquatic encounter/other amount" };
+            var specificAquaticEncounters = new[]
+            {
+                "specific aquatic encounter/amount",
+                "my specific aquatic encounter/my specific aquatic amount",
+                "other specific aquatic encounter/other amount"
+            };
+
+            SetUpEncounterGroup(EnvironmentConstants.Aquatic, aquaticEncounters);
+            SetUpEncounterGroup("temperature" + EnvironmentConstants.Aquatic, specificAquaticEncounters);
+
+            var possibleTimesOfDay = encounterCollectionSelector.SelectPossibleTimesOfDay("environment", "temperature");
+            Assert.That(possibleTimesOfDay, Is.EquivalentTo(new[] { EnvironmentConstants.TimesOfDay.Day }));
+        }
+
+        //INFO: Because you can have a Day encounter allowing underground (which would be Night), if Night has a valid encounter, it will show Day as an option
+        [Test]
+        public void SelectPossibleTimesOfDay_ReturnsValidTimesOfDay_FromUnderground()
+        {
+            SetUpEncounterGroup("temperatureenvironment", new[] { "my encounter/my amount", "my other encounter/my other amount" });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[]
+            {
+                "my wrong encounter/my wrong amount",
+                "my underground encounter/my underground amount"
+            });
+
+            SetupEncounterLevel("my encounter/my amount", 9);
+            SetupEncounterLevel("my other encounter/my other amount", 26);
+            SetupEncounterLevel("my underground encounter/my underground amount", 6);
+
+            var undergroundEncounters = new[]
+            {
+                "underground encounter/amount",
+                "my underground encounter/my underground amount",
+                "other underground encounter/other amount"
+            };
+            SetUpEncounterGroup(EnvironmentConstants.Underground, undergroundEncounters);
+
+            var possibleTimesOfDay = encounterCollectionSelector.SelectPossibleTimesOfDay("environment", "temperature");
+            Assert.That(possibleTimesOfDay, Is.EquivalentTo(new[] { EnvironmentConstants.TimesOfDay.Day, EnvironmentConstants.TimesOfDay.Night }));
+        }
+
+        //INFO: Because you can have a Day encounter allowing underground (which would be Night), if Night has a valid encounter, it will show Day as an option
+        [Test]
+        public void SelectPossibleTimesOfDay_ReturnsValidTimesOfDay_FromUndergroundAquatic()
+        {
+            SetUpEncounterGroup("temperatureenvironment", new[] { "my encounter/my amount", "my other encounter/my other amount" });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[]
+            {
+                "my wrong encounter/my wrong amount",
+                "my underground aquatic encounter/my underground aquatic amount"
+            });
+
+            SetupEncounterLevel("my encounter/my amount", 9);
+            SetupEncounterLevel("my other encounter/my other amount", 26);
+            SetupEncounterLevel("my underground aquatic encounter/my underground aquatic amount", 6);
+
+            var undergroundAquaticEncounters = new[]
+            {
+                "underground aquatic encounter/amount",
+                "my underground aquatic encounter/my underground aquatic amount",
+                "other underground aquatic encounter/other amount"
+            };
+
+            SetUpEncounterGroup(EnvironmentConstants.Underground + EnvironmentConstants.Aquatic, undergroundAquaticEncounters);
+
+            var possibleTimesOfDay = encounterCollectionSelector.SelectPossibleTimesOfDay("environment", "temperature");
+            Assert.That(possibleTimesOfDay, Is.EquivalentTo(new[] { EnvironmentConstants.TimesOfDay.Day, EnvironmentConstants.TimesOfDay.Night }));
+        }
+
+        [Test]
+        public void SelectPossibleTimesOfDay_ReturnsValidTimesOfDay_ForDay()
+        {
+            SetUpEncounterGroup("temperatureenvironment", new[] { "my encounter/my amount", "my other encounter/my other amount" });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Day, new[]
+            {
+                "my encounter/my amount",
+                "my wrong encounter/my wrong amount",
+                "my other encounter/my other amount"
+            });
+
+            SetupEncounterLevel("my encounter/my amount", 9);
+
+            var possibleTimesOfDay = encounterCollectionSelector.SelectPossibleTimesOfDay("environment", "temperature");
+            Assert.That(possibleTimesOfDay, Is.EquivalentTo(new[] { EnvironmentConstants.TimesOfDay.Day }));
+        }
+
+        //INFO: Because you can have a Day encounter allowing underground (which would be Night), if Night has a valid encounter, it will show Day as an option
+        [Test]
+        public void SelectPossibleTimesOfDay_ReturnsValidTimesOfDay_ForNight()
+        {
+            SetUpEncounterGroup("temperatureenvironment", new[] { "my encounter/my amount", "my other encounter/my other amount" });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[]
+            {
+                "my encounter/my amount",
+                "my wrong encounter/my wrong amount",
+                "my other encounter/my other amount"
+            });
+
+            SetupEncounterLevel("my encounter/my amount", 9);
+
+            var possibleTimesOfDay = encounterCollectionSelector.SelectPossibleTimesOfDay("environment", "temperature");
+            Assert.That(possibleTimesOfDay, Is.EquivalentTo(new[] { EnvironmentConstants.TimesOfDay.Day, EnvironmentConstants.TimesOfDay.Night }));
+        }
+
+        [Test]
+        public void SelectPossibleTimesOfDay_ReturnsValidTimesOfDay_None()
+        {
+            SetUpEncounterGroup("temperatureenvironment", new[] { "my encounter/my amount", "my other encounter/my other amount" });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Day, new[]
+            {
+                "my wrong encounter/my wrong amount",
+                "my day encounter/my day amount"
+            });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[]
+            {
+                "my wrong encounter/my wrong amount",
+                "my night encounter/my night amount"
+            });
+
+            SetupEncounterLevel("my encounter/my amount", 9);
+            SetupEncounterLevel("my other encounter/my other amount", 26);
+
+            var possibleTimesOfDay = encounterCollectionSelector.SelectPossibleTimesOfDay("environment", "temperature");
+            Assert.That(possibleTimesOfDay, Is.Empty);
         }
 
         [Test]
@@ -1988,19 +2814,54 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
             Assert.That(possibleLevels, Is.EquivalentTo(new[] { 9, 26, 6 }));
         }
 
+        [TestCase(EncounterSpecifications.MinimumLevel)]
+        [TestCase(2)]
+        [TestCase(3)]
+        [TestCase(4)]
+        [TestCase(5)]
+        [TestCase(6)]
+        [TestCase(7)]
+        [TestCase(8)]
+        [TestCase(9)]
+        [TestCase(10)]
+        [TestCase(11)]
+        [TestCase(12)]
+        [TestCase(13)]
+        [TestCase(14)]
+        [TestCase(15)]
+        [TestCase(16)]
+        [TestCase(17)]
+        [TestCase(18)]
+        [TestCase(19)]
+        [TestCase(20)]
+        [TestCase(21)]
+        [TestCase(22)]
+        [TestCase(23)]
+        [TestCase(24)]
+        [TestCase(25)]
+        [TestCase(26)]
+        [TestCase(27)]
+        [TestCase(28)]
+        [TestCase(29)]
+        [TestCase(EncounterSpecifications.MaximumLevel)]
+        public void SelectPossibleLevels_ReturnsValidLevels_ForLevel(int level)
+        {
+            SetUpEncounterGroup("temperatureenvironment", new[] { "my encounter/my amount", "my other encounter/my other amount" });
+            SetUpEncounterGroup("time of day", new[] { "my encounter/my amount", "my wrong encounter/my wrong amount", "my other encounter/my other amount" });
+
+            SetupEncounterLevel("my encounter/my amount", level);
+
+            var possibleLevels = encounterCollectionSelector.SelectPossibleLevels("environment", "temperature", "time of day");
+            Assert.That(possibleLevels, Is.EquivalentTo(new[] { level }));
+        }
+
         [Test]
         public void SelectPossibleLevels_ReturnsValidLevels_None()
         {
-            SetUpEncounterGroup("temperatureenvironment", new[] { "my other encounter/my other amount" });
+            SetUpEncounterGroup("temperatureenvironment", new[] { "my encounter/my amount", "my other encounter/my other amount" });
             SetUpEncounterGroup("time of day", new[] { "my encounter/my amount", "my wrong encounter/my wrong amount" });
 
-            var aquaticEncounters = new[] { "aquatic encounter/amount", "other aquatic encounter/other amount" };
-            var specificAquaticEncounters = new[] { "specific aquatic encounter/amount", "other specific aquatic encounter/other amount" };
-
-            SetUpEncounterGroup(EnvironmentConstants.Aquatic, aquaticEncounters);
-            SetUpEncounterGroup("temperature" + EnvironmentConstants.Aquatic, specificAquaticEncounters);
-
-            SetupEncounterLevel("my encounter/my amount", -1);
+            SetupEncounterLevel("my encounter/my amount", EncounterSpecifications.MaximumLevel + 1);
 
             var possibleLevels = encounterCollectionSelector.SelectPossibleLevels("environment", "temperature", "time of day");
             Assert.That(possibleLevels, Is.Empty);
