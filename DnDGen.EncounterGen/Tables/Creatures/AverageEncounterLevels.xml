@@ -10091,6 +10091,13 @@
   </collection>
 	<collection>
 		<name>1</name>
+		<entry>Baboon/1</entry>
+		<entry>Badger$Celestial creature$/1</entry>
+		<entry>Badger$Celestial creature$/2</entry>
+		<entry>Badger/1</entry>
+		<entry>Badger/2</entry>
+		<entry>Cat/1</entry>
+		<entry>Character(Adventurer)[1]/1</entry>
 	</collection>
 	<collection>
 		<name>2</name>
@@ -10099,6 +10106,15 @@
 		<entry>Animated object$Tiny$/4</entry>
 		<entry>Ape/1</entry>
 		<entry>Azer/1</entry>
+		<entry>Badger$Celestial creature$/1d3+2</entry>
+		<entry>Badger/1d3+2</entry>
+		<entry>Bat swarm/1</entry>
+		<entry>Bison/1</entry>
+		<entry>Black bear/1</entry>
+		<entry>Blink dog/1</entry>
+		<entry>Boar/1</entry>
+		<entry>Bugbear/1</entry>
+		<entry>Character(Adventurer)[2]/1</entry>
 	</collection>
 	<collection>
 		<name>3</name>
@@ -10107,17 +10123,45 @@
 		<entry>Ankheg/1</entry>
 		<entry>Arrowhawk$Juvenile$/1</entry>
 		<entry>Assassin vine/1</entry>
+		<entry>Bat/6d6+4</entry>
+		<entry>Bat/8d6+2</entry>
+		<entry>Black dragon$Wyrmling$/1</entry>
+		<entry>Blue dragon$Wyrmling$/1</entry>
+		<entry>Brass dragon$Wyrmling$/1</entry>
+		<entry>Bronze dragon$Wyrmling$/1</entry>
+		<entry>Centaur/1</entry>
+		<entry>Character(Adventurer)[1]/1d3+1</entry>
+		<entry>Character(Adventurer)[3]/1</entry>
 	</collection>
 	<collection>
 		<name>4</name>
 		<entry>Ape/2</entry>
 		<entry>Aranea/1</entry>
+		<entry>Azer/2</entry>
+		<entry>Barghest/1</entry>
+		<entry>Black bear/2</entry>
+		<entry>Black dragon$Very young$/1</entry>
+		<entry>Blink dog/2</entry>
+		<entry>Blue dragon$Very young$/1</entry>
+		<entry>Brass dragon$Very young$/1</entry>
+		<entry>Brown bear/1</entry>
+		<entry>Carrion crawler/1</entry>
+		<entry>Centipede swarm/1</entry>
+		<entry>Character(Adventurer)[4]/1</entry>
 	</collection>
 	<collection>
 		<name>5</name>
 		<entry>Achaierai/1</entry>
 		<entry>Animated object$Huge$/1</entry>
 		<entry>Arrowhawk$Adult$/1</entry>
+		<entry>Barghest$Greater$/1</entry>
+		<entry>Basilisk/1</entry>
+		<entry>Bat swarm/1d3+1</entry>
+		<entry>Bearded Devil(Barbazu)/1</entry>
+		<entry>Black dragon$Young$/1</entry>
+		<entry>Bronze dragon$Very young$/1</entry>
+		<entry>Bugbear/1d3+1</entry>
+		<entry>Character(Adventurer)[2]/1d3+1</entry>
 	</collection>
 	<collection>
 		<name>6</name>
@@ -10127,28 +10171,85 @@
 		<entry>Arrowhawk$Juvenile$/1d3+1</entry>
 		<entry>Assassin vine/1d3+1</entry>
 		<entry>Azer/1d2+2</entry>
+		<entry>Babau/1</entry>
+		<entry>Belker/1</entry>
+		<entry>Blue dragon$Young$/1</entry>
+		<entry>Bralani/1</entry>
+		<entry>Brass dragon$Young$/1</entry>
+		<entry>Brown bear/2</entry>
+		<entry>Carrion crawler/2</entry>
+		<entry>Chain Devil(Kyton)/1</entry>
+		<entry>Character(Adventurer)[3]/1d3+1</entry>
 	</collection>
 	<collection>
 		<name>7</name>
 		<entry>Aboleth/1</entry>
 		<entry>Animated object$Gargantuan$/1</entry>
+		<entry>Baboon/6d6+4</entry>
+		<entry>Bearded Devil(Barbazu)/2</entry>
+		<entry>Black dragon$Juvenile$/1</entry>
+		<entry>Black dragon$Wyrmling$/1d4+1</entry>
+		<entry>Black pudding/1</entry>
+		<entry>Blue dragon$Wyrmling$/1d4+1</entry>
+		<entry>Brass dragon$Wyrmling$/1d4+1</entry>
+		<entry>Bronze dragon$Wyrmling$/1d4+1</entry>
+		<entry>Bronze dragon$Young$/1</entry>
+		<entry>Bulette/1</entry>
+		<entry>Centipede swarm/1d3+1</entry>
+		<entry>Chaos beast/1</entry>
+		<entry>Character(Adventurer)[4]/1d3+1</entry>
 	</collection>
 	<collection>
 		<name>8</name>
 		<entry>Arrowhawk$Adult$/1d3+1</entry>
 		<entry>Arrowhawk$Elder$/1</entry>
 		<entry>Athach/1</entry>
+		<entry>Behir/1</entry>
+		<entry>Belker/2</entry>
+		<entry>Black dragon$Very young$/1d4+1</entry>
+		<entry>Blue dragon$Juvenile$/1</entry>
+		<entry>Blue dragon$Very young$/1d4+1</entry>
+		<entry>Boar/1d4+4</entry>
+		<entry>Bodak/1</entry>
+		<entry>Bralani/2</entry>
+		<entry>Brass dragon$Juvenile$/1</entry>
+		<entry>Brass dragon$Very young$/1d4+1</entry>
+		<entry>Camel/8d4-2</entry>
+		<entry>Carrion crawler/1d3+2</entry>
 	</collection>
 	<collection>
 		<name>9</name>
 		<entry>Androsphinx/1</entry>
 		<entry>Aranea/1d4+2</entry>
 		<entry>Avoral/1</entry>
+		<entry>Barghest/1d4+2</entry>
+		<entry>Bat swarm/1d6+6</entry>
+		<entry>Bearded Devil(Barbazu)/1d3+2</entry>
+		<entry>Black dragon$Young adult$/1</entry>
+		<entry>Black dragon$Young$/1d4+1</entry>
+		<entry>Blink dog/1d10+6</entry>
+		<entry>Bone Devil(Osyluth)/1</entry>
+		<entry>Bronze dragon$Juvenile$/1</entry>
+		<entry>Bronze dragon$Very young$/1d4+1</entry>
+		<entry>Bulette/2</entry>
+		<entry>Centaur/1d4+4</entry>
+		<entry>Chain Devil(Kyton)/1d3+1</entry>
 	</collection>
 	<collection>
 		<name>10</name>
 		<entry>Aboleth/1d3+1</entry>
 		<entry>Animated object$Colossal$/1</entry>
+		<entry>Barghest$Greater$/1d4+2</entry>
+		<entry>Basilisk/1d4+2</entry>
+		<entry>Bebilith/1</entry>
+		<entry>Behir/2</entry>
+		<entry>Belker/1d2+2</entry>
+		<entry>Bison/8d4-2</entry>
+		<entry>Blue dragon$Young$/1d4+1</entry>
+		<entry>Bralani/1d3+2</entry>
+		<entry>Brass dragon$Young adult$/1</entry>
+		<entry>Brass dragon$Young$/1d4+1</entry>
+		<entry>Character(Adventurer)[10]/1</entry>
 	</collection>
 	<collection>
 		<name>11</name>
@@ -10158,65 +10259,204 @@
 		<entry>Athach/1d3+1</entry>
 		<entry>Avoral/2</entry>
 		<entry>Azer/1d10+10,Character(Sergeant)[3]{Azer}/2,Character(Leader)[1d4+2]{Azer}/1</entry>
+		<entry>Babau/1d4+2</entry>
+		<entry>Barbed Devil(Hamatula)/1</entry>
+		<entry>Bearded Devil(Barbazu)/2d3+4</entry>
+		<entry>Black dragon$Adult$/1</entry>
+		<entry>Black dragon$Juvenile$/1d4+1</entry>
+		<entry>Blue dragon$Young adult$/1</entry>
+		<entry>Bodak/1d3+1</entry>
+		<entry>Bronze dragon$Young$/1d4+1</entry>
+		<entry>Bugbear/1d10+10,Bugbear$Noncombatant$/3d6+12,Character(Sergeant)[2]{Bugbear}/2,Character(Leader)[1d4+1]{Bugbear}/1</entry>
+		<entry>Centaur/2d6+6,Character(Leader)[1d4+1]{Centaur}@Druid@/1</entry>
+		<entry>Centipede swarm/1d6+6</entry>
+		<entry>Character(Adventurer)[11]/1</entry>
 	</collection>
 	<collection>
 		<name>12</name>
 		<entry>Aboleth/1d3+1,Skum/1d6+6</entry>
 		<entry>Annis/1,Green hag/1,Sea hag/1,Ogre/1d10-2,Frost giant/2d3-2</entry>
+		<entry>Basilisk$Abyssal Greater$/1</entry>
+		<entry>Black pudding$Elder$/1</entry>
+		<entry>Blue dragon$Juvenile$/1d4+1</entry>
+		<entry>Bone Devil(Osyluth)/1d3+1</entry>
+		<entry>Brass dragon$Adult$/1</entry>
+		<entry>Brass dragon$Juvenile$/1d4+1</entry>
+		<entry>Bronze dragon$Young adult$/1</entry>
+		<entry>Chain Devil(Kyton)/2d3+4</entry>
+		<entry>Character(Adventurer)[12]/1</entry>
 	</collection>
 	<collection>
 		<name>13</name>
 		<entry>Annis/1,Green hag/1,Sea hag/1,Ogre/1d10-2,Fire giant/2d3-2</entry>
 		<entry>Avoral/1d3+2</entry>
+		<entry>Barbed Devil(Hamatula)/2</entry>
+		<entry>Beholder/1</entry>
+		<entry>Black dragon$Adult$/1d2,Black dragon$Wyrmling$/1d4+1</entry>
+		<entry>Black dragon$Adult$/2</entry>
+		<entry>Black dragon$Young adult$/1d4+1</entry>
+		<entry>Bronze dragon$Juvenile$/1d4+1</entry>
+		<entry>Character(Adventurer)[10]/1d3+1</entry>
+		<entry>Character(Adventurer)[13]/1</entry>
 	</collection>
 	<collection>
 		<name>14</name>
 		<entry>Annis/1,Green hag/1,Sea hag/1,Ogre/1d10-2,Cloud giant/2d3-2</entry>
 		<entry>Astral deva/1</entry>
+		<entry>Black dragon$Mature adult$/1</entry>
+		<entry>Blue dragon$Adult$/1</entry>
+		<entry>Brass dragon$Adult$/1d2,Brass dragon$Wyrmling$/1d4+1</entry>
+		<entry>Brass dragon$Adult$/2</entry>
+		<entry>Brass dragon$Young adult$/1d4+1</entry>
+		<entry>Chain Devil(Kyton)/1d10+10</entry>
+		<entry>Character(Adventurer)[11]/1d3+1</entry>
+		<entry>Character(Adventurer)[14]/1</entry>
 	</collection>
 	<collection>
 		<name>15</name>
 		<entry>Athach/1d6+6</entry>
+		<entry>Barbed Devil(Hamatula)/1d3+2</entry>
+		<entry>Beholder/2</entry>
+		<entry>Blue dragon$Young adult$/1d4+1</entry>
+		<entry>Bone Devil(Osyluth)/2d3+4</entry>
+		<entry>Brass dragon$Mature adult$/1</entry>
+		<entry>Bronze dragon$Adult$/1</entry>
+		<entry>Character(Adventurer)[12]/1d3+1</entry>
+		<entry>Character(Adventurer)[15]/1</entry>
 	</collection>
 	<collection>
 		<name>16</name>
 		<entry>Astral deva/2</entry>
 		<entry>Azer/10d8+20,Azer$Noncombatant$/5d8+10,Character(Sergeant)[3]{Azer}/1d4+1,Character(Lieutenant)[5]{Azer}/5,Character(Captain)[7]{Azer}/3</entry>
+		<entry>Black dragon$Mature adult$/1d2,Black dragon$Very young$/1d4+1</entry>
+		<entry>Black dragon$Mature adult$/2</entry>
+		<entry>Black dragon$Old$/1</entry>
+		<entry>Blue dragon$Adult$/1d2,Blue dragon$Wyrmling$/1d4+1</entry>
+		<entry>Blue dragon$Adult$/2</entry>
+		<entry>Blue dragon$Mature adult$/1</entry>
+		<entry>Bronze dragon$Young adult$/1d4+1</entry>
+		<entry>Character(Adventurer)[13]/1d3+1</entry>
+		<entry>Character(Adventurer)[16]/1</entry>
 	</collection>
 	<collection>
 		<name>17</name>
 		<entry>Aboleth$Mage$/1</entry>
+		<entry>Barbed Devil(Hamatula)/2d3+4</entry>
+		<entry>Basilisk$Abyssal Greater$/1d4+2</entry>
+		<entry>Brass dragon$Mature adult$/1d2,Brass dragon$Very young$/1d4+1</entry>
+		<entry>Brass dragon$Mature adult$/2</entry>
+		<entry>Brass dragon$Old$/1</entry>
+		<entry>Bronze dragon$Adult$/1d2,Bronze dragon$Wyrmling$/1d4+1</entry>
+		<entry>Bronze dragon$Adult$/2</entry>
+		<entry>Bronze dragon$Mature adult$/1</entry>
+		<entry>Character(Adventurer)[14]/1d3+1</entry>
+		<entry>Character(Adventurer)[17]/1</entry>
 	</collection>
 	<collection>
 		<name>18</name>
 		<entry>Astral deva/1d3+2</entry>
+		<entry>Beholder/1d4+2</entry>
+		<entry>Black dragon$Old$/1d2,Black dragon$Young$/1d4+1</entry>
+		<entry>Black dragon$Old$/2</entry>
+		<entry>Black dragon$Very old$/1</entry>
+		<entry>Blue dragon$Mature adult$/1d2,Blue dragon$Very young$/1d4+1</entry>
+		<entry>Blue dragon$Mature adult$/2</entry>
+		<entry>Blue dragon$Old$/1</entry>
+    	<entry>Centaur/26d6-6,Centaur$Noncombatant$/13d4-7,Character(Sergeant)[3]{Centaur}/10,Character(Lieutenant)[5]{Centaur}/5,Character(Leader)[2d3+3]{Centaur}@Druid@/1</entry>
+		<entry>Character(Adventurer)[15]/1d3+1</entry>
+		<entry>Character(Adventurer)[18]/1</entry>
 	</collection>
 	<collection>
 		<name>19</name>
+		<entry>Black dragon$Ancient$/1</entry>
+		<entry>Blue dragon$Very old$/1</entry>
+		<entry>Brass dragon$Old$/1d2,Brass dragon$Young$/1d4+1</entry>
+		<entry>Brass dragon$Old$/2</entry>
+		<entry>Brass dragon$Very old$/1</entry>
+		<entry>Bronze dragon$Mature adult$/1d2,Bronze dragon$Very young$/1d4+1</entry>
+		<entry>Bronze dragon$Mature adult$/2</entry>
+		<entry>Bronze dragon$Old$/1</entry>
+		<entry>Character(Adventurer)[16]/1d3+1</entry>
+		<entry>Character(Adventurer)[19]/1</entry>
 	</collection>
 	<collection>
 		<name>20</name>
+		<entry>Balor/1</entry>
+		<entry>Black dragon$Very old$/1d2,Black dragon$Juvenile$/1d4+1</entry>
+		<entry>Black dragon$Very old$/2</entry>
+		<entry>Black dragon$Wyrm$/1</entry>
+		<entry>Blue dragon$Old$/1d2,Blue dragon$Young$/1d4+1</entry>
+		<entry>Blue dragon$Old$/2</entry>
+		<entry>Brass dragon$Ancient$/1</entry>
+		<entry>Bronze dragon$Very old$/1</entry>
+		<entry>Character(Adventurer)[17]/1d3+1</entry>
+		<entry>Character(Adventurer)[20]/1</entry>
 	</collection>
 	<collection>
 		<name>21</name>
+		<entry>Balor/1,Marilith/1,Hezrou/1d4+1</entry>
+		<entry>Black dragon$Ancient$/1d2,Black dragon$Young adult$/1d4+1</entry>
+		<entry>Black dragon$Ancient$/2</entry>
+		<entry>Blue dragon$Ancient$/1</entry>
+		<entry>Blue dragon$Very old$/1d2,Blue dragon$Juvenile$/1d4+1</entry>
+		<entry>Blue dragon$Very old$/2</entry>
+		<entry>Brass dragon$Very old$/1d2,Brass dragon$Juvenile$/1d4+1</entry>
+		<entry>Brass dragon$Very old$/2</entry>
+		<entry>Brass dragon$Wyrm$/1</entry>
+		<entry>Bronze dragon$Old$/1d2,Bronze dragon$Young$/1d4+1</entry>
+		<entry>Bronze dragon$Old$/2</entry>
+		<entry>Character(Adventurer)[18]/1d3+1</entry>
 	</collection>
 	<collection>
 		<name>22</name>
+		<entry>Black dragon$Great wyrm$/1</entry>
+		<entry>Black dragon$Wyrm$/1d2,Black dragon$Adult$/1d4+1,Black dragon$Wyrmling$/1d10+5</entry>
+		<entry>Black dragon$Wyrm$/2</entry>
+		<entry>Brass dragon$Ancient$/1d2,Brass dragon$Young adult$/1d4+1</entry>
+		<entry>Brass dragon$Ancient$/2</entry>
+		<entry>Bronze dragon$Ancient$/1</entry>
+		<entry>Bronze dragon$Very old$/1d2,Bronze dragon$Juvenile$/1d4+1</entry>
+		<entry>Bronze dragon$Very old$/2</entry>
+		<entry>Character(Adventurer)[19]/1d3+1</entry>
 	</collection>
 	<collection>
 		<name>23</name>
+		<entry>Blue dragon$Ancient$/1d2,Blue dragon$Young adult$/1d4+1</entry>
+		<entry>Blue dragon$Ancient$/2</entry>
+		<entry>Blue dragon$Wyrm$/1</entry>
+		<entry>Brass dragon$Great wyrm$/1</entry>
+		<entry>Brass dragon$Wyrm$/1d2,Brass dragon$Adult$/1d4+1,Brass dragon$Wyrmling$/1d10+5</entry>
+		<entry>Brass dragon$Wyrm$/2</entry>
+		<entry>Bronze dragon$Wyrm$/1</entry>
+		<entry>Character(Adventurer)[20]/1d3+1</entry>
 	</collection>
 	<collection>
 		<name>24</name>
+		<entry>Black dragon$Great wyrm$/1d2,Black dragon$Mature adult$/1d4+1,Black dragon$Very young$/1d10+5</entry>
+		<entry>Black dragon$Great wyrm$/2</entry>
+		<entry>Bronze dragon$Ancient$/1d2,Bronze dragon$Young adult$/1d4+1</entry>
+		<entry>Bronze dragon$Ancient$/2</entry>
 	</collection>
 	<collection>
 		<name>25</name>
+		<entry>Blue dragon$Great wyrm$/1</entry>
+		<entry>Blue dragon$Wyrm$/1d2,Blue dragon$Adult$/1d4+1,Blue dragon$Wyrmling$/1d10+5</entry>
+		<entry>Blue dragon$Wyrm$/2</entry>
+		<entry>Brass dragon$Great wyrm$/1d2,Brass dragon$Mature adult$/1d4+1,Brass dragon$Very young$/1d10+5</entry>
+		<entry>Brass dragon$Great wyrm$/2</entry>
+		<entry>Bronze dragon$Great wyrm$/1</entry>
+		<entry>Bronze dragon$Wyrm$/1d2,Bronze dragon$Adult$/1d4+1,Bronze dragon$Wyrmling$/1d10+5</entry>
+		<entry>Bronze dragon$Wyrm$/2</entry>
 	</collection>
 	<collection>
 		<name>26</name>
 	</collection>
 	<collection>
 		<name>27</name>
+		<entry>Blue dragon$Great wyrm$/1d2,Blue dragon$Mature adult$/1d4+1,Blue dragon$Very young$/1d10+5</entry>
+		<entry>Blue dragon$Great wyrm$/2</entry>
+		<entry>Bronze dragon$Great wyrm$/1d2,Bronze dragon$Mature adult$/1d4+1,Bronze dragon$Very young$/1d10+5</entry>
+		<entry>Bronze dragon$Great wyrm$/2</entry>
 	</collection>
 	<collection>
 		<name>28</name>
