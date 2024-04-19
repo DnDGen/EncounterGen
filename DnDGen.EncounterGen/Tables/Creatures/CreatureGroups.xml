@@ -4,6 +4,12 @@
   <collection>
     <name></name>
   </collection>
+	<collection>
+		<name>Any</name>
+	</collection>
+	<collection>
+		<name>Civilized</name>
+	</collection>
   <collection>
     <name>Aasimar</name>
     <entry>Character[1]{Aasimar}@Warrior@</entry>
@@ -337,16 +343,6 @@
   </collection>
   <collection>
     <name>Character#Lich#</name>
-    <entry>Character[1]#Lich#</entry>
-    <entry>Character[2]#Lich#</entry>
-    <entry>Character[3]#Lich#</entry>
-    <entry>Character[4]#Lich#</entry>
-    <entry>Character[5]#Lich#</entry>
-    <entry>Character[6]#Lich#</entry>
-    <entry>Character[7]#Lich#</entry>
-    <entry>Character[8]#Lich#</entry>
-    <entry>Character[9]#Lich#</entry>
-    <entry>Character[10]#Lich#</entry>
     <entry>Character[11]#Lich#</entry>
     <entry>Character[12]#Lich#</entry>
     <entry>Character[13]#Lich#</entry>
@@ -2023,11 +2019,9 @@
     <entry>Werewolf</entry>
   </collection>
   <collection>
-    <name>Magic</name>
-    <entry>Construct</entry>
+    <name>Extraplanar</name>
     <entry>Elemental</entry>
     <entry>Outsider</entry>
-    <entry>Undead</entry>
   </collection>
   <collection>
     <name>Magical Beast</name>

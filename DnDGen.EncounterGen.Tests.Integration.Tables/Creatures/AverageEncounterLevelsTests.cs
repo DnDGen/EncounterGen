@@ -2593,7 +2593,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures
             DistinctCollection(encounterConstant, averageEncounterLevel.ToString());
 
             Assert.That(table, Contains.Key(averageEncounterLevel.ToString()));
-            Assert.That(table[averageEncounterLevel.ToString()], Contains.Item(encounterConstant));
+            Assert.That(table[averageEncounterLevel.ToString()], Contains.Item(encounterConstant), $"Level {averageEncounterLevel}");
         }
 
         [TestCase(EncounterSpecifications.MinimumLevel, 1)]

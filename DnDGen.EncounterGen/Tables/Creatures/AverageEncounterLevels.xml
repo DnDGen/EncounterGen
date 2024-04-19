@@ -7718,70 +7718,6 @@
     <entry>4</entry>
   </collection>
   <collection>
-    <name>Character[1]#Lich#/1</name>
-    <entry>3</entry>
-  </collection>
-  <collection>
-    <name>Character[2]#Lich#/1</name>
-    <entry>4</entry>
-  </collection>
-  <collection>
-    <name>Character[3]#Lich#/1</name>
-    <entry>5</entry>
-  </collection>
-  <collection>
-    <name>Character[4]#Lich#/1</name>
-    <entry>6</entry>
-  </collection>
-  <collection>
-    <name>Character[5]#Lich#/1</name>
-    <entry>7</entry>
-  </collection>
-  <collection>
-    <name>Character[5]#Lich#/1,Character[1]#Vampire#/1d3+1,Vampire spawn/1d4+4</name>
-    <entry>11</entry>
-  </collection>
-  <collection>
-    <name>Character[6]#Lich#/1</name>
-    <entry>8</entry>
-  </collection>
-  <collection>
-    <name>Character[6]#Lich#/1,Character[2]#Vampire#/1d3+1,Vampire spawn/1d4+4</name>
-    <entry>12</entry>
-  </collection>
-  <collection>
-    <name>Character[7]#Lich#/1</name>
-    <entry>9</entry>
-  </collection>
-  <collection>
-    <name>Character[7]#Lich#/1,Character[3]#Vampire#/1d3+1,Vampire spawn/1d4+4</name>
-    <entry>12</entry>
-  </collection>
-  <collection>
-    <name>Character[8]#Lich#/1</name>
-    <entry>10</entry>
-  </collection>
-  <collection>
-    <name>Character[8]#Lich#/1,Character[4]#Vampire#/1d3+1,Vampire spawn/1d4+4</name>
-    <entry>13</entry>
-  </collection>
-  <collection>
-    <name>Character[9]#Lich#/1</name>
-    <entry>11</entry>
-  </collection>
-  <collection>
-    <name>Character[9]#Lich#/1,Character[5]#Vampire#/1d3+1,Vampire spawn/1d4+4</name>
-    <entry>13</entry>
-  </collection>
-  <collection>
-    <name>Character[10]#Lich#/1</name>
-    <entry>12</entry>
-  </collection>
-  <collection>
-    <name>Character[10]#Lich#/1,Character[6]#Vampire#/1d3+1,Vampire spawn/1d4+4</name>
-    <entry>14</entry>
-  </collection>
-  <collection>
     <name>Character[11]#Lich#/1</name>
     <entry>13</entry>
   </collection>
@@ -10153,4 +10089,142 @@
     <name>Zombie$Gray render$/1d10+10</name>
     <entry>14</entry>
   </collection>
+	<collection>
+		<name>1</name>
+	</collection>
+	<collection>
+		<name>2</name>
+		<entry>Animated object$Medium$/1</entry>
+		<entry>Animated object$Small$/2</entry>
+		<entry>Animated object$Tiny$/4</entry>
+		<entry>Ape/1</entry>
+		<entry>Azer/1</entry>
+	</collection>
+	<collection>
+		<name>3</name>
+		<entry>Allip/1</entry>
+		<entry>Animated object$Large$/1</entry>
+		<entry>Ankheg/1</entry>
+		<entry>Arrowhawk$Juvenile$/1</entry>
+		<entry>Assassin vine/1</entry>
+	</collection>
+	<collection>
+		<name>4</name>
+		<entry>Ape/2</entry>
+		<entry>Aranea/1</entry>
+	</collection>
+	<collection>
+		<name>5</name>
+		<entry>Achaierai/1</entry>
+		<entry>Animated object$Huge$/1</entry>
+		<entry>Arrowhawk$Adult$/1</entry>
+	</collection>
+	<collection>
+		<name>6</name>
+		<entry>Ankheg/1d3+1</entry>
+		<entry>Annis/1</entry>
+		<entry>Ape/1d3+2</entry>
+		<entry>Arrowhawk$Juvenile$/1d3+1</entry>
+		<entry>Assassin vine/1d3+1</entry>
+		<entry>Azer/1d2+2</entry>
+	</collection>
+	<collection>
+		<name>7</name>
+		<entry>Aboleth/1</entry>
+		<entry>Animated object$Gargantuan$/1</entry>
+	</collection>
+	<collection>
+		<name>8</name>
+		<entry>Arrowhawk$Adult$/1d3+1</entry>
+		<entry>Arrowhawk$Elder$/1</entry>
+		<entry>Athach/1</entry>
+	</collection>
+	<collection>
+		<name>9</name>
+		<entry>Androsphinx/1</entry>
+		<entry>Aranea/1d4+2</entry>
+		<entry>Avoral/1</entry>
+	</collection>
+	<collection>
+		<name>10</name>
+		<entry>Aboleth/1d3+1</entry>
+		<entry>Animated object$Colossal$/1</entry>
+	</collection>
+	<collection>
+		<name>11</name>
+		<entry>Achaierai/1d4+4</entry>
+		<entry>Annis/1,Green hag/1,Sea hag/1,Ogre/1d10-2,Hill giant/2d3-2</entry>
+		<entry>Arrowhawk$Elder$/1d3+1</entry>
+		<entry>Athach/1d3+1</entry>
+		<entry>Avoral/2</entry>
+		<entry>Azer/1d10+10,Character(Sergeant)[3]{Azer}/2,Character(Leader)[1d4+2]{Azer}/1</entry>
+	</collection>
+	<collection>
+		<name>12</name>
+		<entry>Aboleth/1d3+1,Skum/1d6+6</entry>
+		<entry>Annis/1,Green hag/1,Sea hag/1,Ogre/1d10-2,Frost giant/2d3-2</entry>
+	</collection>
+	<collection>
+		<name>13</name>
+		<entry>Annis/1,Green hag/1,Sea hag/1,Ogre/1d10-2,Fire giant/2d3-2</entry>
+		<entry>Avoral/1d3+2</entry>
+	</collection>
+	<collection>
+		<name>14</name>
+		<entry>Annis/1,Green hag/1,Sea hag/1,Ogre/1d10-2,Cloud giant/2d3-2</entry>
+		<entry>Astral deva/1</entry>
+	</collection>
+	<collection>
+		<name>15</name>
+		<entry>Athach/1d6+6</entry>
+	</collection>
+	<collection>
+		<name>16</name>
+		<entry>Astral deva/2</entry>
+		<entry>Azer/10d8+20,Azer$Noncombatant$/5d8+10,Character(Sergeant)[3]{Azer}/1d4+1,Character(Lieutenant)[5]{Azer}/5,Character(Captain)[7]{Azer}/3</entry>
+	</collection>
+	<collection>
+		<name>17</name>
+		<entry>Aboleth$Mage$/1</entry>
+	</collection>
+	<collection>
+		<name>18</name>
+		<entry>Astral deva/1d3+2</entry>
+	</collection>
+	<collection>
+		<name>19</name>
+	</collection>
+	<collection>
+		<name>20</name>
+	</collection>
+	<collection>
+		<name>21</name>
+	</collection>
+	<collection>
+		<name>22</name>
+	</collection>
+	<collection>
+		<name>23</name>
+	</collection>
+	<collection>
+		<name>24</name>
+	</collection>
+	<collection>
+		<name>25</name>
+	</collection>
+	<collection>
+		<name>26</name>
+	</collection>
+	<collection>
+		<name>27</name>
+	</collection>
+	<collection>
+		<name>28</name>
+	</collection>
+	<collection>
+		<name>29</name>
+	</collection>
+	<collection>
+		<name>30</name>
+	</collection>
 </collections>

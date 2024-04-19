@@ -27,6 +27,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
             CreatureConstants.Shark,
             CreatureConstants.Troll_Scrag,
             CreatureConstants.Whale_Orca)]
+        [TestCase(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Civilized)]
         [TestCase(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Desert,
             CreatureConstants.Remorhaz)]
         [TestCase(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Forest,
@@ -64,6 +65,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
             CreatureConstants.Squid,
             CreatureConstants.Triton,
             CreatureConstants.Whale_Cachalot)]
+        [TestCase(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Civilized)]
         [TestCase(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert,
             CreatureConstants.Bat,
             CreatureConstants.Dragon_Blue,
@@ -79,6 +81,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
             CreatureConstants.Octopus,
             CreatureConstants.Sahuagin,
             CreatureConstants.Whale_Baleen)]
+        [TestCase(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Civilized)]
         [TestCase(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Underground)]
         [TestCase(GroupConstants.Extraplanar,
             EnvironmentConstants.Plane_Air,
