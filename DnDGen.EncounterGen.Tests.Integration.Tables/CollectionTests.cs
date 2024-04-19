@@ -16,7 +16,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables
         internal ICollectionSelector collectionSelector;
         internal IEncounterFormatter encounterFormatter;
 
-        private Dictionary<string, IEnumerable<string>> table;
+        protected Dictionary<string, IEnumerable<string>> table;
 
         [SetUp]
         public void CollectionSetup()

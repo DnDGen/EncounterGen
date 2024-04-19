@@ -1,4 +1,5 @@
-﻿using DnDGen.EncounterGen.Models;
+﻿using DnDGen.EncounterGen.Generators;
+using DnDGen.EncounterGen.Models;
 using DnDGen.EncounterGen.Selectors;
 using DnDGen.EncounterGen.Tables;
 using DnDGen.RollGen;
@@ -35,8 +36,12 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures
         [Test]
         public override void EntriesAreComplete()
         {
-            var allEncounters = collectionSelector.SelectAllFrom(TableNameConstants.EncounterGroups).Values.SelectMany(v => v).Distinct();
-            AssertEntriesAreComplete(allEncounters);
+            var allNames = collectionSelector
+                .SelectAllFrom(TableNameConstants.EncounterGroups).Values
+                .SelectMany(v => v)
+                .Union(Enumerable.Range(EncounterSpecifications.MinimumLevel, EncounterSpecifications.MaximumLevel).Select(l => l.ToString()))
+                .Distinct();
+            AssertEntriesAreComplete(allNames);
         }
 
         [TestCase(EncounterConstants.Aasimar_Solitary)]
@@ -2586,6 +2591,45 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures
             var averageEncounterLevel = encounterLevelSelector.Select(encounter);
 
             DistinctCollection(encounterConstant, averageEncounterLevel.ToString());
+
+            Assert.That(table, Contains.Key(averageEncounterLevel.ToString()));
+            Assert.That(table[averageEncounterLevel.ToString()], Contains.Item(encounterConstant));
+        }
+
+        [TestCase(EncounterSpecifications.MinimumLevel, 1)]
+        [TestCase(2, 1)]
+        [TestCase(3, 1)]
+        [TestCase(4, 1)]
+        [TestCase(5, 1)]
+        [TestCase(6, 1)]
+        [TestCase(7, 1)]
+        [TestCase(8, 1)]
+        [TestCase(9, 1)]
+        [TestCase(10, 1)]
+        [TestCase(11, 1)]
+        [TestCase(12, 1)]
+        [TestCase(13, 1)]
+        [TestCase(14, 1)]
+        [TestCase(15, 1)]
+        [TestCase(16, 1)]
+        [TestCase(17, 1)]
+        [TestCase(18, 1)]
+        [TestCase(19, 1)]
+        [TestCase(20, 1)]
+        [TestCase(21, 1)]
+        [TestCase(22, 1)]
+        [TestCase(23, 1)]
+        [TestCase(24, 1)]
+        [TestCase(25, 1)]
+        [TestCase(26, 1)]
+        [TestCase(27, 1)]
+        [TestCase(28, 1)]
+        [TestCase(29, 1)]
+        [TestCase(EncounterSpecifications.MaximumLevel, 1)]
+        public void AverageEncounterLevelGroup_ContainsAllEncountersOfLevel(int level, int count)
+        {
+            Assert.That(table, Contains.Key(level.ToString()));
+            Assert.That(table[level.ToString()].Count, Is.EqualTo(count));
         }
     }
 }

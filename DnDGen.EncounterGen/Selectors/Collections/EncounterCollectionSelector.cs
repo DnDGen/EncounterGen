@@ -202,9 +202,8 @@ namespace DnDGen.EncounterGen.Selectors.Collections
             if (!validEncounters.Any())
                 return Enumerable.Empty<string>();
 
-            var encounterLevels = collectionSelector.SelectAllFrom(TableNameConstants.AverageEncounterLevels);
-            var levelString = specifications.Level.ToString();
-            validEncounters = validEncounters.Where(e => encounterLevels[e].Single() == levelString);
+            var levelEncounters = collectionSelector.SelectFrom(TableNameConstants.AverageEncounterLevels, specifications.Level.ToString());
+            validEncounters = validEncounters.Intersect(levelEncounters);
 
             if (!validEncounters.Any())
                 return Enumerable.Empty<string>();
@@ -269,6 +268,43 @@ namespace DnDGen.EncounterGen.Selectors.Collections
             bool? allowUnderground = null,
             params string[] filters)
         {
+            //Shortcuts
+            if (string.IsNullOrEmpty(environment) && string.IsNullOrEmpty(temperature) && string.IsNullOrEmpty(timeOfDay) && level == 0)
+            {
+                var shortcutEncounters = collectionSelector.SelectAllFrom(TableNameConstants.EncounterGroups).Values
+                    .SelectMany(g => g)
+                    .Distinct();
+
+                if (allowAquatic.HasValue && allowAquatic.Value == false)
+                {
+                    var aquatic = GetEncountersFromCreatureGroup(EnvironmentConstants.Aquatic)
+                        .Concat(GetEncountersFromCreatureGroup(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic))
+                        .Concat(GetEncountersFromCreatureGroup(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic))
+                        .Concat(GetEncountersFromCreatureGroup(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Aquatic))
+                        .Concat(GetEncountersFromCreatureGroup(EnvironmentConstants.Underground + EnvironmentConstants.Aquatic));
+
+                    shortcutEncounters = shortcutEncounters.Except(aquatic);
+                }
+
+                if (allowUnderground.HasValue && allowUnderground.Value == false)
+                {
+                    var underground = GetEncountersFromCreatureGroup(EnvironmentConstants.Underground)
+                        .Concat(GetEncountersFromCreatureGroup(EnvironmentConstants.Underground + EnvironmentConstants.Aquatic));
+
+                    shortcutEncounters = shortcutEncounters.Except(underground);
+                }
+
+                if (filters.Any())
+                {
+                    var allowedCreatureNames = GetAllowedCreatureNames(filters);
+                    shortcutEncounters = shortcutEncounters.Where(e => EncounterIsValid(e, allowedCreatureNames));
+                }
+
+                var shortcutEncounterTypesAndAmounts = shortcutEncounters.Select(encounterFormatter.SelectCreaturesAndAmountsFrom);
+                return shortcutEncounterTypesAndAmounts;
+            }
+
+            //Full
             IEnumerable<string> environments = new[] { environment };
             if (string.IsNullOrEmpty(environment))
                 environments = allEnvironments;
@@ -279,12 +315,18 @@ namespace DnDGen.EncounterGen.Selectors.Collections
                     .SelectMany(SelectPossibleTemperatures)
                     .Distinct();
 
+            if (!temperatures.Any())
+                return Enumerable.Empty<Dictionary<string, string>>();
+
             IEnumerable<string> timesOfDay = new[] { timeOfDay };
             if (string.IsNullOrEmpty(timeOfDay))
                 timesOfDay = environments
                     .SelectMany(e => temperatures
                         .SelectMany(t => SelectPossibleTimesOfDay(e, t)))
                     .Distinct();
+
+            if (!timesOfDay.Any())
+                return Enumerable.Empty<Dictionary<string, string>>();
 
             IEnumerable<int> levels = new[] { level };
             if (level == 0)
@@ -293,6 +335,9 @@ namespace DnDGen.EncounterGen.Selectors.Collections
                         .SelectMany(t => timesOfDay.
                             SelectMany(d => SelectPossibleLevels(e, t, d))))
                     .Distinct();
+
+            if (!levels.Any())
+                return Enumerable.Empty<Dictionary<string, string>>();
 
             IEnumerable<bool> aquatics;
             if (allowAquatic.HasValue)
@@ -309,6 +354,9 @@ namespace DnDGen.EncounterGen.Selectors.Collections
                     .Distinct();
             }
 
+            if (!aquatics.Any())
+                return Enumerable.Empty<Dictionary<string, string>>();
+
             IEnumerable<bool> undergrounds;
             if (allowUnderground.HasValue)
             {
@@ -324,6 +372,9 @@ namespace DnDGen.EncounterGen.Selectors.Collections
                                     SelectMany(a => SelectPossibleAllowUnderground(e, t, d, l, a))))))
                     .Distinct();
             }
+
+            if (!undergrounds.Any())
+                return Enumerable.Empty<Dictionary<string, string>>();
 
             var specs = environments
                     .SelectMany(e => temperatures
