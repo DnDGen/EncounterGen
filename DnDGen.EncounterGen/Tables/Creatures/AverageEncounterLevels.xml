@@ -10098,6 +10098,14 @@
 		<entry>Badger/2</entry>
 		<entry>Cat/1</entry>
 		<entry>Character(Adventurer)[1]/1</entry>
+		<entry>Character(Animal trainer)[1]@Druid&amp;Ranger@/1,Cat/1</entry>
+		<entry>Character(Animal trainer)[1]@Druid&amp;Ranger@/1,Dog/1</entry>
+		<entry>Character(Animal trainer)[1]@Druid&amp;Ranger@/1,Donkey/1</entry>
+		<entry>Character(Animal trainer)[1]@Druid&amp;Ranger@/1,Pony/1</entry>
+		<entry>Character(Artisan)[1]@Expert@/1</entry>
+		<entry>Character(Artisan)[1d2+1]@Expert@/1</entry>
+		<entry>Character(Beggar)[1]@Commoner@/1</entry>
+		<entry>Character(Beggar)[1d2+1]@Commoner@/1</entry>
 	</collection>
 	<collection>
 		<name>2</name>
@@ -10115,6 +10123,20 @@
 		<entry>Boar/1</entry>
 		<entry>Bugbear/1</entry>
 		<entry>Character(Adventurer)[2]/1</entry>
+		<entry>Character(Animal trainer)[1]@Druid&amp;Ranger@/1,Camel/1</entry>
+		<entry>Character(Animal trainer)[1]@Druid&amp;Ranger@/1,Dog$Riding$/1</entry>
+		<entry>Character(Animal trainer)[1]@Druid&amp;Ranger@/1,Heavy horse/1</entry>
+		<entry>Character(Animal trainer)[1]@Druid&amp;Ranger@/1,Light horse/1</entry>
+		<entry>Character(Animal trainer)[1]@Druid&amp;Ranger@/1,Light warhorse/1</entry>
+		<entry>Character(Animal trainer)[1]@Druid&amp;Ranger@/1,Mule/1</entry>
+		<entry>Character(Animal trainer)[1]@Druid&amp;Ranger@/1,Warpony/1</entry>
+		<entry>Character(Animal trainer)[2]@Druid&amp;Ranger@/1,Cat/1</entry>
+		<entry>Character(Animal trainer)[2]@Druid&amp;Ranger@/1,Dog/1</entry>
+		<entry>Character(Animal trainer)[2]@Druid&amp;Ranger@/1,Donkey/1</entry>
+		<entry>Character(Animal trainer)[2]@Druid&amp;Ranger@/1,Pony/1</entry>
+		<entry>Character(Artisan)[1d2+3]@Expert@/1</entry>
+		<entry>Character(Beggar)[1d2+3]@Commoner@/1</entry>
+		<entry>Character(Businessman)[1]@Aristocrat@/1d4</entry>
 	</collection>
 	<collection>
 		<name>3</name>
@@ -10132,6 +10154,22 @@
 		<entry>Centaur/1</entry>
 		<entry>Character(Adventurer)[1]/1d3+1</entry>
 		<entry>Character(Adventurer)[3]/1</entry>
+		<entry>Character(Animal trainer)[1]@Druid&amp;Ranger@/1,Heavy warhorse/1</entry>
+		<entry>Character(Animal trainer)[2]@Druid&amp;Ranger@/1,Camel/1</entry>
+		<entry>Character(Animal trainer)[2]@Druid&amp;Ranger@/1,Dog$Riding$/1</entry>
+		<entry>Character(Animal trainer)[2]@Druid&amp;Ranger@/1,Heavy horse/1</entry>
+		<entry>Character(Animal trainer)[2]@Druid&amp;Ranger@/1,Light horse/1</entry>
+		<entry>Character(Animal trainer)[2]@Druid&amp;Ranger@/1,Light warhorse/1</entry>
+		<entry>Character(Animal trainer)[2]@Druid&amp;Ranger@/1,Mule/1</entry>
+		<entry>Character(Animal trainer)[2]@Druid&amp;Ranger@/1,Warpony/1</entry>
+		<entry>Character(Animal trainer)[3]@Druid&amp;Ranger@/1,Cat/1</entry>
+		<entry>Character(Animal trainer)[3]@Druid&amp;Ranger@/1,Dog/1</entry>
+		<entry>Character(Animal trainer)[3]@Druid&amp;Ranger@/1,Donkey/1</entry>
+		<entry>Character(Animal trainer)[3]@Druid&amp;Ranger@/1,Pony/1</entry>
+		<entry>Character(Animal trainer)[3]@Druid&amp;Ranger@/1,Warpony/1</entry>
+		<entry>Character(Artisan)[1d2+5]@Expert@/1</entry>
+		<entry>Character(Beggar)[1d2+5]@Commoner@/1</entry>
+		<entry>Character(Businessman)[1d2+1]@Aristocrat@/1d4</entry>
 	</collection>
 	<collection>
 		<name>4</name>
@@ -10148,6 +10186,20 @@
 		<entry>Carrion crawler/1</entry>
 		<entry>Centipede swarm/1</entry>
 		<entry>Character(Adventurer)[4]/1</entry>
+		<entry>Character(Animal trainer)[2]@Druid&amp;Ranger@/1,Heavy warhorse/1</entry>
+		<entry>Character(Animal trainer)[3]@Druid&amp;Ranger@/1,Camel/1</entry>
+		<entry>Character(Animal trainer)[3]@Druid&amp;Ranger@/1,Dog$Riding$/1</entry>
+		<entry>Character(Animal trainer)[3]@Druid&amp;Ranger@/1,Heavy horse/1</entry>
+		<entry>Character(Animal trainer)[3]@Druid&amp;Ranger@/1,Light horse/1</entry>
+		<entry>Character(Animal trainer)[3]@Druid&amp;Ranger@/1,Light warhorse/1</entry>
+		<entry>Character(Animal trainer)[3]@Druid&amp;Ranger@/1,Mule/1</entry>
+		<entry>Character(Animal trainer)[4]@Druid&amp;Ranger@/1,Cat/1</entry>
+		<entry>Character(Animal trainer)[4]@Druid&amp;Ranger@/1,Dog/1</entry>
+		<entry>Character(Animal trainer)[4]@Druid&amp;Ranger@/1,Donkey/1</entry>
+		<entry>Character(Animal trainer)[4]@Druid&amp;Ranger@/1,Pony/1</entry>
+		<entry>Character(Animal trainer)[4]@Druid&amp;Ranger@/1,Warpony/1</entry>
+		<entry>Character(Artisan)[1d2+7]@Expert@/1</entry>
+		<entry>Character(Beggar)[1d2+7]@Commoner@/1</entry>
 	</collection>
 	<collection>
 		<name>5</name>
@@ -10162,6 +10214,31 @@
 		<entry>Bronze dragon$Very young$/1</entry>
 		<entry>Bugbear/1d3+1</entry>
 		<entry>Character(Adventurer)[2]/1d3+1</entry>
+		<entry>Character(Adventurer)[5]/1</entry>
+		<entry>Character(Animal trainer)[3]@Druid&amp;Ranger@/1,Heavy warhorse/1</entry>
+		<entry>Character(Animal trainer)[4]@Druid&amp;Ranger@/1,Camel/1</entry>
+		<entry>Character(Animal trainer)[4]@Druid&amp;Ranger@/1,Dog$Riding$/1</entry>
+		<entry>Character(Animal trainer)[4]@Druid&amp;Ranger@/1,Heavy horse/1</entry>
+		<entry>Character(Animal trainer)[4]@Druid&amp;Ranger@/1,Light horse/1</entry>
+		<entry>Character(Animal trainer)[4]@Druid&amp;Ranger@/1,Light warhorse/1</entry>
+		<entry>Character(Animal trainer)[4]@Druid&amp;Ranger@/1,Mule/1</entry>
+		<entry>Character(Animal trainer)[4]@Druid&amp;Ranger@/1,Heavy warhorse/1</entry>
+		<entry>Character(Animal trainer)[5]@Druid&amp;Ranger@/1,Camel/1</entry>
+		<entry>Character(Animal trainer)[5]@Druid&amp;Ranger@/1,Dog$Riding$/1</entry>
+		<entry>Character(Animal trainer)[5]@Druid&amp;Ranger@/1,Heavy horse/1</entry>
+		<entry>Character(Animal trainer)[5]@Druid&amp;Ranger@/1,Light horse/1</entry>
+		<entry>Character(Animal trainer)[5]@Druid&amp;Ranger@/1,Light warhorse/1</entry>
+		<entry>Character(Animal trainer)[5]@Druid&amp;Ranger@/1,Mule/1</entry>
+		<entry>Character(Animal trainer)[5]@Druid&amp;Ranger@/1,Cat/1</entry>
+		<entry>Character(Animal trainer)[5]@Druid&amp;Ranger@/1,Dog/1</entry>
+		<entry>Character(Animal trainer)[5]@Druid&amp;Ranger@/1,Donkey/1</entry>
+		<entry>Character(Animal trainer)[5]@Druid&amp;Ranger@/1,Pony/1</entry>
+		<entry>Character(Animal trainer)[5]@Druid&amp;Ranger@/1,Warpony/1</entry>
+		<entry>Character(Artisan)[1d2+9]@Expert@/1</entry>
+		<entry>Character(Beggar)[1d2+9]@Commoner@/1</entry>
+		<entry>Character(Bandit)[1]@Warrior@/1d10+4,Character(Leader)[1]@Fighter@/1</entry>
+		<entry>Character(Bandit)[1]@Warrior@/1d10+4,Character(Leader)[1d2+1]@Warrior@/1</entry>
+		<entry>Character(Businessman)[1d2+3]@Aristocrat@/1d4</entry>
 	</collection>
 	<collection>
 		<name>6</name>
@@ -10180,6 +10257,22 @@
 		<entry>Carrion crawler/2</entry>
 		<entry>Chain Devil(Kyton)/1</entry>
 		<entry>Character(Adventurer)[3]/1d3+1</entry>
+		<entry>Character(Adventurer)[6]/1</entry>
+		<entry>Character(Animal trainer)[5]@Druid&amp;Ranger@/1,Heavy warhorse/1</entry>
+		<entry>Character(Animal trainer)[6]@Druid&amp;Ranger@/1,Camel/1</entry>
+		<entry>Character(Animal trainer)[6]@Druid&amp;Ranger@/1,Dog$Riding$/1</entry>
+		<entry>Character(Animal trainer)[6]@Druid&amp;Ranger@/1,Heavy horse/1</entry>
+		<entry>Character(Animal trainer)[6]@Druid&amp;Ranger@/1,Light horse/1</entry>
+		<entry>Character(Animal trainer)[6]@Druid&amp;Ranger@/1,Light warhorse/1</entry>
+		<entry>Character(Animal trainer)[6]@Druid&amp;Ranger@/1,Mule/1</entry>
+		<entry>Character(Animal trainer)[6]@Druid&amp;Ranger@/1,Warpony/1</entry>
+		<entry>Character(Animal trainer)[6]@Druid&amp;Ranger@/1,Cat/1</entry>
+		<entry>Character(Animal trainer)[6]@Druid&amp;Ranger@/1,Dog/1</entry>
+		<entry>Character(Animal trainer)[6]@Druid&amp;Ranger@/1,Donkey/1</entry>
+		<entry>Character(Animal trainer)[6]@Druid&amp;Ranger@/1,Pony/1</entry>
+		<entry>Character(Artisan)[1d2+11]@Expert@/1</entry>
+		<entry>Character(Beggar)[1d2+11]@Commoner@/1</entry>
+		<entry>Character(Businessman)[1d2+5]@Aristocrat@/1d4</entry>
 	</collection>
 	<collection>
 		<name>7</name>
@@ -10198,6 +10291,25 @@
 		<entry>Centipede swarm/1d3+1</entry>
 		<entry>Chaos beast/1</entry>
 		<entry>Character(Adventurer)[4]/1d3+1</entry>
+		<entry>Character(Adventurer)[7]/1</entry>
+		<entry>Character(Animal trainer)[6]@Druid&amp;Ranger@/1,Heavy warhorse/1</entry>
+		<entry>Character(Animal trainer)[7]@Druid&amp;Ranger@/1,Camel/1</entry>
+		<entry>Character(Animal trainer)[7]@Druid&amp;Ranger@/1,Dog$Riding$/1</entry>
+		<entry>Character(Animal trainer)[7]@Druid&amp;Ranger@/1,Heavy horse/1</entry>
+		<entry>Character(Animal trainer)[7]@Druid&amp;Ranger@/1,Light horse/1</entry>
+		<entry>Character(Animal trainer)[7]@Druid&amp;Ranger@/1,Light warhorse/1</entry>
+		<entry>Character(Animal trainer)[7]@Druid&amp;Ranger@/1,Mule/1</entry>
+		<entry>Character(Animal trainer)[7]@Druid&amp;Ranger@/1,Warpony/1</entry>
+		<entry>Character(Animal trainer)[7]@Druid&amp;Ranger@/1,Cat/1</entry>
+		<entry>Character(Animal trainer)[7]@Druid&amp;Ranger@/1,Dog/1</entry>
+		<entry>Character(Animal trainer)[7]@Druid&amp;Ranger@/1,Donkey/1</entry>
+		<entry>Character(Animal trainer)[7]@Druid&amp;Ranger@/1,Pony/1</entry>
+		<entry>Character(Animal trainer)[7]@Druid&amp;Ranger@/1,Heavy warhorse/1</entry>
+		<entry>Character(Artisan)[1d2+13]@Expert@/1</entry>
+		<entry>Character(Beggar)[1d2+13]@Commoner@/1</entry>
+		<entry>Character(Bandit)[1d2+1]@Warrior@/1d10+4,Character(Leader)[1d2+3]@Warrior@/1</entry>
+		<entry>Character(Bandit)[1d2+1]@Warrior@/1d10+4,Character(Leader)[2]@Fighter@/1</entry>
+		<entry>Character(Businessman)[1d2+7]@Aristocrat@/1d4</entry>
 	</collection>
 	<collection>
 		<name>8</name>
@@ -10216,6 +10328,23 @@
 		<entry>Brass dragon$Very young$/1d4+1</entry>
 		<entry>Camel/8d4-2</entry>
 		<entry>Carrion crawler/1d3+2</entry>
+		<entry>Character(Adventurer)[5]/1d3+1</entry>
+		<entry>Character(Adventurer)[8]/1</entry>
+		<entry>Character(Animal trainer)[8]@Druid&amp;Ranger@/1,Camel/1</entry>
+		<entry>Character(Animal trainer)[8]@Druid&amp;Ranger@/1,Dog$Riding$/1</entry>
+		<entry>Character(Animal trainer)[8]@Druid&amp;Ranger@/1,Heavy horse/1</entry>
+		<entry>Character(Animal trainer)[8]@Druid&amp;Ranger@/1,Light horse/1</entry>
+		<entry>Character(Animal trainer)[8]@Druid&amp;Ranger@/1,Light warhorse/1</entry>
+		<entry>Character(Animal trainer)[8]@Druid&amp;Ranger@/1,Mule/1</entry>
+		<entry>Character(Animal trainer)[8]@Druid&amp;Ranger@/1,Warpony/1</entry>
+		<entry>Character(Animal trainer)[8]@Druid&amp;Ranger@/1,Cat/1</entry>
+		<entry>Character(Animal trainer)[8]@Druid&amp;Ranger@/1,Dog/1</entry>
+		<entry>Character(Animal trainer)[8]@Druid&amp;Ranger@/1,Donkey/1</entry>
+		<entry>Character(Animal trainer)[8]@Druid&amp;Ranger@/1,Pony/1</entry>
+		<entry>Character(Animal trainer)[8]@Druid&amp;Ranger@/1,Heavy warhorse/1</entry>
+		<entry>Character(Artisan)[1d2+15]@Expert@/1</entry>
+		<entry>Character(Beggar)[1d2+15]@Commoner@/1</entry>
+		<entry>Character(Businessman)[1d2+9]@Aristocrat@/1d4</entry>
 	</collection>
 	<collection>
 		<name>9</name>
@@ -10234,6 +10363,25 @@
 		<entry>Bulette/2</entry>
 		<entry>Centaur/1d4+4</entry>
 		<entry>Chain Devil(Kyton)/1d3+1</entry>
+		<entry>Character(Adventurer)[6]/1d3+1</entry>
+		<entry>Character(Adventurer)[9]/1</entry>
+		<entry>Character(Animal trainer)[9]@Druid&amp;Ranger@/1,Camel/1</entry>
+		<entry>Character(Animal trainer)[9]@Druid&amp;Ranger@/1,Dog$Riding$/1</entry>
+		<entry>Character(Animal trainer)[9]@Druid&amp;Ranger@/1,Heavy horse/1</entry>
+		<entry>Character(Animal trainer)[9]@Druid&amp;Ranger@/1,Light horse/1</entry>
+		<entry>Character(Animal trainer)[9]@Druid&amp;Ranger@/1,Light warhorse/1</entry>
+		<entry>Character(Animal trainer)[9]@Druid&amp;Ranger@/1,Mule/1</entry>
+		<entry>Character(Animal trainer)[9]@Druid&amp;Ranger@/1,Warpony/1</entry>
+		<entry>Character(Animal trainer)[9]@Druid&amp;Ranger@/1,Cat/1</entry>
+		<entry>Character(Animal trainer)[9]@Druid&amp;Ranger@/1,Dog/1</entry>
+		<entry>Character(Animal trainer)[9]@Druid&amp;Ranger@/1,Donkey/1</entry>
+		<entry>Character(Animal trainer)[9]@Druid&amp;Ranger@/1,Pony/1</entry>
+		<entry>Character(Animal trainer)[9]@Druid&amp;Ranger@/1,Heavy warhorse/1</entry>
+		<entry>Character(Artisan)[1d2+17]@Expert@/1</entry>
+		<entry>Character(Beggar)[1d2+17]@Commoner@/1</entry>
+		<entry>Character(Bandit)[1d2+3]@Warrior@/1d10+4,Character(Leader)[1d2+5]@Warrior@/1</entry>
+		<entry>Character(Bandit)[1d2+3]@Warrior@/1d10+4,Character(Leader)[3]@Fighter@/1</entry>
+		<entry>Character(Businessman)[1d2+11]@Aristocrat@/1d4</entry>
 	</collection>
 	<collection>
 		<name>10</name>
@@ -10250,6 +10398,24 @@
 		<entry>Brass dragon$Young adult$/1</entry>
 		<entry>Brass dragon$Young$/1d4+1</entry>
 		<entry>Character(Adventurer)[10]/1</entry>
+		<entry>Character(Adventurer)[7]/1d3+1</entry>
+		<entry>Character(Animal trainer)[10]@Druid&amp;Ranger@/1,Camel/1</entry>
+		<entry>Character(Animal trainer)[10]@Druid&amp;Ranger@/1,Dog$Riding$/1</entry>
+		<entry>Character(Animal trainer)[10]@Druid&amp;Ranger@/1,Heavy horse/1</entry>
+		<entry>Character(Animal trainer)[10]@Druid&amp;Ranger@/1,Light horse/1</entry>
+		<entry>Character(Animal trainer)[10]@Druid&amp;Ranger@/1,Light warhorse/1</entry>
+		<entry>Character(Animal trainer)[10]@Druid&amp;Ranger@/1,Mule/1</entry>
+		<entry>Character(Animal trainer)[10]@Druid&amp;Ranger@/1,Warpony/1</entry>
+		<entry>Character(Animal trainer)[10]@Druid&amp;Ranger@/1,Cat/1</entry>
+		<entry>Character(Animal trainer)[10]@Druid&amp;Ranger@/1,Dog/1</entry>
+		<entry>Character(Animal trainer)[10]@Druid&amp;Ranger@/1,Donkey/1</entry>
+		<entry>Character(Animal trainer)[10]@Druid&amp;Ranger@/1,Pony/1</entry>
+		<entry>Character(Animal trainer)[10]@Druid&amp;Ranger@/1,Heavy warhorse/1</entry>
+		<entry>Character(Artisan)[20]@Expert@/1</entry>
+		<entry>Character(Beggar)[20]@Commoner@/1</entry>
+		<entry>Character(Bandit)[1d2+5]@Warrior@/1d10+4,Character(Leader)[1d2+7]@Warrior@/1</entry>
+		<entry>Character(Bandit)[1d2+5]@Warrior@/1d10+4,Character(Leader)[4]@Fighter@/1</entry>
+		<entry>Character(Businessman)[1d2+13]@Aristocrat@/1d4</entry>
 	</collection>
 	<collection>
 		<name>11</name>
@@ -10271,6 +10437,23 @@
 		<entry>Centaur/2d6+6,Character(Leader)[1d4+1]{Centaur}@Druid@/1</entry>
 		<entry>Centipede swarm/1d6+6</entry>
 		<entry>Character(Adventurer)[11]/1</entry>
+		<entry>Character(Adventurer)[8]/1d3+1</entry>
+		<entry>Character(Animal trainer)[11]@Druid&amp;Ranger@/1,Camel/1</entry>
+		<entry>Character(Animal trainer)[11]@Druid&amp;Ranger@/1,Dog$Riding$/1</entry>
+		<entry>Character(Animal trainer)[11]@Druid&amp;Ranger@/1,Heavy horse/1</entry>
+		<entry>Character(Animal trainer)[11]@Druid&amp;Ranger@/1,Light horse/1</entry>
+		<entry>Character(Animal trainer)[11]@Druid&amp;Ranger@/1,Light warhorse/1</entry>
+		<entry>Character(Animal trainer)[11]@Druid&amp;Ranger@/1,Mule/1</entry>
+		<entry>Character(Animal trainer)[11]@Druid&amp;Ranger@/1,Warpony/1</entry>
+		<entry>Character(Animal trainer)[11]@Druid&amp;Ranger@/1,Cat/1</entry>
+		<entry>Character(Animal trainer)[11]@Druid&amp;Ranger@/1,Dog/1</entry>
+		<entry>Character(Animal trainer)[11]@Druid&amp;Ranger@/1,Donkey/1</entry>
+		<entry>Character(Animal trainer)[11]@Druid&amp;Ranger@/1,Pony/1</entry>
+		<entry>Character(Animal trainer)[11]@Druid&amp;Ranger@/1,Heavy warhorse/1</entry>
+		<entry>Character(Archer)[7]{Harpy}@Fighter@/1</entry>
+		<entry>Character(Bandit)[1d2+7]@Warrior@/1d10+4,Character(Leader)[1d2+9]@Warrior@/1</entry>
+		<entry>Character(Bandit)[1d2+7]@Warrior@/1d10+4,Character(Leader)[5]@Fighter@/1</entry>
+		<entry>Character(Businessman)[1d2+15]@Aristocrat@/1d4</entry>
 	</collection>
 	<collection>
 		<name>12</name>
@@ -10285,6 +10468,22 @@
 		<entry>Bronze dragon$Young adult$/1</entry>
 		<entry>Chain Devil(Kyton)/2d3+4</entry>
 		<entry>Character(Adventurer)[12]/1</entry>
+		<entry>Character(Adventurer)[9]/1d3+1</entry>
+		<entry>Character(Animal trainer)[12]@Druid&amp;Ranger@/1,Camel/1</entry>
+		<entry>Character(Animal trainer)[12]@Druid&amp;Ranger@/1,Dog$Riding$/1</entry>
+		<entry>Character(Animal trainer)[12]@Druid&amp;Ranger@/1,Heavy horse/1</entry>
+		<entry>Character(Animal trainer)[12]@Druid&amp;Ranger@/1,Light horse/1</entry>
+		<entry>Character(Animal trainer)[12]@Druid&amp;Ranger@/1,Light warhorse/1</entry>
+		<entry>Character(Animal trainer)[12]@Druid&amp;Ranger@/1,Mule/1</entry>
+		<entry>Character(Animal trainer)[12]@Druid&amp;Ranger@/1,Warpony/1</entry>
+		<entry>Character(Animal trainer)[12]@Druid&amp;Ranger@/1,Cat/1</entry>
+		<entry>Character(Animal trainer)[12]@Druid&amp;Ranger@/1,Dog/1</entry>
+		<entry>Character(Animal trainer)[12]@Druid&amp;Ranger@/1,Donkey/1</entry>
+		<entry>Character(Animal trainer)[12]@Druid&amp;Ranger@/1,Pony/1</entry>
+		<entry>Character(Animal trainer)[12]@Druid&amp;Ranger@/1,Heavy warhorse/1</entry>
+		<entry>Character(Bandit)[1d2+9]@Warrior@/1d10+4,Character(Leader)[1d2+11]@Warrior@/1</entry>
+		<entry>Character(Bandit)[1d2+9]@Warrior@/1d10+4,Character(Leader)[6]@Fighter@/1</entry>
+		<entry>Character(Businessman)[1d2+17]@Aristocrat@/1d4</entry>
 	</collection>
 	<collection>
 		<name>13</name>
@@ -10298,6 +10497,21 @@
 		<entry>Bronze dragon$Juvenile$/1d4+1</entry>
 		<entry>Character(Adventurer)[10]/1d3+1</entry>
 		<entry>Character(Adventurer)[13]/1</entry>
+		<entry>Character(Animal trainer)[13]@Druid&amp;Ranger@/1,Camel/1</entry>
+		<entry>Character(Animal trainer)[13]@Druid&amp;Ranger@/1,Dog$Riding$/1</entry>
+		<entry>Character(Animal trainer)[13]@Druid&amp;Ranger@/1,Heavy horse/1</entry>
+		<entry>Character(Animal trainer)[13]@Druid&amp;Ranger@/1,Light horse/1</entry>
+		<entry>Character(Animal trainer)[13]@Druid&amp;Ranger@/1,Light warhorse/1</entry>
+		<entry>Character(Animal trainer)[13]@Druid&amp;Ranger@/1,Mule/1</entry>
+		<entry>Character(Animal trainer)[13]@Druid&amp;Ranger@/1,Warpony/1</entry>
+		<entry>Character(Animal trainer)[13]@Druid&amp;Ranger@/1,Cat/1</entry>
+		<entry>Character(Animal trainer)[13]@Druid&amp;Ranger@/1,Dog/1</entry>
+		<entry>Character(Animal trainer)[13]@Druid&amp;Ranger@/1,Donkey/1</entry>
+		<entry>Character(Animal trainer)[13]@Druid&amp;Ranger@/1,Pony/1</entry>
+		<entry>Character(Animal trainer)[13]@Druid&amp;Ranger@/1,Heavy warhorse/1</entry>
+		<entry>Character(Bandit)[1d2+11]@Warrior@/1d10+4,Character(Leader)[1d2+13]@Warrior@/1</entry>
+		<entry>Character(Bandit)[1d2+11]@Warrior@/1d10+4,Character(Leader)[7]@Fighter@/1</entry>
+		<entry>Character(Businessman)[20]@Aristocrat@/1d4</entry>
 	</collection>
 	<collection>
 		<name>14</name>
@@ -10311,6 +10525,20 @@
 		<entry>Chain Devil(Kyton)/1d10+10</entry>
 		<entry>Character(Adventurer)[11]/1d3+1</entry>
 		<entry>Character(Adventurer)[14]/1</entry>
+		<entry>Character(Animal trainer)[14]@Druid&amp;Ranger@/1,Camel/1</entry>
+		<entry>Character(Animal trainer)[14]@Druid&amp;Ranger@/1,Dog$Riding$/1</entry>
+		<entry>Character(Animal trainer)[14]@Druid&amp;Ranger@/1,Heavy horse/1</entry>
+		<entry>Character(Animal trainer)[14]@Druid&amp;Ranger@/1,Light horse/1</entry>
+		<entry>Character(Animal trainer)[14]@Druid&amp;Ranger@/1,Light warhorse/1</entry>
+		<entry>Character(Animal trainer)[14]@Druid&amp;Ranger@/1,Mule/1</entry>
+		<entry>Character(Animal trainer)[14]@Druid&amp;Ranger@/1,Warpony/1</entry>
+		<entry>Character(Animal trainer)[14]@Druid&amp;Ranger@/1,Cat/1</entry>
+		<entry>Character(Animal trainer)[14]@Druid&amp;Ranger@/1,Dog/1</entry>
+		<entry>Character(Animal trainer)[14]@Druid&amp;Ranger@/1,Donkey/1</entry>
+		<entry>Character(Animal trainer)[14]@Druid&amp;Ranger@/1,Pony/1</entry>
+		<entry>Character(Animal trainer)[14]@Druid&amp;Ranger@/1,Heavy warhorse/1</entry>
+		<entry>Character(Bandit)[1d2+13]@Warrior@/1d10+4,Character(Leader)[1d2+15]@Warrior@/1</entry>
+		<entry>Character(Bandit)[1d2+13]@Warrior@/1d10+4,Character(Leader)[8]@Fighter@/1</entry>
 	</collection>
 	<collection>
 		<name>15</name>
@@ -10323,6 +10551,20 @@
 		<entry>Bronze dragon$Adult$/1</entry>
 		<entry>Character(Adventurer)[12]/1d3+1</entry>
 		<entry>Character(Adventurer)[15]/1</entry>
+		<entry>Character(Animal trainer)[15]@Druid&amp;Ranger@/1,Camel/1</entry>
+		<entry>Character(Animal trainer)[15]@Druid&amp;Ranger@/1,Dog$Riding$/1</entry>
+		<entry>Character(Animal trainer)[15]@Druid&amp;Ranger@/1,Heavy horse/1</entry>
+		<entry>Character(Animal trainer)[15]@Druid&amp;Ranger@/1,Light horse/1</entry>
+		<entry>Character(Animal trainer)[15]@Druid&amp;Ranger@/1,Light warhorse/1</entry>
+		<entry>Character(Animal trainer)[15]@Druid&amp;Ranger@/1,Mule/1</entry>
+		<entry>Character(Animal trainer)[15]@Druid&amp;Ranger@/1,Warpony/1</entry>
+		<entry>Character(Animal trainer)[15]@Druid&amp;Ranger@/1,Cat/1</entry>
+		<entry>Character(Animal trainer)[15]@Druid&amp;Ranger@/1,Dog/1</entry>
+		<entry>Character(Animal trainer)[15]@Druid&amp;Ranger@/1,Donkey/1</entry>
+		<entry>Character(Animal trainer)[15]@Druid&amp;Ranger@/1,Pony/1</entry>
+		<entry>Character(Animal trainer)[15]@Druid&amp;Ranger@/1,Heavy warhorse/1</entry>
+		<entry>Character(Bandit)[1d2+15]@Warrior@/1d10+4,Character(Leader)[1d2+17]@Warrior@/1</entry>
+		<entry>Character(Bandit)[1d2+15]@Warrior@/1d10+4,Character(Leader)[9]@Fighter@/1</entry>
 	</collection>
 	<collection>
 		<name>16</name>
@@ -10337,6 +10579,20 @@
 		<entry>Bronze dragon$Young adult$/1d4+1</entry>
 		<entry>Character(Adventurer)[13]/1d3+1</entry>
 		<entry>Character(Adventurer)[16]/1</entry>
+		<entry>Character(Animal trainer)[16]@Druid&amp;Ranger@/1,Camel/1</entry>
+		<entry>Character(Animal trainer)[16]@Druid&amp;Ranger@/1,Dog$Riding$/1</entry>
+		<entry>Character(Animal trainer)[16]@Druid&amp;Ranger@/1,Heavy horse/1</entry>
+		<entry>Character(Animal trainer)[16]@Druid&amp;Ranger@/1,Light horse/1</entry>
+		<entry>Character(Animal trainer)[16]@Druid&amp;Ranger@/1,Light warhorse/1</entry>
+		<entry>Character(Animal trainer)[16]@Druid&amp;Ranger@/1,Mule/1</entry>
+		<entry>Character(Animal trainer)[16]@Druid&amp;Ranger@/1,Warpony/1</entry>
+		<entry>Character(Animal trainer)[16]@Druid&amp;Ranger@/1,Cat/1</entry>
+		<entry>Character(Animal trainer)[16]@Druid&amp;Ranger@/1,Dog/1</entry>
+		<entry>Character(Animal trainer)[16]@Druid&amp;Ranger@/1,Donkey/1</entry>
+		<entry>Character(Animal trainer)[16]@Druid&amp;Ranger@/1,Pony/1</entry>
+		<entry>Character(Animal trainer)[16]@Druid&amp;Ranger@/1,Heavy warhorse/1</entry>
+		<entry>Character(Bandit)[1d2+17]@Warrior@/1d10+4,Character(Leader)[20]@Warrior@/1</entry>
+		<entry>Character(Bandit)[1d2+17]@Warrior@/1d10+4,Character(Leader)[10]@Fighter@/1</entry>
 	</collection>
 	<collection>
 		<name>17</name>
@@ -10351,6 +10607,19 @@
 		<entry>Bronze dragon$Mature adult$/1</entry>
 		<entry>Character(Adventurer)[14]/1d3+1</entry>
 		<entry>Character(Adventurer)[17]/1</entry>
+		<entry>Character(Animal trainer)[17]@Druid&amp;Ranger@/1,Camel/1</entry>
+		<entry>Character(Animal trainer)[17]@Druid&amp;Ranger@/1,Dog$Riding$/1</entry>
+		<entry>Character(Animal trainer)[17]@Druid&amp;Ranger@/1,Heavy horse/1</entry>
+		<entry>Character(Animal trainer)[17]@Druid&amp;Ranger@/1,Light horse/1</entry>
+		<entry>Character(Animal trainer)[17]@Druid&amp;Ranger@/1,Light warhorse/1</entry>
+		<entry>Character(Animal trainer)[17]@Druid&amp;Ranger@/1,Mule/1</entry>
+		<entry>Character(Animal trainer)[17]@Druid&amp;Ranger@/1,Warpony/1</entry>
+		<entry>Character(Animal trainer)[17]@Druid&amp;Ranger@/1,Cat/1</entry>
+		<entry>Character(Animal trainer)[17]@Druid&amp;Ranger@/1,Dog/1</entry>
+		<entry>Character(Animal trainer)[17]@Druid&amp;Ranger@/1,Donkey/1</entry>
+		<entry>Character(Animal trainer)[17]@Druid&amp;Ranger@/1,Pony/1</entry>
+		<entry>Character(Animal trainer)[17]@Druid&amp;Ranger@/1,Heavy warhorse/1</entry>
+		<entry>Character(Bandit)[20]@Warrior@/1d10+4,Character(Leader)[11]@Fighter@/1</entry>
 	</collection>
 	<collection>
 		<name>18</name>
@@ -10365,6 +10634,18 @@
     	<entry>Centaur/26d6-6,Centaur$Noncombatant$/13d4-7,Character(Sergeant)[3]{Centaur}/10,Character(Lieutenant)[5]{Centaur}/5,Character(Leader)[2d3+3]{Centaur}@Druid@/1</entry>
 		<entry>Character(Adventurer)[15]/1d3+1</entry>
 		<entry>Character(Adventurer)[18]/1</entry>
+		<entry>Character(Animal trainer)[18]@Druid&amp;Ranger@/1,Camel/1</entry>
+		<entry>Character(Animal trainer)[18]@Druid&amp;Ranger@/1,Dog$Riding$/1</entry>
+		<entry>Character(Animal trainer)[18]@Druid&amp;Ranger@/1,Heavy horse/1</entry>
+		<entry>Character(Animal trainer)[18]@Druid&amp;Ranger@/1,Light horse/1</entry>
+		<entry>Character(Animal trainer)[18]@Druid&amp;Ranger@/1,Light warhorse/1</entry>
+		<entry>Character(Animal trainer)[18]@Druid&amp;Ranger@/1,Mule/1</entry>
+		<entry>Character(Animal trainer)[18]@Druid&amp;Ranger@/1,Warpony/1</entry>
+		<entry>Character(Animal trainer)[18]@Druid&amp;Ranger@/1,Cat/1</entry>
+		<entry>Character(Animal trainer)[18]@Druid&amp;Ranger@/1,Dog/1</entry>
+		<entry>Character(Animal trainer)[18]@Druid&amp;Ranger@/1,Donkey/1</entry>
+		<entry>Character(Animal trainer)[18]@Druid&amp;Ranger@/1,Pony/1</entry>
+		<entry>Character(Animal trainer)[18]@Druid&amp;Ranger@/1,Heavy warhorse/1</entry>
 	</collection>
 	<collection>
 		<name>19</name>
@@ -10378,6 +10659,18 @@
 		<entry>Bronze dragon$Old$/1</entry>
 		<entry>Character(Adventurer)[16]/1d3+1</entry>
 		<entry>Character(Adventurer)[19]/1</entry>
+		<entry>Character(Animal trainer)[19]@Druid&amp;Ranger@/1,Camel/1</entry>
+		<entry>Character(Animal trainer)[19]@Druid&amp;Ranger@/1,Dog$Riding$/1</entry>
+		<entry>Character(Animal trainer)[19]@Druid&amp;Ranger@/1,Heavy horse/1</entry>
+		<entry>Character(Animal trainer)[19]@Druid&amp;Ranger@/1,Light horse/1</entry>
+		<entry>Character(Animal trainer)[19]@Druid&amp;Ranger@/1,Light warhorse/1</entry>
+		<entry>Character(Animal trainer)[19]@Druid&amp;Ranger@/1,Mule/1</entry>
+		<entry>Character(Animal trainer)[19]@Druid&amp;Ranger@/1,Warpony/1</entry>
+		<entry>Character(Animal trainer)[19]@Druid&amp;Ranger@/1,Cat/1</entry>
+		<entry>Character(Animal trainer)[19]@Druid&amp;Ranger@/1,Dog/1</entry>
+		<entry>Character(Animal trainer)[19]@Druid&amp;Ranger@/1,Donkey/1</entry>
+		<entry>Character(Animal trainer)[19]@Druid&amp;Ranger@/1,Pony/1</entry>
+		<entry>Character(Animal trainer)[19]@Druid&amp;Ranger@/1,Heavy warhorse/1</entry>
 	</collection>
 	<collection>
 		<name>20</name>
@@ -10391,6 +10684,18 @@
 		<entry>Bronze dragon$Very old$/1</entry>
 		<entry>Character(Adventurer)[17]/1d3+1</entry>
 		<entry>Character(Adventurer)[20]/1</entry>
+		<entry>Character(Animal trainer)[20]@Druid&amp;Ranger@/1,Camel/1</entry>
+		<entry>Character(Animal trainer)[20]@Druid&amp;Ranger@/1,Dog$Riding$/1</entry>
+		<entry>Character(Animal trainer)[20]@Druid&amp;Ranger@/1,Heavy horse/1</entry>
+		<entry>Character(Animal trainer)[20]@Druid&amp;Ranger@/1,Light horse/1</entry>
+		<entry>Character(Animal trainer)[20]@Druid&amp;Ranger@/1,Light warhorse/1</entry>
+		<entry>Character(Animal trainer)[20]@Druid&amp;Ranger@/1,Mule/1</entry>
+		<entry>Character(Animal trainer)[20]@Druid&amp;Ranger@/1,Warpony/1</entry>
+		<entry>Character(Animal trainer)[20]@Druid&amp;Ranger@/1,Cat/1</entry>
+		<entry>Character(Animal trainer)[20]@Druid&amp;Ranger@/1,Dog/1</entry>
+		<entry>Character(Animal trainer)[20]@Druid&amp;Ranger@/1,Donkey/1</entry>
+		<entry>Character(Animal trainer)[20]@Druid&amp;Ranger@/1,Pony/1</entry>
+		<entry>Character(Animal trainer)[20]@Druid&amp;Ranger@/1,Heavy warhorse/1</entry>
 	</collection>
 	<collection>
 		<name>21</name>
