@@ -8,7 +8,7 @@ using System.Linq;
 namespace DnDGen.EncounterGen.Tests.Integration.Tables.Treasures
 {
     [TestFixture]
-    public class TreasureAdjustmentsTests : CollectionTests
+    public class TreasureRatesTests : CollectionTests
     {
         protected override string tableName
         {
