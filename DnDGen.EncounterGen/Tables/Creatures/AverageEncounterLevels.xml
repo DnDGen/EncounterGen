@@ -10136,6 +10136,26 @@
 		<entry>Dog/1</entry>
 		<entry>Dog$Celestial creature$/1</entry>
 		<entry>Dog$Riding$/1</entry>
+		<entry>Donkey/1</entry>
+		<entry>Eagle/1</entry>
+		<entry>Eagle/2</entry>
+		<entry>Elemental(Air)$Small$/1</entry>
+		<entry>Elemental(Earth)$Small$/1</entry>
+		<entry>Elemental(Fire)$Small$/1</entry>
+		<entry>Elemental(Water)$Small$/1</entry>
+		<entry>Ghoul/1</entry>
+		<entry>Ghoul$Lacedon$/1</entry>
+		<entry>Giant bee/1</entry>
+		<entry>Giant fire beetle/1d3+2</entry>
+		<entry>Giant fire beetle$Celestial creature$/1d3+2</entry>
+		<entry>Gnoll/1</entry>
+		<entry>Hawk/1</entry>
+		<entry>Hawk/2</entry>
+		<entry>Homunculus/1</entry>
+		<entry>Hyena/1</entry>
+		<entry>Krenshar/1</entry>
+		<entry>Lemure/1</entry>
+		<entry>Lizard/1</entry>
 	</collection>
 	<collection>
 		<name>2</name>
@@ -10187,6 +10207,16 @@
 		<entry>Character[1]{Deep Halfling}@Warrior@/1d3+1</entry>
 		<entry>Character[1]{Forest Gnome}@Warrior@/1d3+1</entry>
 		<entry>Character[1]{Goblin}@Warrior@/1d6+3</entry>
+		<entry>Character[1]{Gray Elf}@Warrior@/1d3+1</entry>
+		<entry>Character[1]{Half-Elf}@Warrior@/1d3+1</entry>
+		<entry>Character[1]{Half-Orc}@Warrior@/1d3+1</entry>
+		<entry>Character[1]{High Elf}@Warrior@/1d3+1</entry>
+		<entry>Character[1]{Hill Dwarf}@Warrior@/1d3+1</entry>
+		<entry>Character[1]{Kobold}@Warrior@/1d6+3</entry>
+		<entry>Character[1]{Lightfoot Halfling}@Warrior@/1d3+1</entry>
+		<entry>Character[1]{Locathah}@Warrior@/1d3+1</entry>
+		<entry>Character[1]{Merfolk}@Warrior@/1d3+1</entry>
+		<entry>Character[1]{Mountain Dwarf}@Warrior@/1d3+1</entry>
 	</collection>
 	<collection>
 		<name>3</name>
@@ -10496,6 +10526,16 @@
 		<entry>Character[1]{Hobgoblin}@Warrior@/10d10,Hobgoblin$Noncombatant$/5d10,Character(Sergeant)[3]{Hobgoblin}@Warrior@/2d3-1,Character(Leader)[1d3+3]{Hobgoblin}@Warrior@/1</entry>
 		<entry>Character[1]#Ghost#/1d6+6</entry>
 		<entry>Character[20]@Any NPC@/1</entry>
+		<entry>Character[20]@Any NPC@/1,Camel/1</entry>
+		<entry>Character[20]@Any NPC@/1,Cat/1</entry>
+		<entry>Character[20]@Any NPC@/1,Dog/1</entry>
+		<entry>Character[20]@Any NPC@/1,Dog$Riding$/1</entry>
+		<entry>Character[20]@Any NPC@/1,Donkey/1</entry>
+		<entry>Character[20]@Any NPC@/1,Heavy horse/1</entry>
+		<entry>Character[20]@Any NPC@/1,Heavy warhorse/1</entry>
+		<entry>Character[20]@Any NPC@/1,Light horse/1</entry>
+		<entry>Character[20]@Any NPC@/1,Light warhorse/1</entry>
+		<entry>Character[20]@Any NPC@/1,Mule/1</entry>
 	</collection>
 	<collection>
 		<name>11</name>
@@ -10554,6 +10594,16 @@
 		<entry>Character(Minstrel)[1d2+11]@Commoner&amp;Expert@/2d4+1,Character(Leader)[7]@Bard@/1d10-9</entry>
 		<entry>Character(Missionary)[1d2+15]@Adept@/1d4</entry>
 		<entry>Character(Missionary)[8]@Cleric&amp;Druid&amp;Monk&amp;Paladin@/1d4</entry>
+	    <entry>Character(Pickpocket)[11]@Rogue@/1</entry>
+	    <entry>Character(Pilgrim)[1d2+5]@Commoner@/1d10+6,Character(Guard)[1d2+5]@Warrior@/1d6-1,Character(Leader)[4]@Cleric@/1</entry>
+	    <entry>Character(Politician)[1d2+13]@Aristocrat@/1,Character(Adviser)[1d2+13]@Expert@/1d3-1,Character(Guard)[1d2+13]@Warrior@/2d3-2</entry>
+	    <entry>Character(Protestor)[1d2+11]@Commoner@/1d10</entry>
+	    <entry>Character(Retired adventurer)[11]/1</entry>
+	    <entry>Character(Scholar)[11]@Monk&amp;Wizard@/1</entry>
+	    <entry>Character(Sellsword)[11]/1</entry>
+	    <entry>Character(Street performer)[1d2+15]@Adept@/1d4</entry>
+	    <entry>Character(Street performer)[8]@Bard&amp;Rogue&amp;Sorcerer@/1d4</entry>
+	    <entry>Character(Teacher)[11]/1,Character(Star Student)[1]/1d3-1,Character(Student)[1]@Any NPC@/1d3+1</entry>
 	</collection>
 	<collection>
 		<name>12</name>
@@ -10604,6 +10654,16 @@
 		<entry>Character(Merchant)[1d2+11]@Commoner&amp;Expert@/1d4+1,Character(Guard)[1d2+11]@Warrior@/1d4</entry>
 		<entry>Character(Minstrel)[1d2+13]@Commoner&amp;Expert@/2d4+1,Character(Leader)[8]@Bard@/1d10-9</entry>
 		<entry>Character(Missionary)[1d2+17]@Adept@/1d4</entry>
+		<entry>Character(Missionary)[9]@Cleric&amp;Druid&amp;Monk&amp;Paladin@/1d4</entry>
+		<entry>Character(Pickpocket)[12]@Rogue@/1</entry>
+		<entry>Character(Pilgrim)[1d2+7]@Commoner@/1d10+6,Character(Guard)[1d2+7]@Warrior@/1d6-1,Character(Leader)[5]@Cleric@/1</entry>
+		<entry>Character(Politician)[1d2+15]@Aristocrat@/1,Character(Adviser)[1d2+15]@Expert@/1d3-1,Character(Guard)[1d2+15]@Warrior@/2d3-2</entry>
+		<entry>Character(Protestor)[1d2+13]@Commoner@/1d10</entry>
+		<entry>Character(Retired adventurer)[12]/1</entry>
+		<entry>Character(Scholar)[12]@Monk&amp;Wizard@/1</entry>
+		<entry>Character(Sellsword)[12]/1</entry>
+		<entry>Character(Street performer)[1d2+17]@Adept@/1d4</entry>
+		<entry>Character(Street performer)[9]@Bard&amp;Rogue&amp;Sorcerer@/1d4</entry>
 	</collection>
 	<collection>
 		<name>13</name>
@@ -10652,6 +10712,16 @@
 		<entry>Character(Hunter)[20]@Commoner&amp;Warrior@/1d4</entry>
 		<entry>Character(Merchant)[1d2+13]@Commoner&amp;Expert@/1d4+1,Character(Guard)[1d2+13]@Warrior@/1d4</entry>
 		<entry>Character(Minstrel)[1d2+15]@Commoner&amp;Expert@/2d4+1,Character(Leader)[9]@Bard@/1d10-9</entry>
+		<entry>Character(Missionary)[10]@Cleric&amp;Druid&amp;Monk&amp;Paladin@/1d4</entry>
+		<entry>Character(Missionary)[20]@Adept@/1d4</entry>
+		<entry>Character(Pickpocket)[13]@Rogue@/1</entry>
+		<entry>Character(Pilgrim)[1d2+9]@Commoner@/1d10+6,Character(Guard)[1d2+9]@Warrior@/1d6-1,Character(Leader)[6]@Cleric@/1</entry>
+		<entry>Character(Politician)[1d2+17]@Aristocrat@/1,Character(Adviser)[1d2+17]@Expert@/1d3-1,Character(Guard)[1d2+17]@Warrior@/2d3-2</entry>
+		<entry>Character(Protestor)[1d2+15]@Commoner@/1d10</entry>
+		<entry>Character(Retired adventurer)[13]/1</entry>
+		<entry>Character(Scholar)[13]@Monk&amp;Wizard@/1</entry>
+		<entry>Character(Sellsword)[13]/1</entry>
+		<entry>Character(Street performer)[10]@Bard&amp;Rogue&amp;Sorcerer@/1d4</entry>
 	</collection>
 	<collection>
 		<name>14</name>
@@ -10699,6 +10769,16 @@
 		<entry>Character(Missionary)[11]@Cleric&amp;Druid&amp;Monk&amp;Paladin@/1d4</entry>
 		<entry>Character(Pickpocket)[14]@Rogue@/1</entry>
 		<entry>Character(Pilgrim)[1d2+11]@Commoner@/1d10+6,Character(Guard)[1d2+11]@Warrior@/1d6-1,Character(Leader)[7]@Cleric@/1</entry>
+		<entry>Character(Politician)[20]@Aristocrat@/1,Character(Adviser)[20]@Expert@/1d3-1,Character(Guard)[20]@Warrior@/2d3-2</entry>
+		<entry>Character(Protestor)[1d2+17]@Commoner@/1d10</entry>
+		<entry>Character(Retired adventurer)[14]/1</entry>
+		<entry>Character(Scholar)[14]@Monk&amp;Wizard@/1</entry>
+		<entry>Character(Sellsword)[14]/1</entry>
+		<entry>Character(Street performer)[11]@Bard&amp;Rogue&amp;Sorcerer@/1d4</entry>
+		<entry>Character(Student)[3]{Githzerai}/4d4+8,Character(Teacher)[7]{Githzerai}/2,Character(Mentor)[9]{Githzerai}/1</entry>
+		<entry>Character(Teacher)[14]/1,Character(Star Student)[4]/1d3-1,Character(Student)[1d2+5]@Any NPC@/1d3+1</entry>
+		<entry>Character(War hero)[14]@Barbarian&amp;Cleric&amp;Fighter&amp;Monk&amp;Paladin&amp;Ranger&amp;Sorcerer&amp;Wizard@/1</entry>
+		<entry>Character[1]{Goblin}@Warrior@/40d10,Goblin$Noncombatant$/40d10,Character(Sergeant)[3]{Goblin}@Warrior@/2d10,Character(Lieutenant)[1d2+3]{Goblin}@Warrior@/1d2,Character(Leader)[1d3+5]{Goblin}@Warrior@/1,Worg/2d8+8,Dire wolf/1d3+1</entry>
 	</collection>
 	<collection>
 		<name>15</name>
@@ -10745,6 +10825,16 @@
 		<entry>Character(Lord)[10]#Mummy#@Cleric@/1</entry>
 		<entry>Character(Merchant)[1d2+17]@Commoner&amp;Expert@/1d4+1,Character(Guard)[1d2+17]@Warrior@/1d4</entry>
 		<entry>Character(Minstrel)[20]@Commoner&amp;Expert@/2d4+1,Character(Leader)[11]@Bard@/1d10-9</entry>
+		<entry>Character(Missionary)[12]@Cleric&amp;Druid&amp;Monk&amp;Paladin@/1d4</entry>
+		<entry>Character(Pickpocket)[15]@Rogue@/1</entry>
+		<entry>Character(Pilgrim)[1d2+13]@Commoner@/1d10+6,Character(Guard)[1d2+13]@Warrior@/1d6-1,Character(Leader)[8]@Cleric@/1</entry>
+		<entry>Character(Protestor)[20]@Commoner@/1d10</entry>
+		<entry>Character(Retired adventurer)[15]/1</entry>
+		<entry>Character(Scholar)[15]@Monk&amp;Wizard@/1</entry>
+		<entry>Character(Sellsword)[15]/1</entry>
+		<entry>Character(Street performer)[12]@Bard&amp;Rogue&amp;Sorcerer@/1d4</entry>
+		<entry>Character(Teacher)[15]/1,Character(Star Student)[5]/1d3-1,Character(Student)[1d2+7]@Any NPC@/1d3+1</entry>
+		<entry>Character(War hero)[15]@Barbarian&amp;Cleric&amp;Fighter&amp;Monk&amp;Paladin&amp;Ranger&amp;Sorcerer&amp;Wizard@/1</entry>
 	</collection>
 	<collection>
 		<name>16</name>
@@ -10793,6 +10883,16 @@
 		<entry>Character(Lord)[10]#Werewolf#@Fighter@/1d2,Werewolf/1d3+1,Wolf/1d4+4</entry>
 		<entry>Character(Lord)[10]#Werewolf#@Fighter@/2</entry>
 		<entry>Character(Merchant)[20]@Commoner&amp;Expert@/1d4+1,Character(Guard)[20]@Warrior@/1d4</entry>
+		<entry>Character(Missionary)[13]@Cleric&amp;Druid&amp;Monk&amp;Paladin@/1d4</entry>
+		<entry>Character(Pickpocket)[16]@Rogue@/1</entry>
+		<entry>Character(Pilgrim)[1d2+15]@Commoner@/1d10+6,Character(Guard)[1d2+15]@Warrior@/1d6-1,Character(Leader)[9]@Cleric@/1</entry>
+		<entry>Character(Retired adventurer)[16]/1</entry>
+		<entry>Character(Scholar)[16]@Monk&amp;Wizard@/1</entry>
+		<entry>Character(Sellsword)[16]/1</entry>
+		<entry>Character(Street performer)[13]@Bard&amp;Rogue&amp;Sorcerer@/1d4</entry>
+		<entry>Character(Teacher)[16]/1,Character(Star Student)[6]/1d3-1,Character(Student)[1d2+9]@Any NPC@/1d3+1</entry>
+		<entry>Character(War hero)[16]@Barbarian&amp;Cleric&amp;Fighter&amp;Monk&amp;Paladin&amp;Ranger&amp;Sorcerer&amp;Wizard@/1</entry>
+		<entry>Character[10]#Vampire#/1d3+2</entry>
 	</collection>
 	<collection>
 		<name>17</name>
@@ -10830,7 +10930,7 @@
 		<entry>Character(Famous researcher)[17]@Wizard@/1</entry>
 		<entry>Character(Famous researcher)[17]@Wizard@/1,Golem$Clay$/1</entry>
 		<entry>Character(Famous researcher)[17]@Wizard@/1,Golem$Flesh$/1</entry>
-		<entry>Character(Famous researcher)[17]@Wizard@/1,Golem$Stone$/1", "", "", "", "", "", "", "", "</entry>
+		<entry>Character(Famous researcher)[17]@Wizard@/1,Golem$Stone$/1</entry>
 		<entry>Character(Famous researcher)[17]@Wizard@/1,Homunculus/1</entry>
 		<entry>Character(Famous researcher)[17]@Wizard@/1,Shield guardian/1</entry>
 		<entry>Character(Hitman)[17]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@/1</entry>
@@ -10839,6 +10939,15 @@
 		<entry>Character(Pickpocket)[17]@Rogue@/1</entry>
 		<entry>Character(Pilgrim)[1d2+17]@Commoner@/1d10+6,Character(Guard)[1d2+17]@Warrior@/1d6-1,Character(Leader)[10]@Cleric@/1</entry>
 		<entry>Character(Retired adventurer)[17]/1</entry>
+		<entry>Character(Scholar)[17]@Monk&amp;Wizard@/1</entry>
+		<entry>Character(Sellsword)[17]/1</entry>
+		<entry>Character(Street performer)[14]@Bard&amp;Rogue&amp;Sorcerer@/1d4</entry>
+		<entry>Character(Teacher)[17]/1,Character(Star Student)[7]/1d3-1,Character(Student)[1d2+11]@Any NPC@/1d3+1</entry>
+		<entry>Character(War hero)[17]@Barbarian&amp;Cleric&amp;Fighter&amp;Monk&amp;Paladin&amp;Ranger&amp;Sorcerer&amp;Wizard@/1</entry>
+		<entry>Character[11]#Vampire#/1d3+2</entry>
+		<entry>Character[12]#Ghost#/1d3+1</entry>
+		<entry>Character[13]#Lich#/1,Character[9]#Vampire#/1d3+1,Vampire spawn/1d4+4</entry>
+		<entry>Character[13]#Vampire#/1d2,Vampire spawn/1d4+1</entry>
 	</collection>
 	<collection>
 		<name>18</name>
@@ -10885,6 +10994,16 @@
 		<entry>Character(Pickpocket)[18]@Rogue@/1</entry>
 		<entry>Character(Pilgrim)[20]@Commoner@/1d10+6,Character(Guard)[20]@Warrior@/1d6-1,Character(Leader)[11]@Cleric@/1</entry>
 		<entry>Character(Retired adventurer)[18]/1</entry>
+		<entry>Character(Scholar)[18]@Monk&amp;Wizard@/1</entry>
+		<entry>Character(Sellsword)[18]/1</entry>
+		<entry>Character(Street performer)[15]@Bard&amp;Rogue&amp;Sorcerer@/1d4</entry>
+		<entry>Character(Teacher)[18]/1,Character(Star Student)[8]/1d3-1,Character(Student)[1d2+13]@Any NPC@/1d3+1</entry>
+		<entry>Character(War hero)[18]@Barbarian&amp;Cleric&amp;Fighter&amp;Monk&amp;Paladin&amp;Ranger&amp;Sorcerer&amp;Wizard@/1</entry>
+		<entry>Character[12]#Vampire#/1d3+2</entry>
+		<entry>Character[13]#Ghost#/1d3+1</entry>
+		<entry>Character[14]#Lich#/1,Character[10]#Vampire#/1d3+1,Vampire spawn/1d4+4</entry>
+		<entry>Character[14]#Vampire#/1d2,Vampire spawn/1d4+1</entry>
+		<entry>Character[14]#Vampire#/2</entry>
 	</collection>
 	<collection>
 		<name>19</name>
@@ -10930,6 +11049,16 @@
 		<entry>Character(Retired adventurer)[19]/1</entry>
 		<entry>Character(Scholar)[19]@Monk&amp;Wizard@/1</entry>
 		<entry>Character(Sellsword)[19]/1</entry>
+		<entry>Character(Street performer)[16]@Bard&amp;Rogue&amp;Sorcerer@/1d4</entry>
+		<entry>Character(Teacher)[19]/1,Character(Star Student)[9]/1d3-1,Character(Student)[1d2+15]@Any NPC@/1d3+1</entry>
+		<entry>Character(War hero)[19]@Barbarian&amp;Cleric&amp;Fighter&amp;Monk&amp;Paladin&amp;Ranger&amp;Sorcerer&amp;Wizard@/1</entry>
+		<entry>Character[10]#Ghost#/1d6+6</entry>
+		<entry>Character[13]#Vampire#/1d3+2</entry>
+		<entry>Character[14]#Ghost#/1d3+1</entry>
+		<entry>Character[15]#Lich#/1,Character[11]#Vampire#/1d3+1,Vampire spawn/1d4+4</entry>
+		<entry>Character[15]#Vampire#/1d2,Vampire spawn/1d4+1</entry>
+		<entry>Character[15]#Vampire#/2</entry>
+		<entry>Character[17]#Ghost#/1</entry>
 	</collection>
 	<collection>
 		<name>20</name>
@@ -10975,6 +11104,16 @@
 		<entry>Character(Scholar)[20]@Monk&amp;Wizard@/1</entry>
 		<entry>Character(Sellsword)[20]/1</entry>
 		<entry>Character(Street performer)[17]@Bard&amp;Rogue&amp;Sorcerer@/1d4</entry>
+		<entry>Character(Student)[3]{Githzerai}/10d8+20,Character(Teacher)[7]{Githzerai}/1d8+2,Character(Mentor)[9]{Githzerai}/5,Character(Master)[13]{Githzerai}/2,Character(Sensei)[16]{Githzerai}/1</entry>
+		<entry>Character(Teacher)[20]/1,Character(Star Student)[10]/1d3-1,Character(Student)[1d2+17]@Any NPC@/1d3+1</entry>
+		<entry>Character(War hero)[20]@Barbarian&amp;Cleric&amp;Fighter&amp;Monk&amp;Paladin&amp;Ranger&amp;Sorcerer&amp;Wizard@/1</entry>
+		<entry>Character[11]#Ghost#/1d6+6</entry>
+		<entry>Character[14]#Vampire#/1d3+2</entry>
+		<entry>Character[15]#Ghost#/1d3+1</entry>
+		<entry>Character[16]#Lich#/1,Character[12]#Vampire#/1d3+1,Vampire spawn/1d4+4</entry>
+		<entry>Character[16]#Vampire#/1d2,Vampire spawn/1d4+1</entry>
+		<entry>Character[16]#Vampire#/2</entry>
+		<entry>Character[18]#Ghost#/1</entry>
 	</collection>
 	<collection>
 		<name>21</name>
@@ -11010,6 +11149,16 @@
 		<entry>Frost giant/1d10+20,Character[1d2+5]{Frost Giant}@Cleric&amp;Sorcerer@/1,Winter wolf/2d10+10,Ogre/2d6+10,White dragon$Young$/1d2,Character(Jarl)[8]{Frost Giant}@Barbarian&amp;Cleric&amp;Fighter&amp;Sorcerer@/1</entry>
 		<entry>Gold dragon$Mature adult$/1d2,Gold dragon$Very young$/1d4+1</entry>
 		<entry>Gold dragon$Mature adult$/2</entry>
+		<entry>Gold dragon$Old$/1</entry>
+		<entry>Green dragon$Ancient$/1</entry>
+		<entry>Green dragon$Very old$/1d2,Green dragon$Juvenile$/1d4+1</entry>
+		<entry>Green dragon$Very old$/2</entry>
+		<entry>Red dragon$Very old$/1</entry>
+		<entry>Titan/1</entry>
+		<entry>White dragon$Great wyrm$/1</entry>
+		<entry>White dragon$Wyrm$/1d2,White dragon$Adult$/1d4+1,White dragon$Wyrmling$/1d10+5</entry>
+		<entry>Silver dragon$Very old$/1</entry>
+		<entry>White dragon$Wyrm$/2</entry>
 	</collection>
 	<collection>
 		<name>22</name>
@@ -11041,6 +11190,12 @@
 		<entry>Green dragon$Wyrm$/1</entry>
 		<entry>Horned Devil(Cornugon)/2d3+4</entry>
 		<entry>Pit fiend/2</entry>
+		<entry>Red dragon$Old$/1d2,Red dragon$Young$/1d4+1</entry>
+		<entry>Red dragon$Old$/2</entry>
+		<entry>Silver dragon$Old$/1d2,Silver dragon$Young$/1d4+1</entry>
+		<entry>Silver dragon$Old$/2</entry>
+		<entry>Storm giant/1d3+1,Storm giant$Noncombatant$/1d2-1,Character[1d4+6]{Storm Giant}@Cleric&amp;Sorcerer@/1,Griffon/1d4+1</entry>
+		<entry>Storm giant/1d3+1,Storm giant$Noncombatant$/1d2-1,Character[1d4+6]{Storm Giant}@Cleric&amp;Sorcerer@/1,Roc/1d2</entry>
 	</collection>
 	<collection>
 		<name>23</name>
@@ -11072,6 +11227,11 @@
 		<entry>Red dragon$Very old$/2</entry>
 		<entry>Silver dragon$Ancient$/1</entry>
 		<entry>Silver dragon$Very old$/1d2,Silver dragon$Juvenile$/1d4+1</entry>
+		<entry>Silver dragon$Very old$/2</entry>
+		<entry>Solar/1</entry>
+		<entry>Titan/2</entry>
+		<entry>White dragon$Great wyrm$/1d2,White dragon$Mature adult$/1d4+1,White dragon$Very young$/1d10+5</entry>
+		<entry>White dragon$Great wyrm$/2</entry>
 	</collection>
 	<collection>
 		<name>24</name>
