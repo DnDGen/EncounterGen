@@ -1,7 +1,7 @@
 ﻿using DnDGen.EncounterGen.Selectors;
+using DnDGen.RollGen;
 using NUnit.Framework;
 using System;
-using System.Linq;
 
 namespace DnDGen.EncounterGen.Tests.Unit.Selectors
 {
@@ -135,38 +135,8 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors
         [TestCase(AmountConstants.Range100To400, 100, 400)]
         public void AmountConstant(string constant, int lower, int upper)
         {
-            var bestRoll = GetBestRollFor(lower, upper);
+            var bestRoll = RollHelper.GetRollWithFewestDice(lower, upper);
             Assert.That(constant, Is.EqualTo(bestRoll));
-        }
-
-        private string GetBestRollFor(int lower, int upper)
-        {
-            if (lower == upper)
-                return lower.ToString();
-
-            var standardDie = new[] { 2, 3, 4, 6, 8, 10, 12, 20, 100 };
-            var range = upper - lower;
-
-            var possibleDieRolls = Enumerable.Range(1, range)
-                .Where(f => range % f == 0) //Get factors
-                .ToDictionary(f => f, f => range / f + 1) //pair quantities with die
-                .Where(r => standardDie.Contains(r.Value)) //filter out non-standard die
-                .ToDictionary(r => r.Key, r => r.Value);
-
-            var quantity = possibleDieRolls.Min(r => r.Key);
-            var die = possibleDieRolls[quantity];
-            var adjustment = lower - quantity;
-
-            Assert.That(quantity + adjustment, Is.EqualTo(lower));
-            Assert.That(quantity * die + adjustment, Is.EqualTo(upper));
-
-            if (adjustment == 0)
-                return $"{quantity}d{die}";
-
-            if (adjustment > 0)
-                return $"{quantity}d{die}+{adjustment}";
-
-            return $"{quantity}d{die}{adjustment}";
         }
 
         [TestCase(AmountConstants.Range0To1, .5, 1)]
@@ -183,7 +153,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors
             var percentageNegative = percentagePositive - 1;
             var lower = Convert.ToInt32(upper / percentagePositive * percentageNegative) + 1;
 
-            var bestRoll = GetBestRollFor(lower, upper);
+            var bestRoll = RollHelper.GetRollWithFewestDice(lower, upper);
             Assert.That(constant, Is.EqualTo(bestRoll));
         }
     }

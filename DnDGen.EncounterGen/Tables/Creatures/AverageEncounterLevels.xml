@@ -10276,6 +10276,44 @@
 		<entry>Crocodile/1</entry>
 		<entry>Darkmantle/2</entry>
 		<entry>Dire badger/1</entry>
+		<entry>Dire bat/1</entry>
+		<entry>Dire weasel/1</entry>
+		<entry>Dretch/1</entry>
+		<entry>Formian$Worker$/1d3+1</entry>
+		<entry>Giant ant$Soldier$/1</entry>
+		<entry>Gnoll/2</entry>
+		<entry>Hippogriff/1</entry>
+		<entry>Hyena/2</entry>
+		<entry>Imp/1</entry>
+		<entry>Krenshar/2</entry>
+		<entry>Lantern archon/1</entry>
+		<entry>Lemure/2</entry>
+		<entry>Leopard/1</entry>
+		<entry>Monitor lizard/1</entry>
+		<entry>Monstrous centipede$Huge$/1</entry>
+		<entry>Monstrous centipede$Medium Fiendish creature$/1d4+1</entry>
+		<entry>Monstrous centipede$Medium$/1d4+1</entry>
+		<entry>Monstrous centipede$Small$/1d6+5</entry>
+		<entry>Monstrous centipede$Tiny$/4d3+4</entry>
+		<entry>Monstrous scorpion$Small$/1d4+1</entry>
+		<entry>Monstrous spider$Large$/1</entry>
+		<entry>Monstrous spider$Small$/1d4+1</entry>
+		<entry>Pseudodragon/2</entry>
+		<entry>Quasit/1</entry>
+		<entry>Rat swarm/1</entry>
+		<entry>Sahuagin/1</entry>
+		<entry>Shark$Large$/1</entry>
+		<entry>Shocker lizard/1</entry>
+		<entry>Stirge/1d3+1</entry>
+		<entry>Thoqqua/1</entry>
+		<entry>Viper snake$Large$/1</entry>
+		<entry>Wererat/1</entry>
+		<entry>White dragon$Wyrmling$/1</entry>
+		<entry>Wolf/2</entry>
+		<entry>Wolverine/1</entry>
+		<entry>Worg/1</entry>
+		<entry>Zombie$Human$/1d4</entry>
+		<entry>Zombie$Kobold$/1d4</entry>
 	</collection>
 	<collection>
 		<name>3</name>
@@ -10319,6 +10357,56 @@
 		<entry>Character(Herder)[1d2+1]@Commoner@/1d4,Livestock$Noncombatant$/5d6</entry>
 		<entry>Character(Hitman)[3]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@/1</entry>
 		<entry>Character(Hunter)[1d2+1]@Commoner&amp;Warrior@/1d4</entry>
+		<entry>Character(Minstrel)[1]@Commoner&amp;Expert@/2d4+1,Character(Leader)[1]@Bard@/1d10-9</entry>
+		<entry>Character(Missionary)[1]@Cleric&amp;Druid&amp;Monk&amp;Paladin@/1d4</entry>
+		<entry>Character(Missionary)[1d2+1]@Adept@/1d4</entry>
+		<entry>Character(Pickpocket)[3]@Rogue@/1</entry>
+		<entry>Character(Protestor)[1]@Commoner@/1d10</entry>
+		<entry>Character(Scholar)[3]@Monk&amp;Wizard@/1</entry>
+		<entry>Character(Sellsword)[3]/1</entry>
+		<entry>Character(Street performer)[1]@Bard&amp;Rogue&amp;Sorcerer@/1d4</entry>
+		<entry>Character(Street performer)[1d2+1]@Adept@/1d4</entry>
+		<entry>Character(Traveler)[1d2+1]@Any NPC@/1d4</entry>
+		<entry>Character[1]{Drow}@Warrior@/1d3+1</entry>
+		<entry>Character[1]{Duergar Dwarf}@Warrior@/1d3+1</entry>
+		<entry>Character[1]{Svirfneblin}@Warrior@/1d3+1</entry>
+		<entry>Character[1]@Any NPC@/1,Heavy warhorse/1</entry>
+		<entry>Character[1]#Ghost#/1</entry>
+		<entry>Character[1]#Vampire#/1</entry>
+		<entry>Character[1d2+1]@Any NPC@/1,Heavy warhorse/1</entry>
+		<entry>Character[1d2+3]@Any NPC@/1,Camel/1</entry>
+		<entry>Character[1d2+3]@Any NPC@/1,Dog$Riding$/1</entry>
+		<entry>Character[1d2+3]@Any NPC@/1,Heavy horse/1</entry>
+		<entry>Character[1d2+3]@Any NPC@/1,Light horse/1</entry>
+		<entry>Character[1d2+3]@Any NPC@/1,Light warhorse/1</entry>
+		<entry>Character[1d2+3]@Any NPC@/1,Mule/1</entry>
+		<entry>Character[1d2+3]@Any NPC@/1,Warpony/1</entry>
+		<entry>Character[1d2+5]@Any NPC@/1</entry>
+		<entry>Character[1d2+5]@Any NPC@/1,Cat/1</entry>
+		<entry>Character[1d2+5]@Any NPC@/1,Dog/1</entry>
+		<entry>Character[1d2+5]@Any NPC@/1,Donkey/1</entry>
+		<entry>Character[1d2+5]@Any NPC@/1,Pony/1</entry>
+		<entry>Character[1d2+5]@Any NPC@/1,Warpony/1</entry>
+		<entry>Cockatrice/1</entry>
+		<entry>Copper dragon$Wyrmling$/1</entry>
+		<entry>Deinonychus/1</entry>
+		<entry>Dire ape/1</entry>
+		<entry>Dire wolf/1</entry>
+		<entry>Dog/1d8+4</entry>
+		<entry>Dog$Celestial creature$/1d8+4</entry>
+		<entry>Doppelganger/1</entry>
+		<entry>Dryad/1</entry>
+		<entry>Elemental(Air)$Medium$/1</entry>
+		<entry>Elemental(Earth)$Medium$/1</entry>
+		<entry>Elemental(Fire)$Medium$/1</entry>
+		<entry>Elemental(Water)$Medium$/1</entry>
+		<entry>Ethereal filcher/1</entry>
+		<entry>Ethereal marauder/1</entry>
+		<entry>Ettercap/1</entry>
+		<entry>Formian$Warrior$/1</entry>
+		<entry>Gelatinous cube/1</entry>
+		<entry>Ghoul/1d3+1</entry>
+		<entry>Ghoul$Ghast$/1</entry>
 	</collection>
 	<collection>
 		<name>4</name>
@@ -10358,7 +10446,46 @@
 		<entry>Character(Merchant)[1]@Commoner&amp;Expert@/1d4+1,Character(Guard)[1]@Warrior@/1d4</entry>
 		<entry>Character(Pickpocket)[4]@Rogue@/1</entry>
 		<entry>Character(Politician)[1d2+1]@Aristocrat@/1,Character(Adviser)[1d2+1]@Expert@/1d3-1,Character(Guard)[1d2+1]@Warrior@/2d3-2</entry>
-		<entry>"Character(Scholar)[4]@Monk&amp;Wizard@/1</entry>
+		<entry>Character(Scholar)[4]@Monk&amp;Wizard@/1</entry>
+		<entry>Character(Sellsword)[4]/1</entry>
+		<entry>Character[1]{Hobgoblin}@Warrior@/1d6+3</entry>
+		<entry>Character[1d2+3]@Any NPC@/1,Heavy warhorse/1</entry>
+		<entry>Character[1d2+5]@Any NPC@/1,Camel/1</entry>
+		<entry>Character[1d2+5]@Any NPC@/1,Dog$Riding$/1</entry>
+		<entry>Character[1d2+5]@Any NPC@/1,Heavy horse/1</entry>
+		<entry>Character[1d2+5]@Any NPC@/1,Light horse/1</entry>
+		<entry>Character[1d2+5]@Any NPC@/1,Light warhorse/1</entry>
+		<entry>Character[1d2+5]@Any NPC@/1,Mule/1</entry>
+		<entry>Character[1d2+7]@Any NPC@/1</entry>
+		<entry>Character[1d2+7]@Any NPC@/1,Cat/1</entry>
+		<entry>Character[1d2+7]@Any NPC@/1,Dog/1</entry>
+		<entry>Character[1d2+7]@Any NPC@/1,Donkey/1</entry>
+		<entry>Character[1d2+7]@Any NPC@/1,Pony/1</entry>
+		<entry>Character[1d2+7]@Any NPC@/1,Warpony/1</entry>
+		<entry>Character[2]#Ghost#/1</entry>
+		<entry>Character[2]#Vampire#/1</entry>
+		<entry>Cheetah/2</entry>
+		<entry>Dire boar/1</entry>
+		<entry>Dire weasel/2</entry>
+		<entry>Dire wolverine/1</entry>
+		<entry>Displacer beast/1</entry>
+		<entry>Dretch/2</entry>
+		<entry>Gargoyle/1</entry>
+		<entry>Gargoyle$Kapoacinth$/1</entry>
+		<entry>Giant ant$Worker$/2d3</entry>
+		<entry>Giant bee/1d4+1</entry>
+		<entry>Giant crocodile/1</entry>
+		<entry>Gray ooze/1</entry>
+		<entry>Green dragon$Very young$/1</entry>
+		<entry>Griffon/1</entry>
+		<entry>Harpy/1</entry>
+		<entry>Hippogriff/2</entry>
+		<entry>Hound archon/1</entry>
+		<entry>Hydra$5 heads$/1</entry>
+		<entry>Janni/1</entry>
+		<entry>Lantern archon/2</entry>
+		<entry>Lemure/1d3+2</entry>
+		<entry>Leopard/2</entry>
 	</collection>
 	<collection>
 		<name>5</name>
@@ -10408,6 +10535,47 @@
 		<entry>Character(Herder)[1d2+3]@Commoner@/1d4,Livestock$Noncombatant$/5d6</entry>
 		<entry>Character(Hitman)[5]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@/1</entry>
 		<entry>Character(Hunter)[1d2+3]@Commoner&amp;Warrior@/1d4</entry>
+		<entry>Character(Minstrel)[1d2+1]@Commoner&amp;Expert@/2d4+1,Character(Leader)[2]@Bard@/1d10-9</entry>
+		<entry>Character(Missionary)[1d2+3]@Adept@/1d4</entry>
+		<entry>Character(Missionary)[2]@Cleric&amp;Druid&amp;Monk&amp;Paladin@/1d4</entry>
+		<entry>Character(Pickpocket)[5]@Rogue@/1</entry>
+		<entry>Character(Protestor)[1d2+1]@Commoner@/1d10</entry>
+		<entry>Character(Scholar)[5]@Monk&amp;Wizard@/1</entry>
+		<entry>Character(Sellsword)[5]/1</entry>
+		<entry>Character(Street performer)[1d2+3]@Adept@/1d4</entry>
+		<entry>Character(Street performer)[2]@Bard&amp;Rogue&amp;Sorcerer@/1d4</entry>
+		<entry>Character(Traveler)[1d2+3]@Any NPC@/1d4</entry>
+		<entry>Character[1]#Vampire#/2</entry>
+		<entry>Character[1d2+5]@Any NPC@/1,Heavy warhorse/1</entry>
+		<entry>Character[1d2+7]@Any NPC@/1,Camel/1</entry>
+		<entry>Character[1d2+7]@Any NPC@/1,Dog$Riding$/1</entry>
+		<entry>Character[1d2+7]@Any NPC@/1,Heavy horse/1</entry>
+		<entry>Character[1d2+7]@Any NPC@/1,Heavy warhorse/1</entry>
+		<entry>Character[1d2+7]@Any NPC@/1,Light horse/1</entry>
+		<entry>Character[1d2+7]@Any NPC@/1,Light warhorse/1</entry>
+		<entry>Character[1d2+7]@Any NPC@/1,Mule/1</entry>
+		<entry>Character[1d2+9]@Any NPC@/1</entry>
+		<entry>Character[1d2+9]@Any NPC@/1,Cat/1</entry>
+		<entry>Character[1d2+9]@Any NPC@/1,Dog/1</entry>
+		<entry>Character[1d2+9]@Any NPC@/1,Donkey/1</entry>
+		<entry>Character[1d2+9]@Any NPC@/1,Pony/1</entry>
+		<entry>Character[1d2+9]@Any NPC@/1,Warpony/1</entry>
+		<entry>Character[1d2+9]@Any NPC@/1,Camel/1</entry>
+		<entry>Character[1d2+9]@Any NPC@/1,Dog$Riding$/1</entry>
+		<entry>Character[1d2+9]@Any NPC@/1,Heavy horse/1</entry>
+		<entry>Character[1d2+9]@Any NPC@/1,Light horse/1</entry>
+		<entry>Character[1d2+9]@Any NPC@/1,Light warhorse/1</entry>
+		<entry>Character[1d2+9]@Any NPC@/1,Mule/1</entry>
+		<entry>Character[3]#Ghost#/1</entry>
+		<entry>Character[3]#Vampire#/1</entry>
+		<entry>Cloaker/1</entry>
+		<entry>Cockatrice/2</entry>
+		<entry>Copper dragon$Very young$/1</entry>
+		<entry>Darkmantle/2d4+1</entry>
+		<entry>Deinonychus/2</entry>
+		<entry>Dire lion/1</entry>
+		<entry>Dire rat/1d10+10</entry>
+		<entry>Dire rat$Fiendish creature$/1d10+10</entry>
 	</collection>
 	<collection>
 		<name>6</name>
@@ -10452,6 +10620,42 @@
 		<entry>Character(Herder)[1d2+5]@Commoner@/1d4,Livestock$Noncombatant$/5d6</entry>
 		<entry>Character(Hitman)[6]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@/1</entry>
 		<entry>Character(Hunter)[1d2+5]@Commoner&amp;Warrior@/1d4</entry>
+		<entry>Character(Merchant)[1d2+1]@Commoner&amp;Expert@/1d4+1,Character(Guard)[1d2+1]@Warrior@/1d4</entry>
+		<entry>Character(Missionary)[1d2+5]@Adept@/1d4</entry>
+		<entry>Character(Missionary)[3]@Cleric&amp;Druid&amp;Monk&amp;Paladin@/1d4</entry>
+		<entry>Character(Pickpocket)[6]@Rogue@/1</entry>
+		<entry>Character(Pilgrim)[1]@Commoner@/1d10+6,Character(Guard)[1]@Warrior@/1d6-1,Character(Leader)[1]@Cleric@/1</entry>
+		<entry>Character(Politician)[1d2+3]@Aristocrat@/1,Character(Adviser)[1d2+3]@Expert@/1d3-1,Character(Guard)[1d2+3]@Warrior@/2d3-2</entry>
+		<entry>Character(Scholar)[6]@Monk&amp;Wizard@/1</entry>
+		<entry>Character(Sellsword)[6]/1</entry>
+		<entry>Character(Street performer)[1d2+5]@Adept@/1d4</entry>
+		<entry>Character(Street performer)[3]@Bard&amp;Rogue&amp;Sorcerer@/1d4</entry>
+		<entry>Character(Traveler)[1d2+5]@Any NPC@/1d4</entry>
+		<entry>Character[1]{Hobgoblin}@Warrior@/2d8+8</entry>
+		<entry>Character[1]#Ghost#/1d3+1</entry>
+		<entry>Character[1d2+11]@Any NPC@/1</entry>
+		<entry>Character[1d2+11]@Any NPC@/1,Camel/1</entry>
+		<entry>Character[1d2+11]@Any NPC@/1,Cat/1</entry>
+		<entry>Character[1d2+11]@Any NPC@/1,Dog/1</entry>
+		<entry>Character[1d2+11]@Any NPC@/1,Dog$Riding$/1</entry>
+		<entry>Character[1d2+11]@Any NPC@/1,Donkey/1</entry>
+		<entry>Character[1d2+11]@Any NPC@/1,Heavy horse/1</entry>
+		<entry>Character[1d2+11]@Any NPC@/1,Pony/1</entry>
+		<entry>Character[1d2+11]@Any NPC@/1,Warpony/1</entry>
+		<entry>Character[1d2+11]@Any NPC@/1,Light horse/1</entry>
+		<entry>Character[1d2+11]@Any NPC@/1,Light warhorse/1</entry>
+		<entry>Character[1d2+11]@Any NPC@/1,Mule/1</entry>
+		<entry>Character[1d2+9]@Any NPC@/1,Heavy warhorse/1</entry>
+		<entry>Character[2]#Vampire#/2</entry>
+		<entry>Character[4]#Ghost#/1</entry>
+		<entry>Character[4]#Vampire#/1</entry>
+		<entry>Cheetah/1d3+2</entry>
+		<entry>Cryohydra$5 heads$/1</entry>
+		<entry>Derro/1d3+1</entry>
+		<entry>Digester/1</entry>
+		<entry>Dire badger/1d4+1</entry>
+		<entry>Dire wolverine/2</entry>
+		<entry>Displacer beast/2</entry>
 	</collection>
 	<collection>
 		<name>7</name>
@@ -10489,6 +10693,51 @@
 		<entry>Character(Bandit)[1d2+1]@Warrior@/1d10+4,Character(Leader)[1d2+3]@Warrior@/1</entry>
 		<entry>Character(Bandit)[1d2+1]@Warrior@/1d10+4,Character(Leader)[2]@Fighter@/1</entry>
 		<entry>Character(Businessman)[1d2+7]@Aristocrat@/1d4</entry>
+		<entry>Character(Construction Worker)[1d2+3]@Commoner@/2d4,Character(Architect)[1d2+3]@Expert@/1</entry>
+		<entry>Character(Crusader)[4]@Paladin@/1d4</entry>
+		<entry>Character(Doctor)[1d2+13]@Adept@/1</entry>
+		<entry>Character(Doctor)[7]@Cleric&amp;Druid@/1</entry>
+		<entry>Character(Farmer)[1d2+7]@Commoner@/1d4</entry>
+		<entry>Character(Fortuneteller)[1d2+13]@Adept@/1</entry>
+		<entry>Character(Gentry)[1d2+3]@Aristocrat@/1d2,Character(Servant)[1d2+3]@Commoner@/1d3+1</entry>
+		<entry>Character(Herder)[1d2+7]@Commoner@/1d4,Livestock$Noncombatant$/5d6</entry>
+		<entry>Character(Hitman)[7]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@/1</entry>
+		<entry>Character(Hunter)[1d2+7]@Commoner&amp;Warrior@/1d4</entry>
+		<entry>Character(Minstrel)[1d2+3]@Commoner&amp;Expert@/2d4+1,Character(Leader)[3]@Bard@/1d10-9</entry>
+		<entry>Character(Missionary)[1d2+7]@Adept@/1d4</entry>
+		<entry>Character(Missionary)[4]@Cleric&amp;Druid&amp;Monk&amp;Paladin@/1d4</entry>
+		<entry>Character(Pickpocket)[7]@Rogue@/1</entry>
+		<entry>Character(Politician)[1d2+5]@Aristocrat@/1,Character(Adviser)[1d2+5]@Expert@/1d3-1,Character(Guard)[1d2+5]@Warrior@/2d3-2</entry>
+		<entry>Character(Protestor)[1d2+3]@Commoner@/1d10</entry>
+		<entry>Character(Scholar)[7]@Monk&amp;Wizard@/1</entry>
+		<entry>Character(Sellsword)[7]/1</entry>
+		<entry>Character(Street performer)[1d2+7]@Adept@/1d4</entry>
+		<entry>Character(Street performer)[4]@Bard&amp;Rogue&amp;Sorcerer@/1d4</entry>
+		<entry>Character(Traveler)[1d2+7]@Any NPC@/1d4</entry>
+		<entry>Character[2]#Ghost#/1d3+1</entry>
+		<entry>Character[1d2+11]@Any NPC@/1,Heavy warhorse/1</entry>
+		<entry>Character[1d2+13]@Any NPC@/1</entry>
+		<entry>Character[1d2+13]@Any NPC@/1,Camel/1</entry>
+		<entry>Character[1d2+13]@Any NPC@/1,Cat/1</entry>
+		<entry>Character[1d2+13]@Any NPC@/1,Dog/1</entry>
+		<entry>Character[1d2+13]@Any NPC@/1,Dog$Riding$/1</entry>
+		<entry>Character[1d2+13]@Any NPC@/1,Donkey/1</entry>
+		<entry>Character[1d2+13]@Any NPC@/1,Heavy horse/1</entry>
+		<entry>Character[1d2+13]@Any NPC@/1,Pony/1</entry>
+		<entry>Character[1d2+13]@Any NPC@/1,Warpony/1</entry>
+		<entry>Character[1d2+13]@Any NPC@/1,Light horse/1</entry>
+		<entry>Character[1d2+13]@Any NPC@/1,Light warhorse/1</entry>
+		<entry>Character[1d2+13]@Any NPC@/1,Mule/1</entry>
+		<entry>Character[1]{Aquatic Elf}@Warrior@/1d10+10,Character(Sergeant)[3]{Aquatic Elf}@Warrior@/2,Character(Leader)[1d4+2]{Aquatic Elf}@Warrior@/1</entry>
+		<entry>Character[1]{Deep Dwarf}@Warrior@/1d10+10,Character(Sergeant)[3]{Deep Dwarf}@Warrior@/2,Character(Leader)[1d4+2]{Deep Dwarf}@Warrior@/1</entry>
+		<entry>Character[1]{Deep Halfling}@Warrior@/1d10+10,Character(Sergeant)[3]{Deep Halfling}@Warrior@/2,Character(Leader)[1d4+2]{Deep Halfling}@Warrior@/1</entry>
+		<entry>Character[1]{Forest Gnome}@Warrior@/1d10+10,Character(Leader)[1d4+2]{Forest Gnome}@Warrior@/1,Character(Lieutenant)[3]{Forest Gnome}@Warrior@/2</entry>
+		<entry>Character[1]{Gray Elf}@Warrior@/1d10+10,Character(Sergeant)[3]{Gray Elf}@Warrior@/2,Character(Leader)[1d4+2]{Gray Elf}@Warrior@/1</entry>
+		<entry>Character[1]{Half-Elf}@Warrior@/1d10+10,Character(Sergeant)[3]{Half-Elf}@Warrior@/2,Character(Leader)[1d4+2]{Half-Elf}@Warrior@/1</entry>
+		<entry>Character[1]{Half-Orc}@Warrior@/1d10+10,Character(Sergeant)[3]{Half-Orc}@Warrior@/2,Character(Leader)[1d4+2]{Half-Orc}@Warrior@/1</entry>
+		<entry>Character[1]{High Elf}@Warrior@/1d10+10,Character(Sergeant)[3]{High Elf}@Warrior@/2,Character(Leader)[1d4+2]{High Elf}@Warrior@/1</entry>
+		<entry>Character[1]{Hill Dwarf}@Warrior@/1d10+10,Character(Sergeant)[3]{Hill Dwarf}@Warrior@/2,Character(Leader)[1d4+2]{Hill Dwarf}@Warrior@/1</entry>
+		<entry>Character[1]{Kobold}@Warrior@/2d8+8,Dire weasel/1d3+1</entry>
 	</collection>
 	<collection>
 		<name>8</name>
@@ -10524,6 +10773,52 @@
 		<entry>Character(Artisan)[1d2+15]@Expert@/1</entry>
 		<entry>Character(Beggar)[1d2+15]@Commoner@/1</entry>
 		<entry>Character(Businessman)[1d2+9]@Aristocrat@/1d4</entry>
+		<entry>Character(Construction Worker)[1d2+5]@Commoner@/2d4,Character(Architect)[1d2+5]@Expert@/1</entry>
+		<entry>Character(Crusader)[5]@Paladin@/1d4</entry>
+		<entry>Character(Doctor)[1d2+15]@Adept@/1</entry>
+		<entry>Character(Doctor)[8]@Cleric&amp;Druid@/1</entry>
+		<entry>Character(Farmer)[1d2+9]@Commoner@/1d4</entry>
+		<entry>Character(Fortuneteller)[1d2+15]@Adept@/1</entry>
+		<entry>Character(Gentry)[1d2+5]@Aristocrat@/1d2,Character(Servant)[1d2+5]@Commoner@/1d3+1</entry>
+		<entry>Character(Guard)[1d2+3]@Warrior@/2d4+1,Character(Captain)[1d2+5]@Warrior@/1</entry>
+		<entry>Character(Guard)[1d2+3]@Warrior@/2d4+1,Character(Captain)[3]@Fighter@/1</entry>
+		<entry>Character(Herder)[1d2+9]@Commoner@/1d4,Livestock$Noncombatant$/5d6</entry>
+		<entry>Character(Hitman)[8]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@/1</entry>
+		<entry>Character(Hunter)[1d2+9]@Commoner&amp;Warrior@/1d4</entry>
+		<entry>Character(Minstrel)[1d2+5]@Commoner&amp;Expert@/2d4+1,Character(Leader)[4]@Bard@/1d10-9</entry>
+		<entry>Character(Missionary)[1d2+9]@Adept@/1d4</entry>
+		<entry>Character(Missionary)[5]@Cleric&amp;Druid&amp;Monk&amp;Paladin@/1d4</entry>
+		<entry>Character(Pickpocket)[8]@Rogue@/1</entry>
+		<entry>Character(Politician)[1d2+7]@Aristocrat@/1,Character(Adviser)[1d2+7]@Expert@/1d3-1,Character(Guard)[1d2+7]@Warrior@/2d3-2</entry>
+		<entry>Character(Protestor)[1d2+5]@Commoner@/1d10</entry>
+		<entry>Character(Scholar)[8]@Monk&amp;Wizard@/1</entry>
+		<entry>Character(Sellsword)[8]/1</entry>
+		<entry>Character(Street performer)[1d2+9]@Adept@/1d4</entry>
+		<entry>Character(Street performer)[5]@Bard&amp;Rogue&amp;Sorcerer@/1d4</entry>
+		<entry>Character(Traveler)[1d2+9]@Any NPC@/1d4</entry>
+		<entry>Character[3]#Ghost#/1d3+1</entry>
+		<entry>Character[1d2+15]@Any NPC@/1</entry>
+		<entry>Character[1d2+15]@Any NPC@/1,Camel/1</entry>
+		<entry>Character[1d2+15]@Any NPC@/1,Cat/1</entry>
+		<entry>Character[1d2+15]@Any NPC@/1,Dog/1</entry>
+		<entry>Character[1d2+15]@Any NPC@/1,Dog$Riding$/1</entry>
+		<entry>Character[1d2+15]@Any NPC@/1,Donkey/1</entry>
+		<entry>Character[1d2+15]@Any NPC@/1,Heavy horse/1</entry>
+		<entry>Character[1d2+15]@Any NPC@/1,Pony/1</entry>
+		<entry>Character[1d2+15]@Any NPC@/1,Warpony/1</entry>
+		<entry>Character[1d2+15]@Any NPC@/1,Light horse/1</entry>
+		<entry>Character[1d2+15]@Any NPC@/1,Light warhorse/1</entry>
+		<entry>Character[1d2+15]@Any NPC@/1,Mule/1</entry>
+		<entry>Character(Merchant)[1d2+3]@Commoner&amp;Expert@/1d4+1,Character(Guard)[1d2+3]@Warrior@/1d4</entry>
+		<entry>Character(Pilgrim)[1d2+1]@Commoner@/1d10+6,Character(Guard)[1d2+1]@Warrior@/1d6-1,Character(Leader)[2]@Cleric@/1</entry>
+		<entry>Character[1]{Drow}@Warrior@/1d4+4,Character(Sergeant)[2]{Drow}@Warrior@/2,Character(Leader)[1d4+2]{Drow}@Warrior@/1</entry>
+		<entry>Character[1]{Kobold}@Warrior@/10d10,Kobold$Noncombatant$/10d10,Character(Sergeant)[3]{Kobold}@Warrior@/2d3-1,Character(Leader)[1d3+3]{Kobold}@Warrior@/1</entry>
+		<entry>Character[1d2+15]@Any NPC@/1,Heavy warhorse/1</entry>
+		<entry>Character[2]#Vampire#/1d3+2</entry>
+		<entry>Character[4]{Merrow}@Barbarian@/1,Ogre$Merrow$/1d3</entry>
+		<entry>Character[4]{Ogre}@Barbarian@/1,Ogre/1d3</entry>
+		<entry>Character[4]#Vampire#/2</entry>
+		<entry>Character[6]#Ghost#/1</entry>
 	</collection>
 	<collection>
 		<name>9</name>
@@ -10561,6 +10856,52 @@
 		<entry>Character(Bandit)[1d2+3]@Warrior@/1d10+4,Character(Leader)[1d2+5]@Warrior@/1</entry>
 		<entry>Character(Bandit)[1d2+3]@Warrior@/1d10+4,Character(Leader)[3]@Fighter@/1</entry>
 		<entry>Character(Businessman)[1d2+11]@Aristocrat@/1d4</entry>
+		<entry>Character(Construction Worker)[1d2+7]@Commoner@/2d4,Character(Architect)[1d2+7]@Expert@/1</entry>
+		<entry>Character(Crusader)[6]@Paladin@/1d4</entry>
+		<entry>Character(Doctor)[1d2+17]@Adept@/1</entry>
+		<entry>Character(Doctor)[9]@Cleric&amp;Druid@/1</entry>
+		<entry>Character(Farmer)[1d2+11]@Commoner@/1d4</entry>
+		<entry>Character(Fortuneteller)[1d2+17]@Adept@/1</entry>
+		<entry>Character(Gentry)[1d2+7]@Aristocrat@/1d2,Character(Servant)[1d2+7]@Commoner@/1d3+1</entry>
+		<entry>Character(Guard)[1d2+5]@Warrior@/2d4+1,Character(Captain)[1d2+7]@Warrior@/1</entry>
+		<entry>Character(Guard)[1d2+5]@Warrior@/2d4+1,Character(Captain)[4]@Fighter@/1</entry>
+		<entry>Character(Herder)[1d2+11]@Commoner@/1d4,Livestock$Noncombatant$/5d6</entry>
+		<entry>Character(Hitman)[9]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@/1</entry>
+		<entry>Character(Hunter)[1d2+11]@Commoner&amp;Warrior@/1d4</entry>
+		<entry>Character(Minstrel)[1d2+7]@Commoner&amp;Expert@/2d4+1,Character(Leader)[5]@Bard@/1d10-9</entry>
+		<entry>Character(Missionary)[1d2+11]@Adept@/1d4</entry>
+		<entry>Character(Missionary)[6]@Cleric&amp;Druid&amp;Monk&amp;Paladin@/1d4</entry>
+		<entry>Character(Pickpocket)[9]@Rogue@/1</entry>
+		<entry>Character(Politician)[1d2+9]@Aristocrat@/1,Character(Adviser)[1d2+9]@Expert@/1d3-1,Character(Guard)[1d2+9]@Warrior@/2d3-2</entry>
+		<entry>Character(Protestor)[1d2+7]@Commoner@/1d10</entry>
+		<entry>Character(Scholar)[9]@Monk&amp;Wizard@/1</entry>
+		<entry>Character(Sellsword)[9]/1</entry>
+		<entry>Character(Street performer)[1d2+11]@Adept@/1d4</entry>
+		<entry>Character(Street performer)[6]@Bard&amp;Rogue&amp;Sorcerer@/1d4</entry>
+		<entry>Character(Traveler)[1d2+11]@Any NPC@/1d4</entry>
+		<entry>Character[4]#Ghost#/1d3+1</entry>
+		<entry>Character(Merchant)[1d2+5]@Commoner&amp;Expert@/1d4+1,Character(Guard)[1d2+5]@Warrior@/1d4</entry>
+		<entry>Character[1]{Goblin}@Warrior@/10d10,Goblin$Noncombatant$/10d10,Character(Sergeant)[3]{Goblin}@Warrior@/2d3-1,Character(Leader)[1d3+3]{Goblin}@Warrior@/1</entry>
+		<entry>Character[1]{Svirfneblin}@Warrior@/1d10+10,Character(Leader)[1d4+2]{Svirfneblin}@Warrior@/1,Character(Lieutenant)[3]{Svirfneblin}@Warrior@/2</entry>
+		<entry>Character[1]#Vampire#/1d2,Vampire spawn/1d4+1</entry>
+		<entry>Character[1d2+17]@Any NPC@/1</entry>
+		<entry>Character[1d2+17]@Any NPC@/1,Camel/1</entry>
+		<entry>Character[1d2+17]@Any NPC@/1,Cat/1</entry>
+		<entry>Character[1d2+17]@Any NPC@/1,Dog/1</entry>
+		<entry>Character[1d2+17]@Any NPC@/1,Dog$Riding$/1</entry>
+		<entry>Character[1d2+17]@Any NPC@/1,Donkey/1</entry>
+		<entry>Character[1d2+17]@Any NPC@/1,Heavy horse/1</entry>
+		<entry>Character[1d2+17]@Any NPC@/1,Heavy warhorse/1</entry>
+		<entry>Character[1d2+17]@Any NPC@/1,Pony/1</entry>
+		<entry>Character[1d2+17]@Any NPC@/1,Warpony/1</entry>
+		<entry>Character[1d2+17]@Any NPC@/1,Light horse/1</entry>
+		<entry>Character[1d2+17]@Any NPC@/1,Light warhorse/1</entry>
+		<entry>Character[1d2+17]@Any NPC@/1,Mule/1</entry>
+		<entry>Character[2]#Vampire#/1d2,Vampire spawn/1d4+1</entry>
+		<entry>Character[3]#Vampire#/1d3+2</entry>
+		<entry>Character[4]{Merrow}@Barbarian@/2</entry>
+		<entry>Character[4]{Ogre}@Barbarian@/2</entry>
+		<entry>Character[5]#Vampire#/2</entry>
 	</collection>
 	<collection>
 		<name>10</name>
@@ -10665,6 +11006,46 @@
 		<entry>Griffon/2d3+4</entry>
 		<entry>Hieracosphinx/1d4+3</entry>
 		<entry>Hydra$11 heads$/1</entry>
+		<entry>Lamia/1d2+2</entry>
+		<entry>Lillend/1d3+1</entry>
+		<entry>Manticore/1d4+2</entry>
+		<entry>Medusa/1d3+1</entry>
+		<entry>Mind flayer/2</entry>
+		<entry>Monstrous scorpion$Gargantuan$/1</entry>
+		<entry>Naga$Guardian$/1</entry>
+		<entry>Night hag/1,Nightmare/1</entry>
+		<entry>Ogre mage/2</entry>
+		<entry>Pixie/1d6+5</entry>
+		<entry>Pixie$with Irresistable Dance$/1,Pixie/1d6+4</entry>
+		<entry>Pyrohydra$9 heads$/1</entry>
+		<entry>Rakshasa/1</entry>
+		<entry>Rast/1d4+2</entry>
+		<entry>Razor boar/1</entry>
+		<entry>Red dragon$Juvenile$/1</entry>
+		<entry>Rhinoceras/2d6</entry>
+		<entry>Salamander$Average$/1d3+2</entry>
+		<entry>Salamander$Noble$/1</entry>
+		<entry>Sea cat/1d8+4</entry>
+		<entry>Shark$Huge$/1d6+5</entry>
+		<entry>Silver dragon$Juvenile$/1</entry>
+		<entry>Skeleton$Chimera$/1d6+4</entry>
+		<entry>Skeleton$Cloud giant$/1d4</entry>
+		<entry>Skeleton$Owlbear$/1d10+10</entry>
+		<entry>Slaad$Blue$/2</entry>
+		<entry>Slaad$Gray$/1</entry>
+		<entry>Spectre/1d3+1</entry>
+		<entry>Tyrannosaurus/2</entry>
+		<entry>Umber hulk/1d3+1</entry>
+		<entry>Werebear/1d3+1,Brown bear/1d4</entry>
+		<entry>White dragon$Adult$/1</entry>
+		<entry>White dragon$Juvenile$/1d4+1</entry>
+		<entry>Will-O'-Wisp/1d2+2</entry>
+		<entry>Xill/1d4+1</entry>
+		<entry>Xorn$Average$/1d3+2</entry>
+		<entry>Xorn$Elder$/2</entry>
+		<entry>Zombie$Bugbear$/1d10+10</entry>
+		<entry>Zombie$Minotaur$/1d6+4</entry>
+		<entry>Zombie$Wyvern$/1d6+4</entry>
 	</collection>
 	<collection>
 		<name>11</name>
@@ -10763,6 +11144,56 @@
 		<entry>Elemental(Fire)$Elder$/1</entry>
 		<entry>Elemental(Water)$Elder$/1</entry>
 		<entry>Ettin/1d3+2,Brown bear/1d2</entry>
+		<entry>Ettin/1d3+2,Brown bear/1d2,Character[1]{Goblin}@Warrior@/1d8+8</entry>
+		<entry>Ettin/1d3+2,Brown bear/1d2,Character[1]{Orc}@Warrior@/1d6+6</entry>
+		<entry>Formian$Taskmaster$/1d3+1,Dominated creature[4]/1d3+1</entry>
+		<entry>Gargoyle/1d12+4</entry>
+		<entry>Gargoyle$Kapoacinth$/1d12+4</entry>
+		<entry>Giant wasp/1d10+10</entry>
+		<entry>Gold dragon$Juvenile$/1</entry>
+		<entry>Gold dragon$Very young$/1d4+1</entry>
+		<entry>Golem$Stone$/1</entry>
+		<entry>Green dragon$Young adult$/1</entry>
+		<entry>Grig/12d6+8</entry>
+		<entry>Gynosphinx/1d3+1</entry>
+		<entry>Harpy/1d6+6</entry>
+		<entry>Hellwasp swarm/1d3+1</entry>
+		<entry>Hezrou/1</entry>
+		<entry>Hill giant dire wereboar/1</entry>
+		<entry>Hill giant/1d4+1</entry>
+		<entry>Hydra$12 heads$/1</entry>
+		<entry>Janni/1d10+5</entry>
+		<entry>Locust swarm/1d10+10</entry>
+		<entry>Megaraptor/1d4+2</entry>
+		<entry>Mohrg/1d3+1</entry>
+		<entry>Mohrg/1d3+1,Zombie$Human$/1d6+4</entry>
+		<entry>Monstrous centipede$Colossal Fiendish creature$/1</entry>
+		<entry>Monstrous scorpion$Huge$/1d4+1</entry>
+		<entry>Monstrous spider$Colossal$/1</entry>
+		<entry>Mummy/2d3+4</entry>
+		<entry>Naga$Dark$/1d3+1</entry>
+		<entry>Naga$Water$/1d2+2</entry>
+		<entry>Nessian warhound/2</entry>
+		<entry>Nightmare$Cauchemar$/1</entry>
+		<entry>Nixie/12d6+8</entry>
+		<entry>Ogre mage/1d2,Ogre/1d3+1</entry>
+		<entry>Pyrohydra$10 heads$/1</entry>
+		<entry>Red dragon$Young$/1d4+1</entry>
+		<entry>Retriever/1</entry>
+		<entry>Roc/2</entry>
+		<entry>Sahuagin/1d10+10,Character(Lieutenant)[3]{Sahuagin}/1,Shark$Huge$/1d2</entry>
+		<entry>Sahuagin/1d10+10,Character(Lieutenant)[3]{Sahuagin}/1,Shark$Large$/1d2</entry>
+		<entry>Sahuagin/1d10+10,Character(Lieutenant)[3]{Sahuagin}/1,Shark$Medium$/1d2</entry>
+		<entry>Scorpionfolk/1d3+2</entry>
+		<entry>Shadow mastiff/1d8+4</entry>
+		<entry>Silver dragon$Young$/1d4+1</entry>
+		<entry>Skeleton$Ettin$/1d6+4</entry>
+		<entry>Skeleton$Red dragon$Young adult$$/1d4</entry>
+		<entry>Skeleton$Troll$/1d10+10</entry>
+		<entry>Slaad$Red$/1d3+2</entry>
+		<entry>Triceratops/2</entry>
+		<entry>Vrock/2</entry>
+		<entry>Whale$Orca$/1d6+5</entry>
 	</collection>
 	<collection>
 		<name>12</name>
@@ -10853,6 +11284,41 @@
 		<entry>Cryohydra$11 heads$/1</entry>
 		<entry>Destrachan/1d3+2</entry>
 		<entry>Displacer beast$Pack Lord$/1</entry>
+		<entry>Djinni/1d10+5</entry>
+		<entry>Formian$Myrmarch$/1,Formian$Worker$/1d12+6,Formian$Warrior$/1d6+5</entry>
+		<entry>Frost worm/1</entry>
+		<entry>Girallon/1d4+4</entry>
+		<entry>Gorgon/1d2+2</entry>
+		<entry>Green dragon$Juvenile$/1d4+1</entry>
+		<entry>Grimlock/10d6,Character(Leader)[1d3+2]{Grimlock}/1d6</entry>
+		<entry>Kolyarut/1</entry>
+		<entry>Kraken/1</entry>
+		<entry>Leonal/1</entry>
+		<entry>Lizardfolk/6d6+24,Character(Lieutenant)[1d4+2]{Lizardfolk}/2,Character(Leader)[2d4+2]{Lizardfolk}/1</entry>
+		<entry>Mind flayer/1d3+2</entry>
+		<entry>Mind flayer/1d3+2,Grimlock/2d3+4</entry>
+		<entry>Monstrous scorpion$Colossal$/1</entry>
+		<entry>Naga$Spirit$/1d3+1</entry>
+		<entry>Nessian warhound/1d2,Hell hound/1d8+4</entry>
+		<entry>Purple worm/1</entry>
+		<entry>Pyrohydra$11 heads$/1</entry>
+		<entry>Roper/1</entry>
+		<entry>Salamander$Noble$/2</entry>
+		<entry>Skeleton$Chimera$/1d10+10</entry>
+		<entry>Skeleton$Megaraptor$/1d6+4</entry>
+		<entry>Slaad$Blue$/1d3+2</entry>
+		<entry>Slaad$Gray$/2</entry>
+		<entry>Stone giant/1d4+1</entry>
+		<entry>Tojanida$Elder$/1d3+1</entry>
+		<entry>Troglodyte/12d6+8,Troglodyte$Noncombatant$/4d4,Monitor lizard/2d6+1</entry>
+		<entry>White dragon$Adult$/1d2,White dragon$Wyrmling$/1d4+1</entry>
+		<entry>White dragon$Adult$/2</entry>
+		<entry>White dragon$Mature adult$/1</entry>
+		<entry>White dragon$Young adult$/1d4+1</entry>
+		<entry>Yrthak/1d3+1</entry>
+		<entry>Zombie$Gray render$/1d6+4</entry>
+		<entry>Zombie$Minotaur$/1d10+10</entry>
+		<entry>Zombie$Wyvern$/1d10+10</entry>
 	</collection>
 	<collection>
 		<name>13</name>
@@ -10941,6 +11407,32 @@
 		<entry>Golem$Clay$/1d3+1</entry>
 		<entry>Golem$Iron$/1</entry>
 		<entry>Green dragon$Adult$/1</entry>
+		<entry>Hellcat(Bezekira)/2d3+4</entry>
+		<entry>Hill giant dire wereboar/2</entry>
+		<entry>Hill giant/1d4+5,Dire wolf/1d3+1</entry>
+		<entry>Hill giant/1d4+5,Hill giant$Noncombatant$/1d2+1</entry>
+		<entry>Ice Devil(Gelugon)/1</entry>
+		<entry>Kuo-toa/1d6+5,Character(Whip)[3]{Kuo-toa}@Cleric@/1d2,Character(Monitor)[4]{Kuo-toa}@Monk@/1d2,Character[8]{Kuo-toa}@Fighter@/1</entry>
+		<entry>Lammasu$Golden Protector$/1</entry>
+		<entry>Naga$Guardian$/1d3+1</entry>
+		<entry>Night hag/3,Nightmare/3</entry>
+		<entry>Pyrohydra$12 heads$/1</entry>
+		<entry>Red dragon$Young adult$/1</entry>
+		<entry>Sahuagin/1d10+10,Character(Lieutenant)[3]{Sahuagin}/1,Dire shark/1d2</entry>
+		<entry>Silver dragon$Young adult$/1</entry>
+		<entry>Skeleton$Cloud giant$/1d6+4</entry>
+		<entry>Skeleton$Ettin$/1d10+10</entry>
+		<entry>Slaad$Death$/1</entry>
+		<entry>Slaad$Green$/1d4+1</entry>
+		<entry>Slaad$Red$/2d3+4</entry>
+		<entry>Spectre/1d6+5</entry>
+		<entry>Storm giant/1</entry>
+		<entry>Treant/1d4+3</entry>
+		<entry>Triton/12d6+8</entry>
+		<entry>Unicorn$Celestial Charger$/1</entry>
+		<entry>Vrock/1d3+2</entry>
+		<entry>Whale$Cachalot$/1d6+5</entry>
+		<entry>Yuan-ti$Pureblood$/1d12+1,Yuan-ti$Halfblood$/1d4+1,Yuan-ti$Abomination$/1d3+1</entry>
 	</collection>
 	<collection>
 		<name>14</name>
@@ -11028,6 +11520,18 @@
 		<entry>Sahuagin/12d6+8,Sahuagin$Noncombatant$/12d6+8,Character(Lieutenant)[3]{Sahuagin}/1d4,Character(Chieftan)[4]{Sahuagin}/1d4,Shark$Huge$/1d2</entry>
 		<entry>Sahuagin/12d6+8,Sahuagin$Noncombatant$/12d6+8,Character(Lieutenant)[3]{Sahuagin}/1d4,Character(Chieftan)[4]{Sahuagin}/1d4,Shark$Large$/1d2</entry>
 		<entry>Sahuagin/12d6+8,Sahuagin$Noncombatant$/12d6+8,Character(Lieutenant)[3]{Sahuagin}/1d4,Character(Chieftan)[4]{Sahuagin}/1d4,Shark$Medium$/1d2</entry>
+		<entry>Silver dragon$Juvenile$/1d4+1</entry>
+		<entry>Skeleton$Megaraptor$/1d10+10</entry>
+		<entry>Skeleton$Red dragon$Young adult$$/1d6+4</entry>
+		<entry>Slaad$Blue$/2d3+4</entry>
+		<entry>Stone giant/1d4+5,Stone giant$Elder$/1</entry>
+		<entry>Stone giant/1d4+5,Stone giant$Noncombatant$/1d2+1</entry>
+		<entry>Trumpet archon/1</entry>
+		<entry>Umber hulk$Truly horrid$/1</entry>
+		<entry>White dragon$Mature adult$/1d2,White dragon$Very young$/1d4+1</entry>
+		<entry>White dragon$Mature adult$/2</entry>
+		<entry>Xorn$Elder$/1d6+5</entry>
+		<entry>Zombie$Gray render$/1d10+10</entry>
 	</collection>
 	<collection>
 		<name>15</name>
@@ -11114,6 +11618,15 @@
 		<entry>Marut/1</entry>
 		<entry>Pixie/12d6+8</entry>
 		<entry>Pixie$with Irresistable Dance$/2d4,Pixie/6d10+12</entry>
+		<entry>Red dragon$Adult$/1</entry>
+		<entry>Sahuagin/12d6+8,Sahuagin$Noncombatant$/12d6+8,Character(Lieutenant)[3]{Sahuagin}/1d4,Character(Chieftan)[4]{Sahuagin}/1d4,Dire shark/1d2</entry>
+		<entry>Scorpionfolk/2d8+4,Monstrous scorpion$Medium$/2d4,Character[1d3+2]{Scorpionfolk}@Ranger@/1</entry>
+		<entry>Silver dragon$Adult$/1</entry>
+		<entry>Skeleton$Cloud giant$/1d10+10</entry>
+		<entry>Slaad$Death$/2</entry>
+		<entry>Triceratops/1d4+4</entry>
+		<entry>Vrock/2d3+4</entry>
+		<entry>White dragon$Old$/1</entry>
 	</collection>
 	<collection>
 		<name>16</name>
