@@ -6,9 +6,89 @@
   </collection>
 	<collection>
 		<name>Any</name>
+		<entry>Allip</entry>
+		<entry>Animated object</entry>
+		<entry>Mummy</entry>
 	</collection>
 	<collection>
 		<name>Civilized</name>
+		<entry>Cat</entry>
+		<entry>Character</entry>
+		<entry>Dog</entry>
+	</collection>
+	<collection>
+		<name>Elemental Plane of Air</name>
+		<entry>Arrowhawk</entry>
+		<entry>Belker</entry>
+	</collection>
+	<collection>
+		<name>Elemental Plane of Earth</name>
+		<entry>Xorn</entry>
+	</collection>
+	<collection>
+		<name>Elemental Plane of Fire</name>
+		<entry>Azer</entry>
+	</collection>
+	<collection>
+		<name>Elemental Plane of Water</name>
+		<entry>Tojanida</entry>
+	</collection>
+	<collection>
+		<name>Astral Plane</name>
+		<entry>Githyanki</entry>
+	</collection>
+	<collection>
+		<name>A chaotic-aligned plane</name>
+	</collection>
+	<collection>
+		<name>A chaotic-evil-aligned plane</name>
+		<entry>Demon</entry>
+		<entry>Basilisk$Abyssal Greater$</entry>
+		<entry>Bodak</entry>
+	</collection>
+	<collection>
+		<name>A chaotic-good-aligned plane</name>
+		<entry>Bralani</entry>
+	</collection>
+	<collection>
+		<name>A lawful-aligned plane</name>
+		<entry>Achaierai</entry>
+	</collection>
+	<collection>
+		<name>A lawful-evil-aligned plane</name>
+		<entry>Devil</entry>
+	</collection>
+	<collection>
+		<name>A lawful-good-aligned plane</name>
+		<entry>Archon</entry>
+	</collection>
+	<collection>
+		<name>Ethereal Plane</name>
+	</collection>
+	<collection>
+		<name>An evil-aligned plane</name>
+		<entry>Fiendish creature</entry>
+		<entry>Barghest</entry>
+	</collection>
+	<collection>
+		<name>A good-aligned plane</name>
+		<entry>Angel</entry>
+		<entry>Avoral</entry>
+		<entry>Celestial creature</entry>
+	</collection>
+	<collection>
+		<name>Plane of Limbo</name>
+		<entry>Chaos beast</entry>
+		<entry>Githzerai</entry>
+	</collection>
+	<collection>
+		<name>A neutral-evil-aligned plane</name>
+	</collection>
+	<collection>
+		<name>Positive Energy Plane</name>
+	</collection>
+	<collection>
+		<name>Plane of Shadow</name>
 	</collection>
   <collection>
     <name>Aasimar</name>
@@ -1144,9 +1224,6 @@
   </collection>
   <collection>
     <name>ColdCivilized</name>
-    <entry>Cat</entry>
-    <entry>Character</entry>
-    <entry>Dog</entry>
   </collection>
   <collection>
     <name>ColdDesert</name>
@@ -1963,10 +2040,25 @@
   </collection>
   <collection>
     <name>Land</name>
-    <entry>Character(Adventurer)</entry>
-    <entry>Character(Farmer)@Commoner@</entry>
-    <entry>Character(Herder)@Commoner@</entry>
-    <entry>Character(Hunter)@Commoner&amp;Warrior@</entry>
+	  <entry>Character(Adventurer)</entry>
+	  <entry>Character(Animal trainer)@Druid&amp;Ranger@</entry>
+	  <entry>Character(Farmer)@Commoner@</entry>
+	  <entry>Character(Captain)@Fighter@</entry>
+	  <entry>Character(Captain)@Warrior@</entry>
+	  <entry>Character(Crusader)@Paladin@</entry>
+	  <entry>Character(Famous entertainer)@Bard&amp;Sorcerer@</entry>
+	  <entry>Character(Famous Priest)@Cleric&amp;Druid&amp;Monk&amp;Paladin@</entry>
+	  <entry>Character(Famous researcher)@Wizard@</entry>
+	  <entry>Character(Fortuneteller)@Adept@</entry>
+	  <entry>Character(Guard)@Warrior@</entry>
+	  <entry>Character(Herder)@Commoner@</entry>
+	  <entry>Character(Hitman)@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</entry>
+	  <entry>Character(Hunter)@Commoner&amp;Warrior@</entry>
+	  <entry>Character(Leader)@Bard@</entry>
+	  <entry>Character(Leader)@Cleric@</entry>
+	  <entry>Character(Leader)@Fighter@</entry>
+	  <entry>Character(Leader)@Warrior@</entry>
+	  <entry>Character(Merchant)@Commoner&amp;Expert@</entry>
     <entry>Character(Pilgrim)@Commoner@</entry>
     <entry>Doppelganger</entry>
     <entry>Gargoyle</entry>
@@ -2020,8 +2112,24 @@
   </collection>
   <collection>
     <name>Extraplanar</name>
-    <entry>Elemental</entry>
-    <entry>Outsider</entry>
+	  <entry>Elemental Plane of Air</entry>
+	  <entry>Elemental Plane of Earth</entry>
+	  <entry>Elemental Plane of Fire</entry>
+	  <entry>Elemental Plane of Water</entry>
+	  <entry>Astral Plane</entry>
+	  <entry>Ethereal Plane</entry>
+	  <entry>Positive Energy Plane</entry>
+	  <entry>Plane of Limbo</entry>
+	  <entry>Plane of Shadow</entry>
+	  <entry>A chaotic-aligned plane</entry>
+	  <entry>A chaotic-evil-aligned plane</entry>
+	  <entry>A chaotic-good-aligned plane</entry>
+	  <entry>An evil-aligned plane</entry>
+	  <entry>A good-aligned plane</entry>
+	  <entry>A lawful-aligned plane</entry>
+	  <entry>A lawful-evil-aligned plane</entry>
+	  <entry>A lawful-good-aligned plane</entry>
+	  <entry>A neutral-evil-aligned plane</entry>
   </collection>
   <collection>
     <name>Magical Beast</name>
@@ -2482,9 +2590,6 @@
   </collection>
   <collection>
     <name>TemperateCivilized</name>
-    <entry>Cat</entry>
-    <entry>Character</entry>
-    <entry>Dog</entry>
   </collection>
   <collection>
     <name>TemperateDesert</name>
@@ -2602,6 +2707,7 @@
     <entry>Tiefling</entry>
     <entry>Triceratops</entry>
     <entry>Worg</entry>
+	  <entry>Half-Orc</entry>
   </collection>
   <collection>
     <name>Tiefling</name>
@@ -2759,9 +2865,6 @@
   </collection>
   <collection>
     <name>WarmCivilized</name>
-    <entry>Cat</entry>
-    <entry>Character</entry>
-    <entry>Dog</entry>
   </collection>
   <collection>
     <name>WarmDesert</name>
