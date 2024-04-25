@@ -83,6 +83,8 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
             CreatureConstants.Whale_Baleen)]
         [TestCase(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Civilized)]
         [TestCase(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Underground)]
+        [TestCase(EnvironmentConstants.Plane_Air)]
+        [TestCase(EnvironmentConstants.Plane_Astral)]
         [TestCase(GroupConstants.Extraplanar,
             EnvironmentConstants.Plane_Air,
             EnvironmentConstants.Plane_Astral,
@@ -105,6 +107,17 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         public void EnvironmentCreatures(string environment, params string[] creatures)
         {
             base.DistinctCollection(environment, creatures);
+        }
+
+        [Test]
+        public void AnyCreatures()
+        {
+            var creatures = new[]
+            {
+                CreatureConstants.Allip,
+            };
+
+            base.DistinctCollection(EnvironmentConstants.Any, creatures);
         }
 
         [Test]
@@ -2271,7 +2284,6 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         [TestCase(CreatureConstants.PhantomFungus, EnvironmentConstants.Underground)]
         [TestCase(CreatureConstants.PhaseSpider, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
         [TestCase(CreatureConstants.Phasm, EnvironmentConstants.Underground)]
-        [TestCase(CreatureConstants.Aasimar, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains)]
         [TestCase(CreatureConstants.Aasimar_Warrior, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains)]
         [TestCase(CreatureConstants.Tiefling, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains)]
         [TestCase(CreatureConstants.Tiefling_Warrior, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains)]
@@ -2554,12 +2566,10 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         [TestCase(CreatureConstants.YuanTi_Pureblood, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest)]
         [TestCase(CreatureConstants.YuanTi_Halfblood, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest)]
         [TestCase(CreatureConstants.YuanTi_Abomination, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest)]
-        public void CreaturesAreInCorrectEnvironment(string creature, string environment)
+        public void CreatureIsInCorrectEnvironment(string creature, string environment)
         {
             var creatures = collectionSelector.Explode(TableNameConstants.CreatureGroups, environment);
             Assert.That(creatures, Contains.Item(creature));
-
-            Assert.Fail("not finished");
         }
     }
 }

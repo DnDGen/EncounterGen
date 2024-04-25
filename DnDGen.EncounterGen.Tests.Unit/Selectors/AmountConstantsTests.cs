@@ -135,6 +135,8 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors
         [TestCase(AmountConstants.Range100To400, 100, 400)]
         public void AmountConstant(string constant, int lower, int upper)
         {
+            //INFO: We want to use the fewest dice. The average encounter level uses the average amount of creatures appearing,
+            //and fewest dice will trend more toward the average than the most-even distribution
             var bestRoll = RollHelper.GetRollWithFewestDice(lower, upper);
             Assert.That(constant, Is.EqualTo(bestRoll));
         }
@@ -153,6 +155,8 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors
             var percentageNegative = percentagePositive - 1;
             var lower = Convert.ToInt32(upper / percentagePositive * percentageNegative) + 1;
 
+            //INFO: We want to use the fewest dice. The average encounter level uses the average amount of creatures appearing,
+            //and fewest dice will trend more toward the average than the most-even distribution
             var bestRoll = RollHelper.GetRollWithFewestDice(lower, upper);
             Assert.That(constant, Is.EqualTo(bestRoll));
         }

@@ -10407,6 +10407,50 @@
 		<entry>Gelatinous cube/1</entry>
 		<entry>Ghoul/1d3+1</entry>
 		<entry>Ghoul$Ghast$/1</entry>
+		<entry>Ghoul$Lacedon$/1d3+1</entry>
+		<entry>Giant eagle/1</entry>
+		<entry>Giant fire beetle/1d6+5</entry>
+		<entry>Giant fire beetle$Celestial creature$/1d6+5</entry>
+		<entry>Giant owl/1</entry>
+		<entry>Giant praying mantis/1</entry>
+		<entry>Giant wasp/1</entry>
+		<entry>Green dragon$Wyrmling$/1</entry>
+		<entry>Grick/1</entry>
+		<entry>Grig/1d3+1</entry>
+		<entry>Grimlock/1d3+1</entry>
+		<entry>Hell hound/1</entry>
+		<entry>Howler/1</entry>
+		<entry>Lion/1</entry>
+		<entry>Lizardfolk/1d2+1</entry>
+		<entry>Locust swarm/1</entry>
+		<entry>Magmin/1</entry>
+		<entry>Mephit[3]/1</entry>
+		<entry>Monstrous centipede$Huge Fiendish creature$/1</entry>
+		<entry>Monstrous scorpion$Large$/1</entry>
+		<entry>Monstrous scorpion$Tiny$/4d3+4</entry>
+		<entry>Monstrous spider$Tiny$/4d3+4</entry>
+		<entry>Nixie/1d3+1</entry>
+		<entry>Ogre/1</entry>
+		<entry>Ogre$Merrow$/1</entry>
+		<entry>Pegasus/1</entry>
+		<entry>Phantom fungus/1</entry>
+		<entry>Rust monster/1</entry>
+		<entry>Salamander$Flamebrother$/1</entry>
+		<entry>Shadow/1</entry>
+		<entry>Skeleton$Human$/1d6+4</entry>
+		<entry>Skeleton$Wolf$/1d4</entry>
+		<entry>Spider swarm/1d3+1</entry>
+		<entry>Tojanida$Juvenile$/1</entry>
+		<entry>Unicorn/1</entry>
+		<entry>Violet fungus/1</entry>
+		<entry>Viper snake$Huge$/1</entry>
+		<entry>Werewolf/1</entry>
+		<entry>White dragon$Very young$/1</entry>
+		<entry>Wight/1</entry>
+		<entry>Xorn$Minor$/1</entry>
+		<entry>Yeth hound/1</entry>
+		<entry>Yuan-ti$Pureblood$/1</entry>
+		<entry>Zombie$Troglodyte$/1d4</entry>
 	</collection>
 	<collection>
 		<name>4</name>
@@ -10486,6 +10530,43 @@
 		<entry>Lantern archon/2</entry>
 		<entry>Lemure/1d3+2</entry>
 		<entry>Leopard/2</entry>
+		<entry>Manta ray/1d4+1</entry>
+		<entry>Mimic/1</entry>
+		<entry>Minotaur/1</entry>
+		<entry>Monkey/6d6+4</entry>
+		<entry>Monkey$Celestial creature$/6d6+4</entry>
+		<entry>Monstrous centipede$Large Fiendish creature$/1d4+1</entry>
+		<entry>Monstrous centipede$Large$/1d4+1</entry>
+		<entry>Monstrous scorpion$Medium$/1d4+1</entry>
+		<entry>Monstrous scorpion$Small$/1d6+5</entry>
+		<entry>Monstrous spider$Medium$/1d4+1</entry>
+		<entry>Monstrous spider$Small$/1d6+5</entry>
+		<entry>Otyugh/1</entry>
+		<entry>Owlbear/1</entry>
+		<entry>Polar bear/1</entry>
+		<entry>Pseudodragon/1d3+2</entry>
+		<entry>Red dragon$Wyrmling$/1</entry>
+		<entry>Rhinoceras/1</entry>
+		<entry>Sahuagin/2</entry>
+		<entry>Satyr$with pipes$/1</entry>
+		<entry>Sea cat/1</entry>
+		<entry>Sea hag/1</entry>
+		<entry>Shark$Huge$/1</entry>
+		<entry>Shark$Medium$/1d4+1</entry>
+		<entry>Shocker lizard/2</entry>
+		<entry>Shrieker/1d3+2</entry>
+		<entry>Silver dragon$Wyrmling$/1</entry>
+		<entry>Stirge/1d4+4</entry>
+		<entry>Thoqqua/2</entry>
+		<entry>Tiger/1</entry>
+		<entry>Troglodyte/1d4+1</entry>
+		<entry>Vampire spawn/1</entry>
+		<entry>Wereboar/1</entry>
+		<entry>Wererat/2</entry>
+		<entry>White dragon$Young$/1</entry>
+		<entry>Worg/2</entry>
+		<entry>Zombie$Human$/1d6+4</entry>
+		<entry>Zombie$Kobold$/1d6+4</entry>
 	</collection>
 	<collection>
 		<name>5</name>
@@ -10576,6 +10657,68 @@
 		<entry>Dire lion/1</entry>
 		<entry>Dire rat/1d10+10</entry>
 		<entry>Dire rat$Fiendish creature$/1d10+10</entry>
+		<entry>Dire wolf/2</entry>
+		<entry>Djinni/1</entry>
+		<entry>Doppelganger/2</entry>
+		<entry>Elemental(Air)$Large$/1</entry>
+		<entry>Elemental(Earth)$Large$/1</entry>
+		<entry>Elemental(Fire)$Large$/1</entry>
+		<entry>Elemental(Water)$Large$/1</entry>
+		<entry>Ettercap/2</entry>
+		<entry>Formian$Worker$/1d12+6</entry>
+		<entry>Giant ant$Soldier$/1d3+1</entry>
+		<entry>Giant constrictor snake/1</entry>
+		<entry>Giant eagle/2</entry>
+		<entry>Giant owl/2</entry>
+		<entry>Gibbering mouther/1</entry>
+		<entry>Gnoll/1d4+1,Hyena/1d2</entry>
+		<entry>Gold dragon$Wyrmling$/1</entry>
+		<entry>Green dragon$Young$/1</entry>
+		<entry>Green hag/1</entry>
+		<entry>Hell hound/2</entry>
+		<entry>Hieracosphinx/1</entry>
+		<entry>Hydra$6 heads$/1</entry>
+		<entry>Lion/2</entry>
+		<entry>Manticore/1</entry>
+		<entry>Monstrous spider$Huge$/1</entry>
+		<entry>Mummy/1</entry>
+		<entry>Nightmare/1</entry>
+		<entry>Ochre jelly/1</entry>
+		<entry>Ogre/2</entry>
+		<entry>Ogre$Merrow$/2</entry>
+		<entry>Pegasus/2</entry>
+		<entry>Phase spider/1</entry>
+		<entry>Porpoise/17d2-14</entry>
+		<entry>Porpoise$Celestial creature$/17d2-14</entry>
+		<entry>Rast/1</entry>
+		<entry>Rat swarm/1d3+1</entry>
+		<entry>Red dragon$Very young$/1</entry>
+		<entry>Rust monster/2</entry>
+		<entry>Salamander$Flamebrother$/2</entry>
+		<entry>Satyr$with pipes$/1,Satyr/1</entry>
+		<entry>Shadow mastiff/1</entry>
+		<entry>Silver dragon$Very young$/1</entry>
+		<entry>Skeleton$Human$/1d10+10</entry>
+		<entry>Skeleton$Owlbear$/1d4</entry>
+		<entry>Spider eater/1</entry>
+		<entry>Stirge/1d6+8</entry>
+		<entry>Toad/10d10</entry>
+		<entry>Tojanida$Adult$/1</entry>
+		<entry>Troll/1</entry>
+		<entry>Troll$Scrag$/1</entry>
+		<entry>Unicorn/2</entry>
+		<entry>Werebear/1</entry>
+		<entry>Weretiger/1</entry>
+		<entry>Werewolf/2</entry>
+		<entry>Whale$Orca$/1</entry>
+		<entry>Wight/2</entry>
+		<entry>Winter wolf/1</entry>
+		<entry>Wraith/1</entry>
+		<entry>Xorn$Minor$/2</entry>
+		<entry>Yeth hound/2</entry>
+		<entry>Yuan-ti$Halfblood$/1</entry>
+		<entry>Yuan-ti$Pureblood$/2</entry>
+		<entry>Zombie$Bugbear$/1d4</entry>
 	</collection>
 	<collection>
 		<name>6</name>
@@ -10656,6 +10799,66 @@
 		<entry>Dire badger/1d4+1</entry>
 		<entry>Dire wolverine/2</entry>
 		<entry>Displacer beast/2</entry>
+		<entry>Dog$Riding$/1d8+4</entry>
+		<entry>Dretch/1d3+2</entry>
+		<entry>Ettercap/1d2,Monstrous spider$Medium$/1d3+1</entry>
+		<entry>Ettin/1</entry>
+		<entry>Formian$Warrior$/1d3+1</entry>
+		<entry>Gargoyle/2</entry>
+		<entry>Gargoyle$Kapoacinth$/2</entry>
+		<entry>Ghoul$Ghast$/1d3+1</entry>
+		<entry>Giant bombardier beetle/1d4+1</entry>
+		<entry>Girallon/1</entry>
+		<entry>Grick/1d3+1</entry>
+		<entry>Griffon/2</entry>
+		<entry>Grig/1d6+5</entry>
+		<entry>Harpy/2</entry>
+		<entry>Hound archon/2</entry>
+		<entry>Howler/1d3+1</entry>
+		<entry>Hydra$7 heads$/1</entry>
+		<entry>Krenshar/2d3+4</entry>
+		<entry>Lamia/1</entry>
+		<entry>Lantern archon/1d3+2</entry>
+		<entry>Magmin/1d3+1</entry>
+		<entry>Megaraptor/1</entry>
+		<entry>Mephit[3]/1d3+1</entry>
+		<entry>Minotaur/2</entry>
+		<entry>Monstrous centipede$Gargantuan$/1</entry>
+		<entry>Monstrous centipede$Huge$/1d4+1</entry>
+		<entry>Monstrous spider$Large$/1d4+1</entry>
+		<entry>Nixie/1d6+5</entry>
+		<entry>Otyugh/2</entry>
+		<entry>Owlbear/2</entry>
+		<entry>Polar bear/2</entry>
+		<entry>Pyrohydra$5 heads$/1</entry>
+		<entry>Rat/10d10</entry>
+		<entry>Salamander$Average$/1</entry>
+		<entry>Sea cat/2</entry>
+		<entry>Shambling mound/1</entry>
+		<entry>Shark$Large$/1d4+1</entry>
+		<entry>Shark$Medium$/1d6+5</entry>
+		<entry>Shocker lizard/1d3+2</entry>
+		<entry>Skeleton$Troll$/1d4</entry>
+		<entry>Skeleton$Wolf$/1d6+4</entry>
+		<entry>Skum/1d4+1</entry>
+		<entry>Squid/1d6+5</entry>
+		<entry>Tendriculos/1</entry>
+		<entry>Tojanida$Juvenile$/1d3+1</entry>
+		<entry>Triton/1d4+1</entry>
+		<entry>Vargouille/1d4+1</entry>
+		<entry>Violet fungus/1d3+1</entry>
+		<entry>Wereboar/2</entry>
+		<entry>Whale$Baleen$/1</entry>
+		<entry>White dragon$Juvenile$/1</entry>
+		<entry>White dragon$Wyrmling$/1d4+1</entry>
+		<entry>Will-O'-Wisp/1</entry>
+		<entry>Wyvern/1</entry>
+		<entry>Xill/1</entry>
+		<entry>Xorn$Average$/1</entry>
+		<entry>Zombie$Human$/1d10+10</entry>
+		<entry>Zombie$Kobold$/1d10+10</entry>
+		<entry>Zombie$Ogre$/1d4</entry>
+		<entry>Zombie$Troglodyte$/1d6+4</entry>
 	</collection>
 	<collection>
 		<name>7</name>
@@ -10738,6 +10941,103 @@
 		<entry>Character[1]{High Elf}@Warrior@/1d10+10,Character(Sergeant)[3]{High Elf}@Warrior@/2,Character(Leader)[1d4+2]{High Elf}@Warrior@/1</entry>
 		<entry>Character[1]{Hill Dwarf}@Warrior@/1d10+10,Character(Sergeant)[3]{Hill Dwarf}@Warrior@/2,Character(Leader)[1d4+2]{Hill Dwarf}@Warrior@/1</entry>
 		<entry>Character[1]{Kobold}@Warrior@/2d8+8,Dire weasel/1d3+1</entry>
+		<entry>Character[1]{Lightfoot Halfling}@Warrior@/1d10+10,Character(Sergeant)[3]{Lightfoot Halfling}@Warrior@/2,Character(Leader)[1d4+2]{Lightfoot Halfling}@Warrior@/1</entry>
+		<entry>Character[1]{Locathah}@Warrior@/1d10+10,Character(Sergeant)[3]{Locathah}@Warrior@/2,Character(Leader)[1d4+2]{Locathah}@Warrior@/1</entry>
+		<entry>Character[1]{Merfolk}@Warrior@/1d10+10,Character(Lieutenant)[3]{Merfolk}@Warrior@/2,Character(Leader)[1d4+2]{Merfolk}@Warrior@/1</entry>
+		<entry>Character[1]{Mountain Dwarf}@Warrior@/1d10+10,Character(Sergeant)[3]{Mountain Dwarf}@Warrior@/2,Character(Leader)[1d4+2]{Mountain Dwarf}@Warrior@/1</entry>
+		<entry>Character[1]{Orc}@Warrior@/1d10+10,Character(Sergeant)[3]{Orc}@Warrior@/2,Character(Leader)[1d4+2]{Orc}@Warrior@/1</entry>
+		<entry>Character[1]{Rock Gnome}@Warrior@/1d10+10,Character(Leader)[1d4+2]{Rock Gnome}@Warrior@/1,Character(Lieutenant)[3]{Rock Gnome}@Warrior@/2</entry>
+		<entry>Character[1]{Tallfellow Halfling}@Warrior@/1d10+10,Character(Sergeant)[3]{Tallfellow Halfling}@Warrior@/2,Character(Leader)[1d4+2]{Tallfellow Halfling}@Warrior@/1</entry>
+		<entry>Character[1]{Wild Elf}@Warrior@/1d10+10,Character(Sergeant)[3]{Wild Elf}@Warrior@/2,Character(Leader)[1d4+2]{Wild Elf}@Warrior@/1</entry>
+		<entry>Character[1]{Wood Elf}@Warrior@/1d10+10,Character(Sergeant)[3]{Wood Elf}@Warrior@/2,Character(Leader)[1d4+2]{Wood Elf}@Warrior@/1</entry>
+		<entry>Character[1]#Vampire#/1d3+2</entry>
+		<entry>Character[1d2+13]@Any NPC@/1,Heavy warhorse/1</entry>
+		<entry>Character[3]{Githyanki}@Fighter@/1d3+1</entry>
+		<entry>Character[3]#Vampire#/2</entry>
+		<entry>Character[4]{Merrow}@Barbarian@/1</entry>
+		<entry>Character[4]{Ogre}@Barbarian@/1</entry>
+		<entry>Character[5]#Ghost#/1</entry>
+		<entry>Character[5]#Vampire#/1</entry>
+		<entry>Chimera/1</entry>
+		<entry>Chuul/1</entry>
+		<entry>Cockatrice/1d3+2</entry>
+		<entry>Copper dragon$Wyrmling$/1d4+1</entry>
+		<entry>Copper dragon$Young$/1</entry>
+		<entry>Criosphinx/1</entry>
+		<entry>Cryohydra$6 heads$/1</entry>
+		<entry>Darkmantle/1d10+5</entry>
+		<entry>Dire bear/1</entry>
+		<entry>Dire lion/2</entry>
+		<entry>Dragonne/1</entry>
+		<entry>Drider/1</entry>
+		<entry>Elasmosaurus/1</entry>
+		<entry>Elemental(Air)$Huge$/1</entry>
+		<entry>Elemental(Earth)$Huge$/1</entry>
+		<entry>Elemental(Fire)$Huge$/1</entry>
+		<entry>Elemental(Water)$Huge$/1</entry>
+		<entry>Elephant/1</entry>
+		<entry>Ghoul/1d6+6</entry>
+		<entry>Ghoul$Lacedon$/1d6+6</entry>
+		<entry>Giant ant$Worker$/1d6+5,Giant ant$Soldier$/1</entry>
+		<entry>Giant owl/1d3+2</entry>
+		<entry>Giant wasp/1d4+1</entry>
+		<entry>Gold dragon$Very young$/1</entry>
+		<entry>Golem$Flesh$/1</entry>
+		<entry>Green dragon$Wyrmling$/1d4+1</entry>
+		<entry>Hellcat(Bezekira)/1</entry>
+		<entry>Hieracosphinx/2</entry>
+		<entry>Hill giant/1</entry>
+		<entry>Hydra$8 heads$/1</entry>
+		<entry>Hyena/1d10+6</entry>
+		<entry>Invisible stalker/1</entry>
+		<entry>Janni/1d3+1</entry>
+		<entry>Kuo-toa/1d3+1,Character(Whip)[3]{Kuo-toa}@Cleric@/1</entry>
+		<entry>Lemure/1d10+5</entry>
+		<entry>Lillend/1</entry>
+		<entry>Manticore/2</entry>
+		<entry>Medusa/1</entry>
+		<entry>Monstrous centipede$Huge Fiendish creature$/1d4+1</entry>
+		<entry>Monstrous scorpion$Huge$/1</entry>
+		<entry>Monstrous scorpion$Large$/1d4+1</entry>
+		<entry>Naga$Water$/1</entry>
+		<entry>Nymph/1</entry>
+		<entry>Ogre/1d2+2</entry>
+		<entry>Ogre$Merrow$/1d2+2</entry>
+		<entry>Phasm/1</entry>
+		<entry>Pixie/1d3+1</entry>
+		<entry>Pyrohydra$6 heads$/1</entry>
+		<entry>Rast/2</entry>
+		<entry>Ravid/1,Animated object$Colossal$/1d6-5,Animated object$Gargantuan$/1d4-3,Animated object$Huge$/1d3-2,Animated object$Large$/1d2-1,Animated object$Medium$/1d2-1,Animated object$Small$/1d3-1,Animated object$Tiny$/2d3-2</entry>
+		<entry>Red dragon$Young$/1</entry>
+		<entry>Remorhaz/1</entry>
+		<entry>Salamander$Flamebrother$/1d3+2</entry>
+		<entry>Satyr$with pipes$/1,Satyr/1d3+1</entry>
+		<entry>Scorpionfolk/1</entry>
+		<entry>Shadow mastiff/2</entry>
+		<entry>Shadow/1d4+1</entry>
+		<entry>Silver dragon$Young$/1</entry>
+		<entry>Skeleton$Chimera$/1d4</entry>
+		<entry>Slaad$Red$/1</entry>
+		<entry>Spectre/1</entry>
+		<entry>Spider swarm/1d6+6</entry>
+		<entry>Succubus/1</entry>
+		<entry>Troglodyte/1d6+5,Monitor lizard/1d2</entry>
+		<entry>Umber hulk/1</entry>
+		<entry>Violet fungus/1d3+1,Shrieker/1d3+2</entry>
+		<entry>Werebear/2</entry>
+		<entry>Wererat/1d4+1,Dire rat/1d4+4</entry>
+		<entry>Weretiger/2</entry>
+		<entry>Whale$Cachalot$/1</entry>
+		<entry>White dragon$Very young$/1d4+1</entry>
+		<entry>Wight/1d3+2</entry>
+		<entry>Winter wolf/2</entry>
+		<entry>Wolf/1d10+6</entry>
+		<entry>Xorn$Minor$/1d3+2</entry>
+		<entry>Yuan-ti$Abomination$/1</entry>
+		<entry>Yuan-ti$Halfblood$/2</entry>
+		<entry>Yuan-ti$Pureblood$/1d2+2</entry>
+		<entry>Zombie$Minotaur$/1d4</entry>
+		<entry>Zombie$Wyvern$/1d4</entry>
 	</collection>
 	<collection>
 		<name>8</name>
@@ -10819,6 +11119,86 @@
 		<entry>Character[4]{Ogre}@Barbarian@/1,Ogre/1d3</entry>
 		<entry>Character[4]#Vampire#/2</entry>
 		<entry>Character[6]#Ghost#/1</entry>
+		<entry>Character[6]#Vampire#/1</entry>
+		<entry>Crocodile/1d6+5</entry>
+		<entry>Cryohydra$7 heads$/1</entry>
+		<entry>Deinonychus/1d4+2</entry>
+		<entry>Destrachan/1</entry>
+		<entry>Dire bat/1d4+4</entry>
+		<entry>Dire tiger/1</entry>
+		<entry>Djinni/1d3+1</entry>
+		<entry>Djinni$Noble$/1</entry>
+		<entry>Doppelganger/1d4+2</entry>
+		<entry>Dryad/1d4+3</entry>
+		<entry>Efreeti/1</entry>
+		<entry>Erinyes/1</entry>
+		<entry>Formian$Taskmaster$/1,Dominated creature[4]/1</entry>
+		<entry>Ghoul$Ghast$/1d3+1,Ghoul/1d6+6</entry>
+		<entry>Giant bee/1d10+10</entry>
+		<entry>Giant bombardier beetle/1d6+5</entry>
+		<entry>Giant octopus/1</entry>
+		<entry>Giant stag beetle/1d4+1</entry>
+		<entry>Gorgon/1</entry>
+		<entry>Gray render/1</entry>
+		<entry>Green dragon$Juvenile$/1</entry>
+		<entry>Green dragon$Very young$/1d4+1</entry>
+		<entry>Grimlock/2d6+8</entry>
+		<entry>Gynosphinx/1</entry>
+		<entry>Hellwasp swarm/1</entry>
+		<entry>Hound archon/1d3+2</entry>
+		<entry>Hydra$9 heads$/1</entry>
+		<entry>Lamia/2</entry>
+		<entry>Lammasu/1</entry>
+		<entry>Light horse/8d4-2</entry>
+		<entry>Lizardfolk/2d3+4,Lizardfolk$Noncombatant$/1d3+2,Character(Leader)[1d4+2]{Lizardfolk}/1</entry>
+		<entry>Locust swarm/1d6+1</entry>
+		<entry>Megaraptor/2</entry>
+		<entry>Mind flayer/1</entry>
+		<entry>Minotaur/1d2+2</entry>
+		<entry>Mohrg/1</entry>
+		<entry>Monstrous centipede$Gargantuan Fiendish creature$/1</entry>
+		<entry>Monstrous spider$Gargantuan$/1</entry>
+		<entry>Mummy/1d3+1</entry>
+		<entry>Naga$Dark$/1</entry>
+		<entry>Ogre mage/1</entry>
+		<entry>Otyugh/1d2+2</entry>
+		<entry>Pyrohydra$7 heads$/1</entry>
+		<entry>Red dragon$Wyrmling$/1d4+1</entry>
+		<entry>Sahuagin/1d4+4</entry>
+		<entry>Salamander$Average$/2</entry>
+		<entry>Shadow$Greater$/1</entry>
+		<entry>Shark$Huge$/1d4+1</entry>
+		<entry>Shark$Large$/1d6+5</entry>
+		<entry>Shield guardian/1</entry>
+		<entry>Shocker lizard/1d6+5</entry>
+		<entry>Silver dragon$Wyrmling$/1d4+1</entry>
+		<entry>Skeleton$Ettin$/1d4</entry>
+		<entry>Skeleton$Owlbear$/1d6+4</entry>
+		<entry>Skeleton$Wolf$/1d10+10</entry>
+		<entry>Slaad$Blue$/1</entry>
+		<entry>Stone giant/1</entry>
+		<entry>Tojanida$Adult$/1d3+1</entry>
+		<entry>Treant/1</entry>
+		<entry>Triton/1d6+5</entry>
+		<entry>Troll/1d3+1</entry>
+		<entry>Troll$Scrag$/1d3+1</entry>
+		<entry>Tyrannosaurus/1</entry>
+		<entry>Unicorn/1d4+2</entry>
+		<entry>Vampire spawn/1d4+1</entry>
+		<entry>Vargouille/1d6+5</entry>
+		<entry>Wereboar/1d2+2</entry>
+		<entry>Wereboar/1d3+1,Boar/1d4</entry>
+		<entry>Wererat/2d3+4</entry>
+		<entry>Werewolf/1d4+1,Wolf/1d4+4</entry>
+		<entry>White dragon$Young adult$/1</entry>
+		<entry>White dragon$Young$/1d4+1</entry>
+		<entry>Will-O'-Wisp/2</entry>
+		<entry>Worg/1d6+5</entry>
+		<entry>Wyvern/2</entry>
+		<entry>Xorn$Average$/2</entry>
+		<entry>Xorn$Elder$/1</entry>
+		<entry>Zombie$Bugbear$/1d6+4</entry>
+		<entry>Zombie$Troglodyte$/1d10+10</entry>
 	</collection>
 	<collection>
 		<name>9</name>
@@ -10902,6 +11282,83 @@
 		<entry>Character[4]{Merrow}@Barbarian@/2</entry>
 		<entry>Character[4]{Ogre}@Barbarian@/2</entry>
 		<entry>Character[5]#Vampire#/2</entry>
+		<entry>Character[7]#Ghost#/1</entry>
+		<entry>Character[7]#Vampire#/1</entry>
+		<entry>Chuul/2</entry>
+		<entry>Copper dragon$Juvenile$/1</entry>
+		<entry>Copper dragon$Very young$/1d4+1</entry>
+		<entry>Cryohydra$8 heads$/1</entry>
+		<entry>Delver/1</entry>
+		<entry>Dire ape/1d4+4</entry>
+		<entry>Dire bear/2</entry>
+		<entry>Dire shark/1</entry>
+		<entry>Dire wolf/1d4+4</entry>
+		<entry>Dragon turtle/1</entry>
+		<entry>Dragonne/2</entry>
+		<entry>Dretch/1d10+5</entry>
+		<entry>Drider/2</entry>
+		<entry>Elasmosaurus/2</entry>
+		<entry>Elemental(Air)$Greater$/1</entry>
+		<entry>Elemental(Earth)$Greater$/1</entry>
+		<entry>Elemental(Fire)$Greater$/1</entry>
+		<entry>Elemental(Water)$Greater$/1</entry>
+		<entry>Ettin/1d2,Brown bear/1d2</entry>
+		<entry>Ettin/1d3+1</entry>
+		<entry>Formian$Warrior$/1d6+5</entry>
+		<entry>Frost giant/1</entry>
+		<entry>Giant eagle/1d8+4</entry>
+		<entry>Giant squid/1</entry>
+		<entry>Gold dragon$Wyrmling$/1d4+1</entry>
+		<entry>Gold dragon$Young$/1</entry>
+		<entry>Green dragon$Young$/1d4+1</entry>
+		<entry>Hell hound/1d8+4</entry>
+		<entry>Hellcat(Bezekira)/2</entry>
+		<entry>Hippogriff/1d6+6</entry>
+		<entry>Howler/2d3+4</entry>
+		<entry>Hydra$10 heads$/1</entry>
+		<entry>Lemure/6d6+4</entry>
+		<entry>Lion/2d3+4</entry>
+		<entry>Magmin/2d3+4</entry>
+		<entry>Mephit[3]/1d8+4</entry>
+		<entry>Monstrous centipede$Colossal$/1</entry>
+		<entry>Monstrous spider$Huge$/1d4+1</entry>
+		<entry>Naga$Spirit$/1</entry>
+		<entry>Naga$Water$/2</entry>
+		<entry>Nessian warhound/1</entry>
+		<entry>Night hag/1</entry>
+		<entry>Ogre/1d4+4</entry>
+		<entry>Ogre$Merrow$/1d4+4</entry>
+		<entry>Owlbear/1d6+2</entry>
+		<entry>Pegasus/2d3+4</entry>
+		<entry>Phase spider/1d4+1</entry>
+		<entry>Pyrohydra$8 heads$/1</entry>
+		<entry>Rat swarm/1d6+6</entry>
+		<entry>Red dragon$Very young$/1d4+1</entry>
+		<entry>Roc/1</entry>
+		<entry>Satyr$with pipes$/1,Satyr/1d6+4</entry>
+		<entry>Scorpionfolk/2</entry>
+		<entry>Shadow/1d6+5</entry>
+		<entry>Silver dragon$Very young$/1d4+1</entry>
+		<entry>Skeleton$Megaraptor$/1d4</entry>
+		<entry>Skeleton$Troll$/1d6+4</entry>
+		<entry>Skum/1d10+5</entry>
+		<entry>Slaad$Green$/1</entry>
+		<entry>Slaad$Red$/2</entry>
+		<entry>Tojanida$Elder$/1</entry>
+		<entry>Triceratops/1</entry>
+		<entry>Vrock/1</entry>
+		<entry>Werebear/1d2+2</entry>
+		<entry>Werewolf/2d3+4</entry>
+		<entry>Wight/1d6+5</entry>
+		<entry>Winter wolf/1d3+2</entry>
+		<entry>Wraith/1d4+1</entry>
+		<entry>Yeth hound/1d6+5</entry>
+		<entry>Yrthak/1</entry>
+		<entry>Yuan-ti$Abomination$/2</entry>
+		<entry>Yuan-ti$Halfblood$/1d2+2</entry>
+		<entry>Zelekhut/1</entry>
+		<entry>Zombie$Gray render$/1d4</entry>
+		<entry>Zombie$Ogre$/1d6+4</entry>
 	</collection>
 	<collection>
 		<name>10</name>
@@ -11194,6 +11651,11 @@
 		<entry>Triceratops/2</entry>
 		<entry>Vrock/2</entry>
 		<entry>Whale$Orca$/1d6+5</entry>
+		<entry>Wraith/1d6+5</entry>
+		<entry>Wraith$Dread$/1</entry>
+		<entry>Wyvern/1d4+2</entry>
+		<entry>Yuan-ti$Abomination$/1d2+2</entry>
+		<entry>Zombie$Ogre$/1d10+10</entry>
 	</collection>
 	<collection>
 		<name>12</name>
