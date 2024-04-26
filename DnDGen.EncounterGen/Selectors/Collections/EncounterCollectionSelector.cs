@@ -100,18 +100,43 @@ namespace DnDGen.EncounterGen.Selectors.Collections
             var specificAquaticEncounters = GetEncountersFromCreatureGroup(encounterSpecifications.Temperature + EnvironmentConstants.Aquatic);
             var undergroundAquaticEncounters = GetEncountersFromCreatureGroup(EnvironmentConstants.Underground + EnvironmentConstants.Aquatic);
             var undergroundEncounters = GetEncountersFromCreatureGroup(EnvironmentConstants.Underground);
+            var undeadEncounters = GetEncountersFromCreatureGroup(CreatureConstants.Types.Undead);
+            var anyEncounters = GetEncountersFromCreatureGroup(EnvironmentConstants.Any);
+            var landEncounters = GetEncountersFromCreatureGroup(EnvironmentConstants.Land);
 
             var commonEncounters = validEncounters.Except(extraplanarEncounters);
 
             if (encounterSpecifications.Environment != EnvironmentConstants.Aquatic)
-                commonEncounters = commonEncounters.Except(aquaticEncounters).Except(specificAquaticEncounters).Except(undergroundAquaticEncounters);
+            {
+                var toRemove = aquaticEncounters
+                    .Union(specificAquaticEncounters).Union(undergroundAquaticEncounters)
+                    .Except(anyEncounters).Except(landEncounters);
+                commonEncounters = commonEncounters.Except(toRemove);
+            }
 
             if (encounterSpecifications.Environment != EnvironmentConstants.Underground)
-                commonEncounters = commonEncounters.Except(undergroundEncounters).Except(undergroundAquaticEncounters);
+            {
+                var toRemove = undergroundEncounters
+                    .Union(undergroundAquaticEncounters)
+                    .Except(anyEncounters).Except(landEncounters);
+                commonEncounters = commonEncounters.Except(toRemove);
+            }
 
-            var potentialUncommonEncounters = aquaticEncounters.Union(undergroundEncounters).Union(specificAquaticEncounters).Union(undergroundAquaticEncounters);
+            if (encounterSpecifications.Environment == EnvironmentConstants.Civilized)
+                commonEncounters = commonEncounters.Except(undeadEncounters);
+
+            var potentialUncommonEncounters = aquaticEncounters
+                .Union(undergroundEncounters).Union(specificAquaticEncounters).Union(undergroundAquaticEncounters)
+                .Except(anyEncounters).Except(landEncounters);
+
+            if (encounterSpecifications.Environment == EnvironmentConstants.Civilized)
+                potentialUncommonEncounters = potentialUncommonEncounters.Except(undeadEncounters);
+
             var uncommonEncounters = validEncounters.Except(commonEncounters).Intersect(potentialUncommonEncounters);
             var rareEncounters = validEncounters.Intersect(extraplanarEncounters);
+
+            if (encounterSpecifications.Environment == EnvironmentConstants.Civilized)
+                rareEncounters = rareEncounters.Union(validEncounters.Intersect(undeadEncounters));
 
             var weightedEncounters = collectionSelector.CreateWeighted(common: commonEncounters, uncommon: uncommonEncounters, rare: rareEncounters);
 

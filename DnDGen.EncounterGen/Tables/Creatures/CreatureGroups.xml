@@ -9,29 +9,73 @@
 		<entry>Allip</entry>
 		<entry>Animated object</entry>
 		<entry>Mummy</entry>
+		<entry>Character#Ghost#</entry>
+		<entry>Character#Lich#</entry>
+		<entry>Character#Vampire#</entry>
+		<entry>Devourer</entry>
+		<entry>Doppelganger</entry>
+		<entry>Gargoyle</entry>
+		<entry>Ghoul</entry>
+		<entry>Golem</entry>
+		<entry>Homunculus</entry>
+		<entry>Mohrg</entry>
+		<entry>Shadow</entry>
+		<entry>Shield guardian</entry>
+		<entry>Skeleton</entry>
+    <entry>Tarrasque</entry>
+		<entry>Wight</entry>
+		<entry>Wraith</entry>
+		<entry>Zombie$Human$</entry>
 	</collection>
 	<collection>
 		<name>Civilized</name>
 		<entry>Cat</entry>
 		<entry>Character</entry>
 		<entry>Dog</entry>
+		<entry>Character(Traveler)@Any NPC@</entry>
+		<entry>Donkey</entry>
+		<entry>Horse</entry>
+		<entry>Livestock</entry>
+		<entry>Mule</entry>
+		<entry>Pony</entry>
 	</collection>
 	<collection>
 		<name>Elemental Plane of Air</name>
 		<entry>Arrowhawk</entry>
 		<entry>Belker</entry>
+		<entry>Djinni</entry>
+		<entry>Elemental(Air)</entry>
+		<entry>Invisible stalker</entry>
+		<entry>Mephit(Air)</entry>
+		<entry>Mephit(Dust)</entry>
+		<entry>Mephit(Ice)</entry>
 	</collection>
 	<collection>
 		<name>Elemental Plane of Earth</name>
 		<entry>Xorn</entry>
+		<entry>Elemental(Earth)</entry>
+		<entry>Mephit(Earth)</entry>
+		<entry>Mephit(Salt)</entry>
 	</collection>
 	<collection>
 		<name>Elemental Plane of Fire</name>
 		<entry>Azer</entry>
+		<entry>Efreeti</entry>
+		<entry>Elemental(Fire)</entry>
+		<entry>Magmin</entry>
+		<entry>Mephit(Fire)</entry>
+		<entry>Mephit(Magma)</entry>
+		<entry>Mephit(Steam)</entry>
+		<entry>Rast</entry>
+		<entry>Salamander</entry>
+		<entry>Thoqqua</entry>
 	</collection>
 	<collection>
 		<name>Elemental Plane of Water</name>
 		<entry>Tojanida</entry>
+		<entry>Elemental(Water)</entry>
+		<entry>Mephit(Ooze)</entry>
+		<entry>Mephit(Water)</entry>
 	</collection>
 	<collection>
 		<name>Astral Plane</name>
@@ -39,6 +83,8 @@
 	</collection>
 	<collection>
 		<name>A chaotic-aligned plane</name>
+		<entry>Howler</entry>
+		<entry>Lillend</entry>
 	</collection>
 	<collection>
 		<name>A chaotic-evil-aligned plane</name>
@@ -49,46 +95,67 @@
 	<collection>
 		<name>A chaotic-good-aligned plane</name>
 		<entry>Bralani</entry>
+		<entry>Ghaele</entry>
+		<entry>Titan</entry>
+		<entry>Unicorn$Celestial Charger$</entry>
 	</collection>
 	<collection>
 		<name>A lawful-aligned plane</name>
 		<entry>Achaierai</entry>
+		<entry>Formian</entry>
+		<entry>Inevitable</entry>
 	</collection>
 	<collection>
 		<name>A lawful-evil-aligned plane</name>
 		<entry>Devil</entry>
+		<entry>Hell hound</entry>
+		<entry>Nessian warhound</entry>
 	</collection>
 	<collection>
 		<name>A lawful-good-aligned plane</name>
 		<entry>Archon</entry>
+		<entry>Lammasu$Golden Protector$</entry>
 	</collection>
 	<collection>
 		<name>Ethereal Plane</name>
+		<entry>Ethereal marauder</entry>
+		<entry>Xill</entry>
 	</collection>
 	<collection>
 		<name>An evil-aligned plane</name>
 		<entry>Fiendish creature</entry>
 		<entry>Barghest</entry>
+		<entry>Hellwasp</entry>
+		<entry>Night hag</entry>
+		<entry>Nightmare</entry>
+		<entry>Vargouille</entry>
+		<entry>Yeth hound</entry>
 	</collection>
 	<collection>
 		<name>A good-aligned plane</name>
 		<entry>Angel</entry>
 		<entry>Avoral</entry>
 		<entry>Celestial creature</entry>
+		<entry>Leonal</entry>
 	</collection>
 	<collection>
 		<name>Plane of Limbo</name>
 		<entry>Chaos beast</entry>
 		<entry>Githzerai</entry>
+		<entry>Slaad</entry>
 	</collection>
 	<collection>
 		<name>A neutral-evil-aligned plane</name>
+		<entry>Nightmare$Cauchemar$</entry>
 	</collection>
 	<collection>
 		<name>Positive Energy Plane</name>
+		<entry>Ravid</entry>
 	</collection>
 	<collection>
 		<name>Plane of Shadow</name>
+		<entry>Nightshade</entry>
+		<entry>Shadow mastiff</entry>
 	</collection>
   <collection>
     <name>Aasimar</name>
@@ -1242,6 +1309,7 @@
     <name>ColdHills</name>
     <entry>Beholder</entry>
     <entry>Ettin</entry>
+    <entry>Skeleton$Ettin$</entry>
     <entry>Ogre mage</entry>
   </collection>
   <collection>
@@ -1253,6 +1321,7 @@
   <collection>
     <name>ColdMountain</name>
     <entry>Troll</entry>
+    <entry>Skeleton$Troll$</entry>
     <entry>White dragon</entry>
     <entry>Frost giant</entry>
   </collection>
@@ -2042,13 +2111,14 @@
     <name>Land</name>
 	  <entry>Character(Adventurer)</entry>
 	  <entry>Character(Animal trainer)@Druid&amp;Ranger@</entry>
-	  <entry>Character(Farmer)@Commoner@</entry>
+    <entry>Character(Bandit)@Warrior@</entry>
 	  <entry>Character(Captain)@Fighter@</entry>
 	  <entry>Character(Captain)@Warrior@</entry>
 	  <entry>Character(Crusader)@Paladin@</entry>
 	  <entry>Character(Famous entertainer)@Bard&amp;Sorcerer@</entry>
 	  <entry>Character(Famous Priest)@Cleric&amp;Druid&amp;Monk&amp;Paladin@</entry>
 	  <entry>Character(Famous researcher)@Wizard@</entry>
+	  <entry>Character(Farmer)@Commoner@</entry>
 	  <entry>Character(Fortuneteller)@Adept@</entry>
 	  <entry>Character(Guard)@Warrior@</entry>
 	  <entry>Character(Herder)@Commoner@</entry>
@@ -2059,13 +2129,26 @@
 	  <entry>Character(Leader)@Fighter@</entry>
 	  <entry>Character(Leader)@Warrior@</entry>
 	  <entry>Character(Merchant)@Commoner&amp;Expert@</entry>
+	  <entry>Character(Minstrel)@Commoner&amp;Expert@</entry>
+	  <entry>Character(Missionary)@Adept@</entry>
+	  <entry>Character(Missionary)@Cleric&amp;Druid&amp;Monk&amp;Paladin@</entry>
+    <entry>Character(Pickpocket)@Rogue@</entry>
     <entry>Character(Pilgrim)@Commoner@</entry>
+	  <entry>Character(Retired adventurer)</entry>
+	  <entry>Character(Scholar)@Monk&amp;Wizard@</entry>
+	  <entry>Character(Sellsword)</entry>
+	  <entry>Character(Star Student)</entry>
+	  <entry>Character(Student)@Any NPC@</entry>
+	  <entry>Character(Teacher)</entry>
+	  <entry>Character(Traveler)@Any NPC@</entry>
+	  <entry>Character(War hero)@Barbarian&amp;Cleric&amp;Fighter&amp;Monk&amp;Paladin&amp;Ranger&amp;Sorcerer&amp;Wizard@</entry>
+	  <entry>Character@Any NPC@</entry>
     <entry>Doppelganger</entry>
     <entry>Gargoyle</entry>
-    <entry>Character(Traveler)@Any NPC@</entry>
+		<entry>Livestock</entry>
     <entry>Rat</entry>
-    <entry>Tarrasque</entry>
-    <entry>Character(Bandit)@Warrior@</entry>
+	  <entry>Spectre</entry>
+	  <entry>Zombie</entry>
   </collection>
   <collection>
     <name>Lion</name>
@@ -2622,11 +2705,13 @@
     <entry>Hawk</entry>
     <entry>High Elf</entry>
     <entry>Kobold</entry>
+    <entry>Zombie$Kobold$</entry>
     <entry>Krenshar</entry>
     <entry>Monstrous spider</entry>
     <entry>Nymph</entry>
     <entry>Owl</entry>
     <entry>Owlbear</entry>
+    <entry>Skeleton$Owlbear$</entry>
     <entry>Pegasus</entry>
     <entry>Pixie</entry>
     <entry>Pseudodragon</entry>
@@ -2639,6 +2724,7 @@
     <entry>Treant</entry>
     <entry>Unicorn</entry>
     <entry>Wolf</entry>
+    <entry>Skeleton$Wolf$</entry>
     <entry>Wood Elf</entry>
   </collection>
   <collection>
@@ -2647,6 +2733,7 @@
     <entry>Bronze dragon</entry>
     <entry>Bulette</entry>
     <entry>Chimera</entry>
+    <entry>Skeleton$Chimera$</entry>
     <entry>Displacer beast</entry>
     <entry>Griffon</entry>
     <entry>Half-Orc</entry>
@@ -2656,6 +2743,7 @@
     <entry>Naga$Dark$</entry>
     <entry>Rock Gnome</entry>
     <entry>Ogre</entry>
+    <entry>Zombie$Ogre$</entry>
     <entry>Orc</entry>
     <entry>Weasel</entry>
   </collection>
@@ -2663,6 +2751,7 @@
     <name>TemperateMarsh</name>
     <entry>Chuul</entry>
     <entry>Gray render</entry>
+    <entry>Zombie$Gray render$</entry>
     <entry>Green hag</entry>
     <entry>Harpy</entry>
     <entry>Hydra</entry>
@@ -2678,7 +2767,9 @@
   <collection>
     <name>TemperateMountain</name>
     <entry>Bugbear</entry>
+    <entry>Zombie$Bugbear$</entry>
     <entry>Cloud giant</entry>
+    <entry>Skeleton$Cloud giant$</entry>
     <entry>Eagle</entry>
     <entry>Gray Elf</entry>
     <entry>Hill Dwarf</entry>
@@ -2708,6 +2799,7 @@
     <entry>Triceratops</entry>
     <entry>Worg</entry>
 	  <entry>Half-Orc</entry>
+    <entry>Skeleton$Human$</entry>
   </collection>
   <collection>
     <name>Tiefling</name>
@@ -2802,9 +2894,11 @@
     <entry>Roper</entry>
     <entry>Rust monster</entry>
     <entry>Skum</entry>
+	  <entry>Spectre</entry>
     <entry>Svirfneblin</entry>
     <entry>Troglodyte</entry>
     <entry>Umber hulk</entry>
+	  <entry>Zombie</entry>
   </collection>
   <collection>
     <name>UndergroundAquatic</name>
@@ -2878,6 +2972,7 @@
     <entry>Hyena</entry>
     <entry>Monstrous scorpion</entry>
     <entry>Scorpionfolk</entry>
+	  <entry>Janni</entry>
   </collection>
   <collection>
     <name>WarmUnderground</name>
@@ -2895,6 +2990,7 @@
     <entry>Leopard</entry>
     <entry>Lizard</entry>
     <entry>Megaraptor</entry>
+    <entry>Skeleton$Megaraptor$</entry>
     <entry>Monkey</entry>
     <entry>Razor boar</entry>
     <entry>Spider swarm</entry>
@@ -2911,6 +3007,7 @@
     <entry>Phase spider</entry>
     <entry>Scorpionfolk</entry>
     <entry>Wyvern</entry>
+    <entry>Zombie$Wyvern$</entry>
   </collection>
   <collection>
     <name>WarmMarsh</name>
@@ -2926,6 +3023,7 @@
     <name>WarmMountain</name>
     <entry>Fire giant</entry>
     <entry>Red dragon</entry>
+    <entry>Skeleton$Red dragon$Young adult$$</entry>
     <entry>Razor boar</entry>
     <entry>Roc</entry>
     <entry>Storm giant</entry>
@@ -2944,6 +3042,7 @@
     <entry>Rhinoceras</entry>
     <entry>Scorpionfolk</entry>
     <entry>Tyrannosaurus</entry>
+    <entry>Mule</entry>
   </collection>
   <collection>
     <name>Weasel</name>

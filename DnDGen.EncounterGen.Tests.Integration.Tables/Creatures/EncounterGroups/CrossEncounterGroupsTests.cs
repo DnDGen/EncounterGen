@@ -304,7 +304,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
         public void BUG_CivilizedUndeadAreRare(string temperature, string timeOfDay, int level)
         {
             var percentage = GetPercentage(EnvironmentConstants.Civilized, temperature, timeOfDay, level, IsUndead);
-            Assert.That(percentage, Is.LessThanOrEqualTo(.15));
+            Assert.That(percentage, Is.LessThanOrEqualTo(.10));
         }
 
         private bool IsUndead(string creature)
@@ -323,9 +323,10 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
 
             var encounters = encounterCollectionSelector.SelectAllWeightedFrom(specifications);
 
-            var leadCreatures = encounters.Select(e => e.First().Key);
-            var subgroupCreatures = leadCreatures.Where(cr => isInSubgroup(cr));
-            var percentage = subgroupCreatures.Count() / (double)leadCreatures.Count();
+            var subgroupCreatures = encounters.Where(e => isInSubgroup(e.First().Key));
+            var subgroupCount = subgroupCreatures.Count();
+            var encounterCount = (double)encounters.Count();
+            var percentage = subgroupCount / encounterCount;
 
             Console.WriteLine($"Actual percentage for {specifications.Description} is {{0:P}}", percentage);
 

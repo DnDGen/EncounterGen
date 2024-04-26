@@ -22,7 +22,13 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         [TestCase(EnvironmentConstants.Civilized,
             CreatureConstants.Cat,
             CreatureConstants.Character,
-            CreatureConstants.Dog)]
+            CreatureConstants.Dog,
+            CreatureConstants.NPC_Traveler,
+            CreatureConstants.Donkey,
+            CreatureConstants.Horse,
+            CreatureConstants.Livestock,
+            CreatureConstants.Mule,
+            CreatureConstants.Pony)]
         [TestCase(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Aquatic,
             CreatureConstants.Shark,
             CreatureConstants.Troll_Scrag,
@@ -37,6 +43,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         [TestCase(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Hills,
             CreatureConstants.Beholder,
             CreatureConstants.Ettin,
+            CreatureConstants.Skeleton_Ettin,
             CreatureConstants.OgreMage)]
         [TestCase(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Marsh,
             CreatureConstants.Annis,
@@ -44,6 +51,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
             CreatureConstants.Ooze_Gray)]
         [TestCase(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain,
             CreatureConstants.Dragon_White,
+            CreatureConstants.Skeleton_Troll,
             CreatureConstants.Giant_Frost,
             CreatureConstants.Troll)]
         [TestCase(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Plains,
@@ -83,24 +91,88 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
             CreatureConstants.Whale_Baleen)]
         [TestCase(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Civilized)]
         [TestCase(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Underground)]
-        [TestCase(EnvironmentConstants.Plane_Air)]
-        [TestCase(EnvironmentConstants.Plane_Astral)]
-        [TestCase(EnvironmentConstants.Plane_Chaotic)]
-        [TestCase(EnvironmentConstants.Plane_ChaoticEvil)]
-        [TestCase(EnvironmentConstants.Plane_ChaoticGood)]
-        [TestCase(EnvironmentConstants.Plane_Earth)]
-        [TestCase(EnvironmentConstants.Plane_Ethereal)]
-        [TestCase(EnvironmentConstants.Plane_Evil)]
-        [TestCase(EnvironmentConstants.Plane_Fire)]
-        [TestCase(EnvironmentConstants.Plane_Good)]
-        [TestCase(EnvironmentConstants.Plane_Lawful)]
-        [TestCase(EnvironmentConstants.Plane_LawfulEvil)]
-        [TestCase(EnvironmentConstants.Plane_LawfulGood)]
-        [TestCase(EnvironmentConstants.Plane_Limbo)]
-        [TestCase(EnvironmentConstants.Plane_NeutralEvil)]
-        [TestCase(EnvironmentConstants.Plane_PositiveEnergy)]
-        [TestCase(EnvironmentConstants.Plane_Shadow)]
-        [TestCase(EnvironmentConstants.Plane_Water)]
+        [TestCase(EnvironmentConstants.Plane_Air,
+            CreatureConstants.Arrowhawk,
+            CreatureConstants.Belker,
+            CreatureConstants.Djinni,
+            CreatureConstants.Elemental_Air,
+            CreatureConstants.InvisibleStalker,
+            CreatureConstants.Mephit_Air,
+            CreatureConstants.Mephit_Dust,
+            CreatureConstants.Mephit_Ice)]
+        [TestCase(EnvironmentConstants.Plane_Astral,
+            CreatureConstants.Githyanki)]
+        [TestCase(EnvironmentConstants.Plane_Chaotic,
+            CreatureConstants.Howler,
+            CreatureConstants.Lillend)]
+        [TestCase(EnvironmentConstants.Plane_ChaoticEvil,
+            CreatureConstants.Demon,
+            CreatureConstants.Basilisk_AbyssalGreater,
+            CreatureConstants.Bodak)]
+        [TestCase(EnvironmentConstants.Plane_ChaoticGood,
+            CreatureConstants.Bralani,
+            CreatureConstants.Ghaele,
+            CreatureConstants.Titan,
+            CreatureConstants.Unicorn_CelestialCharger)]
+        [TestCase(EnvironmentConstants.Plane_Earth,
+            CreatureConstants.Xorn,
+            CreatureConstants.Elemental_Earth,
+            CreatureConstants.Mephit_Earth,
+            CreatureConstants.Mephit_Salt)]
+        [TestCase(EnvironmentConstants.Plane_Ethereal,
+            CreatureConstants.EtherealMarauder,
+            CreatureConstants.Xill)]
+        [TestCase(EnvironmentConstants.Plane_Evil,
+            CreatureConstants.FiendishCreature,
+            CreatureConstants.Barghest,
+            CreatureConstants.Hellwasp,
+            CreatureConstants.NightHag,
+            CreatureConstants.Nightmare,
+            CreatureConstants.YethHound,
+            CreatureConstants.Vargouille)]
+        [TestCase(EnvironmentConstants.Plane_Fire,
+            CreatureConstants.Azer,
+            CreatureConstants.Elemental_Fire,
+            CreatureConstants.Salamander,
+            CreatureConstants.Efreeti,
+            CreatureConstants.Magmin,
+            CreatureConstants.Mephit_Fire,
+            CreatureConstants.Mephit_Magma,
+            CreatureConstants.Mephit_Steam,
+            CreatureConstants.Rast,
+            CreatureConstants.Thoqqua)]
+        [TestCase(EnvironmentConstants.Plane_Good,
+            CreatureConstants.Angel,
+            CreatureConstants.Avoral,
+            CreatureConstants.CelestialCreature,
+            CreatureConstants.Leonal)]
+        [TestCase(EnvironmentConstants.Plane_Lawful,
+            CreatureConstants.Achaierai,
+            CreatureConstants.Formian,
+            CreatureConstants.Inevitable)]
+        [TestCase(EnvironmentConstants.Plane_LawfulEvil,
+            CreatureConstants.Devil,
+            CreatureConstants.HellHound,
+            CreatureConstants.NessianWarhound)]
+        [TestCase(EnvironmentConstants.Plane_LawfulGood,
+            CreatureConstants.Archon,
+            CreatureConstants.Lammasu_GoldenProtector)]
+        [TestCase(EnvironmentConstants.Plane_Limbo,
+            CreatureConstants.ChaosBeast,
+            CreatureConstants.Githzerai,
+            CreatureConstants.Slaad)]
+        [TestCase(EnvironmentConstants.Plane_NeutralEvil,
+            CreatureConstants.Nightmare_Cauchemar)]
+        [TestCase(EnvironmentConstants.Plane_PositiveEnergy,
+            CreatureConstants.Ravid)]
+        [TestCase(EnvironmentConstants.Plane_Shadow,
+            CreatureConstants.Nightshade,
+            CreatureConstants.ShadowMastiff)]
+        [TestCase(EnvironmentConstants.Plane_Water,
+            CreatureConstants.Tojanida,
+            CreatureConstants.Elemental_Water,
+            CreatureConstants.Mephit_Ooze,
+            CreatureConstants.Mephit_Water)]
         [TestCase(GroupConstants.Extraplanar,
             EnvironmentConstants.Plane_Air,
             EnvironmentConstants.Plane_Astral,
@@ -131,6 +203,25 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
             var creatures = new[]
             {
                 CreatureConstants.Allip,
+                CreatureConstants.AnimatedObject,
+                CreatureConstants.Mummy,
+                CreatureConstants.Lich,
+                CreatureConstants.Ghost,
+                CreatureConstants.Vampire,
+                CreatureConstants.Devourer,
+                CreatureConstants.Doppelganger,
+                CreatureConstants.Skeleton,
+                CreatureConstants.Gargoyle,
+                CreatureConstants.Ghoul,
+                CreatureConstants.Golem,
+                CreatureConstants.Homunculus,
+                CreatureConstants.Mohrg,
+                CreatureConstants.Shadow,
+                CreatureConstants.ShieldGuardian,
+                CreatureConstants.Tarrasque,
+                CreatureConstants.Wight,
+                CreatureConstants.Wraith,
+                CreatureConstants.Zombie_Human,
             };
 
             base.DistinctCollection(EnvironmentConstants.Any, creatures);
@@ -150,8 +241,37 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
                 CreatureConstants.Gargoyle,
                 CreatureConstants.NPC_Traveler,
                 CreatureConstants.Rat,
-                CreatureConstants.Tarrasque,
                 CreatureConstants.Warrior_Bandit,
+                CreatureConstants.Character_AnimalTrainer,
+                CreatureConstants.Fighter_Captain,
+                CreatureConstants.Warrior_Captain,
+                CreatureConstants.Paladin_Crusader,
+                CreatureConstants.Character_FamousEntertainer,
+                CreatureConstants.Character_FamousPriest,
+                CreatureConstants.Wizard_FamousResearcher,
+                CreatureConstants.Adept_Fortuneteller,
+                CreatureConstants.Warrior_Guard,
+                CreatureConstants.Character_Hitman,
+                CreatureConstants.Bard_Leader,
+                CreatureConstants.Cleric_Leader,
+                CreatureConstants.Fighter_Leader,
+                CreatureConstants.Warrior_Leader,
+                CreatureConstants.Character_Merchant,
+                CreatureConstants.Character_Minstrel,
+                CreatureConstants.Adept_Missionary,
+                CreatureConstants.Character_Missionary,
+                CreatureConstants.Rogue_Pickpocket,
+                CreatureConstants.Character_RetiredAdventurer,
+                CreatureConstants.Character_Scholar,
+                CreatureConstants.Character_Sellsword,
+                CreatureConstants.Character_StarStudent,
+                CreatureConstants.Character_Student,
+                CreatureConstants.Character_Teacher,
+                CreatureConstants.Character_WarHero,
+                CreatureConstants.NPC,
+                CreatureConstants.Livestock,
+                CreatureConstants.Spectre,
+                CreatureConstants.Zombie,
             };
 
             base.DistinctCollection(EnvironmentConstants.Land, creatures);
@@ -195,6 +315,8 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
                 CreatureConstants.Svirfneblin,
                 CreatureConstants.Troglodyte,
                 CreatureConstants.UmberHulk,
+                CreatureConstants.Spectre,
+                CreatureConstants.Zombie,
             };
 
             base.DistinctCollection(EnvironmentConstants.Underground, encounters);
@@ -221,10 +343,12 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
                 CreatureConstants.Halfling_Tallfellow,
                 CreatureConstants.Hawk,
                 CreatureConstants.Kobold,
+                CreatureConstants.Zombie_Kobold,
                 CreatureConstants.Krenshar,
                 CreatureConstants.Nymph,
                 CreatureConstants.Owl,
                 CreatureConstants.Owlbear,
+                CreatureConstants.Skeleton_Owlbear,
                 CreatureConstants.Pegasus,
                 CreatureConstants.Pixie,
                 CreatureConstants.PrayingMantis_Giant,
@@ -240,6 +364,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
                 CreatureConstants.Unicorn,
                 CreatureConstants.Wasp_Giant,
                 CreatureConstants.Wolf,
+                CreatureConstants.Skeleton_Wolf,
             };
 
             base.DistinctCollection(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest, creatures);
@@ -253,6 +378,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
                 CreatureConstants.Athach,
                 CreatureConstants.Bulette,
                 CreatureConstants.Chimera,
+                CreatureConstants.Skeleton_Chimera,
                 CreatureConstants.DisplacerBeast,
                 CreatureConstants.Dragon_Bronze,
                 CreatureConstants.Giant_Hill,
@@ -262,6 +388,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
                 CreatureConstants.Hippogriff,
                 CreatureConstants.Naga_Dark,
                 CreatureConstants.Ogre,
+                CreatureConstants.Zombie_Ogre,
                 CreatureConstants.Orc,
                 CreatureConstants.Orc_Half,
                 CreatureConstants.Weasel,
@@ -277,6 +404,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
             {
                 CreatureConstants.Chuul,
                 CreatureConstants.GrayRender,
+                CreatureConstants.Zombie_GrayRender,
                 CreatureConstants.GreenHag,
                 CreatureConstants.Harpy,
                 CreatureConstants.Hydra,
@@ -299,12 +427,14 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
             var creatures = new[]
             {
                 CreatureConstants.Bugbear,
+                CreatureConstants.Zombie_Bugbear,
                 CreatureConstants.Dragon_Silver,
                 CreatureConstants.Dwarf_Hill,
                 CreatureConstants.Dwarf_Mountain,
                 CreatureConstants.Eagle,
                 CreatureConstants.Elf_Gray,
                 CreatureConstants.Giant_Cloud,
+                CreatureConstants.Skeleton_Giant_Cloud,
                 CreatureConstants.Giant_Stone,
                 CreatureConstants.RazorBoar,
                 CreatureConstants.Yrthak,
@@ -335,6 +465,8 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
                 CreatureConstants.Tiefling,
                 CreatureConstants.Triceratops,
                 CreatureConstants.Worg,
+                CreatureConstants.Orc_Half,
+                CreatureConstants.Skeleton_Human,
             };
 
             base.DistinctCollection(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains, creatures);
@@ -355,6 +487,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
                 CreatureConstants.Scorpion_Monstrous,
                 CreatureConstants.Scorpionfolk,
                 CreatureConstants.Hyena,
+                CreatureConstants.Janni,
             };
 
             base.DistinctCollection(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert, creatures);
@@ -376,6 +509,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
                 CreatureConstants.Leopard,
                 CreatureConstants.Lizard,
                 CreatureConstants.Megaraptor,
+                CreatureConstants.Skeleton_Megaraptor,
                 CreatureConstants.Monkey,
                 CreatureConstants.RazorBoar,
                 CreatureConstants.Snake_Constrictor,
@@ -399,6 +533,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
                 CreatureConstants.PhaseSpider,
                 CreatureConstants.Scorpionfolk,
                 CreatureConstants.Wyvern,
+                CreatureConstants.Zombie_Wyvern,
             };
 
             base.DistinctCollection(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills, creatures);
@@ -427,6 +562,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
             var creatures = new[]
             {
                 CreatureConstants.Dragon_Red,
+                CreatureConstants.Skeleton_Dragon_Red_YoungAdult,
                 CreatureConstants.Giant_Fire,
                 CreatureConstants.Giant_Storm,
                 CreatureConstants.Roc,
@@ -453,6 +589,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
                 CreatureConstants.Rhinoceras,
                 CreatureConstants.Scorpionfolk,
                 CreatureConstants.Tyrannosaurus,
+                CreatureConstants.Mule,
             };
 
             base.DistinctCollection(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains, creatures);
@@ -558,7 +695,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         [TestCase(CreatureConstants.Ape_Dire, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest)]
         [TestCase(CreatureConstants.Badger_Dire, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
         [TestCase(CreatureConstants.Bat_Dire, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert)]
-        [TestCase(CreatureConstants.Bear_Dire, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Desert)]
+        [TestCase(CreatureConstants.Bear_Dire, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Forest)]
         [TestCase(CreatureConstants.Boar_Dire, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
         [TestCase(CreatureConstants.Lion_Dire, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
         [TestCase(CreatureConstants.Rat_Dire, EnvironmentConstants.Land)]
@@ -693,28 +830,24 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         [TestCase(CreatureConstants.Dragonne, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert)]
         [TestCase(CreatureConstants.Drider, EnvironmentConstants.Underground)]
         [TestCase(CreatureConstants.Dryad, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(CreatureConstants.Dwarf_Hill, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
         [TestCase(CreatureConstants.Dwarf_Hill_Captain, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
         [TestCase(CreatureConstants.Dwarf_Hill_Leader, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
         [TestCase(CreatureConstants.Dwarf_Hill_Lieutenant, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
         [TestCase(CreatureConstants.Dwarf_Hill_Noncombatant, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
         [TestCase(CreatureConstants.Dwarf_Hill_Sergeant, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
         [TestCase(CreatureConstants.Dwarf_Hill_Warrior, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
-        [TestCase(CreatureConstants.Dwarf_Mountain, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
         [TestCase(CreatureConstants.Dwarf_Mountain_Captain, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
         [TestCase(CreatureConstants.Dwarf_Mountain_Leader, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
         [TestCase(CreatureConstants.Dwarf_Mountain_Lieutenant, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
         [TestCase(CreatureConstants.Dwarf_Mountain_Noncombatant, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
         [TestCase(CreatureConstants.Dwarf_Mountain_Sergeant, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
         [TestCase(CreatureConstants.Dwarf_Mountain_Warrior, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
-        [TestCase(CreatureConstants.Dwarf_Deep, EnvironmentConstants.Underground)]
         [TestCase(CreatureConstants.Dwarf_Deep_Captain, EnvironmentConstants.Underground)]
         [TestCase(CreatureConstants.Dwarf_Deep_Leader, EnvironmentConstants.Underground)]
         [TestCase(CreatureConstants.Dwarf_Deep_Lieutenant, EnvironmentConstants.Underground)]
         [TestCase(CreatureConstants.Dwarf_Deep_Noncombatant, EnvironmentConstants.Underground)]
         [TestCase(CreatureConstants.Dwarf_Deep_Sergeant, EnvironmentConstants.Underground)]
         [TestCase(CreatureConstants.Dwarf_Deep_Warrior, EnvironmentConstants.Underground)]
-        [TestCase(CreatureConstants.Duergar, EnvironmentConstants.Underground)]
         [TestCase(CreatureConstants.Duergar_Captain, EnvironmentConstants.Underground)]
         [TestCase(CreatureConstants.Duergar_Leader, EnvironmentConstants.Underground)]
         [TestCase(CreatureConstants.Duergar_Lieutenant, EnvironmentConstants.Underground)]
@@ -722,42 +855,36 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         [TestCase(CreatureConstants.Duergar_Sergeant, EnvironmentConstants.Underground)]
         [TestCase(CreatureConstants.Duergar_Warrior, EnvironmentConstants.Underground)]
         [TestCase(CreatureConstants.Eagle_Giant, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
-        [TestCase(CreatureConstants.Elemental_Air, EnvironmentConstants.Plane_Air)]
         [TestCase(CreatureConstants.Elemental_Air_Elder, EnvironmentConstants.Plane_Air)]
         [TestCase(CreatureConstants.Elemental_Air_Greater, EnvironmentConstants.Plane_Air)]
         [TestCase(CreatureConstants.Elemental_Air_Huge, EnvironmentConstants.Plane_Air)]
         [TestCase(CreatureConstants.Elemental_Air_Large, EnvironmentConstants.Plane_Air)]
         [TestCase(CreatureConstants.Elemental_Air_Medium, EnvironmentConstants.Plane_Air)]
         [TestCase(CreatureConstants.Elemental_Air_Small, EnvironmentConstants.Plane_Air)]
-        [TestCase(CreatureConstants.Elemental_Earth, EnvironmentConstants.Plane_Earth)]
         [TestCase(CreatureConstants.Elemental_Earth_Elder, EnvironmentConstants.Plane_Earth)]
         [TestCase(CreatureConstants.Elemental_Earth_Greater, EnvironmentConstants.Plane_Earth)]
         [TestCase(CreatureConstants.Elemental_Earth_Huge, EnvironmentConstants.Plane_Earth)]
         [TestCase(CreatureConstants.Elemental_Earth_Large, EnvironmentConstants.Plane_Earth)]
         [TestCase(CreatureConstants.Elemental_Earth_Medium, EnvironmentConstants.Plane_Earth)]
         [TestCase(CreatureConstants.Elemental_Earth_Small, EnvironmentConstants.Plane_Earth)]
-        [TestCase(CreatureConstants.Elemental_Fire, EnvironmentConstants.Plane_Fire)]
         [TestCase(CreatureConstants.Elemental_Fire_Elder, EnvironmentConstants.Plane_Fire)]
         [TestCase(CreatureConstants.Elemental_Fire_Greater, EnvironmentConstants.Plane_Fire)]
         [TestCase(CreatureConstants.Elemental_Fire_Huge, EnvironmentConstants.Plane_Fire)]
         [TestCase(CreatureConstants.Elemental_Fire_Large, EnvironmentConstants.Plane_Fire)]
         [TestCase(CreatureConstants.Elemental_Fire_Medium, EnvironmentConstants.Plane_Fire)]
         [TestCase(CreatureConstants.Elemental_Fire_Small, EnvironmentConstants.Plane_Fire)]
-        [TestCase(CreatureConstants.Elemental_Water, EnvironmentConstants.Plane_Water)]
         [TestCase(CreatureConstants.Elemental_Water_Elder, EnvironmentConstants.Plane_Water)]
         [TestCase(CreatureConstants.Elemental_Water_Greater, EnvironmentConstants.Plane_Water)]
         [TestCase(CreatureConstants.Elemental_Water_Huge, EnvironmentConstants.Plane_Water)]
         [TestCase(CreatureConstants.Elemental_Water_Large, EnvironmentConstants.Plane_Water)]
         [TestCase(CreatureConstants.Elemental_Water_Medium, EnvironmentConstants.Plane_Water)]
         [TestCase(CreatureConstants.Elemental_Water_Small, EnvironmentConstants.Plane_Water)]
-        [TestCase(CreatureConstants.Elf_High, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
         [TestCase(CreatureConstants.Elf_High_Captain, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
         [TestCase(CreatureConstants.Elf_High_Leader, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
         [TestCase(CreatureConstants.Elf_High_Lieutenant, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
         [TestCase(CreatureConstants.Elf_High_Noncombatant, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
         [TestCase(CreatureConstants.Elf_High_Sergeant, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
         [TestCase(CreatureConstants.Elf_High_Warrior, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(CreatureConstants.Elf_Half, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
         [TestCase(CreatureConstants.Elf_Half_Captain, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
         [TestCase(CreatureConstants.Elf_Half_Leader, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
         [TestCase(CreatureConstants.Elf_Half_Lieutenant, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
@@ -770,28 +897,24 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         [TestCase(CreatureConstants.Elf_Aquatic_Noncombatant, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic)]
         [TestCase(CreatureConstants.Elf_Aquatic_Sergeant, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic)]
         [TestCase(CreatureConstants.Elf_Aquatic_Warrior, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic)]
-        [TestCase(CreatureConstants.Elf_Gray, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
         [TestCase(CreatureConstants.Elf_Gray_Captain, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
         [TestCase(CreatureConstants.Elf_Gray_Leader, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
         [TestCase(CreatureConstants.Elf_Gray_Lieutenant, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
         [TestCase(CreatureConstants.Elf_Gray_Noncombatant, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
         [TestCase(CreatureConstants.Elf_Gray_Sergeant, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
         [TestCase(CreatureConstants.Elf_Gray_Warrior, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
-        [TestCase(CreatureConstants.Elf_Wild, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest)]
         [TestCase(CreatureConstants.Elf_Wild_Captain, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest)]
         [TestCase(CreatureConstants.Elf_Wild_Leader, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest)]
         [TestCase(CreatureConstants.Elf_Wild_Lieutenant, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest)]
         [TestCase(CreatureConstants.Elf_Wild_Noncombatant, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest)]
         [TestCase(CreatureConstants.Elf_Wild_Sergeant, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest)]
         [TestCase(CreatureConstants.Elf_Wild_Warrior, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest)]
-        [TestCase(CreatureConstants.Elf_Wood, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
         [TestCase(CreatureConstants.Elf_Wood_Captain, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
         [TestCase(CreatureConstants.Elf_Wood_Leader, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
         [TestCase(CreatureConstants.Elf_Wood_Lieutenant, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
         [TestCase(CreatureConstants.Elf_Wood_Noncombatant, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
         [TestCase(CreatureConstants.Elf_Wood_Sergeant, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
         [TestCase(CreatureConstants.Elf_Wood_Warrior, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(CreatureConstants.Drow, EnvironmentConstants.Underground)]
         [TestCase(CreatureConstants.Drow_Captain, EnvironmentConstants.Underground)]
         [TestCase(CreatureConstants.Drow_Leader, EnvironmentConstants.Underground)]
         [TestCase(CreatureConstants.Drow_Lieutenant, EnvironmentConstants.Underground)]
@@ -808,7 +931,6 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         [TestCase(CreatureConstants.Centipede_Monstrous_Fiendish_Large, EnvironmentConstants.Plane_Evil)]
         [TestCase(CreatureConstants.Centipede_Monstrous_Fiendish_Medium, EnvironmentConstants.Plane_Evil)]
         [TestCase(CreatureConstants.Raven_Fiendish, EnvironmentConstants.Plane_Evil)]
-        [TestCase(CreatureConstants.Formian, EnvironmentConstants.Plane_Lawful)]
         [TestCase(CreatureConstants.FormianMyrmarch, EnvironmentConstants.Plane_Lawful)]
         [TestCase(CreatureConstants.FormianQueen, EnvironmentConstants.Plane_Lawful)]
         [TestCase(CreatureConstants.FormianTaskmaster, EnvironmentConstants.Plane_Lawful)]
@@ -883,36 +1005,30 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         [TestCase(CreatureConstants.Gnoll_Lieutenant, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
         [TestCase(CreatureConstants.Gnoll_Noncombatant, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
         [TestCase(CreatureConstants.Gnoll_Sergeant, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
-        [TestCase(CreatureConstants.Gnome_Rock, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
         [TestCase(CreatureConstants.Gnome_Rock_Captain, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
         [TestCase(CreatureConstants.Gnome_Rock_Leader, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
         [TestCase(CreatureConstants.Gnome_Rock_Lieutenant_3rd, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
         [TestCase(CreatureConstants.Gnome_Rock_Lieutenant_5th, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
         [TestCase(CreatureConstants.Gnome_Rock_Sergeant, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
         [TestCase(CreatureConstants.Gnome_Rock_Warrior, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
-        [TestCase(CreatureConstants.Gnome_Forest, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
         [TestCase(CreatureConstants.Gnome_Forest_Captain, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
         [TestCase(CreatureConstants.Gnome_Forest_Leader, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
         [TestCase(CreatureConstants.Gnome_Forest_Lieutenant_3rd, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
         [TestCase(CreatureConstants.Gnome_Forest_Lieutenant_5th, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
         [TestCase(CreatureConstants.Gnome_Forest_Sergeant, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
         [TestCase(CreatureConstants.Gnome_Forest_Warrior, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(CreatureConstants.Svirfneblin, EnvironmentConstants.Underground)]
         [TestCase(CreatureConstants.Svirfneblin_Captain, EnvironmentConstants.Underground)]
         [TestCase(CreatureConstants.Svirfneblin_Leader, EnvironmentConstants.Underground)]
         [TestCase(CreatureConstants.Svirfneblin_Lieutenant_3rd, EnvironmentConstants.Underground)]
         [TestCase(CreatureConstants.Svirfneblin_Lieutenant_5th, EnvironmentConstants.Underground)]
         [TestCase(CreatureConstants.Svirfneblin_Sergeant, EnvironmentConstants.Underground)]
         [TestCase(CreatureConstants.Svirfneblin_Warrior, EnvironmentConstants.Underground)]
-        [TestCase(CreatureConstants.Goblin, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains)]
         [TestCase(CreatureConstants.Goblin_Leader_4thTo6th, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains)]
         [TestCase(CreatureConstants.Goblin_Leader_6thTo8th, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains)]
         [TestCase(CreatureConstants.Goblin_Lieutenant, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains)]
         [TestCase(CreatureConstants.Goblin_Noncombatant, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains)]
         [TestCase(CreatureConstants.Goblin_Sergeant, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains)]
         [TestCase(CreatureConstants.Goblin_Warrior, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains)]
-        [TestCase(CreatureConstants.Goblin, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains)]
-        [TestCase(CreatureConstants.Golem, EnvironmentConstants.Any)]
         [TestCase(CreatureConstants.Golem_Clay, EnvironmentConstants.Any)]
         [TestCase(CreatureConstants.Golem_Flesh, EnvironmentConstants.Any)]
         [TestCase(CreatureConstants.Golem_Iron, EnvironmentConstants.Any)]
@@ -1411,7 +1527,6 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         [TestCase(CreatureConstants.Fighter_Leader_Level7, EnvironmentConstants.Civilized)]
         [TestCase(CreatureConstants.Fighter_Leader_Level8, EnvironmentConstants.Civilized)]
         [TestCase(CreatureConstants.Fighter_Leader_Level9, EnvironmentConstants.Civilized)]
-        [TestCase(CreatureConstants.Livestock, EnvironmentConstants.Civilized)]
         [TestCase(CreatureConstants.Livestock_Noncombatant, EnvironmentConstants.Civilized)]
         [TestCase(CreatureConstants.NPC_Level1, EnvironmentConstants.Civilized)]
         [TestCase(CreatureConstants.NPC_Level10To11, EnvironmentConstants.Civilized)]
@@ -1423,7 +1538,6 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         [TestCase(CreatureConstants.NPC_Level4To5, EnvironmentConstants.Civilized)]
         [TestCase(CreatureConstants.NPC_Level6To7, EnvironmentConstants.Civilized)]
         [TestCase(CreatureConstants.NPC_Level8To9, EnvironmentConstants.Civilized)]
-        [TestCase(CreatureConstants.NPC_Traveler, EnvironmentConstants.Civilized)]
         [TestCase(CreatureConstants.NPC_Traveler_Level1, EnvironmentConstants.Civilized)]
         [TestCase(CreatureConstants.NPC_Traveler_Level10To11, EnvironmentConstants.Civilized)]
         [TestCase(CreatureConstants.NPC_Traveler_Level12To13, EnvironmentConstants.Civilized)]
@@ -1645,7 +1759,6 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         [TestCase(CreatureConstants.Character_Missionary_Level7, EnvironmentConstants.Land)]
         [TestCase(CreatureConstants.Character_Missionary_Level8, EnvironmentConstants.Land)]
         [TestCase(CreatureConstants.Character_Missionary_Level9, EnvironmentConstants.Land)]
-        [TestCase(CreatureConstants.Character_RetiredAdventurer, EnvironmentConstants.Land)]
         [TestCase(CreatureConstants.Character_RetiredAdventurer_Level11, EnvironmentConstants.Land)]
         [TestCase(CreatureConstants.Character_RetiredAdventurer_Level12, EnvironmentConstants.Land)]
         [TestCase(CreatureConstants.Character_RetiredAdventurer_Level13, EnvironmentConstants.Land)]
@@ -1840,7 +1953,6 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         [TestCase(CreatureConstants.Fighter_Leader_Level7, EnvironmentConstants.Land)]
         [TestCase(CreatureConstants.Fighter_Leader_Level8, EnvironmentConstants.Land)]
         [TestCase(CreatureConstants.Fighter_Leader_Level9, EnvironmentConstants.Land)]
-        [TestCase(CreatureConstants.Livestock, EnvironmentConstants.Land)]
         [TestCase(CreatureConstants.Livestock_Noncombatant, EnvironmentConstants.Land)]
         [TestCase(CreatureConstants.NPC_Level1, EnvironmentConstants.Land)]
         [TestCase(CreatureConstants.NPC_Level10To11, EnvironmentConstants.Land)]
@@ -1943,21 +2055,18 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         [TestCase(CreatureConstants.Annis, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Marsh)]
         [TestCase(CreatureConstants.GreenHag, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh)]
         [TestCase(CreatureConstants.SeaHag, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic)]
-        [TestCase(CreatureConstants.Halfling_Lightfoot, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
         [TestCase(CreatureConstants.Halfling_Lightfoot_Captain, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
         [TestCase(CreatureConstants.Halfling_Lightfoot_Leader, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
         [TestCase(CreatureConstants.Halfling_Lightfoot_Lieutenant, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
         [TestCase(CreatureConstants.Halfling_Lightfoot_Noncombatant, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
         [TestCase(CreatureConstants.Halfling_Lightfoot_Sergeant, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
         [TestCase(CreatureConstants.Halfling_Lightfoot_Warrior, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
-        [TestCase(CreatureConstants.Halfling_Deep, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
         [TestCase(CreatureConstants.Halfling_Deep_Captain, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
         [TestCase(CreatureConstants.Halfling_Deep_Leader, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
         [TestCase(CreatureConstants.Halfling_Deep_Lieutenant, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
         [TestCase(CreatureConstants.Halfling_Deep_Noncombatant, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
         [TestCase(CreatureConstants.Halfling_Deep_Sergeant, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
         [TestCase(CreatureConstants.Halfling_Deep_Warrior, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
-        [TestCase(CreatureConstants.Halfling_Tallfellow, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
         [TestCase(CreatureConstants.Halfling_Tallfellow_Captain, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
         [TestCase(CreatureConstants.Halfling_Tallfellow_Leader, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
         [TestCase(CreatureConstants.Halfling_Tallfellow_Lieutenant, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
@@ -1966,7 +2075,6 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         [TestCase(CreatureConstants.Halfling_Tallfellow_Warrior, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
         [TestCase(CreatureConstants.Harpy, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh)]
         [TestCase(CreatureConstants.HarpyArcher, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh)]
-        [TestCase(CreatureConstants.Hydra, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh)]
         [TestCase(CreatureConstants.Hydra_10Heads, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh)]
         [TestCase(CreatureConstants.Hydra_11Heads, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh)]
         [TestCase(CreatureConstants.Hydra_12Heads, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh)]
@@ -1975,7 +2083,6 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         [TestCase(CreatureConstants.Hydra_7Heads, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh)]
         [TestCase(CreatureConstants.Hydra_8Heads, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh)]
         [TestCase(CreatureConstants.Hydra_9Heads, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh)]
-        [TestCase(CreatureConstants.Cryohydra, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Marsh)]
         [TestCase(CreatureConstants.Cryohydra_10Heads, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Marsh)]
         [TestCase(CreatureConstants.Cryohydra_11Heads, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Marsh)]
         [TestCase(CreatureConstants.Cryohydra_12Heads, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Marsh)]
@@ -1984,7 +2091,6 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         [TestCase(CreatureConstants.Cryohydra_7Heads, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Marsh)]
         [TestCase(CreatureConstants.Cryohydra_8Heads, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Marsh)]
         [TestCase(CreatureConstants.Cryohydra_9Heads, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Marsh)]
-        [TestCase(CreatureConstants.Pyrohydra, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh)]
         [TestCase(CreatureConstants.Pyrohydra_10Heads, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh)]
         [TestCase(CreatureConstants.Pyrohydra_11Heads, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh)]
         [TestCase(CreatureConstants.Pyrohydra_12Heads, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh)]
@@ -1995,7 +2101,6 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         [TestCase(CreatureConstants.Pyrohydra_9Heads, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh)]
         [TestCase(CreatureConstants.Howler, EnvironmentConstants.Plane_Chaotic)]
         [TestCase(CreatureConstants.Homunculus, EnvironmentConstants.Any)]
-        [TestCase(CreatureConstants.Hobgoblin, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
         [TestCase(CreatureConstants.Hobgoblin_Leader_4thTo6th, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
         [TestCase(CreatureConstants.Hobgoblin_Leader_6thTo8th, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
         [TestCase(CreatureConstants.Hobgoblin_Lieutenant, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
@@ -2009,7 +2114,6 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         [TestCase(CreatureConstants.Marut, EnvironmentConstants.Plane_Lawful)]
         [TestCase(CreatureConstants.Zelekhut, EnvironmentConstants.Plane_Lawful)]
         [TestCase(CreatureConstants.InvisibleStalker, EnvironmentConstants.Plane_Air)]
-        [TestCase(CreatureConstants.Kobold, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
         [TestCase(CreatureConstants.Kobold_Leader_4thTo6th, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
         [TestCase(CreatureConstants.Kobold_Leader_6thTo8th, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
         [TestCase(CreatureConstants.Kobold_Lieutenant, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
@@ -2038,7 +2142,6 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         [TestCase(CreatureConstants.Lizardfolk_Leader_4thTo10th, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh)]
         [TestCase(CreatureConstants.Lizardfolk_Lieutenant, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh)]
         [TestCase(CreatureConstants.Lizardfolk_Noncombatant, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh)]
-        [TestCase(CreatureConstants.Locathah, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic)]
         [TestCase(CreatureConstants.Locathah_Captain, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic)]
         [TestCase(CreatureConstants.Locathah_Leader, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic)]
         [TestCase(CreatureConstants.Locathah_Lieutenant, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic)]
@@ -2065,7 +2168,6 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         [TestCase(CreatureConstants.Mephit_Salt, EnvironmentConstants.Plane_Earth)]
         [TestCase(CreatureConstants.Mephit_Steam, EnvironmentConstants.Plane_Fire)]
         [TestCase(CreatureConstants.Mephit_Water, EnvironmentConstants.Plane_Water)]
-        [TestCase(CreatureConstants.Merfolk, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic)]
         [TestCase(CreatureConstants.Merfolk_Captain, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic)]
         [TestCase(CreatureConstants.Merfolk_Leader, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic)]
         [TestCase(CreatureConstants.Merfolk_Lieutenant_3rd, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic)]
@@ -2084,7 +2186,6 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         [TestCase(CreatureConstants.NightHag, EnvironmentConstants.Plane_Evil)]
         [TestCase(CreatureConstants.Nightmare, EnvironmentConstants.Plane_Evil)]
         [TestCase(CreatureConstants.Nightmare_Cauchemar, EnvironmentConstants.Plane_NeutralEvil)]
-        [TestCase(CreatureConstants.Nightshade, EnvironmentConstants.Plane_Shadow)]
         [TestCase(CreatureConstants.Nightcrawler, EnvironmentConstants.Plane_Shadow)]
         [TestCase(CreatureConstants.Nightwalker, EnvironmentConstants.Plane_Shadow)]
         [TestCase(CreatureConstants.Nightwing, EnvironmentConstants.Plane_Shadow)]
@@ -2099,15 +2200,12 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         [TestCase(CreatureConstants.GelatinousCube, EnvironmentConstants.Underground)]
         [TestCase(CreatureConstants.Ooze_Gray, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Marsh)]
         [TestCase(CreatureConstants.Ooze_OchreJelly, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh)]
-        [TestCase(CreatureConstants.Orc, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
         [TestCase(CreatureConstants.Orc_Captain, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
         [TestCase(CreatureConstants.Orc_Leader, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
         [TestCase(CreatureConstants.Orc_Lieutenant, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
         [TestCase(CreatureConstants.Orc_Noncombatant, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
         [TestCase(CreatureConstants.Orc_Sergeant, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
         [TestCase(CreatureConstants.Orc_Warrior, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
-        [TestCase(CreatureConstants.Orc_Half, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
-        [TestCase(CreatureConstants.Orc_Half, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains)]
         [TestCase(CreatureConstants.Orc_Half_Captain, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
         [TestCase(CreatureConstants.Orc_Half_Captain, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains)]
         [TestCase(CreatureConstants.Orc_Half_Leader, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
@@ -2128,7 +2226,6 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         [TestCase(CreatureConstants.PhaseSpider, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
         [TestCase(CreatureConstants.Phasm, EnvironmentConstants.Underground)]
         [TestCase(CreatureConstants.Aasimar_Warrior, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains)]
-        [TestCase(CreatureConstants.Tiefling, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains)]
         [TestCase(CreatureConstants.Tiefling_Warrior, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains)]
         [TestCase(CreatureConstants.Pseudodragon, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
         [TestCase(CreatureConstants.PurpleWorm, EnvironmentConstants.Underground)]
@@ -2155,7 +2252,6 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         [TestCase(CreatureConstants.Scorpionfolk, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
         [TestCase(CreatureConstants.Satyr, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
         [TestCase(CreatureConstants.Satyr_WithPipes, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(CreatureConstants.Salamander, EnvironmentConstants.Plane_Fire)]
         [TestCase(CreatureConstants.Salamander_Average, EnvironmentConstants.Plane_Fire)]
         [TestCase(CreatureConstants.Salamander_Flamebrother, EnvironmentConstants.Plane_Fire)]
         [TestCase(CreatureConstants.Salamander_Noble, EnvironmentConstants.Plane_Fire)]
@@ -2167,15 +2263,23 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         [TestCase(CreatureConstants.Sahuagin_Noncombatant, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic)]
         [TestCase(CreatureConstants.Sahuagin_Priest, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic)]
         [TestCase(CreatureConstants.Sahuagin_Underpriest, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic)]
-        [TestCase(CreatureConstants.Skeleton, EnvironmentConstants.Any)]
+        [TestCase(CreatureConstants.Skeleton_Chimera, EnvironmentConstants.Any)]
         [TestCase(CreatureConstants.Skeleton_Chimera, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
+        [TestCase(CreatureConstants.Skeleton_Dragon_Red_YoungAdult, EnvironmentConstants.Any)]
         [TestCase(CreatureConstants.Skeleton_Dragon_Red_YoungAdult, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain)]
+        [TestCase(CreatureConstants.Skeleton_Ettin, EnvironmentConstants.Any)]
         [TestCase(CreatureConstants.Skeleton_Ettin, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Hills)]
+        [TestCase(CreatureConstants.Skeleton_Giant_Cloud, EnvironmentConstants.Any)]
         [TestCase(CreatureConstants.Skeleton_Giant_Cloud, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
+        [TestCase(CreatureConstants.Skeleton_Human, EnvironmentConstants.Any)]
         [TestCase(CreatureConstants.Skeleton_Human, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains)]
+        [TestCase(CreatureConstants.Skeleton_Megaraptor, EnvironmentConstants.Any)]
         [TestCase(CreatureConstants.Skeleton_Megaraptor, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest)]
+        [TestCase(CreatureConstants.Skeleton_Owlbear, EnvironmentConstants.Any)]
         [TestCase(CreatureConstants.Skeleton_Owlbear, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
+        [TestCase(CreatureConstants.Skeleton_Troll, EnvironmentConstants.Any)]
         [TestCase(CreatureConstants.Skeleton_Troll, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain)]
+        [TestCase(CreatureConstants.Skeleton_Wolf, EnvironmentConstants.Any)]
         [TestCase(CreatureConstants.Skeleton_Wolf, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
         [TestCase(CreatureConstants.Skum, EnvironmentConstants.Underground + EnvironmentConstants.Aquatic)]
         [TestCase(CreatureConstants.Spectre, EnvironmentConstants.Land)]
@@ -2192,9 +2296,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         [TestCase(CreatureConstants.Stirge, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh)]
         [TestCase(CreatureConstants.Bat_Swarm, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert)]
         [TestCase(CreatureConstants.Centipede_Swarm, EnvironmentConstants.Underground)]
-        [TestCase(CreatureConstants.Hellwasp, EnvironmentConstants.Plane_Evil)]
         [TestCase(CreatureConstants.Hellwasp_Swarm, EnvironmentConstants.Plane_Evil)]
-        [TestCase(CreatureConstants.Locust, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains)]
         [TestCase(CreatureConstants.Locust_Swarm, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains)]
         [TestCase(CreatureConstants.Rat_Swarm, EnvironmentConstants.Land)]
         [TestCase(CreatureConstants.Spider_Swarm, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest)]
@@ -2202,7 +2304,6 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         [TestCase(CreatureConstants.Tendriculos, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
         [TestCase(CreatureConstants.Thoqqua, EnvironmentConstants.Plane_Fire)]
         [TestCase(CreatureConstants.Titan, EnvironmentConstants.Plane_ChaoticGood)]
-        [TestCase(CreatureConstants.Tojanida, EnvironmentConstants.Plane_Water)]
         [TestCase(CreatureConstants.Tojanida_Adult, EnvironmentConstants.Plane_Water)]
         [TestCase(CreatureConstants.Tojanida_Elder, EnvironmentConstants.Plane_Water)]
         [TestCase(CreatureConstants.Tojanida_Juvenile, EnvironmentConstants.Plane_Water)]
@@ -2246,21 +2347,32 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         [TestCase(CreatureConstants.Wraith_Dread, EnvironmentConstants.Any)]
         [TestCase(CreatureConstants.Wyvern, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
         [TestCase(CreatureConstants.Xill, EnvironmentConstants.Plane_Ethereal)]
-        [TestCase(CreatureConstants.Xorn, EnvironmentConstants.Plane_Earth)]
         [TestCase(CreatureConstants.Xorn_Average, EnvironmentConstants.Plane_Earth)]
         [TestCase(CreatureConstants.Xorn_Elder, EnvironmentConstants.Plane_Earth)]
         [TestCase(CreatureConstants.Xorn_Minor, EnvironmentConstants.Plane_Earth)]
         [TestCase(CreatureConstants.YethHound, EnvironmentConstants.Plane_Evil)]
         [TestCase(CreatureConstants.Yrthak, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
-        [TestCase(CreatureConstants.Zombie, EnvironmentConstants.Land)]
-        [TestCase(CreatureConstants.Zombie, EnvironmentConstants.Underground)]
+        [TestCase(CreatureConstants.Zombie_Kobold, EnvironmentConstants.Land)]
+        [TestCase(CreatureConstants.Zombie_Kobold, EnvironmentConstants.Underground)]
         [TestCase(CreatureConstants.Zombie_Kobold, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
+        [TestCase(CreatureConstants.Zombie_Human, EnvironmentConstants.Land)]
+        [TestCase(CreatureConstants.Zombie_Human, EnvironmentConstants.Underground)]
         [TestCase(CreatureConstants.Zombie_Human, EnvironmentConstants.Any)]
+        [TestCase(CreatureConstants.Zombie_Troglodyte, EnvironmentConstants.Land)]
         [TestCase(CreatureConstants.Zombie_Troglodyte, EnvironmentConstants.Underground)]
+        [TestCase(CreatureConstants.Zombie_Bugbear, EnvironmentConstants.Land)]
+        [TestCase(CreatureConstants.Zombie_Bugbear, EnvironmentConstants.Underground)]
         [TestCase(CreatureConstants.Zombie_Bugbear, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
+        [TestCase(CreatureConstants.Zombie_Ogre, EnvironmentConstants.Land)]
+        [TestCase(CreatureConstants.Zombie_Ogre, EnvironmentConstants.Underground)]
         [TestCase(CreatureConstants.Zombie_Ogre, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
+        [TestCase(CreatureConstants.Zombie_Minotaur, EnvironmentConstants.Land)]
         [TestCase(CreatureConstants.Zombie_Minotaur, EnvironmentConstants.Underground)]
+        [TestCase(CreatureConstants.Zombie_Wyvern, EnvironmentConstants.Land)]
+        [TestCase(CreatureConstants.Zombie_Wyvern, EnvironmentConstants.Underground)]
         [TestCase(CreatureConstants.Zombie_Wyvern, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
+        [TestCase(CreatureConstants.Zombie_GrayRender, EnvironmentConstants.Land)]
+        [TestCase(CreatureConstants.Zombie_GrayRender, EnvironmentConstants.Underground)]
         [TestCase(CreatureConstants.Zombie_GrayRender, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh)]
         [TestCase(CreatureConstants.Ape, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest)]
         [TestCase(CreatureConstants.Baboon, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
@@ -2314,13 +2426,11 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         [TestCase(CreatureConstants.Rat, EnvironmentConstants.Land)]
         [TestCase(CreatureConstants.Raven, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
         [TestCase(CreatureConstants.Rhinoceras, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
-        [TestCase(CreatureConstants.Shark, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Aquatic)]
         [TestCase(CreatureConstants.Shark_Medium, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Aquatic)]
         [TestCase(CreatureConstants.Shark_Large, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Aquatic)]
         [TestCase(CreatureConstants.Shark_Huge, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Aquatic)]
         [TestCase(CreatureConstants.Snake_Constrictor, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest)]
         [TestCase(CreatureConstants.Snake_Constrictor_Giant, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest)]
-        [TestCase(CreatureConstants.Snake_Viper, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh)]
         [TestCase(CreatureConstants.Snake_Viper_Tiny, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh)]
         [TestCase(CreatureConstants.Snake_Viper_Small, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh)]
         [TestCase(CreatureConstants.Snake_Viper_Medium, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh)]
@@ -2331,13 +2441,11 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         [TestCase(CreatureConstants.Tiger, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest)]
         [TestCase(CreatureConstants.Toad, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh)]
         [TestCase(CreatureConstants.Weasel, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
-        [TestCase(CreatureConstants.Whale, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic)]
         [TestCase(CreatureConstants.Whale_Baleen, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic)]
         [TestCase(CreatureConstants.Whale_Cachalot, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic)]
         [TestCase(CreatureConstants.Whale_Orca, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Aquatic)]
         [TestCase(CreatureConstants.Wolf, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
         [TestCase(CreatureConstants.Wolverine, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Forest)]
-        [TestCase(CreatureConstants.Ant_Giant, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains)]
         [TestCase(CreatureConstants.Ant_Giant_Queen, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains)]
         [TestCase(CreatureConstants.Ant_Giant_Soldier, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains)]
         [TestCase(CreatureConstants.Ant_Giant_Worker, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains)]
@@ -2347,7 +2455,6 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         [TestCase(CreatureConstants.StagBeetle_Giant, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
         [TestCase(CreatureConstants.PrayingMantis_Giant, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
         [TestCase(CreatureConstants.Wasp_Giant, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(CreatureConstants.Centipede_Monstrous, EnvironmentConstants.Underground)]
         [TestCase(CreatureConstants.Centipede_Monstrous_Colossal, EnvironmentConstants.Underground)]
         [TestCase(CreatureConstants.Centipede_Monstrous_Gargantuan, EnvironmentConstants.Underground)]
         [TestCase(CreatureConstants.Centipede_Monstrous_Huge, EnvironmentConstants.Underground)]
@@ -2355,7 +2462,6 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         [TestCase(CreatureConstants.Centipede_Monstrous_Medium, EnvironmentConstants.Underground)]
         [TestCase(CreatureConstants.Centipede_Monstrous_Small, EnvironmentConstants.Underground)]
         [TestCase(CreatureConstants.Centipede_Monstrous_Tiny, EnvironmentConstants.Underground)]
-        [TestCase(CreatureConstants.Scorpion_Monstrous, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
         [TestCase(CreatureConstants.Scorpion_Monstrous_Colossal, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
         [TestCase(CreatureConstants.Scorpion_Monstrous_Gargantuan, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
         [TestCase(CreatureConstants.Scorpion_Monstrous_Huge, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
@@ -2363,7 +2469,6 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         [TestCase(CreatureConstants.Scorpion_Monstrous_Medium, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
         [TestCase(CreatureConstants.Scorpion_Monstrous_Small, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
         [TestCase(CreatureConstants.Scorpion_Monstrous_Tiny, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
-        [TestCase(CreatureConstants.Spider_Monstrous, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
         [TestCase(CreatureConstants.Spider_Monstrous_Colossal, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
         [TestCase(CreatureConstants.Spider_Monstrous_Gargantuan, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
         [TestCase(CreatureConstants.Spider_Monstrous_Huge, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
@@ -2375,13 +2480,11 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         [TestCase(CreatureConstants.CarrionCrawler, EnvironmentConstants.Underground)]
         [TestCase(CreatureConstants.DisplacerBeast, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
         [TestCase(CreatureConstants.DisplacerBeast_PackLord, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
-        [TestCase(CreatureConstants.Githyanki, EnvironmentConstants.Plane_Astral)]
         [TestCase(CreatureConstants.Githyanki_Captain, EnvironmentConstants.Plane_Astral)]
         [TestCase(CreatureConstants.Githyanki_Fighter, EnvironmentConstants.Plane_Astral)]
         [TestCase(CreatureConstants.Githyanki_Lieutenant, EnvironmentConstants.Plane_Astral)]
         [TestCase(CreatureConstants.Githyanki_Sergeant, EnvironmentConstants.Plane_Astral)]
         [TestCase(CreatureConstants.Githyanki_SupremeLeader, EnvironmentConstants.Plane_Astral)]
-        [TestCase(CreatureConstants.Githzerai, EnvironmentConstants.Plane_Limbo)]
         [TestCase(CreatureConstants.Githzerai_Master, EnvironmentConstants.Plane_Limbo)]
         [TestCase(CreatureConstants.Githzerai_Mentor, EnvironmentConstants.Plane_Limbo)]
         [TestCase(CreatureConstants.Githzerai_Sensei, EnvironmentConstants.Plane_Limbo)]
@@ -2396,7 +2499,6 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         [TestCase(CreatureConstants.KuoToa_Noncombatant, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic)]
         [TestCase(CreatureConstants.KuoToa_Whip_10th, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic)]
         [TestCase(CreatureConstants.KuoToa_Whip_3rd, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic)]
-        [TestCase(CreatureConstants.Slaad, EnvironmentConstants.Plane_Limbo)]
         [TestCase(CreatureConstants.Slaad_Blue, EnvironmentConstants.Plane_Limbo)]
         [TestCase(CreatureConstants.Slaad_Death, EnvironmentConstants.Plane_Limbo)]
         [TestCase(CreatureConstants.Slaad_Gray, EnvironmentConstants.Plane_Limbo)]
@@ -2404,7 +2506,6 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         [TestCase(CreatureConstants.Slaad_Red, EnvironmentConstants.Plane_Limbo)]
         [TestCase(CreatureConstants.UmberHulk, EnvironmentConstants.Underground)]
         [TestCase(CreatureConstants.UmberHulk_TrulyHorrid, EnvironmentConstants.Underground)]
-        [TestCase(CreatureConstants.YuanTi, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest)]
         [TestCase(CreatureConstants.YuanTi_Pureblood, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest)]
         [TestCase(CreatureConstants.YuanTi_Halfblood, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest)]
         [TestCase(CreatureConstants.YuanTi_Abomination, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest)]

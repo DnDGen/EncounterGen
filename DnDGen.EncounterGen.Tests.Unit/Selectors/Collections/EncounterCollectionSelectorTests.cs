@@ -33,6 +33,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
         private List<string> extraplanarEncounters;
         private List<string> anyEncounters;
         private List<string> civilizedEncounters;
+        private List<string> undeadEncounters;
         private Dictionary<string, List<string>> filters;
         private List<string> wildernessEncounters;
         private EncounterSpecifications specifications;
@@ -51,6 +52,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
             extraplanarEncounters = new List<string> { "extraplanar encounter/extraplanar amount", "other extraplanar encounter/other extraplanar amount" };
             anyEncounters = new List<string> { "any encounter/any amount", "other any encounter/other any amount" };
             civilizedEncounters = new List<string> { "civilized encounter/civilized amount", "other civilized encounter/other civilized amount" };
+            undeadEncounters = new List<string> { "undead encounter/undead amount", "other undead encounter/other undead amount" };
             specificEnvironmentEncounters = new List<string>
             {
                 "specific environment encounter/specific environment amount",
@@ -84,6 +86,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
             SetUpEncounterGroup(EnvironmentConstants.Land, landEncounters);
             SetUpEncounterGroup(EnvironmentConstants.Any, anyEncounters);
             SetUpEncounterGroup(EnvironmentConstants.Civilized, civilizedEncounters);
+            SetUpEncounterGroup(CreatureConstants.Types.Undead, undeadEncounters);
             SetUpEncounterGroup(GroupConstants.Wilderness, wildernessEncounters);
 
             mockCollectionSelector.Setup(s => s.SelectAllFrom(TableNameConstants.EncounterGroups)).Returns(encounterGroups);
@@ -194,7 +197,9 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
         [Test]
         public void GetRandomEncounterTypesAndAmountsFromSelector()
         {
-            mockCollectionSelector.Setup(s => s.SelectRandomFrom(It.IsAny<IEnumerable<Dictionary<string, string>>>())).Returns((IEnumerable<Dictionary<string, string>> collection) => collection.ElementAt(1));
+            mockCollectionSelector
+                .Setup(s => s.SelectRandomFrom(It.IsAny<IEnumerable<Dictionary<string, string>>>()))
+                .Returns((IEnumerable<Dictionary<string, string>> collection) => collection.ElementAt(1));
 
             specificEnvironmentEncounters.Add("wrong encounter/wrong amount");
             SetupEncounterLevel(specificEnvironmentEncounters[1], 9266);
@@ -1059,6 +1064,423 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
             };
 
             AssertEncounterWeight(expectedEncounters, targetEnvironment: EnvironmentConstants.Civilized);
+        }
+
+        [Test]
+        public void BUG_IfCivilized_UndeadFromAnyAreRare()
+        {
+            var specificCivilizedEncounters = new[] { "specific civilized encounter/amount", "other specific civilized encounter/other amount" };
+            SetUpEncounterGroup(temperature + EnvironmentConstants.Civilized, specificCivilizedEncounters);
+
+            anyEncounters.AddRange(undeadEncounters);
+
+            SetupEncounterLevel(extraplanarEncounters[0], 9266);
+            SetupEncounterLevel(extraplanarEncounters[1], 9266);
+            SetupEncounterLevel(anyEncounters[0], 9266);
+            SetupEncounterLevel(anyEncounters[1], 9266);
+            SetupEncounterLevel(landEncounters[0], 9266);
+            SetupEncounterLevel(landEncounters[1], 9266);
+            SetupEncounterLevel(undeadEncounters[0], 9266);
+            SetupEncounterLevel(civilizedEncounters[0], 9266);
+            SetupEncounterLevel(specificCivilizedEncounters[0], 9266);
+
+            timeOfDayEncounters.Add(extraplanarEncounters[0]);
+            timeOfDayEncounters.Add(extraplanarEncounters[1]);
+            timeOfDayEncounters.Add(anyEncounters[0]);
+            timeOfDayEncounters.Add(anyEncounters[1]);
+            timeOfDayEncounters.Add(landEncounters[0]);
+            timeOfDayEncounters.Add(landEncounters[1]);
+            timeOfDayEncounters.Add(undeadEncounters[0]);
+            timeOfDayEncounters.Add(undeadEncounters[1]);
+            timeOfDayEncounters.Add(civilizedEncounters[0]);
+            timeOfDayEncounters.Add(specificCivilizedEncounters[0]);
+
+            wildernessEncounters.Add(extraplanarEncounters[0]);
+            wildernessEncounters.Add(landEncounters[0]);
+            wildernessEncounters.Add(anyEncounters[0]);
+
+            var expectedEncounters = new[]
+            {
+                ("other extraplanar encounter", "other extraplanar amount", rareWeight),
+                ("specific civilized encounter", "amount", commonWeight),
+                ("civilized encounter", "civilized amount", commonWeight),
+                ("undead encounter", "undead amount", rareWeight),
+                ("other land encounter", "other land amount", commonWeight),
+                ("other any encounter", "other any amount", commonWeight),
+            };
+
+            AssertEncounterWeight(expectedEncounters, targetEnvironment: EnvironmentConstants.Civilized);
+        }
+
+        [Test]
+        public void BUG_IfNotCivilized_UndeadFromAnyAreCommon()
+        {
+            anyEncounters.AddRange(undeadEncounters);
+
+            SetupEncounterLevel(extraplanarEncounters[0], 9266);
+            SetupEncounterLevel(extraplanarEncounters[1], 9266);
+            SetupEncounterLevel(anyEncounters[0], 9266);
+            SetupEncounterLevel(anyEncounters[1], 9266);
+            SetupEncounterLevel(landEncounters[0], 9266);
+            SetupEncounterLevel(landEncounters[1], 9266);
+            SetupEncounterLevel(undeadEncounters[0], 9266);
+            SetupEncounterLevel(civilizedEncounters[0], 9266);
+            SetupEncounterLevel(specificEnvironmentEncounters[0], 9266);
+
+            timeOfDayEncounters.Add(extraplanarEncounters[0]);
+            timeOfDayEncounters.Add(extraplanarEncounters[1]);
+            timeOfDayEncounters.Add(anyEncounters[0]);
+            timeOfDayEncounters.Add(anyEncounters[1]);
+            timeOfDayEncounters.Add(landEncounters[0]);
+            timeOfDayEncounters.Add(landEncounters[1]);
+            timeOfDayEncounters.Add(undeadEncounters[0]);
+            timeOfDayEncounters.Add(undeadEncounters[1]);
+            timeOfDayEncounters.Add(civilizedEncounters[0]);
+            timeOfDayEncounters.Add(specificEnvironmentEncounters[0]);
+
+            wildernessEncounters.Add(extraplanarEncounters[0]);
+            wildernessEncounters.Add(landEncounters[0]);
+            wildernessEncounters.Add(anyEncounters[0]);
+
+            var expectedEncounters = new[]
+            {
+                ("extraplanar encounter", "extraplanar amount", rareWeight),
+                ("other extraplanar encounter", "other extraplanar amount", rareWeight),
+                ("specific environment encounter", "specific environment amount", commonWeight),
+                ("undead encounter", "undead amount", commonWeight),
+                ("land encounter", "land amount", commonWeight),
+                ("other land encounter", "other land amount", commonWeight),
+                ("any encounter", "any amount", commonWeight),
+                ("other any encounter", "other any amount", commonWeight),
+            };
+
+            AssertEncounterWeight(expectedEncounters);
+        }
+
+        [Test]
+        public void BUG_IfCivilized_UndeadFromLandAreRare()
+        {
+            var specificCivilizedEncounters = new[] { "specific civilized encounter/amount", "other specific civilized encounter/other amount" };
+            SetUpEncounterGroup(temperature + EnvironmentConstants.Civilized, specificCivilizedEncounters);
+
+            landEncounters.AddRange(undeadEncounters);
+
+            SetupEncounterLevel(extraplanarEncounters[0], 9266);
+            SetupEncounterLevel(extraplanarEncounters[1], 9266);
+            SetupEncounterLevel(anyEncounters[0], 9266);
+            SetupEncounterLevel(anyEncounters[1], 9266);
+            SetupEncounterLevel(landEncounters[0], 9266);
+            SetupEncounterLevel(landEncounters[1], 9266);
+            SetupEncounterLevel(undeadEncounters[0], 9266);
+            SetupEncounterLevel(civilizedEncounters[0], 9266);
+            SetupEncounterLevel(specificCivilizedEncounters[0], 9266);
+
+            timeOfDayEncounters.Add(extraplanarEncounters[0]);
+            timeOfDayEncounters.Add(extraplanarEncounters[1]);
+            timeOfDayEncounters.Add(anyEncounters[0]);
+            timeOfDayEncounters.Add(anyEncounters[1]);
+            timeOfDayEncounters.Add(landEncounters[0]);
+            timeOfDayEncounters.Add(landEncounters[1]);
+            timeOfDayEncounters.Add(undeadEncounters[0]);
+            timeOfDayEncounters.Add(undeadEncounters[1]);
+            timeOfDayEncounters.Add(civilizedEncounters[0]);
+            timeOfDayEncounters.Add(specificCivilizedEncounters[0]);
+
+            wildernessEncounters.Add(extraplanarEncounters[0]);
+            wildernessEncounters.Add(landEncounters[0]);
+            wildernessEncounters.Add(anyEncounters[0]);
+
+            var expectedEncounters = new[]
+            {
+                ("other extraplanar encounter", "other extraplanar amount", rareWeight),
+                ("specific civilized encounter", "amount", commonWeight),
+                ("civilized encounter", "civilized amount", commonWeight),
+                ("undead encounter", "undead amount", rareWeight),
+                ("other land encounter", "other land amount", commonWeight),
+                ("other any encounter", "other any amount", commonWeight),
+            };
+
+            AssertEncounterWeight(expectedEncounters, targetEnvironment: EnvironmentConstants.Civilized);
+        }
+
+        [Test]
+        public void BUG_IfNotCivilized_UndeadFromLandAreCommon()
+        {
+            landEncounters.AddRange(undeadEncounters);
+
+            SetupEncounterLevel(extraplanarEncounters[0], 9266);
+            SetupEncounterLevel(extraplanarEncounters[1], 9266);
+            SetupEncounterLevel(anyEncounters[0], 9266);
+            SetupEncounterLevel(anyEncounters[1], 9266);
+            SetupEncounterLevel(landEncounters[0], 9266);
+            SetupEncounterLevel(landEncounters[1], 9266);
+            SetupEncounterLevel(undeadEncounters[0], 9266);
+            SetupEncounterLevel(civilizedEncounters[0], 9266);
+            SetupEncounterLevel(specificEnvironmentEncounters[0], 9266);
+
+            timeOfDayEncounters.Add(extraplanarEncounters[0]);
+            timeOfDayEncounters.Add(extraplanarEncounters[1]);
+            timeOfDayEncounters.Add(anyEncounters[0]);
+            timeOfDayEncounters.Add(anyEncounters[1]);
+            timeOfDayEncounters.Add(landEncounters[0]);
+            timeOfDayEncounters.Add(landEncounters[1]);
+            timeOfDayEncounters.Add(undeadEncounters[0]);
+            timeOfDayEncounters.Add(undeadEncounters[1]);
+            timeOfDayEncounters.Add(civilizedEncounters[0]);
+            timeOfDayEncounters.Add(specificEnvironmentEncounters[0]);
+
+            wildernessEncounters.Add(extraplanarEncounters[0]);
+            wildernessEncounters.Add(landEncounters[0]);
+            wildernessEncounters.Add(anyEncounters[0]);
+
+            var expectedEncounters = new[]
+            {
+                ("extraplanar encounter", "extraplanar amount", rareWeight),
+                ("other extraplanar encounter", "other extraplanar amount", rareWeight),
+                ("specific environment encounter", "specific environment amount", commonWeight),
+                ("undead encounter", "undead amount", commonWeight),
+                ("land encounter", "land amount", commonWeight),
+                ("other land encounter", "other land amount", commonWeight),
+                ("any encounter", "any amount", commonWeight),
+                ("other any encounter", "other any amount", commonWeight),
+            };
+
+            AssertEncounterWeight(expectedEncounters);
+        }
+
+        [Test]
+        public void BUG_IfCivilized_UndergroundUndeadAreRare()
+        {
+            var specificCivilizedEncounters = new[] { "specific civilized encounter/amount", "other specific civilized encounter/other amount" };
+            SetUpEncounterGroup(temperature + EnvironmentConstants.Civilized, specificCivilizedEncounters);
+
+            var undergroundEncounters = new List<string> { "underground encounter/amount", "other underground encounter/other amount" };
+            SetUpEncounterGroup(EnvironmentConstants.Underground, undergroundEncounters);
+
+            anyEncounters.AddRange(undeadEncounters);
+            undergroundEncounters.AddRange(undeadEncounters);
+
+            SetupEncounterLevel(extraplanarEncounters[0], 9266);
+            SetupEncounterLevel(extraplanarEncounters[1], 9266);
+            SetupEncounterLevel(anyEncounters[0], 9266);
+            SetupEncounterLevel(anyEncounters[1], 9266);
+            SetupEncounterLevel(landEncounters[0], 9266);
+            SetupEncounterLevel(landEncounters[1], 9266);
+            SetupEncounterLevel(undeadEncounters[0], 9266);
+            SetupEncounterLevel(undergroundEncounters[0], 9266);
+            SetupEncounterLevel(undergroundEncounters[1], 9266);
+            SetupEncounterLevel(civilizedEncounters[0], 9266);
+            SetupEncounterLevel(specificCivilizedEncounters[0], 9266);
+
+            timeOfDayEncounters.Add(extraplanarEncounters[0]);
+            timeOfDayEncounters.Add(extraplanarEncounters[1]);
+            timeOfDayEncounters.Add(anyEncounters[0]);
+            timeOfDayEncounters.Add(anyEncounters[1]);
+            timeOfDayEncounters.Add(landEncounters[0]);
+            timeOfDayEncounters.Add(landEncounters[1]);
+            timeOfDayEncounters.Add(undeadEncounters[0]);
+            timeOfDayEncounters.Add(undeadEncounters[1]);
+            timeOfDayEncounters.Add(undergroundEncounters[0]);
+            timeOfDayEncounters.Add(undergroundEncounters[1]);
+            timeOfDayEncounters.Add(civilizedEncounters[0]);
+            timeOfDayEncounters.Add(specificCivilizedEncounters[0]);
+
+            wildernessEncounters.Add(extraplanarEncounters[0]);
+            wildernessEncounters.Add(landEncounters[0]);
+            wildernessEncounters.Add(anyEncounters[0]);
+            wildernessEncounters.Add(undergroundEncounters[0]);
+
+            var nightEncounters = new List<string>(timeOfDayEncounters);
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Night, nightEncounters);
+
+            var expectedEncounters = new[]
+            {
+                ("other extraplanar encounter", "other extraplanar amount", rareWeight),
+                ("specific civilized encounter", "amount", commonWeight),
+                ("civilized encounter", "civilized amount", commonWeight),
+                ("undead encounter", "undead amount", rareWeight),
+                ("other land encounter", "other land amount", commonWeight),
+                ("other any encounter", "other any amount", commonWeight),
+                ("other underground encounter", "other amount", uncommonWeight),
+            };
+
+            AssertEncounterWeight(expectedEncounters, targetEnvironment: EnvironmentConstants.Civilized, allowUnderground: true);
+        }
+
+        [Test]
+        public void BUG_IfNotCivilized_UndergroundUndeadFromAnyAreCommon()
+        {
+            var undergroundEncounters = new List<string> { "underground encounter/amount", "other underground encounter/other amount" };
+            SetUpEncounterGroup(EnvironmentConstants.Underground, undergroundEncounters);
+
+            anyEncounters.AddRange(undeadEncounters);
+            undergroundEncounters.AddRange(undeadEncounters);
+
+            SetupEncounterLevel(extraplanarEncounters[0], 9266);
+            SetupEncounterLevel(extraplanarEncounters[1], 9266);
+            SetupEncounterLevel(anyEncounters[0], 9266);
+            SetupEncounterLevel(anyEncounters[1], 9266);
+            SetupEncounterLevel(landEncounters[0], 9266);
+            SetupEncounterLevel(landEncounters[1], 9266);
+            SetupEncounterLevel(undeadEncounters[0], 9266);
+            SetupEncounterLevel(undergroundEncounters[0], 9266);
+            SetupEncounterLevel(undergroundEncounters[1], 9266);
+            SetupEncounterLevel(civilizedEncounters[0], 9266);
+            SetupEncounterLevel(specificEnvironmentEncounters[0], 9266);
+
+            timeOfDayEncounters.Add(extraplanarEncounters[0]);
+            timeOfDayEncounters.Add(extraplanarEncounters[1]);
+            timeOfDayEncounters.Add(anyEncounters[0]);
+            timeOfDayEncounters.Add(anyEncounters[1]);
+            timeOfDayEncounters.Add(landEncounters[0]);
+            timeOfDayEncounters.Add(landEncounters[1]);
+            timeOfDayEncounters.Add(undeadEncounters[0]);
+            timeOfDayEncounters.Add(undeadEncounters[1]);
+            timeOfDayEncounters.Add(undergroundEncounters[0]);
+            timeOfDayEncounters.Add(undergroundEncounters[1]);
+            timeOfDayEncounters.Add(civilizedEncounters[0]);
+            timeOfDayEncounters.Add(specificEnvironmentEncounters[0]);
+
+            wildernessEncounters.Add(extraplanarEncounters[0]);
+            wildernessEncounters.Add(landEncounters[0]);
+            wildernessEncounters.Add(anyEncounters[0]);
+            wildernessEncounters.Add(undergroundEncounters[0]);
+
+            var nightEncounters = new List<string>(timeOfDayEncounters);
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Night, nightEncounters);
+
+            var expectedEncounters = new[]
+            {
+                ("extraplanar encounter", "extraplanar amount", rareWeight),
+                ("other extraplanar encounter", "other extraplanar amount", rareWeight),
+                ("specific environment encounter", "specific environment amount", commonWeight),
+                ("undead encounter", "undead amount", commonWeight),
+                ("land encounter", "land amount", commonWeight),
+                ("other land encounter", "other land amount", commonWeight),
+                ("any encounter", "any amount", commonWeight),
+                ("other any encounter", "other any amount", commonWeight),
+                ("other underground encounter", "other amount", uncommonWeight),
+                ("underground encounter", "amount", uncommonWeight),
+            };
+
+            AssertEncounterWeight(expectedEncounters, allowUnderground: true);
+        }
+
+        [Test]
+        public void BUG_IfNotCivilized_UndergroundUndeadFromLandAreCommon()
+        {
+            var undergroundEncounters = new List<string> { "underground encounter/amount", "other underground encounter/other amount" };
+            SetUpEncounterGroup(EnvironmentConstants.Underground, undergroundEncounters);
+
+            landEncounters.AddRange(undeadEncounters);
+            undergroundEncounters.AddRange(undeadEncounters);
+
+            SetupEncounterLevel(extraplanarEncounters[0], 9266);
+            SetupEncounterLevel(extraplanarEncounters[1], 9266);
+            SetupEncounterLevel(anyEncounters[0], 9266);
+            SetupEncounterLevel(anyEncounters[1], 9266);
+            SetupEncounterLevel(landEncounters[0], 9266);
+            SetupEncounterLevel(landEncounters[1], 9266);
+            SetupEncounterLevel(undeadEncounters[0], 9266);
+            SetupEncounterLevel(undergroundEncounters[0], 9266);
+            SetupEncounterLevel(undergroundEncounters[1], 9266);
+            SetupEncounterLevel(civilizedEncounters[0], 9266);
+            SetupEncounterLevel(specificEnvironmentEncounters[0], 9266);
+
+            timeOfDayEncounters.Add(extraplanarEncounters[0]);
+            timeOfDayEncounters.Add(extraplanarEncounters[1]);
+            timeOfDayEncounters.Add(anyEncounters[0]);
+            timeOfDayEncounters.Add(anyEncounters[1]);
+            timeOfDayEncounters.Add(landEncounters[0]);
+            timeOfDayEncounters.Add(landEncounters[1]);
+            timeOfDayEncounters.Add(undeadEncounters[0]);
+            timeOfDayEncounters.Add(undeadEncounters[1]);
+            timeOfDayEncounters.Add(undergroundEncounters[0]);
+            timeOfDayEncounters.Add(undergroundEncounters[1]);
+            timeOfDayEncounters.Add(civilizedEncounters[0]);
+            timeOfDayEncounters.Add(specificEnvironmentEncounters[0]);
+
+            wildernessEncounters.Add(extraplanarEncounters[0]);
+            wildernessEncounters.Add(landEncounters[0]);
+            wildernessEncounters.Add(anyEncounters[0]);
+            wildernessEncounters.Add(undergroundEncounters[0]);
+
+            var nightEncounters = new List<string>(timeOfDayEncounters);
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Night, nightEncounters);
+
+            var expectedEncounters = new[]
+            {
+                ("extraplanar encounter", "extraplanar amount", rareWeight),
+                ("other extraplanar encounter", "other extraplanar amount", rareWeight),
+                ("specific environment encounter", "specific environment amount", commonWeight),
+                ("undead encounter", "undead amount", commonWeight),
+                ("land encounter", "land amount", commonWeight),
+                ("other land encounter", "other land amount", commonWeight),
+                ("any encounter", "any amount", commonWeight),
+                ("other any encounter", "other any amount", commonWeight),
+                ("other underground encounter", "other amount", uncommonWeight),
+                ("underground encounter", "amount", uncommonWeight),
+            };
+
+            AssertEncounterWeight(expectedEncounters, allowUnderground: true);
+        }
+
+        [Test]
+        public void BUG_IfNotCivilized_UndergroundUndeadAreUncommon()
+        {
+            var undergroundEncounters = new List<string> { "underground encounter/amount", "other underground encounter/other amount" };
+            SetUpEncounterGroup(EnvironmentConstants.Underground, undergroundEncounters);
+
+            undergroundEncounters.AddRange(undeadEncounters);
+
+            SetupEncounterLevel(extraplanarEncounters[0], 9266);
+            SetupEncounterLevel(extraplanarEncounters[1], 9266);
+            SetupEncounterLevel(anyEncounters[0], 9266);
+            SetupEncounterLevel(anyEncounters[1], 9266);
+            SetupEncounterLevel(landEncounters[0], 9266);
+            SetupEncounterLevel(landEncounters[1], 9266);
+            SetupEncounterLevel(undeadEncounters[0], 9266);
+            SetupEncounterLevel(undergroundEncounters[0], 9266);
+            SetupEncounterLevel(undergroundEncounters[1], 9266);
+            SetupEncounterLevel(civilizedEncounters[0], 9266);
+            SetupEncounterLevel(specificEnvironmentEncounters[0], 9266);
+
+            timeOfDayEncounters.Add(extraplanarEncounters[0]);
+            timeOfDayEncounters.Add(extraplanarEncounters[1]);
+            timeOfDayEncounters.Add(anyEncounters[0]);
+            timeOfDayEncounters.Add(anyEncounters[1]);
+            timeOfDayEncounters.Add(landEncounters[0]);
+            timeOfDayEncounters.Add(landEncounters[1]);
+            timeOfDayEncounters.Add(undeadEncounters[0]);
+            timeOfDayEncounters.Add(undeadEncounters[1]);
+            timeOfDayEncounters.Add(undergroundEncounters[0]);
+            timeOfDayEncounters.Add(undergroundEncounters[1]);
+            timeOfDayEncounters.Add(civilizedEncounters[0]);
+            timeOfDayEncounters.Add(specificEnvironmentEncounters[0]);
+
+            wildernessEncounters.Add(extraplanarEncounters[0]);
+            wildernessEncounters.Add(landEncounters[0]);
+            wildernessEncounters.Add(anyEncounters[0]);
+            wildernessEncounters.Add(undergroundEncounters[0]);
+
+            var nightEncounters = new List<string>(timeOfDayEncounters);
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Night, nightEncounters);
+
+            var expectedEncounters = new[]
+            {
+                ("extraplanar encounter", "extraplanar amount", rareWeight),
+                ("other extraplanar encounter", "other extraplanar amount", rareWeight),
+                ("specific environment encounter", "specific environment amount", commonWeight),
+                ("undead encounter", "undead amount", uncommonWeight),
+                ("land encounter", "land amount", commonWeight),
+                ("other land encounter", "other land amount", commonWeight),
+                ("any encounter", "any amount", commonWeight),
+                ("other any encounter", "other any amount", commonWeight),
+                ("other underground encounter", "other amount", uncommonWeight),
+                ("underground encounter", "amount", uncommonWeight),
+            };
+
+            AssertEncounterWeight(expectedEncounters, allowUnderground: true);
         }
 
         [Test]
