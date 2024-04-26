@@ -2377,16 +2377,6 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors
         [TestCase(EncounterConstants.Leonal_Pride, CreatureConstants.Leonal, AmountConstants.Range4To9)]
         [TestCase(EncounterConstants.Leopard_Solitary, CreatureConstants.Leopard, AmountConstants.Range1)]
         [TestCase(EncounterConstants.Leopard_Pair, CreatureConstants.Leopard, AmountConstants.Range2)]
-        [TestCase(EncounterConstants.Lich_Level1_Solitary, CreatureConstants.Lich_Level1, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.Lich_Level2_Solitary, CreatureConstants.Lich_Level2, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.Lich_Level3_Solitary, CreatureConstants.Lich_Level3, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.Lich_Level4_Solitary, CreatureConstants.Lich_Level4, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.Lich_Level5_Solitary, CreatureConstants.Lich_Level5, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.Lich_Level6_Solitary, CreatureConstants.Lich_Level6, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.Lich_Level7_Solitary, CreatureConstants.Lich_Level7, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.Lich_Level8_Solitary, CreatureConstants.Lich_Level8, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.Lich_Level9_Solitary, CreatureConstants.Lich_Level9, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.Lich_Level10_Solitary, CreatureConstants.Lich_Level10, AmountConstants.Range1)]
         [TestCase(EncounterConstants.Lich_Level11_Solitary, CreatureConstants.Lich_Level11, AmountConstants.Range1)]
         [TestCase(EncounterConstants.Lich_Level12_Solitary, CreatureConstants.Lich_Level12, AmountConstants.Range1)]
         [TestCase(EncounterConstants.Lich_Level13_Solitary, CreatureConstants.Lich_Level13, AmountConstants.Range1)]
@@ -2397,24 +2387,6 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors
         [TestCase(EncounterConstants.Lich_Level18_Solitary, CreatureConstants.Lich_Level18, AmountConstants.Range1)]
         [TestCase(EncounterConstants.Lich_Level19_Solitary, CreatureConstants.Lich_Level19, AmountConstants.Range1)]
         [TestCase(EncounterConstants.Lich_Level20_Solitary, CreatureConstants.Lich_Level20, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.Lich_Level5_Troupe, CreatureConstants.Lich_Level5, AmountConstants.Range1,
-            CreatureConstants.Vampire_Level1, AmountConstants.Range2To4,
-            CreatureConstants.VampireSpawn, AmountConstants.Range5To8)]
-        [TestCase(EncounterConstants.Lich_Level6_Troupe, CreatureConstants.Lich_Level6, AmountConstants.Range1,
-            CreatureConstants.Vampire_Level2, AmountConstants.Range2To4,
-            CreatureConstants.VampireSpawn, AmountConstants.Range5To8)]
-        [TestCase(EncounterConstants.Lich_Level7_Troupe, CreatureConstants.Lich_Level7, AmountConstants.Range1,
-            CreatureConstants.Vampire_Level3, AmountConstants.Range2To4,
-            CreatureConstants.VampireSpawn, AmountConstants.Range5To8)]
-        [TestCase(EncounterConstants.Lich_Level8_Troupe, CreatureConstants.Lich_Level8, AmountConstants.Range1,
-            CreatureConstants.Vampire_Level4, AmountConstants.Range2To4,
-            CreatureConstants.VampireSpawn, AmountConstants.Range5To8)]
-        [TestCase(EncounterConstants.Lich_Level9_Troupe, CreatureConstants.Lich_Level9, AmountConstants.Range1,
-            CreatureConstants.Vampire_Level5, AmountConstants.Range2To4,
-            CreatureConstants.VampireSpawn, AmountConstants.Range5To8)]
-        [TestCase(EncounterConstants.Lich_Level10_Troupe, CreatureConstants.Lich_Level10, AmountConstants.Range1,
-            CreatureConstants.Vampire_Level6, AmountConstants.Range2To4,
-            CreatureConstants.VampireSpawn, AmountConstants.Range5To8)]
         [TestCase(EncounterConstants.Lich_Level11_Troupe, CreatureConstants.Lich_Level11, AmountConstants.Range1,
             CreatureConstants.Vampire_Level7, AmountConstants.Range2To4,
             CreatureConstants.VampireSpawn, AmountConstants.Range5To8)]

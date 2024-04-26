@@ -1198,16 +1198,6 @@
         public const string Leonal = "Leonal";
         public const string Leopard = "Leopard";
         public const string Lich = "Character#Lich#";
-        public const string Lich_Level1 = "Character[1]#Lich#";
-        public const string Lich_Level2 = "Character[2]#Lich#";
-        public const string Lich_Level3 = "Character[3]#Lich#";
-        public const string Lich_Level4 = "Character[4]#Lich#";
-        public const string Lich_Level5 = "Character[5]#Lich#";
-        public const string Lich_Level6 = "Character[6]#Lich#";
-        public const string Lich_Level7 = "Character[7]#Lich#";
-        public const string Lich_Level8 = "Character[8]#Lich#";
-        public const string Lich_Level9 = "Character[9]#Lich#";
-        public const string Lich_Level10 = "Character[10]#Lich#";
         public const string Lich_Level11 = "Character[11]#Lich#";
         public const string Lich_Level12 = "Character[12]#Lich#";
         public const string Lich_Level13 = "Character[13]#Lich#";

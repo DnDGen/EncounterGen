@@ -26,9 +26,15 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
 
         [TestCase(EnvironmentConstants.Aquatic)]
         [TestCase(EnvironmentConstants.Underground)]
+        [TestCase(EnvironmentConstants.Land)]
+        [TestCase(EnvironmentConstants.Any)]
+        [TestCase(EnvironmentConstants.Civilized)]
         [TestCase(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Aquatic)]
         [TestCase(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic)]
         [TestCase(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic)]
+        [TestCase(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Civilized)]
+        [TestCase(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Civilized)]
+        [TestCase(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Civilized)]
         [TestCase(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Desert)]
         [TestCase(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert)]
         [TestCase(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
@@ -50,8 +56,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         [TestCase(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Underground)]
         [TestCase(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Underground)]
         [TestCase(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Underground)]
-        [TestCase(GroupConstants.Magic)]
-        [TestCase(GroupConstants.Land)]
+        [TestCase(EnvironmentConstants.Underground + EnvironmentConstants.Aquatic)]
         [TestCase(GroupConstants.Wilderness)]
         public void AllCreaturesArePresentInAtLeastOneTimeOfDay(string source)
         {
@@ -62,6 +67,9 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
 
         [TestCase(EnvironmentConstants.Aquatic)]
         [TestCase(EnvironmentConstants.Underground)]
+        [TestCase(EnvironmentConstants.Land)]
+        [TestCase(EnvironmentConstants.Any)]
+        [TestCase(EnvironmentConstants.Civilized)]
         [TestCase(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Aquatic)]
         [TestCase(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic)]
         [TestCase(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic)]
@@ -86,8 +94,6 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         [TestCase(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Underground)]
         [TestCase(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Underground)]
         [TestCase(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Underground)]
-        [TestCase(GroupConstants.Magic)]
-        [TestCase(GroupConstants.Land)]
         [TestCase(GroupConstants.Wilderness)]
         public void AllCreaturesHaveType(string source)
         {

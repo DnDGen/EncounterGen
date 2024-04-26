@@ -7,6 +7,7 @@ using DnDGen.Infrastructure.Selectors.Collections;
 using Moq;
 using NUnit.Framework;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace DnDGen.EncounterGen.Tests.Unit.Generators
 {
@@ -347,6 +348,138 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
 
             var isValid = encounterVerifier.CreatureIsValid("creature (description)", new[] { Filter });
             Assert.That(isValid, Is.True);
+        }
+
+        [TestCase(true, true)]
+        [TestCase(true, false)]
+        [TestCase(false, true)]
+        [TestCase(false, false)]
+        public void ValidEncounterExists_ReturnsTrue_WhenThereIsAnEncounter(bool aquatic, bool underground)
+        {
+            mockEncounterCollectionSelector
+                .Setup(s => s.SelectPossibleFrom("environment", "temperature", "time of day", 9266, aquatic, underground, "filter 1", "filter 2"))
+                .Returns(new[]
+                {
+                    new Dictionary<string, string>
+                    {
+                        { "my creature", "my amount" }
+                    }
+                });
+
+            var exists = encounterVerifier.ValidEncounterExists("environment", "temperature", "time of day", 9266, aquatic, underground, "filter 1", "filter 2");
+            Assert.That(exists, Is.True);
+        }
+
+        [TestCase(true, true)]
+        [TestCase(true, false)]
+        [TestCase(false, true)]
+        [TestCase(false, false)]
+        public void ValidEncounterExists_ReturnsFalse_WhenThereIsNoEncounter(bool aquatic, bool underground)
+        {
+            mockEncounterCollectionSelector
+                .Setup(s => s.SelectPossibleFrom("environment", "temperature", "time of day", 9266, aquatic, underground, "filter 1", "filter 2"))
+                .Returns(Enumerable.Empty<Dictionary<string, string>>());
+
+            var exists = encounterVerifier.ValidEncounterExists("environment", "temperature", "time of day", 9266, aquatic, underground, "filter 1", "filter 2");
+            Assert.That(exists, Is.False);
+        }
+
+        [Test]
+        public void GetValidTemperatues_ReturnsPossibleTemperatures()
+        {
+            var possibleTemps = new[] { "temp 1", "temp 2" };
+            mockEncounterCollectionSelector
+                .Setup(s => s.SelectPossibleTemperatures("environment"))
+                .Returns(possibleTemps);
+
+            var temperatures = encounterVerifier.GetValidTemperatues("environment");
+            Assert.That(temperatures, Is.EqualTo(possibleTemps));
+        }
+
+        [Test]
+        public void GetValidTimesOfDay_ReturnsPossibleTimesOfDay()
+        {
+            var possibleTimesOfDay = new[] { "time 1", "time 2" };
+            mockEncounterCollectionSelector
+                .Setup(s => s.SelectPossibleTimesOfDay("environment", "temperature"))
+                .Returns(possibleTimesOfDay);
+
+            var timesOfDay = encounterVerifier.GetValidTimesOfDay("environment", "temperature");
+            Assert.That(timesOfDay, Is.EqualTo(possibleTimesOfDay));
+        }
+
+        [Test]
+        public void GetValidLevels_ReturnsPossibleLevels()
+        {
+            var possibleLevels = new[] { 9266, 90210 };
+            mockEncounterCollectionSelector
+                .Setup(s => s.SelectPossibleLevels("environment", "temperature", "time of day"))
+                .Returns(possibleLevels);
+
+            var levels = encounterVerifier.GetValidLevels("environment", "temperature", "time of day");
+            Assert.That(levels, Is.EqualTo(possibleLevels));
+        }
+
+        [TestCase]
+        [TestCase(true)]
+        [TestCase(false)]
+        [TestCase(true, false)]
+        public void GetValidAllowAquatic_ReturnsPossibleAllowAquatic(params bool[] possibleAquatic)
+        {
+            mockEncounterCollectionSelector
+                .Setup(s => s.SelectPossibleAllowAquatic("environment", "temperature", "time of day", 9266))
+                .Returns(possibleAquatic);
+
+            var aquatic = encounterVerifier.GetValidAllowAquatic("environment", "temperature", "time of day", 9266);
+            Assert.That(aquatic, Is.EqualTo(possibleAquatic));
+        }
+
+        [TestCase(true)]
+        [TestCase(true, true)]
+        [TestCase(true, false)]
+        [TestCase(true, true, false)]
+        [TestCase(false)]
+        [TestCase(false, true)]
+        [TestCase(false, false)]
+        [TestCase(false, true, false)]
+        public void GetValidAllowUnderground_ReturnsPossibleAllowUnderground(bool aquatic, params bool[] possibleUnderground)
+        {
+            mockEncounterCollectionSelector
+                .Setup(s => s.SelectPossibleAllowUnderground("environment", "temperature", "time of day", 9266, aquatic))
+                .Returns(possibleUnderground);
+
+            var underground = encounterVerifier.GetValidAllowUnderground("environment", "temperature", "time of day", 9266, aquatic);
+            Assert.That(underground, Is.EqualTo(possibleUnderground));
+        }
+
+        [TestCase(true, true)]
+        [TestCase(true, false)]
+        [TestCase(false, true)]
+        [TestCase(false, false)]
+        public void GetValidFilters_ReturnsPossibleFilters(bool aquatic, bool underground)
+        {
+            var possibleFilters = new[] { "filter 1", "filter 2" };
+            mockEncounterCollectionSelector
+                .Setup(s => s.SelectPossibleFilters("environment", "temperature", "time of day", 9266, aquatic, underground))
+                .Returns(possibleFilters);
+
+            var filters = encounterVerifier.GetValidFilters("environment", "temperature", "time of day", 9266, aquatic, underground);
+            Assert.That(filters, Is.EqualTo(possibleFilters));
+        }
+
+        [TestCase(true, true)]
+        [TestCase(true, false)]
+        [TestCase(false, true)]
+        [TestCase(false, false)]
+        public void GetValidFilters_ReturnsPossibleFilters_None(bool aquatic, bool underground)
+        {
+            var possibleFilters = Enumerable.Empty<string>();
+            mockEncounterCollectionSelector
+                .Setup(s => s.SelectPossibleFilters("environment", "temperature", "time of day", 9266, aquatic, underground))
+                .Returns(possibleFilters);
+
+            var filters = encounterVerifier.GetValidFilters("environment", "temperature", "time of day", 9266, aquatic, underground);
+            Assert.That(filters, Is.Empty);
         }
     }
 }

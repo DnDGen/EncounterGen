@@ -1,4 +1,5 @@
-﻿using DnDGen.EncounterGen.Models;
+﻿using DnDGen.EncounterGen.Generators;
+using DnDGen.EncounterGen.Models;
 using DnDGen.EncounterGen.Selectors;
 using DnDGen.EncounterGen.Tables;
 using DnDGen.RollGen;
@@ -35,8 +36,12 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures
         [Test]
         public override void EntriesAreComplete()
         {
-            var allEncounters = collectionSelector.SelectAllFrom(TableNameConstants.EncounterGroups).Values.SelectMany(v => v).Distinct();
-            AssertEntriesAreComplete(allEncounters);
+            var allNames = collectionSelector
+                .SelectAllFrom(TableNameConstants.EncounterGroups).Values
+                .SelectMany(v => v)
+                .Union(Enumerable.Range(EncounterSpecifications.MinimumLevel, EncounterSpecifications.MaximumLevel).Select(l => l.ToString()))
+                .Distinct();
+            AssertEntriesAreComplete(allNames);
         }
 
         [TestCase(EncounterConstants.Aasimar_Solitary)]
@@ -1619,16 +1624,6 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures
         [TestCase(EncounterConstants.Leonal_Pride)]
         [TestCase(EncounterConstants.Leopard_Solitary)]
         [TestCase(EncounterConstants.Leopard_Pair)]
-        [TestCase(EncounterConstants.Lich_Level1_Solitary)]
-        [TestCase(EncounterConstants.Lich_Level2_Solitary)]
-        [TestCase(EncounterConstants.Lich_Level3_Solitary)]
-        [TestCase(EncounterConstants.Lich_Level4_Solitary)]
-        [TestCase(EncounterConstants.Lich_Level5_Solitary)]
-        [TestCase(EncounterConstants.Lich_Level6_Solitary)]
-        [TestCase(EncounterConstants.Lich_Level7_Solitary)]
-        [TestCase(EncounterConstants.Lich_Level8_Solitary)]
-        [TestCase(EncounterConstants.Lich_Level9_Solitary)]
-        [TestCase(EncounterConstants.Lich_Level10_Solitary)]
         [TestCase(EncounterConstants.Lich_Level11_Solitary)]
         [TestCase(EncounterConstants.Lich_Level12_Solitary)]
         [TestCase(EncounterConstants.Lich_Level13_Solitary)]
@@ -1639,12 +1634,6 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures
         [TestCase(EncounterConstants.Lich_Level18_Solitary)]
         [TestCase(EncounterConstants.Lich_Level19_Solitary)]
         [TestCase(EncounterConstants.Lich_Level20_Solitary)]
-        [TestCase(EncounterConstants.Lich_Level5_Troupe)]
-        [TestCase(EncounterConstants.Lich_Level6_Troupe)]
-        [TestCase(EncounterConstants.Lich_Level7_Troupe)]
-        [TestCase(EncounterConstants.Lich_Level8_Troupe)]
-        [TestCase(EncounterConstants.Lich_Level9_Troupe)]
-        [TestCase(EncounterConstants.Lich_Level10_Troupe)]
         [TestCase(EncounterConstants.Lich_Level11_Troupe)]
         [TestCase(EncounterConstants.Lich_Level12_Troupe)]
         [TestCase(EncounterConstants.Lich_Level13_Troupe)]
@@ -2602,6 +2591,49 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures
             var averageEncounterLevel = encounterLevelSelector.Select(encounter);
 
             DistinctCollection(encounterConstant, averageEncounterLevel.ToString());
+
+            Assert.That(table, Contains.Key(averageEncounterLevel.ToString()));
+            Assert.That(table[averageEncounterLevel.ToString()], Contains.Item(encounterConstant), $"Level {averageEncounterLevel}");
+        }
+
+        [TestCase(EncounterSpecifications.MinimumLevel)]
+        [TestCase(2)]
+        [TestCase(3)]
+        [TestCase(4)]
+        [TestCase(5)]
+        [TestCase(6)]
+        [TestCase(7)]
+        [TestCase(8)]
+        [TestCase(9)]
+        [TestCase(10)]
+        [TestCase(11)]
+        [TestCase(12)]
+        [TestCase(13)]
+        [TestCase(14)]
+        [TestCase(15)]
+        [TestCase(16)]
+        [TestCase(17)]
+        [TestCase(18)]
+        [TestCase(19)]
+        [TestCase(20)]
+        [TestCase(21)]
+        [TestCase(22)]
+        [TestCase(23)]
+        [TestCase(24)]
+        [TestCase(25)]
+        [TestCase(26)]
+        [TestCase(27)]
+        [TestCase(28)]
+        [TestCase(29)]
+        [TestCase(EncounterSpecifications.MaximumLevel)]
+        public void AverageEncounterLevelGroup_ContainsAllEncountersOfLevel(int level)
+        {
+            var encountersOfLevel = table
+                .Where(kvp => kvp.Value.FirstOrDefault() == level.ToString())
+                .Select(kvp => kvp.Key);
+
+            Assert.That(table, Contains.Key(level.ToString()));
+            Assert.That(table[level.ToString()], Is.EquivalentTo(encountersOfLevel));
         }
     }
 }

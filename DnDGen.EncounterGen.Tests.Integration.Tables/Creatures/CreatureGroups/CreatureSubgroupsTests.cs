@@ -1330,7 +1330,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         }
 
         [Test]
-        public void CharacterFamousEntertainerubgroup()
+        public void CharacterFamousEntertainerSubgroup()
         {
             var items = new[]
             {
@@ -1879,16 +1879,6 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         {
             var items = new[]
             {
-                CreatureConstants.Lich_Level1,
-                CreatureConstants.Lich_Level2,
-                CreatureConstants.Lich_Level3,
-                CreatureConstants.Lich_Level4,
-                CreatureConstants.Lich_Level5,
-                CreatureConstants.Lich_Level6,
-                CreatureConstants.Lich_Level7,
-                CreatureConstants.Lich_Level8,
-                CreatureConstants.Lich_Level9,
-                CreatureConstants.Lich_Level10,
                 CreatureConstants.Lich_Level11,
                 CreatureConstants.Lich_Level12,
                 CreatureConstants.Lich_Level13,

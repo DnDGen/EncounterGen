@@ -14,11 +14,6 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         }
 
         [TestCase("")]
-        [TestCase(GroupConstants.Magic,
-            CreatureConstants.Types.Undead,
-            CreatureConstants.Types.Outsider,
-            CreatureConstants.Types.Construct,
-            CreatureConstants.Types.Elemental)]
         [TestCase(GroupConstants.RequiresSubtype,
             CreatureConstants.Mephit_CR3,
             CreatureConstants.DominatedCreature_CR1,
