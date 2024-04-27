@@ -97,42 +97,42 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
         {
             var types = new[]
             {
-                CreatureConstants.Types.Aberration,
-                CreatureConstants.Types.Animal,
-                CreatureConstants.Types.Construct,
-                CreatureConstants.Types.Dragon,
-                CreatureConstants.Types.Elemental,
-                CreatureConstants.Types.Fey,
-                CreatureConstants.Types.Giant,
-                CreatureConstants.Types.Humanoid,
-                CreatureConstants.Types.MagicalBeast,
-                CreatureConstants.Types.MonstrousHumanoid,
-                CreatureConstants.Types.Ooze,
-                CreatureConstants.Types.Outsider,
-                CreatureConstants.Types.Plant,
-                CreatureConstants.Types.Undead,
-                CreatureConstants.Types.Vermin,
+                CreatureDataConstants.Types.Aberration,
+                CreatureDataConstants.Types.Animal,
+                CreatureDataConstants.Types.Construct,
+                CreatureDataConstants.Types.Dragon,
+                CreatureDataConstants.Types.Elemental,
+                CreatureDataConstants.Types.Fey,
+                CreatureDataConstants.Types.Giant,
+                CreatureDataConstants.Types.Humanoid,
+                CreatureDataConstants.Types.MagicalBeast,
+                CreatureDataConstants.Types.MonstrousHumanoid,
+                CreatureDataConstants.Types.Ooze,
+                CreatureDataConstants.Types.Outsider,
+                CreatureDataConstants.Types.Plant,
+                CreatureDataConstants.Types.Undead,
+                CreatureDataConstants.Types.Vermin,
             };
 
             var excludedCreatures = new[] {
-                CreatureConstants.DominatedCreature,
-                CreatureConstants.DominatedCreature_CR1,
-                CreatureConstants.DominatedCreature_CR10,
-                CreatureConstants.DominatedCreature_CR11,
-                CreatureConstants.DominatedCreature_CR12,
-                CreatureConstants.DominatedCreature_CR13,
-                CreatureConstants.DominatedCreature_CR14,
-                CreatureConstants.DominatedCreature_CR15,
-                CreatureConstants.DominatedCreature_CR16,
-                CreatureConstants.DominatedCreature_CR2,
-                CreatureConstants.DominatedCreature_CR3,
-                CreatureConstants.DominatedCreature_CR4,
-                CreatureConstants.DominatedCreature_CR5,
-                CreatureConstants.DominatedCreature_CR6,
-                CreatureConstants.DominatedCreature_CR7,
-                CreatureConstants.DominatedCreature_CR8,
-                CreatureConstants.DominatedCreature_CR9,
-                CreatureConstants.Noncombatant,
+                CreatureDataConstants.DominatedCreature,
+                CreatureDataConstants.DominatedCreature_CR1,
+                CreatureDataConstants.DominatedCreature_CR10,
+                CreatureDataConstants.DominatedCreature_CR11,
+                CreatureDataConstants.DominatedCreature_CR12,
+                CreatureDataConstants.DominatedCreature_CR13,
+                CreatureDataConstants.DominatedCreature_CR14,
+                CreatureDataConstants.DominatedCreature_CR15,
+                CreatureDataConstants.DominatedCreature_CR16,
+                CreatureDataConstants.DominatedCreature_CR2,
+                CreatureDataConstants.DominatedCreature_CR3,
+                CreatureDataConstants.DominatedCreature_CR4,
+                CreatureDataConstants.DominatedCreature_CR5,
+                CreatureDataConstants.DominatedCreature_CR6,
+                CreatureDataConstants.DominatedCreature_CR7,
+                CreatureDataConstants.DominatedCreature_CR8,
+                CreatureDataConstants.DominatedCreature_CR9,
+                CreatureDataConstants.Noncombatant,
             };
 
             var allCreatures = GetAllCreaturesFromEncounters();
@@ -309,7 +309,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
 
         private bool IsUndead(string creature)
         {
-            var undead = collectionSelector.Explode(TableNameConstants.CreatureGroups, CreatureConstants.Types.Undead);
+            var undead = collectionSelector.Explode(TableNameConstants.CreatureGroups, CreatureDataConstants.Types.Undead);
             return undead.Contains(creature);
         }
 
@@ -450,7 +450,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
         private bool IsUndeadCharacter(string creature)
         {
             var name = encounterFormatter.SelectNameFrom(creature);
-            return IsUndead(creature) && name == CreatureConstants.Character;
+            return IsUndead(creature) && name == CreatureDataConstants.Character;
         }
     }
 }

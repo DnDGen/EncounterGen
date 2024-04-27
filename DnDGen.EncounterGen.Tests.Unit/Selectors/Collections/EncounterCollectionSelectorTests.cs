@@ -86,7 +86,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
             SetUpEncounterGroup(EnvironmentConstants.Land, landEncounters);
             SetUpEncounterGroup(EnvironmentConstants.Any, anyEncounters);
             SetUpEncounterGroup(EnvironmentConstants.Civilized, civilizedEncounters);
-            SetUpEncounterGroup(CreatureConstants.Types.Undead, undeadEncounters);
+            SetUpEncounterGroup(CreatureDataConstants.Types.Undead, undeadEncounters);
             SetUpEncounterGroup(GroupConstants.Wilderness, wildernessEncounters);
 
             mockCollectionSelector.Setup(s => s.SelectAllFrom(TableNameConstants.EncounterGroups)).Returns(encounterGroups);
@@ -5809,30 +5809,30 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
 
             SetupEncounterLevel("my encounter/my amount", 9266);
 
-            filters[CreatureConstants.Types.Aberration].Add("my encounter");
-            filters[CreatureConstants.Types.Aberration].Add("my wrong encounter");
+            filters[CreatureDataConstants.Types.Aberration].Add("my encounter");
+            filters[CreatureDataConstants.Types.Aberration].Add("my wrong encounter");
 
             var possibleFilters = encounterCollectionSelector.SelectPossibleFilters("environment", "temperature", "time of day", 9266, false, false);
-            Assert.That(possibleFilters, Is.EquivalentTo(new[] { CreatureConstants.Types.Aberration }));
+            Assert.That(possibleFilters, Is.EquivalentTo(new[] { CreatureDataConstants.Types.Aberration }));
         }
 
         private void SetupAllFilters()
         {
-            SetupFilter(CreatureConstants.Types.Aberration);
-            SetupFilter(CreatureConstants.Types.Animal);
-            SetupFilter(CreatureConstants.Types.Construct);
-            SetupFilter(CreatureConstants.Types.Dragon);
-            SetupFilter(CreatureConstants.Types.Elemental);
-            SetupFilter(CreatureConstants.Types.Fey);
-            SetupFilter(CreatureConstants.Types.Giant);
-            SetupFilter(CreatureConstants.Types.Humanoid);
-            SetupFilter(CreatureConstants.Types.MagicalBeast);
-            SetupFilter(CreatureConstants.Types.MonstrousHumanoid);
-            SetupFilter(CreatureConstants.Types.Ooze);
-            SetupFilter(CreatureConstants.Types.Outsider);
-            SetupFilter(CreatureConstants.Types.Plant);
-            SetupFilter(CreatureConstants.Types.Undead);
-            SetupFilter(CreatureConstants.Types.Vermin);
+            SetupFilter(CreatureDataConstants.Types.Aberration);
+            SetupFilter(CreatureDataConstants.Types.Animal);
+            SetupFilter(CreatureDataConstants.Types.Construct);
+            SetupFilter(CreatureDataConstants.Types.Dragon);
+            SetupFilter(CreatureDataConstants.Types.Elemental);
+            SetupFilter(CreatureDataConstants.Types.Fey);
+            SetupFilter(CreatureDataConstants.Types.Giant);
+            SetupFilter(CreatureDataConstants.Types.Humanoid);
+            SetupFilter(CreatureDataConstants.Types.MagicalBeast);
+            SetupFilter(CreatureDataConstants.Types.MonstrousHumanoid);
+            SetupFilter(CreatureDataConstants.Types.Ooze);
+            SetupFilter(CreatureDataConstants.Types.Outsider);
+            SetupFilter(CreatureDataConstants.Types.Plant);
+            SetupFilter(CreatureDataConstants.Types.Undead);
+            SetupFilter(CreatureDataConstants.Types.Vermin);
         }
 
         [Test]
@@ -5845,11 +5845,11 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
             SetupEncounterLevel("my encounter/my amount", 9266);
             landEncounters.Add("my encounter/my amount");
 
-            filters[CreatureConstants.Types.Aberration].Add("my encounter");
-            filters[CreatureConstants.Types.Aberration].Add("my wrong encounter");
+            filters[CreatureDataConstants.Types.Aberration].Add("my encounter");
+            filters[CreatureDataConstants.Types.Aberration].Add("my wrong encounter");
 
             var possibleFilters = encounterCollectionSelector.SelectPossibleFilters("environment", "temperature", "time of day", 9266, false, false);
-            Assert.That(possibleFilters, Is.EquivalentTo(new[] { CreatureConstants.Types.Aberration }));
+            Assert.That(possibleFilters, Is.EquivalentTo(new[] { CreatureDataConstants.Types.Aberration }));
         }
 
         [Test]
@@ -5862,11 +5862,11 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
             SetupEncounterLevel("my encounter/my amount", 9266);
             anyEncounters.Add("my encounter/my amount");
 
-            filters[CreatureConstants.Types.Aberration].Add("my encounter");
-            filters[CreatureConstants.Types.Aberration].Add("my wrong encounter");
+            filters[CreatureDataConstants.Types.Aberration].Add("my encounter");
+            filters[CreatureDataConstants.Types.Aberration].Add("my wrong encounter");
 
             var possibleFilters = encounterCollectionSelector.SelectPossibleFilters("environment", "temperature", "time of day", 9266, false, false);
-            Assert.That(possibleFilters, Is.EquivalentTo(new[] { CreatureConstants.Types.Aberration }));
+            Assert.That(possibleFilters, Is.EquivalentTo(new[] { CreatureDataConstants.Types.Aberration }));
         }
 
         [Test]
@@ -5879,11 +5879,11 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
             SetupEncounterLevel("my encounter/my amount", 9266);
             extraplanarEncounters.Add("my encounter/my amount");
 
-            filters[CreatureConstants.Types.Aberration].Add("my encounter");
-            filters[CreatureConstants.Types.Aberration].Add("my wrong encounter");
+            filters[CreatureDataConstants.Types.Aberration].Add("my encounter");
+            filters[CreatureDataConstants.Types.Aberration].Add("my wrong encounter");
 
             var possibleFilters = encounterCollectionSelector.SelectPossibleFilters("environment", "temperature", "time of day", 9266, false, false);
-            Assert.That(possibleFilters, Is.EquivalentTo(new[] { CreatureConstants.Types.Aberration }));
+            Assert.That(possibleFilters, Is.EquivalentTo(new[] { CreatureDataConstants.Types.Aberration }));
         }
 
         [Test]
@@ -5896,11 +5896,11 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
             SetupEncounterLevel("my encounter/my amount", 9266);
             civilizedEncounters.Add("my encounter/my amount");
 
-            filters[CreatureConstants.Types.Aberration].Add("my encounter");
-            filters[CreatureConstants.Types.Aberration].Add("my wrong encounter");
+            filters[CreatureDataConstants.Types.Aberration].Add("my encounter");
+            filters[CreatureDataConstants.Types.Aberration].Add("my wrong encounter");
 
             var possibleFilters = encounterCollectionSelector.SelectPossibleFilters(EnvironmentConstants.Civilized, "temperature", "time of day", 9266, false, false);
-            Assert.That(possibleFilters, Is.EquivalentTo(new[] { CreatureConstants.Types.Aberration }));
+            Assert.That(possibleFilters, Is.EquivalentTo(new[] { CreatureDataConstants.Types.Aberration }));
         }
 
         [Test]
@@ -5918,11 +5918,11 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
 
             SetupEncounterLevel("my encounter/my amount", 9266);
 
-            filters[CreatureConstants.Types.Aberration].Add("my encounter");
-            filters[CreatureConstants.Types.Aberration].Add("my wrong encounter");
+            filters[CreatureDataConstants.Types.Aberration].Add("my encounter");
+            filters[CreatureDataConstants.Types.Aberration].Add("my wrong encounter");
 
             var possibleFilters = encounterCollectionSelector.SelectPossibleFilters("environment", "temperature", "time of day", 9266, true, false);
-            Assert.That(possibleFilters, Is.EquivalentTo(new[] { CreatureConstants.Types.Aberration }));
+            Assert.That(possibleFilters, Is.EquivalentTo(new[] { CreatureDataConstants.Types.Aberration }));
         }
 
         [Test]
@@ -5940,11 +5940,11 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
 
             SetupEncounterLevel("my encounter/my amount", 9266);
 
-            filters[CreatureConstants.Types.Aberration].Add("my encounter");
-            filters[CreatureConstants.Types.Aberration].Add("my wrong encounter");
+            filters[CreatureDataConstants.Types.Aberration].Add("my encounter");
+            filters[CreatureDataConstants.Types.Aberration].Add("my wrong encounter");
 
             var possibleFilters = encounterCollectionSelector.SelectPossibleFilters("environment", "temperature", "time of day", 9266, true, false);
-            Assert.That(possibleFilters, Is.EquivalentTo(new[] { CreatureConstants.Types.Aberration }));
+            Assert.That(possibleFilters, Is.EquivalentTo(new[] { CreatureDataConstants.Types.Aberration }));
         }
 
         [Test]
@@ -5959,11 +5959,11 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
 
             SetupEncounterLevel("my encounter/my amount", 9266);
 
-            filters[CreatureConstants.Types.Aberration].Add("my encounter");
-            filters[CreatureConstants.Types.Aberration].Add("my wrong encounter");
+            filters[CreatureDataConstants.Types.Aberration].Add("my encounter");
+            filters[CreatureDataConstants.Types.Aberration].Add("my wrong encounter");
 
             var possibleFilters = encounterCollectionSelector.SelectPossibleFilters("environment", "temperature", "time of day", 9266, false, true);
-            Assert.That(possibleFilters, Is.EquivalentTo(new[] { CreatureConstants.Types.Aberration }));
+            Assert.That(possibleFilters, Is.EquivalentTo(new[] { CreatureDataConstants.Types.Aberration }));
         }
 
         [Test]
@@ -5984,28 +5984,28 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
 
             SetupEncounterLevel("my encounter/my amount", 9266);
 
-            filters[CreatureConstants.Types.Aberration].Add("my encounter");
-            filters[CreatureConstants.Types.Aberration].Add("my wrong encounter");
+            filters[CreatureDataConstants.Types.Aberration].Add("my encounter");
+            filters[CreatureDataConstants.Types.Aberration].Add("my wrong encounter");
 
             var possibleFilters = encounterCollectionSelector.SelectPossibleFilters("environment", "temperature", "time of day", 9266, true, true);
-            Assert.That(possibleFilters, Is.EquivalentTo(new[] { CreatureConstants.Types.Aberration }));
+            Assert.That(possibleFilters, Is.EquivalentTo(new[] { CreatureDataConstants.Types.Aberration }));
         }
 
-        [TestCase(CreatureConstants.Types.Aberration)]
-        [TestCase(CreatureConstants.Types.Animal)]
-        [TestCase(CreatureConstants.Types.Construct)]
-        [TestCase(CreatureConstants.Types.Dragon)]
-        [TestCase(CreatureConstants.Types.Elemental)]
-        [TestCase(CreatureConstants.Types.Fey)]
-        [TestCase(CreatureConstants.Types.Giant)]
-        [TestCase(CreatureConstants.Types.Humanoid)]
-        [TestCase(CreatureConstants.Types.MagicalBeast)]
-        [TestCase(CreatureConstants.Types.MonstrousHumanoid)]
-        [TestCase(CreatureConstants.Types.Ooze)]
-        [TestCase(CreatureConstants.Types.Outsider)]
-        [TestCase(CreatureConstants.Types.Plant)]
-        [TestCase(CreatureConstants.Types.Undead)]
-        [TestCase(CreatureConstants.Types.Vermin)]
+        [TestCase(CreatureDataConstants.Types.Aberration)]
+        [TestCase(CreatureDataConstants.Types.Animal)]
+        [TestCase(CreatureDataConstants.Types.Construct)]
+        [TestCase(CreatureDataConstants.Types.Dragon)]
+        [TestCase(CreatureDataConstants.Types.Elemental)]
+        [TestCase(CreatureDataConstants.Types.Fey)]
+        [TestCase(CreatureDataConstants.Types.Giant)]
+        [TestCase(CreatureDataConstants.Types.Humanoid)]
+        [TestCase(CreatureDataConstants.Types.MagicalBeast)]
+        [TestCase(CreatureDataConstants.Types.MonstrousHumanoid)]
+        [TestCase(CreatureDataConstants.Types.Ooze)]
+        [TestCase(CreatureDataConstants.Types.Outsider)]
+        [TestCase(CreatureDataConstants.Types.Plant)]
+        [TestCase(CreatureDataConstants.Types.Undead)]
+        [TestCase(CreatureDataConstants.Types.Vermin)]
         public void SelectPossibleFilters_ReturnsValidFilters_ForFilter(string filter)
         {
             SetupAllFilters();
@@ -6031,13 +6031,13 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
             SetupEncounterLevel("my encounter/my amount", 9266);
             SetupEncounterLevel("my other encounter/my other amount", 9266);
 
-            filters[CreatureConstants.Types.Animal].Add("my encounter");
-            filters[CreatureConstants.Types.Animal].Add("my wrong encounter");
-            filters[CreatureConstants.Types.Construct].Add("my other encounter");
-            filters[CreatureConstants.Types.Construct].Add("my wrong encounter");
+            filters[CreatureDataConstants.Types.Animal].Add("my encounter");
+            filters[CreatureDataConstants.Types.Animal].Add("my wrong encounter");
+            filters[CreatureDataConstants.Types.Construct].Add("my other encounter");
+            filters[CreatureDataConstants.Types.Construct].Add("my wrong encounter");
 
             var possibleFilters = encounterCollectionSelector.SelectPossibleFilters("environment", "temperature", "time of day", 9266, false, false);
-            Assert.That(possibleFilters, Is.EquivalentTo(new[] { CreatureConstants.Types.Animal, CreatureConstants.Types.Construct }));
+            Assert.That(possibleFilters, Is.EquivalentTo(new[] { CreatureDataConstants.Types.Animal, CreatureDataConstants.Types.Construct }));
         }
 
         [Test]

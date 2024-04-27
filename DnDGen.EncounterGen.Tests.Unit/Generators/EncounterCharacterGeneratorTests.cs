@@ -76,7 +76,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
 
             mockCollectionSelector.Setup(s => s.SelectRandomFrom(It.IsAny<IEnumerable<string>>())).Returns((IEnumerable<string> c) => c.Last());
 
-            mockEncounterFormatter.Setup(s => s.SelectNameFrom(creatures[0].Type.Name)).Returns(CreatureConstants.Character);
+            mockEncounterFormatter.Setup(s => s.SelectNameFrom(creatures[0].Type.Name)).Returns(CreatureDataConstants.Character);
             mockEncounterFormatter.Setup(s => s.SelectChallengeRatingFrom(creatures[0].Type.Name)).Returns("1337");
 
             mockJustInTimeFactory.Setup(f => f.Build<IAlignmentRandomizer>(AlignmentRandomizerTypeConstants.Any)).Returns(mockAnyAlignmentRandomizer.Object);
@@ -585,27 +585,27 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
             creatures[7].Type.Name = "not a character";
             creatures[7].Quantity = 13;
 
-            mockEncounterFormatter.Setup(s => s.SelectNameFrom(creatures[1].Type.Name)).Returns(CreatureConstants.Character);
+            mockEncounterFormatter.Setup(s => s.SelectNameFrom(creatures[1].Type.Name)).Returns(CreatureDataConstants.Character);
             mockEncounterFormatter.Setup(s => s.SelectChallengeRatingFrom(creatures[1].Type.Name)).Returns("1337");
             mockEncounterFormatter.Setup(s => s.SelectCharacterClassesFrom(creatures[1].Type.Name)).Returns(new[] { ClassNameRandomizerTypeConstants.AnyNPC });
 
-            mockEncounterFormatter.Setup(s => s.SelectNameFrom(creatures[2].Type.Name)).Returns(CreatureConstants.Character);
+            mockEncounterFormatter.Setup(s => s.SelectNameFrom(creatures[2].Type.Name)).Returns(CreatureDataConstants.Character);
             mockEncounterFormatter.Setup(s => s.SelectChallengeRatingFrom(creatures[2].Type.Name)).Returns("1337");
             mockEncounterFormatter.Setup(s => s.SelectCharacterClassesFrom(creatures[2].Type.Name)).Returns(new[] { "class name" });
 
-            mockEncounterFormatter.Setup(s => s.SelectNameFrom(creatures[3].Type.Name)).Returns(CreatureConstants.Character);
+            mockEncounterFormatter.Setup(s => s.SelectNameFrom(creatures[3].Type.Name)).Returns(CreatureDataConstants.Character);
             mockEncounterFormatter.Setup(s => s.SelectChallengeRatingFrom(creatures[3].Type.Name)).Returns("1337");
             mockEncounterFormatter.Setup(s => s.SelectBaseRaceFrom(creatures[3].Type.Name)).Returns("base race");
 
-            mockEncounterFormatter.Setup(s => s.SelectNameFrom(creatures[4].Type.Name)).Returns(CreatureConstants.Character);
+            mockEncounterFormatter.Setup(s => s.SelectNameFrom(creatures[4].Type.Name)).Returns(CreatureDataConstants.Character);
             mockEncounterFormatter.Setup(s => s.SelectChallengeRatingFrom(creatures[4].Type.Name)).Returns("1337");
             mockEncounterFormatter.Setup(s => s.SelectMetaraceFrom(creatures[4].Type.Name)).Returns("metarace");
 
-            mockEncounterFormatter.Setup(s => s.SelectNameFrom(creatures[5].Type.Name)).Returns(CreatureConstants.Character);
+            mockEncounterFormatter.Setup(s => s.SelectNameFrom(creatures[5].Type.Name)).Returns(CreatureDataConstants.Character);
             mockEncounterFormatter.Setup(s => s.SelectChallengeRatingFrom(creatures[5].Type.Name)).Returns("1337");
             mockEncounterFormatter.Setup(s => s.SelectCharacterClassesFrom(creatures[5].Type.Name)).Returns(new[] { "class name", "other class name" });
 
-            mockEncounterFormatter.Setup(s => s.SelectNameFrom(creatures[6].Type.Name)).Returns(CreatureConstants.Character);
+            mockEncounterFormatter.Setup(s => s.SelectNameFrom(creatures[6].Type.Name)).Returns(CreatureDataConstants.Character);
             mockEncounterFormatter.Setup(s => s.SelectChallengeRatingFrom(creatures[6].Type.Name)).Returns("13d37");
 
             mockEncounterFormatter.Setup(s => s.SelectNameFrom(creatures[7].Type.Name)).Returns("really not a character");
@@ -641,7 +641,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
         [Test]
         public void WholeCreatureTypeMustMatchToBeCharacter()
         {
-            creatures[0].Type.Name = $"{CreatureConstants.Character} but not really[6789]";
+            creatures[0].Type.Name = $"{CreatureDataConstants.Character} but not really[6789]";
 
             var characters = encounterCharacterGenerator.GenerateFrom(creatures);
             Assert.That(characters, Is.Not.Null);

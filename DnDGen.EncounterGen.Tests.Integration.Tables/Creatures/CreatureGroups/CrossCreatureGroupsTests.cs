@@ -100,24 +100,24 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
             var sourceCreatures = ExplodeCollection(source);
             var allTypes = new[]
             {
-                CreatureConstants.Types.Aberration,
-                CreatureConstants.Types.Animal,
-                CreatureConstants.Types.Construct,
-                CreatureConstants.Types.Dragon,
-                CreatureConstants.Types.Elemental,
-                CreatureConstants.Types.Fey,
-                CreatureConstants.Types.Giant,
-                CreatureConstants.Types.Humanoid,
-                CreatureConstants.Types.MagicalBeast,
-                CreatureConstants.Types.MonstrousHumanoid,
-                CreatureConstants.Types.Ooze,
-                CreatureConstants.Types.Outsider,
-                CreatureConstants.Types.Plant,
-                CreatureConstants.Types.Undead,
-                CreatureConstants.Types.Vermin,
+                CreatureDataConstants.Types.Aberration,
+                CreatureDataConstants.Types.Animal,
+                CreatureDataConstants.Types.Construct,
+                CreatureDataConstants.Types.Dragon,
+                CreatureDataConstants.Types.Elemental,
+                CreatureDataConstants.Types.Fey,
+                CreatureDataConstants.Types.Giant,
+                CreatureDataConstants.Types.Humanoid,
+                CreatureDataConstants.Types.MagicalBeast,
+                CreatureDataConstants.Types.MonstrousHumanoid,
+                CreatureDataConstants.Types.Ooze,
+                CreatureDataConstants.Types.Outsider,
+                CreatureDataConstants.Types.Plant,
+                CreatureDataConstants.Types.Undead,
+                CreatureDataConstants.Types.Vermin,
             };
 
-            var excludedCreatures = new[] { CreatureConstants.DominatedCreature, CreatureConstants.Noncombatant };
+            var excludedCreatures = new[] { CreatureDataConstants.DominatedCreature, CreatureDataConstants.Noncombatant };
             var explodedExcludedCreatures = ExplodeCollections(excludedCreatures);
             var creatures = sourceCreatures.Except(explodedExcludedCreatures);
 
@@ -139,29 +139,29 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
             var allCreatures = GetAllCreatures();
             var creatureTemplates = new[]
             {
-                CreatureConstants.DominatedCreature_CR1,
-                CreatureConstants.DominatedCreature_CR2,
-                CreatureConstants.DominatedCreature_CR3,
-                CreatureConstants.DominatedCreature_CR4,
-                CreatureConstants.DominatedCreature_CR5,
-                CreatureConstants.DominatedCreature_CR6,
-                CreatureConstants.DominatedCreature_CR7,
-                CreatureConstants.DominatedCreature_CR8,
-                CreatureConstants.DominatedCreature_CR9,
-                CreatureConstants.DominatedCreature_CR10,
-                CreatureConstants.DominatedCreature_CR11,
-                CreatureConstants.DominatedCreature_CR12,
-                CreatureConstants.DominatedCreature_CR13,
-                CreatureConstants.DominatedCreature_CR14,
-                CreatureConstants.DominatedCreature_CR15,
-                CreatureConstants.DominatedCreature_CR16,
-                CreatureConstants.Mephit_CR3,
+                CreatureDataConstants.DominatedCreature_CR1,
+                CreatureDataConstants.DominatedCreature_CR2,
+                CreatureDataConstants.DominatedCreature_CR3,
+                CreatureDataConstants.DominatedCreature_CR4,
+                CreatureDataConstants.DominatedCreature_CR5,
+                CreatureDataConstants.DominatedCreature_CR6,
+                CreatureDataConstants.DominatedCreature_CR7,
+                CreatureDataConstants.DominatedCreature_CR8,
+                CreatureDataConstants.DominatedCreature_CR9,
+                CreatureDataConstants.DominatedCreature_CR10,
+                CreatureDataConstants.DominatedCreature_CR11,
+                CreatureDataConstants.DominatedCreature_CR12,
+                CreatureDataConstants.DominatedCreature_CR13,
+                CreatureDataConstants.DominatedCreature_CR14,
+                CreatureDataConstants.DominatedCreature_CR15,
+                CreatureDataConstants.DominatedCreature_CR16,
+                CreatureDataConstants.Mephit_CR3,
             };
 
-            var constructs = ExplodeCollection(CreatureConstants.Types.Construct);
-            var oozes = ExplodeCollection(CreatureConstants.Types.Ooze);
-            var plants = ExplodeCollection(CreatureConstants.Types.Plant);
-            var undead = ExplodeCollection(CreatureConstants.Types.Undead);
+            var constructs = ExplodeCollection(CreatureDataConstants.Types.Construct);
+            var oozes = ExplodeCollection(CreatureDataConstants.Types.Ooze);
+            var plants = ExplodeCollection(CreatureDataConstants.Types.Plant);
+            var undead = ExplodeCollection(CreatureDataConstants.Types.Undead);
 
             var creaturesWithBrains = allCreatures
                 .Except(creatureTemplates)
@@ -170,18 +170,18 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
                 .Except(plants)
                 .Except(undead);
 
-            var dominatedCreatures = ExplodeCollection(CreatureConstants.DominatedCreature);
+            var dominatedCreatures = ExplodeCollection(CreatureDataConstants.DominatedCreature);
             AssertWholeCollection(creaturesWithBrains, dominatedCreatures);
         }
 
-        [TestCase(CreatureConstants.Types.Construct)]
-        [TestCase(CreatureConstants.Types.Ooze)]
-        [TestCase(CreatureConstants.Types.Plant)]
-        [TestCase(CreatureConstants.Types.Undead)]
+        [TestCase(CreatureDataConstants.Types.Construct)]
+        [TestCase(CreatureDataConstants.Types.Ooze)]
+        [TestCase(CreatureDataConstants.Types.Plant)]
+        [TestCase(CreatureDataConstants.Types.Undead)]
         public void SubtypeCannotBeDominated(string subtype)
         {
             var subtypeCreatures = ExplodeCollection(subtype);
-            var dominatedCreatues = ExplodeCollection(CreatureConstants.DominatedCreature);
+            var dominatedCreatues = ExplodeCollection(CreatureDataConstants.DominatedCreature);
             Assert.That(subtypeCreatures.Intersect(dominatedCreatues), Is.Empty);
         }
 

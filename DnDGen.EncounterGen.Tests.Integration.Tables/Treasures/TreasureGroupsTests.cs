@@ -37,554 +37,554 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Treasures
             AssertEntriesAreComplete(allCreatures);
         }
 
-        [TestCase(CreatureConstants.Aboleth)]
-        [TestCase(CreatureConstants.Aboleth_Mage)]
-        [TestCase(CreatureConstants.Achaierai)]
-        [TestCase(CreatureConstants.Allip)]
-        [TestCase(CreatureConstants.Androsphinx)]
-        [TestCase(CreatureConstants.AnimatedObject_Colossal)]
-        [TestCase(CreatureConstants.AnimatedObject_Gargantuan)]
-        [TestCase(CreatureConstants.AnimatedObject_Huge)]
-        [TestCase(CreatureConstants.AnimatedObject_Large)]
-        [TestCase(CreatureConstants.AnimatedObject_Medium)]
-        [TestCase(CreatureConstants.AnimatedObject_Small)]
-        [TestCase(CreatureConstants.AnimatedObject_Tiny)]
-        [TestCase(CreatureConstants.Ankheg)]
-        [TestCase(CreatureConstants.Annis)]
-        [TestCase(CreatureConstants.SeaHag)]
-        [TestCase(CreatureConstants.Ant_Giant_Soldier)]
-        [TestCase(CreatureConstants.Ant_Giant_Worker)]
-        [TestCase(CreatureConstants.Ant_Giant_Queen)]
-        [TestCase(CreatureConstants.Ape)]
-        [TestCase(CreatureConstants.Ape_Dire)]
-        [TestCase(CreatureConstants.Aranea)]
-        [TestCase(CreatureConstants.Arrowhawk_Adult)]
-        [TestCase(CreatureConstants.Arrowhawk_Elder)]
-        [TestCase(CreatureConstants.Arrowhawk_Juvenile)]
-        [TestCase(CreatureConstants.AssassinVine)]
-        [TestCase(CreatureConstants.Avoral)]
-        [TestCase(CreatureConstants.Babau)]
-        [TestCase(CreatureConstants.Baboon)]
-        [TestCase(CreatureConstants.Badger)]
-        [TestCase(CreatureConstants.Badger_Dire)]
-        [TestCase(CreatureConstants.Badger_Celestial)]
-        [TestCase(CreatureConstants.Barghest)]
-        [TestCase(CreatureConstants.Barghest_Greater)]
-        [TestCase(CreatureConstants.Basilisk)]
-        [TestCase(CreatureConstants.Basilisk_AbyssalGreater)]
-        [TestCase(CreatureConstants.Bat)]
-        [TestCase(CreatureConstants.Bat_Dire)]
-        [TestCase(CreatureConstants.Bat_Swarm)]
-        [TestCase(CreatureConstants.Bear_Black)]
-        [TestCase(CreatureConstants.Bear_Brown)]
-        [TestCase(CreatureConstants.Bear_Dire)]
-        [TestCase(CreatureConstants.Bear_Polar)]
-        [TestCase(CreatureConstants.Bebilith)]
-        [TestCase(CreatureConstants.Bee_Giant)]
-        [TestCase(CreatureConstants.Behir)]
-        [TestCase(CreatureConstants.Beholder)]
-        [TestCase(CreatureConstants.Belker)]
-        [TestCase(CreatureConstants.Bison)]
-        [TestCase(CreatureConstants.BlackPudding)]
-        [TestCase(CreatureConstants.BlackPudding_Elder)]
-        [TestCase(CreatureConstants.BlinkDog)]
-        [TestCase(CreatureConstants.Boar)]
-        [TestCase(CreatureConstants.Boar_Dire)]
-        [TestCase(CreatureConstants.Bodak)]
-        [TestCase(CreatureConstants.BombardierBeetle_Giant)]
-        [TestCase(CreatureConstants.Bulette)]
-        [TestCase(CreatureConstants.Camel)]
-        [TestCase(CreatureConstants.CarrionCrawler)]
-        [TestCase(CreatureConstants.Cat)]
-        [TestCase(CreatureConstants.Centipede_Monstrous_Colossal)]
-        [TestCase(CreatureConstants.Centipede_Monstrous_Gargantuan)]
-        [TestCase(CreatureConstants.Centipede_Monstrous_Huge)]
-        [TestCase(CreatureConstants.Centipede_Monstrous_Large)]
-        [TestCase(CreatureConstants.Centipede_Monstrous_Medium)]
-        [TestCase(CreatureConstants.Centipede_Monstrous_Small)]
-        [TestCase(CreatureConstants.Centipede_Monstrous_Tiny)]
-        [TestCase(CreatureConstants.Centipede_Monstrous_Fiendish_Colossal)]
-        [TestCase(CreatureConstants.Centipede_Monstrous_Fiendish_Gargantuan)]
-        [TestCase(CreatureConstants.Centipede_Monstrous_Fiendish_Huge)]
-        [TestCase(CreatureConstants.Centipede_Monstrous_Fiendish_Large)]
-        [TestCase(CreatureConstants.Centipede_Monstrous_Fiendish_Medium)]
-        [TestCase(CreatureConstants.Centipede_Swarm)]
-        [TestCase(CreatureConstants.ChaosBeast)]
-        [TestCase(CreatureConstants.Cheetah)]
-        [TestCase(CreatureConstants.Chimera)]
-        [TestCase(CreatureConstants.Choker)]
-        [TestCase(CreatureConstants.Chuul)]
-        [TestCase(CreatureConstants.Cloaker)]
-        [TestCase(CreatureConstants.Cockatrice)]
-        [TestCase(CreatureConstants.Couatl)]
-        [TestCase(CreatureConstants.Criosphinx)]
-        [TestCase(CreatureConstants.Crocodile)]
-        [TestCase(CreatureConstants.Crocodile_Giant)]
-        [TestCase(CreatureConstants.Cryohydra_10Heads)]
-        [TestCase(CreatureConstants.Cryohydra_11Heads)]
-        [TestCase(CreatureConstants.Cryohydra_12Heads)]
-        [TestCase(CreatureConstants.Cryohydra_5Heads)]
-        [TestCase(CreatureConstants.Cryohydra_6Heads)]
-        [TestCase(CreatureConstants.Cryohydra_7Heads)]
-        [TestCase(CreatureConstants.Cryohydra_8Heads)]
-        [TestCase(CreatureConstants.Cryohydra_9Heads)]
-        [TestCase(CreatureConstants.Darkmantle)]
-        [TestCase(CreatureConstants.Deinonychus)]
-        [TestCase(CreatureConstants.Delver)]
-        [TestCase(CreatureConstants.Destrachan)]
-        [TestCase(CreatureConstants.Devourer)]
-        [TestCase(CreatureConstants.Digester)]
-        [TestCase(CreatureConstants.DisplacerBeast)]
-        [TestCase(CreatureConstants.DisplacerBeast_PackLord)]
-        [TestCase(CreatureConstants.Djinni)]
-        [TestCase(CreatureConstants.Djinni_Noble)]
-        [TestCase(CreatureConstants.Dog)]
-        [TestCase(CreatureConstants.Dog_Celestial)]
-        [TestCase(CreatureConstants.Dog_Riding)]
-        [TestCase(CreatureConstants.Donkey)]
-        [TestCase(CreatureConstants.Doppelganger)]
-        [TestCase(CreatureConstants.Dragon_Black_Adult)]
-        [TestCase(CreatureConstants.Dragon_Black_Ancient)]
-        [TestCase(CreatureConstants.Dragon_Black_GreatWyrm)]
-        [TestCase(CreatureConstants.Dragon_Black_Juvenile)]
-        [TestCase(CreatureConstants.Dragon_Black_MatureAdult)]
-        [TestCase(CreatureConstants.Dragon_Black_Old)]
-        [TestCase(CreatureConstants.Dragon_Black_VeryOld)]
-        [TestCase(CreatureConstants.Dragon_Black_VeryYoung)]
-        [TestCase(CreatureConstants.Dragon_Black_Wyrm)]
-        [TestCase(CreatureConstants.Dragon_Black_Wyrmling)]
-        [TestCase(CreatureConstants.Dragon_Black_Young)]
-        [TestCase(CreatureConstants.Dragon_Black_YoungAdult)]
-        [TestCase(CreatureConstants.Dragon_Blue_Adult)]
-        [TestCase(CreatureConstants.Dragon_Blue_Ancient)]
-        [TestCase(CreatureConstants.Dragon_Blue_GreatWyrm)]
-        [TestCase(CreatureConstants.Dragon_Blue_Juvenile)]
-        [TestCase(CreatureConstants.Dragon_Blue_MatureAdult)]
-        [TestCase(CreatureConstants.Dragon_Blue_Old)]
-        [TestCase(CreatureConstants.Dragon_Blue_VeryOld)]
-        [TestCase(CreatureConstants.Dragon_Blue_VeryYoung)]
-        [TestCase(CreatureConstants.Dragon_Blue_Wyrm)]
-        [TestCase(CreatureConstants.Dragon_Blue_Wyrmling)]
-        [TestCase(CreatureConstants.Dragon_Blue_Young)]
-        [TestCase(CreatureConstants.Dragon_Blue_YoungAdult)]
-        [TestCase(CreatureConstants.Dragon_Green_Adult)]
-        [TestCase(CreatureConstants.Dragon_Green_Ancient)]
-        [TestCase(CreatureConstants.Dragon_Green_GreatWyrm)]
-        [TestCase(CreatureConstants.Dragon_Green_Juvenile)]
-        [TestCase(CreatureConstants.Dragon_Green_MatureAdult)]
-        [TestCase(CreatureConstants.Dragon_Green_Old)]
-        [TestCase(CreatureConstants.Dragon_Green_VeryOld)]
-        [TestCase(CreatureConstants.Dragon_Green_VeryYoung)]
-        [TestCase(CreatureConstants.Dragon_Green_Wyrm)]
-        [TestCase(CreatureConstants.Dragon_Green_Wyrmling)]
-        [TestCase(CreatureConstants.Dragon_Green_Young)]
-        [TestCase(CreatureConstants.Dragon_Green_YoungAdult)]
-        [TestCase(CreatureConstants.Dragon_Red_Adult)]
-        [TestCase(CreatureConstants.Dragon_Red_Ancient)]
-        [TestCase(CreatureConstants.Dragon_Red_GreatWyrm)]
-        [TestCase(CreatureConstants.Dragon_Red_Juvenile)]
-        [TestCase(CreatureConstants.Dragon_Red_MatureAdult)]
-        [TestCase(CreatureConstants.Dragon_Red_Old)]
-        [TestCase(CreatureConstants.Dragon_Red_VeryOld)]
-        [TestCase(CreatureConstants.Dragon_Red_VeryYoung)]
-        [TestCase(CreatureConstants.Dragon_Red_Wyrm)]
-        [TestCase(CreatureConstants.Dragon_Red_Wyrmling)]
-        [TestCase(CreatureConstants.Dragon_Red_Young)]
-        [TestCase(CreatureConstants.Dragon_Red_YoungAdult)]
-        [TestCase(CreatureConstants.Dragon_White_Adult)]
-        [TestCase(CreatureConstants.Dragon_White_Ancient)]
-        [TestCase(CreatureConstants.Dragon_White_GreatWyrm)]
-        [TestCase(CreatureConstants.Dragon_White_Juvenile)]
-        [TestCase(CreatureConstants.Dragon_White_MatureAdult)]
-        [TestCase(CreatureConstants.Dragon_White_Old)]
-        [TestCase(CreatureConstants.Dragon_White_VeryOld)]
-        [TestCase(CreatureConstants.Dragon_White_VeryYoung)]
-        [TestCase(CreatureConstants.Dragon_White_Wyrm)]
-        [TestCase(CreatureConstants.Dragon_White_Wyrmling)]
-        [TestCase(CreatureConstants.Dragon_White_Young)]
-        [TestCase(CreatureConstants.Dragon_White_YoungAdult)]
-        [TestCase(CreatureConstants.Dragon_Bronze_Adult)]
-        [TestCase(CreatureConstants.Dragon_Bronze_Ancient)]
-        [TestCase(CreatureConstants.Dragon_Bronze_GreatWyrm)]
-        [TestCase(CreatureConstants.Dragon_Bronze_Juvenile)]
-        [TestCase(CreatureConstants.Dragon_Bronze_MatureAdult)]
-        [TestCase(CreatureConstants.Dragon_Bronze_Old)]
-        [TestCase(CreatureConstants.Dragon_Bronze_VeryOld)]
-        [TestCase(CreatureConstants.Dragon_Bronze_VeryYoung)]
-        [TestCase(CreatureConstants.Dragon_Bronze_Wyrm)]
-        [TestCase(CreatureConstants.Dragon_Bronze_Wyrmling)]
-        [TestCase(CreatureConstants.Dragon_Bronze_Young)]
-        [TestCase(CreatureConstants.Dragon_Bronze_YoungAdult)]
-        [TestCase(CreatureConstants.Dragon_Copper_Adult)]
-        [TestCase(CreatureConstants.Dragon_Copper_Ancient)]
-        [TestCase(CreatureConstants.Dragon_Copper_GreatWyrm)]
-        [TestCase(CreatureConstants.Dragon_Copper_Juvenile)]
-        [TestCase(CreatureConstants.Dragon_Copper_MatureAdult)]
-        [TestCase(CreatureConstants.Dragon_Copper_Old)]
-        [TestCase(CreatureConstants.Dragon_Copper_VeryOld)]
-        [TestCase(CreatureConstants.Dragon_Copper_VeryYoung)]
-        [TestCase(CreatureConstants.Dragon_Copper_Wyrm)]
-        [TestCase(CreatureConstants.Dragon_Copper_Wyrmling)]
-        [TestCase(CreatureConstants.Dragon_Copper_Young)]
-        [TestCase(CreatureConstants.Dragon_Copper_YoungAdult)]
-        [TestCase(CreatureConstants.Dragon_Silver_Adult)]
-        [TestCase(CreatureConstants.Dragon_Silver_Ancient)]
-        [TestCase(CreatureConstants.Dragon_Silver_GreatWyrm)]
-        [TestCase(CreatureConstants.Dragon_Silver_Juvenile)]
-        [TestCase(CreatureConstants.Dragon_Silver_MatureAdult)]
-        [TestCase(CreatureConstants.Dragon_Silver_Old)]
-        [TestCase(CreatureConstants.Dragon_Silver_VeryOld)]
-        [TestCase(CreatureConstants.Dragon_Silver_VeryYoung)]
-        [TestCase(CreatureConstants.Dragon_Silver_Wyrm)]
-        [TestCase(CreatureConstants.Dragon_Silver_Wyrmling)]
-        [TestCase(CreatureConstants.Dragon_Silver_Young)]
-        [TestCase(CreatureConstants.Dragon_Silver_YoungAdult)]
-        [TestCase(CreatureConstants.Dragon_Gold_Adult)]
-        [TestCase(CreatureConstants.Dragon_Gold_Ancient)]
-        [TestCase(CreatureConstants.Dragon_Gold_GreatWyrm)]
-        [TestCase(CreatureConstants.Dragon_Gold_Juvenile)]
-        [TestCase(CreatureConstants.Dragon_Gold_MatureAdult)]
-        [TestCase(CreatureConstants.Dragon_Gold_Old)]
-        [TestCase(CreatureConstants.Dragon_Gold_VeryOld)]
-        [TestCase(CreatureConstants.Dragon_Gold_VeryYoung)]
-        [TestCase(CreatureConstants.Dragon_Gold_Wyrm)]
-        [TestCase(CreatureConstants.Dragon_Gold_Wyrmling)]
-        [TestCase(CreatureConstants.Dragon_Gold_Young)]
-        [TestCase(CreatureConstants.Dragon_Gold_YoungAdult)]
-        [TestCase(CreatureConstants.Dragon_Brass_Adult)]
-        [TestCase(CreatureConstants.Dragon_Brass_Ancient)]
-        [TestCase(CreatureConstants.Dragon_Brass_GreatWyrm)]
-        [TestCase(CreatureConstants.Dragon_Brass_Juvenile)]
-        [TestCase(CreatureConstants.Dragon_Brass_MatureAdult)]
-        [TestCase(CreatureConstants.Dragon_Brass_Old)]
-        [TestCase(CreatureConstants.Dragon_Brass_VeryOld)]
-        [TestCase(CreatureConstants.Dragon_Brass_VeryYoung)]
-        [TestCase(CreatureConstants.Dragon_Brass_Wyrm)]
-        [TestCase(CreatureConstants.Dragon_Brass_Wyrmling)]
-        [TestCase(CreatureConstants.Dragon_Brass_Young)]
-        [TestCase(CreatureConstants.Dragon_Brass_YoungAdult)]
-        [TestCase(CreatureConstants.DragonTurtle)]
-        [TestCase(CreatureConstants.Dragonne)]
-        [TestCase(CreatureConstants.Dretch)]
-        [TestCase(CreatureConstants.Eagle)]
-        [TestCase(CreatureConstants.Eagle_Giant)]
-        [TestCase(CreatureConstants.Efreeti)]
-        [TestCase(CreatureConstants.Elasmosaurus)]
-        [TestCase(CreatureConstants.Elephant)]
-        [TestCase(CreatureConstants.Elemental_Air_Elder)]
-        [TestCase(CreatureConstants.Elemental_Air_Greater)]
-        [TestCase(CreatureConstants.Elemental_Air_Huge)]
-        [TestCase(CreatureConstants.Elemental_Air_Large)]
-        [TestCase(CreatureConstants.Elemental_Air_Medium)]
-        [TestCase(CreatureConstants.Elemental_Air_Small)]
-        [TestCase(CreatureConstants.Elemental_Earth_Elder)]
-        [TestCase(CreatureConstants.Elemental_Earth_Greater)]
-        [TestCase(CreatureConstants.Elemental_Earth_Huge)]
-        [TestCase(CreatureConstants.Elemental_Earth_Large)]
-        [TestCase(CreatureConstants.Elemental_Earth_Medium)]
-        [TestCase(CreatureConstants.Elemental_Earth_Small)]
-        [TestCase(CreatureConstants.Elemental_Fire_Elder)]
-        [TestCase(CreatureConstants.Elemental_Fire_Greater)]
-        [TestCase(CreatureConstants.Elemental_Fire_Huge)]
-        [TestCase(CreatureConstants.Elemental_Fire_Large)]
-        [TestCase(CreatureConstants.Elemental_Fire_Medium)]
-        [TestCase(CreatureConstants.Elemental_Fire_Small)]
-        [TestCase(CreatureConstants.Elemental_Water_Elder)]
-        [TestCase(CreatureConstants.Elemental_Water_Greater)]
-        [TestCase(CreatureConstants.Elemental_Water_Huge)]
-        [TestCase(CreatureConstants.Elemental_Water_Large)]
-        [TestCase(CreatureConstants.Elemental_Water_Medium)]
-        [TestCase(CreatureConstants.Elemental_Water_Small)]
-        [TestCase(CreatureConstants.EtherealFilcher)]
-        [TestCase(CreatureConstants.EtherealMarauder)]
-        [TestCase(CreatureConstants.Ettercap)]
-        [TestCase(CreatureConstants.FireBeetle_Giant)]
-        [TestCase(CreatureConstants.FireBeetle_Giant_Celestial)]
-        [TestCase(CreatureConstants.FormianQueen)]
-        [TestCase(CreatureConstants.FormianTaskmaster)]
-        [TestCase(CreatureConstants.FormianWarrior)]
-        [TestCase(CreatureConstants.FormianWorker)]
-        [TestCase(CreatureConstants.FrostWorm)]
-        [TestCase(CreatureConstants.Gargoyle)]
-        [TestCase(CreatureConstants.Gargoyle_Kapoacinth)]
-        [TestCase(CreatureConstants.GelatinousCube)]//Stone and metal only
-        [TestCase(CreatureConstants.Ghoul)]
-        [TestCase(CreatureConstants.Ghoul_Lacedon)]
-        [TestCase(CreatureConstants.Ghoul_Ghast)]
-        [TestCase(CreatureConstants.GibberingMouther)]
-        [TestCase(CreatureConstants.Girallon)]
-        [TestCase(CreatureConstants.Glabrezu)]
-        [TestCase(CreatureConstants.Golem_Clay)]
-        [TestCase(CreatureConstants.Golem_Flesh)]
-        [TestCase(CreatureConstants.Golem_Iron)]
-        [TestCase(CreatureConstants.Golem_Stone)]
-        [TestCase(CreatureConstants.Golem_Stone_Greater)]
-        [TestCase(CreatureConstants.Gorgon)]
-        [TestCase(CreatureConstants.GrayRender)]
-        [TestCase(CreatureConstants.GreenHag)]
-        [TestCase(CreatureConstants.Grick)]
-        [TestCase(CreatureConstants.Griffon)]
-        [TestCase(CreatureConstants.Gynosphinx)]
-        [TestCase(CreatureConstants.BarbedDevil_Hamatula)]
-        [TestCase(CreatureConstants.Hawk)]
-        [TestCase(CreatureConstants.Hellcat_Bezekira)]
-        [TestCase(CreatureConstants.HellHound)]
-        [TestCase(CreatureConstants.Hellwasp_Swarm)]
-        [TestCase(CreatureConstants.Hezrou)]
-        [TestCase(CreatureConstants.Hieracosphinx)]
-        [TestCase(CreatureConstants.Hippogriff)]
-        [TestCase(CreatureConstants.Homunculus)]
-        [TestCase(CreatureConstants.Horse_Heavy)]
-        [TestCase(CreatureConstants.Horse_Heavy_War)]
-        [TestCase(CreatureConstants.Horse_Light)]
-        [TestCase(CreatureConstants.Horse_Light_War)]
-        [TestCase(CreatureConstants.Howler)]
-        [TestCase(CreatureConstants.Hydra_10Heads)]
-        [TestCase(CreatureConstants.Hydra_11Heads)]
-        [TestCase(CreatureConstants.Hydra_12Heads)]
-        [TestCase(CreatureConstants.Hydra_5Heads)]
-        [TestCase(CreatureConstants.Hydra_6Heads)]
-        [TestCase(CreatureConstants.Hydra_7Heads)]
-        [TestCase(CreatureConstants.Hydra_8Heads)]
-        [TestCase(CreatureConstants.Hydra_9Heads)]
-        [TestCase(CreatureConstants.Hyena)]
-        [TestCase(CreatureConstants.Imp)]
-        [TestCase(CreatureConstants.InvisibleStalker)]
-        [TestCase(CreatureConstants.Kraken)]
-        [TestCase(CreatureConstants.Krenshar)]
-        [TestCase(CreatureConstants.Lammasu)]
-        [TestCase(CreatureConstants.Lammasu_GoldenProtector)]
-        [TestCase(CreatureConstants.LanternArchon)]
-        [TestCase(CreatureConstants.Lemure)]
-        [TestCase(CreatureConstants.Leonal)]
-        [TestCase(CreatureConstants.Leopard)]
-        [TestCase(CreatureConstants.Lion)]
-        [TestCase(CreatureConstants.Lion_Dire)]
-        [TestCase(CreatureConstants.Lizard)]
-        [TestCase(CreatureConstants.Lizard_Monitor)]
-        [TestCase(CreatureConstants.Locust_Swarm)]
-        [TestCase(CreatureConstants.Magmin)] //Nonflammable
-        [TestCase(CreatureConstants.MantaRay)]
-        [TestCase(CreatureConstants.Manticore)]
-        [TestCase(CreatureConstants.Marut)]
-        [TestCase(CreatureConstants.Megaraptor)]
-        [TestCase(CreatureConstants.Mephit_CR3)]
-        [TestCase(CreatureConstants.Mephit_Air)]
-        [TestCase(CreatureConstants.Mephit_Dust)]
-        [TestCase(CreatureConstants.Mephit_Earth)]
-        [TestCase(CreatureConstants.Mephit_Fire)]
-        [TestCase(CreatureConstants.Mephit_Ice)]
-        [TestCase(CreatureConstants.Mephit_Magma)]
-        [TestCase(CreatureConstants.Mephit_Ooze)]
-        [TestCase(CreatureConstants.Mephit_Salt)]
-        [TestCase(CreatureConstants.Mephit_Steam)]
-        [TestCase(CreatureConstants.Mephit_Water)]
-        [TestCase(CreatureConstants.Mimic)]
-        [TestCase(CreatureConstants.MindFlayer)]
-        [TestCase(CreatureConstants.Mohrg)]
-        [TestCase(CreatureConstants.Monkey)]
-        [TestCase(CreatureConstants.Monkey_Celestial)]
-        [TestCase(CreatureConstants.Mule)]
-        [TestCase(CreatureConstants.Mummy)]
-        [TestCase(CreatureConstants.Naga_Dark)]
-        [TestCase(CreatureConstants.Naga_Guardian)]
-        [TestCase(CreatureConstants.Naga_Spirit)]
-        [TestCase(CreatureConstants.Naga_Water)]
-        [TestCase(CreatureConstants.Nalfeshnee)]
-        [TestCase(CreatureConstants.NightHag)]
-        [TestCase(CreatureConstants.Nightcrawler)]
-        [TestCase(CreatureConstants.Nightmare)]
-        [TestCase(CreatureConstants.Nightmare_Cauchemar)]
-        [TestCase(CreatureConstants.Nightwalker)]
-        [TestCase(CreatureConstants.Nightwing)]
-        [TestCase(CreatureConstants.Octopus)]
-        [TestCase(CreatureConstants.Octopus_Giant)]
-        [TestCase(CreatureConstants.Ooze_Gray)]
-        [TestCase(CreatureConstants.Ooze_OchreJelly)]
-        [TestCase(CreatureConstants.Otyugh)]
-        [TestCase(CreatureConstants.BoneDevil_Osyluth)]
-        [TestCase(CreatureConstants.Owl)]
-        [TestCase(CreatureConstants.Owl_Giant)]
-        [TestCase(CreatureConstants.Owl_Celestial)]
-        [TestCase(CreatureConstants.Owlbear)]
-        [TestCase(CreatureConstants.Pegasus)]
-        [TestCase(CreatureConstants.PhantomFungus)]
-        [TestCase(CreatureConstants.PhaseSpider)]
-        [TestCase(CreatureConstants.Phasm)]
-        [TestCase(CreatureConstants.PitFiend)]
-        [TestCase(CreatureConstants.Pony)]
-        [TestCase(CreatureConstants.Pony_War)]
-        [TestCase(CreatureConstants.Porpoise)]
-        [TestCase(CreatureConstants.Porpoise_Celestial)]
-        [TestCase(CreatureConstants.PrayingMantis_Giant)]
-        [TestCase(CreatureConstants.Pseudodragon)]
-        [TestCase(CreatureConstants.PurpleWorm)]//Only stone goods
-        [TestCase(CreatureConstants.Pyrohydra_10Heads)]
-        [TestCase(CreatureConstants.Pyrohydra_11Heads)]
-        [TestCase(CreatureConstants.Pyrohydra_12Heads)]
-        [TestCase(CreatureConstants.Pyrohydra_5Heads)]
-        [TestCase(CreatureConstants.Pyrohydra_6Heads)]
-        [TestCase(CreatureConstants.Pyrohydra_7Heads)]
-        [TestCase(CreatureConstants.Pyrohydra_8Heads)]
-        [TestCase(CreatureConstants.Pyrohydra_9Heads)]
-        [TestCase(CreatureConstants.Quasit)]
-        [TestCase(CreatureConstants.Rakshasa)]
-        [TestCase(CreatureConstants.Rast)]
-        [TestCase(CreatureConstants.Rat)]
-        [TestCase(CreatureConstants.Rat_Dire)]
-        [TestCase(CreatureConstants.Rat_Dire_Fiendish)]
-        [TestCase(CreatureConstants.Rat_Swarm)]
-        [TestCase(CreatureConstants.Raven)]
-        [TestCase(CreatureConstants.Raven_Fiendish)]
-        [TestCase(CreatureConstants.Ravid)]
-        [TestCase(CreatureConstants.RazorBoar)]
-        [TestCase(CreatureConstants.Remorhaz)]
-        [TestCase(CreatureConstants.Retriever)]
-        [TestCase(CreatureConstants.Rhinoceras)]
-        [TestCase(CreatureConstants.Roc)]
-        [TestCase(CreatureConstants.Roper)]//only stone goods
-        [TestCase(CreatureConstants.RustMonster)]
-        [TestCase(CreatureConstants.Scorpion_Monstrous_Colossal)]
-        [TestCase(CreatureConstants.Scorpion_Monstrous_Gargantuan)]
-        [TestCase(CreatureConstants.Scorpion_Monstrous_Huge)]
-        [TestCase(CreatureConstants.Scorpion_Monstrous_Large)]
-        [TestCase(CreatureConstants.Scorpion_Monstrous_Medium)]
-        [TestCase(CreatureConstants.Scorpion_Monstrous_Small)]
-        [TestCase(CreatureConstants.Scorpion_Monstrous_Tiny)]
-        [TestCase(CreatureConstants.SeaCat)]
-        [TestCase(CreatureConstants.Shadow)]
-        [TestCase(CreatureConstants.Shadow_Greater)]
-        [TestCase(CreatureConstants.ShadowMastiff)]
-        [TestCase(CreatureConstants.ShamblingMound)]
-        [TestCase(CreatureConstants.Shark_Dire)]
-        [TestCase(CreatureConstants.Shark_Huge)]
-        [TestCase(CreatureConstants.Shark_Large)]
-        [TestCase(CreatureConstants.Shark_Medium)]
-        [TestCase(CreatureConstants.ShieldGuardian)]
-        [TestCase(CreatureConstants.ShockerLizard)]
-        [TestCase(CreatureConstants.Shrieker)]
-        [TestCase(CreatureConstants.Skeleton_Chimera)]
-        [TestCase(CreatureConstants.Skeleton_Dragon_Red_YoungAdult)]
-        [TestCase(CreatureConstants.Skeleton_Ettin)]
-        [TestCase(CreatureConstants.Skeleton_Giant_Cloud)]
-        [TestCase(CreatureConstants.Skeleton_Human)]
-        [TestCase(CreatureConstants.Skeleton_Megaraptor)]
-        [TestCase(CreatureConstants.Skeleton_Owlbear)]
-        [TestCase(CreatureConstants.Skeleton_Troll)]
-        [TestCase(CreatureConstants.Skeleton_Wolf)]
-        [TestCase(CreatureConstants.Skum)]
-        [TestCase(CreatureConstants.Slaad_Blue)]
-        [TestCase(CreatureConstants.Slaad_Death)]
-        [TestCase(CreatureConstants.Slaad_Gray)]
-        [TestCase(CreatureConstants.Slaad_Green)]
-        [TestCase(CreatureConstants.Slaad_Red)]
-        [TestCase(CreatureConstants.Snake_Constrictor)]
-        [TestCase(CreatureConstants.Snake_Constrictor_Giant)]
-        [TestCase(CreatureConstants.Snake_Viper_Huge)]
-        [TestCase(CreatureConstants.Snake_Viper_Large)]
-        [TestCase(CreatureConstants.Snake_Viper_Medium)]
-        [TestCase(CreatureConstants.Snake_Viper_Small)]
-        [TestCase(CreatureConstants.Snake_Viper_Tiny)]
-        [TestCase(CreatureConstants.Spectre)]
-        [TestCase(CreatureConstants.Spider_Monstrous_Colossal)]
-        [TestCase(CreatureConstants.Spider_Monstrous_Gargantuan)]
-        [TestCase(CreatureConstants.Spider_Monstrous_Huge)]
-        [TestCase(CreatureConstants.Spider_Monstrous_Large)]
-        [TestCase(CreatureConstants.Spider_Monstrous_Medium)]
-        [TestCase(CreatureConstants.Spider_Monstrous_Small)]
-        [TestCase(CreatureConstants.Spider_Monstrous_Tiny)]
-        [TestCase(CreatureConstants.Spider_Swarm)]
-        [TestCase(CreatureConstants.SpiderEater)]
-        [TestCase(CreatureConstants.Squid)]
-        [TestCase(CreatureConstants.Squid_Giant)]
-        [TestCase(CreatureConstants.StagBeetle_Giant)]
-        [TestCase(CreatureConstants.Stirge)]
-        [TestCase(CreatureConstants.Succubus)]
-        [TestCase(CreatureConstants.Tarrasque)]
-        [TestCase(CreatureConstants.Tendriculos)]
-        [TestCase(CreatureConstants.Thoqqua)]
-        [TestCase(CreatureConstants.Tiger)]
-        [TestCase(CreatureConstants.Tiger_Dire)]
-        [TestCase(CreatureConstants.Toad)]
-        [TestCase(CreatureConstants.Tojanida_Adult)]
-        [TestCase(CreatureConstants.Tojanida_Elder)]
-        [TestCase(CreatureConstants.Tojanida_Juvenile)]
-        [TestCase(CreatureConstants.Treant)]
-        [TestCase(CreatureConstants.Triceratops)]
-        [TestCase(CreatureConstants.Troll)]
-        [TestCase(CreatureConstants.Troll_Scrag)]
-        [TestCase(CreatureConstants.Tyrannosaurus)]
-        [TestCase(CreatureConstants.UmberHulk)]
-        [TestCase(CreatureConstants.UmberHulk_TrulyHorrid)]
-        [TestCase(CreatureConstants.Unicorn)]
-        [TestCase(CreatureConstants.Unicorn_CelestialCharger)]
-        [TestCase(CreatureConstants.VampireSpawn)]
-        [TestCase(CreatureConstants.Vargouille)]
-        [TestCase(CreatureConstants.VioletFungus)]
-        [TestCase(CreatureConstants.Vrock)]
-        [TestCase(CreatureConstants.Wasp_Giant)]
-        [TestCase(CreatureConstants.Weasel)]
-        [TestCase(CreatureConstants.Weasel_Dire)]
-        [TestCase(CreatureConstants.Whale_Baleen)]
-        [TestCase(CreatureConstants.Whale_Cachalot)]
-        [TestCase(CreatureConstants.Whale_Orca)]
-        [TestCase(CreatureConstants.Wight)]
-        [TestCase(CreatureConstants.WillOWisp)]
-        [TestCase(CreatureConstants.WinterWolf)]
-        [TestCase(CreatureConstants.Wolf)]
-        [TestCase(CreatureConstants.Wolf_Dire)]
-        [TestCase(CreatureConstants.Wolverine)]
-        [TestCase(CreatureConstants.Wolverine_Dire)]
-        [TestCase(CreatureConstants.Worg)]
-        [TestCase(CreatureConstants.Wraith)]
-        [TestCase(CreatureConstants.Wraith_Dread)]
-        [TestCase(CreatureConstants.Wyvern)]
-        [TestCase(CreatureConstants.Xill)]
-        [TestCase(CreatureConstants.Xorn_Average)]
-        [TestCase(CreatureConstants.Xorn_Elder)]
-        [TestCase(CreatureConstants.Xorn_Minor)]
-        [TestCase(CreatureConstants.YethHound)]
-        [TestCase(CreatureConstants.Yrthak)]
-        [TestCase(CreatureConstants.Zombie_Bugbear)]
-        [TestCase(CreatureConstants.Zombie_GrayRender)]
-        [TestCase(CreatureConstants.Zombie_Human)]
-        [TestCase(CreatureConstants.Zombie_Kobold)]
-        [TestCase(CreatureConstants.Zombie_Minotaur)]
-        [TestCase(CreatureConstants.Zombie_Ogre)]
-        [TestCase(CreatureConstants.Zombie_Troglodyte)]
-        [TestCase(CreatureConstants.Zombie_Wyvern)]
+        [TestCase(CreatureDataConstants.Aboleth)]
+        [TestCase(CreatureDataConstants.Aboleth_Mage)]
+        [TestCase(CreatureDataConstants.Achaierai)]
+        [TestCase(CreatureDataConstants.Allip)]
+        [TestCase(CreatureDataConstants.Androsphinx)]
+        [TestCase(CreatureDataConstants.AnimatedObject_Colossal)]
+        [TestCase(CreatureDataConstants.AnimatedObject_Gargantuan)]
+        [TestCase(CreatureDataConstants.AnimatedObject_Huge)]
+        [TestCase(CreatureDataConstants.AnimatedObject_Large)]
+        [TestCase(CreatureDataConstants.AnimatedObject_Medium)]
+        [TestCase(CreatureDataConstants.AnimatedObject_Small)]
+        [TestCase(CreatureDataConstants.AnimatedObject_Tiny)]
+        [TestCase(CreatureDataConstants.Ankheg)]
+        [TestCase(CreatureDataConstants.Annis)]
+        [TestCase(CreatureDataConstants.SeaHag)]
+        [TestCase(CreatureDataConstants.Ant_Giant_Soldier)]
+        [TestCase(CreatureDataConstants.Ant_Giant_Worker)]
+        [TestCase(CreatureDataConstants.Ant_Giant_Queen)]
+        [TestCase(CreatureDataConstants.Ape)]
+        [TestCase(CreatureDataConstants.Ape_Dire)]
+        [TestCase(CreatureDataConstants.Aranea)]
+        [TestCase(CreatureDataConstants.Arrowhawk_Adult)]
+        [TestCase(CreatureDataConstants.Arrowhawk_Elder)]
+        [TestCase(CreatureDataConstants.Arrowhawk_Juvenile)]
+        [TestCase(CreatureDataConstants.AssassinVine)]
+        [TestCase(CreatureDataConstants.Avoral)]
+        [TestCase(CreatureDataConstants.Babau)]
+        [TestCase(CreatureDataConstants.Baboon)]
+        [TestCase(CreatureDataConstants.Badger)]
+        [TestCase(CreatureDataConstants.Badger_Dire)]
+        [TestCase(CreatureDataConstants.Badger_Celestial)]
+        [TestCase(CreatureDataConstants.Barghest)]
+        [TestCase(CreatureDataConstants.Barghest_Greater)]
+        [TestCase(CreatureDataConstants.Basilisk)]
+        [TestCase(CreatureDataConstants.Basilisk_AbyssalGreater)]
+        [TestCase(CreatureDataConstants.Bat)]
+        [TestCase(CreatureDataConstants.Bat_Dire)]
+        [TestCase(CreatureDataConstants.Bat_Swarm)]
+        [TestCase(CreatureDataConstants.Bear_Black)]
+        [TestCase(CreatureDataConstants.Bear_Brown)]
+        [TestCase(CreatureDataConstants.Bear_Dire)]
+        [TestCase(CreatureDataConstants.Bear_Polar)]
+        [TestCase(CreatureDataConstants.Bebilith)]
+        [TestCase(CreatureDataConstants.Bee_Giant)]
+        [TestCase(CreatureDataConstants.Behir)]
+        [TestCase(CreatureDataConstants.Beholder)]
+        [TestCase(CreatureDataConstants.Belker)]
+        [TestCase(CreatureDataConstants.Bison)]
+        [TestCase(CreatureDataConstants.BlackPudding)]
+        [TestCase(CreatureDataConstants.BlackPudding_Elder)]
+        [TestCase(CreatureDataConstants.BlinkDog)]
+        [TestCase(CreatureDataConstants.Boar)]
+        [TestCase(CreatureDataConstants.Boar_Dire)]
+        [TestCase(CreatureDataConstants.Bodak)]
+        [TestCase(CreatureDataConstants.BombardierBeetle_Giant)]
+        [TestCase(CreatureDataConstants.Bulette)]
+        [TestCase(CreatureDataConstants.Camel)]
+        [TestCase(CreatureDataConstants.CarrionCrawler)]
+        [TestCase(CreatureDataConstants.Cat)]
+        [TestCase(CreatureDataConstants.Centipede_Monstrous_Colossal)]
+        [TestCase(CreatureDataConstants.Centipede_Monstrous_Gargantuan)]
+        [TestCase(CreatureDataConstants.Centipede_Monstrous_Huge)]
+        [TestCase(CreatureDataConstants.Centipede_Monstrous_Large)]
+        [TestCase(CreatureDataConstants.Centipede_Monstrous_Medium)]
+        [TestCase(CreatureDataConstants.Centipede_Monstrous_Small)]
+        [TestCase(CreatureDataConstants.Centipede_Monstrous_Tiny)]
+        [TestCase(CreatureDataConstants.Centipede_Monstrous_Fiendish_Colossal)]
+        [TestCase(CreatureDataConstants.Centipede_Monstrous_Fiendish_Gargantuan)]
+        [TestCase(CreatureDataConstants.Centipede_Monstrous_Fiendish_Huge)]
+        [TestCase(CreatureDataConstants.Centipede_Monstrous_Fiendish_Large)]
+        [TestCase(CreatureDataConstants.Centipede_Monstrous_Fiendish_Medium)]
+        [TestCase(CreatureDataConstants.Centipede_Swarm)]
+        [TestCase(CreatureDataConstants.ChaosBeast)]
+        [TestCase(CreatureDataConstants.Cheetah)]
+        [TestCase(CreatureDataConstants.Chimera)]
+        [TestCase(CreatureDataConstants.Choker)]
+        [TestCase(CreatureDataConstants.Chuul)]
+        [TestCase(CreatureDataConstants.Cloaker)]
+        [TestCase(CreatureDataConstants.Cockatrice)]
+        [TestCase(CreatureDataConstants.Couatl)]
+        [TestCase(CreatureDataConstants.Criosphinx)]
+        [TestCase(CreatureDataConstants.Crocodile)]
+        [TestCase(CreatureDataConstants.Crocodile_Giant)]
+        [TestCase(CreatureDataConstants.Cryohydra_10Heads)]
+        [TestCase(CreatureDataConstants.Cryohydra_11Heads)]
+        [TestCase(CreatureDataConstants.Cryohydra_12Heads)]
+        [TestCase(CreatureDataConstants.Cryohydra_5Heads)]
+        [TestCase(CreatureDataConstants.Cryohydra_6Heads)]
+        [TestCase(CreatureDataConstants.Cryohydra_7Heads)]
+        [TestCase(CreatureDataConstants.Cryohydra_8Heads)]
+        [TestCase(CreatureDataConstants.Cryohydra_9Heads)]
+        [TestCase(CreatureDataConstants.Darkmantle)]
+        [TestCase(CreatureDataConstants.Deinonychus)]
+        [TestCase(CreatureDataConstants.Delver)]
+        [TestCase(CreatureDataConstants.Destrachan)]
+        [TestCase(CreatureDataConstants.Devourer)]
+        [TestCase(CreatureDataConstants.Digester)]
+        [TestCase(CreatureDataConstants.DisplacerBeast)]
+        [TestCase(CreatureDataConstants.DisplacerBeast_PackLord)]
+        [TestCase(CreatureDataConstants.Djinni)]
+        [TestCase(CreatureDataConstants.Djinni_Noble)]
+        [TestCase(CreatureDataConstants.Dog)]
+        [TestCase(CreatureDataConstants.Dog_Celestial)]
+        [TestCase(CreatureDataConstants.Dog_Riding)]
+        [TestCase(CreatureDataConstants.Donkey)]
+        [TestCase(CreatureDataConstants.Doppelganger)]
+        [TestCase(CreatureDataConstants.Dragon_Black_Adult)]
+        [TestCase(CreatureDataConstants.Dragon_Black_Ancient)]
+        [TestCase(CreatureDataConstants.Dragon_Black_GreatWyrm)]
+        [TestCase(CreatureDataConstants.Dragon_Black_Juvenile)]
+        [TestCase(CreatureDataConstants.Dragon_Black_MatureAdult)]
+        [TestCase(CreatureDataConstants.Dragon_Black_Old)]
+        [TestCase(CreatureDataConstants.Dragon_Black_VeryOld)]
+        [TestCase(CreatureDataConstants.Dragon_Black_VeryYoung)]
+        [TestCase(CreatureDataConstants.Dragon_Black_Wyrm)]
+        [TestCase(CreatureDataConstants.Dragon_Black_Wyrmling)]
+        [TestCase(CreatureDataConstants.Dragon_Black_Young)]
+        [TestCase(CreatureDataConstants.Dragon_Black_YoungAdult)]
+        [TestCase(CreatureDataConstants.Dragon_Blue_Adult)]
+        [TestCase(CreatureDataConstants.Dragon_Blue_Ancient)]
+        [TestCase(CreatureDataConstants.Dragon_Blue_GreatWyrm)]
+        [TestCase(CreatureDataConstants.Dragon_Blue_Juvenile)]
+        [TestCase(CreatureDataConstants.Dragon_Blue_MatureAdult)]
+        [TestCase(CreatureDataConstants.Dragon_Blue_Old)]
+        [TestCase(CreatureDataConstants.Dragon_Blue_VeryOld)]
+        [TestCase(CreatureDataConstants.Dragon_Blue_VeryYoung)]
+        [TestCase(CreatureDataConstants.Dragon_Blue_Wyrm)]
+        [TestCase(CreatureDataConstants.Dragon_Blue_Wyrmling)]
+        [TestCase(CreatureDataConstants.Dragon_Blue_Young)]
+        [TestCase(CreatureDataConstants.Dragon_Blue_YoungAdult)]
+        [TestCase(CreatureDataConstants.Dragon_Green_Adult)]
+        [TestCase(CreatureDataConstants.Dragon_Green_Ancient)]
+        [TestCase(CreatureDataConstants.Dragon_Green_GreatWyrm)]
+        [TestCase(CreatureDataConstants.Dragon_Green_Juvenile)]
+        [TestCase(CreatureDataConstants.Dragon_Green_MatureAdult)]
+        [TestCase(CreatureDataConstants.Dragon_Green_Old)]
+        [TestCase(CreatureDataConstants.Dragon_Green_VeryOld)]
+        [TestCase(CreatureDataConstants.Dragon_Green_VeryYoung)]
+        [TestCase(CreatureDataConstants.Dragon_Green_Wyrm)]
+        [TestCase(CreatureDataConstants.Dragon_Green_Wyrmling)]
+        [TestCase(CreatureDataConstants.Dragon_Green_Young)]
+        [TestCase(CreatureDataConstants.Dragon_Green_YoungAdult)]
+        [TestCase(CreatureDataConstants.Dragon_Red_Adult)]
+        [TestCase(CreatureDataConstants.Dragon_Red_Ancient)]
+        [TestCase(CreatureDataConstants.Dragon_Red_GreatWyrm)]
+        [TestCase(CreatureDataConstants.Dragon_Red_Juvenile)]
+        [TestCase(CreatureDataConstants.Dragon_Red_MatureAdult)]
+        [TestCase(CreatureDataConstants.Dragon_Red_Old)]
+        [TestCase(CreatureDataConstants.Dragon_Red_VeryOld)]
+        [TestCase(CreatureDataConstants.Dragon_Red_VeryYoung)]
+        [TestCase(CreatureDataConstants.Dragon_Red_Wyrm)]
+        [TestCase(CreatureDataConstants.Dragon_Red_Wyrmling)]
+        [TestCase(CreatureDataConstants.Dragon_Red_Young)]
+        [TestCase(CreatureDataConstants.Dragon_Red_YoungAdult)]
+        [TestCase(CreatureDataConstants.Dragon_White_Adult)]
+        [TestCase(CreatureDataConstants.Dragon_White_Ancient)]
+        [TestCase(CreatureDataConstants.Dragon_White_GreatWyrm)]
+        [TestCase(CreatureDataConstants.Dragon_White_Juvenile)]
+        [TestCase(CreatureDataConstants.Dragon_White_MatureAdult)]
+        [TestCase(CreatureDataConstants.Dragon_White_Old)]
+        [TestCase(CreatureDataConstants.Dragon_White_VeryOld)]
+        [TestCase(CreatureDataConstants.Dragon_White_VeryYoung)]
+        [TestCase(CreatureDataConstants.Dragon_White_Wyrm)]
+        [TestCase(CreatureDataConstants.Dragon_White_Wyrmling)]
+        [TestCase(CreatureDataConstants.Dragon_White_Young)]
+        [TestCase(CreatureDataConstants.Dragon_White_YoungAdult)]
+        [TestCase(CreatureDataConstants.Dragon_Bronze_Adult)]
+        [TestCase(CreatureDataConstants.Dragon_Bronze_Ancient)]
+        [TestCase(CreatureDataConstants.Dragon_Bronze_GreatWyrm)]
+        [TestCase(CreatureDataConstants.Dragon_Bronze_Juvenile)]
+        [TestCase(CreatureDataConstants.Dragon_Bronze_MatureAdult)]
+        [TestCase(CreatureDataConstants.Dragon_Bronze_Old)]
+        [TestCase(CreatureDataConstants.Dragon_Bronze_VeryOld)]
+        [TestCase(CreatureDataConstants.Dragon_Bronze_VeryYoung)]
+        [TestCase(CreatureDataConstants.Dragon_Bronze_Wyrm)]
+        [TestCase(CreatureDataConstants.Dragon_Bronze_Wyrmling)]
+        [TestCase(CreatureDataConstants.Dragon_Bronze_Young)]
+        [TestCase(CreatureDataConstants.Dragon_Bronze_YoungAdult)]
+        [TestCase(CreatureDataConstants.Dragon_Copper_Adult)]
+        [TestCase(CreatureDataConstants.Dragon_Copper_Ancient)]
+        [TestCase(CreatureDataConstants.Dragon_Copper_GreatWyrm)]
+        [TestCase(CreatureDataConstants.Dragon_Copper_Juvenile)]
+        [TestCase(CreatureDataConstants.Dragon_Copper_MatureAdult)]
+        [TestCase(CreatureDataConstants.Dragon_Copper_Old)]
+        [TestCase(CreatureDataConstants.Dragon_Copper_VeryOld)]
+        [TestCase(CreatureDataConstants.Dragon_Copper_VeryYoung)]
+        [TestCase(CreatureDataConstants.Dragon_Copper_Wyrm)]
+        [TestCase(CreatureDataConstants.Dragon_Copper_Wyrmling)]
+        [TestCase(CreatureDataConstants.Dragon_Copper_Young)]
+        [TestCase(CreatureDataConstants.Dragon_Copper_YoungAdult)]
+        [TestCase(CreatureDataConstants.Dragon_Silver_Adult)]
+        [TestCase(CreatureDataConstants.Dragon_Silver_Ancient)]
+        [TestCase(CreatureDataConstants.Dragon_Silver_GreatWyrm)]
+        [TestCase(CreatureDataConstants.Dragon_Silver_Juvenile)]
+        [TestCase(CreatureDataConstants.Dragon_Silver_MatureAdult)]
+        [TestCase(CreatureDataConstants.Dragon_Silver_Old)]
+        [TestCase(CreatureDataConstants.Dragon_Silver_VeryOld)]
+        [TestCase(CreatureDataConstants.Dragon_Silver_VeryYoung)]
+        [TestCase(CreatureDataConstants.Dragon_Silver_Wyrm)]
+        [TestCase(CreatureDataConstants.Dragon_Silver_Wyrmling)]
+        [TestCase(CreatureDataConstants.Dragon_Silver_Young)]
+        [TestCase(CreatureDataConstants.Dragon_Silver_YoungAdult)]
+        [TestCase(CreatureDataConstants.Dragon_Gold_Adult)]
+        [TestCase(CreatureDataConstants.Dragon_Gold_Ancient)]
+        [TestCase(CreatureDataConstants.Dragon_Gold_GreatWyrm)]
+        [TestCase(CreatureDataConstants.Dragon_Gold_Juvenile)]
+        [TestCase(CreatureDataConstants.Dragon_Gold_MatureAdult)]
+        [TestCase(CreatureDataConstants.Dragon_Gold_Old)]
+        [TestCase(CreatureDataConstants.Dragon_Gold_VeryOld)]
+        [TestCase(CreatureDataConstants.Dragon_Gold_VeryYoung)]
+        [TestCase(CreatureDataConstants.Dragon_Gold_Wyrm)]
+        [TestCase(CreatureDataConstants.Dragon_Gold_Wyrmling)]
+        [TestCase(CreatureDataConstants.Dragon_Gold_Young)]
+        [TestCase(CreatureDataConstants.Dragon_Gold_YoungAdult)]
+        [TestCase(CreatureDataConstants.Dragon_Brass_Adult)]
+        [TestCase(CreatureDataConstants.Dragon_Brass_Ancient)]
+        [TestCase(CreatureDataConstants.Dragon_Brass_GreatWyrm)]
+        [TestCase(CreatureDataConstants.Dragon_Brass_Juvenile)]
+        [TestCase(CreatureDataConstants.Dragon_Brass_MatureAdult)]
+        [TestCase(CreatureDataConstants.Dragon_Brass_Old)]
+        [TestCase(CreatureDataConstants.Dragon_Brass_VeryOld)]
+        [TestCase(CreatureDataConstants.Dragon_Brass_VeryYoung)]
+        [TestCase(CreatureDataConstants.Dragon_Brass_Wyrm)]
+        [TestCase(CreatureDataConstants.Dragon_Brass_Wyrmling)]
+        [TestCase(CreatureDataConstants.Dragon_Brass_Young)]
+        [TestCase(CreatureDataConstants.Dragon_Brass_YoungAdult)]
+        [TestCase(CreatureDataConstants.DragonTurtle)]
+        [TestCase(CreatureDataConstants.Dragonne)]
+        [TestCase(CreatureDataConstants.Dretch)]
+        [TestCase(CreatureDataConstants.Eagle)]
+        [TestCase(CreatureDataConstants.Eagle_Giant)]
+        [TestCase(CreatureDataConstants.Efreeti)]
+        [TestCase(CreatureDataConstants.Elasmosaurus)]
+        [TestCase(CreatureDataConstants.Elephant)]
+        [TestCase(CreatureDataConstants.Elemental_Air_Elder)]
+        [TestCase(CreatureDataConstants.Elemental_Air_Greater)]
+        [TestCase(CreatureDataConstants.Elemental_Air_Huge)]
+        [TestCase(CreatureDataConstants.Elemental_Air_Large)]
+        [TestCase(CreatureDataConstants.Elemental_Air_Medium)]
+        [TestCase(CreatureDataConstants.Elemental_Air_Small)]
+        [TestCase(CreatureDataConstants.Elemental_Earth_Elder)]
+        [TestCase(CreatureDataConstants.Elemental_Earth_Greater)]
+        [TestCase(CreatureDataConstants.Elemental_Earth_Huge)]
+        [TestCase(CreatureDataConstants.Elemental_Earth_Large)]
+        [TestCase(CreatureDataConstants.Elemental_Earth_Medium)]
+        [TestCase(CreatureDataConstants.Elemental_Earth_Small)]
+        [TestCase(CreatureDataConstants.Elemental_Fire_Elder)]
+        [TestCase(CreatureDataConstants.Elemental_Fire_Greater)]
+        [TestCase(CreatureDataConstants.Elemental_Fire_Huge)]
+        [TestCase(CreatureDataConstants.Elemental_Fire_Large)]
+        [TestCase(CreatureDataConstants.Elemental_Fire_Medium)]
+        [TestCase(CreatureDataConstants.Elemental_Fire_Small)]
+        [TestCase(CreatureDataConstants.Elemental_Water_Elder)]
+        [TestCase(CreatureDataConstants.Elemental_Water_Greater)]
+        [TestCase(CreatureDataConstants.Elemental_Water_Huge)]
+        [TestCase(CreatureDataConstants.Elemental_Water_Large)]
+        [TestCase(CreatureDataConstants.Elemental_Water_Medium)]
+        [TestCase(CreatureDataConstants.Elemental_Water_Small)]
+        [TestCase(CreatureDataConstants.EtherealFilcher)]
+        [TestCase(CreatureDataConstants.EtherealMarauder)]
+        [TestCase(CreatureDataConstants.Ettercap)]
+        [TestCase(CreatureDataConstants.FireBeetle_Giant)]
+        [TestCase(CreatureDataConstants.FireBeetle_Giant_Celestial)]
+        [TestCase(CreatureDataConstants.FormianQueen)]
+        [TestCase(CreatureDataConstants.FormianTaskmaster)]
+        [TestCase(CreatureDataConstants.FormianWarrior)]
+        [TestCase(CreatureDataConstants.FormianWorker)]
+        [TestCase(CreatureDataConstants.FrostWorm)]
+        [TestCase(CreatureDataConstants.Gargoyle)]
+        [TestCase(CreatureDataConstants.Gargoyle_Kapoacinth)]
+        [TestCase(CreatureDataConstants.GelatinousCube)]//Stone and metal only
+        [TestCase(CreatureDataConstants.Ghoul)]
+        [TestCase(CreatureDataConstants.Ghoul_Lacedon)]
+        [TestCase(CreatureDataConstants.Ghoul_Ghast)]
+        [TestCase(CreatureDataConstants.GibberingMouther)]
+        [TestCase(CreatureDataConstants.Girallon)]
+        [TestCase(CreatureDataConstants.Glabrezu)]
+        [TestCase(CreatureDataConstants.Golem_Clay)]
+        [TestCase(CreatureDataConstants.Golem_Flesh)]
+        [TestCase(CreatureDataConstants.Golem_Iron)]
+        [TestCase(CreatureDataConstants.Golem_Stone)]
+        [TestCase(CreatureDataConstants.Golem_Stone_Greater)]
+        [TestCase(CreatureDataConstants.Gorgon)]
+        [TestCase(CreatureDataConstants.GrayRender)]
+        [TestCase(CreatureDataConstants.GreenHag)]
+        [TestCase(CreatureDataConstants.Grick)]
+        [TestCase(CreatureDataConstants.Griffon)]
+        [TestCase(CreatureDataConstants.Gynosphinx)]
+        [TestCase(CreatureDataConstants.BarbedDevil_Hamatula)]
+        [TestCase(CreatureDataConstants.Hawk)]
+        [TestCase(CreatureDataConstants.Hellcat_Bezekira)]
+        [TestCase(CreatureDataConstants.HellHound)]
+        [TestCase(CreatureDataConstants.Hellwasp_Swarm)]
+        [TestCase(CreatureDataConstants.Hezrou)]
+        [TestCase(CreatureDataConstants.Hieracosphinx)]
+        [TestCase(CreatureDataConstants.Hippogriff)]
+        [TestCase(CreatureDataConstants.Homunculus)]
+        [TestCase(CreatureDataConstants.Horse_Heavy)]
+        [TestCase(CreatureDataConstants.Horse_Heavy_War)]
+        [TestCase(CreatureDataConstants.Horse_Light)]
+        [TestCase(CreatureDataConstants.Horse_Light_War)]
+        [TestCase(CreatureDataConstants.Howler)]
+        [TestCase(CreatureDataConstants.Hydra_10Heads)]
+        [TestCase(CreatureDataConstants.Hydra_11Heads)]
+        [TestCase(CreatureDataConstants.Hydra_12Heads)]
+        [TestCase(CreatureDataConstants.Hydra_5Heads)]
+        [TestCase(CreatureDataConstants.Hydra_6Heads)]
+        [TestCase(CreatureDataConstants.Hydra_7Heads)]
+        [TestCase(CreatureDataConstants.Hydra_8Heads)]
+        [TestCase(CreatureDataConstants.Hydra_9Heads)]
+        [TestCase(CreatureDataConstants.Hyena)]
+        [TestCase(CreatureDataConstants.Imp)]
+        [TestCase(CreatureDataConstants.InvisibleStalker)]
+        [TestCase(CreatureDataConstants.Kraken)]
+        [TestCase(CreatureDataConstants.Krenshar)]
+        [TestCase(CreatureDataConstants.Lammasu)]
+        [TestCase(CreatureDataConstants.Lammasu_GoldenProtector)]
+        [TestCase(CreatureDataConstants.LanternArchon)]
+        [TestCase(CreatureDataConstants.Lemure)]
+        [TestCase(CreatureDataConstants.Leonal)]
+        [TestCase(CreatureDataConstants.Leopard)]
+        [TestCase(CreatureDataConstants.Lion)]
+        [TestCase(CreatureDataConstants.Lion_Dire)]
+        [TestCase(CreatureDataConstants.Lizard)]
+        [TestCase(CreatureDataConstants.Lizard_Monitor)]
+        [TestCase(CreatureDataConstants.Locust_Swarm)]
+        [TestCase(CreatureDataConstants.Magmin)] //Nonflammable
+        [TestCase(CreatureDataConstants.MantaRay)]
+        [TestCase(CreatureDataConstants.Manticore)]
+        [TestCase(CreatureDataConstants.Marut)]
+        [TestCase(CreatureDataConstants.Megaraptor)]
+        [TestCase(CreatureDataConstants.Mephit_CR3)]
+        [TestCase(CreatureDataConstants.Mephit_Air)]
+        [TestCase(CreatureDataConstants.Mephit_Dust)]
+        [TestCase(CreatureDataConstants.Mephit_Earth)]
+        [TestCase(CreatureDataConstants.Mephit_Fire)]
+        [TestCase(CreatureDataConstants.Mephit_Ice)]
+        [TestCase(CreatureDataConstants.Mephit_Magma)]
+        [TestCase(CreatureDataConstants.Mephit_Ooze)]
+        [TestCase(CreatureDataConstants.Mephit_Salt)]
+        [TestCase(CreatureDataConstants.Mephit_Steam)]
+        [TestCase(CreatureDataConstants.Mephit_Water)]
+        [TestCase(CreatureDataConstants.Mimic)]
+        [TestCase(CreatureDataConstants.MindFlayer)]
+        [TestCase(CreatureDataConstants.Mohrg)]
+        [TestCase(CreatureDataConstants.Monkey)]
+        [TestCase(CreatureDataConstants.Monkey_Celestial)]
+        [TestCase(CreatureDataConstants.Mule)]
+        [TestCase(CreatureDataConstants.Mummy)]
+        [TestCase(CreatureDataConstants.Naga_Dark)]
+        [TestCase(CreatureDataConstants.Naga_Guardian)]
+        [TestCase(CreatureDataConstants.Naga_Spirit)]
+        [TestCase(CreatureDataConstants.Naga_Water)]
+        [TestCase(CreatureDataConstants.Nalfeshnee)]
+        [TestCase(CreatureDataConstants.NightHag)]
+        [TestCase(CreatureDataConstants.Nightcrawler)]
+        [TestCase(CreatureDataConstants.Nightmare)]
+        [TestCase(CreatureDataConstants.Nightmare_Cauchemar)]
+        [TestCase(CreatureDataConstants.Nightwalker)]
+        [TestCase(CreatureDataConstants.Nightwing)]
+        [TestCase(CreatureDataConstants.Octopus)]
+        [TestCase(CreatureDataConstants.Octopus_Giant)]
+        [TestCase(CreatureDataConstants.Ooze_Gray)]
+        [TestCase(CreatureDataConstants.Ooze_OchreJelly)]
+        [TestCase(CreatureDataConstants.Otyugh)]
+        [TestCase(CreatureDataConstants.BoneDevil_Osyluth)]
+        [TestCase(CreatureDataConstants.Owl)]
+        [TestCase(CreatureDataConstants.Owl_Giant)]
+        [TestCase(CreatureDataConstants.Owl_Celestial)]
+        [TestCase(CreatureDataConstants.Owlbear)]
+        [TestCase(CreatureDataConstants.Pegasus)]
+        [TestCase(CreatureDataConstants.PhantomFungus)]
+        [TestCase(CreatureDataConstants.PhaseSpider)]
+        [TestCase(CreatureDataConstants.Phasm)]
+        [TestCase(CreatureDataConstants.PitFiend)]
+        [TestCase(CreatureDataConstants.Pony)]
+        [TestCase(CreatureDataConstants.Pony_War)]
+        [TestCase(CreatureDataConstants.Porpoise)]
+        [TestCase(CreatureDataConstants.Porpoise_Celestial)]
+        [TestCase(CreatureDataConstants.PrayingMantis_Giant)]
+        [TestCase(CreatureDataConstants.Pseudodragon)]
+        [TestCase(CreatureDataConstants.PurpleWorm)]//Only stone goods
+        [TestCase(CreatureDataConstants.Pyrohydra_10Heads)]
+        [TestCase(CreatureDataConstants.Pyrohydra_11Heads)]
+        [TestCase(CreatureDataConstants.Pyrohydra_12Heads)]
+        [TestCase(CreatureDataConstants.Pyrohydra_5Heads)]
+        [TestCase(CreatureDataConstants.Pyrohydra_6Heads)]
+        [TestCase(CreatureDataConstants.Pyrohydra_7Heads)]
+        [TestCase(CreatureDataConstants.Pyrohydra_8Heads)]
+        [TestCase(CreatureDataConstants.Pyrohydra_9Heads)]
+        [TestCase(CreatureDataConstants.Quasit)]
+        [TestCase(CreatureDataConstants.Rakshasa)]
+        [TestCase(CreatureDataConstants.Rast)]
+        [TestCase(CreatureDataConstants.Rat)]
+        [TestCase(CreatureDataConstants.Rat_Dire)]
+        [TestCase(CreatureDataConstants.Rat_Dire_Fiendish)]
+        [TestCase(CreatureDataConstants.Rat_Swarm)]
+        [TestCase(CreatureDataConstants.Raven)]
+        [TestCase(CreatureDataConstants.Raven_Fiendish)]
+        [TestCase(CreatureDataConstants.Ravid)]
+        [TestCase(CreatureDataConstants.RazorBoar)]
+        [TestCase(CreatureDataConstants.Remorhaz)]
+        [TestCase(CreatureDataConstants.Retriever)]
+        [TestCase(CreatureDataConstants.Rhinoceras)]
+        [TestCase(CreatureDataConstants.Roc)]
+        [TestCase(CreatureDataConstants.Roper)]//only stone goods
+        [TestCase(CreatureDataConstants.RustMonster)]
+        [TestCase(CreatureDataConstants.Scorpion_Monstrous_Colossal)]
+        [TestCase(CreatureDataConstants.Scorpion_Monstrous_Gargantuan)]
+        [TestCase(CreatureDataConstants.Scorpion_Monstrous_Huge)]
+        [TestCase(CreatureDataConstants.Scorpion_Monstrous_Large)]
+        [TestCase(CreatureDataConstants.Scorpion_Monstrous_Medium)]
+        [TestCase(CreatureDataConstants.Scorpion_Monstrous_Small)]
+        [TestCase(CreatureDataConstants.Scorpion_Monstrous_Tiny)]
+        [TestCase(CreatureDataConstants.SeaCat)]
+        [TestCase(CreatureDataConstants.Shadow)]
+        [TestCase(CreatureDataConstants.Shadow_Greater)]
+        [TestCase(CreatureDataConstants.ShadowMastiff)]
+        [TestCase(CreatureDataConstants.ShamblingMound)]
+        [TestCase(CreatureDataConstants.Shark_Dire)]
+        [TestCase(CreatureDataConstants.Shark_Huge)]
+        [TestCase(CreatureDataConstants.Shark_Large)]
+        [TestCase(CreatureDataConstants.Shark_Medium)]
+        [TestCase(CreatureDataConstants.ShieldGuardian)]
+        [TestCase(CreatureDataConstants.ShockerLizard)]
+        [TestCase(CreatureDataConstants.Shrieker)]
+        [TestCase(CreatureDataConstants.Skeleton_Chimera)]
+        [TestCase(CreatureDataConstants.Skeleton_Dragon_Red_YoungAdult)]
+        [TestCase(CreatureDataConstants.Skeleton_Ettin)]
+        [TestCase(CreatureDataConstants.Skeleton_Giant_Cloud)]
+        [TestCase(CreatureDataConstants.Skeleton_Human)]
+        [TestCase(CreatureDataConstants.Skeleton_Megaraptor)]
+        [TestCase(CreatureDataConstants.Skeleton_Owlbear)]
+        [TestCase(CreatureDataConstants.Skeleton_Troll)]
+        [TestCase(CreatureDataConstants.Skeleton_Wolf)]
+        [TestCase(CreatureDataConstants.Skum)]
+        [TestCase(CreatureDataConstants.Slaad_Blue)]
+        [TestCase(CreatureDataConstants.Slaad_Death)]
+        [TestCase(CreatureDataConstants.Slaad_Gray)]
+        [TestCase(CreatureDataConstants.Slaad_Green)]
+        [TestCase(CreatureDataConstants.Slaad_Red)]
+        [TestCase(CreatureDataConstants.Snake_Constrictor)]
+        [TestCase(CreatureDataConstants.Snake_Constrictor_Giant)]
+        [TestCase(CreatureDataConstants.Snake_Viper_Huge)]
+        [TestCase(CreatureDataConstants.Snake_Viper_Large)]
+        [TestCase(CreatureDataConstants.Snake_Viper_Medium)]
+        [TestCase(CreatureDataConstants.Snake_Viper_Small)]
+        [TestCase(CreatureDataConstants.Snake_Viper_Tiny)]
+        [TestCase(CreatureDataConstants.Spectre)]
+        [TestCase(CreatureDataConstants.Spider_Monstrous_Colossal)]
+        [TestCase(CreatureDataConstants.Spider_Monstrous_Gargantuan)]
+        [TestCase(CreatureDataConstants.Spider_Monstrous_Huge)]
+        [TestCase(CreatureDataConstants.Spider_Monstrous_Large)]
+        [TestCase(CreatureDataConstants.Spider_Monstrous_Medium)]
+        [TestCase(CreatureDataConstants.Spider_Monstrous_Small)]
+        [TestCase(CreatureDataConstants.Spider_Monstrous_Tiny)]
+        [TestCase(CreatureDataConstants.Spider_Swarm)]
+        [TestCase(CreatureDataConstants.SpiderEater)]
+        [TestCase(CreatureDataConstants.Squid)]
+        [TestCase(CreatureDataConstants.Squid_Giant)]
+        [TestCase(CreatureDataConstants.StagBeetle_Giant)]
+        [TestCase(CreatureDataConstants.Stirge)]
+        [TestCase(CreatureDataConstants.Succubus)]
+        [TestCase(CreatureDataConstants.Tarrasque)]
+        [TestCase(CreatureDataConstants.Tendriculos)]
+        [TestCase(CreatureDataConstants.Thoqqua)]
+        [TestCase(CreatureDataConstants.Tiger)]
+        [TestCase(CreatureDataConstants.Tiger_Dire)]
+        [TestCase(CreatureDataConstants.Toad)]
+        [TestCase(CreatureDataConstants.Tojanida_Adult)]
+        [TestCase(CreatureDataConstants.Tojanida_Elder)]
+        [TestCase(CreatureDataConstants.Tojanida_Juvenile)]
+        [TestCase(CreatureDataConstants.Treant)]
+        [TestCase(CreatureDataConstants.Triceratops)]
+        [TestCase(CreatureDataConstants.Troll)]
+        [TestCase(CreatureDataConstants.Troll_Scrag)]
+        [TestCase(CreatureDataConstants.Tyrannosaurus)]
+        [TestCase(CreatureDataConstants.UmberHulk)]
+        [TestCase(CreatureDataConstants.UmberHulk_TrulyHorrid)]
+        [TestCase(CreatureDataConstants.Unicorn)]
+        [TestCase(CreatureDataConstants.Unicorn_CelestialCharger)]
+        [TestCase(CreatureDataConstants.VampireSpawn)]
+        [TestCase(CreatureDataConstants.Vargouille)]
+        [TestCase(CreatureDataConstants.VioletFungus)]
+        [TestCase(CreatureDataConstants.Vrock)]
+        [TestCase(CreatureDataConstants.Wasp_Giant)]
+        [TestCase(CreatureDataConstants.Weasel)]
+        [TestCase(CreatureDataConstants.Weasel_Dire)]
+        [TestCase(CreatureDataConstants.Whale_Baleen)]
+        [TestCase(CreatureDataConstants.Whale_Cachalot)]
+        [TestCase(CreatureDataConstants.Whale_Orca)]
+        [TestCase(CreatureDataConstants.Wight)]
+        [TestCase(CreatureDataConstants.WillOWisp)]
+        [TestCase(CreatureDataConstants.WinterWolf)]
+        [TestCase(CreatureDataConstants.Wolf)]
+        [TestCase(CreatureDataConstants.Wolf_Dire)]
+        [TestCase(CreatureDataConstants.Wolverine)]
+        [TestCase(CreatureDataConstants.Wolverine_Dire)]
+        [TestCase(CreatureDataConstants.Worg)]
+        [TestCase(CreatureDataConstants.Wraith)]
+        [TestCase(CreatureDataConstants.Wraith_Dread)]
+        [TestCase(CreatureDataConstants.Wyvern)]
+        [TestCase(CreatureDataConstants.Xill)]
+        [TestCase(CreatureDataConstants.Xorn_Average)]
+        [TestCase(CreatureDataConstants.Xorn_Elder)]
+        [TestCase(CreatureDataConstants.Xorn_Minor)]
+        [TestCase(CreatureDataConstants.YethHound)]
+        [TestCase(CreatureDataConstants.Yrthak)]
+        [TestCase(CreatureDataConstants.Zombie_Bugbear)]
+        [TestCase(CreatureDataConstants.Zombie_GrayRender)]
+        [TestCase(CreatureDataConstants.Zombie_Human)]
+        [TestCase(CreatureDataConstants.Zombie_Kobold)]
+        [TestCase(CreatureDataConstants.Zombie_Minotaur)]
+        [TestCase(CreatureDataConstants.Zombie_Ogre)]
+        [TestCase(CreatureDataConstants.Zombie_Troglodyte)]
+        [TestCase(CreatureDataConstants.Zombie_Wyvern)]
         public void TreasureGroupIsEmpty(string entry)
         {
             base.DistinctCollection(entry);
         }
 
-        [TestCase(CreatureConstants.AstralDeva, WeaponConstants.HeavyMace, ItemTypeConstants.Weapon, 3, SpecialAbilityConstants.Disruption, TraitConstants.Sizes.Medium)]
-        [TestCase(CreatureConstants.BeardedDevil_Barbazu, WeaponConstants.Glaive, ItemTypeConstants.Weapon, 0, "", TraitConstants.Sizes.Medium)]
-        [TestCase(CreatureConstants.ChainDevil_Kyton, WeaponConstants.SpikedChain, ItemTypeConstants.Weapon, 0, "", TraitConstants.Sizes.Medium)]
-        [TestCase(CreatureConstants.FormianMyrmarch, WeaponConstants.Javelin, ItemTypeConstants.Weapon, 0, "", TraitConstants.Sizes.Large)]
-        [TestCase(CreatureConstants.Ghaele, WeaponConstants.Greatsword, ItemTypeConstants.Weapon, 4, SpecialAbilityConstants.Holy, TraitConstants.Sizes.Medium)]
-        [TestCase(CreatureConstants.Giant_Cloud, WeaponConstants.Morningstar, ItemTypeConstants.Weapon, 0, "", TraitConstants.Sizes.Gargantuan)]
-        [TestCase(CreatureConstants.Giant_Fire, WeaponConstants.Greatsword, ItemTypeConstants.Weapon, 0, "", TraitConstants.Sizes.Large)]
-        [TestCase(CreatureConstants.Giant_Stone, WeaponConstants.Greatclub, ItemTypeConstants.Weapon, 0, "", TraitConstants.Sizes.Large)]
-        [TestCase(CreatureConstants.Giant_Stone_Elder, WeaponConstants.Greatclub, ItemTypeConstants.Weapon, 0, "", TraitConstants.Sizes.Large)]
-        [TestCase(CreatureConstants.Grimlock, WeaponConstants.Battleaxe, ItemTypeConstants.Weapon, 0, "", TraitConstants.Sizes.Medium)] //only gems, no art objects
-        [TestCase(CreatureConstants.Harpy, WeaponConstants.Club, ItemTypeConstants.Weapon, 0, "", TraitConstants.Sizes.Medium)]
-        [TestCase(CreatureConstants.HornedDevil_Cornugon, WeaponConstants.SpikedChain, ItemTypeConstants.Weapon, 0, "", TraitConstants.Sizes.Large)]
-        [TestCase(CreatureConstants.HoundArchon, WeaponConstants.Greatsword, ItemTypeConstants.Weapon, 0, "", TraitConstants.Sizes.Medium)]
-        [TestCase(CreatureConstants.IceDevil_Gelugon, WeaponConstants.Longspear, ItemTypeConstants.Weapon, 0, "", TraitConstants.Sizes.Large)]
-        [TestCase(CreatureConstants.Kolyarut, WeaponConstants.Longsword, ItemTypeConstants.Weapon, 2, "", TraitConstants.Sizes.Medium)]
-        [TestCase(CreatureConstants.KuoToa, WeaponConstants.Shortspear, ItemTypeConstants.Weapon, 0, "", TraitConstants.Sizes.Medium)]
-        [TestCase(CreatureConstants.Lamia, WeaponConstants.Dagger, ItemTypeConstants.Weapon, 0, "", TraitConstants.Sizes.Large)]
-        [TestCase(CreatureConstants.Lillend, WeaponConstants.ShortSword, ItemTypeConstants.Weapon, 0, "", TraitConstants.Sizes.Large)]
-        [TestCase(CreatureConstants.Minotaur, WeaponConstants.Greataxe, ItemTypeConstants.Weapon, 0, "", TraitConstants.Sizes.Large)]
-        [TestCase(CreatureConstants.NessianWarhound, ArmorConstants.ChainShirt, ItemTypeConstants.Armor, 2, "", "Barding", TraitConstants.Sizes.Large)]
-        [TestCase(CreatureConstants.Nymph, WeaponConstants.Dagger, ItemTypeConstants.Weapon, 0, "", TraitConstants.Sizes.Medium)]
-        [TestCase(CreatureConstants.Planetar, WeaponConstants.Greatsword, ItemTypeConstants.Weapon, 3, "", TraitConstants.Sizes.Large)]
-        [TestCase(CreatureConstants.Salamander_Average, WeaponConstants.Shortspear, ItemTypeConstants.Weapon, 0, "", TraitConstants.Sizes.Medium)] //Non-flammable
-        [TestCase(CreatureConstants.Salamander_Flamebrother, WeaponConstants.Shortspear, ItemTypeConstants.Weapon, 0, "", TraitConstants.Sizes.Small)]//Non-flammable
-        [TestCase(CreatureConstants.Salamander_Noble, WeaponConstants.Longspear, ItemTypeConstants.Weapon, 3, "", TraitConstants.Sizes.Large)]//Non-flammable
-        [TestCase(CreatureConstants.Scorpionfolk, WeaponConstants.Lance, ItemTypeConstants.Weapon, 0, "", TraitConstants.Sizes.Large)]
-        [TestCase(CreatureConstants.TrumpetArchon, WeaponConstants.Greatsword, ItemTypeConstants.Weapon, 4, "", TraitConstants.Sizes.Medium)]
+        [TestCase(CreatureDataConstants.AstralDeva, WeaponConstants.HeavyMace, ItemTypeConstants.Weapon, 3, SpecialAbilityConstants.Disruption, TraitConstants.Sizes.Medium)]
+        [TestCase(CreatureDataConstants.BeardedDevil_Barbazu, WeaponConstants.Glaive, ItemTypeConstants.Weapon, 0, "", TraitConstants.Sizes.Medium)]
+        [TestCase(CreatureDataConstants.ChainDevil_Kyton, WeaponConstants.SpikedChain, ItemTypeConstants.Weapon, 0, "", TraitConstants.Sizes.Medium)]
+        [TestCase(CreatureDataConstants.FormianMyrmarch, WeaponConstants.Javelin, ItemTypeConstants.Weapon, 0, "", TraitConstants.Sizes.Large)]
+        [TestCase(CreatureDataConstants.Ghaele, WeaponConstants.Greatsword, ItemTypeConstants.Weapon, 4, SpecialAbilityConstants.Holy, TraitConstants.Sizes.Medium)]
+        [TestCase(CreatureDataConstants.Giant_Cloud, WeaponConstants.Morningstar, ItemTypeConstants.Weapon, 0, "", TraitConstants.Sizes.Gargantuan)]
+        [TestCase(CreatureDataConstants.Giant_Fire, WeaponConstants.Greatsword, ItemTypeConstants.Weapon, 0, "", TraitConstants.Sizes.Large)]
+        [TestCase(CreatureDataConstants.Giant_Stone, WeaponConstants.Greatclub, ItemTypeConstants.Weapon, 0, "", TraitConstants.Sizes.Large)]
+        [TestCase(CreatureDataConstants.Giant_Stone_Elder, WeaponConstants.Greatclub, ItemTypeConstants.Weapon, 0, "", TraitConstants.Sizes.Large)]
+        [TestCase(CreatureDataConstants.Grimlock, WeaponConstants.Battleaxe, ItemTypeConstants.Weapon, 0, "", TraitConstants.Sizes.Medium)] //only gems, no art objects
+        [TestCase(CreatureDataConstants.Harpy, WeaponConstants.Club, ItemTypeConstants.Weapon, 0, "", TraitConstants.Sizes.Medium)]
+        [TestCase(CreatureDataConstants.HornedDevil_Cornugon, WeaponConstants.SpikedChain, ItemTypeConstants.Weapon, 0, "", TraitConstants.Sizes.Large)]
+        [TestCase(CreatureDataConstants.HoundArchon, WeaponConstants.Greatsword, ItemTypeConstants.Weapon, 0, "", TraitConstants.Sizes.Medium)]
+        [TestCase(CreatureDataConstants.IceDevil_Gelugon, WeaponConstants.Longspear, ItemTypeConstants.Weapon, 0, "", TraitConstants.Sizes.Large)]
+        [TestCase(CreatureDataConstants.Kolyarut, WeaponConstants.Longsword, ItemTypeConstants.Weapon, 2, "", TraitConstants.Sizes.Medium)]
+        [TestCase(CreatureDataConstants.KuoToa, WeaponConstants.Shortspear, ItemTypeConstants.Weapon, 0, "", TraitConstants.Sizes.Medium)]
+        [TestCase(CreatureDataConstants.Lamia, WeaponConstants.Dagger, ItemTypeConstants.Weapon, 0, "", TraitConstants.Sizes.Large)]
+        [TestCase(CreatureDataConstants.Lillend, WeaponConstants.ShortSword, ItemTypeConstants.Weapon, 0, "", TraitConstants.Sizes.Large)]
+        [TestCase(CreatureDataConstants.Minotaur, WeaponConstants.Greataxe, ItemTypeConstants.Weapon, 0, "", TraitConstants.Sizes.Large)]
+        [TestCase(CreatureDataConstants.NessianWarhound, ArmorConstants.ChainShirt, ItemTypeConstants.Armor, 2, "", "Barding", TraitConstants.Sizes.Large)]
+        [TestCase(CreatureDataConstants.Nymph, WeaponConstants.Dagger, ItemTypeConstants.Weapon, 0, "", TraitConstants.Sizes.Medium)]
+        [TestCase(CreatureDataConstants.Planetar, WeaponConstants.Greatsword, ItemTypeConstants.Weapon, 3, "", TraitConstants.Sizes.Large)]
+        [TestCase(CreatureDataConstants.Salamander_Average, WeaponConstants.Shortspear, ItemTypeConstants.Weapon, 0, "", TraitConstants.Sizes.Medium)] //Non-flammable
+        [TestCase(CreatureDataConstants.Salamander_Flamebrother, WeaponConstants.Shortspear, ItemTypeConstants.Weapon, 0, "", TraitConstants.Sizes.Small)]//Non-flammable
+        [TestCase(CreatureDataConstants.Salamander_Noble, WeaponConstants.Longspear, ItemTypeConstants.Weapon, 3, "", TraitConstants.Sizes.Large)]//Non-flammable
+        [TestCase(CreatureDataConstants.Scorpionfolk, WeaponConstants.Lance, ItemTypeConstants.Weapon, 0, "", TraitConstants.Sizes.Large)]
+        [TestCase(CreatureDataConstants.TrumpetArchon, WeaponConstants.Greatsword, ItemTypeConstants.Weapon, 4, "", TraitConstants.Sizes.Medium)]
         public void TreasureGroupOfOnePresetItem(string entry, string itemName, string itemType, int itemBonus, string abilityName, params string[] traits)
         {
             var setItem = FormatSetItem(itemName, itemType, itemBonus, abilityName, 0, false, traits);
@@ -620,7 +620,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Treasures
         {
             var morningstar = FormatSetItem(WeaponConstants.Morningstar, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Huge);
 
-            base.Collection(CreatureConstants.Athach, new[] { morningstar, morningstar, morningstar });
+            base.Collection(CreatureDataConstants.Athach, new[] { morningstar, morningstar, morningstar });
         }
 
         [Test]
@@ -629,7 +629,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Treasures
             var warhammer = FormatSetItem(WeaponConstants.Warhammer, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Medium);
             var spear = FormatSetItem(WeaponConstants.Shortspear, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Medium);
 
-            base.DistinctCollection(CreatureConstants.Azer, new[] { warhammer, spear });
+            base.DistinctCollection(CreatureDataConstants.Azer, new[] { warhammer, spear });
         }
 
         [Test]
@@ -638,7 +638,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Treasures
             var longsword = FormatSetItem(WeaponConstants.Longsword, ItemTypeConstants.Weapon, 1, SpecialAbilityConstants.Vorpal, 0, false, TraitConstants.Sizes.Large);
             var whip = FormatSetItem(WeaponConstants.Whip, ItemTypeConstants.Weapon, 1, SpecialAbilityConstants.Flaming, 0, false, TraitConstants.Sizes.Large);
 
-            base.DistinctCollection(CreatureConstants.Balor, new[] { longsword, whip });
+            base.DistinctCollection(CreatureDataConstants.Balor, new[] { longsword, whip });
         }
 
         [Test]
@@ -646,7 +646,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Treasures
         {
             var scimitar = FormatSetItem(WeaponConstants.Scimitar, ItemTypeConstants.Weapon, 1, SpecialAbilityConstants.Holy, 0, false, TraitConstants.Sizes.Medium);
             var longbow = FormatSetItem(WeaponConstants.CompositeLongbow, ItemTypeConstants.Weapon, 1, SpecialAbilityConstants.Holy, 0, false, "+4 Strength bonus", TraitConstants.Sizes.Medium);
-            base.DistinctCollection(CreatureConstants.Bralani, new[] { scimitar, longbow });
+            base.DistinctCollection(CreatureDataConstants.Bralani, new[] { scimitar, longbow });
         }
 
         [Test]
@@ -655,7 +655,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Treasures
             var morningstar = FormatSetItem(WeaponConstants.Morningstar, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Medium);
             var javelin = FormatSetItem(WeaponConstants.Javelin, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Medium);
 
-            base.DistinctCollection(CreatureConstants.Bugbear, new[] { morningstar, javelin });
+            base.DistinctCollection(CreatureDataConstants.Bugbear, new[] { morningstar, javelin });
         }
 
         [Test]
@@ -664,7 +664,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Treasures
             var longsword = FormatSetItem(WeaponConstants.Longsword, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Large);
             var longbow = FormatSetItem(WeaponConstants.CompositeLongbow, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Large, "+4 Strength bonus");
 
-            base.DistinctCollection(CreatureConstants.Centaur, new[] { longsword, longbow });
+            base.DistinctCollection(CreatureDataConstants.Centaur, new[] { longsword, longbow });
         }
 
         [Test]
@@ -672,7 +672,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Treasures
         {
             var shortSword = FormatSetItem(WeaponConstants.ShortSword, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Small);
             var crossbow = FormatSetItem(WeaponConstants.LightRepeatingCrossbow, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Small);
-            base.DistinctCollection(CreatureConstants.Derro, new[] { shortSword, crossbow });
+            base.DistinctCollection(CreatureDataConstants.Derro, new[] { shortSword, crossbow });
         }
 
         [Test]
@@ -681,7 +681,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Treasures
             var dagger = FormatSetItem(WeaponConstants.Dagger, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Large);
             var shortbow = FormatSetItem(WeaponConstants.Shortbow, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Large);
 
-            base.Collection(CreatureConstants.Drider, new[] { dagger, dagger, shortbow });
+            base.Collection(CreatureDataConstants.Drider, new[] { dagger, dagger, shortbow });
         }
 
         [Test]
@@ -690,7 +690,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Treasures
             var dagger = FormatSetItem(WeaponConstants.Dagger, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Medium);
             var longbow = FormatSetItem(WeaponConstants.Longbow, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Medium, TraitConstants.Masterwork);
 
-            base.DistinctCollection(CreatureConstants.Dryad, new[] { dagger, longbow });
+            base.DistinctCollection(CreatureDataConstants.Dryad, new[] { dagger, longbow });
         }
 
         [Test]
@@ -700,7 +700,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Treasures
             var longbow = FormatSetItem(WeaponConstants.CompositeLongbow, ItemTypeConstants.Weapon, 1, SpecialAbilityConstants.Flaming, 0, false, "+5 Strength bonus", TraitConstants.Sizes.Medium);
             var rope = FormatSetItem("Rope, 50 ft.", ItemTypeConstants.Tool);
 
-            base.DistinctCollection(CreatureConstants.Erinyes, new[] { longsword, longbow, rope });
+            base.DistinctCollection(CreatureDataConstants.Erinyes, new[] { longsword, longbow, rope });
         }
 
         [Test]
@@ -709,7 +709,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Treasures
             var morningstar = FormatSetItem(WeaponConstants.Morningstar, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Large);
             var javelin = FormatSetItem(WeaponConstants.Javelin, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Large);
 
-            base.DistinctCollection(CreatureConstants.Ettin, new[] { morningstar, javelin });
+            base.DistinctCollection(CreatureDataConstants.Ettin, new[] { morningstar, javelin });
         }
 
         [Test]
@@ -718,7 +718,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Treasures
             var greataxe = FormatSetItem(WeaponConstants.Greataxe, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Large);
             var armor = FormatSetItem(ArmorConstants.ChainShirt, ItemTypeConstants.Armor, 0, string.Empty, 0, false, TraitConstants.Sizes.Large);
 
-            base.DistinctCollection(CreatureConstants.Giant_Frost, new[] { greataxe, armor });
+            base.DistinctCollection(CreatureDataConstants.Giant_Frost, new[] { greataxe, armor });
         }
 
         [Test]
@@ -727,7 +727,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Treasures
             var greatclub = FormatSetItem(WeaponConstants.Greatclub, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Large);
             var armor = FormatSetItem(ArmorConstants.HideArmor, ItemTypeConstants.Armor, 0, string.Empty, 0, false, TraitConstants.Sizes.Large);
 
-            base.DistinctCollection(CreatureConstants.Giant_Hill, new[] { greatclub, armor });
+            base.DistinctCollection(CreatureDataConstants.Giant_Hill, new[] { greatclub, armor });
         }
 
         [Test]
@@ -736,7 +736,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Treasures
             var battleaxe = FormatSetItem(WeaponConstants.Battleaxe, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Medium);
             var shortbow = FormatSetItem(WeaponConstants.Shortbow, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Medium);
 
-            base.DistinctCollection(CreatureConstants.Gnoll, new[] { battleaxe, shortbow });
+            base.DistinctCollection(CreatureDataConstants.Gnoll, new[] { battleaxe, shortbow });
         }
 
         [Test]
@@ -745,7 +745,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Treasures
             var shortSword = FormatSetItem(WeaponConstants.ShortSword, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Tiny);
             var longbow = FormatSetItem(WeaponConstants.Longbow, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Tiny);
 
-            base.DistinctCollection(CreatureConstants.Grig, new[] { shortSword, longbow });
+            base.DistinctCollection(CreatureDataConstants.Grig, new[] { shortSword, longbow });
         }
 
         [Test]
@@ -754,7 +754,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Treasures
             var scimitar = FormatSetItem(WeaponConstants.Scimitar, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Medium);
             var longbow = FormatSetItem(WeaponConstants.Longbow, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Medium);
 
-            base.DistinctCollection(CreatureConstants.Janni, new[] { scimitar, longbow });
+            base.DistinctCollection(CreatureDataConstants.Janni, new[] { scimitar, longbow });
         }
 
         [Test]
@@ -763,7 +763,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Treasures
             var club = FormatSetItem(WeaponConstants.Club, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Medium);
             var javelin = FormatSetItem(WeaponConstants.Javelin, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Medium);
 
-            base.DistinctCollection(CreatureConstants.Lizardfolk, new[] { club, javelin });
+            base.DistinctCollection(CreatureDataConstants.Lizardfolk, new[] { club, javelin });
         }
 
         [Test]
@@ -771,7 +771,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Treasures
         {
             var longsword = FormatSetItem(WeaponConstants.Longsword, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Large);
 
-            base.Collection(CreatureConstants.Marilith, new[] { longsword, longsword, longsword, longsword, longsword, longsword });
+            base.Collection(CreatureDataConstants.Marilith, new[] { longsword, longsword, longsword, longsword, longsword, longsword });
         }
 
         [Test]
@@ -780,7 +780,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Treasures
             var dagger = FormatSetItem(WeaponConstants.Dagger, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Medium);
             var shortbow = FormatSetItem(WeaponConstants.Shortbow, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Medium);
 
-            base.DistinctCollection(CreatureConstants.Medusa, new[] { dagger, shortbow });
+            base.DistinctCollection(CreatureDataConstants.Medusa, new[] { dagger, shortbow });
         }
 
         [Test]
@@ -789,7 +789,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Treasures
             var shortSword = FormatSetItem(WeaponConstants.ShortSword, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Small);
             var crossbow = FormatSetItem(WeaponConstants.LightCrossbow, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Small);
 
-            base.DistinctCollection(CreatureConstants.Nixie, new[] { shortSword, crossbow });
+            base.DistinctCollection(CreatureDataConstants.Nixie, new[] { shortSword, crossbow });
         }
 
         [Test]
@@ -798,7 +798,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Treasures
             var greatclub = FormatSetItem(WeaponConstants.Greatclub, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Large);
             var javelin = FormatSetItem(WeaponConstants.Javelin, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Large);
 
-            base.DistinctCollection(CreatureConstants.Ogre, new[] { greatclub, javelin });
+            base.DistinctCollection(CreatureDataConstants.Ogre, new[] { greatclub, javelin });
         }
 
         [Test]
@@ -807,7 +807,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Treasures
             var longspear = FormatSetItem(WeaponConstants.Longspear, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Large);
             var javelin = FormatSetItem(WeaponConstants.Javelin, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Large);
 
-            base.DistinctCollection(CreatureConstants.Ogre_Merrow, new[] { longspear, javelin });
+            base.DistinctCollection(CreatureDataConstants.Ogre_Merrow, new[] { longspear, javelin });
         }
 
         [Test]
@@ -816,7 +816,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Treasures
             var greatsword = FormatSetItem(WeaponConstants.Greatsword, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Large);
             var longbow = FormatSetItem(WeaponConstants.Longbow, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Large);
 
-            base.DistinctCollection(CreatureConstants.OgreMage, new[] { greatsword, longbow });
+            base.DistinctCollection(CreatureDataConstants.OgreMage, new[] { greatsword, longbow });
         }
 
         [Test]
@@ -825,7 +825,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Treasures
             var shortSword = FormatSetItem(WeaponConstants.ShortSword, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Small);
             var longbow = FormatSetItem(WeaponConstants.Longbow, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Small);
 
-            base.DistinctCollection(CreatureConstants.Pixie, new[] { shortSword, longbow });
+            base.DistinctCollection(CreatureDataConstants.Pixie, new[] { shortSword, longbow });
         }
 
         [Test]
@@ -834,7 +834,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Treasures
             var shortSword = FormatSetItem(WeaponConstants.ShortSword, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Small);
             var longbow = FormatSetItem(WeaponConstants.Longbow, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Small);
 
-            base.DistinctCollection(CreatureConstants.Pixie_WithIrresistableDance, new[] { shortSword, longbow });
+            base.DistinctCollection(CreatureDataConstants.Pixie_WithIrresistableDance, new[] { shortSword, longbow });
         }
 
         [Test]
@@ -843,7 +843,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Treasures
             var trident = FormatSetItem(WeaponConstants.Trident, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Medium);
             var crossbow = FormatSetItem(WeaponConstants.HeavyCrossbow, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Medium);
 
-            base.DistinctCollection(CreatureConstants.Sahuagin, new[] { trident, crossbow });
+            base.DistinctCollection(CreatureDataConstants.Sahuagin, new[] { trident, crossbow });
         }
 
         [Test]
@@ -852,7 +852,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Treasures
             var dagger = FormatSetItem(WeaponConstants.Dagger, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Medium);
             var shortbow = FormatSetItem(WeaponConstants.Shortbow, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Medium);
 
-            base.DistinctCollection(CreatureConstants.Satyr, new[] { dagger, shortbow });
+            base.DistinctCollection(CreatureDataConstants.Satyr, new[] { dagger, shortbow });
         }
 
         [Test]
@@ -862,7 +862,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Treasures
             var shortbow = FormatSetItem(WeaponConstants.Shortbow, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Medium);
             var pipes = FormatSetItem("Pipes", ItemTypeConstants.Tool);
 
-            base.DistinctCollection(CreatureConstants.Satyr_WithPipes, new[] { dagger, shortbow, pipes });
+            base.DistinctCollection(CreatureDataConstants.Satyr_WithPipes, new[] { dagger, shortbow, pipes });
         }
 
         [Test]
@@ -871,7 +871,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Treasures
             var greatsword = FormatSetItem(WeaponConstants.Greatsword, ItemTypeConstants.Weapon, 5, SpecialAbilityConstants.Dancing, 0, false, TraitConstants.Sizes.Large);
             var longbow = FormatSetItem(WeaponConstants.CompositeLongbow, ItemTypeConstants.Weapon, 2, "Creates slaying arrows keyed to any creature type or subtype", 5, false, "+5 Strength bonus", TraitConstants.Sizes.Large);
 
-            base.DistinctCollection(CreatureConstants.Solar, new[] { greatsword, longbow });
+            base.DistinctCollection(CreatureDataConstants.Solar, new[] { greatsword, longbow });
         }
 
         [Test]
@@ -880,7 +880,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Treasures
             var greatsword = FormatSetItem(WeaponConstants.Greatsword, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Huge);
             var longbow = FormatSetItem(WeaponConstants.CompositeLongbow, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Huge, "+14 Strength bonus");
 
-            base.DistinctCollection(CreatureConstants.Giant_Storm, new[] { greatsword, longbow });
+            base.DistinctCollection(CreatureDataConstants.Giant_Storm, new[] { greatsword, longbow });
         }
 
         [Test]
@@ -889,7 +889,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Treasures
             var warhammer = FormatSetItem(WeaponConstants.Warhammer, ItemTypeConstants.Weapon, 3, string.Empty, 0, false, TraitConstants.Sizes.Gargantuan, TraitConstants.SpecialMaterials.Adamantine);
             var armor = FormatSetItem(ArmorConstants.HalfPlate, ItemTypeConstants.Armor, 4, string.Empty, 0, false, TraitConstants.Sizes.Huge);
 
-            base.DistinctCollection(CreatureConstants.Titan, new[] { warhammer, armor });
+            base.DistinctCollection(CreatureDataConstants.Titan, new[] { warhammer, armor });
         }
 
         [Test]
@@ -898,7 +898,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Treasures
             var trident = FormatSetItem(WeaponConstants.Trident, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Medium);
             var crossbow = FormatSetItem(WeaponConstants.HeavyCrossbow, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Medium);
 
-            base.DistinctCollection(CreatureConstants.Triton, new[] { trident, crossbow });
+            base.DistinctCollection(CreatureDataConstants.Triton, new[] { trident, crossbow });
         }
 
         [Test]
@@ -907,7 +907,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Treasures
             var club = FormatSetItem(WeaponConstants.Club, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Medium);
             var javelin = FormatSetItem(WeaponConstants.Javelin, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Medium);
 
-            base.DistinctCollection(CreatureConstants.Troglodyte, new[] { club, javelin });
+            base.DistinctCollection(CreatureDataConstants.Troglodyte, new[] { club, javelin });
         }
 
         [Test]
@@ -916,7 +916,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Treasures
             var greataxe = FormatSetItem(WeaponConstants.Greataxe, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Medium);
             var throwingAxe = FormatSetItem(WeaponConstants.ThrowingAxe, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Medium);
 
-            base.DistinctCollection(CreatureConstants.Werebear, new[] { greataxe, throwingAxe });
+            base.DistinctCollection(CreatureDataConstants.Werebear, new[] { greataxe, throwingAxe });
         }
 
         [Test]
@@ -927,7 +927,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Treasures
             var armor = FormatSetItem(ArmorConstants.ScaleMail, ItemTypeConstants.Armor, 0, string.Empty, 0, false, TraitConstants.Sizes.Medium);
             var shield = FormatSetItem(ArmorConstants.HeavyWoodenShield, ItemTypeConstants.Armor, 0, string.Empty, 0, false, TraitConstants.Sizes.Medium);
 
-            base.DistinctCollection(CreatureConstants.Wereboar, new[] { battleaxe, javelin, armor, shield });
+            base.DistinctCollection(CreatureDataConstants.Wereboar, new[] { battleaxe, javelin, armor, shield });
         }
 
         [Test]
@@ -935,7 +935,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Treasures
         {
             var greatclub = FormatSetItem(WeaponConstants.Greatclub, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Large);
             var armor = FormatSetItem(ArmorConstants.HideArmor, ItemTypeConstants.Armor, 0, string.Empty, 0, false, TraitConstants.Sizes.Large);
-            base.DistinctCollection(CreatureConstants.Wereboar_HillGiantDire, new[] { greatclub, armor });
+            base.DistinctCollection(CreatureDataConstants.Wereboar_HillGiantDire, new[] { greatclub, armor });
         }
 
         [Test]
@@ -944,7 +944,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Treasures
             var rapier = FormatSetItem(WeaponConstants.Rapier, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Medium);
             var lightCrossbow = FormatSetItem(WeaponConstants.LightCrossbow, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Medium);
 
-            base.DistinctCollection(CreatureConstants.Wererat, new[] { rapier, lightCrossbow });
+            base.DistinctCollection(CreatureDataConstants.Wererat, new[] { rapier, lightCrossbow });
         }
 
         [Test]
@@ -953,7 +953,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Treasures
             var glaive = FormatSetItem(WeaponConstants.Glaive, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Medium);
             var longbow = FormatSetItem(WeaponConstants.CompositeLongbow, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Medium, "+1 Strength bonus");
 
-            base.DistinctCollection(CreatureConstants.Weretiger, new[] { glaive, longbow });
+            base.DistinctCollection(CreatureDataConstants.Weretiger, new[] { glaive, longbow });
         }
 
         [Test]
@@ -962,7 +962,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Treasures
             var longsword = FormatSetItem(WeaponConstants.Longsword, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Medium);
             var lightCrossbow = FormatSetItem(WeaponConstants.LightCrossbow, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Medium);
 
-            base.DistinctCollection(CreatureConstants.Werewolf, new[] { longsword, lightCrossbow });
+            base.DistinctCollection(CreatureDataConstants.Werewolf, new[] { longsword, lightCrossbow });
         }
 
         [Test]
@@ -971,7 +971,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Treasures
             var scimitar = FormatSetItem(WeaponConstants.Scimitar, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Medium);
             var longbow = FormatSetItem(WeaponConstants.Longbow, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Medium);
 
-            base.DistinctCollection(CreatureConstants.YuanTi_Pureblood, new[] { scimitar, longbow });
+            base.DistinctCollection(CreatureDataConstants.YuanTi_Pureblood, new[] { scimitar, longbow });
         }
 
         [Test]
@@ -980,7 +980,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Treasures
             var scimitar = FormatSetItem(WeaponConstants.Scimitar, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Medium);
             var longbow = FormatSetItem(WeaponConstants.CompositeLongbow, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Medium, "+2 Strength bonus");
 
-            base.DistinctCollection(CreatureConstants.YuanTi_Halfblood, new[] { scimitar, longbow });
+            base.DistinctCollection(CreatureDataConstants.YuanTi_Halfblood, new[] { scimitar, longbow });
         }
 
         [Test]
@@ -989,7 +989,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Treasures
             var scimitar = FormatSetItem(WeaponConstants.Scimitar, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Large);
             var longbow = FormatSetItem(WeaponConstants.CompositeLongbow, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Large, "+4 Strength bonus");
 
-            base.DistinctCollection(CreatureConstants.YuanTi_Abomination, new[] { scimitar, longbow });
+            base.DistinctCollection(CreatureDataConstants.YuanTi_Abomination, new[] { scimitar, longbow });
         }
 
         [Test]
@@ -997,14 +997,14 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Treasures
         {
             var chain = FormatSetItem(WeaponConstants.SpikedChain, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Large);
 
-            base.Collection(CreatureConstants.Zelekhut, new[] { chain, chain });
+            base.Collection(CreatureDataConstants.Zelekhut, new[] { chain, chain });
         }
 
         [Test]
         public void CharactersDoNotHaveSetItems()
         {
             var entries = GetEntries();
-            var characters = entries.Where(e => e.Contains(CreatureConstants.Character));
+            var characters = entries.Where(e => e.Contains(CreatureDataConstants.Character));
 
             foreach (var character in characters)
             {
@@ -1016,7 +1016,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Treasures
         public void NoncombatantsDoNotHaveSetItems()
         {
             var entries = GetEntries();
-            var noncombatants = entries.Where(e => e.Contains(CreatureConstants.Noncombatant));
+            var noncombatants = entries.Where(e => e.Contains(CreatureDataConstants.Noncombatant));
 
             foreach (var noncombatant in noncombatants)
             {

@@ -12,1044 +12,1044 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
             AssertCreatureGroupEntriesAreComplete();
         }
 
-        [TestCase(CreatureConstants.Aasimar,
-            CreatureConstants.Aasimar_Warrior)]
-        [TestCase(CreatureConstants.Aboleth,
-            CreatureConstants.Aboleth,
-            CreatureConstants.Aboleth_Mage)]
-        [TestCase(CreatureConstants.Adept_Doctor,
-            CreatureConstants.Adept_Doctor_Level1,
-            CreatureConstants.Adept_Doctor_Level10To11,
-            CreatureConstants.Adept_Doctor_Level12To13,
-            CreatureConstants.Adept_Doctor_Level14To15,
-            CreatureConstants.Adept_Doctor_Level16To17,
-            CreatureConstants.Adept_Doctor_Level18To19,
-            CreatureConstants.Adept_Doctor_Level20,
-            CreatureConstants.Adept_Doctor_Level2To3,
-            CreatureConstants.Adept_Doctor_Level4To5,
-            CreatureConstants.Adept_Doctor_Level6To7,
-            CreatureConstants.Adept_Doctor_Level8To9)]
-        [TestCase(CreatureConstants.Angel,
-            CreatureConstants.AstralDeva,
-            CreatureConstants.Planetar,
-            CreatureConstants.Solar)]
-        [TestCase(CreatureConstants.AnimatedObject,
-            CreatureConstants.AnimatedObject_Colossal,
-            CreatureConstants.AnimatedObject_Gargantuan,
-            CreatureConstants.AnimatedObject_Huge,
-            CreatureConstants.AnimatedObject_Large,
-            CreatureConstants.AnimatedObject_Medium,
-            CreatureConstants.AnimatedObject_Small,
-            CreatureConstants.AnimatedObject_Tiny)]
-        [TestCase(CreatureConstants.Ant_Giant,
-            CreatureConstants.Ant_Giant_Queen,
-            CreatureConstants.Ant_Giant_Soldier,
-            CreatureConstants.Ant_Giant_Worker)]
-        [TestCase(CreatureConstants.Ape,
-            CreatureConstants.Ape,
-            CreatureConstants.Ape_Dire)]
-        [TestCase(CreatureConstants.Archon,
-            CreatureConstants.HoundArchon,
-            CreatureConstants.LanternArchon,
-            CreatureConstants.TrumpetArchon)]
-        [TestCase(CreatureConstants.Arrowhawk,
-            CreatureConstants.Arrowhawk_Adult,
-            CreatureConstants.Arrowhawk_Elder,
-            CreatureConstants.Arrowhawk_Juvenile)]
-        [TestCase(CreatureConstants.Azer,
-            CreatureConstants.Azer,
-            CreatureConstants.Azer_Captain,
-            CreatureConstants.Azer_Leader,
-            CreatureConstants.Azer_Lieutenant,
-            CreatureConstants.Azer_Noncombatant,
-            CreatureConstants.Azer_Sergeant)]
-        [TestCase(CreatureConstants.Badger,
-            CreatureConstants.Badger,
-            CreatureConstants.Badger_Dire)]
-        [TestCase(CreatureConstants.Bard_Leader,
-            CreatureConstants.Bard_Leader_Level1,
-            CreatureConstants.Bard_Leader_Level10,
-            CreatureConstants.Bard_Leader_Level11,
-            CreatureConstants.Bard_Leader_Level2,
-            CreatureConstants.Bard_Leader_Level3,
-            CreatureConstants.Bard_Leader_Level4,
-            CreatureConstants.Bard_Leader_Level5,
-            CreatureConstants.Bard_Leader_Level6,
-            CreatureConstants.Bard_Leader_Level7,
-            CreatureConstants.Bard_Leader_Level8,
-            CreatureConstants.Bard_Leader_Level9)]
-        [TestCase(CreatureConstants.Barghest,
-            CreatureConstants.Barghest,
-            CreatureConstants.Barghest_Greater)]
-        [TestCase(CreatureConstants.Bat,
-            CreatureConstants.Bat,
-            CreatureConstants.Bat_Dire,
-            CreatureConstants.Bat_Swarm)]
-        [TestCase(CreatureConstants.Bear,
-            CreatureConstants.Bear_Black,
-            CreatureConstants.Bear_Brown,
-            CreatureConstants.Bear_Dire,
-            CreatureConstants.Bear_Polar,
-            CreatureConstants.Werebear)]
-        [TestCase(CreatureConstants.Bear_Brown,
-            CreatureConstants.Bear_Brown,
-            CreatureConstants.Bear_Dire,
-            CreatureConstants.Werebear)]
-        [TestCase(CreatureConstants.BlackPudding,
-            CreatureConstants.BlackPudding,
-            CreatureConstants.BlackPudding_Elder)]
-        [TestCase(CreatureConstants.Boar,
-            CreatureConstants.Boar,
-            CreatureConstants.Boar_Dire,
-            CreatureConstants.Wereboar,
-            CreatureConstants.Wereboar_HillGiantDire)]
-        [TestCase(CreatureConstants.Bugbear,
-            CreatureConstants.Bugbear,
-            CreatureConstants.Bugbear_Leader,
-            CreatureConstants.Bugbear_Noncombatant,
-            CreatureConstants.Bugbear_Sergeant)]
-        [TestCase(CreatureConstants.CelestialCreature,
-            CreatureConstants.Badger_Celestial,
-            CreatureConstants.Dog_Celestial,
-            CreatureConstants.FireBeetle_Giant_Celestial,
-            CreatureConstants.Monkey_Celestial,
-            CreatureConstants.Owl_Celestial,
-            CreatureConstants.Porpoise_Celestial)]
-        [TestCase(CreatureConstants.Centaur,
-            CreatureConstants.Centaur,
-            CreatureConstants.Centaur_Leader_2ndTo5th,
-            CreatureConstants.Centaur_Leader_5thTo9th,
-            CreatureConstants.Centaur_Lieutenant,
-            CreatureConstants.Centaur_Noncombatant,
-            CreatureConstants.Centaur_Sergeant)]
-        [TestCase(CreatureConstants.Centipede_Monstrous,
-            CreatureConstants.Centipede_Monstrous_Colossal,
-            CreatureConstants.Centipede_Monstrous_Gargantuan,
-            CreatureConstants.Centipede_Monstrous_Huge,
-            CreatureConstants.Centipede_Monstrous_Large,
-            CreatureConstants.Centipede_Monstrous_Medium,
-            CreatureConstants.Centipede_Monstrous_Small,
-            CreatureConstants.Centipede_Monstrous_Tiny)]
-        [TestCase(CreatureConstants.Character_RetiredAdventurer,
-            CreatureConstants.Character_RetiredAdventurer_Level11,
-            CreatureConstants.Character_RetiredAdventurer_Level12,
-            CreatureConstants.Character_RetiredAdventurer_Level13,
-            CreatureConstants.Character_RetiredAdventurer_Level14,
-            CreatureConstants.Character_RetiredAdventurer_Level15,
-            CreatureConstants.Character_RetiredAdventurer_Level16,
-            CreatureConstants.Character_RetiredAdventurer_Level17,
-            CreatureConstants.Character_RetiredAdventurer_Level18,
-            CreatureConstants.Character_RetiredAdventurer_Level19,
-            CreatureConstants.Character_RetiredAdventurer_Level20)]
-        [TestCase(CreatureConstants.Character_StarStudent,
-            CreatureConstants.Character_StarStudent_Level1,
-            CreatureConstants.Character_StarStudent_Level10,
-            CreatureConstants.Character_StarStudent_Level2,
-            CreatureConstants.Character_StarStudent_Level3,
-            CreatureConstants.Character_StarStudent_Level4,
-            CreatureConstants.Character_StarStudent_Level5,
-            CreatureConstants.Character_StarStudent_Level6,
-            CreatureConstants.Character_StarStudent_Level7,
-            CreatureConstants.Character_StarStudent_Level8,
-            CreatureConstants.Character_StarStudent_Level9)]
-        [TestCase(CreatureConstants.Character_Student,
-            CreatureConstants.Character_Student_Level1,
-            CreatureConstants.Character_Student_Level10To11,
-            CreatureConstants.Character_Student_Level12To13,
-            CreatureConstants.Character_Student_Level14To15,
-            CreatureConstants.Character_Student_Level16To17,
-            CreatureConstants.Character_Student_Level18To19,
-            CreatureConstants.Character_Student_Level2To3,
-            CreatureConstants.Character_Student_Level4To5,
-            CreatureConstants.Character_Student_Level6To7,
-            CreatureConstants.Character_Student_Level8To9)]
-        [TestCase(CreatureConstants.Character_Teacher,
-            CreatureConstants.Character_Teacher_Level11,
-            CreatureConstants.Character_Teacher_Level12,
-            CreatureConstants.Character_Teacher_Level13,
-            CreatureConstants.Character_Teacher_Level14,
-            CreatureConstants.Character_Teacher_Level15,
-            CreatureConstants.Character_Teacher_Level16,
-            CreatureConstants.Character_Teacher_Level17,
-            CreatureConstants.Character_Teacher_Level18,
-            CreatureConstants.Character_Teacher_Level19,
-            CreatureConstants.Character_Teacher_Level20)]
-        [TestCase(CreatureConstants.Cleric_Leader,
-            CreatureConstants.Cleric_Leader_Level1,
-            CreatureConstants.Cleric_Leader_Level10,
-            CreatureConstants.Cleric_Leader_Level11,
-            CreatureConstants.Cleric_Leader_Level2,
-            CreatureConstants.Cleric_Leader_Level3,
-            CreatureConstants.Cleric_Leader_Level4,
-            CreatureConstants.Cleric_Leader_Level5,
-            CreatureConstants.Cleric_Leader_Level6,
-            CreatureConstants.Cleric_Leader_Level7,
-            CreatureConstants.Cleric_Leader_Level8,
-            CreatureConstants.Cleric_Leader_Level9)]
-        [TestCase(CreatureConstants.Crocodile,
-            CreatureConstants.Crocodile,
-            CreatureConstants.Crocodile_Giant)]
-        [TestCase(CreatureConstants.Cryohydra,
-            CreatureConstants.Cryohydra_10Heads,
-            CreatureConstants.Cryohydra_11Heads,
-            CreatureConstants.Cryohydra_12Heads,
-            CreatureConstants.Cryohydra_5Heads,
-            CreatureConstants.Cryohydra_6Heads,
-            CreatureConstants.Cryohydra_7Heads,
-            CreatureConstants.Cryohydra_8Heads,
-            CreatureConstants.Cryohydra_9Heads)]
-        [TestCase(CreatureConstants.Demon,
-            CreatureConstants.Babau,
-            CreatureConstants.Balor,
-            CreatureConstants.Bebilith,
-            CreatureConstants.Dretch,
-            CreatureConstants.Glabrezu,
-            CreatureConstants.Hezrou,
-            CreatureConstants.Marilith,
-            CreatureConstants.Nalfeshnee,
-            CreatureConstants.Quasit,
-            CreatureConstants.Retriever,
-            CreatureConstants.Succubus,
-            CreatureConstants.Vrock)]
-        [TestCase(CreatureConstants.Derro,
-            CreatureConstants.Derro,
-            CreatureConstants.Derro_Noncombatant,
-            CreatureConstants.Derro_Sorcerer_3rd,
-            CreatureConstants.Derro_Sorcerer_5thTo8th)]
-        [TestCase(CreatureConstants.Devil,
-            CreatureConstants.BarbedDevil_Hamatula,
-            CreatureConstants.BeardedDevil_Barbazu,
-            CreatureConstants.BoneDevil_Osyluth,
-            CreatureConstants.ChainDevil_Kyton,
-            CreatureConstants.Erinyes,
-            CreatureConstants.Hellcat_Bezekira,
-            CreatureConstants.HornedDevil_Cornugon,
-            CreatureConstants.IceDevil_Gelugon,
-            CreatureConstants.Imp,
-            CreatureConstants.Lemure,
-            CreatureConstants.PitFiend)]
-        [TestCase(CreatureConstants.Dinosaur,
-            CreatureConstants.Deinonychus,
-            CreatureConstants.Elasmosaurus,
-            CreatureConstants.Megaraptor,
-            CreatureConstants.Triceratops,
-            CreatureConstants.Tyrannosaurus)]
-        [TestCase(CreatureConstants.DisplacerBeast,
-            CreatureConstants.DisplacerBeast,
-            CreatureConstants.DisplacerBeast_PackLord)]
-        [TestCase(CreatureConstants.Djinni,
-            CreatureConstants.Djinni,
-            CreatureConstants.Djinni_Noble)]
-        [TestCase(CreatureConstants.Dog,
-            CreatureConstants.Dog,
-            CreatureConstants.Dog_Riding)]
-        [TestCase(CreatureConstants.Dragon_Black,
-            CreatureConstants.Dragon_Black_Adult,
-            CreatureConstants.Dragon_Black_Ancient,
-            CreatureConstants.Dragon_Black_GreatWyrm,
-            CreatureConstants.Dragon_Black_Juvenile,
-            CreatureConstants.Dragon_Black_MatureAdult,
-            CreatureConstants.Dragon_Black_Old,
-            CreatureConstants.Dragon_Black_VeryOld,
-            CreatureConstants.Dragon_Black_VeryYoung,
-            CreatureConstants.Dragon_Black_Wyrm,
-            CreatureConstants.Dragon_Black_Wyrmling,
-            CreatureConstants.Dragon_Black_Young,
-            CreatureConstants.Dragon_Black_YoungAdult)]
-        [TestCase(CreatureConstants.Dragon_Blue,
-            CreatureConstants.Dragon_Blue_Adult,
-            CreatureConstants.Dragon_Blue_Ancient,
-            CreatureConstants.Dragon_Blue_GreatWyrm,
-            CreatureConstants.Dragon_Blue_Juvenile,
-            CreatureConstants.Dragon_Blue_MatureAdult,
-            CreatureConstants.Dragon_Blue_Old,
-            CreatureConstants.Dragon_Blue_VeryOld,
-            CreatureConstants.Dragon_Blue_VeryYoung,
-            CreatureConstants.Dragon_Blue_Wyrm,
-            CreatureConstants.Dragon_Blue_Wyrmling,
-            CreatureConstants.Dragon_Blue_Young,
-            CreatureConstants.Dragon_Blue_YoungAdult)]
-        [TestCase(CreatureConstants.Dragon_Brass,
-            CreatureConstants.Dragon_Brass_Adult,
-            CreatureConstants.Dragon_Brass_Ancient,
-            CreatureConstants.Dragon_Brass_GreatWyrm,
-            CreatureConstants.Dragon_Brass_Juvenile,
-            CreatureConstants.Dragon_Brass_MatureAdult,
-            CreatureConstants.Dragon_Brass_Old,
-            CreatureConstants.Dragon_Brass_VeryOld,
-            CreatureConstants.Dragon_Brass_VeryYoung,
-            CreatureConstants.Dragon_Brass_Wyrm,
-            CreatureConstants.Dragon_Brass_Wyrmling,
-            CreatureConstants.Dragon_Brass_Young,
-            CreatureConstants.Dragon_Brass_YoungAdult)]
-        [TestCase(CreatureConstants.Dragon_Bronze,
-            CreatureConstants.Dragon_Bronze_Adult,
-            CreatureConstants.Dragon_Bronze_Ancient,
-            CreatureConstants.Dragon_Bronze_GreatWyrm,
-            CreatureConstants.Dragon_Bronze_Juvenile,
-            CreatureConstants.Dragon_Bronze_MatureAdult,
-            CreatureConstants.Dragon_Bronze_Old,
-            CreatureConstants.Dragon_Bronze_VeryOld,
-            CreatureConstants.Dragon_Bronze_VeryYoung,
-            CreatureConstants.Dragon_Bronze_Wyrm,
-            CreatureConstants.Dragon_Bronze_Wyrmling,
-            CreatureConstants.Dragon_Bronze_Young,
-            CreatureConstants.Dragon_Bronze_YoungAdult)]
-        [TestCase(CreatureConstants.Dragon_Copper,
-            CreatureConstants.Dragon_Copper_Adult,
-            CreatureConstants.Dragon_Copper_Ancient,
-            CreatureConstants.Dragon_Copper_GreatWyrm,
-            CreatureConstants.Dragon_Copper_Juvenile,
-            CreatureConstants.Dragon_Copper_MatureAdult,
-            CreatureConstants.Dragon_Copper_Old,
-            CreatureConstants.Dragon_Copper_VeryOld,
-            CreatureConstants.Dragon_Copper_VeryYoung,
-            CreatureConstants.Dragon_Copper_Wyrm,
-            CreatureConstants.Dragon_Copper_Wyrmling,
-            CreatureConstants.Dragon_Copper_Young,
-            CreatureConstants.Dragon_Copper_YoungAdult)]
-        [TestCase(CreatureConstants.Dragon_Gold,
-            CreatureConstants.Dragon_Gold_Adult,
-            CreatureConstants.Dragon_Gold_Ancient,
-            CreatureConstants.Dragon_Gold_GreatWyrm,
-            CreatureConstants.Dragon_Gold_Juvenile,
-            CreatureConstants.Dragon_Gold_MatureAdult,
-            CreatureConstants.Dragon_Gold_Old,
-            CreatureConstants.Dragon_Gold_VeryOld,
-            CreatureConstants.Dragon_Gold_VeryYoung,
-            CreatureConstants.Dragon_Gold_Wyrm,
-            CreatureConstants.Dragon_Gold_Wyrmling,
-            CreatureConstants.Dragon_Gold_Young,
-            CreatureConstants.Dragon_Gold_YoungAdult)]
-        [TestCase(CreatureConstants.Dragon_Green,
-            CreatureConstants.Dragon_Green_Adult,
-            CreatureConstants.Dragon_Green_Ancient,
-            CreatureConstants.Dragon_Green_GreatWyrm,
-            CreatureConstants.Dragon_Green_Juvenile,
-            CreatureConstants.Dragon_Green_MatureAdult,
-            CreatureConstants.Dragon_Green_Old,
-            CreatureConstants.Dragon_Green_VeryOld,
-            CreatureConstants.Dragon_Green_VeryYoung,
-            CreatureConstants.Dragon_Green_Wyrm,
-            CreatureConstants.Dragon_Green_Wyrmling,
-            CreatureConstants.Dragon_Green_Young,
-            CreatureConstants.Dragon_Green_YoungAdult)]
-        [TestCase(CreatureConstants.Dragon_Red,
-            CreatureConstants.Dragon_Red_Adult,
-            CreatureConstants.Dragon_Red_Ancient,
-            CreatureConstants.Dragon_Red_GreatWyrm,
-            CreatureConstants.Dragon_Red_Juvenile,
-            CreatureConstants.Dragon_Red_MatureAdult,
-            CreatureConstants.Dragon_Red_Old,
-            CreatureConstants.Dragon_Red_VeryOld,
-            CreatureConstants.Dragon_Red_VeryYoung,
-            CreatureConstants.Dragon_Red_Wyrm,
-            CreatureConstants.Dragon_Red_Wyrmling,
-            CreatureConstants.Dragon_Red_Young,
-            CreatureConstants.Dragon_Red_YoungAdult)]
-        [TestCase(CreatureConstants.Dragon_Silver,
-            CreatureConstants.Dragon_Silver_Adult,
-            CreatureConstants.Dragon_Silver_Ancient,
-            CreatureConstants.Dragon_Silver_GreatWyrm,
-            CreatureConstants.Dragon_Silver_Juvenile,
-            CreatureConstants.Dragon_Silver_MatureAdult,
-            CreatureConstants.Dragon_Silver_Old,
-            CreatureConstants.Dragon_Silver_VeryOld,
-            CreatureConstants.Dragon_Silver_VeryYoung,
-            CreatureConstants.Dragon_Silver_Wyrm,
-            CreatureConstants.Dragon_Silver_Wyrmling,
-            CreatureConstants.Dragon_Silver_Young,
-            CreatureConstants.Dragon_Silver_YoungAdult)]
-        [TestCase(CreatureConstants.Dragon_White,
-            CreatureConstants.Dragon_White_Adult,
-            CreatureConstants.Dragon_White_Ancient,
-            CreatureConstants.Dragon_White_GreatWyrm,
-            CreatureConstants.Dragon_White_Juvenile,
-            CreatureConstants.Dragon_White_MatureAdult,
-            CreatureConstants.Dragon_White_Old,
-            CreatureConstants.Dragon_White_VeryOld,
-            CreatureConstants.Dragon_White_VeryYoung,
-            CreatureConstants.Dragon_White_Wyrm,
-            CreatureConstants.Dragon_White_Wyrmling,
-            CreatureConstants.Dragon_White_Young,
-            CreatureConstants.Dragon_White_YoungAdult)]
-        [TestCase(CreatureConstants.Drow,
-            CreatureConstants.Drow_Captain,
-            CreatureConstants.Drow_Leader,
-            CreatureConstants.Drow_Lieutenant,
-            CreatureConstants.Drow_Noncombatant,
-            CreatureConstants.Drow_Sergeant,
-            CreatureConstants.Drow_Warrior)]
-        [TestCase(CreatureConstants.Duergar,
-            CreatureConstants.Duergar_Captain,
-            CreatureConstants.Duergar_Leader,
-            CreatureConstants.Duergar_Lieutenant,
-            CreatureConstants.Duergar_Noncombatant,
-            CreatureConstants.Duergar_Sergeant,
-            CreatureConstants.Duergar_Warrior)]
-        [TestCase(CreatureConstants.Dwarf,
-            CreatureConstants.Dwarf_Deep,
-            CreatureConstants.Dwarf_Hill,
-            CreatureConstants.Dwarf_Mountain)]
-        [TestCase(CreatureConstants.Dwarf_Deep,
-            CreatureConstants.Dwarf_Deep_Captain,
-            CreatureConstants.Dwarf_Deep_Leader,
-            CreatureConstants.Dwarf_Deep_Lieutenant,
-            CreatureConstants.Dwarf_Deep_Noncombatant,
-            CreatureConstants.Dwarf_Deep_Sergeant,
-            CreatureConstants.Dwarf_Deep_Warrior)]
-        [TestCase(CreatureConstants.Dwarf_Hill,
-            CreatureConstants.Dwarf_Hill_Captain,
-            CreatureConstants.Dwarf_Hill_Leader,
-            CreatureConstants.Dwarf_Hill_Lieutenant,
-            CreatureConstants.Dwarf_Hill_Noncombatant,
-            CreatureConstants.Dwarf_Hill_Sergeant,
-            CreatureConstants.Dwarf_Hill_Warrior)]
-        [TestCase(CreatureConstants.Dwarf_Mountain,
-            CreatureConstants.Dwarf_Mountain_Captain,
-            CreatureConstants.Dwarf_Mountain_Leader,
-            CreatureConstants.Dwarf_Mountain_Lieutenant,
-            CreatureConstants.Dwarf_Mountain_Noncombatant,
-            CreatureConstants.Dwarf_Mountain_Sergeant,
-            CreatureConstants.Dwarf_Mountain_Warrior)]
-        [TestCase(CreatureConstants.Eagle,
-            CreatureConstants.Eagle,
-            CreatureConstants.Eagle_Giant)]
-        [TestCase(CreatureConstants.Elemental_Air,
-            CreatureConstants.Elemental_Air_Elder,
-            CreatureConstants.Elemental_Air_Greater,
-            CreatureConstants.Elemental_Air_Huge,
-            CreatureConstants.Elemental_Air_Large,
-            CreatureConstants.Elemental_Air_Medium,
-            CreatureConstants.Elemental_Air_Small)]
-        [TestCase(CreatureConstants.Elemental_Earth,
-            CreatureConstants.Elemental_Earth_Elder,
-            CreatureConstants.Elemental_Earth_Greater,
-            CreatureConstants.Elemental_Earth_Huge,
-            CreatureConstants.Elemental_Earth_Large,
-            CreatureConstants.Elemental_Earth_Medium,
-            CreatureConstants.Elemental_Earth_Small)]
-        [TestCase(CreatureConstants.Elemental_Fire,
-            CreatureConstants.Elemental_Fire_Elder,
-            CreatureConstants.Elemental_Fire_Greater,
-            CreatureConstants.Elemental_Fire_Huge,
-            CreatureConstants.Elemental_Fire_Large,
-            CreatureConstants.Elemental_Fire_Medium,
-            CreatureConstants.Elemental_Fire_Small)]
-        [TestCase(CreatureConstants.Elemental_Water,
-            CreatureConstants.Elemental_Water_Elder,
-            CreatureConstants.Elemental_Water_Greater,
-            CreatureConstants.Elemental_Water_Huge,
-            CreatureConstants.Elemental_Water_Large,
-            CreatureConstants.Elemental_Water_Medium,
-            CreatureConstants.Elemental_Water_Small)]
-        [TestCase(CreatureConstants.Elf,
-            CreatureConstants.Elf_Gray,
-            CreatureConstants.Elf_Half,
-            CreatureConstants.Elf_High,
-            CreatureConstants.Elf_Wild,
-            CreatureConstants.Elf_Wood)]
-        [TestCase(CreatureConstants.Elf_Aquatic,
-            CreatureConstants.Elf_Aquatic_Captain,
-            CreatureConstants.Elf_Aquatic_Leader,
-            CreatureConstants.Elf_Aquatic_Lieutenant,
-            CreatureConstants.Elf_Aquatic_Noncombatant,
-            CreatureConstants.Elf_Aquatic_Sergeant,
-            CreatureConstants.Elf_Aquatic_Warrior)]
-        [TestCase(CreatureConstants.Elf_Gray,
-            CreatureConstants.Elf_Gray_Captain,
-            CreatureConstants.Elf_Gray_Leader,
-            CreatureConstants.Elf_Gray_Lieutenant,
-            CreatureConstants.Elf_Gray_Noncombatant,
-            CreatureConstants.Elf_Gray_Sergeant,
-            CreatureConstants.Elf_Gray_Warrior)]
-        [TestCase(CreatureConstants.Elf_Half,
-            CreatureConstants.Elf_Half_Captain,
-            CreatureConstants.Elf_Half_Leader,
-            CreatureConstants.Elf_Half_Lieutenant,
-            CreatureConstants.Elf_Half_Noncombatant,
-            CreatureConstants.Elf_Half_Sergeant,
-            CreatureConstants.Elf_Half_Warrior)]
-        [TestCase(CreatureConstants.Elf_High,
-            CreatureConstants.Elf_High_Captain,
-            CreatureConstants.Elf_High_Leader,
-            CreatureConstants.Elf_High_Lieutenant,
-            CreatureConstants.Elf_High_Noncombatant,
-            CreatureConstants.Elf_High_Sergeant,
-            CreatureConstants.Elf_High_Warrior)]
-        [TestCase(CreatureConstants.Elf_Wild,
-            CreatureConstants.Elf_Wild_Captain,
-            CreatureConstants.Elf_Wild_Leader,
-            CreatureConstants.Elf_Wild_Lieutenant,
-            CreatureConstants.Elf_Wild_Noncombatant,
-            CreatureConstants.Elf_Wild_Sergeant,
-            CreatureConstants.Elf_Wild_Warrior)]
-        [TestCase(CreatureConstants.Elf_Wood,
-            CreatureConstants.Elf_Wood_Captain,
-            CreatureConstants.Elf_Wood_Leader,
-            CreatureConstants.Elf_Wood_Lieutenant,
-            CreatureConstants.Elf_Wood_Noncombatant,
-            CreatureConstants.Elf_Wood_Sergeant,
-            CreatureConstants.Elf_Wood_Warrior)]
-        [TestCase(CreatureConstants.Expert_Adviser,
-            CreatureConstants.Expert_Adviser_Level1,
-            CreatureConstants.Expert_Adviser_Level10To11,
-            CreatureConstants.Expert_Adviser_Level12To13,
-            CreatureConstants.Expert_Adviser_Level14To15,
-            CreatureConstants.Expert_Adviser_Level16To17,
-            CreatureConstants.Expert_Adviser_Level18To19,
-            CreatureConstants.Expert_Adviser_Level20,
-            CreatureConstants.Expert_Adviser_Level2To3,
-            CreatureConstants.Expert_Adviser_Level4To5,
-            CreatureConstants.Expert_Adviser_Level6To7,
-            CreatureConstants.Expert_Adviser_Level8To9)]
-        [TestCase(CreatureConstants.Expert_Artisan,
-            CreatureConstants.Expert_Artisan_Level1,
-            CreatureConstants.Expert_Artisan_Level10To11,
-            CreatureConstants.Expert_Artisan_Level12To13,
-            CreatureConstants.Expert_Artisan_Level14To15,
-            CreatureConstants.Expert_Artisan_Level16To17,
-            CreatureConstants.Expert_Artisan_Level18To19,
-            CreatureConstants.Expert_Artisan_Level20,
-            CreatureConstants.Expert_Artisan_Level2To3,
-            CreatureConstants.Expert_Artisan_Level4To5,
-            CreatureConstants.Expert_Artisan_Level6To7,
-            CreatureConstants.Expert_Artisan_Level8To9)]
-        [TestCase(CreatureConstants.FiendishCreature,
-            CreatureConstants.Centipede_Monstrous_Fiendish_Colossal,
-            CreatureConstants.Centipede_Monstrous_Fiendish_Gargantuan,
-            CreatureConstants.Centipede_Monstrous_Fiendish_Huge,
-            CreatureConstants.Centipede_Monstrous_Fiendish_Large,
-            CreatureConstants.Centipede_Monstrous_Fiendish_Medium,
-            CreatureConstants.Rat_Dire_Fiendish,
-            CreatureConstants.Raven_Fiendish)]
-        [TestCase(CreatureConstants.Fighter_Captain,
-            CreatureConstants.Fighter_Captain_Level1,
-            CreatureConstants.Fighter_Captain_Level10,
-            CreatureConstants.Fighter_Captain_Level11,
-            CreatureConstants.Fighter_Captain_Level2,
-            CreatureConstants.Fighter_Captain_Level3,
-            CreatureConstants.Fighter_Captain_Level4,
-            CreatureConstants.Fighter_Captain_Level5,
-            CreatureConstants.Fighter_Captain_Level6,
-            CreatureConstants.Fighter_Captain_Level7,
-            CreatureConstants.Fighter_Captain_Level8,
-            CreatureConstants.Fighter_Captain_Level9)]
-        [TestCase(CreatureConstants.Fighter_Leader,
-            CreatureConstants.Fighter_Leader_Level1,
-            CreatureConstants.Fighter_Leader_Level10,
-            CreatureConstants.Fighter_Leader_Level11,
-            CreatureConstants.Fighter_Leader_Level2,
-            CreatureConstants.Fighter_Leader_Level3,
-            CreatureConstants.Fighter_Leader_Level4,
-            CreatureConstants.Fighter_Leader_Level5,
-            CreatureConstants.Fighter_Leader_Level6,
-            CreatureConstants.Fighter_Leader_Level7,
-            CreatureConstants.Fighter_Leader_Level8,
-            CreatureConstants.Fighter_Leader_Level9)]
-        [TestCase(CreatureConstants.Formian,
-            CreatureConstants.FormianMyrmarch,
-            CreatureConstants.FormianQueen,
-            CreatureConstants.FormianTaskmaster,
-            CreatureConstants.FormianWarrior,
-            CreatureConstants.FormianWorker)]
-        [TestCase(CreatureConstants.Fungus,
-            CreatureConstants.Shrieker,
-            CreatureConstants.VioletFungus)]
-        [TestCase(CreatureConstants.Genie,
-            CreatureConstants.Djinni,
-            CreatureConstants.Efreeti,
-            CreatureConstants.Janni)]
-        [TestCase(CreatureConstants.Ghoul,
-            CreatureConstants.Ghoul,
-            CreatureConstants.Ghoul_Ghast)]
-        [TestCase(CreatureConstants.Giant_Cloud,
-            CreatureConstants.Giant_Cloud,
-            CreatureConstants.Giant_Cloud_Leader,
-            CreatureConstants.Giant_Cloud_Noncombatant)]
-        [TestCase(CreatureConstants.Giant_Fire,
-            CreatureConstants.Giant_Fire,
-            CreatureConstants.Giant_Fire_Adept_1stTo2nd,
-            CreatureConstants.Giant_Fire_Adept_3rdTo5th,
-            CreatureConstants.Giant_Fire_Adept_6thTo7th,
-            CreatureConstants.Giant_Fire_Cleric_1stTo2nd,
-            CreatureConstants.Giant_Fire_Leader_6thTo7th,
-            CreatureConstants.Giant_Fire_Noncombatant,
-            CreatureConstants.Giant_Fire_Sorcerer_3rdTo5th)]
-        [TestCase(CreatureConstants.Giant_Frost,
-            CreatureConstants.Giant_Frost,
-            CreatureConstants.Giant_Frost_Adept_1stTo2nd,
-            CreatureConstants.Giant_Frost_Adept_3rdTo5th,
-            CreatureConstants.Giant_Frost_Adept_6thTo7th,
-            CreatureConstants.Giant_Frost_Cleric_1stTo2nd,
-            CreatureConstants.Giant_Frost_Jarl,
-            CreatureConstants.Giant_Frost_Leader_6thTo7th,
-            CreatureConstants.Giant_Frost_Noncombatant,
-            CreatureConstants.Giant_Frost_Sorcerer_3rdTo5th)]
-        [TestCase(CreatureConstants.Giant_Hill,
-            CreatureConstants.Giant_Hill,
-            CreatureConstants.Giant_Hill_Noncombatant,
-            CreatureConstants.Wereboar_HillGiantDire)]
-        [TestCase(CreatureConstants.Giant_Stone,
-            CreatureConstants.Giant_Stone,
-            CreatureConstants.Giant_Stone_Elder,
-            CreatureConstants.Giant_Stone_Noncombatant)]
-        [TestCase(CreatureConstants.Giant_Storm,
-            CreatureConstants.Giant_Storm,
-            CreatureConstants.Giant_Storm_Leader,
-            CreatureConstants.Giant_Storm_Noncombatant)]
-        [TestCase(CreatureConstants.Githyanki,
-            CreatureConstants.Githyanki_Fighter,
-            CreatureConstants.Githyanki_Sergeant,
-            CreatureConstants.Githyanki_Captain,
-            CreatureConstants.Githyanki_Lieutenant,
-            CreatureConstants.Githyanki_SupremeLeader)]
-        [TestCase(CreatureConstants.Githzerai,
-            CreatureConstants.Githzerai_Student,
-            CreatureConstants.Githzerai_Teacher,
-            CreatureConstants.Githzerai_Mentor,
-            CreatureConstants.Githzerai_Master,
-            CreatureConstants.Githzerai_Sensei)]
-        [TestCase(CreatureConstants.Gnoll,
-            CreatureConstants.Gnoll,
-            CreatureConstants.Gnoll_Leader_4thTo6th,
-            CreatureConstants.Gnoll_Leader_6thTo8th,
-            CreatureConstants.Gnoll_Lieutenant,
-            CreatureConstants.Gnoll_Noncombatant,
-            CreatureConstants.Gnoll_Sergeant)]
-        [TestCase(CreatureConstants.Gnome,
-            CreatureConstants.Gnome_Forest,
-            CreatureConstants.Gnome_Rock)]
-        [TestCase(CreatureConstants.Gnome_Forest,
-            CreatureConstants.Gnome_Forest_Captain,
-            CreatureConstants.Gnome_Forest_Leader,
-            CreatureConstants.Gnome_Forest_Lieutenant_3rd,
-            CreatureConstants.Gnome_Forest_Lieutenant_5th,
-            CreatureConstants.Gnome_Forest_Sergeant,
-            CreatureConstants.Gnome_Forest_Warrior)]
-        [TestCase(CreatureConstants.Gnome_Rock,
-            CreatureConstants.Gnome_Rock_Captain,
-            CreatureConstants.Gnome_Rock_Leader,
-            CreatureConstants.Gnome_Rock_Lieutenant_3rd,
-            CreatureConstants.Gnome_Rock_Lieutenant_5th,
-            CreatureConstants.Gnome_Rock_Sergeant,
-            CreatureConstants.Gnome_Rock_Warrior)]
-        [TestCase(CreatureConstants.Goblin,
-            CreatureConstants.Goblin_Leader_4thTo6th,
-            CreatureConstants.Goblin_Leader_6thTo8th,
-            CreatureConstants.Goblin_Lieutenant,
-            CreatureConstants.Goblin_Noncombatant,
-            CreatureConstants.Goblin_Sergeant,
-            CreatureConstants.Goblin_Warrior)]
-        [TestCase(CreatureConstants.Golem,
-            CreatureConstants.Golem_Clay,
-            CreatureConstants.Golem_Flesh,
-            CreatureConstants.Golem_Iron,
-            CreatureConstants.Golem_Stone,
-            CreatureConstants.Golem_Stone_Greater)]
-        [TestCase(CreatureConstants.Grimlock,
-            CreatureConstants.Grimlock,
-            CreatureConstants.Grimlock_Leader)]
-        [TestCase(CreatureConstants.Hag,
-            CreatureConstants.Annis,
-            CreatureConstants.GreenHag,
-            CreatureConstants.SeaHag)]
-        [TestCase(CreatureConstants.Halfling,
-            CreatureConstants.Halfling_Deep,
-            CreatureConstants.Halfling_Lightfoot,
-            CreatureConstants.Halfling_Tallfellow)]
-        [TestCase(CreatureConstants.Halfling_Deep,
-            CreatureConstants.Halfling_Deep_Captain,
-            CreatureConstants.Halfling_Deep_Leader,
-            CreatureConstants.Halfling_Deep_Lieutenant,
-            CreatureConstants.Halfling_Deep_Noncombatant,
-            CreatureConstants.Halfling_Deep_Sergeant,
-            CreatureConstants.Halfling_Deep_Warrior)]
-        [TestCase(CreatureConstants.Halfling_Lightfoot,
-            CreatureConstants.Halfling_Lightfoot_Captain,
-            CreatureConstants.Halfling_Lightfoot_Leader,
-            CreatureConstants.Halfling_Lightfoot_Lieutenant,
-            CreatureConstants.Halfling_Lightfoot_Noncombatant,
-            CreatureConstants.Halfling_Lightfoot_Sergeant,
-            CreatureConstants.Halfling_Lightfoot_Warrior)]
-        [TestCase(CreatureConstants.Halfling_Tallfellow,
-            CreatureConstants.Halfling_Tallfellow_Captain,
-            CreatureConstants.Halfling_Tallfellow_Leader,
-            CreatureConstants.Halfling_Tallfellow_Lieutenant,
-            CreatureConstants.Halfling_Tallfellow_Noncombatant,
-            CreatureConstants.Halfling_Tallfellow_Sergeant,
-            CreatureConstants.Halfling_Tallfellow_Warrior)]
-        [TestCase(CreatureConstants.Harpy,
-            CreatureConstants.Harpy,
-            CreatureConstants.HarpyArcher)]
-        [TestCase(CreatureConstants.Hellwasp,
-            CreatureConstants.Hellwasp_Swarm)]
-        [TestCase(CreatureConstants.Hobgoblin,
-            CreatureConstants.Hobgoblin_Leader_4thTo6th,
-            CreatureConstants.Hobgoblin_Leader_6thTo8th,
-            CreatureConstants.Hobgoblin_Lieutenant,
-            CreatureConstants.Hobgoblin_Noncombatant,
-            CreatureConstants.Hobgoblin_Sergeant,
-            CreatureConstants.Hobgoblin_Warrior)]
-        [TestCase(CreatureConstants.Horse,
-            CreatureConstants.Horse_Heavy,
-            CreatureConstants.Horse_Heavy_War,
-            CreatureConstants.Horse_Light,
-            CreatureConstants.Horse_Light_War)]
-        [TestCase(CreatureConstants.HoundArchon,
-            CreatureConstants.HoundArchon,
-            CreatureConstants.HoundArchon_Hero)]
-        [TestCase(CreatureConstants.Hydra,
-            CreatureConstants.Cryohydra,
-            CreatureConstants.Pyrohydra,
-            CreatureConstants.Hydra_10Heads,
-            CreatureConstants.Hydra_11Heads,
-            CreatureConstants.Hydra_12Heads,
-            CreatureConstants.Hydra_5Heads,
-            CreatureConstants.Hydra_6Heads,
-            CreatureConstants.Hydra_7Heads,
-            CreatureConstants.Hydra_8Heads,
-            CreatureConstants.Hydra_9Heads)]
-        [TestCase(CreatureConstants.Inevitable,
-            CreatureConstants.Kolyarut,
-            CreatureConstants.Marut,
-            CreatureConstants.Zelekhut)]
-        [TestCase(CreatureConstants.Kobold,
-            CreatureConstants.Kobold_Leader_4thTo6th,
-            CreatureConstants.Kobold_Leader_6thTo8th,
-            CreatureConstants.Kobold_Lieutenant,
-            CreatureConstants.Kobold_Noncombatant,
-            CreatureConstants.Kobold_Sergeant,
-            CreatureConstants.Kobold_Warrior)]
-        [TestCase(CreatureConstants.KuoToa,
-            CreatureConstants.KuoToa,
-            CreatureConstants.KuoToa_Whip_3rd,
-            CreatureConstants.KuoToa_Monitor,
-            CreatureConstants.KuoToa_Fighter_8th,
-            CreatureConstants.KuoToa_Noncombatant,
-            CreatureConstants.KuoToa_Fighter_10th,
-            CreatureConstants.KuoToa_Whip_10th)]
-        [TestCase(CreatureConstants.Lammasu,
-            CreatureConstants.Lammasu,
-            CreatureConstants.Lammasu_GoldenProtector)]
-        [TestCase(CreatureConstants.Lion,
-            CreatureConstants.Lion,
-            CreatureConstants.Lion_Dire)]
-        [TestCase(CreatureConstants.Livestock,
-            CreatureConstants.Livestock_Noncombatant)]
-        [TestCase(CreatureConstants.Lizard,
-            CreatureConstants.Lizard,
-            CreatureConstants.Lizard_Monitor)]
-        [TestCase(CreatureConstants.Lizardfolk,
-            CreatureConstants.Lizardfolk,
-            CreatureConstants.Lizardfolk_Leader_3rdTo6th,
-            CreatureConstants.Lizardfolk_Leader_4thTo10th,
-            CreatureConstants.Lizardfolk_Lieutenant,
-            CreatureConstants.Lizardfolk_Noncombatant)]
-        [TestCase(CreatureConstants.Locathah,
-            CreatureConstants.Locathah_Warrior,
-            CreatureConstants.Locathah_Sergeant,
-            CreatureConstants.Locathah_Leader,
-            CreatureConstants.Locathah_Noncombatant,
-            CreatureConstants.Locathah_Lieutenant,
-            CreatureConstants.Locathah_Captain)]
-        [TestCase(CreatureConstants.Locust,
-            CreatureConstants.Locust_Swarm)]
-        [TestCase(CreatureConstants.Lycanthrope,
-            CreatureConstants.Werebear,
-            CreatureConstants.Wereboar,
-            CreatureConstants.Wererat,
-            CreatureConstants.Weretiger,
-            CreatureConstants.Werewolf)]
-        [TestCase(CreatureConstants.Mephit,
-            CreatureConstants.Mephit_Air,
-            CreatureConstants.Mephit_Dust,
-            CreatureConstants.Mephit_Earth,
-            CreatureConstants.Mephit_Fire,
-            CreatureConstants.Mephit_Ice,
-            CreatureConstants.Mephit_Magma,
-            CreatureConstants.Mephit_Ooze,
-            CreatureConstants.Mephit_Salt,
-            CreatureConstants.Mephit_Steam,
-            CreatureConstants.Mephit_Water)]
-        [TestCase(CreatureConstants.Merfolk,
-            CreatureConstants.Merfolk_Warrior,
-            CreatureConstants.Merfolk_Lieutenant_3rd,
-            CreatureConstants.Merfolk_Leader,
-            CreatureConstants.Merfolk_Sergeant,
-            CreatureConstants.Merfolk_Lieutenant_5th,
-            CreatureConstants.Merfolk_Captain)]
-        [TestCase(CreatureConstants.MindFlayer,
-            CreatureConstants.MindFlayer,
-            CreatureConstants.MindFlayer_Sorcerer)]
-        [TestCase(CreatureConstants.Mummy,
-            CreatureConstants.Mummy,
-            CreatureConstants.MummyLord)]
-        [TestCase(CreatureConstants.Naga,
-            CreatureConstants.Naga_Dark,
-            CreatureConstants.Naga_Guardian,
-            CreatureConstants.Naga_Spirit,
-            CreatureConstants.Naga_Water)]
-        [TestCase(CreatureConstants.Nightmare,
-            CreatureConstants.Nightmare,
-            CreatureConstants.Nightmare_Cauchemar)]
-        [TestCase(CreatureConstants.Nightshade,
-            CreatureConstants.Nightcrawler,
-            CreatureConstants.Nightwalker,
-            CreatureConstants.Nightwing)]
-        [TestCase(CreatureConstants.NPC,
-            CreatureConstants.NPC_Level1,
-            CreatureConstants.NPC_Level10To11,
-            CreatureConstants.NPC_Level12To13,
-            CreatureConstants.NPC_Level14To15,
-            CreatureConstants.NPC_Level16To17,
-            CreatureConstants.NPC_Level18To19,
-            CreatureConstants.NPC_Level20,
-            CreatureConstants.NPC_Level2To3,
-            CreatureConstants.NPC_Level4To5,
-            CreatureConstants.NPC_Level6To7,
-            CreatureConstants.NPC_Level8To9)]
-        [TestCase(CreatureConstants.Octopus,
-            CreatureConstants.Octopus,
-            CreatureConstants.Octopus_Giant)]
-        [TestCase(CreatureConstants.Ogre,
-            CreatureConstants.Ogre,
-            CreatureConstants.Ogre_Barbarian)]
-        [TestCase(CreatureConstants.Ogre_Merrow,
-            CreatureConstants.Ogre_Merrow,
-            CreatureConstants.Ogre_Merrow_Barbarian)]
-        [TestCase(CreatureConstants.Orc,
-            CreatureConstants.Orc_Captain,
-            CreatureConstants.Orc_Leader,
-            CreatureConstants.Orc_Lieutenant,
-            CreatureConstants.Orc_Noncombatant,
-            CreatureConstants.Orc_Sergeant,
-            CreatureConstants.Orc_Warrior)]
-        [TestCase(CreatureConstants.Orc_Half,
-            CreatureConstants.Orc_Half_Captain,
-            CreatureConstants.Orc_Half_Leader,
-            CreatureConstants.Orc_Half_Lieutenant,
-            CreatureConstants.Orc_Half_Noncombatant,
-            CreatureConstants.Orc_Half_Sergeant,
-            CreatureConstants.Orc_Half_Warrior)]
-        [TestCase(CreatureConstants.Owl,
-            CreatureConstants.Owl,
-            CreatureConstants.Owl_Giant)]
-        [TestCase(CreatureConstants.Pixie,
-            CreatureConstants.Pixie,
-            CreatureConstants.Pixie_WithIrresistableDance)]
-        [TestCase(CreatureConstants.Pony,
-            CreatureConstants.Pony,
-            CreatureConstants.Pony_War)]
-        [TestCase(CreatureConstants.Pyrohydra,
-            CreatureConstants.Pyrohydra_10Heads,
-            CreatureConstants.Pyrohydra_11Heads,
-            CreatureConstants.Pyrohydra_12Heads,
-            CreatureConstants.Pyrohydra_5Heads,
-            CreatureConstants.Pyrohydra_6Heads,
-            CreatureConstants.Pyrohydra_7Heads,
-            CreatureConstants.Pyrohydra_8Heads,
-            CreatureConstants.Pyrohydra_9Heads)]
-        [TestCase(CreatureConstants.Rat,
-            CreatureConstants.Rat,
-            CreatureConstants.Rat_Dire,
-            CreatureConstants.Rat_Swarm,
-            CreatureConstants.Wererat)]
-        [TestCase(CreatureConstants.Sahuagin,
-            CreatureConstants.Sahuagin,
-            CreatureConstants.Sahuagin_Baron,
-            CreatureConstants.Sahuagin_Chieftan,
-            CreatureConstants.Sahuagin_Guard,
-            CreatureConstants.Sahuagin_Lieutenant,
-            CreatureConstants.Sahuagin_Noncombatant,
-            CreatureConstants.Sahuagin_Priest,
-            CreatureConstants.Sahuagin_Underpriest)]
-        [TestCase(CreatureConstants.Salamander,
-            CreatureConstants.Salamander_Average,
-            CreatureConstants.Salamander_Flamebrother,
-            CreatureConstants.Salamander_Noble)]
-        [TestCase(CreatureConstants.Satyr,
-            CreatureConstants.Satyr,
-            CreatureConstants.Satyr_WithPipes)]
-        [TestCase(CreatureConstants.Scorpion_Monstrous,
-            CreatureConstants.Scorpion_Monstrous_Colossal,
-            CreatureConstants.Scorpion_Monstrous_Gargantuan,
-            CreatureConstants.Scorpion_Monstrous_Huge,
-            CreatureConstants.Scorpion_Monstrous_Large,
-            CreatureConstants.Scorpion_Monstrous_Medium,
-            CreatureConstants.Scorpion_Monstrous_Small,
-            CreatureConstants.Scorpion_Monstrous_Tiny)]
-        [TestCase(CreatureConstants.Scorpionfolk,
-            CreatureConstants.Scorpionfolk,
-            CreatureConstants.Scorpionfolk_Cleric,
-            CreatureConstants.Scorpionfolk_Ranger_3rdTo5th,
-            CreatureConstants.Scorpionfolk_Ranger_6thTo8th)]
-        [TestCase(CreatureConstants.Shadow,
-            CreatureConstants.Shadow,
-            CreatureConstants.Shadow_Greater)]
-        [TestCase(CreatureConstants.Shark,
-            CreatureConstants.Shark_Dire,
-            CreatureConstants.Shark_Medium,
-            CreatureConstants.Shark_Large,
-            CreatureConstants.Shark_Huge)]
-        [TestCase(CreatureConstants.Skeleton,
-            CreatureConstants.Skeleton_Chimera,
-            CreatureConstants.Skeleton_Dragon_Red_YoungAdult,
-            CreatureConstants.Skeleton_Ettin,
-            CreatureConstants.Skeleton_Giant_Cloud,
-            CreatureConstants.Skeleton_Human,
-            CreatureConstants.Skeleton_Megaraptor,
-            CreatureConstants.Skeleton_Owlbear,
-            CreatureConstants.Skeleton_Troll,
-            CreatureConstants.Skeleton_Wolf)]
-        [TestCase(CreatureConstants.Slaad,
-            CreatureConstants.Slaad_Blue,
-            CreatureConstants.Slaad_Death,
-            CreatureConstants.Slaad_Gray,
-            CreatureConstants.Slaad_Green,
-            CreatureConstants.Slaad_Red)]
-        [TestCase(CreatureConstants.Snake_Constrictor,
-            CreatureConstants.Snake_Constrictor,
-            CreatureConstants.Snake_Constrictor_Giant)]
-        [TestCase(CreatureConstants.Snake_Viper,
-            CreatureConstants.Snake_Viper_Huge,
-            CreatureConstants.Snake_Viper_Large,
-            CreatureConstants.Snake_Viper_Medium,
-            CreatureConstants.Snake_Viper_Small,
-            CreatureConstants.Snake_Viper_Tiny)]
-        [TestCase(CreatureConstants.Spider_Monstrous,
-            CreatureConstants.Spider_Monstrous_Colossal,
-            CreatureConstants.Spider_Monstrous_Gargantuan,
-            CreatureConstants.Spider_Monstrous_Huge,
-            CreatureConstants.Spider_Monstrous_Large,
-            CreatureConstants.Spider_Monstrous_Medium,
-            CreatureConstants.Spider_Monstrous_Small,
-            CreatureConstants.Spider_Monstrous_Tiny)]
-        [TestCase(CreatureConstants.Sprite,
-            CreatureConstants.Grig,
-            CreatureConstants.Pixie,
-            CreatureConstants.Nixie)]
-        [TestCase(CreatureConstants.Squid,
-            CreatureConstants.Squid,
-            CreatureConstants.Squid_Giant)]
-        [TestCase(CreatureConstants.Svirfneblin,
-            CreatureConstants.Svirfneblin_Captain,
-            CreatureConstants.Svirfneblin_Leader,
-            CreatureConstants.Svirfneblin_Lieutenant_3rd,
-            CreatureConstants.Svirfneblin_Lieutenant_5th,
-            CreatureConstants.Svirfneblin_Sergeant,
-            CreatureConstants.Svirfneblin_Warrior)]
-        [TestCase(CreatureConstants.Tiefling,
-            CreatureConstants.Tiefling_Warrior)]
-        [TestCase(CreatureConstants.Tiger,
-            CreatureConstants.Tiger,
-            CreatureConstants.Tiger_Dire,
-            CreatureConstants.Weretiger)]
-        [TestCase(CreatureConstants.Tojanida,
-            CreatureConstants.Tojanida_Juvenile,
-            CreatureConstants.Tojanida_Adult,
-            CreatureConstants.Tojanida_Elder)]
-        [TestCase(CreatureConstants.Troglodyte,
-            CreatureConstants.Troglodyte,
-            CreatureConstants.Troglodyte_Noncombatant)]
-        [TestCase(CreatureConstants.Troll,
-            CreatureConstants.Troll,
-            CreatureConstants.Troll_Hunter)]
-        [TestCase(CreatureConstants.Troll_Scrag,
-            CreatureConstants.Troll_Scrag,
-            CreatureConstants.Troll_Scrag_Hunter)]
-        [TestCase(CreatureConstants.UmberHulk,
-            CreatureConstants.UmberHulk,
-            CreatureConstants.UmberHulk_TrulyHorrid)]
-        [TestCase(CreatureConstants.Unicorn,
-            CreatureConstants.Unicorn,
-            CreatureConstants.Unicorn_CelestialCharger)]
-        [TestCase(CreatureConstants.Warrior_Bandit,
-            CreatureConstants.Warrior_Bandit_Level1,
-            CreatureConstants.Warrior_Bandit_Level10To11,
-            CreatureConstants.Warrior_Bandit_Level12To13,
-            CreatureConstants.Warrior_Bandit_Level14To15,
-            CreatureConstants.Warrior_Bandit_Level16To17,
-            CreatureConstants.Warrior_Bandit_Level18To19,
-            CreatureConstants.Warrior_Bandit_Level20,
-            CreatureConstants.Warrior_Bandit_Level2To3,
-            CreatureConstants.Warrior_Bandit_Level4To5,
-            CreatureConstants.Warrior_Bandit_Level6To7,
-            CreatureConstants.Warrior_Bandit_Level8To9)]
-        [TestCase(CreatureConstants.Warrior_Captain,
-            CreatureConstants.Warrior_Captain_Level10To11,
-            CreatureConstants.Warrior_Captain_Level12To13,
-            CreatureConstants.Warrior_Captain_Level14To15,
-            CreatureConstants.Warrior_Captain_Level16To17,
-            CreatureConstants.Warrior_Captain_Level18To19,
-            CreatureConstants.Warrior_Captain_Level20,
-            CreatureConstants.Warrior_Captain_Level2To3,
-            CreatureConstants.Warrior_Captain_Level4To5,
-            CreatureConstants.Warrior_Captain_Level6To7,
-            CreatureConstants.Warrior_Captain_Level8To9)]
-        [TestCase(CreatureConstants.Warrior_Guard,
-            CreatureConstants.Warrior_Guard_Level1,
-            CreatureConstants.Warrior_Guard_Level10To11,
-            CreatureConstants.Warrior_Guard_Level12To13,
-            CreatureConstants.Warrior_Guard_Level14To15,
-            CreatureConstants.Warrior_Guard_Level16To17,
-            CreatureConstants.Warrior_Guard_Level18To19,
-            CreatureConstants.Warrior_Guard_Level20,
-            CreatureConstants.Warrior_Guard_Level2To3,
-            CreatureConstants.Warrior_Guard_Level4To5,
-            CreatureConstants.Warrior_Guard_Level6To7,
-            CreatureConstants.Warrior_Guard_Level8To9)]
-        [TestCase(CreatureConstants.Warrior_Leader,
-            CreatureConstants.Warrior_Leader_Level10To11,
-            CreatureConstants.Warrior_Leader_Level12To13,
-            CreatureConstants.Warrior_Leader_Level14To15,
-            CreatureConstants.Warrior_Leader_Level16To17,
-            CreatureConstants.Warrior_Leader_Level18To19,
-            CreatureConstants.Warrior_Leader_Level20,
-            CreatureConstants.Warrior_Leader_Level2To3,
-            CreatureConstants.Warrior_Leader_Level4To5,
-            CreatureConstants.Warrior_Leader_Level6To7,
-            CreatureConstants.Warrior_Leader_Level8To9)]
-        [TestCase(CreatureConstants.Weasel,
-            CreatureConstants.Weasel,
-            CreatureConstants.Weasel_Dire)]
-        [TestCase(CreatureConstants.Wereboar,
-            CreatureConstants.Wereboar,
-            CreatureConstants.Wereboar_HillGiantDire)]
-        [TestCase(CreatureConstants.Werewolf,
-            CreatureConstants.Werewolf,
-            CreatureConstants.WerewolfLord)]
-        [TestCase(CreatureConstants.Whale,
-            CreatureConstants.Whale_Baleen,
-            CreatureConstants.Whale_Cachalot,
-            CreatureConstants.Whale_Orca)]
-        [TestCase(CreatureConstants.Wolf,
-            CreatureConstants.Werewolf,
-            CreatureConstants.Wolf,
-            CreatureConstants.Wolf_Dire)]
-        [TestCase(CreatureConstants.Wolverine,
-            CreatureConstants.Wolverine,
-            CreatureConstants.Wolverine_Dire)]
-        [TestCase(CreatureConstants.Wraith,
-            CreatureConstants.Wraith,
-            CreatureConstants.Wraith_Dread)]
-        [TestCase(CreatureConstants.Xorn,
-            CreatureConstants.Xorn_Average,
-            CreatureConstants.Xorn_Elder,
-            CreatureConstants.Xorn_Minor)]
-        [TestCase(CreatureConstants.YuanTi,
-            CreatureConstants.YuanTi_Abomination,
-            CreatureConstants.YuanTi_Halfblood,
-            CreatureConstants.YuanTi_Pureblood)]
-        [TestCase(CreatureConstants.Zombie,
-            CreatureConstants.Zombie_Bugbear,
-            CreatureConstants.Zombie_GrayRender,
-            CreatureConstants.Zombie_Human,
-            CreatureConstants.Zombie_Kobold,
-            CreatureConstants.Zombie_Minotaur,
-            CreatureConstants.Zombie_Ogre,
-            CreatureConstants.Zombie_Troglodyte,
-            CreatureConstants.Zombie_Wyvern)]
+        [TestCase(CreatureDataConstants.Aasimar,
+            CreatureDataConstants.Aasimar_Warrior)]
+        [TestCase(CreatureDataConstants.Aboleth,
+            CreatureDataConstants.Aboleth,
+            CreatureDataConstants.Aboleth_Mage)]
+        [TestCase(CreatureDataConstants.Adept_Doctor,
+            CreatureDataConstants.Adept_Doctor_Level1,
+            CreatureDataConstants.Adept_Doctor_Level10To11,
+            CreatureDataConstants.Adept_Doctor_Level12To13,
+            CreatureDataConstants.Adept_Doctor_Level14To15,
+            CreatureDataConstants.Adept_Doctor_Level16To17,
+            CreatureDataConstants.Adept_Doctor_Level18To19,
+            CreatureDataConstants.Adept_Doctor_Level20,
+            CreatureDataConstants.Adept_Doctor_Level2To3,
+            CreatureDataConstants.Adept_Doctor_Level4To5,
+            CreatureDataConstants.Adept_Doctor_Level6To7,
+            CreatureDataConstants.Adept_Doctor_Level8To9)]
+        [TestCase(CreatureDataConstants.Angel,
+            CreatureDataConstants.AstralDeva,
+            CreatureDataConstants.Planetar,
+            CreatureDataConstants.Solar)]
+        [TestCase(CreatureDataConstants.AnimatedObject,
+            CreatureDataConstants.AnimatedObject_Colossal,
+            CreatureDataConstants.AnimatedObject_Gargantuan,
+            CreatureDataConstants.AnimatedObject_Huge,
+            CreatureDataConstants.AnimatedObject_Large,
+            CreatureDataConstants.AnimatedObject_Medium,
+            CreatureDataConstants.AnimatedObject_Small,
+            CreatureDataConstants.AnimatedObject_Tiny)]
+        [TestCase(CreatureDataConstants.Ant_Giant,
+            CreatureDataConstants.Ant_Giant_Queen,
+            CreatureDataConstants.Ant_Giant_Soldier,
+            CreatureDataConstants.Ant_Giant_Worker)]
+        [TestCase(CreatureDataConstants.Ape,
+            CreatureDataConstants.Ape,
+            CreatureDataConstants.Ape_Dire)]
+        [TestCase(CreatureDataConstants.Archon,
+            CreatureDataConstants.HoundArchon,
+            CreatureDataConstants.LanternArchon,
+            CreatureDataConstants.TrumpetArchon)]
+        [TestCase(CreatureDataConstants.Arrowhawk,
+            CreatureDataConstants.Arrowhawk_Adult,
+            CreatureDataConstants.Arrowhawk_Elder,
+            CreatureDataConstants.Arrowhawk_Juvenile)]
+        [TestCase(CreatureDataConstants.Azer,
+            CreatureDataConstants.Azer,
+            CreatureDataConstants.Azer_Captain,
+            CreatureDataConstants.Azer_Leader,
+            CreatureDataConstants.Azer_Lieutenant,
+            CreatureDataConstants.Azer_Noncombatant,
+            CreatureDataConstants.Azer_Sergeant)]
+        [TestCase(CreatureDataConstants.Badger,
+            CreatureDataConstants.Badger,
+            CreatureDataConstants.Badger_Dire)]
+        [TestCase(CreatureDataConstants.Bard_Leader,
+            CreatureDataConstants.Bard_Leader_Level1,
+            CreatureDataConstants.Bard_Leader_Level10,
+            CreatureDataConstants.Bard_Leader_Level11,
+            CreatureDataConstants.Bard_Leader_Level2,
+            CreatureDataConstants.Bard_Leader_Level3,
+            CreatureDataConstants.Bard_Leader_Level4,
+            CreatureDataConstants.Bard_Leader_Level5,
+            CreatureDataConstants.Bard_Leader_Level6,
+            CreatureDataConstants.Bard_Leader_Level7,
+            CreatureDataConstants.Bard_Leader_Level8,
+            CreatureDataConstants.Bard_Leader_Level9)]
+        [TestCase(CreatureDataConstants.Barghest,
+            CreatureDataConstants.Barghest,
+            CreatureDataConstants.Barghest_Greater)]
+        [TestCase(CreatureDataConstants.Bat,
+            CreatureDataConstants.Bat,
+            CreatureDataConstants.Bat_Dire,
+            CreatureDataConstants.Bat_Swarm)]
+        [TestCase(CreatureDataConstants.Bear,
+            CreatureDataConstants.Bear_Black,
+            CreatureDataConstants.Bear_Brown,
+            CreatureDataConstants.Bear_Dire,
+            CreatureDataConstants.Bear_Polar,
+            CreatureDataConstants.Werebear)]
+        [TestCase(CreatureDataConstants.Bear_Brown,
+            CreatureDataConstants.Bear_Brown,
+            CreatureDataConstants.Bear_Dire,
+            CreatureDataConstants.Werebear)]
+        [TestCase(CreatureDataConstants.BlackPudding,
+            CreatureDataConstants.BlackPudding,
+            CreatureDataConstants.BlackPudding_Elder)]
+        [TestCase(CreatureDataConstants.Boar,
+            CreatureDataConstants.Boar,
+            CreatureDataConstants.Boar_Dire,
+            CreatureDataConstants.Wereboar,
+            CreatureDataConstants.Wereboar_HillGiantDire)]
+        [TestCase(CreatureDataConstants.Bugbear,
+            CreatureDataConstants.Bugbear,
+            CreatureDataConstants.Bugbear_Leader,
+            CreatureDataConstants.Bugbear_Noncombatant,
+            CreatureDataConstants.Bugbear_Sergeant)]
+        [TestCase(CreatureDataConstants.CelestialCreature,
+            CreatureDataConstants.Badger_Celestial,
+            CreatureDataConstants.Dog_Celestial,
+            CreatureDataConstants.FireBeetle_Giant_Celestial,
+            CreatureDataConstants.Monkey_Celestial,
+            CreatureDataConstants.Owl_Celestial,
+            CreatureDataConstants.Porpoise_Celestial)]
+        [TestCase(CreatureDataConstants.Centaur,
+            CreatureDataConstants.Centaur,
+            CreatureDataConstants.Centaur_Leader_2ndTo5th,
+            CreatureDataConstants.Centaur_Leader_5thTo9th,
+            CreatureDataConstants.Centaur_Lieutenant,
+            CreatureDataConstants.Centaur_Noncombatant,
+            CreatureDataConstants.Centaur_Sergeant)]
+        [TestCase(CreatureDataConstants.Centipede_Monstrous,
+            CreatureDataConstants.Centipede_Monstrous_Colossal,
+            CreatureDataConstants.Centipede_Monstrous_Gargantuan,
+            CreatureDataConstants.Centipede_Monstrous_Huge,
+            CreatureDataConstants.Centipede_Monstrous_Large,
+            CreatureDataConstants.Centipede_Monstrous_Medium,
+            CreatureDataConstants.Centipede_Monstrous_Small,
+            CreatureDataConstants.Centipede_Monstrous_Tiny)]
+        [TestCase(CreatureDataConstants.Character_RetiredAdventurer,
+            CreatureDataConstants.Character_RetiredAdventurer_Level11,
+            CreatureDataConstants.Character_RetiredAdventurer_Level12,
+            CreatureDataConstants.Character_RetiredAdventurer_Level13,
+            CreatureDataConstants.Character_RetiredAdventurer_Level14,
+            CreatureDataConstants.Character_RetiredAdventurer_Level15,
+            CreatureDataConstants.Character_RetiredAdventurer_Level16,
+            CreatureDataConstants.Character_RetiredAdventurer_Level17,
+            CreatureDataConstants.Character_RetiredAdventurer_Level18,
+            CreatureDataConstants.Character_RetiredAdventurer_Level19,
+            CreatureDataConstants.Character_RetiredAdventurer_Level20)]
+        [TestCase(CreatureDataConstants.Character_StarStudent,
+            CreatureDataConstants.Character_StarStudent_Level1,
+            CreatureDataConstants.Character_StarStudent_Level10,
+            CreatureDataConstants.Character_StarStudent_Level2,
+            CreatureDataConstants.Character_StarStudent_Level3,
+            CreatureDataConstants.Character_StarStudent_Level4,
+            CreatureDataConstants.Character_StarStudent_Level5,
+            CreatureDataConstants.Character_StarStudent_Level6,
+            CreatureDataConstants.Character_StarStudent_Level7,
+            CreatureDataConstants.Character_StarStudent_Level8,
+            CreatureDataConstants.Character_StarStudent_Level9)]
+        [TestCase(CreatureDataConstants.Character_Student,
+            CreatureDataConstants.Character_Student_Level1,
+            CreatureDataConstants.Character_Student_Level10To11,
+            CreatureDataConstants.Character_Student_Level12To13,
+            CreatureDataConstants.Character_Student_Level14To15,
+            CreatureDataConstants.Character_Student_Level16To17,
+            CreatureDataConstants.Character_Student_Level18To19,
+            CreatureDataConstants.Character_Student_Level2To3,
+            CreatureDataConstants.Character_Student_Level4To5,
+            CreatureDataConstants.Character_Student_Level6To7,
+            CreatureDataConstants.Character_Student_Level8To9)]
+        [TestCase(CreatureDataConstants.Character_Teacher,
+            CreatureDataConstants.Character_Teacher_Level11,
+            CreatureDataConstants.Character_Teacher_Level12,
+            CreatureDataConstants.Character_Teacher_Level13,
+            CreatureDataConstants.Character_Teacher_Level14,
+            CreatureDataConstants.Character_Teacher_Level15,
+            CreatureDataConstants.Character_Teacher_Level16,
+            CreatureDataConstants.Character_Teacher_Level17,
+            CreatureDataConstants.Character_Teacher_Level18,
+            CreatureDataConstants.Character_Teacher_Level19,
+            CreatureDataConstants.Character_Teacher_Level20)]
+        [TestCase(CreatureDataConstants.Cleric_Leader,
+            CreatureDataConstants.Cleric_Leader_Level1,
+            CreatureDataConstants.Cleric_Leader_Level10,
+            CreatureDataConstants.Cleric_Leader_Level11,
+            CreatureDataConstants.Cleric_Leader_Level2,
+            CreatureDataConstants.Cleric_Leader_Level3,
+            CreatureDataConstants.Cleric_Leader_Level4,
+            CreatureDataConstants.Cleric_Leader_Level5,
+            CreatureDataConstants.Cleric_Leader_Level6,
+            CreatureDataConstants.Cleric_Leader_Level7,
+            CreatureDataConstants.Cleric_Leader_Level8,
+            CreatureDataConstants.Cleric_Leader_Level9)]
+        [TestCase(CreatureDataConstants.Crocodile,
+            CreatureDataConstants.Crocodile,
+            CreatureDataConstants.Crocodile_Giant)]
+        [TestCase(CreatureDataConstants.Cryohydra,
+            CreatureDataConstants.Cryohydra_10Heads,
+            CreatureDataConstants.Cryohydra_11Heads,
+            CreatureDataConstants.Cryohydra_12Heads,
+            CreatureDataConstants.Cryohydra_5Heads,
+            CreatureDataConstants.Cryohydra_6Heads,
+            CreatureDataConstants.Cryohydra_7Heads,
+            CreatureDataConstants.Cryohydra_8Heads,
+            CreatureDataConstants.Cryohydra_9Heads)]
+        [TestCase(CreatureDataConstants.Demon,
+            CreatureDataConstants.Babau,
+            CreatureDataConstants.Balor,
+            CreatureDataConstants.Bebilith,
+            CreatureDataConstants.Dretch,
+            CreatureDataConstants.Glabrezu,
+            CreatureDataConstants.Hezrou,
+            CreatureDataConstants.Marilith,
+            CreatureDataConstants.Nalfeshnee,
+            CreatureDataConstants.Quasit,
+            CreatureDataConstants.Retriever,
+            CreatureDataConstants.Succubus,
+            CreatureDataConstants.Vrock)]
+        [TestCase(CreatureDataConstants.Derro,
+            CreatureDataConstants.Derro,
+            CreatureDataConstants.Derro_Noncombatant,
+            CreatureDataConstants.Derro_Sorcerer_3rd,
+            CreatureDataConstants.Derro_Sorcerer_5thTo8th)]
+        [TestCase(CreatureDataConstants.Devil,
+            CreatureDataConstants.BarbedDevil_Hamatula,
+            CreatureDataConstants.BeardedDevil_Barbazu,
+            CreatureDataConstants.BoneDevil_Osyluth,
+            CreatureDataConstants.ChainDevil_Kyton,
+            CreatureDataConstants.Erinyes,
+            CreatureDataConstants.Hellcat_Bezekira,
+            CreatureDataConstants.HornedDevil_Cornugon,
+            CreatureDataConstants.IceDevil_Gelugon,
+            CreatureDataConstants.Imp,
+            CreatureDataConstants.Lemure,
+            CreatureDataConstants.PitFiend)]
+        [TestCase(CreatureDataConstants.Dinosaur,
+            CreatureDataConstants.Deinonychus,
+            CreatureDataConstants.Elasmosaurus,
+            CreatureDataConstants.Megaraptor,
+            CreatureDataConstants.Triceratops,
+            CreatureDataConstants.Tyrannosaurus)]
+        [TestCase(CreatureDataConstants.DisplacerBeast,
+            CreatureDataConstants.DisplacerBeast,
+            CreatureDataConstants.DisplacerBeast_PackLord)]
+        [TestCase(CreatureDataConstants.Djinni,
+            CreatureDataConstants.Djinni,
+            CreatureDataConstants.Djinni_Noble)]
+        [TestCase(CreatureDataConstants.Dog,
+            CreatureDataConstants.Dog,
+            CreatureDataConstants.Dog_Riding)]
+        [TestCase(CreatureDataConstants.Dragon_Black,
+            CreatureDataConstants.Dragon_Black_Adult,
+            CreatureDataConstants.Dragon_Black_Ancient,
+            CreatureDataConstants.Dragon_Black_GreatWyrm,
+            CreatureDataConstants.Dragon_Black_Juvenile,
+            CreatureDataConstants.Dragon_Black_MatureAdult,
+            CreatureDataConstants.Dragon_Black_Old,
+            CreatureDataConstants.Dragon_Black_VeryOld,
+            CreatureDataConstants.Dragon_Black_VeryYoung,
+            CreatureDataConstants.Dragon_Black_Wyrm,
+            CreatureDataConstants.Dragon_Black_Wyrmling,
+            CreatureDataConstants.Dragon_Black_Young,
+            CreatureDataConstants.Dragon_Black_YoungAdult)]
+        [TestCase(CreatureDataConstants.Dragon_Blue,
+            CreatureDataConstants.Dragon_Blue_Adult,
+            CreatureDataConstants.Dragon_Blue_Ancient,
+            CreatureDataConstants.Dragon_Blue_GreatWyrm,
+            CreatureDataConstants.Dragon_Blue_Juvenile,
+            CreatureDataConstants.Dragon_Blue_MatureAdult,
+            CreatureDataConstants.Dragon_Blue_Old,
+            CreatureDataConstants.Dragon_Blue_VeryOld,
+            CreatureDataConstants.Dragon_Blue_VeryYoung,
+            CreatureDataConstants.Dragon_Blue_Wyrm,
+            CreatureDataConstants.Dragon_Blue_Wyrmling,
+            CreatureDataConstants.Dragon_Blue_Young,
+            CreatureDataConstants.Dragon_Blue_YoungAdult)]
+        [TestCase(CreatureDataConstants.Dragon_Brass,
+            CreatureDataConstants.Dragon_Brass_Adult,
+            CreatureDataConstants.Dragon_Brass_Ancient,
+            CreatureDataConstants.Dragon_Brass_GreatWyrm,
+            CreatureDataConstants.Dragon_Brass_Juvenile,
+            CreatureDataConstants.Dragon_Brass_MatureAdult,
+            CreatureDataConstants.Dragon_Brass_Old,
+            CreatureDataConstants.Dragon_Brass_VeryOld,
+            CreatureDataConstants.Dragon_Brass_VeryYoung,
+            CreatureDataConstants.Dragon_Brass_Wyrm,
+            CreatureDataConstants.Dragon_Brass_Wyrmling,
+            CreatureDataConstants.Dragon_Brass_Young,
+            CreatureDataConstants.Dragon_Brass_YoungAdult)]
+        [TestCase(CreatureDataConstants.Dragon_Bronze,
+            CreatureDataConstants.Dragon_Bronze_Adult,
+            CreatureDataConstants.Dragon_Bronze_Ancient,
+            CreatureDataConstants.Dragon_Bronze_GreatWyrm,
+            CreatureDataConstants.Dragon_Bronze_Juvenile,
+            CreatureDataConstants.Dragon_Bronze_MatureAdult,
+            CreatureDataConstants.Dragon_Bronze_Old,
+            CreatureDataConstants.Dragon_Bronze_VeryOld,
+            CreatureDataConstants.Dragon_Bronze_VeryYoung,
+            CreatureDataConstants.Dragon_Bronze_Wyrm,
+            CreatureDataConstants.Dragon_Bronze_Wyrmling,
+            CreatureDataConstants.Dragon_Bronze_Young,
+            CreatureDataConstants.Dragon_Bronze_YoungAdult)]
+        [TestCase(CreatureDataConstants.Dragon_Copper,
+            CreatureDataConstants.Dragon_Copper_Adult,
+            CreatureDataConstants.Dragon_Copper_Ancient,
+            CreatureDataConstants.Dragon_Copper_GreatWyrm,
+            CreatureDataConstants.Dragon_Copper_Juvenile,
+            CreatureDataConstants.Dragon_Copper_MatureAdult,
+            CreatureDataConstants.Dragon_Copper_Old,
+            CreatureDataConstants.Dragon_Copper_VeryOld,
+            CreatureDataConstants.Dragon_Copper_VeryYoung,
+            CreatureDataConstants.Dragon_Copper_Wyrm,
+            CreatureDataConstants.Dragon_Copper_Wyrmling,
+            CreatureDataConstants.Dragon_Copper_Young,
+            CreatureDataConstants.Dragon_Copper_YoungAdult)]
+        [TestCase(CreatureDataConstants.Dragon_Gold,
+            CreatureDataConstants.Dragon_Gold_Adult,
+            CreatureDataConstants.Dragon_Gold_Ancient,
+            CreatureDataConstants.Dragon_Gold_GreatWyrm,
+            CreatureDataConstants.Dragon_Gold_Juvenile,
+            CreatureDataConstants.Dragon_Gold_MatureAdult,
+            CreatureDataConstants.Dragon_Gold_Old,
+            CreatureDataConstants.Dragon_Gold_VeryOld,
+            CreatureDataConstants.Dragon_Gold_VeryYoung,
+            CreatureDataConstants.Dragon_Gold_Wyrm,
+            CreatureDataConstants.Dragon_Gold_Wyrmling,
+            CreatureDataConstants.Dragon_Gold_Young,
+            CreatureDataConstants.Dragon_Gold_YoungAdult)]
+        [TestCase(CreatureDataConstants.Dragon_Green,
+            CreatureDataConstants.Dragon_Green_Adult,
+            CreatureDataConstants.Dragon_Green_Ancient,
+            CreatureDataConstants.Dragon_Green_GreatWyrm,
+            CreatureDataConstants.Dragon_Green_Juvenile,
+            CreatureDataConstants.Dragon_Green_MatureAdult,
+            CreatureDataConstants.Dragon_Green_Old,
+            CreatureDataConstants.Dragon_Green_VeryOld,
+            CreatureDataConstants.Dragon_Green_VeryYoung,
+            CreatureDataConstants.Dragon_Green_Wyrm,
+            CreatureDataConstants.Dragon_Green_Wyrmling,
+            CreatureDataConstants.Dragon_Green_Young,
+            CreatureDataConstants.Dragon_Green_YoungAdult)]
+        [TestCase(CreatureDataConstants.Dragon_Red,
+            CreatureDataConstants.Dragon_Red_Adult,
+            CreatureDataConstants.Dragon_Red_Ancient,
+            CreatureDataConstants.Dragon_Red_GreatWyrm,
+            CreatureDataConstants.Dragon_Red_Juvenile,
+            CreatureDataConstants.Dragon_Red_MatureAdult,
+            CreatureDataConstants.Dragon_Red_Old,
+            CreatureDataConstants.Dragon_Red_VeryOld,
+            CreatureDataConstants.Dragon_Red_VeryYoung,
+            CreatureDataConstants.Dragon_Red_Wyrm,
+            CreatureDataConstants.Dragon_Red_Wyrmling,
+            CreatureDataConstants.Dragon_Red_Young,
+            CreatureDataConstants.Dragon_Red_YoungAdult)]
+        [TestCase(CreatureDataConstants.Dragon_Silver,
+            CreatureDataConstants.Dragon_Silver_Adult,
+            CreatureDataConstants.Dragon_Silver_Ancient,
+            CreatureDataConstants.Dragon_Silver_GreatWyrm,
+            CreatureDataConstants.Dragon_Silver_Juvenile,
+            CreatureDataConstants.Dragon_Silver_MatureAdult,
+            CreatureDataConstants.Dragon_Silver_Old,
+            CreatureDataConstants.Dragon_Silver_VeryOld,
+            CreatureDataConstants.Dragon_Silver_VeryYoung,
+            CreatureDataConstants.Dragon_Silver_Wyrm,
+            CreatureDataConstants.Dragon_Silver_Wyrmling,
+            CreatureDataConstants.Dragon_Silver_Young,
+            CreatureDataConstants.Dragon_Silver_YoungAdult)]
+        [TestCase(CreatureDataConstants.Dragon_White,
+            CreatureDataConstants.Dragon_White_Adult,
+            CreatureDataConstants.Dragon_White_Ancient,
+            CreatureDataConstants.Dragon_White_GreatWyrm,
+            CreatureDataConstants.Dragon_White_Juvenile,
+            CreatureDataConstants.Dragon_White_MatureAdult,
+            CreatureDataConstants.Dragon_White_Old,
+            CreatureDataConstants.Dragon_White_VeryOld,
+            CreatureDataConstants.Dragon_White_VeryYoung,
+            CreatureDataConstants.Dragon_White_Wyrm,
+            CreatureDataConstants.Dragon_White_Wyrmling,
+            CreatureDataConstants.Dragon_White_Young,
+            CreatureDataConstants.Dragon_White_YoungAdult)]
+        [TestCase(CreatureDataConstants.Drow,
+            CreatureDataConstants.Drow_Captain,
+            CreatureDataConstants.Drow_Leader,
+            CreatureDataConstants.Drow_Lieutenant,
+            CreatureDataConstants.Drow_Noncombatant,
+            CreatureDataConstants.Drow_Sergeant,
+            CreatureDataConstants.Drow_Warrior)]
+        [TestCase(CreatureDataConstants.Duergar,
+            CreatureDataConstants.Duergar_Captain,
+            CreatureDataConstants.Duergar_Leader,
+            CreatureDataConstants.Duergar_Lieutenant,
+            CreatureDataConstants.Duergar_Noncombatant,
+            CreatureDataConstants.Duergar_Sergeant,
+            CreatureDataConstants.Duergar_Warrior)]
+        [TestCase(CreatureDataConstants.Dwarf,
+            CreatureDataConstants.Dwarf_Deep,
+            CreatureDataConstants.Dwarf_Hill,
+            CreatureDataConstants.Dwarf_Mountain)]
+        [TestCase(CreatureDataConstants.Dwarf_Deep,
+            CreatureDataConstants.Dwarf_Deep_Captain,
+            CreatureDataConstants.Dwarf_Deep_Leader,
+            CreatureDataConstants.Dwarf_Deep_Lieutenant,
+            CreatureDataConstants.Dwarf_Deep_Noncombatant,
+            CreatureDataConstants.Dwarf_Deep_Sergeant,
+            CreatureDataConstants.Dwarf_Deep_Warrior)]
+        [TestCase(CreatureDataConstants.Dwarf_Hill,
+            CreatureDataConstants.Dwarf_Hill_Captain,
+            CreatureDataConstants.Dwarf_Hill_Leader,
+            CreatureDataConstants.Dwarf_Hill_Lieutenant,
+            CreatureDataConstants.Dwarf_Hill_Noncombatant,
+            CreatureDataConstants.Dwarf_Hill_Sergeant,
+            CreatureDataConstants.Dwarf_Hill_Warrior)]
+        [TestCase(CreatureDataConstants.Dwarf_Mountain,
+            CreatureDataConstants.Dwarf_Mountain_Captain,
+            CreatureDataConstants.Dwarf_Mountain_Leader,
+            CreatureDataConstants.Dwarf_Mountain_Lieutenant,
+            CreatureDataConstants.Dwarf_Mountain_Noncombatant,
+            CreatureDataConstants.Dwarf_Mountain_Sergeant,
+            CreatureDataConstants.Dwarf_Mountain_Warrior)]
+        [TestCase(CreatureDataConstants.Eagle,
+            CreatureDataConstants.Eagle,
+            CreatureDataConstants.Eagle_Giant)]
+        [TestCase(CreatureDataConstants.Elemental_Air,
+            CreatureDataConstants.Elemental_Air_Elder,
+            CreatureDataConstants.Elemental_Air_Greater,
+            CreatureDataConstants.Elemental_Air_Huge,
+            CreatureDataConstants.Elemental_Air_Large,
+            CreatureDataConstants.Elemental_Air_Medium,
+            CreatureDataConstants.Elemental_Air_Small)]
+        [TestCase(CreatureDataConstants.Elemental_Earth,
+            CreatureDataConstants.Elemental_Earth_Elder,
+            CreatureDataConstants.Elemental_Earth_Greater,
+            CreatureDataConstants.Elemental_Earth_Huge,
+            CreatureDataConstants.Elemental_Earth_Large,
+            CreatureDataConstants.Elemental_Earth_Medium,
+            CreatureDataConstants.Elemental_Earth_Small)]
+        [TestCase(CreatureDataConstants.Elemental_Fire,
+            CreatureDataConstants.Elemental_Fire_Elder,
+            CreatureDataConstants.Elemental_Fire_Greater,
+            CreatureDataConstants.Elemental_Fire_Huge,
+            CreatureDataConstants.Elemental_Fire_Large,
+            CreatureDataConstants.Elemental_Fire_Medium,
+            CreatureDataConstants.Elemental_Fire_Small)]
+        [TestCase(CreatureDataConstants.Elemental_Water,
+            CreatureDataConstants.Elemental_Water_Elder,
+            CreatureDataConstants.Elemental_Water_Greater,
+            CreatureDataConstants.Elemental_Water_Huge,
+            CreatureDataConstants.Elemental_Water_Large,
+            CreatureDataConstants.Elemental_Water_Medium,
+            CreatureDataConstants.Elemental_Water_Small)]
+        [TestCase(CreatureDataConstants.Elf,
+            CreatureDataConstants.Elf_Gray,
+            CreatureDataConstants.Elf_Half,
+            CreatureDataConstants.Elf_High,
+            CreatureDataConstants.Elf_Wild,
+            CreatureDataConstants.Elf_Wood)]
+        [TestCase(CreatureDataConstants.Elf_Aquatic,
+            CreatureDataConstants.Elf_Aquatic_Captain,
+            CreatureDataConstants.Elf_Aquatic_Leader,
+            CreatureDataConstants.Elf_Aquatic_Lieutenant,
+            CreatureDataConstants.Elf_Aquatic_Noncombatant,
+            CreatureDataConstants.Elf_Aquatic_Sergeant,
+            CreatureDataConstants.Elf_Aquatic_Warrior)]
+        [TestCase(CreatureDataConstants.Elf_Gray,
+            CreatureDataConstants.Elf_Gray_Captain,
+            CreatureDataConstants.Elf_Gray_Leader,
+            CreatureDataConstants.Elf_Gray_Lieutenant,
+            CreatureDataConstants.Elf_Gray_Noncombatant,
+            CreatureDataConstants.Elf_Gray_Sergeant,
+            CreatureDataConstants.Elf_Gray_Warrior)]
+        [TestCase(CreatureDataConstants.Elf_Half,
+            CreatureDataConstants.Elf_Half_Captain,
+            CreatureDataConstants.Elf_Half_Leader,
+            CreatureDataConstants.Elf_Half_Lieutenant,
+            CreatureDataConstants.Elf_Half_Noncombatant,
+            CreatureDataConstants.Elf_Half_Sergeant,
+            CreatureDataConstants.Elf_Half_Warrior)]
+        [TestCase(CreatureDataConstants.Elf_High,
+            CreatureDataConstants.Elf_High_Captain,
+            CreatureDataConstants.Elf_High_Leader,
+            CreatureDataConstants.Elf_High_Lieutenant,
+            CreatureDataConstants.Elf_High_Noncombatant,
+            CreatureDataConstants.Elf_High_Sergeant,
+            CreatureDataConstants.Elf_High_Warrior)]
+        [TestCase(CreatureDataConstants.Elf_Wild,
+            CreatureDataConstants.Elf_Wild_Captain,
+            CreatureDataConstants.Elf_Wild_Leader,
+            CreatureDataConstants.Elf_Wild_Lieutenant,
+            CreatureDataConstants.Elf_Wild_Noncombatant,
+            CreatureDataConstants.Elf_Wild_Sergeant,
+            CreatureDataConstants.Elf_Wild_Warrior)]
+        [TestCase(CreatureDataConstants.Elf_Wood,
+            CreatureDataConstants.Elf_Wood_Captain,
+            CreatureDataConstants.Elf_Wood_Leader,
+            CreatureDataConstants.Elf_Wood_Lieutenant,
+            CreatureDataConstants.Elf_Wood_Noncombatant,
+            CreatureDataConstants.Elf_Wood_Sergeant,
+            CreatureDataConstants.Elf_Wood_Warrior)]
+        [TestCase(CreatureDataConstants.Expert_Adviser,
+            CreatureDataConstants.Expert_Adviser_Level1,
+            CreatureDataConstants.Expert_Adviser_Level10To11,
+            CreatureDataConstants.Expert_Adviser_Level12To13,
+            CreatureDataConstants.Expert_Adviser_Level14To15,
+            CreatureDataConstants.Expert_Adviser_Level16To17,
+            CreatureDataConstants.Expert_Adviser_Level18To19,
+            CreatureDataConstants.Expert_Adviser_Level20,
+            CreatureDataConstants.Expert_Adviser_Level2To3,
+            CreatureDataConstants.Expert_Adviser_Level4To5,
+            CreatureDataConstants.Expert_Adviser_Level6To7,
+            CreatureDataConstants.Expert_Adviser_Level8To9)]
+        [TestCase(CreatureDataConstants.Expert_Artisan,
+            CreatureDataConstants.Expert_Artisan_Level1,
+            CreatureDataConstants.Expert_Artisan_Level10To11,
+            CreatureDataConstants.Expert_Artisan_Level12To13,
+            CreatureDataConstants.Expert_Artisan_Level14To15,
+            CreatureDataConstants.Expert_Artisan_Level16To17,
+            CreatureDataConstants.Expert_Artisan_Level18To19,
+            CreatureDataConstants.Expert_Artisan_Level20,
+            CreatureDataConstants.Expert_Artisan_Level2To3,
+            CreatureDataConstants.Expert_Artisan_Level4To5,
+            CreatureDataConstants.Expert_Artisan_Level6To7,
+            CreatureDataConstants.Expert_Artisan_Level8To9)]
+        [TestCase(CreatureDataConstants.FiendishCreature,
+            CreatureDataConstants.Centipede_Monstrous_Fiendish_Colossal,
+            CreatureDataConstants.Centipede_Monstrous_Fiendish_Gargantuan,
+            CreatureDataConstants.Centipede_Monstrous_Fiendish_Huge,
+            CreatureDataConstants.Centipede_Monstrous_Fiendish_Large,
+            CreatureDataConstants.Centipede_Monstrous_Fiendish_Medium,
+            CreatureDataConstants.Rat_Dire_Fiendish,
+            CreatureDataConstants.Raven_Fiendish)]
+        [TestCase(CreatureDataConstants.Fighter_Captain,
+            CreatureDataConstants.Fighter_Captain_Level1,
+            CreatureDataConstants.Fighter_Captain_Level10,
+            CreatureDataConstants.Fighter_Captain_Level11,
+            CreatureDataConstants.Fighter_Captain_Level2,
+            CreatureDataConstants.Fighter_Captain_Level3,
+            CreatureDataConstants.Fighter_Captain_Level4,
+            CreatureDataConstants.Fighter_Captain_Level5,
+            CreatureDataConstants.Fighter_Captain_Level6,
+            CreatureDataConstants.Fighter_Captain_Level7,
+            CreatureDataConstants.Fighter_Captain_Level8,
+            CreatureDataConstants.Fighter_Captain_Level9)]
+        [TestCase(CreatureDataConstants.Fighter_Leader,
+            CreatureDataConstants.Fighter_Leader_Level1,
+            CreatureDataConstants.Fighter_Leader_Level10,
+            CreatureDataConstants.Fighter_Leader_Level11,
+            CreatureDataConstants.Fighter_Leader_Level2,
+            CreatureDataConstants.Fighter_Leader_Level3,
+            CreatureDataConstants.Fighter_Leader_Level4,
+            CreatureDataConstants.Fighter_Leader_Level5,
+            CreatureDataConstants.Fighter_Leader_Level6,
+            CreatureDataConstants.Fighter_Leader_Level7,
+            CreatureDataConstants.Fighter_Leader_Level8,
+            CreatureDataConstants.Fighter_Leader_Level9)]
+        [TestCase(CreatureDataConstants.Formian,
+            CreatureDataConstants.FormianMyrmarch,
+            CreatureDataConstants.FormianQueen,
+            CreatureDataConstants.FormianTaskmaster,
+            CreatureDataConstants.FormianWarrior,
+            CreatureDataConstants.FormianWorker)]
+        [TestCase(CreatureDataConstants.Fungus,
+            CreatureDataConstants.Shrieker,
+            CreatureDataConstants.VioletFungus)]
+        [TestCase(CreatureDataConstants.Genie,
+            CreatureDataConstants.Djinni,
+            CreatureDataConstants.Efreeti,
+            CreatureDataConstants.Janni)]
+        [TestCase(CreatureDataConstants.Ghoul,
+            CreatureDataConstants.Ghoul,
+            CreatureDataConstants.Ghoul_Ghast)]
+        [TestCase(CreatureDataConstants.Giant_Cloud,
+            CreatureDataConstants.Giant_Cloud,
+            CreatureDataConstants.Giant_Cloud_Leader,
+            CreatureDataConstants.Giant_Cloud_Noncombatant)]
+        [TestCase(CreatureDataConstants.Giant_Fire,
+            CreatureDataConstants.Giant_Fire,
+            CreatureDataConstants.Giant_Fire_Adept_1stTo2nd,
+            CreatureDataConstants.Giant_Fire_Adept_3rdTo5th,
+            CreatureDataConstants.Giant_Fire_Adept_6thTo7th,
+            CreatureDataConstants.Giant_Fire_Cleric_1stTo2nd,
+            CreatureDataConstants.Giant_Fire_Leader_6thTo7th,
+            CreatureDataConstants.Giant_Fire_Noncombatant,
+            CreatureDataConstants.Giant_Fire_Sorcerer_3rdTo5th)]
+        [TestCase(CreatureDataConstants.Giant_Frost,
+            CreatureDataConstants.Giant_Frost,
+            CreatureDataConstants.Giant_Frost_Adept_1stTo2nd,
+            CreatureDataConstants.Giant_Frost_Adept_3rdTo5th,
+            CreatureDataConstants.Giant_Frost_Adept_6thTo7th,
+            CreatureDataConstants.Giant_Frost_Cleric_1stTo2nd,
+            CreatureDataConstants.Giant_Frost_Jarl,
+            CreatureDataConstants.Giant_Frost_Leader_6thTo7th,
+            CreatureDataConstants.Giant_Frost_Noncombatant,
+            CreatureDataConstants.Giant_Frost_Sorcerer_3rdTo5th)]
+        [TestCase(CreatureDataConstants.Giant_Hill,
+            CreatureDataConstants.Giant_Hill,
+            CreatureDataConstants.Giant_Hill_Noncombatant,
+            CreatureDataConstants.Wereboar_HillGiantDire)]
+        [TestCase(CreatureDataConstants.Giant_Stone,
+            CreatureDataConstants.Giant_Stone,
+            CreatureDataConstants.Giant_Stone_Elder,
+            CreatureDataConstants.Giant_Stone_Noncombatant)]
+        [TestCase(CreatureDataConstants.Giant_Storm,
+            CreatureDataConstants.Giant_Storm,
+            CreatureDataConstants.Giant_Storm_Leader,
+            CreatureDataConstants.Giant_Storm_Noncombatant)]
+        [TestCase(CreatureDataConstants.Githyanki,
+            CreatureDataConstants.Githyanki_Fighter,
+            CreatureDataConstants.Githyanki_Sergeant,
+            CreatureDataConstants.Githyanki_Captain,
+            CreatureDataConstants.Githyanki_Lieutenant,
+            CreatureDataConstants.Githyanki_SupremeLeader)]
+        [TestCase(CreatureDataConstants.Githzerai,
+            CreatureDataConstants.Githzerai_Student,
+            CreatureDataConstants.Githzerai_Teacher,
+            CreatureDataConstants.Githzerai_Mentor,
+            CreatureDataConstants.Githzerai_Master,
+            CreatureDataConstants.Githzerai_Sensei)]
+        [TestCase(CreatureDataConstants.Gnoll,
+            CreatureDataConstants.Gnoll,
+            CreatureDataConstants.Gnoll_Leader_4thTo6th,
+            CreatureDataConstants.Gnoll_Leader_6thTo8th,
+            CreatureDataConstants.Gnoll_Lieutenant,
+            CreatureDataConstants.Gnoll_Noncombatant,
+            CreatureDataConstants.Gnoll_Sergeant)]
+        [TestCase(CreatureDataConstants.Gnome,
+            CreatureDataConstants.Gnome_Forest,
+            CreatureDataConstants.Gnome_Rock)]
+        [TestCase(CreatureDataConstants.Gnome_Forest,
+            CreatureDataConstants.Gnome_Forest_Captain,
+            CreatureDataConstants.Gnome_Forest_Leader,
+            CreatureDataConstants.Gnome_Forest_Lieutenant_3rd,
+            CreatureDataConstants.Gnome_Forest_Lieutenant_5th,
+            CreatureDataConstants.Gnome_Forest_Sergeant,
+            CreatureDataConstants.Gnome_Forest_Warrior)]
+        [TestCase(CreatureDataConstants.Gnome_Rock,
+            CreatureDataConstants.Gnome_Rock_Captain,
+            CreatureDataConstants.Gnome_Rock_Leader,
+            CreatureDataConstants.Gnome_Rock_Lieutenant_3rd,
+            CreatureDataConstants.Gnome_Rock_Lieutenant_5th,
+            CreatureDataConstants.Gnome_Rock_Sergeant,
+            CreatureDataConstants.Gnome_Rock_Warrior)]
+        [TestCase(CreatureDataConstants.Goblin,
+            CreatureDataConstants.Goblin_Leader_4thTo6th,
+            CreatureDataConstants.Goblin_Leader_6thTo8th,
+            CreatureDataConstants.Goblin_Lieutenant,
+            CreatureDataConstants.Goblin_Noncombatant,
+            CreatureDataConstants.Goblin_Sergeant,
+            CreatureDataConstants.Goblin_Warrior)]
+        [TestCase(CreatureDataConstants.Golem,
+            CreatureDataConstants.Golem_Clay,
+            CreatureDataConstants.Golem_Flesh,
+            CreatureDataConstants.Golem_Iron,
+            CreatureDataConstants.Golem_Stone,
+            CreatureDataConstants.Golem_Stone_Greater)]
+        [TestCase(CreatureDataConstants.Grimlock,
+            CreatureDataConstants.Grimlock,
+            CreatureDataConstants.Grimlock_Leader)]
+        [TestCase(CreatureDataConstants.Hag,
+            CreatureDataConstants.Annis,
+            CreatureDataConstants.GreenHag,
+            CreatureDataConstants.SeaHag)]
+        [TestCase(CreatureDataConstants.Halfling,
+            CreatureDataConstants.Halfling_Deep,
+            CreatureDataConstants.Halfling_Lightfoot,
+            CreatureDataConstants.Halfling_Tallfellow)]
+        [TestCase(CreatureDataConstants.Halfling_Deep,
+            CreatureDataConstants.Halfling_Deep_Captain,
+            CreatureDataConstants.Halfling_Deep_Leader,
+            CreatureDataConstants.Halfling_Deep_Lieutenant,
+            CreatureDataConstants.Halfling_Deep_Noncombatant,
+            CreatureDataConstants.Halfling_Deep_Sergeant,
+            CreatureDataConstants.Halfling_Deep_Warrior)]
+        [TestCase(CreatureDataConstants.Halfling_Lightfoot,
+            CreatureDataConstants.Halfling_Lightfoot_Captain,
+            CreatureDataConstants.Halfling_Lightfoot_Leader,
+            CreatureDataConstants.Halfling_Lightfoot_Lieutenant,
+            CreatureDataConstants.Halfling_Lightfoot_Noncombatant,
+            CreatureDataConstants.Halfling_Lightfoot_Sergeant,
+            CreatureDataConstants.Halfling_Lightfoot_Warrior)]
+        [TestCase(CreatureDataConstants.Halfling_Tallfellow,
+            CreatureDataConstants.Halfling_Tallfellow_Captain,
+            CreatureDataConstants.Halfling_Tallfellow_Leader,
+            CreatureDataConstants.Halfling_Tallfellow_Lieutenant,
+            CreatureDataConstants.Halfling_Tallfellow_Noncombatant,
+            CreatureDataConstants.Halfling_Tallfellow_Sergeant,
+            CreatureDataConstants.Halfling_Tallfellow_Warrior)]
+        [TestCase(CreatureDataConstants.Harpy,
+            CreatureDataConstants.Harpy,
+            CreatureDataConstants.HarpyArcher)]
+        [TestCase(CreatureDataConstants.Hellwasp,
+            CreatureDataConstants.Hellwasp_Swarm)]
+        [TestCase(CreatureDataConstants.Hobgoblin,
+            CreatureDataConstants.Hobgoblin_Leader_4thTo6th,
+            CreatureDataConstants.Hobgoblin_Leader_6thTo8th,
+            CreatureDataConstants.Hobgoblin_Lieutenant,
+            CreatureDataConstants.Hobgoblin_Noncombatant,
+            CreatureDataConstants.Hobgoblin_Sergeant,
+            CreatureDataConstants.Hobgoblin_Warrior)]
+        [TestCase(CreatureDataConstants.Horse,
+            CreatureDataConstants.Horse_Heavy,
+            CreatureDataConstants.Horse_Heavy_War,
+            CreatureDataConstants.Horse_Light,
+            CreatureDataConstants.Horse_Light_War)]
+        [TestCase(CreatureDataConstants.HoundArchon,
+            CreatureDataConstants.HoundArchon,
+            CreatureDataConstants.HoundArchon_Hero)]
+        [TestCase(CreatureDataConstants.Hydra,
+            CreatureDataConstants.Cryohydra,
+            CreatureDataConstants.Pyrohydra,
+            CreatureDataConstants.Hydra_10Heads,
+            CreatureDataConstants.Hydra_11Heads,
+            CreatureDataConstants.Hydra_12Heads,
+            CreatureDataConstants.Hydra_5Heads,
+            CreatureDataConstants.Hydra_6Heads,
+            CreatureDataConstants.Hydra_7Heads,
+            CreatureDataConstants.Hydra_8Heads,
+            CreatureDataConstants.Hydra_9Heads)]
+        [TestCase(CreatureDataConstants.Inevitable,
+            CreatureDataConstants.Kolyarut,
+            CreatureDataConstants.Marut,
+            CreatureDataConstants.Zelekhut)]
+        [TestCase(CreatureDataConstants.Kobold,
+            CreatureDataConstants.Kobold_Leader_4thTo6th,
+            CreatureDataConstants.Kobold_Leader_6thTo8th,
+            CreatureDataConstants.Kobold_Lieutenant,
+            CreatureDataConstants.Kobold_Noncombatant,
+            CreatureDataConstants.Kobold_Sergeant,
+            CreatureDataConstants.Kobold_Warrior)]
+        [TestCase(CreatureDataConstants.KuoToa,
+            CreatureDataConstants.KuoToa,
+            CreatureDataConstants.KuoToa_Whip_3rd,
+            CreatureDataConstants.KuoToa_Monitor,
+            CreatureDataConstants.KuoToa_Fighter_8th,
+            CreatureDataConstants.KuoToa_Noncombatant,
+            CreatureDataConstants.KuoToa_Fighter_10th,
+            CreatureDataConstants.KuoToa_Whip_10th)]
+        [TestCase(CreatureDataConstants.Lammasu,
+            CreatureDataConstants.Lammasu,
+            CreatureDataConstants.Lammasu_GoldenProtector)]
+        [TestCase(CreatureDataConstants.Lion,
+            CreatureDataConstants.Lion,
+            CreatureDataConstants.Lion_Dire)]
+        [TestCase(CreatureDataConstants.Livestock,
+            CreatureDataConstants.Livestock_Noncombatant)]
+        [TestCase(CreatureDataConstants.Lizard,
+            CreatureDataConstants.Lizard,
+            CreatureDataConstants.Lizard_Monitor)]
+        [TestCase(CreatureDataConstants.Lizardfolk,
+            CreatureDataConstants.Lizardfolk,
+            CreatureDataConstants.Lizardfolk_Leader_3rdTo6th,
+            CreatureDataConstants.Lizardfolk_Leader_4thTo10th,
+            CreatureDataConstants.Lizardfolk_Lieutenant,
+            CreatureDataConstants.Lizardfolk_Noncombatant)]
+        [TestCase(CreatureDataConstants.Locathah,
+            CreatureDataConstants.Locathah_Warrior,
+            CreatureDataConstants.Locathah_Sergeant,
+            CreatureDataConstants.Locathah_Leader,
+            CreatureDataConstants.Locathah_Noncombatant,
+            CreatureDataConstants.Locathah_Lieutenant,
+            CreatureDataConstants.Locathah_Captain)]
+        [TestCase(CreatureDataConstants.Locust,
+            CreatureDataConstants.Locust_Swarm)]
+        [TestCase(CreatureDataConstants.Lycanthrope,
+            CreatureDataConstants.Werebear,
+            CreatureDataConstants.Wereboar,
+            CreatureDataConstants.Wererat,
+            CreatureDataConstants.Weretiger,
+            CreatureDataConstants.Werewolf)]
+        [TestCase(CreatureDataConstants.Mephit,
+            CreatureDataConstants.Mephit_Air,
+            CreatureDataConstants.Mephit_Dust,
+            CreatureDataConstants.Mephit_Earth,
+            CreatureDataConstants.Mephit_Fire,
+            CreatureDataConstants.Mephit_Ice,
+            CreatureDataConstants.Mephit_Magma,
+            CreatureDataConstants.Mephit_Ooze,
+            CreatureDataConstants.Mephit_Salt,
+            CreatureDataConstants.Mephit_Steam,
+            CreatureDataConstants.Mephit_Water)]
+        [TestCase(CreatureDataConstants.Merfolk,
+            CreatureDataConstants.Merfolk_Warrior,
+            CreatureDataConstants.Merfolk_Lieutenant_3rd,
+            CreatureDataConstants.Merfolk_Leader,
+            CreatureDataConstants.Merfolk_Sergeant,
+            CreatureDataConstants.Merfolk_Lieutenant_5th,
+            CreatureDataConstants.Merfolk_Captain)]
+        [TestCase(CreatureDataConstants.MindFlayer,
+            CreatureDataConstants.MindFlayer,
+            CreatureDataConstants.MindFlayer_Sorcerer)]
+        [TestCase(CreatureDataConstants.Mummy,
+            CreatureDataConstants.Mummy,
+            CreatureDataConstants.MummyLord)]
+        [TestCase(CreatureDataConstants.Naga,
+            CreatureDataConstants.Naga_Dark,
+            CreatureDataConstants.Naga_Guardian,
+            CreatureDataConstants.Naga_Spirit,
+            CreatureDataConstants.Naga_Water)]
+        [TestCase(CreatureDataConstants.Nightmare,
+            CreatureDataConstants.Nightmare,
+            CreatureDataConstants.Nightmare_Cauchemar)]
+        [TestCase(CreatureDataConstants.Nightshade,
+            CreatureDataConstants.Nightcrawler,
+            CreatureDataConstants.Nightwalker,
+            CreatureDataConstants.Nightwing)]
+        [TestCase(CreatureDataConstants.NPC,
+            CreatureDataConstants.NPC_Level1,
+            CreatureDataConstants.NPC_Level10To11,
+            CreatureDataConstants.NPC_Level12To13,
+            CreatureDataConstants.NPC_Level14To15,
+            CreatureDataConstants.NPC_Level16To17,
+            CreatureDataConstants.NPC_Level18To19,
+            CreatureDataConstants.NPC_Level20,
+            CreatureDataConstants.NPC_Level2To3,
+            CreatureDataConstants.NPC_Level4To5,
+            CreatureDataConstants.NPC_Level6To7,
+            CreatureDataConstants.NPC_Level8To9)]
+        [TestCase(CreatureDataConstants.Octopus,
+            CreatureDataConstants.Octopus,
+            CreatureDataConstants.Octopus_Giant)]
+        [TestCase(CreatureDataConstants.Ogre,
+            CreatureDataConstants.Ogre,
+            CreatureDataConstants.Ogre_Barbarian)]
+        [TestCase(CreatureDataConstants.Ogre_Merrow,
+            CreatureDataConstants.Ogre_Merrow,
+            CreatureDataConstants.Ogre_Merrow_Barbarian)]
+        [TestCase(CreatureDataConstants.Orc,
+            CreatureDataConstants.Orc_Captain,
+            CreatureDataConstants.Orc_Leader,
+            CreatureDataConstants.Orc_Lieutenant,
+            CreatureDataConstants.Orc_Noncombatant,
+            CreatureDataConstants.Orc_Sergeant,
+            CreatureDataConstants.Orc_Warrior)]
+        [TestCase(CreatureDataConstants.Orc_Half,
+            CreatureDataConstants.Orc_Half_Captain,
+            CreatureDataConstants.Orc_Half_Leader,
+            CreatureDataConstants.Orc_Half_Lieutenant,
+            CreatureDataConstants.Orc_Half_Noncombatant,
+            CreatureDataConstants.Orc_Half_Sergeant,
+            CreatureDataConstants.Orc_Half_Warrior)]
+        [TestCase(CreatureDataConstants.Owl,
+            CreatureDataConstants.Owl,
+            CreatureDataConstants.Owl_Giant)]
+        [TestCase(CreatureDataConstants.Pixie,
+            CreatureDataConstants.Pixie,
+            CreatureDataConstants.Pixie_WithIrresistableDance)]
+        [TestCase(CreatureDataConstants.Pony,
+            CreatureDataConstants.Pony,
+            CreatureDataConstants.Pony_War)]
+        [TestCase(CreatureDataConstants.Pyrohydra,
+            CreatureDataConstants.Pyrohydra_10Heads,
+            CreatureDataConstants.Pyrohydra_11Heads,
+            CreatureDataConstants.Pyrohydra_12Heads,
+            CreatureDataConstants.Pyrohydra_5Heads,
+            CreatureDataConstants.Pyrohydra_6Heads,
+            CreatureDataConstants.Pyrohydra_7Heads,
+            CreatureDataConstants.Pyrohydra_8Heads,
+            CreatureDataConstants.Pyrohydra_9Heads)]
+        [TestCase(CreatureDataConstants.Rat,
+            CreatureDataConstants.Rat,
+            CreatureDataConstants.Rat_Dire,
+            CreatureDataConstants.Rat_Swarm,
+            CreatureDataConstants.Wererat)]
+        [TestCase(CreatureDataConstants.Sahuagin,
+            CreatureDataConstants.Sahuagin,
+            CreatureDataConstants.Sahuagin_Baron,
+            CreatureDataConstants.Sahuagin_Chieftan,
+            CreatureDataConstants.Sahuagin_Guard,
+            CreatureDataConstants.Sahuagin_Lieutenant,
+            CreatureDataConstants.Sahuagin_Noncombatant,
+            CreatureDataConstants.Sahuagin_Priest,
+            CreatureDataConstants.Sahuagin_Underpriest)]
+        [TestCase(CreatureDataConstants.Salamander,
+            CreatureDataConstants.Salamander_Average,
+            CreatureDataConstants.Salamander_Flamebrother,
+            CreatureDataConstants.Salamander_Noble)]
+        [TestCase(CreatureDataConstants.Satyr,
+            CreatureDataConstants.Satyr,
+            CreatureDataConstants.Satyr_WithPipes)]
+        [TestCase(CreatureDataConstants.Scorpion_Monstrous,
+            CreatureDataConstants.Scorpion_Monstrous_Colossal,
+            CreatureDataConstants.Scorpion_Monstrous_Gargantuan,
+            CreatureDataConstants.Scorpion_Monstrous_Huge,
+            CreatureDataConstants.Scorpion_Monstrous_Large,
+            CreatureDataConstants.Scorpion_Monstrous_Medium,
+            CreatureDataConstants.Scorpion_Monstrous_Small,
+            CreatureDataConstants.Scorpion_Monstrous_Tiny)]
+        [TestCase(CreatureDataConstants.Scorpionfolk,
+            CreatureDataConstants.Scorpionfolk,
+            CreatureDataConstants.Scorpionfolk_Cleric,
+            CreatureDataConstants.Scorpionfolk_Ranger_3rdTo5th,
+            CreatureDataConstants.Scorpionfolk_Ranger_6thTo8th)]
+        [TestCase(CreatureDataConstants.Shadow,
+            CreatureDataConstants.Shadow,
+            CreatureDataConstants.Shadow_Greater)]
+        [TestCase(CreatureDataConstants.Shark,
+            CreatureDataConstants.Shark_Dire,
+            CreatureDataConstants.Shark_Medium,
+            CreatureDataConstants.Shark_Large,
+            CreatureDataConstants.Shark_Huge)]
+        [TestCase(CreatureDataConstants.Skeleton,
+            CreatureDataConstants.Skeleton_Chimera,
+            CreatureDataConstants.Skeleton_Dragon_Red_YoungAdult,
+            CreatureDataConstants.Skeleton_Ettin,
+            CreatureDataConstants.Skeleton_Giant_Cloud,
+            CreatureDataConstants.Skeleton_Human,
+            CreatureDataConstants.Skeleton_Megaraptor,
+            CreatureDataConstants.Skeleton_Owlbear,
+            CreatureDataConstants.Skeleton_Troll,
+            CreatureDataConstants.Skeleton_Wolf)]
+        [TestCase(CreatureDataConstants.Slaad,
+            CreatureDataConstants.Slaad_Blue,
+            CreatureDataConstants.Slaad_Death,
+            CreatureDataConstants.Slaad_Gray,
+            CreatureDataConstants.Slaad_Green,
+            CreatureDataConstants.Slaad_Red)]
+        [TestCase(CreatureDataConstants.Snake_Constrictor,
+            CreatureDataConstants.Snake_Constrictor,
+            CreatureDataConstants.Snake_Constrictor_Giant)]
+        [TestCase(CreatureDataConstants.Snake_Viper,
+            CreatureDataConstants.Snake_Viper_Huge,
+            CreatureDataConstants.Snake_Viper_Large,
+            CreatureDataConstants.Snake_Viper_Medium,
+            CreatureDataConstants.Snake_Viper_Small,
+            CreatureDataConstants.Snake_Viper_Tiny)]
+        [TestCase(CreatureDataConstants.Spider_Monstrous,
+            CreatureDataConstants.Spider_Monstrous_Colossal,
+            CreatureDataConstants.Spider_Monstrous_Gargantuan,
+            CreatureDataConstants.Spider_Monstrous_Huge,
+            CreatureDataConstants.Spider_Monstrous_Large,
+            CreatureDataConstants.Spider_Monstrous_Medium,
+            CreatureDataConstants.Spider_Monstrous_Small,
+            CreatureDataConstants.Spider_Monstrous_Tiny)]
+        [TestCase(CreatureDataConstants.Sprite,
+            CreatureDataConstants.Grig,
+            CreatureDataConstants.Pixie,
+            CreatureDataConstants.Nixie)]
+        [TestCase(CreatureDataConstants.Squid,
+            CreatureDataConstants.Squid,
+            CreatureDataConstants.Squid_Giant)]
+        [TestCase(CreatureDataConstants.Svirfneblin,
+            CreatureDataConstants.Svirfneblin_Captain,
+            CreatureDataConstants.Svirfneblin_Leader,
+            CreatureDataConstants.Svirfneblin_Lieutenant_3rd,
+            CreatureDataConstants.Svirfneblin_Lieutenant_5th,
+            CreatureDataConstants.Svirfneblin_Sergeant,
+            CreatureDataConstants.Svirfneblin_Warrior)]
+        [TestCase(CreatureDataConstants.Tiefling,
+            CreatureDataConstants.Tiefling_Warrior)]
+        [TestCase(CreatureDataConstants.Tiger,
+            CreatureDataConstants.Tiger,
+            CreatureDataConstants.Tiger_Dire,
+            CreatureDataConstants.Weretiger)]
+        [TestCase(CreatureDataConstants.Tojanida,
+            CreatureDataConstants.Tojanida_Juvenile,
+            CreatureDataConstants.Tojanida_Adult,
+            CreatureDataConstants.Tojanida_Elder)]
+        [TestCase(CreatureDataConstants.Troglodyte,
+            CreatureDataConstants.Troglodyte,
+            CreatureDataConstants.Troglodyte_Noncombatant)]
+        [TestCase(CreatureDataConstants.Troll,
+            CreatureDataConstants.Troll,
+            CreatureDataConstants.Troll_Hunter)]
+        [TestCase(CreatureDataConstants.Troll_Scrag,
+            CreatureDataConstants.Troll_Scrag,
+            CreatureDataConstants.Troll_Scrag_Hunter)]
+        [TestCase(CreatureDataConstants.UmberHulk,
+            CreatureDataConstants.UmberHulk,
+            CreatureDataConstants.UmberHulk_TrulyHorrid)]
+        [TestCase(CreatureDataConstants.Unicorn,
+            CreatureDataConstants.Unicorn,
+            CreatureDataConstants.Unicorn_CelestialCharger)]
+        [TestCase(CreatureDataConstants.Warrior_Bandit,
+            CreatureDataConstants.Warrior_Bandit_Level1,
+            CreatureDataConstants.Warrior_Bandit_Level10To11,
+            CreatureDataConstants.Warrior_Bandit_Level12To13,
+            CreatureDataConstants.Warrior_Bandit_Level14To15,
+            CreatureDataConstants.Warrior_Bandit_Level16To17,
+            CreatureDataConstants.Warrior_Bandit_Level18To19,
+            CreatureDataConstants.Warrior_Bandit_Level20,
+            CreatureDataConstants.Warrior_Bandit_Level2To3,
+            CreatureDataConstants.Warrior_Bandit_Level4To5,
+            CreatureDataConstants.Warrior_Bandit_Level6To7,
+            CreatureDataConstants.Warrior_Bandit_Level8To9)]
+        [TestCase(CreatureDataConstants.Warrior_Captain,
+            CreatureDataConstants.Warrior_Captain_Level10To11,
+            CreatureDataConstants.Warrior_Captain_Level12To13,
+            CreatureDataConstants.Warrior_Captain_Level14To15,
+            CreatureDataConstants.Warrior_Captain_Level16To17,
+            CreatureDataConstants.Warrior_Captain_Level18To19,
+            CreatureDataConstants.Warrior_Captain_Level20,
+            CreatureDataConstants.Warrior_Captain_Level2To3,
+            CreatureDataConstants.Warrior_Captain_Level4To5,
+            CreatureDataConstants.Warrior_Captain_Level6To7,
+            CreatureDataConstants.Warrior_Captain_Level8To9)]
+        [TestCase(CreatureDataConstants.Warrior_Guard,
+            CreatureDataConstants.Warrior_Guard_Level1,
+            CreatureDataConstants.Warrior_Guard_Level10To11,
+            CreatureDataConstants.Warrior_Guard_Level12To13,
+            CreatureDataConstants.Warrior_Guard_Level14To15,
+            CreatureDataConstants.Warrior_Guard_Level16To17,
+            CreatureDataConstants.Warrior_Guard_Level18To19,
+            CreatureDataConstants.Warrior_Guard_Level20,
+            CreatureDataConstants.Warrior_Guard_Level2To3,
+            CreatureDataConstants.Warrior_Guard_Level4To5,
+            CreatureDataConstants.Warrior_Guard_Level6To7,
+            CreatureDataConstants.Warrior_Guard_Level8To9)]
+        [TestCase(CreatureDataConstants.Warrior_Leader,
+            CreatureDataConstants.Warrior_Leader_Level10To11,
+            CreatureDataConstants.Warrior_Leader_Level12To13,
+            CreatureDataConstants.Warrior_Leader_Level14To15,
+            CreatureDataConstants.Warrior_Leader_Level16To17,
+            CreatureDataConstants.Warrior_Leader_Level18To19,
+            CreatureDataConstants.Warrior_Leader_Level20,
+            CreatureDataConstants.Warrior_Leader_Level2To3,
+            CreatureDataConstants.Warrior_Leader_Level4To5,
+            CreatureDataConstants.Warrior_Leader_Level6To7,
+            CreatureDataConstants.Warrior_Leader_Level8To9)]
+        [TestCase(CreatureDataConstants.Weasel,
+            CreatureDataConstants.Weasel,
+            CreatureDataConstants.Weasel_Dire)]
+        [TestCase(CreatureDataConstants.Wereboar,
+            CreatureDataConstants.Wereboar,
+            CreatureDataConstants.Wereboar_HillGiantDire)]
+        [TestCase(CreatureDataConstants.Werewolf,
+            CreatureDataConstants.Werewolf,
+            CreatureDataConstants.WerewolfLord)]
+        [TestCase(CreatureDataConstants.Whale,
+            CreatureDataConstants.Whale_Baleen,
+            CreatureDataConstants.Whale_Cachalot,
+            CreatureDataConstants.Whale_Orca)]
+        [TestCase(CreatureDataConstants.Wolf,
+            CreatureDataConstants.Werewolf,
+            CreatureDataConstants.Wolf,
+            CreatureDataConstants.Wolf_Dire)]
+        [TestCase(CreatureDataConstants.Wolverine,
+            CreatureDataConstants.Wolverine,
+            CreatureDataConstants.Wolverine_Dire)]
+        [TestCase(CreatureDataConstants.Wraith,
+            CreatureDataConstants.Wraith,
+            CreatureDataConstants.Wraith_Dread)]
+        [TestCase(CreatureDataConstants.Xorn,
+            CreatureDataConstants.Xorn_Average,
+            CreatureDataConstants.Xorn_Elder,
+            CreatureDataConstants.Xorn_Minor)]
+        [TestCase(CreatureDataConstants.YuanTi,
+            CreatureDataConstants.YuanTi_Abomination,
+            CreatureDataConstants.YuanTi_Halfblood,
+            CreatureDataConstants.YuanTi_Pureblood)]
+        [TestCase(CreatureDataConstants.Zombie,
+            CreatureDataConstants.Zombie_Bugbear,
+            CreatureDataConstants.Zombie_GrayRender,
+            CreatureDataConstants.Zombie_Human,
+            CreatureDataConstants.Zombie_Kobold,
+            CreatureDataConstants.Zombie_Minotaur,
+            CreatureDataConstants.Zombie_Ogre,
+            CreatureDataConstants.Zombie_Troglodyte,
+            CreatureDataConstants.Zombie_Wyvern)]
         public void CreatureSubgroup(string creature, params string[] subgroup)
         {
             base.DistinctCollection(creature, subgroup);
@@ -1060,20 +1060,20 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         {
             var items = new[]
             {
-                CreatureConstants.Adept_Fortuneteller_Level1,
-                CreatureConstants.Adept_Fortuneteller_Level10To11,
-                CreatureConstants.Adept_Fortuneteller_Level12To13,
-                CreatureConstants.Adept_Fortuneteller_Level14To15,
-                CreatureConstants.Adept_Fortuneteller_Level16To17,
-                CreatureConstants.Adept_Fortuneteller_Level18To19,
-                CreatureConstants.Adept_Fortuneteller_Level20,
-                CreatureConstants.Adept_Fortuneteller_Level2To3,
-                CreatureConstants.Adept_Fortuneteller_Level4To5,
-                CreatureConstants.Adept_Fortuneteller_Level6To7,
-                CreatureConstants.Adept_Fortuneteller_Level8To9,
+                CreatureDataConstants.Adept_Fortuneteller_Level1,
+                CreatureDataConstants.Adept_Fortuneteller_Level10To11,
+                CreatureDataConstants.Adept_Fortuneteller_Level12To13,
+                CreatureDataConstants.Adept_Fortuneteller_Level14To15,
+                CreatureDataConstants.Adept_Fortuneteller_Level16To17,
+                CreatureDataConstants.Adept_Fortuneteller_Level18To19,
+                CreatureDataConstants.Adept_Fortuneteller_Level20,
+                CreatureDataConstants.Adept_Fortuneteller_Level2To3,
+                CreatureDataConstants.Adept_Fortuneteller_Level4To5,
+                CreatureDataConstants.Adept_Fortuneteller_Level6To7,
+                CreatureDataConstants.Adept_Fortuneteller_Level8To9,
             };
 
-            base.DistinctCollection(CreatureConstants.Adept_Fortuneteller, items);
+            base.DistinctCollection(CreatureDataConstants.Adept_Fortuneteller, items);
         }
 
         [Test]
@@ -1081,20 +1081,20 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         {
             var items = new[]
             {
-                CreatureConstants.Adept_Missionary_Level1,
-                CreatureConstants.Adept_Missionary_Level10To11,
-                CreatureConstants.Adept_Missionary_Level12To13,
-                CreatureConstants.Adept_Missionary_Level14To15,
-                CreatureConstants.Adept_Missionary_Level16To17,
-                CreatureConstants.Adept_Missionary_Level18To19,
-                CreatureConstants.Adept_Missionary_Level20,
-                CreatureConstants.Adept_Missionary_Level2To3,
-                CreatureConstants.Adept_Missionary_Level4To5,
-                CreatureConstants.Adept_Missionary_Level6To7,
-                CreatureConstants.Adept_Missionary_Level8To9,
+                CreatureDataConstants.Adept_Missionary_Level1,
+                CreatureDataConstants.Adept_Missionary_Level10To11,
+                CreatureDataConstants.Adept_Missionary_Level12To13,
+                CreatureDataConstants.Adept_Missionary_Level14To15,
+                CreatureDataConstants.Adept_Missionary_Level16To17,
+                CreatureDataConstants.Adept_Missionary_Level18To19,
+                CreatureDataConstants.Adept_Missionary_Level20,
+                CreatureDataConstants.Adept_Missionary_Level2To3,
+                CreatureDataConstants.Adept_Missionary_Level4To5,
+                CreatureDataConstants.Adept_Missionary_Level6To7,
+                CreatureDataConstants.Adept_Missionary_Level8To9,
             };
 
-            base.DistinctCollection(CreatureConstants.Adept_Missionary, items);
+            base.DistinctCollection(CreatureDataConstants.Adept_Missionary, items);
         }
 
         [Test]
@@ -1102,20 +1102,20 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         {
             var items = new[]
             {
-                CreatureConstants.Adept_StreetPerformer_Level1,
-                CreatureConstants.Adept_StreetPerformer_Level10To11,
-                CreatureConstants.Adept_StreetPerformer_Level12To13,
-                CreatureConstants.Adept_StreetPerformer_Level14To15,
-                CreatureConstants.Adept_StreetPerformer_Level16To17,
-                CreatureConstants.Adept_StreetPerformer_Level18To19,
-                CreatureConstants.Adept_StreetPerformer_Level20,
-                CreatureConstants.Adept_StreetPerformer_Level2To3,
-                CreatureConstants.Adept_StreetPerformer_Level4To5,
-                CreatureConstants.Adept_StreetPerformer_Level6To7,
-                CreatureConstants.Adept_StreetPerformer_Level8To9,
+                CreatureDataConstants.Adept_StreetPerformer_Level1,
+                CreatureDataConstants.Adept_StreetPerformer_Level10To11,
+                CreatureDataConstants.Adept_StreetPerformer_Level12To13,
+                CreatureDataConstants.Adept_StreetPerformer_Level14To15,
+                CreatureDataConstants.Adept_StreetPerformer_Level16To17,
+                CreatureDataConstants.Adept_StreetPerformer_Level18To19,
+                CreatureDataConstants.Adept_StreetPerformer_Level20,
+                CreatureDataConstants.Adept_StreetPerformer_Level2To3,
+                CreatureDataConstants.Adept_StreetPerformer_Level4To5,
+                CreatureDataConstants.Adept_StreetPerformer_Level6To7,
+                CreatureDataConstants.Adept_StreetPerformer_Level8To9,
             };
 
-            base.DistinctCollection(CreatureConstants.Adept_StreetPerformer, items);
+            base.DistinctCollection(CreatureDataConstants.Adept_StreetPerformer, items);
         }
 
         [Test]
@@ -1123,20 +1123,20 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         {
             var items = new[]
             {
-                CreatureConstants.Aristocrat_Businessman_Level1,
-                CreatureConstants.Aristocrat_Businessman_Level10To11,
-                CreatureConstants.Aristocrat_Businessman_Level12To13,
-                CreatureConstants.Aristocrat_Businessman_Level14To15,
-                CreatureConstants.Aristocrat_Businessman_Level16To17,
-                CreatureConstants.Aristocrat_Businessman_Level18To19,
-                CreatureConstants.Aristocrat_Businessman_Level20,
-                CreatureConstants.Aristocrat_Businessman_Level2To3,
-                CreatureConstants.Aristocrat_Businessman_Level4To5,
-                CreatureConstants.Aristocrat_Businessman_Level6To7,
-                CreatureConstants.Aristocrat_Businessman_Level8To9,
+                CreatureDataConstants.Aristocrat_Businessman_Level1,
+                CreatureDataConstants.Aristocrat_Businessman_Level10To11,
+                CreatureDataConstants.Aristocrat_Businessman_Level12To13,
+                CreatureDataConstants.Aristocrat_Businessman_Level14To15,
+                CreatureDataConstants.Aristocrat_Businessman_Level16To17,
+                CreatureDataConstants.Aristocrat_Businessman_Level18To19,
+                CreatureDataConstants.Aristocrat_Businessman_Level20,
+                CreatureDataConstants.Aristocrat_Businessman_Level2To3,
+                CreatureDataConstants.Aristocrat_Businessman_Level4To5,
+                CreatureDataConstants.Aristocrat_Businessman_Level6To7,
+                CreatureDataConstants.Aristocrat_Businessman_Level8To9,
             };
 
-            base.DistinctCollection(CreatureConstants.Aristocrat_Businessman, items);
+            base.DistinctCollection(CreatureDataConstants.Aristocrat_Businessman, items);
         }
 
         [Test]
@@ -1144,20 +1144,20 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         {
             var items = new[]
             {
-                CreatureConstants.Aristocrat_Gentry_Level1,
-                CreatureConstants.Aristocrat_Gentry_Level10To11,
-                CreatureConstants.Aristocrat_Gentry_Level12To13,
-                CreatureConstants.Aristocrat_Gentry_Level14To15,
-                CreatureConstants.Aristocrat_Gentry_Level16To17,
-                CreatureConstants.Aristocrat_Gentry_Level18To19,
-                CreatureConstants.Aristocrat_Gentry_Level20,
-                CreatureConstants.Aristocrat_Gentry_Level2To3,
-                CreatureConstants.Aristocrat_Gentry_Level4To5,
-                CreatureConstants.Aristocrat_Gentry_Level6To7,
-                CreatureConstants.Aristocrat_Gentry_Level8To9,
+                CreatureDataConstants.Aristocrat_Gentry_Level1,
+                CreatureDataConstants.Aristocrat_Gentry_Level10To11,
+                CreatureDataConstants.Aristocrat_Gentry_Level12To13,
+                CreatureDataConstants.Aristocrat_Gentry_Level14To15,
+                CreatureDataConstants.Aristocrat_Gentry_Level16To17,
+                CreatureDataConstants.Aristocrat_Gentry_Level18To19,
+                CreatureDataConstants.Aristocrat_Gentry_Level20,
+                CreatureDataConstants.Aristocrat_Gentry_Level2To3,
+                CreatureDataConstants.Aristocrat_Gentry_Level4To5,
+                CreatureDataConstants.Aristocrat_Gentry_Level6To7,
+                CreatureDataConstants.Aristocrat_Gentry_Level8To9,
             };
 
-            base.DistinctCollection(CreatureConstants.Aristocrat_Gentry, items);
+            base.DistinctCollection(CreatureDataConstants.Aristocrat_Gentry, items);
         }
 
         [Test]
@@ -1165,20 +1165,20 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         {
             var items = new[]
             {
-                CreatureConstants.Aristocrat_Politician_Level1,
-                CreatureConstants.Aristocrat_Politician_Level10To11,
-                CreatureConstants.Aristocrat_Politician_Level12To13,
-                CreatureConstants.Aristocrat_Politician_Level14To15,
-                CreatureConstants.Aristocrat_Politician_Level16To17,
-                CreatureConstants.Aristocrat_Politician_Level18To19,
-                CreatureConstants.Aristocrat_Politician_Level20,
-                CreatureConstants.Aristocrat_Politician_Level2To3,
-                CreatureConstants.Aristocrat_Politician_Level4To5,
-                CreatureConstants.Aristocrat_Politician_Level6To7,
-                CreatureConstants.Aristocrat_Politician_Level8To9,
+                CreatureDataConstants.Aristocrat_Politician_Level1,
+                CreatureDataConstants.Aristocrat_Politician_Level10To11,
+                CreatureDataConstants.Aristocrat_Politician_Level12To13,
+                CreatureDataConstants.Aristocrat_Politician_Level14To15,
+                CreatureDataConstants.Aristocrat_Politician_Level16To17,
+                CreatureDataConstants.Aristocrat_Politician_Level18To19,
+                CreatureDataConstants.Aristocrat_Politician_Level20,
+                CreatureDataConstants.Aristocrat_Politician_Level2To3,
+                CreatureDataConstants.Aristocrat_Politician_Level4To5,
+                CreatureDataConstants.Aristocrat_Politician_Level6To7,
+                CreatureDataConstants.Aristocrat_Politician_Level8To9,
             };
 
-            base.DistinctCollection(CreatureConstants.Aristocrat_Politician, items);
+            base.DistinctCollection(CreatureDataConstants.Aristocrat_Politician, items);
         }
 
         [Test]
@@ -1186,57 +1186,57 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         {
             var items = new[]
             {
-                CreatureConstants.Adept_Doctor,
-                CreatureConstants.Adept_Fortuneteller,
-                CreatureConstants.Adept_Missionary,
-                CreatureConstants.Adept_StreetPerformer,
-                CreatureConstants.Aristocrat_Businessman,
-                CreatureConstants.Aristocrat_Gentry,
-                CreatureConstants.Aristocrat_Politician,
-                CreatureConstants.Bard_Leader,
-                CreatureConstants.Character_Adventurer,
-                CreatureConstants.Character_AnimalTrainer,
-                CreatureConstants.Character_Doctor,
-                CreatureConstants.Character_FamousEntertainer,
-                CreatureConstants.Character_FamousPriest,
-                CreatureConstants.Character_Hitman,
-                CreatureConstants.Character_Hunter,
-                CreatureConstants.Character_Merchant,
-                CreatureConstants.Character_Minstrel,
-                CreatureConstants.Character_Missionary,
-                CreatureConstants.Character_RetiredAdventurer,
-                CreatureConstants.Character_Scholar,
-                CreatureConstants.Character_Sellsword,
-                CreatureConstants.Character_StarStudent,
-                CreatureConstants.Character_StreetPerformer,
-                CreatureConstants.Character_Student,
-                CreatureConstants.Character_Teacher,
-                CreatureConstants.Character_WarHero,
-                CreatureConstants.Cleric_Leader,
-                CreatureConstants.Commoner_Beggar,
-                CreatureConstants.Commoner_ConstructionWorker,
-                CreatureConstants.Commoner_Farmer,
-                CreatureConstants.Commoner_Herder,
-                CreatureConstants.Commoner_Pilgrim,
-                CreatureConstants.Commoner_Protestor,
-                CreatureConstants.Commoner_Servant,
-                CreatureConstants.Expert_Adviser,
-                CreatureConstants.Expert_Architect,
-                CreatureConstants.Expert_Artisan,
-                CreatureConstants.Fighter_Captain,
-                CreatureConstants.Fighter_Leader,
-                CreatureConstants.NPC,
-                CreatureConstants.NPC_Traveler,
-                CreatureConstants.Paladin_Crusader,
-                CreatureConstants.Rogue_Pickpocket,
-                CreatureConstants.Warrior_Bandit,
-                CreatureConstants.Warrior_Captain,
-                CreatureConstants.Warrior_Guard,
-                CreatureConstants.Warrior_Leader,
-                CreatureConstants.Wizard_FamousResearcher,
+                CreatureDataConstants.Adept_Doctor,
+                CreatureDataConstants.Adept_Fortuneteller,
+                CreatureDataConstants.Adept_Missionary,
+                CreatureDataConstants.Adept_StreetPerformer,
+                CreatureDataConstants.Aristocrat_Businessman,
+                CreatureDataConstants.Aristocrat_Gentry,
+                CreatureDataConstants.Aristocrat_Politician,
+                CreatureDataConstants.Bard_Leader,
+                CreatureDataConstants.Character_Adventurer,
+                CreatureDataConstants.Character_AnimalTrainer,
+                CreatureDataConstants.Character_Doctor,
+                CreatureDataConstants.Character_FamousEntertainer,
+                CreatureDataConstants.Character_FamousPriest,
+                CreatureDataConstants.Character_Hitman,
+                CreatureDataConstants.Character_Hunter,
+                CreatureDataConstants.Character_Merchant,
+                CreatureDataConstants.Character_Minstrel,
+                CreatureDataConstants.Character_Missionary,
+                CreatureDataConstants.Character_RetiredAdventurer,
+                CreatureDataConstants.Character_Scholar,
+                CreatureDataConstants.Character_Sellsword,
+                CreatureDataConstants.Character_StarStudent,
+                CreatureDataConstants.Character_StreetPerformer,
+                CreatureDataConstants.Character_Student,
+                CreatureDataConstants.Character_Teacher,
+                CreatureDataConstants.Character_WarHero,
+                CreatureDataConstants.Cleric_Leader,
+                CreatureDataConstants.Commoner_Beggar,
+                CreatureDataConstants.Commoner_ConstructionWorker,
+                CreatureDataConstants.Commoner_Farmer,
+                CreatureDataConstants.Commoner_Herder,
+                CreatureDataConstants.Commoner_Pilgrim,
+                CreatureDataConstants.Commoner_Protestor,
+                CreatureDataConstants.Commoner_Servant,
+                CreatureDataConstants.Expert_Adviser,
+                CreatureDataConstants.Expert_Architect,
+                CreatureDataConstants.Expert_Artisan,
+                CreatureDataConstants.Fighter_Captain,
+                CreatureDataConstants.Fighter_Leader,
+                CreatureDataConstants.NPC,
+                CreatureDataConstants.NPC_Traveler,
+                CreatureDataConstants.Paladin_Crusader,
+                CreatureDataConstants.Rogue_Pickpocket,
+                CreatureDataConstants.Warrior_Bandit,
+                CreatureDataConstants.Warrior_Captain,
+                CreatureDataConstants.Warrior_Guard,
+                CreatureDataConstants.Warrior_Leader,
+                CreatureDataConstants.Wizard_FamousResearcher,
             };
 
-            base.DistinctCollection(CreatureConstants.Character, items);
+            base.DistinctCollection(CreatureDataConstants.Character, items);
         }
 
         [Test]
@@ -1244,29 +1244,29 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         {
             var items = new[]
             {
-                CreatureConstants.Character_Adventurer_Level1,
-                CreatureConstants.Character_Adventurer_Level10,
-                CreatureConstants.Character_Adventurer_Level11,
-                CreatureConstants.Character_Adventurer_Level12,
-                CreatureConstants.Character_Adventurer_Level13,
-                CreatureConstants.Character_Adventurer_Level14,
-                CreatureConstants.Character_Adventurer_Level15,
-                CreatureConstants.Character_Adventurer_Level16,
-                CreatureConstants.Character_Adventurer_Level17,
-                CreatureConstants.Character_Adventurer_Level18,
-                CreatureConstants.Character_Adventurer_Level19,
-                CreatureConstants.Character_Adventurer_Level2,
-                CreatureConstants.Character_Adventurer_Level20,
-                CreatureConstants.Character_Adventurer_Level3,
-                CreatureConstants.Character_Adventurer_Level4,
-                CreatureConstants.Character_Adventurer_Level5,
-                CreatureConstants.Character_Adventurer_Level6,
-                CreatureConstants.Character_Adventurer_Level7,
-                CreatureConstants.Character_Adventurer_Level8,
-                CreatureConstants.Character_Adventurer_Level9
+                CreatureDataConstants.Character_Adventurer_Level1,
+                CreatureDataConstants.Character_Adventurer_Level10,
+                CreatureDataConstants.Character_Adventurer_Level11,
+                CreatureDataConstants.Character_Adventurer_Level12,
+                CreatureDataConstants.Character_Adventurer_Level13,
+                CreatureDataConstants.Character_Adventurer_Level14,
+                CreatureDataConstants.Character_Adventurer_Level15,
+                CreatureDataConstants.Character_Adventurer_Level16,
+                CreatureDataConstants.Character_Adventurer_Level17,
+                CreatureDataConstants.Character_Adventurer_Level18,
+                CreatureDataConstants.Character_Adventurer_Level19,
+                CreatureDataConstants.Character_Adventurer_Level2,
+                CreatureDataConstants.Character_Adventurer_Level20,
+                CreatureDataConstants.Character_Adventurer_Level3,
+                CreatureDataConstants.Character_Adventurer_Level4,
+                CreatureDataConstants.Character_Adventurer_Level5,
+                CreatureDataConstants.Character_Adventurer_Level6,
+                CreatureDataConstants.Character_Adventurer_Level7,
+                CreatureDataConstants.Character_Adventurer_Level8,
+                CreatureDataConstants.Character_Adventurer_Level9
             };
 
-            base.DistinctCollection(CreatureConstants.Character_Adventurer, items);
+            base.DistinctCollection(CreatureDataConstants.Character_Adventurer, items);
         }
 
         [Test]
@@ -1274,29 +1274,29 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         {
             var items = new[]
             {
-                CreatureConstants.Character_AnimalTrainer_Level1,
-                CreatureConstants.Character_AnimalTrainer_Level10,
-                CreatureConstants.Character_AnimalTrainer_Level11,
-                CreatureConstants.Character_AnimalTrainer_Level12,
-                CreatureConstants.Character_AnimalTrainer_Level13,
-                CreatureConstants.Character_AnimalTrainer_Level14,
-                CreatureConstants.Character_AnimalTrainer_Level15,
-                CreatureConstants.Character_AnimalTrainer_Level16,
-                CreatureConstants.Character_AnimalTrainer_Level17,
-                CreatureConstants.Character_AnimalTrainer_Level18,
-                CreatureConstants.Character_AnimalTrainer_Level19,
-                CreatureConstants.Character_AnimalTrainer_Level2,
-                CreatureConstants.Character_AnimalTrainer_Level20,
-                CreatureConstants.Character_AnimalTrainer_Level3,
-                CreatureConstants.Character_AnimalTrainer_Level4,
-                CreatureConstants.Character_AnimalTrainer_Level5,
-                CreatureConstants.Character_AnimalTrainer_Level6,
-                CreatureConstants.Character_AnimalTrainer_Level7,
-                CreatureConstants.Character_AnimalTrainer_Level8,
-                CreatureConstants.Character_AnimalTrainer_Level9
+                CreatureDataConstants.Character_AnimalTrainer_Level1,
+                CreatureDataConstants.Character_AnimalTrainer_Level10,
+                CreatureDataConstants.Character_AnimalTrainer_Level11,
+                CreatureDataConstants.Character_AnimalTrainer_Level12,
+                CreatureDataConstants.Character_AnimalTrainer_Level13,
+                CreatureDataConstants.Character_AnimalTrainer_Level14,
+                CreatureDataConstants.Character_AnimalTrainer_Level15,
+                CreatureDataConstants.Character_AnimalTrainer_Level16,
+                CreatureDataConstants.Character_AnimalTrainer_Level17,
+                CreatureDataConstants.Character_AnimalTrainer_Level18,
+                CreatureDataConstants.Character_AnimalTrainer_Level19,
+                CreatureDataConstants.Character_AnimalTrainer_Level2,
+                CreatureDataConstants.Character_AnimalTrainer_Level20,
+                CreatureDataConstants.Character_AnimalTrainer_Level3,
+                CreatureDataConstants.Character_AnimalTrainer_Level4,
+                CreatureDataConstants.Character_AnimalTrainer_Level5,
+                CreatureDataConstants.Character_AnimalTrainer_Level6,
+                CreatureDataConstants.Character_AnimalTrainer_Level7,
+                CreatureDataConstants.Character_AnimalTrainer_Level8,
+                CreatureDataConstants.Character_AnimalTrainer_Level9
             };
 
-            base.DistinctCollection(CreatureConstants.Character_AnimalTrainer, items);
+            base.DistinctCollection(CreatureDataConstants.Character_AnimalTrainer, items);
         }
 
         [Test]
@@ -1304,29 +1304,29 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         {
             var items = new[]
             {
-                CreatureConstants.Character_Doctor_Level1,
-                CreatureConstants.Character_Doctor_Level10,
-                CreatureConstants.Character_Doctor_Level11,
-                CreatureConstants.Character_Doctor_Level12,
-                CreatureConstants.Character_Doctor_Level13,
-                CreatureConstants.Character_Doctor_Level14,
-                CreatureConstants.Character_Doctor_Level15,
-                CreatureConstants.Character_Doctor_Level16,
-                CreatureConstants.Character_Doctor_Level17,
-                CreatureConstants.Character_Doctor_Level18,
-                CreatureConstants.Character_Doctor_Level19,
-                CreatureConstants.Character_Doctor_Level2,
-                CreatureConstants.Character_Doctor_Level20,
-                CreatureConstants.Character_Doctor_Level3,
-                CreatureConstants.Character_Doctor_Level4,
-                CreatureConstants.Character_Doctor_Level5,
-                CreatureConstants.Character_Doctor_Level6,
-                CreatureConstants.Character_Doctor_Level7,
-                CreatureConstants.Character_Doctor_Level8,
-                CreatureConstants.Character_Doctor_Level9
+                CreatureDataConstants.Character_Doctor_Level1,
+                CreatureDataConstants.Character_Doctor_Level10,
+                CreatureDataConstants.Character_Doctor_Level11,
+                CreatureDataConstants.Character_Doctor_Level12,
+                CreatureDataConstants.Character_Doctor_Level13,
+                CreatureDataConstants.Character_Doctor_Level14,
+                CreatureDataConstants.Character_Doctor_Level15,
+                CreatureDataConstants.Character_Doctor_Level16,
+                CreatureDataConstants.Character_Doctor_Level17,
+                CreatureDataConstants.Character_Doctor_Level18,
+                CreatureDataConstants.Character_Doctor_Level19,
+                CreatureDataConstants.Character_Doctor_Level2,
+                CreatureDataConstants.Character_Doctor_Level20,
+                CreatureDataConstants.Character_Doctor_Level3,
+                CreatureDataConstants.Character_Doctor_Level4,
+                CreatureDataConstants.Character_Doctor_Level5,
+                CreatureDataConstants.Character_Doctor_Level6,
+                CreatureDataConstants.Character_Doctor_Level7,
+                CreatureDataConstants.Character_Doctor_Level8,
+                CreatureDataConstants.Character_Doctor_Level9
             };
 
-            base.DistinctCollection(CreatureConstants.Character_Doctor, items);
+            base.DistinctCollection(CreatureDataConstants.Character_Doctor, items);
         }
 
         [Test]
@@ -1334,19 +1334,19 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         {
             var items = new[]
             {
-                CreatureConstants.Character_FamousEntertainer_Level11,
-                CreatureConstants.Character_FamousEntertainer_Level12,
-                CreatureConstants.Character_FamousEntertainer_Level13,
-                CreatureConstants.Character_FamousEntertainer_Level14,
-                CreatureConstants.Character_FamousEntertainer_Level15,
-                CreatureConstants.Character_FamousEntertainer_Level16,
-                CreatureConstants.Character_FamousEntertainer_Level17,
-                CreatureConstants.Character_FamousEntertainer_Level18,
-                CreatureConstants.Character_FamousEntertainer_Level19,
-                CreatureConstants.Character_FamousEntertainer_Level20,
+                CreatureDataConstants.Character_FamousEntertainer_Level11,
+                CreatureDataConstants.Character_FamousEntertainer_Level12,
+                CreatureDataConstants.Character_FamousEntertainer_Level13,
+                CreatureDataConstants.Character_FamousEntertainer_Level14,
+                CreatureDataConstants.Character_FamousEntertainer_Level15,
+                CreatureDataConstants.Character_FamousEntertainer_Level16,
+                CreatureDataConstants.Character_FamousEntertainer_Level17,
+                CreatureDataConstants.Character_FamousEntertainer_Level18,
+                CreatureDataConstants.Character_FamousEntertainer_Level19,
+                CreatureDataConstants.Character_FamousEntertainer_Level20,
             };
 
-            base.DistinctCollection(CreatureConstants.Character_FamousEntertainer, items);
+            base.DistinctCollection(CreatureDataConstants.Character_FamousEntertainer, items);
         }
 
         [Test]
@@ -1354,19 +1354,19 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         {
             var items = new[]
             {
-                CreatureConstants.Character_FamousPriest_Level11,
-                CreatureConstants.Character_FamousPriest_Level12,
-                CreatureConstants.Character_FamousPriest_Level13,
-                CreatureConstants.Character_FamousPriest_Level14,
-                CreatureConstants.Character_FamousPriest_Level15,
-                CreatureConstants.Character_FamousPriest_Level16,
-                CreatureConstants.Character_FamousPriest_Level17,
-                CreatureConstants.Character_FamousPriest_Level18,
-                CreatureConstants.Character_FamousPriest_Level19,
-                CreatureConstants.Character_FamousPriest_Level20,
+                CreatureDataConstants.Character_FamousPriest_Level11,
+                CreatureDataConstants.Character_FamousPriest_Level12,
+                CreatureDataConstants.Character_FamousPriest_Level13,
+                CreatureDataConstants.Character_FamousPriest_Level14,
+                CreatureDataConstants.Character_FamousPriest_Level15,
+                CreatureDataConstants.Character_FamousPriest_Level16,
+                CreatureDataConstants.Character_FamousPriest_Level17,
+                CreatureDataConstants.Character_FamousPriest_Level18,
+                CreatureDataConstants.Character_FamousPriest_Level19,
+                CreatureDataConstants.Character_FamousPriest_Level20,
             };
 
-            base.DistinctCollection(CreatureConstants.Character_FamousPriest, items);
+            base.DistinctCollection(CreatureDataConstants.Character_FamousPriest, items);
         }
 
         [Test]
@@ -1374,29 +1374,29 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         {
             var items = new[]
             {
-                CreatureConstants.Character_Hitman_Level1,
-                CreatureConstants.Character_Hitman_Level10,
-                CreatureConstants.Character_Hitman_Level11,
-                CreatureConstants.Character_Hitman_Level12,
-                CreatureConstants.Character_Hitman_Level13,
-                CreatureConstants.Character_Hitman_Level14,
-                CreatureConstants.Character_Hitman_Level15,
-                CreatureConstants.Character_Hitman_Level16,
-                CreatureConstants.Character_Hitman_Level17,
-                CreatureConstants.Character_Hitman_Level18,
-                CreatureConstants.Character_Hitman_Level19,
-                CreatureConstants.Character_Hitman_Level2,
-                CreatureConstants.Character_Hitman_Level20,
-                CreatureConstants.Character_Hitman_Level3,
-                CreatureConstants.Character_Hitman_Level4,
-                CreatureConstants.Character_Hitman_Level5,
-                CreatureConstants.Character_Hitman_Level6,
-                CreatureConstants.Character_Hitman_Level7,
-                CreatureConstants.Character_Hitman_Level8,
-                CreatureConstants.Character_Hitman_Level9
+                CreatureDataConstants.Character_Hitman_Level1,
+                CreatureDataConstants.Character_Hitman_Level10,
+                CreatureDataConstants.Character_Hitman_Level11,
+                CreatureDataConstants.Character_Hitman_Level12,
+                CreatureDataConstants.Character_Hitman_Level13,
+                CreatureDataConstants.Character_Hitman_Level14,
+                CreatureDataConstants.Character_Hitman_Level15,
+                CreatureDataConstants.Character_Hitman_Level16,
+                CreatureDataConstants.Character_Hitman_Level17,
+                CreatureDataConstants.Character_Hitman_Level18,
+                CreatureDataConstants.Character_Hitman_Level19,
+                CreatureDataConstants.Character_Hitman_Level2,
+                CreatureDataConstants.Character_Hitman_Level20,
+                CreatureDataConstants.Character_Hitman_Level3,
+                CreatureDataConstants.Character_Hitman_Level4,
+                CreatureDataConstants.Character_Hitman_Level5,
+                CreatureDataConstants.Character_Hitman_Level6,
+                CreatureDataConstants.Character_Hitman_Level7,
+                CreatureDataConstants.Character_Hitman_Level8,
+                CreatureDataConstants.Character_Hitman_Level9
             };
 
-            base.DistinctCollection(CreatureConstants.Character_Hitman, items);
+            base.DistinctCollection(CreatureDataConstants.Character_Hitman, items);
         }
 
         [Test]
@@ -1404,20 +1404,20 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         {
             var items = new[]
             {
-                CreatureConstants.Character_Hunter_Level1,
-                CreatureConstants.Character_Hunter_Level10To11,
-                CreatureConstants.Character_Hunter_Level12To13,
-                CreatureConstants.Character_Hunter_Level14To15,
-                CreatureConstants.Character_Hunter_Level16To17,
-                CreatureConstants.Character_Hunter_Level18To19,
-                CreatureConstants.Character_Hunter_Level20,
-                CreatureConstants.Character_Hunter_Level2To3,
-                CreatureConstants.Character_Hunter_Level4To5,
-                CreatureConstants.Character_Hunter_Level6To7,
-                CreatureConstants.Character_Hunter_Level8To9,
+                CreatureDataConstants.Character_Hunter_Level1,
+                CreatureDataConstants.Character_Hunter_Level10To11,
+                CreatureDataConstants.Character_Hunter_Level12To13,
+                CreatureDataConstants.Character_Hunter_Level14To15,
+                CreatureDataConstants.Character_Hunter_Level16To17,
+                CreatureDataConstants.Character_Hunter_Level18To19,
+                CreatureDataConstants.Character_Hunter_Level20,
+                CreatureDataConstants.Character_Hunter_Level2To3,
+                CreatureDataConstants.Character_Hunter_Level4To5,
+                CreatureDataConstants.Character_Hunter_Level6To7,
+                CreatureDataConstants.Character_Hunter_Level8To9,
             };
 
-            base.DistinctCollection(CreatureConstants.Character_Hunter, items);
+            base.DistinctCollection(CreatureDataConstants.Character_Hunter, items);
         }
 
         [Test]
@@ -1425,20 +1425,20 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         {
             var items = new[]
             {
-                CreatureConstants.Character_Merchant_Level1,
-                CreatureConstants.Character_Merchant_Level10To11,
-                CreatureConstants.Character_Merchant_Level12To13,
-                CreatureConstants.Character_Merchant_Level14To15,
-                CreatureConstants.Character_Merchant_Level16To17,
-                CreatureConstants.Character_Merchant_Level18To19,
-                CreatureConstants.Character_Merchant_Level20,
-                CreatureConstants.Character_Merchant_Level2To3,
-                CreatureConstants.Character_Merchant_Level4To5,
-                CreatureConstants.Character_Merchant_Level6To7,
-                CreatureConstants.Character_Merchant_Level8To9,
+                CreatureDataConstants.Character_Merchant_Level1,
+                CreatureDataConstants.Character_Merchant_Level10To11,
+                CreatureDataConstants.Character_Merchant_Level12To13,
+                CreatureDataConstants.Character_Merchant_Level14To15,
+                CreatureDataConstants.Character_Merchant_Level16To17,
+                CreatureDataConstants.Character_Merchant_Level18To19,
+                CreatureDataConstants.Character_Merchant_Level20,
+                CreatureDataConstants.Character_Merchant_Level2To3,
+                CreatureDataConstants.Character_Merchant_Level4To5,
+                CreatureDataConstants.Character_Merchant_Level6To7,
+                CreatureDataConstants.Character_Merchant_Level8To9,
             };
 
-            base.DistinctCollection(CreatureConstants.Character_Merchant, items);
+            base.DistinctCollection(CreatureDataConstants.Character_Merchant, items);
         }
 
         [Test]
@@ -1446,20 +1446,20 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         {
             var items = new[]
             {
-                CreatureConstants.Character_Minstrel_Level1,
-                CreatureConstants.Character_Minstrel_Level10To11,
-                CreatureConstants.Character_Minstrel_Level12To13,
-                CreatureConstants.Character_Minstrel_Level14To15,
-                CreatureConstants.Character_Minstrel_Level16To17,
-                CreatureConstants.Character_Minstrel_Level18To19,
-                CreatureConstants.Character_Minstrel_Level20,
-                CreatureConstants.Character_Minstrel_Level2To3,
-                CreatureConstants.Character_Minstrel_Level4To5,
-                CreatureConstants.Character_Minstrel_Level6To7,
-                CreatureConstants.Character_Minstrel_Level8To9,
+                CreatureDataConstants.Character_Minstrel_Level1,
+                CreatureDataConstants.Character_Minstrel_Level10To11,
+                CreatureDataConstants.Character_Minstrel_Level12To13,
+                CreatureDataConstants.Character_Minstrel_Level14To15,
+                CreatureDataConstants.Character_Minstrel_Level16To17,
+                CreatureDataConstants.Character_Minstrel_Level18To19,
+                CreatureDataConstants.Character_Minstrel_Level20,
+                CreatureDataConstants.Character_Minstrel_Level2To3,
+                CreatureDataConstants.Character_Minstrel_Level4To5,
+                CreatureDataConstants.Character_Minstrel_Level6To7,
+                CreatureDataConstants.Character_Minstrel_Level8To9,
             };
 
-            base.DistinctCollection(CreatureConstants.Character_Minstrel, items);
+            base.DistinctCollection(CreatureDataConstants.Character_Minstrel, items);
         }
 
         [Test]
@@ -1467,29 +1467,29 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         {
             var items = new[]
             {
-                CreatureConstants.Character_Missionary_Level1,
-                CreatureConstants.Character_Missionary_Level10,
-                CreatureConstants.Character_Missionary_Level11,
-                CreatureConstants.Character_Missionary_Level12,
-                CreatureConstants.Character_Missionary_Level13,
-                CreatureConstants.Character_Missionary_Level14,
-                CreatureConstants.Character_Missionary_Level15,
-                CreatureConstants.Character_Missionary_Level16,
-                CreatureConstants.Character_Missionary_Level17,
-                CreatureConstants.Character_Missionary_Level18,
-                CreatureConstants.Character_Missionary_Level19,
-                CreatureConstants.Character_Missionary_Level2,
-                CreatureConstants.Character_Missionary_Level20,
-                CreatureConstants.Character_Missionary_Level3,
-                CreatureConstants.Character_Missionary_Level4,
-                CreatureConstants.Character_Missionary_Level5,
-                CreatureConstants.Character_Missionary_Level6,
-                CreatureConstants.Character_Missionary_Level7,
-                CreatureConstants.Character_Missionary_Level8,
-                CreatureConstants.Character_Missionary_Level9
+                CreatureDataConstants.Character_Missionary_Level1,
+                CreatureDataConstants.Character_Missionary_Level10,
+                CreatureDataConstants.Character_Missionary_Level11,
+                CreatureDataConstants.Character_Missionary_Level12,
+                CreatureDataConstants.Character_Missionary_Level13,
+                CreatureDataConstants.Character_Missionary_Level14,
+                CreatureDataConstants.Character_Missionary_Level15,
+                CreatureDataConstants.Character_Missionary_Level16,
+                CreatureDataConstants.Character_Missionary_Level17,
+                CreatureDataConstants.Character_Missionary_Level18,
+                CreatureDataConstants.Character_Missionary_Level19,
+                CreatureDataConstants.Character_Missionary_Level2,
+                CreatureDataConstants.Character_Missionary_Level20,
+                CreatureDataConstants.Character_Missionary_Level3,
+                CreatureDataConstants.Character_Missionary_Level4,
+                CreatureDataConstants.Character_Missionary_Level5,
+                CreatureDataConstants.Character_Missionary_Level6,
+                CreatureDataConstants.Character_Missionary_Level7,
+                CreatureDataConstants.Character_Missionary_Level8,
+                CreatureDataConstants.Character_Missionary_Level9
             };
 
-            base.DistinctCollection(CreatureConstants.Character_Missionary, items);
+            base.DistinctCollection(CreatureDataConstants.Character_Missionary, items);
         }
 
         [Test]
@@ -1497,29 +1497,29 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         {
             var items = new[]
             {
-                CreatureConstants.Character_Scholar_Level1,
-                CreatureConstants.Character_Scholar_Level10,
-                CreatureConstants.Character_Scholar_Level11,
-                CreatureConstants.Character_Scholar_Level12,
-                CreatureConstants.Character_Scholar_Level13,
-                CreatureConstants.Character_Scholar_Level14,
-                CreatureConstants.Character_Scholar_Level15,
-                CreatureConstants.Character_Scholar_Level16,
-                CreatureConstants.Character_Scholar_Level17,
-                CreatureConstants.Character_Scholar_Level18,
-                CreatureConstants.Character_Scholar_Level19,
-                CreatureConstants.Character_Scholar_Level2,
-                CreatureConstants.Character_Scholar_Level20,
-                CreatureConstants.Character_Scholar_Level3,
-                CreatureConstants.Character_Scholar_Level4,
-                CreatureConstants.Character_Scholar_Level5,
-                CreatureConstants.Character_Scholar_Level6,
-                CreatureConstants.Character_Scholar_Level7,
-                CreatureConstants.Character_Scholar_Level8,
-                CreatureConstants.Character_Scholar_Level9
+                CreatureDataConstants.Character_Scholar_Level1,
+                CreatureDataConstants.Character_Scholar_Level10,
+                CreatureDataConstants.Character_Scholar_Level11,
+                CreatureDataConstants.Character_Scholar_Level12,
+                CreatureDataConstants.Character_Scholar_Level13,
+                CreatureDataConstants.Character_Scholar_Level14,
+                CreatureDataConstants.Character_Scholar_Level15,
+                CreatureDataConstants.Character_Scholar_Level16,
+                CreatureDataConstants.Character_Scholar_Level17,
+                CreatureDataConstants.Character_Scholar_Level18,
+                CreatureDataConstants.Character_Scholar_Level19,
+                CreatureDataConstants.Character_Scholar_Level2,
+                CreatureDataConstants.Character_Scholar_Level20,
+                CreatureDataConstants.Character_Scholar_Level3,
+                CreatureDataConstants.Character_Scholar_Level4,
+                CreatureDataConstants.Character_Scholar_Level5,
+                CreatureDataConstants.Character_Scholar_Level6,
+                CreatureDataConstants.Character_Scholar_Level7,
+                CreatureDataConstants.Character_Scholar_Level8,
+                CreatureDataConstants.Character_Scholar_Level9
             };
 
-            base.DistinctCollection(CreatureConstants.Character_Scholar, items);
+            base.DistinctCollection(CreatureDataConstants.Character_Scholar, items);
         }
 
         [Test]
@@ -1527,29 +1527,29 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         {
             var items = new[]
             {
-                CreatureConstants.Character_Sellsword_Level1,
-                CreatureConstants.Character_Sellsword_Level10,
-                CreatureConstants.Character_Sellsword_Level11,
-                CreatureConstants.Character_Sellsword_Level12,
-                CreatureConstants.Character_Sellsword_Level13,
-                CreatureConstants.Character_Sellsword_Level14,
-                CreatureConstants.Character_Sellsword_Level15,
-                CreatureConstants.Character_Sellsword_Level16,
-                CreatureConstants.Character_Sellsword_Level17,
-                CreatureConstants.Character_Sellsword_Level18,
-                CreatureConstants.Character_Sellsword_Level19,
-                CreatureConstants.Character_Sellsword_Level2,
-                CreatureConstants.Character_Sellsword_Level20,
-                CreatureConstants.Character_Sellsword_Level3,
-                CreatureConstants.Character_Sellsword_Level4,
-                CreatureConstants.Character_Sellsword_Level5,
-                CreatureConstants.Character_Sellsword_Level6,
-                CreatureConstants.Character_Sellsword_Level7,
-                CreatureConstants.Character_Sellsword_Level8,
-                CreatureConstants.Character_Sellsword_Level9
+                CreatureDataConstants.Character_Sellsword_Level1,
+                CreatureDataConstants.Character_Sellsword_Level10,
+                CreatureDataConstants.Character_Sellsword_Level11,
+                CreatureDataConstants.Character_Sellsword_Level12,
+                CreatureDataConstants.Character_Sellsword_Level13,
+                CreatureDataConstants.Character_Sellsword_Level14,
+                CreatureDataConstants.Character_Sellsword_Level15,
+                CreatureDataConstants.Character_Sellsword_Level16,
+                CreatureDataConstants.Character_Sellsword_Level17,
+                CreatureDataConstants.Character_Sellsword_Level18,
+                CreatureDataConstants.Character_Sellsword_Level19,
+                CreatureDataConstants.Character_Sellsword_Level2,
+                CreatureDataConstants.Character_Sellsword_Level20,
+                CreatureDataConstants.Character_Sellsword_Level3,
+                CreatureDataConstants.Character_Sellsword_Level4,
+                CreatureDataConstants.Character_Sellsword_Level5,
+                CreatureDataConstants.Character_Sellsword_Level6,
+                CreatureDataConstants.Character_Sellsword_Level7,
+                CreatureDataConstants.Character_Sellsword_Level8,
+                CreatureDataConstants.Character_Sellsword_Level9
             };
 
-            base.DistinctCollection(CreatureConstants.Character_Sellsword, items);
+            base.DistinctCollection(CreatureDataConstants.Character_Sellsword, items);
         }
 
         [Test]
@@ -1557,29 +1557,29 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         {
             var items = new[]
             {
-                CreatureConstants.Character_StreetPerformer_Level1,
-                CreatureConstants.Character_StreetPerformer_Level10,
-                CreatureConstants.Character_StreetPerformer_Level11,
-                CreatureConstants.Character_StreetPerformer_Level12,
-                CreatureConstants.Character_StreetPerformer_Level13,
-                CreatureConstants.Character_StreetPerformer_Level14,
-                CreatureConstants.Character_StreetPerformer_Level15,
-                CreatureConstants.Character_StreetPerformer_Level16,
-                CreatureConstants.Character_StreetPerformer_Level17,
-                CreatureConstants.Character_StreetPerformer_Level18,
-                CreatureConstants.Character_StreetPerformer_Level19,
-                CreatureConstants.Character_StreetPerformer_Level2,
-                CreatureConstants.Character_StreetPerformer_Level20,
-                CreatureConstants.Character_StreetPerformer_Level3,
-                CreatureConstants.Character_StreetPerformer_Level4,
-                CreatureConstants.Character_StreetPerformer_Level5,
-                CreatureConstants.Character_StreetPerformer_Level6,
-                CreatureConstants.Character_StreetPerformer_Level7,
-                CreatureConstants.Character_StreetPerformer_Level8,
-                CreatureConstants.Character_StreetPerformer_Level9
+                CreatureDataConstants.Character_StreetPerformer_Level1,
+                CreatureDataConstants.Character_StreetPerformer_Level10,
+                CreatureDataConstants.Character_StreetPerformer_Level11,
+                CreatureDataConstants.Character_StreetPerformer_Level12,
+                CreatureDataConstants.Character_StreetPerformer_Level13,
+                CreatureDataConstants.Character_StreetPerformer_Level14,
+                CreatureDataConstants.Character_StreetPerformer_Level15,
+                CreatureDataConstants.Character_StreetPerformer_Level16,
+                CreatureDataConstants.Character_StreetPerformer_Level17,
+                CreatureDataConstants.Character_StreetPerformer_Level18,
+                CreatureDataConstants.Character_StreetPerformer_Level19,
+                CreatureDataConstants.Character_StreetPerformer_Level2,
+                CreatureDataConstants.Character_StreetPerformer_Level20,
+                CreatureDataConstants.Character_StreetPerformer_Level3,
+                CreatureDataConstants.Character_StreetPerformer_Level4,
+                CreatureDataConstants.Character_StreetPerformer_Level5,
+                CreatureDataConstants.Character_StreetPerformer_Level6,
+                CreatureDataConstants.Character_StreetPerformer_Level7,
+                CreatureDataConstants.Character_StreetPerformer_Level8,
+                CreatureDataConstants.Character_StreetPerformer_Level9
             };
 
-            base.DistinctCollection(CreatureConstants.Character_StreetPerformer, items);
+            base.DistinctCollection(CreatureDataConstants.Character_StreetPerformer, items);
         }
 
         [Test]
@@ -1587,19 +1587,19 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         {
             var items = new[]
             {
-                CreatureConstants.Character_WarHero_Level11,
-                CreatureConstants.Character_WarHero_Level12,
-                CreatureConstants.Character_WarHero_Level13,
-                CreatureConstants.Character_WarHero_Level14,
-                CreatureConstants.Character_WarHero_Level15,
-                CreatureConstants.Character_WarHero_Level16,
-                CreatureConstants.Character_WarHero_Level17,
-                CreatureConstants.Character_WarHero_Level18,
-                CreatureConstants.Character_WarHero_Level19,
-                CreatureConstants.Character_WarHero_Level20,
+                CreatureDataConstants.Character_WarHero_Level11,
+                CreatureDataConstants.Character_WarHero_Level12,
+                CreatureDataConstants.Character_WarHero_Level13,
+                CreatureDataConstants.Character_WarHero_Level14,
+                CreatureDataConstants.Character_WarHero_Level15,
+                CreatureDataConstants.Character_WarHero_Level16,
+                CreatureDataConstants.Character_WarHero_Level17,
+                CreatureDataConstants.Character_WarHero_Level18,
+                CreatureDataConstants.Character_WarHero_Level19,
+                CreatureDataConstants.Character_WarHero_Level20,
             };
 
-            base.DistinctCollection(CreatureConstants.Character_WarHero, items);
+            base.DistinctCollection(CreatureDataConstants.Character_WarHero, items);
         }
 
         [Test]
@@ -1607,20 +1607,20 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         {
             var items = new[]
             {
-                CreatureConstants.Commoner_Beggar_Level1,
-                CreatureConstants.Commoner_Beggar_Level10To11,
-                CreatureConstants.Commoner_Beggar_Level12To13,
-                CreatureConstants.Commoner_Beggar_Level14To15,
-                CreatureConstants.Commoner_Beggar_Level16To17,
-                CreatureConstants.Commoner_Beggar_Level18To19,
-                CreatureConstants.Commoner_Beggar_Level20,
-                CreatureConstants.Commoner_Beggar_Level2To3,
-                CreatureConstants.Commoner_Beggar_Level4To5,
-                CreatureConstants.Commoner_Beggar_Level6To7,
-                CreatureConstants.Commoner_Beggar_Level8To9,
+                CreatureDataConstants.Commoner_Beggar_Level1,
+                CreatureDataConstants.Commoner_Beggar_Level10To11,
+                CreatureDataConstants.Commoner_Beggar_Level12To13,
+                CreatureDataConstants.Commoner_Beggar_Level14To15,
+                CreatureDataConstants.Commoner_Beggar_Level16To17,
+                CreatureDataConstants.Commoner_Beggar_Level18To19,
+                CreatureDataConstants.Commoner_Beggar_Level20,
+                CreatureDataConstants.Commoner_Beggar_Level2To3,
+                CreatureDataConstants.Commoner_Beggar_Level4To5,
+                CreatureDataConstants.Commoner_Beggar_Level6To7,
+                CreatureDataConstants.Commoner_Beggar_Level8To9,
             };
 
-            base.DistinctCollection(CreatureConstants.Commoner_Beggar, items);
+            base.DistinctCollection(CreatureDataConstants.Commoner_Beggar, items);
         }
 
         [Test]
@@ -1628,20 +1628,20 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         {
             var items = new[]
             {
-                CreatureConstants.Commoner_ConstructionWorker_Level1,
-                CreatureConstants.Commoner_ConstructionWorker_Level10To11,
-                CreatureConstants.Commoner_ConstructionWorker_Level12To13,
-                CreatureConstants.Commoner_ConstructionWorker_Level14To15,
-                CreatureConstants.Commoner_ConstructionWorker_Level16To17,
-                CreatureConstants.Commoner_ConstructionWorker_Level18To19,
-                CreatureConstants.Commoner_ConstructionWorker_Level20,
-                CreatureConstants.Commoner_ConstructionWorker_Level2To3,
-                CreatureConstants.Commoner_ConstructionWorker_Level4To5,
-                CreatureConstants.Commoner_ConstructionWorker_Level6To7,
-                CreatureConstants.Commoner_ConstructionWorker_Level8To9,
+                CreatureDataConstants.Commoner_ConstructionWorker_Level1,
+                CreatureDataConstants.Commoner_ConstructionWorker_Level10To11,
+                CreatureDataConstants.Commoner_ConstructionWorker_Level12To13,
+                CreatureDataConstants.Commoner_ConstructionWorker_Level14To15,
+                CreatureDataConstants.Commoner_ConstructionWorker_Level16To17,
+                CreatureDataConstants.Commoner_ConstructionWorker_Level18To19,
+                CreatureDataConstants.Commoner_ConstructionWorker_Level20,
+                CreatureDataConstants.Commoner_ConstructionWorker_Level2To3,
+                CreatureDataConstants.Commoner_ConstructionWorker_Level4To5,
+                CreatureDataConstants.Commoner_ConstructionWorker_Level6To7,
+                CreatureDataConstants.Commoner_ConstructionWorker_Level8To9,
             };
 
-            base.DistinctCollection(CreatureConstants.Commoner_ConstructionWorker, items);
+            base.DistinctCollection(CreatureDataConstants.Commoner_ConstructionWorker, items);
         }
 
         [Test]
@@ -1649,20 +1649,20 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         {
             var items = new[]
             {
-                CreatureConstants.Commoner_Farmer_Level1,
-                CreatureConstants.Commoner_Farmer_Level10To11,
-                CreatureConstants.Commoner_Farmer_Level12To13,
-                CreatureConstants.Commoner_Farmer_Level14To15,
-                CreatureConstants.Commoner_Farmer_Level16To17,
-                CreatureConstants.Commoner_Farmer_Level18To19,
-                CreatureConstants.Commoner_Farmer_Level20,
-                CreatureConstants.Commoner_Farmer_Level2To3,
-                CreatureConstants.Commoner_Farmer_Level4To5,
-                CreatureConstants.Commoner_Farmer_Level6To7,
-                CreatureConstants.Commoner_Farmer_Level8To9,
+                CreatureDataConstants.Commoner_Farmer_Level1,
+                CreatureDataConstants.Commoner_Farmer_Level10To11,
+                CreatureDataConstants.Commoner_Farmer_Level12To13,
+                CreatureDataConstants.Commoner_Farmer_Level14To15,
+                CreatureDataConstants.Commoner_Farmer_Level16To17,
+                CreatureDataConstants.Commoner_Farmer_Level18To19,
+                CreatureDataConstants.Commoner_Farmer_Level20,
+                CreatureDataConstants.Commoner_Farmer_Level2To3,
+                CreatureDataConstants.Commoner_Farmer_Level4To5,
+                CreatureDataConstants.Commoner_Farmer_Level6To7,
+                CreatureDataConstants.Commoner_Farmer_Level8To9,
             };
 
-            base.DistinctCollection(CreatureConstants.Commoner_Farmer, items);
+            base.DistinctCollection(CreatureDataConstants.Commoner_Farmer, items);
         }
 
         [Test]
@@ -1670,20 +1670,20 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         {
             var items = new[]
             {
-                CreatureConstants.Commoner_Herder_Level1,
-                CreatureConstants.Commoner_Herder_Level10To11,
-                CreatureConstants.Commoner_Herder_Level12To13,
-                CreatureConstants.Commoner_Herder_Level14To15,
-                CreatureConstants.Commoner_Herder_Level16To17,
-                CreatureConstants.Commoner_Herder_Level18To19,
-                CreatureConstants.Commoner_Herder_Level20,
-                CreatureConstants.Commoner_Herder_Level2To3,
-                CreatureConstants.Commoner_Herder_Level4To5,
-                CreatureConstants.Commoner_Herder_Level6To7,
-                CreatureConstants.Commoner_Herder_Level8To9,
+                CreatureDataConstants.Commoner_Herder_Level1,
+                CreatureDataConstants.Commoner_Herder_Level10To11,
+                CreatureDataConstants.Commoner_Herder_Level12To13,
+                CreatureDataConstants.Commoner_Herder_Level14To15,
+                CreatureDataConstants.Commoner_Herder_Level16To17,
+                CreatureDataConstants.Commoner_Herder_Level18To19,
+                CreatureDataConstants.Commoner_Herder_Level20,
+                CreatureDataConstants.Commoner_Herder_Level2To3,
+                CreatureDataConstants.Commoner_Herder_Level4To5,
+                CreatureDataConstants.Commoner_Herder_Level6To7,
+                CreatureDataConstants.Commoner_Herder_Level8To9,
             };
 
-            base.DistinctCollection(CreatureConstants.Commoner_Herder, items);
+            base.DistinctCollection(CreatureDataConstants.Commoner_Herder, items);
         }
 
         [Test]
@@ -1691,20 +1691,20 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         {
             var items = new[]
             {
-                CreatureConstants.Commoner_Pilgrim_Level1,
-                CreatureConstants.Commoner_Pilgrim_Level10To11,
-                CreatureConstants.Commoner_Pilgrim_Level12To13,
-                CreatureConstants.Commoner_Pilgrim_Level14To15,
-                CreatureConstants.Commoner_Pilgrim_Level16To17,
-                CreatureConstants.Commoner_Pilgrim_Level18To19,
-                CreatureConstants.Commoner_Pilgrim_Level20,
-                CreatureConstants.Commoner_Pilgrim_Level2To3,
-                CreatureConstants.Commoner_Pilgrim_Level4To5,
-                CreatureConstants.Commoner_Pilgrim_Level6To7,
-                CreatureConstants.Commoner_Pilgrim_Level8To9,
+                CreatureDataConstants.Commoner_Pilgrim_Level1,
+                CreatureDataConstants.Commoner_Pilgrim_Level10To11,
+                CreatureDataConstants.Commoner_Pilgrim_Level12To13,
+                CreatureDataConstants.Commoner_Pilgrim_Level14To15,
+                CreatureDataConstants.Commoner_Pilgrim_Level16To17,
+                CreatureDataConstants.Commoner_Pilgrim_Level18To19,
+                CreatureDataConstants.Commoner_Pilgrim_Level20,
+                CreatureDataConstants.Commoner_Pilgrim_Level2To3,
+                CreatureDataConstants.Commoner_Pilgrim_Level4To5,
+                CreatureDataConstants.Commoner_Pilgrim_Level6To7,
+                CreatureDataConstants.Commoner_Pilgrim_Level8To9,
             };
 
-            base.DistinctCollection(CreatureConstants.Commoner_Pilgrim, items);
+            base.DistinctCollection(CreatureDataConstants.Commoner_Pilgrim, items);
         }
 
         [Test]
@@ -1712,20 +1712,20 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         {
             var items = new[]
             {
-                CreatureConstants.Commoner_Protestor_Level1,
-                CreatureConstants.Commoner_Protestor_Level10To11,
-                CreatureConstants.Commoner_Protestor_Level12To13,
-                CreatureConstants.Commoner_Protestor_Level14To15,
-                CreatureConstants.Commoner_Protestor_Level16To17,
-                CreatureConstants.Commoner_Protestor_Level18To19,
-                CreatureConstants.Commoner_Protestor_Level20,
-                CreatureConstants.Commoner_Protestor_Level2To3,
-                CreatureConstants.Commoner_Protestor_Level4To5,
-                CreatureConstants.Commoner_Protestor_Level6To7,
-                CreatureConstants.Commoner_Protestor_Level8To9,
+                CreatureDataConstants.Commoner_Protestor_Level1,
+                CreatureDataConstants.Commoner_Protestor_Level10To11,
+                CreatureDataConstants.Commoner_Protestor_Level12To13,
+                CreatureDataConstants.Commoner_Protestor_Level14To15,
+                CreatureDataConstants.Commoner_Protestor_Level16To17,
+                CreatureDataConstants.Commoner_Protestor_Level18To19,
+                CreatureDataConstants.Commoner_Protestor_Level20,
+                CreatureDataConstants.Commoner_Protestor_Level2To3,
+                CreatureDataConstants.Commoner_Protestor_Level4To5,
+                CreatureDataConstants.Commoner_Protestor_Level6To7,
+                CreatureDataConstants.Commoner_Protestor_Level8To9,
             };
 
-            base.DistinctCollection(CreatureConstants.Commoner_Protestor, items);
+            base.DistinctCollection(CreatureDataConstants.Commoner_Protestor, items);
         }
 
         [Test]
@@ -1733,20 +1733,20 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         {
             var items = new[]
             {
-                CreatureConstants.Commoner_Servant_Level1,
-                CreatureConstants.Commoner_Servant_Level10To11,
-                CreatureConstants.Commoner_Servant_Level12To13,
-                CreatureConstants.Commoner_Servant_Level14To15,
-                CreatureConstants.Commoner_Servant_Level16To17,
-                CreatureConstants.Commoner_Servant_Level18To19,
-                CreatureConstants.Commoner_Servant_Level20,
-                CreatureConstants.Commoner_Servant_Level2To3,
-                CreatureConstants.Commoner_Servant_Level4To5,
-                CreatureConstants.Commoner_Servant_Level6To7,
-                CreatureConstants.Commoner_Servant_Level8To9,
+                CreatureDataConstants.Commoner_Servant_Level1,
+                CreatureDataConstants.Commoner_Servant_Level10To11,
+                CreatureDataConstants.Commoner_Servant_Level12To13,
+                CreatureDataConstants.Commoner_Servant_Level14To15,
+                CreatureDataConstants.Commoner_Servant_Level16To17,
+                CreatureDataConstants.Commoner_Servant_Level18To19,
+                CreatureDataConstants.Commoner_Servant_Level20,
+                CreatureDataConstants.Commoner_Servant_Level2To3,
+                CreatureDataConstants.Commoner_Servant_Level4To5,
+                CreatureDataConstants.Commoner_Servant_Level6To7,
+                CreatureDataConstants.Commoner_Servant_Level8To9,
             };
 
-            base.DistinctCollection(CreatureConstants.Commoner_Servant, items);
+            base.DistinctCollection(CreatureDataConstants.Commoner_Servant, items);
         }
 
         [Test]
@@ -1754,73 +1754,73 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         {
             var subtypes = new[]
             {
-                CreatureConstants.Types.Aberration,
-                CreatureConstants.Types.Animal,
-                CreatureConstants.Types.Dragon,
-                CreatureConstants.Types.Elemental,
-                CreatureConstants.Types.Fey,
-                CreatureConstants.Types.Giant,
-                CreatureConstants.Types.Humanoid,
-                CreatureConstants.Types.MagicalBeast,
-                CreatureConstants.Types.MonstrousHumanoid,
-                CreatureConstants.Types.Vermin,
+                CreatureDataConstants.Types.Aberration,
+                CreatureDataConstants.Types.Animal,
+                CreatureDataConstants.Types.Dragon,
+                CreatureDataConstants.Types.Elemental,
+                CreatureDataConstants.Types.Fey,
+                CreatureDataConstants.Types.Giant,
+                CreatureDataConstants.Types.Humanoid,
+                CreatureDataConstants.Types.MagicalBeast,
+                CreatureDataConstants.Types.MonstrousHumanoid,
+                CreatureDataConstants.Types.Vermin,
                 //Outsider
-                CreatureConstants.Achaierai,
-                CreatureConstants.Angel,
-                CreatureConstants.Archon,
-                CreatureConstants.Arrowhawk,
-                CreatureConstants.Avoral,
-                CreatureConstants.Azer,
-                CreatureConstants.Barghest,
-                CreatureConstants.Basilisk_AbyssalGreater,
-                CreatureConstants.Bralani,
-                CreatureConstants.CelestialCreature,
-                CreatureConstants.ChaosBeast,
-                CreatureConstants.Couatl,
-                CreatureConstants.Devil,
-                CreatureConstants.FiendishCreature,
-                CreatureConstants.Formian,
-                CreatureConstants.Genie,
-                CreatureConstants.Ghaele,
-                CreatureConstants.Githyanki,
-                CreatureConstants.Githzerai,
-                CreatureConstants.HellHound,
-                CreatureConstants.Hellwasp,
-                CreatureConstants.Howler,
-                CreatureConstants.Leonal,
-                CreatureConstants.Lillend,
-                CreatureConstants.Mephit,
-                CreatureConstants.NessianWarhound,
-                CreatureConstants.NightHag,
-                CreatureConstants.Nightmare,
-                CreatureConstants.Rakshasa,
-                CreatureConstants.Rast,
-                CreatureConstants.Ravid,
-                CreatureConstants.Salamander,
-                CreatureConstants.ShadowMastiff,
-                CreatureConstants.Slaad,
-                CreatureConstants.Titan,
-                CreatureConstants.Tojanida,
-                CreatureConstants.Triton,
-                CreatureConstants.Vargouille,
-                CreatureConstants.Xill,
-                CreatureConstants.Xorn,
-                CreatureConstants.YethHound,
+                CreatureDataConstants.Achaierai,
+                CreatureDataConstants.Angel,
+                CreatureDataConstants.Archon,
+                CreatureDataConstants.Arrowhawk,
+                CreatureDataConstants.Avoral,
+                CreatureDataConstants.Azer,
+                CreatureDataConstants.Barghest,
+                CreatureDataConstants.Basilisk_AbyssalGreater,
+                CreatureDataConstants.Bralani,
+                CreatureDataConstants.CelestialCreature,
+                CreatureDataConstants.ChaosBeast,
+                CreatureDataConstants.Couatl,
+                CreatureDataConstants.Devil,
+                CreatureDataConstants.FiendishCreature,
+                CreatureDataConstants.Formian,
+                CreatureDataConstants.Genie,
+                CreatureDataConstants.Ghaele,
+                CreatureDataConstants.Githyanki,
+                CreatureDataConstants.Githzerai,
+                CreatureDataConstants.HellHound,
+                CreatureDataConstants.Hellwasp,
+                CreatureDataConstants.Howler,
+                CreatureDataConstants.Leonal,
+                CreatureDataConstants.Lillend,
+                CreatureDataConstants.Mephit,
+                CreatureDataConstants.NessianWarhound,
+                CreatureDataConstants.NightHag,
+                CreatureDataConstants.Nightmare,
+                CreatureDataConstants.Rakshasa,
+                CreatureDataConstants.Rast,
+                CreatureDataConstants.Ravid,
+                CreatureDataConstants.Salamander,
+                CreatureDataConstants.ShadowMastiff,
+                CreatureDataConstants.Slaad,
+                CreatureDataConstants.Titan,
+                CreatureDataConstants.Tojanida,
+                CreatureDataConstants.Triton,
+                CreatureDataConstants.Vargouille,
+                CreatureDataConstants.Xill,
+                CreatureDataConstants.Xorn,
+                CreatureDataConstants.YethHound,
                 //Demon
-                CreatureConstants.Babau,
-                CreatureConstants.Balor,
-                CreatureConstants.Bebilith,
-                CreatureConstants.Dretch,
-                CreatureConstants.Glabrezu,
-                CreatureConstants.Hezrou,
-                CreatureConstants.Marilith,
-                CreatureConstants.Nalfeshnee,
-                CreatureConstants.Quasit,
-                CreatureConstants.Succubus,
-                CreatureConstants.Vrock,
+                CreatureDataConstants.Babau,
+                CreatureDataConstants.Balor,
+                CreatureDataConstants.Bebilith,
+                CreatureDataConstants.Dretch,
+                CreatureDataConstants.Glabrezu,
+                CreatureDataConstants.Hezrou,
+                CreatureDataConstants.Marilith,
+                CreatureDataConstants.Nalfeshnee,
+                CreatureDataConstants.Quasit,
+                CreatureDataConstants.Succubus,
+                CreatureDataConstants.Vrock,
             };
 
-            base.DistinctCollection(CreatureConstants.DominatedCreature, subtypes);
+            base.DistinctCollection(CreatureDataConstants.DominatedCreature, subtypes);
         }
 
         [Test]
@@ -1828,20 +1828,20 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         {
             var items = new[]
             {
-                CreatureConstants.Expert_Architect_Level1,
-                CreatureConstants.Expert_Architect_Level10To11,
-                CreatureConstants.Expert_Architect_Level12To13,
-                CreatureConstants.Expert_Architect_Level14To15,
-                CreatureConstants.Expert_Architect_Level16To17,
-                CreatureConstants.Expert_Architect_Level18To19,
-                CreatureConstants.Expert_Architect_Level20,
-                CreatureConstants.Expert_Architect_Level2To3,
-                CreatureConstants.Expert_Architect_Level4To5,
-                CreatureConstants.Expert_Architect_Level6To7,
-                CreatureConstants.Expert_Architect_Level8To9,
+                CreatureDataConstants.Expert_Architect_Level1,
+                CreatureDataConstants.Expert_Architect_Level10To11,
+                CreatureDataConstants.Expert_Architect_Level12To13,
+                CreatureDataConstants.Expert_Architect_Level14To15,
+                CreatureDataConstants.Expert_Architect_Level16To17,
+                CreatureDataConstants.Expert_Architect_Level18To19,
+                CreatureDataConstants.Expert_Architect_Level20,
+                CreatureDataConstants.Expert_Architect_Level2To3,
+                CreatureDataConstants.Expert_Architect_Level4To5,
+                CreatureDataConstants.Expert_Architect_Level6To7,
+                CreatureDataConstants.Expert_Architect_Level8To9,
             };
 
-            base.DistinctCollection(CreatureConstants.Expert_Architect, items);
+            base.DistinctCollection(CreatureDataConstants.Expert_Architect, items);
         }
 
         [Test]
@@ -1849,29 +1849,29 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         {
             var items = new[]
             {
-                CreatureConstants.Ghost_Level1,
-                CreatureConstants.Ghost_Level2,
-                CreatureConstants.Ghost_Level3,
-                CreatureConstants.Ghost_Level4,
-                CreatureConstants.Ghost_Level5,
-                CreatureConstants.Ghost_Level6,
-                CreatureConstants.Ghost_Level7,
-                CreatureConstants.Ghost_Level8,
-                CreatureConstants.Ghost_Level9,
-                CreatureConstants.Ghost_Level10,
-                CreatureConstants.Ghost_Level11,
-                CreatureConstants.Ghost_Level12,
-                CreatureConstants.Ghost_Level13,
-                CreatureConstants.Ghost_Level14,
-                CreatureConstants.Ghost_Level15,
-                CreatureConstants.Ghost_Level16,
-                CreatureConstants.Ghost_Level17,
-                CreatureConstants.Ghost_Level18,
-                CreatureConstants.Ghost_Level19,
-                CreatureConstants.Ghost_Level20
+                CreatureDataConstants.Ghost_Level1,
+                CreatureDataConstants.Ghost_Level2,
+                CreatureDataConstants.Ghost_Level3,
+                CreatureDataConstants.Ghost_Level4,
+                CreatureDataConstants.Ghost_Level5,
+                CreatureDataConstants.Ghost_Level6,
+                CreatureDataConstants.Ghost_Level7,
+                CreatureDataConstants.Ghost_Level8,
+                CreatureDataConstants.Ghost_Level9,
+                CreatureDataConstants.Ghost_Level10,
+                CreatureDataConstants.Ghost_Level11,
+                CreatureDataConstants.Ghost_Level12,
+                CreatureDataConstants.Ghost_Level13,
+                CreatureDataConstants.Ghost_Level14,
+                CreatureDataConstants.Ghost_Level15,
+                CreatureDataConstants.Ghost_Level16,
+                CreatureDataConstants.Ghost_Level17,
+                CreatureDataConstants.Ghost_Level18,
+                CreatureDataConstants.Ghost_Level19,
+                CreatureDataConstants.Ghost_Level20
             };
 
-            base.DistinctCollection(CreatureConstants.Ghost, items);
+            base.DistinctCollection(CreatureDataConstants.Ghost, items);
         }
 
         [Test]
@@ -1879,19 +1879,19 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         {
             var items = new[]
             {
-                CreatureConstants.Lich_Level11,
-                CreatureConstants.Lich_Level12,
-                CreatureConstants.Lich_Level13,
-                CreatureConstants.Lich_Level14,
-                CreatureConstants.Lich_Level15,
-                CreatureConstants.Lich_Level16,
-                CreatureConstants.Lich_Level17,
-                CreatureConstants.Lich_Level18,
-                CreatureConstants.Lich_Level19,
-                CreatureConstants.Lich_Level20
+                CreatureDataConstants.Lich_Level11,
+                CreatureDataConstants.Lich_Level12,
+                CreatureDataConstants.Lich_Level13,
+                CreatureDataConstants.Lich_Level14,
+                CreatureDataConstants.Lich_Level15,
+                CreatureDataConstants.Lich_Level16,
+                CreatureDataConstants.Lich_Level17,
+                CreatureDataConstants.Lich_Level18,
+                CreatureDataConstants.Lich_Level19,
+                CreatureDataConstants.Lich_Level20
             };
 
-            base.DistinctCollection(CreatureConstants.Lich, items);
+            base.DistinctCollection(CreatureDataConstants.Lich, items);
         }
 
         [Test]
@@ -1899,20 +1899,20 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         {
             var items = new[]
             {
-                CreatureConstants.NPC_Traveler_Level1,
-                CreatureConstants.NPC_Traveler_Level10To11,
-                CreatureConstants.NPC_Traveler_Level12To13,
-                CreatureConstants.NPC_Traveler_Level14To15,
-                CreatureConstants.NPC_Traveler_Level16To17,
-                CreatureConstants.NPC_Traveler_Level18To19,
-                CreatureConstants.NPC_Traveler_Level20,
-                CreatureConstants.NPC_Traveler_Level2To3,
-                CreatureConstants.NPC_Traveler_Level4To5,
-                CreatureConstants.NPC_Traveler_Level6To7,
-                CreatureConstants.NPC_Traveler_Level8To9,
+                CreatureDataConstants.NPC_Traveler_Level1,
+                CreatureDataConstants.NPC_Traveler_Level10To11,
+                CreatureDataConstants.NPC_Traveler_Level12To13,
+                CreatureDataConstants.NPC_Traveler_Level14To15,
+                CreatureDataConstants.NPC_Traveler_Level16To17,
+                CreatureDataConstants.NPC_Traveler_Level18To19,
+                CreatureDataConstants.NPC_Traveler_Level20,
+                CreatureDataConstants.NPC_Traveler_Level2To3,
+                CreatureDataConstants.NPC_Traveler_Level4To5,
+                CreatureDataConstants.NPC_Traveler_Level6To7,
+                CreatureDataConstants.NPC_Traveler_Level8To9,
             };
 
-            base.DistinctCollection(CreatureConstants.NPC_Traveler, items);
+            base.DistinctCollection(CreatureDataConstants.NPC_Traveler, items);
         }
 
         [Test]
@@ -1920,29 +1920,29 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         {
             var items = new[]
             {
-                CreatureConstants.Paladin_Crusader_Level1,
-                CreatureConstants.Paladin_Crusader_Level2,
-                CreatureConstants.Paladin_Crusader_Level3,
-                CreatureConstants.Paladin_Crusader_Level4,
-                CreatureConstants.Paladin_Crusader_Level5,
-                CreatureConstants.Paladin_Crusader_Level6,
-                CreatureConstants.Paladin_Crusader_Level7,
-                CreatureConstants.Paladin_Crusader_Level8,
-                CreatureConstants.Paladin_Crusader_Level9,
-                CreatureConstants.Paladin_Crusader_Level10,
-                CreatureConstants.Paladin_Crusader_Level11,
-                CreatureConstants.Paladin_Crusader_Level12,
-                CreatureConstants.Paladin_Crusader_Level13,
-                CreatureConstants.Paladin_Crusader_Level14,
-                CreatureConstants.Paladin_Crusader_Level15,
-                CreatureConstants.Paladin_Crusader_Level16,
-                CreatureConstants.Paladin_Crusader_Level17,
-                CreatureConstants.Paladin_Crusader_Level18,
-                CreatureConstants.Paladin_Crusader_Level19,
-                CreatureConstants.Paladin_Crusader_Level20
+                CreatureDataConstants.Paladin_Crusader_Level1,
+                CreatureDataConstants.Paladin_Crusader_Level2,
+                CreatureDataConstants.Paladin_Crusader_Level3,
+                CreatureDataConstants.Paladin_Crusader_Level4,
+                CreatureDataConstants.Paladin_Crusader_Level5,
+                CreatureDataConstants.Paladin_Crusader_Level6,
+                CreatureDataConstants.Paladin_Crusader_Level7,
+                CreatureDataConstants.Paladin_Crusader_Level8,
+                CreatureDataConstants.Paladin_Crusader_Level9,
+                CreatureDataConstants.Paladin_Crusader_Level10,
+                CreatureDataConstants.Paladin_Crusader_Level11,
+                CreatureDataConstants.Paladin_Crusader_Level12,
+                CreatureDataConstants.Paladin_Crusader_Level13,
+                CreatureDataConstants.Paladin_Crusader_Level14,
+                CreatureDataConstants.Paladin_Crusader_Level15,
+                CreatureDataConstants.Paladin_Crusader_Level16,
+                CreatureDataConstants.Paladin_Crusader_Level17,
+                CreatureDataConstants.Paladin_Crusader_Level18,
+                CreatureDataConstants.Paladin_Crusader_Level19,
+                CreatureDataConstants.Paladin_Crusader_Level20
             };
 
-            base.DistinctCollection(CreatureConstants.Paladin_Crusader, items);
+            base.DistinctCollection(CreatureDataConstants.Paladin_Crusader, items);
         }
 
         [Test]
@@ -1950,29 +1950,29 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         {
             var items = new[]
             {
-                CreatureConstants.Rogue_Pickpocket_Level1,
-                CreatureConstants.Rogue_Pickpocket_Level2,
-                CreatureConstants.Rogue_Pickpocket_Level3,
-                CreatureConstants.Rogue_Pickpocket_Level4,
-                CreatureConstants.Rogue_Pickpocket_Level5,
-                CreatureConstants.Rogue_Pickpocket_Level6,
-                CreatureConstants.Rogue_Pickpocket_Level7,
-                CreatureConstants.Rogue_Pickpocket_Level8,
-                CreatureConstants.Rogue_Pickpocket_Level9,
-                CreatureConstants.Rogue_Pickpocket_Level10,
-                CreatureConstants.Rogue_Pickpocket_Level11,
-                CreatureConstants.Rogue_Pickpocket_Level12,
-                CreatureConstants.Rogue_Pickpocket_Level13,
-                CreatureConstants.Rogue_Pickpocket_Level14,
-                CreatureConstants.Rogue_Pickpocket_Level15,
-                CreatureConstants.Rogue_Pickpocket_Level16,
-                CreatureConstants.Rogue_Pickpocket_Level17,
-                CreatureConstants.Rogue_Pickpocket_Level18,
-                CreatureConstants.Rogue_Pickpocket_Level19,
-                CreatureConstants.Rogue_Pickpocket_Level20
+                CreatureDataConstants.Rogue_Pickpocket_Level1,
+                CreatureDataConstants.Rogue_Pickpocket_Level2,
+                CreatureDataConstants.Rogue_Pickpocket_Level3,
+                CreatureDataConstants.Rogue_Pickpocket_Level4,
+                CreatureDataConstants.Rogue_Pickpocket_Level5,
+                CreatureDataConstants.Rogue_Pickpocket_Level6,
+                CreatureDataConstants.Rogue_Pickpocket_Level7,
+                CreatureDataConstants.Rogue_Pickpocket_Level8,
+                CreatureDataConstants.Rogue_Pickpocket_Level9,
+                CreatureDataConstants.Rogue_Pickpocket_Level10,
+                CreatureDataConstants.Rogue_Pickpocket_Level11,
+                CreatureDataConstants.Rogue_Pickpocket_Level12,
+                CreatureDataConstants.Rogue_Pickpocket_Level13,
+                CreatureDataConstants.Rogue_Pickpocket_Level14,
+                CreatureDataConstants.Rogue_Pickpocket_Level15,
+                CreatureDataConstants.Rogue_Pickpocket_Level16,
+                CreatureDataConstants.Rogue_Pickpocket_Level17,
+                CreatureDataConstants.Rogue_Pickpocket_Level18,
+                CreatureDataConstants.Rogue_Pickpocket_Level19,
+                CreatureDataConstants.Rogue_Pickpocket_Level20
             };
 
-            base.DistinctCollection(CreatureConstants.Rogue_Pickpocket, items);
+            base.DistinctCollection(CreatureDataConstants.Rogue_Pickpocket, items);
         }
 
         [Test]
@@ -1980,30 +1980,30 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         {
             var items = new[]
             {
-                CreatureConstants.Vampire_Level1,
-                CreatureConstants.Vampire_Level2,
-                CreatureConstants.Vampire_Level3,
-                CreatureConstants.Vampire_Level4,
-                CreatureConstants.Vampire_Level5,
-                CreatureConstants.Vampire_Level6,
-                CreatureConstants.Vampire_Level7,
-                CreatureConstants.Vampire_Level8,
-                CreatureConstants.Vampire_Level9,
-                CreatureConstants.Vampire_Level10,
-                CreatureConstants.Vampire_Level11,
-                CreatureConstants.Vampire_Level12,
-                CreatureConstants.Vampire_Level13,
-                CreatureConstants.Vampire_Level14,
-                CreatureConstants.Vampire_Level15,
-                CreatureConstants.Vampire_Level16,
-                CreatureConstants.Vampire_Level17,
-                CreatureConstants.Vampire_Level18,
-                CreatureConstants.Vampire_Level19,
-                CreatureConstants.Vampire_Level20,
-                CreatureConstants.VampireSpawn,
+                CreatureDataConstants.Vampire_Level1,
+                CreatureDataConstants.Vampire_Level2,
+                CreatureDataConstants.Vampire_Level3,
+                CreatureDataConstants.Vampire_Level4,
+                CreatureDataConstants.Vampire_Level5,
+                CreatureDataConstants.Vampire_Level6,
+                CreatureDataConstants.Vampire_Level7,
+                CreatureDataConstants.Vampire_Level8,
+                CreatureDataConstants.Vampire_Level9,
+                CreatureDataConstants.Vampire_Level10,
+                CreatureDataConstants.Vampire_Level11,
+                CreatureDataConstants.Vampire_Level12,
+                CreatureDataConstants.Vampire_Level13,
+                CreatureDataConstants.Vampire_Level14,
+                CreatureDataConstants.Vampire_Level15,
+                CreatureDataConstants.Vampire_Level16,
+                CreatureDataConstants.Vampire_Level17,
+                CreatureDataConstants.Vampire_Level18,
+                CreatureDataConstants.Vampire_Level19,
+                CreatureDataConstants.Vampire_Level20,
+                CreatureDataConstants.VampireSpawn,
             };
 
-            base.DistinctCollection(CreatureConstants.Vampire, items);
+            base.DistinctCollection(CreatureDataConstants.Vampire, items);
         }
 
         [Test]
@@ -2011,19 +2011,19 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         {
             var items = new[]
             {
-                CreatureConstants.Wizard_FamousResearcher_Level11,
-                CreatureConstants.Wizard_FamousResearcher_Level12,
-                CreatureConstants.Wizard_FamousResearcher_Level13,
-                CreatureConstants.Wizard_FamousResearcher_Level14,
-                CreatureConstants.Wizard_FamousResearcher_Level15,
-                CreatureConstants.Wizard_FamousResearcher_Level16,
-                CreatureConstants.Wizard_FamousResearcher_Level17,
-                CreatureConstants.Wizard_FamousResearcher_Level18,
-                CreatureConstants.Wizard_FamousResearcher_Level19,
-                CreatureConstants.Wizard_FamousResearcher_Level20
+                CreatureDataConstants.Wizard_FamousResearcher_Level11,
+                CreatureDataConstants.Wizard_FamousResearcher_Level12,
+                CreatureDataConstants.Wizard_FamousResearcher_Level13,
+                CreatureDataConstants.Wizard_FamousResearcher_Level14,
+                CreatureDataConstants.Wizard_FamousResearcher_Level15,
+                CreatureDataConstants.Wizard_FamousResearcher_Level16,
+                CreatureDataConstants.Wizard_FamousResearcher_Level17,
+                CreatureDataConstants.Wizard_FamousResearcher_Level18,
+                CreatureDataConstants.Wizard_FamousResearcher_Level19,
+                CreatureDataConstants.Wizard_FamousResearcher_Level20
             };
 
-            base.DistinctCollection(CreatureConstants.Wizard_FamousResearcher, items);
+            base.DistinctCollection(CreatureDataConstants.Wizard_FamousResearcher, items);
         }
     }
 }

@@ -92,7 +92,7 @@ namespace DnDGen.EncounterGen.Selectors
                 return false;
 
             var name = encounterFormatter.SelectNameFrom(creatureType.Name);
-            if (name == CreatureConstants.Character)
+            if (name == CreatureDataConstants.Character)
                 return true;
 
             return IsCharacter(creatureType.SubType);

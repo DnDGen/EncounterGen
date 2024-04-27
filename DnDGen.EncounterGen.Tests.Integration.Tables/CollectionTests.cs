@@ -76,21 +76,21 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables
             //INFO: These are creatues that do not explicitly appear in encounters, but we wish to include them anyway
             var extraCreatures = new[]
             {
-                CreatureConstants.DominatedCreature_CR1,
-                CreatureConstants.DominatedCreature_CR2,
-                CreatureConstants.DominatedCreature_CR3,
-                CreatureConstants.DominatedCreature_CR5,
-                CreatureConstants.DominatedCreature_CR6,
-                CreatureConstants.Mephit_Air,
-                CreatureConstants.Mephit_Dust,
-                CreatureConstants.Mephit_Earth,
-                CreatureConstants.Mephit_Fire,
-                CreatureConstants.Mephit_Ice,
-                CreatureConstants.Mephit_Magma,
-                CreatureConstants.Mephit_Ooze,
-                CreatureConstants.Mephit_Salt,
-                CreatureConstants.Mephit_Steam,
-                CreatureConstants.Mephit_Water,
+                CreatureDataConstants.DominatedCreature_CR1,
+                CreatureDataConstants.DominatedCreature_CR2,
+                CreatureDataConstants.DominatedCreature_CR3,
+                CreatureDataConstants.DominatedCreature_CR5,
+                CreatureDataConstants.DominatedCreature_CR6,
+                CreatureDataConstants.Mephit_Air,
+                CreatureDataConstants.Mephit_Dust,
+                CreatureDataConstants.Mephit_Earth,
+                CreatureDataConstants.Mephit_Fire,
+                CreatureDataConstants.Mephit_Ice,
+                CreatureDataConstants.Mephit_Magma,
+                CreatureDataConstants.Mephit_Ooze,
+                CreatureDataConstants.Mephit_Salt,
+                CreatureDataConstants.Mephit_Steam,
+                CreatureDataConstants.Mephit_Water,
             };
 
             allCreatures = allCreatures.Union(extraCreatures);

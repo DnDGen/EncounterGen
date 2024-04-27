@@ -65,7 +65,7 @@ namespace DnDGen.EncounterGen.Generators
         private bool IsCharacter(string creature)
         {
             var name = encounterFormatter.SelectNameFrom(creature);
-            return name == CreatureConstants.Character;
+            return name == CreatureDataConstants.Character;
         }
 
         private Character GenerateCharacter(Creature creature)

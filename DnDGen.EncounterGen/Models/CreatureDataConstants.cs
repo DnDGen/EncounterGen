@@ -1,6 +1,6 @@
 ﻿namespace DnDGen.EncounterGen.Models
 {
-    public static class CreatureConstants
+    public static class CreatureDataConstants
     {
         public static class Types
         {
