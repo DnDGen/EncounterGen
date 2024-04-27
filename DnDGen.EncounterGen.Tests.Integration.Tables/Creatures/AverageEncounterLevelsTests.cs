@@ -222,7 +222,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures
         [TestCase(EncounterDataConstants.BeardedDevil_Team)]
         [TestCase(EncounterDataConstants.BeardedDevil_Squad)]
         [TestCase(EncounterDataConstants.Bebilith_Solitary)]
-        [TestCase(EncounterDataConstants.Bee_Gient_Solitary)]
+        [TestCase(EncounterDataConstants.Bee_Giant_Solitary)]
         [TestCase(EncounterDataConstants.Bee_Giant_Buzz)]
         [TestCase(EncounterDataConstants.Bee_Giant_Hive)]
         [TestCase(EncounterDataConstants.Behir_Solitary)]

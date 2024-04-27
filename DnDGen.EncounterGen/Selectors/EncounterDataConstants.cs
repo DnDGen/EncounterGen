@@ -183,7 +183,7 @@ namespace DnDGen.EncounterGen.Selectors
         public const string BeardedDevil_Team = "Bearded Devil(Barbazu)/1d3+2";
         public const string BeardedDevil_Squad = "Bearded Devil(Barbazu)/2d3+4";
         public const string Bebilith_Solitary = "Bebilith/1";
-        public const string Bee_Gient_Solitary = "Giant bee/1";
+        public const string Bee_Giant_Solitary = "Giant bee/1";
         public const string Bee_Giant_Buzz = "Giant bee/1d4+1";
         public const string Bee_Giant_Hive = "Giant bee/1d10+10";
         public const string Behir_Solitary = "Behir/1";

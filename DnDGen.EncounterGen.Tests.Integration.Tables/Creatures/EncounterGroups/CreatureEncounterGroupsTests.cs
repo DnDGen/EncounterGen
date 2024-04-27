@@ -285,7 +285,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
             EncounterDataConstants.BeardedDevil_Team)]
         [TestCase(CreatureDataConstants.Bebilith, EncounterDataConstants.Bebilith_Solitary)]
         [TestCase(CreatureDataConstants.Bee_Giant,
-            EncounterDataConstants.Bee_Gient_Solitary,
+            EncounterDataConstants.Bee_Giant_Solitary,
             EncounterDataConstants.Bee_Giant_Buzz,
             EncounterDataConstants.Bee_Giant_Hive)]
         [TestCase(CreatureDataConstants.Behir,

@@ -240,7 +240,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors
         [TestCase(EncounterDataConstants.BeardedDevil_Team, CreatureDataConstants.BeardedDevil_Barbazu, AmountConstants.Range3To5)]
         [TestCase(EncounterDataConstants.BeardedDevil_Squad, CreatureDataConstants.BeardedDevil_Barbazu, AmountConstants.Range6To10)]
         [TestCase(EncounterDataConstants.Bebilith_Solitary, CreatureDataConstants.Bebilith, AmountConstants.Range1)]
-        [TestCase(EncounterDataConstants.Bee_Gient_Solitary, CreatureDataConstants.Bee_Giant, AmountConstants.Range1)]
+        [TestCase(EncounterDataConstants.Bee_Giant_Solitary, CreatureDataConstants.Bee_Giant, AmountConstants.Range1)]
         [TestCase(EncounterDataConstants.Bee_Giant_Buzz, CreatureDataConstants.Bee_Giant, AmountConstants.Range2To5)]
         [TestCase(EncounterDataConstants.Bee_Giant_Hive, CreatureDataConstants.Bee_Giant, AmountConstants.Range11To20)]
         [TestCase(EncounterDataConstants.Behir_Solitary, CreatureDataConstants.Behir, AmountConstants.Range1)]
