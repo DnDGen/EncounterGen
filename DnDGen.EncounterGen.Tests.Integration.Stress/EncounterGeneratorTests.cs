@@ -11,7 +11,6 @@ namespace DnDGen.EncounterGen.Tests.Integration.Stress
     public class EncounterGeneratorTests : StressTests
     {
         private IEncounterGenerator encounterGenerator;
-        private IEncounterVerifier encounterVerifier;
 
         private const int PresetLevel = 7;
 
@@ -22,7 +21,6 @@ namespace DnDGen.EncounterGen.Tests.Integration.Stress
         {
             testedFilters = new HashSet<string>();
             encounterGenerator = GetNewInstanceOf<IEncounterGenerator>();
-            encounterVerifier = GetNewInstanceOf<IEncounterVerifier>();
         }
 
         [Test]
@@ -66,6 +64,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Stress
 
         private void AssertEncounter(Encounter encounter)
         {
+            Assert.That(encounter.Description, Is.Not.Empty);
             Assert.That(encounter.Creatures, Is.Not.Empty);
             Assert.That(encounter.Creatures, Is.All.Not.Null);
             Assert.That(encounter.Characters, Is.Not.Null);

@@ -8,6 +8,8 @@
 	  <Description>This generates encounters for the Dungeons and Dragons 3.5 system.  One can generate encounters of particular levels, times of day, and environments.  One can also filter creature types.  Treasure and equipment are generated.</Description>
 	  <PackageReleaseNotes>
 		  4.0.0: .Net 6, consolidated nuget packages, removed EventGen, removed iterative generators, dependency-compatible Ninject module loading
+		  + #49: rebalance encounter rates
+		  + #35: encounter descriptions
 	  </PackageReleaseNotes>
 	  <PackageProjectUrl>https://github.com/DnDGen/EncounterGen</PackageProjectUrl>
 	  <RepositoryUrl>https://github.com/DnDGen/EncounterGen</RepositoryUrl>

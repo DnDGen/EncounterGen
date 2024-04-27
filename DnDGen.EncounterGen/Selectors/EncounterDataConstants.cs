@@ -1,6 +1,9 @@
-﻿namespace DnDGen.EncounterGen.Selectors
+﻿using System;
+
+namespace DnDGen.EncounterGen.Selectors
 {
-    internal static class EncounterConstants
+    [Obsolete]
+    internal static class EncounterDataConstants
     {
         public const string Aasimar_Solitary = "Character[1]{Aasimar}@Warrior@/1";
         public const string Aasimar_Pair = "Character[1]{Aasimar}@Warrior@/2";
