@@ -467,6 +467,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
                 CreatureDataConstants.Worg,
                 CreatureDataConstants.Orc_Half,
                 CreatureDataConstants.Skeleton_Human,
+                CreatureDataConstants.Human,
             };
 
             base.DistinctCollection(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains, creatures);
@@ -2075,6 +2076,12 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         [TestCase(CreatureDataConstants.Halfling_Tallfellow_Warrior, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
         [TestCase(CreatureDataConstants.Harpy, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh)]
         [TestCase(CreatureDataConstants.HarpyArcher, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh)]
+        [TestCase(CreatureDataConstants.Human_Captain, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains)]
+        [TestCase(CreatureDataConstants.Human_Leader, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains)]
+        [TestCase(CreatureDataConstants.Human_Lieutenant, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains)]
+        [TestCase(CreatureDataConstants.Human_Noncombatant, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains)]
+        [TestCase(CreatureDataConstants.Human_Sergeant, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains)]
+        [TestCase(CreatureDataConstants.Human_Warrior, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains)]
         [TestCase(CreatureDataConstants.Hydra_10Heads, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh)]
         [TestCase(CreatureDataConstants.Hydra_11Heads, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh)]
         [TestCase(CreatureDataConstants.Hydra_12Heads, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh)]

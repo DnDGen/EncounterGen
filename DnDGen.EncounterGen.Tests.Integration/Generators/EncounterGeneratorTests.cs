@@ -2,6 +2,7 @@
 using DnDGen.EncounterGen.Models;
 using DnDGen.RollGen;
 using NUnit.Framework;
+using System.Diagnostics;
 using System.Linq;
 
 namespace DnDGen.EncounterGen.Tests.Integration.Generators
@@ -11,12 +12,14 @@ namespace DnDGen.EncounterGen.Tests.Integration.Generators
     {
         private IEncounterGenerator encounterGenerator;
         private Dice dice;
+        private Stopwatch stopwatch;
 
         [SetUp]
         public void Setup()
         {
             encounterGenerator = GetNewInstanceOf<IEncounterGenerator>();
             dice = GetNewInstanceOf<Dice>();
+            stopwatch = new Stopwatch();
         }
 
         [TestCase(EnvironmentConstants.Civilized,
@@ -35,8 +38,12 @@ namespace DnDGen.EncounterGen.Tests.Integration.Generators
                 AllowUnderground = allowUnderground
             };
 
+            stopwatch.Start();
             var encounter = encounterGenerator.Generate(specifications);
+            stopwatch.Stop();
+
             AssertEncounter(encounter);
+            Assert.That(stopwatch.Elapsed.TotalSeconds, Is.LessThan(1));
         }
 
         [TestCase(EnvironmentConstants.Aquatic, EnvironmentConstants.Temperatures.Cold, EnvironmentConstants.TimesOfDay.Day, false, false)]
@@ -267,8 +274,12 @@ namespace DnDGen.EncounterGen.Tests.Integration.Generators
                 AllowUnderground = allowUnderground
             };
 
+            stopwatch.Start();
             var encounter = encounterGenerator.Generate(specifications);
+            stopwatch.Stop();
+
             AssertEncounter(encounter);
+            Assert.That(stopwatch.Elapsed.TotalSeconds, Is.LessThan(1));
         }
 
         [TestCase(EncounterSpecifications.MinimumLevel)]
@@ -313,8 +324,12 @@ namespace DnDGen.EncounterGen.Tests.Integration.Generators
                 AllowUnderground = true
             };
 
+            stopwatch.Start();
             var encounter = encounterGenerator.Generate(specifications);
+            stopwatch.Stop();
+
             AssertEncounter(encounter);
+            Assert.That(stopwatch.Elapsed.TotalSeconds, Is.LessThan(1));
         }
 
         [TestCase(CreatureDataConstants.Types.Aberration)]
@@ -345,8 +360,12 @@ namespace DnDGen.EncounterGen.Tests.Integration.Generators
                 CreatureTypeFilters = new[] { filter },
             };
 
+            stopwatch.Start();
             var encounter = encounterGenerator.Generate(specifications);
+            stopwatch.Stop();
+
             AssertEncounter(encounter);
+            Assert.That(stopwatch.Elapsed.TotalSeconds, Is.LessThan(1));
         }
 
         private void AssertEncounter(Encounter encounter)

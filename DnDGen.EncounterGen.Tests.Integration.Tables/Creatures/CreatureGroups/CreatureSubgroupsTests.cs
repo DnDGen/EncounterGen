@@ -699,6 +699,13 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         [TestCase(CreatureDataConstants.HoundArchon,
             CreatureDataConstants.HoundArchon,
             CreatureDataConstants.HoundArchon_Hero)]
+        [TestCase(CreatureDataConstants.Human,
+            CreatureDataConstants.Human_Captain,
+            CreatureDataConstants.Human_Leader,
+            CreatureDataConstants.Human_Lieutenant,
+            CreatureDataConstants.Human_Noncombatant,
+            CreatureDataConstants.Human_Sergeant,
+            CreatureDataConstants.Human_Warrior)]
         [TestCase(CreatureDataConstants.Hydra,
             CreatureDataConstants.Cryohydra,
             CreatureDataConstants.Pyrohydra,

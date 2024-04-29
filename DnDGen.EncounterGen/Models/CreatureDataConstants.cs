@@ -1159,6 +1159,12 @@
         public const string HoundArchon_Hero = "Character(Hero)[11]{Hound Archon}@Paladin@";
         public const string Howler = "Howler";
         public const string Human = "Human";
+        public const string Human_Captain = "Character(Captain)[7]{Human}@Warrior@";
+        public const string Human_Leader = "Character(Leader)[1d4+2]{Human}@Warrior@";
+        public const string Human_Lieutenant = "Character(Lieutenant)[5]{Human}@Warrior@";
+        public const string Human_Noncombatant = "Human$Noncombatant$";
+        public const string Human_Sergeant = "Character(Sergeant)[3]{Human}@Warrior@";
+        public const string Human_Warrior = "Character[1]{Human}@Warrior@";
         public const string Hydra = "Hydra";
         public const string Hydra_5Heads = "Hydra$5 heads$";
         public const string Hydra_6Heads = "Hydra$6 heads$";

@@ -1326,7 +1326,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
             EncounterDataConstants.Dryad_Solitary,
             EncounterDataConstants.Dryad_Grove)]
         [TestCase(CreatureDataConstants.Duergar_Warrior,
-            EncounterDataConstants.Duerger_Team,
+            EncounterDataConstants.Duergar_Team,
             EncounterDataConstants.Duergar_Squad,
             EncounterDataConstants.Duergar_Clan)]
         [TestCase(CreatureDataConstants.Duergar_Noncombatant, EncounterDataConstants.Duergar_Clan)]

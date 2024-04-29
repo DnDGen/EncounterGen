@@ -150,6 +150,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
                 CreatureDataConstants.Hobgoblin,
                 CreatureDataConstants.Horse,
                 CreatureDataConstants.HoundArchon,
+                CreatureDataConstants.Human,
                 CreatureDataConstants.Hydra,
                 CreatureDataConstants.Inevitable,
                 CreatureDataConstants.Kobold,

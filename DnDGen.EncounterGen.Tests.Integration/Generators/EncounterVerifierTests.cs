@@ -327,5 +327,41 @@ namespace DnDGen.EncounterGen.Tests.Integration.Generators
             Assert.That(valid, Is.True);
             Assert.That(stopwatch.Elapsed.TotalSeconds, Is.LessThan(1));
         }
+
+        [TestCase(CreatureDataConstants.Types.Aberration)]
+        [TestCase(CreatureDataConstants.Types.Animal)]
+        [TestCase(CreatureDataConstants.Types.Construct)]
+        [TestCase(CreatureDataConstants.Types.Dragon)]
+        [TestCase(CreatureDataConstants.Types.Elemental)]
+        [TestCase(CreatureDataConstants.Types.Fey)]
+        [TestCase(CreatureDataConstants.Types.Giant)]
+        [TestCase(CreatureDataConstants.Types.Humanoid)]
+        [TestCase(CreatureDataConstants.Types.MagicalBeast)]
+        [TestCase(CreatureDataConstants.Types.MonstrousHumanoid)]
+        [TestCase(CreatureDataConstants.Types.Ooze)]
+        [TestCase(CreatureDataConstants.Types.Outsider)]
+        [TestCase(CreatureDataConstants.Types.Plant)]
+        [TestCase(CreatureDataConstants.Types.Undead)]
+        [TestCase(CreatureDataConstants.Types.Vermin)]
+        public void ValidEncounterExists_ReturnsTrue_ForFilter(string filter)
+        {
+            var specifications = new EncounterSpecifications
+            {
+                Environment = EnvironmentConstants.Civilized,
+                Temperature = EnvironmentConstants.Temperatures.Temperate,
+                TimeOfDay = EnvironmentConstants.TimesOfDay.Night,
+                Level = 1,
+                AllowAquatic = true,
+                AllowUnderground = true,
+                CreatureTypeFilters = new[] { filter },
+            };
+
+            stopwatch.Start();
+            var valid = encounterVerifier.ValidEncounterExists(specifications);
+            stopwatch.Stop();
+
+            Assert.That(valid, Is.True);
+            Assert.That(stopwatch.Elapsed.TotalSeconds, Is.LessThan(1));
+        }
     }
 }

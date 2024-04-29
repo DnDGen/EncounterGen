@@ -1692,7 +1692,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors
             CreatureDataConstants.Drow_Captain, AmountConstants.Range1To4)]
         [TestCase(EncounterDataConstants.Dryad_Solitary, CreatureDataConstants.Dryad, AmountConstants.Range1)]
         [TestCase(EncounterDataConstants.Dryad_Grove, CreatureDataConstants.Dryad, AmountConstants.Range4To7)]
-        [TestCase(EncounterDataConstants.Duerger_Team, CreatureDataConstants.Duergar_Warrior, AmountConstants.Range2To4)]
+        [TestCase(EncounterDataConstants.Duergar_Team, CreatureDataConstants.Duergar_Warrior, AmountConstants.Range2To4)]
         [TestCase(EncounterDataConstants.Duergar_Squad, CreatureDataConstants.Duergar_Warrior, AmountConstants.Range9To16,
             CreatureDataConstants.Duergar_Sergeant, AmountConstants.Range3,
             CreatureDataConstants.Duergar_Leader, AmountConstants.Range1)]
@@ -2300,6 +2300,15 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors
         [TestCase(EncounterDataConstants.Howler_Solitary, CreatureDataConstants.Howler, AmountConstants.Range1)]
         [TestCase(EncounterDataConstants.Howler_Gang, CreatureDataConstants.Howler, AmountConstants.Range2To4)]
         [TestCase(EncounterDataConstants.Howler_Pack, CreatureDataConstants.Howler, AmountConstants.Range6To10)]
+        [TestCase(EncounterDataConstants.Human_Squad, CreatureDataConstants.Human_Warrior, AmountConstants.Range2To4)]
+        [TestCase(EncounterDataConstants.Human_Company, CreatureDataConstants.Human_Warrior, AmountConstants.Range11To20,
+            CreatureDataConstants.Human_Sergeant, AmountConstants.Range2,
+            CreatureDataConstants.Human_Leader, AmountConstants.Range1)]
+        [TestCase(EncounterDataConstants.Human_Band, CreatureDataConstants.Human_Warrior, AmountConstants.Range30To100,
+            CreatureDataConstants.Human_Noncombatant, AmountConstants.Range6To20,
+            CreatureDataConstants.Human_Sergeant, AmountConstants.Range3To10,
+            CreatureDataConstants.Human_Lieutenant, AmountConstants.Range5,
+            CreatureDataConstants.Human_Captain, AmountConstants.Range3)]
         [TestCase(EncounterDataConstants.Hydra_5Heads_Solitary, CreatureDataConstants.Hydra_5Heads, AmountConstants.Range1)]
         [TestCase(EncounterDataConstants.Hydra_6Heads_Solitary, CreatureDataConstants.Hydra_6Heads, AmountConstants.Range1)]
         [TestCase(EncounterDataConstants.Hydra_7Heads_Solitary, CreatureDataConstants.Hydra_7Heads, AmountConstants.Range1)]
