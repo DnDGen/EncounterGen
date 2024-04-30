@@ -881,27 +881,27 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors
         [TestCase(EncounterDataConstants.Character_FamousPriest_Level18_Solitary, CreatureDataConstants.Character_FamousPriest_Level18, AmountConstants.Range1)]
         [TestCase(EncounterDataConstants.Character_FamousPriest_Level19_Solitary, CreatureDataConstants.Character_FamousPriest_Level19, AmountConstants.Range1)]
         [TestCase(EncounterDataConstants.Character_FamousPriest_Level20_Solitary, CreatureDataConstants.Character_FamousPriest_Level20, AmountConstants.Range1)]
-        [TestCase(EncounterDataConstants.Character_Merchant_Level1_Group, CreatureDataConstants.Character_Merchant_Level1, AmountConstants.Range2To5,
+        [TestCase(EncounterDataConstants.Character_Merchant_Level1_Caravan, CreatureDataConstants.Character_Merchant_Level1, AmountConstants.Range2To5,
             CreatureDataConstants.Warrior_Guard_Level1, AmountConstants.Range1To4)]
-        [TestCase(EncounterDataConstants.Character_Merchant_Level2To3_Group, CreatureDataConstants.Character_Merchant_Level2To3, AmountConstants.Range2To5,
+        [TestCase(EncounterDataConstants.Character_Merchant_Level2To3_Caravan, CreatureDataConstants.Character_Merchant_Level2To3, AmountConstants.Range2To5,
             CreatureDataConstants.Warrior_Guard_Level2To3, AmountConstants.Range1To4)]
-        [TestCase(EncounterDataConstants.Character_Merchant_Level4To5_Group, CreatureDataConstants.Character_Merchant_Level4To5, AmountConstants.Range2To5,
+        [TestCase(EncounterDataConstants.Character_Merchant_Level4To5_Caravan, CreatureDataConstants.Character_Merchant_Level4To5, AmountConstants.Range2To5,
             CreatureDataConstants.Warrior_Guard_Level4To5, AmountConstants.Range1To4)]
-        [TestCase(EncounterDataConstants.Character_Merchant_Level6To7_Group, CreatureDataConstants.Character_Merchant_Level6To7, AmountConstants.Range2To5,
+        [TestCase(EncounterDataConstants.Character_Merchant_Level6To7_Caravan, CreatureDataConstants.Character_Merchant_Level6To7, AmountConstants.Range2To5,
             CreatureDataConstants.Warrior_Guard_Level6To7, AmountConstants.Range1To4)]
-        [TestCase(EncounterDataConstants.Character_Merchant_Level8To9_Group, CreatureDataConstants.Character_Merchant_Level8To9, AmountConstants.Range2To5,
+        [TestCase(EncounterDataConstants.Character_Merchant_Level8To9_Caravan, CreatureDataConstants.Character_Merchant_Level8To9, AmountConstants.Range2To5,
             CreatureDataConstants.Warrior_Guard_Level8To9, AmountConstants.Range1To4)]
-        [TestCase(EncounterDataConstants.Character_Merchant_Level10To11_Group, CreatureDataConstants.Character_Merchant_Level10To11, AmountConstants.Range2To5,
+        [TestCase(EncounterDataConstants.Character_Merchant_Level10To11_Caravan, CreatureDataConstants.Character_Merchant_Level10To11, AmountConstants.Range2To5,
             CreatureDataConstants.Warrior_Guard_Level10To11, AmountConstants.Range1To4)]
-        [TestCase(EncounterDataConstants.Character_Merchant_Level12To13_Group, CreatureDataConstants.Character_Merchant_Level12To13, AmountConstants.Range2To5,
+        [TestCase(EncounterDataConstants.Character_Merchant_Level12To13_Caravan, CreatureDataConstants.Character_Merchant_Level12To13, AmountConstants.Range2To5,
             CreatureDataConstants.Warrior_Guard_Level12To13, AmountConstants.Range1To4)]
-        [TestCase(EncounterDataConstants.Character_Merchant_Level14To15_Group, CreatureDataConstants.Character_Merchant_Level14To15, AmountConstants.Range2To5,
+        [TestCase(EncounterDataConstants.Character_Merchant_Level14To15_Caravan, CreatureDataConstants.Character_Merchant_Level14To15, AmountConstants.Range2To5,
             CreatureDataConstants.Warrior_Guard_Level14To15, AmountConstants.Range1To4)]
-        [TestCase(EncounterDataConstants.Character_Merchant_Level16To17_Group, CreatureDataConstants.Character_Merchant_Level16To17, AmountConstants.Range2To5,
+        [TestCase(EncounterDataConstants.Character_Merchant_Level16To17_Caravan, CreatureDataConstants.Character_Merchant_Level16To17, AmountConstants.Range2To5,
             CreatureDataConstants.Warrior_Guard_Level16To17, AmountConstants.Range1To4)]
-        [TestCase(EncounterDataConstants.Character_Merchant_Level18To19_Group, CreatureDataConstants.Character_Merchant_Level18To19, AmountConstants.Range2To5,
+        [TestCase(EncounterDataConstants.Character_Merchant_Level18To19_Caravan, CreatureDataConstants.Character_Merchant_Level18To19, AmountConstants.Range2To5,
             CreatureDataConstants.Warrior_Guard_Level18To19, AmountConstants.Range1To4)]
-        [TestCase(EncounterDataConstants.Character_Merchant_Level20_Group, CreatureDataConstants.Character_Merchant_Level20, AmountConstants.Range2To5,
+        [TestCase(EncounterDataConstants.Character_Merchant_Level20_Caravan, CreatureDataConstants.Character_Merchant_Level20, AmountConstants.Range2To5,
             CreatureDataConstants.Warrior_Guard_Level20, AmountConstants.Range1To4)]
         [TestCase(EncounterDataConstants.Character_Minstrel_Level1_Group, CreatureDataConstants.Character_Minstrel_Level1, AmountConstants.Range3To9,
             CreatureDataConstants.Bard_Leader_Level1, AmountConstants.Range10PercentTo1)]
