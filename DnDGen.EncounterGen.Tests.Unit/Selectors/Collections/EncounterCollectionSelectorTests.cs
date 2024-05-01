@@ -6543,13 +6543,13 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
         }
 
         [Test]
-        public void SelectAllWeightedFrom_AddUndergroundToCivilized()
+        public void SelectAllWeightedEncountersFrom_AddUndergroundToCivilized()
         {
-            var specificCivilizedEncounters = new[] { "specific civilized encounter/amount", "other specific civilized encounter/other amount" };
-            var undergroundEncounters = new[] { "underground encounter/amount", "other underground encounter/other amount" };
+            var specificCivilizedEncounters = new[] { "specific civilized encounter", "other specific civilized encounter" };
+            var undergroundEncounters = new[] { "underground encounter", "other underground encounter" };
 
-            SetUpCreatureBasedEncounterGroup(temperature + EnvironmentConstants.Civilized, specificCivilizedEncounters);
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Underground, undergroundEncounters);
+            SetUpEncounterGroup(temperature + EnvironmentConstants.Civilized, specificCivilizedEncounters);
+            SetUpEncounterGroup(EnvironmentConstants.Underground, undergroundEncounters);
 
             SetupEncounterLevel(extraplanarEncounters[0], 9266);
             SetupEncounterLevel(extraplanarEncounters[1], 9266);
@@ -6574,40 +6574,45 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
             nightEncounters.Add(undergroundEncounters[0]);
             nightEncounters.Add(undergroundEncounters[1]);
 
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.TimesOfDay.Night, nightEncounters);
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Night, nightEncounters);
 
             wildernessEncounters.Add(extraplanarEncounters[0]);
             wildernessEncounters.Add(anyEncounters[0]);
             wildernessEncounters.Add(landEncounters[0]);
             wildernessEncounters.Add(undergroundEncounters[0]);
 
+            specifications.Environment = EnvironmentConstants.Civilized;
+            specifications.AllowUnderground = true;
+
+            var weightedEncounters = encounterCollectionSelector.SelectAllWeightedEncountersFrom(specifications);
+
             var expectedEncounters = new[]
             {
-                ("other extraplanar encounter", "other extraplanar amount", rareWeight),
-                ("specific civilized encounter", "amount", commonWeight),
-                ("civilized encounter", "civilized amount", commonWeight),
-                ("other any encounter", "other any amount", commonWeight),
-                ("other land encounter", "other land amount", commonWeight),
-                ("other underground encounter", "other amount", uncommonWeight),
+                ("other extraplanar encounter", rareWeight),
+                ("specific civilized encounter", commonWeight),
+                ("civilized encounter", commonWeight),
+                ("other any encounter", commonWeight),
+                ("other land encounter", commonWeight),
+                ("other underground encounter", uncommonWeight),
             };
 
-            AssertEncounterWeight(expectedEncounters, targetEnvironment: EnvironmentConstants.Civilized, allowUnderground: true);
+            AssertEncounterWeight(expectedEncounters, weightedEncounters);
         }
 
         [Test]
-        public void SelectAllWeightedFrom_AddUndergroundAndAquaticToCivilized()
+        public void SelectAllWeightedEncountersFrom_AddUndergroundAndAquaticToCivilized()
         {
-            var specificCivilizedEncounters = new[] { "specific civilized encounter/amount", "other specific civilized encounter/other amount" };
-            var undergroundEncounters = new[] { "underground encounter/amount", "other underground encounter/other amount" };
-            var undergroundAquaticEncounters = new[] { "underground aquatic encounter/amount", "other underground aquatic encounter/other amount" };
-            var aquaticEncounters = new[] { "aquatic encounter/amount", "other aquatic encounter/other amount" };
-            var specificAquaticEncounters = new[] { "specific aquatic encounter/amount", "other specific aquatic encounter/other amount" };
+            var specificCivilizedEncounters = new[] { "specific civilized encounter", "other specific civilized encounter" };
+            var undergroundEncounters = new[] { "underground encounter", "other underground encounter" };
+            var undergroundAquaticEncounters = new[] { "underground aquatic encounter", "other underground aquatic encounter" };
+            var aquaticEncounters = new[] { "aquatic encounter", "other aquatic encounter" };
+            var specificAquaticEncounters = new[] { "specific aquatic encounter", "other specific aquatic encounter" };
 
-            SetUpCreatureBasedEncounterGroup(temperature + EnvironmentConstants.Civilized, specificCivilizedEncounters);
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Underground, undergroundEncounters);
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Underground + EnvironmentConstants.Aquatic, undergroundAquaticEncounters);
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Aquatic, aquaticEncounters);
-            SetUpCreatureBasedEncounterGroup(temperature + EnvironmentConstants.Aquatic, specificAquaticEncounters);
+            SetUpEncounterGroup(temperature + EnvironmentConstants.Civilized, specificCivilizedEncounters);
+            SetUpEncounterGroup(EnvironmentConstants.Underground, undergroundEncounters);
+            SetUpEncounterGroup(EnvironmentConstants.Underground + EnvironmentConstants.Aquatic, undergroundAquaticEncounters);
+            SetUpEncounterGroup(EnvironmentConstants.Aquatic, aquaticEncounters);
+            SetUpEncounterGroup(temperature + EnvironmentConstants.Aquatic, specificAquaticEncounters);
 
             SetupEncounterLevel(extraplanarEncounters[0], 9266);
             SetupEncounterLevel(extraplanarEncounters[1], 9266);
@@ -6644,7 +6649,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
             nightEncounters.Add(specificAquaticEncounters[0]);
             nightEncounters.Add(specificAquaticEncounters[1]);
 
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.TimesOfDay.Night, nightEncounters);
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Night, nightEncounters);
 
             wildernessEncounters.Add(extraplanarEncounters[0]);
             wildernessEncounters.Add(anyEncounters[0]);
@@ -6654,134 +6659,140 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
             wildernessEncounters.Add(aquaticEncounters[0]);
             wildernessEncounters.Add(specificAquaticEncounters[0]);
 
+            specifications.Environment = EnvironmentConstants.Civilized;
+            specifications.AllowAquatic = true;
+            specifications.AllowUnderground = true;
+
+            var weightedEncounters = encounterCollectionSelector.SelectAllWeightedEncountersFrom(specifications);
+
             var expectedEncounters = new[]
             {
-                ("other extraplanar encounter", "other extraplanar amount", rareWeight),
-                ("specific civilized encounter", "amount", commonWeight),
-                ("civilized encounter", "civilized amount", commonWeight),
-                ("other any encounter", "other any amount", commonWeight),
-                ("other land encounter", "other land amount", commonWeight),
-                ("other aquatic encounter", "other amount", uncommonWeight),
-                ("other specific aquatic encounter", "other amount", uncommonWeight),
-                ("other underground encounter", "other amount", uncommonWeight),
-                ("other underground aquatic encounter", "other amount", uncommonWeight),
+                ("other extraplanar encounter", rareWeight),
+                ("specific civilized encounter", commonWeight),
+                ("civilized encounter", commonWeight),
+                ("other any encounter", commonWeight),
+                ("other land encounter", commonWeight),
+                ("other aquatic encounter", uncommonWeight),
+                ("other specific aquatic encounter", uncommonWeight),
+                ("other underground encounter", uncommonWeight),
+                ("other underground aquatic encounter", uncommonWeight),
             };
 
-            AssertEncounterWeight(expectedEncounters, targetEnvironment: EnvironmentConstants.Civilized, allowAquatic: true, allowUnderground: true);
+            AssertEncounterWeight(expectedEncounters, weightedEncounters);
         }
 
         [Test]
-        public void SelectPossibleFrom_ReturnsPossibleEncounters_AllDefaults_Some()
+        public void SelectPossibleEncountersFrom_ReturnsPossibleEncounters_AllDefaults_Some()
         {
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert, new[] { "my warm encounter/my warm amount", "my wrong encounter/my wrong amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest, new[] { "my wrong encounter/my amount", "my temperate encounter/my temperate amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Hills, new[] { "my wrong encounter/my amount", "my cold encounter/my cold amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.TimesOfDay.Day, new[]
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert, new[] { "my warm encounter", "my wrong encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest, new[] { "my wrong encounter", "my temperate encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Hills, new[] { "my wrong encounter", "my cold encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Day, new[]
             {
-                "my warm encounter/my warm amount",
-                "my temperate encounter/my temperate amount",
-                "my wrong encounter/my wrong amount",
-                "my any encounter/my any amount",
-                "my extraplanar encounter/my extraplanar amount",
-                "my warm aquatic encounter/my warm aquatic amount",
-                "my cold aquatic encounter/my cold aquatic amount",
-                "my warm civilized encounter/my warm civilized amount",
-                "my cold civilized encounter/my cold civilized amount",
-                "my day encounter/my day amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[]
+                "my warm encounter",
+                "my temperate encounter",
+                "my wrong encounter",
+                "my any encounter",
+                "my extraplanar encounter",
+                "my warm aquatic encounter",
+                "my cold aquatic encounter",
+                "my warm civilized encounter",
+                "my cold civilized encounter",
+                "my day encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[]
             {
-                "my night encounter/my night amount",
-                "my cold encounter/my cold amount",
-                "my wrong encounter/my wrong amount",
-                "my land encounter/my land amount",
-                "my aquatic encounter/my aquatic amount",
-                "my temperate aquatic encounter/my temperate aquatic amount",
-                "my civilized encounter/my civilized amount",
-                "my temperate civilized encounter/my temperate civilized amount",
-                "my underground encounter/my underground amount",
-                "my underground aquatic encounter/my underground aquatic amount",
-                "my other encounter/my other amount" });
+                "my night encounter",
+                "my cold encounter",
+                "my wrong encounter",
+                "my land encounter",
+                "my aquatic encounter",
+                "my temperate aquatic encounter",
+                "my civilized encounter",
+                "my temperate civilized encounter",
+                "my underground encounter",
+                "my underground aquatic encounter",
+                "my other encounter" });
 
-            SetupEncounterLevel("my warm encounter/my warm amount", 9);
-            SetupEncounterLevel("my temperate encounter/my temperate amount", 26);
-            SetupEncounterLevel("my cold encounter/my cold amount", 6);
-            SetupEncounterLevel("my other encounter/my other amount", 9);
+            SetupEncounterLevel("my warm encounter", 9);
+            SetupEncounterLevel("my temperate encounter", 26);
+            SetupEncounterLevel("my cold encounter", 6);
+            SetupEncounterLevel("my other encounter", 9);
 
-            landEncounters.Add("my land encounter/my land amount");
-            anyEncounters.Add("my any encounter/my any amount");
-            extraplanarEncounters.Add("my extraplanar encounter/my extraplanar amount");
-            SetupEncounterLevel("my land encounter/my land amount", 2);
-            SetupEncounterLevel("my any encounter/my any amount", 10);
-            SetupEncounterLevel("my extraplanar encounter/my extraplanar amount", 4);
+            landEncounters.Add("my land encounter");
+            anyEncounters.Add("my any encounter");
+            extraplanarEncounters.Add("my extraplanar encounter");
+            SetupEncounterLevel("my land encounter", 2);
+            SetupEncounterLevel("my any encounter", 10);
+            SetupEncounterLevel("my extraplanar encounter", 4);
 
-            var aquaticEncounters = new[] { "my aquatic encounter/my aquatic amount", "aquatic encounter/amount", "other aquatic encounter/other amount" };
+            var aquaticEncounters = new[] { "my aquatic encounter", "aquatic encounter", "other aquatic encounter" };
 
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Aquatic, aquaticEncounters);
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic, new[]
+            SetUpEncounterGroup(EnvironmentConstants.Aquatic, aquaticEncounters);
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic, new[]
             {
-                "my warm aquatic encounter/my warm aquatic amount",
-                "my wrong encounter/my wrong amount"
+                "my warm aquatic encounter",
+                "my wrong encounter"
             });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic, new[]
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic, new[]
             {
-                "my wrong encounter/my amount",
-                "my temperate aquatic encounter/my temperate aquatic amount"
+                "my wrong encounter",
+                "my temperate aquatic encounter"
             });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Aquatic, new[]
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Aquatic, new[]
             {
-                "my wrong encounter/my amount",
-                "my cold aquatic encounter/my cold aquatic amount"
-            });
-
-            SetupEncounterLevel("my aquatic encounter/my aquatic amount", 3);
-            SetupEncounterLevel("my warm aquatic encounter/my warm aquatic amount", 6);
-            SetupEncounterLevel("my temperate aquatic encounter/my temperate aquatic amount", 9);
-            SetupEncounterLevel("my cold aquatic encounter/my cold aquatic amount", 6);
-
-            var civilizedEncounters = new[] { "my civilized encounter/my civilized amount", "civilized encounter/amount", "other civilized encounter/other amount" };
-
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Civilized, civilizedEncounters);
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Civilized, new[]
-            {
-                "my warm civilized encounter/my warm civilized amount",
-                "my wrong encounter/my wrong amount"
-            });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Civilized, new[]
-            {
-                "my wrong encounter/my amount",
-                "my temperate civilized encounter/my temperate civilized amount"
-            });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Civilized, new[]
-            {
-                "my wrong encounter/my amount",
-                "my cold civilized encounter/my cold civilized amount"
+                "my wrong encounter",
+                "my cold aquatic encounter"
             });
 
-            SetupEncounterLevel("my civilized encounter/my civilized amount", 3);
-            SetupEncounterLevel("my warm civilized encounter/my warm civilized amount", 6);
-            SetupEncounterLevel("my temperate civilized encounter/my temperate civilized amount", 9);
-            SetupEncounterLevel("my cold civilized encounter/my cold civilized amount", 6);
+            SetupEncounterLevel("my aquatic encounter", 3);
+            SetupEncounterLevel("my warm aquatic encounter", 6);
+            SetupEncounterLevel("my temperate aquatic encounter", 9);
+            SetupEncounterLevel("my cold aquatic encounter", 6);
+
+            var civilizedEncounters = new[] { "my civilized encounter", "civilized encounter", "other civilized encounter" };
+
+            SetUpEncounterGroup(EnvironmentConstants.Civilized, civilizedEncounters);
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Civilized, new[]
+            {
+                "my warm civilized encounter",
+                "my wrong encounter"
+            });
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Civilized, new[]
+            {
+                "my wrong encounter",
+                "my temperate civilized encounter"
+            });
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Civilized, new[]
+            {
+                "my wrong encounter",
+                "my cold civilized encounter"
+            });
+
+            SetupEncounterLevel("my civilized encounter", 3);
+            SetupEncounterLevel("my warm civilized encounter", 6);
+            SetupEncounterLevel("my temperate civilized encounter", 9);
+            SetupEncounterLevel("my cold civilized encounter", 6);
 
             var undergroundEncounters = new[]
             {
-                "underground encounter/amount",
-                "my underground encounter/my underground amount",
-                "other underground encounter/other amount"
+                "underground encounter",
+                "my underground encounter",
+                "other underground encounter"
             };
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Underground, undergroundEncounters);
-            SetupEncounterLevel("my underground encounter/my underground amount", 7);
+            SetUpEncounterGroup(EnvironmentConstants.Underground, undergroundEncounters);
+            SetupEncounterLevel("my underground encounter", 7);
 
             var undergroundAquaticEncounters = new[]
             {
-                "underground aquatic encounter/amount",
-                "my underground aquatic encounter/my underground aquatic amount",
-                "other underground aquatic encounter/other amount"
+                "underground aquatic encounter",
+                "my underground aquatic encounter",
+                "other underground aquatic encounter"
             };
 
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Underground + EnvironmentConstants.Aquatic, undergroundAquaticEncounters);
-            SetupEncounterLevel("my underground aquatic encounter/my underground aquatic amount", 13);
+            SetUpEncounterGroup(EnvironmentConstants.Underground + EnvironmentConstants.Aquatic, undergroundAquaticEncounters);
+            SetupEncounterLevel("my underground aquatic encounter", 13);
 
-            var possibleEncounters = encounterCollectionSelector.SelectPossibleFrom();
+            var possibleEncounters = encounterCollectionSelector.SelectPossibleEncountersFrom();
 
             //INFO: Since this method is only used in the EncounterVerifier, and immediately followed with .Any(), we will not assert contents
             Assert.That(possibleEncounters, Is.Not.Empty);
@@ -6789,1007 +6800,1007 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
 
         [Test]
         [Ignore("If nothing is toggled, then there will be valid encounters no matter what")]
-        public void SelectPossibleFrom_ReturnsPossibleEncounters_AllDefaults_None()
+        public void SelectPossibleEncountersFrom_ReturnsPossibleEncounters_AllDefaults_None()
         {
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert, new[] { "my warm encounter/my warm amount", "my wrong encounter/my wrong amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest, new[] { "my wrong encounter/my amount", "my temperate encounter/my temperate amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Hills, new[] { "my wrong encounter/my amount", "my cold encounter/my cold amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.TimesOfDay.Day, new[]
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert, new[] { "my warm encounter", "my wrong encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest, new[] { "my wrong encounter", "my temperate encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Hills, new[] { "my wrong encounter", "my cold encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Day, new[]
             {
-                "my warm encounter/my warm amount",
-                "my temperate encounter/my temperate amount",
-                "my wrong encounter/my wrong amount",
-                "my any encounter/my any amount",
-                "my extraplanar encounter/my extraplanar amount",
-                "my warm aquatic encounter/my warm aquatic amount",
-                "my cold aquatic encounter/my cold aquatic amount",
-                "my warm civilized encounter/my warm civilized amount",
-                "my cold civilized encounter/my cold civilized amount",
-                "my day encounter/my day amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[]
+                "my warm encounter",
+                "my temperate encounter",
+                "my wrong encounter",
+                "my any encounter",
+                "my extraplanar encounter",
+                "my warm aquatic encounter",
+                "my cold aquatic encounter",
+                "my warm civilized encounter",
+                "my cold civilized encounter",
+                "my day encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[]
             {
-                "my night encounter/my night amount",
-                "my cold encounter/my cold amount",
-                "my wrong encounter/my wrong amount",
-                "my land encounter/my land amount",
-                "my aquatic encounter/my aquatic amount",
-                "my temperate aquatic encounter/my temperate aquatic amount",
-                "my civilized encounter/my civilized amount",
-                "my temperate civilized encounter/my temperate civilized amount",
-                "my underground encounter/my underground amount",
-                "my underground aquatic encounter/my underground aquatic amount",
-                "my other encounter/my other amount" });
+                "my night encounter",
+                "my cold encounter",
+                "my wrong encounter",
+                "my land encounter",
+                "my aquatic encounter",
+                "my temperate aquatic encounter",
+                "my civilized encounter",
+                "my temperate civilized encounter",
+                "my underground encounter",
+                "my underground aquatic encounter",
+                "my other encounter" });
 
-            SetupEncounterLevel("my warm encounter/my warm amount", 9);
-            SetupEncounterLevel("my temperate encounter/my temperate amount", 26);
-            SetupEncounterLevel("my cold encounter/my cold amount", 6);
-            SetupEncounterLevel("my other encounter/my other amount", 9);
+            SetupEncounterLevel("my warm encounter", 9);
+            SetupEncounterLevel("my temperate encounter", 26);
+            SetupEncounterLevel("my cold encounter", 6);
+            SetupEncounterLevel("my other encounter", 9);
 
-            landEncounters.Add("my land encounter/my land amount");
-            anyEncounters.Add("my any encounter/my any amount");
-            extraplanarEncounters.Add("my extraplanar encounter/my extraplanar amount");
-            SetupEncounterLevel("my land encounter/my land amount", 2);
-            SetupEncounterLevel("my any encounter/my any amount", 10);
-            SetupEncounterLevel("my extraplanar encounter/my extraplanar amount", 4);
+            landEncounters.Add("my land encounter");
+            anyEncounters.Add("my any encounter");
+            extraplanarEncounters.Add("my extraplanar encounter");
+            SetupEncounterLevel("my land encounter", 2);
+            SetupEncounterLevel("my any encounter", 10);
+            SetupEncounterLevel("my extraplanar encounter", 4);
 
-            var aquaticEncounters = new[] { "my aquatic encounter/my aquatic amount", "aquatic encounter/amount", "other aquatic encounter/other amount" };
+            var aquaticEncounters = new[] { "my aquatic encounter", "aquatic encounter", "other aquatic encounter" };
 
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Aquatic, aquaticEncounters);
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic, new[]
+            SetUpEncounterGroup(EnvironmentConstants.Aquatic, aquaticEncounters);
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic, new[]
             {
-                "my warm aquatic encounter/my warm aquatic amount",
-                "my wrong encounter/my wrong amount"
+                "my warm aquatic encounter",
+                "my wrong encounter"
             });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic, new[]
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic, new[]
             {
-                "my wrong encounter/my amount",
-                "my temperate aquatic encounter/my temperate aquatic amount"
+                "my wrong encounter",
+                "my temperate aquatic encounter"
             });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Aquatic, new[]
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Aquatic, new[]
             {
-                "my wrong encounter/my amount",
-                "my cold aquatic encounter/my cold aquatic amount"
-            });
-
-            SetupEncounterLevel("my aquatic encounter/my aquatic amount", 3);
-            SetupEncounterLevel("my warm aquatic encounter/my warm aquatic amount", 6);
-            SetupEncounterLevel("my temperate aquatic encounter/my temperate aquatic amount", 9);
-            SetupEncounterLevel("my cold aquatic encounter/my cold aquatic amount", 6);
-
-            var civilizedEncounters = new[] { "my civilized encounter/my civilized amount", "civilized encounter/amount", "other civilized encounter/other amount" };
-
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Civilized, civilizedEncounters);
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Civilized, new[]
-            {
-                "my warm civilized encounter/my warm civilized amount",
-                "my wrong encounter/my wrong amount"
-            });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Civilized, new[]
-            {
-                "my wrong encounter/my amount",
-                "my temperate civilized encounter/my temperate civilized amount"
-            });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Civilized, new[]
-            {
-                "my wrong encounter/my amount",
-                "my cold civilized encounter/my cold civilized amount"
+                "my wrong encounter",
+                "my cold aquatic encounter"
             });
 
-            SetupEncounterLevel("my civilized encounter/my civilized amount", 3);
-            SetupEncounterLevel("my warm civilized encounter/my warm civilized amount", 6);
-            SetupEncounterLevel("my temperate civilized encounter/my temperate civilized amount", 9);
-            SetupEncounterLevel("my cold civilized encounter/my cold civilized amount", 6);
+            SetupEncounterLevel("my aquatic encounter", 3);
+            SetupEncounterLevel("my warm aquatic encounter", 6);
+            SetupEncounterLevel("my temperate aquatic encounter", 9);
+            SetupEncounterLevel("my cold aquatic encounter", 6);
+
+            var civilizedEncounters = new[] { "my civilized encounter", "civilized encounter", "other civilized encounter" };
+
+            SetUpEncounterGroup(EnvironmentConstants.Civilized, civilizedEncounters);
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Civilized, new[]
+            {
+                "my warm civilized encounter",
+                "my wrong encounter"
+            });
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Civilized, new[]
+            {
+                "my wrong encounter",
+                "my temperate civilized encounter"
+            });
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Civilized, new[]
+            {
+                "my wrong encounter",
+                "my cold civilized encounter"
+            });
+
+            SetupEncounterLevel("my civilized encounter", 3);
+            SetupEncounterLevel("my warm civilized encounter", 6);
+            SetupEncounterLevel("my temperate civilized encounter", 9);
+            SetupEncounterLevel("my cold civilized encounter", 6);
 
             var undergroundEncounters = new[]
             {
-                "underground encounter/amount",
-                "my underground encounter/my underground amount",
-                "other underground encounter/other amount"
+                "underground encounter",
+                "my underground encounter",
+                "other underground encounter"
             };
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Underground, undergroundEncounters);
-            SetupEncounterLevel("my underground encounter/my underground amount", 7);
+            SetUpEncounterGroup(EnvironmentConstants.Underground, undergroundEncounters);
+            SetupEncounterLevel("my underground encounter", 7);
 
             var undergroundAquaticEncounters = new[]
             {
-                "underground aquatic encounter/amount",
-                "my underground aquatic encounter/my underground aquatic amount",
-                "other underground aquatic encounter/other amount"
+                "underground aquatic encounter",
+                "my underground aquatic encounter",
+                "other underground aquatic encounter"
             };
 
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Underground + EnvironmentConstants.Aquatic, undergroundAquaticEncounters);
-            SetupEncounterLevel("my underground aquatic encounter/my underground aquatic amount", 13);
+            SetUpEncounterGroup(EnvironmentConstants.Underground + EnvironmentConstants.Aquatic, undergroundAquaticEncounters);
+            SetupEncounterLevel("my underground aquatic encounter", 13);
 
             levelEncounters.Clear();
 
-            var possibleEncounters = encounterCollectionSelector.SelectPossibleFrom();
+            var possibleEncounters = encounterCollectionSelector.SelectPossibleEncountersFrom();
 
             //INFO: Since this method is only used in the EncounterVerifier, and immediately followed with .Any(), we will not assert contents
             Assert.That(possibleEncounters, Is.Empty);
         }
 
         [Test]
-        public void SelectPossibleFrom_ReturnsPossibleEncounters_FromSetEnvironment_Some()
+        public void SelectPossibleEncountersFrom_ReturnsPossibleEncounters_FromSetEnvironment_Some()
         {
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Warm + "environment", new[] { "my warm encounter/my warm amount", "my wrong encounter/my wrong amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Temperate + "environment", new[] { "my wrong encounter/my amount", "my temperate encounter/my temperate amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Cold + "environment", new[] { "my wrong encounter/my amount", "my cold encounter/my cold amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.TimesOfDay.Day, new[]
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Warm + "environment", new[] { "my warm encounter", "my wrong encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Temperate + "environment", new[] { "my wrong encounter", "my temperate encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Cold + "environment", new[] { "my wrong encounter", "my cold encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Day, new[]
             {
-                "my warm encounter/my warm amount",
-                "my temperate encounter/my temperate amount",
-                "my wrong encounter/my wrong amount",
-                "my any encounter/my any amount",
-                "my extraplanar encounter/my extraplanar amount",
-                "my warm aquatic encounter/my warm aquatic amount",
-                "my cold aquatic encounter/my cold aquatic amount",
-                "my warm civilized encounter/my warm civilized amount",
-                "my cold civilized encounter/my cold civilized amount",
-                "my day encounter/my day amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[]
+                "my warm encounter",
+                "my temperate encounter",
+                "my wrong encounter",
+                "my any encounter",
+                "my extraplanar encounter",
+                "my warm aquatic encounter",
+                "my cold aquatic encounter",
+                "my warm civilized encounter",
+                "my cold civilized encounter",
+                "my day encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[]
             {
-                "my night encounter/my night amount",
-                "my cold encounter/my cold amount",
-                "my wrong encounter/my wrong amount",
-                "my land encounter/my land amount",
-                "my aquatic encounter/my aquatic amount",
-                "my temperate aquatic encounter/my temperate aquatic amount",
-                "my civilized encounter/my civilized amount",
-                "my temperate civilized encounter/my temperate civilized amount",
-                "my underground encounter/my underground amount",
-                "my underground aquatic encounter/my underground aquatic amount",
-                "my other encounter/my other amount" });
+                "my night encounter",
+                "my cold encounter",
+                "my wrong encounter",
+                "my land encounter",
+                "my aquatic encounter",
+                "my temperate aquatic encounter",
+                "my civilized encounter",
+                "my temperate civilized encounter",
+                "my underground encounter",
+                "my underground aquatic encounter",
+                "my other encounter" });
 
-            SetupEncounterLevel("my warm encounter/my warm amount", 9);
-            SetupEncounterLevel("my temperate encounter/my temperate amount", 26);
-            SetupEncounterLevel("my cold encounter/my cold amount", 6);
-            SetupEncounterLevel("my other encounter/my other amount", 9);
+            SetupEncounterLevel("my warm encounter", 9);
+            SetupEncounterLevel("my temperate encounter", 26);
+            SetupEncounterLevel("my cold encounter", 6);
+            SetupEncounterLevel("my other encounter", 9);
 
-            landEncounters.Add("my land encounter/my land amount");
-            anyEncounters.Add("my any encounter/my any amount");
-            extraplanarEncounters.Add("my extraplanar encounter/my extraplanar amount");
-            SetupEncounterLevel("my land encounter/my land amount", 2);
-            SetupEncounterLevel("my any encounter/my any amount", 10);
-            SetupEncounterLevel("my extraplanar encounter/my extraplanar amount", 4);
+            landEncounters.Add("my land encounter");
+            anyEncounters.Add("my any encounter");
+            extraplanarEncounters.Add("my extraplanar encounter");
+            SetupEncounterLevel("my land encounter", 2);
+            SetupEncounterLevel("my any encounter", 10);
+            SetupEncounterLevel("my extraplanar encounter", 4);
 
-            var aquaticEncounters = new[] { "my aquatic encounter/my aquatic amount", "aquatic encounter/amount", "other aquatic encounter/other amount" };
+            var aquaticEncounters = new[] { "my aquatic encounter", "aquatic encounter", "other aquatic encounter" };
 
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Aquatic, aquaticEncounters);
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic, new[]
+            SetUpEncounterGroup(EnvironmentConstants.Aquatic, aquaticEncounters);
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic, new[]
             {
-                "my warm aquatic encounter/my warm aquatic amount",
-                "my wrong encounter/my wrong amount"
+                "my warm aquatic encounter",
+                "my wrong encounter"
             });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic, new[]
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic, new[]
             {
-                "my wrong encounter/my amount",
-                "my temperate aquatic encounter/my temperate aquatic amount"
+                "my wrong encounter",
+                "my temperate aquatic encounter"
             });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Aquatic, new[]
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Aquatic, new[]
             {
-                "my wrong encounter/my amount",
-                "my cold aquatic encounter/my cold aquatic amount"
-            });
-
-            SetupEncounterLevel("my aquatic encounter/my aquatic amount", 3);
-            SetupEncounterLevel("my warm aquatic encounter/my warm aquatic amount", 6);
-            SetupEncounterLevel("my temperate aquatic encounter/my temperate aquatic amount", 9);
-            SetupEncounterLevel("my cold aquatic encounter/my cold aquatic amount", 6);
-
-            var civilizedEncounters = new[] { "my civilized encounter/my civilized amount", "civilized encounter/amount", "other civilized encounter/other amount" };
-
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Civilized, civilizedEncounters);
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Civilized, new[]
-            {
-                "my warm civilized encounter/my warm civilized amount",
-                "my wrong encounter/my wrong amount"
-            });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Civilized, new[]
-            {
-                "my wrong encounter/my amount",
-                "my temperate civilized encounter/my temperate civilized amount"
-            });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Civilized, new[]
-            {
-                "my wrong encounter/my amount",
-                "my cold civilized encounter/my cold civilized amount"
+                "my wrong encounter",
+                "my cold aquatic encounter"
             });
 
-            SetupEncounterLevel("my civilized encounter/my civilized amount", 3);
-            SetupEncounterLevel("my warm civilized encounter/my warm civilized amount", 6);
-            SetupEncounterLevel("my temperate civilized encounter/my temperate civilized amount", 9);
-            SetupEncounterLevel("my cold civilized encounter/my cold civilized amount", 6);
+            SetupEncounterLevel("my aquatic encounter", 3);
+            SetupEncounterLevel("my warm aquatic encounter", 6);
+            SetupEncounterLevel("my temperate aquatic encounter", 9);
+            SetupEncounterLevel("my cold aquatic encounter", 6);
+
+            var civilizedEncounters = new[] { "my civilized encounter", "civilized encounter", "other civilized encounter" };
+
+            SetUpEncounterGroup(EnvironmentConstants.Civilized, civilizedEncounters);
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Civilized, new[]
+            {
+                "my warm civilized encounter",
+                "my wrong encounter"
+            });
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Civilized, new[]
+            {
+                "my wrong encounter",
+                "my temperate civilized encounter"
+            });
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Civilized, new[]
+            {
+                "my wrong encounter",
+                "my cold civilized encounter"
+            });
+
+            SetupEncounterLevel("my civilized encounter", 3);
+            SetupEncounterLevel("my warm civilized encounter", 6);
+            SetupEncounterLevel("my temperate civilized encounter", 9);
+            SetupEncounterLevel("my cold civilized encounter", 6);
 
             var undergroundEncounters = new[]
             {
-                "underground encounter/amount",
-                "my underground encounter/my underground amount",
-                "other underground encounter/other amount"
+                "underground encounter",
+                "my underground encounter",
+                "other underground encounter"
             };
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Underground, undergroundEncounters);
-            SetupEncounterLevel("my underground encounter/my underground amount", 7);
+            SetUpEncounterGroup(EnvironmentConstants.Underground, undergroundEncounters);
+            SetupEncounterLevel("my underground encounter", 7);
 
             var undergroundAquaticEncounters = new[]
             {
-                "underground aquatic encounter/amount",
-                "my underground aquatic encounter/my underground aquatic amount",
-                "other underground aquatic encounter/other amount"
+                "underground aquatic encounter",
+                "my underground aquatic encounter",
+                "other underground aquatic encounter"
             };
 
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Underground + EnvironmentConstants.Aquatic, undergroundAquaticEncounters);
-            SetupEncounterLevel("my underground aquatic encounter/my underground aquatic amount", 13);
+            SetUpEncounterGroup(EnvironmentConstants.Underground + EnvironmentConstants.Aquatic, undergroundAquaticEncounters);
+            SetupEncounterLevel("my underground aquatic encounter", 13);
 
-            var possibleEncounters = encounterCollectionSelector.SelectPossibleFrom(environment: "environment");
+            var possibleEncounters = encounterCollectionSelector.SelectPossibleEncountersFrom(environment: "environment");
 
             //INFO: Since this method is only used in the EncounterVerifier, and immediately followed with .Any(), we will not assert contents
             Assert.That(possibleEncounters, Is.Not.Empty);
         }
 
         [Test]
-        public void SelectPossibleFrom_ReturnsPossibleEncounters_FromSetEnvironment_None()
+        public void SelectPossibleEncountersFrom_ReturnsPossibleEncounters_FromSetEnvironment_None()
         {
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Warm + "environment", new[] { "my warm encounter/my warm amount", "my wrong encounter/my wrong amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Temperate + "environment", new[] { "my wrong encounter/my amount", "my temperate encounter/my temperate amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Cold + "environment", new[] { "my wrong encounter/my amount", "my cold encounter/my cold amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.TimesOfDay.Day, new[]
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Warm + "environment", new[] { "my warm encounter", "my wrong encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Temperate + "environment", new[] { "my wrong encounter", "my temperate encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Cold + "environment", new[] { "my wrong encounter", "my cold encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Day, new[]
             {
-                "my warm encounter/my warm amount",
-                "my temperate encounter/my temperate amount",
-                "my wrong encounter/my wrong amount",
-                "my any encounter/my any amount",
-                "my extraplanar encounter/my extraplanar amount",
-                "my warm aquatic encounter/my warm aquatic amount",
-                "my cold aquatic encounter/my cold aquatic amount",
-                "my warm civilized encounter/my warm civilized amount",
-                "my cold civilized encounter/my cold civilized amount",
-                "my day encounter/my day amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[]
+                "my warm encounter",
+                "my temperate encounter",
+                "my wrong encounter",
+                "my any encounter",
+                "my extraplanar encounter",
+                "my warm aquatic encounter",
+                "my cold aquatic encounter",
+                "my warm civilized encounter",
+                "my cold civilized encounter",
+                "my day encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[]
             {
-                "my night encounter/my night amount",
-                "my cold encounter/my cold amount",
-                "my wrong encounter/my wrong amount",
-                "my land encounter/my land amount",
-                "my aquatic encounter/my aquatic amount",
-                "my temperate aquatic encounter/my temperate aquatic amount",
-                "my civilized encounter/my civilized amount",
-                "my temperate civilized encounter/my temperate civilized amount",
-                "my underground encounter/my underground amount",
-                "my underground aquatic encounter/my underground aquatic amount",
-                "my other encounter/my other amount" });
+                "my night encounter",
+                "my cold encounter",
+                "my wrong encounter",
+                "my land encounter",
+                "my aquatic encounter",
+                "my temperate aquatic encounter",
+                "my civilized encounter",
+                "my temperate civilized encounter",
+                "my underground encounter",
+                "my underground aquatic encounter",
+                "my other encounter" });
 
-            SetupEncounterLevel("my warm encounter/my warm amount", 9);
-            SetupEncounterLevel("my temperate encounter/my temperate amount", 26);
-            SetupEncounterLevel("my cold encounter/my cold amount", 6);
-            SetupEncounterLevel("my other encounter/my other amount", 9);
+            SetupEncounterLevel("my warm encounter", 9);
+            SetupEncounterLevel("my temperate encounter", 26);
+            SetupEncounterLevel("my cold encounter", 6);
+            SetupEncounterLevel("my other encounter", 9);
 
-            landEncounters.Add("my land encounter/my land amount");
-            anyEncounters.Add("my any encounter/my any amount");
-            extraplanarEncounters.Add("my extraplanar encounter/my extraplanar amount");
-            SetupEncounterLevel("my land encounter/my land amount", 2);
-            SetupEncounterLevel("my any encounter/my any amount", 10);
-            SetupEncounterLevel("my extraplanar encounter/my extraplanar amount", 4);
+            landEncounters.Add("my land encounter");
+            anyEncounters.Add("my any encounter");
+            extraplanarEncounters.Add("my extraplanar encounter");
+            SetupEncounterLevel("my land encounter", 2);
+            SetupEncounterLevel("my any encounter", 10);
+            SetupEncounterLevel("my extraplanar encounter", 4);
 
-            var aquaticEncounters = new[] { "my aquatic encounter/my aquatic amount", "aquatic encounter/amount", "other aquatic encounter/other amount" };
+            var aquaticEncounters = new[] { "my aquatic encounter", "aquatic encounter", "other aquatic encounter" };
 
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Aquatic, aquaticEncounters);
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic, new[]
+            SetUpEncounterGroup(EnvironmentConstants.Aquatic, aquaticEncounters);
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic, new[]
             {
-                "my warm aquatic encounter/my warm aquatic amount",
-                "my wrong encounter/my wrong amount"
+                "my warm aquatic encounter",
+                "my wrong encounter"
             });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic, new[]
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic, new[]
             {
-                "my wrong encounter/my amount",
-                "my temperate aquatic encounter/my temperate aquatic amount"
+                "my wrong encounter",
+                "my temperate aquatic encounter"
             });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Aquatic, new[]
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Aquatic, new[]
             {
-                "my wrong encounter/my amount",
-                "my cold aquatic encounter/my cold aquatic amount"
-            });
-
-            SetupEncounterLevel("my aquatic encounter/my aquatic amount", 3);
-            SetupEncounterLevel("my warm aquatic encounter/my warm aquatic amount", 6);
-            SetupEncounterLevel("my temperate aquatic encounter/my temperate aquatic amount", 9);
-            SetupEncounterLevel("my cold aquatic encounter/my cold aquatic amount", 6);
-
-            var civilizedEncounters = new[] { "my civilized encounter/my civilized amount", "civilized encounter/amount", "other civilized encounter/other amount" };
-
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Civilized, civilizedEncounters);
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Civilized, new[]
-            {
-                "my warm civilized encounter/my warm civilized amount",
-                "my wrong encounter/my wrong amount"
-            });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Civilized, new[]
-            {
-                "my wrong encounter/my amount",
-                "my temperate civilized encounter/my temperate civilized amount"
-            });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Civilized, new[]
-            {
-                "my wrong encounter/my amount",
-                "my cold civilized encounter/my cold civilized amount"
+                "my wrong encounter",
+                "my cold aquatic encounter"
             });
 
-            SetupEncounterLevel("my civilized encounter/my civilized amount", 3);
-            SetupEncounterLevel("my warm civilized encounter/my warm civilized amount", 6);
-            SetupEncounterLevel("my temperate civilized encounter/my temperate civilized amount", 9);
-            SetupEncounterLevel("my cold civilized encounter/my cold civilized amount", 6);
+            SetupEncounterLevel("my aquatic encounter", 3);
+            SetupEncounterLevel("my warm aquatic encounter", 6);
+            SetupEncounterLevel("my temperate aquatic encounter", 9);
+            SetupEncounterLevel("my cold aquatic encounter", 6);
+
+            var civilizedEncounters = new[] { "my civilized encounter", "civilized encounter", "other civilized encounter" };
+
+            SetUpEncounterGroup(EnvironmentConstants.Civilized, civilizedEncounters);
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Civilized, new[]
+            {
+                "my warm civilized encounter",
+                "my wrong encounter"
+            });
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Civilized, new[]
+            {
+                "my wrong encounter",
+                "my temperate civilized encounter"
+            });
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Civilized, new[]
+            {
+                "my wrong encounter",
+                "my cold civilized encounter"
+            });
+
+            SetupEncounterLevel("my civilized encounter", 3);
+            SetupEncounterLevel("my warm civilized encounter", 6);
+            SetupEncounterLevel("my temperate civilized encounter", 9);
+            SetupEncounterLevel("my cold civilized encounter", 6);
 
             var undergroundEncounters = new[]
             {
-                "underground encounter/amount",
-                "my underground encounter/my underground amount",
-                "other underground encounter/other amount"
+                "underground encounter",
+                "my underground encounter",
+                "other underground encounter"
             };
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Underground, undergroundEncounters);
-            SetupEncounterLevel("my underground encounter/my underground amount", 7);
+            SetUpEncounterGroup(EnvironmentConstants.Underground, undergroundEncounters);
+            SetupEncounterLevel("my underground encounter", 7);
 
             var undergroundAquaticEncounters = new[]
             {
-                "underground aquatic encounter/amount",
-                "my underground aquatic encounter/my underground aquatic amount",
-                "other underground aquatic encounter/other amount"
+                "underground aquatic encounter",
+                "my underground aquatic encounter",
+                "other underground aquatic encounter"
             };
 
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Underground + EnvironmentConstants.Aquatic, undergroundAquaticEncounters);
-            SetupEncounterLevel("my underground aquatic encounter/my underground aquatic amount", 13);
+            SetUpEncounterGroup(EnvironmentConstants.Underground + EnvironmentConstants.Aquatic, undergroundAquaticEncounters);
+            SetupEncounterLevel("my underground aquatic encounter", 13);
 
             levelEncounters.Clear();
 
-            var possibleEncounters = encounterCollectionSelector.SelectPossibleFrom(environment: "environment");
+            var possibleEncounters = encounterCollectionSelector.SelectPossibleEncountersFrom(environment: "environment");
 
             //INFO: Since this method is only used in the EncounterVerifier, and immediately followed with .Any(), we will not assert contents
             Assert.That(possibleEncounters, Is.Empty);
         }
 
         [Test]
-        public void SelectPossibleFrom_ReturnsPossibleEncounters_FromSetTemperature_Some()
+        public void SelectPossibleEncountersFrom_ReturnsPossibleEncounters_FromSetTemperature_Some()
         {
-            SetUpCreatureBasedEncounterGroup("temperature" + EnvironmentConstants.Desert, new[] { "my desert encounter/my desert amount", "my wrong encounter/my wrong amount" });
-            SetUpCreatureBasedEncounterGroup("temperature" + EnvironmentConstants.Forest, new[] { "my wrong encounter/my amount", "my forest encounter/my forest amount" });
-            SetUpCreatureBasedEncounterGroup("temperature" + EnvironmentConstants.Hills, new[] { "my wrong encounter/my amount", "my hills encounter/my hills amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.TimesOfDay.Day, new[]
+            SetUpEncounterGroup("temperature" + EnvironmentConstants.Desert, new[] { "my desert encounter", "my wrong encounter" });
+            SetUpEncounterGroup("temperature" + EnvironmentConstants.Forest, new[] { "my wrong encounter", "my forest encounter" });
+            SetUpEncounterGroup("temperature" + EnvironmentConstants.Hills, new[] { "my wrong encounter", "my hills encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Day, new[]
             {
-                "my desert encounter/my desert amount",
-                "my forest encounter/my forest amount",
-                "my wrong encounter/my wrong amount",
-                "my any encounter/my any amount",
-                "my extraplanar encounter/my extraplanar amount",
-                "my warm aquatic encounter/my warm aquatic amount",
-                "my cold aquatic encounter/my cold aquatic amount",
-                "my warm civilized encounter/my warm civilized amount",
-                "my cold civilized encounter/my cold civilized amount",
-                "my day encounter/my day amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[]
+                "my desert encounter",
+                "my forest encounter",
+                "my wrong encounter",
+                "my any encounter",
+                "my extraplanar encounter",
+                "my warm aquatic encounter",
+                "my cold aquatic encounter",
+                "my warm civilized encounter",
+                "my cold civilized encounter",
+                "my day encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[]
             {
-                "my night encounter/my night amount",
-                "my hills encounter/my hills amount",
-                "my wrong encounter/my wrong amount",
-                "my land encounter/my land amount",
-                "my aquatic encounter/my aquatic amount",
-                "my temperate aquatic encounter/my temperate aquatic amount",
-                "my civilized encounter/my civilized amount",
-                "my temperate civilized encounter/my temperate civilized amount",
-                "my underground encounter/my underground amount",
-                "my underground aquatic encounter/my underground aquatic amount",
-                "my other encounter/my other amount" });
+                "my night encounter",
+                "my hills encounter",
+                "my wrong encounter",
+                "my land encounter",
+                "my aquatic encounter",
+                "my temperate aquatic encounter",
+                "my civilized encounter",
+                "my temperate civilized encounter",
+                "my underground encounter",
+                "my underground aquatic encounter",
+                "my other encounter" });
 
-            SetupEncounterLevel("my warm encounter/my warm amount", 9);
-            SetupEncounterLevel("my temperate encounter/my temperate amount", 26);
-            SetupEncounterLevel("my cold encounter/my cold amount", 6);
-            SetupEncounterLevel("my other encounter/my other amount", 9);
+            SetupEncounterLevel("my warm encounter", 9);
+            SetupEncounterLevel("my temperate encounter", 26);
+            SetupEncounterLevel("my cold encounter", 6);
+            SetupEncounterLevel("my other encounter", 9);
 
-            landEncounters.Add("my land encounter/my land amount");
-            anyEncounters.Add("my any encounter/my any amount");
-            extraplanarEncounters.Add("my extraplanar encounter/my extraplanar amount");
-            SetupEncounterLevel("my land encounter/my land amount", 2);
-            SetupEncounterLevel("my any encounter/my any amount", 10);
-            SetupEncounterLevel("my extraplanar encounter/my extraplanar amount", 4);
+            landEncounters.Add("my land encounter");
+            anyEncounters.Add("my any encounter");
+            extraplanarEncounters.Add("my extraplanar encounter");
+            SetupEncounterLevel("my land encounter", 2);
+            SetupEncounterLevel("my any encounter", 10);
+            SetupEncounterLevel("my extraplanar encounter", 4);
 
-            var aquaticEncounters = new[] { "my aquatic encounter/my aquatic amount", "aquatic encounter/amount", "other aquatic encounter/other amount" };
+            var aquaticEncounters = new[] { "my aquatic encounter", "aquatic encounter", "other aquatic encounter" };
 
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Aquatic, aquaticEncounters);
-            SetUpCreatureBasedEncounterGroup("temperature" + EnvironmentConstants.Aquatic, new[]
+            SetUpEncounterGroup(EnvironmentConstants.Aquatic, aquaticEncounters);
+            SetUpEncounterGroup("temperature" + EnvironmentConstants.Aquatic, new[]
             {
-                "my temperature aquatic encounter/my temperature aquatic amount",
-                "my wrong encounter/my wrong amount"
+                "my temperature aquatic encounter",
+                "my wrong encounter"
             });
 
-            var civilizedEncounters = new[] { "my civilized encounter/my civilized amount", "civilized encounter/amount", "other civilized encounter/other amount" };
+            var civilizedEncounters = new[] { "my civilized encounter", "civilized encounter", "other civilized encounter" };
 
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Civilized, civilizedEncounters);
-            SetUpCreatureBasedEncounterGroup("temperature" + EnvironmentConstants.Civilized, new[]
+            SetUpEncounterGroup(EnvironmentConstants.Civilized, civilizedEncounters);
+            SetUpEncounterGroup("temperature" + EnvironmentConstants.Civilized, new[]
             {
-                "my temperature civilized encounter/my temperature civilized amount",
-                "my wrong encounter/my wrong amount"
+                "my temperature civilized encounter",
+                "my wrong encounter"
             });
 
-            SetupEncounterLevel("my civilized encounter/my civilized amount", 3);
-            SetupEncounterLevel("my temperature civilized encounter/my warm civilized amount", 6);
+            SetupEncounterLevel("my civilized encounter", 3);
+            SetupEncounterLevel("my temperature civilized encounter", 6);
 
             var undergroundEncounters = new[]
             {
-                "underground encounter/amount",
-                "my underground encounter/my underground amount",
-                "other underground encounter/other amount"
+                "underground encounter",
+                "my underground encounter",
+                "other underground encounter"
             };
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Underground, undergroundEncounters);
-            SetupEncounterLevel("my underground encounter/my underground amount", 7);
+            SetUpEncounterGroup(EnvironmentConstants.Underground, undergroundEncounters);
+            SetupEncounterLevel("my underground encounter", 7);
 
             var undergroundAquaticEncounters = new[]
             {
-                "underground aquatic encounter/amount",
-                "my underground aquatic encounter/my underground aquatic amount",
-                "other underground aquatic encounter/other amount"
+                "underground aquatic encounter",
+                "my underground aquatic encounter",
+                "other underground aquatic encounter"
             };
 
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Underground + EnvironmentConstants.Aquatic, undergroundAquaticEncounters);
-            SetupEncounterLevel("my underground aquatic encounter/my underground aquatic amount", 13);
+            SetUpEncounterGroup(EnvironmentConstants.Underground + EnvironmentConstants.Aquatic, undergroundAquaticEncounters);
+            SetupEncounterLevel("my underground aquatic encounter", 13);
 
-            var possibleEncounters = encounterCollectionSelector.SelectPossibleFrom(temperature: "temperature");
+            var possibleEncounters = encounterCollectionSelector.SelectPossibleEncountersFrom(temperature: "temperature");
 
             //INFO: Since this method is only used in the EncounterVerifier, and immediately followed with .Any(), we will not assert contents
             Assert.That(possibleEncounters, Is.Not.Empty);
         }
 
         [Test]
-        public void SelectPossibleFrom_ReturnsPossibleEncounters_FromSetTemperature_None()
+        public void SelectPossibleEncountersFrom_ReturnsPossibleEncounters_FromSetTemperature_None()
         {
-            SetUpCreatureBasedEncounterGroup("temperature" + EnvironmentConstants.Desert, new[] { "my desert encounter/my desert amount", "my wrong encounter/my wrong amount" });
-            SetUpCreatureBasedEncounterGroup("temperature" + EnvironmentConstants.Forest, new[] { "my wrong encounter/my amount", "my forest encounter/my forest amount" });
-            SetUpCreatureBasedEncounterGroup("temperature" + EnvironmentConstants.Hills, new[] { "my wrong encounter/my amount", "my hills encounter/my hills amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.TimesOfDay.Day, new[]
+            SetUpEncounterGroup("temperature" + EnvironmentConstants.Desert, new[] { "my desert encounter", "my wrong encounter" });
+            SetUpEncounterGroup("temperature" + EnvironmentConstants.Forest, new[] { "my wrong encounter", "my forest encounter" });
+            SetUpEncounterGroup("temperature" + EnvironmentConstants.Hills, new[] { "my wrong encounter", "my hills encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Day, new[]
             {
-                "my desert encounter/my desert amount",
-                "my forest encounter/my forest amount",
-                "my wrong encounter/my wrong amount",
-                "my any encounter/my any amount",
-                "my extraplanar encounter/my extraplanar amount",
-                "my warm aquatic encounter/my warm aquatic amount",
-                "my cold aquatic encounter/my cold aquatic amount",
-                "my warm civilized encounter/my warm civilized amount",
-                "my cold civilized encounter/my cold civilized amount",
-                "my day encounter/my day amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[]
+                "my desert encounter",
+                "my forest encounter",
+                "my wrong encounter",
+                "my any encounter",
+                "my extraplanar encounter",
+                "my warm aquatic encounter",
+                "my cold aquatic encounter",
+                "my warm civilized encounter",
+                "my cold civilized encounter",
+                "my day encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[]
             {
-                "my night encounter/my night amount",
-                "my hills encounter/my hills amount",
-                "my wrong encounter/my wrong amount",
-                "my land encounter/my land amount",
-                "my aquatic encounter/my aquatic amount",
-                "my temperate aquatic encounter/my temperate aquatic amount",
-                "my civilized encounter/my civilized amount",
-                "my temperate civilized encounter/my temperate civilized amount",
-                "my underground encounter/my underground amount",
-                "my underground aquatic encounter/my underground aquatic amount",
-                "my other encounter/my other amount" });
+                "my night encounter",
+                "my hills encounter",
+                "my wrong encounter",
+                "my land encounter",
+                "my aquatic encounter",
+                "my temperate aquatic encounter",
+                "my civilized encounter",
+                "my temperate civilized encounter",
+                "my underground encounter",
+                "my underground aquatic encounter",
+                "my other encounter" });
 
-            SetupEncounterLevel("my warm encounter/my warm amount", 9);
-            SetupEncounterLevel("my temperate encounter/my temperate amount", 26);
-            SetupEncounterLevel("my cold encounter/my cold amount", 6);
-            SetupEncounterLevel("my other encounter/my other amount", 9);
+            SetupEncounterLevel("my warm encounter", 9);
+            SetupEncounterLevel("my temperate encounter", 26);
+            SetupEncounterLevel("my cold encounter", 6);
+            SetupEncounterLevel("my other encounter", 9);
 
-            landEncounters.Add("my land encounter/my land amount");
-            anyEncounters.Add("my any encounter/my any amount");
-            extraplanarEncounters.Add("my extraplanar encounter/my extraplanar amount");
-            SetupEncounterLevel("my land encounter/my land amount", 2);
-            SetupEncounterLevel("my any encounter/my any amount", 10);
-            SetupEncounterLevel("my extraplanar encounter/my extraplanar amount", 4);
+            landEncounters.Add("my land encounter");
+            anyEncounters.Add("my any encounter");
+            extraplanarEncounters.Add("my extraplanar encounter");
+            SetupEncounterLevel("my land encounter", 2);
+            SetupEncounterLevel("my any encounter", 10);
+            SetupEncounterLevel("my extraplanar encounter", 4);
 
-            var aquaticEncounters = new[] { "my aquatic encounter/my aquatic amount", "aquatic encounter/amount", "other aquatic encounter/other amount" };
+            var aquaticEncounters = new[] { "my aquatic encounter", "aquatic encounter", "other aquatic encounter" };
 
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Aquatic, aquaticEncounters);
-            SetUpCreatureBasedEncounterGroup("temperature" + EnvironmentConstants.Aquatic, new[]
+            SetUpEncounterGroup(EnvironmentConstants.Aquatic, aquaticEncounters);
+            SetUpEncounterGroup("temperature" + EnvironmentConstants.Aquatic, new[]
             {
-                "my temperature aquatic encounter/my temperature aquatic amount",
-                "my wrong encounter/my wrong amount"
+                "my temperature aquatic encounter",
+                "my wrong encounter"
             });
 
-            var civilizedEncounters = new[] { "my civilized encounter/my civilized amount", "civilized encounter/amount", "other civilized encounter/other amount" };
+            var civilizedEncounters = new[] { "my civilized encounter", "civilized encounter", "other civilized encounter" };
 
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Civilized, civilizedEncounters);
-            SetUpCreatureBasedEncounterGroup("temperature" + EnvironmentConstants.Civilized, new[]
+            SetUpEncounterGroup(EnvironmentConstants.Civilized, civilizedEncounters);
+            SetUpEncounterGroup("temperature" + EnvironmentConstants.Civilized, new[]
             {
-                "my temperature civilized encounter/my temperature civilized amount",
-                "my wrong encounter/my wrong amount"
+                "my temperature civilized encounter",
+                "my wrong encounter"
             });
 
-            SetupEncounterLevel("my civilized encounter/my civilized amount", 3);
-            SetupEncounterLevel("my temperature civilized encounter/my warm civilized amount", 6);
+            SetupEncounterLevel("my civilized encounter", 3);
+            SetupEncounterLevel("my temperature civilized encounter", 6);
 
             var undergroundEncounters = new[]
             {
-                "underground encounter/amount",
-                "my underground encounter/my underground amount",
-                "other underground encounter/other amount"
+                "underground encounter",
+                "my underground encounter",
+                "other underground encounter"
             };
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Underground, undergroundEncounters);
-            SetupEncounterLevel("my underground encounter/my underground amount", 7);
+            SetUpEncounterGroup(EnvironmentConstants.Underground, undergroundEncounters);
+            SetupEncounterLevel("my underground encounter", 7);
 
             var undergroundAquaticEncounters = new[]
             {
-                "underground aquatic encounter/amount",
-                "my underground aquatic encounter/my underground aquatic amount",
-                "other underground aquatic encounter/other amount"
+                "underground aquatic encounter",
+                "my underground aquatic encounter",
+                "other underground aquatic encounter"
             };
 
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Underground + EnvironmentConstants.Aquatic, undergroundAquaticEncounters);
-            SetupEncounterLevel("my underground aquatic encounter/my underground aquatic amount", 13);
+            SetUpEncounterGroup(EnvironmentConstants.Underground + EnvironmentConstants.Aquatic, undergroundAquaticEncounters);
+            SetupEncounterLevel("my underground aquatic encounter", 13);
 
             levelEncounters.Clear();
 
-            var possibleEncounters = encounterCollectionSelector.SelectPossibleFrom(temperature: "temperature");
+            var possibleEncounters = encounterCollectionSelector.SelectPossibleEncountersFrom(temperature: "temperature");
 
             //INFO: Since this method is only used in the EncounterVerifier, and immediately followed with .Any(), we will not assert contents
             Assert.That(possibleEncounters, Is.Empty);
         }
 
         [Test]
-        public void SelectPossibleFrom_ReturnsPossibleEncounters_FromSetTimeOfDay_Some()
+        public void SelectPossibleEncountersFrom_ReturnsPossibleEncounters_FromSetTimeOfDay_Some()
         {
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert, new[] { "my warm encounter/my warm amount", "my wrong encounter/my wrong amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest, new[] { "my wrong encounter/my amount", "my temperate encounter/my temperate amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Hills, new[] { "my wrong encounter/my amount", "my cold encounter/my cold amount" });
-            SetUpCreatureBasedEncounterGroup("time of day", new[]
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert, new[] { "my warm encounter", "my wrong encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest, new[] { "my wrong encounter", "my temperate encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Hills, new[] { "my wrong encounter", "my cold encounter" });
+            SetUpEncounterGroup("time of day", new[]
             {
-                "my warm encounter/my warm amount",
-                "my temperate encounter/my temperate amount",
-                "my wrong encounter/my wrong amount",
-                "my any encounter/my any amount",
-                "my extraplanar encounter/my extraplanar amount",
-                "my warm aquatic encounter/my warm aquatic amount",
-                "my cold aquatic encounter/my cold aquatic amount",
-                "my warm civilized encounter/my warm civilized amount",
-                "my cold civilized encounter/my cold civilized amount",
-                "my day encounter/my day amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[]
+                "my warm encounter",
+                "my temperate encounter",
+                "my wrong encounter",
+                "my any encounter",
+                "my extraplanar encounter",
+                "my warm aquatic encounter",
+                "my cold aquatic encounter",
+                "my warm civilized encounter",
+                "my cold civilized encounter",
+                "my day encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[]
             {
-                "my night encounter/my night amount",
-                "my cold encounter/my cold amount",
-                "my wrong encounter/my wrong amount",
-                "my land encounter/my land amount",
-                "my aquatic encounter/my aquatic amount",
-                "my temperate aquatic encounter/my temperate aquatic amount",
-                "my civilized encounter/my civilized amount",
-                "my temperate civilized encounter/my temperate civilized amount",
-                "my underground encounter/my underground amount",
-                "my underground aquatic encounter/my underground aquatic amount",
-                "my other encounter/my other amount" });
+                "my night encounter",
+                "my cold encounter",
+                "my wrong encounter",
+                "my land encounter",
+                "my aquatic encounter",
+                "my temperate aquatic encounter",
+                "my civilized encounter",
+                "my temperate civilized encounter",
+                "my underground encounter",
+                "my underground aquatic encounter",
+                "my other encounter" });
 
-            SetupEncounterLevel("my warm encounter/my warm amount", 9);
-            SetupEncounterLevel("my temperate encounter/my temperate amount", 26);
-            SetupEncounterLevel("my cold encounter/my cold amount", 6);
-            SetupEncounterLevel("my other encounter/my other amount", 9);
+            SetupEncounterLevel("my warm encounter", 9);
+            SetupEncounterLevel("my temperate encounter", 26);
+            SetupEncounterLevel("my cold encounter", 6);
+            SetupEncounterLevel("my other encounter", 9);
 
-            landEncounters.Add("my land encounter/my land amount");
-            anyEncounters.Add("my any encounter/my any amount");
-            extraplanarEncounters.Add("my extraplanar encounter/my extraplanar amount");
-            SetupEncounterLevel("my land encounter/my land amount", 2);
-            SetupEncounterLevel("my any encounter/my any amount", 10);
-            SetupEncounterLevel("my extraplanar encounter/my extraplanar amount", 4);
+            landEncounters.Add("my land encounter");
+            anyEncounters.Add("my any encounter");
+            extraplanarEncounters.Add("my extraplanar encounter");
+            SetupEncounterLevel("my land encounter", 2);
+            SetupEncounterLevel("my any encounter", 10);
+            SetupEncounterLevel("my extraplanar encounter", 4);
 
-            var aquaticEncounters = new[] { "my aquatic encounter/my aquatic amount", "aquatic encounter/amount", "other aquatic encounter/other amount" };
+            var aquaticEncounters = new[] { "my aquatic encounter", "aquatic encounter", "other aquatic encounter" };
 
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Aquatic, aquaticEncounters);
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic, new[]
+            SetUpEncounterGroup(EnvironmentConstants.Aquatic, aquaticEncounters);
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic, new[]
             {
-                "my warm aquatic encounter/my warm aquatic amount",
-                "my wrong encounter/my wrong amount"
+                "my warm aquatic encounter",
+                "my wrong encounter"
             });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic, new[]
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic, new[]
             {
-                "my wrong encounter/my amount",
-                "my temperate aquatic encounter/my temperate aquatic amount"
+                "my wrong encounter",
+                "my temperate aquatic encounter"
             });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Aquatic, new[]
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Aquatic, new[]
             {
-                "my wrong encounter/my amount",
-                "my cold aquatic encounter/my cold aquatic amount"
-            });
-
-            SetupEncounterLevel("my aquatic encounter/my aquatic amount", 3);
-            SetupEncounterLevel("my warm aquatic encounter/my warm aquatic amount", 6);
-            SetupEncounterLevel("my temperate aquatic encounter/my temperate aquatic amount", 9);
-            SetupEncounterLevel("my cold aquatic encounter/my cold aquatic amount", 6);
-
-            var civilizedEncounters = new[] { "my civilized encounter/my civilized amount", "civilized encounter/amount", "other civilized encounter/other amount" };
-
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Civilized, civilizedEncounters);
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Civilized, new[]
-            {
-                "my warm civilized encounter/my warm civilized amount",
-                "my wrong encounter/my wrong amount"
-            });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Civilized, new[]
-            {
-                "my wrong encounter/my amount",
-                "my temperate civilized encounter/my temperate civilized amount"
-            });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Civilized, new[]
-            {
-                "my wrong encounter/my amount",
-                "my cold civilized encounter/my cold civilized amount"
+                "my wrong encounter",
+                "my cold aquatic encounter"
             });
 
-            SetupEncounterLevel("my civilized encounter/my civilized amount", 3);
-            SetupEncounterLevel("my warm civilized encounter/my warm civilized amount", 6);
-            SetupEncounterLevel("my temperate civilized encounter/my temperate civilized amount", 9);
-            SetupEncounterLevel("my cold civilized encounter/my cold civilized amount", 6);
+            SetupEncounterLevel("my aquatic encounter", 3);
+            SetupEncounterLevel("my warm aquatic encounter", 6);
+            SetupEncounterLevel("my temperate aquatic encounter", 9);
+            SetupEncounterLevel("my cold aquatic encounter", 6);
+
+            var civilizedEncounters = new[] { "my civilized encounter", "civilized encounter", "other civilized encounter" };
+
+            SetUpEncounterGroup(EnvironmentConstants.Civilized, civilizedEncounters);
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Civilized, new[]
+            {
+                "my warm civilized encounter",
+                "my wrong encounter"
+            });
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Civilized, new[]
+            {
+                "my wrong encounter",
+                "my temperate civilized encounter"
+            });
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Civilized, new[]
+            {
+                "my wrong encounter",
+                "my cold civilized encounter"
+            });
+
+            SetupEncounterLevel("my civilized encounter", 3);
+            SetupEncounterLevel("my warm civilized encounter", 6);
+            SetupEncounterLevel("my temperate civilized encounter", 9);
+            SetupEncounterLevel("my cold civilized encounter", 6);
 
             var undergroundEncounters = new[]
             {
-                "underground encounter/amount",
-                "my underground encounter/my underground amount",
-                "other underground encounter/other amount"
+                "underground encounter",
+                "my underground encounter",
+                "other underground encounter"
             };
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Underground, undergroundEncounters);
-            SetupEncounterLevel("my underground encounter/my underground amount", 7);
+            SetUpEncounterGroup(EnvironmentConstants.Underground, undergroundEncounters);
+            SetupEncounterLevel("my underground encounter", 7);
 
             var undergroundAquaticEncounters = new[]
             {
-                "underground aquatic encounter/amount",
-                "my underground aquatic encounter/my underground aquatic amount",
-                "other underground aquatic encounter/other amount"
+                "underground aquatic encounter",
+                "my underground aquatic encounter",
+                "other underground aquatic encounter"
             };
 
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Underground + EnvironmentConstants.Aquatic, undergroundAquaticEncounters);
-            SetupEncounterLevel("my underground aquatic encounter/my underground aquatic amount", 13);
+            SetUpEncounterGroup(EnvironmentConstants.Underground + EnvironmentConstants.Aquatic, undergroundAquaticEncounters);
+            SetupEncounterLevel("my underground aquatic encounter", 13);
 
-            var possibleEncounters = encounterCollectionSelector.SelectPossibleFrom(timeOfDay: "time of day");
+            var possibleEncounters = encounterCollectionSelector.SelectPossibleEncountersFrom(timeOfDay: "time of day");
 
             //INFO: Since this method is only used in the EncounterVerifier, and immediately followed with .Any(), we will not assert contents
             Assert.That(possibleEncounters, Is.Not.Empty);
         }
 
         [Test]
-        public void SelectPossibleFrom_ReturnsPossibleEncounters_FromSetTimeOfDay_None()
+        public void SelectPossibleEncountersFrom_ReturnsPossibleEncounters_FromSetTimeOfDay_None()
         {
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert, new[] { "my warm encounter/my warm amount", "my wrong encounter/my wrong amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest, new[] { "my wrong encounter/my amount", "my temperate encounter/my temperate amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Hills, new[] { "my wrong encounter/my amount", "my cold encounter/my cold amount" });
-            SetUpCreatureBasedEncounterGroup("time of day", new[]
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert, new[] { "my warm encounter", "my wrong encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest, new[] { "my wrong encounter", "my temperate encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Hills, new[] { "my wrong encounter", "my cold encounter" });
+            SetUpEncounterGroup("time of day", new[]
             {
-                "my warm encounter/my warm amount",
-                "my temperate encounter/my temperate amount",
-                "my wrong encounter/my wrong amount",
-                "my any encounter/my any amount",
-                "my extraplanar encounter/my extraplanar amount",
-                "my warm aquatic encounter/my warm aquatic amount",
-                "my cold aquatic encounter/my cold aquatic amount",
-                "my warm civilized encounter/my warm civilized amount",
-                "my cold civilized encounter/my cold civilized amount",
-                "my day encounter/my day amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[]
+                "my warm encounter",
+                "my temperate encounter",
+                "my wrong encounter",
+                "my any encounter",
+                "my extraplanar encounter",
+                "my warm aquatic encounter",
+                "my cold aquatic encounter",
+                "my warm civilized encounter",
+                "my cold civilized encounter",
+                "my day encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[]
             {
-                "my night encounter/my night amount",
-                "my cold encounter/my cold amount",
-                "my wrong encounter/my wrong amount",
-                "my land encounter/my land amount",
-                "my aquatic encounter/my aquatic amount",
-                "my temperate aquatic encounter/my temperate aquatic amount",
-                "my civilized encounter/my civilized amount",
-                "my temperate civilized encounter/my temperate civilized amount",
-                "my underground encounter/my underground amount",
-                "my underground aquatic encounter/my underground aquatic amount",
-                "my other encounter/my other amount" });
+                "my night encounter",
+                "my cold encounter",
+                "my wrong encounter",
+                "my land encounter",
+                "my aquatic encounter",
+                "my temperate aquatic encounter",
+                "my civilized encounter",
+                "my temperate civilized encounter",
+                "my underground encounter",
+                "my underground aquatic encounter",
+                "my other encounter" });
 
-            SetupEncounterLevel("my warm encounter/my warm amount", 9);
-            SetupEncounterLevel("my temperate encounter/my temperate amount", 26);
-            SetupEncounterLevel("my cold encounter/my cold amount", 6);
-            SetupEncounterLevel("my other encounter/my other amount", 9);
+            SetupEncounterLevel("my warm encounter", 9);
+            SetupEncounterLevel("my temperate encounter", 26);
+            SetupEncounterLevel("my cold encounter", 6);
+            SetupEncounterLevel("my other encounter", 9);
 
-            landEncounters.Add("my land encounter/my land amount");
-            anyEncounters.Add("my any encounter/my any amount");
-            extraplanarEncounters.Add("my extraplanar encounter/my extraplanar amount");
-            SetupEncounterLevel("my land encounter/my land amount", 2);
-            SetupEncounterLevel("my any encounter/my any amount", 10);
-            SetupEncounterLevel("my extraplanar encounter/my extraplanar amount", 4);
+            landEncounters.Add("my land encounter");
+            anyEncounters.Add("my any encounter");
+            extraplanarEncounters.Add("my extraplanar encounter");
+            SetupEncounterLevel("my land encounter", 2);
+            SetupEncounterLevel("my any encounter", 10);
+            SetupEncounterLevel("my extraplanar encounter", 4);
 
-            var aquaticEncounters = new[] { "my aquatic encounter/my aquatic amount", "aquatic encounter/amount", "other aquatic encounter/other amount" };
+            var aquaticEncounters = new[] { "my aquatic encounter", "aquatic encounter", "other aquatic encounter" };
 
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Aquatic, aquaticEncounters);
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic, new[]
+            SetUpEncounterGroup(EnvironmentConstants.Aquatic, aquaticEncounters);
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic, new[]
             {
-                "my warm aquatic encounter/my warm aquatic amount",
-                "my wrong encounter/my wrong amount"
+                "my warm aquatic encounter",
+                "my wrong encounter"
             });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic, new[]
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic, new[]
             {
-                "my wrong encounter/my amount",
-                "my temperate aquatic encounter/my temperate aquatic amount"
+                "my wrong encounter",
+                "my temperate aquatic encounter"
             });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Aquatic, new[]
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Aquatic, new[]
             {
-                "my wrong encounter/my amount",
-                "my cold aquatic encounter/my cold aquatic amount"
-            });
-
-            SetupEncounterLevel("my aquatic encounter/my aquatic amount", 3);
-            SetupEncounterLevel("my warm aquatic encounter/my warm aquatic amount", 6);
-            SetupEncounterLevel("my temperate aquatic encounter/my temperate aquatic amount", 9);
-            SetupEncounterLevel("my cold aquatic encounter/my cold aquatic amount", 6);
-
-            var civilizedEncounters = new[] { "my civilized encounter/my civilized amount", "civilized encounter/amount", "other civilized encounter/other amount" };
-
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Civilized, civilizedEncounters);
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Civilized, new[]
-            {
-                "my warm civilized encounter/my warm civilized amount",
-                "my wrong encounter/my wrong amount"
-            });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Civilized, new[]
-            {
-                "my wrong encounter/my amount",
-                "my temperate civilized encounter/my temperate civilized amount"
-            });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Civilized, new[]
-            {
-                "my wrong encounter/my amount",
-                "my cold civilized encounter/my cold civilized amount"
+                "my wrong encounter",
+                "my cold aquatic encounter"
             });
 
-            SetupEncounterLevel("my civilized encounter/my civilized amount", 3);
-            SetupEncounterLevel("my warm civilized encounter/my warm civilized amount", 6);
-            SetupEncounterLevel("my temperate civilized encounter/my temperate civilized amount", 9);
-            SetupEncounterLevel("my cold civilized encounter/my cold civilized amount", 6);
+            SetupEncounterLevel("my aquatic encounter", 3);
+            SetupEncounterLevel("my warm aquatic encounter", 6);
+            SetupEncounterLevel("my temperate aquatic encounter", 9);
+            SetupEncounterLevel("my cold aquatic encounter", 6);
+
+            var civilizedEncounters = new[] { "my civilized encounter", "civilized encounter", "other civilized encounter" };
+
+            SetUpEncounterGroup(EnvironmentConstants.Civilized, civilizedEncounters);
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Civilized, new[]
+            {
+                "my warm civilized encounter",
+                "my wrong encounter"
+            });
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Civilized, new[]
+            {
+                "my wrong encounter",
+                "my temperate civilized encounter"
+            });
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Civilized, new[]
+            {
+                "my wrong encounter",
+                "my cold civilized encounter"
+            });
+
+            SetupEncounterLevel("my civilized encounter", 3);
+            SetupEncounterLevel("my warm civilized encounter", 6);
+            SetupEncounterLevel("my temperate civilized encounter", 9);
+            SetupEncounterLevel("my cold civilized encounter", 6);
 
             var undergroundEncounters = new[]
             {
-                "underground encounter/amount",
-                "my underground encounter/my underground amount",
-                "other underground encounter/other amount"
+                "underground encounter",
+                "my underground encounter",
+                "other underground encounter"
             };
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Underground, undergroundEncounters);
-            SetupEncounterLevel("my underground encounter/my underground amount", 7);
+            SetUpEncounterGroup(EnvironmentConstants.Underground, undergroundEncounters);
+            SetupEncounterLevel("my underground encounter", 7);
 
             var undergroundAquaticEncounters = new[]
             {
-                "underground aquatic encounter/amount",
-                "my underground aquatic encounter/my underground aquatic amount",
-                "other underground aquatic encounter/other amount"
+                "underground aquatic encounter",
+                "my underground aquatic encounter",
+                "other underground aquatic encounter"
             };
 
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Underground + EnvironmentConstants.Aquatic, undergroundAquaticEncounters);
-            SetupEncounterLevel("my underground aquatic encounter/my underground aquatic amount", 13);
+            SetUpEncounterGroup(EnvironmentConstants.Underground + EnvironmentConstants.Aquatic, undergroundAquaticEncounters);
+            SetupEncounterLevel("my underground aquatic encounter", 13);
 
             levelEncounters.Clear();
 
-            var possibleEncounters = encounterCollectionSelector.SelectPossibleFrom(timeOfDay: "time of day");
+            var possibleEncounters = encounterCollectionSelector.SelectPossibleEncountersFrom(timeOfDay: "time of day");
 
             //INFO: Since this method is only used in the EncounterVerifier, and immediately followed with .Any(), we will not assert contents
             Assert.That(possibleEncounters, Is.Empty);
         }
 
         [Test]
-        public void SelectPossibleFrom_ReturnsPossibleEncounters_FromSetLevel_Some()
+        public void SelectPossibleEncountersFrom_ReturnsPossibleEncounters_FromSetLevel_Some()
         {
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert, new[] { "my warm encounter/my warm amount", "my wrong encounter/my wrong amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest, new[] { "my wrong encounter/my amount", "my temperate encounter/my temperate amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Hills, new[] { "my wrong encounter/my amount", "my cold encounter/my cold amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.TimesOfDay.Day, new[]
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert, new[] { "my warm encounter", "my wrong encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest, new[] { "my wrong encounter", "my temperate encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Hills, new[] { "my wrong encounter", "my cold encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Day, new[]
             {
-                "my warm encounter/my warm amount",
-                "my temperate encounter/my temperate amount",
-                "my wrong encounter/my wrong amount",
-                "my any encounter/my any amount",
-                "my extraplanar encounter/my extraplanar amount",
-                "my warm aquatic encounter/my warm aquatic amount",
-                "my cold aquatic encounter/my cold aquatic amount",
-                "my warm civilized encounter/my warm civilized amount",
-                "my cold civilized encounter/my cold civilized amount",
-                "my day encounter/my day amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[]
+                "my warm encounter",
+                "my temperate encounter",
+                "my wrong encounter",
+                "my any encounter",
+                "my extraplanar encounter",
+                "my warm aquatic encounter",
+                "my cold aquatic encounter",
+                "my warm civilized encounter",
+                "my cold civilized encounter",
+                "my day encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[]
             {
-                "my night encounter/my night amount",
-                "my cold encounter/my cold amount",
-                "my wrong encounter/my wrong amount",
-                "my land encounter/my land amount",
-                "my aquatic encounter/my aquatic amount",
-                "my temperate aquatic encounter/my temperate aquatic amount",
-                "my civilized encounter/my civilized amount",
-                "my temperate civilized encounter/my temperate civilized amount",
-                "my underground encounter/my underground amount",
-                "my underground aquatic encounter/my underground aquatic amount",
-                "my other encounter/my other amount" });
+                "my night encounter",
+                "my cold encounter",
+                "my wrong encounter",
+                "my land encounter",
+                "my aquatic encounter",
+                "my temperate aquatic encounter",
+                "my civilized encounter",
+                "my temperate civilized encounter",
+                "my underground encounter",
+                "my underground aquatic encounter",
+                "my other encounter" });
 
-            SetupEncounterLevel("my warm encounter/my warm amount", 9);
-            SetupEncounterLevel("my temperate encounter/my temperate amount", 26);
-            SetupEncounterLevel("my cold encounter/my cold amount", 6);
-            SetupEncounterLevel("my other encounter/my other amount", 9);
+            SetupEncounterLevel("my warm encounter", 9);
+            SetupEncounterLevel("my temperate encounter", 26);
+            SetupEncounterLevel("my cold encounter", 6);
+            SetupEncounterLevel("my other encounter", 9);
 
-            landEncounters.Add("my land encounter/my land amount");
-            anyEncounters.Add("my any encounter/my any amount");
-            extraplanarEncounters.Add("my extraplanar encounter/my extraplanar amount");
-            SetupEncounterLevel("my land encounter/my land amount", 2);
-            SetupEncounterLevel("my any encounter/my any amount", 10);
-            SetupEncounterLevel("my extraplanar encounter/my extraplanar amount", 4);
+            landEncounters.Add("my land encounter");
+            anyEncounters.Add("my any encounter");
+            extraplanarEncounters.Add("my extraplanar encounter");
+            SetupEncounterLevel("my land encounter", 2);
+            SetupEncounterLevel("my any encounter", 10);
+            SetupEncounterLevel("my extraplanar encounter", 4);
 
-            var aquaticEncounters = new[] { "my aquatic encounter/my aquatic amount", "aquatic encounter/amount", "other aquatic encounter/other amount" };
+            var aquaticEncounters = new[] { "my aquatic encounter", "aquatic encounter", "other aquatic encounter" };
 
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Aquatic, aquaticEncounters);
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic, new[]
+            SetUpEncounterGroup(EnvironmentConstants.Aquatic, aquaticEncounters);
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic, new[]
             {
-                "my warm aquatic encounter/my warm aquatic amount",
-                "my wrong encounter/my wrong amount"
+                "my warm aquatic encounter",
+                "my wrong encounter"
             });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic, new[]
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic, new[]
             {
-                "my wrong encounter/my amount",
-                "my temperate aquatic encounter/my temperate aquatic amount"
+                "my wrong encounter",
+                "my temperate aquatic encounter"
             });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Aquatic, new[]
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Aquatic, new[]
             {
-                "my wrong encounter/my amount",
-                "my cold aquatic encounter/my cold aquatic amount"
-            });
-
-            SetupEncounterLevel("my aquatic encounter/my aquatic amount", 783);
-            SetupEncounterLevel("my warm aquatic encounter/my warm aquatic amount", 6);
-            SetupEncounterLevel("my temperate aquatic encounter/my temperate aquatic amount", 9);
-            SetupEncounterLevel("my cold aquatic encounter/my cold aquatic amount", 6);
-
-            var civilizedEncounters = new[] { "my civilized encounter/my civilized amount", "civilized encounter/amount", "other civilized encounter/other amount" };
-
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Civilized, civilizedEncounters);
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Civilized, new[]
-            {
-                "my warm civilized encounter/my warm civilized amount",
-                "my wrong encounter/my wrong amount"
-            });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Civilized, new[]
-            {
-                "my wrong encounter/my amount",
-                "my temperate civilized encounter/my temperate civilized amount"
-            });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Civilized, new[]
-            {
-                "my wrong encounter/my amount",
-                "my cold civilized encounter/my cold civilized amount"
+                "my wrong encounter",
+                "my cold aquatic encounter"
             });
 
-            SetupEncounterLevel("my civilized encounter/my civilized amount", 3);
-            SetupEncounterLevel("my warm civilized encounter/my warm civilized amount", 6);
-            SetupEncounterLevel("my temperate civilized encounter/my temperate civilized amount", 9);
-            SetupEncounterLevel("my cold civilized encounter/my cold civilized amount", 6);
+            SetupEncounterLevel("my aquatic encounter", 783);
+            SetupEncounterLevel("my warm aquatic encounter", 6);
+            SetupEncounterLevel("my temperate aquatic encounter", 9);
+            SetupEncounterLevel("my cold aquatic encounter", 6);
+
+            var civilizedEncounters = new[] { "my civilized encounter", "civilized encounter", "other civilized encounter" };
+
+            SetUpEncounterGroup(EnvironmentConstants.Civilized, civilizedEncounters);
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Civilized, new[]
+            {
+                "my warm civilized encounter",
+                "my wrong encounter"
+            });
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Civilized, new[]
+            {
+                "my wrong encounter",
+                "my temperate civilized encounter"
+            });
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Civilized, new[]
+            {
+                "my wrong encounter",
+                "my cold civilized encounter"
+            });
+
+            SetupEncounterLevel("my civilized encounter", 3);
+            SetupEncounterLevel("my warm civilized encounter", 6);
+            SetupEncounterLevel("my temperate civilized encounter", 9);
+            SetupEncounterLevel("my cold civilized encounter", 6);
 
             var undergroundEncounters = new[]
             {
-                "underground encounter/amount",
-                "my underground encounter/my underground amount",
-                "other underground encounter/other amount"
+                "underground encounter",
+                "my underground encounter",
+                "other underground encounter"
             };
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Underground, undergroundEncounters);
-            SetupEncounterLevel("my underground encounter/my underground amount", 7);
+            SetUpEncounterGroup(EnvironmentConstants.Underground, undergroundEncounters);
+            SetupEncounterLevel("my underground encounter", 7);
 
             var undergroundAquaticEncounters = new[]
             {
-                "underground aquatic encounter/amount",
-                "my underground aquatic encounter/my underground aquatic amount",
-                "other underground aquatic encounter/other amount"
+                "underground aquatic encounter",
+                "my underground aquatic encounter",
+                "other underground aquatic encounter"
             };
 
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Underground + EnvironmentConstants.Aquatic, undergroundAquaticEncounters);
-            SetupEncounterLevel("my underground aquatic encounter/my underground aquatic amount", 13);
+            SetUpEncounterGroup(EnvironmentConstants.Underground + EnvironmentConstants.Aquatic, undergroundAquaticEncounters);
+            SetupEncounterLevel("my underground aquatic encounter", 13);
 
-            var possibleEncounters = encounterCollectionSelector.SelectPossibleFrom(level: 783);
+            var possibleEncounters = encounterCollectionSelector.SelectPossibleEncountersFrom(level: 783);
 
             //INFO: Since this method is only used in the EncounterVerifier, and immediately followed with .Any(), we will not assert contents
             Assert.That(possibleEncounters, Is.Not.Empty);
         }
 
         [Test]
-        public void SelectPossibleFrom_ReturnsPossibleEncounters_FromSetLevel_None()
+        public void SelectPossibleEncountersFrom_ReturnsPossibleEncounters_FromSetLevel_None()
         {
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert, new[] { "my warm encounter/my warm amount", "my wrong encounter/my wrong amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest, new[] { "my wrong encounter/my amount", "my temperate encounter/my temperate amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Hills, new[] { "my wrong encounter/my amount", "my cold encounter/my cold amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.TimesOfDay.Day, new[]
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert, new[] { "my warm encounter", "my wrong encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest, new[] { "my wrong encounter", "my temperate encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Hills, new[] { "my wrong encounter", "my cold encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Day, new[]
             {
-                "my warm encounter/my warm amount",
-                "my temperate encounter/my temperate amount",
-                "my wrong encounter/my wrong amount",
-                "my any encounter/my any amount",
-                "my extraplanar encounter/my extraplanar amount",
-                "my warm aquatic encounter/my warm aquatic amount",
-                "my cold aquatic encounter/my cold aquatic amount",
-                "my warm civilized encounter/my warm civilized amount",
-                "my cold civilized encounter/my cold civilized amount",
-                "my day encounter/my day amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[]
+                "my warm encounter",
+                "my temperate encounter",
+                "my wrong encounter",
+                "my any encounter",
+                "my extraplanar encounter",
+                "my warm aquatic encounter",
+                "my cold aquatic encounter",
+                "my warm civilized encounter",
+                "my cold civilized encounter",
+                "my day encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[]
             {
-                "my night encounter/my night amount",
-                "my cold encounter/my cold amount",
-                "my wrong encounter/my wrong amount",
-                "my land encounter/my land amount",
-                "my aquatic encounter/my aquatic amount",
-                "my temperate aquatic encounter/my temperate aquatic amount",
-                "my civilized encounter/my civilized amount",
-                "my temperate civilized encounter/my temperate civilized amount",
-                "my underground encounter/my underground amount",
-                "my underground aquatic encounter/my underground aquatic amount",
-                "my other encounter/my other amount" });
+                "my night encounter",
+                "my cold encounter",
+                "my wrong encounter",
+                "my land encounter",
+                "my aquatic encounter",
+                "my temperate aquatic encounter",
+                "my civilized encounter",
+                "my temperate civilized encounter",
+                "my underground encounter",
+                "my underground aquatic encounter",
+                "my other encounter" });
 
-            SetupEncounterLevel("my warm encounter/my warm amount", 9);
-            SetupEncounterLevel("my temperate encounter/my temperate amount", 26);
-            SetupEncounterLevel("my cold encounter/my cold amount", 6);
-            SetupEncounterLevel("my other encounter/my other amount", 9);
+            SetupEncounterLevel("my warm encounter", 9);
+            SetupEncounterLevel("my temperate encounter", 26);
+            SetupEncounterLevel("my cold encounter", 6);
+            SetupEncounterLevel("my other encounter", 9);
 
-            landEncounters.Add("my land encounter/my land amount");
-            anyEncounters.Add("my any encounter/my any amount");
-            extraplanarEncounters.Add("my extraplanar encounter/my extraplanar amount");
-            SetupEncounterLevel("my land encounter/my land amount", 2);
-            SetupEncounterLevel("my any encounter/my any amount", 10);
-            SetupEncounterLevel("my extraplanar encounter/my extraplanar amount", 4);
+            landEncounters.Add("my land encounter");
+            anyEncounters.Add("my any encounter");
+            extraplanarEncounters.Add("my extraplanar encounter");
+            SetupEncounterLevel("my land encounter", 2);
+            SetupEncounterLevel("my any encounter", 10);
+            SetupEncounterLevel("my extraplanar encounter", 4);
 
-            var aquaticEncounters = new[] { "my aquatic encounter/my aquatic amount", "aquatic encounter/amount", "other aquatic encounter/other amount" };
+            var aquaticEncounters = new[] { "my aquatic encounter", "aquatic encounter", "other aquatic encounter" };
 
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Aquatic, aquaticEncounters);
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic, new[]
+            SetUpEncounterGroup(EnvironmentConstants.Aquatic, aquaticEncounters);
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic, new[]
             {
-                "my warm aquatic encounter/my warm aquatic amount",
-                "my wrong encounter/my wrong amount"
+                "my warm aquatic encounter",
+                "my wrong encounter"
             });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic, new[]
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic, new[]
             {
-                "my wrong encounter/my amount",
-                "my temperate aquatic encounter/my temperate aquatic amount"
+                "my wrong encounter",
+                "my temperate aquatic encounter"
             });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Aquatic, new[]
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Aquatic, new[]
             {
-                "my wrong encounter/my amount",
-                "my cold aquatic encounter/my cold aquatic amount"
-            });
-
-            SetupEncounterLevel("my aquatic encounter/my aquatic amount", 7);
-            SetupEncounterLevel("my warm aquatic encounter/my warm aquatic amount", 6);
-            SetupEncounterLevel("my temperate aquatic encounter/my temperate aquatic amount", 9);
-            SetupEncounterLevel("my cold aquatic encounter/my cold aquatic amount", 6);
-
-            var civilizedEncounters = new[] { "my civilized encounter/my civilized amount", "civilized encounter/amount", "other civilized encounter/other amount" };
-
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Civilized, civilizedEncounters);
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Civilized, new[]
-            {
-                "my warm civilized encounter/my warm civilized amount",
-                "my wrong encounter/my wrong amount"
-            });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Civilized, new[]
-            {
-                "my wrong encounter/my amount",
-                "my temperate civilized encounter/my temperate civilized amount"
-            });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Civilized, new[]
-            {
-                "my wrong encounter/my amount",
-                "my cold civilized encounter/my cold civilized amount"
+                "my wrong encounter",
+                "my cold aquatic encounter"
             });
 
-            SetupEncounterLevel("my civilized encounter/my civilized amount", 3);
-            SetupEncounterLevel("my warm civilized encounter/my warm civilized amount", 6);
-            SetupEncounterLevel("my temperate civilized encounter/my temperate civilized amount", 9);
-            SetupEncounterLevel("my cold civilized encounter/my cold civilized amount", 6);
+            SetupEncounterLevel("my aquatic encounter", 7);
+            SetupEncounterLevel("my warm aquatic encounter", 6);
+            SetupEncounterLevel("my temperate aquatic encounter", 9);
+            SetupEncounterLevel("my cold aquatic encounter", 6);
+
+            var civilizedEncounters = new[] { "my civilized encounter", "civilized encounter", "other civilized encounter" };
+
+            SetUpEncounterGroup(EnvironmentConstants.Civilized, civilizedEncounters);
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Civilized, new[]
+            {
+                "my warm civilized encounter",
+                "my wrong encounter"
+            });
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Civilized, new[]
+            {
+                "my wrong encounter",
+                "my temperate civilized encounter"
+            });
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Civilized, new[]
+            {
+                "my wrong encounter",
+                "my cold civilized encounter"
+            });
+
+            SetupEncounterLevel("my civilized encounter", 3);
+            SetupEncounterLevel("my warm civilized encounter", 6);
+            SetupEncounterLevel("my temperate civilized encounter", 9);
+            SetupEncounterLevel("my cold civilized encounter", 6);
 
             var undergroundEncounters = new[]
             {
-                "underground encounter/amount",
-                "my underground encounter/my underground amount",
-                "other underground encounter/other amount"
+                "underground encounter",
+                "my underground encounter",
+                "other underground encounter"
             };
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Underground, undergroundEncounters);
-            SetupEncounterLevel("my underground encounter/my underground amount", 7);
+            SetUpEncounterGroup(EnvironmentConstants.Underground, undergroundEncounters);
+            SetupEncounterLevel("my underground encounter", 7);
 
             var undergroundAquaticEncounters = new[]
             {
-                "underground aquatic encounter/amount",
-                "my underground aquatic encounter/my underground aquatic amount",
-                "other underground aquatic encounter/other amount"
+                "underground aquatic encounter",
+                "my underground aquatic encounter",
+                "other underground aquatic encounter"
             };
 
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Underground + EnvironmentConstants.Aquatic, undergroundAquaticEncounters);
-            SetupEncounterLevel("my underground aquatic encounter/my underground aquatic amount", 13);
+            SetUpEncounterGroup(EnvironmentConstants.Underground + EnvironmentConstants.Aquatic, undergroundAquaticEncounters);
+            SetupEncounterLevel("my underground aquatic encounter", 13);
 
-            var possibleEncounters = encounterCollectionSelector.SelectPossibleFrom(level: 783);
+            var possibleEncounters = encounterCollectionSelector.SelectPossibleEncountersFrom(level: 783);
 
             //INFO: Since this method is only used in the EncounterVerifier, and immediately followed with .Any(), we will not assert contents
             Assert.That(possibleEncounters, Is.Empty);
@@ -7797,117 +7808,117 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
 
         [TestCase(true)]
         [TestCase(false)]
-        public void SelectPossibleFrom_ReturnsPossibleEncounters_FromSetAllowAquatic_Some(bool aquatic)
+        public void SelectPossibleEncountersFrom_ReturnsPossibleEncounters_FromSetAllowAquatic_Some(bool aquatic)
         {
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert, new[] { "my warm encounter/my warm amount", "my wrong encounter/my wrong amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest, new[] { "my wrong encounter/my amount", "my temperate encounter/my temperate amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Hills, new[] { "my wrong encounter/my amount", "my cold encounter/my cold amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.TimesOfDay.Day, new[]
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert, new[] { "my warm encounter", "my wrong encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest, new[] { "my wrong encounter", "my temperate encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Hills, new[] { "my wrong encounter", "my cold encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Day, new[]
             {
-                "my warm encounter/my warm amount",
-                "my temperate encounter/my temperate amount",
-                "my wrong encounter/my wrong amount",
-                "my any encounter/my any amount",
-                "my extraplanar encounter/my extraplanar amount",
-                "my warm aquatic encounter/my warm aquatic amount",
-                "my cold aquatic encounter/my cold aquatic amount",
-                "my warm civilized encounter/my warm civilized amount",
-                "my cold civilized encounter/my cold civilized amount",
-                "my day encounter/my day amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[]
+                "my warm encounter",
+                "my temperate encounter",
+                "my wrong encounter",
+                "my any encounter",
+                "my extraplanar encounter",
+                "my warm aquatic encounter",
+                "my cold aquatic encounter",
+                "my warm civilized encounter",
+                "my cold civilized encounter",
+                "my day encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[]
             {
-                "my night encounter/my night amount",
-                "my cold encounter/my cold amount",
-                "my wrong encounter/my wrong amount",
-                "my land encounter/my land amount",
-                "my aquatic encounter/my aquatic amount",
-                "my temperate aquatic encounter/my temperate aquatic amount",
-                "my civilized encounter/my civilized amount",
-                "my temperate civilized encounter/my temperate civilized amount",
-                "my underground encounter/my underground amount",
-                "my underground aquatic encounter/my underground aquatic amount",
-                "my other encounter/my other amount" });
+                "my night encounter",
+                "my cold encounter",
+                "my wrong encounter",
+                "my land encounter",
+                "my aquatic encounter",
+                "my temperate aquatic encounter",
+                "my civilized encounter",
+                "my temperate civilized encounter",
+                "my underground encounter",
+                "my underground aquatic encounter",
+                "my other encounter" });
 
-            SetupEncounterLevel("my warm encounter/my warm amount", 9);
-            SetupEncounterLevel("my temperate encounter/my temperate amount", 26);
-            SetupEncounterLevel("my cold encounter/my cold amount", 6);
-            SetupEncounterLevel("my other encounter/my other amount", 9);
+            SetupEncounterLevel("my warm encounter", 9);
+            SetupEncounterLevel("my temperate encounter", 26);
+            SetupEncounterLevel("my cold encounter", 6);
+            SetupEncounterLevel("my other encounter", 9);
 
-            landEncounters.Add("my land encounter/my land amount");
-            anyEncounters.Add("my any encounter/my any amount");
-            extraplanarEncounters.Add("my extraplanar encounter/my extraplanar amount");
-            SetupEncounterLevel("my land encounter/my land amount", 2);
-            SetupEncounterLevel("my any encounter/my any amount", 10);
-            SetupEncounterLevel("my extraplanar encounter/my extraplanar amount", 4);
+            landEncounters.Add("my land encounter");
+            anyEncounters.Add("my any encounter");
+            extraplanarEncounters.Add("my extraplanar encounter");
+            SetupEncounterLevel("my land encounter", 2);
+            SetupEncounterLevel("my any encounter", 10);
+            SetupEncounterLevel("my extraplanar encounter", 4);
 
-            var aquaticEncounters = new[] { "my aquatic encounter/my aquatic amount", "aquatic encounter/amount", "other aquatic encounter/other amount" };
+            var aquaticEncounters = new[] { "my aquatic encounter", "aquatic encounter", "other aquatic encounter" };
 
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Aquatic, aquaticEncounters);
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic, new[]
+            SetUpEncounterGroup(EnvironmentConstants.Aquatic, aquaticEncounters);
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic, new[]
             {
-                "my warm aquatic encounter/my warm aquatic amount",
-                "my wrong encounter/my wrong amount"
+                "my warm aquatic encounter",
+                "my wrong encounter"
             });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic, new[]
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic, new[]
             {
-                "my wrong encounter/my amount",
-                "my temperate aquatic encounter/my temperate aquatic amount"
+                "my wrong encounter",
+                "my temperate aquatic encounter"
             });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Aquatic, new[]
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Aquatic, new[]
             {
-                "my wrong encounter/my amount",
-                "my cold aquatic encounter/my cold aquatic amount"
-            });
-
-            SetupEncounterLevel("my aquatic encounter/my aquatic amount", 3);
-            SetupEncounterLevel("my warm aquatic encounter/my warm aquatic amount", 6);
-            SetupEncounterLevel("my temperate aquatic encounter/my temperate aquatic amount", 9);
-            SetupEncounterLevel("my cold aquatic encounter/my cold aquatic amount", 6);
-
-            var civilizedEncounters = new[] { "my civilized encounter/my civilized amount", "civilized encounter/amount", "other civilized encounter/other amount" };
-
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Civilized, civilizedEncounters);
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Civilized, new[]
-            {
-                "my warm civilized encounter/my warm civilized amount",
-                "my wrong encounter/my wrong amount"
-            });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Civilized, new[]
-            {
-                "my wrong encounter/my amount",
-                "my temperate civilized encounter/my temperate civilized amount"
-            });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Civilized, new[]
-            {
-                "my wrong encounter/my amount",
-                "my cold civilized encounter/my cold civilized amount"
+                "my wrong encounter",
+                "my cold aquatic encounter"
             });
 
-            SetupEncounterLevel("my civilized encounter/my civilized amount", 3);
-            SetupEncounterLevel("my warm civilized encounter/my warm civilized amount", 6);
-            SetupEncounterLevel("my temperate civilized encounter/my temperate civilized amount", 9);
-            SetupEncounterLevel("my cold civilized encounter/my cold civilized amount", 6);
+            SetupEncounterLevel("my aquatic encounter", 3);
+            SetupEncounterLevel("my warm aquatic encounter", 6);
+            SetupEncounterLevel("my temperate aquatic encounter", 9);
+            SetupEncounterLevel("my cold aquatic encounter", 6);
+
+            var civilizedEncounters = new[] { "my civilized encounter", "civilized encounter", "other civilized encounter" };
+
+            SetUpEncounterGroup(EnvironmentConstants.Civilized, civilizedEncounters);
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Civilized, new[]
+            {
+                "my warm civilized encounter",
+                "my wrong encounter"
+            });
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Civilized, new[]
+            {
+                "my wrong encounter",
+                "my temperate civilized encounter"
+            });
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Civilized, new[]
+            {
+                "my wrong encounter",
+                "my cold civilized encounter"
+            });
+
+            SetupEncounterLevel("my civilized encounter", 3);
+            SetupEncounterLevel("my warm civilized encounter", 6);
+            SetupEncounterLevel("my temperate civilized encounter", 9);
+            SetupEncounterLevel("my cold civilized encounter", 6);
 
             var undergroundEncounters = new[]
             {
-                "underground encounter/amount",
-                "my underground encounter/my underground amount",
-                "other underground encounter/other amount"
+                "underground encounter",
+                "my underground encounter",
+                "other underground encounter"
             };
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Underground, undergroundEncounters);
-            SetupEncounterLevel("my underground encounter/my underground amount", 7);
+            SetUpEncounterGroup(EnvironmentConstants.Underground, undergroundEncounters);
+            SetupEncounterLevel("my underground encounter", 7);
 
             var undergroundAquaticEncounters = new[]
             {
-                "underground aquatic encounter/amount",
-                "my underground aquatic encounter/my underground aquatic amount",
-                "other underground aquatic encounter/other amount"
+                "underground aquatic encounter",
+                "my underground aquatic encounter",
+                "other underground aquatic encounter"
             };
 
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Underground + EnvironmentConstants.Aquatic, undergroundAquaticEncounters);
-            SetupEncounterLevel("my underground aquatic encounter/my underground aquatic amount", 13);
+            SetUpEncounterGroup(EnvironmentConstants.Underground + EnvironmentConstants.Aquatic, undergroundAquaticEncounters);
+            SetupEncounterLevel("my underground aquatic encounter", 13);
 
-            var possibleEncounters = encounterCollectionSelector.SelectPossibleFrom(allowAquatic: aquatic);
+            var possibleEncounters = encounterCollectionSelector.SelectPossibleEncountersFrom(allowAquatic: aquatic);
 
             //INFO: Since this method is only used in the EncounterVerifier, and immediately followed with .Any(), we will not assert contents
             Assert.That(possibleEncounters, Is.Not.Empty);
@@ -7916,119 +7927,119 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
         [TestCase(true)]
         [TestCase(false)]
         [Ignore("If only the allow aquatic is toggled, then there will be valid encounters no matter what")]
-        public void SelectPossibleFrom_ReturnsPossibleEncounters_FromSetAllowAquatic_None(bool aquatic)
+        public void SelectPossibleEncountersFrom_ReturnsPossibleEncounters_FromSetAllowAquatic_None(bool aquatic)
         {
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert, new[] { "my warm encounter/my warm amount", "my wrong encounter/my wrong amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest, new[] { "my wrong encounter/my amount", "my temperate encounter/my temperate amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Hills, new[] { "my wrong encounter/my amount", "my cold encounter/my cold amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.TimesOfDay.Day, new[]
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert, new[] { "my warm encounter", "my wrong encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest, new[] { "my wrong encounter", "my temperate encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Hills, new[] { "my wrong encounter", "my cold encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Day, new[]
             {
-                "my warm encounter/my warm amount",
-                "my temperate encounter/my temperate amount",
-                "my wrong encounter/my wrong amount",
-                "my any encounter/my any amount",
-                "my extraplanar encounter/my extraplanar amount",
-                "my warm aquatic encounter/my warm aquatic amount",
-                "my cold aquatic encounter/my cold aquatic amount",
-                "my warm civilized encounter/my warm civilized amount",
-                "my cold civilized encounter/my cold civilized amount",
-                "my day encounter/my day amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[]
+                "my warm encounter",
+                "my temperate encounter",
+                "my wrong encounter",
+                "my any encounter",
+                "my extraplanar encounter",
+                "my warm aquatic encounter",
+                "my cold aquatic encounter",
+                "my warm civilized encounter",
+                "my cold civilized encounter",
+                "my day encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[]
             {
-                "my night encounter/my night amount",
-                "my cold encounter/my cold amount",
-                "my wrong encounter/my wrong amount",
-                "my land encounter/my land amount",
-                "my aquatic encounter/my aquatic amount",
-                "my temperate aquatic encounter/my temperate aquatic amount",
-                "my civilized encounter/my civilized amount",
-                "my temperate civilized encounter/my temperate civilized amount",
-                "my underground encounter/my underground amount",
-                "my underground aquatic encounter/my underground aquatic amount",
-                "my other encounter/my other amount" });
+                "my night encounter",
+                "my cold encounter",
+                "my wrong encounter",
+                "my land encounter",
+                "my aquatic encounter",
+                "my temperate aquatic encounter",
+                "my civilized encounter",
+                "my temperate civilized encounter",
+                "my underground encounter",
+                "my underground aquatic encounter",
+                "my other encounter" });
 
-            SetupEncounterLevel("my warm encounter/my warm amount", 9);
-            SetupEncounterLevel("my temperate encounter/my temperate amount", 26);
-            SetupEncounterLevel("my cold encounter/my cold amount", 6);
-            SetupEncounterLevel("my other encounter/my other amount", 9);
+            SetupEncounterLevel("my warm encounter", 9);
+            SetupEncounterLevel("my temperate encounter", 26);
+            SetupEncounterLevel("my cold encounter", 6);
+            SetupEncounterLevel("my other encounter", 9);
 
-            landEncounters.Add("my land encounter/my land amount");
-            anyEncounters.Add("my any encounter/my any amount");
-            extraplanarEncounters.Add("my extraplanar encounter/my extraplanar amount");
-            SetupEncounterLevel("my land encounter/my land amount", 2);
-            SetupEncounterLevel("my any encounter/my any amount", 10);
-            SetupEncounterLevel("my extraplanar encounter/my extraplanar amount", 4);
+            landEncounters.Add("my land encounter");
+            anyEncounters.Add("my any encounter");
+            extraplanarEncounters.Add("my extraplanar encounter");
+            SetupEncounterLevel("my land encounter", 2);
+            SetupEncounterLevel("my any encounter", 10);
+            SetupEncounterLevel("my extraplanar encounter", 4);
 
-            var aquaticEncounters = new[] { "my aquatic encounter/my aquatic amount", "aquatic encounter/amount", "other aquatic encounter/other amount" };
+            var aquaticEncounters = new[] { "my aquatic encounter", "aquatic encounter", "other aquatic encounter" };
 
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Aquatic, aquaticEncounters);
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic, new[]
+            SetUpEncounterGroup(EnvironmentConstants.Aquatic, aquaticEncounters);
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic, new[]
             {
-                "my warm aquatic encounter/my warm aquatic amount",
-                "my wrong encounter/my wrong amount"
+                "my warm aquatic encounter",
+                "my wrong encounter"
             });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic, new[]
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic, new[]
             {
-                "my wrong encounter/my amount",
-                "my temperate aquatic encounter/my temperate aquatic amount"
+                "my wrong encounter",
+                "my temperate aquatic encounter"
             });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Aquatic, new[]
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Aquatic, new[]
             {
-                "my wrong encounter/my amount",
-                "my cold aquatic encounter/my cold aquatic amount"
-            });
-
-            SetupEncounterLevel("my aquatic encounter/my aquatic amount", 3);
-            SetupEncounterLevel("my warm aquatic encounter/my warm aquatic amount", 6);
-            SetupEncounterLevel("my temperate aquatic encounter/my temperate aquatic amount", 9);
-            SetupEncounterLevel("my cold aquatic encounter/my cold aquatic amount", 6);
-
-            var civilizedEncounters = new[] { "my civilized encounter/my civilized amount", "civilized encounter/amount", "other civilized encounter/other amount" };
-
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Civilized, civilizedEncounters);
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Civilized, new[]
-            {
-                "my warm civilized encounter/my warm civilized amount",
-                "my wrong encounter/my wrong amount"
-            });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Civilized, new[]
-            {
-                "my wrong encounter/my amount",
-                "my temperate civilized encounter/my temperate civilized amount"
-            });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Civilized, new[]
-            {
-                "my wrong encounter/my amount",
-                "my cold civilized encounter/my cold civilized amount"
+                "my wrong encounter",
+                "my cold aquatic encounter"
             });
 
-            SetupEncounterLevel("my civilized encounter/my civilized amount", 3);
-            SetupEncounterLevel("my warm civilized encounter/my warm civilized amount", 6);
-            SetupEncounterLevel("my temperate civilized encounter/my temperate civilized amount", 9);
-            SetupEncounterLevel("my cold civilized encounter/my cold civilized amount", 6);
+            SetupEncounterLevel("my aquatic encounter", 3);
+            SetupEncounterLevel("my warm aquatic encounter", 6);
+            SetupEncounterLevel("my temperate aquatic encounter", 9);
+            SetupEncounterLevel("my cold aquatic encounter", 6);
+
+            var civilizedEncounters = new[] { "my civilized encounter", "civilized encounter", "other civilized encounter" };
+
+            SetUpEncounterGroup(EnvironmentConstants.Civilized, civilizedEncounters);
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Civilized, new[]
+            {
+                "my warm civilized encounter",
+                "my wrong encounter"
+            });
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Civilized, new[]
+            {
+                "my wrong encounter",
+                "my temperate civilized encounter"
+            });
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Civilized, new[]
+            {
+                "my wrong encounter",
+                "my cold civilized encounter"
+            });
+
+            SetupEncounterLevel("my civilized encounter", 3);
+            SetupEncounterLevel("my warm civilized encounter", 6);
+            SetupEncounterLevel("my temperate civilized encounter", 9);
+            SetupEncounterLevel("my cold civilized encounter", 6);
 
             var undergroundEncounters = new[]
             {
-                "underground encounter/amount",
-                "my underground encounter/my underground amount",
-                "other underground encounter/other amount"
+                "underground encounter",
+                "my underground encounter",
+                "other underground encounter"
             };
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Underground, undergroundEncounters);
-            SetupEncounterLevel("my underground encounter/my underground amount", 7);
+            SetUpEncounterGroup(EnvironmentConstants.Underground, undergroundEncounters);
+            SetupEncounterLevel("my underground encounter", 7);
 
             var undergroundAquaticEncounters = new[]
             {
-                "underground aquatic encounter/amount",
-                "my underground aquatic encounter/my underground aquatic amount",
-                "other underground aquatic encounter/other amount"
+                "underground aquatic encounter",
+                "my underground aquatic encounter",
+                "other underground aquatic encounter"
             };
 
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Underground + EnvironmentConstants.Aquatic, undergroundAquaticEncounters);
-            SetupEncounterLevel("my underground aquatic encounter/my underground aquatic amount", 13);
+            SetUpEncounterGroup(EnvironmentConstants.Underground + EnvironmentConstants.Aquatic, undergroundAquaticEncounters);
+            SetupEncounterLevel("my underground aquatic encounter", 13);
 
             levelEncounters.Clear();
 
-            var possibleEncounters = encounterCollectionSelector.SelectPossibleFrom(allowAquatic: aquatic);
+            var possibleEncounters = encounterCollectionSelector.SelectPossibleEncountersFrom(allowAquatic: aquatic);
 
             //INFO: Since this method is only used in the EncounterVerifier, and immediately followed with .Any(), we will not assert contents
             Assert.That(possibleEncounters, Is.Empty);
@@ -8036,117 +8047,117 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
 
         [TestCase(true)]
         [TestCase(false)]
-        public void SelectPossibleFrom_ReturnsPossibleEncounters_FromSetAllowUnderground_Some(bool underground)
+        public void SelectPossibleEncountersFrom_ReturnsPossibleEncounters_FromSetAllowUnderground_Some(bool underground)
         {
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert, new[] { "my warm encounter/my warm amount", "my wrong encounter/my wrong amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest, new[] { "my wrong encounter/my amount", "my temperate encounter/my temperate amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Hills, new[] { "my wrong encounter/my amount", "my cold encounter/my cold amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.TimesOfDay.Day, new[]
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert, new[] { "my warm encounter", "my wrong encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest, new[] { "my wrong encounter", "my temperate encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Hills, new[] { "my wrong encounter", "my cold encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Day, new[]
             {
-                "my warm encounter/my warm amount",
-                "my temperate encounter/my temperate amount",
-                "my wrong encounter/my wrong amount",
-                "my any encounter/my any amount",
-                "my extraplanar encounter/my extraplanar amount",
-                "my warm aquatic encounter/my warm aquatic amount",
-                "my cold aquatic encounter/my cold aquatic amount",
-                "my warm civilized encounter/my warm civilized amount",
-                "my cold civilized encounter/my cold civilized amount",
-                "my day encounter/my day amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[]
+                "my warm encounter",
+                "my temperate encounter",
+                "my wrong encounter",
+                "my any encounter",
+                "my extraplanar encounter",
+                "my warm aquatic encounter",
+                "my cold aquatic encounter",
+                "my warm civilized encounter",
+                "my cold civilized encounter",
+                "my day encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[]
             {
-                "my night encounter/my night amount",
-                "my cold encounter/my cold amount",
-                "my wrong encounter/my wrong amount",
-                "my land encounter/my land amount",
-                "my aquatic encounter/my aquatic amount",
-                "my temperate aquatic encounter/my temperate aquatic amount",
-                "my civilized encounter/my civilized amount",
-                "my temperate civilized encounter/my temperate civilized amount",
-                "my underground encounter/my underground amount",
-                "my underground aquatic encounter/my underground aquatic amount",
-                "my other encounter/my other amount" });
+                "my night encounter",
+                "my cold encounter",
+                "my wrong encounter",
+                "my land encounter",
+                "my aquatic encounter",
+                "my temperate aquatic encounter",
+                "my civilized encounter",
+                "my temperate civilized encounter",
+                "my underground encounter",
+                "my underground aquatic encounter",
+                "my other encounter" });
 
-            SetupEncounterLevel("my warm encounter/my warm amount", 9);
-            SetupEncounterLevel("my temperate encounter/my temperate amount", 26);
-            SetupEncounterLevel("my cold encounter/my cold amount", 6);
-            SetupEncounterLevel("my other encounter/my other amount", 9);
+            SetupEncounterLevel("my warm encounter", 9);
+            SetupEncounterLevel("my temperate encounter", 26);
+            SetupEncounterLevel("my cold encounter", 6);
+            SetupEncounterLevel("my other encounter", 9);
 
-            landEncounters.Add("my land encounter/my land amount");
-            anyEncounters.Add("my any encounter/my any amount");
-            extraplanarEncounters.Add("my extraplanar encounter/my extraplanar amount");
-            SetupEncounterLevel("my land encounter/my land amount", 2);
-            SetupEncounterLevel("my any encounter/my any amount", 10);
-            SetupEncounterLevel("my extraplanar encounter/my extraplanar amount", 4);
+            landEncounters.Add("my land encounter");
+            anyEncounters.Add("my any encounter");
+            extraplanarEncounters.Add("my extraplanar encounter");
+            SetupEncounterLevel("my land encounter", 2);
+            SetupEncounterLevel("my any encounter", 10);
+            SetupEncounterLevel("my extraplanar encounter", 4);
 
-            var aquaticEncounters = new[] { "my aquatic encounter/my aquatic amount", "aquatic encounter/amount", "other aquatic encounter/other amount" };
+            var aquaticEncounters = new[] { "my aquatic encounter", "aquatic encounter", "other aquatic encounter" };
 
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Aquatic, aquaticEncounters);
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic, new[]
+            SetUpEncounterGroup(EnvironmentConstants.Aquatic, aquaticEncounters);
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic, new[]
             {
-                "my warm aquatic encounter/my warm aquatic amount",
-                "my wrong encounter/my wrong amount"
+                "my warm aquatic encounter",
+                "my wrong encounter"
             });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic, new[]
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic, new[]
             {
-                "my wrong encounter/my amount",
-                "my temperate aquatic encounter/my temperate aquatic amount"
+                "my wrong encounter",
+                "my temperate aquatic encounter"
             });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Aquatic, new[]
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Aquatic, new[]
             {
-                "my wrong encounter/my amount",
-                "my cold aquatic encounter/my cold aquatic amount"
-            });
-
-            SetupEncounterLevel("my aquatic encounter/my aquatic amount", 3);
-            SetupEncounterLevel("my warm aquatic encounter/my warm aquatic amount", 6);
-            SetupEncounterLevel("my temperate aquatic encounter/my temperate aquatic amount", 9);
-            SetupEncounterLevel("my cold aquatic encounter/my cold aquatic amount", 6);
-
-            var civilizedEncounters = new[] { "my civilized encounter/my civilized amount", "civilized encounter/amount", "other civilized encounter/other amount" };
-
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Civilized, civilizedEncounters);
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Civilized, new[]
-            {
-                "my warm civilized encounter/my warm civilized amount",
-                "my wrong encounter/my wrong amount"
-            });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Civilized, new[]
-            {
-                "my wrong encounter/my amount",
-                "my temperate civilized encounter/my temperate civilized amount"
-            });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Civilized, new[]
-            {
-                "my wrong encounter/my amount",
-                "my cold civilized encounter/my cold civilized amount"
+                "my wrong encounter",
+                "my cold aquatic encounter"
             });
 
-            SetupEncounterLevel("my civilized encounter/my civilized amount", 3);
-            SetupEncounterLevel("my warm civilized encounter/my warm civilized amount", 6);
-            SetupEncounterLevel("my temperate civilized encounter/my temperate civilized amount", 9);
-            SetupEncounterLevel("my cold civilized encounter/my cold civilized amount", 6);
+            SetupEncounterLevel("my aquatic encounter", 3);
+            SetupEncounterLevel("my warm aquatic encounter", 6);
+            SetupEncounterLevel("my temperate aquatic encounter", 9);
+            SetupEncounterLevel("my cold aquatic encounter", 6);
+
+            var civilizedEncounters = new[] { "my civilized encounter", "civilized encounter", "other civilized encounter" };
+
+            SetUpEncounterGroup(EnvironmentConstants.Civilized, civilizedEncounters);
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Civilized, new[]
+            {
+                "my warm civilized encounter",
+                "my wrong encounter"
+            });
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Civilized, new[]
+            {
+                "my wrong encounter",
+                "my temperate civilized encounter"
+            });
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Civilized, new[]
+            {
+                "my wrong encounter",
+                "my cold civilized encounter"
+            });
+
+            SetupEncounterLevel("my civilized encounter", 3);
+            SetupEncounterLevel("my warm civilized encounter", 6);
+            SetupEncounterLevel("my temperate civilized encounter", 9);
+            SetupEncounterLevel("my cold civilized encounter", 6);
 
             var undergroundEncounters = new[]
             {
-                "underground encounter/amount",
-                "my underground encounter/my underground amount",
-                "other underground encounter/other amount"
+                "underground encounter",
+                "my underground encounter",
+                "other underground encounter"
             };
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Underground, undergroundEncounters);
-            SetupEncounterLevel("my underground encounter/my underground amount", 7);
+            SetUpEncounterGroup(EnvironmentConstants.Underground, undergroundEncounters);
+            SetupEncounterLevel("my underground encounter", 7);
 
             var undergroundAquaticEncounters = new[]
             {
-                "underground aquatic encounter/amount",
-                "my underground aquatic encounter/my underground aquatic amount",
-                "other underground aquatic encounter/other amount"
+                "underground aquatic encounter",
+                "my underground aquatic encounter",
+                "other underground aquatic encounter"
             };
 
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Underground + EnvironmentConstants.Aquatic, undergroundAquaticEncounters);
-            SetupEncounterLevel("my underground aquatic encounter/my underground aquatic amount", 13);
+            SetUpEncounterGroup(EnvironmentConstants.Underground + EnvironmentConstants.Aquatic, undergroundAquaticEncounters);
+            SetupEncounterLevel("my underground aquatic encounter", 13);
 
-            var possibleEncounters = encounterCollectionSelector.SelectPossibleFrom(allowUnderground: underground);
+            var possibleEncounters = encounterCollectionSelector.SelectPossibleEncountersFrom(allowUnderground: underground);
 
             //INFO: Since this method is only used in the EncounterVerifier, and immediately followed with .Any(), we will not assert contents
             Assert.That(possibleEncounters, Is.Not.Empty);
@@ -8155,238 +8166,238 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
         [TestCase(true)]
         [TestCase(false)]
         [Ignore("If only the allow underground is toggled, then there will be valid encounters no matter what")]
-        public void SelectPossibleFrom_ReturnsPossibleEncounters_FromSetAllowUnderground_None(bool underground)
+        public void SelectPossibleEncountersFrom_ReturnsPossibleEncounters_FromSetAllowUnderground_None(bool underground)
         {
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert, new[] { "my warm encounter/my warm amount", "my wrong encounter/my wrong amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest, new[] { "my wrong encounter/my amount", "my temperate encounter/my temperate amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Hills, new[] { "my wrong encounter/my amount", "my cold encounter/my cold amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.TimesOfDay.Day, new[]
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert, new[] { "my warm encounter", "my wrong encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest, new[] { "my wrong encounter", "my temperate encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Hills, new[] { "my wrong encounter", "my cold encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Day, new[]
             {
-                "my warm encounter/my warm amount",
-                "my temperate encounter/my temperate amount",
-                "my wrong encounter/my wrong amount",
-                "my any encounter/my any amount",
-                "my extraplanar encounter/my extraplanar amount",
-                "my warm aquatic encounter/my warm aquatic amount",
-                "my cold aquatic encounter/my cold aquatic amount",
-                "my warm civilized encounter/my warm civilized amount",
-                "my cold civilized encounter/my cold civilized amount",
-                "my day encounter/my day amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[]
+                "my warm encounter",
+                "my temperate encounter",
+                "my wrong encounter",
+                "my any encounter",
+                "my extraplanar encounter",
+                "my warm aquatic encounter",
+                "my cold aquatic encounter",
+                "my warm civilized encounter",
+                "my cold civilized encounter",
+                "my day encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[]
             {
-                "my night encounter/my night amount",
-                "my cold encounter/my cold amount",
-                "my wrong encounter/my wrong amount",
-                "my land encounter/my land amount",
-                "my aquatic encounter/my aquatic amount",
-                "my temperate aquatic encounter/my temperate aquatic amount",
-                "my civilized encounter/my civilized amount",
-                "my temperate civilized encounter/my temperate civilized amount",
-                "my underground encounter/my underground amount",
-                "my underground aquatic encounter/my underground aquatic amount",
-                "my other encounter/my other amount" });
+                "my night encounter",
+                "my cold encounter",
+                "my wrong encounter",
+                "my land encounter",
+                "my aquatic encounter",
+                "my temperate aquatic encounter",
+                "my civilized encounter",
+                "my temperate civilized encounter",
+                "my underground encounter",
+                "my underground aquatic encounter",
+                "my other encounter" });
 
-            SetupEncounterLevel("my warm encounter/my warm amount", 9);
-            SetupEncounterLevel("my temperate encounter/my temperate amount", 26);
-            SetupEncounterLevel("my cold encounter/my cold amount", 6);
-            SetupEncounterLevel("my other encounter/my other amount", 9);
+            SetupEncounterLevel("my warm encounter", 9);
+            SetupEncounterLevel("my temperate encounter", 26);
+            SetupEncounterLevel("my cold encounter", 6);
+            SetupEncounterLevel("my other encounter", 9);
 
-            landEncounters.Add("my land encounter/my land amount");
-            anyEncounters.Add("my any encounter/my any amount");
-            extraplanarEncounters.Add("my extraplanar encounter/my extraplanar amount");
-            SetupEncounterLevel("my land encounter/my land amount", 2);
-            SetupEncounterLevel("my any encounter/my any amount", 10);
-            SetupEncounterLevel("my extraplanar encounter/my extraplanar amount", 4);
+            landEncounters.Add("my land encounter");
+            anyEncounters.Add("my any encounter");
+            extraplanarEncounters.Add("my extraplanar encounter");
+            SetupEncounterLevel("my land encounter", 2);
+            SetupEncounterLevel("my any encounter", 10);
+            SetupEncounterLevel("my extraplanar encounter", 4);
 
-            var aquaticEncounters = new[] { "my aquatic encounter/my aquatic amount", "aquatic encounter/amount", "other aquatic encounter/other amount" };
+            var aquaticEncounters = new[] { "my aquatic encounter", "aquatic encounter", "other aquatic encounter" };
 
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Aquatic, aquaticEncounters);
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic, new[]
+            SetUpEncounterGroup(EnvironmentConstants.Aquatic, aquaticEncounters);
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic, new[]
             {
-                "my warm aquatic encounter/my warm aquatic amount",
-                "my wrong encounter/my wrong amount"
+                "my warm aquatic encounter",
+                "my wrong encounter"
             });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic, new[]
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic, new[]
             {
-                "my wrong encounter/my amount",
-                "my temperate aquatic encounter/my temperate aquatic amount"
+                "my wrong encounter",
+                "my temperate aquatic encounter"
             });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Aquatic, new[]
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Aquatic, new[]
             {
-                "my wrong encounter/my amount",
-                "my cold aquatic encounter/my cold aquatic amount"
-            });
-
-            SetupEncounterLevel("my aquatic encounter/my aquatic amount", 3);
-            SetupEncounterLevel("my warm aquatic encounter/my warm aquatic amount", 6);
-            SetupEncounterLevel("my temperate aquatic encounter/my temperate aquatic amount", 9);
-            SetupEncounterLevel("my cold aquatic encounter/my cold aquatic amount", 6);
-
-            var civilizedEncounters = new[] { "my civilized encounter/my civilized amount", "civilized encounter/amount", "other civilized encounter/other amount" };
-
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Civilized, civilizedEncounters);
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Civilized, new[]
-            {
-                "my warm civilized encounter/my warm civilized amount",
-                "my wrong encounter/my wrong amount"
-            });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Civilized, new[]
-            {
-                "my wrong encounter/my amount",
-                "my temperate civilized encounter/my temperate civilized amount"
-            });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Civilized, new[]
-            {
-                "my wrong encounter/my amount",
-                "my cold civilized encounter/my cold civilized amount"
+                "my wrong encounter",
+                "my cold aquatic encounter"
             });
 
-            SetupEncounterLevel("my civilized encounter/my civilized amount", 3);
-            SetupEncounterLevel("my warm civilized encounter/my warm civilized amount", 6);
-            SetupEncounterLevel("my temperate civilized encounter/my temperate civilized amount", 9);
-            SetupEncounterLevel("my cold civilized encounter/my cold civilized amount", 6);
+            SetupEncounterLevel("my aquatic encounter", 3);
+            SetupEncounterLevel("my warm aquatic encounter", 6);
+            SetupEncounterLevel("my temperate aquatic encounter", 9);
+            SetupEncounterLevel("my cold aquatic encounter", 6);
+
+            var civilizedEncounters = new[] { "my civilized encounter", "civilized encounter", "other civilized encounter" };
+
+            SetUpEncounterGroup(EnvironmentConstants.Civilized, civilizedEncounters);
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Civilized, new[]
+            {
+                "my warm civilized encounter",
+                "my wrong encounter"
+            });
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Civilized, new[]
+            {
+                "my wrong encounter",
+                "my temperate civilized encounter"
+            });
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Civilized, new[]
+            {
+                "my wrong encounter",
+                "my cold civilized encounter"
+            });
+
+            SetupEncounterLevel("my civilized encounter", 3);
+            SetupEncounterLevel("my warm civilized encounter", 6);
+            SetupEncounterLevel("my temperate civilized encounter", 9);
+            SetupEncounterLevel("my cold civilized encounter", 6);
 
             var undergroundEncounters = new[]
             {
-                "underground encounter/amount",
-                "my underground encounter/my underground amount",
-                "other underground encounter/other amount"
+                "underground encounter",
+                "my underground encounter",
+                "other underground encounter"
             };
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Underground, undergroundEncounters);
-            SetupEncounterLevel("my underground encounter/my underground amount", 7);
+            SetUpEncounterGroup(EnvironmentConstants.Underground, undergroundEncounters);
+            SetupEncounterLevel("my underground encounter", 7);
 
             var undergroundAquaticEncounters = new[]
             {
-                "underground aquatic encounter/amount",
-                "my underground aquatic encounter/my underground aquatic amount",
-                "other underground aquatic encounter/other amount"
+                "underground aquatic encounter",
+                "my underground aquatic encounter",
+                "other underground aquatic encounter"
             };
 
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Underground + EnvironmentConstants.Aquatic, undergroundAquaticEncounters);
-            SetupEncounterLevel("my underground aquatic encounter/my underground aquatic amount", 13);
+            SetUpEncounterGroup(EnvironmentConstants.Underground + EnvironmentConstants.Aquatic, undergroundAquaticEncounters);
+            SetupEncounterLevel("my underground aquatic encounter", 13);
 
             levelEncounters.Clear();
 
-            var possibleEncounters = encounterCollectionSelector.SelectPossibleFrom(allowUnderground: underground);
+            var possibleEncounters = encounterCollectionSelector.SelectPossibleEncountersFrom(allowUnderground: underground);
 
             //INFO: Since this method is only used in the EncounterVerifier, and immediately followed with .Any(), we will not assert contents
             Assert.That(possibleEncounters, Is.Empty);
         }
 
         [Test]
-        public void SelectPossibleFrom_ReturnsPossibleEncounters_FromSetFilter_Some()
+        public void SelectPossibleEncountersFrom_ReturnsPossibleEncounters_FromSetFilter_Some()
         {
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert, new[] { "my warm encounter/my warm amount", "my wrong encounter/my wrong amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest, new[] { "my wrong encounter/my amount", "my temperate encounter/my temperate amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Hills, new[] { "my wrong encounter/my amount", "my cold encounter/my cold amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.TimesOfDay.Day, new[]
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert, new[] { "my warm encounter", "my wrong encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest, new[] { "my wrong encounter", "my temperate encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Hills, new[] { "my wrong encounter", "my cold encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Day, new[]
             {
-                "my warm encounter/my warm amount",
-                "my temperate encounter/my temperate amount",
-                "my wrong encounter/my wrong amount",
-                "my any encounter/my any amount",
-                "my extraplanar encounter/my extraplanar amount",
-                "my warm aquatic encounter/my warm aquatic amount",
-                "my cold aquatic encounter/my cold aquatic amount",
-                "my warm civilized encounter/my warm civilized amount",
-                "my cold civilized encounter/my cold civilized amount",
-                "my day encounter/my day amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[]
+                "my warm encounter",
+                "my temperate encounter",
+                "my wrong encounter",
+                "my any encounter",
+                "my extraplanar encounter",
+                "my warm aquatic encounter",
+                "my cold aquatic encounter",
+                "my warm civilized encounter",
+                "my cold civilized encounter",
+                "my day encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[]
             {
-                "my night encounter/my night amount",
-                "my cold encounter/my cold amount",
-                "my wrong encounter/my wrong amount",
-                "my land encounter/my land amount",
-                "my aquatic encounter/my aquatic amount",
-                "my temperate aquatic encounter/my temperate aquatic amount",
-                "my civilized encounter/my civilized amount",
-                "my temperate civilized encounter/my temperate civilized amount",
-                "my underground encounter/my underground amount",
-                "my underground aquatic encounter/my underground aquatic amount",
-                "my other encounter/my other amount" });
+                "my night encounter",
+                "my cold encounter",
+                "my wrong encounter",
+                "my land encounter",
+                "my aquatic encounter",
+                "my temperate aquatic encounter",
+                "my civilized encounter",
+                "my temperate civilized encounter",
+                "my underground encounter",
+                "my underground aquatic encounter",
+                "my other encounter" });
 
-            SetupEncounterLevel("my warm encounter/my warm amount", 9);
-            SetupEncounterLevel("my temperate encounter/my temperate amount", 26);
-            SetupEncounterLevel("my cold encounter/my cold amount", 6);
-            SetupEncounterLevel("my other encounter/my other amount", 9);
+            SetupEncounterLevel("my warm encounter", 9);
+            SetupEncounterLevel("my temperate encounter", 26);
+            SetupEncounterLevel("my cold encounter", 6);
+            SetupEncounterLevel("my other encounter", 9);
 
-            landEncounters.Add("my land encounter/my land amount");
-            anyEncounters.Add("my any encounter/my any amount");
-            extraplanarEncounters.Add("my extraplanar encounter/my extraplanar amount");
-            SetupEncounterLevel("my land encounter/my land amount", 2);
-            SetupEncounterLevel("my any encounter/my any amount", 10);
-            SetupEncounterLevel("my extraplanar encounter/my extraplanar amount", 4);
+            landEncounters.Add("my land encounter");
+            anyEncounters.Add("my any encounter");
+            extraplanarEncounters.Add("my extraplanar encounter");
+            SetupEncounterLevel("my land encounter", 2);
+            SetupEncounterLevel("my any encounter", 10);
+            SetupEncounterLevel("my extraplanar encounter", 4);
 
-            var aquaticEncounters = new[] { "my aquatic encounter/my aquatic amount", "aquatic encounter/amount", "other aquatic encounter/other amount" };
+            var aquaticEncounters = new[] { "my aquatic encounter", "aquatic encounter", "other aquatic encounter" };
 
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Aquatic, aquaticEncounters);
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic, new[]
+            SetUpEncounterGroup(EnvironmentConstants.Aquatic, aquaticEncounters);
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic, new[]
             {
-                "my warm aquatic encounter/my warm aquatic amount",
-                "my wrong encounter/my wrong amount"
+                "my warm aquatic encounter",
+                "my wrong encounter"
             });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic, new[]
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic, new[]
             {
-                "my wrong encounter/my amount",
-                "my temperate aquatic encounter/my temperate aquatic amount"
+                "my wrong encounter",
+                "my temperate aquatic encounter"
             });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Aquatic, new[]
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Aquatic, new[]
             {
-                "my wrong encounter/my amount",
-                "my cold aquatic encounter/my cold aquatic amount"
-            });
-
-            SetupEncounterLevel("my aquatic encounter/my aquatic amount", 3);
-            SetupEncounterLevel("my warm aquatic encounter/my warm aquatic amount", 6);
-            SetupEncounterLevel("my temperate aquatic encounter/my temperate aquatic amount", 9);
-            SetupEncounterLevel("my cold aquatic encounter/my cold aquatic amount", 6);
-
-            var civilizedEncounters = new[] { "my civilized encounter/my civilized amount", "civilized encounter/amount", "other civilized encounter/other amount" };
-
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Civilized, civilizedEncounters);
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Civilized, new[]
-            {
-                "my warm civilized encounter/my warm civilized amount",
-                "my wrong encounter/my wrong amount"
-            });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Civilized, new[]
-            {
-                "my wrong encounter/my amount",
-                "my temperate civilized encounter/my temperate civilized amount"
-            });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Civilized, new[]
-            {
-                "my wrong encounter/my amount",
-                "my cold civilized encounter/my cold civilized amount"
+                "my wrong encounter",
+                "my cold aquatic encounter"
             });
 
-            SetupEncounterLevel("my civilized encounter/my civilized amount", 3);
-            SetupEncounterLevel("my warm civilized encounter/my warm civilized amount", 6);
-            SetupEncounterLevel("my temperate civilized encounter/my temperate civilized amount", 9);
-            SetupEncounterLevel("my cold civilized encounter/my cold civilized amount", 6);
+            SetupEncounterLevel("my aquatic encounter", 3);
+            SetupEncounterLevel("my warm aquatic encounter", 6);
+            SetupEncounterLevel("my temperate aquatic encounter", 9);
+            SetupEncounterLevel("my cold aquatic encounter", 6);
+
+            var civilizedEncounters = new[] { "my civilized encounter", "civilized encounter", "other civilized encounter" };
+
+            SetUpEncounterGroup(EnvironmentConstants.Civilized, civilizedEncounters);
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Civilized, new[]
+            {
+                "my warm civilized encounter",
+                "my wrong encounter"
+            });
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Civilized, new[]
+            {
+                "my wrong encounter",
+                "my temperate civilized encounter"
+            });
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Civilized, new[]
+            {
+                "my wrong encounter",
+                "my cold civilized encounter"
+            });
+
+            SetupEncounterLevel("my civilized encounter", 3);
+            SetupEncounterLevel("my warm civilized encounter", 6);
+            SetupEncounterLevel("my temperate civilized encounter", 9);
+            SetupEncounterLevel("my cold civilized encounter", 6);
 
             var undergroundEncounters = new[]
             {
-                "underground encounter/amount",
-                "my underground encounter/my underground amount",
-                "other underground encounter/other amount"
+                "underground encounter",
+                "my underground encounter",
+                "other underground encounter"
             };
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Underground, undergroundEncounters);
-            SetupEncounterLevel("my underground encounter/my underground amount", 7);
+            SetUpEncounterGroup(EnvironmentConstants.Underground, undergroundEncounters);
+            SetupEncounterLevel("my underground encounter", 7);
 
             var undergroundAquaticEncounters = new[]
             {
-                "underground aquatic encounter/amount",
-                "my underground aquatic encounter/my underground aquatic amount",
-                "other underground aquatic encounter/other amount"
+                "underground aquatic encounter",
+                "my underground aquatic encounter",
+                "other underground aquatic encounter"
             };
 
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Underground + EnvironmentConstants.Aquatic, undergroundAquaticEncounters);
-            SetupEncounterLevel("my underground aquatic encounter/my underground aquatic amount", 13);
+            SetUpEncounterGroup(EnvironmentConstants.Underground + EnvironmentConstants.Aquatic, undergroundAquaticEncounters);
+            SetupEncounterLevel("my underground aquatic encounter", 13);
 
-            SetupFilter("filter 1", "my land encounter");
+            SetupEncounterFilter("filter 1", "my land encounter");
 
-            var possibleEncounters = encounterCollectionSelector.SelectPossibleFrom(filters: new[] { "filter 1" });
+            var possibleEncounters = encounterCollectionSelector.SelectPossibleEncountersFrom(filters: new[] { "filter 1" });
 
             //INFO: Since this method is only used in the EncounterVerifier, and immediately followed with .Any(), we will not assert contents
             Assert.That(possibleEncounters, Is.Not.Empty);
@@ -8394,239 +8405,239 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
 
         [Test]
         [Ignore("If only the filter is toggled, then there will be valid encounters no matter what")]
-        public void SelectPossibleFrom_ReturnsPossibleEncounters_FromSetFilter_None()
+        public void SelectPossibleEncountersFrom_ReturnsPossibleEncounters_FromSetFilter_None()
         {
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert, new[] { "my warm encounter/my warm amount", "my wrong encounter/my wrong amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest, new[] { "my wrong encounter/my amount", "my temperate encounter/my temperate amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Hills, new[] { "my wrong encounter/my amount", "my cold encounter/my cold amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.TimesOfDay.Day, new[]
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert, new[] { "my warm encounter", "my wrong encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest, new[] { "my wrong encounter", "my temperate encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Hills, new[] { "my wrong encounter", "my cold encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Day, new[]
             {
-                "my warm encounter/my warm amount",
-                "my temperate encounter/my temperate amount",
-                "my wrong encounter/my wrong amount",
-                "my any encounter/my any amount",
-                "my extraplanar encounter/my extraplanar amount",
-                "my warm aquatic encounter/my warm aquatic amount",
-                "my cold aquatic encounter/my cold aquatic amount",
-                "my warm civilized encounter/my warm civilized amount",
-                "my cold civilized encounter/my cold civilized amount",
-                "my day encounter/my day amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[]
+                "my warm encounter",
+                "my temperate encounter",
+                "my wrong encounter",
+                "my any encounter",
+                "my extraplanar encounter",
+                "my warm aquatic encounter",
+                "my cold aquatic encounter",
+                "my warm civilized encounter",
+                "my cold civilized encounter",
+                "my day encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[]
             {
-                "my night encounter/my night amount",
-                "my cold encounter/my cold amount",
-                "my wrong encounter/my wrong amount",
-                "my land encounter/my land amount",
-                "my aquatic encounter/my aquatic amount",
-                "my temperate aquatic encounter/my temperate aquatic amount",
-                "my civilized encounter/my civilized amount",
-                "my temperate civilized encounter/my temperate civilized amount",
-                "my underground encounter/my underground amount",
-                "my underground aquatic encounter/my underground aquatic amount",
-                "my other encounter/my other amount" });
+                "my night encounter",
+                "my cold encounter",
+                "my wrong encounter",
+                "my land encounter",
+                "my aquatic encounter",
+                "my temperate aquatic encounter",
+                "my civilized encounter",
+                "my temperate civilized encounter",
+                "my underground encounter",
+                "my underground aquatic encounter",
+                "my other encounter" });
 
-            SetupEncounterLevel("my warm encounter/my warm amount", 9);
-            SetupEncounterLevel("my temperate encounter/my temperate amount", 26);
-            SetupEncounterLevel("my cold encounter/my cold amount", 6);
-            SetupEncounterLevel("my other encounter/my other amount", 9);
+            SetupEncounterLevel("my warm encounter", 9);
+            SetupEncounterLevel("my temperate encounter", 26);
+            SetupEncounterLevel("my cold encounter", 6);
+            SetupEncounterLevel("my other encounter", 9);
 
-            landEncounters.Add("my land encounter/my land amount");
-            anyEncounters.Add("my any encounter/my any amount");
-            extraplanarEncounters.Add("my extraplanar encounter/my extraplanar amount");
-            SetupEncounterLevel("my land encounter/my land amount", 2);
-            SetupEncounterLevel("my any encounter/my any amount", 10);
-            SetupEncounterLevel("my extraplanar encounter/my extraplanar amount", 4);
+            landEncounters.Add("my land encounter");
+            anyEncounters.Add("my any encounter");
+            extraplanarEncounters.Add("my extraplanar encounter");
+            SetupEncounterLevel("my land encounter", 2);
+            SetupEncounterLevel("my any encounter", 10);
+            SetupEncounterLevel("my extraplanar encounter", 4);
 
-            var aquaticEncounters = new[] { "my aquatic encounter/my aquatic amount", "aquatic encounter/amount", "other aquatic encounter/other amount" };
+            var aquaticEncounters = new[] { "my aquatic encounter", "aquatic encounter", "other aquatic encounter" };
 
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Aquatic, aquaticEncounters);
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic, new[]
+            SetUpEncounterGroup(EnvironmentConstants.Aquatic, aquaticEncounters);
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic, new[]
             {
-                "my warm aquatic encounter/my warm aquatic amount",
-                "my wrong encounter/my wrong amount"
+                "my warm aquatic encounter",
+                "my wrong encounter"
             });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic, new[]
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic, new[]
             {
-                "my wrong encounter/my amount",
-                "my temperate aquatic encounter/my temperate aquatic amount"
+                "my wrong encounter",
+                "my temperate aquatic encounter"
             });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Aquatic, new[]
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Aquatic, new[]
             {
-                "my wrong encounter/my amount",
-                "my cold aquatic encounter/my cold aquatic amount"
-            });
-
-            SetupEncounterLevel("my aquatic encounter/my aquatic amount", 3);
-            SetupEncounterLevel("my warm aquatic encounter/my warm aquatic amount", 6);
-            SetupEncounterLevel("my temperate aquatic encounter/my temperate aquatic amount", 9);
-            SetupEncounterLevel("my cold aquatic encounter/my cold aquatic amount", 6);
-
-            var civilizedEncounters = new[] { "my civilized encounter/my civilized amount", "civilized encounter/amount", "other civilized encounter/other amount" };
-
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Civilized, civilizedEncounters);
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Civilized, new[]
-            {
-                "my warm civilized encounter/my warm civilized amount",
-                "my wrong encounter/my wrong amount"
-            });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Civilized, new[]
-            {
-                "my wrong encounter/my amount",
-                "my temperate civilized encounter/my temperate civilized amount"
-            });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Civilized, new[]
-            {
-                "my wrong encounter/my amount",
-                "my cold civilized encounter/my cold civilized amount"
+                "my wrong encounter",
+                "my cold aquatic encounter"
             });
 
-            SetupEncounterLevel("my civilized encounter/my civilized amount", 3);
-            SetupEncounterLevel("my warm civilized encounter/my warm civilized amount", 6);
-            SetupEncounterLevel("my temperate civilized encounter/my temperate civilized amount", 9);
-            SetupEncounterLevel("my cold civilized encounter/my cold civilized amount", 6);
+            SetupEncounterLevel("my aquatic encounter", 3);
+            SetupEncounterLevel("my warm aquatic encounter", 6);
+            SetupEncounterLevel("my temperate aquatic encounter", 9);
+            SetupEncounterLevel("my cold aquatic encounter", 6);
+
+            var civilizedEncounters = new[] { "my civilized encounter", "civilized encounter", "other civilized encounter" };
+
+            SetUpEncounterGroup(EnvironmentConstants.Civilized, civilizedEncounters);
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Civilized, new[]
+            {
+                "my warm civilized encounter",
+                "my wrong encounter"
+            });
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Civilized, new[]
+            {
+                "my wrong encounter",
+                "my temperate civilized encounter"
+            });
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Civilized, new[]
+            {
+                "my wrong encounter",
+                "my cold civilized encounter"
+            });
+
+            SetupEncounterLevel("my civilized encounter", 3);
+            SetupEncounterLevel("my warm civilized encounter", 6);
+            SetupEncounterLevel("my temperate civilized encounter", 9);
+            SetupEncounterLevel("my cold civilized encounter", 6);
 
             var undergroundEncounters = new[]
             {
-                "underground encounter/amount",
-                "my underground encounter/my underground amount",
-                "other underground encounter/other amount"
+                "underground encounter",
+                "my underground encounter",
+                "other underground encounter"
             };
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Underground, undergroundEncounters);
-            SetupEncounterLevel("my underground encounter/my underground amount", 7);
+            SetUpEncounterGroup(EnvironmentConstants.Underground, undergroundEncounters);
+            SetupEncounterLevel("my underground encounter", 7);
 
             var undergroundAquaticEncounters = new[]
             {
-                "underground aquatic encounter/amount",
-                "my underground aquatic encounter/my underground aquatic amount",
-                "other underground aquatic encounter/other amount"
+                "underground aquatic encounter",
+                "my underground aquatic encounter",
+                "other underground aquatic encounter"
             };
 
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Underground + EnvironmentConstants.Aquatic, undergroundAquaticEncounters);
-            SetupEncounterLevel("my underground aquatic encounter/my underground aquatic amount", 13);
+            SetUpEncounterGroup(EnvironmentConstants.Underground + EnvironmentConstants.Aquatic, undergroundAquaticEncounters);
+            SetupEncounterLevel("my underground aquatic encounter", 13);
 
-            SetupFilter("filter 1", "my wrong encounter");
+            SetupEncounterFilter("filter 1", "my wrong encounter");
 
-            var possibleEncounters = encounterCollectionSelector.SelectPossibleFrom(filters: new[] { "filter 1" });
+            var possibleEncounters = encounterCollectionSelector.SelectPossibleEncountersFrom(filters: new[] { "filter 1" });
 
             //INFO: Since this method is only used in the EncounterVerifier, and immediately followed with .Any(), we will not assert contents
             Assert.That(possibleEncounters, Is.Empty);
         }
 
         [Test]
-        public void SelectPossibleFrom_ReturnsPossibleEncounters_FromSetFilters_Some()
+        public void SelectPossibleEncountersFrom_ReturnsPossibleEncounters_FromSetFilters_Some()
         {
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert, new[] { "my warm encounter/my warm amount", "my wrong encounter/my wrong amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest, new[] { "my wrong encounter/my amount", "my temperate encounter/my temperate amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Hills, new[] { "my wrong encounter/my amount", "my cold encounter/my cold amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.TimesOfDay.Day, new[]
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert, new[] { "my warm encounter", "my wrong encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest, new[] { "my wrong encounter", "my temperate encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Hills, new[] { "my wrong encounter", "my cold encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Day, new[]
             {
-                "my warm encounter/my warm amount",
-                "my temperate encounter/my temperate amount",
-                "my wrong encounter/my wrong amount",
-                "my any encounter/my any amount",
-                "my extraplanar encounter/my extraplanar amount",
-                "my warm aquatic encounter/my warm aquatic amount",
-                "my cold aquatic encounter/my cold aquatic amount",
-                "my warm civilized encounter/my warm civilized amount",
-                "my cold civilized encounter/my cold civilized amount",
-                "my day encounter/my day amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[]
+                "my warm encounter",
+                "my temperate encounter",
+                "my wrong encounter",
+                "my any encounter",
+                "my extraplanar encounter",
+                "my warm aquatic encounter",
+                "my cold aquatic encounter",
+                "my warm civilized encounter",
+                "my cold civilized encounter",
+                "my day encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[]
             {
-                "my night encounter/my night amount",
-                "my cold encounter/my cold amount",
-                "my wrong encounter/my wrong amount",
-                "my land encounter/my land amount",
-                "my aquatic encounter/my aquatic amount",
-                "my temperate aquatic encounter/my temperate aquatic amount",
-                "my civilized encounter/my civilized amount",
-                "my temperate civilized encounter/my temperate civilized amount",
-                "my underground encounter/my underground amount",
-                "my underground aquatic encounter/my underground aquatic amount",
-                "my other encounter/my other amount" });
+                "my night encounter",
+                "my cold encounter",
+                "my wrong encounter",
+                "my land encounter",
+                "my aquatic encounter",
+                "my temperate aquatic encounter",
+                "my civilized encounter",
+                "my temperate civilized encounter",
+                "my underground encounter",
+                "my underground aquatic encounter",
+                "my other encounter" });
 
-            SetupEncounterLevel("my warm encounter/my warm amount", 9);
-            SetupEncounterLevel("my temperate encounter/my temperate amount", 26);
-            SetupEncounterLevel("my cold encounter/my cold amount", 6);
-            SetupEncounterLevel("my other encounter/my other amount", 9);
+            SetupEncounterLevel("my warm encounter", 9);
+            SetupEncounterLevel("my temperate encounter", 26);
+            SetupEncounterLevel("my cold encounter", 6);
+            SetupEncounterLevel("my other encounter", 9);
 
-            landEncounters.Add("my land encounter/my land amount");
-            anyEncounters.Add("my any encounter/my any amount");
-            extraplanarEncounters.Add("my extraplanar encounter/my extraplanar amount");
-            SetupEncounterLevel("my land encounter/my land amount", 2);
-            SetupEncounterLevel("my any encounter/my any amount", 10);
-            SetupEncounterLevel("my extraplanar encounter/my extraplanar amount", 4);
+            landEncounters.Add("my land encounter");
+            anyEncounters.Add("my any encounter");
+            extraplanarEncounters.Add("my extraplanar encounter");
+            SetupEncounterLevel("my land encounter", 2);
+            SetupEncounterLevel("my any encounter", 10);
+            SetupEncounterLevel("my extraplanar encounter", 4);
 
-            var aquaticEncounters = new[] { "my aquatic encounter/my aquatic amount", "aquatic encounter/amount", "other aquatic encounter/other amount" };
+            var aquaticEncounters = new[] { "my aquatic encounter", "aquatic encounter", "other aquatic encounter" };
 
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Aquatic, aquaticEncounters);
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic, new[]
+            SetUpEncounterGroup(EnvironmentConstants.Aquatic, aquaticEncounters);
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic, new[]
             {
-                "my warm aquatic encounter/my warm aquatic amount",
-                "my wrong encounter/my wrong amount"
+                "my warm aquatic encounter",
+                "my wrong encounter"
             });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic, new[]
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic, new[]
             {
-                "my wrong encounter/my amount",
-                "my temperate aquatic encounter/my temperate aquatic amount"
+                "my wrong encounter",
+                "my temperate aquatic encounter"
             });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Aquatic, new[]
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Aquatic, new[]
             {
-                "my wrong encounter/my amount",
-                "my cold aquatic encounter/my cold aquatic amount"
-            });
-
-            SetupEncounterLevel("my aquatic encounter/my aquatic amount", 3);
-            SetupEncounterLevel("my warm aquatic encounter/my warm aquatic amount", 6);
-            SetupEncounterLevel("my temperate aquatic encounter/my temperate aquatic amount", 9);
-            SetupEncounterLevel("my cold aquatic encounter/my cold aquatic amount", 6);
-
-            var civilizedEncounters = new[] { "my civilized encounter/my civilized amount", "civilized encounter/amount", "other civilized encounter/other amount" };
-
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Civilized, civilizedEncounters);
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Civilized, new[]
-            {
-                "my warm civilized encounter/my warm civilized amount",
-                "my wrong encounter/my wrong amount"
-            });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Civilized, new[]
-            {
-                "my wrong encounter/my amount",
-                "my temperate civilized encounter/my temperate civilized amount"
-            });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Civilized, new[]
-            {
-                "my wrong encounter/my amount",
-                "my cold civilized encounter/my cold civilized amount"
+                "my wrong encounter",
+                "my cold aquatic encounter"
             });
 
-            SetupEncounterLevel("my civilized encounter/my civilized amount", 3);
-            SetupEncounterLevel("my warm civilized encounter/my warm civilized amount", 6);
-            SetupEncounterLevel("my temperate civilized encounter/my temperate civilized amount", 9);
-            SetupEncounterLevel("my cold civilized encounter/my cold civilized amount", 6);
+            SetupEncounterLevel("my aquatic encounter", 3);
+            SetupEncounterLevel("my warm aquatic encounter", 6);
+            SetupEncounterLevel("my temperate aquatic encounter", 9);
+            SetupEncounterLevel("my cold aquatic encounter", 6);
+
+            var civilizedEncounters = new[] { "my civilized encounter", "civilized encounter", "other civilized encounter" };
+
+            SetUpEncounterGroup(EnvironmentConstants.Civilized, civilizedEncounters);
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Civilized, new[]
+            {
+                "my warm civilized encounter",
+                "my wrong encounter"
+            });
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Civilized, new[]
+            {
+                "my wrong encounter",
+                "my temperate civilized encounter"
+            });
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Civilized, new[]
+            {
+                "my wrong encounter",
+                "my cold civilized encounter"
+            });
+
+            SetupEncounterLevel("my civilized encounter", 3);
+            SetupEncounterLevel("my warm civilized encounter", 6);
+            SetupEncounterLevel("my temperate civilized encounter", 9);
+            SetupEncounterLevel("my cold civilized encounter", 6);
 
             var undergroundEncounters = new[]
             {
-                "underground encounter/amount",
-                "my underground encounter/my underground amount",
-                "other underground encounter/other amount"
+                "underground encounter",
+                "my underground encounter",
+                "other underground encounter"
             };
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Underground, undergroundEncounters);
-            SetupEncounterLevel("my underground encounter/my underground amount", 7);
+            SetUpEncounterGroup(EnvironmentConstants.Underground, undergroundEncounters);
+            SetupEncounterLevel("my underground encounter", 7);
 
             var undergroundAquaticEncounters = new[]
             {
-                "underground aquatic encounter/amount",
-                "my underground aquatic encounter/my underground aquatic amount",
-                "other underground aquatic encounter/other amount"
+                "underground aquatic encounter",
+                "my underground aquatic encounter",
+                "other underground aquatic encounter"
             };
 
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Underground + EnvironmentConstants.Aquatic, undergroundAquaticEncounters);
-            SetupEncounterLevel("my underground aquatic encounter/my underground aquatic amount", 13);
+            SetUpEncounterGroup(EnvironmentConstants.Underground + EnvironmentConstants.Aquatic, undergroundAquaticEncounters);
+            SetupEncounterLevel("my underground aquatic encounter", 13);
 
-            SetupFilter("filter 1", "my land encounter");
-            SetupFilter("filter 2", "my any encounter");
+            SetupEncounterFilter("filter 1", "my land encounter");
+            SetupEncounterFilter("filter 2", "my any encounter");
 
-            var possibleEncounters = encounterCollectionSelector.SelectPossibleFrom(filters: new[] { "filter 1", "filter 2" });
+            var possibleEncounters = encounterCollectionSelector.SelectPossibleEncountersFrom(filters: new[] { "filter 1", "filter 2" });
 
             //INFO: Since this method is only used in the EncounterVerifier, and immediately followed with .Any(), we will not assert contents
             Assert.That(possibleEncounters, Is.Not.Empty);
@@ -8634,182 +8645,182 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
 
         [Test]
         [Ignore("If only the filters are toggled, then there will be valid encounters no matter what")]
-        public void SelectPossibleFrom_ReturnsPossibleEncounters_FromSetFilters_None()
+        public void SelectPossibleEncountersFrom_ReturnsPossibleEncounters_FromSetFilters_None()
         {
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert, new[] { "my warm encounter/my warm amount", "my wrong encounter/my wrong amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest, new[] { "my wrong encounter/my amount", "my temperate encounter/my temperate amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Hills, new[] { "my wrong encounter/my amount", "my cold encounter/my cold amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.TimesOfDay.Day, new[]
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert, new[] { "my warm encounter", "my wrong encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest, new[] { "my wrong encounter", "my temperate encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Hills, new[] { "my wrong encounter", "my cold encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Day, new[]
             {
-                "my warm encounter/my warm amount",
-                "my temperate encounter/my temperate amount",
-                "my wrong encounter/my wrong amount",
-                "my any encounter/my any amount",
-                "my extraplanar encounter/my extraplanar amount",
-                "my warm aquatic encounter/my warm aquatic amount",
-                "my cold aquatic encounter/my cold aquatic amount",
-                "my warm civilized encounter/my warm civilized amount",
-                "my cold civilized encounter/my cold civilized amount",
-                "my day encounter/my day amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[]
+                "my warm encounter",
+                "my temperate encounter",
+                "my wrong encounter",
+                "my any encounter",
+                "my extraplanar encounter",
+                "my warm aquatic encounter",
+                "my cold aquatic encounter",
+                "my warm civilized encounter",
+                "my cold civilized encounter",
+                "my day encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[]
             {
-                "my night encounter/my night amount",
-                "my cold encounter/my cold amount",
-                "my wrong encounter/my wrong amount",
-                "my land encounter/my land amount",
-                "my aquatic encounter/my aquatic amount",
-                "my temperate aquatic encounter/my temperate aquatic amount",
-                "my civilized encounter/my civilized amount",
-                "my temperate civilized encounter/my temperate civilized amount",
-                "my underground encounter/my underground amount",
-                "my underground aquatic encounter/my underground aquatic amount",
-                "my other encounter/my other amount" });
+                "my night encounter",
+                "my cold encounter",
+                "my wrong encounter",
+                "my land encounter",
+                "my aquatic encounter",
+                "my temperate aquatic encounter",
+                "my civilized encounter",
+                "my temperate civilized encounter",
+                "my underground encounter",
+                "my underground aquatic encounter",
+                "my other encounter" });
 
-            SetupEncounterLevel("my warm encounter/my warm amount", 9);
-            SetupEncounterLevel("my temperate encounter/my temperate amount", 26);
-            SetupEncounterLevel("my cold encounter/my cold amount", 6);
-            SetupEncounterLevel("my other encounter/my other amount", 9);
+            SetupEncounterLevel("my warm encounter", 9);
+            SetupEncounterLevel("my temperate encounter", 26);
+            SetupEncounterLevel("my cold encounter", 6);
+            SetupEncounterLevel("my other encounter", 9);
 
-            landEncounters.Add("my land encounter/my land amount");
-            anyEncounters.Add("my any encounter/my any amount");
-            extraplanarEncounters.Add("my extraplanar encounter/my extraplanar amount");
-            SetupEncounterLevel("my land encounter/my land amount", 2);
-            SetupEncounterLevel("my any encounter/my any amount", 10);
-            SetupEncounterLevel("my extraplanar encounter/my extraplanar amount", 4);
+            landEncounters.Add("my land encounter");
+            anyEncounters.Add("my any encounter");
+            extraplanarEncounters.Add("my extraplanar encounter");
+            SetupEncounterLevel("my land encounter", 2);
+            SetupEncounterLevel("my any encounter", 10);
+            SetupEncounterLevel("my extraplanar encounter", 4);
 
-            var aquaticEncounters = new[] { "my aquatic encounter/my aquatic amount", "aquatic encounter/amount", "other aquatic encounter/other amount" };
+            var aquaticEncounters = new[] { "my aquatic encounter", "aquatic encounter", "other aquatic encounter" };
 
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Aquatic, aquaticEncounters);
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic, new[]
+            SetUpEncounterGroup(EnvironmentConstants.Aquatic, aquaticEncounters);
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic, new[]
             {
-                "my warm aquatic encounter/my warm aquatic amount",
-                "my wrong encounter/my wrong amount"
+                "my warm aquatic encounter",
+                "my wrong encounter"
             });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic, new[]
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic, new[]
             {
-                "my wrong encounter/my amount",
-                "my temperate aquatic encounter/my temperate aquatic amount"
+                "my wrong encounter",
+                "my temperate aquatic encounter"
             });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Aquatic, new[]
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Aquatic, new[]
             {
-                "my wrong encounter/my amount",
-                "my cold aquatic encounter/my cold aquatic amount"
-            });
-
-            SetupEncounterLevel("my aquatic encounter/my aquatic amount", 3);
-            SetupEncounterLevel("my warm aquatic encounter/my warm aquatic amount", 6);
-            SetupEncounterLevel("my temperate aquatic encounter/my temperate aquatic amount", 9);
-            SetupEncounterLevel("my cold aquatic encounter/my cold aquatic amount", 6);
-
-            var civilizedEncounters = new[] { "my civilized encounter/my civilized amount", "civilized encounter/amount", "other civilized encounter/other amount" };
-
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Civilized, civilizedEncounters);
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Civilized, new[]
-            {
-                "my warm civilized encounter/my warm civilized amount",
-                "my wrong encounter/my wrong amount"
-            });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Civilized, new[]
-            {
-                "my wrong encounter/my amount",
-                "my temperate civilized encounter/my temperate civilized amount"
-            });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Civilized, new[]
-            {
-                "my wrong encounter/my amount",
-                "my cold civilized encounter/my cold civilized amount"
+                "my wrong encounter",
+                "my cold aquatic encounter"
             });
 
-            SetupEncounterLevel("my civilized encounter/my civilized amount", 3);
-            SetupEncounterLevel("my warm civilized encounter/my warm civilized amount", 6);
-            SetupEncounterLevel("my temperate civilized encounter/my temperate civilized amount", 9);
-            SetupEncounterLevel("my cold civilized encounter/my cold civilized amount", 6);
+            SetupEncounterLevel("my aquatic encounter", 3);
+            SetupEncounterLevel("my warm aquatic encounter", 6);
+            SetupEncounterLevel("my temperate aquatic encounter", 9);
+            SetupEncounterLevel("my cold aquatic encounter", 6);
+
+            var civilizedEncounters = new[] { "my civilized encounter", "civilized encounter", "other civilized encounter" };
+
+            SetUpEncounterGroup(EnvironmentConstants.Civilized, civilizedEncounters);
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Civilized, new[]
+            {
+                "my warm civilized encounter",
+                "my wrong encounter"
+            });
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Civilized, new[]
+            {
+                "my wrong encounter",
+                "my temperate civilized encounter"
+            });
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Civilized, new[]
+            {
+                "my wrong encounter",
+                "my cold civilized encounter"
+            });
+
+            SetupEncounterLevel("my civilized encounter", 3);
+            SetupEncounterLevel("my warm civilized encounter", 6);
+            SetupEncounterLevel("my temperate civilized encounter", 9);
+            SetupEncounterLevel("my cold civilized encounter", 6);
 
             var undergroundEncounters = new[]
             {
-                "underground encounter/amount",
-                "my underground encounter/my underground amount",
-                "other underground encounter/other amount"
+                "underground encounter",
+                "my underground encounter",
+                "other underground encounter"
             };
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Underground, undergroundEncounters);
-            SetupEncounterLevel("my underground encounter/my underground amount", 7);
+            SetUpEncounterGroup(EnvironmentConstants.Underground, undergroundEncounters);
+            SetupEncounterLevel("my underground encounter", 7);
 
             var undergroundAquaticEncounters = new[]
             {
-                "underground aquatic encounter/amount",
-                "my underground aquatic encounter/my underground aquatic amount",
-                "other underground aquatic encounter/other amount"
+                "underground aquatic encounter",
+                "my underground aquatic encounter",
+                "other underground aquatic encounter"
             };
 
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Underground + EnvironmentConstants.Aquatic, undergroundAquaticEncounters);
-            SetupEncounterLevel("my underground aquatic encounter/my underground aquatic amount", 13);
+            SetUpEncounterGroup(EnvironmentConstants.Underground + EnvironmentConstants.Aquatic, undergroundAquaticEncounters);
+            SetupEncounterLevel("my underground aquatic encounter", 13);
 
-            SetupFilter("filter 1", "my wrong encounter");
-            SetupFilter("filter 2", "my other wrong encounter");
+            SetupEncounterFilter("filter 1", "my wrong encounter");
+            SetupEncounterFilter("filter 2", "my other wrong encounter");
 
-            var possibleEncounters = encounterCollectionSelector.SelectPossibleFrom(filters: new[] { "filter 1", "filter 2" });
+            var possibleEncounters = encounterCollectionSelector.SelectPossibleEncountersFrom(filters: new[] { "filter 1", "filter 2" });
 
             //INFO: Since this method is only used in the EncounterVerifier, and immediately followed with .Any(), we will not assert contents
             Assert.That(possibleEncounters, Is.Empty);
         }
 
         [Test]
-        public void SelectPossibleFrom_ReturnsPossibleEncounters_FromSomeSetValues_Some()
+        public void SelectPossibleEncountersFrom_ReturnsPossibleEncounters_FromSomeSetValues_Some()
         {
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Warm + "environment", new[] { "my warm encounter/my warm amount", "my wrong encounter/my wrong amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Temperate + "environment", new[] { "my wrong encounter/my amount", "my temperate encounter/my temperate amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Cold + "environment", new[] { "my wrong encounter/my amount", "my cold encounter/my cold amount" });
-            SetUpCreatureBasedEncounterGroup("time of day", new[]
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Warm + "environment", new[] { "my warm encounter", "my wrong encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Temperate + "environment", new[] { "my wrong encounter", "my temperate encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Cold + "environment", new[] { "my wrong encounter", "my cold encounter" });
+            SetUpEncounterGroup("time of day", new[]
             {
-                "my warm encounter/my warm amount",
-                "my temperate encounter/my temperate amount",
-                "my wrong encounter/my wrong amount",
-                "my any encounter/my any amount",
-                "my extraplanar encounter/my extraplanar amount",
-                "my warm aquatic encounter/my warm aquatic amount",
-                "my cold aquatic encounter/my cold aquatic amount",
-                "my warm civilized encounter/my warm civilized amount",
-                "my cold civilized encounter/my cold civilized amount",
-                "my day encounter/my day amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[]
+                "my warm encounter",
+                "my temperate encounter",
+                "my wrong encounter",
+                "my any encounter",
+                "my extraplanar encounter",
+                "my warm aquatic encounter",
+                "my cold aquatic encounter",
+                "my warm civilized encounter",
+                "my cold civilized encounter",
+                "my day encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[]
             {
-                "my night encounter/my night amount",
-                "my cold encounter/my cold amount",
-                "my wrong encounter/my wrong amount",
-                "my land encounter/my land amount",
-                "my aquatic encounter/my aquatic amount",
-                "my temperate aquatic encounter/my temperate aquatic amount",
-                "my civilized encounter/my civilized amount",
-                "my temperate civilized encounter/my temperate civilized amount",
-                "my underground encounter/my underground amount",
-                "my underground aquatic encounter/my underground aquatic amount",
-                "my other encounter/my other amount" });
+                "my night encounter",
+                "my cold encounter",
+                "my wrong encounter",
+                "my land encounter",
+                "my aquatic encounter",
+                "my temperate aquatic encounter",
+                "my civilized encounter",
+                "my temperate civilized encounter",
+                "my underground encounter",
+                "my underground aquatic encounter",
+                "my other encounter" });
 
-            SetupEncounterLevel("my warm encounter/my warm amount", 9);
-            SetupEncounterLevel("my temperate encounter/my temperate amount", 26);
-            SetupEncounterLevel("my cold encounter/my cold amount", 6);
-            SetupEncounterLevel("my other encounter/my other amount", 9);
+            SetupEncounterLevel("my warm encounter", 9);
+            SetupEncounterLevel("my temperate encounter", 26);
+            SetupEncounterLevel("my cold encounter", 6);
+            SetupEncounterLevel("my other encounter", 9);
 
-            landEncounters.Add("my land encounter/my land amount");
-            anyEncounters.Add("my any encounter/my any amount");
-            extraplanarEncounters.Add("my extraplanar encounter/my extraplanar amount");
-            SetupEncounterLevel("my land encounter/my land amount", 2);
-            SetupEncounterLevel("my any encounter/my any amount", 10);
-            SetupEncounterLevel("my extraplanar encounter/my extraplanar amount", 4);
+            landEncounters.Add("my land encounter");
+            anyEncounters.Add("my any encounter");
+            extraplanarEncounters.Add("my extraplanar encounter");
+            SetupEncounterLevel("my land encounter", 2);
+            SetupEncounterLevel("my any encounter", 10);
+            SetupEncounterLevel("my extraplanar encounter", 4);
 
             var undergroundEncounters = new[]
             {
-                "underground encounter/amount",
-                "my underground encounter/my underground amount",
-                "other underground encounter/other amount"
+                "underground encounter",
+                "my underground encounter",
+                "other underground encounter"
             };
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Underground, undergroundEncounters);
-            SetupEncounterLevel("my underground encounter/my underground amount", 7);
+            SetUpEncounterGroup(EnvironmentConstants.Underground, undergroundEncounters);
+            SetupEncounterLevel("my underground encounter", 7);
 
-            SetupFilter("filter 1", "my warm encounter", "my land encounter");
-            SetupFilter("filter 2", "my any encounter", "my extraplanar encounter");
+            SetupEncounterFilter("filter 1", "my warm encounter", "my land encounter");
+            SetupEncounterFilter("filter 2", "my any encounter", "my extraplanar encounter");
 
-            var possibleEncounters = encounterCollectionSelector.SelectPossibleFrom(
+            var possibleEncounters = encounterCollectionSelector.SelectPossibleEncountersFrom(
                 environment: "environment",
                 timeOfDay: "time of day",
                 allowAquatic: false,
@@ -8820,61 +8831,61 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
         }
 
         [Test]
-        public void SelectPossibleFrom_ReturnsPossibleEncounters_FromSomeSetValues_None()
+        public void SelectPossibleEncountersFrom_ReturnsPossibleEncounters_FromSomeSetValues_None()
         {
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Warm + "environment", new[] { "my warm encounter/my warm amount", "my wrong encounter/my wrong amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Temperate + "environment", new[] { "my wrong encounter/my amount", "my temperate encounter/my temperate amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Cold + "environment", new[] { "my wrong encounter/my amount", "my cold encounter/my cold amount" });
-            SetUpCreatureBasedEncounterGroup("time of day", new[]
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Warm + "environment", new[] { "my warm encounter", "my wrong encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Temperate + "environment", new[] { "my wrong encounter", "my temperate encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Cold + "environment", new[] { "my wrong encounter", "my cold encounter" });
+            SetUpEncounterGroup("time of day", new[]
             {
-                "my warm encounter/my warm amount",
-                "my temperate encounter/my temperate amount",
-                "my wrong encounter/my wrong amount",
-                "my extraplanar encounter/my extraplanar amount",
-                "my warm aquatic encounter/my warm aquatic amount",
-                "my cold aquatic encounter/my cold aquatic amount",
-                "my warm civilized encounter/my warm civilized amount",
-                "my cold civilized encounter/my cold civilized amount",
-                "my day encounter/my day amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[]
+                "my warm encounter",
+                "my temperate encounter",
+                "my wrong encounter",
+                "my extraplanar encounter",
+                "my warm aquatic encounter",
+                "my cold aquatic encounter",
+                "my warm civilized encounter",
+                "my cold civilized encounter",
+                "my day encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[]
             {
-                "my night encounter/my night amount",
-                "my cold encounter/my cold amount",
-                "my wrong encounter/my wrong amount",
-                "my land encounter/my land amount",
-                "my aquatic encounter/my aquatic amount",
-                "my temperate aquatic encounter/my temperate aquatic amount",
-                "my civilized encounter/my civilized amount",
-                "my temperate civilized encounter/my temperate civilized amount",
-                "my underground encounter/my underground amount",
-                "my underground aquatic encounter/my underground aquatic amount",
-                "my other encounter/my other amount" });
+                "my night encounter",
+                "my cold encounter",
+                "my wrong encounter",
+                "my land encounter",
+                "my aquatic encounter",
+                "my temperate aquatic encounter",
+                "my civilized encounter",
+                "my temperate civilized encounter",
+                "my underground encounter",
+                "my underground aquatic encounter",
+                "my other encounter" });
 
-            SetupEncounterLevel("my warm encounter/my warm amount", 666);
-            SetupEncounterLevel("my temperate encounter/my temperate amount", 26);
-            SetupEncounterLevel("my cold encounter/my cold amount", 6);
-            SetupEncounterLevel("my other encounter/my other amount", 9);
+            SetupEncounterLevel("my warm encounter", 666);
+            SetupEncounterLevel("my temperate encounter", 26);
+            SetupEncounterLevel("my cold encounter", 6);
+            SetupEncounterLevel("my other encounter", 9);
 
-            landEncounters.Add("my land encounter/my land amount");
-            anyEncounters.Add("my any encounter/my any amount");
-            extraplanarEncounters.Add("my extraplanar encounter/my extraplanar amount");
-            SetupEncounterLevel("my land encounter/my land amount", 2);
-            SetupEncounterLevel("my any encounter/my any amount", 10);
-            SetupEncounterLevel("my extraplanar encounter/my extraplanar amount", 4);
+            landEncounters.Add("my land encounter");
+            anyEncounters.Add("my any encounter");
+            extraplanarEncounters.Add("my extraplanar encounter");
+            SetupEncounterLevel("my land encounter", 2);
+            SetupEncounterLevel("my any encounter", 10);
+            SetupEncounterLevel("my extraplanar encounter", 4);
 
             var undergroundEncounters = new[]
             {
-                "underground encounter/amount",
-                "my underground encounter/my underground amount",
-                "other underground encounter/other amount"
+                "underground encounter",
+                "my underground encounter",
+                "other underground encounter"
             };
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Underground, undergroundEncounters);
-            SetupEncounterLevel("my underground encounter/my underground amount", 7);
+            SetUpEncounterGroup(EnvironmentConstants.Underground, undergroundEncounters);
+            SetupEncounterLevel("my underground encounter", 7);
 
-            SetupFilter("filter 1", "my warm encounter", "my wrong encounter");
-            SetupFilter("filter 2", "my any encounter", "my other wrong encounter");
+            SetupEncounterFilter("filter 1", "my warm encounter", "my wrong encounter");
+            SetupEncounterFilter("filter 2", "my any encounter", "my other wrong encounter");
 
-            var possibleEncounters = encounterCollectionSelector.SelectPossibleFrom(
+            var possibleEncounters = encounterCollectionSelector.SelectPossibleEncountersFrom(
                 environment: "environment",
                 timeOfDay: "time of day",
                 allowAquatic: false,
@@ -8885,102 +8896,110 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
         }
 
         [Test]
-        public void SelectPossibleFrom_ReturnsPossibleEncounters_FromAllSetValues_Some()
+        public void SelectPossibleEncountersFrom_ReturnsPossibleEncounters_FromAllSetValues_Some()
         {
-            SetUpCreatureBasedEncounterGroup("temperatureenvironment", new[] { "my encounter/my amount", "my wrong encounter/my wrong amount" });
-            SetUpCreatureBasedEncounterGroup("time of day", new[]
+            SetUpEncounterGroup("temperatureenvironment", new[] { "my encounter", "my wrong encounter" });
+            SetUpEncounterGroup("time of day", new[]
             {
-                "my encounter/my amount",
-                "my temperate encounter/my temperate amount",
-                "my wrong encounter/my wrong amount",
-                "my any encounter/my any amount",
-                "my extraplanar encounter/my extraplanar amount",
-                "my warm aquatic encounter/my warm aquatic amount",
-                "my cold aquatic encounter/my cold aquatic amount",
-                "my warm civilized encounter/my warm civilized amount",
-                "my cold civilized encounter/my cold civilized amount",
-                "my day encounter/my day amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[]
+                "my encounter",
+                "my temperate encounter",
+                "my wrong encounter",
+                "my any encounter",
+                "my extraplanar encounter",
+                "my warm aquatic encounter",
+                "my cold aquatic encounter",
+                "my warm civilized encounter",
+                "my cold civilized encounter",
+                "my day encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[]
             {
-                "my night encounter/my night amount",
-                "my cold encounter/my cold amount",
-                "my wrong encounter/my wrong amount",
-                "my land encounter/my land amount",
-                "my aquatic encounter/my aquatic amount",
-                "my temperate aquatic encounter/my temperate aquatic amount",
-                "my civilized encounter/my civilized amount",
-                "my temperate civilized encounter/my temperate civilized amount",
-                "my underground encounter/my underground amount",
-                "my underground aquatic encounter/my underground aquatic amount",
-                "my other encounter/my other amount" });
+                "my night encounter",
+                "my cold encounter",
+                "my wrong encounter",
+                "my land encounter",
+                "my aquatic encounter",
+                "my temperate aquatic encounter",
+                "my civilized encounter",
+                "my temperate civilized encounter",
+                "my underground encounter",
+                "my underground aquatic encounter",
+                "my other encounter" });
 
-            SetupEncounterLevel("my encounter/my amount", 783);
-            SetupEncounterLevel("my temperate encounter/my temperate amount", 26);
-            SetupEncounterLevel("my cold encounter/my cold amount", 6);
-            SetupEncounterLevel("my other encounter/my other amount", 9);
+            SetupEncounterLevel("my encounter", 783);
+            SetupEncounterLevel("my temperate encounter", 26);
+            SetupEncounterLevel("my cold encounter", 6);
+            SetupEncounterLevel("my other encounter", 9);
 
-            landEncounters.Add("my land encounter/my land amount");
-            anyEncounters.Add("my any encounter/my any amount");
-            extraplanarEncounters.Add("my extraplanar encounter/my extraplanar amount");
-            SetupEncounterLevel("my land encounter/my land amount", 2);
-            SetupEncounterLevel("my any encounter/my any amount", 10);
-            SetupEncounterLevel("my extraplanar encounter/my extraplanar amount", 4);
+            landEncounters.Add("my land encounter");
+            anyEncounters.Add("my any encounter");
+            extraplanarEncounters.Add("my extraplanar encounter");
+            SetupEncounterLevel("my land encounter", 2);
+            SetupEncounterLevel("my any encounter", 10);
+            SetupEncounterLevel("my extraplanar encounter", 4);
 
-            SetupFilter("filter 1", "my encounter", "my other encounter");
-            SetupFilter("filter 2", "my other land encounter", "my other any encounter");
+            SetupEncounterFilter("filter 1", "my encounter", "my other encounter");
+            SetupEncounterFilter("filter 2", "my other land encounter", "my other any encounter");
 
-            var possibleEncounters = encounterCollectionSelector.SelectPossibleFrom("environment", "temperature", "time of day", 783, false, false, "filter 1", "filter 2");
+            var possibleEncounters = encounterCollectionSelector.SelectPossibleEncountersFrom("environment", "temperature", "time of day", 783, false, false, "filter 1", "filter 2");
 
             //INFO: Since this method is only used in the EncounterVerifier, and immediately followed with .Any(), we will not assert contents
             Assert.That(possibleEncounters, Is.Not.Empty);
         }
 
         [Test]
-        public void SelectPossibleFrom_ReturnsPossibleEncounters_FromAllSetValues_None()
+        public void SelectPossibleEncountersFrom_ReturnsPossibleEncounters_FromAllSetValues_None()
         {
-            SetUpCreatureBasedEncounterGroup("temperatureenvironment", new[] { "my encounter/my amount", "my wrong encounter/my wrong amount" });
-            SetUpCreatureBasedEncounterGroup("time of day", new[]
+            SetUpEncounterGroup("temperatureenvironment", new[] { "my encounter", "my wrong encounter" });
+            SetUpEncounterGroup("time of day", new[]
             {
-                "my encounter/my amount",
-                "my temperate encounter/my temperate amount",
-                "my wrong encounter/my wrong amount",
-                "my any encounter/my any amount",
-                "my extraplanar encounter/my extraplanar amount",
-                "my warm aquatic encounter/my warm aquatic amount",
-                "my cold aquatic encounter/my cold aquatic amount",
-                "my warm civilized encounter/my warm civilized amount",
-                "my cold civilized encounter/my cold civilized amount",
-                "my day encounter/my day amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[]
+                "my encounter",
+                "my temperate encounter",
+                "my wrong encounter",
+                "my any encounter",
+                "my extraplanar encounter",
+                "my warm aquatic encounter",
+                "my cold aquatic encounter",
+                "my warm civilized encounter",
+                "my cold civilized encounter",
+                "my day encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[]
             {
-                "my night encounter/my night amount",
-                "my cold encounter/my cold amount",
-                "my wrong encounter/my wrong amount",
-                "my land encounter/my land amount",
-                "my aquatic encounter/my aquatic amount",
-                "my temperate aquatic encounter/my temperate aquatic amount",
-                "my civilized encounter/my civilized amount",
-                "my temperate civilized encounter/my temperate civilized amount",
-                "my underground encounter/my underground amount",
-                "my underground aquatic encounter/my underground aquatic amount",
-                "my other encounter/my other amount" });
+                "my night encounter",
+                "my cold encounter",
+                "my wrong encounter",
+                "my land encounter",
+                "my aquatic encounter",
+                "my temperate aquatic encounter",
+                "my civilized encounter",
+                "my temperate civilized encounter",
+                "my underground encounter",
+                "my underground aquatic encounter",
+                "my other encounter" });
 
-            SetupEncounterLevel("my encounter/my amount", 9);
-            SetupEncounterLevel("my temperate encounter/my temperate amount", 26);
-            SetupEncounterLevel("my cold encounter/my cold amount", 6);
-            SetupEncounterLevel("my other encounter/my other amount", 9);
+            SetupEncounterLevel("my encounter", 9);
+            SetupEncounterLevel("my temperate encounter", 26);
+            SetupEncounterLevel("my cold encounter", 6);
+            SetupEncounterLevel("my other encounter", 9);
 
-            landEncounters.Add("my land encounter/my land amount");
-            anyEncounters.Add("my any encounter/my any amount");
-            extraplanarEncounters.Add("my extraplanar encounter/my extraplanar amount");
-            SetupEncounterLevel("my land encounter/my land amount", 2);
-            SetupEncounterLevel("my any encounter/my any amount", 10);
-            SetupEncounterLevel("my extraplanar encounter/my extraplanar amount", 4);
+            landEncounters.Add("my land encounter");
+            anyEncounters.Add("my any encounter");
+            extraplanarEncounters.Add("my extraplanar encounter");
+            SetupEncounterLevel("my land encounter", 2);
+            SetupEncounterLevel("my any encounter", 10);
+            SetupEncounterLevel("my extraplanar encounter", 4);
 
-            SetupFilter("filter 1", "my wrong encounter", "my other encounter");
-            SetupFilter("filter 2", "my other wrong encounter", "my other aquatic encounter");
+            SetupEncounterFilter("filter 1", "my wrong encounter", "my other encounter");
+            SetupEncounterFilter("filter 2", "my other wrong encounter", "my other aquatic encounter");
 
-            var possibleEncounters = encounterCollectionSelector.SelectPossibleFrom("environment", "temperature", "time of day", 783, false, false, "filter 1", "filter 2");
+            var possibleEncounters = encounterCollectionSelector.SelectPossibleEncountersFrom(
+                "environment",
+                "temperature",
+                "time of day",
+                783,
+                false,
+                false,
+                "filter 1",
+                "filter 2");
 
             //INFO: Since this method is only used in the EncounterVerifier, and immediately followed with .Any(), we will not assert contents
             Assert.That(possibleEncounters, Is.Empty);
@@ -8989,21 +9008,21 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
         [Test]
         public void SelectPossibleTemperatures_ReturnsValidTemperatures()
         {
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Warm + "environment", new[] { "my encounter/my amount", "my wrong encounter/my wrong amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Cold + "environment", new[] { "my wrong encounter/my amount", "my other encounter/my other amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.TimesOfDay.Day, new[]
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Warm + "environment", new[] { "my encounter", "my wrong encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Cold + "environment", new[] { "my wrong encounter", "my other encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Day, new[]
             {
-                "my encounter/my amount",
-                "my wrong encounter/my wrong amount",
-                "my day encounter/my day amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[]
+                "my encounter",
+                "my wrong encounter",
+                "my day encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[]
             {
-                "my night encounter/my night amount",
-                "my wrong encounter/my wrong amount",
-                "my other encounter/my other amount" });
+                "my night encounter",
+                "my wrong encounter",
+                "my other encounter" });
 
-            SetupEncounterLevel("my encounter/my amount", 9);
-            SetupEncounterLevel("my other encounter/my other amount", 26);
+            SetupEncounterLevel("my encounter", 9);
+            SetupEncounterLevel("my other encounter", 26);
 
             var possibleTemps = encounterCollectionSelector.SelectPossibleTemperatures("environment");
             Assert.That(possibleTemps, Is.EquivalentTo(new[] { EnvironmentConstants.Temperatures.Warm, EnvironmentConstants.Temperatures.Cold }));
@@ -9012,32 +9031,32 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
         [Test]
         public void SelectPossibleTemperatures_ReturnsValidTemperatures_FromLand()
         {
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Warm + "environment", new[] { "my warm encounter/my warm amount", "my wrong encounter/my wrong amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Temperate + "environment", new[]
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Warm + "environment", new[] { "my warm encounter", "my wrong encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Temperate + "environment", new[]
             {
-                "my wrong encounter/my amount",
-                "my temperate encounter/my temperate amount"
+                "my wrong encounter",
+                "my temperate encounter"
             });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Cold + "environment", new[] { "my wrong encounter/my amount", "my cold encounter/my cold amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.TimesOfDay.Day, new[]
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Cold + "environment", new[] { "my wrong encounter", "my cold encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Day, new[]
             {
-                "my encounter/my amount",
-                "my wrong encounter/my wrong amount",
-                "my day encounter/my day amount",
-                "my land encounter/my land amount"
+                "my encounter",
+                "my wrong encounter",
+                "my day encounter",
+                "my land encounter"
             });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[]
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[]
             {
-                "my night encounter/my night amount",
-                "my wrong encounter/my wrong amount",
-                "my other encounter/my other amount"
+                "my night encounter",
+                "my wrong encounter",
+                "my other encounter"
             });
 
-            SetupEncounterLevel("my encounter/my amount", 9);
-            SetupEncounterLevel("my other encounter/my other amount", 26);
+            SetupEncounterLevel("my encounter", 9);
+            SetupEncounterLevel("my other encounter", 26);
 
-            landEncounters.Add("my land encounter/my land amount");
-            SetupEncounterLevel("my land encounter/my land amount", 6);
+            landEncounters.Add("my land encounter");
+            SetupEncounterLevel("my land encounter", 6);
 
             var possibleTemps = encounterCollectionSelector.SelectPossibleTemperatures("environment");
             Assert.That(possibleTemps, Is.EquivalentTo(new[]
@@ -9051,32 +9070,32 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
         [Test]
         public void SelectPossibleTemperatures_ReturnsValidTemperatures_FromAny()
         {
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Warm + "environment", new[] { "my warm encounter/my warm amount", "my wrong encounter/my wrong amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Temperate + "environment", new[]
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Warm + "environment", new[] { "my warm encounter", "my wrong encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Temperate + "environment", new[]
             {
-                "my wrong encounter/my amount",
-                "my temperate encounter/my temperate amount"
+                "my wrong encounter",
+                "my temperate encounter"
             });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Cold + "environment", new[] { "my wrong encounter/my amount", "my cold encounter/my cold amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.TimesOfDay.Day, new[]
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Cold + "environment", new[] { "my wrong encounter", "my cold encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Day, new[]
             {
-                "my encounter/my amount",
-                "my wrong encounter/my wrong amount",
-                "my day encounter/my day amount",
-                "my any encounter/my any amount"
+                "my encounter",
+                "my wrong encounter",
+                "my day encounter",
+                "my any encounter"
             });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[]
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[]
             {
-                "my night encounter/my night amount",
-                "my wrong encounter/my wrong amount",
-                "my other encounter/my other amount"
+                "my night encounter",
+                "my wrong encounter",
+                "my other encounter"
             });
 
-            SetupEncounterLevel("my encounter/my amount", 9);
-            SetupEncounterLevel("my other encounter/my other amount", 26);
+            SetupEncounterLevel("my encounter", 9);
+            SetupEncounterLevel("my other encounter", 26);
 
-            anyEncounters.Add("my any encounter/my any amount");
-            SetupEncounterLevel("my any encounter/my any amount", 6);
+            anyEncounters.Add("my any encounter");
+            SetupEncounterLevel("my any encounter", 6);
 
             var possibleTemps = encounterCollectionSelector.SelectPossibleTemperatures("environment");
             Assert.That(possibleTemps, Is.EquivalentTo(new[]
@@ -9090,32 +9109,32 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
         [Test]
         public void SelectPossibleTemperatures_ReturnsValidTemperatures_FromExtraplanar()
         {
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Warm + "environment", new[] { "my warm encounter/my warm amount", "my wrong encounter/my wrong amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Temperate + "environment", new[]
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Warm + "environment", new[] { "my warm encounter", "my wrong encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Temperate + "environment", new[]
             {
-                "my wrong encounter/my amount",
-                "my temperate encounter/my temperate amount"
+                "my wrong encounter",
+                "my temperate encounter"
             });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Cold + "environment", new[] { "my wrong encounter/my amount", "my cold encounter/my cold amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.TimesOfDay.Day, new[]
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Cold + "environment", new[] { "my wrong encounter", "my cold encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Day, new[]
             {
-                "my encounter/my amount",
-                "my wrong encounter/my wrong amount",
-                "my day encounter/my day amount",
-                "my extraplanar encounter/my extraplanar amount"
+                "my encounter",
+                "my wrong encounter",
+                "my day encounter",
+                "my extraplanar encounter"
             });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[]
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[]
             {
-                "my night encounter/my night amount",
-                "my wrong encounter/my wrong amount",
-                "my other encounter/my other amount"
+                "my night encounter",
+                "my wrong encounter",
+                "my other encounter"
             });
 
-            SetupEncounterLevel("my encounter/my amount", 9);
-            SetupEncounterLevel("my other encounter/my other amount", 26);
+            SetupEncounterLevel("my encounter", 9);
+            SetupEncounterLevel("my other encounter", 26);
 
-            extraplanarEncounters.Add("my extraplanar encounter/my extraplanar amount");
-            SetupEncounterLevel("my extraplanar encounter/my extraplanar amount", 6);
+            extraplanarEncounters.Add("my extraplanar encounter");
+            SetupEncounterLevel("my extraplanar encounter", 6);
 
             var possibleTemps = encounterCollectionSelector.SelectPossibleTemperatures("environment");
             Assert.That(possibleTemps, Is.EquivalentTo(new[]
@@ -9129,40 +9148,40 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
         [Test]
         public void SelectPossibleTemperatures_ReturnsValidTemperatures_FromCivilized()
         {
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Civilized, new[]
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Civilized, new[]
             {
-                "my warm encounter/my warm amount",
-                "my wrong encounter/my wrong amount"
+                "my warm encounter",
+                "my wrong encounter"
             });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Civilized, new[]
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Civilized, new[]
             {
-                "my wrong encounter/my amount",
-                "my temperate encounter/my temperate amount"
+                "my wrong encounter",
+                "my temperate encounter"
             });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Civilized, new[]
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Civilized, new[]
             {
-                "my wrong encounter/my amount",
-                "my cold encounter/my cold amount"
+                "my wrong encounter",
+                "my cold encounter"
             });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.TimesOfDay.Day, new[]
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Day, new[]
             {
-                "my encounter/my amount",
-                "my wrong encounter/my wrong amount",
-                "my day encounter/my day amount",
-                "my civilized encounter/my civilized amount"
+                "my encounter",
+                "my wrong encounter",
+                "my day encounter",
+                "my civilized encounter"
             });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[]
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[]
             {
-                "my night encounter/my night amount",
-                "my wrong encounter/my wrong amount",
-                "my other encounter/my other amount"
+                "my night encounter",
+                "my wrong encounter",
+                "my other encounter"
             });
 
-            SetupEncounterLevel("my encounter/my amount", 9);
-            SetupEncounterLevel("my other encounter/my other amount", 26);
+            SetupEncounterLevel("my encounter", 9);
+            SetupEncounterLevel("my other encounter", 26);
 
-            civilizedEncounters.Add("my civilized encounter/my civilized amount");
-            SetupEncounterLevel("my civilized encounter/my civilized amount", 6);
+            civilizedEncounters.Add("my civilized encounter");
+            SetupEncounterLevel("my civilized encounter", 6);
 
             var possibleTemps = encounterCollectionSelector.SelectPossibleTemperatures(EnvironmentConstants.Civilized);
             Assert.That(possibleTemps, Is.EquivalentTo(new[]
@@ -9176,48 +9195,48 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
         [Test]
         public void SelectPossibleTemperatures_ReturnsValidTemperatures_FromAquatic()
         {
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Warm + "environment", new[] { "my warm encounter/my warm amount", "my wrong encounter/my wrong amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Temperate + "environment", new[]
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Warm + "environment", new[] { "my warm encounter", "my wrong encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Temperate + "environment", new[]
             {
-                "my wrong encounter/my amount",
-                "my temperate encounter/my temperate amount"
+                "my wrong encounter",
+                "my temperate encounter"
             });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Cold + "environment", new[] { "my wrong encounter/my amount", "my cold encounter/my cold amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.TimesOfDay.Day, new[]
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Cold + "environment", new[] { "my wrong encounter", "my cold encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Day, new[]
             {
-                "my encounter/my amount",
-                "my wrong encounter/my wrong amount",
-                "my day encounter/my day amount",
-                "my aquatic encounter/my aquatic amount"
+                "my encounter",
+                "my wrong encounter",
+                "my day encounter",
+                "my aquatic encounter"
             });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[]
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[]
             {
-                "my night encounter/my night amount",
-                "my wrong encounter/my wrong amount",
-                "my other encounter/my other amount"
+                "my night encounter",
+                "my wrong encounter",
+                "my other encounter"
             });
 
-            SetupEncounterLevel("my encounter/my amount", 9);
-            SetupEncounterLevel("my other encounter/my other amount", 26);
-            SetupEncounterLevel("my aquatic encounter/my aquatic amount", 6);
+            SetupEncounterLevel("my encounter", 9);
+            SetupEncounterLevel("my other encounter", 26);
+            SetupEncounterLevel("my aquatic encounter", 6);
 
-            var aquaticEncounters = new[] { "my aquatic encounter/my aquatic amount", "aquatic encounter/amount", "other aquatic encounter/other amount" };
+            var aquaticEncounters = new[] { "my aquatic encounter", "aquatic encounter", "other aquatic encounter" };
 
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Aquatic, aquaticEncounters);
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic, new[]
+            SetUpEncounterGroup(EnvironmentConstants.Aquatic, aquaticEncounters);
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic, new[]
             {
-                "my warm aquatic encounter/my warm aquatic amount",
-                "my wrong encounter/my wrong amount"
+                "my warm aquatic encounter",
+                "my wrong encounter"
             });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic, new[]
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic, new[]
             {
-                "my wrong encounter/my amount",
-                "my temperate aquatic encounter/my temperate aquatic amount"
+                "my wrong encounter",
+                "my temperate aquatic encounter"
             });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Aquatic, new[]
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Aquatic, new[]
             {
-                "my wrong encounter/my amount",
-                "my cold aquatic encounter/my cold aquatic amount"
+                "my wrong encounter",
+                "my cold aquatic encounter"
             });
 
             var possibleTemps = encounterCollectionSelector.SelectPossibleTemperatures("environment");
@@ -9234,41 +9253,41 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
         [TestCase(EnvironmentConstants.Temperatures.Cold)]
         public void SelectPossibleTemperatures_ReturnsValidTemperatures_FromSpecificAquatic(string temp)
         {
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Warm + "environment", new[] { "my warm encounter/my warm amount", "my wrong encounter/my wrong amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Temperate + "environment", new[]
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Warm + "environment", new[] { "my warm encounter", "my wrong encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Temperate + "environment", new[]
             {
-                "my wrong encounter/my amount",
-                "my temperate encounter/my temperate amount"
+                "my wrong encounter",
+                "my temperate encounter"
             });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Cold + "environment", new[] { "my wrong encounter/my amount", "my cold encounter/my cold amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.TimesOfDay.Day, new[]
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Cold + "environment", new[] { "my wrong encounter", "my cold encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Day, new[]
             {
-                "my encounter/my amount",
-                "my wrong encounter/my wrong amount",
-                "my day encounter/my day amount",
-                "my specific aquatic encounter/my specific aquatic amount"
+                "my encounter",
+                "my wrong encounter",
+                "my day encounter",
+                "my specific aquatic encounter"
             });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[]
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[]
             {
-                "my night encounter/my night amount",
-                "my wrong encounter/my wrong amount",
-                "my other encounter/my other amount"
+                "my night encounter",
+                "my wrong encounter",
+                "my other encounter"
             });
 
-            SetupEncounterLevel("my encounter/my amount", 9);
-            SetupEncounterLevel("my other encounter/my other amount", 26);
-            SetupEncounterLevel("my specific aquatic encounter/my specific aquatic amount", 6);
+            SetupEncounterLevel("my encounter", 9);
+            SetupEncounterLevel("my other encounter", 26);
+            SetupEncounterLevel("my specific aquatic encounter", 6);
 
-            var aquaticEncounters = new[] { "aquatic encounter/amount", "other aquatic encounter/other amount" };
+            var aquaticEncounters = new[] { "aquatic encounter", "other aquatic encounter" };
             var specificAquaticEncounters = new[]
             {
-                "specific aquatic encounter/amount",
-                "my specific aquatic encounter/my specific aquatic amount",
-                "other specific aquatic encounter/other amount"
+                "specific aquatic encounter",
+                "my specific aquatic encounter",
+                "other specific aquatic encounter"
             };
 
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Aquatic, aquaticEncounters);
-            SetUpCreatureBasedEncounterGroup(temp + EnvironmentConstants.Aquatic, specificAquaticEncounters);
+            SetUpEncounterGroup(EnvironmentConstants.Aquatic, aquaticEncounters);
+            SetUpEncounterGroup(temp + EnvironmentConstants.Aquatic, specificAquaticEncounters);
 
             var possibleTemps = encounterCollectionSelector.SelectPossibleTemperatures("environment");
             Assert.That(possibleTemps, Is.EquivalentTo(new[] { temp }));
@@ -9277,46 +9296,46 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
         [Test]
         public void SelectPossibleTemperatures_ReturnsValidTemperatures_FromUnderground()
         {
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Warm + "environment", new[] { "my warm encounter/my warm amount", "my wrong encounter/my wrong amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Temperate + "environment", new[]
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Warm + "environment", new[] { "my warm encounter", "my wrong encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Temperate + "environment", new[]
             {
-                "my wrong encounter/my amount",
-                "my temperate encounter/my temperate amount"
+                "my wrong encounter",
+                "my temperate encounter"
             });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Cold + "environment", new[] { "my wrong encounter/my amount", "my cold encounter/my cold amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.TimesOfDay.Day, new[]
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Cold + "environment", new[] { "my wrong encounter", "my cold encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Day, new[]
             {
-                "my encounter/my amount",
-                "my wrong encounter/my wrong amount",
-                "my day encounter/my day amount",
+                "my encounter",
+                "my wrong encounter",
+                "my day encounter",
             });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[]
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[]
             {
-                "my night encounter/my night amount",
-                "my wrong encounter/my wrong amount",
-                "my other encounter/my other amount",
-                "my underground encounter/my underground amount"
+                "my night encounter",
+                "my wrong encounter",
+                "my other encounter",
+                "my underground encounter"
             });
 
-            SetupEncounterLevel("my encounter/my amount", 9);
-            SetupEncounterLevel("my other encounter/my other amount", 26);
-            SetupEncounterLevel("my underground encounter/my underground amount", 6);
+            SetupEncounterLevel("my encounter", 9);
+            SetupEncounterLevel("my other encounter", 26);
+            SetupEncounterLevel("my underground encounter", 6);
 
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[]
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[]
             {
-                "my encounter/my amount",
-                "my wrong encounter/my wrong amount",
-                "my other encounter/my other amount",
-                "my underground encounter/my underground amount"
+                "my encounter",
+                "my wrong encounter",
+                "my other encounter",
+                "my underground encounter"
             });
 
             var undergroundEncounters = new[]
             {
-                "underground encounter/amount",
-                "my underground encounter/my underground amount",
-                "other underground encounter/other amount"
+                "underground encounter",
+                "my underground encounter",
+                "other underground encounter"
             };
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Underground, undergroundEncounters);
+            SetUpEncounterGroup(EnvironmentConstants.Underground, undergroundEncounters);
 
             var possibleTemps = encounterCollectionSelector.SelectPossibleTemperatures("environment");
             Assert.That(possibleTemps, Is.EquivalentTo(new[]
@@ -9330,39 +9349,39 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
         [Test]
         public void SelectPossibleTemperatures_ReturnsValidTemperatures_FromUndergroundAquatic()
         {
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Warm + "environment", new[] { "my warm encounter/my warm amount", "my wrong encounter/my wrong amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Temperate + "environment", new[]
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Warm + "environment", new[] { "my warm encounter", "my wrong encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Temperate + "environment", new[]
             {
-                "my wrong encounter/my amount",
-                "my temperate encounter/my temperate amount"
+                "my wrong encounter",
+                "my temperate encounter"
             });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Cold + "environment", new[] { "my wrong encounter/my amount", "my cold encounter/my cold amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.TimesOfDay.Day, new[]
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Cold + "environment", new[] { "my wrong encounter", "my cold encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Day, new[]
             {
-                "my encounter/my amount",
-                "my wrong encounter/my wrong amount",
-                "my day encounter/my day amount",
+                "my encounter",
+                "my wrong encounter",
+                "my day encounter",
             });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[]
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[]
             {
-                "my night encounter/my night amount",
-                "my wrong encounter/my wrong amount",
-                "my other encounter/my other amount",
-                "my underground aquatic encounter/my underground aquatic amount"
+                "my night encounter",
+                "my wrong encounter",
+                "my other encounter",
+                "my underground aquatic encounter"
             });
 
-            SetupEncounterLevel("my encounter/my amount", 9);
-            SetupEncounterLevel("my other encounter/my other amount", 26);
-            SetupEncounterLevel("my underground aquatic encounter/my underground aquatic amount", 6);
+            SetupEncounterLevel("my encounter", 9);
+            SetupEncounterLevel("my other encounter", 26);
+            SetupEncounterLevel("my underground aquatic encounter", 6);
 
             var undergroundAquaticEncounters = new[]
             {
-                "underground aquatic encounter/amount",
-                "my underground aquatic encounter/my underground aquatic amount",
-                "other underground aquatic encounter/other amount"
+                "underground aquatic encounter",
+                "my underground aquatic encounter",
+                "other underground aquatic encounter"
             };
 
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Underground + EnvironmentConstants.Aquatic, undergroundAquaticEncounters);
+            SetUpEncounterGroup(EnvironmentConstants.Underground + EnvironmentConstants.Aquatic, undergroundAquaticEncounters);
 
             var possibleTemps = encounterCollectionSelector.SelectPossibleTemperatures("environment");
             Assert.That(possibleTemps, Is.EquivalentTo(new[]
@@ -9378,21 +9397,21 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
         [TestCase(EnvironmentConstants.Temperatures.Cold)]
         public void SelectPossibleTemperatures_ReturnsValidTemperatures_ForTemperature(string temperature)
         {
-            SetUpCreatureBasedEncounterGroup(temperature + "environment", new[] { "my encounter/my amount", "my other encounter/my other amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.TimesOfDay.Day, new[]
+            SetUpEncounterGroup(temperature + "environment", new[] { "my encounter", "my other encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Day, new[]
             {
-                "my encounter/my amount",
-                "my wrong encounter/my wrong amount",
-                "my day encounter/my day amount",
+                "my encounter",
+                "my wrong encounter",
+                "my day encounter",
             });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[]
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[]
             {
-                "my night encounter/my night amount",
-                "my wrong encounter/my wrong amount",
-                "my other encounter/my other amount",
+                "my night encounter",
+                "my wrong encounter",
+                "my other encounter",
             });
 
-            SetupEncounterLevel("my encounter/my amount", 9);
+            SetupEncounterLevel("my encounter", 9);
 
             var possibleTemps = encounterCollectionSelector.SelectPossibleTemperatures("environment");
             Assert.That(possibleTemps, Is.EquivalentTo(new[] { temperature }));
@@ -9401,27 +9420,27 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
         [Test]
         public void SelectPossibleTemperatures_ReturnsValidTemperatures_None()
         {
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Warm + "environment", new[] { "my warm encounter/my warm amount", "my wrong encounter/my wrong amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Temperate + "environment", new[]
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Warm + "environment", new[] { "my warm encounter", "my wrong encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Temperate + "environment", new[]
             {
-                "my wrong encounter/my amount",
-                "my temperate encounter/my temperate amount"
+                "my wrong encounter",
+                "my temperate encounter"
             });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Temperatures.Cold + "environment", new[] { "my wrong encounter/my amount", "my cold encounter/my cold amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.TimesOfDay.Day, new[]
+            SetUpEncounterGroup(EnvironmentConstants.Temperatures.Cold + "environment", new[] { "my wrong encounter", "my cold encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Day, new[]
 {
-                "my encounter/my amount",
-                "my wrong encounter/my wrong amount",
-                "my day encounter/my day amount",
+                "my encounter",
+                "my wrong encounter",
+                "my day encounter",
             });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[]
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[]
             {
-                "my night encounter/my night amount",
-                "my wrong encounter/my wrong amount",
-                "my other encounter/my other amount",
+                "my night encounter",
+                "my wrong encounter",
+                "my other encounter",
             });
 
-            SetupEncounterLevel("my encounter/my amount", 9);
+            SetupEncounterLevel("my encounter", 9);
 
             var possibleTemps = encounterCollectionSelector.SelectPossibleTemperatures("environment");
             Assert.That(possibleTemps, Is.Empty);
@@ -9430,20 +9449,20 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
         [Test]
         public void SelectPossibleTimesOfDay_ReturnsValidTimesOfDay()
         {
-            SetUpCreatureBasedEncounterGroup("temperatureenvironment", new[] { "my encounter/my amount", "my other encounter/my other amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.TimesOfDay.Day, new[]
+            SetUpEncounterGroup("temperatureenvironment", new[] { "my encounter", "my other encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Day, new[]
             {
-                "my encounter/my amount",
-                "my wrong encounter/my wrong amount",
-                "my day encounter/my day amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[]
+                "my encounter",
+                "my wrong encounter",
+                "my day encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[]
             {
-                "my night encounter/my night amount",
-                "my wrong encounter/my wrong amount",
-                "my other encounter/my other amount" });
+                "my night encounter",
+                "my wrong encounter",
+                "my other encounter" });
 
-            SetupEncounterLevel("my encounter/my amount", 9);
-            SetupEncounterLevel("my other encounter/my other amount", 26);
+            SetupEncounterLevel("my encounter", 9);
+            SetupEncounterLevel("my other encounter", 26);
 
             var possibleTimesOfDay = encounterCollectionSelector.SelectPossibleTimesOfDay("environment", "temperature");
             Assert.That(possibleTimesOfDay, Is.EquivalentTo(new[] { EnvironmentConstants.TimesOfDay.Day, EnvironmentConstants.TimesOfDay.Night }));
@@ -9452,18 +9471,18 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
         [Test]
         public void SelectPossibleTimesOfDay_ReturnsValidTimesOfDay_FromLand()
         {
-            SetUpCreatureBasedEncounterGroup("temperatureenvironment", new[] { "my encounter/my amount", "my other encounter/my other amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.TimesOfDay.Day, new[]
+            SetUpEncounterGroup("temperatureenvironment", new[] { "my encounter", "my other encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Day, new[]
             {
-                "my wrong encounter/my wrong amount",
-                "my land encounter/my land amount"
+                "my wrong encounter",
+                "my land encounter"
             });
 
-            SetupEncounterLevel("my encounter/my amount", 9);
-            SetupEncounterLevel("my other encounter/my other amount", 26);
+            SetupEncounterLevel("my encounter", 9);
+            SetupEncounterLevel("my other encounter", 26);
 
-            landEncounters.Add("my land encounter/my land amount");
-            SetupEncounterLevel("my land encounter/my land amount", 6);
+            landEncounters.Add("my land encounter");
+            SetupEncounterLevel("my land encounter", 6);
 
             var possibleTimesOfDay = encounterCollectionSelector.SelectPossibleTimesOfDay("environment", "temperature");
             Assert.That(possibleTimesOfDay, Is.EquivalentTo(new[] { EnvironmentConstants.TimesOfDay.Day }));
@@ -9472,18 +9491,18 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
         [Test]
         public void SelectPossibleTimesOfDay_ReturnsValidTimesOfDay_FromAny()
         {
-            SetUpCreatureBasedEncounterGroup("temperatureenvironment", new[] { "my encounter/my amount", "my other encounter/my other amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.TimesOfDay.Day, new[]
+            SetUpEncounterGroup("temperatureenvironment", new[] { "my encounter", "my other encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Day, new[]
             {
-                "my wrong encounter/my wrong amount",
-                "my any encounter/my any amount"
+                "my wrong encounter",
+                "my any encounter"
             });
 
-            SetupEncounterLevel("my encounter/my amount", 9);
-            SetupEncounterLevel("my other encounter/my other amount", 26);
+            SetupEncounterLevel("my encounter", 9);
+            SetupEncounterLevel("my other encounter", 26);
 
-            anyEncounters.Add("my any encounter/my any amount");
-            SetupEncounterLevel("my any encounter/my any amount", 6);
+            anyEncounters.Add("my any encounter");
+            SetupEncounterLevel("my any encounter", 6);
 
             var possibleTimesOfDay = encounterCollectionSelector.SelectPossibleTimesOfDay("environment", "temperature");
             Assert.That(possibleTimesOfDay, Is.EquivalentTo(new[] { EnvironmentConstants.TimesOfDay.Day }));
@@ -9492,18 +9511,18 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
         [Test]
         public void SelectPossibleTimesOfDay_ReturnsValidTimesOfDay_FromExtraplanar()
         {
-            SetUpCreatureBasedEncounterGroup("temperatureenvironment", new[] { "my encounter/my amount", "my other encounter/my other amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.TimesOfDay.Day, new[]
+            SetUpEncounterGroup("temperatureenvironment", new[] { "my encounter", "my other encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Day, new[]
             {
-                "my wrong encounter/my wrong amount",
-                "my extraplanar encounter/my extraplanar amount"
+                "my wrong encounter",
+                "my extraplanar encounter"
             });
 
-            SetupEncounterLevel("my encounter/my amount", 9);
-            SetupEncounterLevel("my other encounter/my other amount", 26);
+            SetupEncounterLevel("my encounter", 9);
+            SetupEncounterLevel("my other encounter", 26);
 
-            extraplanarEncounters.Add("my extraplanar encounter/my extraplanar amount");
-            SetupEncounterLevel("my extraplanar encounter/my extraplanar amount", 6);
+            extraplanarEncounters.Add("my extraplanar encounter");
+            SetupEncounterLevel("my extraplanar encounter", 6);
 
             var possibleTimesOfDay = encounterCollectionSelector.SelectPossibleTimesOfDay("environment", "temperature");
             Assert.That(possibleTimesOfDay, Is.EquivalentTo(new[] { EnvironmentConstants.TimesOfDay.Day }));
@@ -9512,18 +9531,18 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
         [Test]
         public void SelectPossibleTimesOfDay_ReturnsValidTimesOfDay_FromCivilized()
         {
-            SetUpCreatureBasedEncounterGroup("temperatureCivilized", new[] { "my encounter/my amount", "my other encounter/my other amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.TimesOfDay.Day, new[]
+            SetUpEncounterGroup("temperatureCivilized", new[] { "my encounter", "my other encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Day, new[]
             {
-                "my wrong encounter/my wrong amount",
-                "my civilized encounter/my civilized amount"
+                "my wrong encounter",
+                "my civilized encounter"
             });
 
-            SetupEncounterLevel("my encounter/my amount", 9);
-            SetupEncounterLevel("my other encounter/my other amount", 26);
+            SetupEncounterLevel("my encounter", 9);
+            SetupEncounterLevel("my other encounter", 26);
 
-            civilizedEncounters.Add("my civilized encounter/my civilized amount");
-            SetupEncounterLevel("my civilized encounter/my civilized amount", 6);
+            civilizedEncounters.Add("my civilized encounter");
+            SetupEncounterLevel("my civilized encounter", 6);
 
             var possibleTimesOfDay = encounterCollectionSelector.SelectPossibleTimesOfDay(EnvironmentConstants.Civilized, "temperature");
             Assert.That(possibleTimesOfDay, Is.EquivalentTo(new[] { EnvironmentConstants.TimesOfDay.Day }));
@@ -9532,22 +9551,22 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
         [Test]
         public void SelectPossibleTimesOfDay_ReturnsValidTimesOfDay_FromAquatic()
         {
-            SetUpCreatureBasedEncounterGroup("temperatureenvironment", new[] { "my encounter/my amount", "my other encounter/my other amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.TimesOfDay.Day, new[]
+            SetUpEncounterGroup("temperatureenvironment", new[] { "my encounter", "my other encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Day, new[]
             {
-                "my wrong encounter/my wrong amount",
-                "my aquatic encounter/my aquatic amount"
+                "my wrong encounter",
+                "my aquatic encounter"
             });
 
-            SetupEncounterLevel("my encounter/my amount", 9);
-            SetupEncounterLevel("my other encounter/my other amount", 26);
-            SetupEncounterLevel("my aquatic encounter/my aquatic amount", 6);
+            SetupEncounterLevel("my encounter", 9);
+            SetupEncounterLevel("my other encounter", 26);
+            SetupEncounterLevel("my aquatic encounter", 6);
 
-            var aquaticEncounters = new[] { "my aquatic encounter/my aquatic amount", "aquatic encounter/amount", "other aquatic encounter/other amount" };
-            var specificAquaticEncounters = new[] { "specific aquatic encounter/amount", "other specific aquatic encounter/other amount" };
+            var aquaticEncounters = new[] { "my aquatic encounter", "aquatic encounter", "other aquatic encounter" };
+            var specificAquaticEncounters = new[] { "specific aquatic encounter", "other specific aquatic encounter" };
 
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Aquatic, aquaticEncounters);
-            SetUpCreatureBasedEncounterGroup("temperature" + EnvironmentConstants.Aquatic, specificAquaticEncounters);
+            SetUpEncounterGroup(EnvironmentConstants.Aquatic, aquaticEncounters);
+            SetUpEncounterGroup("temperature" + EnvironmentConstants.Aquatic, specificAquaticEncounters);
 
             var possibleTimesOfDay = encounterCollectionSelector.SelectPossibleTimesOfDay("environment", "temperature");
             Assert.That(possibleTimesOfDay, Is.EquivalentTo(new[] { EnvironmentConstants.TimesOfDay.Day }));
@@ -9556,27 +9575,27 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
         [Test]
         public void SelectPossibleTimesOfDay_ReturnsValidTimesOfDay_FromSpecificAquatic()
         {
-            SetUpCreatureBasedEncounterGroup("temperatureenvironment", new[] { "my encounter/my amount", "my other encounter/my other amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.TimesOfDay.Day, new[]
+            SetUpEncounterGroup("temperatureenvironment", new[] { "my encounter", "my other encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Day, new[]
             {
-                "my wrong encounter/my wrong amount",
-                "my specific aquatic encounter/my specific aquatic amount"
+                "my wrong encounter",
+                "my specific aquatic encounter"
             });
 
-            SetupEncounterLevel("my encounter/my amount", 9);
-            SetupEncounterLevel("my other encounter/my other amount", 26);
-            SetupEncounterLevel("my specific aquatic encounter/my specific aquatic amount", 6);
+            SetupEncounterLevel("my encounter", 9);
+            SetupEncounterLevel("my other encounter", 26);
+            SetupEncounterLevel("my specific aquatic encounter", 6);
 
-            var aquaticEncounters = new[] { "aquatic encounter/amount", "other aquatic encounter/other amount" };
+            var aquaticEncounters = new[] { "aquatic encounter", "other aquatic encounter" };
             var specificAquaticEncounters = new[]
             {
-                "specific aquatic encounter/amount",
-                "my specific aquatic encounter/my specific aquatic amount",
-                "other specific aquatic encounter/other amount"
+                "specific aquatic encounter",
+                "my specific aquatic encounter",
+                "other specific aquatic encounter"
             };
 
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Aquatic, aquaticEncounters);
-            SetUpCreatureBasedEncounterGroup("temperature" + EnvironmentConstants.Aquatic, specificAquaticEncounters);
+            SetUpEncounterGroup(EnvironmentConstants.Aquatic, aquaticEncounters);
+            SetUpEncounterGroup("temperature" + EnvironmentConstants.Aquatic, specificAquaticEncounters);
 
             var possibleTimesOfDay = encounterCollectionSelector.SelectPossibleTimesOfDay("environment", "temperature");
             Assert.That(possibleTimesOfDay, Is.EquivalentTo(new[] { EnvironmentConstants.TimesOfDay.Day }));
@@ -9586,24 +9605,24 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
         [Test]
         public void SelectPossibleTimesOfDay_ReturnsValidTimesOfDay_FromUnderground()
         {
-            SetUpCreatureBasedEncounterGroup("temperatureenvironment", new[] { "my encounter/my amount", "my other encounter/my other amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[]
+            SetUpEncounterGroup("temperatureenvironment", new[] { "my encounter", "my other encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[]
             {
-                "my wrong encounter/my wrong amount",
-                "my underground encounter/my underground amount"
+                "my wrong encounter",
+                "my underground encounter"
             });
 
-            SetupEncounterLevel("my encounter/my amount", 9);
-            SetupEncounterLevel("my other encounter/my other amount", 26);
-            SetupEncounterLevel("my underground encounter/my underground amount", 6);
+            SetupEncounterLevel("my encounter", 9);
+            SetupEncounterLevel("my other encounter", 26);
+            SetupEncounterLevel("my underground encounter", 6);
 
             var undergroundEncounters = new[]
             {
-                "underground encounter/amount",
-                "my underground encounter/my underground amount",
-                "other underground encounter/other amount"
+                "underground encounter",
+                "my underground encounter",
+                "other underground encounter"
             };
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Underground, undergroundEncounters);
+            SetUpEncounterGroup(EnvironmentConstants.Underground, undergroundEncounters);
 
             var possibleTimesOfDay = encounterCollectionSelector.SelectPossibleTimesOfDay("environment", "temperature");
             Assert.That(possibleTimesOfDay, Is.EquivalentTo(new[] { EnvironmentConstants.TimesOfDay.Day, EnvironmentConstants.TimesOfDay.Night }));
@@ -9613,25 +9632,25 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
         [Test]
         public void SelectPossibleTimesOfDay_ReturnsValidTimesOfDay_FromUndergroundAquatic()
         {
-            SetUpCreatureBasedEncounterGroup("temperatureenvironment", new[] { "my encounter/my amount", "my other encounter/my other amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[]
+            SetUpEncounterGroup("temperatureenvironment", new[] { "my encounter", "my other encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[]
             {
-                "my wrong encounter/my wrong amount",
-                "my underground aquatic encounter/my underground aquatic amount"
+                "my wrong encounter",
+                "my underground aquatic encounter"
             });
 
-            SetupEncounterLevel("my encounter/my amount", 9);
-            SetupEncounterLevel("my other encounter/my other amount", 26);
-            SetupEncounterLevel("my underground aquatic encounter/my underground aquatic amount", 6);
+            SetupEncounterLevel("my encounter", 9);
+            SetupEncounterLevel("my other encounter", 26);
+            SetupEncounterLevel("my underground aquatic encounter", 6);
 
             var undergroundAquaticEncounters = new[]
             {
-                "underground aquatic encounter/amount",
-                "my underground aquatic encounter/my underground aquatic amount",
-                "other underground aquatic encounter/other amount"
+                "underground aquatic encounter",
+                "my underground aquatic encounter",
+                "other underground aquatic encounter"
             };
 
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Underground + EnvironmentConstants.Aquatic, undergroundAquaticEncounters);
+            SetUpEncounterGroup(EnvironmentConstants.Underground + EnvironmentConstants.Aquatic, undergroundAquaticEncounters);
 
             var possibleTimesOfDay = encounterCollectionSelector.SelectPossibleTimesOfDay("environment", "temperature");
             Assert.That(possibleTimesOfDay, Is.EquivalentTo(new[] { EnvironmentConstants.TimesOfDay.Day, EnvironmentConstants.TimesOfDay.Night }));
@@ -9640,15 +9659,15 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
         [Test]
         public void SelectPossibleTimesOfDay_ReturnsValidTimesOfDay_ForDay()
         {
-            SetUpCreatureBasedEncounterGroup("temperatureenvironment", new[] { "my encounter/my amount", "my other encounter/my other amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.TimesOfDay.Day, new[]
+            SetUpEncounterGroup("temperatureenvironment", new[] { "my encounter", "my other encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Day, new[]
             {
-                "my encounter/my amount",
-                "my wrong encounter/my wrong amount",
-                "my other encounter/my other amount"
+                "my encounter",
+                "my wrong encounter",
+                "my other encounter"
             });
 
-            SetupEncounterLevel("my encounter/my amount", 9);
+            SetupEncounterLevel("my encounter", 9);
 
             var possibleTimesOfDay = encounterCollectionSelector.SelectPossibleTimesOfDay("environment", "temperature");
             Assert.That(possibleTimesOfDay, Is.EquivalentTo(new[] { EnvironmentConstants.TimesOfDay.Day }));
@@ -9658,15 +9677,15 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
         [Test]
         public void SelectPossibleTimesOfDay_ReturnsValidTimesOfDay_ForNight()
         {
-            SetUpCreatureBasedEncounterGroup("temperatureenvironment", new[] { "my encounter/my amount", "my other encounter/my other amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[]
+            SetUpEncounterGroup("temperatureenvironment", new[] { "my encounter", "my other encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[]
             {
-                "my encounter/my amount",
-                "my wrong encounter/my wrong amount",
-                "my other encounter/my other amount"
+                "my encounter",
+                "my wrong encounter",
+                "my other encounter"
             });
 
-            SetupEncounterLevel("my encounter/my amount", 9);
+            SetupEncounterLevel("my encounter", 9);
 
             var possibleTimesOfDay = encounterCollectionSelector.SelectPossibleTimesOfDay("environment", "temperature");
             Assert.That(possibleTimesOfDay, Is.EquivalentTo(new[] { EnvironmentConstants.TimesOfDay.Day, EnvironmentConstants.TimesOfDay.Night }));
@@ -9675,20 +9694,20 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
         [Test]
         public void SelectPossibleTimesOfDay_ReturnsValidTimesOfDay_None()
         {
-            SetUpCreatureBasedEncounterGroup("temperatureenvironment", new[] { "my encounter/my amount", "my other encounter/my other amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.TimesOfDay.Day, new[]
+            SetUpEncounterGroup("temperatureenvironment", new[] { "my encounter", "my other encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Day, new[]
             {
-                "my wrong encounter/my wrong amount",
-                "my day encounter/my day amount"
+                "my wrong encounter",
+                "my day encounter"
             });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[]
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[]
             {
-                "my wrong encounter/my wrong amount",
-                "my night encounter/my night amount"
+                "my wrong encounter",
+                "my night encounter"
             });
 
-            SetupEncounterLevel("my encounter/my amount", 9);
-            SetupEncounterLevel("my other encounter/my other amount", 26);
+            SetupEncounterLevel("my encounter", 9);
+            SetupEncounterLevel("my other encounter", 26);
 
             var possibleTimesOfDay = encounterCollectionSelector.SelectPossibleTimesOfDay("environment", "temperature");
             Assert.That(possibleTimesOfDay, Is.Empty);
@@ -9697,11 +9716,11 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
         [Test]
         public void SelectPossibleLevels_ReturnsValidLevels()
         {
-            SetUpCreatureBasedEncounterGroup("temperatureenvironment", new[] { "my encounter/my amount", "my other encounter/my other amount" });
-            SetUpCreatureBasedEncounterGroup("time of day", new[] { "my encounter/my amount", "my wrong encounter/my wrong amount", "my other encounter/my other amount" });
+            SetUpEncounterGroup("temperatureenvironment", new[] { "my encounter", "my other encounter" });
+            SetUpEncounterGroup("time of day", new[] { "my encounter", "my wrong encounter", "my other encounter" });
 
-            SetupEncounterLevel("my encounter/my amount", 9);
-            SetupEncounterLevel("my other encounter/my other amount", 26);
+            SetupEncounterLevel("my encounter", 9);
+            SetupEncounterLevel("my other encounter", 26);
 
             var possibleLevels = encounterCollectionSelector.SelectPossibleLevels("environment", "temperature", "time of day");
             Assert.That(possibleLevels, Is.EquivalentTo(new[] { 9, 26 }));
@@ -9710,20 +9729,20 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
         [Test]
         public void SelectPossibleLevels_ReturnsValidLevels_FromLand()
         {
-            SetUpCreatureBasedEncounterGroup("temperatureenvironment", new[] { "my encounter/my amount", "my other encounter/my other amount" });
-            SetUpCreatureBasedEncounterGroup("time of day", new[]
+            SetUpEncounterGroup("temperatureenvironment", new[] { "my encounter", "my other encounter" });
+            SetUpEncounterGroup("time of day", new[]
             {
-                "my encounter/my amount",
-                "my wrong encounter/my wrong amount",
-                "my other encounter/my other amount",
-                "my land encounter/my land amount"
+                "my encounter",
+                "my wrong encounter",
+                "my other encounter",
+                "my land encounter"
             });
 
-            SetupEncounterLevel("my encounter/my amount", 9);
-            SetupEncounterLevel("my other encounter/my other amount", 26);
+            SetupEncounterLevel("my encounter", 9);
+            SetupEncounterLevel("my other encounter", 26);
 
-            landEncounters.Add("my land encounter/my land amount");
-            SetupEncounterLevel("my land encounter/my land amount", 6);
+            landEncounters.Add("my land encounter");
+            SetupEncounterLevel("my land encounter", 6);
 
             var possibleLevels = encounterCollectionSelector.SelectPossibleLevels("environment", "temperature", "time of day");
             Assert.That(possibleLevels, Is.EquivalentTo(new[] { 9, 26, 6 }));
@@ -9732,20 +9751,20 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
         [Test]
         public void SelectPossibleLevels_ReturnsValidLevels_FromAny()
         {
-            SetUpCreatureBasedEncounterGroup("temperatureenvironment", new[] { "my encounter/my amount", "my other encounter/my other amount" });
-            SetUpCreatureBasedEncounterGroup("time of day", new[]
+            SetUpEncounterGroup("temperatureenvironment", new[] { "my encounter", "my other encounter" });
+            SetUpEncounterGroup("time of day", new[]
             {
-                "my encounter/my amount",
-                "my wrong encounter/my wrong amount",
-                "my other encounter/my other amount",
-                "my any encounter/my any amount"
+                "my encounter",
+                "my wrong encounter",
+                "my other encounter",
+                "my any encounter"
             });
 
-            SetupEncounterLevel("my encounter/my amount", 9);
-            SetupEncounterLevel("my other encounter/my other amount", 26);
+            SetupEncounterLevel("my encounter", 9);
+            SetupEncounterLevel("my other encounter", 26);
 
-            anyEncounters.Add("my any encounter/my any amount");
-            SetupEncounterLevel("my any encounter/my any amount", 6);
+            anyEncounters.Add("my any encounter");
+            SetupEncounterLevel("my any encounter", 6);
 
             var possibleLevels = encounterCollectionSelector.SelectPossibleLevels("environment", "temperature", "time of day");
             Assert.That(possibleLevels, Is.EquivalentTo(new[] { 9, 26, 6 }));
@@ -9754,20 +9773,20 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
         [Test]
         public void SelectPossibleLevels_ReturnsValidLevels_FromExtraplanar()
         {
-            SetUpCreatureBasedEncounterGroup("temperatureenvironment", new[] { "my encounter/my amount", "my other encounter/my other amount" });
-            SetUpCreatureBasedEncounterGroup("time of day", new[]
+            SetUpEncounterGroup("temperatureenvironment", new[] { "my encounter", "my other encounter" });
+            SetUpEncounterGroup("time of day", new[]
             {
-                "my encounter/my amount",
-                "my wrong encounter/my wrong amount",
-                "my other encounter/my other amount",
-                "my extraplanar encounter/my extraplanar amount"
+                "my encounter",
+                "my wrong encounter",
+                "my other encounter",
+                "my extraplanar encounter"
             });
 
-            SetupEncounterLevel("my encounter/my amount", 9);
-            SetupEncounterLevel("my other encounter/my other amount", 26);
+            SetupEncounterLevel("my encounter", 9);
+            SetupEncounterLevel("my other encounter", 26);
 
-            extraplanarEncounters.Add("my extraplanar encounter/my extraplanar amount");
-            SetupEncounterLevel("my extraplanar encounter/my extraplanar amount", 6);
+            extraplanarEncounters.Add("my extraplanar encounter");
+            SetupEncounterLevel("my extraplanar encounter", 6);
 
             var possibleLevels = encounterCollectionSelector.SelectPossibleLevels("environment", "temperature", "time of day");
             Assert.That(possibleLevels, Is.EquivalentTo(new[] { 9, 26, 6 }));
@@ -9776,20 +9795,20 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
         [Test]
         public void SelectPossibleLevels_ReturnsValidLevels_FromCivilized()
         {
-            SetUpCreatureBasedEncounterGroup("temperatureCivilized", new[] { "my encounter/my amount", "my other encounter/my other amount" });
-            SetUpCreatureBasedEncounterGroup("time of day", new[]
+            SetUpEncounterGroup("temperatureCivilized", new[] { "my encounter", "my other encounter" });
+            SetUpEncounterGroup("time of day", new[]
             {
-                "my encounter/my amount",
-                "my wrong encounter/my wrong amount",
-                "my other encounter/my other amount",
-                "my civilized encounter/my civilized amount"
+                "my encounter",
+                "my wrong encounter",
+                "my other encounter",
+                "my civilized encounter"
             });
 
-            SetupEncounterLevel("my encounter/my amount", 9);
-            SetupEncounterLevel("my other encounter/my other amount", 26);
+            SetupEncounterLevel("my encounter", 9);
+            SetupEncounterLevel("my other encounter", 26);
 
-            civilizedEncounters.Add("my civilized encounter/my civilized amount");
-            SetupEncounterLevel("my civilized encounter/my civilized amount", 6);
+            civilizedEncounters.Add("my civilized encounter");
+            SetupEncounterLevel("my civilized encounter", 6);
 
             var possibleLevels = encounterCollectionSelector.SelectPossibleLevels(EnvironmentConstants.Civilized, "temperature", "time of day");
             Assert.That(possibleLevels, Is.EquivalentTo(new[] { 9, 26, 6 }));
@@ -9798,24 +9817,24 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
         [Test]
         public void SelectPossibleLevels_ReturnsValidLevels_FromAquatic()
         {
-            SetUpCreatureBasedEncounterGroup("temperatureenvironment", new[] { "my encounter/my amount", "my other encounter/my other amount" });
-            SetUpCreatureBasedEncounterGroup("time of day", new[]
+            SetUpEncounterGroup("temperatureenvironment", new[] { "my encounter", "my other encounter" });
+            SetUpEncounterGroup("time of day", new[]
             {
-                "my encounter/my amount",
-                "my wrong encounter/my wrong amount",
-                "my other encounter/my other amount",
-                "my aquatic encounter/my aquatic amount"
+                "my encounter",
+                "my wrong encounter",
+                "my other encounter",
+                "my aquatic encounter"
             });
 
-            SetupEncounterLevel("my encounter/my amount", 9);
-            SetupEncounterLevel("my other encounter/my other amount", 26);
-            SetupEncounterLevel("my aquatic encounter/my aquatic amount", 6);
+            SetupEncounterLevel("my encounter", 9);
+            SetupEncounterLevel("my other encounter", 26);
+            SetupEncounterLevel("my aquatic encounter", 6);
 
-            var aquaticEncounters = new[] { "my aquatic encounter/my aquatic amount", "aquatic encounter/amount", "other aquatic encounter/other amount" };
-            var specificAquaticEncounters = new[] { "specific aquatic encounter/amount", "other specific aquatic encounter/other amount" };
+            var aquaticEncounters = new[] { "my aquatic encounter", "aquatic encounter", "other aquatic encounter" };
+            var specificAquaticEncounters = new[] { "specific aquatic encounter", "other specific aquatic encounter" };
 
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Aquatic, aquaticEncounters);
-            SetUpCreatureBasedEncounterGroup("temperature" + EnvironmentConstants.Aquatic, specificAquaticEncounters);
+            SetUpEncounterGroup(EnvironmentConstants.Aquatic, aquaticEncounters);
+            SetUpEncounterGroup("temperature" + EnvironmentConstants.Aquatic, specificAquaticEncounters);
 
             var possibleLevels = encounterCollectionSelector.SelectPossibleLevels("environment", "temperature", "time of day");
             Assert.That(possibleLevels, Is.EquivalentTo(new[] { 9, 26, 6 }));
@@ -9824,29 +9843,29 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
         [Test]
         public void SelectPossibleLevels_ReturnsValidLevels_FromSpecificAquatic()
         {
-            SetUpCreatureBasedEncounterGroup("temperatureenvironment", new[] { "my encounter/my amount", "my other encounter/my other amount" });
-            SetUpCreatureBasedEncounterGroup("time of day", new[]
+            SetUpEncounterGroup("temperatureenvironment", new[] { "my encounter", "my other encounter" });
+            SetUpEncounterGroup("time of day", new[]
             {
-                "my encounter/my amount",
-                "my wrong encounter/my wrong amount",
-                "my other encounter/my other amount",
-                "my specific aquatic encounter/my specific aquatic amount"
+                "my encounter",
+                "my wrong encounter",
+                "my other encounter",
+                "my specific aquatic encounter"
             });
 
-            SetupEncounterLevel("my encounter/my amount", 9);
-            SetupEncounterLevel("my other encounter/my other amount", 26);
-            SetupEncounterLevel("my specific aquatic encounter/my specific aquatic amount", 6);
+            SetupEncounterLevel("my encounter", 9);
+            SetupEncounterLevel("my other encounter", 26);
+            SetupEncounterLevel("my specific aquatic encounter", 6);
 
-            var aquaticEncounters = new[] { "aquatic encounter/amount", "other aquatic encounter/other amount" };
+            var aquaticEncounters = new[] { "aquatic encounter", "other aquatic encounter" };
             var specificAquaticEncounters = new[]
             {
-                "specific aquatic encounter/amount",
-                "my specific aquatic encounter/my specific aquatic amount",
-                "other specific aquatic encounter/other amount"
+                "specific aquatic encounter",
+                "my specific aquatic encounter",
+                "other specific aquatic encounter"
             };
 
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Aquatic, aquaticEncounters);
-            SetUpCreatureBasedEncounterGroup("temperature" + EnvironmentConstants.Aquatic, specificAquaticEncounters);
+            SetUpEncounterGroup(EnvironmentConstants.Aquatic, aquaticEncounters);
+            SetUpEncounterGroup("temperature" + EnvironmentConstants.Aquatic, specificAquaticEncounters);
 
             var possibleLevels = encounterCollectionSelector.SelectPossibleLevels("environment", "temperature", "time of day");
             Assert.That(possibleLevels, Is.EquivalentTo(new[] { 9, 26, 6 }));
@@ -9855,34 +9874,34 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
         [Test]
         public void SelectPossibleLevels_ReturnsValidLevels_FromUnderground()
         {
-            SetUpCreatureBasedEncounterGroup("temperatureenvironment", new[] { "my encounter/my amount", "my other encounter/my other amount" });
-            SetUpCreatureBasedEncounterGroup("time of day", new[]
+            SetUpEncounterGroup("temperatureenvironment", new[] { "my encounter", "my other encounter" });
+            SetUpEncounterGroup("time of day", new[]
             {
-                "my encounter/my amount",
-                "my wrong encounter/my wrong amount",
-                "my other encounter/my other amount",
-                "my underground encounter/my underground amount"
+                "my encounter",
+                "my wrong encounter",
+                "my other encounter",
+                "my underground encounter"
             });
 
-            SetupEncounterLevel("my encounter/my amount", 9);
-            SetupEncounterLevel("my other encounter/my other amount", 26);
-            SetupEncounterLevel("my underground encounter/my underground amount", 6);
+            SetupEncounterLevel("my encounter", 9);
+            SetupEncounterLevel("my other encounter", 26);
+            SetupEncounterLevel("my underground encounter", 6);
 
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[]
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[]
             {
-                "my encounter/my amount",
-                "my wrong encounter/my wrong amount",
-                "my other encounter/my other amount",
-                "my underground encounter/my underground amount"
+                "my encounter",
+                "my wrong encounter",
+                "my other encounter",
+                "my underground encounter"
             });
 
             var undergroundEncounters = new[]
             {
-                "underground encounter/amount",
-                "my underground encounter/my underground amount",
-                "other underground encounter/other amount"
+                "underground encounter",
+                "my underground encounter",
+                "other underground encounter"
             };
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Underground, undergroundEncounters);
+            SetUpEncounterGroup(EnvironmentConstants.Underground, undergroundEncounters);
 
             var possibleLevels = encounterCollectionSelector.SelectPossibleLevels("environment", "temperature", "time of day");
             Assert.That(possibleLevels, Is.EquivalentTo(new[] { 9, 26, 6 }));
@@ -9891,35 +9910,35 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
         [Test]
         public void SelectPossibleLevels_ReturnsValidLevels_FromUndergroundAquatic()
         {
-            SetUpCreatureBasedEncounterGroup("temperatureenvironment", new[] { "my encounter/my amount", "my other encounter/my other amount" });
-            SetUpCreatureBasedEncounterGroup("time of day", new[]
+            SetUpEncounterGroup("temperatureenvironment", new[] { "my encounter", "my other encounter" });
+            SetUpEncounterGroup("time of day", new[]
             {
-                "my encounter/my amount",
-                "my wrong encounter/my wrong amount",
-                "my other encounter/my other amount",
-                "my underground aquatic encounter/my underground aquatic amount"
+                "my encounter",
+                "my wrong encounter",
+                "my other encounter",
+                "my underground aquatic encounter"
             });
 
-            SetupEncounterLevel("my encounter/my amount", 9);
-            SetupEncounterLevel("my other encounter/my other amount", 26);
-            SetupEncounterLevel("my underground aquatic encounter/my underground aquatic amount", 6);
+            SetupEncounterLevel("my encounter", 9);
+            SetupEncounterLevel("my other encounter", 26);
+            SetupEncounterLevel("my underground aquatic encounter", 6);
 
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[]
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[]
             {
-                "my encounter/my amount",
-                "my wrong encounter/my wrong amount",
-                "my other encounter/my other amount",
-                "my underground aquatic encounter/my underground aquatic amount"
+                "my encounter",
+                "my wrong encounter",
+                "my other encounter",
+                "my underground aquatic encounter"
             });
 
             var undergroundAquaticEncounters = new[]
             {
-                "underground aquatic encounter/amount",
-                "my underground aquatic encounter/my underground aquatic amount",
-                "other underground aquatic encounter/other amount"
+                "underground aquatic encounter",
+                "my underground aquatic encounter",
+                "other underground aquatic encounter"
             };
 
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Underground + EnvironmentConstants.Aquatic, undergroundAquaticEncounters);
+            SetUpEncounterGroup(EnvironmentConstants.Underground + EnvironmentConstants.Aquatic, undergroundAquaticEncounters);
 
             var possibleLevels = encounterCollectionSelector.SelectPossibleLevels("environment", "temperature", "time of day");
             Assert.That(possibleLevels, Is.EquivalentTo(new[] { 9, 26, 6 }));
@@ -9957,10 +9976,10 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
         [TestCase(EncounterSpecifications.MaximumLevel)]
         public void SelectPossibleLevels_ReturnsValidLevels_ForLevel(int level)
         {
-            SetUpCreatureBasedEncounterGroup("temperatureenvironment", new[] { "my encounter/my amount", "my other encounter/my other amount" });
-            SetUpCreatureBasedEncounterGroup("time of day", new[] { "my encounter/my amount", "my wrong encounter/my wrong amount", "my other encounter/my other amount" });
+            SetUpEncounterGroup("temperatureenvironment", new[] { "my encounter", "my other encounter" });
+            SetUpEncounterGroup("time of day", new[] { "my encounter", "my wrong encounter", "my other encounter" });
 
-            SetupEncounterLevel("my encounter/my amount", level);
+            SetupEncounterLevel("my encounter", level);
 
             var possibleLevels = encounterCollectionSelector.SelectPossibleLevels("environment", "temperature", "time of day");
             Assert.That(possibleLevels, Is.EquivalentTo(new[] { level }));
@@ -9969,10 +9988,10 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
         [Test]
         public void SelectPossibleLevels_ReturnsValidLevels_None()
         {
-            SetUpCreatureBasedEncounterGroup("temperatureenvironment", new[] { "my encounter/my amount", "my other encounter/my other amount" });
-            SetUpCreatureBasedEncounterGroup("time of day", new[] { "my encounter/my amount", "my wrong encounter/my wrong amount" });
+            SetUpEncounterGroup("temperatureenvironment", new[] { "my encounter", "my other encounter" });
+            SetUpEncounterGroup("time of day", new[] { "my encounter", "my wrong encounter" });
 
-            SetupEncounterLevel("my encounter/my amount", EncounterSpecifications.MaximumLevel + 1);
+            SetupEncounterLevel("my encounter", EncounterSpecifications.MaximumLevel + 1);
 
             var possibleLevels = encounterCollectionSelector.SelectPossibleLevels("environment", "temperature", "time of day");
             Assert.That(possibleLevels, Is.Empty);
@@ -9981,10 +10000,10 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
         [Test]
         public void SelectPossibleAllowAquatic_ReturnsValidAquatic()
         {
-            SetUpCreatureBasedEncounterGroup("temperatureenvironment", new[] { "my encounter/my amount", "my other encounter/my other amount" });
-            SetUpCreatureBasedEncounterGroup("time of day", new[] { "my encounter/my amount", "my wrong encounter/my wrong amount" });
+            SetUpEncounterGroup("temperatureenvironment", new[] { "my encounter", "my other encounter" });
+            SetUpEncounterGroup("time of day", new[] { "my encounter", "my wrong encounter" });
 
-            SetupEncounterLevel("my encounter/my amount", 9266);
+            SetupEncounterLevel("my encounter", 9266);
 
             var possibleAquatics = encounterCollectionSelector.SelectPossibleAllowAquatic("environment", "temperature", "time of day", 9266);
             Assert.That(possibleAquatics, Is.EquivalentTo(new[] { true, false }));
@@ -9993,11 +10012,11 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
         [Test]
         public void SelectPossibleAllowAquatic_ReturnsValidAquatic_FromLand()
         {
-            SetUpCreatureBasedEncounterGroup("temperatureenvironment", new[] { "my other encounter/my other amount" });
-            SetUpCreatureBasedEncounterGroup("time of day", new[] { "my encounter/my amount", "my wrong encounter/my wrong amount" });
+            SetUpEncounterGroup("temperatureenvironment", new[] { "my other encounter" });
+            SetUpEncounterGroup("time of day", new[] { "my encounter", "my wrong encounter" });
 
-            SetupEncounterLevel("my encounter/my amount", 9266);
-            landEncounters.Add("my encounter/my amount");
+            SetupEncounterLevel("my encounter", 9266);
+            landEncounters.Add("my encounter");
 
             var possibleAquatics = encounterCollectionSelector.SelectPossibleAllowAquatic("environment", "temperature", "time of day", 9266);
             Assert.That(possibleAquatics, Is.EquivalentTo(new[] { true, false }));
@@ -10006,11 +10025,11 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
         [Test]
         public void SelectPossibleAllowAquatic_ReturnsValidAquatic_FromAny()
         {
-            SetUpCreatureBasedEncounterGroup("temperatureenvironment", new[] { "my other encounter/my other amount" });
-            SetUpCreatureBasedEncounterGroup("time of day", new[] { "my encounter/my amount", "my wrong encounter/my wrong amount" });
+            SetUpEncounterGroup("temperatureenvironment", new[] { "my other encounter" });
+            SetUpEncounterGroup("time of day", new[] { "my encounter", "my wrong encounter" });
 
-            SetupEncounterLevel("my encounter/my amount", 9266);
-            anyEncounters.Add("my encounter/my amount");
+            SetupEncounterLevel("my encounter", 9266);
+            anyEncounters.Add("my encounter");
 
             var possibleAquatics = encounterCollectionSelector.SelectPossibleAllowAquatic("environment", "temperature", "time of day", 9266);
             Assert.That(possibleAquatics, Is.EquivalentTo(new[] { true, false }));
@@ -10019,11 +10038,11 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
         [Test]
         public void SelectPossibleAllowAquatic_ReturnsValidAquatic_FromExtraplanar()
         {
-            SetUpCreatureBasedEncounterGroup("temperatureenvironment", new[] { "my other encounter/my other amount" });
-            SetUpCreatureBasedEncounterGroup("time of day", new[] { "my encounter/my amount", "my wrong encounter/my wrong amount" });
+            SetUpEncounterGroup("temperatureenvironment", new[] { "my other encounter" });
+            SetUpEncounterGroup("time of day", new[] { "my encounter", "my wrong encounter" });
 
-            SetupEncounterLevel("my encounter/my amount", 9266);
-            extraplanarEncounters.Add("my encounter/my amount");
+            SetupEncounterLevel("my encounter", 9266);
+            extraplanarEncounters.Add("my encounter");
 
             var possibleAquatics = encounterCollectionSelector.SelectPossibleAllowAquatic("environment", "temperature", "time of day", 9266);
             Assert.That(possibleAquatics, Is.EquivalentTo(new[] { true, false }));
@@ -10032,11 +10051,11 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
         [Test]
         public void SelectPossibleAllowAquatic_ReturnsValidAquatic_FromCivilized()
         {
-            SetUpCreatureBasedEncounterGroup("temperatureCivilized", new[] { "my other encounter/my other amount" });
-            SetUpCreatureBasedEncounterGroup("time of day", new[] { "my encounter/my amount", "my wrong encounter/my wrong amount" });
+            SetUpEncounterGroup("temperatureCivilized", new[] { "my other encounter" });
+            SetUpEncounterGroup("time of day", new[] { "my encounter", "my wrong encounter" });
 
-            SetupEncounterLevel("my encounter/my amount", 9266);
-            civilizedEncounters.Add("my encounter/my amount");
+            SetupEncounterLevel("my encounter", 9266);
+            civilizedEncounters.Add("my encounter");
 
             var possibleAquatics = encounterCollectionSelector.SelectPossibleAllowAquatic(EnvironmentConstants.Civilized, "temperature", "time of day", 9266);
             Assert.That(possibleAquatics, Is.EquivalentTo(new[] { true, false }));
@@ -10045,16 +10064,16 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
         [Test]
         public void SelectPossibleAllowAquatic_ReturnsValidAquatic_FromAquatic()
         {
-            SetUpCreatureBasedEncounterGroup("temperatureenvironment", new[] { "my other encounter/my other amount" });
-            SetUpCreatureBasedEncounterGroup("time of day", new[] { "my encounter/my amount", "my wrong encounter/my wrong amount" });
+            SetUpEncounterGroup("temperatureenvironment", new[] { "my other encounter" });
+            SetUpEncounterGroup("time of day", new[] { "my encounter", "my wrong encounter" });
 
-            var aquaticEncounters = new[] { "my encounter/my amount", "aquatic encounter/amount", "other aquatic encounter/other amount" };
-            var specificAquaticEncounters = new[] { "specific aquatic encounter/amount", "other specific aquatic encounter/other amount" };
+            var aquaticEncounters = new[] { "my encounter", "aquatic encounter", "other aquatic encounter" };
+            var specificAquaticEncounters = new[] { "specific aquatic encounter", "other specific aquatic encounter" };
 
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Aquatic, aquaticEncounters);
-            SetUpCreatureBasedEncounterGroup("temperature" + EnvironmentConstants.Aquatic, specificAquaticEncounters);
+            SetUpEncounterGroup(EnvironmentConstants.Aquatic, aquaticEncounters);
+            SetUpEncounterGroup("temperature" + EnvironmentConstants.Aquatic, specificAquaticEncounters);
 
-            SetupEncounterLevel("my encounter/my amount", 9266);
+            SetupEncounterLevel("my encounter", 9266);
 
             var possibleAquatics = encounterCollectionSelector.SelectPossibleAllowAquatic("environment", "temperature", "time of day", 9266);
             Assert.That(possibleAquatics, Is.EquivalentTo(new[] { true }));
@@ -10063,16 +10082,16 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
         [Test]
         public void SelectPossibleAllowAquatic_ReturnsValidAquatic_FromSpecificAquatic()
         {
-            SetUpCreatureBasedEncounterGroup("temperatureenvironment", new[] { "my other encounter/my other amount" });
-            SetUpCreatureBasedEncounterGroup("time of day", new[] { "my encounter/my amount", "my wrong encounter/my wrong amount" });
+            SetUpEncounterGroup("temperatureenvironment", new[] { "my other encounter" });
+            SetUpEncounterGroup("time of day", new[] { "my encounter", "my wrong encounter" });
 
-            var aquaticEncounters = new[] { "aquatic encounter/amount", "other aquatic encounter/other amount" };
-            var specificAquaticEncounters = new[] { "specific aquatic encounter/amount", "my encounter/my amount", "other specific aquatic encounter/other amount" };
+            var aquaticEncounters = new[] { "aquatic encounter", "other aquatic encounter" };
+            var specificAquaticEncounters = new[] { "specific aquatic encounter", "my encounter", "other specific aquatic encounter" };
 
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Aquatic, aquaticEncounters);
-            SetUpCreatureBasedEncounterGroup("temperature" + EnvironmentConstants.Aquatic, specificAquaticEncounters);
+            SetUpEncounterGroup(EnvironmentConstants.Aquatic, aquaticEncounters);
+            SetUpEncounterGroup("temperature" + EnvironmentConstants.Aquatic, specificAquaticEncounters);
 
-            SetupEncounterLevel("my encounter/my amount", 9266);
+            SetupEncounterLevel("my encounter", 9266);
 
             var possibleAquatics = encounterCollectionSelector.SelectPossibleAllowAquatic("environment", "temperature", "time of day", 9266);
             Assert.That(possibleAquatics, Is.EquivalentTo(new[] { true }));
@@ -10081,13 +10100,13 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
         [Test]
         public void SelectPossibleAllowAquatic_ReturnsValidAquatic_FromUnderground()
         {
-            SetUpCreatureBasedEncounterGroup("temperatureenvironment", new[] { "my other encounter/my other amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[] { "my encounter/my amount", "my wrong encounter/my wrong amount" });
+            SetUpEncounterGroup("temperatureenvironment", new[] { "my other encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[] { "my encounter", "my wrong encounter" });
 
-            var undergroundEncounters = new[] { "underground encounter/amount", "my encounter/my amount", "other underground encounter/other amount" };
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Underground, undergroundEncounters);
+            var undergroundEncounters = new[] { "underground encounter", "my encounter", "other underground encounter" };
+            SetUpEncounterGroup(EnvironmentConstants.Underground, undergroundEncounters);
 
-            SetupEncounterLevel("my encounter/my amount", 9266);
+            SetupEncounterLevel("my encounter", 9266);
 
             var possibleAquatics = encounterCollectionSelector.SelectPossibleAllowAquatic("environment", "temperature", "time of day", 9266);
             Assert.That(possibleAquatics, Is.EquivalentTo(new[] { true, false }));
@@ -10096,19 +10115,19 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
         [Test]
         public void SelectPossibleAllowAquatic_ReturnsValidAquatic_FromUndergroundAquatic()
         {
-            SetUpCreatureBasedEncounterGroup("temperatureenvironment", new[] { "my other encounter/my other amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[] { "my encounter/my amount", "my wrong encounter/my wrong amount" });
+            SetUpEncounterGroup("temperatureenvironment", new[] { "my other encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[] { "my encounter", "my wrong encounter" });
 
             var undergroundAquaticEncounters = new[]
             {
-                "underground aquatic encounter/amount",
-                "my encounter/my amount",
-                "other underground aquatic encounter/other amount"
+                "underground aquatic encounter",
+                "my encounter",
+                "other underground aquatic encounter"
             };
 
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Underground + EnvironmentConstants.Aquatic, undergroundAquaticEncounters);
+            SetUpEncounterGroup(EnvironmentConstants.Underground + EnvironmentConstants.Aquatic, undergroundAquaticEncounters);
 
-            SetupEncounterLevel("my encounter/my amount", 9266);
+            SetupEncounterLevel("my encounter", 9266);
 
             var possibleAquatics = encounterCollectionSelector.SelectPossibleAllowAquatic("environment", "temperature", "time of day", 9266);
             Assert.That(possibleAquatics, Is.EquivalentTo(new[] { true }));
@@ -10117,16 +10136,16 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
         [Test]
         public void SelectPossibleAllowAquatic_ReturnsValidAquatic_None()
         {
-            SetUpCreatureBasedEncounterGroup("temperatureenvironment", new[] { "my other encounter/my other amount" });
-            SetUpCreatureBasedEncounterGroup("time of day", new[] { "my encounter/my amount", "my wrong encounter/my wrong amount" });
+            SetUpEncounterGroup("temperatureenvironment", new[] { "my other encounter" });
+            SetUpEncounterGroup("time of day", new[] { "my encounter", "my wrong encounter" });
 
-            var aquaticEncounters = new[] { "aquatic encounter/amount", "other aquatic encounter/other amount" };
-            var specificAquaticEncounters = new[] { "specific aquatic encounter/amount", "other specific aquatic encounter/other amount" };
+            var aquaticEncounters = new[] { "aquatic encounter", "other aquatic encounter" };
+            var specificAquaticEncounters = new[] { "specific aquatic encounter", "other specific aquatic encounter" };
 
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Aquatic, aquaticEncounters);
-            SetUpCreatureBasedEncounterGroup("temperature" + EnvironmentConstants.Aquatic, specificAquaticEncounters);
+            SetUpEncounterGroup(EnvironmentConstants.Aquatic, aquaticEncounters);
+            SetUpEncounterGroup("temperature" + EnvironmentConstants.Aquatic, specificAquaticEncounters);
 
-            SetupEncounterLevel("my encounter/my amount", 9266);
+            SetupEncounterLevel("my encounter", 9266);
 
             var possibleAquatics = encounterCollectionSelector.SelectPossibleAllowAquatic("environment", "temperature", "time of day", 9266);
             Assert.That(possibleAquatics, Is.Empty);
@@ -10135,11 +10154,11 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
         [Test]
         public void SelectPossibleAllowUnderground_ReturnsValidUnderground()
         {
-            SetUpCreatureBasedEncounterGroup("temperatureenvironment", new[] { "my encounter/my amount", "my other encounter/my other amount" });
-            SetUpCreatureBasedEncounterGroup("time of day", new[] { "my encounter/my amount", "my wrong encounter/my wrong amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[] { "my encounter/my amount", "my wrong encounter/my wrong amount" });
+            SetUpEncounterGroup("temperatureenvironment", new[] { "my encounter", "my other encounter" });
+            SetUpEncounterGroup("time of day", new[] { "my encounter", "my wrong encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[] { "my encounter", "my wrong encounter" });
 
-            SetupEncounterLevel("my encounter/my amount", 9266);
+            SetupEncounterLevel("my encounter", 9266);
 
             var possibleUndergrounds = encounterCollectionSelector.SelectPossibleAllowUnderground("environment", "temperature", "time of day", 9266, false);
             Assert.That(possibleUndergrounds, Is.EquivalentTo(new[] { true, false }));
@@ -10148,12 +10167,12 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
         [Test]
         public void SelectPossibleAllowUnderground_ReturnsValidUnderground_FromLand()
         {
-            SetUpCreatureBasedEncounterGroup("temperatureenvironment", new[] { "my other encounter/my other amount" });
-            SetUpCreatureBasedEncounterGroup("time of day", new[] { "my encounter/my amount", "my wrong encounter/my wrong amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[] { "my encounter/my amount", "my wrong encounter/my wrong amount" });
+            SetUpEncounterGroup("temperatureenvironment", new[] { "my other encounter" });
+            SetUpEncounterGroup("time of day", new[] { "my encounter", "my wrong encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[] { "my encounter", "my wrong encounter" });
 
-            SetupEncounterLevel("my encounter/my amount", 9266);
-            landEncounters.Add("my encounter/my amount");
+            SetupEncounterLevel("my encounter", 9266);
+            landEncounters.Add("my encounter");
 
             var possibleUndergrounds = encounterCollectionSelector.SelectPossibleAllowUnderground("environment", "temperature", "time of day", 9266, false);
             Assert.That(possibleUndergrounds, Is.EquivalentTo(new[] { true, false }));
@@ -10162,12 +10181,12 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
         [Test]
         public void SelectPossibleAllowUnderground_ReturnsValidUnderground_FromAny()
         {
-            SetUpCreatureBasedEncounterGroup("temperatureenvironment", new[] { "my other encounter/my other amount" });
-            SetUpCreatureBasedEncounterGroup("time of day", new[] { "my encounter/my amount", "my wrong encounter/my wrong amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[] { "my encounter/my amount", "my wrong encounter/my wrong amount" });
+            SetUpEncounterGroup("temperatureenvironment", new[] { "my other encounter" });
+            SetUpEncounterGroup("time of day", new[] { "my encounter", "my wrong encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[] { "my encounter", "my wrong encounter" });
 
-            SetupEncounterLevel("my encounter/my amount", 9266);
-            anyEncounters.Add("my encounter/my amount");
+            SetupEncounterLevel("my encounter", 9266);
+            anyEncounters.Add("my encounter");
 
             var possibleUndergrounds = encounterCollectionSelector.SelectPossibleAllowUnderground("environment", "temperature", "time of day", 9266, false);
             Assert.That(possibleUndergrounds, Is.EquivalentTo(new[] { true, false }));
@@ -10176,12 +10195,12 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
         [Test]
         public void SelectPossibleAllowUnderground_ReturnsValidUnderground_FromExtraplanar()
         {
-            SetUpCreatureBasedEncounterGroup("temperatureenvironment", new[] { "my other encounter/my other amount" });
-            SetUpCreatureBasedEncounterGroup("time of day", new[] { "my encounter/my amount", "my wrong encounter/my wrong amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[] { "my encounter/my amount", "my wrong encounter/my wrong amount" });
+            SetUpEncounterGroup("temperatureenvironment", new[] { "my other encounter" });
+            SetUpEncounterGroup("time of day", new[] { "my encounter", "my wrong encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[] { "my encounter", "my wrong encounter" });
 
-            SetupEncounterLevel("my encounter/my amount", 9266);
-            extraplanarEncounters.Add("my encounter/my amount");
+            SetupEncounterLevel("my encounter", 9266);
+            extraplanarEncounters.Add("my encounter");
 
             var possibleUndergrounds = encounterCollectionSelector.SelectPossibleAllowUnderground("environment", "temperature", "time of day", 9266, false);
             Assert.That(possibleUndergrounds, Is.EquivalentTo(new[] { true, false }));
@@ -10190,12 +10209,12 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
         [Test]
         public void SelectPossibleAllowUnderground_ReturnsValidUnderground_FromCivilized()
         {
-            SetUpCreatureBasedEncounterGroup("temperatureCivilized", new[] { "my other encounter/my other amount" });
-            SetUpCreatureBasedEncounterGroup("time of day", new[] { "my encounter/my amount", "my wrong encounter/my wrong amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[] { "my encounter/my amount", "my wrong encounter/my wrong amount" });
+            SetUpEncounterGroup("temperatureCivilized", new[] { "my other encounter" });
+            SetUpEncounterGroup("time of day", new[] { "my encounter", "my wrong encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[] { "my encounter", "my wrong encounter" });
 
-            SetupEncounterLevel("my encounter/my amount", 9266);
-            civilizedEncounters.Add("my encounter/my amount");
+            SetupEncounterLevel("my encounter", 9266);
+            civilizedEncounters.Add("my encounter");
 
             var possibleUndergrounds = encounterCollectionSelector.SelectPossibleAllowUnderground(
                 EnvironmentConstants.Civilized,
@@ -10209,17 +10228,17 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
         [Test]
         public void SelectPossibleAllowUnderground_ReturnsValidUnderground_FromAquatic()
         {
-            SetUpCreatureBasedEncounterGroup("temperatureenvironment", new[] { "my other encounter/my other amount" });
-            SetUpCreatureBasedEncounterGroup("time of day", new[] { "my encounter/my amount", "my wrong encounter/my wrong amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[] { "my encounter/my amount", "my wrong encounter/my wrong amount" });
+            SetUpEncounterGroup("temperatureenvironment", new[] { "my other encounter" });
+            SetUpEncounterGroup("time of day", new[] { "my encounter", "my wrong encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[] { "my encounter", "my wrong encounter" });
 
-            var aquaticEncounters = new[] { "my encounter/my amount", "aquatic encounter/amount", "other aquatic encounter/other amount" };
-            var specificAquaticEncounters = new[] { "specific aquatic encounter/amount", "other specific aquatic encounter/other amount" };
+            var aquaticEncounters = new[] { "my encounter", "aquatic encounter", "other aquatic encounter" };
+            var specificAquaticEncounters = new[] { "specific aquatic encounter", "other specific aquatic encounter" };
 
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Aquatic, aquaticEncounters);
-            SetUpCreatureBasedEncounterGroup("temperature" + EnvironmentConstants.Aquatic, specificAquaticEncounters);
+            SetUpEncounterGroup(EnvironmentConstants.Aquatic, aquaticEncounters);
+            SetUpEncounterGroup("temperature" + EnvironmentConstants.Aquatic, specificAquaticEncounters);
 
-            SetupEncounterLevel("my encounter/my amount", 9266);
+            SetupEncounterLevel("my encounter", 9266);
 
             var possibleUndergrounds = encounterCollectionSelector.SelectPossibleAllowUnderground("environment", "temperature", "time of day", 9266, true);
             Assert.That(possibleUndergrounds, Is.EquivalentTo(new[] { true, false }));
@@ -10228,17 +10247,17 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
         [Test]
         public void SelectPossibleAllowUnderground_ReturnsValidUnderground_FromSpecificAquatic()
         {
-            SetUpCreatureBasedEncounterGroup("temperatureenvironment", new[] { "my other encounter/my other amount" });
-            SetUpCreatureBasedEncounterGroup("time of day", new[] { "my encounter/my amount", "my wrong encounter/my wrong amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[] { "my encounter/my amount", "my wrong encounter/my wrong amount" });
+            SetUpEncounterGroup("temperatureenvironment", new[] { "my other encounter" });
+            SetUpEncounterGroup("time of day", new[] { "my encounter", "my wrong encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[] { "my encounter", "my wrong encounter" });
 
-            var aquaticEncounters = new[] { "aquatic encounter/amount", "other aquatic encounter/other amount" };
-            var specificAquaticEncounters = new[] { "specific aquatic encounter/amount", "my encounter/my amount", "other specific aquatic encounter/other amount" };
+            var aquaticEncounters = new[] { "aquatic encounter", "other aquatic encounter" };
+            var specificAquaticEncounters = new[] { "specific aquatic encounter", "my encounter", "other specific aquatic encounter" };
 
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Aquatic, aquaticEncounters);
-            SetUpCreatureBasedEncounterGroup("temperature" + EnvironmentConstants.Aquatic, specificAquaticEncounters);
+            SetUpEncounterGroup(EnvironmentConstants.Aquatic, aquaticEncounters);
+            SetUpEncounterGroup("temperature" + EnvironmentConstants.Aquatic, specificAquaticEncounters);
 
-            SetupEncounterLevel("my encounter/my amount", 9266);
+            SetupEncounterLevel("my encounter", 9266);
 
             var possibleUndergrounds = encounterCollectionSelector.SelectPossibleAllowUnderground("environment", "temperature", "time of day", 9266, true);
             Assert.That(possibleUndergrounds, Is.EquivalentTo(new[] { true, false }));
@@ -10247,14 +10266,14 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
         [Test]
         public void SelectPossibleAllowUnderground_ReturnsValidUnderground_FromUnderground()
         {
-            SetUpCreatureBasedEncounterGroup("temperatureenvironment", new[] { "my other encounter/my other amount" });
-            SetUpCreatureBasedEncounterGroup("time of day", new[] { "my encounter/my amount", "my wrong encounter/my wrong amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[] { "my encounter/my amount", "my wrong encounter/my wrong amount" });
+            SetUpEncounterGroup("temperatureenvironment", new[] { "my other encounter" });
+            SetUpEncounterGroup("time of day", new[] { "my encounter", "my wrong encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[] { "my encounter", "my wrong encounter" });
 
-            var undergroundEncounters = new[] { "underground encounter/amount", "my encounter/my amount", "other underground encounter/other amount" };
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Underground, undergroundEncounters);
+            var undergroundEncounters = new[] { "underground encounter", "my encounter", "other underground encounter" };
+            SetUpEncounterGroup(EnvironmentConstants.Underground, undergroundEncounters);
 
-            SetupEncounterLevel("my encounter/my amount", 9266);
+            SetupEncounterLevel("my encounter", 9266);
 
             var possibleUndergrounds = encounterCollectionSelector.SelectPossibleAllowUnderground("environment", "temperature", "time of day", 9266, false);
             Assert.That(possibleUndergrounds, Is.EquivalentTo(new[] { true }));
@@ -10263,20 +10282,20 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
         [Test]
         public void SelectPossibleAllowUnderground_ReturnsValidUnderground_FromUndergroundAquatic()
         {
-            SetUpCreatureBasedEncounterGroup("temperatureenvironment", new[] { "my other encounter/my other amount" });
-            SetUpCreatureBasedEncounterGroup("time of day", new[] { "my encounter/my amount", "my wrong encounter/my wrong amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[] { "my encounter/my amount", "my wrong encounter/my wrong amount" });
+            SetUpEncounterGroup("temperatureenvironment", new[] { "my other encounter" });
+            SetUpEncounterGroup("time of day", new[] { "my encounter", "my wrong encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[] { "my encounter", "my wrong encounter" });
 
             var undergroundAquaticEncounters = new[]
             {
-                "underground aquatic encounter/amount",
-                "my encounter/my amount",
-                "other underground aquatic encounter/other amount"
+                "underground aquatic encounter",
+                "my encounter",
+                "other underground aquatic encounter"
             };
 
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Underground + EnvironmentConstants.Aquatic, undergroundAquaticEncounters);
+            SetUpEncounterGroup(EnvironmentConstants.Underground + EnvironmentConstants.Aquatic, undergroundAquaticEncounters);
 
-            SetupEncounterLevel("my encounter/my amount", 9266);
+            SetupEncounterLevel("my encounter", 9266);
 
             var possibleUndergrounds = encounterCollectionSelector.SelectPossibleAllowUnderground("environment", "temperature", "time of day", 9266, true);
             Assert.That(possibleUndergrounds, Is.EquivalentTo(new[] { true }));
@@ -10285,14 +10304,14 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
         [Test]
         public void SelectPossibleAllowUnderground_ReturnsValidUnderground_None()
         {
-            SetUpCreatureBasedEncounterGroup("temperatureenvironment", new[] { "my other encounter/my other amount" });
-            SetUpCreatureBasedEncounterGroup("time of day", new[] { "my encounter/my amount", "my wrong encounter/my wrong amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[] { "my encounter/my amount", "my wrong encounter/my wrong amount" });
+            SetUpEncounterGroup("temperatureenvironment", new[] { "my other encounter" });
+            SetUpEncounterGroup("time of day", new[] { "my encounter", "my wrong encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[] { "my encounter", "my wrong encounter" });
 
-            var undergroundEncounters = new[] { "underground encounter/amount", "other underground encounter/other amount" };
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Underground, undergroundEncounters);
+            var undergroundEncounters = new[] { "underground encounter", "other underground encounter" };
+            SetUpEncounterGroup(EnvironmentConstants.Underground, undergroundEncounters);
 
-            SetupEncounterLevel("my encounter/my amount", 9266);
+            SetupEncounterLevel("my encounter", 9266);
 
             var possibleUndergrounds = encounterCollectionSelector.SelectPossibleAllowUnderground("environment", "temperature", "time of day", 9266, false);
             Assert.That(possibleUndergrounds, Is.Empty);
@@ -10302,10 +10321,10 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
         public void SelectPossibleFilters_ReturnsValidFilters()
         {
             SetupAllFilters();
-            SetUpCreatureBasedEncounterGroup("temperatureenvironment", new[] { "my encounter/my amount", "my other encounter/my other amount" });
-            SetUpCreatureBasedEncounterGroup("time of day", new[] { "my encounter/my amount", "my wrong encounter/my wrong amount" });
+            SetUpEncounterGroup("temperatureenvironment", new[] { "my encounter", "my other encounter" });
+            SetUpEncounterGroup("time of day", new[] { "my encounter", "my wrong encounter" });
 
-            SetupEncounterLevel("my encounter/my amount", 9266);
+            SetupEncounterLevel("my encounter", 9266);
 
             filters[CreatureDataConstants.Types.Aberration].Add("my encounter");
             filters[CreatureDataConstants.Types.Aberration].Add("my wrong encounter");
@@ -10331,17 +10350,33 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
             SetupFilter(CreatureDataConstants.Types.Plant);
             SetupFilter(CreatureDataConstants.Types.Undead);
             SetupFilter(CreatureDataConstants.Types.Vermin);
+
+            SetupEncounterFilter(CreatureDataConstants.Types.Aberration);
+            SetupEncounterFilter(CreatureDataConstants.Types.Animal);
+            SetupEncounterFilter(CreatureDataConstants.Types.Construct);
+            SetupEncounterFilter(CreatureDataConstants.Types.Dragon);
+            SetupEncounterFilter(CreatureDataConstants.Types.Elemental);
+            SetupEncounterFilter(CreatureDataConstants.Types.Fey);
+            SetupEncounterFilter(CreatureDataConstants.Types.Giant);
+            SetupEncounterFilter(CreatureDataConstants.Types.Humanoid);
+            SetupEncounterFilter(CreatureDataConstants.Types.MagicalBeast);
+            SetupEncounterFilter(CreatureDataConstants.Types.MonstrousHumanoid);
+            SetupEncounterFilter(CreatureDataConstants.Types.Ooze);
+            SetupEncounterFilter(CreatureDataConstants.Types.Outsider);
+            SetupEncounterFilter(CreatureDataConstants.Types.Plant);
+            SetupEncounterFilter(CreatureDataConstants.Types.Undead);
+            SetupEncounterFilter(CreatureDataConstants.Types.Vermin);
         }
 
         [Test]
         public void SelectPossibleFilters_ReturnsValidFilters_FromLand()
         {
             SetupAllFilters();
-            SetUpCreatureBasedEncounterGroup("temperatureenvironment", new[] { "my other encounter/my other amount" });
-            SetUpCreatureBasedEncounterGroup("time of day", new[] { "my encounter/my amount", "my wrong encounter/my wrong amount" });
+            SetUpEncounterGroup("temperatureenvironment", new[] { "my other encounter" });
+            SetUpEncounterGroup("time of day", new[] { "my encounter", "my wrong encounter" });
 
-            SetupEncounterLevel("my encounter/my amount", 9266);
-            landEncounters.Add("my encounter/my amount");
+            SetupEncounterLevel("my encounter", 9266);
+            landEncounters.Add("my encounter");
 
             filters[CreatureDataConstants.Types.Aberration].Add("my encounter");
             filters[CreatureDataConstants.Types.Aberration].Add("my wrong encounter");
@@ -10354,11 +10389,11 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
         public void SelectPossibleFilters_ReturnsValidFilters_FromAny()
         {
             SetupAllFilters();
-            SetUpCreatureBasedEncounterGroup("temperatureenvironment", new[] { "my other encounter/my other amount" });
-            SetUpCreatureBasedEncounterGroup("time of day", new[] { "my encounter/my amount", "my wrong encounter/my wrong amount" });
+            SetUpEncounterGroup("temperatureenvironment", new[] { "my other encounter" });
+            SetUpEncounterGroup("time of day", new[] { "my encounter", "my wrong encounter" });
 
-            SetupEncounterLevel("my encounter/my amount", 9266);
-            anyEncounters.Add("my encounter/my amount");
+            SetupEncounterLevel("my encounter", 9266);
+            anyEncounters.Add("my encounter");
 
             filters[CreatureDataConstants.Types.Aberration].Add("my encounter");
             filters[CreatureDataConstants.Types.Aberration].Add("my wrong encounter");
@@ -10371,11 +10406,11 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
         public void SelectPossibleFilters_ReturnsValidFilters_FromExtraplanar()
         {
             SetupAllFilters();
-            SetUpCreatureBasedEncounterGroup("temperatureenvironment", new[] { "my other encounter/my other amount" });
-            SetUpCreatureBasedEncounterGroup("time of day", new[] { "my encounter/my amount", "my wrong encounter/my wrong amount" });
+            SetUpEncounterGroup("temperatureenvironment", new[] { "my other encounter" });
+            SetUpEncounterGroup("time of day", new[] { "my encounter", "my wrong encounter" });
 
-            SetupEncounterLevel("my encounter/my amount", 9266);
-            extraplanarEncounters.Add("my encounter/my amount");
+            SetupEncounterLevel("my encounter", 9266);
+            extraplanarEncounters.Add("my encounter");
 
             filters[CreatureDataConstants.Types.Aberration].Add("my encounter");
             filters[CreatureDataConstants.Types.Aberration].Add("my wrong encounter");
@@ -10388,11 +10423,11 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
         public void SelectPossibleFilters_ReturnsValidFilters_FromCivilized()
         {
             SetupAllFilters();
-            SetUpCreatureBasedEncounterGroup("temperatureCivilized", new[] { "my other encounter/my other amount" });
-            SetUpCreatureBasedEncounterGroup("time of day", new[] { "my encounter/my amount", "my wrong encounter/my wrong amount" });
+            SetUpEncounterGroup("temperatureCivilized", new[] { "my other encounter" });
+            SetUpEncounterGroup("time of day", new[] { "my encounter", "my wrong encounter" });
 
-            SetupEncounterLevel("my encounter/my amount", 9266);
-            civilizedEncounters.Add("my encounter/my amount");
+            SetupEncounterLevel("my encounter", 9266);
+            civilizedEncounters.Add("my encounter");
 
             filters[CreatureDataConstants.Types.Aberration].Add("my encounter");
             filters[CreatureDataConstants.Types.Aberration].Add("my wrong encounter");
@@ -10405,16 +10440,16 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
         public void SelectPossibleFilters_ReturnsValidFilters_FromAquatic()
         {
             SetupAllFilters();
-            SetUpCreatureBasedEncounterGroup("temperatureenvironment", new[] { "my other encounter/my other amount" });
-            SetUpCreatureBasedEncounterGroup("time of day", new[] { "my encounter/my amount", "my wrong encounter/my wrong amount" });
+            SetUpEncounterGroup("temperatureenvironment", new[] { "my other encounter" });
+            SetUpEncounterGroup("time of day", new[] { "my encounter", "my wrong encounter" });
 
-            var aquaticEncounters = new[] { "my encounter/my amount", "aquatic encounter/amount", "other aquatic encounter/other amount" };
-            var specificAquaticEncounters = new[] { "specific aquatic encounter/amount", "other specific aquatic encounter/other amount" };
+            var aquaticEncounters = new[] { "my encounter", "aquatic encounter", "other aquatic encounter" };
+            var specificAquaticEncounters = new[] { "specific aquatic encounter", "other specific aquatic encounter" };
 
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Aquatic, aquaticEncounters);
-            SetUpCreatureBasedEncounterGroup("temperature" + EnvironmentConstants.Aquatic, specificAquaticEncounters);
+            SetUpEncounterGroup(EnvironmentConstants.Aquatic, aquaticEncounters);
+            SetUpEncounterGroup("temperature" + EnvironmentConstants.Aquatic, specificAquaticEncounters);
 
-            SetupEncounterLevel("my encounter/my amount", 9266);
+            SetupEncounterLevel("my encounter", 9266);
 
             filters[CreatureDataConstants.Types.Aberration].Add("my encounter");
             filters[CreatureDataConstants.Types.Aberration].Add("my wrong encounter");
@@ -10427,16 +10462,16 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
         public void SelectPossibleFilters_ReturnsValidFilters_FromSpecificAquatic()
         {
             SetupAllFilters();
-            SetUpCreatureBasedEncounterGroup("temperatureenvironment", new[] { "my other encounter/my other amount" });
-            SetUpCreatureBasedEncounterGroup("time of day", new[] { "my encounter/my amount", "my wrong encounter/my wrong amount" });
+            SetUpEncounterGroup("temperatureenvironment", new[] { "my other encounter" });
+            SetUpEncounterGroup("time of day", new[] { "my encounter", "my wrong encounter" });
 
-            var aquaticEncounters = new[] { "aquatic encounter/amount", "other aquatic encounter/other amount" };
-            var specificAquaticEncounters = new[] { "specific aquatic encounter/amount", "my encounter/my amount", "other specific aquatic encounter/other amount" };
+            var aquaticEncounters = new[] { "aquatic encounter", "other aquatic encounter" };
+            var specificAquaticEncounters = new[] { "specific aquatic encounter", "my encounter", "other specific aquatic encounter" };
 
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Aquatic, aquaticEncounters);
-            SetUpCreatureBasedEncounterGroup("temperature" + EnvironmentConstants.Aquatic, specificAquaticEncounters);
+            SetUpEncounterGroup(EnvironmentConstants.Aquatic, aquaticEncounters);
+            SetUpEncounterGroup("temperature" + EnvironmentConstants.Aquatic, specificAquaticEncounters);
 
-            SetupEncounterLevel("my encounter/my amount", 9266);
+            SetupEncounterLevel("my encounter", 9266);
 
             filters[CreatureDataConstants.Types.Aberration].Add("my encounter");
             filters[CreatureDataConstants.Types.Aberration].Add("my wrong encounter");
@@ -10449,13 +10484,13 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
         public void SelectPossibleFilters_ReturnsValidFilters_FromUnderground()
         {
             SetupAllFilters();
-            SetUpCreatureBasedEncounterGroup("temperatureenvironment", new[] { "my other encounter/my other amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[] { "my encounter/my amount", "my wrong encounter/my wrong amount" });
+            SetUpEncounterGroup("temperatureenvironment", new[] { "my other encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[] { "my encounter", "my wrong encounter" });
 
-            var undergroundEncounters = new[] { "underground encounter/amount", "my encounter/my amount", "other underground encounter/other amount" };
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Underground, undergroundEncounters);
+            var undergroundEncounters = new[] { "underground encounter", "my encounter", "other underground encounter" };
+            SetUpEncounterGroup(EnvironmentConstants.Underground, undergroundEncounters);
 
-            SetupEncounterLevel("my encounter/my amount", 9266);
+            SetupEncounterLevel("my encounter", 9266);
 
             filters[CreatureDataConstants.Types.Aberration].Add("my encounter");
             filters[CreatureDataConstants.Types.Aberration].Add("my wrong encounter");
@@ -10468,19 +10503,19 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
         public void SelectPossibleFilters_ReturnsValidFilters_FromUndergroundAquatic()
         {
             SetupAllFilters();
-            SetUpCreatureBasedEncounterGroup("temperatureenvironment", new[] { "my other encounter/my other amount" });
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[] { "my encounter/my amount", "my wrong encounter/my wrong amount" });
+            SetUpEncounterGroup("temperatureenvironment", new[] { "my other encounter" });
+            SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Night, new[] { "my encounter", "my wrong encounter" });
 
             var undergroundAquaticEncounters = new[]
             {
-                "underground aquatic encounter/amount",
-                "my encounter/my amount",
-                "other underground aquatic encounter/other amount"
+                "underground aquatic encounter",
+                "my encounter",
+                "other underground aquatic encounter"
             };
 
-            SetUpCreatureBasedEncounterGroup(EnvironmentConstants.Underground + EnvironmentConstants.Aquatic, undergroundAquaticEncounters);
+            SetUpEncounterGroup(EnvironmentConstants.Underground + EnvironmentConstants.Aquatic, undergroundAquaticEncounters);
 
-            SetupEncounterLevel("my encounter/my amount", 9266);
+            SetupEncounterLevel("my encounter", 9266);
 
             filters[CreatureDataConstants.Types.Aberration].Add("my encounter");
             filters[CreatureDataConstants.Types.Aberration].Add("my wrong encounter");
@@ -10507,10 +10542,10 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
         public void SelectPossibleFilters_ReturnsValidFilters_ForFilter(string filter)
         {
             SetupAllFilters();
-            SetUpCreatureBasedEncounterGroup("temperatureenvironment", new[] { "my encounter/my amount", "my other encounter/my other amount" });
-            SetUpCreatureBasedEncounterGroup("time of day", new[] { "my encounter/my amount", "my wrong encounter/my wrong amount" });
+            SetUpEncounterGroup("temperatureenvironment", new[] { "my encounter", "my other encounter" });
+            SetUpEncounterGroup("time of day", new[] { "my encounter", "my wrong encounter" });
 
-            SetupEncounterLevel("my encounter/my amount", 9266);
+            SetupEncounterLevel("my encounter", 9266);
 
             filters[filter].Add("my encounter");
             filters[filter].Add("my wrong encounter");
@@ -10523,11 +10558,11 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
         public void SelectPossibleFilters_ReturnsValidFilters_SomeFilters()
         {
             SetupAllFilters();
-            SetUpCreatureBasedEncounterGroup("temperatureenvironment", new[] { "my encounter/my amount", "my other encounter/my other amount" });
-            SetUpCreatureBasedEncounterGroup("time of day", new[] { "my encounter/my amount", "my wrong encounter/my wrong amount", "my other encounter/my other amount" });
+            SetUpEncounterGroup("temperatureenvironment", new[] { "my encounter", "my other encounter" });
+            SetUpEncounterGroup("time of day", new[] { "my encounter", "my wrong encounter", "my other encounter" });
 
-            SetupEncounterLevel("my encounter/my amount", 9266);
-            SetupEncounterLevel("my other encounter/my other amount", 9266);
+            SetupEncounterLevel("my encounter", 9266);
+            SetupEncounterLevel("my other encounter", 9266);
 
             filters[CreatureDataConstants.Types.Animal].Add("my encounter");
             filters[CreatureDataConstants.Types.Animal].Add("my wrong encounter");
@@ -10542,10 +10577,10 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
         public void SelectPossibleFilters_ReturnsValidFilters_NoFilters()
         {
             SetupAllFilters();
-            SetUpCreatureBasedEncounterGroup("temperatureenvironment", new[] { "my encounter/my amount", "my other encounter/my other amount" });
-            SetUpCreatureBasedEncounterGroup("time of day", new[] { "my encounter/my amount", "my wrong encounter/my wrong amount" });
+            SetUpEncounterGroup("temperatureenvironment", new[] { "my encounter", "my other encounter" });
+            SetUpEncounterGroup("time of day", new[] { "my encounter", "my wrong encounter" });
 
-            SetupEncounterLevel("my encounter/my amount", 9266);
+            SetupEncounterLevel("my encounter", 9266);
 
             var possibleFilters = encounterCollectionSelector.SelectPossibleFilters("environment", "temperature", "time of day", 9266, false, false);
             Assert.That(possibleFilters, Is.Empty);

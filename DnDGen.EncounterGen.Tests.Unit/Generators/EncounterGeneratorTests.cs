@@ -50,7 +50,8 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
                 mockEncounterCharacterGenerator.Object,
                 mockEncounterTreasureGenerator.Object,
                 mockEncounterVerifier.Object,
-                mockCreatureGenerator.Object);
+                mockCreatureGenerator.Object,
+                mockEncounterCollectionSelector.Object);
 
             specifications = new EncounterSpecifications();
             treasure = new Treasure();
@@ -178,10 +179,10 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
         [Test]
         public void RerollEncounter()
         {
-            //mockCreatureGenerator
-            //    .SetupSequence(g => g.GenerateFor("my encounter"))
-            //    .Returns(new[] { new Creature { Type = new CreatureType { Name = "bad creature" }, Quantity = 666 } })
-            //    .Returns(creatures);
+            mockCreatureGenerator
+                .SetupSequence(g => g.GenerateFor("my encounter"))
+                .Returns(new[] { new Creature { Type = new CreatureType { Name = "bad creature" }, Quantity = 666 } })
+                .Returns(creatures);
 
             mockEncounterVerifier
                 .Setup(v => v.EncounterIsValid(It.Is<Encounter>(e => e.Creatures.Single().Quantity == 600), specifications.CreatureTypeFilters))
@@ -311,10 +312,10 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
                 .Returns(4);
 
             mockEncounterCollectionSelector
-                .Setup(g => g.SelectRandomEncounterFrom(It.Is<EncounterSpecifications>(es => es.Level == EncounterLevel + 4)))
+                .Setup(g => g.SelectRandomEncounterFrom(It.Is<EncounterSpecifications>(es => es.Level == 14)))
                 .Returns("my other encounter");
             mockEncounterCollectionSelector
-                .Setup(g => g.SelectRandomEncounterFrom(It.Is<EncounterSpecifications>(es => es.Level == EncounterLevel - 4)))
+                .Setup(g => g.SelectRandomEncounterFrom(It.Is<EncounterSpecifications>(es => es.Level == 6)))
                 .Returns("my wrong encounter");
 
             mockCreatureGenerator.Setup(s => s.GenerateFor("my other encounter")).Returns(otherCreatures);
@@ -332,7 +333,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
 
             var encounter = encounterGenerator.Generate(specifications);
             Assert.That(encounter, Is.Not.Null);
-            Assert.That(encounter.Description, Is.EqualTo("my encounter"));
+            Assert.That(encounter.Description, Is.EqualTo("my other encounter"));
             Assert.That(encounter.Creatures, Is.EqualTo(otherCreatures));
         }
 

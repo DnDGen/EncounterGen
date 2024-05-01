@@ -31,7 +31,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
         }
 
         [Test]
-        public void CacheResultsFromSelectingAllWeighted()
+        public void SelectAllWeightedFrom_CacheResultsFromSelectingAllWeighted()
         {
             var collection = new[]
             {
@@ -50,7 +50,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
         }
 
         [Test]
-        public void CacheSimilarResultsFromSelectingAllWeighted()
+        public void SelectAllWeightedFrom_CacheSimilarResultsFromSelectingAllWeighted()
         {
             var collection = new[]
             {
@@ -72,7 +72,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
         }
 
         [Test]
-        public void CacheKeyIsUniquePerLevel()
+        public void SelectAllWeightedFrom_CacheKeyIsUniquePerLevel()
         {
             var collection = new[]
             {
@@ -110,7 +110,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
         }
 
         [Test]
-        public void CacheKeyIsUniquePerEnvironment()
+        public void SelectAllWeightedFrom_CacheKeyIsUniquePerEnvironment()
         {
             var collection = new[]
             {
@@ -148,7 +148,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
         }
 
         [Test]
-        public void CacheKeyIsUniquePerTimeOfDay()
+        public void SelectAllWeightedFrom_CacheKeyIsUniquePerTimeOfDay()
         {
             var collection = new[]
             {
@@ -186,7 +186,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
         }
 
         [Test]
-        public void CacheKeyIsUniquePerTemperature()
+        public void SelectAllWeightedFrom_CacheKeyIsUniquePerTemperature()
         {
             var collection = new[]
             {
@@ -224,7 +224,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
         }
 
         [Test]
-        public void CacheKeyIsUniqueWithFilter()
+        public void SelectAllWeightedFrom_CacheKeyIsUniqueWithFilter()
         {
             var collection = new[]
             {
@@ -262,7 +262,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
         }
 
         [Test]
-        public void CacheKeyIsUniqueBetweenFilters()
+        public void SelectAllWeightedFrom_CacheKeyIsUniqueBetweenFilters()
         {
             specifications.CreatureTypeFilters = new[] { "filter" };
 
@@ -302,7 +302,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
         }
 
         [Test]
-        public void CacheKeyIsUniqueWithMultipleFilters()
+        public void SelectAllWeightedFrom_CacheKeyIsUniqueWithMultipleFilters()
         {
             specifications.CreatureTypeFilters = new[] { "filter" };
 
@@ -342,7 +342,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
         }
 
         [Test]
-        public void SelectRandomFromCachedWeightedEncounters()
+        public void SelectRandomFrom_SelectRandomFromCachedWeightedEncounters()
         {
             var collection = new[]
             {
@@ -364,13 +364,278 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
         }
 
         [Test]
-        public void IfCacheIsEmpty_ThrowException()
+        public void SelectRandomFrom_IfCacheIsEmpty_ThrowException()
         {
             var collection = Enumerable.Empty<Dictionary<string, string>>();
 
             mockInnerSelector.Setup(s => s.SelectAllWeightedFrom(specifications)).Returns(collection);
 
             Assert.That(() => cachingProxy.SelectRandomFrom(specifications), Throws.ArgumentException.With.Message.EqualTo($"No valid encounters exist for {specifications.Description}"));
+        }
+
+        [Test]
+        public void SelectAllWeightedEncountersFrom_CacheResultsFromSelectingAllWeighted()
+        {
+            var collection = new[] { "encounter 1", "encounter 2" };
+            mockInnerSelector.Setup(s => s.SelectAllWeightedEncountersFrom(specifications)).Returns(collection);
+
+            var result = cachingProxy.SelectAllWeightedEncountersFrom(specifications);
+            Assert.That(result, Is.EqualTo(collection));
+
+            result = cachingProxy.SelectAllWeightedEncountersFrom(specifications);
+            Assert.That(result, Is.EqualTo(collection));
+            mockInnerSelector.Verify(s => s.SelectAllWeightedEncountersFrom(It.IsAny<EncounterSpecifications>()), Times.Once);
+        }
+
+        [Test]
+        public void SelectAllWeightedEncountersFrom_CacheSimilarResultsFromSelectingAllWeighted()
+        {
+            var collection = new[] { "encounter 1", "encounter 2" };
+            mockInnerSelector.Setup(s => s.SelectAllWeightedEncountersFrom(specifications)).Returns(collection);
+
+            var result = cachingProxy.SelectAllWeightedEncountersFrom(specifications);
+            Assert.That(result, Is.EqualTo(collection));
+
+            var clone = specifications.Clone();
+
+            result = cachingProxy.SelectAllWeightedEncountersFrom(clone);
+
+            Assert.That(result, Is.EqualTo(collection));
+            mockInnerSelector.Verify(s => s.SelectAllWeightedEncountersFrom(It.IsAny<EncounterSpecifications>()), Times.Once);
+        }
+
+        [Test]
+        public void SelectAllWeightedEncountersFrom_CacheKeyIsUniquePerLevel()
+        {
+            var collection = new[] { "encounter 1", "encounter 2" };
+            mockInnerSelector.Setup(s => s.SelectAllWeightedEncountersFrom(specifications)).Returns(collection);
+
+            var otherCollection = new[] { "other encounter 1", "other encounter 2" };
+
+            var otherSpecs = specifications.Clone();
+            otherSpecs.Level = 90210;
+
+            mockInnerSelector.Setup(s => s.SelectAllWeightedEncountersFrom(otherSpecs)).Returns(otherCollection);
+
+            var result = cachingProxy.SelectAllWeightedEncountersFrom(specifications);
+            Assert.That(result, Is.EqualTo(collection));
+
+            result = cachingProxy.SelectAllWeightedEncountersFrom(otherSpecs);
+            Assert.That(result, Is.EqualTo(otherCollection));
+            mockInnerSelector.Verify(s => s.SelectAllWeightedEncountersFrom(It.IsAny<EncounterSpecifications>()), Times.Exactly(2));
+
+            result = cachingProxy.SelectAllWeightedEncountersFrom(specifications);
+            Assert.That(result, Is.EqualTo(collection));
+            mockInnerSelector.Verify(s => s.SelectAllWeightedEncountersFrom(It.IsAny<EncounterSpecifications>()), Times.Exactly(2));
+
+            result = cachingProxy.SelectAllWeightedEncountersFrom(otherSpecs);
+            Assert.That(result, Is.EqualTo(otherCollection));
+            mockInnerSelector.Verify(s => s.SelectAllWeightedEncountersFrom(It.IsAny<EncounterSpecifications>()), Times.Exactly(2));
+        }
+
+        [Test]
+        public void SelectAllWeightedEncountersFrom_CacheKeyIsUniquePerEnvironment()
+        {
+            var collection = new[] { "encounter 1", "encounter 2" };
+            mockInnerSelector.Setup(s => s.SelectAllWeightedEncountersFrom(specifications)).Returns(collection);
+
+            var otherCollection = new[] { "other encounter 1", "other encounter 2" };
+
+            var otherSpecs = specifications.Clone();
+            otherSpecs.Environment = "other environment";
+
+            mockInnerSelector.Setup(s => s.SelectAllWeightedEncountersFrom(otherSpecs)).Returns(otherCollection);
+
+            var result = cachingProxy.SelectAllWeightedEncountersFrom(specifications);
+            Assert.That(result, Is.EqualTo(collection));
+
+            result = cachingProxy.SelectAllWeightedEncountersFrom(otherSpecs);
+            Assert.That(result, Is.EqualTo(otherCollection));
+            mockInnerSelector.Verify(s => s.SelectAllWeightedEncountersFrom(It.IsAny<EncounterSpecifications>()), Times.Exactly(2));
+
+            result = cachingProxy.SelectAllWeightedEncountersFrom(specifications);
+            Assert.That(result, Is.EqualTo(collection));
+            mockInnerSelector.Verify(s => s.SelectAllWeightedEncountersFrom(It.IsAny<EncounterSpecifications>()), Times.Exactly(2));
+
+            result = cachingProxy.SelectAllWeightedEncountersFrom(otherSpecs);
+            Assert.That(result, Is.EqualTo(otherCollection));
+            mockInnerSelector.Verify(s => s.SelectAllWeightedEncountersFrom(It.IsAny<EncounterSpecifications>()), Times.Exactly(2));
+        }
+
+        [Test]
+        public void SelectAllWeightedEncountersFrom_CacheKeyIsUniquePerTimeOfDay()
+        {
+            var collection = new[] { "encounter 1", "encounter 2" };
+            mockInnerSelector.Setup(s => s.SelectAllWeightedEncountersFrom(specifications)).Returns(collection);
+
+            var otherCollection = new[] { "other encounter 1", "other encounter 2" };
+
+            var otherSpecs = specifications.Clone();
+            otherSpecs.TimeOfDay = "other time of day";
+
+            mockInnerSelector.Setup(s => s.SelectAllWeightedEncountersFrom(otherSpecs)).Returns(otherCollection);
+
+            var result = cachingProxy.SelectAllWeightedEncountersFrom(specifications);
+            Assert.That(result, Is.EqualTo(collection));
+
+            result = cachingProxy.SelectAllWeightedEncountersFrom(otherSpecs);
+            Assert.That(result, Is.EqualTo(otherCollection));
+            mockInnerSelector.Verify(s => s.SelectAllWeightedEncountersFrom(It.IsAny<EncounterSpecifications>()), Times.Exactly(2));
+
+            result = cachingProxy.SelectAllWeightedEncountersFrom(specifications);
+            Assert.That(result, Is.EqualTo(collection));
+            mockInnerSelector.Verify(s => s.SelectAllWeightedEncountersFrom(It.IsAny<EncounterSpecifications>()), Times.Exactly(2));
+
+            result = cachingProxy.SelectAllWeightedEncountersFrom(otherSpecs);
+            Assert.That(result, Is.EqualTo(otherCollection));
+            mockInnerSelector.Verify(s => s.SelectAllWeightedEncountersFrom(It.IsAny<EncounterSpecifications>()), Times.Exactly(2));
+        }
+
+        [Test]
+        public void SelectAllWeightedEncountersFrom_CacheKeyIsUniquePerTemperature()
+        {
+            var collection = new[] { "encounter 1", "encounter 2" };
+            mockInnerSelector.Setup(s => s.SelectAllWeightedEncountersFrom(specifications)).Returns(collection);
+
+            var otherCollection = new[] { "other encounter 1", "other encounter 2" };
+
+            var otherSpecs = specifications.Clone();
+            otherSpecs.Temperature = "other temperature";
+
+            mockInnerSelector.Setup(s => s.SelectAllWeightedEncountersFrom(otherSpecs)).Returns(otherCollection);
+
+            var result = cachingProxy.SelectAllWeightedEncountersFrom(specifications);
+            Assert.That(result, Is.EqualTo(collection));
+
+            result = cachingProxy.SelectAllWeightedEncountersFrom(otherSpecs);
+            Assert.That(result, Is.EqualTo(otherCollection));
+            mockInnerSelector.Verify(s => s.SelectAllWeightedEncountersFrom(It.IsAny<EncounterSpecifications>()), Times.Exactly(2));
+
+            result = cachingProxy.SelectAllWeightedEncountersFrom(specifications);
+            Assert.That(result, Is.EqualTo(collection));
+            mockInnerSelector.Verify(s => s.SelectAllWeightedEncountersFrom(It.IsAny<EncounterSpecifications>()), Times.Exactly(2));
+
+            result = cachingProxy.SelectAllWeightedEncountersFrom(otherSpecs);
+            Assert.That(result, Is.EqualTo(otherCollection));
+            mockInnerSelector.Verify(s => s.SelectAllWeightedEncountersFrom(It.IsAny<EncounterSpecifications>()), Times.Exactly(2));
+        }
+
+        [Test]
+        public void SelectAllWeightedEncountersFrom_CacheKeyIsUniqueWithFilter()
+        {
+            var collection = new[] { "encounter 1", "encounter 2" };
+            mockInnerSelector.Setup(s => s.SelectAllWeightedEncountersFrom(specifications)).Returns(collection);
+
+            var otherCollection = new[] { "other encounter 1", "other encounter 2" };
+
+            var otherSpecs = specifications.Clone();
+            otherSpecs.CreatureTypeFilters = new[] { "filter" };
+
+            mockInnerSelector.Setup(s => s.SelectAllWeightedEncountersFrom(otherSpecs)).Returns(otherCollection);
+
+            var result = cachingProxy.SelectAllWeightedEncountersFrom(specifications);
+            Assert.That(result, Is.EqualTo(collection));
+
+            result = cachingProxy.SelectAllWeightedEncountersFrom(otherSpecs);
+            Assert.That(result, Is.EqualTo(otherCollection));
+            mockInnerSelector.Verify(s => s.SelectAllWeightedEncountersFrom(It.IsAny<EncounterSpecifications>()), Times.Exactly(2));
+
+            result = cachingProxy.SelectAllWeightedEncountersFrom(specifications);
+            Assert.That(result, Is.EqualTo(collection));
+            mockInnerSelector.Verify(s => s.SelectAllWeightedEncountersFrom(It.IsAny<EncounterSpecifications>()), Times.Exactly(2));
+
+            result = cachingProxy.SelectAllWeightedEncountersFrom(otherSpecs);
+            Assert.That(result, Is.EqualTo(otherCollection));
+            mockInnerSelector.Verify(s => s.SelectAllWeightedEncountersFrom(It.IsAny<EncounterSpecifications>()), Times.Exactly(2));
+        }
+
+        [Test]
+        public void SelectAllWeightedEncountersFrom_CacheKeyIsUniqueBetweenFilters()
+        {
+            specifications.CreatureTypeFilters = new[] { "filter" };
+
+            var collection = new[] { "encounter 1", "encounter 2" };
+            mockInnerSelector.Setup(s => s.SelectAllWeightedEncountersFrom(specifications)).Returns(collection);
+
+            var otherCollection = new[] { "other encounter 1", "other encounter 2" };
+
+            var otherSpecs = specifications.Clone();
+            otherSpecs.CreatureTypeFilters = new[] { "other filter" };
+
+            mockInnerSelector.Setup(s => s.SelectAllWeightedEncountersFrom(otherSpecs)).Returns(otherCollection);
+
+            var result = cachingProxy.SelectAllWeightedEncountersFrom(specifications);
+            Assert.That(result, Is.EqualTo(collection));
+
+            result = cachingProxy.SelectAllWeightedEncountersFrom(otherSpecs);
+            Assert.That(result, Is.EqualTo(otherCollection));
+            mockInnerSelector.Verify(s => s.SelectAllWeightedEncountersFrom(It.IsAny<EncounterSpecifications>()), Times.Exactly(2));
+
+            result = cachingProxy.SelectAllWeightedEncountersFrom(specifications);
+            Assert.That(result, Is.EqualTo(collection));
+            mockInnerSelector.Verify(s => s.SelectAllWeightedEncountersFrom(It.IsAny<EncounterSpecifications>()), Times.Exactly(2));
+
+            result = cachingProxy.SelectAllWeightedEncountersFrom(otherSpecs);
+            Assert.That(result, Is.EqualTo(otherCollection));
+            mockInnerSelector.Verify(s => s.SelectAllWeightedEncountersFrom(It.IsAny<EncounterSpecifications>()), Times.Exactly(2));
+        }
+
+        [Test]
+        public void SelectAllWeightedEncountersFrom_CacheKeyIsUniqueWithMultipleFilters()
+        {
+            specifications.CreatureTypeFilters = new[] { "filter" };
+
+            var collection = new[] { "encounter 1", "encounter 2" };
+            mockInnerSelector.Setup(s => s.SelectAllWeightedEncountersFrom(specifications)).Returns(collection);
+
+            var otherCollection = new[] { "other encounter 1", "other encounter 2" };
+
+            var otherSpecs = specifications.Clone();
+            otherSpecs.CreatureTypeFilters = new[] { "filter", "other filter" };
+
+            mockInnerSelector.Setup(s => s.SelectAllWeightedEncountersFrom(otherSpecs)).Returns(otherCollection);
+
+            var result = cachingProxy.SelectAllWeightedEncountersFrom(specifications);
+            Assert.That(result, Is.EqualTo(collection));
+
+            result = cachingProxy.SelectAllWeightedEncountersFrom(otherSpecs);
+            Assert.That(result, Is.EqualTo(otherCollection));
+            mockInnerSelector.Verify(s => s.SelectAllWeightedEncountersFrom(It.IsAny<EncounterSpecifications>()), Times.Exactly(2));
+
+            result = cachingProxy.SelectAllWeightedEncountersFrom(specifications);
+            Assert.That(result, Is.EqualTo(collection));
+            mockInnerSelector.Verify(s => s.SelectAllWeightedEncountersFrom(It.IsAny<EncounterSpecifications>()), Times.Exactly(2));
+
+            result = cachingProxy.SelectAllWeightedEncountersFrom(otherSpecs);
+            Assert.That(result, Is.EqualTo(otherCollection));
+            mockInnerSelector.Verify(s => s.SelectAllWeightedEncountersFrom(It.IsAny<EncounterSpecifications>()), Times.Exactly(2));
+        }
+
+        [Test]
+        public void SelectRandomEncounterFrom_SelectRandomFromCachedWeightedEncounters()
+        {
+            var collection = new[] { "encounter 1", "encounter 2" };
+            mockInnerSelector.Setup(s => s.SelectAllWeightedEncountersFrom(specifications)).Returns(collection);
+
+            mockCollectionSelector.SetupSequence(s => s.SelectRandomFrom(collection)).Returns(collection.First()).Returns(collection.Last());
+
+            var result = cachingProxy.SelectRandomEncounterFrom(specifications);
+            Assert.That(result, Is.EqualTo(collection.First()));
+
+            result = cachingProxy.SelectRandomEncounterFrom(specifications);
+            Assert.That(result, Is.EqualTo(collection.Last()));
+            mockInnerSelector.Verify(s => s.SelectAllWeightedEncountersFrom(It.IsAny<EncounterSpecifications>()), Times.Once);
+            mockInnerSelector.Verify(s => s.SelectRandomEncounterFrom(It.IsAny<EncounterSpecifications>()), Times.Never);
+        }
+
+        [Test]
+        public void SelectRandomEncounterFrom_IfCacheIsEmpty_ThrowException()
+        {
+            var collection = Enumerable.Empty<string>();
+
+            mockInnerSelector.Setup(s => s.SelectAllWeightedEncountersFrom(specifications)).Returns(collection);
+
+            Assert.That(() => cachingProxy.SelectRandomEncounterFrom(specifications), Throws.ArgumentException.With.Message.EqualTo($"No valid encounters exist for {specifications.Description}"));
         }
     }
 }
