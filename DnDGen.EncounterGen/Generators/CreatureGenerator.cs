@@ -18,7 +18,12 @@ namespace DnDGen.EncounterGen.Generators
         private readonly IEncounterFormatter encounterFormatter;
         private readonly IChallengeRatingSelector challengeRatingSelector;
 
-        public CreatureGenerator(Dice dice, ICollectionSelector collectionSelector, IEncounterCollectionSelector encounterCollectionSelector, IEncounterFormatter encounterFormatter, IChallengeRatingSelector challengeRatingSelector)
+        public CreatureGenerator(
+            Dice dice,
+            ICollectionSelector collectionSelector,
+            IEncounterCollectionSelector encounterCollectionSelector,
+            IEncounterFormatter encounterFormatter,
+            IChallengeRatingSelector challengeRatingSelector)
         {
             this.dice = dice;
             this.collectionSelector = collectionSelector;
@@ -177,6 +182,11 @@ namespace DnDGen.EncounterGen.Generators
             }
 
             return subtype;
+        }
+
+        public IEnumerable<Creature> GenerateFor(string encounter)
+        {
+            throw new NotImplementedException();
         }
     }
 }

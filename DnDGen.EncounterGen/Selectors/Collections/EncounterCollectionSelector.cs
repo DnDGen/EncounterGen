@@ -494,5 +494,20 @@ namespace DnDGen.EncounterGen.Selectors.Collections
                     CreatureTypeFilters = new[] { f },
                 }).Any());
         }
+
+        public string SelectRandomEncounterFrom(EncounterSpecifications encounterSpecifications)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<string> SelectAllWeightedEncountersFrom(EncounterSpecifications encounterSpecifications)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<string> SelectPossibleEncountersFrom(string environment = "", string temperature = "", string timeOfDay = "", int level = 0, bool? allowAquatic = null, bool? allowUnderground = null, params string[] filters)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
