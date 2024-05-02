@@ -5,7 +5,14 @@ namespace DnDGen.EncounterGen.Selectors
 {
     internal class EncounterFormatter : IEncounterFormatter
     {
-        public string BuildCreature(string name, string description = "", string subtype = "", string challengeRating = "", string baseRace = "", string metarace = "", params string[] characterClasses)
+        public string BuildCreature(
+            string name,
+            string description = "",
+            string subtype = "",
+            string challengeRating = "",
+            string baseRace = "",
+            string metarace = "",
+            params string[] characterClasses)
         {
             var creature = name;
 
@@ -66,7 +73,7 @@ namespace DnDGen.EncounterGen.Selectors
         public Dictionary<string, string> SelectCreaturesAndAmountsFrom(string encounter)
         {
             var rawCreaturesAndAmounts = encounter.Split(',');
-            return rawCreaturesAndAmounts.Select(ca => ca.Split('/')).ToDictionary(ca => ca[0], ca => ca[1]);
+            return SelectCreaturesAndAmountsFrom(rawCreaturesAndAmounts);
         }
 
         public string SelectDescriptionFrom(string creature)
@@ -85,12 +92,17 @@ namespace DnDGen.EncounterGen.Selectors
             if (firstIndex == -1)
                 return creature;
 
-            return creature.Substring(0, firstIndex);
+            return creature[..firstIndex];
         }
 
         public string SelectSubtypeFrom(string creature)
         {
             return GetSubstring(creature, '$', '$');
+        }
+
+        public Dictionary<string, string> SelectCreaturesAndAmountsFrom(IEnumerable<string> encounterCreatureData)
+        {
+            return encounterCreatureData.Select(ca => ca.Split('/')).ToDictionary(ca => ca[0], ca => ca[1]);
         }
     }
 }

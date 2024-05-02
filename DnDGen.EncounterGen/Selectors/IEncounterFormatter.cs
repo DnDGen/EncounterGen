@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
 [assembly: InternalsVisibleTo("DnDGen.EncounterGen.Tests.Unit")]
@@ -10,7 +11,10 @@ namespace DnDGen.EncounterGen.Selectors
 {
     internal interface IEncounterFormatter
     {
+        [Obsolete]
         Dictionary<string, string> SelectCreaturesAndAmountsFrom(string encounter);
+        Dictionary<string, string> SelectCreaturesAndAmountsFrom(IEnumerable<string> encounterCreatureData);
+        [Obsolete]
         string BuildEncounter(Dictionary<string, string> creaturesAndAmounts);
         string SelectNameFrom(string creature);
         string SelectDescriptionFrom(string creature);
@@ -19,6 +23,13 @@ namespace DnDGen.EncounterGen.Selectors
         string SelectBaseRaceFrom(string creature);
         string SelectMetaraceFrom(string creature);
         IEnumerable<string> SelectCharacterClassesFrom(string creature);
-        string BuildCreature(string name, string description = "", string subtype = "", string challengeRating = "", string baseRace = "", string metarace = "", params string[] characterClasses);
+        string BuildCreature(
+            string name,
+            string description = "",
+            string subtype = "",
+            string challengeRating = "",
+            string baseRace = "",
+            string metarace = "",
+            params string[] characterClasses);
     }
 }

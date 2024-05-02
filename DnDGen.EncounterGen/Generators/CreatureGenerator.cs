@@ -1,6 +1,5 @@
 ﻿using DnDGen.EncounterGen.Models;
 using DnDGen.EncounterGen.Selectors;
-using DnDGen.EncounterGen.Selectors.Collections;
 using DnDGen.EncounterGen.Tables;
 using DnDGen.Infrastructure.Selectors.Collections;
 using DnDGen.RollGen;
@@ -14,20 +13,17 @@ namespace DnDGen.EncounterGen.Generators
     {
         private readonly Dice dice;
         private readonly ICollectionSelector collectionSelector;
-        private readonly IEncounterCollectionSelector encounterCollectionSelector;
         private readonly IEncounterFormatter encounterFormatter;
         private readonly IChallengeRatingSelector challengeRatingSelector;
 
         public CreatureGenerator(
             Dice dice,
             ICollectionSelector collectionSelector,
-            IEncounterCollectionSelector encounterCollectionSelector,
             IEncounterFormatter encounterFormatter,
             IChallengeRatingSelector challengeRatingSelector)
         {
             this.dice = dice;
             this.collectionSelector = collectionSelector;
-            this.encounterCollectionSelector = encounterCollectionSelector;
             this.encounterFormatter = encounterFormatter;
             this.challengeRatingSelector = challengeRatingSelector;
         }
@@ -37,23 +33,6 @@ namespace DnDGen.EncounterGen.Generators
             foreach (var creature in creatures)
             {
                 creature.Type = CleanCreatureType(creature.Type);
-            }
-
-            return creatures;
-        }
-
-        public IEnumerable<Creature> GenerateFor(EncounterSpecifications encounterSpecifications)
-        {
-            var creaturesAndAmounts = encounterCollectionSelector.SelectRandomFrom(encounterSpecifications);
-            var creatures = new List<Creature>();
-
-            foreach (var kvp in creaturesAndAmounts)
-            {
-                var creatureName = kvp.Key;
-                var amount = kvp.Value;
-
-                var subCreatures = GetCreatures(creatureName, amount);
-                creatures.AddRange(subCreatures);
             }
 
             return creatures;
@@ -106,10 +85,7 @@ namespace DnDGen.EncounterGen.Generators
             return new[] { creature };
         }
 
-        private bool SubtypeNotFilled(Creature creature)
-        {
-            return creature.Type.SubType == null || string.IsNullOrEmpty(creature.Type.SubType.Name);
-        }
+        private bool SubtypeNotFilled(Creature creature) => creature.Type.SubType == null || string.IsNullOrEmpty(creature.Type.SubType.Name);
 
         private CreatureType GetCreatureType(string fullCreature)
         {
@@ -186,7 +162,20 @@ namespace DnDGen.EncounterGen.Generators
 
         public IEnumerable<Creature> GenerateFor(string encounter)
         {
-            throw new NotImplementedException();
+            var creatureData = collectionSelector.SelectFrom(TableNameConstants.EncounterCreatures, encounter);
+            var creaturesAndAmounts = encounterFormatter.SelectCreaturesAndAmountsFrom(creatureData);
+            var creatures = new List<Creature>();
+
+            foreach (var kvp in creaturesAndAmounts)
+            {
+                var creatureName = kvp.Key;
+                var amount = kvp.Value;
+
+                var subCreatures = GetCreatures(creatureName, amount);
+                creatures.AddRange(subCreatures);
+            }
+
+            return creatures;
         }
     }
 }

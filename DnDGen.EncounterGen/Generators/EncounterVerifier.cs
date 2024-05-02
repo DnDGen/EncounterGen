@@ -26,9 +26,16 @@ namespace DnDGen.EncounterGen.Generators
             if (!encounterSpecifications.IsValid())
                 return false;
 
-            var allEncounterCreaturesAndAmounts = encounterCollectionSelector.SelectAllWeightedFrom(encounterSpecifications);
+            var exists = ValidEncounterExists(
+                encounterSpecifications.Environment,
+                encounterSpecifications.Temperature,
+                encounterSpecifications.TimeOfDay,
+                encounterSpecifications.Level,
+                encounterSpecifications.AllowAquatic,
+                encounterSpecifications.AllowUnderground,
+                encounterSpecifications.CreatureTypeFilters.ToArray());
 
-            return allEncounterCreaturesAndAmounts.Any();
+            return exists;
         }
 
         public bool EncounterIsValid(Encounter encounter, IEnumerable<string> creatureTypeFilters)
@@ -76,7 +83,14 @@ namespace DnDGen.EncounterGen.Generators
             bool allowUnderground = true,
             params string[] filters)
         {
-            var possibleEncounters = encounterCollectionSelector.SelectPossibleFrom(environment, temperature, timeOfDay, level, allowAquatic, allowUnderground, filters);
+            var possibleEncounters = encounterCollectionSelector.SelectPossibleEncountersFrom(
+                environment,
+                temperature,
+                timeOfDay,
+                level,
+                allowAquatic,
+                allowUnderground,
+                filters);
             return possibleEncounters.Any();
         }
 

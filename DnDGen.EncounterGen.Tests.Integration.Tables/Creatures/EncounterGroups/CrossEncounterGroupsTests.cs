@@ -307,10 +307,10 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
             Assert.That(percentage, Is.LessThanOrEqualTo(.10));
         }
 
-        private bool IsUndead(string creature)
+        private bool IsUndead(string encounter)
         {
-            var undead = collectionSelector.Explode(TableNameConstants.CreatureGroups, CreatureDataConstants.Types.Undead);
-            return undead.Contains(creature);
+            var undead = collectionSelector.Explode(TableNameConstants.EncounterGroups, CreatureDataConstants.Types.Undead);
+            return undead.Contains(encounter);
         }
 
         private double GetPercentage(string environment, string temperature, string timeOfDay, int level, Func<string, bool> isInSubgroup)
@@ -321,10 +321,10 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
             specifications.Temperature = temperature;
             specifications.TimeOfDay = timeOfDay;
 
-            var encounters = encounterCollectionSelector.SelectAllWeightedFrom(specifications);
+            var encounters = encounterCollectionSelector.SelectAllWeightedEncountersFrom(specifications);
 
-            var subgroupCreatures = encounters.Where(e => isInSubgroup(e.First().Key));
-            var subgroupCount = subgroupCreatures.Count();
+            var subgroupEncounters = encounters.Where(isInSubgroup);
+            var subgroupCount = subgroupEncounters.Count();
             var encounterCount = (double)encounters.Count();
             var percentage = subgroupCount / encounterCount;
 
@@ -447,10 +447,11 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
             Assert.That(percentage, Is.Positive);
         }
 
-        private bool IsUndeadCharacter(string creature)
+        private bool IsUndeadCharacter(string encounter)
         {
-            var name = encounterFormatter.SelectNameFrom(creature);
-            return IsUndead(creature) && name == CreatureDataConstants.Character;
+            var creatures = collectionSelector.SelectFrom(TableNameConstants.EncounterCreatures, encounter);
+            var names = creatures.Select(encounterFormatter.SelectNameFrom);
+            return IsUndead(encounter) && names.Contains(CreatureDataConstants.Character);
         }
     }
 }

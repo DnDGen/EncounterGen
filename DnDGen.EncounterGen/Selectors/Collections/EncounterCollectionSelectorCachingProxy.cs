@@ -27,37 +27,6 @@ namespace DnDGen.EncounterGen.Selectors.Collections
             return $"{specifications.Description}";
         }
 
-        public IEnumerable<Dictionary<string, string>> SelectAllWeightedFrom(EncounterSpecifications specifications)
-        {
-            var key = GetKey(specifications);
-            if (!cachedCollections.ContainsKey(key))
-                cachedCollections[key] = internalSelector.SelectAllWeightedFrom(specifications);
-
-            return cachedCollections[key];
-        }
-
-        public Dictionary<string, string> SelectRandomFrom(EncounterSpecifications specifications)
-        {
-            var weightedEncounters = SelectAllWeightedFrom(specifications);
-
-            if (!weightedEncounters.Any())
-                throw new ArgumentException($"No valid encounters exist for {specifications.Description}");
-
-            return collectionSelector.SelectRandomFrom(weightedEncounters);
-        }
-
-        public IEnumerable<Dictionary<string, string>> SelectPossibleFrom(
-            string environment = "",
-            string temperature = "",
-            string timeOfDay = "",
-            int level = 0,
-            bool? allowAquatic = null,
-            bool? allowUnderground = null,
-            params string[] filters)
-        {
-            return internalSelector.SelectPossibleFrom(environment, temperature, timeOfDay, level, allowAquatic, allowUnderground, filters);
-        }
-
         public IEnumerable<string> SelectPossibleTemperatures(string environment)
         {
             return internalSelector.SelectPossibleTemperatures(environment);
