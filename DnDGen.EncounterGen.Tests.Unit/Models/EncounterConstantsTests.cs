@@ -8,9 +8,9 @@ namespace DnDGen.EncounterGen.Tests.Unit.Models
     [TestFixture]
     public class EncounterConstantsTests
     {
-        [TestCase(EncounterConstants.Aasimar_Solitary, "Aasimar Warrior (Solitary)")]
-        [TestCase(EncounterConstants.Aasimar_Pair, "Aasimar Warriors (Pair)")]
-        [TestCase(EncounterConstants.Aasimar_Team, "Aasimar Warriors (Team)")]
+        [TestCase(EncounterConstants.Aasimar_Solitary, "Aasimar (Solitary)")]
+        [TestCase(EncounterConstants.Aasimar_Pair, "Aasimars (Pair)")]
+        [TestCase(EncounterConstants.Aasimar_Team, "Aasimars (Team)")]
         [TestCase(EncounterConstants.Aboleth_Solitary, "Aboleth (Solitary)")]
         [TestCase(EncounterConstants.Aboleth_Brood, "Aboleths (Brood)")]
         [TestCase(EncounterConstants.Aboleth_SlaverBrood, "Aboleths (Slaver Brood)")]

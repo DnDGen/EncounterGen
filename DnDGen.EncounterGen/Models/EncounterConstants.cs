@@ -6,9 +6,9 @@ namespace DnDGen.EncounterGen.Models
 {
     public static class EncounterConstants
     {
-        public const string Aasimar_Solitary = "Aasimar Warrior (Solitary)";
-        public const string Aasimar_Pair = "Aasimar Warriors (Pair)";
-        public const string Aasimar_Team = "Aasimar Warriors (Team)";
+        public const string Aasimar_Solitary = "Aasimar (Solitary)";
+        public const string Aasimar_Pair = "Aasimars (Pair)";
+        public const string Aasimar_Team = "Aasimars (Team)";
         public const string Aboleth_Solitary = "Aboleth (Solitary)";
         public const string Aboleth_Brood = "Aboleths (Brood)";
         public const string Aboleth_SlaverBrood = "Aboleths (Slaver Brood)";

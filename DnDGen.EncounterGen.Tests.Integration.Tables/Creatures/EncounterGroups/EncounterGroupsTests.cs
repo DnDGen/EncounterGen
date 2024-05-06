@@ -11,13 +11,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
     {
         internal IEncounterCollectionSelector encounterCollectionSelector;
 
-        protected override string tableName
-        {
-            get
-            {
-                return TableNameConstants.EncounterGroups;
-            }
-        }
+        protected override string tableName => TableNameConstants.EncounterGroups;
 
         [SetUp]
         public void EncounterGroupsSetup()

@@ -23,6 +23,7 @@
     <None Remove="Tables\Creatures\AverageChallengeRatings.xml" />
     <None Remove="Tables\Creatures\AverageEncounterLevels.xml" />
     <None Remove="Tables\Creatures\CreatureGroups.xml" />
+    <None Remove="Tables\Creatures\EncounterCreatures.xml" />
     <None Remove="Tables\Creatures\EncounterGroups.xml" />
     <None Remove="Tables\EncounterDifficulty.xml" />
     <None Remove="Tables\EncounterLevelModifiers.xml" />
@@ -37,6 +38,9 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Tables\Creatures\CreatureGroups.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\Creatures\EncounterCreatures.xml">
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Tables\Creatures\EncounterGroups.xml">
@@ -59,6 +63,6 @@
     <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
   </ItemGroup>
 	<ItemGroup>
-		<None Include="18531-twenty-sided-dice-vector-thumb.png" Pack="true" PackagePath=""/>
+		<None Include="18531-twenty-sided-dice-vector-thumb.png" Pack="true" PackagePath="" />
 	</ItemGroup>
 </Project>

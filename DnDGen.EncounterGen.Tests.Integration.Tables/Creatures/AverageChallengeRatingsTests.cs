@@ -8,13 +8,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures
     [TestFixture]
     public class AverageChallengeRatingsTests : CollectionTests
     {
-        protected override string tableName
-        {
-            get
-            {
-                return TableNameConstants.AverageChallengeRatings;
-            }
-        }
+        protected override string tableName => TableNameConstants.AverageChallengeRatings;
 
         [Test]
         public override void EntriesAreComplete()

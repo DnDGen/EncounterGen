@@ -70,8 +70,8 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables
 
         protected IEnumerable<string> GetAllCreaturesFromEncounters()
         {
-            var allEncounters = collectionSelector.SelectAllFrom(TableNameConstants.EncounterGroups).Values.SelectMany(v => v);
-            var allCreatures = allEncounters.SelectMany(e => encounterFormatter.SelectCreaturesAndAmountsFrom(e).Keys);
+            var creaturesAndAmounts = collectionSelector.SelectAllFrom(TableNameConstants.EncounterCreatures);
+            var allCreatures = creaturesAndAmounts.Values.SelectMany(e => encounterFormatter.SelectCreaturesAndAmountsFrom(e).Keys);
 
             //INFO: These are creatues that do not explicitly appear in encounters, but we wish to include them anyway
             var extraCreatures = new[]
@@ -100,24 +100,11 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables
 
         protected void AssertWholeCollection(IEnumerable<string> expected, IEnumerable<string> actual)
         {
-            if (actual.Count() == 1 && expected.Count() == 1)
-                Assert.That(actual.Single(), Is.EqualTo(expected.Single()));
-
-            var missing = expected.Except(actual);
-            Assert.That(missing, Is.Empty, $"{missing.Count()} of {expected.Count()} missing");
-
-            var extra = actual.Except(expected);
-            Assert.That(extra, Is.Empty, $"{extra.Count()} extra");
-
-            Assert.That(actual.Count, Is.EqualTo(expected.Count()));
             Assert.That(actual, Is.EquivalentTo(expected));
         }
 
         protected void AssertContainedCollection(IEnumerable<string> contained, IEnumerable<string> container)
         {
-            var extra = contained.Except(container);
-            Assert.That(extra, Is.Empty, $"{extra.Count()} extra in contained collection that are not in container");
-
             Assert.That(contained, Is.SubsetOf(container));
         }
 
