@@ -66,37 +66,40 @@
 		<name>Planetars (Pair)</name>
 		<entry>Planetar/2</entry>
 	</collection>
+	<collection>
+		<name>Solar (Solitary)</name>
+		<entry>Solar/1</entry>
+	</collection>
   <collection>
-    <name>Solar</name>
-    <entry>Solar/1</entry>
-    <entry>Solar/2</entry>
+	  <name>Solars (Pair)</name>
+	  <entry>Solar/2</entry>
   </collection>
   <collection>
     <name>Animated object$Tiny$</name>
     <entry>Animated object$Tiny$/4</entry>
   </collection>
   <collection>
-    <name>Animated object$Small$</name>
+    <name>Small Animated Objects (Pair)</name>
     <entry>Animated object$Small$/2</entry>
   </collection>
   <collection>
-    <name>Animated object$Medium$</name>
+    <name>Medium Animated Object (Solitary)</name>
     <entry>Animated object$Medium$/1</entry>
   </collection>
   <collection>
-    <name>Animated object$Large$</name>
+    <name>Large Animated Object (Solitary)</name>
     <entry>Animated object$Large$/1</entry>
   </collection>
   <collection>
-    <name>Animated object$Huge$</name>
+    <name>Huge Animated Object (Solitary)</name>
     <entry>Animated object$Huge$/1</entry>
   </collection>
   <collection>
-    <name>Animated object$Gargantuan$</name>
+    <name>Gargantuan Animated Object (Solitary)</name>
     <entry>Animated object$Gargantuan$/1</entry>
   </collection>
   <collection>
-    <name>Animated object$Colossal$</name>
+    <name>Colossal Animated Object (Solitary)</name>
     <entry>Animated object$Colossal$/1</entry>
   </collection>
   <collection>
@@ -697,19 +700,19 @@
     <entry>Centaur/1</entry>
   </collection>
 	<collection>
-		<name>Centaur (Team)</name>
+		<name>Centaurs (Company)</name>
 		<entry>Centaur/1d4+4</entry>
 	</collection>
 	<collection>
-		<name>Centaur (Squad)</name>
+		<name>Centaurs (Troop)</name>
 		<entry>Centaur/2d6+6</entry>
 		<entry>Character(Leader)[1d4+1]{Centaur}@Druid@/1</entry>
 	</collection>
 	<collection>
-		<name>Centaur (Clan)</name>
+		<name>Centaurs (Tribe)</name>
 		<entry>Centaur/26d6-6</entry>
 		<entry>Centaur$Noncombatant$/13d4-7</entry>
-		<entry>Character(Sergeant)[3]{Centaur}/101</entry>
+		<entry>Character(Sergeant)[3]{Centaur}/10</entry>
 		<entry>Character(Lieutenant)[5]{Centaur}/5</entry>
 		<entry>Character(Leader)[2d3+3]{Centaur}@Druid@/1</entry>
 	</collection>
@@ -722,65 +725,98 @@
     <entry>Monstrous centipede$Small$/1d4+1</entry>
     <entry>Monstrous centipede$Small$/1d6+5</entry>
   </collection>
+	<collection>
+		<name>Medium Monstrous Centipede (Solitary)</name>
+		<entry>Monstrous centipede$Medium$/1</entry>
+	</collection>
   <collection>
-    <name>Monstrous centipede$Medium$</name>
-    <entry>Monstrous centipede$Medium$/1</entry>
-    <entry>Monstrous centipede$Medium$/1d4+1</entry>
+	  <name>Medium Monstrous Centipede (Colony)</name>
+	  <entry>Monstrous centipede$Medium$/1d4+1</entry>
   </collection>
   <collection>
-    <name>Monstrous centipede$Large$</name>
+	  <name>Large Monstrous Centipede (Solitary)</name>
     <entry>Monstrous centipede$Large$/1</entry>
-    <entry>Monstrous centipede$Large$/1d4+1</entry>
   </collection>
+	<collection>
+		<name>Large Monstrous Centipedes (Colony)</name>
+		<entry>Monstrous centipede$Large$/1d4+1</entry>
+	</collection>
   <collection>
-    <name>Monstrous centipede$Huge$</name>
+	  <name>Huge Monstrous Centipede (Solitary)</name>
     <entry>Monstrous centipede$Huge$/1</entry>
-    <entry>Monstrous centipede$Huge$/1d4+1</entry>
   </collection>
+	<collection>
+		<name>Huge Monstrous Centipedes (Colony)</name>
+		<entry>Monstrous centipede$Huge$/1d4+1</entry>
+	</collection>
   <collection>
-    <name>Monstrous centipede$Gargantuan$</name>
+	  <name>Gargantuan Monstrous Centipede (Solitary)</name>
     <entry>Monstrous centipede$Gargantuan$/1</entry>
   </collection>
   <collection>
-    <name>Monstrous centipede$Colossal$</name>
+    <name>Colossal Monstrous Centipede (Solitary)</name>
     <entry>Monstrous centipede$Colossal$/1</entry>
   </collection>
+	<collection>
+		<name>Centipede Swarm (Solitary)</name>
+		<entry>Centipede swarm/1</entry>
+	</collection>
   <collection>
-    <name>Centipede swarm</name>
-    <entry>Centipede swarm/1</entry>
-    <entry>Centipede swarm/1d3+1</entry>
-    <entry>Centipede swarm/1d6+6</entry>
+	  <name>Centipede Swarms (Tangle)</name>
+	  <entry>Centipede swarm/1d3+1</entry>
   </collection>
   <collection>
-    <name>Monstrous centipede$Medium Fiendish creature$</name>
-    <entry>Monstrous centipede$Medium Fiendish creature$/1</entry>
-    <entry>Monstrous centipede$Medium Fiendish creature$/1d4+1</entry>
+	  <name>Centipede Swarms (Colony)</name>
+	  <entry>Centipede swarm/1d6+6</entry>
+  </collection>
+	<collection>
+		<name>Medium Fiendish Monstrous Centipede (Solitary)</name>
+		<entry>Monstrous centipede$Medium Fiendish creature$/1</entry>
+	</collection>
+  <collection>
+	  <name>Medium Fiendish Monstrous Centipedes (Colony)</name>
+	  <entry>Monstrous centipede$Medium Fiendish creature$/1d4+1</entry>
+  </collection>
+	<collection>
+		<name>Large Fiendish Monstrous Centipede (Solitary)</name>
+		<entry>Monstrous centipede$Large Fiendish creature$/1</entry>
+	</collection>
+  <collection>
+	  <name>Large Fiendish Monstrous Centipedes (Colony)</name>
+	  <entry>Monstrous centipede$Large Fiendish creature$/1d4+1</entry>
+  </collection>
+	<collection>
+		<name>Huge Fiendish Monstrous Centipede (Solitary)</name>
+		<entry>Monstrous centipede$Huge Fiendish creature$/1</entry>
+	</collection>
+  <collection>
+	  <name>Huge Fiendish Monstrous Centipedes (Colony)</name>
+	  <entry>Monstrous centipede$Huge Fiendish creature$/1d4+1</entry>
   </collection>
   <collection>
-    <name>Monstrous centipede$Large Fiendish creature$</name>
-    <entry>Monstrous centipede$Large Fiendish creature$/1</entry>
-    <entry>Monstrous centipede$Large Fiendish creature$/1d4+1</entry>
-  </collection>
-  <collection>
-    <name>Monstrous centipede$Huge Fiendish creature$</name>
-    <entry>Monstrous centipede$Huge Fiendish creature$/1</entry>
-    <entry>Monstrous centipede$Huge Fiendish creature$/1d4+1</entry>
-  </collection>
-  <collection>
-    <name>Monstrous centipede$Gargantuan Fiendish creature$</name>
+	  <name>Gargantuan Fiendish Monstrous Centipede (Solitary)</name>
     <entry>Monstrous centipede$Gargantuan Fiendish creature$/1</entry>
   </collection>
   <collection>
-    <name>Monstrous centipede$Colossal Fiendish creature$</name>
+	  <name>Colossal Fiendish Monstrous Centipede (Solitary)</name>
     <entry>Monstrous centipede$Colossal Fiendish creature$/1</entry>
   </collection>
   <collection>
     <name>Chain Devil (Kyton) (Solitary)</name>
     <entry>Chain Devil(Kyton)/1</entry>
-    <entry>Chain Devil(Kyton)/1d3+1</entry>
-    <entry>Chain Devil(Kyton)/2d3+4</entry>
-    <entry>Chain Devil(Kyton)/1d10+10</entry>
   </collection>
+	<collection>
+		<name>Chain Devils (Kytons) (Gang)</name>
+		<entry>Chain Devil(Kyton)/1d3+1</entry>
+	</collection>
+	<collection>
+		<name>Chain Devils (Kytons) (Band)</name>
+		<entry>Chain Devil(Kyton)/2d3+4</entry>
+	</collection>
+	<collection>
+		<name>Chain Devils (Kytons) (Mob)</name>
+		<entry>Chain Devil(Kyton)/1d10+10</entry>
+	</collection>
   <collection>
     <name>Chaos Beast (Solitary)</name>
     <entry>Chaos beast/1</entry>
@@ -4810,209 +4846,792 @@
     <entry>Character[1]@Any NPC@/1,Warpony/1</entry>
     <entry>Character[1]@Any NPC@/1,Dog$Riding$/1</entry>
   </collection>
+	<collection>
+		<name>Local [Level 1] (Solitary)</name>
+		<entry>Character[1]@Any NPC@/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 1] (with Cat)</name>
+		<entry>Character[1]@Any NPC@/1</entry>
+		<entry>Cat/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 1] (with Dog)</name>
+		<entry>Character[1]@Any NPC@/1</entry>
+		<entry>Dog/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 1] (with Donkey)</name>
+		<entry>Character[1]@Any NPC@/1</entry>
+		<entry>Donkey/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 1] (with Mule)</name>
+		<entry>Character[1]@Any NPC@/1</entry>
+		<entry>Mule/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 1] (with Light Horse)</name>
+		<entry>Character[1]@Any NPC@/1</entry>
+		<entry>Light horse/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 1] (with Heavy Horse)</name>
+		<entry>Character[1]@Any NPC@/1</entry>
+		<entry>Heavy horse/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 1] (with Light Warhorse)</name>
+		<entry>Character[1]@Any NPC@/1</entry>
+		<entry>Light warhorse/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 1] (with Heavy Warhorse)</name>
+		<entry>Character[1]@Any NPC@/1</entry>
+		<entry>Heavy warhorse/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 1] (with Camel)</name>
+		<entry>Character[1]@Any NPC@/1</entry>
+		<entry>Camel/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 1] (with Pony)</name>
+		<entry>Character[1]@Any NPC@/1</entry>
+		<entry>Pony/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 1] (with Warpony)</name>
+		<entry>Character[1]@Any NPC@/1</entry>
+		<entry>Warpony/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 1] (with Riding Dog)</name>
+		<entry>Character[1]@Any NPC@/1</entry>
+		<entry>Dog$Riding$/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 2-3] (Solitary)</name>
+		<entry>Character[1d2+1]@Any NPC@/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 2-3] (with Cat)</name>
+		<entry>Character[1d2+1]@Any NPC@/1</entry>
+		<entry>Cat/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 2-3] (with Dog)</name>
+		<entry>Character[1d2+1]@Any NPC@/1</entry>
+		<entry>Dog/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 2-3] (with Donkey)</name>
+		<entry>Character[1d2+1]@Any NPC@/1</entry>
+		<entry>Donkey/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 2-3] (with Mule)</name>
+		<entry>Character[1d2+1]@Any NPC@/1</entry>
+		<entry>Mule/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 2-3] (with Light Horse)</name>
+		<entry>Character[1d2+1]@Any NPC@/1</entry>
+		<entry>Light horse/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 2-3] (with Heavy Horse)</name>
+		<entry>Character[1d2+1]@Any NPC@/1</entry>
+		<entry>Heavy horse/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 2-3] (with Light Warhorse)</name>
+		<entry>Character[1d2+1]@Any NPC@/1</entry>
+		<entry>Light warhorse/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 2-3] (with Heavy Warhorse)</name>
+		<entry>Character[1d2+1]@Any NPC@/1</entry>
+		<entry>Heavy warhorse/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 2-3] (with Camel)</name>
+		<entry>Character[1d2+1]@Any NPC@/1</entry>
+		<entry>Camel/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 2-3] (with Pony)</name>
+		<entry>Character[1d2+1]@Any NPC@/1</entry>
+		<entry>Pony/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 2-3] (with Warpony)</name>
+		<entry>Character[1d2+1]@Any NPC@/1</entry>
+		<entry>Warpony/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 2-3] (with Riding Dog)</name>
+		<entry>Character[1d2+1]@Any NPC@/1</entry>
+		<entry>Dog$Riding$/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 4-5] (Solitary)</name>
+		<entry>Character[1d2+3]@Any NPC@/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 4-5] (with Cat)</name>
+		<entry>Character[1d2+3]@Any NPC@/1</entry>
+		<entry>Cat/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 4-5] (with Dog)</name>
+		<entry>Character[1d2+3]@Any NPC@/1</entry>
+		<entry>Dog/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 4-5] (with Donkey)</name>
+		<entry>Character[1d2+3]@Any NPC@/1</entry>
+		<entry>Donkey/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 4-5] (with Mule)</name>
+		<entry>Character[1d2+3]@Any NPC@/1</entry>
+		<entry>Mule/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 4-5] (with Light Horse)</name>
+		<entry>Character[1d2+3]@Any NPC@/1</entry>
+		<entry>Light horse/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 4-5] (with Heavy Horse)</name>
+		<entry>Character[1d2+3]@Any NPC@/1</entry>
+		<entry>Heavy horse/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 4-5] (with Light Warhorse)</name>
+		<entry>Character[1d2+3]@Any NPC@/1</entry>
+		<entry>Light warhorse/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 4-5] (with Heavy Warhorse)</name>
+		<entry>Character[1d2+3]@Any NPC@/1</entry>
+		<entry>Heavy warhorse/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 4-5] (with Camel)</name>
+		<entry>Character[1d2+3]@Any NPC@/1</entry>
+		<entry>Camel/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 4-5] (with Pony)</name>
+		<entry>Character[1d2+3]@Any NPC@/1</entry>
+		<entry>Pony/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 4-5] (with Warpony)</name>
+		<entry>Character[1d2+3]@Any NPC@/1</entry>
+		<entry>Warpony/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 4-5] (with Riding Dog)</name>
+		<entry>Character[1d2+3]@Any NPC@/1</entry>
+		<entry>Dog$Riding$/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 6-7] (Solitary)</name>
+		<entry>Character[1d2+5]@Any NPC@/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 6-7] (with Cat)</name>
+		<entry>Character[1d2+5]@Any NPC@/1</entry>
+		<entry>Cat/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 6-7] (with Dog)</name>
+		<entry>Character[1d2+5]@Any NPC@/1</entry>
+		<entry>Dog/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 6-7] (with Donkey)</name>
+		<entry>Character[1d2+5]@Any NPC@/1</entry>
+		<entry>Donkey/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 6-7] (with Mule)</name>
+		<entry>Character[1d2+5]@Any NPC@/1</entry>
+		<entry>Mule/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 6-7] (with Light Horse)</name>
+		<entry>Character[1d2+5]@Any NPC@/1</entry>
+		<entry>Light horse/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 6-7] (with Heavy Horse)</name>
+		<entry>Character[1d2+5]@Any NPC@/1</entry>
+		<entry>Heavy horse/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 6-7] (with Light Warhorse)</name>
+		<entry>Character[1d2+5]@Any NPC@/1</entry>
+		<entry>Light warhorse/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 6-7] (with Heavy Warhorse)</name>
+		<entry>Character[1d2+5]@Any NPC@/1</entry>
+		<entry>Heavy warhorse/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 6-7] (with Camel)</name>
+		<entry>Character[1d2+5]@Any NPC@/1</entry>
+		<entry>Camel/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 6-7] (with Pony)</name>
+		<entry>Character[1d2+5]@Any NPC@/1</entry>
+		<entry>Pony/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 6-7] (with Warpony)</name>
+		<entry>Character[1d2+5]@Any NPC@/1</entry>
+		<entry>Warpony/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 6-7] (with Riding Dog)</name>
+		<entry>Character[1d2+5]@Any NPC@/1</entry>
+		<entry>Dog$Riding$/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 8-9] (Solitary)</name>
+		<entry>Character[1d2+7]@Any NPC@/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 8-9] (with Cat)</name>
+		<entry>Character[1d2+7]@Any NPC@/1</entry>
+		<entry>Cat/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 8-9] (with Dog)</name>
+		<entry>Character[1d2+7]@Any NPC@/1</entry>
+		<entry>Dog/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 8-9] (with Donkey)</name>
+		<entry>Character[1d2+7]@Any NPC@/1</entry>
+		<entry>Donkey/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 8-9] (with Mule)</name>
+		<entry>Character[1d2+7]@Any NPC@/1</entry>
+		<entry>Mule/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 8-9] (with Light Horse)</name>
+		<entry>Character[1d2+7]@Any NPC@/1</entry>
+		<entry>Light horse/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 8-9] (with Heavy Horse)</name>
+		<entry>Character[1d2+7]@Any NPC@/1</entry>
+		<entry>Heavy horse/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 8-9] (with Light Warhorse)</name>
+		<entry>Character[1d2+7]@Any NPC@/1</entry>
+		<entry>Light warhorse/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 8-9] (with Heavy Warhorse)</name>
+		<entry>Character[1d2+7]@Any NPC@/1</entry>
+		<entry>Heavy warhorse/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 8-9] (with Camel)</name>
+		<entry>Character[1d2+7]@Any NPC@/1</entry>
+		<entry>Camel/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 8-9] (with Pony)</name>
+		<entry>Character[1d2+7]@Any NPC@/1</entry>
+		<entry>Pony/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 8-9] (with Warpony)</name>
+		<entry>Character[1d2+7]@Any NPC@/1</entry>
+		<entry>Warpony/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 8-9] (with Riding Dog)</name>
+		<entry>Character[1d2+7]@Any NPC@/1</entry>
+		<entry>Dog$Riding$/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 10-11] (Solitary)</name>
+		<entry>Character[1d2+9]@Any NPC@/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 10-11] (with Cat)</name>
+		<entry>Character[1d2+9]@Any NPC@/1</entry>
+		<entry>Cat/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 10-11] (with Dog)</name>
+		<entry>Character[1d2+9]@Any NPC@/1</entry>
+		<entry>Dog/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 10-11] (with Donkey)</name>
+		<entry>Character[1d2+9]@Any NPC@/1</entry>
+		<entry>Donkey/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 10-11] (with Mule)</name>
+		<entry>Character[1d2+9]@Any NPC@/1</entry>
+		<entry>Mule/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 10-11] (with Light Horse)</name>
+		<entry>Character[1d2+9]@Any NPC@/1</entry>
+		<entry>Light horse/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 10-11] (with Heavy Horse)</name>
+		<entry>Character[1d2+9]@Any NPC@/1</entry>
+		<entry>Heavy horse/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 10-11] (with Light Warhorse)</name>
+		<entry>Character[1d2+9]@Any NPC@/1</entry>
+		<entry>Light warhorse/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 10-11] (with Heavy Warhorse)</name>
+		<entry>Character[1d2+9]@Any NPC@/1</entry>
+		<entry>Heavy warhorse/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 10-11] (with Camel)</name>
+		<entry>Character[1d2+9]@Any NPC@/1</entry>
+		<entry>Camel/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 10-11] (with Pony)</name>
+		<entry>Character[1d2+9]@Any NPC@/1</entry>
+		<entry>Pony/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 10-11] (with Warpony)</name>
+		<entry>Character[1d2+9]@Any NPC@/1</entry>
+		<entry>Warpony/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 10-11] (with Riding Dog)</name>
+		<entry>Character[1d2+9]@Any NPC@/1</entry>
+		<entry>Dog$Riding$/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 12-13] (Solitary)</name>
+		<entry>Character[1d2+11]@Any NPC@/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 12-13] (with Cat)</name>
+		<entry>Character[1d2+11]@Any NPC@/1</entry>
+		<entry>Cat/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 12-13] (with Dog)</name>
+		<entry>Character[1d2+11]@Any NPC@/1</entry>
+		<entry>Dog/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 12-13] (with Donkey)</name>
+		<entry>Character[1d2+11]@Any NPC@/1</entry>
+		<entry>Donkey/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 12-13] (with Mule)</name>
+		<entry>Character[1d2+11]@Any NPC@/1</entry>
+		<entry>Mule/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 12-13] (with Light Horse)</name>
+		<entry>Character[1d2+11]@Any NPC@/1</entry>
+		<entry>Light horse/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 12-13] (with Heavy Horse)</name>
+		<entry>Character[1d2+11]@Any NPC@/1</entry>
+		<entry>Heavy horse/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 12-13] (with Light Warhorse)</name>
+		<entry>Character[1d2+11]@Any NPC@/1</entry>
+		<entry>Light warhorse/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 12-13] (with Heavy Warhorse)</name>
+		<entry>Character[1d2+11]@Any NPC@/1</entry>
+		<entry>Heavy warhorse/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 12-13] (with Camel)</name>
+		<entry>Character[1d2+11]@Any NPC@/1</entry>
+		<entry>Camel/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 12-13] (with Pony)</name>
+		<entry>Character[1d2+11]@Any NPC@/1</entry>
+		<entry>Pony/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 12-13] (with Warpony)</name>
+		<entry>Character[1d2+11]@Any NPC@/1</entry>
+		<entry>Warpony/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 12-13] (with Riding Dog)</name>
+		<entry>Character[1d2+11]@Any NPC@/1</entry>
+		<entry>Dog$Riding$/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 14-15] (Solitary)</name>
+		<entry>Character[1d2+13]@Any NPC@/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 14-15] (with Cat)</name>
+		<entry>Character[1d2+13]@Any NPC@/1</entry>
+		<entry>Cat/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 14-15] (with Dog)</name>
+		<entry>Character[1d2+13]@Any NPC@/1</entry>
+		<entry>Dog/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 14-15] (with Donkey)</name>
+		<entry>Character[1d2+13]@Any NPC@/1</entry>
+		<entry>Donkey/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 14-15] (with Mule)</name>
+		<entry>Character[1d2+13]@Any NPC@/1</entry>
+		<entry>Mule/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 14-15] (with Light Horse)</name>
+		<entry>Character[1d2+13]@Any NPC@/1</entry>
+		<entry>Light horse/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 14-15] (with Heavy Horse)</name>
+		<entry>Character[1d2+13]@Any NPC@/1</entry>
+		<entry>Heavy horse/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 14-15] (with Light Warhorse)</name>
+		<entry>Character[1d2+13]@Any NPC@/1</entry>
+		<entry>Light warhorse/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 14-15] (with Heavy Warhorse)</name>
+		<entry>Character[1d2+13]@Any NPC@/1</entry>
+		<entry>Heavy warhorse/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 14-15] (with Camel)</name>
+		<entry>Character[1d2+13]@Any NPC@/1</entry>
+		<entry>Camel/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 14-15] (with Pony)</name>
+		<entry>Character[1d2+13]@Any NPC@/1</entry>
+		<entry>Pony/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 14-15] (with Warpony)</name>
+		<entry>Character[1d2+13]@Any NPC@/1</entry>
+		<entry>Warpony/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 14-15] (with Riding Dog)</name>
+		<entry>Character[1d2+13]@Any NPC@/1</entry>
+		<entry>Dog$Riding$/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 16-17] (Solitary)</name>
+		<entry>Character[1d2+15]@Any NPC@/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 16-17] (with Cat)</name>
+		<entry>Character[1d2+15]@Any NPC@/1</entry>
+		<entry>Cat/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 16-17] (with Dog)</name>
+		<entry>Character[1d2+15]@Any NPC@/1</entry>
+		<entry>Dog/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 16-17] (with Donkey)</name>
+		<entry>Character[1d2+15]@Any NPC@/1</entry>
+		<entry>Donkey/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 16-17] (with Mule)</name>
+		<entry>Character[1d2+15]@Any NPC@/1</entry>
+		<entry>Mule/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 16-17] (with Light Horse)</name>
+		<entry>Character[1d2+15]@Any NPC@/1</entry>
+		<entry>Light horse/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 16-17] (with Heavy Horse)</name>
+		<entry>Character[1d2+15]@Any NPC@/1</entry>
+		<entry>Heavy horse/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 16-17] (with Light Warhorse)</name>
+		<entry>Character[1d2+15]@Any NPC@/1</entry>
+		<entry>Light warhorse/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 16-17] (with Heavy Warhorse)</name>
+		<entry>Character[1d2+15]@Any NPC@/1</entry>
+		<entry>Heavy warhorse/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 16-17] (with Camel)</name>
+		<entry>Character[1d2+15]@Any NPC@/1</entry>
+		<entry>Camel/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 16-17] (with Pony)</name>
+		<entry>Character[1d2+15]@Any NPC@/1</entry>
+		<entry>Pony/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 16-17] (with Warpony)</name>
+		<entry>Character[1d2+15]@Any NPC@/1</entry>
+		<entry>Warpony/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 16-17] (with Riding Dog)</name>
+		<entry>Character[1d2+15]@Any NPC@/1</entry>
+		<entry>Dog$Riding$/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 18-19] (Solitary)</name>
+		<entry>Character[1d2+17]@Any NPC@/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 18-19] (with Cat)</name>
+		<entry>Character[1d2+17]@Any NPC@/1</entry>
+		<entry>Cat/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 18-19] (with Dog)</name>
+		<entry>Character[1d2+17]@Any NPC@/1</entry>
+		<entry>Dog/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 18-19] (with Donkey)</name>
+		<entry>Character[1d2+17]@Any NPC@/1</entry>
+		<entry>Donkey/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 18-19] (with Mule)</name>
+		<entry>Character[1d2+17]@Any NPC@/1</entry>
+		<entry>Mule/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 18-19] (with Light Horse)</name>
+		<entry>Character[1d2+17]@Any NPC@/1</entry>
+		<entry>Light horse/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 18-19] (with Heavy Horse)</name>
+		<entry>Character[1d2+17]@Any NPC@/1</entry>
+		<entry>Heavy horse/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 18-19] (with Light Warhorse)</name>
+		<entry>Character[1d2+17]@Any NPC@/1</entry>
+		<entry>Light warhorse/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 18-19] (with Heavy Warhorse)</name>
+		<entry>Character[1d2+17]@Any NPC@/1</entry>
+		<entry>Heavy warhorse/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 18-19] (with Camel)</name>
+		<entry>Character[1d2+17]@Any NPC@/1</entry>
+		<entry>Camel/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 18-19] (with Pony)</name>
+		<entry>Character[1d2+17]@Any NPC@/1</entry>
+		<entry>Pony/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 18-19] (with Warpony)</name>
+		<entry>Character[1d2+17]@Any NPC@/1</entry>
+		<entry>Warpony/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 18-19] (with Riding Dog)</name>
+		<entry>Character[1d2+17]@Any NPC@/1</entry>
+		<entry>Dog$Riding$/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 20] (Solitary)</name>
+		<entry>Character[20]@Any NPC@/1</entry>
+	</collection>
   <collection>
-    <name>Character[1d2+1]@Any NPC@</name>
-    <entry>Character[1d2+1]@Any NPC@/1</entry>
-    <entry>Character[1d2+1]@Any NPC@/1,Cat/1</entry>
-    <entry>Character[1d2+1]@Any NPC@/1,Dog/1</entry>
-    <entry>Character[1d2+1]@Any NPC@/1,Donkey/1</entry>
-    <entry>Character[1d2+1]@Any NPC@/1,Mule/1</entry>
-    <entry>Character[1d2+1]@Any NPC@/1,Light horse/1</entry>
-    <entry>Character[1d2+1]@Any NPC@/1,Heavy horse/1</entry>
-    <entry>Character[1d2+1]@Any NPC@/1,Light warhorse/1</entry>
-    <entry>Character[1d2+1]@Any NPC@/1,Heavy warhorse/1</entry>
-    <entry>Character[1d2+1]@Any NPC@/1,Camel/1</entry>
-    <entry>Character[1d2+1]@Any NPC@/1,Pony/1</entry>
-    <entry>Character[1d2+1]@Any NPC@/1,Warpony/1</entry>
-    <entry>Character[1d2+1]@Any NPC@/1,Dog$Riding$/1</entry>
+    <name>Local [Level 20] (with Cat)</name>
+	  <entry>Character[20]@Any NPC@/1</entry>
+	  <entry>Cat/1</entry>
   </collection>
+	<collection>
+		<name>Local [Level 20] (with Dog)</name>
+		<entry>Character[20]@Any NPC@/1</entry>
+		<entry>Dog/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 20] (with Donkey)</name>
+		<entry>Character[20]@Any NPC@/1</entry>
+		<entry>Donkey/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 20] (with Mule)</name>
+		<entry>Character[20]@Any NPC@/1</entry>
+		<entry>Mule/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 20] (with Light Horse)</name>
+		<entry>Character[20]@Any NPC@/1</entry>
+		<entry>Light horse/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 20] (with Heavy Horse)</name>
+		<entry>Character[20]@Any NPC@/1</entry>
+		<entry>Heavy horse/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 20] (with Light Warhorse)</name>
+		<entry>Character[20]@Any NPC@/1</entry>
+		<entry>Light warhorse/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 20] (with Heavy Warhorse)</name>
+		<entry>Character[20]@Any NPC@/1</entry>
+		<entry>Heavy warhorse/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 20] (with Camel)</name>
+		<entry>Character[20]@Any NPC@/1</entry>
+		<entry>Camel/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 20] (with Pony)</name>
+		<entry>Character[20]@Any NPC@/1</entry>
+		<entry>Pony/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 20] (with Warpony)</name>
+		<entry>Character[20]@Any NPC@/1</entry>
+		<entry>Warpony/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 20] (with Riding Dog)</name>
+		<entry>Character[20]@Any NPC@/1</entry>
+		<entry>Dog$Riding$/1</entry>
+	</collection>
   <collection>
-    <name>Character[1d2+3]@Any NPC@</name>
-    <entry>Character[1d2+3]@Any NPC@/1</entry>
-    <entry>Character[1d2+3]@Any NPC@/1,Cat/1</entry>
-    <entry>Character[1d2+3]@Any NPC@/1,Dog/1</entry>
-    <entry>Character[1d2+3]@Any NPC@/1,Donkey/1</entry>
-    <entry>Character[1d2+3]@Any NPC@/1,Mule/1</entry>
-    <entry>Character[1d2+3]@Any NPC@/1,Light horse/1</entry>
-    <entry>Character[1d2+3]@Any NPC@/1,Heavy horse/1</entry>
-    <entry>Character[1d2+3]@Any NPC@/1,Light warhorse/1</entry>
-    <entry>Character[1d2+3]@Any NPC@/1,Heavy warhorse/1</entry>
-    <entry>Character[1d2+3]@Any NPC@/1,Camel/1</entry>
-    <entry>Character[1d2+3]@Any NPC@/1,Pony/1</entry>
-    <entry>Character[1d2+3]@Any NPC@/1,Warpony/1</entry>
-    <entry>Character[1d2+3]@Any NPC@/1,Dog$Riding$/1</entry>
-  </collection>
-  <collection>
-    <name>Character[1d2+5]@Any NPC@</name>
-    <entry>Character[1d2+5]@Any NPC@/1</entry>
-    <entry>Character[1d2+5]@Any NPC@/1,Cat/1</entry>
-    <entry>Character[1d2+5]@Any NPC@/1,Dog/1</entry>
-    <entry>Character[1d2+5]@Any NPC@/1,Donkey/1</entry>
-    <entry>Character[1d2+5]@Any NPC@/1,Mule/1</entry>
-    <entry>Character[1d2+5]@Any NPC@/1,Light horse/1</entry>
-    <entry>Character[1d2+5]@Any NPC@/1,Heavy horse/1</entry>
-    <entry>Character[1d2+5]@Any NPC@/1,Light warhorse/1</entry>
-    <entry>Character[1d2+5]@Any NPC@/1,Heavy warhorse/1</entry>
-    <entry>Character[1d2+5]@Any NPC@/1,Camel/1</entry>
-    <entry>Character[1d2+5]@Any NPC@/1,Pony/1</entry>
-    <entry>Character[1d2+5]@Any NPC@/1,Warpony/1</entry>
-    <entry>Character[1d2+5]@Any NPC@/1,Dog$Riding$/1</entry>
-  </collection>
-  <collection>
-    <name>Character[1d2+7]@Any NPC@</name>
-    <entry>Character[1d2+7]@Any NPC@/1</entry>
-    <entry>Character[1d2+7]@Any NPC@/1,Cat/1</entry>
-    <entry>Character[1d2+7]@Any NPC@/1,Dog/1</entry>
-    <entry>Character[1d2+7]@Any NPC@/1,Donkey/1</entry>
-    <entry>Character[1d2+7]@Any NPC@/1,Mule/1</entry>
-    <entry>Character[1d2+7]@Any NPC@/1,Light horse/1</entry>
-    <entry>Character[1d2+7]@Any NPC@/1,Heavy horse/1</entry>
-    <entry>Character[1d2+7]@Any NPC@/1,Light warhorse/1</entry>
-    <entry>Character[1d2+7]@Any NPC@/1,Heavy warhorse/1</entry>
-    <entry>Character[1d2+7]@Any NPC@/1,Camel/1</entry>
-    <entry>Character[1d2+7]@Any NPC@/1,Pony/1</entry>
-    <entry>Character[1d2+7]@Any NPC@/1,Warpony/1</entry>
-    <entry>Character[1d2+7]@Any NPC@/1,Dog$Riding$/1</entry>
-  </collection>
-  <collection>
-    <name>Character[1d2+9]@Any NPC@</name>
-    <entry>Character[1d2+9]@Any NPC@/1</entry>
-    <entry>Character[1d2+9]@Any NPC@/1,Cat/1</entry>
-    <entry>Character[1d2+9]@Any NPC@/1,Dog/1</entry>
-    <entry>Character[1d2+9]@Any NPC@/1,Donkey/1</entry>
-    <entry>Character[1d2+9]@Any NPC@/1,Mule/1</entry>
-    <entry>Character[1d2+9]@Any NPC@/1,Light horse/1</entry>
-    <entry>Character[1d2+9]@Any NPC@/1,Heavy horse/1</entry>
-    <entry>Character[1d2+9]@Any NPC@/1,Light warhorse/1</entry>
-    <entry>Character[1d2+9]@Any NPC@/1,Heavy warhorse/1</entry>
-    <entry>Character[1d2+9]@Any NPC@/1,Camel/1</entry>
-    <entry>Character[1d2+9]@Any NPC@/1,Pony/1</entry>
-    <entry>Character[1d2+9]@Any NPC@/1,Warpony/1</entry>
-    <entry>Character[1d2+9]@Any NPC@/1,Dog$Riding$/1</entry>
-  </collection>
-  <collection>
-    <name>Character[1d2+11]@Any NPC@</name>
-    <entry>Character[1d2+11]@Any NPC@/1</entry>
-    <entry>Character[1d2+11]@Any NPC@/1,Cat/1</entry>
-    <entry>Character[1d2+11]@Any NPC@/1,Dog/1</entry>
-    <entry>Character[1d2+11]@Any NPC@/1,Donkey/1</entry>
-    <entry>Character[1d2+11]@Any NPC@/1,Mule/1</entry>
-    <entry>Character[1d2+11]@Any NPC@/1,Light horse/1</entry>
-    <entry>Character[1d2+11]@Any NPC@/1,Heavy horse/1</entry>
-    <entry>Character[1d2+11]@Any NPC@/1,Light warhorse/1</entry>
-    <entry>Character[1d2+11]@Any NPC@/1,Heavy warhorse/1</entry>
-    <entry>Character[1d2+11]@Any NPC@/1,Camel/1</entry>
-    <entry>Character[1d2+11]@Any NPC@/1,Pony/1</entry>
-    <entry>Character[1d2+11]@Any NPC@/1,Warpony/1</entry>
-    <entry>Character[1d2+11]@Any NPC@/1,Dog$Riding$/1</entry>
-  </collection>
-  <collection>
-    <name>Character[1d2+13]@Any NPC@</name>
-    <entry>Character[1d2+13]@Any NPC@/1</entry>
-    <entry>Character[1d2+13]@Any NPC@/1,Cat/1</entry>
-    <entry>Character[1d2+13]@Any NPC@/1,Dog/1</entry>
-    <entry>Character[1d2+13]@Any NPC@/1,Donkey/1</entry>
-    <entry>Character[1d2+13]@Any NPC@/1,Mule/1</entry>
-    <entry>Character[1d2+13]@Any NPC@/1,Light horse/1</entry>
-    <entry>Character[1d2+13]@Any NPC@/1,Heavy horse/1</entry>
-    <entry>Character[1d2+13]@Any NPC@/1,Light warhorse/1</entry>
-    <entry>Character[1d2+13]@Any NPC@/1,Heavy warhorse/1</entry>
-    <entry>Character[1d2+13]@Any NPC@/1,Camel/1</entry>
-    <entry>Character[1d2+13]@Any NPC@/1,Pony/1</entry>
-    <entry>Character[1d2+13]@Any NPC@/1,Warpony/1</entry>
-    <entry>Character[1d2+13]@Any NPC@/1,Dog$Riding$/1</entry>
-  </collection>
-  <collection>
-    <name>Character[1d2+15]@Any NPC@</name>
-    <entry>Character[1d2+15]@Any NPC@/1</entry>
-    <entry>Character[1d2+15]@Any NPC@/1,Cat/1</entry>
-    <entry>Character[1d2+15]@Any NPC@/1,Dog/1</entry>
-    <entry>Character[1d2+15]@Any NPC@/1,Donkey/1</entry>
-    <entry>Character[1d2+15]@Any NPC@/1,Mule/1</entry>
-    <entry>Character[1d2+15]@Any NPC@/1,Light horse/1</entry>
-    <entry>Character[1d2+15]@Any NPC@/1,Heavy horse/1</entry>
-    <entry>Character[1d2+15]@Any NPC@/1,Light warhorse/1</entry>
-    <entry>Character[1d2+15]@Any NPC@/1,Heavy warhorse/1</entry>
-    <entry>Character[1d2+15]@Any NPC@/1,Camel/1</entry>
-    <entry>Character[1d2+15]@Any NPC@/1,Pony/1</entry>
-    <entry>Character[1d2+15]@Any NPC@/1,Warpony/1</entry>
-    <entry>Character[1d2+15]@Any NPC@/1,Dog$Riding$/1</entry>
-  </collection>
-  <collection>
-    <name>Character[1d2+17]@Any NPC@</name>
-    <entry>Character[1d2+17]@Any NPC@/1</entry>
-    <entry>Character[1d2+17]@Any NPC@/1,Cat/1</entry>
-    <entry>Character[1d2+17]@Any NPC@/1,Dog/1</entry>
-    <entry>Character[1d2+17]@Any NPC@/1,Donkey/1</entry>
-    <entry>Character[1d2+17]@Any NPC@/1,Mule/1</entry>
-    <entry>Character[1d2+17]@Any NPC@/1,Light horse/1</entry>
-    <entry>Character[1d2+17]@Any NPC@/1,Heavy horse/1</entry>
-    <entry>Character[1d2+17]@Any NPC@/1,Light warhorse/1</entry>
-    <entry>Character[1d2+17]@Any NPC@/1,Heavy warhorse/1</entry>
-    <entry>Character[1d2+17]@Any NPC@/1,Camel/1</entry>
-    <entry>Character[1d2+17]@Any NPC@/1,Pony/1</entry>
-    <entry>Character[1d2+17]@Any NPC@/1,Warpony/1</entry>
-    <entry>Character[1d2+17]@Any NPC@/1,Dog$Riding$/1</entry>
-  </collection>
-  <collection>
-    <name>Character[20]@Any NPC@</name>
-    <entry>Character[20]@Any NPC@/1</entry>
-    <entry>Character[20]@Any NPC@/1,Cat/1</entry>
-    <entry>Character[20]@Any NPC@/1,Dog/1</entry>
-    <entry>Character[20]@Any NPC@/1,Donkey/1</entry>
-    <entry>Character[20]@Any NPC@/1,Mule/1</entry>
-    <entry>Character[20]@Any NPC@/1,Light horse/1</entry>
-    <entry>Character[20]@Any NPC@/1,Heavy horse/1</entry>
-    <entry>Character[20]@Any NPC@/1,Light warhorse/1</entry>
-    <entry>Character[20]@Any NPC@/1,Heavy warhorse/1</entry>
-    <entry>Character[20]@Any NPC@/1,Camel/1</entry>
-    <entry>Character[20]@Any NPC@/1,Pony/1</entry>
-    <entry>Character[20]@Any NPC@/1,Warpony/1</entry>
-    <entry>Character[20]@Any NPC@/1,Dog$Riding$/1</entry>
-  </collection>
-  <collection>
-    <name>Cheetah</name>
+    <name>Cheetah (Solitary)</name>
     <entry>Cheetah/1</entry>
-    <entry>Cheetah/2</entry>
-    <entry>Cheetah/1d3+2</entry>
   </collection>
+	<collection>
+		<name>Cheetahs (Pair)</name>
+		<entry>Cheetah/2</entry>
+	</collection>
+	<collection>
+		<name>Cheetahs (Family)</name>
+		<entry>Cheetah/1d3+2</entry>
+	</collection>
+	<collection>
+		<name>Chimera (Solitary)</name>
+		<entry>Chimera/1</entry>
+	</collection>
   <collection>
-    <name>Chimera</name>
-    <entry>Chimera/1</entry>
-    <entry>Chimera/1d3+2</entry>
-    <entry>Chimera/1d8+5</entry>
+	  <name>Chimeras (Pride)</name>
+	  <entry>Chimera/1d3+2</entry>
   </collection>
+	<collection>
+		<name>Chimeras (Flight)</name>
+		<entry>Chimera/1d8+5</entry>
+	</collection>
   <collection>
-    <name>Choker</name>
+    <name>Choker (Solitary)</name>
     <entry>Choker/1</entry>
   </collection>
+	<collection>
+		<name>Chuul (Solitary)</name>
+		<entry>Chuul/1</entry>
+	</collection>
   <collection>
-    <name>Chuul</name>
-    <entry>Chuul/1</entry>
-    <entry>Chuul/2</entry>
-    <entry>Chuul/1d3+2</entry>
+	  <name>Chuuls (Pair)</name>
+	  <entry>Chuul/2</entry>
   </collection>
+	<collection>
+		<name>Chuuls (Pack)</name>
+		<entry>Chuul/1d3+2</entry>
+	</collection>
   <collection>
-    <name>Cloaker</name>
+    <name>Cloaker (Solitary)</name>
     <entry>Cloaker/1</entry>
-    <entry>Cloaker/1d4+2</entry>
-    <entry>Cloaker/1d6+6</entry>
   </collection>
+	<collection>
+		<name>Cloakers (Mob)</name>
+		<entry>Cloaker/1d4+2</entry>
+	</collection>
+	<collection>
+		<name>Cloakers (Flock)</name>
+		<entry>Cloaker/1d6+6</entry>
+	</collection>
+	<collection>
+		<name>Cockatrice (Solitary)</name>
+		<entry>Cockatrice/1</entry>
+	</collection>
   <collection>
-    <name>Cockatrice</name>
-    <entry>Cockatrice/1</entry>
-    <entry>Cockatrice/2</entry>
-    <entry>Cockatrice/1d3+2</entry>
-    <entry>Cockatrice/1d8+5</entry>
+	  <name>Cockatrices (Pair)</name>
+	  <entry>Cockatrice/2</entry>
   </collection>
+	<collection>
+		<name>Cockatrices (Flight)</name>
+		<entry>Cockatrice/1d3+2</entry>
+	</collection>
+	<collection>
+		<name>Cockatrices (Flock)</name>
+		<entry>Cockatrice/1d8+5</entry>
+	</collection>
+	<collection>
+		<name>Couatl (Solitary)</name>
+		<entry>Couatl/1</entry>
+	</collection>
   <collection>
-    <name>Couatl</name>
-    <entry>Couatl/1</entry>
-    <entry>Couatl/2</entry>
-    <entry>Couatl/1d4+2</entry>
+	  <name>Couatls (Pair)</name>
+	  <entry>Couatl/2</entry>
   </collection>
+	<collection>
+		<name>Couatl (Pair+)</name>
+		<entry>Couatl/1d4+2</entry>
+	</collection>
   <collection>
-    <name>Criosphinx</name>
+    <name>Criosphinx (Solitary)</name>
     <entry>Criosphinx/1</entry>
   </collection>
   <collection>
@@ -7120,26 +7739,39 @@
     <entry>Ghoul$Ghast$/1d3+1,Ghoul/1d6+6</entry>
   </collection>
   <collection>
-    <name>Cloud giant</name>
+    <name>Cloud Giant (Solitary)</name>
     <entry>Cloud giant/1</entry>
-    <entry>Cloud giant/1d3+1</entry>
-    <entry>Cloud giant/1d3+1,Cloud giant$Noncombatant$/1d2-1,Character[1d4+3]{Cloud Giant}@Cleric&amp;Sorcerer@/1,Griffon/1d4+1</entry>
-    <entry>Cloud giant/1d3+1,Cloud giant$Noncombatant$/1d2-1,Character[1d4+3]{Cloud Giant}@Cleric&amp;Sorcerer@/1,Dire lion/2d4</entry>
-    <entry>Cloud giant/1d4+5,Character[1d4+3]{Cloud Giant}@Cleric&amp;Sorcerer@/1,Griffon/1d4+1</entry>
-    <entry>Cloud giant/1d4+5,Character[1d4+3]{Cloud Giant}@Cleric&amp;Sorcerer@/1,Dire lion/2d4</entry>
   </collection>
-  <collection>
-    <name>Cloud giant$Noncombatant$</name>
-    <entry>Cloud giant/1d3+1,Cloud giant$Noncombatant$/1d2-1,Character[1d4+3]{Cloud Giant}@Cleric&amp;Sorcerer@/1,Griffon/1d4+1</entry>
-    <entry>Cloud giant/1d3+1,Cloud giant$Noncombatant$/1d2-1,Character[1d4+3]{Cloud Giant}@Cleric&amp;Sorcerer@/1,Dire lion/2d4</entry>
-  </collection>
-  <collection>
-    <name>Character[1d4+3]{Cloud Giant}@Cleric&amp;Sorcerer@</name>
-    <entry>Cloud giant/1d3+1,Cloud giant$Noncombatant$/1d2-1,Character[1d4+3]{Cloud Giant}@Cleric&amp;Sorcerer@/1,Griffon/1d4+1</entry>
-    <entry>Cloud giant/1d3+1,Cloud giant$Noncombatant$/1d2-1,Character[1d4+3]{Cloud Giant}@Cleric&amp;Sorcerer@/1,Dire lion/2d4</entry>
-    <entry>Cloud giant/1d4+5,Character[1d4+3]{Cloud Giant}@Cleric&amp;Sorcerer@/1,Griffon/1d4+1</entry>
-    <entry>Cloud giant/1d4+5,Character[1d4+3]{Cloud Giant}@Cleric&amp;Sorcerer@/1,Dire lion/2d4</entry>
-  </collection>
+	<collection>
+		<name>Cloud Giants (Gang)</name>
+		<entry>Cloud giant/1d3+1</entry>
+	</collection>
+	<collection>
+		<name>Cloud Giants (Family with Griffons)</name>
+		<entry>Cloud giant/1d3+1</entry>
+		<entry>Cloud giant$Noncombatant$/1d2-1</entry>
+		<entry>Character[1d4+3]{Cloud Giant}@Cleric&amp;Sorcerer@/1</entry>
+		<entry>Griffon/1d4+1</entry>
+	</collection>
+	<collection>
+		<name>Cloud Giants (Family with Dire Lions)</name>
+		<entry>Cloud giant/1d3+1</entry>
+		<entry>Cloud giant$Noncombatant$/1d2-1</entry>
+		<entry>Character[1d4+3]{Cloud Giant}@Cleric&amp;Sorcerer@/1</entry>
+		<entry>Dire lion/2d4</entry>
+	</collection>
+	<collection>
+		<name>Cloud Giants (Band with Griffons)</name>
+		<entry>Cloud giant/1d4+5</entry>
+		<entry>Character[1d4+3]{Cloud Giant}@Cleric&amp;Sorcerer@/1</entry>
+		<entry>Griffon/1d4+1</entry>
+	</collection>
+	<collection>
+		<name>Cloud Giants (Band with Dire Lions)</name>
+		<entry>Cloud giant/1d4+5</entry>
+		<entry>Character[1d4+3]{Cloud Giant}@Cleric&amp;Sorcerer@/1</entry>
+		<entry>Dire lion/2d4</entry>
+	</collection>
   <collection>
     <name>Fire giant</name>
     <entry>Fire giant/1</entry>
@@ -7342,62 +7974,47 @@
     <entry>Character(Student)[3]{Githzerai}/10d8+20,Character(Teacher)[7]{Githzerai}/1d8+2,Character(Mentor)[9]{Githzerai}/5,Character(Master)[13]{Githzerai}/2,Character(Sensei)[16]{Githzerai}/1</entry>
   </collection>
   <collection>
-    <name>Gnoll</name>
+    <name>Gnoll (Solitary)</name>
     <entry>Gnoll/1</entry>
-    <entry>Gnoll/2</entry>
-    <entry>Gnoll/1d4+1,Hyena/1d2</entry>
-    <entry>Gnoll/10d10,Gnoll$Noncombatant$/5d10,Character(Sergeant)[3]{Gnoll}/2d3-1,Character(Leader)[1d3+3]{Gnoll}/1,Hyena/1d4+4</entry>
-    <entry>Gnoll/20d10,Character(Sergeant)[3]{Gnoll}/1d10,Character(Lieutenant)[1d2+3]{Gnoll}/1d2,Character(Leader)[1d3+5]{Gnoll}/1,Hyena/1d6+6</entry>
-    <entry>Gnoll/20d10,Character(Sergeant)[3]{Gnoll}/1d10,Character(Lieutenant)[1d2+3]{Gnoll}/1d2,Character(Leader)[1d3+5]{Gnoll}/1,Hyena/1d6+6,Troll/1d3</entry>
   </collection>
-  <collection>
-    <name>Gnoll$Noncombatant$</name>
-    <entry>Gnoll/10d10,Gnoll$Noncombatant$/5d10,Character(Sergeant)[3]{Gnoll}/2d3-1,Character(Leader)[1d3+3]{Gnoll}/1,Hyena/1d4+4</entry>
-  </collection>
-  <collection>
-    <name>Character(Sergeant)[3]{Gnoll}</name>
-    <entry>Gnoll/10d10,Gnoll$Noncombatant$/5d10,Character(Sergeant)[3]{Gnoll}/2d3-1,Character(Leader)[1d3+3]{Gnoll}/1,Hyena/1d4+4</entry>
-    <entry>Gnoll/20d10,Character(Sergeant)[3]{Gnoll}/1d10,Character(Lieutenant)[1d2+3]{Gnoll}/1d2,Character(Leader)[1d3+5]{Gnoll}/1,Hyena/1d6+6</entry>
-    <entry>Gnoll/20d10,Character(Sergeant)[3]{Gnoll}/1d10,Character(Lieutenant)[1d2+3]{Gnoll}/1d2,Character(Leader)[1d3+5]{Gnoll}/1,Hyena/1d6+6,Troll/1d3</entry>
-  </collection>
-  <collection>
-    <name>Character(Leader)[1d3+3]{Gnoll}</name>
-    <entry>Gnoll/10d10,Gnoll$Noncombatant$/5d10,Character(Sergeant)[3]{Gnoll}/2d3-1,Character(Leader)[1d3+3]{Gnoll}/1,Hyena/1d4+4</entry>
-  </collection>
-  <collection>
-    <name>Character(Lieutenant)[1d2+3]{Gnoll}</name>
-    <entry>Gnoll/20d10,Character(Sergeant)[3]{Gnoll}/1d10,Character(Lieutenant)[1d2+3]{Gnoll}/1d2,Character(Leader)[1d3+5]{Gnoll}/1,Hyena/1d6+6</entry>
-    <entry>Gnoll/20d10,Character(Sergeant)[3]{Gnoll}/1d10,Character(Lieutenant)[1d2+3]{Gnoll}/1d2,Character(Leader)[1d3+5]{Gnoll}/1,Hyena/1d6+6,Troll/1d3</entry>
-  </collection>
-  <collection>
-    <name>Character(Leader)[1d3+5]{Gnoll}</name>
-    <entry>Gnoll/20d10,Character(Sergeant)[3]{Gnoll}/1d10,Character(Lieutenant)[1d2+3]{Gnoll}/1d2,Character(Leader)[1d3+5]{Gnoll}/1,Hyena/1d6+6</entry>
-    <entry>Gnoll/20d10,Character(Sergeant)[3]{Gnoll}/1d10,Character(Lieutenant)[1d2+3]{Gnoll}/1d2,Character(Leader)[1d3+5]{Gnoll}/1,Hyena/1d6+6,Troll/1d3</entry>
-  </collection>
+	<collection>
+		<name>Gnolls (Pair)</name>
+		<entry>Gnoll/2</entry>
+	</collection>
+	<collection>
+		<name>Gnolls (Pair+)</name>
+		<entry>Gnoll/1d4+1</entry>
+		<entry>Hyena/1d2</entry>
+	</collection>
+	<collection>
+		<name>Gnolls (Pair++)</name>
+		<entry>Gnoll/10d10</entry>
+		<entry>Gnoll$Noncombatant$/5d10</entry>
+		<entry>Character(Sergeant)[3]{Gnoll}/2d3-1</entry>
+		<entry>Character(Leader)[1d3+3]{Gnoll}/1</entry>
+		<entry>Hyena/1d4+4</entry>
+	</collection>
+	<collection>
+		<name>Gnolls (Pair+++)</name>
+		<entry>Gnoll/20d10</entry>
+		<entry>Character(Sergeant)[3]{Gnoll}/1d10</entry>
+		<entry>Character(Lieutenant)[1d2+3]{Gnoll}/1d2</entry>
+		<entry>Character(Leader)[1d3+5]{Gnoll}/1</entry>
+		<entry>Hyena/1d6+6</entry>
+	</collection>
+	<collection>
+		<name>Gnolls (Pair++++)</name>
+		<entry>Gnoll/20d10</entry>
+		<entry>Character(Sergeant)[3]{Gnoll}/1d10</entry>
+		<entry>Character(Lieutenant)[1d2+3]{Gnoll}/1d2</entry>
+		<entry>Character(Leader)[1d3+5]{Gnoll}/1</entry>
+		<entry>Hyena/1d6+6</entry>
+		<entry>Troll/1d3</entry>
+	</collection>
   <collection>
     <name>Character[1]{Forest Gnome}@Warrior@</name>
     <entry>Character[1]{Forest Gnome}@Warrior@/1d3+1</entry>
     <entry>Character[1]{Forest Gnome}@Warrior@/1d10+10,Character(Leader)[1d4+2]{Forest Gnome}@Warrior@/1,Character(Lieutenant)[3]{Forest Gnome}@Warrior@/2</entry>
-    <entry>Character[1]{Forest Gnome}@Warrior@/4d6+26,Character(Sergeant)[3]{Forest Gnome}@Warrior@/1d2+1,Character(Lieutenant)[5]{Forest Gnome}@Warrior@/5,Character(Captain)[7]{Forest Gnome}@Warrior@/3,Dire badger/1d4+1</entry>
-  </collection>
-  <collection>
-    <name>Character(Leader)[1d4+2]{Forest Gnome}@Warrior@</name>
-    <entry>Character[1]{Forest Gnome}@Warrior@/1d10+10,Character(Leader)[1d4+2]{Forest Gnome}@Warrior@/1,Character(Lieutenant)[3]{Forest Gnome}@Warrior@/2</entry>
-  </collection>
-  <collection>
-    <name>Character(Captain)[7]{Forest Gnome}@Warrior@</name>
-    <entry>Character[1]{Forest Gnome}@Warrior@/4d6+26,Character(Sergeant)[3]{Forest Gnome}@Warrior@/1d2+1,Character(Lieutenant)[5]{Forest Gnome}@Warrior@/5,Character(Captain)[7]{Forest Gnome}@Warrior@/3,Dire badger/1d4+1</entry>
-  </collection>
-  <collection>
-    <name>Character(Lieutenant)[3]{Forest Gnome}@Warrior@</name>
-    <entry>Character[1]{Forest Gnome}@Warrior@/1d10+10,Character(Leader)[1d4+2]{Forest Gnome}@Warrior@/1,Character(Lieutenant)[3]{Forest Gnome}@Warrior@/2</entry>
-  </collection>
-  <collection>
-    <name>Character(Lieutenant)[5]{Forest Gnome}@Warrior@</name>
-    <entry>Character[1]{Forest Gnome}@Warrior@/4d6+26,Character(Sergeant)[3]{Forest Gnome}@Warrior@/1d2+1,Character(Lieutenant)[5]{Forest Gnome}@Warrior@/5,Character(Captain)[7]{Forest Gnome}@Warrior@/3,Dire badger/1d4+1</entry>
-  </collection>
-  <collection>
-    <name>Character(Sergeant)[3]{Forest Gnome}@Warrior@</name>
     <entry>Character[1]{Forest Gnome}@Warrior@/4d6+26,Character(Sergeant)[3]{Forest Gnome}@Warrior@/1d2+1,Character(Lieutenant)[5]{Forest Gnome}@Warrior@/5,Character(Captain)[7]{Forest Gnome}@Warrior@/3,Dire badger/1d4+1</entry>
   </collection>
   <collection>
@@ -7407,35 +8024,15 @@
     <entry>Character[1]{Rock Gnome}@Warrior@/4d6+26,Character(Sergeant)[3]{Rock Gnome}@Warrior@/1d2+1,Character(Lieutenant)[5]{Rock Gnome}@Warrior@/5,Character(Captain)[7]{Rock Gnome}@Warrior@/3,Dire badger/1d4+1</entry>
   </collection>
   <collection>
-    <name>Character(Leader)[1d4+2]{Rock Gnome}@Warrior@</name>
-    <entry>Character[1]{Rock Gnome}@Warrior@/1d10+10,Character(Leader)[1d4+2]{Rock Gnome}@Warrior@/1,Character(Lieutenant)[3]{Rock Gnome}@Warrior@/2</entry>
-  </collection>
-  <collection>
-    <name>Character(Captain)[7]{Rock Gnome}@Warrior@</name>
-    <entry>Character[1]{Rock Gnome}@Warrior@/4d6+26,Character(Sergeant)[3]{Rock Gnome}@Warrior@/1d2+1,Character(Lieutenant)[5]{Rock Gnome}@Warrior@/5,Character(Captain)[7]{Rock Gnome}@Warrior@/3,Dire badger/1d4+1</entry>
-  </collection>
-  <collection>
-    <name>Character(Lieutenant)[3]{Rock Gnome}@Warrior@</name>
-    <entry>Character[1]{Rock Gnome}@Warrior@/1d10+10,Character(Leader)[1d4+2]{Rock Gnome}@Warrior@/1,Character(Lieutenant)[3]{Rock Gnome}@Warrior@/2</entry>
-  </collection>
-  <collection>
-    <name>Character(Lieutenant)[5]{Rock Gnome}@Warrior@</name>
-    <entry>Character[1]{Rock Gnome}@Warrior@/4d6+26,Character(Sergeant)[3]{Rock Gnome}@Warrior@/1d2+1,Character(Lieutenant)[5]{Rock Gnome}@Warrior@/5,Character(Captain)[7]{Rock Gnome}@Warrior@/3,Dire badger/1d4+1</entry>
-  </collection>
-  <collection>
-    <name>Character(Sergeant)[3]{Rock Gnome}@Warrior@</name>
-    <entry>Character[1]{Rock Gnome}@Warrior@/4d6+26,Character(Sergeant)[3]{Rock Gnome}@Warrior@/1d2+1,Character(Lieutenant)[5]{Rock Gnome}@Warrior@/5,Character(Captain)[7]{Rock Gnome}@Warrior@/3,Dire badger/1d4+1</entry>
-  </collection>
-  <collection>
-    <name>Glabrezu</name>
+    <name>Glabrezu (Solitary)</name>
     <entry>Glabrezu/1</entry>
-    <entry>Glabrezu/1,Succubus/1,Vrock/1d4+1</entry>
   </collection>
-  <collection>
-    <name>Goblin$Noncombatant$</name>
-    <entry>Character[1]{Goblin}@Warrior@/10d10,Goblin$Noncombatant$/10d10,Character(Sergeant)[3]{Goblin}@Warrior@/2d3-1,Character(Leader)[1d3+3]{Goblin}@Warrior@/1</entry>
-    <entry>Character[1]{Goblin}@Warrior@/40d10,Goblin$Noncombatant$/40d10,Character(Sergeant)[3]{Goblin}@Warrior@/2d10,Character(Lieutenant)[1d2+3]{Goblin}@Warrior@/1d2,Character(Leader)[1d3+5]{Goblin}@Warrior@/1,Worg/2d8+8,Dire wolf/1d3+1</entry>
-  </collection>
+	<collection>
+		<name>Glabrezu (Troupe)</name>
+		<entry>Glabrezu/1</entry>
+		<entry>Succubus/1</entry>
+		<entry>Vrock/1d4+1</entry>
+	</collection>
   <collection>
     <name>Character[1]{Goblin}@Warrior@</name>
     <entry>Character[1]{Goblin}@Warrior@/1d6+3</entry>
@@ -7444,79 +8041,89 @@
     <entry>Character[1]{Goblin}@Warrior@/40d10,Goblin$Noncombatant$/40d10,Character(Sergeant)[3]{Goblin}@Warrior@/2d10,Character(Lieutenant)[1d2+3]{Goblin}@Warrior@/1d2,Character(Leader)[1d3+5]{Goblin}@Warrior@/1,Worg/2d8+8,Dire wolf/1d3+1</entry>
   </collection>
   <collection>
-    <name>Character(Sergeant)[3]{Goblin}@Warrior@</name>
-    <entry>Character[1]{Goblin}@Warrior@/10d10,Goblin$Noncombatant$/10d10,Character(Sergeant)[3]{Goblin}@Warrior@/2d3-1,Character(Leader)[1d3+3]{Goblin}@Warrior@/1</entry>
-    <entry>Character[1]{Goblin}@Warrior@/40d10,Goblin$Noncombatant$/40d10,Character(Sergeant)[3]{Goblin}@Warrior@/2d10,Character(Lieutenant)[1d2+3]{Goblin}@Warrior@/1d2,Character(Leader)[1d3+5]{Goblin}@Warrior@/1,Worg/2d8+8,Dire wolf/1d3+1</entry>
-  </collection>
-  <collection>
-    <name>Character(Lieutenant)[1d2+3]{Goblin}@Warrior@</name>
-    <entry>Character[1]{Goblin}@Warrior@/40d10,Goblin$Noncombatant$/40d10,Character(Sergeant)[3]{Goblin}@Warrior@/2d10,Character(Lieutenant)[1d2+3]{Goblin}@Warrior@/1d2,Character(Leader)[1d3+5]{Goblin}@Warrior@/1,Worg/2d8+8,Dire wolf/1d3+1</entry>
-  </collection>
-  <collection>
-    <name>Character(Leader)[1d3+3]{Goblin}@Warrior@</name>
-    <entry>Character[1]{Goblin}@Warrior@/10d10,Goblin$Noncombatant$/10d10,Character(Sergeant)[3]{Goblin}@Warrior@/2d3-1,Character(Leader)[1d3+3]{Goblin}@Warrior@/1</entry>
-  </collection>
-  <collection>
-    <name>Character(Leader)[1d3+5]{Goblin}@Warrior@</name>
-    <entry>Character[1]{Goblin}@Warrior@/40d10,Goblin$Noncombatant$/40d10,Character(Sergeant)[3]{Goblin}@Warrior@/2d10,Character(Lieutenant)[1d2+3]{Goblin}@Warrior@/1d2,Character(Leader)[1d3+5]{Goblin}@Warrior@/1,Worg/2d8+8,Dire wolf/1d3+1</entry>
-  </collection>
-  <collection>
-    <name>Golem$Clay$</name>
+    <name>Clay Golem (Solitary)</name>
     <entry>Golem$Clay$/1</entry>
-    <entry>Golem$Clay$/1d3+1</entry>
   </collection>
+	<collection>
+		<name>Clay Golems (Gang)</name>
+		<entry>Golem$Clay$/1d3+1</entry>
+	</collection>
   <collection>
-    <name>Golem$Flesh$</name>
+	  <name>Flesh Golem (Solitary)</name>
     <entry>Golem$Flesh$/1</entry>
-    <entry>Golem$Flesh$/1d3+1</entry>
   </collection>
+	<collection>
+		<name>Flesh Golems (Gang)</name>
+		<entry>Golem$Flesh$/1d3+1</entry>
+	</collection>
   <collection>
-    <name>Golem$Iron$</name>
+	  <name>Iron Golem (Solitary)</name>
     <entry>Golem$Iron$/1</entry>
-    <entry>Golem$Iron$/1d3+1</entry>
+  </collection>
+	<collection>
+		<name>Iron Golems (Gang)</name>
+		<entry>Golem$Iron$/1d3+1</entry>
+	</collection>
+	<collection>
+		<name>Stone Golem (Solitary)</name>
+		<entry>Golem$Stone$/1</entry>
+	</collection>
+  <collection>
+	  <name>Stone Golems (Gang)</name>
+	  <entry>Golem$Stone$/1d3+1</entry>
   </collection>
   <collection>
-    <name>Golem$Stone$</name>
-    <entry>Golem$Stone$/1</entry>
-    <entry>Golem$Stone$/1d3+1</entry>
+	  <name>Greater Stone Golem (Solitary)</name>
     <entry>Golem$Greater Stone$/1</entry>
-    <entry>Golem$Greater Stone$/1d3+1</entry>
   </collection>
+	<collection>
+		<name>Greater Stone Golems (Gang)</name>
+		<entry>Golem$Greater Stone$/1d3+1</entry>
+	</collection>
   <collection>
-    <name>Golem$Greater Stone$</name>
-    <entry>Golem$Greater Stone$/1</entry>
-    <entry>Golem$Greater Stone$/1d3+1</entry>
-  </collection>
-  <collection>
-    <name>Gorgon</name>
+    <name>Gorgon (Solitary)</name>
     <entry>Gorgon/1</entry>
-    <entry>Gorgon/2</entry>
-    <entry>Gorgon/1d2+2</entry>
-    <entry>Gorgon/4d3+1</entry>
   </collection>
+	<collection>
+		<name>Gorgons (Pair)</name>
+		<entry>Gorgon/2</entry>
+	</collection>
+	<collection>
+		<name>Gorgons (Pair+)</name>
+		<entry>Gorgon/1d2+2</entry>
+	</collection>
+	<collection>
+		<name>Gorgons (Pair++)</name>
+		<entry>Gorgon/4d3+1</entry>
+	</collection>
   <collection>
-    <name>Gray render</name>
+    <name>Gray Render (Solitary)</name>
     <entry>Gray render/1</entry>
   </collection>
   <collection>
-    <name>Green hag</name>
+    <name>Green Hag (Solitary)</name>
     <entry>Green hag/1</entry>
-    <entry>Annis/1,Green hag/1,Sea hag/1,Ogre/1d10-2,Cloud giant/2d3-2</entry>
-    <entry>Annis/1,Green hag/1,Sea hag/1,Ogre/1d10-2,Fire giant/2d3-2</entry>
-    <entry>Annis/1,Green hag/1,Sea hag/1,Ogre/1d10-2,Frost giant/2d3-2</entry>
-    <entry>Annis/1,Green hag/1,Sea hag/1,Ogre/1d10-2,Hill giant/2d3-2</entry>
+  </collection>
+	<collection>
+		<name>Grick (Solitary)</name>
+		<entry>Grick/1</entry>
+	</collection>
+  <collection>
+	  <name>Grick (Solitary+)</name>
+	  <entry>Grick/1d3+1</entry>
   </collection>
   <collection>
-    <name>Grick</name>
-    <entry>Grick/1</entry>
-    <entry>Grick/1d3+1</entry>
-  </collection>
-  <collection>
-    <name>Griffon</name>
+    <name>Griffon (Solitary)</name>
     <entry>Griffon/1</entry>
-    <entry>Griffon/2</entry>
-    <entry>Griffon/2d3+4</entry>
   </collection>
+	<collection>
+		<name>Griffons (Pair)</name>
+		<entry>Griffon/2</entry>
+	</collection>
+	<collection>
+		<name>Griffons (Pair+)</name>
+		<entry>Griffon/2d3+4</entry>
+	</collection>
   <collection>
     <name>Grimlock</name>
     <entry>Grimlock/1d3+1</entry>
@@ -8875,11 +9482,11 @@
     <entry>Monstrous scorpion$Huge$/1d4+1</entry>
   </collection>
   <collection>
-    <name>Monstrous scorpion$Gargantuan$</name>
+    <name>Gargantuan Monstrous Scorpion (Solitary)</name>
     <entry>Monstrous scorpion$Gargantuan$/1</entry>
   </collection>
   <collection>
-    <name>Monstrous scorpion$Colossal$</name>
+    <name>Colossal Monstrous Scorpion (Solitary)</name>
     <entry>Monstrous scorpion$Colossal$/1</entry>
   </collection>
   <collection>
@@ -8972,59 +9579,113 @@
     <entry>Shocker lizard/1d6+5</entry>
   </collection>
   <collection>
-    <name>Skeleton$Human$</name>
+    <name>Human Skeletons (Small Group)</name>
     <entry>Skeleton$Human$/1d4</entry>
-    <entry>Skeleton$Human$/1d6+4</entry>
-    <entry>Skeleton$Human$/1d10+10</entry>
   </collection>
+	<collection>
+		<name>Human Skeletons (Group)</name>
+		<entry>Skeleton$Human$/1d6+4</entry>
+	</collection>
+	<collection>
+		<name>Human Skeletons (Large Group)</name>
+		<entry>Skeleton$Human$/1d10+10</entry>
+	</collection>
   <collection>
-    <name>Skeleton$Wolf$</name>
+    <name>Wolf Skeletons (Small Group)</name>
     <entry>Skeleton$Wolf$/1d4</entry>
-    <entry>Skeleton$Wolf$/1d6+4</entry>
-    <entry>Skeleton$Wolf$/1d10+10</entry>
+  </collection>
+	<collection>
+		<name>Wolf Skeletons (Group)</name>
+		<entry>Skeleton$Wolf$/1d6+4</entry>
+	</collection>
+	<collection>
+		<name>Wolf Skeletons (Large Group)</name>
+		<entry>Skeleton$Wolf$/1d10+10</entry>
+	</collection>
+	<collection>
+		<name>Owlbear Skeletons (Small Group)</name>
+		<entry>Skeleton$Owlbear$/1d4</entry>
+	</collection>
+  <collection>
+	  <name>Owlbear Skeletons (Group)</name>
+	  <entry>Skeleton$Owlbear$/1d6+4</entry>
   </collection>
   <collection>
-    <name>Skeleton$Owlbear$</name>
-    <entry>Skeleton$Owlbear$/1d4</entry>
-    <entry>Skeleton$Owlbear$/1d6+4</entry>
-    <entry>Skeleton$Owlbear$/1d10+10</entry>
+	  <name>Owlbear Skeletons (Large Group)</name>
+	  <entry>Skeleton$Owlbear$/1d10+10</entry>
   </collection>
   <collection>
-    <name>Skeleton$Troll$</name>
+    <name>Troll Skeletons (Small Group)</name>
     <entry>Skeleton$Troll$/1d4</entry>
-    <entry>Skeleton$Troll$/1d6+4</entry>
-    <entry>Skeleton$Troll$/1d10+10</entry>
   </collection>
+	<collection>
+		<name>Troll Skeletons (Group)</name>
+		<entry>Skeleton$Troll$/1d6+4</entry>
+	</collection>
+	<collection>
+		<name>Troll Skeletons (Large Group)</name>
+		<entry>Skeleton$Troll$/1d10+10</entry>
+	</collection>
   <collection>
-    <name>Skeleton$Chimera$</name>
+    <name>Chimera Skeletons (Small Group)</name>
     <entry>Skeleton$Chimera$/1d4</entry>
-    <entry>Skeleton$Chimera$/1d6+4</entry>
-    <entry>Skeleton$Chimera$/1d10+10</entry>
   </collection>
+	<collection>
+		<name>Chimera Skeletons (Group)</name>
+		<entry>Skeleton$Chimera$/1d6+4</entry>
+	</collection>
+	<collection>
+		<name>Chimera Skeletons (Large Group)</name>
+		<entry>Skeleton$Chimera$/1d10+10</entry>
+	</collection>
+	<collection>
+		<name>Ettin Skeletons (Small Group)</name>
+		<entry>Skeleton$Ettin$/1d4</entry>
+	</collection>
   <collection>
-    <name>Skeleton$Ettin$</name>
-    <entry>Skeleton$Ettin$/1d4</entry>
-    <entry>Skeleton$Ettin$/1d6+4</entry>
-    <entry>Skeleton$Ettin$/1d10+10</entry>
+	  <name>Ettin Skeletons (Group)</name>
+	  <entry>Skeleton$Ettin$/1d6+4</entry>
   </collection>
+	<collection>
+		<name>Ettin Skeletons (Large Group)</name>
+		<entry>Skeleton$Ettin$/1d10+10</entry>
+	</collection>
   <collection>
-    <name>Skeleton$Megaraptor$</name>
+    <name>Megaraptor Skeletons (Small Group)</name>
     <entry>Skeleton$Megaraptor$/1d4</entry>
-    <entry>Skeleton$Megaraptor$/1d6+4</entry>
-    <entry>Skeleton$Megaraptor$/1d10+10</entry>
+  </collection>
+	<collection>
+		<name>Megaraptor Skeletons (Group)</name>
+		<entry>Skeleton$Megaraptor$/1d6+4</entry>
+	</collection>
+	<collection>
+		<name>Megaraptor Skeletons (Large Group)</name>
+		<entry>Skeleton$Megaraptor$/1d10+10</entry>
+	</collection>
+	<collection>
+		<name>Cloud Giant Skeletons (Small Group)</name>
+		<entry>Skeleton$Cloud giant$/1d4</entry>
+	</collection>
+  <collection>
+	  <name>Cloud Giant Skeletons (Group)</name>
+	  <entry>Skeleton$Cloud giant$/1d6+4</entry>
   </collection>
   <collection>
-    <name>Skeleton$Cloud giant$</name>
-    <entry>Skeleton$Cloud giant$/1d4</entry>
-    <entry>Skeleton$Cloud giant$/1d6+4</entry>
-    <entry>Skeleton$Cloud giant$/1d10+10</entry>
+	  <name>Cloud Giant Skeletons (Large Group)</name>
+	  <entry>Skeleton$Cloud giant$/1d10+10</entry>
   </collection>
   <collection>
-    <name>Skeleton$Red dragon$Young adult$$</name>
+    <name>Young Adult Red Dragon Skeletons (Small Group)</name>
     <entry>Skeleton$Red dragon$Young adult$$/1d4</entry>
-    <entry>Skeleton$Red dragon$Young adult$$/1d6+4</entry>
-    <entry>Skeleton$Red dragon$Young adult$$/1d10+10</entry>
   </collection>
+	<collection>
+		<name>Young Adult Red Dragon Skeletons (Group)</name>
+		<entry>Skeleton$Red dragon$Young adult$$/1d6+4</entry>
+	</collection>
+	<collection>
+		<name>Young Adult Red Dragon Skeletons (Large Group)</name>
+		<entry>Skeleton$Red dragon$Young adult$$/1d10+10</entry>
+	</collection>
   <collection>
     <name>Skum</name>
     <entry>Skum/1d4+1</entry>
@@ -9075,7 +9736,7 @@
     <entry>Slaad$Gray$/1</entry>
   </collection>
 	<collection>
-		<name>Gray Slaad (Pair)</name>
+		<name>Gray Slaadi (Pair)</name>
 		<entry>Slaad$Gray$/2</entry>
 	</collection>
   <collection>
@@ -9083,36 +9744,35 @@
     <entry>Slaad$Death$/1</entry>
   </collection>
 	<collection>
-		<name>Death Slaad (Pair)</name>
+		<name>Death Slaadi (Pair)</name>
 		<entry>Slaad$Death$/2</entry>
 	</collection>
   <collection>
-    <name>Constrictor snake</name>
+    <name>Constrictor Snake (Solitary)</name>
     <entry>Constrictor snake/1</entry>
+  </collection>
+  <collection>
+    <name>Giant Constrictor Snake (Solitary)</name>
     <entry>Giant constrictor snake/1</entry>
   </collection>
   <collection>
-    <name>Giant constrictor snake</name>
-    <entry>Giant constrictor snake/1</entry>
-  </collection>
-  <collection>
-    <name>Viper snake$Tiny$</name>
+    <name>Tiny Viper Snake (Solitary)</name>
     <entry>Viper snake$Tiny$/1</entry>
   </collection>
+	<collection>
+		<name>Small Viper Snake (Solitary)</name>
+		<entry>Viper snake$Small$/1</entry>
+	</collection>
   <collection>
-    <name>Viper snake$Small$</name>
-    <entry>Viper snake$Small$/1</entry>
-  </collection>
-  <collection>
-    <name>Viper snake$Medium$</name>
+    <name>Medium Viper Snake (Solitary)</name>
     <entry>Viper snake$Medium$/1</entry>
   </collection>
   <collection>
-    <name>Viper snake$Large$</name>
+    <name>Large Viper Snake (Solitary)</name>
     <entry>Viper snake$Large$/1</entry>
   </collection>
   <collection>
-    <name>Viper snake$Huge$</name>
+    <name>Huge Viper Snake (Solitary)</name>
     <entry>Viper snake$Huge$/1</entry>
   </collection>
   <collection>
@@ -9146,11 +9806,11 @@
     <entry>Monstrous spider$Huge$/1d4+1</entry>
   </collection>
   <collection>
-    <name>Monstrous spider$Gargantuan$</name>
+    <name>Gargantuan Monstrous Spider (Solitary)</name>
     <entry>Monstrous spider$Gargantuan$/1</entry>
   </collection>
   <collection>
-    <name>Monstrous spider$Colossal$</name>
+    <name>Colossal Monstrous Spider (Solitary)</name>
     <entry>Monstrous spider$Colossal$/1</entry>
   </collection>
   <collection>
