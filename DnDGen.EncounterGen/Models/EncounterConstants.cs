@@ -847,9 +847,9 @@ namespace DnDGen.EncounterGen.Models
         public const string Deinonychus_Pair = "Deinonychuses (Pair)";
         public const string Deinonychus_Pack = "Deinonychuses (Pack)";
         public const string Delver_Solitary = "Delver (Solitary)";
-        public const string Derro_Team = "Derros (Team)";
-        public const string Derro_Squad = "Derros (Squad)";
-        public const string Derro_Band = "Derros (Band)";
+        public const string Derro_Team = "Derro (Team)";
+        public const string Derro_Squad = "Derro (Squad)";
+        public const string Derro_Band = "Derro (Band)";
         public const string Destrachan_Solitary = "Destrachan (Solitary)";
         public const string Destrachan_Pack = "Destrachans (Pack)";
         public const string Devourer_Solitary = "Devourer (Solitary)";
@@ -1218,9 +1218,9 @@ namespace DnDGen.EncounterGen.Models
         public const string Eagle_Giant_Solitary = "Giant Eagle (Solitary)";
         public const string Eagle_Giant_Pair = "Giant Eagles (Pair)";
         public const string Eagle_Giant_Eyrie = "Giant Eagles (Eyrie)";
-        public const string Efreeti_Solitary = "Efreet (Solitary)";
-        public const string Efreeti_Company = "Efreeti (Company)";
-        public const string Efreeti_Band = "Efreeti (Band)";
+        public const string Efreeti_Solitary = "Efreeti (Solitary)";
+        public const string Efreeti_Company = "Efreet (Company)";
+        public const string Efreeti_Band = "Efreet (Band)";
         public const string Elasmosaurus_Solitary = "Elasmosaurus (Solitary)";
         public const string Elasmosaurus_Pair = "Elasmosauruses (Pair)";
         public const string Elasmosaurus_Herd = "Elasmosauruses (Herd)";
