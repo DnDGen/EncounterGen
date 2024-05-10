@@ -147,21 +147,27 @@
 		<entry>Hill giant/2d3-2</entry>
 	</collection>
   <collection>
-    <name>Giant ant$Worker$</name>
+    <name>Giant Worker Ants (Gang)</name>
     <entry>Giant ant$Worker$/2d3</entry>
-    <entry>Giant ant$Worker$/1d6+5,Giant ant$Soldier$/1</entry>
-    <entry>Giant ant$Queen$/1,Giant ant$Worker$/10d10,Giant ant$Soldier$/3d6+2</entry>
   </collection>
   <collection>
-    <name>Giant ant$Soldier$</name>
-    <entry>Giant ant$Worker$/1d6+5,Giant ant$Soldier$/1</entry>
+    <name>Giant Worker Ants (Crew)</name>
+    <entry>Giant ant$Worker$/1d6+5</entry>
     <entry>Giant ant$Soldier$/1</entry>
-    <entry>Giant ant$Soldier$/1d3+1</entry>
-    <entry>Giant ant$Queen$/1,Giant ant$Worker$/10d10,Giant ant$Soldier$/3d6+2</entry>
   </collection>
   <collection>
-    <name>Giant ant$Queen$</name>
-    <entry>Giant ant$Queen$/1,Giant ant$Worker$/10d10,Giant ant$Soldier$/3d6+2</entry>
+    <name>Giant Soldier Ant (Solitary)</name>
+    <entry>Giant ant$Soldier$/1</entry>
+  </collection>
+  <collection>
+    <name>Giant Soldier Ants (Gang)</name>
+    <entry>Giant ant$Soldier$/1d3+1</entry>
+  </collection>
+  <collection>
+    <name>Giant Ant Queen (Hive)</name>
+    <entry>Giant ant$Queen$/1</entry>
+    <entry>Giant ant$Worker$/10d10</entry>
+    <entry>Giant ant$Soldier$/3d6+2</entry>
   </collection>
   <collection>
     <name>Ape (Solitary)</name>
@@ -500,9 +506,15 @@
     <entry>Bebilith/1</entry>
   </collection>
   <collection>
-    <name>Giant bee</name>
+    <name>Giant Bee (Solitary)</name>
     <entry>Giant bee/1</entry>
+  </collection>
+  <collection>
+    <name>Giant Bees (Buzz)</name>
     <entry>Giant bee/1d4+1</entry>
+  </collection>
+  <collection>
+    <name>Giant Bees (Hive)</name>
     <entry>Giant bee/1d10+10</entry>
   </collection>
   <collection>
@@ -624,8 +636,11 @@
 		<entry>Bodak/1d3+1</entry>
 	</collection>
   <collection>
-    <name>Giant bombardier beetle</name>
+    <name>Giant Bombardier Beetles (Cluster)</name>
     <entry>Giant bombardier beetle/1d4+1</entry>
+  </collection>
+  <collection>
+    <name>Giant Bombardier Beetles (Click)</name>
     <entry>Giant bombardier beetle/1d6+5</entry>
   </collection>
   <collection>
@@ -7400,9 +7415,15 @@
     <entry>Eagle/2</entry>
   </collection>
   <collection>
-    <name>Giant eagle</name>
+    <name>Giant Eagle (Solitary)</name>
     <entry>Giant eagle/1</entry>
+  </collection>
+  <collection>
+    <name>Giant Eagles (Pair)</name>
     <entry>Giant eagle/2</entry>
+  </collection>
+  <collection>
+    <name>Giant Eagles (Eyrie)</name>
     <entry>Giant eagle/1d8+4</entry>
   </collection>
   <collection>
@@ -7849,148 +7870,293 @@
     <entry>Janni/1d10+5</entry>
   </collection>
   <collection>
-    <name>Ghaele</name>
+    <name>Ghaele (Solitary)</name>
     <entry>Ghaele/1</entry>
+  </collection>
+  <collection>
+    <name>Ghaeles (Pair)</name>
     <entry>Ghaele/2</entry>
+  </collection>
+  <collection>
+    <name>Ghaeles (Squad)</name>
     <entry>Ghaele/1d3+2</entry>
   </collection>
   <collection>
-    <name>Character[1]#Ghost#</name>
+    <name>Ghost [Level 1] (Solitary)</name>
     <entry>Character[1]#Ghost#/1</entry>
+  </collection>
+  <collection>
+    <name>Ghosts [Level 1] (Gang)</name>
     <entry>Character[1]#Ghost#/1d3+1</entry>
+  </collection>
+  <collection>
+    <name>Ghosts [Level 1] (Mob)</name>
     <entry>Character[1]#Ghost#/1d6+6</entry>
   </collection>
   <collection>
-    <name>Character[2]#Ghost#</name>
+    <name>Ghost [Level 2] (Solitary)</name>
     <entry>Character[2]#Ghost#/1</entry>
+  </collection>
+  <collection>
+    <name>Ghosts [Level 2] (Gang)</name>
     <entry>Character[2]#Ghost#/1d3+1</entry>
+  </collection>
+  <collection>
+    <name>Ghosts [Level 2] (Mob)</name>
     <entry>Character[2]#Ghost#/1d6+6</entry>
   </collection>
   <collection>
-    <name>Character[3]#Ghost#</name>
+    <name>Ghost [Level 3] (Solitary)</name>
     <entry>Character[3]#Ghost#/1</entry>
+  </collection>
+  <collection>
+    <name>Ghosts [Level 3] (Gang)</name>
     <entry>Character[3]#Ghost#/1d3+1</entry>
+  </collection>
+  <collection>
+    <name>Ghosts [Level 3] (Mob)</name>
     <entry>Character[3]#Ghost#/1d6+6</entry>
   </collection>
   <collection>
-    <name>Character[4]#Ghost#</name>
+    <name>Ghost [Level 4] (Solitary)</name>
     <entry>Character[4]#Ghost#/1</entry>
+  </collection>
+  <collection>
+    <name>Ghosts [Level 4] (Gang)</name>
     <entry>Character[4]#Ghost#/1d3+1</entry>
+  </collection>
+  <collection>
+    <name>Ghosts [Level 4] (Mob)</name>
     <entry>Character[4]#Ghost#/1d6+6</entry>
   </collection>
   <collection>
-    <name>Character[5]#Ghost#</name>
+    <name>Ghost [Level 5] (Solitary)</name>
     <entry>Character[5]#Ghost#/1</entry>
+  </collection>
+  <collection>
+    <name>Ghosts [Level 5] (Gang)</name>
     <entry>Character[5]#Ghost#/1d3+1</entry>
+  </collection>
+  <collection>
+    <name>Ghosts [Level 5] (Mob)</name>
     <entry>Character[5]#Ghost#/1d6+6</entry>
   </collection>
   <collection>
-    <name>Character[6]#Ghost#</name>
+    <name>Ghost [Level 6] (Solitary)</name>
     <entry>Character[6]#Ghost#/1</entry>
+  </collection>
+  <collection>
+    <name>Ghosts [Level 6] (Gang)</name>
     <entry>Character[6]#Ghost#/1d3+1</entry>
+  </collection>
+  <collection>
+    <name>Ghosts [Level 6] (Mob)</name>
     <entry>Character[6]#Ghost#/1d6+6</entry>
   </collection>
   <collection>
-    <name>Character[7]#Ghost#</name>
+    <name>Ghost [Level 7] (Solitary)</name>
     <entry>Character[7]#Ghost#/1</entry>
+  </collection>
+  <collection>
+    <name>Ghosts [Level 7] (Gang)</name>
     <entry>Character[7]#Ghost#/1d3+1</entry>
+  </collection>
+  <collection>
+    <name>Ghosts [Level 7] (Mob)</name>
     <entry>Character[7]#Ghost#/1d6+6</entry>
   </collection>
   <collection>
-    <name>Character[8]#Ghost#</name>
+    <name>Ghost [Level 8] (Solitary)</name>
     <entry>Character[8]#Ghost#/1</entry>
+  </collection>
+  <collection>
+    <name>Ghosts [Level 8] (Gang)</name>
     <entry>Character[8]#Ghost#/1d3+1</entry>
+  </collection>
+  <collection>
+    <name>Ghosts [Level 8] (Mob)</name>
     <entry>Character[8]#Ghost#/1d6+6</entry>
   </collection>
   <collection>
-    <name>Character[9]#Ghost#</name>
+    <name>Ghost [Level 9] (Solitary)</name>
     <entry>Character[9]#Ghost#/1</entry>
+  </collection>
+  <collection>
+    <name>Ghosts [Level 9] (Gang)</name>
     <entry>Character[9]#Ghost#/1d3+1</entry>
+  </collection>
+  <collection>
+    <name>Ghosts [Level 9] (Mob)</name>
     <entry>Character[9]#Ghost#/1d6+6</entry>
   </collection>
   <collection>
-    <name>Character[10]#Ghost#</name>
+    <name>Ghost [Level 10] (Solitary)</name>
     <entry>Character[10]#Ghost#/1</entry>
+  </collection>
+  <collection>
+    <name>Ghosts [Level 10] (Gang)</name>
     <entry>Character[10]#Ghost#/1d3+1</entry>
+  </collection>
+  <collection>
+    <name>Ghosts [Level 10] (Mob)</name>
     <entry>Character[10]#Ghost#/1d6+6</entry>
   </collection>
   <collection>
-    <name>Character[11]#Ghost#</name>
+    <name>Ghost [Level 11] (Solitary)</name>
     <entry>Character[11]#Ghost#/1</entry>
+  </collection>
+  <collection>
+    <name>Ghosts [Level 11] (Gang)</name>
     <entry>Character[11]#Ghost#/1d3+1</entry>
+  </collection>
+  <collection>
+    <name>Ghosts [Level 11] (Mob)</name>
     <entry>Character[11]#Ghost#/1d6+6</entry>
   </collection>
   <collection>
-    <name>Character[12]#Ghost#</name>
+    <name>Ghost [Level 12] (Solitary)</name>
     <entry>Character[12]#Ghost#/1</entry>
+  </collection>
+  <collection>
+    <name>Ghosts [Level 12] (Gang)</name>
     <entry>Character[12]#Ghost#/1d3+1</entry>
+  </collection>
+  <collection>
+    <name>Ghosts [Level 12] (Mob)</name>
     <entry>Character[12]#Ghost#/1d6+6</entry>
   </collection>
   <collection>
-    <name>Character[13]#Ghost#</name>
+    <name>Ghost [Level 13] (Solitary)</name>
     <entry>Character[13]#Ghost#/1</entry>
+  </collection>
+  <collection>
+    <name>Ghosts [Level 13] (Gang)</name>
     <entry>Character[13]#Ghost#/1d3+1</entry>
+  </collection>
+  <collection>
+    <name>Ghosts [Level 13] (Mob)</name>
     <entry>Character[13]#Ghost#/1d6+6</entry>
   </collection>
   <collection>
-    <name>Character[14]#Ghost#</name>
+    <name>Ghost [Level 14] (Solitary)</name>
     <entry>Character[14]#Ghost#/1</entry>
+  </collection>
+  <collection>
+    <name>Ghosts [Level 14] (Gang)</name>
     <entry>Character[14]#Ghost#/1d3+1</entry>
+  </collection>
+  <collection>
+    <name>Ghosts [Level 14] (Mob)</name>
     <entry>Character[14]#Ghost#/1d6+6</entry>
   </collection>
   <collection>
-    <name>Character[15]#Ghost#</name>
+    <name>Ghost [Level 15] (Solitary)</name>
     <entry>Character[15]#Ghost#/1</entry>
+  </collection>
+  <collection>
+    <name>Ghosts [Level 15] (Gang)</name>
     <entry>Character[15]#Ghost#/1d3+1</entry>
+  </collection>
+  <collection>
+    <name>Ghosts [Level 15] (Mob)</name>
     <entry>Character[15]#Ghost#/1d6+6</entry>
   </collection>
   <collection>
-    <name>Character[16]#Ghost#</name>
+    <name>Ghost [Level 16] (Solitary)</name>
     <entry>Character[16]#Ghost#/1</entry>
+  </collection>
+  <collection>
+    <name>Ghosts [Level 16] (Gang)</name>
     <entry>Character[16]#Ghost#/1d3+1</entry>
+  </collection>
+  <collection>
+    <name>Ghosts [Level 16] (Mob)</name>
     <entry>Character[16]#Ghost#/1d6+6</entry>
   </collection>
   <collection>
-    <name>Character[17]#Ghost#</name>
+    <name>Ghost [Level 17] (Solitary)</name>
     <entry>Character[17]#Ghost#/1</entry>
+  </collection>
+  <collection>
+    <name>Ghosts [Level 17] (Gang)</name>
     <entry>Character[17]#Ghost#/1d3+1</entry>
+  </collection>
+  <collection>
+    <name>Ghosts [Level 17] (Mob)</name>
     <entry>Character[17]#Ghost#/1d6+6</entry>
   </collection>
   <collection>
-    <name>Character[18]#Ghost#</name>
+    <name>Ghost [Level 18] (Solitary)</name>
     <entry>Character[18]#Ghost#/1</entry>
+  </collection>
+  <collection>
+    <name>Ghosts [Level 18] (Gang)</name>
     <entry>Character[18]#Ghost#/1d3+1</entry>
+  </collection>
+  <collection>
+    <name>Ghosts [Level 18] (Mob)</name>
     <entry>Character[18]#Ghost#/1d6+6</entry>
   </collection>
   <collection>
-    <name>Character[19]#Ghost#</name>
+    <name>Ghost [Level 19] (Solitary)</name>
     <entry>Character[19]#Ghost#/1</entry>
+  </collection>
+  <collection>
+    <name>Ghosts [Level 19] (Gang)</name>
     <entry>Character[19]#Ghost#/1d3+1</entry>
+  </collection>
+  <collection>
+    <name>Ghosts [Level 19] (Mob)</name>
     <entry>Character[19]#Ghost#/1d6+6</entry>
   </collection>
   <collection>
-    <name>Character[20]#Ghost#</name>
+    <name>Ghost [Level 20] (Solitary)</name>
     <entry>Character[20]#Ghost#/1</entry>
+  </collection>
+  <collection>
+    <name>Ghosts [Level 20] (Gang)</name>
     <entry>Character[20]#Ghost#/1d3+1</entry>
+  </collection>
+  <collection>
+    <name>Ghosts [Level 20] (Mob)</name>
     <entry>Character[20]#Ghost#/1d6+6</entry>
   </collection>
   <collection>
-    <name>Ghoul</name>
+    <name>Ghoul (Solitary)</name>
     <entry>Ghoul/1</entry>
+  </collection>
+  <collection>
+    <name>Ghouls (Gang)</name>
     <entry>Ghoul/1d3+1</entry>
+  </collection>
+  <collection>
+    <name>Ghouls (Pack)</name>
     <entry>Ghoul/1d6+6</entry>
   </collection>
   <collection>
-    <name>Ghoul$Lacedon$</name>
+    <name>Lacedon (Solitary)</name>
     <entry>Ghoul$Lacedon$/1</entry>
+  </collection>
+  <collection>
+    <name>Lacedons (Gang)</name>
     <entry>Ghoul$Lacedon$/1d3+1</entry>
+  </collection>
+  <collection>
+    <name>Lacedons (Pack)</name>
     <entry>Ghoul$Lacedon$/1d6+6</entry>
   </collection>
   <collection>
-    <name>Ghoul$Ghast$</name>
+    <name>Ghast (Solitary)</name>
     <entry>Ghoul$Ghast$/1</entry>
+  </collection>
+  <collection>
+    <name>Ghasts (Gang)</name>
     <entry>Ghoul$Ghast$/1d3+1</entry>
-    <entry>Ghoul$Ghast$/1d3+1,Ghoul/1d6+6</entry>
+  </collection>
+  <collection>
+    <name>Ghasts (Pack)</name>
+    <entry>Ghoul$Ghast$/1d3+1</entry>
+    <entry>Ghoul/1d6+6</entry>
   </collection>
   <collection>
     <name>Cloud Giant (Solitary)</name>
@@ -8193,57 +8359,50 @@
     <entry>Gibbering mouther/1</entry>
   </collection>
   <collection>
-    <name>Girallon</name>
+    <name>Girallon (Solitary)</name>
     <entry>Girallon/1</entry>
+  </collection>
+  <collection>
+    <name>Girallons (Company)</name>
     <entry>Girallon/1d4+4</entry>
   </collection>
   <collection>
-    <name>Character(Captain)[9]{Githyanki}</name>
-    <entry>Character[3]{Githyanki}@Fighter@/1d10+10,Character(Sergeant)[7]{Githyanki}/2,Character(Captain)[9]{Githyanki}/1,Red dragon$Young$/1</entry>
-    <entry>Character[3]{Githyanki}@Fighter@/10d8+20,Character(Sergeant)[7]{Githyanki}/1d8+2,Character(Lieutenant)[7]{Githyanki}/5,Character(Captain)[9]{Githyanki}/3,Character(Supreme Leader)[16]{Githyanki}/1,Red dragon$Young$/1d4</entry>
-  </collection>
-  <collection>
-    <name>Character(Lieutenant)[7]{Githyanki}</name>
-    <entry>Character[3]{Githyanki}@Fighter@/10d8+20,Character(Sergeant)[7]{Githyanki}/1d8+2,Character(Lieutenant)[7]{Githyanki}/5,Character(Captain)[9]{Githyanki}/3,Character(Supreme Leader)[16]{Githyanki}/1,Red dragon$Young$/1d4</entry>
-  </collection>
-  <collection>
-    <name>Character(Sergeant)[7]{Githyanki}</name>
-    <entry>Character[3]{Githyanki}@Fighter@/1d10+10,Character(Sergeant)[7]{Githyanki}/2,Character(Captain)[9]{Githyanki}/1,Red dragon$Young$/1</entry>
-    <entry>Character[3]{Githyanki}@Fighter@/10d8+20,Character(Sergeant)[7]{Githyanki}/1d8+2,Character(Lieutenant)[7]{Githyanki}/5,Character(Captain)[9]{Githyanki}/3,Character(Supreme Leader)[16]{Githyanki}/1,Red dragon$Young$/1d4</entry>
-  </collection>
-  <collection>
-    <name>Character(Supreme Leader)[16]{Githyanki}</name>
-    <entry>Character[3]{Githyanki}@Fighter@/10d8+20,Character(Sergeant)[7]{Githyanki}/1d8+2,Character(Lieutenant)[7]{Githyanki}/5,Character(Captain)[9]{Githyanki}/3,Character(Supreme Leader)[16]{Githyanki}/1,Red dragon$Young$/1d4</entry>
-  </collection>
-  <collection>
-    <name>Character[3]{Githyanki}@Fighter@</name>
+    <name>Githyanki (Company)</name>
     <entry>Character[3]{Githyanki}@Fighter@/1d3+1</entry>
-    <entry>Character[3]{Githyanki}@Fighter@/1d10+10,Character(Sergeant)[7]{Githyanki}/2,Character(Captain)[9]{Githyanki}/1,Red dragon$Young$/1</entry>
-    <entry>Character[3]{Githyanki}@Fighter@/10d8+20,Character(Sergeant)[7]{Githyanki}/1d8+2,Character(Lieutenant)[7]{Githyanki}/5,Character(Captain)[9]{Githyanki}/3,Character(Supreme Leader)[16]{Githyanki}/1,Red dragon$Young$/1d4</entry>
   </collection>
   <collection>
-    <name>Character(Master)[13]{Githzerai}</name>
-    <entry>Character(Student)[3]{Githzerai}/10d8+20,Character(Teacher)[7]{Githzerai}/1d8+2,Character(Mentor)[9]{Githzerai}/5,Character(Master)[13]{Githzerai}/2,Character(Sensei)[16]{Githzerai}/1</entry>
+    <name>Githyanki (Squad)</name>
+    <entry>Character[3]{Githyanki}@Fighter@/1d10+10</entry>
+    <entry>Character(Sergeant)[7]{Githyanki}/2</entry>
+    <entry>Character(Captain)[9]{Githyanki}/1</entry>
+    <entry>Red dragon$Young$/1</entry>
   </collection>
   <collection>
-    <name>Character(Mentor)[9]{Githzerai}</name>
-    <entry>Character(Student)[3]{Githzerai}/4d4+8,Character(Teacher)[7]{Githzerai}/2,Character(Mentor)[9]{Githzerai}/1</entry>
-    <entry>Character(Student)[3]{Githzerai}/10d8+20,Character(Teacher)[7]{Githzerai}/1d8+2,Character(Mentor)[9]{Githzerai}/5,Character(Master)[13]{Githzerai}/2,Character(Sensei)[16]{Githzerai}/1</entry>
+    <name>Githyanki (Regiment)</name>
+    <entry>Character[3]{Githyanki}@Fighter@/10d8+20</entry>
+    <entry>Character(Sergeant)[7]{Githyanki}/1d8+2</entry>
+    <entry>Character(Lieutenant)[7]{Githyanki}/5</entry>
+    <entry>Character(Captain)[9]{Githyanki}/3</entry>
+    <entry>Character(Supreme Leader)[16]{Githyanki}/1</entry>
+    <entry>Red dragon$Young$/1d4</entry>
   </collection>
   <collection>
-    <name>Character(Sensei)[16]{Githzerai}</name>
-    <entry>Character(Student)[3]{Githzerai}/10d8+20,Character(Teacher)[7]{Githzerai}/1d8+2,Character(Mentor)[9]{Githzerai}/5,Character(Master)[13]{Githzerai}/2,Character(Sensei)[16]{Githzerai}/1</entry>
-  </collection>
-  <collection>
-    <name>Character(Student)[3]{Githzerai}</name>
+    <name>Githzerai (Fellowship)</name>
     <entry>Character(Student)[3]{Githzerai}/1d10+2</entry>
-    <entry>Character(Student)[3]{Githzerai}/4d4+8,Character(Teacher)[7]{Githzerai}/2,Character(Mentor)[9]{Githzerai}/1</entry>
-    <entry>Character(Student)[3]{Githzerai}/10d8+20,Character(Teacher)[7]{Githzerai}/1d8+2,Character(Mentor)[9]{Githzerai}/5,Character(Master)[13]{Githzerai}/2,Character(Sensei)[16]{Githzerai}/1</entry>
   </collection>
   <collection>
-    <name>Character(Teacher)[7]{Githzerai}</name>
-    <entry>Character(Student)[3]{Githzerai}/4d4+8,Character(Teacher)[7]{Githzerai}/2,Character(Mentor)[9]{Githzerai}/1</entry>
-    <entry>Character(Student)[3]{Githzerai}/10d8+20,Character(Teacher)[7]{Githzerai}/1d8+2,Character(Mentor)[9]{Githzerai}/5,Character(Master)[13]{Githzerai}/2,Character(Sensei)[16]{Githzerai}/1</entry>
+    <name>Githzerai (Sect)</name>
+    <entry>Character(Student)[3]{Githzerai}/4d4+8</entry>
+    <entry>Character(Teacher)[7]{Githzerai}/2</entry>
+    <entry>Character(Mentor)[9]{Githzerai}/1</entry>
+  </collection>
+  <collection>
+    <name>Githzerai (Order)</name>
+    <entry>Character(Student)[3]{Githzerai}/10d8+20</entry>
+    <entry>Character(Teacher)[7]{Githzerai}/1d8+2</entry>
+    <entry>Character(Mentor)[9]{Githzerai}/5</entry>
+    <entry>Character(Master)[13]{Githzerai}/2</entry>
+    <entry>Character(Sensei)[16]{Githzerai}/1</entry>
   </collection>
   <collection>
     <name>Gnoll (Solitary)</name>
@@ -8254,12 +8413,12 @@
 		<entry>Gnoll/2</entry>
 	</collection>
 	<collection>
-		<name>Gnolls (Pair+)</name>
+		<name>Gnolls (Hunting Party)</name>
 		<entry>Gnoll/1d4+1</entry>
 		<entry>Hyena/1d2</entry>
 	</collection>
 	<collection>
-		<name>Gnolls (Pair++)</name>
+		<name>Gnolls (Band)</name>
 		<entry>Gnoll/10d10</entry>
 		<entry>Gnoll$Noncombatant$/5d10</entry>
 		<entry>Character(Sergeant)[3]{Gnoll}/2d3-1</entry>
@@ -8267,7 +8426,7 @@
 		<entry>Hyena/1d4+4</entry>
 	</collection>
 	<collection>
-		<name>Gnolls (Pair+++)</name>
+		<name>Gnolls (Tribe)</name>
 		<entry>Gnoll/20d10</entry>
 		<entry>Character(Sergeant)[3]{Gnoll}/1d10</entry>
 		<entry>Character(Lieutenant)[1d2+3]{Gnoll}/1d2</entry>
@@ -8275,7 +8434,7 @@
 		<entry>Hyena/1d6+6</entry>
 	</collection>
 	<collection>
-		<name>Gnolls (Pair++++)</name>
+		<name>Gnolls (Tribe with Trolls)</name>
 		<entry>Gnoll/20d10</entry>
 		<entry>Character(Sergeant)[3]{Gnoll}/1d10</entry>
 		<entry>Character(Lieutenant)[1d2+3]{Gnoll}/1d2</entry>
@@ -8330,11 +8489,30 @@
 		<entry>Vrock/1d4+1</entry>
 	</collection>
   <collection>
-    <name>Character[1]{Goblin}@Warrior@</name>
+    <name>Goblins (Gang)</name>
     <entry>Character[1]{Goblin}@Warrior@/1d6+3</entry>
-    <entry>Character[1]{Goblin}@Warrior@/10d10,Goblin$Noncombatant$/10d10,Character(Sergeant)[3]{Goblin}@Warrior@/2d3-1,Character(Leader)[1d3+3]{Goblin}@Warrior@/1</entry>
-    <entry>Character[1]{Goblin}@Warrior@/2d8+8,Worg/2d8+8</entry>
-    <entry>Character[1]{Goblin}@Warrior@/40d10,Goblin$Noncombatant$/40d10,Character(Sergeant)[3]{Goblin}@Warrior@/2d10,Character(Lieutenant)[1d2+3]{Goblin}@Warrior@/1d2,Character(Leader)[1d3+5]{Goblin}@Warrior@/1,Worg/2d8+8,Dire wolf/1d3+1</entry>
+  </collection>
+  <collection>
+    <name>Goblins (Band)</name>
+    <entry>Character[1]{Goblin}@Warrior@/10d10</entry>
+    <entry>Goblin$Noncombatant$/10d10</entry>
+    <entry>Character(Sergeant)[3]{Goblin}@Warrior@/2d3-1</entry>
+    <entry>Character(Leader)[1d3+3]{Goblin}@Warrior@/1</entry>
+  </collection>
+  <collection>
+    <name>Goblins (Warband)</name>
+    <entry>Character[1]{Goblin}@Warrior@/2d8+8</entry>
+    <entry>Worg/2d8+8</entry>
+  </collection>
+  <collection>
+    <name>Goblins (Tribe)</name>
+    <entry>Character[1]{Goblin}@Warrior@/40d10</entry>
+    <entry>Goblin$Noncombatant$/40d10</entry>
+    <entry>Character(Sergeant)[3]{Goblin}@Warrior@/2d10</entry>
+    <entry>Character(Lieutenant)[1d2+3]{Goblin}@Warrior@/1d2</entry>
+    <entry>Character(Leader)[1d3+5]{Goblin}@Warrior@/1</entry>
+    <entry>Worg/2d8+8</entry>
+    <entry>Dire wolf/1d3+1</entry>
   </collection>
   <collection>
     <name>Clay Golem (Solitary)</name>
@@ -9394,7 +9572,7 @@
 		<entry>Giant owl/2</entry>
 	</collection>
 	<collection>
-		<name>Giant Owls (Flight)</name>
+		<name>Giant Owls (Company)</name>
 		<entry>Giant owl/1d3+2</entry>
 	</collection>
   <collection>
@@ -10073,16 +10251,19 @@
     <entry>Spider swarm/1d6+6</entry>
   </collection>
   <collection>
-    <name>Spider eater</name>
+    <name>Spider Eater (Solitary)</name>
     <entry>Spider eater/1</entry>
   </collection>
   <collection>
-    <name>Squid</name>
+    <name>Squid (Solitary)</name>
     <entry>Squid/1</entry>
+  </collection>
+  <collection>
+    <name>Squids (School)</name>
     <entry>Squid/1d6+5</entry>
   </collection>
   <collection>
-    <name>Giant squid</name>
+    <name>Giant Squid (Solitary)</name>
     <entry>Giant squid/1</entry>
   </collection>
   <collection>
@@ -10111,8 +10292,11 @@
     <entry>Pixie$with Irresistable Dance$/2d4,Pixie/6d10+12</entry>
   </collection>
   <collection>
-    <name>Giant stag beetle</name>
+    <name>Giant Stag Beetles (Cluster)</name>
     <entry>Giant stag beetle/1d4+1</entry>
+  </collection>
+  <collection>
+    <name>Giant Stag Beetles (Mass)</name>
     <entry>Giant stag beetle/1d6+5</entry>
   </collection>
   <collection>
@@ -10808,11 +10992,11 @@
     <entry>Giant wasp/1</entry>
   </collection>
 	<collection>
-		<name>Giant Wasp (Swarm)</name>
+		<name>Giant Wasps (Swarm)</name>
 		<entry>Giant wasp/1d4+1</entry>
 	</collection>
 	<collection>
-		<name>Giant Wasp (Hive)</name>
+		<name>Giant Wasps (Nest)</name>
 		<entry>Giant wasp/1d10+10</entry>
 	</collection>
   <collection>
