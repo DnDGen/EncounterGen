@@ -206,7 +206,7 @@
 		<entry>Hound archon/2</entry>
 	</collection>
 	<collection>
-		<name>Hound Archons (Group)</name>
+		<name>Hound Archons (Squad)</name>
 		<entry>Hound archon/1d3+2</entry>
 	</collection>
 	<collection>
@@ -219,17 +219,29 @@
 		<entry>Brass dragon$Juvenile$/1</entry>
 	</collection>
   <collection>
-    <name>Lantern archon</name>
+    <name>Lantern Archon (Solitary)</name>
     <entry>Lantern archon/1</entry>
-    <entry>Lantern archon/2</entry>
-    <entry>Lantern archon/1d3+2</entry>
   </collection>
+	<collection>
+		<name>Lantern Archons (Pair)</name>
+		<entry>Lantern archon/2</entry>
+	</collection>
+	<collection>
+		<name>Lantern Archons (Squad)</name>
+		<entry>Lantern archon/1d3+2</entry>
+	</collection>
   <collection>
-    <name>Trumpet archon</name>
+    <name>Trumpet Archon (Solitary)</name>
     <entry>Trumpet archon/1</entry>
-    <entry>Trumpet archon/2</entry>
-    <entry>Trumpet archon/1d3+2</entry>
   </collection>
+	<collection>
+		<name>Trumpet Archons (Pair)</name>
+		<entry>Trumpet archon/2</entry>
+	</collection>
+	<collection>
+		<name>Trumpet Archons (Squad)</name>
+		<entry>Trumpet archon/1d3+2</entry>
+	</collection>
   <collection>
     <name>Juvenile Arrowhawk (Solitary)</name>
     <entry>Arrowhawk$Juvenile$/1</entry>
@@ -619,7 +631,7 @@
 		<entry>Hill giant dire wereboar/2</entry>
 	</collection>
 	<collection>
-		<name>Hill Giant Dire Wereboars (Gang)</name>
+		<name>Hill Giant Dire Wereboars (Brood)</name>
 		<entry>Hill giant dire wereboar/1d2+2</entry>
 	</collection>
 	<collection>
@@ -745,7 +757,7 @@
 		<entry>Monstrous centipede$Medium$/1</entry>
 	</collection>
   <collection>
-	  <name>Medium Monstrous Centipede (Colony)</name>
+	  <name>Medium Monstrous Centipedes (Colony)</name>
 	  <entry>Monstrous centipede$Medium$/1d4+1</entry>
   </collection>
   <collection>
@@ -996,50 +1008,6 @@
 		<name>Adventurers [Level 20] (Party)</name>
 		<entry>Character(Adventurer)[20]/1d3+1</entry>
 	</collection>
-  <collection>
-    <name>Character(Adviser)[1]@Expert@</name>
-    <entry>Character(Politician)[1]@Aristocrat@/1,Character(Adviser)[1]@Expert@/1d3-1,Character(Guard)[1]@Warrior@/2d3-2</entry>
-  </collection>
-  <collection>
-    <name>Character(Adviser)[1d2+1]@Expert@</name>
-    <entry>Character(Politician)[1d2+1]@Aristocrat@/1,Character(Adviser)[1d2+1]@Expert@/1d3-1,Character(Guard)[1d2+1]@Warrior@/2d3-2</entry>
-  </collection>
-  <collection>
-    <name>Character(Adviser)[1d2+3]@Expert@</name>
-    <entry>Character(Politician)[1d2+3]@Aristocrat@/1,Character(Adviser)[1d2+3]@Expert@/1d3-1,Character(Guard)[1d2+3]@Warrior@/2d3-2</entry>
-  </collection>
-  <collection>
-    <name>Character(Adviser)[1d2+5]@Expert@</name>
-    <entry>Character(Politician)[1d2+5]@Aristocrat@/1,Character(Adviser)[1d2+5]@Expert@/1d3-1,Character(Guard)[1d2+5]@Warrior@/2d3-2</entry>
-  </collection>
-  <collection>
-    <name>Character(Adviser)[1d2+7]@Expert@</name>
-    <entry>Character(Politician)[1d2+7]@Aristocrat@/1,Character(Adviser)[1d2+7]@Expert@/1d3-1,Character(Guard)[1d2+7]@Warrior@/2d3-2</entry>
-  </collection>
-  <collection>
-    <name>Character(Adviser)[1d2+9]@Expert@</name>
-    <entry>Character(Politician)[1d2+9]@Aristocrat@/1,Character(Adviser)[1d2+9]@Expert@/1d3-1,Character(Guard)[1d2+9]@Warrior@/2d3-2</entry>
-  </collection>
-  <collection>
-    <name>Character(Adviser)[1d2+11]@Expert@</name>
-    <entry>Character(Politician)[1d2+11]@Aristocrat@/1,Character(Adviser)[1d2+11]@Expert@/1d3-1,Character(Guard)[1d2+11]@Warrior@/2d3-2</entry>
-  </collection>
-  <collection>
-    <name>Character(Adviser)[1d2+13]@Expert@</name>
-    <entry>Character(Politician)[1d2+13]@Aristocrat@/1,Character(Adviser)[1d2+13]@Expert@/1d3-1,Character(Guard)[1d2+13]@Warrior@/2d3-2</entry>
-  </collection>
-  <collection>
-    <name>Character(Adviser)[1d2+15]@Expert@</name>
-    <entry>Character(Politician)[1d2+15]@Aristocrat@/1,Character(Adviser)[1d2+15]@Expert@/1d3-1,Character(Guard)[1d2+15]@Warrior@/2d3-2</entry>
-  </collection>
-  <collection>
-    <name>Character(Adviser)[1d2+17]@Expert@</name>
-    <entry>Character(Politician)[1d2+17]@Aristocrat@/1,Character(Adviser)[1d2+17]@Expert@/1d3-1,Character(Guard)[1d2+17]@Warrior@/2d3-2</entry>
-  </collection>
-  <collection>
-    <name>Character(Adviser)[20]@Expert@</name>
-    <entry>Character(Politician)[20]@Aristocrat@/1,Character(Adviser)[20]@Expert@/1d3-1,Character(Guard)[20]@Warrior@/2d3-2</entry>
-  </collection>
   <collection>
     <name>Animal Trainer [Level 1] (with Cat)</name>
 	  <entry>Character(Animal trainer)[1]@Druid&amp;Ranger@/1</entry>
@@ -2818,90 +2786,6 @@
     <entry>Character(Businessman)[20]@Aristocrat@/1d4</entry>
   </collection>
   <collection>
-    <name>Character(Captain)[1]@Fighter@</name>
-    <entry>Character(Guard)[1]@Warrior@/2d4+1,Character(Captain)[1]@Fighter@/1</entry>
-  </collection>
-  <collection>
-    <name>Character(Captain)[2]@Fighter@</name>
-    <entry>Character(Guard)[1d2+1]@Warrior@/2d4+1,Character(Captain)[2]@Fighter@/1</entry>
-  </collection>
-  <collection>
-    <name>Character(Captain)[3]@Fighter@</name>
-    <entry>Character(Guard)[1d2+3]@Warrior@/2d4+1,Character(Captain)[3]@Fighter@/1</entry>
-  </collection>
-  <collection>
-    <name>Character(Captain)[4]@Fighter@</name>
-    <entry>Character(Guard)[1d2+5]@Warrior@/2d4+1,Character(Captain)[4]@Fighter@/1</entry>
-  </collection>
-  <collection>
-    <name>Character(Captain)[5]@Fighter@</name>
-    <entry>Character(Guard)[1d2+7]@Warrior@/2d4+1,Character(Captain)[5]@Fighter@/1</entry>
-  </collection>
-  <collection>
-    <name>Character(Captain)[6]@Fighter@</name>
-    <entry>Character(Guard)[1d2+9]@Warrior@/2d4+1,Character(Captain)[6]@Fighter@/1</entry>
-  </collection>
-  <collection>
-    <name>Character(Captain)[7]@Fighter@</name>
-    <entry>Character(Guard)[1d2+11]@Warrior@/2d4+1,Character(Captain)[7]@Fighter@/1</entry>
-  </collection>
-  <collection>
-    <name>Character(Captain)[8]@Fighter@</name>
-    <entry>Character(Guard)[1d2+13]@Warrior@/2d4+1,Character(Captain)[8]@Fighter@/1</entry>
-  </collection>
-  <collection>
-    <name>Character(Captain)[9]@Fighter@</name>
-    <entry>Character(Guard)[1d2+15]@Warrior@/2d4+1,Character(Captain)[9]@Fighter@/1</entry>
-  </collection>
-  <collection>
-    <name>Character(Captain)[10]@Fighter@</name>
-    <entry>Character(Guard)[1d2+17]@Warrior@/2d4+1,Character(Captain)[10]@Fighter@/1</entry>
-  </collection>
-  <collection>
-    <name>Character(Captain)[11]@Fighter@</name>
-    <entry>Character(Guard)[20]@Warrior@/2d4+1,Character(Captain)[11]@Fighter@/1</entry>
-  </collection>
-  <collection>
-    <name>Character(Captain)[1d2+1]@Warrior@</name>
-    <entry>Character(Guard)[1]@Warrior@/2d4+1,Character(Captain)[1d2+1]@Warrior@/1</entry>
-  </collection>
-  <collection>
-    <name>Character(Captain)[1d2+3]@Warrior@</name>
-    <entry>Character(Guard)[1d2+1]@Warrior@/2d4+1,Character(Captain)[1d2+3]@Warrior@/1</entry>
-  </collection>
-  <collection>
-    <name>Character(Captain)[1d2+5]@Warrior@</name>
-    <entry>Character(Guard)[1d2+3]@Warrior@/2d4+1,Character(Captain)[1d2+5]@Warrior@/1</entry>
-  </collection>
-  <collection>
-    <name>Character(Captain)[1d2+7]@Warrior@</name>
-    <entry>Character(Guard)[1d2+5]@Warrior@/2d4+1,Character(Captain)[1d2+7]@Warrior@/1</entry>
-  </collection>
-  <collection>
-    <name>Character(Captain)[1d2+9]@Warrior@</name>
-    <entry>Character(Guard)[1d2+7]@Warrior@/2d4+1,Character(Captain)[1d2+9]@Warrior@/1</entry>
-  </collection>
-  <collection>
-    <name>Character(Captain)[1d2+11]@Warrior@</name>
-    <entry>Character(Guard)[1d2+9]@Warrior@/2d4+1,Character(Captain)[1d2+11]@Warrior@/1</entry>
-  </collection>
-  <collection>
-    <name>Character(Captain)[1d2+13]@Warrior@</name>
-    <entry>Character(Guard)[1d2+11]@Warrior@/2d4+1,Character(Captain)[1d2+13]@Warrior@/1</entry>
-  </collection>
-  <collection>
-    <name>Character(Captain)[1d2+15]@Warrior@</name>
-    <entry>Character(Guard)[1d2+13]@Warrior@/2d4+1,Character(Captain)[1d2+15]@Warrior@/1</entry>
-  </collection>
-  <collection>
-    <name>Character(Captain)[1d2+17]@Warrior@</name>
-    <entry>Character(Guard)[1d2+15]@Warrior@/2d4+1,Character(Captain)[1d2+17]@Warrior@/1</entry>
-  </collection>
-  <collection>
-    <name>Character(Captain)[20]@Warrior@</name>
-    <entry>Character(Guard)[1d2+17]@Warrior@/2d4+1,Character(Captain)[20]@Warrior@/1</entry>
-  </collection>
-  <collection>
     <name>Crusaders [Level 1] (Band)</name>
     <entry>Character(Crusader)[1]@Paladin@/1d4</entry>
   </collection>
@@ -3699,181 +3583,243 @@
     <entry>Character(Servant)[20]@Commoner@/1d3+1</entry>
   </collection>
   <collection>
-    <name>Character(Guard)[1]@Warrior@</name>
-    <entry>Character(Guard)[1]@Warrior@/2d4+1,Character(Captain)[1]@Fighter@/1</entry>
-    <entry>Character(Guard)[1]@Warrior@/2d4+1,Character(Captain)[1d2+1]@Warrior@/1</entry>
+    <name>Guards [Level 1] (Patrol)</name>
+	  <entry>Character(Guard)[1]@Warrior@/2d4+1</entry>
+	  <entry>Character(Captain)[1d2+1]@Warrior@/1</entry>
+  </collection>
+	<collection>
+		<name>Guards [Level 1] (Patrol with Fighter)</name>
+		<entry>Character(Guard)[1]@Warrior@/2d4+1</entry>
+		<entry>Character(Captain)[1]@Fighter@/1</entry>
+	</collection>
+	<collection>
+		<name>Guards [Level 2-3] (Patrol)</name>
+		<entry>Character(Guard)[1d2+1]@Warrior@/2d4+1</entry>
+		<entry>Character(Captain)[1d2+3]@Warrior@/1</entry>
+	</collection>
+	<collection>
+		<name>Guards [Level 2-3] (Patrol with Fighter)</name>
+		<entry>Character(Guard)[1d2+1]@Warrior@/2d4+1</entry>
+		<entry>Character(Captain)[2]@Fighter@/1</entry>
+	</collection>
+	<collection>
+		<name>Guards [Level 4-5] (Patrol)</name>
+		<entry>Character(Guard)[1d2+3]@Warrior@/2d4+1</entry>
+		<entry>Character(Captain)[1d2+5]@Warrior@/1</entry>
+	</collection>
+	<collection>
+		<name>Guards [Level 4-5] (Patrol with Fighter)</name>
+		<entry>Character(Guard)[1d2+3]@Warrior@/2d4+1</entry>
+		<entry>Character(Captain)[3]@Fighter@/1</entry>
+	</collection>
+	<collection>
+		<name>Guards [Level 6-7] (Patrol)</name>
+		<entry>Character(Guard)[1d2+5]@Warrior@/2d4+1</entry>
+		<entry>Character(Captain)[1d2+7]@Warrior@/1</entry>
+	</collection>
+	<collection>
+		<name>Guards [Level 6-7] (Patrol with Fighter)</name>
+		<entry>Character(Guard)[1d2+5]@Warrior@/2d4+1</entry>
+		<entry>Character(Captain)[4]@Fighter@/1</entry>
+	</collection>
+	<collection>
+		<name>Guards [Level 8-9] (Patrol)</name>
+		<entry>Character(Guard)[1d2+7]@Warrior@/2d4+1</entry>
+		<entry>Character(Captain)[1d2+9]@Warrior@/1</entry>
+	</collection>
+	<collection>
+		<name>Guards [Level 8-9] (Patrol with Fighter)</name>
+		<entry>Character(Guard)[1d2+7]@Warrior@/2d4+1</entry>
+		<entry>Character(Captain)[5]@Fighter@/1</entry>
+	</collection>
+	<collection>
+		<name>Guards [Level 10-11] (Patrol)</name>
+		<entry>Character(Guard)[1d2+9]@Warrior@/2d4+1</entry>
+		<entry>Character(Captain)[1d2+11]@Warrior@/1</entry>
+	</collection>
+	<collection>
+		<name>Guards [Level 10-11] (Patrol with Fighter)</name>
+		<entry>Character(Guard)[1d2+9]@Warrior@/2d4+1</entry>
+		<entry>Character(Captain)[6]@Fighter@/1</entry>
+	</collection>
+	<collection>
+		<name>Guards [Level 12-13] (Patrol)</name>
+		<entry>Character(Guard)[1d2+11]@Warrior@/2d4+1</entry>
+		<entry>Character(Captain)[1d2+13]@Warrior@/1</entry>
+	</collection>
+	<collection>
+		<name>Guards [Level 12-13] (Patrol with Fighter)</name>
+		<entry>Character(Guard)[1d2+11]@Warrior@/2d4+1</entry>
+		<entry>Character(Captain)[7]@Fighter@/1</entry>
+	</collection>
+	<collection>
+		<name>Guards [Level 14-15] (Patrol)</name>
+		<entry>Character(Guard)[1d2+13]@Warrior@/2d4+1</entry>
+		<entry>Character(Captain)[1d2+15]@Warrior@/1</entry>
+	</collection>
+	<collection>
+		<name>Guards [Level 14-15] (Patrol with Fighter)</name>
+		<entry>Character(Guard)[1d2+13]@Warrior@/2d4+1</entry>
+		<entry>Character(Captain)[8]@Fighter@/1</entry>
+	</collection>
+	<collection>
+		<name>Guards [Level 16-17] (Patrol)</name>
+		<entry>Character(Guard)[1d2+15]@Warrior@/2d4+1</entry>
+		<entry>Character(Captain)[1d2+17]@Warrior@/1</entry>
+	</collection>
+	<collection>
+		<name>Guards [Level 16-17] (Patrol with Fighter)</name>
+		<entry>Character(Guard)[1d2+15]@Warrior@/2d4+1</entry>
+		<entry>Character(Captain)[9]@Fighter@/1</entry>
+	</collection>
+	<collection>
+		<name>Guards [Level 18-19] (Patrol)</name>
+		<entry>Character(Guard)[1d2+17]@Warrior@/2d4+1</entry>
+		<entry>Character(Captain)[20]@Warrior@/1</entry>
+	</collection>
+	<collection>
+		<name>Guards [Level 18-19] (Patrol with Fighter)</name>
+		<entry>Character(Guard)[1d2+17]@Warrior@/2d4+1</entry>
+		<entry>Character(Captain)[10]@Fighter@/1</entry>
+	</collection>
+	<collection>
+		<name>Guards [Level 20] (Patrol with Fighter)</name>
+		<entry>Character(Guard)[20]@Warrior@/2d4+1</entry>
+		<entry>Character(Captain)[11]@Fighter@/1</entry>
+	</collection>
+  <collection>
+    <name>Herders [Level 1] (Group)</name>
+	  <entry>Character(Herder)[1]@Commoner@/1d4</entry>
+	  <entry>Livestock$Noncombatant$/5d6</entry>
   </collection>
   <collection>
-    <name>Character(Guard)[1d2+1]@Warrior@</name>
-    <entry>Character(Guard)[1d2+1]@Warrior@/2d4+1,Character(Captain)[2]@Fighter@/1</entry>
-    <entry>Character(Guard)[1d2+1]@Warrior@/2d4+1,Character(Captain)[1d2+3]@Warrior@/1</entry>
+	  <name>Herders [Level 2-3] (Group)</name>
+	  <entry>Character(Herder)[1d2+1]@Commoner@/1d4</entry>
+	  <entry>Livestock$Noncombatant$/5d6</entry>
   </collection>
   <collection>
-    <name>Character(Guard)[1d2+3]@Warrior@</name>
-    <entry>Character(Guard)[1d2+3]@Warrior@/2d4+1,Character(Captain)[3]@Fighter@/1</entry>
-    <entry>Character(Guard)[1d2+3]@Warrior@/2d4+1,Character(Captain)[1d2+5]@Warrior@/1</entry>
+	  <name>Herders [Level 4-5] (Group)</name>
+	  <entry>Character(Herder)[1d2+3]@Commoner@/1d4</entry>
+	  <entry>Livestock$Noncombatant$/5d6</entry>
   </collection>
   <collection>
-    <name>Character(Guard)[1d2+5]@Warrior@</name>
-    <entry>Character(Guard)[1d2+5]@Warrior@/2d4+1,Character(Captain)[4]@Fighter@/1</entry>
-    <entry>Character(Guard)[1d2+5]@Warrior@/2d4+1,Character(Captain)[1d2+7]@Warrior@/1</entry>
+	  <name>Herders [Level 6-7] (Group)</name>
+    <entry>Character(Herder)[1d2+5]@Commoner@/1d4</entry>
+	  <entry>Livestock$Noncombatant$/5d6</entry>
   </collection>
   <collection>
-    <name>Character(Guard)[1d2+7]@Warrior@</name>
-    <entry>Character(Guard)[1d2+7]@Warrior@/2d4+1,Character(Captain)[5]@Fighter@/1</entry>
-    <entry>Character(Guard)[1d2+7]@Warrior@/2d4+1,Character(Captain)[1d2+9]@Warrior@/1</entry>
+	  <name>Herders [Level 8-9] (Group)</name>
+	  <entry>Character(Herder)[1d2+7]@Commoner@/1d4</entry>
+	  <entry>Livestock$Noncombatant$/5d6</entry>
   </collection>
   <collection>
-    <name>Character(Guard)[1d2+9]@Warrior@</name>
-    <entry>Character(Guard)[1d2+9]@Warrior@/2d4+1,Character(Captain)[6]@Fighter@/1</entry>
-    <entry>Character(Guard)[1d2+9]@Warrior@/2d4+1,Character(Captain)[1d2+11]@Warrior@/1</entry>
+	  <name>Herders [Level 10-11] (Group)</name>
+	  <entry>Character(Herder)[1d2+9]@Commoner@/1d4</entry>
+	  <entry>Livestock$Noncombatant$/5d6</entry>
   </collection>
   <collection>
-    <name>Character(Guard)[1d2+11]@Warrior@</name>
-    <entry>Character(Guard)[1d2+11]@Warrior@/2d4+1,Character(Captain)[7]@Fighter@/1</entry>
-    <entry>Character(Guard)[1d2+11]@Warrior@/2d4+1,Character(Captain)[1d2+13]@Warrior@/1</entry>
+	  <name>Herders [Level 12-13] (Group)</name>
+    <entry>Character(Herder)[1d2+11]@Commoner@/1d4</entry>
+	  <entry>Livestock$Noncombatant$/5d6</entry>
   </collection>
   <collection>
-    <name>Character(Guard)[1d2+13]@Warrior@</name>
-    <entry>Character(Guard)[1d2+13]@Warrior@/2d4+1,Character(Captain)[8]@Fighter@/1</entry>
-    <entry>Character(Guard)[1d2+13]@Warrior@/2d4+1,Character(Captain)[1d2+15]@Warrior@/1</entry>
+	  <name>Herders [Level 14-15] (Group)</name>
+	  <entry>Character(Herder)[1d2+13]@Commoner@/1d4</entry>
+	  <entry>Livestock$Noncombatant$/5d6</entry>
   </collection>
   <collection>
-    <name>Character(Guard)[1d2+15]@Warrior@</name>
-    <entry>Character(Guard)[1d2+15]@Warrior@/2d4+1,Character(Captain)[9]@Fighter@/1</entry>
-    <entry>Character(Guard)[1d2+15]@Warrior@/2d4+1,Character(Captain)[1d2+17]@Warrior@/1</entry>
+	  <name>Herders [Level 16-17] (Group)</name>
+	  <entry>Character(Herder)[1d2+15]@Commoner@/1d4</entry>
+	  <entry>Livestock$Noncombatant$/5d6</entry>
   </collection>
   <collection>
-    <name>Character(Guard)[1d2+17]@Warrior@</name>
-    <entry>Character(Guard)[1d2+17]@Warrior@/2d4+1,Character(Captain)[10]@Fighter@/1</entry>
-    <entry>Character(Guard)[1d2+17]@Warrior@/2d4+1,Character(Captain)[20]@Warrior@/1</entry>
+	  <name>Herders [Level 18-19] (Group)</name>
+    <entry>Character(Herder)[1d2+17]@Commoner@/1d4</entry>
+	  <entry>Livestock$Noncombatant$/5d6</entry>
   </collection>
   <collection>
-    <name>Character(Guard)[20]@Warrior@</name>
-    <entry>Character(Guard)[20]@Warrior@/2d4+1,Character(Captain)[11]@Fighter@/1</entry>
+	  <name>Herders [Level 20] (Group)</name>
+    <entry>Character(Herder)[20]@Commoner@/1d4</entry>
+	  <entry>Livestock$Noncombatant$/5d6</entry>
   </collection>
   <collection>
-    <name>Character(Herder)[1]@Commoner@</name>
-    <entry>Character(Herder)[1]@Commoner@/1d4,Livestock$Noncombatant$/5d6</entry>
-  </collection>
-  <collection>
-    <name>Character(Herder)[1d2+1]@Commoner@</name>
-    <entry>Character(Herder)[1d2+1]@Commoner@/1d4,Livestock$Noncombatant$/5d6</entry>
-  </collection>
-  <collection>
-    <name>Character(Herder)[1d2+3]@Commoner@</name>
-    <entry>Character(Herder)[1d2+3]@Commoner@/1d4,Livestock$Noncombatant$/5d6</entry>
-  </collection>
-  <collection>
-    <name>Character(Herder)[1d2+5]@Commoner@</name>
-    <entry>Character(Herder)[1d2+5]@Commoner@/1d4,Livestock$Noncombatant$/5d6</entry>
-  </collection>
-  <collection>
-    <name>Character(Herder)[1d2+7]@Commoner@</name>
-    <entry>Character(Herder)[1d2+7]@Commoner@/1d4,Livestock$Noncombatant$/5d6</entry>
-  </collection>
-  <collection>
-    <name>Character(Herder)[1d2+9]@Commoner@</name>
-    <entry>Character(Herder)[1d2+9]@Commoner@/1d4,Livestock$Noncombatant$/5d6</entry>
-  </collection>
-  <collection>
-    <name>Character(Herder)[1d2+11]@Commoner@</name>
-    <entry>Character(Herder)[1d2+11]@Commoner@/1d4,Livestock$Noncombatant$/5d6</entry>
-  </collection>
-  <collection>
-    <name>Character(Herder)[1d2+13]@Commoner@</name>
-    <entry>Character(Herder)[1d2+13]@Commoner@/1d4,Livestock$Noncombatant$/5d6</entry>
-  </collection>
-  <collection>
-    <name>Character(Herder)[1d2+15]@Commoner@</name>
-    <entry>Character(Herder)[1d2+15]@Commoner@/1d4,Livestock$Noncombatant$/5d6</entry>
-  </collection>
-  <collection>
-    <name>Character(Herder)[1d2+17]@Commoner@</name>
-    <entry>Character(Herder)[1d2+17]@Commoner@/1d4,Livestock$Noncombatant$/5d6</entry>
-  </collection>
-  <collection>
-    <name>Character(Herder)[20]@Commoner@</name>
-    <entry>Character(Herder)[20]@Commoner@/1d4,Livestock$Noncombatant$/5d6</entry>
-  </collection>
-  <collection>
-    <name>Character(Hitman)[1]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</name>
+    <name>Hitman [Level 1] (Solitary)</name>
     <entry>Character(Hitman)[1]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@/1</entry>
   </collection>
   <collection>
-    <name>Character(Hitman)[2]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</name>
-    <entry>Character(Hitman)[2]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@/1</entry>
+	  <name>Hitman [Level 2] (Solitary)</name>
+	  <entry>Character(Hitman)[2]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@/1</entry>
   </collection>
   <collection>
-    <name>Character(Hitman)[3]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</name>
+	  <name>Hitman [Level 3] (Solitary)</name>
     <entry>Character(Hitman)[3]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@/1</entry>
   </collection>
   <collection>
-    <name>Character(Hitman)[4]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</name>
+	  <name>Hitman [Level 4] (Solitary)</name>
     <entry>Character(Hitman)[4]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@/1</entry>
   </collection>
   <collection>
-    <name>Character(Hitman)[5]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</name>
+	  <name>Hitman [Level 5] (Solitary)</name>
     <entry>Character(Hitman)[5]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@/1</entry>
   </collection>
   <collection>
-    <name>Character(Hitman)[6]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</name>
-    <entry>Character(Hitman)[6]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@/1</entry>
+	  <name>Hitman [Level 6] (Solitary)</name>
+	  <entry>Character(Hitman)[6]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@/1</entry>
   </collection>
   <collection>
-    <name>Character(Hitman)[7]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</name>
-    <entry>Character(Hitman)[7]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@/1</entry>
+	  <name>Hitman [Level 7] (Solitary)</name>
+	  <entry>Character(Hitman)[7]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@/1</entry>
   </collection>
   <collection>
-    <name>Character(Hitman)[8]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</name>
+	  <name>Hitman [Level 8] (Solitary)</name>
     <entry>Character(Hitman)[8]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@/1</entry>
   </collection>
   <collection>
-    <name>Character(Hitman)[9]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</name>
+	  <name>Hitman [Level 9] (Solitary)</name>
     <entry>Character(Hitman)[9]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@/1</entry>
   </collection>
   <collection>
-    <name>Character(Hitman)[10]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</name>
-    <entry>Character(Hitman)[10]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@/1</entry>
+	  <name>Hitman [Level 10] (Solitary)</name>
+	  <entry>Character(Hitman)[10]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@/1</entry>
   </collection>
   <collection>
-    <name>Character(Hitman)[11]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</name>
+	  <name>Hitman [Level 11] (Solitary)</name>
     <entry>Character(Hitman)[11]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@/1</entry>
   </collection>
   <collection>
-    <name>Character(Hitman)[12]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</name>
+	  <name>Hitman [Level 12] (Solitary)</name>
     <entry>Character(Hitman)[12]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@/1</entry>
   </collection>
   <collection>
-    <name>Character(Hitman)[13]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</name>
+	  <name>Hitman [Level 13] (Solitary)</name>
     <entry>Character(Hitman)[13]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@/1</entry>
   </collection>
   <collection>
-    <name>Character(Hitman)[14]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</name>
+	  <name>Hitman [Level 14] (Solitary)</name>
     <entry>Character(Hitman)[14]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@/1</entry>
   </collection>
   <collection>
-    <name>Character(Hitman)[15]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</name>
+	  <name>Hitman [Level 15] (Solitary)</name>
     <entry>Character(Hitman)[15]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@/1</entry>
   </collection>
   <collection>
-    <name>Character(Hitman)[16]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</name>
-    <entry>Character(Hitman)[16]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@/1</entry>
+	  <name>Hitman [Level 16] (Solitary)</name>
+	  <entry>Character(Hitman)[16]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@/1</entry>
   </collection>
   <collection>
-    <name>Character(Hitman)[17]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</name>
+	  <name>Hitman [Level 17] (Solitary)</name>
     <entry>Character(Hitman)[17]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@/1</entry>
   </collection>
   <collection>
-    <name>Character(Hitman)[18]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</name>
-    <entry>Character(Hitman)[18]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@/1</entry>
+	  <name>Hitman [Level 18] (Solitary)</name>
+	  <entry>Character(Hitman)[18]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@/1</entry>
   </collection>
   <collection>
-    <name>Character(Hitman)[19]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</name>
+	  <name>Hitman [Level 19] (Solitary)</name>
     <entry>Character(Hitman)[19]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@/1</entry>
   </collection>
   <collection>
-    <name>Character(Hitman)[20]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</name>
+	  <name>Hitman [Level 20] (Solitary)</name>
     <entry>Character(Hitman)[20]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@/1</entry>
   </collection>
   <collection>
@@ -4093,49 +4039,60 @@
     <entry>Character(Bandit)[1d2+17]@Warrior@/1d10+4,Character(Leader)[20]@Warrior@/1</entry>
   </collection>
   <collection>
-    <name>Character(Merchant)[1]@Commoner&amp;Expert@</name>
-    <entry>Character(Merchant)[1]@Commoner&amp;Expert@/1d4+1,Character(Guard)[1]@Warrior@/1d4</entry>
+    <name>Mechants [Level 1] (Caravan)</name>
+	  <entry>Character(Merchant)[1]@Commoner&amp;Expert@/1d4+1</entry>
+	  <entry>Character(Guard)[1]@Warrior@/1d4</entry>
   </collection>
-  <collection>
-    <name>Character(Merchant)[1d2+1]@Commoner&amp;Expert@</name>
-    <entry>Character(Merchant)[1d2+1]@Commoner&amp;Expert@/1d4+1,Character(Guard)[1d2+1]@Warrior@/1d4</entry>
-  </collection>
-  <collection>
-    <name>Character(Merchant)[1d2+3]@Commoner&amp;Expert@</name>
-    <entry>Character(Merchant)[1d2+3]@Commoner&amp;Expert@/1d4+1,Character(Guard)[1d2+3]@Warrior@/1d4</entry>
-  </collection>
-  <collection>
-    <name>Character(Merchant)[1d2+5]@Commoner&amp;Expert@</name>
-    <entry>Character(Merchant)[1d2+5]@Commoner&amp;Expert@/1d4+1,Character(Guard)[1d2+5]@Warrior@/1d4</entry>
-  </collection>
-  <collection>
-    <name>Character(Merchant)[1d2+7]@Commoner&amp;Expert@</name>
-    <entry>Character(Merchant)[1d2+7]@Commoner&amp;Expert@/1d4+1,Character(Guard)[1d2+7]@Warrior@/1d4</entry>
-  </collection>
-  <collection>
-    <name>Character(Merchant)[1d2+9]@Commoner&amp;Expert@</name>
-    <entry>Character(Merchant)[1d2+9]@Commoner&amp;Expert@/1d4+1,Character(Guard)[1d2+9]@Warrior@/1d4</entry>
-  </collection>
-  <collection>
-    <name>Character(Merchant)[1d2+11]@Commoner&amp;Expert@</name>
-    <entry>Character(Merchant)[1d2+11]@Commoner&amp;Expert@/1d4+1,Character(Guard)[1d2+11]@Warrior@/1d4</entry>
-  </collection>
-  <collection>
-    <name>Character(Merchant)[1d2+13]@Commoner&amp;Expert@</name>
-    <entry>Character(Merchant)[1d2+13]@Commoner&amp;Expert@/1d4+1,Character(Guard)[1d2+13]@Warrior@/1d4</entry>
-  </collection>
-  <collection>
-    <name>Character(Merchant)[1d2+15]@Commoner&amp;Expert@</name>
-    <entry>Character(Merchant)[1d2+15]@Commoner&amp;Expert@/1d4+1,Character(Guard)[1d2+15]@Warrior@/1d4</entry>
-  </collection>
-  <collection>
-    <name>Character(Merchant)[1d2+17]@Commoner&amp;Expert@</name>
-    <entry>Character(Merchant)[1d2+17]@Commoner&amp;Expert@/1d4+1,Character(Guard)[1d2+17]@Warrior@/1d4</entry>
-  </collection>
-  <collection>
-    <name>Character(Merchant)[20]@Commoner&amp;Expert@</name>
-    <entry>Character(Merchant)[20]@Commoner&amp;Expert@/1d4+1,Character(Guard)[20]@Warrior@/1d4</entry>
-  </collection>
+	<collection>
+		<name>Mechants [Level 2-3] (Caravan)</name>
+		<entry>Character(Merchant)[1d2+1]@Commoner&amp;Expert@/1d4+1</entry>
+		<entry>Character(Guard)[1d2+1]@Warrior@/1d4</entry>
+	</collection>
+	<collection>
+		<name>Mechants [Level 4-5] (Caravan)</name>
+		<entry>Character(Merchant)[1d2+3]@Commoner&amp;Expert@/1d4+1</entry>
+		<entry>Character(Guard)[1d2+3]@Warrior@/1d4</entry>
+	</collection>
+	<collection>
+		<name>Mechants [Level 6-7] (Caravan)</name>
+		<entry>Character(Merchant)[1d2+5]@Commoner&amp;Expert@/1d4+1</entry>
+		<entry>Character(Guard)[1d2+5]@Warrior@/1d4</entry>
+	</collection>
+	<collection>
+		<name>Mechants [Level 8-9] (Caravan)</name>
+		<entry>Character(Merchant)[1d2+7]@Commoner&amp;Expert@/1d4+1</entry>
+		<entry>Character(Guard)[1d2+7]@Warrior@/1d4</entry>
+	</collection>
+	<collection>
+		<name>Mechants [Level 10-11] (Caravan)</name>
+		<entry>Character(Merchant)[1d2+9]@Commoner&amp;Expert@/1d4+1</entry>
+		<entry>Character(Guard)[1d2+9]@Warrior@/1d4</entry>
+	</collection>
+	<collection>
+		<name>Mechants [Level 12-13] (Caravan)</name>
+		<entry>Character(Merchant)[1d2+11]@Commoner&amp;Expert@/1d4+1</entry>
+		<entry>Character(Guard)[1d2+11]@Warrior@/1d4</entry>
+	</collection>
+	<collection>
+		<name>Mechants [Level 14-15] (Caravan)</name>
+		<entry>Character(Merchant)[1d2+13]@Commoner&amp;Expert@/1d4+1</entry>
+		<entry>Character(Guard)[1d2+13]@Warrior@/1d4</entry>
+	</collection>
+	<collection>
+		<name>Mechants [Level 16-17] (Caravan)</name>
+		<entry>Character(Merchant)[1d2+15]@Commoner&amp;Expert@/1d4+1</entry>
+		<entry>Character(Guard)[1d2+15]@Warrior@/1d4</entry>
+	</collection>
+	<collection>
+		<name>Mechants [Level 18-19] (Caravan)</name>
+		<entry>Character(Merchant)[1d2+17]@Commoner&amp;Expert@/1d4+1</entry>
+		<entry>Character(Guard)[1d2+17]@Warrior@/1d4</entry>
+	</collection>
+	<collection>
+		<name>Mechants [Level 20] (Caravan)</name>
+		<entry>Character(Merchant)[20]@Commoner&amp;Expert@/1d4+1</entry>
+		<entry>Character(Guard)[20]@Warrior@/1d4</entry>
+	</collection>
   <collection>
     <name>Character(Minstrel)[1]@Commoner&amp;Expert@</name>
     <entry>Character(Minstrel)[1]@Commoner&amp;Expert@/2d4+1,Character(Leader)[1]@Bard@/1d10-9</entry>
@@ -6073,10 +6030,13 @@
 		<entry>Black dragon$Juvenile$/1d4+1</entry>
 	</collection>
   <collection>
-    <name>Black dragon$Young adult$</name>
+    <name>Young Adult Black Dragon (Solitary)</name>
     <entry>Black dragon$Young adult$/1</entry>
-    <entry>Black dragon$Young adult$/1d4+1</entry>
   </collection>
+	<collection>
+		<name>Young Adult Black Dragons (Clutch)</name>
+		<entry>Black dragon$Young adult$/1d4+1</entry>
+	</collection>
   <collection>
     <name>Adult Black Dragon (Solitary)</name>
     <entry>Black dragon$Adult$/1</entry>
@@ -6175,29 +6135,41 @@
     <entry>Blue dragon$Wyrmling$/1</entry>
   </collection>
 	<collection>
-		<name>Wyrmling Blue Dragon (Clutch)</name>
+		<name>Wyrmling Blue Dragons (Clutch)</name>
 		<entry>Blue dragon$Wyrmling$/1d4+1</entry>
 	</collection>
-  <collection>
-    <name>Blue dragon$Very young$</name>
-    <entry>Blue dragon$Very young$/1</entry>
-    <entry>Blue dragon$Very young$/1d4+1</entry>
-  </collection>
-  <collection>
-    <name>Blue dragon$Young$</name>
-    <entry>Blue dragon$Young$/1</entry>
-    <entry>Blue dragon$Young$/1d4+1</entry>
-  </collection>
-  <collection>
-    <name>Blue dragon$Juvenile$</name>
-    <entry>Blue dragon$Juvenile$/1</entry>
-    <entry>Blue dragon$Juvenile$/1d4+1</entry>
-  </collection>
-  <collection>
-    <name>Blue dragon$Young adult$</name>
-    <entry>Blue dragon$Young adult$/1</entry>
-    <entry>Blue dragon$Young adult$/1d4+1</entry>
-  </collection>
+	<collection>
+		<name>Very Young Blue Dragon (Solitary)</name>
+		<entry>Blue dragon$Very young$/1</entry>
+	</collection>
+	<collection>
+		<name>Very Young Blue Dragons (Clutch)</name>
+		<entry>Blue dragon$Very young$/1d4+1</entry>
+	</collection>
+	<collection>
+		<name>Young Blue Dragon (Solitary)</name>
+		<entry>Blue dragon$Young$/1</entry>
+	</collection>
+	<collection>
+		<name>Young Blue Dragons (Clutch)</name>
+		<entry>Blue dragon$Young$/1d4+1</entry>
+	</collection>
+	<collection>
+		<name>Juvenile Blue Dragon (Solitary)</name>
+		<entry>Blue dragon$Juvenile$/1</entry>
+	</collection>
+	<collection>
+		<name>Juvenile Blue Dragons (Clutch)</name>
+		<entry>Blue dragon$Juvenile$/1d4+1</entry>
+	</collection>
+	<collection>
+		<name>Young Adult Blue Dragon (Solitary)</name>
+		<entry>Blue dragon$Young adult$/1</entry>
+	</collection>
+	<collection>
+		<name>Young Adult Blue Dragons (Clutch)</name>
+		<entry>Blue dragon$Young adult$/1d4+1</entry>
+	</collection>
   <collection>
     <name>Adult Blue Dragon (Solitary)</name>
     <entry>Blue dragon$Adult$/1</entry>
@@ -6296,29 +6268,41 @@
 		<entry>Bronze dragon$Wyrmling$/1</entry>
 	</collection>
 	<collection>
-		<name>Wyrmling Bronze Dragon (Clutch)</name>
+		<name>Wyrmling Bronze Dragons (Clutch)</name>
 		<entry>Bronze dragon$Wyrmling$/1d4+1</entry>
 	</collection>
-  <collection>
-    <name>Bronze dragon$Very young$</name>
-    <entry>Bronze dragon$Very young$/1</entry>
-    <entry>Bronze dragon$Very young$/1d4+1</entry>
-  </collection>
-  <collection>
-    <name>Bronze dragon$Young$</name>
-    <entry>Bronze dragon$Young$/1</entry>
-    <entry>Bronze dragon$Young$/1d4+1</entry>
-  </collection>
-  <collection>
-    <name>Bronze dragon$Juvenile$</name>
-    <entry>Bronze dragon$Juvenile$/1</entry>
-    <entry>Bronze dragon$Juvenile$/1d4+1</entry>
-  </collection>
-  <collection>
-    <name>Bronze dragon$Young adult$</name>
-    <entry>Bronze dragon$Young adult$/1</entry>
-    <entry>Bronze dragon$Young adult$/1d4+1</entry>
-  </collection>
+	<collection>
+		<name>Very Young Bronze Dragon (Solitary)</name>
+		<entry>Bronze dragon$Very young$/1</entry>
+	</collection>
+	<collection>
+		<name>Very Young Bronze Dragons (Clutch)</name>
+		<entry>Bronze dragon$Very young$/1d4+1</entry>
+	</collection>
+	<collection>
+		<name>Young Bronze Dragon (Solitary)</name>
+		<entry>Bronze dragon$Young$/1</entry>
+	</collection>
+	<collection>
+		<name>Young Bronze Dragons (Clutch)</name>
+		<entry>Bronze dragon$Young$/1d4+1</entry>
+	</collection>
+	<collection>
+		<name>Juvenile Bronze Dragon (Solitary)</name>
+		<entry>Bronze dragon$Juvenile$/1</entry>
+	</collection>
+	<collection>
+		<name>Juvenile Bronze Dragons (Clutch)</name>
+		<entry>Bronze dragon$Juvenile$/1d4+1</entry>
+	</collection>
+	<collection>
+		<name>Young Adult Bronze Dragon (Solitary)</name>
+		<entry>Bronze dragon$Young adult$/1</entry>
+	</collection>
+	<collection>
+		<name>Young Adult Bronze Dragons (Clutch)</name>
+		<entry>Bronze dragon$Young adult$/1d4+1</entry>
+	</collection>
   <collection>
     <name>Adult Bronze Dragon (Solitary)</name>
     <entry>Bronze dragon$Adult$/1</entry>
@@ -6417,29 +6401,41 @@
 		<entry>Brass dragon$Wyrmling$/1</entry>
 	</collection>
 	<collection>
-		<name>Wyrmling Brass Dragon (Clutch)</name>
+		<name>Wyrmling Brass Dragons (Clutch)</name>
 		<entry>Brass dragon$Wyrmling$/1d4+1</entry>
 	</collection>
-  <collection>
-    <name>Brass dragon$Very young$</name>
-    <entry>Brass dragon$Very young$/1</entry>
-    <entry>Brass dragon$Very young$/1d4+1</entry>
-  </collection>
-  <collection>
-    <name>Brass dragon$Young$</name>
-    <entry>Brass dragon$Young$/1</entry>
-    <entry>Brass dragon$Young$/1d4+1</entry>
-  </collection>
-  <collection>
-    <name>Brass dragon$Juvenile$</name>
-    <entry>Brass dragon$Juvenile$/1</entry>
-    <entry>Brass dragon$Juvenile$/1d4+1</entry>
-  </collection>
-  <collection>
-    <name>Brass dragon$Young adult$</name>
-    <entry>Brass dragon$Young adult$/1</entry>
-    <entry>Brass dragon$Young adult$/1d4+1</entry>
-  </collection>
+	<collection>
+		<name>Very Young Brass Dragon (Solitary)</name>
+		<entry>Brass dragon$Very young$/1</entry>
+	</collection>
+	<collection>
+		<name>Very Young Brass Dragons (Clutch)</name>
+		<entry>Brass dragon$Very young$/1d4+1</entry>
+	</collection>
+	<collection>
+		<name>Young Brass Dragon (Solitary)</name>
+		<entry>Brass dragon$Young$/1</entry>
+	</collection>
+	<collection>
+		<name>Young Brass Dragons (Clutch)</name>
+		<entry>Brass dragon$Young$/1d4+1</entry>
+	</collection>
+	<collection>
+		<name>Juvenile Brass Dragon (Solitary)</name>
+		<entry>Brass dragon$Juvenile$/1</entry>
+	</collection>
+	<collection>
+		<name>Juvenile Brass Dragons (Clutch)</name>
+		<entry>Brass dragon$Juvenile$/1d4+1</entry>
+	</collection>
+	<collection>
+		<name>Young Adult Brass Dragon (Solitary)</name>
+		<entry>Brass dragon$Young adult$/1</entry>
+	</collection>
+	<collection>
+		<name>Young Adult Brass Dragons (Clutch)</name>
+		<entry>Brass dragon$Young adult$/1d4+1</entry>
+	</collection>
   <collection>
     <name>Adult Brass Dragon (Solitary)</name>
     <entry>Brass dragon$Adult$/1</entry>
@@ -6538,29 +6534,41 @@
 		<entry>Copper dragon$Wyrmling$/1</entry>
 	</collection>
 	<collection>
-		<name>Wyrmling Copper Dragon (Clutch)</name>
+		<name>Wyrmling Copper Dragons (Clutch)</name>
 		<entry>Copper dragon$Wyrmling$/1d4+1</entry>
 	</collection>
-  <collection>
-    <name>Copper dragon$Very young$</name>
-    <entry>Copper dragon$Very young$/1</entry>
-    <entry>Copper dragon$Very young$/1d4+1</entry>
-  </collection>
-  <collection>
-    <name>Copper dragon$Young$</name>
-    <entry>Copper dragon$Young$/1</entry>
-    <entry>Copper dragon$Young$/1d4+1</entry>
-  </collection>
-  <collection>
-    <name>Copper dragon$Juvenile$</name>
-    <entry>Copper dragon$Juvenile$/1</entry>
-    <entry>Copper dragon$Juvenile$/1d4+1</entry>
-  </collection>
-  <collection>
-    <name>Copper dragon$Young adult$</name>
-    <entry>Copper dragon$Young adult$/1</entry>
-    <entry>Copper dragon$Young adult$/1d4+1</entry>
-  </collection>
+	<collection>
+		<name>Very Young Copper Dragon (Solitary)</name>
+		<entry>Copper dragon$Very young$/1</entry>
+	</collection>
+	<collection>
+		<name>Very Young Copper Dragons (Clutch)</name>
+		<entry>Copper dragon$Very young$/1d4+1</entry>
+	</collection>
+	<collection>
+		<name>Young Copper Dragon (Solitary)</name>
+		<entry>Copper dragon$Young$/1</entry>
+	</collection>
+	<collection>
+		<name>Young Copper Dragons (Clutch)</name>
+		<entry>Copper dragon$Young$/1d4+1</entry>
+	</collection>
+	<collection>
+		<name>Juvenile Copper Dragon (Solitary)</name>
+		<entry>Copper dragon$Juvenile$/1</entry>
+	</collection>
+	<collection>
+		<name>Juvenile Copper Dragons (Clutch)</name>
+		<entry>Copper dragon$Juvenile$/1d4+1</entry>
+	</collection>
+	<collection>
+		<name>Young Adult Copper Dragon (Solitary)</name>
+		<entry>Copper dragon$Young adult$/1</entry>
+	</collection>
+	<collection>
+		<name>Young Adult Copper Dragons (Clutch)</name>
+		<entry>Copper dragon$Young adult$/1d4+1</entry>
+	</collection>
   <collection>
     <name>Adult Copper Dragon (Solitary)</name>
     <entry>Copper dragon$Adult$/1</entry>
@@ -6659,29 +6667,41 @@
 		<entry>Green dragon$Wyrmling$/1</entry>
 	</collection>
 	<collection>
-		<name>Wyrmling Green Dragon (Clutch)</name>
+		<name>Wyrmling Green Dragons (Clutch)</name>
 		<entry>Green dragon$Wyrmling$/1d4+1</entry>
 	</collection>
-  <collection>
-    <name>Green dragon$Very young$</name>
-    <entry>Green dragon$Very young$/1</entry>
-    <entry>Green dragon$Very young$/1d4+1</entry>
-  </collection>
-  <collection>
-    <name>Green dragon$Young$</name>
-    <entry>Green dragon$Young$/1</entry>
-    <entry>Green dragon$Young$/1d4+1</entry>
-  </collection>
-  <collection>
-    <name>Green dragon$Juvenile$</name>
-    <entry>Green dragon$Juvenile$/1</entry>
-    <entry>Green dragon$Juvenile$/1d4+1</entry>
-  </collection>
-  <collection>
-    <name>Green dragon$Young adult$</name>
-    <entry>Green dragon$Young adult$/1</entry>
-    <entry>Green dragon$Young adult$/1d4+1</entry>
-  </collection>
+	<collection>
+		<name>Very Young Green Dragon (Solitary)</name>
+		<entry>Green dragon$Very young$/1</entry>
+	</collection>
+	<collection>
+		<name>Very Young Green Dragons (Clutch)</name>
+		<entry>Green dragon$Very young$/1d4+1</entry>
+	</collection>
+	<collection>
+		<name>Young Green Dragon (Solitary)</name>
+		<entry>Green dragon$Young$/1</entry>
+	</collection>
+	<collection>
+		<name>Young Green Dragons (Clutch)</name>
+		<entry>Green dragon$Young$/1d4+1</entry>
+	</collection>
+	<collection>
+		<name>Juvenile Green Dragon (Solitary)</name>
+		<entry>Green dragon$Juvenile$/1</entry>
+	</collection>
+	<collection>
+		<name>Juvenile Green Dragons (Clutch)</name>
+		<entry>Green dragon$Juvenile$/1d4+1</entry>
+	</collection>
+	<collection>
+		<name>Young Adult Green Dragon (Solitary)</name>
+		<entry>Green dragon$Young adult$/1</entry>
+	</collection>
+	<collection>
+		<name>Young Adult Green Dragons (Clutch)</name>
+		<entry>Green dragon$Young adult$/1d4+1</entry>
+	</collection>
   <collection>
     <name>Adult Green Dragon (Solitary)</name>
     <entry>Green dragon$Adult$/1</entry>
@@ -6700,11 +6720,11 @@
     <entry>Green dragon$Mature adult$/1</entry>
   </collection>
 	<collection>
-		<name>Mature Adult Green Dragon (Pair)</name>
+		<name>Mature Adult Green Dragons (Pair)</name>
 		<entry>Green dragon$Mature adult$/2</entry>
 	</collection>
 	<collection>
-		<name>Mature Adult Green Dragon (Family)</name>
+		<name>Mature Adult Green Dragons (Family)</name>
 		<entry>Green dragon$Mature adult$/1d2</entry>
 		<entry>Green dragon$Very young$/1d4+1</entry>
 	</collection>
@@ -6726,11 +6746,11 @@
     <entry>Green dragon$Very old$/1</entry>
   </collection>
 	<collection>
-		<name>Very Old Green Dragon (Pair)</name>
+		<name>Very Old Green Dragons (Pair)</name>
 		<entry>Green dragon$Very old$/2</entry>
 	</collection>
 	<collection>
-		<name>Very Old Green Dragon (Family)</name>
+		<name>Very Old Green Dragons (Family)</name>
 		<entry>Green dragon$Very old$/1d2</entry>
 		<entry>Green dragon$Juvenile$/1d4+1</entry>
 	</collection>
@@ -6780,29 +6800,41 @@
 		<entry>Gold dragon$Wyrmling$/1</entry>
 	</collection>
 	<collection>
-		<name>Wyrmling Gold Dragon (Clutch)</name>
+		<name>Wyrmling Gold Dragons (Clutch)</name>
 		<entry>Gold dragon$Wyrmling$/1d4+1</entry>
 	</collection>
-  <collection>
-    <name>Gold dragon$Very young$</name>
-    <entry>Gold dragon$Very young$/1</entry>
-    <entry>Gold dragon$Very young$/1d4+1</entry>
-  </collection>
-  <collection>
-    <name>Gold dragon$Young$</name>
-    <entry>Gold dragon$Young$/1</entry>
-    <entry>Gold dragon$Young$/1d4+1</entry>
-  </collection>
-  <collection>
-    <name>Gold dragon$Juvenile$</name>
-    <entry>Gold dragon$Juvenile$/1</entry>
-    <entry>Gold dragon$Juvenile$/1d4+1</entry>
-  </collection>
-  <collection>
-    <name>Gold dragon$Young adult$</name>
-    <entry>Gold dragon$Young adult$/1</entry>
-    <entry>Gold dragon$Young adult$/1d4+1</entry>
-  </collection>
+	<collection>
+		<name>Very Young Gold Dragon (Solitary)</name>
+		<entry>Gold dragon$Very young$/1</entry>
+	</collection>
+	<collection>
+		<name>Very Young Gold Dragons (Clutch)</name>
+		<entry>Gold dragon$Very young$/1d4+1</entry>
+	</collection>
+	<collection>
+		<name>Young Gold Dragon (Solitary)</name>
+		<entry>Gold dragon$Young$/1</entry>
+	</collection>
+	<collection>
+		<name>Young Gold Dragons (Clutch)</name>
+		<entry>Gold dragon$Young$/1d4+1</entry>
+	</collection>
+	<collection>
+		<name>Juvenile Gold Dragon (Solitary)</name>
+		<entry>Gold dragon$Juvenile$/1</entry>
+	</collection>
+	<collection>
+		<name>Juvenile Gold Dragons (Clutch)</name>
+		<entry>Gold dragon$Juvenile$/1d4+1</entry>
+	</collection>
+	<collection>
+		<name>Young Adult Gold Dragon (Solitary)</name>
+		<entry>Gold dragon$Young adult$/1</entry>
+	</collection>
+	<collection>
+		<name>Young Adult Gold Dragons (Clutch)</name>
+		<entry>Gold dragon$Young adult$/1d4+1</entry>
+	</collection>
   <collection>
     <name>Adult Gold Dragon (Solitary)</name>
     <entry>Gold dragon$Adult$/1</entry>
@@ -6901,29 +6933,41 @@
 		<entry>Red dragon$Wyrmling$/1</entry>
 	</collection>
 	<collection>
-		<name>Wyrmling Red Dragon (Clutch)</name>
+		<name>Wyrmling Red Dragons (Clutch)</name>
 		<entry>Red dragon$Wyrmling$/1d4+1</entry>
 	</collection>
-  <collection>
-    <name>Red dragon$Very young$</name>
-    <entry>Red dragon$Very young$/1</entry>
-    <entry>Red dragon$Very young$/1d4+1</entry>
-  </collection>
-  <collection>
-    <name>Red dragon$Young$</name>
-    <entry>Red dragon$Young$/1</entry>
-    <entry>Red dragon$Young$/1d4+1</entry>
-  </collection>
-  <collection>
-    <name>Red dragon$Juvenile$</name>
-    <entry>Red dragon$Juvenile$/1</entry>
-    <entry>Red dragon$Juvenile$/1d4+1</entry>
-  </collection>
-  <collection>
-    <name>Red dragon$Young adult$</name>
-    <entry>Red dragon$Young adult$/1</entry>
-    <entry>Red dragon$Young adult$/1d4+1</entry>
-  </collection>
+	<collection>
+		<name>Very Young Red Dragon (Solitary)</name>
+		<entry>Red dragon$Very young$/1</entry>
+	</collection>
+	<collection>
+		<name>Very Young Red Dragons (Clutch)</name>
+		<entry>Red dragon$Very young$/1d4+1</entry>
+	</collection>
+	<collection>
+		<name>Young Red Dragon (Solitary)</name>
+		<entry>Red dragon$Young$/1</entry>
+	</collection>
+	<collection>
+		<name>Young Red Dragons (Clutch)</name>
+		<entry>Red dragon$Young$/1d4+1</entry>
+	</collection>
+	<collection>
+		<name>Juvenile Red Dragon (Solitary)</name>
+		<entry>Red dragon$Juvenile$/1</entry>
+	</collection>
+	<collection>
+		<name>Juvenile Red Dragons (Clutch)</name>
+		<entry>Red dragon$Juvenile$/1d4+1</entry>
+	</collection>
+	<collection>
+		<name>Young Adult Red Dragon (Solitary)</name>
+		<entry>Red dragon$Young adult$/1</entry>
+	</collection>
+	<collection>
+		<name>Young Adult Red Dragons (Clutch)</name>
+		<entry>Red dragon$Young adult$/1d4+1</entry>
+	</collection>
   <collection>
     <name>Adult Red Dragon (Solitary)</name>
     <entry>Red dragon$Adult$/1</entry>
@@ -7022,29 +7066,41 @@
 		<entry>Silver dragon$Wyrmling$/1</entry>
 	</collection>
 	<collection>
-		<name>Wyrmling Silver Dragon (Clutch)</name>
+		<name>Wyrmling Silver Dragons (Clutch)</name>
 		<entry>Silver dragon$Wyrmling$/1d4+1</entry>
 	</collection>
-  <collection>
-    <name>Silver dragon$Very young$</name>
-    <entry>Silver dragon$Very young$/1</entry>
-    <entry>Silver dragon$Very young$/1d4+1</entry>
-  </collection>
-  <collection>
-    <name>Silver dragon$Young$</name>
-    <entry>Silver dragon$Young$/1</entry>
-    <entry>Silver dragon$Young$/1d4+1</entry>
-  </collection>
-  <collection>
-    <name>Silver dragon$Juvenile$</name>
-    <entry>Silver dragon$Juvenile$/1</entry>
-    <entry>Silver dragon$Juvenile$/1d4+1</entry>
-  </collection>
-  <collection>
-    <name>Silver dragon$Young adult$</name>
-    <entry>Silver dragon$Young adult$/1</entry>
-    <entry>Silver dragon$Young adult$/1d4+1</entry>
-  </collection>
+	<collection>
+		<name>Very Young Silver Dragon (Solitary)</name>
+		<entry>Silver dragon$Very young$/1</entry>
+	</collection>
+	<collection>
+		<name>Very Young Silver Dragons (Clutch)</name>
+		<entry>Silver dragon$Very young$/1d4+1</entry>
+	</collection>
+	<collection>
+		<name>Young Silver Dragon (Solitary)</name>
+		<entry>Silver dragon$Young$/1</entry>
+	</collection>
+	<collection>
+		<name>Young Silver Dragons (Clutch)</name>
+		<entry>Silver dragon$Young$/1d4+1</entry>
+	</collection>
+	<collection>
+		<name>Juvenile Silver Dragon (Solitary)</name>
+		<entry>Silver dragon$Juvenile$/1</entry>
+	</collection>
+	<collection>
+		<name>Juvenile Silver Dragons (Clutch)</name>
+		<entry>Silver dragon$Juvenile$/1d4+1</entry>
+	</collection>
+	<collection>
+		<name>Young Adult Silver Dragon (Solitary)</name>
+		<entry>Silver dragon$Young adult$/1</entry>
+	</collection>
+	<collection>
+		<name>Young Adult Silver Dragons (Clutch)</name>
+		<entry>Silver dragon$Young adult$/1d4+1</entry>
+	</collection>
   <collection>
     <name>Adult Silver Dragon (Solitary)</name>
     <entry>Silver dragon$Adult$/1</entry>
@@ -7063,11 +7119,11 @@
     <entry>Silver dragon$Mature adult$/1</entry>
   </collection>
 	<collection>
-		<name>Mature Adult Silver Dragon (Pair)</name>
+		<name>Mature Adult Silver Dragons (Pair)</name>
 		<entry>Silver dragon$Mature adult$/2</entry>
 	</collection>
 	<collection>
-		<name>Mature Adult Silver Dragon (Family)</name>
+		<name>Mature Adult Silver Dragons (Family)</name>
 		<entry>Silver dragon$Mature adult$/1d2</entry>
 		<entry>Silver dragon$Very young$/1d4+1</entry>
 	</collection>
@@ -7076,11 +7132,11 @@
     <entry>Silver dragon$Old$/1</entry>
   </collection>
 	<collection>
-		<name>Old Silver Dragon (Pair)</name>
+		<name>Old Silver Dragons (Pair)</name>
 		<entry>Silver dragon$Old$/2</entry>
 	</collection>
 	<collection>
-		<name>Old Silver Dragon (Family)</name>
+		<name>Old Silver Dragons (Family)</name>
 		<entry>Silver dragon$Old$/1d2</entry>
 		<entry>Silver dragon$Young$/1d4+1</entry>
 	</collection>
@@ -7089,11 +7145,11 @@
     <entry>Silver dragon$Very old$/1</entry>
   </collection>
 	<collection>
-		<name>Very Old Silver Dragon (Pair)</name>
+		<name>Very Old Silver Dragons (Pair)</name>
 		<entry>Silver dragon$Very old$/2</entry>
 	</collection>
 	<collection>
-		<name>Very Old Silver Dragon (Family)</name>
+		<name>Very Old Silver Dragons (Family)</name>
 		<entry>Silver dragon$Very old$/1d2</entry>
 		<entry>Silver dragon$Juvenile$/1d4+1</entry>
 	</collection>
@@ -7143,29 +7199,41 @@
 		<entry>White dragon$Wyrmling$/1</entry>
 	</collection>
 	<collection>
-		<name>Wyrmling White Dragon (Clutch)</name>
+		<name>Wyrmling White Dragons (Clutch)</name>
 		<entry>White dragon$Wyrmling$/1d4+1</entry>
 	</collection>
-  <collection>
-    <name>White dragon$Very young$</name>
-    <entry>White dragon$Very young$/1</entry>
-    <entry>White dragon$Very young$/1d4+1</entry>
-  </collection>
-  <collection>
-    <name>White dragon$Young$</name>
-    <entry>White dragon$Young$/1</entry>
-    <entry>White dragon$Young$/1d4+1</entry>
-  </collection>
-  <collection>
-    <name>White dragon$Juvenile$</name>
-    <entry>White dragon$Juvenile$/1</entry>
-    <entry>White dragon$Juvenile$/1d4+1</entry>
-  </collection>
-  <collection>
-    <name>White dragon$Young adult$</name>
-    <entry>White dragon$Young adult$/1</entry>
-    <entry>White dragon$Young adult$/1d4+1</entry>
-  </collection>
+	<collection>
+		<name>Very Young White Dragon (Solitary)</name>
+		<entry>White dragon$Very young$/1</entry>
+	</collection>
+	<collection>
+		<name>Very Young White Dragons (Clutch)</name>
+		<entry>White dragon$Very young$/1d4+1</entry>
+	</collection>
+	<collection>
+		<name>Young White Dragon (Solitary)</name>
+		<entry>White dragon$Young$/1</entry>
+	</collection>
+	<collection>
+		<name>Young White Dragons (Clutch)</name>
+		<entry>White dragon$Young$/1d4+1</entry>
+	</collection>
+	<collection>
+		<name>Juvenile White Dragon (Solitary)</name>
+		<entry>White dragon$Juvenile$/1</entry>
+	</collection>
+	<collection>
+		<name>Juvenile White Dragons (Clutch)</name>
+		<entry>White dragon$Juvenile$/1d4+1</entry>
+	</collection>
+	<collection>
+		<name>Young Adult White Dragon (Solitary)</name>
+		<entry>White dragon$Young adult$/1</entry>
+	</collection>
+	<collection>
+		<name>Young Adult White Dragons (Clutch)</name>
+		<entry>White dragon$Young adult$/1d4+1</entry>
+	</collection>
   <collection>
     <name>Adult White Dragon (Solitary)</name>
     <entry>White dragon$Adult$/1</entry>
@@ -7858,15 +7926,15 @@
     <entry>Efreeti/1d10+5</entry>
   </collection>
   <collection>
-    <name>Janni (Singular)</name>
+    <name>Janni (Solitary)</name>
     <entry>Janni/1</entry>
   </collection>
   <collection>
-    <name>Jann (Singular+)</name>
+    <name>Jann (Company)</name>
     <entry>Janni/1d3+1</entry>
   </collection>
   <collection>
-    <name>Jann (Singular++)</name>
+    <name>Jann (Band)</name>
     <entry>Janni/1d10+5</entry>
   </collection>
   <collection>
@@ -8333,13 +8401,31 @@
     <entry>Character(Jarl)[8]{Frost Giant}@Barbarian&amp;Cleric&amp;Fighter&amp;Sorcerer@/1</entry>
   </collection>
   <collection>
-    <name>Hill giant</name>
+    <name>Hill Giant (Solitary)</name>
     <entry>Hill giant/1</entry>
-    <entry>Hill giant/1d4+1</entry>
-    <entry>Hill giant/1d4+5,Hill giant$Noncombatant$/1d2+1</entry>
-    <entry>Hill giant/1d4+5,Dire wolf/1d3+1</entry>
-    <entry>Hill giant/1d10+20,Hill giant$Noncombatant$/2d3+5,Dire wolf/2d10+10,Ogre/1d3+1,Character[1]{Orc}@Warrior@/2d6+10</entry>
   </collection>
+	<collection>
+		<name>Hill Giants (Gang)</name>
+		<entry>Hill giant/1d4+1</entry>
+	</collection>
+	<collection>
+		<name>Hill Giants (Band)</name>
+		<entry>Hill giant/1d4+5</entry>
+		<entry>Hill giant$Noncombatant$/1d2+1</entry>
+	</collection>
+	<collection>
+		<name>Hill Giants (Hunting/Raiding Party)</name>
+		<entry>Hill giant/1d4+5</entry>
+		<entry>Dire wolf/1d3+1</entry>
+	</collection>
+	<collection>
+		<name>Hill Giants (Tribe)</name>
+		<entry>Hill giant/1d10+20</entry>
+		<entry>Hill giant$Noncombatant$/2d3+5</entry>
+		<entry>Dire wolf/2d10+10</entry>
+		<entry>Ogre/1d3+1</entry>
+		<entry>Character[1]{Orc}@Warrior@/2d6+10</entry>
+	</collection>
   <collection>
     <name>Stone giant</name>
     <entry>Stone giant/1</entry>
@@ -8563,11 +8649,11 @@
 		<entry>Gorgon/2</entry>
 	</collection>
 	<collection>
-		<name>Gorgons (Pair+)</name>
+		<name>Gorgons (Pack)</name>
 		<entry>Gorgon/1d2+2</entry>
 	</collection>
 	<collection>
-		<name>Gorgons (Pair++)</name>
+		<name>Gorgons (Herd)</name>
 		<entry>Gorgon/4d3+1</entry>
 	</collection>
   <collection>
@@ -8583,7 +8669,7 @@
 		<entry>Grick/1</entry>
 	</collection>
   <collection>
-	  <name>Grick (Solitary+)</name>
+	  <name>Gricks (Cluster)</name>
 	  <entry>Grick/1d3+1</entry>
   </collection>
   <collection>
@@ -8595,24 +8681,30 @@
 		<entry>Griffon/2</entry>
 	</collection>
 	<collection>
-		<name>Griffons (Pair+)</name>
+		<name>Griffons (Pride)</name>
 		<entry>Griffon/2d3+4</entry>
 	</collection>
   <collection>
-    <name>Grimlock</name>
+    <name>Grimlocks (Gang)</name>
     <entry>Grimlock/1d3+1</entry>
-    <entry>Grimlock/2d6+8</entry>
-    <entry>Grimlock/10d6,Character(Leader)[1d3+2]{Grimlock}/1d6</entry>
   </collection>
+	<collection>
+		<name>Grimlocks (Pack)</name>
+		<entry>Grimlock/2d6+8</entry>
+	</collection>
+	<collection>
+		<name>Grimlocks (Tribe)</name>
+		<entry>Grimlock/10d6</entry>
+		<entry>Character(Leader)[1d3+2]{Grimlock}/1d6</entry>
+	</collection>
   <collection>
-    <name>Character(Leader)[1d3+2]{Grimlock}</name>
-    <entry>Grimlock/10d6,Character(Leader)[1d3+2]{Grimlock}/1d6</entry>
-  </collection>
-  <collection>
-    <name>Gynosphinx</name>
+    <name>Gynosphinx (Solitary)</name>
     <entry>Gynosphinx/1</entry>
-    <entry>Gynosphinx/1d3+1</entry>
   </collection>
+	<collection>
+		<name>Gynosphinxes (Covey)</name>
+		<entry>Gynosphinx/1d3+1</entry>
+	</collection>
   <collection>
     <name>Deep Halflings (Company)</name>
     <entry>Character[1]{Deep Halfling}@Warrior@/1d3+1</entry>
@@ -8674,13 +8766,19 @@
     <entry>Dog$Riding$/1d4+1</entry>
   </collection>
   <collection>
-    <name>Harpy</name>
+    <name>Harpy (Solitary)</name>
     <entry>Harpy/1</entry>
-    <entry>Harpy/2</entry>
-    <entry>Harpy/1d6+6</entry>
   </collection>
+	<collection>
+		<name>Harpies (Pair)</name>
+		<entry>Harpy/2</entry>
+	</collection>
+	<collection>
+		<name>Harpies (Flight)</name>
+		<entry>Harpy/1d6+6</entry>
+	</collection>
   <collection>
-    <name>Character(Archer)[7]{Harpy}@Fighter@</name>
+    <name>Harpy Archer (Solitary)</name>
     <entry>Character(Archer)[7]{Harpy}@Fighter@/1</entry>
   </collection>
   <collection>
@@ -8692,112 +8790,171 @@
     <entry>Hawk/2</entry>
   </collection>
   <collection>
-    <name>Hell hound</name>
+    <name>Hell Hound (Solitary)</name>
     <entry>Hell hound/1</entry>
-    <entry>Hell hound/2</entry>
-    <entry>Hell hound/1d8+4</entry>
-    <entry>Nessian warhound/1</entry>
-    <entry>Nessian warhound/2</entry>
-    <entry>Nessian warhound/1d2,Hell hound/1d8+4</entry>
   </collection>
+	<collection>
+		<name>Hell Hounds (Pair)</name>
+		<entry>Hell hound/2</entry>
+	</collection>
+	<collection>
+		<name>Hell Hounds (Pack)</name>
+		<entry>Hell hound/1d8+4</entry>
+	</collection>
   <collection>
-    <name>Nessian warhound</name>
+    <name>Nessian Warhound (Solitary)</name>
     <entry>Nessian warhound/1</entry>
-    <entry>Nessian warhound/2</entry>
-    <entry>Nessian warhound/1d2,Hell hound/1d8+4</entry>
   </collection>
+	<collection>
+		<name>Nessian Warhounds (Pair)</name>
+		<entry>Nessian warhound/2</entry>
+	</collection>
+	<collection>
+		<name>Nessian Warhounds (Pack)</name>
+		<entry>Nessian warhound/1d2</entry>
+		<entry>Hell hound/1d8+4</entry>
+	</collection>
   <collection>
-    <name>Hellcat(Bezekira)</name>
+    <name>Hellcat (Bezekira) (Solitary)</name>
     <entry>Hellcat(Bezekira)/1</entry>
-    <entry>Hellcat(Bezekira)/2</entry>
-    <entry>Hellcat(Bezekira)/2d3+4</entry>
   </collection>
+	<collection>
+		<name>Hellcats (Bezekiras) (Pair)</name>
+		<entry>Hellcat(Bezekira)/2</entry>
+	</collection>
+	<collection>
+		<name>Hellcats (Bezekiras) (Pride)</name>
+		<entry>Hellcat(Bezekira)/2d3+4</entry>
+	</collection>
   <collection>
-    <name>Hellwasp swarm</name>
+    <name>Hellwasp Swarm (Solitary)</name>
     <entry>Hellwasp swarm/1</entry>
-    <entry>Hellwasp swarm/1d3+1</entry>
-    <entry>Hellwasp swarm/1d4+4</entry>
   </collection>
+	<collection>
+		<name>Hellwasp Swarms (Fright)</name>
+		<entry>Hellwasp swarm/1d3+1</entry>
+	</collection>
+	<collection>
+		<name>Hellwasp Swarms (Terror)</name>
+		<entry>Hellwasp swarm/1d4+4</entry>
+	</collection>
   <collection>
-    <name>Hezrou</name>
+    <name>Hezrou (Solitary)</name>
     <entry>Hezrou/1</entry>
-    <entry>Hezrou/1d3+1</entry>
   </collection>
+	<collection>
+		<name>Hezrous (Gang)</name>
+		<entry>Hezrou/1d3+1</entry>
+	</collection>
   <collection>
-    <name>Hieracosphinx</name>
+    <name>Hieracosphinx (Solitary)</name>
     <entry>Hieracosphinx/1</entry>
-    <entry>Hieracosphinx/2</entry>
-    <entry>Hieracosphinx/1d4+3</entry>
   </collection>
+	<collection>
+		<name>Hieracosphinxes (Pair)</name>
+		<entry>Hieracosphinx/2</entry>
+	</collection>
+	<collection>
+		<name>Hieracosphinxes (Flock)</name>
+		<entry>Hieracosphinx/1d4+3</entry>
+	</collection>
   <collection>
-    <name>Hippogriff</name>
+    <name>Hippogriff (Solitary)</name>
     <entry>Hippogriff/1</entry>
-    <entry>Hippogriff/2</entry>
-    <entry>Hippogriff/1d6+6</entry>
   </collection>
+	<collection>
+		<name>Hippogriffs (Pair)</name>
+		<entry>Hippogriff/2</entry>
+	</collection>
+	<collection>
+		<name>Hippogriffs (Flight)</name>
+		<entry>Hippogriff/1d6+6</entry>
+	</collection>
   <collection>
-    <name>Hobgoblin$Noncombatant$</name>
-    <entry>Character[1]{Hobgoblin}@Warrior@/10d10,Hobgoblin$Noncombatant$/5d10,Character(Sergeant)[3]{Hobgoblin}@Warrior@/2d3-1,Character(Leader)[1d3+3]{Hobgoblin}@Warrior@/1</entry>
-    <entry>Character[1]{Hobgoblin}@Warrior@/30d10,Hobgoblin$Noncombatant$/15d10,Character(Sergeant)[3]{Hobgoblin}@Warrior@/13d2-11,Character(Lieutenant)[1d2+3]{Hobgoblin}@Warrior@/1d2,Character(Leader)[1d3+5]{Hobgoblin}@Warrior@/1,Dire wolf/1d3+1,Ogre/1d4</entry>
-    <entry>Character[1]{Hobgoblin}@Warrior@/30d10,Hobgoblin$Noncombatant$/15d10,Character(Sergeant)[3]{Hobgoblin}@Warrior@/13d2-11,Character(Lieutenant)[1d2+3]{Hobgoblin}@Warrior@/1d2,Character(Leader)[1d3+5]{Hobgoblin}@Warrior@/1,Dire wolf/1d3+1,Troll/1d2</entry>
-  </collection>
-  <collection>
-    <name>Character[1]{Hobgoblin}@Warrior@</name>
+    <name>Hobgoblins (Gang)</name>
     <entry>Character[1]{Hobgoblin}@Warrior@/1d6+3</entry>
-    <entry>Character[1]{Hobgoblin}@Warrior@/10d10,Hobgoblin$Noncombatant$/5d10,Character(Sergeant)[3]{Hobgoblin}@Warrior@/2d3-1,Character(Leader)[1d3+3]{Hobgoblin}@Warrior@/1</entry>
-    <entry>Character[1]{Hobgoblin}@Warrior@/2d8+8</entry>
-    <entry>Character[1]{Hobgoblin}@Warrior@/30d10,Hobgoblin$Noncombatant$/15d10,Character(Sergeant)[3]{Hobgoblin}@Warrior@/13d2-11,Character(Lieutenant)[1d2+3]{Hobgoblin}@Warrior@/1d2,Character(Leader)[1d3+5]{Hobgoblin}@Warrior@/1,Dire wolf/1d3+1,Ogre/1d4</entry>
-    <entry>Character[1]{Hobgoblin}@Warrior@/30d10,Hobgoblin$Noncombatant$/15d10,Character(Sergeant)[3]{Hobgoblin}@Warrior@/13d2-11,Character(Lieutenant)[1d2+3]{Hobgoblin}@Warrior@/1d2,Character(Leader)[1d3+5]{Hobgoblin}@Warrior@/1,Dire wolf/1d3+1,Troll/1d2</entry>
   </collection>
+	<collection>
+		<name>Hobgoblins (Band)</name>
+		<entry>Character[1]{Hobgoblin}@Warrior@/10d10</entry>
+		<entry>Hobgoblin$Noncombatant$/5d10</entry>
+		<entry>Character(Sergeant)[3]{Hobgoblin}@Warrior@/2d3-1</entry>
+		<entry>Character(Leader)[1d3+3]{Hobgoblin}@Warrior@/1</entry>
+	</collection>
+	<collection>
+		<name>Hobgoblins (Warband)</name>
+		<entry>Character[1]{Hobgoblin}@Warrior@/2d8+8</entry>
+	</collection>
+	<collection>
+		<name>Hobgoblins (Tribe with Ogres)</name>
+		<entry>Character[1]{Hobgoblin}@Warrior@/30d10</entry>
+		<entry>Hobgoblin$Noncombatant$/15d10</entry>
+		<entry>Character(Sergeant)[3]{Hobgoblin}@Warrior@/13d2-11</entry>
+		<entry>Character(Lieutenant)[1d2+3]{Hobgoblin}@Warrior@/1d2</entry>
+		<entry>Character(Leader)[1d3+5]{Hobgoblin}@Warrior@/1</entry>
+		<entry>Dire wolf/1d3+1</entry>
+		<entry>Ogre/1d4</entry>
+	</collection>
+	<collection>
+		<name>Hobgoblins (Tribe with Trolls)</name>
+		<entry>Character[1]{Hobgoblin}@Warrior@/30d10</entry>
+		<entry>Hobgoblin$Noncombatant$/15d10</entry>
+		<entry>Character(Sergeant)[3]{Hobgoblin}@Warrior@/13d2-11</entry>
+		<entry>Character(Lieutenant)[1d2+3]{Hobgoblin}@Warrior@/1d2</entry>
+		<entry>Character(Leader)[1d3+5]{Hobgoblin}@Warrior@/1</entry>
+		<entry>Dire wolf/1d3+1</entry>
+		<entry>Troll/1d2</entry>
+	</collection>
   <collection>
-    <name>Character(Sergeant)[3]{Hobgoblin}@Warrior@</name>
-    <entry>Character[1]{Hobgoblin}@Warrior@/10d10,Hobgoblin$Noncombatant$/5d10,Character(Sergeant)[3]{Hobgoblin}@Warrior@/2d3-1,Character(Leader)[1d3+3]{Hobgoblin}@Warrior@/1</entry>
-    <entry>Character[1]{Hobgoblin}@Warrior@/30d10,Hobgoblin$Noncombatant$/15d10,Character(Sergeant)[3]{Hobgoblin}@Warrior@/13d2-11,Character(Lieutenant)[1d2+3]{Hobgoblin}@Warrior@/1d2,Character(Leader)[1d3+5]{Hobgoblin}@Warrior@/1,Dire wolf/1d3+1,Ogre/1d4</entry>
-    <entry>Character[1]{Hobgoblin}@Warrior@/30d10,Hobgoblin$Noncombatant$/15d10,Character(Sergeant)[3]{Hobgoblin}@Warrior@/13d2-11,Character(Lieutenant)[1d2+3]{Hobgoblin}@Warrior@/1d2,Character(Leader)[1d3+5]{Hobgoblin}@Warrior@/1,Dire wolf/1d3+1,Troll/1d2</entry>
-  </collection>
-  <collection>
-    <name>Character(Lieutenant)[1d2+3]{Hobgoblin}@Warrior@</name>
-    <entry>Character[1]{Hobgoblin}@Warrior@/30d10,Hobgoblin$Noncombatant$/15d10,Character(Sergeant)[3]{Hobgoblin}@Warrior@/13d2-11,Character(Lieutenant)[1d2+3]{Hobgoblin}@Warrior@/1d2,Character(Leader)[1d3+5]{Hobgoblin}@Warrior@/1,Dire wolf/1d3+1,Ogre/1d4</entry>
-    <entry>Character[1]{Hobgoblin}@Warrior@/30d10,Hobgoblin$Noncombatant$/15d10,Character(Sergeant)[3]{Hobgoblin}@Warrior@/13d2-11,Character(Lieutenant)[1d2+3]{Hobgoblin}@Warrior@/1d2,Character(Leader)[1d3+5]{Hobgoblin}@Warrior@/1,Dire wolf/1d3+1,Troll/1d2</entry>
-  </collection>
-  <collection>
-    <name>Character(Leader)[1d3+3]{Hobgoblin}@Warrior@</name>
-    <entry>Character[1]{Hobgoblin}@Warrior@/10d10,Hobgoblin$Noncombatant$/5d10,Character(Sergeant)[3]{Hobgoblin}@Warrior@/2d3-1,Character(Leader)[1d3+3]{Hobgoblin}@Warrior@/1</entry>
-  </collection>
-  <collection>
-    <name>Character(Leader)[1d3+5]{Hobgoblin}@Warrior@</name>
-    <entry>Character[1]{Hobgoblin}@Warrior@/30d10,Hobgoblin$Noncombatant$/15d10,Character(Sergeant)[3]{Hobgoblin}@Warrior@/13d2-11,Character(Lieutenant)[1d2+3]{Hobgoblin}@Warrior@/1d2,Character(Leader)[1d3+5]{Hobgoblin}@Warrior@/1,Dire wolf/1d3+1,Ogre/1d4</entry>
-    <entry>Character[1]{Hobgoblin}@Warrior@/30d10,Hobgoblin$Noncombatant$/15d10,Character(Sergeant)[3]{Hobgoblin}@Warrior@/13d2-11,Character(Lieutenant)[1d2+3]{Hobgoblin}@Warrior@/1d2,Character(Leader)[1d3+5]{Hobgoblin}@Warrior@/1,Dire wolf/1d3+1,Troll/1d2</entry>
-  </collection>
-  <collection>
-    <name>Homunculus</name>
+    <name>Homunculus (Solitary)</name>
     <entry>Homunculus/1</entry>
   </collection>
   <collection>
-    <name>Horned Devil(Cornugon)</name>
+    <name>Horned Devil (Cornugon) (Solitary)</name>
     <entry>Horned Devil(Cornugon)/1</entry>
-    <entry>Horned Devil(Cornugon)/1d3+1</entry>
-    <entry>Horned Devil(Cornugon)/2d3+4</entry>
   </collection>
+	<collection>
+		<name>Horned Devils (Cornugons) (Team)</name>
+		<entry>Horned Devil(Cornugon)/1d3+1</entry>
+	</collection>
+	<collection>
+		<name>Horned Devils (Cornugons) (Squad)</name>
+		<entry>Horned Devil(Cornugon)/2d3+4</entry>
+	</collection>
   <collection>
-    <name>Light horse</name>
+    <name>Light Horses (Herd)</name>
     <entry>Light horse/8d4-2</entry>
   </collection>
   <collection>
-    <name>Light warhorse</name>
-  </collection>
-  <collection>
-    <name>Heavy horse</name>
-  </collection>
-  <collection>
-    <name>Heavy warhorse</name>
-  </collection>
-  <collection>
-    <name>Howler</name>
+    <name>Howler (Solitary)</name>
     <entry>Howler/1</entry>
-    <entry>Howler/1d3+1</entry>
-    <entry>Howler/2d3+4</entry>
   </collection>
+	<collection>
+		<name>Howlers (Gang)</name>
+		<entry>Howler/1d3+1</entry>
+	</collection>
+	<collection>
+		<name>Howlers (Pack)</name>
+		<entry>Howler/2d3+4</entry>
+	</collection>
+	<collection>
+		<name>Humans (Band)</name>
+		<entry>Character[1]{Human}@Warrior@/10d8+20</entry>
+		<entry>Human$Noncombatant$/2d8+4</entry>
+		<entry>Character(Sergeant)[3]{Human}@Warrior@/1d8+2</entry>
+		<entry>Character(Lieutenant)[5]{Human}@Warrior@/5</entry>
+		<entry>Character(Captain)[7]{Human}@Warrior@/3</entry>
+	</collection>
+	<collection>
+		<name>Humans (Company)</name>
+		<entry>Character[1]{Human}@Warrior@/1d10+10</entry>
+		<entry>Character(Sergeant)[3]{Human}@Warrior@/2</entry>
+		<entry>Character(Leader)[1d4+2]{Human}@Warrior@/1</entry>
+	</collection>
+	<collection>
+		<name>Humans (Squad)</name>
+		<entry>Character[1]{Human}@Warrior@/1d3+1</entry>
+	</collection>
   <collection>
     <name>Hydra (5 Heads) (Solitary)</name>
     <entry>Hydra$5 heads$/1</entry>
@@ -8895,202 +9052,288 @@
     <entry>Pyrohydra$12 heads$/1</entry>
   </collection>
   <collection>
-    <name>Hyena</name>
+    <name>Hyena (Solitary)</name>
     <entry>Hyena/1</entry>
-    <entry>Hyena/2</entry>
-    <entry>Hyena/1d10+6</entry>
   </collection>
+	<collection>
+		<name>Hyenas (Pair)</name>
+		<entry>Hyena/2</entry>
+	</collection>
+	<collection>
+		<name>Hyenas (Pack)</name>
+		<entry>Hyena/1d10+6</entry>
+	</collection>
   <collection>
-    <name>Ice Devil(Gelugon)</name>
+    <name>Ice Devil (Gelugon) (Solitary)</name>
     <entry>Ice Devil(Gelugon)/1</entry>
-    <entry>Ice Devil(Gelugon)/1d3+1</entry>
-    <entry>Ice Devil(Gelugon)/2d3+4</entry>
-    <entry>Ice Devil(Gelugon)/1d2,Bearded Devil(Barbazu)/1d6+6,Bone Devil(Osyluth)/1d4</entry>
   </collection>
+	<collection>
+		<name>Ice Devils (Gelugons) (Team)</name>
+		<entry>Ice Devil(Gelugon)/1d3+1</entry>
+	</collection>
+	<collection>
+		<name>Ice Devils (Gelugons) (Squad)</name>
+		<entry>Ice Devil(Gelugon)/2d3+4</entry>
+	</collection>
+	<collection>
+		<name>Ice Devils (Gelugons) (Troupe)</name>
+		<entry>Ice Devil(Gelugon)/1d2</entry>
+		<entry>Bearded Devil(Barbazu)/1d6+6</entry>
+		<entry>Bone Devil(Osyluth)/1d4</entry>
+	</collection>
   <collection>
-    <name>Imp</name>
+    <name>Imp (Solitary)</name>
     <entry>Imp/1</entry>
   </collection>
   <collection>
-    <name>Kolyarut</name>
+    <name>Kolyarut (Solitary)</name>
     <entry>Kolyarut/1</entry>
   </collection>
   <collection>
-    <name>Marut</name>
+    <name>Marut (Solitary)</name>
     <entry>Marut/1</entry>
   </collection>
   <collection>
-    <name>Zelekhut</name>
+    <name>Zelekhut (Solitary)</name>
     <entry>Zelekhut/1</entry>
   </collection>
   <collection>
-    <name>Invisible stalker</name>
+    <name>Invisible Stalker (Solitary)</name>
     <entry>Invisible stalker/1</entry>
   </collection>
   <collection>
-    <name>Kobold$Noncombatant$</name>
-    <entry>Character[1]{Kobold}@Warrior@/10d10,Kobold$Noncombatant$/10d10,Character(Sergeant)[3]{Kobold}@Warrior@/2d3-1,Character(Leader)[1d3+3]{Kobold}@Warrior@/1</entry>
-  </collection>
-  <collection>
-    <name>Character[1]{Kobold}@Warrior@</name>
+    <name>Kobolds (Gang)</name>
     <entry>Character[1]{Kobold}@Warrior@/1d6+3</entry>
-    <entry>Character[1]{Kobold}@Warrior@/10d10,Kobold$Noncombatant$/10d10,Character(Sergeant)[3]{Kobold}@Warrior@/2d3-1,Character(Leader)[1d3+3]{Kobold}@Warrior@/1</entry>
-    <entry>Character[1]{Kobold}@Warrior@/2d8+8,Dire weasel/1d3+1</entry>
-    <entry>Character[1]{Kobold}@Warrior@/40d10,Character(Sergeant)[3]{Kobold}@Warrior@/2d10,Character(Lieutenant)[1d2+3]{Kobold}@Warrior@/1d2,Character(Leader)[1d3+5]{Kobold}@Warrior@/1,Dire weasel/1d4+4</entry>
   </collection>
+	<collection>
+		<name>Kobolds (Band)</name>
+		<entry>Character[1]{Kobold}@Warrior@/10d10</entry>
+		<entry>Kobold$Noncombatant$/10d10</entry>
+		<entry>Character(Sergeant)[3]{Kobold}@Warrior@/2d3-1</entry>
+		<entry>Character(Leader)[1d3+3]{Kobold}@Warrior@/1</entry>
+	</collection>
+	<collection>
+		<name>Kobolds (Warband)</name>
+		<entry>Character[1]{Kobold}@Warrior@/2d8+8</entry>
+		<entry>Dire weasel/1d3+1</entry>
+	</collection>
+	<collection>
+		<name>Kobolds (Tribe)</name>
+		<entry>Character[1]{Kobold}@Warrior@/40d10</entry>
+		<entry>Character(Sergeant)[3]{Kobold}@Warrior@/2d10</entry>
+		<entry>Character(Lieutenant)[1d2+3]{Kobold}@Warrior@/1d2</entry>
+		<entry>Character(Leader)[1d3+5]{Kobold}@Warrior@/1</entry>
+		<entry>Dire weasel/1d4+4</entry>
+	</collection>
   <collection>
-    <name>Character(Sergeant)[3]{Kobold}@Warrior@</name>
-    <entry>Character[1]{Kobold}@Warrior@/10d10,Kobold$Noncombatant$/10d10,Character(Sergeant)[3]{Kobold}@Warrior@/2d3-1,Character(Leader)[1d3+3]{Kobold}@Warrior@/1</entry>
-    <entry>Character[1]{Kobold}@Warrior@/40d10,Character(Sergeant)[3]{Kobold}@Warrior@/2d10,Character(Lieutenant)[1d2+3]{Kobold}@Warrior@/1d2,Character(Leader)[1d3+5]{Kobold}@Warrior@/1,Dire weasel/1d4+4</entry>
-  </collection>
-  <collection>
-    <name>Character(Lieutenant)[1d2+3]{Kobold}@Warrior@</name>
-    <entry>Character[1]{Kobold}@Warrior@/40d10,Character(Sergeant)[3]{Kobold}@Warrior@/2d10,Character(Lieutenant)[1d2+3]{Kobold}@Warrior@/1d2,Character(Leader)[1d3+5]{Kobold}@Warrior@/1,Dire weasel/1d4+4</entry>
-  </collection>
-  <collection>
-    <name>Character(Leader)[1d3+3]{Kobold}@Warrior@</name>
-    <entry>Character[1]{Kobold}@Warrior@/10d10,Kobold$Noncombatant$/10d10,Character(Sergeant)[3]{Kobold}@Warrior@/2d3-1,Character(Leader)[1d3+3]{Kobold}@Warrior@/1</entry>
-  </collection>
-  <collection>
-    <name>Character(Leader)[1d3+5]{Kobold}@Warrior@</name>
-    <entry>Character[1]{Kobold}@Warrior@/40d10,Character(Sergeant)[3]{Kobold}@Warrior@/2d10,Character(Lieutenant)[1d2+3]{Kobold}@Warrior@/1d2,Character(Leader)[1d3+5]{Kobold}@Warrior@/1,Dire weasel/1d4+4</entry>
-  </collection>
-  <collection>
-    <name>Kraken</name>
+    <name>Kraken (Solitary)</name>
     <entry>Kraken/1</entry>
   </collection>
   <collection>
-    <name>Krenshar</name>
+    <name>Krenshar (Solitary)</name>
     <entry>Krenshar/1</entry>
-    <entry>Krenshar/2</entry>
-    <entry>Krenshar/2d3+4</entry>
   </collection>
+	<collection>
+		<name>Krenshars (Pair)</name>
+		<entry>Krenshar/2</entry>
+	</collection>
+	<collection>
+		<name>Krenshars (Pride)</name>
+		<entry>Krenshar/2d3+4</entry>
+	</collection>
   <collection>
-    <name>Kuo-toa</name>
-    <entry>Kuo-toa/1d3+1,Character(Whip)[3]{Kuo-toa}@Cleric@/1</entry>
-    <entry>Kuo-toa/1d6+5,Character(Whip)[3]{Kuo-toa}@Cleric@/1d2,Character(Monitor)[4]{Kuo-toa}@Monk@/1d2,Character[8]{Kuo-toa}@Fighter@/1</entry>
-    <entry>Kuo-toa/6d6+14,Kuo-toa$Noncombatant$/6d6+14,Character(Whip)[3]{Kuo-toa}@Cleric@/2,Character[8]{Kuo-toa}@Fighter@/2,Character[10]{Kuo-toa}@Fighter@/1</entry>
-    <entry>Kuo-toa/40d10,Character(Whip)[3]{Kuo-toa}@Cleric@/2d10,Character(Monitor)[4]{Kuo-toa}@Monk@/1,Character[8]{Kuo-toa}@Fighter@/4,Character(Whip)[10]{Kuo-toa}@Cleric@/1,Character[10]{Kuo-toa}@Fighter@/2</entry>
+    <name>Kuo-toas (Patrol)</name>
+	  <entry>Kuo-toa/1d3+1</entry>
+	  <entry>Character(Whip)[3]{Kuo-toa}@Cleric@/1</entry>
   </collection>
+	<collection>
+		<name>Kuo-toas (Squad)</name>
+		<entry>Kuo-toa/1d6+5</entry>
+		<entry>Character(Whip)[3]{Kuo-toa}@Cleric@/1d2</entry>
+		<entry>Character(Monitor)[4]{Kuo-toa}@Monk@/1d2</entry>
+		<entry>Character[8]{Kuo-toa}@Fighter@/1</entry>
+	</collection>
+	<collection>
+		<name>Kuo-toas (Band)</name>
+		<entry>Kuo-toa/6d6+14</entry>
+		<entry>Kuo-toa$Noncombatant$/6d6+14</entry>
+		<entry>Character(Whip)[3]{Kuo-toa}@Cleric@/2</entry>
+		<entry>Character[8]{Kuo-toa}@Fighter@/2</entry>
+		<entry>Character[10]{Kuo-toa}@Fighter@/1</entry>
+	</collection>
+	<collection>
+		<name>Kuo-toas (Tribe)</name>
+		<entry>Kuo-toa/40d10</entry>
+		<entry>Character(Whip)[3]{Kuo-toa}@Cleric@/2d10</entry>
+		<entry>Character(Monitor)[4]{Kuo-toa}@Monk@/1</entry>
+		<entry>Character[8]{Kuo-toa}@Fighter@/4</entry>
+		<entry>Character(Whip)[10]{Kuo-toa}@Cleric@/1</entry>
+		<entry>Character[10]{Kuo-toa}@Fighter@/2</entry>
+	</collection>
   <collection>
-    <name>Kuo-toa$Noncombatant$</name>
-    <entry>Kuo-toa/6d6+14,Kuo-toa$Noncombatant$/6d6+14,Character(Whip)[3]{Kuo-toa}@Cleric@/2,Character[8]{Kuo-toa}@Fighter@/2,Character[10]{Kuo-toa}@Fighter@/1</entry>
-  </collection>
-  <collection>
-    <name>Character(Whip)[10]{Kuo-toa}@Cleric@</name>
-    <entry>Kuo-toa/40d10,Character(Whip)[3]{Kuo-toa}@Cleric@/2d10,Character(Monitor)[4]{Kuo-toa}@Monk@/1,Character[8]{Kuo-toa}@Fighter@/4,Character(Whip)[10]{Kuo-toa}@Cleric@/1,Character[10]{Kuo-toa}@Fighter@/2</entry>
-  </collection>
-  <collection>
-    <name>Character(Whip)[3]{Kuo-toa}@Cleric@</name>
-    <entry>Kuo-toa/1d3+1,Character(Whip)[3]{Kuo-toa}@Cleric@/1</entry>
-    <entry>Kuo-toa/1d6+5,Character(Whip)[3]{Kuo-toa}@Cleric@/1d2,Character(Monitor)[4]{Kuo-toa}@Monk@/1d2,Character[8]{Kuo-toa}@Fighter@/1</entry>
-    <entry>Kuo-toa/6d6+14,Kuo-toa$Noncombatant$/6d6+14,Character(Whip)[3]{Kuo-toa}@Cleric@/2,Character[8]{Kuo-toa}@Fighter@/2,Character[10]{Kuo-toa}@Fighter@/1</entry>
-    <entry>Kuo-toa/40d10,Character(Whip)[3]{Kuo-toa}@Cleric@/2d10,Character(Monitor)[4]{Kuo-toa}@Monk@/1,Character[8]{Kuo-toa}@Fighter@/4,Character(Whip)[10]{Kuo-toa}@Cleric@/1,Character[10]{Kuo-toa}@Fighter@/2</entry>
-  </collection>
-  <collection>
-    <name>Character(Monitor)[4]{Kuo-toa}@Monk@</name>
-    <entry>Kuo-toa/1d6+5,Character(Whip)[3]{Kuo-toa}@Cleric@/1d2,Character(Monitor)[4]{Kuo-toa}@Monk@/1d2,Character[8]{Kuo-toa}@Fighter@/1</entry>
-    <entry>Kuo-toa/40d10,Character(Whip)[3]{Kuo-toa}@Cleric@/2d10,Character(Monitor)[4]{Kuo-toa}@Monk@/1,Character[8]{Kuo-toa}@Fighter@/4,Character(Whip)[10]{Kuo-toa}@Cleric@/1,Character[10]{Kuo-toa}@Fighter@/2</entry>
-  </collection>
-  <collection>
-    <name>Character[8]{Kuo-toa}@Fighter@</name>
-    <entry>Kuo-toa/1d6+5,Character(Whip)[3]{Kuo-toa}@Cleric@/1d2,Character(Monitor)[4]{Kuo-toa}@Monk@/1d2,Character[8]{Kuo-toa}@Fighter@/1</entry>
-    <entry>Kuo-toa/6d6+14,Kuo-toa$Noncombatant$/6d6+14,Character(Whip)[3]{Kuo-toa}@Cleric@/2,Character[8]{Kuo-toa}@Fighter@/2,Character[10]{Kuo-toa}@Fighter@/1</entry>
-    <entry>Kuo-toa/40d10,Character(Whip)[3]{Kuo-toa}@Cleric@/2d10,Character(Monitor)[4]{Kuo-toa}@Monk@/1,Character[8]{Kuo-toa}@Fighter@/4,Character(Whip)[10]{Kuo-toa}@Cleric@/1,Character[10]{Kuo-toa}@Fighter@/2</entry>
-  </collection>
-  <collection>
-    <name>Character[10]{Kuo-toa}@Fighter@</name>
-    <entry>Kuo-toa/6d6+14,Kuo-toa$Noncombatant$/6d6+14,Character(Whip)[3]{Kuo-toa}@Cleric@/2,Character[8]{Kuo-toa}@Fighter@/2,Character[10]{Kuo-toa}@Fighter@/1</entry>
-    <entry>Kuo-toa/40d10,Character(Whip)[3]{Kuo-toa}@Cleric@/2d10,Character(Monitor)[4]{Kuo-toa}@Monk@/1,Character[8]{Kuo-toa}@Fighter@/4,Character(Whip)[10]{Kuo-toa}@Cleric@/1,Character[10]{Kuo-toa}@Fighter@/2</entry>
-  </collection>
-  <collection>
-    <name>Lamia</name>
+    <name>Lamia (Solitary)</name>
     <entry>Lamia/1</entry>
-    <entry>Lamia/2</entry>
-    <entry>Lamia/1d2+2</entry>
   </collection>
+	<collection>
+		<name>Lamias (Pair)</name>
+		<entry>Lamia/2</entry>
+	</collection>
+	<collection>
+		<name>Lamias (Gang)</name>
+		<entry>Lamia/1d2+2</entry>
+	</collection>
   <collection>
-    <name>Lammasu</name>
+    <name>Lammasu (Solitary)</name>
     <entry>Lammasu/1</entry>
+  </collection>
+  <collection>
+    <name>Golden Protector Lammasu (Solitary)</name>
     <entry>Lammasu$Golden Protector$/1</entry>
   </collection>
   <collection>
-    <name>Lammasu$Golden Protector$</name>
-    <entry>Lammasu$Golden Protector$/1</entry>
-  </collection>
-  <collection>
-    <name>Lemure</name>
+    <name>Lemure (Solitary)</name>
     <entry>Lemure/1</entry>
-    <entry>Lemure/2</entry>
-    <entry>Lemure/1d3+2</entry>
-    <entry>Lemure/1d10+5</entry>
-    <entry>Lemure/6d6+4</entry>
   </collection>
+	<collection>
+		<name>Lemures (Pair)</name>
+		<entry>Lemure/2</entry>
+	</collection>
+	<collection>
+		<name>Lemures (Gang)</name>
+		<entry>Lemure/1d3+2</entry>
+	</collection>
+	<collection>
+		<name>Lemures (Swarm)</name>
+		<entry>Lemure/1d10+5</entry>
+	</collection>
+	<collection>
+		<name>Lemures (Mob)</name>
+		<entry>Lemure/6d6+4</entry>
+	</collection>
   <collection>
-    <name>Leonal</name>
+    <name>Leonal (Solitary)</name>
     <entry>Leonal/1</entry>
-    <entry>Leonal/1d6+3</entry>
   </collection>
+	<collection>
+		<name>Leonals (Pride)</name>
+		<entry>Leonal/1d6+3</entry>
+	</collection>
   <collection>
-    <name>Leopard</name>
+    <name>Leopard (Solitary)</name>
     <entry>Leopard/1</entry>
-    <entry>Leopard/2</entry>
   </collection>
+	<collection>
+		<name>Leopards (Pair)</name>
+		<entry>Leopard/2</entry>
+	</collection>
   <collection>
-    <name>Character[11]#Lich#</name>
+    <name>Lich [Level 11] (Solitary)</name>
     <entry>Character[11]#Lich#/1</entry>
-    <entry>Character[11]#Lich#/1,Character[7]#Vampire#/1d3+1,Vampire spawn/1d4+4</entry>
   </collection>
+	<collection>
+		<name>Lich [Level 11] (Troupe)</name>
+		<entry>Character[11]#Lich#/1</entry>
+		<entry>Character[7]#Vampire#/1d3+1</entry>
+		<entry>Vampire spawn/1d4+4</entry>
+	</collection>
+	<collection>
+		<name>Lich [Level 12] (Solitary)</name>
+		<entry>Character[12]#Lich#/1</entry>
+	</collection>
+	<collection>
+		<name>Lich [Level 12] (Troupe)</name>
+		<entry>Character[12]#Lich#/1</entry>
+		<entry>Character[8]#Vampire#/1d3+1</entry>
+		<entry>Vampire spawn/1d4+4</entry>
+	</collection>
+	<collection>
+		<name>Lich [Level 13] (Solitary)</name>
+		<entry>Character[13]#Lich#/1</entry>
+	</collection>
+	<collection>
+		<name>Lich [Level 13] (Troupe)</name>
+		<entry>Character[13]#Lich#/1</entry>
+		<entry>Character[9]#Vampire#/1d3+1</entry>
+		<entry>Vampire spawn/1d4+4</entry>
+	</collection>
+	<collection>
+		<name>Lich [Level 14] (Solitary)</name>
+		<entry>Character[14]#Lich#/1</entry>
+	</collection>
+	<collection>
+		<name>Lich [Level 14] (Troupe)</name>
+		<entry>Character[14]#Lich#/1</entry>
+		<entry>Character[10]#Vampire#/1d3+1</entry>
+		<entry>Vampire spawn/1d4+4</entry>
+	</collection>
+	<collection>
+		<name>Lich [Level 15] (Solitary)</name>
+		<entry>Character[15]#Lich#/1</entry>
+	</collection>
+	<collection>
+		<name>Lich [Level 15] (Troupe)</name>
+		<entry>Character[15]#Lich#/1</entry>
+		<entry>Character[11]#Vampire#/1d3+1</entry>
+		<entry>Vampire spawn/1d4+4</entry>
+	</collection>
+	<collection>
+		<name>Lich [Level 16] (Solitary)</name>
+		<entry>Character[16]#Lich#/1</entry>
+	</collection>
+	<collection>
+		<name>Lich [Level 16] (Troupe)</name>
+		<entry>Character[16]#Lich#/1</entry>
+		<entry>Character[12]#Vampire#/1d3+1</entry>
+		<entry>Vampire spawn/1d4+4</entry>
+	</collection>
+	<collection>
+		<name>Lich [Level 17] (Solitary)</name>
+		<entry>Character[17]#Lich#/1</entry>
+	</collection>
+	<collection>
+		<name>Lich [Level 17] (Troupe)</name>
+		<entry>Character[17]#Lich#/1</entry>
+		<entry>Character[13]#Vampire#/1d3+1</entry>
+		<entry>Vampire spawn/1d4+4</entry>
+	</collection>
+	<collection>
+		<name>Lich [Level 18] (Solitary)</name>
+		<entry>Character[18]#Lich#/1</entry>
+	</collection>
+	<collection>
+		<name>Lich [Level 18] (Troupe)</name>
+		<entry>Character[18]#Lich#/1</entry>
+		<entry>Character[14]#Vampire#/1d3+1</entry>
+		<entry>Vampire spawn/1d4+4</entry>
+	</collection>
+	<collection>
+		<name>Lich [Level 19] (Solitary)</name>
+		<entry>Character[19]#Lich#/1</entry>
+	</collection>
+	<collection>
+		<name>Lich [Level 19] (Troupe)</name>
+		<entry>Character[19]#Lich#/1</entry>
+		<entry>Character[15]#Vampire#/1d3+1</entry>
+		<entry>Vampire spawn/1d4+4</entry>
+	</collection>
+	<collection>
+		<name>Lich [Level 20] (Solitary)</name>
+		<entry>Character[20]#Lich#/1</entry>
+	</collection>
+	<collection>
+		<name>Lich [Level 20] (Troupe)</name>
+		<entry>Character[20]#Lich#/1</entry>
+		<entry>Character[16]#Vampire#/1d3+1</entry>
+		<entry>Vampire spawn/1d4+4</entry>
+	</collection>
   <collection>
-    <name>Character[12]#Lich#</name>
-    <entry>Character[12]#Lich#/1</entry>
-    <entry>Character[12]#Lich#/1,Character[8]#Vampire#/1d3+1,Vampire spawn/1d4+4</entry>
-  </collection>
-  <collection>
-    <name>Character[13]#Lich#</name>
-    <entry>Character[13]#Lich#/1</entry>
-    <entry>Character[13]#Lich#/1,Character[9]#Vampire#/1d3+1,Vampire spawn/1d4+4</entry>
-  </collection>
-  <collection>
-    <name>Character[14]#Lich#</name>
-    <entry>Character[14]#Lich#/1</entry>
-    <entry>Character[14]#Lich#/1,Character[10]#Vampire#/1d3+1,Vampire spawn/1d4+4</entry>
-  </collection>
-  <collection>
-    <name>Character[15]#Lich#</name>
-    <entry>Character[15]#Lich#/1</entry>
-    <entry>Character[15]#Lich#/1,Character[11]#Vampire#/1d3+1,Vampire spawn/1d4+4</entry>
-  </collection>
-  <collection>
-    <name>Character[16]#Lich#</name>
-    <entry>Character[16]#Lich#/1</entry>
-    <entry>Character[16]#Lich#/1,Character[12]#Vampire#/1d3+1,Vampire spawn/1d4+4</entry>
-  </collection>
-  <collection>
-    <name>Character[17]#Lich#</name>
-    <entry>Character[17]#Lich#/1</entry>
-    <entry>Character[17]#Lich#/1,Character[13]#Vampire#/1d3+1,Vampire spawn/1d4+4</entry>
-  </collection>
-  <collection>
-    <name>Character[18]#Lich#</name>
-    <entry>Character[18]#Lich#/1</entry>
-    <entry>Character[18]#Lich#/1,Character[14]#Vampire#/1d3+1,Vampire spawn/1d4+4</entry>
-  </collection>
-  <collection>
-    <name>Character[19]#Lich#</name>
-    <entry>Character[19]#Lich#/1</entry>
-    <entry>Character[19]#Lich#/1,Character[15]#Vampire#/1d3+1,Vampire spawn/1d4+4</entry>
-  </collection>
-  <collection>
-    <name>Character[20]#Lich#</name>
-    <entry>Character[20]#Lich#/1</entry>
-    <entry>Character[20]#Lich#/1,Character[16]#Vampire#/1d3+1,Vampire spawn/1d4+4</entry>
-  </collection>
-  <collection>
-    <name>Lillend</name>
+    <name>Lillend (Solitary)</name>
     <entry>Lillend/1</entry>
-    <entry>Lillend/1d3+1</entry>
   </collection>
+	<collection>
+		<name>Lillends (Covey)</name>
+		<entry>Lillend/1d3+1</entry>
+	</collection>
   <collection>
     <name>Lion (Solitary)</name>
     <entry>Lion/1</entry>
@@ -9116,9 +9359,6 @@
     <entry>Dire lion/2d3+4</entry>
   </collection>
   <collection>
-    <name>Livestock$Noncombatant$</name>
-  </collection>
-  <collection>
     <name>Lizard (Solitary)</name>
     <entry>Lizard/1</entry>
   </collection>
@@ -9127,40 +9367,83 @@
     <entry>Monitor lizard/1</entry>
   </collection>
   <collection>
-    <name>Lizardfolk</name>
+    <name>Lizardfolk (Gang)</name>
     <entry>Lizardfolk/1d2+1</entry>
-    <entry>Lizardfolk/2d3+4,Lizardfolk$Noncombatant$/1d3+2,Character(Leader)[1d4+2]{Lizardfolk}/1</entry>
-    <entry>Lizardfolk/6d6+24,Character(Lieutenant)[1d4+2]{Lizardfolk}/2,Character(Leader)[2d4+2]{Lizardfolk}/1</entry>
   </collection>
+	<collection>
+		<name>Lizardfolk (Band)</name>
+		<entry>Lizardfolk/2d3+4</entry>
+		<entry>Lizardfolk$Noncombatant$/1d3+2</entry>
+		<entry>Character(Leader)[1d4+2]{Lizardfolk}/1</entry>
+	</collection>
+	<collection>
+		<name>Lizardfolk (Tribe)</name>
+		<entry>Lizardfolk/6d6+24</entry>
+		<entry>Character(Lieutenant)[1d4+2]{Lizardfolk}/2</entry>
+		<entry>Character(Leader)[2d4+2]{Lizardfolk}/1</entry>
+	</collection>
   <collection>
-    <name>Character[1]{Locathah}@Warrior@</name>
+    <name>Locathah (Company)</name>
     <entry>Character[1]{Locathah}@Warrior@/1d3+1</entry>
-    <entry>Character[1]{Locathah}@Warrior@/1d10+10,Character(Sergeant)[3]{Locathah}@Warrior@/2,Character(Leader)[1d4+2]{Locathah}@Warrior@/1</entry>
-    <entry>Character[1]{Locathah}@Warrior@/10d8+20,Locathah$Noncombatant$/10d8+20,Character(Sergeant)[3]{Locathah}@Warrior@/1d8+2,Character(Lieutenant)[5]{Locathah}@Warrior@/5,Character(Captain)[7]{Locathah}@Warrior@/3</entry>
   </collection>
+	<collection>
+		<name>Locathah (Patrol)</name>
+		<entry>Character[1]{Locathah}@Warrior@/1d10+10</entry>
+		<entry>Character(Sergeant)[3]{Locathah}@Warrior@/2</entry>
+		<entry>Character(Leader)[1d4+2]{Locathah}@Warrior@/1</entry>
+	</collection>
+	<collection>
+		<name>Locathah (Tribe)</name>
+		<entry>Character[1]{Locathah}@Warrior@/10d8+20</entry>
+		<entry>Locathah$Noncombatant$/10d8+20</entry>
+		<entry>Character(Sergeant)[3]{Locathah}@Warrior@/1d8+2</entry>
+		<entry>Character(Lieutenant)[5]{Locathah}@Warrior@/5</entry>
+		<entry>Character(Captain)[7]{Locathah}@Warrior@/3</entry>
+	</collection>
   <collection>
-    <name>Locust swarm</name>
+    <name>Locust Swarm (Solitary)</name>
     <entry>Locust swarm/1</entry>
-    <entry>Locust swarm/1d6+1</entry>
-    <entry>Locust swarm/1d10+10</entry>
   </collection>
+	<collection>
+		<name>Locust Swarms (Cloud)</name>
+		<entry>Locust swarm/1d6+1</entry>
+	</collection>
+	<collection>
+		<name>Locust Swarms (Plague)</name>
+		<entry>Locust swarm/1d10+10</entry>
+	</collection>
   <collection>
-    <name>Magmin</name>
+    <name>Magmin (Solitary)</name>
     <entry>Magmin/1</entry>
-    <entry>Magmin/1d3+1</entry>
-    <entry>Magmin/2d3+4</entry>
   </collection>
+	<collection>
+		<name>Magmins (Gang)</name>
+		<entry>Magmin/1d3+1</entry>
+	</collection>
+	<collection>
+		<name>Magmins (Squad)</name>
+		<entry>Magmin/2d3+4</entry>
+	</collection>
   <collection>
-    <name>Manta ray</name>
+    <name>Manta Ray (Solitary)</name>
     <entry>Manta ray/1</entry>
-    <entry>Manta ray/1d4+1</entry>
   </collection>
+	<collection>
+		<name>Manta Rays (School)</name>
+		<entry>Manta ray/1d4+1</entry>
+	</collection>
   <collection>
-    <name>Manticore</name>
+    <name>Manticore (Solitary)</name>
     <entry>Manticore/1</entry>
-    <entry>Manticore/2</entry>
-    <entry>Manticore/1d4+2</entry>
   </collection>
+	<collection>
+		<name>Manticores (Pair)</name>
+		<entry>Manticore/2</entry>
+	</collection>
+	<collection>
+		<name>Manticores (Pride)</name>
+		<entry>Manticore/1d4+2</entry>
+	</collection>
   <collection>
     <name>Marilith (Solitary)</name>
     <entry>Marilith/1</entry>
@@ -9170,82 +9453,37 @@
     <entry>Marilith/2</entry>
   </collection>
   <collection>
-    <name>Medusa</name>
+    <name>Medusa (Solitary)</name>
     <entry>Medusa/1</entry>
-    <entry>Medusa/1d3+1</entry>
   </collection>
+	<collection>
+		<name>Medusas (Covey)</name>
+		<entry>Medusa/1d3+1</entry>
+	</collection>
   <collection>
-    <name>Megaraptor</name>
+    <name>Megaraptor (Solitary)</name>
     <entry>Megaraptor/1</entry>
-    <entry>Megaraptor/2</entry>
-    <entry>Megaraptor/1d4+2</entry>
   </collection>
+	<collection>
+		<name>Megaraptors (Pair)</name>
+		<entry>Megaraptor/2</entry>
+	</collection>
+	<collection>
+		<name>Megaraptors (Pack)</name>
+		<entry>Megaraptor/1d4+2</entry>
+	</collection>
   <collection>
-    <name>Mephit[3]</name>
+    <name>Mephit (Solitary)</name>
     <entry>Mephit[3]/1</entry>
-    <entry>Mephit[3]/1d3+1</entry>
-    <entry>Mephit[3]/1d8+4</entry>
   </collection>
-  <collection>
-    <name>Mephit(Air)</name>
-    <entry>Mephit[3]/1</entry>
-    <entry>Mephit[3]/1d3+1</entry>
-    <entry>Mephit[3]/1d8+4</entry>
-  </collection>
-  <collection>
-    <name>Mephit(Dust)</name>
-    <entry>Mephit[3]/1</entry>
-    <entry>Mephit[3]/1d3+1</entry>
-    <entry>Mephit[3]/1d8+4</entry>
-  </collection>
-  <collection>
-    <name>Mephit(Earth)</name>
-    <entry>Mephit[3]/1</entry>
-    <entry>Mephit[3]/1d3+1</entry>
-    <entry>Mephit[3]/1d8+4</entry>
-  </collection>
-  <collection>
-    <name>Mephit(Fire)</name>
-    <entry>Mephit[3]/1</entry>
-    <entry>Mephit[3]/1d3+1</entry>
-    <entry>Mephit[3]/1d8+4</entry>
-  </collection>
-  <collection>
-    <name>Mephit(Ice)</name>
-    <entry>Mephit[3]/1</entry>
-    <entry>Mephit[3]/1d3+1</entry>
-    <entry>Mephit[3]/1d8+4</entry>
-  </collection>
-  <collection>
-    <name>Mephit(Magma)</name>
-    <entry>Mephit[3]/1</entry>
-    <entry>Mephit[3]/1d3+1</entry>
-    <entry>Mephit[3]/1d8+4</entry>
-  </collection>
-  <collection>
-    <name>Mephit(Ooze)</name>
-    <entry>Mephit[3]/1</entry>
-    <entry>Mephit[3]/1d3+1</entry>
-    <entry>Mephit[3]/1d8+4</entry>
-  </collection>
-  <collection>
-    <name>Mephit(Salt)</name>
-    <entry>Mephit[3]/1</entry>
-    <entry>Mephit[3]/1d3+1</entry>
-    <entry>Mephit[3]/1d8+4</entry>
-  </collection>
-  <collection>
-    <name>Mephit(Steam)</name>
-    <entry>Mephit[3]/1</entry>
-    <entry>Mephit[3]/1d3+1</entry>
-    <entry>Mephit[3]/1d8+4</entry>
-  </collection>
-  <collection>
-    <name>Mephit(Water)</name>
-    <entry>Mephit[3]/1</entry>
-    <entry>Mephit[3]/1d3+1</entry>
-    <entry>Mephit[3]/1d8+4</entry>
-  </collection>
+	<collection>
+		<name>Mephits (Gang)</name>
+		<entry>Mephit[3]/1d3+1</entry>
+	</collection>
+	<collection>
+		<name>Mephits (Mob)</name>
+		<entry>Mephit[3]/1d8+4</entry>
+	</collection>
   <collection>
     <name>Character[1]{Merfolk}@Warrior@</name>
     <entry>Character[1]{Merfolk}@Warrior@/1d3+1</entry>
@@ -9253,27 +9491,7 @@
     <entry>Character[1]{Merfolk}@Warrior@/6d6+24,Character(Sergeant)[3]{Merfolk}@Warrior@/1d2+1,Character(Lieutenant)[5]{Merfolk}@Warrior@/5,Character(Captain)[7]{Merfolk}@Warrior@/3,Porpoise/10</entry>
   </collection>
   <collection>
-    <name>Character(Lieutenant)[3]{Merfolk}@Warrior@</name>
-    <entry>Character[1]{Merfolk}@Warrior@/1d10+10,Character(Lieutenant)[3]{Merfolk}@Warrior@/2,Character(Leader)[1d4+2]{Merfolk}@Warrior@/1</entry>
-  </collection>
-  <collection>
-    <name>Character(Sergeant)[3]{Merfolk}@Warrior@</name>
-    <entry>Character[1]{Merfolk}@Warrior@/6d6+24,Character(Sergeant)[3]{Merfolk}@Warrior@/1d2+1,Character(Lieutenant)[5]{Merfolk}@Warrior@/5,Character(Captain)[7]{Merfolk}@Warrior@/3,Porpoise/10</entry>
-  </collection>
-  <collection>
-    <name>Character(Lieutenant)[5]{Merfolk}@Warrior@</name>
-    <entry>Character[1]{Merfolk}@Warrior@/6d6+24,Character(Sergeant)[3]{Merfolk}@Warrior@/1d2+1,Character(Lieutenant)[5]{Merfolk}@Warrior@/5,Character(Captain)[7]{Merfolk}@Warrior@/3,Porpoise/10</entry>
-  </collection>
-  <collection>
-    <name>Character(Leader)[1d4+2]{Merfolk}@Warrior@</name>
-    <entry>Character[1]{Merfolk}@Warrior@/1d10+10,Character(Lieutenant)[3]{Merfolk}@Warrior@/2,Character(Leader)[1d4+2]{Merfolk}@Warrior@/1</entry>
-  </collection>
-  <collection>
-    <name>Character(Captain)[7]{Merfolk}@Warrior@</name>
-    <entry>Character[1]{Merfolk}@Warrior@/6d6+24,Character(Sergeant)[3]{Merfolk}@Warrior@/1d2+1,Character(Lieutenant)[5]{Merfolk}@Warrior@/5,Character(Captain)[7]{Merfolk}@Warrior@/3,Porpoise/10</entry>
-  </collection>
-  <collection>
-    <name>Mimic</name>
+    <name>Mimic (Solitary)</name>
     <entry>Mimic/1</entry>
   </collection>
   <collection>
@@ -9282,9 +9500,6 @@
     <entry>Mind flayer/2</entry>
     <entry>Mind flayer/1d3+2</entry>
     <entry>Mind flayer/1d3+2,Grimlock/2d3+4</entry>
-    <entry>Character[9]{Mind Flayer}@Sorcerer@/1</entry>
-    <entry>Character[9]{Mind Flayer}@Sorcerer@/1,Mind flayer/1d3+1</entry>
-    <entry>Character[9]{Mind Flayer}@Sorcerer@/2,Mind flayer/1d3+1,Grimlock/2d3+4</entry>
   </collection>
   <collection>
     <name>Character[9]{Mind Flayer}@Sorcerer@</name>
@@ -9445,10 +9660,6 @@
     <entry>Ogre/2</entry>
     <entry>Ogre/1d2+2</entry>
     <entry>Ogre/1d4+4</entry>
-    <entry>Character[4]{Ogre}@Barbarian@/1</entry>
-    <entry>Character[4]{Ogre}@Barbarian@/2</entry>
-    <entry>Character[4]{Ogre}@Barbarian@/1,Ogre/1d3</entry>
-    <entry>Character[4]{Ogre}@Barbarian@/1,Ogre/1d4+3</entry>
   </collection>
   <collection>
     <name>Character[4]{Ogre}@Barbarian@</name>
@@ -9463,10 +9674,6 @@
     <entry>Ogre$Merrow$/2</entry>
     <entry>Ogre$Merrow$/1d2+2</entry>
     <entry>Ogre$Merrow$/1d4+4</entry>
-    <entry>Character[4]{Merrow}@Barbarian@/1</entry>
-    <entry>Character[4]{Merrow}@Barbarian@/2</entry>
-    <entry>Character[4]{Merrow}@Barbarian@/1,Ogre$Merrow$/1d3</entry>
-    <entry>Character[4]{Merrow}@Barbarian@/1,Ogre$Merrow$/1d4+3</entry>
   </collection>
   <collection>
     <name>Character[4]{Merrow}@Barbarian@</name>
@@ -9482,67 +9689,49 @@
     <entry>Ogre mage/1d2,Ogre/1d3+1</entry>
   </collection>
   <collection>
-    <name>Gray ooze</name>
+    <name>Gray Ooze (Solitary)</name>
     <entry>Gray ooze/1</entry>
   </collection>
   <collection>
-    <name>Ochre jelly</name>
+    <name>Ochre Jelly (Solitary)</name>
     <entry>Ochre jelly/1</entry>
   </collection>
   <collection>
-    <name>Orc$Noncombatant$</name>
-    <entry>Character[1]{Orc}@Warrior@/10d8+20,Orc$Noncombatant$/15d8+30,Character(Sergeant)[3]{Orc}@Warrior@/1d8+2,Character(Lieutenant)[5]{Orc}@Warrior@/5,Character(Captain)[7]{Orc}@Warrior@/3</entry>
-  </collection>
-  <collection>
-    <name>Character[1]{Orc}@Warrior@</name>
+    <name>Orcs (Gang)</name>
     <entry>Character[1]{Orc}@Warrior@/1d3+1</entry>
-    <entry>Character[1]{Orc}@Warrior@/1d10+10,Character(Sergeant)[3]{Orc}@Warrior@/2,Character(Leader)[1d4+2]{Orc}@Warrior@/1</entry>
-    <entry>Character[1]{Orc}@Warrior@/10d8+20,Orc$Noncombatant$/15d8+30,Character(Sergeant)[3]{Orc}@Warrior@/1d8+2,Character(Lieutenant)[5]{Orc}@Warrior@/5,Character(Captain)[7]{Orc}@Warrior@/3</entry>
   </collection>
+	<collection>
+		<name>Orcs (Squad)</name>
+		<entry>Character[1]{Orc}@Warrior@/1d10+10</entry>
+		<entry>Character(Sergeant)[3]{Orc}@Warrior@/2</entry>
+		<entry>Character(Leader)[1d4+2]{Orc}@Warrior@/1</entry>
+	</collection>
+	<collection>
+		<name>Orcs (Band)</name>
+		<entry>Character[1]{Orc}@Warrior@/10d8+20</entry>
+		<entry>Orc$Noncombatant$/15d8+30</entry>
+		<entry>Character(Sergeant)[3]{Orc}@Warrior@/1d8+2</entry>
+		<entry>Character(Lieutenant)[5]{Orc}@Warrior@/5</entry>
+		<entry>Character(Captain)[7]{Orc}@Warrior@/3</entry>
+	</collection>
   <collection>
-    <name>Character(Sergeant)[3]{Orc}@Warrior@</name>
-    <entry>Character[1]{Orc}@Warrior@/1d10+10,Character(Sergeant)[3]{Orc}@Warrior@/2,Character(Leader)[1d4+2]{Orc}@Warrior@/1</entry>
-    <entry>Character[1]{Orc}@Warrior@/10d8+20,Orc$Noncombatant$/15d8+30,Character(Sergeant)[3]{Orc}@Warrior@/1d8+2,Character(Lieutenant)[5]{Orc}@Warrior@/5,Character(Captain)[7]{Orc}@Warrior@/3</entry>
-  </collection>
-  <collection>
-    <name>Character(Lieutenant)[5]{Orc}@Warrior@</name>
-    <entry>Character[1]{Orc}@Warrior@/10d8+20,Orc$Noncombatant$/15d8+30,Character(Sergeant)[3]{Orc}@Warrior@/1d8+2,Character(Lieutenant)[5]{Orc}@Warrior@/5,Character(Captain)[7]{Orc}@Warrior@/3</entry>
-  </collection>
-  <collection>
-    <name>Character(Leader)[1d4+2]{Orc}@Warrior@</name>
-    <entry>Character[1]{Orc}@Warrior@/1d10+10,Character(Sergeant)[3]{Orc}@Warrior@/2,Character(Leader)[1d4+2]{Orc}@Warrior@/1</entry>
-  </collection>
-  <collection>
-    <name>Character(Captain)[7]{Orc}@Warrior@</name>
-    <entry>Character[1]{Orc}@Warrior@/10d8+20,Orc$Noncombatant$/15d8+30,Character(Sergeant)[3]{Orc}@Warrior@/1d8+2,Character(Lieutenant)[5]{Orc}@Warrior@/5,Character(Captain)[7]{Orc}@Warrior@/3</entry>
-  </collection>
-  <collection>
-    <name>Half-Orc$Noncombatant$</name>
-    <entry>Character[1]{Half-Orc}@Warrior@/10d8+20,Half-Orc$Noncombatant$/15d8+30,Character(Sergeant)[3]{Half-Orc}@Warrior@/1d8+2,Character(Lieutenant)[5]{Half-Orc}@Warrior@/5,Character(Captain)[7]{Half-Orc}@Warrior@/3</entry>
-  </collection>
-  <collection>
-    <name>Character[1]{Half-Orc}@Warrior@</name>
+    <name>Half-Orcs (Gang)</name>
     <entry>Character[1]{Half-Orc}@Warrior@/1d3+1</entry>
-    <entry>Character[1]{Half-Orc}@Warrior@/1d10+10,Character(Sergeant)[3]{Half-Orc}@Warrior@/2,Character(Leader)[1d4+2]{Half-Orc}@Warrior@/1</entry>
-    <entry>Character[1]{Half-Orc}@Warrior@/10d8+20,Half-Orc$Noncombatant$/15d8+30,Character(Sergeant)[3]{Half-Orc}@Warrior@/1d8+2,Character(Lieutenant)[5]{Half-Orc}@Warrior@/5,Character(Captain)[7]{Half-Orc}@Warrior@/3</entry>
   </collection>
-  <collection>
-    <name>Character(Sergeant)[3]{Half-Orc}@Warrior@</name>
-    <entry>Character[1]{Half-Orc}@Warrior@/1d10+10,Character(Sergeant)[3]{Half-Orc}@Warrior@/2,Character(Leader)[1d4+2]{Half-Orc}@Warrior@/1</entry>
-    <entry>Character[1]{Half-Orc}@Warrior@/10d8+20,Half-Orc$Noncombatant$/15d8+30,Character(Sergeant)[3]{Half-Orc}@Warrior@/1d8+2,Character(Lieutenant)[5]{Half-Orc}@Warrior@/5,Character(Captain)[7]{Half-Orc}@Warrior@/3</entry>
-  </collection>
-  <collection>
-    <name>Character(Lieutenant)[5]{Half-Orc}@Warrior@</name>
-    <entry>Character[1]{Half-Orc}@Warrior@/10d8+20,Half-Orc$Noncombatant$/15d8+30,Character(Sergeant)[3]{Half-Orc}@Warrior@/1d8+2,Character(Lieutenant)[5]{Half-Orc}@Warrior@/5,Character(Captain)[7]{Half-Orc}@Warrior@/3</entry>
-  </collection>
-  <collection>
-    <name>Character(Leader)[1d4+2]{Half-Orc}@Warrior@</name>
-    <entry>Character[1]{Half-Orc}@Warrior@/1d10+10,Character(Sergeant)[3]{Half-Orc}@Warrior@/2,Character(Leader)[1d4+2]{Half-Orc}@Warrior@/1</entry>
-  </collection>
-  <collection>
-    <name>Character(Captain)[7]{Half-Orc}@Warrior@</name>
-    <entry>Character[1]{Half-Orc}@Warrior@/10d8+20,Half-Orc$Noncombatant$/15d8+30,Character(Sergeant)[3]{Half-Orc}@Warrior@/1d8+2,Character(Lieutenant)[5]{Half-Orc}@Warrior@/5,Character(Captain)[7]{Half-Orc}@Warrior@/3</entry>
-  </collection>
+	<collection>
+		<name>Half-Orcs (Squad)</name>
+		<entry>Character[1]{Half-Orc}@Warrior@/1d10+10</entry>
+		<entry>Character(Sergeant)[3]{Half-Orc}@Warrior@/2</entry>
+		<entry>Character(Leader)[1d4+2]{Half-Orc}@Warrior@/1</entry>
+	</collection>
+	<collection>
+		<name>Half-Orcs (Band)</name>
+		<entry>Character[1]{Half-Orc}@Warrior@/10d8+20</entry>
+		<entry>Half-Orc$Noncombatant$/15d8+30</entry>
+		<entry>Character(Sergeant)[3]{Half-Orc}@Warrior@/1d8+2</entry>
+		<entry>Character(Lieutenant)[5]{Half-Orc}@Warrior@/5</entry>
+		<entry>Character(Captain)[7]{Half-Orc}@Warrior@/3</entry>
+	</collection>
   <collection>
     <name>Otyugh (Solitary)</name>
     <entry>Otyugh/1</entry>
@@ -9911,20 +10100,29 @@
     <entry>Monstrous scorpion$Small$/1d6+5</entry>
   </collection>
   <collection>
-    <name>Monstrous scorpion$Medium$</name>
+    <name>Medium Monstrous Scorpion (Solitary)</name>
     <entry>Monstrous scorpion$Medium$/1</entry>
-    <entry>Monstrous scorpion$Medium$/1d4+1</entry>
   </collection>
+	<collection>
+		<name>Medium Monstrous Scorpions (Colony)</name>
+		<entry>Monstrous scorpion$Medium$/1d4+1</entry>
+	</collection>
   <collection>
-    <name>Monstrous scorpion$Large$</name>
+    <name>Large Monstrous Scorpion (Solitary)</name>
     <entry>Monstrous scorpion$Large$/1</entry>
-    <entry>Monstrous scorpion$Large$/1d4+1</entry>
   </collection>
+	<collection>
+		<name>Large Monstrous Scorpions (Colony)</name>
+		<entry>Monstrous scorpion$Large$/1d4+1</entry>
+	</collection>
   <collection>
-    <name>Monstrous scorpion$Huge$</name>
+    <name>Huge Monstrous Scorpion (Solitary)</name>
     <entry>Monstrous scorpion$Huge$/1</entry>
-    <entry>Monstrous scorpion$Huge$/1d4+1</entry>
   </collection>
+	<collection>
+		<name>Huge Monstrous Scorpions (Colony)</name>
+		<entry>Monstrous scorpion$Huge$/1d4+1</entry>
+	</collection>
   <collection>
     <name>Gargantuan Monstrous Scorpion (Solitary)</name>
     <entry>Monstrous scorpion$Gargantuan$/1</entry>
@@ -9981,23 +10179,41 @@
     <entry>Dire shark/1d4+1</entry>
   </collection>
   <collection>
-    <name>Shark$Medium$</name>
+	  <name>Medium Shark (Solitary)</name>
     <entry>Shark$Medium$/1</entry>
-    <entry>Shark$Medium$/1d4+1</entry>
-    <entry>Shark$Medium$/1d6+5</entry>
   </collection>
+	<collection>
+		<name>Medium Sharks (School)</name>
+		<entry>Shark$Medium$/1d4+1</entry>
+	</collection>
+	<collection>
+		<name>Medium Sharks (Pack)</name>
+		<entry>Shark$Medium$/1d6+5</entry>
+	</collection>
   <collection>
-    <name>Shark$Large$</name>
+	  <name>Large Shark (Solitary)</name>
     <entry>Shark$Large$/1</entry>
-    <entry>Shark$Large$/1d4+1</entry>
-    <entry>Shark$Large$/1d6+5</entry>
   </collection>
+	<collection>
+		<name>Large Sharks (School)</name>
+		<entry>Shark$Large$/1d4+1</entry>
+	</collection>
+	<collection>
+		<name>Large Sharks (Pack)</name>
+		<entry>Shark$Large$/1d6+5</entry>
+	</collection>
   <collection>
-    <name>Shark$Huge$</name>
+    <name>Huge Shark (Solitary)</name>
     <entry>Shark$Huge$/1</entry>
-    <entry>Shark$Huge$/1d4+1</entry>
-    <entry>Shark$Huge$/1d6+5</entry>
   </collection>
+	<collection>
+		<name>Huge Sharks (School)</name>
+		<entry>Shark$Huge$/1d4+1</entry>
+	</collection>
+	<collection>
+		<name>Huge Sharks (Pack)</name>
+		<entry>Shark$Huge$/1d6+5</entry>
+	</collection>
   <collection>
     <name>Shield Guardian (Solitary)</name>
     <entry>Shield guardian/1</entry>
@@ -10222,20 +10438,29 @@
     <entry>Monstrous spider$Small$/1d6+5</entry>
   </collection>
   <collection>
-    <name>Monstrous spider$Medium$</name>
+    <name>Medium Monstrous Spider (Solitary)</name>
     <entry>Monstrous spider$Medium$/1</entry>
-    <entry>Monstrous spider$Medium$/1d4+1</entry>
   </collection>
+	<collection>
+		<name>Medium Monstrous Spiders (Colony)</name>
+		<entry>Monstrous spider$Medium$/1d4+1</entry>
+	</collection>
   <collection>
-    <name>Monstrous spider$Large$</name>
+    <name>Large Monstrous Spider (Solitary)</name>
     <entry>Monstrous spider$Large$/1</entry>
-    <entry>Monstrous spider$Large$/1d4+1</entry>
   </collection>
+	<collection>
+		<name>Large Monstrous Spiders (Colony)</name>
+		<entry>Monstrous spider$Large$/1d4+1</entry>
+	</collection>
   <collection>
-    <name>Monstrous spider$Huge$</name>
+    <name>Huge Monstrous Spider (Solitary)</name>
     <entry>Monstrous spider$Huge$/1</entry>
-    <entry>Monstrous spider$Huge$/1d4+1</entry>
   </collection>
+	<collection>
+		<name>Huge Monstrous Spiders (Colony)</name>
+		<entry>Monstrous spider$Huge$/1d4+1</entry>
+	</collection>
   <collection>
     <name>Gargantuan Monstrous Spider (Solitary)</name>
     <entry>Monstrous spider$Gargantuan$/1</entry>
@@ -10267,25 +10492,41 @@
     <entry>Giant squid/1</entry>
   </collection>
   <collection>
-    <name>Grig</name>
+    <name>Grigs (Gang)</name>
     <entry>Grig/1d3+1</entry>
-    <entry>Grig/1d6+5</entry>
-    <entry>Grig/12d6+8</entry>
   </collection>
+	<collection>
+		<name>Grigs (Band)</name>
+		<entry>Grig/1d6+5</entry>
+	</collection>
+	<collection>
+		<name>Grigs (Tribe)</name>
+		<entry>Grig/12d6+8</entry>
+	</collection>
   <collection>
-    <name>Nixie</name>
+    <name>Nixies (Gang)</name>
     <entry>Nixie/1d3+1</entry>
-    <entry>Nixie/1d6+5</entry>
-    <entry>Nixie/12d6+8</entry>
   </collection>
+	<collection>
+		<name>Nixies (Band)</name>
+		<entry>Nixie/1d6+5</entry>
+	</collection>
+	<collection>
+		<name>Nixies (Tribe)</name>
+		<entry>Nixie/12d6+8</entry>
+	</collection>
   <collection>
-    <name>Pixie</name>
+    <name>Pixies (Gang)</name>
     <entry>Pixie/1d3+1</entry>
-    <entry>Pixie/1d6+5</entry>
-    <entry>Pixie/12d6+8</entry>
-    <entry>Pixie$with Irresistable Dance$/1,Pixie/1d6+4</entry>
-    <entry>Pixie$with Irresistable Dance$/2d4,Pixie/6d10+12</entry>
   </collection>
+	<collection>
+		<name>Pixies (Bamd)</name>
+		<entry>Pixie/1d6+5</entry>
+	</collection>
+	<collection>
+		<name>Pixies (Tribe)</name>
+		<entry>Pixie/12d6+8</entry>
+	</collection>
   <collection>
     <name>Pixie$with Irresistable Dance$</name>
     <entry>Pixie$with Irresistable Dance$/1,Pixie/1d6+4</entry>
@@ -11237,23 +11478,41 @@
     <entry>Yuan-ti$Pureblood$/20d8,Yuan-ti$Halfblood$/10d8,Yuan-ti$Abomination$/6d6+4</entry>
   </collection>
   <collection>
-    <name>Zombie$Kobold$</name>
+    <name>Kobold Zombies (Small Group)</name>
     <entry>Zombie$Kobold$/1d4</entry>
-    <entry>Zombie$Kobold$/1d6+4</entry>
-    <entry>Zombie$Kobold$/1d10+10</entry>
   </collection>
+	<collection>
+		<name>Kobold Zombies (Group)</name>
+		<entry>Zombie$Kobold$/1d6+4</entry>
+	</collection>
+	<collection>
+		<name>Kobold Zombies (Large Group)</name>
+		<entry>Zombie$Kobold$/1d10+10</entry>
+	</collection>
   <collection>
-    <name>Zombie$Human$</name>
+    <name>Human Zombies (Small Group)</name>
     <entry>Zombie$Human$/1d4</entry>
-    <entry>Zombie$Human$/1d6+4</entry>
-    <entry>Zombie$Human$/1d10+10</entry>
   </collection>
+	<collection>
+		<name>Human Zombies (Group)</name>
+		<entry>Zombie$Human$/1d6+4</entry>
+	</collection>
+	<collection>
+		<name>Human Zombies (Large Group)</name>
+		<entry>Zombie$Human$/1d10+10</entry>
+	</collection>
   <collection>
-    <name>Zombie$Troglodyte$</name>
+    <name>Troglodyte Zombies (Small Group)</name>
     <entry>Zombie$Troglodyte$/1d4</entry>
-    <entry>Zombie$Troglodyte$/1d6+4</entry>
-    <entry>Zombie$Troglodyte$/1d10+10</entry>
   </collection>
+	<collection>
+		<name>Troglodyte Zombies (Group)</name>
+		<entry>Zombie$Troglodyte$/1d6+4</entry>
+	</collection>
+	<collection>
+		<name>Troglodyte Zombies (Large Group)</name>
+		<entry>Zombie$Troglodyte$/1d10+10</entry>
+	</collection>
   <collection>
     <name>Bugbear Zombies (Small Group)</name>
     <entry>Zombie$Bugbear$/1d4</entry>
