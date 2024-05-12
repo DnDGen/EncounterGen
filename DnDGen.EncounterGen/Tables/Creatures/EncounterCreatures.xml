@@ -3823,220 +3823,48 @@
     <entry>Character(Hitman)[20]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@/1</entry>
   </collection>
   <collection>
-    <name>Character(Hunter)[1]@Commoner&amp;Warrior@</name>
+    <name>Hunters [Level 1] (Hunting Party)</name>
     <entry>Character(Hunter)[1]@Commoner&amp;Warrior@/1d4</entry>
   </collection>
   <collection>
-    <name>Character(Hunter)[1d2+1]@Commoner&amp;Warrior@</name>
+	  <name>Hunters [Level 2-3] (Hunting Party)</name>
     <entry>Character(Hunter)[1d2+1]@Commoner&amp;Warrior@/1d4</entry>
   </collection>
   <collection>
-    <name>Character(Hunter)[1d2+3]@Commoner&amp;Warrior@</name>
+	  <name>Hunters [Level 4-5] (Hunting Party)</name>
     <entry>Character(Hunter)[1d2+3]@Commoner&amp;Warrior@/1d4</entry>
   </collection>
   <collection>
-    <name>Character(Hunter)[1d2+5]@Commoner&amp;Warrior@</name>
+	  <name>Hunters [Level 6-7] (Hunting Party)</name>
     <entry>Character(Hunter)[1d2+5]@Commoner&amp;Warrior@/1d4</entry>
   </collection>
   <collection>
-    <name>Character(Hunter)[1d2+7]@Commoner&amp;Warrior@</name>
-    <entry>Character(Hunter)[1d2+7]@Commoner&amp;Warrior@/1d4</entry>
+	  <name>Hunters [Level 8-9] (Hunting Party)</name>
+	  <entry>Character(Hunter)[1d2+7]@Commoner&amp;Warrior@/1d4</entry>
   </collection>
   <collection>
-    <name>Character(Hunter)[1d2+9]@Commoner&amp;Warrior@</name>
+	  <name>Hunters [Level 10-11] (Hunting Party)</name>
     <entry>Character(Hunter)[1d2+9]@Commoner&amp;Warrior@/1d4</entry>
   </collection>
   <collection>
-    <name>Character(Hunter)[1d2+11]@Commoner&amp;Warrior@</name>
+	  <name>Hunters [Level 12-13] (Hunting Party)</name>
     <entry>Character(Hunter)[1d2+11]@Commoner&amp;Warrior@/1d4</entry>
   </collection>
   <collection>
-    <name>Character(Hunter)[1d2+13]@Commoner&amp;Warrior@</name>
+	  <name>Hunters [Level 14-15] (Hunting Party)</name>
     <entry>Character(Hunter)[1d2+13]@Commoner&amp;Warrior@/1d4</entry>
   </collection>
   <collection>
-    <name>Character(Hunter)[1d2+15]@Commoner&amp;Warrior@</name>
+	  <name>Hunters [Level 16-17] (Hunting Party)</name>
     <entry>Character(Hunter)[1d2+15]@Commoner&amp;Warrior@/1d4</entry>
   </collection>
   <collection>
-    <name>Character(Hunter)[1d2+17]@Commoner&amp;Warrior@</name>
+	  <name>Hunters [Level 18-19] (Hunting Party)</name>
     <entry>Character(Hunter)[1d2+17]@Commoner&amp;Warrior@/1d4</entry>
   </collection>
   <collection>
-    <name>Character(Hunter)[20]@Commoner&amp;Warrior@</name>
+	  <name>Hunters [Level 20] (Hunting Party)</name>
     <entry>Character(Hunter)[20]@Commoner&amp;Warrior@/1d4</entry>
-  </collection>
-  <collection>
-    <name>Character(Leader)[1]@Bard@</name>
-    <entry>Character(Minstrel)[1]@Commoner&amp;Expert@/2d4+1,Character(Leader)[1]@Bard@/1d10-9</entry>
-  </collection>
-  <collection>
-    <name>Character(Leader)[2]@Bard@</name>
-    <entry>Character(Minstrel)[1d2+1]@Commoner&amp;Expert@/2d4+1,Character(Leader)[2]@Bard@/1d10-9</entry>
-  </collection>
-  <collection>
-    <name>Character(Leader)[3]@Bard@</name>
-    <entry>Character(Minstrel)[1d2+3]@Commoner&amp;Expert@/2d4+1,Character(Leader)[3]@Bard@/1d10-9</entry>
-  </collection>
-  <collection>
-    <name>Character(Leader)[4]@Bard@</name>
-    <entry>Character(Minstrel)[1d2+5]@Commoner&amp;Expert@/2d4+1,Character(Leader)[4]@Bard@/1d10-9</entry>
-  </collection>
-  <collection>
-    <name>Character(Leader)[5]@Bard@</name>
-    <entry>Character(Minstrel)[1d2+7]@Commoner&amp;Expert@/2d4+1,Character(Leader)[5]@Bard@/1d10-9</entry>
-  </collection>
-  <collection>
-    <name>Character(Leader)[6]@Bard@</name>
-    <entry>Character(Minstrel)[1d2+9]@Commoner&amp;Expert@/2d4+1,Character(Leader)[6]@Bard@/1d10-9</entry>
-  </collection>
-  <collection>
-    <name>Character(Leader)[7]@Bard@</name>
-    <entry>Character(Minstrel)[1d2+11]@Commoner&amp;Expert@/2d4+1,Character(Leader)[7]@Bard@/1d10-9</entry>
-  </collection>
-  <collection>
-    <name>Character(Leader)[8]@Bard@</name>
-    <entry>Character(Minstrel)[1d2+13]@Commoner&amp;Expert@/2d4+1,Character(Leader)[8]@Bard@/1d10-9</entry>
-  </collection>
-  <collection>
-    <name>Character(Leader)[9]@Bard@</name>
-    <entry>Character(Minstrel)[1d2+15]@Commoner&amp;Expert@/2d4+1,Character(Leader)[9]@Bard@/1d10-9</entry>
-  </collection>
-  <collection>
-    <name>Character(Leader)[10]@Bard@</name>
-    <entry>Character(Minstrel)[1d2+17]@Commoner&amp;Expert@/2d4+1,Character(Leader)[10]@Bard@/1d10-9</entry>
-  </collection>
-  <collection>
-    <name>Character(Leader)[11]@Bard@</name>
-    <entry>Character(Minstrel)[20]@Commoner&amp;Expert@/2d4+1,Character(Leader)[11]@Bard@/1d10-9</entry>
-  </collection>
-  <collection>
-    <name>Character(Leader)[1]@Cleric@</name>
-    <entry>Character(Pilgrim)[1]@Commoner@/1d10+6,Character(Guard)[1]@Warrior@/1d6-1,Character(Leader)[1]@Cleric@/1</entry>
-  </collection>
-  <collection>
-    <name>Character(Leader)[2]@Cleric@</name>
-    <entry>Character(Pilgrim)[1d2+1]@Commoner@/1d10+6,Character(Guard)[1d2+1]@Warrior@/1d6-1,Character(Leader)[2]@Cleric@/1</entry>
-  </collection>
-  <collection>
-    <name>Character(Leader)[3]@Cleric@</name>
-    <entry>Character(Pilgrim)[1d2+3]@Commoner@/1d10+6,Character(Guard)[1d2+3]@Warrior@/1d6-1,Character(Leader)[3]@Cleric@/1</entry>
-  </collection>
-  <collection>
-    <name>Character(Leader)[4]@Cleric@</name>
-    <entry>Character(Pilgrim)[1d2+5]@Commoner@/1d10+6,Character(Guard)[1d2+5]@Warrior@/1d6-1,Character(Leader)[4]@Cleric@/1</entry>
-  </collection>
-  <collection>
-    <name>Character(Leader)[5]@Cleric@</name>
-    <entry>Character(Pilgrim)[1d2+7]@Commoner@/1d10+6,Character(Guard)[1d2+7]@Warrior@/1d6-1,Character(Leader)[5]@Cleric@/1</entry>
-  </collection>
-  <collection>
-    <name>Character(Leader)[6]@Cleric@</name>
-    <entry>Character(Pilgrim)[1d2+9]@Commoner@/1d10+6,Character(Guard)[1d2+9]@Warrior@/1d6-1,Character(Leader)[6]@Cleric@/1</entry>
-  </collection>
-  <collection>
-    <name>Character(Leader)[7]@Cleric@</name>
-    <entry>Character(Pilgrim)[1d2+11]@Commoner@/1d10+6,Character(Guard)[1d2+11]@Warrior@/1d6-1,Character(Leader)[7]@Cleric@/1</entry>
-  </collection>
-  <collection>
-    <name>Character(Leader)[8]@Cleric@</name>
-    <entry>Character(Pilgrim)[1d2+13]@Commoner@/1d10+6,Character(Guard)[1d2+13]@Warrior@/1d6-1,Character(Leader)[8]@Cleric@/1</entry>
-  </collection>
-  <collection>
-    <name>Character(Leader)[9]@Cleric@</name>
-    <entry>Character(Pilgrim)[1d2+15]@Commoner@/1d10+6,Character(Guard)[1d2+15]@Warrior@/1d6-1,Character(Leader)[9]@Cleric@/1</entry>
-  </collection>
-  <collection>
-    <name>Character(Leader)[10]@Cleric@</name>
-    <entry>Character(Pilgrim)[1d2+17]@Commoner@/1d10+6,Character(Guard)[1d2+17]@Warrior@/1d6-1,Character(Leader)[10]@Cleric@/1</entry>
-  </collection>
-  <collection>
-    <name>Character(Leader)[11]@Cleric@</name>
-    <entry>Character(Pilgrim)[20]@Commoner@/1d10+6,Character(Guard)[20]@Warrior@/1d6-1,Character(Leader)[11]@Cleric@/1</entry>
-  </collection>
-  <collection>
-    <name>Character(Leader)[1]@Fighter@</name>
-    <entry>Character(Bandit)[1]@Warrior@/1d10+4,Character(Leader)[1]@Fighter@/1</entry>
-  </collection>
-  <collection>
-    <name>Character(Leader)[2]@Fighter@</name>
-    <entry>Character(Bandit)[1d2+1]@Warrior@/1d10+4,Character(Leader)[2]@Fighter@/1</entry>
-  </collection>
-  <collection>
-    <name>Character(Leader)[3]@Fighter@</name>
-    <entry>Character(Bandit)[1d2+3]@Warrior@/1d10+4,Character(Leader)[3]@Fighter@/1</entry>
-  </collection>
-  <collection>
-    <name>Character(Leader)[4]@Fighter@</name>
-    <entry>Character(Bandit)[1d2+5]@Warrior@/1d10+4,Character(Leader)[4]@Fighter@/1</entry>
-  </collection>
-  <collection>
-    <name>Character(Leader)[5]@Fighter@</name>
-    <entry>Character(Bandit)[1d2+7]@Warrior@/1d10+4,Character(Leader)[5]@Fighter@/1</entry>
-  </collection>
-  <collection>
-    <name>Character(Leader)[6]@Fighter@</name>
-    <entry>Character(Bandit)[1d2+9]@Warrior@/1d10+4,Character(Leader)[6]@Fighter@/1</entry>
-  </collection>
-  <collection>
-    <name>Character(Leader)[7]@Fighter@</name>
-    <entry>Character(Bandit)[1d2+11]@Warrior@/1d10+4,Character(Leader)[7]@Fighter@/1</entry>
-  </collection>
-  <collection>
-    <name>Character(Leader)[8]@Fighter@</name>
-    <entry>Character(Bandit)[1d2+13]@Warrior@/1d10+4,Character(Leader)[8]@Fighter@/1</entry>
-  </collection>
-  <collection>
-    <name>Character(Leader)[9]@Fighter@</name>
-    <entry>Character(Bandit)[1d2+15]@Warrior@/1d10+4,Character(Leader)[9]@Fighter@/1</entry>
-  </collection>
-  <collection>
-    <name>Character(Leader)[10]@Fighter@</name>
-    <entry>Character(Bandit)[1d2+17]@Warrior@/1d10+4,Character(Leader)[10]@Fighter@/1</entry>
-  </collection>
-  <collection>
-    <name>Character(Leader)[11]@Fighter@</name>
-    <entry>Character(Bandit)[20]@Warrior@/1d10+4,Character(Leader)[11]@Fighter@/1</entry>
-  </collection>
-  <collection>
-    <name>Character(Leader)[1d2+1]@Warrior@</name>
-    <entry>Character(Bandit)[1]@Warrior@/1d10+4,Character(Leader)[1d2+1]@Warrior@/1</entry>
-  </collection>
-  <collection>
-    <name>Character(Leader)[1d2+3]@Warrior@</name>
-    <entry>Character(Bandit)[1d2+1]@Warrior@/1d10+4,Character(Leader)[1d2+3]@Warrior@/1</entry>
-  </collection>
-  <collection>
-    <name>Character(Leader)[1d2+5]@Warrior@</name>
-    <entry>Character(Bandit)[1d2+3]@Warrior@/1d10+4,Character(Leader)[1d2+5]@Warrior@/1</entry>
-  </collection>
-  <collection>
-    <name>Character(Leader)[1d2+7]@Warrior@</name>
-    <entry>Character(Bandit)[1d2+5]@Warrior@/1d10+4,Character(Leader)[1d2+7]@Warrior@/1</entry>
-  </collection>
-  <collection>
-    <name>Character(Leader)[1d2+9]@Warrior@</name>
-    <entry>Character(Bandit)[1d2+7]@Warrior@/1d10+4,Character(Leader)[1d2+9]@Warrior@/1</entry>
-  </collection>
-  <collection>
-    <name>Character(Leader)[1d2+11]@Warrior@</name>
-    <entry>Character(Bandit)[1d2+9]@Warrior@/1d10+4,Character(Leader)[1d2+11]@Warrior@/1</entry>
-  </collection>
-  <collection>
-    <name>Character(Leader)[1d2+13]@Warrior@</name>
-    <entry>Character(Bandit)[1d2+11]@Warrior@/1d10+4,Character(Leader)[1d2+13]@Warrior@/1</entry>
-  </collection>
-  <collection>
-    <name>Character(Leader)[1d2+15]@Warrior@</name>
-    <entry>Character(Bandit)[1d2+13]@Warrior@/1d10+4,Character(Leader)[1d2+15]@Warrior@/1</entry>
-  </collection>
-  <collection>
-    <name>Character(Leader)[1d2+17]@Warrior@</name>
-    <entry>Character(Bandit)[1d2+15]@Warrior@/1d10+4,Character(Leader)[1d2+17]@Warrior@/1</entry>
-  </collection>
-  <collection>
-    <name>Character(Leader)[20]@Warrior@</name>
-    <entry>Character(Bandit)[1d2+17]@Warrior@/1d10+4,Character(Leader)[20]@Warrior@/1</entry>
   </collection>
   <collection>
     <name>Mechants [Level 1] (Caravan)</name>

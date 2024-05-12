@@ -51,13 +51,13 @@ namespace DnDGen.EncounterGen.Generators
             return characters;
         }
 
-        private bool IsCharacter(CreatureType creatureType)
+        private bool IsCharacter(EncounterCreature creatureType)
         {
             if (IsCharacter(creatureType.Name))
                 return true;
 
-            if (creatureType.SubType != null)
-                return IsCharacter(creatureType.SubType);
+            if (creatureType.SubCreature != null)
+                return IsCharacter(creatureType.SubCreature);
 
             return false;
         }
@@ -125,13 +125,13 @@ namespace DnDGen.EncounterGen.Generators
             return characterGenerator.GenerateWith(alignmentRandomizer, chosenClassNameRandomizer, setLevelRandomizer, chosenBaseRaceRandomizer, chosenMetaraceRandomizer, abilitiesRandomizer);
         }
 
-        private string GetCharacterTemplate(CreatureType creaturetype)
+        private string GetCharacterTemplate(EncounterCreature creaturetype)
         {
             if (IsCharacter(creaturetype.Name))
                 return creaturetype.Name;
 
-            if (creaturetype.SubType != null)
-                return GetCharacterTemplate(creaturetype.SubType);
+            if (creaturetype.SubCreature != null)
+                return GetCharacterTemplate(creaturetype.SubCreature);
 
             return string.Empty;
         }

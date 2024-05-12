@@ -107,7 +107,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
             var creature = encounter.Creatures.Single();
             Assert.That(creature.Type.Name, Is.EqualTo("creature"));
             Assert.That(creature.Type.Description, Is.Empty);
-            Assert.That(creature.Type.SubType, Is.Null);
+            Assert.That(creature.Type.SubCreature, Is.Null);
             Assert.That(creature.Quantity, Is.EqualTo(42));
             Assert.That(creature.ChallengeRating, Is.EqualTo("challenge rating"));
         }
@@ -130,7 +130,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
             var creature = encounter.Creatures.Single();
             Assert.That(creature.Type.Name, Is.EqualTo("creature"));
             Assert.That(creature.Type.Description, Is.Empty);
-            Assert.That(creature.Type.SubType, Is.Null);
+            Assert.That(creature.Type.SubCreature, Is.Null);
             Assert.That(creature.Quantity, Is.EqualTo(42));
             Assert.That(creature.ChallengeRating, Is.EqualTo("challenge rating"));
         }
@@ -148,7 +148,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
             var creature = encounter.Creatures.Single();
             Assert.That(creature.Type.Name, Is.EqualTo("creature"));
             Assert.That(creature.Type.Description, Is.Empty);
-            Assert.That(creature.Type.SubType, Is.Null);
+            Assert.That(creature.Type.SubCreature, Is.Null);
             Assert.That(creature.Quantity, Is.EqualTo(42));
             Assert.That(creature.ChallengeRating, Is.EqualTo("challenge rating"));
 
@@ -181,7 +181,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
         {
             mockCreatureGenerator
                 .SetupSequence(g => g.GenerateFor("my encounter"))
-                .Returns(new[] { new Creature { Type = new CreatureType { Name = "bad creature" }, Quantity = 666 } })
+                .Returns(new[] { new Creature { Type = new EncounterCreature { Name = "bad creature" }, Quantity = 666 } })
                 .Returns(creatures);
 
             mockEncounterVerifier

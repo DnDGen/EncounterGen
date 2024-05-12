@@ -38,7 +38,7 @@ namespace DnDGen.EncounterGen.Generators
             return creatures;
         }
 
-        private CreatureType CleanCreatureType(CreatureType creatureType)
+        private EncounterCreature CleanCreatureType(EncounterCreature creatureType)
         {
             var baseRace = encounterFormatter.SelectBaseRaceFrom(creatureType.Name);
             var metarace = encounterFormatter.SelectMetaraceFrom(creatureType.Name);
@@ -47,10 +47,10 @@ namespace DnDGen.EncounterGen.Generators
             if (string.IsNullOrEmpty(creatureType.Description))
                 creatureType.Description = encounterFormatter.SelectDescriptionFrom(creatureType.Name);
 
-            if (!string.IsNullOrEmpty(subtype) && creatureType.SubType == null)
+            if (!string.IsNullOrEmpty(subtype) && creatureType.SubCreature == null)
             {
-                creatureType.SubType = new CreatureType();
-                creatureType.SubType.Name = subtype;
+                creatureType.SubCreature = new EncounterCreature();
+                creatureType.SubCreature.Name = subtype;
             }
 
             if (!string.IsNullOrEmpty(baseRace))
@@ -60,8 +60,8 @@ namespace DnDGen.EncounterGen.Generators
             else
                 creatureType.Name = encounterFormatter.SelectNameFrom(creatureType.Name);
 
-            if (creatureType.SubType != null)
-                creatureType.SubType = CleanCreatureType(creatureType.SubType);
+            if (creatureType.SubCreature != null)
+                creatureType.SubCreature = CleanCreatureType(creatureType.SubCreature);
 
             return creatureType;
         }
@@ -85,17 +85,17 @@ namespace DnDGen.EncounterGen.Generators
             return new[] { creature };
         }
 
-        private bool SubtypeNotFilled(Creature creature) => creature.Type.SubType == null || string.IsNullOrEmpty(creature.Type.SubType.Name);
+        private bool SubtypeNotFilled(Creature creature) => creature.Type.SubCreature == null || string.IsNullOrEmpty(creature.Type.SubCreature.Name);
 
-        private CreatureType GetCreatureType(string fullCreature)
+        private EncounterCreature GetCreatureType(string fullCreature)
         {
-            var creatureType = new CreatureType();
+            var creatureType = new EncounterCreature();
             creatureType.Name = fullCreature;
             creatureType.Description = encounterFormatter.SelectDescriptionFrom(fullCreature);
 
             var subtype = encounterFormatter.SelectSubtypeFrom(fullCreature);
             if (!string.IsNullOrEmpty(subtype))
-                creatureType.SubType = GetCreatureType(subtype);
+                creatureType.SubCreature = GetCreatureType(subtype);
 
             return creatureType;
         }
@@ -107,13 +107,13 @@ namespace DnDGen.EncounterGen.Generators
             while (creatures.Sum(c => c.Quantity) < sourceCreature.Quantity)
             {
                 var subtype = GetRandomSubtype(sourceCreature.Type);
-                var creature = creatures.FirstOrDefault(c => CreatureType.AreEqual(c.Type.SubType, subtype));
+                var creature = creatures.FirstOrDefault(c => EncounterCreature.AreEqual(c.Type.SubCreature, subtype));
 
                 if (creature == null)
                 {
                     creature = new Creature();
                     creature.ChallengeRating = sourceCreature.ChallengeRating;
-                    creature.Type.SubType = subtype;
+                    creature.Type.SubCreature = subtype;
                     creature.Type.Name = sourceCreature.Type.Name;
                     creature.Type.Description = sourceCreature.Type.Description;
                     creature.Quantity = 0;
@@ -127,7 +127,7 @@ namespace DnDGen.EncounterGen.Generators
             return creatures;
         }
 
-        private CreatureType GetRandomSubtype(CreatureType sourceCreatureType)
+        private EncounterCreature GetRandomSubtype(EncounterCreature sourceCreatureType)
         {
             var setChallengeRating = encounterFormatter.SelectChallengeRatingFrom(sourceCreatureType.Name);
 
@@ -141,7 +141,7 @@ namespace DnDGen.EncounterGen.Generators
             var validSubtypeNames = subtypeNames.Where(s => challengeRatings[s].Single() == setChallengeRating);
             var fullSubtype = collectionSelector.SelectRandomFrom(validSubtypeNames);
 
-            var subtype = new CreatureType();
+            var subtype = new EncounterCreature();
             subtype.Name = fullSubtype;
             subtype.Description = encounterFormatter.SelectDescriptionFrom(fullSubtype);
 
@@ -150,11 +150,11 @@ namespace DnDGen.EncounterGen.Generators
 
             if (!string.IsNullOrEmpty(furtherFullSubtype))
             {
-                subtype.SubType = GetCreatureType(furtherFullSubtype);
+                subtype.SubCreature = GetCreatureType(furtherFullSubtype);
             }
             else if (creaturesRequiringSubtypes.Contains(fullSubtype))
             {
-                subtype.SubType = GetRandomSubtype(subtype);
+                subtype.SubCreature = GetRandomSubtype(subtype);
             }
 
             return subtype;

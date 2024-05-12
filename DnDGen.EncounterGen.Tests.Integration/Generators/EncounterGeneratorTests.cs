@@ -378,7 +378,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Generators
 
             foreach (var creature in encounter.Creatures)
             {
-                AssertCreatureType(creature.Type);
+                AssertEncounterCreature(creature.Type);
                 Assert.That(creature.Quantity, Is.Positive);
                 Assert.That(creature.ChallengeRating, Is.Not.Empty);
             }
@@ -399,16 +399,16 @@ namespace DnDGen.EncounterGen.Tests.Integration.Generators
             Assert.That(encounter.ActualDifficulty, Is.Not.Empty);
         }
 
-        private void AssertCreatureType(CreatureType creatureType)
+        private void AssertEncounterCreature(EncounterCreature encounterCreature)
         {
-            Assert.That(creatureType.Name, Is.Not.Empty);
-            Assert.That(creatureType.Description, Is.Not.Null);
+            Assert.That(encounterCreature.Name, Is.Not.Empty);
+            Assert.That(encounterCreature.Description, Is.Not.Null);
 
-            Assert.That(dice.ContainsRoll(creatureType.Name), Is.False);
-            Assert.That(dice.ContainsRoll(creatureType.Description), Is.False);
+            Assert.That(dice.ContainsRoll(encounterCreature.Name), Is.False);
+            Assert.That(dice.ContainsRoll(encounterCreature.Description), Is.False);
 
-            if (creatureType.SubType != null)
-                AssertCreatureType(creatureType.SubType);
+            if (encounterCreature.SubCreature != null)
+                AssertEncounterCreature(encounterCreature.SubCreature);
         }
     }
 }

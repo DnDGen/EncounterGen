@@ -539,8 +539,8 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
         public void GenerateCharactersFromSubtype()
         {
             creatures[0].Type.Name = "other creature";
-            creatures[0].Type.SubType = new CreatureType();
-            creatures[0].Type.SubType.Name = "creature";
+            creatures[0].Type.SubCreature = new EncounterCreature();
+            creatures[0].Type.SubCreature.Name = "creature";
 
             mockCharacterGenerator
                 .Setup(g => g.GenerateWith(

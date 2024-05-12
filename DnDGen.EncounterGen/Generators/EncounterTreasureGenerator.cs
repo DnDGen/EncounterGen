@@ -171,13 +171,13 @@ namespace DnDGen.EncounterGen.Generators
             return templates;
         }
 
-        private string GetCreatureNameForTreasure(CreatureType creatureType)
+        private string GetCreatureNameForTreasure(EncounterCreature creatureType)
         {
             var useSubtypeForTreasure = collectionSelector.SelectFrom(TableNameConstants.CreatureGroups, GroupConstants.UseSubtypeForTreasure);
 
             if (useSubtypeForTreasure.Contains(creatureType.Name))
             {
-                return GetCreatureNameForTreasure(creatureType.SubType);
+                return GetCreatureNameForTreasure(creatureType.SubCreature);
             }
 
             return creatureType.Name;

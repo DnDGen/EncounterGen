@@ -64,8 +64,8 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
 
             level = 9266;
             creature.Type.Name = "creature";
-            creature.Type.SubType = new CreatureType();
-            creature.Type.SubType.Name = "subtype";
+            creature.Type.SubCreature = new EncounterCreature();
+            creature.Type.SubCreature.Name = "subtype";
             creature.Quantity = 1;
             creatures.Add(creature);
             treasureRates.Coin = 1;
@@ -439,7 +439,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
             subtypeTreasureRates.Goods = 2;
             subtypeTreasureRates.Items = 2;
 
-            mockTreasureAdjustmentSelector.Setup(s => s.SelectFor(creature.Type.SubType.Name)).Returns(subtypeTreasureRates);
+            mockTreasureAdjustmentSelector.Setup(s => s.SelectFor(creature.Type.SubCreature.Name)).Returns(subtypeTreasureRates);
 
             var secondGoods = new[] { new Good(), new Good() };
             mockGoodsGenerator.SetupSequence(g => g.GenerateAtLevel(level)).Returns(goods).Returns(secondGoods);
@@ -465,8 +465,8 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
         [Test]
         public void UseSubtypeWithoutFurtherSubtypeForTreasure()
         {
-            creature.Type.SubType.SubType = new CreatureType();
-            creature.Type.SubType.SubType.Name = "further subtype";
+            creature.Type.SubCreature.SubCreature = new EncounterCreature();
+            creature.Type.SubCreature.SubCreature.Name = "further subtype";
 
             usesSubtypeForTreasure.Add(creature.Type.Name);
 
@@ -475,7 +475,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
             subtypeTreasureRates.Goods = 2;
             subtypeTreasureRates.Items = 2;
 
-            mockTreasureAdjustmentSelector.Setup(s => s.SelectFor(creature.Type.SubType.Name)).Returns(subtypeTreasureRates);
+            mockTreasureAdjustmentSelector.Setup(s => s.SelectFor(creature.Type.SubCreature.Name)).Returns(subtypeTreasureRates);
 
             var secondGoods = new[] { new Good(), new Good() };
             mockGoodsGenerator.SetupSequence(g => g.GenerateAtLevel(level)).Returns(goods).Returns(secondGoods);
@@ -501,18 +501,18 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
         [Test]
         public void UseFurtherSubtypeForTreasure()
         {
-            creature.Type.SubType.SubType = new CreatureType();
-            creature.Type.SubType.SubType.Name = "further subtype";
+            creature.Type.SubCreature.SubCreature = new EncounterCreature();
+            creature.Type.SubCreature.SubCreature.Name = "further subtype";
 
             usesSubtypeForTreasure.Add(creature.Type.Name);
-            usesSubtypeForTreasure.Add(creature.Type.SubType.Name);
+            usesSubtypeForTreasure.Add(creature.Type.SubCreature.Name);
 
             var subSubtypeTreasureRates = new TreasureRatesSelection();
             subSubtypeTreasureRates.Coin = 2;
             subSubtypeTreasureRates.Goods = 2;
             subSubtypeTreasureRates.Items = 2;
 
-            mockTreasureAdjustmentSelector.Setup(s => s.SelectFor(creature.Type.SubType.SubType.Name)).Returns(subSubtypeTreasureRates);
+            mockTreasureAdjustmentSelector.Setup(s => s.SelectFor(creature.Type.SubCreature.SubCreature.Name)).Returns(subSubtypeTreasureRates);
 
             var secondGoods = new[] { new Good(), new Good() };
             mockGoodsGenerator.SetupSequence(g => g.GenerateAtLevel(level)).Returns(goods).Returns(secondGoods);
@@ -667,7 +667,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
             subtypeTreasureRates.Goods = 2;
             subtypeTreasureRates.Items = 2;
 
-            mockTreasureAdjustmentSelector.Setup(s => s.SelectFor(creature.Type.SubType.Name)).Returns(subtypeTreasureRates);
+            mockTreasureAdjustmentSelector.Setup(s => s.SelectFor(creature.Type.SubCreature.Name)).Returns(subtypeTreasureRates);
 
             var secondGoods = new[] { new Good(), new Good() };
             mockGoodsGenerator.SetupSequence(g => g.GenerateAtLevel(level)).Returns(goods).Returns(secondGoods);
@@ -676,7 +676,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
             mockItemsGenerator.SetupSequence(g => g.GenerateRandomAtLevel(level)).Returns(items).Returns(secondItems);
 
             var setTreasureItems = new[] { "item 1", "item 2" };
-            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.TreasureGroups, creature.Type.SubType.Name)).Returns(setTreasureItems);
+            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.TreasureGroups, creature.Type.SubCreature.Name)).Returns(setTreasureItems);
 
             var template1 = new Item();
             var template2 = new Item();
@@ -717,18 +717,18 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
         [Test]
         public void UseFurtherSubtypeForSetTreasure()
         {
-            creature.Type.SubType.SubType = new CreatureType();
-            creature.Type.SubType.SubType.Name = "further subtype";
+            creature.Type.SubCreature.SubCreature = new EncounterCreature();
+            creature.Type.SubCreature.SubCreature.Name = "further subtype";
 
             usesSubtypeForTreasure.Add(creature.Type.Name);
-            usesSubtypeForTreasure.Add(creature.Type.SubType.Name);
+            usesSubtypeForTreasure.Add(creature.Type.SubCreature.Name);
 
             var subSubtypeTreasureRates = new TreasureRatesSelection();
             subSubtypeTreasureRates.Coin = 2;
             subSubtypeTreasureRates.Goods = 2;
             subSubtypeTreasureRates.Items = 2;
 
-            mockTreasureAdjustmentSelector.Setup(s => s.SelectFor(creature.Type.SubType.SubType.Name)).Returns(subSubtypeTreasureRates);
+            mockTreasureAdjustmentSelector.Setup(s => s.SelectFor(creature.Type.SubCreature.SubCreature.Name)).Returns(subSubtypeTreasureRates);
 
             var secondGoods = new[] { new Good(), new Good() };
             mockGoodsGenerator.SetupSequence(g => g.GenerateAtLevel(level)).Returns(goods).Returns(secondGoods);
@@ -737,7 +737,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
             mockItemsGenerator.SetupSequence(g => g.GenerateRandomAtLevel(level)).Returns(items).Returns(secondItems);
 
             var setTreasureItems = new[] { "item 1", "item 2" };
-            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.TreasureGroups, creature.Type.SubType.SubType.Name)).Returns(setTreasureItems);
+            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.TreasureGroups, creature.Type.SubCreature.SubCreature.Name)).Returns(setTreasureItems);
 
             var template1 = new Item();
             var template2 = new Item();

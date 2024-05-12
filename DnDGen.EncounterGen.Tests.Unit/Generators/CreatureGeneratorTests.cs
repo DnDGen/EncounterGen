@@ -100,7 +100,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
             var creature = creatures.Single();
             Assert.That(creature.Type.Name, Is.EqualTo("creature"));
             Assert.That(creature.Type.Description, Is.Empty);
-            Assert.That(creature.Type.SubType, Is.Null);
+            Assert.That(creature.Type.SubCreature, Is.Null);
             Assert.That(creature.Quantity, Is.EqualTo(42));
             Assert.That(creature.ChallengeRating, Is.EqualTo("challenge rating"));
         }
@@ -132,7 +132,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
             var creature = creatures.Single();
             Assert.That(creature.Type.Name, Is.EqualTo("other creature"));
             Assert.That(creature.Type.Description, Is.Empty);
-            Assert.That(creature.Type.SubType, Is.Null);
+            Assert.That(creature.Type.SubCreature, Is.Null);
             Assert.That(creature.Quantity, Is.EqualTo(69));
             Assert.That(creature.ChallengeRating, Is.EqualTo("other challenge rating"));
         }
@@ -158,7 +158,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
             var creature = creatures.Single();
             Assert.That(creature.Type.Name, Is.EqualTo("creature"));
             Assert.That(creature.Type.Description, Is.EqualTo("creature description"));
-            Assert.That(creature.Type.SubType, Is.Null);
+            Assert.That(creature.Type.SubCreature, Is.Null);
             Assert.That(creature.Quantity, Is.EqualTo(42));
             Assert.That(creature.ChallengeRating, Is.EqualTo("challenge rating"));
         }
@@ -184,9 +184,9 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
             var creature = creatures.Single();
             Assert.That(creature.Type.Name, Is.EqualTo("creature"));
             Assert.That(creature.Type.Description, Is.Empty);
-            Assert.That(creature.Type.SubType.Name, Is.EqualTo("subtype"));
-            Assert.That(creature.Type.SubType.Description, Is.Empty);
-            Assert.That(creature.Type.SubType.SubType, Is.Null);
+            Assert.That(creature.Type.SubCreature.Name, Is.EqualTo("subtype"));
+            Assert.That(creature.Type.SubCreature.Description, Is.Empty);
+            Assert.That(creature.Type.SubCreature.SubCreature, Is.Null);
             Assert.That(creature.Quantity, Is.EqualTo(42));
             Assert.That(creature.ChallengeRating, Is.EqualTo("challenge rating"));
         }
@@ -221,7 +221,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
 
             var creature = creatures.Single();
             Assert.That(creature.Type.Name, Is.EqualTo("creature"));
-            Assert.That(creature.Type.SubType.Name, Is.EqualTo("other creature"));
+            Assert.That(creature.Type.SubCreature.Name, Is.EqualTo("other creature"));
             Assert.That(creature.Quantity, Is.EqualTo(42));
             Assert.That(creature.ChallengeRating, Is.EqualTo("specific challenge rating"));
         }
@@ -259,13 +259,13 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
 
             var first = creatures.First();
             Assert.That(first.Type.Name, Is.EqualTo("creature"));
-            Assert.That(first.Type.SubType.Name, Is.EqualTo("other creature"));
+            Assert.That(first.Type.SubCreature.Name, Is.EqualTo("other creature"));
             Assert.That(first.Quantity, Is.EqualTo(21));
             Assert.That(first.ChallengeRating, Is.EqualTo("specific challenge rating"));
 
             var last = creatures.Last();
             Assert.That(last.Type.Name, Is.EqualTo("creature"));
-            Assert.That(last.Type.SubType.Name, Is.EqualTo("random creature"));
+            Assert.That(last.Type.SubCreature.Name, Is.EqualTo("random creature"));
             Assert.That(last.Quantity, Is.EqualTo(21));
             Assert.That(last.ChallengeRating, Is.EqualTo("specific challenge rating"));
         }
@@ -327,8 +327,8 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
 
             var creature = creatures.Single();
             Assert.That(creature.Type.Name, Is.EqualTo("creature"));
-            Assert.That(creature.Type.SubType.Name, Is.EqualTo("other creature"));
-            Assert.That(creature.Type.SubType.SubType.Name, Is.EqualTo("subtype"));
+            Assert.That(creature.Type.SubCreature.Name, Is.EqualTo("other creature"));
+            Assert.That(creature.Type.SubCreature.SubCreature.Name, Is.EqualTo("subtype"));
             Assert.That(creature.Quantity, Is.EqualTo(42));
             Assert.That(creature.ChallengeRating, Is.EqualTo("specific challenge rating"));
         }
@@ -370,8 +370,8 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
 
             var creature = creatures.Single();
             Assert.That(creature.Type.Name, Is.EqualTo("creature"));
-            Assert.That(creature.Type.SubType.Name, Is.EqualTo("other creature"));
-            Assert.That(creature.Type.SubType.SubType.Name, Is.EqualTo("subtype"));
+            Assert.That(creature.Type.SubCreature.Name, Is.EqualTo("other creature"));
+            Assert.That(creature.Type.SubCreature.SubCreature.Name, Is.EqualTo("subtype"));
             Assert.That(creature.Quantity, Is.EqualTo(42));
             Assert.That(creature.ChallengeRating, Is.EqualTo("specific challenge rating"));
         }
@@ -417,19 +417,19 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
             Assert.That(creatures.Length, Is.EqualTo(3));
 
             Assert.That(creatures[0].Type.Name, Is.EqualTo("creature"));
-            Assert.That(creatures[0].Type.SubType.Name, Is.EqualTo("random creature"));
+            Assert.That(creatures[0].Type.SubCreature.Name, Is.EqualTo("random creature"));
             Assert.That(creatures[0].Quantity, Is.EqualTo(21));
             Assert.That(creatures[0].ChallengeRating, Is.EqualTo("specific challenge rating"));
 
             Assert.That(creatures[1].Type.Name, Is.EqualTo("creature"));
-            Assert.That(creatures[1].Type.SubType.Name, Is.EqualTo("other creature"));
-            Assert.That(creatures[1].Type.SubType.SubType.Name, Is.EqualTo("other subtype"));
+            Assert.That(creatures[1].Type.SubCreature.Name, Is.EqualTo("other creature"));
+            Assert.That(creatures[1].Type.SubCreature.SubCreature.Name, Is.EqualTo("other subtype"));
             Assert.That(creatures[1].Quantity, Is.EqualTo(11));
             Assert.That(creatures[1].ChallengeRating, Is.EqualTo("specific challenge rating"));
 
             Assert.That(creatures[2].Type.Name, Is.EqualTo("creature"));
-            Assert.That(creatures[2].Type.SubType.Name, Is.EqualTo("other creature"));
-            Assert.That(creatures[2].Type.SubType.SubType.Name, Is.EqualTo("subtype"));
+            Assert.That(creatures[2].Type.SubCreature.Name, Is.EqualTo("other creature"));
+            Assert.That(creatures[2].Type.SubCreature.SubCreature.Name, Is.EqualTo("subtype"));
             Assert.That(creatures[2].Quantity, Is.EqualTo(10));
             Assert.That(creatures[2].ChallengeRating, Is.EqualTo("specific challenge rating"));
         }
@@ -464,9 +464,9 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
             var creature = creatures.Single();
             Assert.That(creature.Type.Name, Is.EqualTo("creature"));
             Assert.That(creature.Type.Description, Is.EqualTo("creature description"));
-            Assert.That(creature.Type.SubType.Name, Is.EqualTo("subtype"));
-            Assert.That(creature.Type.SubType.Description, Is.EqualTo("subtype description"));
-            Assert.That(creature.Type.SubType.SubType, Is.Null);
+            Assert.That(creature.Type.SubCreature.Name, Is.EqualTo("subtype"));
+            Assert.That(creature.Type.SubCreature.Description, Is.EqualTo("subtype description"));
+            Assert.That(creature.Type.SubCreature.SubCreature, Is.Null);
         }
 
         //INFO: There is no current example of this in the system, but it is a good thing to test
@@ -508,13 +508,13 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
             var creature = creatures.Single();
             Assert.That(creature.Type.Name, Is.EqualTo("creature"));
             Assert.That(creature.Type.Description, Is.EqualTo("creature description"));
-            Assert.That(creature.Type.SubType.Name, Is.EqualTo("subtype"));
-            Assert.That(creature.Type.SubType.Description, Is.EqualTo("subtype description"));
-            Assert.That(creature.Type.SubType.SubType.Name, Is.EqualTo("further subtype"));
-            Assert.That(creature.Type.SubType.SubType.Description, Is.EqualTo("further subtype description"));
-            Assert.That(creature.Type.SubType.SubType.SubType.Name, Is.EqualTo("last subtype"));
-            Assert.That(creature.Type.SubType.SubType.SubType.Description, Is.EqualTo("last subtype description"));
-            Assert.That(creature.Type.SubType.SubType.SubType.SubType, Is.Null);
+            Assert.That(creature.Type.SubCreature.Name, Is.EqualTo("subtype"));
+            Assert.That(creature.Type.SubCreature.Description, Is.EqualTo("subtype description"));
+            Assert.That(creature.Type.SubCreature.SubCreature.Name, Is.EqualTo("further subtype"));
+            Assert.That(creature.Type.SubCreature.SubCreature.Description, Is.EqualTo("further subtype description"));
+            Assert.That(creature.Type.SubCreature.SubCreature.SubCreature.Name, Is.EqualTo("last subtype"));
+            Assert.That(creature.Type.SubCreature.SubCreature.SubCreature.Description, Is.EqualTo("last subtype description"));
+            Assert.That(creature.Type.SubCreature.SubCreature.SubCreature.SubCreature, Is.Null);
         }
 
         [Test]
@@ -566,7 +566,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
             var creature = cleanedCreatures.Single();
             Assert.That(creature.Type.Name, Is.EqualTo("creature name"));
             Assert.That(creature.Type.Description, Is.EqualTo("creature description"));
-            Assert.That(creature.Type.SubType, Is.Null);
+            Assert.That(creature.Type.SubCreature, Is.Null);
         }
 
         [Test]
@@ -591,7 +591,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
             var creature = cleanedCreatures.Single();
             Assert.That(creature.Type.Name, Is.EqualTo("creature name"));
             Assert.That(creature.Type.Description, Is.EqualTo("description"));
-            Assert.That(creature.Type.SubType, Is.Null);
+            Assert.That(creature.Type.SubCreature, Is.Null);
         }
 
         [Test]
@@ -603,8 +603,8 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
             };
 
             creatures[0].Type.Name = "creature";
-            creatures[0].Type.SubType = new CreatureType();
-            creatures[0].Type.SubType.Name = "subtype";
+            creatures[0].Type.SubCreature = new EncounterCreature();
+            creatures[0].Type.SubCreature.Name = "subtype";
 
             mockEncounterFormatter.Setup(s => s.SelectNameFrom(creatures[0].Type.Name)).Returns("creature name");
             mockEncounterFormatter.Setup(s => s.SelectDescriptionFrom(creatures[0].Type.Name)).Returns("creature description");
@@ -620,9 +620,9 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
             var creature = cleanedCreatures.Single();
             Assert.That(creature.Type.Name, Is.EqualTo("creature name"));
             Assert.That(creature.Type.Description, Is.EqualTo("creature description"));
-            Assert.That(creature.Type.SubType.Name, Is.EqualTo("subtype name"));
-            Assert.That(creature.Type.SubType.Description, Is.EqualTo("subtype description"));
-            Assert.That(creature.Type.SubType.SubType, Is.Null);
+            Assert.That(creature.Type.SubCreature.Name, Is.EqualTo("subtype name"));
+            Assert.That(creature.Type.SubCreature.Description, Is.EqualTo("subtype description"));
+            Assert.That(creature.Type.SubCreature.SubCreature, Is.Null);
         }
 
         [Test]
@@ -649,9 +649,9 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
             var creature = cleanedCreatures.Single();
             Assert.That(creature.Type.Name, Is.EqualTo("creature name"));
             Assert.That(creature.Type.Description, Is.EqualTo("creature description"));
-            Assert.That(creature.Type.SubType.Name, Is.EqualTo("subtype name"));
-            Assert.That(creature.Type.SubType.Description, Is.EqualTo("subtype description"));
-            Assert.That(creature.Type.SubType.SubType, Is.Null);
+            Assert.That(creature.Type.SubCreature.Name, Is.EqualTo("subtype name"));
+            Assert.That(creature.Type.SubCreature.Description, Is.EqualTo("subtype description"));
+            Assert.That(creature.Type.SubCreature.SubCreature, Is.Null);
         }
 
         [Test]
@@ -663,8 +663,8 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
             };
 
             creatures[0].Type.Name = "creature";
-            creatures[0].Type.SubType = new CreatureType();
-            creatures[0].Type.SubType.Name = "existing subtype";
+            creatures[0].Type.SubCreature = new EncounterCreature();
+            creatures[0].Type.SubCreature.Name = "existing subtype";
 
             mockEncounterFormatter.Setup(s => s.SelectNameFrom(creatures[0].Type.Name)).Returns("creature name");
             mockEncounterFormatter.Setup(s => s.SelectDescriptionFrom(creatures[0].Type.Name)).Returns("creature description");
@@ -682,9 +682,9 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
             var creature = cleanedCreatures.Single();
             Assert.That(creature.Type.Name, Is.EqualTo("creature name"));
             Assert.That(creature.Type.Description, Is.EqualTo("creature description"));
-            Assert.That(creature.Type.SubType.Name, Is.EqualTo("existing subtype name"));
-            Assert.That(creature.Type.SubType.Description, Is.EqualTo("existing subtype description"));
-            Assert.That(creature.Type.SubType.SubType, Is.Null);
+            Assert.That(creature.Type.SubCreature.Name, Is.EqualTo("existing subtype name"));
+            Assert.That(creature.Type.SubCreature.Description, Is.EqualTo("existing subtype description"));
+            Assert.That(creature.Type.SubCreature.SubCreature, Is.Null);
         }
 
         [Test]
@@ -696,10 +696,10 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
             };
 
             creatures[0].Type.Name = "creature";
-            creatures[0].Type.SubType = new CreatureType();
-            creatures[0].Type.SubType.Name = "subtype";
-            creatures[0].Type.SubType.SubType = new CreatureType();
-            creatures[0].Type.SubType.SubType.Name = "further subtype";
+            creatures[0].Type.SubCreature = new EncounterCreature();
+            creatures[0].Type.SubCreature.Name = "subtype";
+            creatures[0].Type.SubCreature.SubCreature = new EncounterCreature();
+            creatures[0].Type.SubCreature.SubCreature.Name = "further subtype";
 
             mockEncounterFormatter.Setup(s => s.SelectNameFrom(creatures[0].Type.Name)).Returns("creature name");
             mockEncounterFormatter.Setup(s => s.SelectDescriptionFrom(creatures[0].Type.Name)).Returns("creature description");
@@ -718,11 +718,11 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
             var creature = cleanedCreatures.Single();
             Assert.That(creature.Type.Name, Is.EqualTo("creature name"));
             Assert.That(creature.Type.Description, Is.EqualTo("creature description"));
-            Assert.That(creature.Type.SubType.Name, Is.EqualTo("subtype name"));
-            Assert.That(creature.Type.SubType.Description, Is.EqualTo("subtype description"));
-            Assert.That(creature.Type.SubType.SubType.Name, Is.EqualTo("further subtype name"));
-            Assert.That(creature.Type.SubType.SubType.Description, Is.EqualTo("further subtype description"));
-            Assert.That(creature.Type.SubType.SubType.SubType, Is.Null);
+            Assert.That(creature.Type.SubCreature.Name, Is.EqualTo("subtype name"));
+            Assert.That(creature.Type.SubCreature.Description, Is.EqualTo("subtype description"));
+            Assert.That(creature.Type.SubCreature.SubCreature.Name, Is.EqualTo("further subtype name"));
+            Assert.That(creature.Type.SubCreature.SubCreature.Description, Is.EqualTo("further subtype description"));
+            Assert.That(creature.Type.SubCreature.SubCreature.SubCreature, Is.Null);
         }
 
         [Test]
@@ -734,8 +734,8 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
             };
 
             creatures[0].Type.Name = "creature";
-            creatures[0].Type.SubType = new CreatureType();
-            creatures[0].Type.SubType.Name = "subtype";
+            creatures[0].Type.SubCreature = new EncounterCreature();
+            creatures[0].Type.SubCreature.Name = "subtype";
 
             mockEncounterFormatter.Setup(s => s.SelectNameFrom(creatures[0].Type.Name)).Returns("creature name");
             mockEncounterFormatter.Setup(s => s.SelectDescriptionFrom(creatures[0].Type.Name)).Returns("creature description");
@@ -754,11 +754,11 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
             var creature = cleanedCreatures.Single();
             Assert.That(creature.Type.Name, Is.EqualTo("creature name"));
             Assert.That(creature.Type.Description, Is.EqualTo("creature description"));
-            Assert.That(creature.Type.SubType.Name, Is.EqualTo("subtype name"));
-            Assert.That(creature.Type.SubType.Description, Is.EqualTo("subtype description"));
-            Assert.That(creature.Type.SubType.SubType.Name, Is.EqualTo("further subtype name"));
-            Assert.That(creature.Type.SubType.SubType.Description, Is.EqualTo("further subtype description"));
-            Assert.That(creature.Type.SubType.SubType.SubType, Is.Null);
+            Assert.That(creature.Type.SubCreature.Name, Is.EqualTo("subtype name"));
+            Assert.That(creature.Type.SubCreature.Description, Is.EqualTo("subtype description"));
+            Assert.That(creature.Type.SubCreature.SubCreature.Name, Is.EqualTo("further subtype name"));
+            Assert.That(creature.Type.SubCreature.SubCreature.Description, Is.EqualTo("further subtype description"));
+            Assert.That(creature.Type.SubCreature.SubCreature.SubCreature, Is.Null);
         }
 
         [Test]
@@ -788,11 +788,11 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
             var creature = cleanedCreatures.Single();
             Assert.That(creature.Type.Name, Is.EqualTo("creature name"));
             Assert.That(creature.Type.Description, Is.EqualTo("creature description"));
-            Assert.That(creature.Type.SubType.Name, Is.EqualTo("subtype name"));
-            Assert.That(creature.Type.SubType.Description, Is.EqualTo("subtype description"));
-            Assert.That(creature.Type.SubType.SubType.Name, Is.EqualTo("further subtype name"));
-            Assert.That(creature.Type.SubType.SubType.Description, Is.EqualTo("further subtype description"));
-            Assert.That(creature.Type.SubType.SubType.SubType, Is.Null);
+            Assert.That(creature.Type.SubCreature.Name, Is.EqualTo("subtype name"));
+            Assert.That(creature.Type.SubCreature.Description, Is.EqualTo("subtype description"));
+            Assert.That(creature.Type.SubCreature.SubCreature.Name, Is.EqualTo("further subtype name"));
+            Assert.That(creature.Type.SubCreature.SubCreature.Description, Is.EqualTo("further subtype description"));
+            Assert.That(creature.Type.SubCreature.SubCreature.SubCreature, Is.Null);
         }
 
         [Test]
@@ -816,7 +816,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
             var creature = cleanedCreatures.Single();
             Assert.That(creature.Type.Name, Is.EqualTo("metarace"));
             Assert.That(creature.Type.Description, Is.EqualTo("description"));
-            Assert.That(creature.Type.SubType, Is.Null);
+            Assert.That(creature.Type.SubCreature, Is.Null);
         }
 
         [Test]
@@ -840,7 +840,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
             var creature = cleanedCreatures.Single();
             Assert.That(creature.Type.Name, Is.EqualTo("base race"));
             Assert.That(creature.Type.Description, Is.EqualTo("description"));
-            Assert.That(creature.Type.SubType, Is.Null);
+            Assert.That(creature.Type.SubCreature, Is.Null);
         }
     }
 }

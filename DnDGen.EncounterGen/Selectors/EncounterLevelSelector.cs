@@ -86,7 +86,7 @@ namespace DnDGen.EncounterGen.Selectors
             return Convert.ToInt32(encounterLevel);
         }
 
-        private bool IsCharacter(CreatureType creatureType)
+        private bool IsCharacter(EncounterCreature creatureType)
         {
             if (creatureType == null)
                 return false;
@@ -95,7 +95,7 @@ namespace DnDGen.EncounterGen.Selectors
             if (name == CreatureDataConstants.Character)
                 return true;
 
-            return IsCharacter(creatureType.SubType);
+            return IsCharacter(creatureType.SubCreature);
         }
     }
 }

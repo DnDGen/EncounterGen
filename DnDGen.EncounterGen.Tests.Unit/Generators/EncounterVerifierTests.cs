@@ -188,8 +188,8 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
             var encounter = new Encounter();
             encounter.Creatures = new[]
             {
-                new Creature { Type = new CreatureType { Name = "creature" }, Quantity = 9266 },
-                new Creature { Type = new CreatureType { Name = "other creature" }, Quantity = 90210 },
+                new Creature { Type = new EncounterCreature { Name = "creature" }, Quantity = 9266 },
+                new Creature { Type = new EncounterCreature { Name = "other creature" }, Quantity = 90210 },
             };
 
             mockAmountSelector.Setup(s => s.Select(encounter)).Returns(15);
@@ -204,7 +204,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
             var encounter = new Encounter();
             encounter.Creatures = new[]
             {
-                new Creature { Type = new CreatureType { Name = "bogus creature" }, Quantity = 9266 },
+                new Creature { Type = new EncounterCreature { Name = "bogus creature" }, Quantity = 9266 },
             };
 
             mockAmountSelector.Setup(s => s.Select(encounter)).Returns(15);
@@ -219,7 +219,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
             var encounter = new Encounter();
             encounter.Creatures = new[]
             {
-                new Creature { Type = new CreatureType { Name = "creature" }, Quantity = 9266 },
+                new Creature { Type = new EncounterCreature { Name = "creature" }, Quantity = 9266 },
             };
 
             mockAmountSelector.Setup(s => s.Select(encounter)).Returns(15);
@@ -245,8 +245,8 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
             var encounter = new Encounter();
             encounter.Creatures = new[]
             {
-                new Creature { Type = new CreatureType { Name = "creature" }, Quantity = 9266 },
-                new Creature { Type = new CreatureType { Name = "other creature" }, Quantity = 90210 },
+                new Creature { Type = new EncounterCreature { Name = "creature" }, Quantity = 9266 },
+                new Creature { Type = new EncounterCreature { Name = "other creature" }, Quantity = 90210 },
             };
 
             mockAmountSelector.Setup(s => s.Select(encounter)).Returns(15);
@@ -264,8 +264,8 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
             var encounter = new Encounter();
             encounter.Creatures = new[]
             {
-                new Creature { Type = new CreatureType { Name = "creature" }, Quantity = 9266 },
-                new Creature { Type = new CreatureType { Name = "other creature" }, Quantity = 90210 },
+                new Creature { Type = new EncounterCreature { Name = "creature" }, Quantity = 9266 },
+                new Creature { Type = new EncounterCreature { Name = "other creature" }, Quantity = 90210 },
             };
 
             mockAmountSelector.Setup(s => s.Select(encounter)).Returns(level);
