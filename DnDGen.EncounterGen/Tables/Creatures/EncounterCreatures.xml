@@ -4101,500 +4101,460 @@
     <entry>Character(Missionary)[20]@Cleric&amp;Druid&amp;Monk&amp;Paladin@/1d4</entry>
   </collection>
   <collection>
-    <name>Character(Pickpocket)[1]@Rogue@</name>
+    <name>Pickpocket [Level 1] (Solitary)</name>
     <entry>Character(Pickpocket)[1]@Rogue@/1</entry>
   </collection>
   <collection>
-    <name>Character(Pickpocket)[2]@Rogue@</name>
+	  <name>Pickpocket [Level 2] (Solitary)</name>
     <entry>Character(Pickpocket)[2]@Rogue@/1</entry>
   </collection>
   <collection>
-    <name>Character(Pickpocket)[3]@Rogue@</name>
+	  <name>Pickpocket [Level 3] (Solitary)</name>
     <entry>Character(Pickpocket)[3]@Rogue@/1</entry>
   </collection>
   <collection>
-    <name>Character(Pickpocket)[4]@Rogue@</name>
-    <entry>Character(Pickpocket)[4]@Rogue@/1</entry>
+	  <name>Pickpocket [Level 4] (Solitary)</name>
+	  <entry>Character(Pickpocket)[4]@Rogue@/1</entry>
   </collection>
   <collection>
-    <name>Character(Pickpocket)[5]@Rogue@</name>
+	  <name>Pickpocket [Level 5] (Solitary)</name>
     <entry>Character(Pickpocket)[5]@Rogue@/1</entry>
   </collection>
   <collection>
-    <name>Character(Pickpocket)[6]@Rogue@</name>
+	  <name>Pickpocket [Level 6] (Solitary)</name>
     <entry>Character(Pickpocket)[6]@Rogue@/1</entry>
   </collection>
   <collection>
-    <name>Character(Pickpocket)[7]@Rogue@</name>
+	  <name>Pickpocket [Level 7] (Solitary)</name>
     <entry>Character(Pickpocket)[7]@Rogue@/1</entry>
   </collection>
   <collection>
-    <name>Character(Pickpocket)[8]@Rogue@</name>
+	  <name>Pickpocket [Level 8] (Solitary)</name>
     <entry>Character(Pickpocket)[8]@Rogue@/1</entry>
   </collection>
   <collection>
-    <name>Character(Pickpocket)[9]@Rogue@</name>
+	  <name>Pickpocket [Level 9] (Solitary)</name>
     <entry>Character(Pickpocket)[9]@Rogue@/1</entry>
   </collection>
   <collection>
-    <name>Character(Pickpocket)[10]@Rogue@</name>
+	  <name>Pickpocket [Level 10] (Solitary)</name>
     <entry>Character(Pickpocket)[10]@Rogue@/1</entry>
   </collection>
   <collection>
-    <name>Character(Pickpocket)[11]@Rogue@</name>
-    <entry>Character(Pickpocket)[11]@Rogue@/1</entry>
+	  <name>Pickpocket [Level 11] (Solitary)</name>
+	  <entry>Character(Pickpocket)[11]@Rogue@/1</entry>
   </collection>
   <collection>
-    <name>Character(Pickpocket)[12]@Rogue@</name>
-    <entry>Character(Pickpocket)[12]@Rogue@/1</entry>
+	  <name>Pickpocket [Level 12] (Solitary)</name>
+	  <entry>Character(Pickpocket)[12]@Rogue@/1</entry>
   </collection>
   <collection>
-    <name>Character(Pickpocket)[13]@Rogue@</name>
-    <entry>Character(Pickpocket)[13]@Rogue@/1</entry>
+	  <name>Pickpocket [Level 13] (Solitary)</name>
+	  <entry>Character(Pickpocket)[13]@Rogue@/1</entry>
   </collection>
   <collection>
-    <name>Character(Pickpocket)[14]@Rogue@</name>
-    <entry>Character(Pickpocket)[14]@Rogue@/1</entry>
+	  <name>Pickpocket [Level 14] (Solitary)</name>
+	  <entry>Character(Pickpocket)[14]@Rogue@/1</entry>
   </collection>
   <collection>
-    <name>Character(Pickpocket)[15]@Rogue@</name>
+	  <name>Pickpocket [Level 15] (Solitary)</name>
     <entry>Character(Pickpocket)[15]@Rogue@/1</entry>
   </collection>
   <collection>
-    <name>Character(Pickpocket)[16]@Rogue@</name>
-    <entry>Character(Pickpocket)[16]@Rogue@/1</entry>
+	  <name>Pickpocket [Level 16] (Solitary)</name>
+	  <entry>Character(Pickpocket)[16]@Rogue@/1</entry>
   </collection>
   <collection>
-    <name>Character(Pickpocket)[17]@Rogue@</name>
+	  <name>Pickpocket [Level 17] (Solitary)</name>
     <entry>Character(Pickpocket)[17]@Rogue@/1</entry>
   </collection>
   <collection>
-    <name>Character(Pickpocket)[18]@Rogue@</name>
-    <entry>Character(Pickpocket)[18]@Rogue@/1</entry>
+	  <name>Pickpocket [Level 18] (Solitary)</name>
+	  <entry>Character(Pickpocket)[18]@Rogue@/1</entry>
   </collection>
   <collection>
-    <name>Character(Pickpocket)[19]@Rogue@</name>
-    <entry>Character(Pickpocket)[19]@Rogue@/1</entry>
+	  <name>Pickpocket [Level 19] (Solitary)</name>
+	  <entry>Character(Pickpocket)[19]@Rogue@/1</entry>
   </collection>
   <collection>
-    <name>Character(Pickpocket)[20]@Rogue@</name>
+	  <name>Pickpocket [Level 20] (Solitary)</name>
     <entry>Character(Pickpocket)[20]@Rogue@/1</entry>
   </collection>
   <collection>
-    <name>Character(Pilgrim)[1]@Commoner@</name>
-    <entry>Character(Pilgrim)[1]@Commoner@/1d10+6,Character(Guard)[1]@Warrior@/1d6-1,Character(Leader)[1]@Cleric@/1</entry>
+    <name>Pilgrims [Level 1] (Caravan)</name>
+	  <entry>Character(Pilgrim)[1]@Commoner@/1d10+6</entry>
+	  <entry>Character(Guard)[1]@Warrior@/1d6-1</entry>
+	  <entry>Character(Leader)[1]@Cleric@/1</entry>
   </collection>
   <collection>
-    <name>Character(Pilgrim)[1d2+1]@Commoner@</name>
-    <entry>Character(Pilgrim)[1d2+1]@Commoner@/1d10+6,Character(Guard)[1d2+1]@Warrior@/1d6-1,Character(Leader)[2]@Cleric@/1</entry>
+	  <name>Pilgrims [Level 2-3] (Caravan)</name>
+	  <entry>Character(Pilgrim)[1d2+1]@Commoner@/1d10+6</entry>
+	  <entry>Character(Guard)[1d2+1]@Warrior@/1d6-1</entry>
+	  <entry>Character(Leader)[2]@Cleric@/1</entry>
   </collection>
   <collection>
-    <name>Character(Pilgrim)[1d2+3]@Commoner@</name>
-    <entry>Character(Pilgrim)[1d2+3]@Commoner@/1d10+6,Character(Guard)[1d2+3]@Warrior@/1d6-1,Character(Leader)[3]@Cleric@/1</entry>
+	  <name>Pilgrims [Level 4-5] (Caravan)</name>
+	  <entry>Character(Pilgrim)[1d2+3]@Commoner@/1d10+6</entry>
+	  <entry>Character(Guard)[1d2+3]@Warrior@/1d6-1</entry>
+	  <entry>Character(Leader)[3]@Cleric@/1</entry>
   </collection>
   <collection>
-    <name>Character(Pilgrim)[1d2+5]@Commoner@</name>
-    <entry>Character(Pilgrim)[1d2+5]@Commoner@/1d10+6,Character(Guard)[1d2+5]@Warrior@/1d6-1,Character(Leader)[4]@Cleric@/1</entry>
+	  <name>Pilgrims [Level 6-7] (Caravan)</name>
+	  <entry>Character(Pilgrim)[1d2+5]@Commoner@/1d10+6</entry>
+	  <entry>Character(Guard)[1d2+5]@Warrior@/1d6-1</entry>
+	  <entry>Character(Leader)[4]@Cleric@/1</entry>
   </collection>
   <collection>
-    <name>Character(Pilgrim)[1d2+7]@Commoner@</name>
-    <entry>Character(Pilgrim)[1d2+7]@Commoner@/1d10+6,Character(Guard)[1d2+7]@Warrior@/1d6-1,Character(Leader)[5]@Cleric@/1</entry>
+	  <name>Pilgrims [Level 8-9] (Caravan)</name>
+	  <entry>Character(Pilgrim)[1d2+7]@Commoner@/1d10+6</entry>
+	  <entry>Character(Guard)[1d2+7]@Warrior@/1d6-1</entry>
+	  <entry>Character(Leader)[5]@Cleric@/1</entry>
   </collection>
   <collection>
-    <name>Character(Pilgrim)[1d2+9]@Commoner@</name>
-    <entry>Character(Pilgrim)[1d2+9]@Commoner@/1d10+6,Character(Guard)[1d2+9]@Warrior@/1d6-1,Character(Leader)[6]@Cleric@/1</entry>
+	  <name>Pilgrims [Level 10-11] (Caravan)</name>
+	  <entry>Character(Pilgrim)[1d2+9]@Commoner@/1d10+6</entry>
+	  <entry>Character(Guard)[1d2+9]@Warrior@/1d6-1</entry>
+	  <entry>Character(Leader)[6]@Cleric@/1</entry>
   </collection>
   <collection>
-    <name>Character(Pilgrim)[1d2+11]@Commoner@</name>
-    <entry>Character(Pilgrim)[1d2+11]@Commoner@/1d10+6,Character(Guard)[1d2+11]@Warrior@/1d6-1,Character(Leader)[7]@Cleric@/1</entry>
+	  <name>Pilgrims [Level 12-13] (Caravan)</name>
+	  <entry>Character(Pilgrim)[1d2+11]@Commoner@/1d10+6</entry>
+	  <entry>Character(Guard)[1d2+11]@Warrior@/1d6-1</entry>
+	  <entry>Character(Leader)[7]@Cleric@/1</entry>
   </collection>
   <collection>
-    <name>Character(Pilgrim)[1d2+13]@Commoner@</name>
-    <entry>Character(Pilgrim)[1d2+13]@Commoner@/1d10+6,Character(Guard)[1d2+13]@Warrior@/1d6-1,Character(Leader)[8]@Cleric@/1</entry>
+	  <name>Pilgrims [Level 14-15] (Caravan)</name>
+	  <entry>Character(Pilgrim)[1d2+13]@Commoner@/1d10+6</entry>
+	  <entry>Character(Guard)[1d2+13]@Warrior@/1d6-1</entry>
+	  <entry>Character(Leader)[8]@Cleric@/1</entry>
   </collection>
   <collection>
-    <name>Character(Pilgrim)[1d2+15]@Commoner@</name>
-    <entry>Character(Pilgrim)[1d2+15]@Commoner@/1d10+6,Character(Guard)[1d2+15]@Warrior@/1d6-1,Character(Leader)[9]@Cleric@/1</entry>
+	  <name>Pilgrims [Level 16-17] (Caravan)</name>
+	  <entry>Character(Pilgrim)[1d2+15]@Commoner@/1d10+6</entry>
+	  <entry>Character(Guard)[1d2+15]@Warrior@/1d6-1</entry>
+	  <entry>Character(Leader)[9]@Cleric@/1</entry>
   </collection>
   <collection>
-    <name>Character(Pilgrim)[1d2+17]@Commoner@</name>
-    <entry>Character(Pilgrim)[1d2+17]@Commoner@/1d10+6,Character(Guard)[1d2+17]@Warrior@/1d6-1,Character(Leader)[10]@Cleric@/1</entry>
+	  <name>Pilgrims [Level 18-19] (Caravan)</name>
+	  <entry>Character(Pilgrim)[1d2+17]@Commoner@/1d10+6</entry>
+	  <entry>Character(Guard)[1d2+17]@Warrior@/1d6-1</entry>
+	  <entry>Character(Leader)[10]@Cleric@/1</entry>
   </collection>
   <collection>
-    <name>Character(Pilgrim)[20]@Commoner@</name>
-    <entry>Character(Pilgrim)[20]@Commoner@/1d10+6,Character(Guard)[20]@Warrior@/1d6-1,Character(Leader)[11]@Cleric@/1</entry>
+	  <name>Pilgrims [Level 20] (Caravan)</name>
+	  <entry>Character(Pilgrim)[20]@Commoner@/1d10+6</entry>
+	  <entry>Character(Guard)[20]@Warrior@/1d6-1</entry>
+	  <entry>Character(Leader)[11]@Cleric@/1</entry>
   </collection>
   <collection>
-    <name>Character(Politician)[1]@Aristocrat@</name>
-    <entry>Character(Politician)[1]@Aristocrat@/1,Character(Adviser)[1]@Expert@/1d3-1,Character(Guard)[1]@Warrior@/2d3-2</entry>
+    <name>Politician [Level 1] (with Advisers and Guards)</name>
+	  <entry>Character(Politician)[1]@Aristocrat@/1</entry>
+	  <entry>Character(Adviser)[1]@Expert@/1d3-1</entry>
+	  <entry>Character(Guard)[1]@Warrior@/2d3-2</entry>
   </collection>
   <collection>
-    <name>Character(Politician)[1d2+1]@Aristocrat@</name>
-    <entry>Character(Politician)[1d2+1]@Aristocrat@/1,Character(Adviser)[1d2+1]@Expert@/1d3-1,Character(Guard)[1d2+1]@Warrior@/2d3-2</entry>
+	  <name>Politician [Level 2-3] (with Advisers and Guards)</name>
+	  <entry>Character(Politician)[1d2+1]@Aristocrat@/1</entry>
+	  <entry>Character(Adviser)[1d2+1]@Expert@/1d3-1</entry>
+	  <entry>Character(Guard)[1d2+1]@Warrior@/2d3-2</entry>
   </collection>
   <collection>
-    <name>Character(Politician)[1d2+3]@Aristocrat@</name>
-    <entry>Character(Politician)[1d2+3]@Aristocrat@/1,Character(Adviser)[1d2+3]@Expert@/1d3-1,Character(Guard)[1d2+3]@Warrior@/2d3-2</entry>
+	  <name>Politician [Level 4-5] (with Advisers and Guards)</name>
+	  <entry>Character(Politician)[1d2+3]@Aristocrat@/1</entry>
+	  <entry>Character(Adviser)[1d2+3]@Expert@/1d3-1</entry>
+	  <entry>Character(Guard)[1d2+3]@Warrior@/2d3-2</entry>
   </collection>
   <collection>
-    <name>Character(Politician)[1d2+5]@Aristocrat@</name>
-    <entry>Character(Politician)[1d2+5]@Aristocrat@/1,Character(Adviser)[1d2+5]@Expert@/1d3-1,Character(Guard)[1d2+5]@Warrior@/2d3-2</entry>
+	  <name>Politician [Level 6-7] (with Advisers and Guards)</name>
+	  <entry>Character(Politician)[1d2+5]@Aristocrat@/1</entry>
+	  <entry>Character(Adviser)[1d2+5]@Expert@/1d3-1</entry>
+	  <entry>Character(Guard)[1d2+5]@Warrior@/2d3-2</entry>
   </collection>
   <collection>
-    <name>Character(Politician)[1d2+7]@Aristocrat@</name>
-    <entry>Character(Politician)[1d2+7]@Aristocrat@/1,Character(Adviser)[1d2+7]@Expert@/1d3-1,Character(Guard)[1d2+7]@Warrior@/2d3-2</entry>
+	  <name>Politician [Level 8-9] (with Advisers and Guards)</name>
+	  <entry>Character(Politician)[1d2+7]@Aristocrat@/1</entry>
+	  <entry>Character(Adviser)[1d2+7]@Expert@/1d3-1</entry>
+	  <entry>Character(Guard)[1d2+7]@Warrior@/2d3-2</entry>
   </collection>
   <collection>
-    <name>Character(Politician)[1d2+9]@Aristocrat@</name>
-    <entry>Character(Politician)[1d2+9]@Aristocrat@/1,Character(Adviser)[1d2+9]@Expert@/1d3-1,Character(Guard)[1d2+9]@Warrior@/2d3-2</entry>
+	  <name>Politician [Level 10-11] (with Advisers and Guards)</name>
+	  <entry>Character(Politician)[1d2+9]@Aristocrat@/1</entry>
+	  <entry>Character(Adviser)[1d2+9]@Expert@/1d3-1</entry>
+	  <entry>Character(Guard)[1d2+9]@Warrior@/2d3-2</entry>
   </collection>
   <collection>
-    <name>Character(Politician)[1d2+11]@Aristocrat@</name>
-    <entry>Character(Politician)[1d2+11]@Aristocrat@/1,Character(Adviser)[1d2+11]@Expert@/1d3-1,Character(Guard)[1d2+11]@Warrior@/2d3-2</entry>
+	  <name>Politician [Level 12-13] (with Advisers and Guards)</name>
+	  <entry>Character(Politician)[1d2+11]@Aristocrat@/1</entry>
+	  <entry>Character(Adviser)[1d2+11]@Expert@/1d3-1</entry>
+	  <entry>Character(Guard)[1d2+11]@Warrior@/2d3-2</entry>
   </collection>
   <collection>
-    <name>Character(Politician)[1d2+13]@Aristocrat@</name>
-    <entry>Character(Politician)[1d2+13]@Aristocrat@/1,Character(Adviser)[1d2+13]@Expert@/1d3-1,Character(Guard)[1d2+13]@Warrior@/2d3-2</entry>
+	  <name>Politician [Level 14-15] (with Advisers and Guards)</name>
+	  <entry>Character(Politician)[1d2+13]@Aristocrat@/1</entry>
+	  <entry>Character(Adviser)[1d2+13]@Expert@/1d3-1</entry>
+	  <entry>Character(Guard)[1d2+13]@Warrior@/2d3-2</entry>
   </collection>
   <collection>
-    <name>Character(Politician)[1d2+15]@Aristocrat@</name>
-    <entry>Character(Politician)[1d2+15]@Aristocrat@/1,Character(Adviser)[1d2+15]@Expert@/1d3-1,Character(Guard)[1d2+15]@Warrior@/2d3-2</entry>
+	  <name>Politician [Level 16-17] (with Advisers and Guards)</name>
+	  <entry>Character(Politician)[1d2+15]@Aristocrat@/1</entry>
+	  <entry>Character(Adviser)[1d2+15]@Expert@/1d3-1</entry>
+	  <entry>Character(Guard)[1d2+15]@Warrior@/2d3-2</entry>
   </collection>
   <collection>
-    <name>Character(Politician)[1d2+17]@Aristocrat@</name>
-    <entry>Character(Politician)[1d2+17]@Aristocrat@/1,Character(Adviser)[1d2+17]@Expert@/1d3-1,Character(Guard)[1d2+17]@Warrior@/2d3-2</entry>
+	  <name>Politician [Level 18-19] (with Advisers and Guards)</name>
+	  <entry>Character(Politician)[1d2+17]@Aristocrat@/1</entry>
+	  <entry>Character(Adviser)[1d2+17]@Expert@/1d3-1</entry>
+	  <entry>Character(Guard)[1d2+17]@Warrior@/2d3-2</entry>
   </collection>
   <collection>
-    <name>Character(Politician)[20]@Aristocrat@</name>
-    <entry>Character(Politician)[20]@Aristocrat@/1,Character(Adviser)[20]@Expert@/1d3-1,Character(Guard)[20]@Warrior@/2d3-2</entry>
+	  <name>Politician [Level 20] (with Advisers and Guards)</name>
+	  <entry>Character(Politician)[20]@Aristocrat@/1</entry>
+	  <entry>Character(Adviser)[20]@Expert@/1d3-1</entry>
+	  <entry>Character(Guard)[20]@Warrior@/2d3-2</entry>
   </collection>
   <collection>
-    <name>Character(Protestor)[1]@Commoner@</name>
+    <name>Protestors [Level 1] (Protest)</name>
     <entry>Character(Protestor)[1]@Commoner@/1d10</entry>
   </collection>
   <collection>
-    <name>Character(Protestor)[1d2+1]@Commoner@</name>
+	  <name>Protestors [Level 2-3] (Protest)</name>
     <entry>Character(Protestor)[1d2+1]@Commoner@/1d10</entry>
   </collection>
   <collection>
-    <name>Character(Protestor)[1d2+3]@Commoner@</name>
-    <entry>Character(Protestor)[1d2+3]@Commoner@/1d10</entry>
+	  <name>Protestors [Level 4-5] (Protest)</name>
+	  <entry>Character(Protestor)[1d2+3]@Commoner@/1d10</entry>
   </collection>
   <collection>
-    <name>Character(Protestor)[1d2+5]@Commoner@</name>
-    <entry>Character(Protestor)[1d2+5]@Commoner@/1d10</entry>
+	  <name>Protestors [Level 6-7] (Protest)</name>
+	  <entry>Character(Protestor)[1d2+5]@Commoner@/1d10</entry>
   </collection>
   <collection>
-    <name>Character(Protestor)[1d2+7]@Commoner@</name>
-    <entry>Character(Protestor)[1d2+7]@Commoner@/1d10</entry>
+	  <name>Protestors [Level 8-9] (Protest)</name>
+	  <entry>Character(Protestor)[1d2+7]@Commoner@/1d10</entry>
   </collection>
   <collection>
-    <name>Character(Protestor)[1d2+9]@Commoner@</name>
-    <entry>Character(Protestor)[1d2+9]@Commoner@/1d10</entry>
+	  <name>Protestors [Level 10-11] (Protest)</name>
+	  <entry>Character(Protestor)[1d2+9]@Commoner@/1d10</entry>
   </collection>
   <collection>
-    <name>Character(Protestor)[1d2+11]@Commoner@</name>
+	  <name>Protestors [Level 12-13] (Protest)</name>
     <entry>Character(Protestor)[1d2+11]@Commoner@/1d10</entry>
   </collection>
   <collection>
-    <name>Character(Protestor)[1d2+13]@Commoner@</name>
+	  <name>Protestors [Level 14-15] (Protest)</name>
     <entry>Character(Protestor)[1d2+13]@Commoner@/1d10</entry>
   </collection>
   <collection>
-    <name>Character(Protestor)[1d2+15]@Commoner@</name>
+	  <name>Protestors [Level 16-17] (Protest)</name>
     <entry>Character(Protestor)[1d2+15]@Commoner@/1d10</entry>
   </collection>
   <collection>
-    <name>Character(Protestor)[1d2+17]@Commoner@</name>
+	  <name>Protestors [Level 18-19] (Protest)</name>
     <entry>Character(Protestor)[1d2+17]@Commoner@/1d10</entry>
   </collection>
   <collection>
-    <name>Character(Protestor)[20]@Commoner@</name>
+	  <name>Protestors [Level 20] (Protest)</name>
     <entry>Character(Protestor)[20]@Commoner@/1d10</entry>
   </collection>
   <collection>
-    <name>Character(Retired adventurer)[11]</name>
+    <name>Retired Adventurer [Level 11] (Solitary)</name>
     <entry>Character(Retired adventurer)[11]/1</entry>
   </collection>
   <collection>
-    <name>Character(Retired adventurer)[12]</name>
-    <entry>Character(Retired adventurer)[12]/1</entry>
+	  <name>Retired Adventurer [Level 12] (Solitary)</name>
+	  <entry>Character(Retired adventurer)[12]/1</entry>
   </collection>
   <collection>
-    <name>Character(Retired adventurer)[13]</name>
+	  <name>Retired Adventurer [Level 13] (Solitary)</name>
     <entry>Character(Retired adventurer)[13]/1</entry>
   </collection>
   <collection>
-    <name>Character(Retired adventurer)[14]</name>
+	  <name>Retired Adventurer [Level 14] (Solitary)</name>
     <entry>Character(Retired adventurer)[14]/1</entry>
   </collection>
   <collection>
-    <name>Character(Retired adventurer)[15]</name>
+	  <name>Retired Adventurer [Level 15] (Solitary)</name>
     <entry>Character(Retired adventurer)[15]/1</entry>
   </collection>
   <collection>
-    <name>Character(Retired adventurer)[16]</name>
+	  <name>Retired Adventurer [Level 16] (Solitary)</name>
     <entry>Character(Retired adventurer)[16]/1</entry>
   </collection>
   <collection>
-    <name>Character(Retired adventurer)[17]</name>
-    <entry>Character(Retired adventurer)[17]/1</entry>
+	  <name>Retired Adventurer [Level 17] (Solitary)</name>
+	  <entry>Character(Retired adventurer)[17]/1</entry>
   </collection>
   <collection>
-    <name>Character(Retired adventurer)[18]</name>
+	  <name>Retired Adventurer [Level 18] (Solitary)</name>
     <entry>Character(Retired adventurer)[18]/1</entry>
   </collection>
   <collection>
-    <name>Character(Retired adventurer)[19]</name>
-    <entry>Character(Retired adventurer)[19]/1</entry>
+	  <name>Retired Adventurer [Level 19] (Solitary)</name>
+	  <entry>Character(Retired adventurer)[19]/1</entry>
   </collection>
   <collection>
-    <name>Character(Retired adventurer)[20]</name>
+	  <name>Retired Adventurer [Level 20] (Solitary)</name>
     <entry>Character(Retired adventurer)[20]/1</entry>
   </collection>
   <collection>
-    <name>Character(Scholar)[1]@Monk&amp;Wizard@</name>
+    <name>Scholar [Level 1] (Solitary)</name>
     <entry>Character(Scholar)[1]@Monk&amp;Wizard@/1</entry>
   </collection>
   <collection>
-    <name>Character(Scholar)[2]@Monk&amp;Wizard@</name>
+	  <name>Scholar [Level 2] (Solitary)</name>
     <entry>Character(Scholar)[2]@Monk&amp;Wizard@/1</entry>
   </collection>
   <collection>
-    <name>Character(Scholar)[3]@Monk&amp;Wizard@</name>
+	  <name>Scholar [Level 3] (Solitary)</name>
     <entry>Character(Scholar)[3]@Monk&amp;Wizard@/1</entry>
   </collection>
   <collection>
-    <name>Character(Scholar)[4]@Monk&amp;Wizard@</name>
+	  <name>Scholar [Level 4] (Solitary)</name>
     <entry>Character(Scholar)[4]@Monk&amp;Wizard@/1</entry>
   </collection>
   <collection>
-    <name>Character(Scholar)[5]@Monk&amp;Wizard@</name>
+	  <name>Scholar [Level 5] (Solitary)</name>
     <entry>Character(Scholar)[5]@Monk&amp;Wizard@/1</entry>
   </collection>
   <collection>
-    <name>Character(Scholar)[6]@Monk&amp;Wizard@</name>
-    <entry>Character(Scholar)[6]@Monk&amp;Wizard@/1</entry>
+	  <name>Scholar [Level 6] (Solitary)</name>
+	  <entry>Character(Scholar)[6]@Monk&amp;Wizard@/1</entry>
   </collection>
   <collection>
-    <name>Character(Scholar)[7]@Monk&amp;Wizard@</name>
-    <entry>Character(Scholar)[7]@Monk&amp;Wizard@/1</entry>
+	  <name>Scholar [Level 7] (Solitary)</name>
+	  <entry>Character(Scholar)[7]@Monk&amp;Wizard@/1</entry>
   </collection>
   <collection>
-    <name>Character(Scholar)[8]@Monk&amp;Wizard@</name>
-    <entry>Character(Scholar)[8]@Monk&amp;Wizard@/1</entry>
+	  <name>Scholar [Level 8] (Solitary)</name>
+	  <entry>Character(Scholar)[8]@Monk&amp;Wizard@/1</entry>
   </collection>
   <collection>
-    <name>Character(Scholar)[9]@Monk&amp;Wizard@</name>
-    <entry>Character(Scholar)[9]@Monk&amp;Wizard@/1</entry>
+	  <name>Scholar [Level 9] (Solitary)</name>
+	  <entry>Character(Scholar)[9]@Monk&amp;Wizard@/1</entry>
   </collection>
   <collection>
-    <name>Character(Scholar)[10]@Monk&amp;Wizard@</name>
+	  <name>Scholar [Level 10] (Solitary)</name>
     <entry>Character(Scholar)[10]@Monk&amp;Wizard@/1</entry>
   </collection>
   <collection>
-    <name>Character(Scholar)[11]@Monk&amp;Wizard@</name>
+	  <name>Scholar [Level 11] (Solitary)</name>
     <entry>Character(Scholar)[11]@Monk&amp;Wizard@/1</entry>
   </collection>
   <collection>
-    <name>Character(Scholar)[12]@Monk&amp;Wizard@</name>
+	  <name>Scholar [Level 12] (Solitary)</name>
     <entry>Character(Scholar)[12]@Monk&amp;Wizard@/1</entry>
   </collection>
   <collection>
-    <name>Character(Scholar)[13]@Monk&amp;Wizard@</name>
-    <entry>Character(Scholar)[13]@Monk&amp;Wizard@/1</entry>
+	  <name>Scholar [Level 13] (Solitary)</name>
+	  <entry>Character(Scholar)[13]@Monk&amp;Wizard@/1</entry>
   </collection>
   <collection>
-    <name>Character(Scholar)[14]@Monk&amp;Wizard@</name>
-    <entry>Character(Scholar)[14]@Monk&amp;Wizard@/1</entry>
+	  <name>Scholar [Level 14] (Solitary)</name>
+	  <entry>Character(Scholar)[14]@Monk&amp;Wizard@/1</entry>
   </collection>
   <collection>
-    <name>Character(Scholar)[15]@Monk&amp;Wizard@</name>
-    <entry>Character(Scholar)[15]@Monk&amp;Wizard@/1</entry>
+	  <name>Scholar [Level 15] (Solitary)</name>
+	  <entry>Character(Scholar)[15]@Monk&amp;Wizard@/1</entry>
   </collection>
   <collection>
-    <name>Character(Scholar)[16]@Monk&amp;Wizard@</name>
-    <entry>Character(Scholar)[16]@Monk&amp;Wizard@/1</entry>
+	  <name>Scholar [Level 16] (Solitary)</name>
+	  <entry>Character(Scholar)[16]@Monk&amp;Wizard@/1</entry>
   </collection>
   <collection>
-    <name>Character(Scholar)[17]@Monk&amp;Wizard@</name>
-    <entry>Character(Scholar)[17]@Monk&amp;Wizard@/1</entry>
+	  <name>Scholar [Level 17] (Solitary)</name>
+	  <entry>Character(Scholar)[17]@Monk&amp;Wizard@/1</entry>
   </collection>
   <collection>
-    <name>Character(Scholar)[18]@Monk&amp;Wizard@</name>
-    <entry>Character(Scholar)[18]@Monk&amp;Wizard@/1</entry>
+	  <name>Scholar [Level 18] (Solitary)</name>
+	  <entry>Character(Scholar)[18]@Monk&amp;Wizard@/1</entry>
   </collection>
   <collection>
-    <name>Character(Scholar)[19]@Monk&amp;Wizard@</name>
-    <entry>Character(Scholar)[19]@Monk&amp;Wizard@/1</entry>
+	  <name>Scholar [Level 19] (Solitary)</name>
+	  <entry>Character(Scholar)[19]@Monk&amp;Wizard@/1</entry>
   </collection>
   <collection>
-    <name>Character(Scholar)[20]@Monk&amp;Wizard@</name>
+	  <name>Scholar [Level 20] (Solitary)</name>
     <entry>Character(Scholar)[20]@Monk&amp;Wizard@/1</entry>
   </collection>
   <collection>
-    <name>Character(Sellsword)[1]</name>
+    <name>Sellsword [Level 1] (Solitary)</name>
     <entry>Character(Sellsword)[1]/1</entry>
   </collection>
   <collection>
-    <name>Character(Sellsword)[2]</name>
+	  <name>Sellsword [Level 2] (Solitary)</name>
     <entry>Character(Sellsword)[2]/1</entry>
   </collection>
   <collection>
-    <name>Character(Sellsword)[3]</name>
+	  <name>Sellsword [Level 3] (Solitary)</name>
     <entry>Character(Sellsword)[3]/1</entry>
   </collection>
   <collection>
-    <name>Character(Sellsword)[4]</name>
-    <entry>Character(Sellsword)[4]/1</entry>
+	  <name>Sellsword [Level 4] (Solitary)</name>
+	  <entry>Character(Sellsword)[4]/1</entry>
   </collection>
   <collection>
-    <name>Character(Sellsword)[5]</name>
-    <entry>Character(Sellsword)[5]/1</entry>
+	  <name>Sellsword [Level 5] (Solitary)</name>
+	  <entry>Character(Sellsword)[5]/1</entry>
   </collection>
   <collection>
-    <name>Character(Sellsword)[6]</name>
+	  <name>Sellsword [Level 6] (Solitary)</name>
     <entry>Character(Sellsword)[6]/1</entry>
   </collection>
   <collection>
-    <name>Character(Sellsword)[7]</name>
-    <entry>Character(Sellsword)[7]/1</entry>
+	  <name>Sellsword [Level 7] (Solitary)</name>
+	  <entry>Character(Sellsword)[7]/1</entry>
   </collection>
   <collection>
-    <name>Character(Sellsword)[8]</name>
-    <entry>Character(Sellsword)[8]/1</entry>
+	  <name>Sellsword [Level 8] (Solitary)</name>
+	  <entry>Character(Sellsword)[8]/1</entry>
   </collection>
   <collection>
-    <name>Character(Sellsword)[9]</name>
+	  <name>Sellsword [Level 9] (Solitary)</name>
     <entry>Character(Sellsword)[9]/1</entry>
   </collection>
   <collection>
-    <name>Character(Sellsword)[10]</name>
+	  <name>Sellsword [Level 10] (Solitary)</name>
     <entry>Character(Sellsword)[10]/1</entry>
   </collection>
   <collection>
-    <name>Character(Sellsword)[11]</name>
+	  <name>Sellsword [Level 11] (Solitary)</name>
     <entry>Character(Sellsword)[11]/1</entry>
   </collection>
   <collection>
-    <name>Character(Sellsword)[12]</name>
+	  <name>Sellsword [Level 12] (Solitary)</name>
     <entry>Character(Sellsword)[12]/1</entry>
   </collection>
   <collection>
-    <name>Character(Sellsword)[13]</name>
+	  <name>Sellsword [Level 13] (Solitary)</name>
     <entry>Character(Sellsword)[13]/1</entry>
   </collection>
   <collection>
-    <name>Character(Sellsword)[14]</name>
+	  <name>Sellsword [Level 14] (Solitary)</name>
     <entry>Character(Sellsword)[14]/1</entry>
   </collection>
   <collection>
-    <name>Character(Sellsword)[15]</name>
+	  <name>Sellsword [Level 15] (Solitary)</name>
     <entry>Character(Sellsword)[15]/1</entry>
   </collection>
   <collection>
-    <name>Character(Sellsword)[16]</name>
-    <entry>Character(Sellsword)[16]/1</entry>
+	  <name>Sellsword [Level 16] (Solitary)</name>
+	  <entry>Character(Sellsword)[16]/1</entry>
   </collection>
   <collection>
-    <name>Character(Sellsword)[17]</name>
-    <entry>Character(Sellsword)[17]/1</entry>
+	  <name>Sellsword [Level 17] (Solitary)</name>
+	  <entry>Character(Sellsword)[17]/1</entry>
   </collection>
   <collection>
-    <name>Character(Sellsword)[18]</name>
-    <entry>Character(Sellsword)[18]/1</entry>
+	  <name>Sellsword [Level 18] (Solitary)</name>
+	  <entry>Character(Sellsword)[18]/1</entry>
   </collection>
   <collection>
-    <name>Character(Sellsword)[19]</name>
-    <entry>Character(Sellsword)[19]/1</entry>
+	  <name>Sellsword [Level 19] (Solitary)</name>
+	  <entry>Character(Sellsword)[19]/1</entry>
   </collection>
   <collection>
-    <name>Character(Sellsword)[20]</name>
+	  <name>Sellsword [Level 20] (Solitary)</name>
     <entry>Character(Sellsword)[20]/1</entry>
-  </collection>
-  <collection>
-    <name>Character(Servant)[1]@Commoner@</name>
-    <entry>Character(Gentry)[1]@Aristocrat@/1d2,Character(Servant)[1]@Commoner@/1d3+1</entry>
-  </collection>
-  <collection>
-    <name>Character(Servant)[1d2+1]@Commoner@</name>
-    <entry>Character(Gentry)[1d2+1]@Aristocrat@/1d2,Character(Servant)[1d2+1]@Commoner@/1d3+1</entry>
-  </collection>
-  <collection>
-    <name>Character(Servant)[1d2+3]@Commoner@</name>
-    <entry>Character(Gentry)[1d2+3]@Aristocrat@/1d2,Character(Servant)[1d2+3]@Commoner@/1d3+1</entry>
-  </collection>
-  <collection>
-    <name>Character(Servant)[1d2+5]@Commoner@</name>
-    <entry>Character(Gentry)[1d2+5]@Aristocrat@/1d2,Character(Servant)[1d2+5]@Commoner@/1d3+1</entry>
-  </collection>
-  <collection>
-    <name>Character(Servant)[1d2+7]@Commoner@</name>
-    <entry>Character(Gentry)[1d2+7]@Aristocrat@/1d2,Character(Servant)[1d2+7]@Commoner@/1d3+1</entry>
-  </collection>
-  <collection>
-    <name>Character(Servant)[1d2+9]@Commoner@</name>
-    <entry>Character(Gentry)[1d2+9]@Aristocrat@/1d2,Character(Servant)[1d2+9]@Commoner@/1d3+1</entry>
-  </collection>
-  <collection>
-    <name>Character(Servant)[1d2+11]@Commoner@</name>
-    <entry>Character(Gentry)[1d2+11]@Aristocrat@/1d2,Character(Servant)[1d2+11]@Commoner@/1d3+1</entry>
-  </collection>
-  <collection>
-    <name>Character(Servant)[1d2+13]@Commoner@</name>
-    <entry>Character(Gentry)[1d2+13]@Aristocrat@/1d2,Character(Servant)[1d2+13]@Commoner@/1d3+1</entry>
-  </collection>
-  <collection>
-    <name>Character(Servant)[1d2+15]@Commoner@</name>
-    <entry>Character(Gentry)[1d2+15]@Aristocrat@/1d2,Character(Servant)[1d2+15]@Commoner@/1d3+1</entry>
-  </collection>
-  <collection>
-    <name>Character(Servant)[1d2+17]@Commoner@</name>
-    <entry>Character(Gentry)[1d2+17]@Aristocrat@/1d2,Character(Servant)[1d2+17]@Commoner@/1d3+1</entry>
-  </collection>
-  <collection>
-    <name>Character(Servant)[20]@Commoner@</name>
-    <entry>Character(Gentry)[20]@Aristocrat@/1d2,Character(Servant)[20]@Commoner@/1d3+1</entry>
-  </collection>
-  <collection>
-    <name>Character(Star Student)[1]</name>
-    <entry>Character(Teacher)[11]/1,Character(Star Student)[1]/1d3-1,Character(Student)[1]@Any NPC@/1d3+1</entry>
-  </collection>
-  <collection>
-    <name>Character(Star Student)[2]</name>
-    <entry>Character(Teacher)[12]/1,Character(Star Student)[2]/1d3-1,Character(Student)[1d2+1]@Any NPC@/1d3+1</entry>
-  </collection>
-  <collection>
-    <name>Character(Star Student)[3]</name>
-    <entry>Character(Teacher)[13]/1,Character(Star Student)[3]/1d3-1,Character(Student)[1d2+3]@Any NPC@/1d3+1</entry>
-  </collection>
-  <collection>
-    <name>Character(Star Student)[4]</name>
-    <entry>Character(Teacher)[14]/1,Character(Star Student)[4]/1d3-1,Character(Student)[1d2+5]@Any NPC@/1d3+1</entry>
-  </collection>
-  <collection>
-    <name>Character(Star Student)[5]</name>
-    <entry>Character(Teacher)[15]/1,Character(Star Student)[5]/1d3-1,Character(Student)[1d2+7]@Any NPC@/1d3+1</entry>
-  </collection>
-  <collection>
-    <name>Character(Star Student)[6]</name>
-    <entry>Character(Teacher)[16]/1,Character(Star Student)[6]/1d3-1,Character(Student)[1d2+9]@Any NPC@/1d3+1</entry>
-  </collection>
-  <collection>
-    <name>Character(Star Student)[7]</name>
-    <entry>Character(Teacher)[17]/1,Character(Star Student)[7]/1d3-1,Character(Student)[1d2+11]@Any NPC@/1d3+1</entry>
-  </collection>
-  <collection>
-    <name>Character(Star Student)[8]</name>
-    <entry>Character(Teacher)[18]/1,Character(Star Student)[8]/1d3-1,Character(Student)[1d2+13]@Any NPC@/1d3+1</entry>
-  </collection>
-  <collection>
-    <name>Character(Star Student)[9]</name>
-    <entry>Character(Teacher)[19]/1,Character(Star Student)[9]/1d3-1,Character(Student)[1d2+15]@Any NPC@/1d3+1</entry>
-  </collection>
-  <collection>
-    <name>Character(Star Student)[10]</name>
-    <entry>Character(Teacher)[20]/1,Character(Star Student)[10]/1d3-1,Character(Student)[1d2+17]@Any NPC@/1d3+1</entry>
   </collection>
   <collection>
     <name>Character(Street performer)[1]@Adept@</name>
@@ -7749,7 +7709,7 @@
     <entry>Djinni/1d10+5</entry>
   </collection>
   <collection>
-    <name>Noble Djinn (Solitary)</name>
+    <name>Noble Djinni (Solitary)</name>
     <entry>Djinni$Noble$/1</entry>
   </collection>
   <collection>
@@ -9398,7 +9358,7 @@
 		<entry>Mohrg/1d3+1</entry>
 	</collection>
 	<collection>
-		<name>Mohrgs (Troupe)</name>
+		<name>Mohrgs (Mob)</name>
 		<entry>Mohrg/1d3+1</entry>
 		<entry>Zombie$Human$/1d6+4</entry>
 	</collection>
@@ -9415,11 +9375,11 @@
     <entry>Mummy/1</entry>
   </collection>
 	<collection>
-		<name>Mummies (Something)</name>
+		<name>Mummies (Warden Squad)</name>
 		<entry>Mummy/1d3+1</entry>
 	</collection>
 	<collection>
-		<name>Mummies (Tomb Guard)</name>
+		<name>Mummies (Guardian Detail)</name>
 		<entry>Mummy/2d3+4</entry>
 	</collection>
   <collection>
@@ -9462,16 +9422,29 @@
     <entry>Naga$Water$/1d2+2</entry>
   </collection>
   <collection>
-    <name>Nalfeshnee</name>
+    <name>Nalfeshnee (Solitary)</name>
     <entry>Nalfeshnee/1</entry>
-    <entry>Nalfeshnee/1,Hezrou/1,Vrock/1d4+1</entry>
   </collection>
+	<collection>
+		<name>Nalfeshnee (Troupe)</name>
+		<entry>Nalfeshnee/1</entry>
+		<entry>Hezrou/1</entry>
+		<entry>Vrock/1d4+1</entry>
+	</collection>
   <collection>
-    <name>Night hag</name>
+    <name>Night Hag (Solitary)</name>
     <entry>Night hag/1</entry>
-    <entry>Night hag/1,Nightmare/1</entry>
-    <entry>Night hag/3,Nightmare/3</entry>
   </collection>
+	<collection>
+		<name>Night Hag (with Mount)</name>
+		<entry>Night hag/1</entry>
+		<entry>Nightmare/1</entry>
+	</collection>
+	<collection>
+		<name>Night Hags (Covey)</name>
+		<entry>Night hag/3</entry>
+		<entry>Nightmare/3</entry>
+	</collection>
   <collection>
     <name>Nightmare (Solitary)</name>
     <entry>Nightmare/1</entry>
@@ -9593,11 +9566,18 @@
 		<entry>Ogre$Merrow$/1d4+3</entry>
 	</collection>
   <collection>
-    <name>Ogre mage</name>
+    <name>Ogre Mage (Solitary)</name>
     <entry>Ogre mage/1</entry>
-    <entry>Ogre mage/2</entry>
-    <entry>Ogre mage/1d2,Ogre/1d3+1</entry>
   </collection>
+	<collection>
+		<name>Ogre Mages (Pair)</name>
+		<entry>Ogre mage/2</entry>
+	</collection>
+	<collection>
+		<name>Ogre Mages (Troupe)</name>
+		<entry>Ogre mage/1d2</entry>
+		<entry>Ogre/1d3+1</entry>
+	</collection>
   <collection>
     <name>Gray Ooze (Solitary)</name>
     <entry>Gray ooze/1</entry>
@@ -9651,7 +9631,7 @@
 		<entry>Otyugh/2</entry>
 	</collection>
 	<collection>
-		<name>Otyughs (Gang)</name>
+		<name>Otyughs (Cluster)</name>
 		<entry>Otyugh/1d2+2</entry>
 	</collection>
   <collection>
@@ -9691,11 +9671,11 @@
     <entry>Pegasus/1</entry>
   </collection>
 	<collection>
-		<name>Pegasus (Pair)</name>
+		<name>Pegasuses (Pair)</name>
 		<entry>Pegasus/2</entry>
 	</collection>
 	<collection>
-		<name>Pegasus (Flight)</name>
+		<name>Pegasuses (Herd)</name>
 		<entry>Pegasus/2d3+4</entry>
 	</collection>
   <collection>
@@ -9707,7 +9687,7 @@
     <entry>Phase spider/1</entry>
   </collection>
 	<collection>
-		<name>Phase Spiders (Swarm)</name>
+		<name>Phase Spiders (Cluster)</name>
 		<entry>Phase spider/1d4+1</entry>
 	</collection>
   <collection>
@@ -9723,7 +9703,7 @@
 		<entry>Pit fiend/2</entry>
 	</collection>
 	<collection>
-		<name>Pit Fiends (Gang)</name>
+		<name>Pit Fiends (Team)</name>
 		<entry>Pit fiend/1d2+2</entry>
 	</collection>
 	<collection>
@@ -9773,7 +9753,7 @@
 		<entry>Pseudodragon/2</entry>
 	</collection>
 	<collection>
-		<name>Pseudodragons (Group)</name>
+		<name>Pseudodragons (Clutch)</name>
 		<entry>Pseudodragon/1d3+2</entry>
 	</collection>
   <collection>
@@ -9797,11 +9777,11 @@
 		<entry>Rast/2</entry>
 	</collection>
 	<collection>
-		<name>Rasts (Group)</name>
+		<name>Rasts (Cluster)</name>
 		<entry>Rast/1d4+2</entry>
 	</collection>
   <collection>
-    <name>Rat (Plague)</name>
+    <name>Rats (Plague)</name>
     <entry>Rat/10d10</entry>
   </collection>
   <collection>
@@ -9813,28 +9793,51 @@
     <entry>Dire rat/1d10+10</entry>
   </collection>
   <collection>
-    <name>Wererat</name>
+    <name>Wererat (Solitary)</name>
     <entry>Wererat/1</entry>
-    <entry>Wererat/2</entry>
-    <entry>Wererat/2d3+4</entry>
-    <entry>Wererat/1d4+1,Dire rat/1d4+4</entry>
   </collection>
+	<collection>
+		<name>Wererats (Pair)</name>
+		<entry>Wererat/2</entry>
+	</collection>
+	<collection>
+		<name>Wererats (Pack)</name>
+		<entry>Wererat/2d3+4</entry>
+	</collection>
+	<collection>
+		<name>Wererats (Troupe)</name>
+		<entry>Wererat/1d4+1</entry>
+		<entry>Dire rat/1d4+4</entry>
+	</collection>
   <collection>
-    <name>Rat swarm</name>
+    <name>Rat Swarm (Solitary)</name>
     <entry>Rat swarm/1</entry>
-    <entry>Rat swarm/1d3+1</entry>
-    <entry>Rat swarm/1d6+6</entry>
   </collection>
+	<collection>
+		<name>Rat Swarms (Pack)</name>
+		<entry>Rat swarm/1d3+1</entry>
+	</collection>
+	<collection>
+		<name>Rat Swarms (Infestation)</name>
+		<entry>Rat swarm/1d6+6</entry>
+	</collection>
   <collection>
     <name>Raven (Solitary)</name>
     <entry>Raven/1</entry>
   </collection>
   <collection>
-    <name>Ravid</name>
-    <entry>Ravid/1,Animated object$Colossal$/1d6-5,Animated object$Gargantuan$/1d4-3,Animated object$Huge$/1d3-2,Animated object$Large$/1d2-1,Animated object$Medium$/1d2-1,Animated object$Small$/1d3-1,Animated object$Tiny$/2d3-2</entry>
+    <name>Ravid (with Animated Objects)</name>
+	  <entry>Ravid/1</entry>
+	  <entry>Animated object$Colossal$/1d6-5</entry>
+	  <entry>Animated object$Gargantuan$/1d4-3</entry>
+	  <entry>Animated object$Huge$/1d3-2</entry>
+	  <entry>Animated object$Large$/1d2-1</entry>
+	  <entry>Animated object$Medium$/1d2-1</entry>
+	  <entry>Animated object$Small$/1d3-1</entry>
+	  <entry>Animated object$Tiny$/2d3-2</entry>
   </collection>
   <collection>
-    <name>Razor boar</name>
+    <name>Razor Boar (Solitary)</name>
     <entry>Razor boar/1</entry>
   </collection>
   <collection>
@@ -9858,11 +9861,17 @@
     <entry>Roc/2</entry>
   </collection>
   <collection>
-    <name>Roper</name>
+    <name>Roper (Solitary)</name>
     <entry>Roper/1</entry>
-    <entry>Roper/2</entry>
-    <entry>Roper/1d4+2</entry>
   </collection>
+	<collection>
+		<name>Ropers (Pair)</name>
+		<entry>Roper/2</entry>
+	</collection>
+	<collection>
+		<name>Ropers (Cluster)</name>
+		<entry>Roper/1d4+2</entry>
+	</collection>
   <collection>
     <name>Rust Monster (Solitary)</name>
     <entry>Rust monster/1</entry>
@@ -9872,88 +9881,121 @@
     <entry>Rust monster/2</entry>
   </collection>
   <collection>
-    <name>Sahuagin</name>
+    <name>Sahuagin (Solitary)</name>
     <entry>Sahuagin/1</entry>
-    <entry>Sahuagin/2</entry>
-    <entry>Sahuagin/1d4+4</entry>
-    <entry>Sahuagin/1d10+10,Character(Lieutenant)[3]{Sahuagin}/1,Dire shark/1d2</entry>
-    <entry>Sahuagin/1d10+10,Character(Lieutenant)[3]{Sahuagin}/1,Shark$Medium$/1d2</entry>
-    <entry>Sahuagin/1d10+10,Character(Lieutenant)[3]{Sahuagin}/1,Shark$Large$/1d2</entry>
-    <entry>Sahuagin/1d10+10,Character(Lieutenant)[3]{Sahuagin}/1,Shark$Huge$/1d2</entry>
-    <entry>Sahuagin/12d6+8,Sahuagin$Noncombatant$/12d6+8,Character(Lieutenant)[3]{Sahuagin}/1d4,Character(Chieftan)[4]{Sahuagin}/1d4,Dire shark/1d2</entry>
-    <entry>Sahuagin/12d6+8,Sahuagin$Noncombatant$/12d6+8,Character(Lieutenant)[3]{Sahuagin}/1d4,Character(Chieftan)[4]{Sahuagin}/1d4,Shark$Medium$/1d2</entry>
-    <entry>Sahuagin/12d6+8,Sahuagin$Noncombatant$/12d6+8,Character(Lieutenant)[3]{Sahuagin}/1d4,Character(Chieftan)[4]{Sahuagin}/1d4,Shark$Large$/1d2</entry>
-    <entry>Sahuagin/12d6+8,Sahuagin$Noncombatant$/12d6+8,Character(Lieutenant)[3]{Sahuagin}/1d4,Character(Chieftan)[4]{Sahuagin}/1d4,Shark$Huge$/1d2</entry>
-    <entry>Sahuagin/10d10+60,Sahuagin$Noncombatant$/10d10+60,Character(Lieutenant)[3]{Sahuagin}/2d3+2,Character(Chieftan)[4]{Sahuagin}/1d3+1,Character(Guard)[4]{Sahuagin}/9,Character(Underpriest)[1d4+2]{Sahuagin}@Cleric@/1d4,Character(Priest)[7]{Sahuagin}@Cleric@/1,Character(Baron)[1d3+5]{Sahuagin}/1,Dire shark/1d4+4</entry>
-    <entry>Sahuagin/10d10+60,Sahuagin$Noncombatant$/10d10+60,Character(Lieutenant)[3]{Sahuagin}/2d3+2,Character(Chieftan)[4]{Sahuagin}/1d3+1,Character(Guard)[4]{Sahuagin}/9,Character(Underpriest)[1d4+2]{Sahuagin}@Cleric@/1d4,Character(Priest)[7]{Sahuagin}@Cleric@/1,Character(Baron)[1d3+5]{Sahuagin}/1,Shark$Medium$/1d4+4</entry>
-    <entry>Sahuagin/10d10+60,Sahuagin$Noncombatant$/10d10+60,Character(Lieutenant)[3]{Sahuagin}/2d3+2,Character(Chieftan)[4]{Sahuagin}/1d3+1,Character(Guard)[4]{Sahuagin}/9,Character(Underpriest)[1d4+2]{Sahuagin}@Cleric@/1d4,Character(Priest)[7]{Sahuagin}@Cleric@/1,Character(Baron)[1d3+5]{Sahuagin}/1,Shark$Large$/1d4+4</entry>
-    <entry>Sahuagin/10d10+60,Sahuagin$Noncombatant$/10d10+60,Character(Lieutenant)[3]{Sahuagin}/2d3+2,Character(Chieftan)[4]{Sahuagin}/1d3+1,Character(Guard)[4]{Sahuagin}/9,Character(Underpriest)[1d4+2]{Sahuagin}@Cleric@/1d4,Character(Priest)[7]{Sahuagin}@Cleric@/1,Character(Baron)[1d3+5]{Sahuagin}/1,Shark$Huge$/1d4+4</entry>
   </collection>
-  <collection>
-    <name>Sahuagin$Noncombatant$</name>
-    <entry>Sahuagin/12d6+8,Sahuagin$Noncombatant$/12d6+8,Character(Lieutenant)[3]{Sahuagin}/1d4,Character(Chieftan)[4]{Sahuagin}/1d4,Dire shark/1d2</entry>
-    <entry>Sahuagin/12d6+8,Sahuagin$Noncombatant$/12d6+8,Character(Lieutenant)[3]{Sahuagin}/1d4,Character(Chieftan)[4]{Sahuagin}/1d4,Shark$Medium$/1d2</entry>
-    <entry>Sahuagin/12d6+8,Sahuagin$Noncombatant$/12d6+8,Character(Lieutenant)[3]{Sahuagin}/1d4,Character(Chieftan)[4]{Sahuagin}/1d4,Shark$Large$/1d2</entry>
-    <entry>Sahuagin/12d6+8,Sahuagin$Noncombatant$/12d6+8,Character(Lieutenant)[3]{Sahuagin}/1d4,Character(Chieftan)[4]{Sahuagin}/1d4,Shark$Huge$/1d2</entry>
-    <entry>Sahuagin/10d10+60,Sahuagin$Noncombatant$/10d10+60,Character(Lieutenant)[3]{Sahuagin}/2d3+2,Character(Chieftan)[4]{Sahuagin}/1d3+1,Character(Guard)[4]{Sahuagin}/9,Character(Underpriest)[1d4+2]{Sahuagin}@Cleric@/1d4,Character(Priest)[7]{Sahuagin}@Cleric@/1,Character(Baron)[1d3+5]{Sahuagin}/1,Dire shark/1d4+4</entry>
-    <entry>Sahuagin/10d10+60,Sahuagin$Noncombatant$/10d10+60,Character(Lieutenant)[3]{Sahuagin}/2d3+2,Character(Chieftan)[4]{Sahuagin}/1d3+1,Character(Guard)[4]{Sahuagin}/9,Character(Underpriest)[1d4+2]{Sahuagin}@Cleric@/1d4,Character(Priest)[7]{Sahuagin}@Cleric@/1,Character(Baron)[1d3+5]{Sahuagin}/1,Shark$Medium$/1d4+4</entry>
-    <entry>Sahuagin/10d10+60,Sahuagin$Noncombatant$/10d10+60,Character(Lieutenant)[3]{Sahuagin}/2d3+2,Character(Chieftan)[4]{Sahuagin}/1d3+1,Character(Guard)[4]{Sahuagin}/9,Character(Underpriest)[1d4+2]{Sahuagin}@Cleric@/1d4,Character(Priest)[7]{Sahuagin}@Cleric@/1,Character(Baron)[1d3+5]{Sahuagin}/1,Shark$Large$/1d4+4</entry>
-    <entry>Sahuagin/10d10+60,Sahuagin$Noncombatant$/10d10+60,Character(Lieutenant)[3]{Sahuagin}/2d3+2,Character(Chieftan)[4]{Sahuagin}/1d3+1,Character(Guard)[4]{Sahuagin}/9,Character(Underpriest)[1d4+2]{Sahuagin}@Cleric@/1d4,Character(Priest)[7]{Sahuagin}@Cleric@/1,Character(Baron)[1d3+5]{Sahuagin}/1,Shark$Huge$/1d4+4</entry>
-  </collection>
-  <collection>
-    <name>Character(Baron)[1d3+5]{Sahuagin}</name>
-    <entry>Sahuagin/10d10+60,Sahuagin$Noncombatant$/10d10+60,Character(Lieutenant)[3]{Sahuagin}/2d3+2,Character(Chieftan)[4]{Sahuagin}/1d3+1,Character(Guard)[4]{Sahuagin}/9,Character(Underpriest)[1d4+2]{Sahuagin}@Cleric@/1d4,Character(Priest)[7]{Sahuagin}@Cleric@/1,Character(Baron)[1d3+5]{Sahuagin}/1,Dire shark/1d4+4</entry>
-    <entry>Sahuagin/10d10+60,Sahuagin$Noncombatant$/10d10+60,Character(Lieutenant)[3]{Sahuagin}/2d3+2,Character(Chieftan)[4]{Sahuagin}/1d3+1,Character(Guard)[4]{Sahuagin}/9,Character(Underpriest)[1d4+2]{Sahuagin}@Cleric@/1d4,Character(Priest)[7]{Sahuagin}@Cleric@/1,Character(Baron)[1d3+5]{Sahuagin}/1,Shark$Medium$/1d4+4</entry>
-    <entry>Sahuagin/10d10+60,Sahuagin$Noncombatant$/10d10+60,Character(Lieutenant)[3]{Sahuagin}/2d3+2,Character(Chieftan)[4]{Sahuagin}/1d3+1,Character(Guard)[4]{Sahuagin}/9,Character(Underpriest)[1d4+2]{Sahuagin}@Cleric@/1d4,Character(Priest)[7]{Sahuagin}@Cleric@/1,Character(Baron)[1d3+5]{Sahuagin}/1,Shark$Large$/1d4+4</entry>
-    <entry>Sahuagin/10d10+60,Sahuagin$Noncombatant$/10d10+60,Character(Lieutenant)[3]{Sahuagin}/2d3+2,Character(Chieftan)[4]{Sahuagin}/1d3+1,Character(Guard)[4]{Sahuagin}/9,Character(Underpriest)[1d4+2]{Sahuagin}@Cleric@/1d4,Character(Priest)[7]{Sahuagin}@Cleric@/1,Character(Baron)[1d3+5]{Sahuagin}/1,Shark$Huge$/1d4+4</entry>
-  </collection>
-  <collection>
-    <name>Character(Chieftan)[4]{Sahuagin}</name>
-    <entry>Sahuagin/12d6+8,Sahuagin$Noncombatant$/12d6+8,Character(Lieutenant)[3]{Sahuagin}/1d4,Character(Chieftan)[4]{Sahuagin}/1d4,Dire shark/1d2</entry>
-    <entry>Sahuagin/12d6+8,Sahuagin$Noncombatant$/12d6+8,Character(Lieutenant)[3]{Sahuagin}/1d4,Character(Chieftan)[4]{Sahuagin}/1d4,Shark$Medium$/1d2</entry>
-    <entry>Sahuagin/12d6+8,Sahuagin$Noncombatant$/12d6+8,Character(Lieutenant)[3]{Sahuagin}/1d4,Character(Chieftan)[4]{Sahuagin}/1d4,Shark$Large$/1d2</entry>
-    <entry>Sahuagin/12d6+8,Sahuagin$Noncombatant$/12d6+8,Character(Lieutenant)[3]{Sahuagin}/1d4,Character(Chieftan)[4]{Sahuagin}/1d4,Shark$Huge$/1d2</entry>
-    <entry>Sahuagin/10d10+60,Sahuagin$Noncombatant$/10d10+60,Character(Lieutenant)[3]{Sahuagin}/2d3+2,Character(Chieftan)[4]{Sahuagin}/1d3+1,Character(Guard)[4]{Sahuagin}/9,Character(Underpriest)[1d4+2]{Sahuagin}@Cleric@/1d4,Character(Priest)[7]{Sahuagin}@Cleric@/1,Character(Baron)[1d3+5]{Sahuagin}/1,Dire shark/1d4+4</entry>
-    <entry>Sahuagin/10d10+60,Sahuagin$Noncombatant$/10d10+60,Character(Lieutenant)[3]{Sahuagin}/2d3+2,Character(Chieftan)[4]{Sahuagin}/1d3+1,Character(Guard)[4]{Sahuagin}/9,Character(Underpriest)[1d4+2]{Sahuagin}@Cleric@/1d4,Character(Priest)[7]{Sahuagin}@Cleric@/1,Character(Baron)[1d3+5]{Sahuagin}/1,Shark$Medium$/1d4+4</entry>
-    <entry>Sahuagin/10d10+60,Sahuagin$Noncombatant$/10d10+60,Character(Lieutenant)[3]{Sahuagin}/2d3+2,Character(Chieftan)[4]{Sahuagin}/1d3+1,Character(Guard)[4]{Sahuagin}/9,Character(Underpriest)[1d4+2]{Sahuagin}@Cleric@/1d4,Character(Priest)[7]{Sahuagin}@Cleric@/1,Character(Baron)[1d3+5]{Sahuagin}/1,Shark$Large$/1d4+4</entry>
-    <entry>Sahuagin/10d10+60,Sahuagin$Noncombatant$/10d10+60,Character(Lieutenant)[3]{Sahuagin}/2d3+2,Character(Chieftan)[4]{Sahuagin}/1d3+1,Character(Guard)[4]{Sahuagin}/9,Character(Underpriest)[1d4+2]{Sahuagin}@Cleric@/1d4,Character(Priest)[7]{Sahuagin}@Cleric@/1,Character(Baron)[1d3+5]{Sahuagin}/1,Shark$Huge$/1d4+4</entry>
-  </collection>
-  <collection>
-    <name>Character(Guard)[4]{Sahuagin}</name>
-    <entry>Sahuagin/10d10+60,Sahuagin$Noncombatant$/10d10+60,Character(Lieutenant)[3]{Sahuagin}/2d3+2,Character(Chieftan)[4]{Sahuagin}/1d3+1,Character(Guard)[4]{Sahuagin}/9,Character(Underpriest)[1d4+2]{Sahuagin}@Cleric@/1d4,Character(Priest)[7]{Sahuagin}@Cleric@/1,Character(Baron)[1d3+5]{Sahuagin}/1,Dire shark/1d4+4</entry>
-    <entry>Sahuagin/10d10+60,Sahuagin$Noncombatant$/10d10+60,Character(Lieutenant)[3]{Sahuagin}/2d3+2,Character(Chieftan)[4]{Sahuagin}/1d3+1,Character(Guard)[4]{Sahuagin}/9,Character(Underpriest)[1d4+2]{Sahuagin}@Cleric@/1d4,Character(Priest)[7]{Sahuagin}@Cleric@/1,Character(Baron)[1d3+5]{Sahuagin}/1,Shark$Medium$/1d4+4</entry>
-    <entry>Sahuagin/10d10+60,Sahuagin$Noncombatant$/10d10+60,Character(Lieutenant)[3]{Sahuagin}/2d3+2,Character(Chieftan)[4]{Sahuagin}/1d3+1,Character(Guard)[4]{Sahuagin}/9,Character(Underpriest)[1d4+2]{Sahuagin}@Cleric@/1d4,Character(Priest)[7]{Sahuagin}@Cleric@/1,Character(Baron)[1d3+5]{Sahuagin}/1,Shark$Large$/1d4+4</entry>
-    <entry>Sahuagin/10d10+60,Sahuagin$Noncombatant$/10d10+60,Character(Lieutenant)[3]{Sahuagin}/2d3+2,Character(Chieftan)[4]{Sahuagin}/1d3+1,Character(Guard)[4]{Sahuagin}/9,Character(Underpriest)[1d4+2]{Sahuagin}@Cleric@/1d4,Character(Priest)[7]{Sahuagin}@Cleric@/1,Character(Baron)[1d3+5]{Sahuagin}/1,Shark$Huge$/1d4+4</entry>
-  </collection>
-  <collection>
-    <name>Character(Lieutenant)[3]{Sahuagin}</name>
-    <entry>Sahuagin/1d10+10,Character(Lieutenant)[3]{Sahuagin}/1,Dire shark/1d2</entry>
-    <entry>Sahuagin/1d10+10,Character(Lieutenant)[3]{Sahuagin}/1,Shark$Medium$/1d2</entry>
-    <entry>Sahuagin/1d10+10,Character(Lieutenant)[3]{Sahuagin}/1,Shark$Large$/1d2</entry>
-    <entry>Sahuagin/1d10+10,Character(Lieutenant)[3]{Sahuagin}/1,Shark$Huge$/1d2</entry>
-    <entry>Sahuagin/12d6+8,Sahuagin$Noncombatant$/12d6+8,Character(Lieutenant)[3]{Sahuagin}/1d4,Character(Chieftan)[4]{Sahuagin}/1d4,Dire shark/1d2</entry>
-    <entry>Sahuagin/12d6+8,Sahuagin$Noncombatant$/12d6+8,Character(Lieutenant)[3]{Sahuagin}/1d4,Character(Chieftan)[4]{Sahuagin}/1d4,Shark$Medium$/1d2</entry>
-    <entry>Sahuagin/12d6+8,Sahuagin$Noncombatant$/12d6+8,Character(Lieutenant)[3]{Sahuagin}/1d4,Character(Chieftan)[4]{Sahuagin}/1d4,Shark$Large$/1d2</entry>
-    <entry>Sahuagin/12d6+8,Sahuagin$Noncombatant$/12d6+8,Character(Lieutenant)[3]{Sahuagin}/1d4,Character(Chieftan)[4]{Sahuagin}/1d4,Shark$Huge$/1d2</entry>
-    <entry>Sahuagin/10d10+60,Sahuagin$Noncombatant$/10d10+60,Character(Lieutenant)[3]{Sahuagin}/2d3+2,Character(Chieftan)[4]{Sahuagin}/1d3+1,Character(Guard)[4]{Sahuagin}/9,Character(Underpriest)[1d4+2]{Sahuagin}@Cleric@/1d4,Character(Priest)[7]{Sahuagin}@Cleric@/1,Character(Baron)[1d3+5]{Sahuagin}/1,Dire shark/1d4+4</entry>
-    <entry>Sahuagin/10d10+60,Sahuagin$Noncombatant$/10d10+60,Character(Lieutenant)[3]{Sahuagin}/2d3+2,Character(Chieftan)[4]{Sahuagin}/1d3+1,Character(Guard)[4]{Sahuagin}/9,Character(Underpriest)[1d4+2]{Sahuagin}@Cleric@/1d4,Character(Priest)[7]{Sahuagin}@Cleric@/1,Character(Baron)[1d3+5]{Sahuagin}/1,Shark$Medium$/1d4+4</entry>
-    <entry>Sahuagin/10d10+60,Sahuagin$Noncombatant$/10d10+60,Character(Lieutenant)[3]{Sahuagin}/2d3+2,Character(Chieftan)[4]{Sahuagin}/1d3+1,Character(Guard)[4]{Sahuagin}/9,Character(Underpriest)[1d4+2]{Sahuagin}@Cleric@/1d4,Character(Priest)[7]{Sahuagin}@Cleric@/1,Character(Baron)[1d3+5]{Sahuagin}/1,Shark$Large$/1d4+4</entry>
-    <entry>Sahuagin/10d10+60,Sahuagin$Noncombatant$/10d10+60,Character(Lieutenant)[3]{Sahuagin}/2d3+2,Character(Chieftan)[4]{Sahuagin}/1d3+1,Character(Guard)[4]{Sahuagin}/9,Character(Underpriest)[1d4+2]{Sahuagin}@Cleric@/1d4,Character(Priest)[7]{Sahuagin}@Cleric@/1,Character(Baron)[1d3+5]{Sahuagin}/1,Shark$Huge$/1d4+4</entry>
-  </collection>
-  <collection>
-    <name>Character(Priest)[7]{Sahuagin}@Cleric@</name>
-    <entry>Sahuagin/10d10+60,Sahuagin$Noncombatant$/10d10+60,Character(Lieutenant)[3]{Sahuagin}/2d3+2,Character(Chieftan)[4]{Sahuagin}/1d3+1,Character(Guard)[4]{Sahuagin}/9,Character(Underpriest)[1d4+2]{Sahuagin}@Cleric@/1d4,Character(Priest)[7]{Sahuagin}@Cleric@/1,Character(Baron)[1d3+5]{Sahuagin}/1,Dire shark/1d4+4</entry>
-    <entry>Sahuagin/10d10+60,Sahuagin$Noncombatant$/10d10+60,Character(Lieutenant)[3]{Sahuagin}/2d3+2,Character(Chieftan)[4]{Sahuagin}/1d3+1,Character(Guard)[4]{Sahuagin}/9,Character(Underpriest)[1d4+2]{Sahuagin}@Cleric@/1d4,Character(Priest)[7]{Sahuagin}@Cleric@/1,Character(Baron)[1d3+5]{Sahuagin}/1,Shark$Medium$/1d4+4</entry>
-    <entry>Sahuagin/10d10+60,Sahuagin$Noncombatant$/10d10+60,Character(Lieutenant)[3]{Sahuagin}/2d3+2,Character(Chieftan)[4]{Sahuagin}/1d3+1,Character(Guard)[4]{Sahuagin}/9,Character(Underpriest)[1d4+2]{Sahuagin}@Cleric@/1d4,Character(Priest)[7]{Sahuagin}@Cleric@/1,Character(Baron)[1d3+5]{Sahuagin}/1,Shark$Large$/1d4+4</entry>
-    <entry>Sahuagin/10d10+60,Sahuagin$Noncombatant$/10d10+60,Character(Lieutenant)[3]{Sahuagin}/2d3+2,Character(Chieftan)[4]{Sahuagin}/1d3+1,Character(Guard)[4]{Sahuagin}/9,Character(Underpriest)[1d4+2]{Sahuagin}@Cleric@/1d4,Character(Priest)[7]{Sahuagin}@Cleric@/1,Character(Baron)[1d3+5]{Sahuagin}/1,Shark$Huge$/1d4+4</entry>
-  </collection>
-  <collection>
-    <name>Character(Underpriest)[1d4+2]{Sahuagin}@Cleric@</name>
-    <entry>Sahuagin/10d10+60,Sahuagin$Noncombatant$/10d10+60,Character(Lieutenant)[3]{Sahuagin}/2d3+2,Character(Chieftan)[4]{Sahuagin}/1d3+1,Character(Guard)[4]{Sahuagin}/9,Character(Underpriest)[1d4+2]{Sahuagin}@Cleric@/1d4,Character(Priest)[7]{Sahuagin}@Cleric@/1,Character(Baron)[1d3+5]{Sahuagin}/1,Dire shark/1d4+4</entry>
-    <entry>Sahuagin/10d10+60,Sahuagin$Noncombatant$/10d10+60,Character(Lieutenant)[3]{Sahuagin}/2d3+2,Character(Chieftan)[4]{Sahuagin}/1d3+1,Character(Guard)[4]{Sahuagin}/9,Character(Underpriest)[1d4+2]{Sahuagin}@Cleric@/1d4,Character(Priest)[7]{Sahuagin}@Cleric@/1,Character(Baron)[1d3+5]{Sahuagin}/1,Shark$Medium$/1d4+4</entry>
-    <entry>Sahuagin/10d10+60,Sahuagin$Noncombatant$/10d10+60,Character(Lieutenant)[3]{Sahuagin}/2d3+2,Character(Chieftan)[4]{Sahuagin}/1d3+1,Character(Guard)[4]{Sahuagin}/9,Character(Underpriest)[1d4+2]{Sahuagin}@Cleric@/1d4,Character(Priest)[7]{Sahuagin}@Cleric@/1,Character(Baron)[1d3+5]{Sahuagin}/1,Shark$Large$/1d4+4</entry>
-    <entry>Sahuagin/10d10+60,Sahuagin$Noncombatant$/10d10+60,Character(Lieutenant)[3]{Sahuagin}/2d3+2,Character(Chieftan)[4]{Sahuagin}/1d3+1,Character(Guard)[4]{Sahuagin}/9,Character(Underpriest)[1d4+2]{Sahuagin}@Cleric@/1d4,Character(Priest)[7]{Sahuagin}@Cleric@/1,Character(Baron)[1d3+5]{Sahuagin}/1,Shark$Huge$/1d4+4</entry>
-  </collection>
+	<collection>
+		<name>Sahuagins (Pair)</name>
+		<entry>Sahuagin/2</entry>
+	</collection>
+	<collection>
+		<name>Sahuagins (Team)</name>
+		<entry>Sahuagin/1d4+4</entry>
+	</collection>
+	<collection>
+		<name>Sahuagins (Patrol with Dire Sharks)</name>
+		<entry>Sahuagin/1d10+10</entry>
+		<entry>Character(Lieutenant)[3]{Sahuagin}/1</entry>
+		<entry>Dire shark/1d2</entry>
+	</collection>
+	<collection>
+		<name>Sahuagins (Patrol with Medium Sharks)</name>
+		<entry>Sahuagin/1d10+10</entry>
+		<entry>Character(Lieutenant)[3]{Sahuagin}/1</entry>
+		<entry>Shark$Medium$/1d2</entry>
+	</collection>
+	<collection>
+		<name>Sahuagins (Patrol with Large Sharks)</name>
+		<entry>Sahuagin/1d10+10</entry>
+		<entry>Character(Lieutenant)[3]{Sahuagin}/1</entry>
+		<entry>Shark$Large$/1d2</entry>
+	</collection>
+	<collection>
+		<name>Sahuagins (Patrol with Huge Sharks)</name>
+		<entry>Sahuagin/1d10+10</entry>
+		<entry>Character(Lieutenant)[3]{Sahuagin}/1</entry>
+		<entry>Shark$Huge$/1d2</entry>
+	</collection>
+	<collection>
+		<name>Sahuagins (Band with Dire Sharks)</name>
+		<entry>Sahuagin/12d6+8</entry>
+		<entry>Sahuagin$Noncombatant$/12d6+8</entry>
+		<entry>Character(Lieutenant)[3]{Sahuagin}/1d4</entry>
+		<entry>Character(Chieftan)[4]{Sahuagin}/1d4</entry>
+		<entry>Dire shark/1d2</entry>
+	</collection>
+	<collection>
+		<name>Sahuagins (Band with Medium Sharks)</name>
+		<entry>Sahuagin/12d6+8</entry>
+		<entry>Sahuagin$Noncombatant$/12d6+8</entry>
+		<entry>Character(Lieutenant)[3]{Sahuagin}/1d4</entry>
+		<entry>Character(Chieftan)[4]{Sahuagin}/1d4</entry>
+		<entry>Shark$Medium$/1d2</entry>
+	</collection>
+	<collection>
+		<name>Sahuagins (Band with Large Sharks)</name>
+		<entry>Sahuagin/12d6+8</entry>
+		<entry>Sahuagin$Noncombatant$/12d6+8</entry>
+		<entry>Character(Lieutenant)[3]{Sahuagin}/1d4</entry>
+		<entry>Character(Chieftan)[4]{Sahuagin}/1d4</entry>
+		<entry>Shark$Large$/1d2</entry>
+	</collection>
+	<collection>
+		<name>Sahuagins (Band with Huge Sharks)</name>
+		<entry>Sahuagin/12d6+8</entry>
+		<entry>Sahuagin$Noncombatant$/12d6+8</entry>
+		<entry>Character(Lieutenant)[3]{Sahuagin}/1d4</entry>
+		<entry>Character(Chieftan)[4]{Sahuagin}/1d4</entry>
+		<entry>Shark$Huge$/1d2</entry>
+	</collection>
+	<collection>
+		<name>Sahuagins (Tribe with Dire Sharks)</name>
+		<entry>Sahuagin/10d10+60</entry>
+		<entry>Sahuagin$Noncombatant$/10d10+60</entry>
+		<entry>Character(Lieutenant)[3]{Sahuagin}/2d3+2</entry>
+		<entry>Character(Chieftan)[4]{Sahuagin}/1d3+1</entry>
+		<entry>Character(Guard)[4]{Sahuagin}/9</entry>
+		<entry>Character(Underpriest)[1d4+2]{Sahuagin}@Cleric@/1d4</entry>
+		<entry>Character(Priest)[7]{Sahuagin}@Cleric@/1</entry>
+		<entry>Character(Baron)[1d3+5]{Sahuagin}/1</entry>
+		<entry>Dire shark/1d4+4</entry>
+	</collection>
+	<collection>
+		<name>Sahuagins (Tribe with Medium Sharks)</name>
+		<entry>Sahuagin/10d10+60</entry>
+		<entry>Sahuagin$Noncombatant$/10d10+60</entry>
+		<entry>Character(Lieutenant)[3]{Sahuagin}/2d3+2</entry>
+		<entry>Character(Chieftan)[4]{Sahuagin}/1d3+1</entry>
+		<entry>Character(Guard)[4]{Sahuagin}/9</entry>
+		<entry>Character(Underpriest)[1d4+2]{Sahuagin}@Cleric@/1d4</entry>
+		<entry>Character(Priest)[7]{Sahuagin}@Cleric@/1</entry>
+		<entry>Character(Baron)[1d3+5]{Sahuagin}/1</entry>
+		<entry>Shark$Medium$/1d4+4</entry>
+	</collection>
+	<collection>
+		<name>Sahuagins (Tribe with Large Sharks)</name>
+		<entry>Sahuagin/10d10+60</entry>
+		<entry>Sahuagin$Noncombatant$/10d10+60</entry>
+		<entry>Character(Lieutenant)[3]{Sahuagin}/2d3+2</entry>
+		<entry>Character(Chieftan)[4]{Sahuagin}/1d3+1</entry>
+		<entry>Character(Guard)[4]{Sahuagin}/9</entry>
+		<entry>Character(Underpriest)[1d4+2]{Sahuagin}@Cleric@/1d4</entry>
+		<entry>Character(Priest)[7]{Sahuagin}@Cleric@/1</entry>
+		<entry>Character(Baron)[1d3+5]{Sahuagin}/1</entry>
+		<entry>Shark$Large$/1d4+4</entry>
+	</collection>
+	<collection>
+		<name>Sahuagins (Tribe with Huge Sharks)</name>
+		<entry>Sahuagin/10d10+60</entry>
+		<entry>Sahuagin$Noncombatant$/10d10+60</entry>
+		<entry>Character(Lieutenant)[3]{Sahuagin}/2d3+2</entry>
+		<entry>Character(Chieftan)[4]{Sahuagin}/1d3+1</entry>
+		<entry>Character(Guard)[4]{Sahuagin}/9</entry>
+		<entry>Character(Underpriest)[1d4+2]{Sahuagin}@Cleric@/1d4</entry>
+		<entry>Character(Priest)[7]{Sahuagin}@Cleric@/1</entry>
+		<entry>Character(Baron)[1d3+5]{Sahuagin}/1</entry>
+		<entry>Shark$Huge$/1d4+4</entry>
+	</collection>
   <collection>
     <name>Flamebrother Salamander (Solitary)</name>
     <entry>Salamander$Flamebrother$/1</entry>
@@ -9987,7 +10029,7 @@
 		<entry>Salamander$Noble$/2</entry>
 	</collection>
 	<collection>
-		<name>Noble Salamanders (Cluster)</name>
+		<name>Noble Salamanders (Noble Party)</name>
 		<entry>Salamander$Noble$/1d6+8</entry>
 	</collection>
   <collection>
@@ -9995,11 +10037,20 @@
     <entry>Satyr$with pipes$/1</entry>
   </collection>
   <collection>
-    <name>Satyr$with pipes$</name>
-    <entry>Satyr$with pipes$/1,Satyr/1</entry>
-    <entry>Satyr$with pipes$/1,Satyr/1d3+1</entry>
-    <entry>Satyr$with pipes$/1,Satyr/1d6+4</entry>
+    <name>Satyrs (Pair)</name>
+	  <entry>Satyr$with pipes$/1</entry>
+	  <entry>Satyr/1</entry>
   </collection>
+	<collection>
+		<name>Satyrs (Band)</name>
+		<entry>Satyr$with pipes$/1</entry>
+		<entry>Satyr/1d3+1</entry>
+	</collection>
+	<collection>
+		<name>Satyrs (Troop)</name>
+		<entry>Satyr$with pipes$/1</entry>
+		<entry>Satyr/1d6+4</entry>
+	</collection>
   <collection>
     <name>Monstrous scorpion$Tiny$</name>
     <entry>Monstrous scorpion$Tiny$/4d3+4</entry>
@@ -10430,7 +10481,7 @@
     <entry>Pixie/1d3+1</entry>
   </collection>
 	<collection>
-		<name>Pixies (Bamd)</name>
+		<name>Pixies (Band)</name>
 		<entry>Pixie/1d6+5</entry>
 	</collection>
 	<collection>
@@ -10438,10 +10489,15 @@
 		<entry>Pixie/12d6+8</entry>
 	</collection>
   <collection>
-    <name>Pixie$with Irresistable Dance$</name>
-    <entry>Pixie$with Irresistable Dance$/1,Pixie/1d6+4</entry>
-    <entry>Pixie$with Irresistable Dance$/2d4,Pixie/6d10+12</entry>
+    <name>Pixie with Irresistable Dance (Band)</name>
+	  <entry>Pixie$with Irresistable Dance$/1</entry>
+	  <entry>Pixie/1d6+4</entry>
   </collection>
+  <collection>
+	  <name>Pixies with Irresistable Dance (Tribe)</name>
+	  <entry>Pixie$with Irresistable Dance$/2d4</entry>
+	  <entry>Pixie/6d10+12</entry>
+	</collection>
   <collection>
     <name>Giant Stag Beetles (Cluster)</name>
     <entry>Giant stag beetle/1d4+1</entry>

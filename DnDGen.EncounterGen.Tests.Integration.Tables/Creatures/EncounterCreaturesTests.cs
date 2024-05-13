@@ -1171,37 +1171,37 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures
             CreatureDataConstants.Livestock_Noncombatant, AmountConstants.Range5To30)]
         [TestCase(EncounterConstants.Commoner_Herder_Level20_Group, CreatureDataConstants.Commoner_Herder_Level20, AmountConstants.Range1To4,
             CreatureDataConstants.Livestock_Noncombatant, AmountConstants.Range5To30)]
-        [TestCase(EncounterConstants.Commoner_Pilgrim_Level1_Group, CreatureDataConstants.Commoner_Pilgrim_Level1, AmountConstants.Range7To16,
+        [TestCase(EncounterConstants.Commoner_Pilgrim_Level1_Caravan, CreatureDataConstants.Commoner_Pilgrim_Level1, AmountConstants.Range7To16,
             CreatureDataConstants.Warrior_Guard_Level1, AmountConstants.Range0To5,
             CreatureDataConstants.Cleric_Leader_Level1, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.Commoner_Pilgrim_Level2To3_Group, CreatureDataConstants.Commoner_Pilgrim_Level2To3, AmountConstants.Range7To16,
+        [TestCase(EncounterConstants.Commoner_Pilgrim_Level2To3_Caravan, CreatureDataConstants.Commoner_Pilgrim_Level2To3, AmountConstants.Range7To16,
             CreatureDataConstants.Warrior_Guard_Level2To3, AmountConstants.Range0To5,
             CreatureDataConstants.Cleric_Leader_Level2, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.Commoner_Pilgrim_Level4To5_Group, CreatureDataConstants.Commoner_Pilgrim_Level4To5, AmountConstants.Range7To16,
+        [TestCase(EncounterConstants.Commoner_Pilgrim_Level4To5_Caravan, CreatureDataConstants.Commoner_Pilgrim_Level4To5, AmountConstants.Range7To16,
             CreatureDataConstants.Warrior_Guard_Level4To5, AmountConstants.Range0To5,
             CreatureDataConstants.Cleric_Leader_Level3, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.Commoner_Pilgrim_Level6To7_Group, CreatureDataConstants.Commoner_Pilgrim_Level6To7, AmountConstants.Range7To16,
+        [TestCase(EncounterConstants.Commoner_Pilgrim_Level6To7_Caravan, CreatureDataConstants.Commoner_Pilgrim_Level6To7, AmountConstants.Range7To16,
             CreatureDataConstants.Warrior_Guard_Level6To7, AmountConstants.Range0To5,
             CreatureDataConstants.Cleric_Leader_Level4, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.Commoner_Pilgrim_Level8To9_Group, CreatureDataConstants.Commoner_Pilgrim_Level8To9, AmountConstants.Range7To16,
+        [TestCase(EncounterConstants.Commoner_Pilgrim_Level8To9_Caravan, CreatureDataConstants.Commoner_Pilgrim_Level8To9, AmountConstants.Range7To16,
             CreatureDataConstants.Warrior_Guard_Level8To9, AmountConstants.Range0To5,
             CreatureDataConstants.Cleric_Leader_Level5, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.Commoner_Pilgrim_Level10To11_Group, CreatureDataConstants.Commoner_Pilgrim_Level10To11, AmountConstants.Range7To16,
+        [TestCase(EncounterConstants.Commoner_Pilgrim_Level10To11_Caravan, CreatureDataConstants.Commoner_Pilgrim_Level10To11, AmountConstants.Range7To16,
             CreatureDataConstants.Warrior_Guard_Level10To11, AmountConstants.Range0To5,
             CreatureDataConstants.Cleric_Leader_Level6, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.Commoner_Pilgrim_Level12To13_Group, CreatureDataConstants.Commoner_Pilgrim_Level12To13, AmountConstants.Range7To16,
+        [TestCase(EncounterConstants.Commoner_Pilgrim_Level12To13_Caravan, CreatureDataConstants.Commoner_Pilgrim_Level12To13, AmountConstants.Range7To16,
             CreatureDataConstants.Warrior_Guard_Level12To13, AmountConstants.Range0To5,
             CreatureDataConstants.Cleric_Leader_Level7, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.Commoner_Pilgrim_Level14To15_Group, CreatureDataConstants.Commoner_Pilgrim_Level14To15, AmountConstants.Range7To16,
+        [TestCase(EncounterConstants.Commoner_Pilgrim_Level14To15_Caravan, CreatureDataConstants.Commoner_Pilgrim_Level14To15, AmountConstants.Range7To16,
             CreatureDataConstants.Warrior_Guard_Level14To15, AmountConstants.Range0To5,
             CreatureDataConstants.Cleric_Leader_Level8, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.Commoner_Pilgrim_Level16To17_Group, CreatureDataConstants.Commoner_Pilgrim_Level16To17, AmountConstants.Range7To16,
+        [TestCase(EncounterConstants.Commoner_Pilgrim_Level16To17_Caravan, CreatureDataConstants.Commoner_Pilgrim_Level16To17, AmountConstants.Range7To16,
             CreatureDataConstants.Warrior_Guard_Level16To17, AmountConstants.Range0To5,
             CreatureDataConstants.Cleric_Leader_Level9, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.Commoner_Pilgrim_Level18To19_Group, CreatureDataConstants.Commoner_Pilgrim_Level18To19, AmountConstants.Range7To16,
+        [TestCase(EncounterConstants.Commoner_Pilgrim_Level18To19_Caravan, CreatureDataConstants.Commoner_Pilgrim_Level18To19, AmountConstants.Range7To16,
             CreatureDataConstants.Warrior_Guard_Level18To19, AmountConstants.Range0To5,
             CreatureDataConstants.Cleric_Leader_Level10, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.Commoner_Pilgrim_Level20_Group, CreatureDataConstants.Commoner_Pilgrim_Level20, AmountConstants.Range7To16,
+        [TestCase(EncounterConstants.Commoner_Pilgrim_Level20_Caravan, CreatureDataConstants.Commoner_Pilgrim_Level20, AmountConstants.Range7To16,
             CreatureDataConstants.Warrior_Guard_Level20, AmountConstants.Range0To5,
             CreatureDataConstants.Cleric_Leader_Level11, AmountConstants.Range1)]
         [TestCase(EncounterConstants.Commoner_Protestor_Level1_Group, CreatureDataConstants.Commoner_Protestor_Level1, AmountConstants.Range1To10)]
@@ -3750,13 +3750,13 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures
         [TestCase(EncounterConstants.Zombie_GrayRender_SmallGroup, CreatureDataConstants.Zombie_GrayRender, AmountConstants.Range1To4)]
         [TestCase(EncounterConstants.Zombie_GrayRender_Group, CreatureDataConstants.Zombie_GrayRender, AmountConstants.Range5To10)]
         [TestCase(EncounterConstants.Zombie_GrayRender_LargeGroup, CreatureDataConstants.Zombie_GrayRender, AmountConstants.Range11To20)]
-        public void EncounterConstant(string encounter, params string[] creaturesAndAmounts)
+        public void EncounterCreatures(string encounter, params string[] creaturesAndAmounts)
         {
             var creatures = FormatCreatures(creaturesAndAmounts);
-            DistinctCollection(encounter, creatures.ToArray());
+            DistinctCollection(encounter, creatures);
         }
 
-        private IEnumerable<string> FormatCreatures(params string[] creaturesAndAmounts)
+        private string[] FormatCreatures(params string[] creaturesAndAmounts)
         {
             if (creaturesAndAmounts.Any() == false)
                 Assert.Fail("No creatures or amounts were supplied");
@@ -3768,7 +3768,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures
             for (var i = 0; i < creaturesAndAmounts.Length; i += 2)
                 formattedTypesAndAmounts.Add($"{creaturesAndAmounts[i]}/{creaturesAndAmounts[i + 1]}");
 
-            return formattedTypesAndAmounts;
+            return formattedTypesAndAmounts.ToArray();
         }
     }
 }
