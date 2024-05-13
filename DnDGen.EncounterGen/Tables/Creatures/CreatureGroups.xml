@@ -2527,7 +2527,7 @@
     <entry>Red dragon$Great wyrm$</entry>
   </collection>
   <collection>
-    <name>Requires Subtype</name>
+    <name>Requires Subcreature</name>
     <entry>Mephit[3]</entry>
     <entry>Dominated creature[1]</entry>
     <entry>Dominated creature[2]</entry>
@@ -2906,7 +2906,7 @@
     <entry>Skum</entry>
   </collection>
   <collection>
-    <name>Use Subtype for Treasure</name>
+    <name>Use Subcreature for Treasure</name>
     <entry>Dominated creature[1]</entry>
     <entry>Dominated creature[2]</entry>
     <entry>Dominated creature[3]</entry>

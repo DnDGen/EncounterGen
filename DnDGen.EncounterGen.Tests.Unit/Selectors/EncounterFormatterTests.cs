@@ -33,7 +33,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors
         [Test]
         public void BuildCreatureWithSubtype()
         {
-            var creature = encounterFormatter.BuildCreature("creature name", subtype: "subtype");
+            var creature = encounterFormatter.BuildCreature("creature name", subcreature: "subtype");
             Assert.That(creature, Is.EqualTo("creature name$subtype$"));
         }
 
@@ -202,7 +202,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors
         public void SelectSubtype()
         {
             var creature = "creature name(description)$subtype$[challenge rating]{base race}#metarace#@class&other class@";
-            var subtype = encounterFormatter.SelectSubtypeFrom(creature);
+            var subtype = encounterFormatter.SelectSubCreatureFrom(creature);
             Assert.That(subtype, Is.EqualTo("subtype"));
         }
 
@@ -210,7 +210,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors
         public void SelectFurtherSubtype()
         {
             var creature = "creature name(description)$subtype$further subtype$$[challenge rating]{base race}#metarace#@class&other class@";
-            var subtype = encounterFormatter.SelectSubtypeFrom(creature);
+            var subtype = encounterFormatter.SelectSubCreatureFrom(creature);
             Assert.That(subtype, Is.EqualTo("subtype$further subtype$"));
         }
 
@@ -218,7 +218,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors
         public void SelectNoSubtype()
         {
             var creature = "creature name(description)[challenge rating]{base race}#metarace#@class&other class@";
-            var subtype = encounterFormatter.SelectSubtypeFrom(creature);
+            var subtype = encounterFormatter.SelectSubCreatureFrom(creature);
             Assert.That(subtype, Is.Empty);
         }
 

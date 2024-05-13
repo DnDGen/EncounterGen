@@ -178,11 +178,11 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         [TestCase(CreatureDataConstants.Types.Ooze)]
         [TestCase(CreatureDataConstants.Types.Plant)]
         [TestCase(CreatureDataConstants.Types.Undead)]
-        public void SubtypeCannotBeDominated(string subtype)
+        public void CreatureTypeCannotBeDominated(string creatureType)
         {
-            var subtypeCreatures = ExplodeCollection(subtype);
+            var creatures = ExplodeCollection(creatureType);
             var dominatedCreatues = ExplodeCollection(CreatureDataConstants.DominatedCreature);
-            Assert.That(subtypeCreatures.Intersect(dominatedCreatues), Is.Empty);
+            Assert.That(creatures.Intersect(dominatedCreatues), Is.Empty);
         }
 
         [Test]

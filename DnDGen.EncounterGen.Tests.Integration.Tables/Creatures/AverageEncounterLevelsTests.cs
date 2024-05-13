@@ -2573,18 +2573,18 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures
         {
             var creaturesAndAmounts = encounterFormatter.SelectCreaturesAndAmountsFrom(encounterConstant);
             var encounter = new Encounter();
-            var creatures = new List<Creature>();
+            var creatures = new List<EncounterCreature>();
             encounter.Creatures = creatures;
 
             foreach (var kvp in creaturesAndAmounts)
             {
                 var creatureName = kvp.Key;
                 var amount = kvp.Value;
-                var creature = new Creature();
+                var creature = new EncounterCreature();
                 var averageQuantity = dice.Roll(amount).AsPotentialAverage();
 
                 //INFO: Using a GUID and not the actual creature name so that characters are computed like other creatures
-                creature.Type.Name = Guid.NewGuid().ToString();
+                creature.Creature.Name = Guid.NewGuid().ToString();
                 creature.ChallengeRating = challengeRatingSelector.SelectAverageForCreature(creatureName);
                 creature.Quantity = Convert.ToInt32(Math.Round(averageQuantity, MidpointRounding.AwayFromZero));
 

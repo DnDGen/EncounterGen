@@ -14,7 +14,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         }
 
         [TestCase("")]
-        [TestCase(GroupConstants.RequiresSubtype,
+        [TestCase(GroupConstants.RequiresSubcreature,
             CreatureDataConstants.Mephit_CR3,
             CreatureDataConstants.DominatedCreature_CR1,
             CreatureDataConstants.DominatedCreature_CR2,
@@ -32,7 +32,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
             CreatureDataConstants.DominatedCreature_CR14,
             CreatureDataConstants.DominatedCreature_CR15,
             CreatureDataConstants.DominatedCreature_CR16)]
-        [TestCase(GroupConstants.UseSubtypeForTreasure,
+        [TestCase(GroupConstants.UseSubcreatureForTreasure,
             CreatureDataConstants.DominatedCreature_CR1,
             CreatureDataConstants.DominatedCreature_CR2,
             CreatureDataConstants.DominatedCreature_CR3,

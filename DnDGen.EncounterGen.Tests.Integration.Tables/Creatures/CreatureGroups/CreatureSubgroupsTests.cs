@@ -1759,7 +1759,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         [Test]
         public void DominatedCreatureSubgroup()
         {
-            var subtypes = new[]
+            var subcreatures = new[]
             {
                 CreatureDataConstants.Types.Aberration,
                 CreatureDataConstants.Types.Animal,
@@ -1827,7 +1827,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
                 CreatureDataConstants.Vrock,
             };
 
-            base.DistinctCollection(CreatureDataConstants.DominatedCreature, subtypes);
+            base.DistinctCollection(CreatureDataConstants.DominatedCreature, subcreatures);
         }
 
         [Test]

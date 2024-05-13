@@ -40,7 +40,7 @@ namespace DnDGen.EncounterGen.Generators
 
         public bool EncounterIsValid(Encounter encounter, IEnumerable<string> creatureTypeFilters)
         {
-            var creatureNames = encounter.Creatures.Select(c => c.Type.Name);
+            var creatureNames = encounter.Creatures.Select(c => c.Creature.Name);
             var level = amountSelector.Select(encounter);
 
             return EncounterSpecifications.LevelIsValid(level) && EncounterIsValid(creatureNames, creatureTypeFilters);

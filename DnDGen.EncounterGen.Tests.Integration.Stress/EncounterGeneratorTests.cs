@@ -72,7 +72,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Stress
 
             foreach (var creature in encounter.Creatures)
             {
-                AssertEncounterCreature(creature.Type);
+                AssertCreature(creature.Creature);
                 Assert.That(creature.Quantity, Is.Positive);
                 Assert.That(creature.ChallengeRating, Is.Not.Empty);
             }
@@ -93,16 +93,16 @@ namespace DnDGen.EncounterGen.Tests.Integration.Stress
             Assert.That(encounter.ActualDifficulty, Is.Not.Empty);
         }
 
-        private void AssertEncounterCreature(EncounterCreature encounterCreature)
+        private void AssertCreature(Creature creature)
         {
-            Assert.That(encounterCreature.Name, Is.Not.Empty);
-            Assert.That(encounterCreature.Description, Is.Not.Null);
+            Assert.That(creature.Name, Is.Not.Empty);
+            Assert.That(creature.Description, Is.Not.Null);
 
-            Assert.That(dice.ContainsRoll(encounterCreature.Name), Is.False);
-            Assert.That(dice.ContainsRoll(encounterCreature.Description), Is.False);
+            Assert.That(dice.ContainsRoll(creature.Name), Is.False);
+            Assert.That(dice.ContainsRoll(creature.Description), Is.False);
 
-            if (encounterCreature.SubCreature != null)
-                AssertEncounterCreature(encounterCreature.SubCreature);
+            if (creature.SubCreature != null)
+                AssertCreature(creature.SubCreature);
         }
     }
 }

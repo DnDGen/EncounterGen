@@ -6,6 +6,6 @@ namespace DnDGen.EncounterGen.Generators
 {
     internal interface IEncounterCharacterGenerator
     {
-        IEnumerable<Character> GenerateFrom(IEnumerable<Creature> creatures);
+        IEnumerable<Character> GenerateFrom(IEnumerable<EncounterCreature> creatures);
     }
 }

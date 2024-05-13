@@ -5,7 +5,7 @@ namespace DnDGen.EncounterGen.Generators
 {
     internal interface ICreatureGenerator
     {
-        IEnumerable<Creature> GenerateFor(string encounter);
-        IEnumerable<Creature> CleanCreatures(IEnumerable<Creature> creatures);
+        IEnumerable<EncounterCreature> GenerateFor(string encounter);
+        IEnumerable<EncounterCreature> CleanCreatures(IEnumerable<EncounterCreature> creatures);
     }
 }

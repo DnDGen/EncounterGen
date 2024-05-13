@@ -8,7 +8,7 @@ namespace DnDGen.EncounterGen.Selectors
         public string BuildCreature(
             string name,
             string description = "",
-            string subtype = "",
+            string subcreature = "",
             string challengeRating = "",
             string baseRace = "",
             string metarace = "",
@@ -19,8 +19,8 @@ namespace DnDGen.EncounterGen.Selectors
             if (!string.IsNullOrEmpty(description))
                 creature += $"({description})";
 
-            if (!string.IsNullOrEmpty(subtype))
-                creature += $"${subtype}$";
+            if (!string.IsNullOrEmpty(subcreature))
+                creature += $"${subcreature}$";
 
             if (!string.IsNullOrEmpty(challengeRating))
                 creature += $"[{challengeRating}]";
@@ -95,7 +95,7 @@ namespace DnDGen.EncounterGen.Selectors
             return creature[..firstIndex];
         }
 
-        public string SelectSubtypeFrom(string creature)
+        public string SelectSubCreatureFrom(string creature)
         {
             return GetSubstring(creature, '$', '$');
         }

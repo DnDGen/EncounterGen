@@ -28,7 +28,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
         private int levelModifier;
         private int actualEncounterLevel;
         private EncounterSpecifications specifications;
-        private List<Creature> creatures;
+        private List<EncounterCreature> creatures;
         private List<Treasure> treasures;
 
         private int EncounterLevel => specifications.Level + levelModifier;
@@ -55,7 +55,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
 
             specifications = new EncounterSpecifications();
             treasure = new Treasure();
-            creatures = new List<Creature>();
+            creatures = new List<EncounterCreature>();
             treasures = new List<Treasure>();
 
             levelModifier = 1;
@@ -68,8 +68,8 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
 
             treasures.Add(treasure);
 
-            var creature = new Creature();
-            creature.Type.Name = "creature";
+            var creature = new EncounterCreature();
+            creature.Creature.Name = "creature";
             creature.Quantity = 42;
             creature.ChallengeRating = "challenge rating";
             creatures.Add(creature);
@@ -79,14 +79,14 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
                 .Setup(g => g.SelectRandomEncounterFrom(It.Is<EncounterSpecifications>(es => es.Level == EncounterLevel)))
                 .Returns("my encounter");
             mockCreatureGenerator.Setup(g => g.GenerateFor("my encounter")).Returns(creatures);
-            mockCreatureGenerator.Setup(g => g.CleanCreatures(It.IsAny<IEnumerable<Creature>>())).Returns((IEnumerable<Creature> cc) => cc);
+            mockCreatureGenerator.Setup(g => g.CleanCreatures(It.IsAny<IEnumerable<EncounterCreature>>())).Returns((IEnumerable<EncounterCreature> cc) => cc);
             mockAmountSelector.Setup(d => d.Select(It.IsAny<Encounter>())).Returns(actualEncounterLevel);
 
             mockEncounterVerifier.Setup(v => v.ValidEncounterExists(specifications)).Returns(true);
             mockEncounterVerifier.Setup(v => v.ValidEncounterExists(It.Is<EncounterSpecifications>(es => es.Level == EncounterLevel))).Returns(true);
             mockEncounterVerifier.Setup(v => v.EncounterIsValid(It.IsAny<Encounter>(), specifications.CreatureTypeFilters)).Returns(true);
 
-            mockEncounterTreasureGenerator.Setup(g => g.GenerateFor(It.IsAny<IEnumerable<Creature>>(), It.IsAny<int>())).Returns(Enumerable.Empty<Treasure>());
+            mockEncounterTreasureGenerator.Setup(g => g.GenerateFor(It.IsAny<IEnumerable<EncounterCreature>>(), It.IsAny<int>())).Returns(Enumerable.Empty<Treasure>());
             mockEncounterTreasureGenerator.Setup(g => g.GenerateFor(creatures, actualEncounterLevel)).Returns(treasures);
         }
 
@@ -105,9 +105,9 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
             Assert.That(encounter.Treasures, Is.EqualTo(treasures));
 
             var creature = encounter.Creatures.Single();
-            Assert.That(creature.Type.Name, Is.EqualTo("creature"));
-            Assert.That(creature.Type.Description, Is.Empty);
-            Assert.That(creature.Type.SubCreature, Is.Null);
+            Assert.That(creature.Creature.Name, Is.EqualTo("creature"));
+            Assert.That(creature.Creature.Description, Is.Empty);
+            Assert.That(creature.Creature.SubCreature, Is.Null);
             Assert.That(creature.Quantity, Is.EqualTo(42));
             Assert.That(creature.ChallengeRating, Is.EqualTo("challenge rating"));
         }
@@ -128,9 +128,9 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
             Assert.That(encounter.ActualEncounterLevel, Is.EqualTo(12));
 
             var creature = encounter.Creatures.Single();
-            Assert.That(creature.Type.Name, Is.EqualTo("creature"));
-            Assert.That(creature.Type.Description, Is.Empty);
-            Assert.That(creature.Type.SubCreature, Is.Null);
+            Assert.That(creature.Creature.Name, Is.EqualTo("creature"));
+            Assert.That(creature.Creature.Description, Is.Empty);
+            Assert.That(creature.Creature.SubCreature, Is.Null);
             Assert.That(creature.Quantity, Is.EqualTo(42));
             Assert.That(creature.ChallengeRating, Is.EqualTo("challenge rating"));
         }
@@ -139,16 +139,16 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
         public void GenerateEncounterWithCharacters()
         {
             var characters = new[] { new Character(), new Character() };
-            mockEncounterCharacterGenerator.Setup(g => g.GenerateFrom(It.IsAny<IEnumerable<Creature>>())).Returns(characters);
+            mockEncounterCharacterGenerator.Setup(g => g.GenerateFrom(It.IsAny<IEnumerable<EncounterCreature>>())).Returns(characters);
 
             var encounter = encounterGenerator.Generate(specifications);
             Assert.That(encounter, Is.Not.Null);
             Assert.That(encounter.Description, Is.EqualTo("my encounter"));
 
             var creature = encounter.Creatures.Single();
-            Assert.That(creature.Type.Name, Is.EqualTo("creature"));
-            Assert.That(creature.Type.Description, Is.Empty);
-            Assert.That(creature.Type.SubCreature, Is.Null);
+            Assert.That(creature.Creature.Name, Is.EqualTo("creature"));
+            Assert.That(creature.Creature.Description, Is.Empty);
+            Assert.That(creature.Creature.SubCreature, Is.Null);
             Assert.That(creature.Quantity, Is.EqualTo(42));
             Assert.That(creature.ChallengeRating, Is.EqualTo("challenge rating"));
 
@@ -160,10 +160,10 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
         {
             var cleanedCreatures = new[]
             {
-                new Creature()
+                new EncounterCreature()
             };
 
-            cleanedCreatures[0].Type.Name = "cleaned creature";
+            cleanedCreatures[0].Creature.Name = "cleaned creature";
             mockCreatureGenerator.Setup(g => g.CleanCreatures(creatures)).Returns(cleanedCreatures);
 
             var encounter = encounterGenerator.Generate(specifications);
@@ -173,7 +173,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
             Assert.That(encounter.Creatures, Is.EqualTo(cleanedCreatures));
 
             var creature = encounter.Creatures.Single();
-            Assert.That(creature.Type.Name, Is.EqualTo("cleaned creature"));
+            Assert.That(creature.Creature.Name, Is.EqualTo("cleaned creature"));
         }
 
         [Test]
@@ -181,7 +181,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
         {
             mockCreatureGenerator
                 .SetupSequence(g => g.GenerateFor("my encounter"))
-                .Returns(new[] { new Creature { Type = new EncounterCreature { Name = "bad creature" }, Quantity = 666 } })
+                .Returns(new[] { new EncounterCreature { Creature = new Creature { Name = "bad creature" }, Quantity = 666 } })
                 .Returns(creatures);
 
             mockEncounterVerifier
@@ -196,7 +196,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
             Assert.That(encounter.Description, Is.EqualTo("my encounter"));
 
             var creature = encounter.Creatures.Single();
-            Assert.That(creature.Type.Name, Is.EqualTo("creature"));
+            Assert.That(creature.Creature.Name, Is.EqualTo("creature"));
             Assert.That(creature.Quantity, Is.EqualTo(42));
             Assert.That(creature.ChallengeRating, Is.EqualTo("challenge rating"));
             Assert.That(encounter.Characters, Is.Empty);
@@ -209,21 +209,21 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
         {
             var wrongCreatures = new[]
             {
-                new Creature(),
-                new Creature(),
+                new EncounterCreature(),
+                new EncounterCreature(),
             };
 
-            wrongCreatures[0].Type.Name = "creature";
+            wrongCreatures[0].Creature.Name = "creature";
             wrongCreatures[0].Quantity = 42;
-            wrongCreatures[1].Type.Name = "wrong creature";
+            wrongCreatures[1].Creature.Name = "wrong creature";
             wrongCreatures[1].Quantity = 666;
 
             var otherCreatures = new[]
             {
-                new Creature(),
+                new EncounterCreature(),
             };
 
-            otherCreatures[0].Type.Name = "other creature";
+            otherCreatures[0].Creature.Name = "other creature";
             otherCreatures[0].Quantity = 600;
 
             mockCreatureGenerator
@@ -233,10 +233,10 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
                 .Returns(creatures);
 
             mockEncounterVerifier
-                .Setup(v => v.EncounterIsValid(It.Is<Encounter>(e => e.Creatures.Any(c => c.Type.Name == "other creature")), specifications.CreatureTypeFilters))
+                .Setup(v => v.EncounterIsValid(It.Is<Encounter>(e => e.Creatures.Any(c => c.Creature.Name == "other creature")), specifications.CreatureTypeFilters))
                 .Returns(true);
             mockEncounterVerifier
-                .Setup(v => v.EncounterIsValid(It.Is<Encounter>(e => e.Creatures.Any(c => c.Type.Name == "wrong creature")), specifications.CreatureTypeFilters))
+                .Setup(v => v.EncounterIsValid(It.Is<Encounter>(e => e.Creatures.Any(c => c.Creature.Name == "wrong creature")), specifications.CreatureTypeFilters))
                 .Returns(false);
 
             var encounter = encounterGenerator.Generate(specifications);
@@ -245,7 +245,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
             Assert.That(encounter.Creatures, Is.EqualTo(otherCreatures));
 
             var creature = encounter.Creatures.Single();
-            Assert.That(creature.Type.Name, Is.EqualTo("other creature"));
+            Assert.That(creature.Creature.Name, Is.EqualTo("other creature"));
             Assert.That(creature.Quantity, Is.EqualTo(600));
             Assert.That(encounter.Characters, Is.Empty);
         }
@@ -262,8 +262,8 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
         [Test]
         public void GetTreasureForAllCreatures()
         {
-            var otherCreature = new Creature();
-            otherCreature.Type.Name = "other creature";
+            var otherCreature = new EncounterCreature();
+            otherCreature.Creature.Name = "other creature";
             otherCreature.Quantity = 600;
             creatures.Add(otherCreature);
 
@@ -289,21 +289,21 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
 
             var wrongCreatures = new[]
             {
-                new Creature(),
-                new Creature(),
+                new EncounterCreature(),
+                new EncounterCreature(),
             };
 
-            wrongCreatures[0].Type.Name = "creature";
+            wrongCreatures[0].Creature.Name = "creature";
             wrongCreatures[0].Quantity = 42;
-            wrongCreatures[1].Type.Name = "wrong creature";
+            wrongCreatures[1].Creature.Name = "wrong creature";
             wrongCreatures[1].Quantity = 666;
 
             var otherCreatures = new[]
             {
-                new Creature(),
+                new EncounterCreature(),
             };
 
-            otherCreatures[0].Type.Name = "other creature";
+            otherCreatures[0].Creature.Name = "other creature";
             otherCreatures[0].Quantity = 600;
 
             mockPercentileSelector
@@ -325,10 +325,10 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
             mockEncounterVerifier.Setup(v => v.ValidEncounterExists(It.Is<EncounterSpecifications>(es => es.Level == specifications.Level - 4))).Returns(false);
 
             mockEncounterVerifier
-                .Setup(v => v.EncounterIsValid(It.Is<Encounter>(e => e.Creatures.Any(c => c.Type.Name == "other creature")), specifications.CreatureTypeFilters))
+                .Setup(v => v.EncounterIsValid(It.Is<Encounter>(e => e.Creatures.Any(c => c.Creature.Name == "other creature")), specifications.CreatureTypeFilters))
                 .Returns(true);
             mockEncounterVerifier
-                .Setup(v => v.EncounterIsValid(It.Is<Encounter>(e => e.Creatures.Any(c => c.Type.Name == "wrong creature")), specifications.CreatureTypeFilters))
+                .Setup(v => v.EncounterIsValid(It.Is<Encounter>(e => e.Creatures.Any(c => c.Creature.Name == "wrong creature")), specifications.CreatureTypeFilters))
                 .Returns(false);
 
             var encounter = encounterGenerator.Generate(specifications);
@@ -342,21 +342,21 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
         {
             var wrongCreatures = new[]
             {
-                new Creature(),
-                new Creature(),
+                new EncounterCreature(),
+                new EncounterCreature(),
             };
 
-            wrongCreatures[0].Type.Name = "creature";
+            wrongCreatures[0].Creature.Name = "creature";
             wrongCreatures[0].Quantity = 42;
-            wrongCreatures[1].Type.Name = "wrong creature";
+            wrongCreatures[1].Creature.Name = "wrong creature";
             wrongCreatures[1].Quantity = 666;
 
             var otherCreatures = new[]
             {
-                new Creature(),
+                new EncounterCreature(),
             };
 
-            otherCreatures[0].Type.Name = "other creature";
+            otherCreatures[0].Creature.Name = "other creature";
             otherCreatures[0].Quantity = 600;
 
             mockCreatureGenerator

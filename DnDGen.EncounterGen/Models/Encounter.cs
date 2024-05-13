@@ -8,7 +8,7 @@ namespace DnDGen.EncounterGen.Models
     public class Encounter
     {
         public string Description { get; set; }
-        public IEnumerable<Creature> Creatures { get; set; }
+        public IEnumerable<EncounterCreature> Creatures { get; set; }
         public IEnumerable<Character> Characters { get; set; }
         public IEnumerable<Treasure> Treasures { get; set; }
         public int TargetEncounterLevel { get; set; }
@@ -20,7 +20,7 @@ namespace DnDGen.EncounterGen.Models
 
         public Encounter()
         {
-            Creatures = Enumerable.Empty<Creature>();
+            Creatures = Enumerable.Empty<EncounterCreature>();
             Characters = Enumerable.Empty<Character>();
             Treasures = Enumerable.Empty<Treasure>();
         }

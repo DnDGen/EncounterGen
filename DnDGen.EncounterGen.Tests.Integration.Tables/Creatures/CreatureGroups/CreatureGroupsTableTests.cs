@@ -293,8 +293,8 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
                 EnvironmentConstants.Plane_Shadow,
                 EnvironmentConstants.Plane_Water,
                 GroupConstants.Extraplanar,
-                GroupConstants.RequiresSubtype,
-                GroupConstants.UseSubtypeForTreasure,
+                GroupConstants.RequiresSubcreature,
+                GroupConstants.UseSubcreatureForTreasure,
                 GroupConstants.Wilderness,
             };
 

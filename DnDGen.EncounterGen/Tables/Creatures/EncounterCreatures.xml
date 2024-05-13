@@ -3867,226 +3867,237 @@
     <entry>Character(Hunter)[20]@Commoner&amp;Warrior@/1d4</entry>
   </collection>
   <collection>
-    <name>Mechants [Level 1] (Caravan)</name>
+    <name>Merchants [Level 1] (Caravan)</name>
 	  <entry>Character(Merchant)[1]@Commoner&amp;Expert@/1d4+1</entry>
 	  <entry>Character(Guard)[1]@Warrior@/1d4</entry>
   </collection>
 	<collection>
-		<name>Mechants [Level 2-3] (Caravan)</name>
+		<name>Merchants [Level 2-3] (Caravan)</name>
 		<entry>Character(Merchant)[1d2+1]@Commoner&amp;Expert@/1d4+1</entry>
 		<entry>Character(Guard)[1d2+1]@Warrior@/1d4</entry>
 	</collection>
 	<collection>
-		<name>Mechants [Level 4-5] (Caravan)</name>
+		<name>Merchants [Level 4-5] (Caravan)</name>
 		<entry>Character(Merchant)[1d2+3]@Commoner&amp;Expert@/1d4+1</entry>
 		<entry>Character(Guard)[1d2+3]@Warrior@/1d4</entry>
 	</collection>
 	<collection>
-		<name>Mechants [Level 6-7] (Caravan)</name>
+		<name>Merchants [Level 6-7] (Caravan)</name>
 		<entry>Character(Merchant)[1d2+5]@Commoner&amp;Expert@/1d4+1</entry>
 		<entry>Character(Guard)[1d2+5]@Warrior@/1d4</entry>
 	</collection>
 	<collection>
-		<name>Mechants [Level 8-9] (Caravan)</name>
+		<name>Merchants [Level 8-9] (Caravan)</name>
 		<entry>Character(Merchant)[1d2+7]@Commoner&amp;Expert@/1d4+1</entry>
 		<entry>Character(Guard)[1d2+7]@Warrior@/1d4</entry>
 	</collection>
 	<collection>
-		<name>Mechants [Level 10-11] (Caravan)</name>
+		<name>Merchants [Level 10-11] (Caravan)</name>
 		<entry>Character(Merchant)[1d2+9]@Commoner&amp;Expert@/1d4+1</entry>
 		<entry>Character(Guard)[1d2+9]@Warrior@/1d4</entry>
 	</collection>
 	<collection>
-		<name>Mechants [Level 12-13] (Caravan)</name>
+		<name>Merchants [Level 12-13] (Caravan)</name>
 		<entry>Character(Merchant)[1d2+11]@Commoner&amp;Expert@/1d4+1</entry>
 		<entry>Character(Guard)[1d2+11]@Warrior@/1d4</entry>
 	</collection>
 	<collection>
-		<name>Mechants [Level 14-15] (Caravan)</name>
+		<name>Merchants [Level 14-15] (Caravan)</name>
 		<entry>Character(Merchant)[1d2+13]@Commoner&amp;Expert@/1d4+1</entry>
 		<entry>Character(Guard)[1d2+13]@Warrior@/1d4</entry>
 	</collection>
 	<collection>
-		<name>Mechants [Level 16-17] (Caravan)</name>
+		<name>Merchants [Level 16-17] (Caravan)</name>
 		<entry>Character(Merchant)[1d2+15]@Commoner&amp;Expert@/1d4+1</entry>
 		<entry>Character(Guard)[1d2+15]@Warrior@/1d4</entry>
 	</collection>
 	<collection>
-		<name>Mechants [Level 18-19] (Caravan)</name>
+		<name>Merchants [Level 18-19] (Caravan)</name>
 		<entry>Character(Merchant)[1d2+17]@Commoner&amp;Expert@/1d4+1</entry>
 		<entry>Character(Guard)[1d2+17]@Warrior@/1d4</entry>
 	</collection>
 	<collection>
-		<name>Mechants [Level 20] (Caravan)</name>
+		<name>Merchants [Level 20] (Caravan)</name>
 		<entry>Character(Merchant)[20]@Commoner&amp;Expert@/1d4+1</entry>
 		<entry>Character(Guard)[20]@Warrior@/1d4</entry>
 	</collection>
   <collection>
-    <name>Character(Minstrel)[1]@Commoner&amp;Expert@</name>
-    <entry>Character(Minstrel)[1]@Commoner&amp;Expert@/2d4+1,Character(Leader)[1]@Bard@/1d10-9</entry>
+    <name>Minstrels [Level 1] (Group)</name>
+	  <entry>Character(Minstrel)[1]@Commoner&amp;Expert@/2d4+1</entry>
+	  <entry>Character(Leader)[1]@Bard@/1d10-9</entry>
   </collection>
   <collection>
-    <name>Character(Minstrel)[1d2+1]@Commoner&amp;Expert@</name>
-    <entry>Character(Minstrel)[1d2+1]@Commoner&amp;Expert@/2d4+1,Character(Leader)[2]@Bard@/1d10-9</entry>
+	  <name>Minstrels [Level 2-3] (Group)</name>
+	  <entry>Character(Minstrel)[1d2+1]@Commoner&amp;Expert@/2d4+1</entry>
+	  <entry>Character(Leader)[2]@Bard@/1d10-9</entry>
   </collection>
   <collection>
-    <name>Character(Minstrel)[1d2+3]@Commoner&amp;Expert@</name>
-    <entry>Character(Minstrel)[1d2+3]@Commoner&amp;Expert@/2d4+1,Character(Leader)[3]@Bard@/1d10-9</entry>
+	  <name>Minstrels [Level 4-5] (Group)</name>
+	  <entry>Character(Minstrel)[1d2+3]@Commoner&amp;Expert@/2d4+1</entry>
+	  <entry>Character(Leader)[3]@Bard@/1d10-9</entry>
   </collection>
   <collection>
-    <name>Character(Minstrel)[1d2+5]@Commoner&amp;Expert@</name>
-    <entry>Character(Minstrel)[1d2+5]@Commoner&amp;Expert@/2d4+1,Character(Leader)[4]@Bard@/1d10-9</entry>
+	  <name>Minstrels [Level 6-7] (Group)</name>
+	  <entry>Character(Minstrel)[1d2+5]@Commoner&amp;Expert@/2d4+1</entry>
+	  <entry>Character(Leader)[4]@Bard@/1d10-9</entry>
   </collection>
   <collection>
-    <name>Character(Minstrel)[1d2+7]@Commoner&amp;Expert@</name>
-    <entry>Character(Minstrel)[1d2+7]@Commoner&amp;Expert@/2d4+1,Character(Leader)[5]@Bard@/1d10-9</entry>
+	  <name>Minstrels [Level 8-9] (Group)</name>
+	  <entry>Character(Minstrel)[1d2+7]@Commoner&amp;Expert@/2d4+1</entry>
+	  <entry>Character(Leader)[5]@Bard@/1d10-9</entry>
   </collection>
   <collection>
-    <name>Character(Minstrel)[1d2+9]@Commoner&amp;Expert@</name>
-    <entry>Character(Minstrel)[1d2+9]@Commoner&amp;Expert@/2d4+1,Character(Leader)[6]@Bard@/1d10-9</entry>
+	  <name>Minstrels [Level 10-11] (Group)</name>
+	  <entry>Character(Minstrel)[1d2+9]@Commoner&amp;Expert@/2d4+1</entry>
+	  <entry>Character(Leader)[6]@Bard@/1d10-9</entry>
   </collection>
   <collection>
-    <name>Character(Minstrel)[1d2+11]@Commoner&amp;Expert@</name>
-    <entry>Character(Minstrel)[1d2+11]@Commoner&amp;Expert@/2d4+1,Character(Leader)[7]@Bard@/1d10-9</entry>
+	  <name>Minstrels [Level 12-13] (Group)</name>
+	  <entry>Character(Minstrel)[1d2+11]@Commoner&amp;Expert@/2d4+1</entry>
+	  <entry>Character(Leader)[7]@Bard@/1d10-9</entry>
   </collection>
   <collection>
-    <name>Character(Minstrel)[1d2+13]@Commoner&amp;Expert@</name>
-    <entry>Character(Minstrel)[1d2+13]@Commoner&amp;Expert@/2d4+1,Character(Leader)[8]@Bard@/1d10-9</entry>
+	  <name>Minstrels [Level 14-15] (Group)</name>
+	  <entry>Character(Minstrel)[1d2+13]@Commoner&amp;Expert@/2d4+1</entry>
+	  <entry>Character(Leader)[8]@Bard@/1d10-9</entry>
   </collection>
   <collection>
-    <name>Character(Minstrel)[1d2+15]@Commoner&amp;Expert@</name>
-    <entry>Character(Minstrel)[1d2+15]@Commoner&amp;Expert@/2d4+1,Character(Leader)[9]@Bard@/1d10-9</entry>
+	  <name>Minstrels [Level 16-17] (Group)</name>
+	  <entry>Character(Minstrel)[1d2+15]@Commoner&amp;Expert@/2d4+1</entry>
+	  <entry>Character(Leader)[9]@Bard@/1d10-9</entry>
   </collection>
   <collection>
-    <name>Character(Minstrel)[1d2+17]@Commoner&amp;Expert@</name>
-    <entry>Character(Minstrel)[1d2+17]@Commoner&amp;Expert@/2d4+1,Character(Leader)[10]@Bard@/1d10-9</entry>
+	  <name>Minstrels [Level 18-19] (Group)</name>
+	  <entry>Character(Minstrel)[1d2+17]@Commoner&amp;Expert@/2d4+1</entry>
+	  <entry>Character(Leader)[10]@Bard@/1d10-9</entry>
   </collection>
   <collection>
-    <name>Character(Minstrel)[20]@Commoner&amp;Expert@</name>
-    <entry>Character(Minstrel)[20]@Commoner&amp;Expert@/2d4+1,Character(Leader)[11]@Bard@/1d10-9</entry>
+	  <name>Minstrels [Level 20] (Group)</name>
+	  <entry>Character(Minstrel)[20]@Commoner&amp;Expert@/2d4+1</entry>
+	  <entry>Character(Leader)[11]@Bard@/1d10-9</entry>
   </collection>
   <collection>
-    <name>Character(Missionary)[1]@Adept@</name>
+    <name>Missionaries [Level 1 Adepts] (Mission Team)</name>
     <entry>Character(Missionary)[1]@Adept@/1d4</entry>
   </collection>
   <collection>
-    <name>Character(Missionary)[1d2+1]@Adept@</name>
+	  <name>Missionaries [Level 2-3 Adepts] (Mission Team)</name>
     <entry>Character(Missionary)[1d2+1]@Adept@/1d4</entry>
   </collection>
   <collection>
-    <name>Character(Missionary)[1d2+3]@Adept@</name>
+	  <name>Missionaries [Level 4-5 Adepts] (Mission Team)</name>
     <entry>Character(Missionary)[1d2+3]@Adept@/1d4</entry>
   </collection>
   <collection>
-    <name>Character(Missionary)[1d2+5]@Adept@</name>
-    <entry>Character(Missionary)[1d2+5]@Adept@/1d4</entry>
+	  <name>Missionaries [Level 6-7 Adepts] (Mission Team)</name>
+	  <entry>Character(Missionary)[1d2+5]@Adept@/1d4</entry>
   </collection>
   <collection>
-    <name>Character(Missionary)[1d2+7]@Adept@</name>
-    <entry>Character(Missionary)[1d2+7]@Adept@/1d4</entry>
+	  <name>Missionaries [Level 8-9 Adepts] (Mission Team)</name>
+	  <entry>Character(Missionary)[1d2+7]@Adept@/1d4</entry>
   </collection>
   <collection>
-    <name>Character(Missionary)[1d2+9]@Adept@</name>
+	  <name>Missionaries [Level 10-11 Adepts] (Mission Team)</name>
     <entry>Character(Missionary)[1d2+9]@Adept@/1d4</entry>
   </collection>
   <collection>
-    <name>Character(Missionary)[1d2+11]@Adept@</name>
-    <entry>Character(Missionary)[1d2+11]@Adept@/1d4</entry>
+	  <name>Missionaries [Level 12-13 Adepts] (Mission Team)</name>
+	  <entry>Character(Missionary)[1d2+11]@Adept@/1d4</entry>
   </collection>
   <collection>
-    <name>Character(Missionary)[1d2+13]@Adept@</name>
-    <entry>Character(Missionary)[1d2+13]@Adept@/1d4</entry>
+	  <name>Missionaries [Level 14-15 Adepts] (Mission Team)</name>
+	  <entry>Character(Missionary)[1d2+13]@Adept@/1d4</entry>
   </collection>
   <collection>
-    <name>Character(Missionary)[1d2+15]@Adept@</name>
+	  <name>Missionaries [Level 16-17 Adepts] (Mission Team)</name>
     <entry>Character(Missionary)[1d2+15]@Adept@/1d4</entry>
   </collection>
   <collection>
-    <name>Character(Missionary)[1d2+17]@Adept@</name>
-    <entry>Character(Missionary)[1d2+17]@Adept@/1d4</entry>
+	  <name>Missionaries [Level 18-19 Adepts] (Mission Team)</name>
+	  <entry>Character(Missionary)[1d2+17]@Adept@/1d4</entry>
   </collection>
   <collection>
-    <name>Character(Missionary)[20]@Adept@</name>
+	  <name>Missionaries [Level 20 Adepts] (Mission Team)</name>
     <entry>Character(Missionary)[20]@Adept@/1d4</entry>
   </collection>
   <collection>
-    <name>Character(Missionary)[1]@Cleric&amp;Druid&amp;Monk&amp;Paladin@</name>
+	  <name>Missionaries [Level 1] (Mission Team)</name>
     <entry>Character(Missionary)[1]@Cleric&amp;Druid&amp;Monk&amp;Paladin@/1d4</entry>
   </collection>
   <collection>
-    <name>Character(Missionary)[2]@Cleric&amp;Druid&amp;Monk&amp;Paladin@</name>
+	  <name>Missionaries [Level 2] (Mission Team)</name>
     <entry>Character(Missionary)[2]@Cleric&amp;Druid&amp;Monk&amp;Paladin@/1d4</entry>
   </collection>
   <collection>
-    <name>Character(Missionary)[3]@Cleric&amp;Druid&amp;Monk&amp;Paladin@</name>
+	  <name>Missionaries [Level 3] (Mission Team)</name>
     <entry>Character(Missionary)[3]@Cleric&amp;Druid&amp;Monk&amp;Paladin@/1d4</entry>
   </collection>
   <collection>
-    <name>Character(Missionary)[4]@Cleric&amp;Druid&amp;Monk&amp;Paladin@</name>
+	  <name>Missionaries [Level 4] (Mission Team)</name>
     <entry>Character(Missionary)[4]@Cleric&amp;Druid&amp;Monk&amp;Paladin@/1d4</entry>
   </collection>
   <collection>
-    <name>Character(Missionary)[5]@Cleric&amp;Druid&amp;Monk&amp;Paladin@</name>
+	  <name>Missionaries [Level 5] (Mission Team)</name>
     <entry>Character(Missionary)[5]@Cleric&amp;Druid&amp;Monk&amp;Paladin@/1d4</entry>
   </collection>
   <collection>
-    <name>Character(Missionary)[6]@Cleric&amp;Druid&amp;Monk&amp;Paladin@</name>
+	  <name>Missionaries [Level 6] (Mission Team)</name>
     <entry>Character(Missionary)[6]@Cleric&amp;Druid&amp;Monk&amp;Paladin@/1d4</entry>
   </collection>
   <collection>
-    <name>Character(Missionary)[7]@Cleric&amp;Druid&amp;Monk&amp;Paladin@</name>
+	  <name>Missionaries [Level 7] (Mission Team)</name>
     <entry>Character(Missionary)[7]@Cleric&amp;Druid&amp;Monk&amp;Paladin@/1d4</entry>
   </collection>
   <collection>
-    <name>Character(Missionary)[8]@Cleric&amp;Druid&amp;Monk&amp;Paladin@</name>
+	  <name>Missionaries [Level 8] (Mission Team)</name>
     <entry>Character(Missionary)[8]@Cleric&amp;Druid&amp;Monk&amp;Paladin@/1d4</entry>
   </collection>
   <collection>
-    <name>Character(Missionary)[9]@Cleric&amp;Druid&amp;Monk&amp;Paladin@</name>
+	  <name>Missionaries [Level 9] (Mission Team)</name>
     <entry>Character(Missionary)[9]@Cleric&amp;Druid&amp;Monk&amp;Paladin@/1d4</entry>
   </collection>
   <collection>
-    <name>Character(Missionary)[10]@Cleric&amp;Druid&amp;Monk&amp;Paladin@</name>
+	  <name>Missionaries [Level 10] (Mission Team)</name>
     <entry>Character(Missionary)[10]@Cleric&amp;Druid&amp;Monk&amp;Paladin@/1d4</entry>
   </collection>
   <collection>
-    <name>Character(Missionary)[11]@Cleric&amp;Druid&amp;Monk&amp;Paladin@</name>
+	  <name>Missionaries [Level 11] (Mission Team)</name>
     <entry>Character(Missionary)[11]@Cleric&amp;Druid&amp;Monk&amp;Paladin@/1d4</entry>
   </collection>
   <collection>
-    <name>Character(Missionary)[12]@Cleric&amp;Druid&amp;Monk&amp;Paladin@</name>
+	  <name>Missionaries [Level 12] (Mission Team)</name>
     <entry>Character(Missionary)[12]@Cleric&amp;Druid&amp;Monk&amp;Paladin@/1d4</entry>
   </collection>
   <collection>
-    <name>Character(Missionary)[13]@Cleric&amp;Druid&amp;Monk&amp;Paladin@</name>
+	  <name>Missionaries [Level 13] (Mission Team)</name>
     <entry>Character(Missionary)[13]@Cleric&amp;Druid&amp;Monk&amp;Paladin@/1d4</entry>
   </collection>
   <collection>
-    <name>Character(Missionary)[14]@Cleric&amp;Druid&amp;Monk&amp;Paladin@</name>
+	  <name>Missionaries [Level 14] (Mission Team)</name>
     <entry>Character(Missionary)[14]@Cleric&amp;Druid&amp;Monk&amp;Paladin@/1d4</entry>
   </collection>
   <collection>
-    <name>Character(Missionary)[15]@Cleric&amp;Druid&amp;Monk&amp;Paladin@</name>
+	  <name>Missionaries [Level 15] (Mission Team)</name>
     <entry>Character(Missionary)[15]@Cleric&amp;Druid&amp;Monk&amp;Paladin@/1d4</entry>
   </collection>
   <collection>
-    <name>Character(Missionary)[16]@Cleric&amp;Druid&amp;Monk&amp;Paladin@</name>
+	  <name>Missionaries [Level 16] (Mission Team)</name>
     <entry>Character(Missionary)[16]@Cleric&amp;Druid&amp;Monk&amp;Paladin@/1d4</entry>
   </collection>
   <collection>
-    <name>Character(Missionary)[17]@Cleric&amp;Druid&amp;Monk&amp;Paladin@</name>
+	  <name>Missionaries [Level 17] (Mission Team)</name>
     <entry>Character(Missionary)[17]@Cleric&amp;Druid&amp;Monk&amp;Paladin@/1d4</entry>
   </collection>
   <collection>
-    <name>Character(Missionary)[18]@Cleric&amp;Druid&amp;Monk&amp;Paladin@</name>
+	  <name>Missionaries [Level 18] (Mission Team)</name>
     <entry>Character(Missionary)[18]@Cleric&amp;Druid&amp;Monk&amp;Paladin@/1d4</entry>
   </collection>
   <collection>
-    <name>Character(Missionary)[19]@Cleric&amp;Druid&amp;Monk&amp;Paladin@</name>
+	  <name>Missionaries [Level 19] (Mission Team)</name>
     <entry>Character(Missionary)[19]@Cleric&amp;Druid&amp;Monk&amp;Paladin@/1d4</entry>
   </collection>
   <collection>
-    <name>Character(Missionary)[20]@Cleric&amp;Druid&amp;Monk&amp;Paladin@</name>
+	  <name>Missionaries [Level 20] (Mission Team)</name>
     <entry>Character(Missionary)[20]@Cleric&amp;Druid&amp;Monk&amp;Paladin@/1d4</entry>
   </collection>
   <collection>
@@ -9313,28 +9324,59 @@
 		<entry>Mephit[3]/1d8+4</entry>
 	</collection>
   <collection>
-    <name>Character[1]{Merfolk}@Warrior@</name>
+    <name>Merfolk (Company)</name>
     <entry>Character[1]{Merfolk}@Warrior@/1d3+1</entry>
-    <entry>Character[1]{Merfolk}@Warrior@/1d10+10,Character(Lieutenant)[3]{Merfolk}@Warrior@/2,Character(Leader)[1d4+2]{Merfolk}@Warrior@/1</entry>
-    <entry>Character[1]{Merfolk}@Warrior@/6d6+24,Character(Sergeant)[3]{Merfolk}@Warrior@/1d2+1,Character(Lieutenant)[5]{Merfolk}@Warrior@/5,Character(Captain)[7]{Merfolk}@Warrior@/3,Porpoise/10</entry>
   </collection>
+	<collection>
+		<name>Merfolk (Patrol)</name>
+		<entry>Character[1]{Merfolk}@Warrior@/1d10+10</entry>
+		<entry>Character(Lieutenant)[3]{Merfolk}@Warrior@/2</entry>
+		<entry>Character(Leader)[1d4+2]{Merfolk}@Warrior@/1</entry>
+	</collection>
+	<collection>
+		<name>Merfolk (Band)</name>
+		<entry>Character[1]{Merfolk}@Warrior@/6d6+24</entry>
+		<entry>Character(Sergeant)[3]{Merfolk}@Warrior@/1d2+1</entry>
+		<entry>Character(Lieutenant)[5]{Merfolk}@Warrior@/5</entry>
+		<entry>Character(Captain)[7]{Merfolk}@Warrior@/3</entry>
+		<entry>Porpoise/10</entry>
+	</collection>
   <collection>
     <name>Mimic (Solitary)</name>
     <entry>Mimic/1</entry>
   </collection>
   <collection>
-    <name>Mind flayer</name>
+    <name>Mind Flayer (Solitary)</name>
     <entry>Mind flayer/1</entry>
-    <entry>Mind flayer/2</entry>
-    <entry>Mind flayer/1d3+2</entry>
-    <entry>Mind flayer/1d3+2,Grimlock/2d3+4</entry>
   </collection>
+	<collection>
+		<name>Mind Flayers (Pair)</name>
+		<entry>Mind flayer/2</entry>
+	</collection>
+	<collection>
+		<name>Mind Flayers (Inquisition)</name>
+		<entry>Mind flayer/1d3+2</entry>
+	</collection>
+	<collection>
+		<name>Mind Flayers (Cult)</name>
+		<entry>Mind flayer/1d3+2</entry>
+		<entry>Grimlock/2d3+4</entry>
+	</collection>
   <collection>
-    <name>Character[9]{Mind Flayer}@Sorcerer@</name>
+    <name>Mind Flayer Sorcerer (Solitary)</name>
     <entry>Character[9]{Mind Flayer}@Sorcerer@/1</entry>
-    <entry>Character[9]{Mind Flayer}@Sorcerer@/1,Mind flayer/1d3+1</entry>
-    <entry>Character[9]{Mind Flayer}@Sorcerer@/2,Mind flayer/1d3+1,Grimlock/2d3+4</entry>
   </collection>
+	<collection>
+		<name>Mind Flayer Sorcerer (Inquisition)</name>
+		<entry>Character[9]{Mind Flayer}@Sorcerer@/1</entry>
+		<entry>Mind flayer/1d3+1</entry>
+	</collection>
+	<collection>
+		<name>Mind Flayer Sorcerers (Cult)</name>
+		<entry>Character[9]{Mind Flayer}@Sorcerer@/2</entry>
+		<entry>Mind flayer/1d3+1</entry>
+		<entry>Grimlock/2d3+4</entry>
+	</collection>
   <collection>
     <name>Minotaur (Solitary)</name>
     <entry>Minotaur/1</entry>
@@ -9483,33 +9525,73 @@
     <entry>Giant octopus/1</entry>
   </collection>
   <collection>
-    <name>Ogre</name>
+    <name>Ogre (Solitary)</name>
     <entry>Ogre/1</entry>
-    <entry>Ogre/2</entry>
-    <entry>Ogre/1d2+2</entry>
-    <entry>Ogre/1d4+4</entry>
   </collection>
+	<collection>
+		<name>Ogres (Pair)</name>
+		<entry>Ogre/2</entry>
+	</collection>
+	<collection>
+		<name>Ogres (Gang)</name>
+		<entry>Ogre/1d2+2</entry>
+	</collection>
+	<collection>
+		<name>Ogres (Band)</name>
+		<entry>Ogre/1d4+4</entry>
+	</collection>
   <collection>
-    <name>Character[4]{Ogre}@Barbarian@</name>
+    <name>Ogre Barbarian (Solitary)</name>
     <entry>Character[4]{Ogre}@Barbarian@/1</entry>
-    <entry>Character[4]{Ogre}@Barbarian@/2</entry>
-    <entry>Character[4]{Ogre}@Barbarian@/1,Ogre/1d3</entry>
-    <entry>Character[4]{Ogre}@Barbarian@/1,Ogre/1d4+3</entry>
   </collection>
+	<collection>
+		<name>Ogre Barbarians (Pair)</name>
+		<entry>Character[4]{Ogre}@Barbarian@/2</entry>
+	</collection>
+	<collection>
+		<name>Ogre Barbarian (Gang)</name>
+		<entry>Character[4]{Ogre}@Barbarian@/1</entry>
+		<entry>Ogre/1d3</entry>
+	</collection>
+	<collection>
+		<name>Ogre Barbarian (Band)</name>
+		<entry>Character[4]{Ogre}@Barbarian@/1</entry>
+		<entry>Ogre/1d4+3</entry>
+	</collection>
   <collection>
-    <name>Ogre$Merrow$</name>
+    <name>Merrow (Solitary)</name>
     <entry>Ogre$Merrow$/1</entry>
-    <entry>Ogre$Merrow$/2</entry>
-    <entry>Ogre$Merrow$/1d2+2</entry>
-    <entry>Ogre$Merrow$/1d4+4</entry>
   </collection>
+	<collection>
+		<name>Merrows (Pair)</name>
+		<entry>Ogre$Merrow$/2</entry>
+	</collection>
+	<collection>
+		<name>Merrows (Gang)</name>
+		<entry>Ogre$Merrow$/1d2+2</entry>
+	</collection>
+	<collection>
+		<name>Merrows (Band)</name>
+		<entry>Ogre$Merrow$/1d4+4</entry>
+	</collection>
   <collection>
-    <name>Character[4]{Merrow}@Barbarian@</name>
+    <name>Merrow Barbarian (Solitary)</name>
     <entry>Character[4]{Merrow}@Barbarian@/1</entry>
-    <entry>Character[4]{Merrow}@Barbarian@/2</entry>
-    <entry>Character[4]{Merrow}@Barbarian@/1,Ogre$Merrow$/1d3</entry>
-    <entry>Character[4]{Merrow}@Barbarian@/1,Ogre$Merrow$/1d4+3</entry>
   </collection>
+	<collection>
+		<name>Merrow Barbarians (Pair)</name>
+		<entry>Character[4]{Merrow}@Barbarian@/2</entry>
+	</collection>
+	<collection>
+		<name>Merrow Barbarian (Gang)</name>
+		<entry>Character[4]{Merrow}@Barbarian@/1</entry>
+		<entry>Ogre$Merrow$/1d3</entry>
+	</collection>
+	<collection>
+		<name>Merrow Barbarian (Band)</name>
+		<entry>Character[4]{Merrow}@Barbarian@/1</entry>
+		<entry>Ogre$Merrow$/1d4+3</entry>
+	</collection>
   <collection>
     <name>Ogre mage</name>
     <entry>Ogre mage/1</entry>

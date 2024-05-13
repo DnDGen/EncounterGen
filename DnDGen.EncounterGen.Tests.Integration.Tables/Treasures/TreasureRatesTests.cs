@@ -22,8 +22,8 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Treasures
         public override void EntriesAreComplete()
         {
             var allCreatures = GetAllCreaturesFromEncounters();
-            var useSubtypeForTreasure = collectionSelector.Explode(TableNameConstants.CreatureGroups, GroupConstants.UseSubtypeForTreasure);
-            allCreatures = allCreatures.Except(useSubtypeForTreasure);
+            var useSubcreatureForTreasure = collectionSelector.Explode(TableNameConstants.CreatureGroups, GroupConstants.UseSubcreatureForTreasure);
+            allCreatures = allCreatures.Except(useSubcreatureForTreasure);
 
             AssertEntriesAreComplete(allCreatures);
         }

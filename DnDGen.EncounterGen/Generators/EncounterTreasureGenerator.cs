@@ -41,7 +41,7 @@ namespace DnDGen.EncounterGen.Generators
             this.itemsGenerator = itemsGenerator;
         }
 
-        public IEnumerable<Treasure> GenerateFor(IEnumerable<Creature> creatures, int level)
+        public IEnumerable<Treasure> GenerateFor(IEnumerable<EncounterCreature> creatures, int level)
         {
             var treasures = new List<Treasure>();
 
@@ -56,9 +56,9 @@ namespace DnDGen.EncounterGen.Generators
             return treasures;
         }
 
-        private Treasure GenerateFor(Creature creature, int level)
+        private Treasure GenerateFor(EncounterCreature creature, int level)
         {
-            var creatureName = GetCreatureNameForTreasure(creature.Type);
+            var creatureName = GetCreatureNameForTreasure(creature.Creature);
             var treasureRates = treasureAdjustmentSelector.SelectFor(creatureName);
 
             var treasure = new Treasure();
@@ -171,16 +171,16 @@ namespace DnDGen.EncounterGen.Generators
             return templates;
         }
 
-        private string GetCreatureNameForTreasure(EncounterCreature creatureType)
+        private string GetCreatureNameForTreasure(Creature creature)
         {
-            var useSubtypeForTreasure = collectionSelector.SelectFrom(TableNameConstants.CreatureGroups, GroupConstants.UseSubtypeForTreasure);
+            var useSubcreatureForTreasure = collectionSelector.SelectFrom(TableNameConstants.CreatureGroups, GroupConstants.UseSubcreatureForTreasure);
 
-            if (useSubtypeForTreasure.Contains(creatureType.Name))
+            if (useSubcreatureForTreasure.Contains(creature.Name))
             {
-                return GetCreatureNameForTreasure(creatureType.SubCreature);
+                return GetCreatureNameForTreasure(creature.SubCreature);
             }
 
-            return creatureType.Name;
+            return creature.Name;
         }
     }
 }

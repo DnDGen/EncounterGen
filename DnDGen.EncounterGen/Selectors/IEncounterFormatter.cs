@@ -18,7 +18,7 @@ namespace DnDGen.EncounterGen.Selectors
         string BuildEncounter(Dictionary<string, string> creaturesAndAmounts);
         string SelectNameFrom(string creature);
         string SelectDescriptionFrom(string creature);
-        string SelectSubtypeFrom(string creature);
+        string SelectSubCreatureFrom(string creature);
         string SelectChallengeRatingFrom(string creature);
         string SelectBaseRaceFrom(string creature);
         string SelectMetaraceFrom(string creature);
@@ -26,7 +26,7 @@ namespace DnDGen.EncounterGen.Selectors
         string BuildCreature(
             string name,
             string description = "",
-            string subtype = "",
+            string subcreature = "",
             string challengeRating = "",
             string baseRace = "",
             string metarace = "",
