@@ -3865,6 +3865,30 @@
     <name>Character(Captain)[7]{Wood Elf}@Warrior@</name>
     <entry>3</entry>
   </collection>
+	<collection>
+		<name>Character[1]{Human}@Warrior@</name>
+		<entry>1/2</entry>
+	</collection>
+	<collection>
+		<name>Human$Noncombatant$</name>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Sergeant)[3]{Human}@Warrior@</name>
+		<entry>1</entry>
+	</collection>
+	<collection>
+		<name>Character(Leader)[1d4+2]{Human}@Warrior@</name>
+		<entry>2</entry>
+	</collection>
+	<collection>
+		<name>Character(Lieutenant)[5]{Human}@Warrior@</name>
+		<entry>2</entry>
+	</collection>
+	<collection>
+		<name>Character(Captain)[7]{Human}@Warrior@</name>
+		<entry>3</entry>
+	</collection>
   <collection>
     <name>Erinyes</name>
     <entry>8</entry>
