@@ -6,5 +6,6 @@
         public const string UseSubcreatureForTreasure = "Use Sub-creature for Treasure";
         public const string Wilderness = "Wilderness";
         public const string Extraplanar = "Extraplanar";
+        public const string All = "All";
     }
 }

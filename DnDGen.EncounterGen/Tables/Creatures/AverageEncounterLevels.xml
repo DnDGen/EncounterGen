@@ -781,13 +781,13 @@
 		<entry>Bearded Devils (Barbazus) (Pair)</entry>
 		<entry>Juvenile Black Dragon (Solitary)</entry>
 		<entry>Wyrmling Black Dragons (Clutch)</entry>
-		<entry>Black pudding (Solitary)</entry>
+		<entry>Black Pudding (Solitary)</entry>
 		<entry>Wyrmling Blue Dragons (Clutch)</entry>
 		<entry>Wyrmling Brass Dragons (Clutch)</entry>
 		<entry>Wyrmling Bronze Dragons (Clutch)</entry>
 		<entry>Young Bronze Dragon (Solitary)</entry>
 		<entry>Bulette (Solitary)</entry>
-		<entry>Centipede swarm/1d3+1</entry>
+		<entry>Centipede Swarms (Tangle)</entry>
 		<entry>Chaos Beast (Solitary)</entry>
 		<entry>Adventurers [Level 4] (Party)</entry>
 		<entry>Adventurer [Level 7] (Solitary)</entry>
@@ -823,7 +823,7 @@
 		<entry>Missionaries [Level 8-9 Adepts] (Mission Team)</entry>
 		<entry>Missionaries [Level 4] (Mission Team)</entry>
 		<entry>Pickpocket [Level 7] (Solitary)</entry>
-		<entry>Politician [Level 6-7]@Aristocrat@/1,Character(Adviser)[Level 6-7]@Expert@/1d3-1,Guards [Level 6-7]@Warrior@/2d3-2</entry>
+		<entry>Politician [Level 6-7] (with Advisers and Guards)</entry>
 		<entry>Protestors [Level 4-5] (Protest)</entry>
 		<entry>Scholar [Level 7] (Solitary)</entry>
 		<entry>Sellsword [Level 7] (Solitary)</entry>
@@ -850,23 +850,23 @@
 		<entry>Gray Elves (Company)</entry>
 		<entry>Wild Elves (Company)</entry>
 		<entry>Wood Elves (Company)</entry>
-		<entry>Character[Level 1]{Deep Dwarf}@Warrior@/1d10+10,Character(Sergeant)[Level 3]{Deep Dwarf}@Warrior@/2,Character(Leader)[1d4+2]{Deep Dwarf}@Warrior@ (Solitary)</entry>
-		<entry>Character[Level 1]{Deep Halfling}@Warrior@/1d10+10,Character(Sergeant)[Level 3]{Deep Halfling}@Warrior@/2,Character(Leader)[1d4+2]{Deep Halfling}@Warrior@ (Solitary)</entry>
-		<entry>Character[Level 1]{Forest Gnome}@Warrior@/1d10+10,Character(Leader)[1d4+2]{Forest Gnome}@Warrior@/1,Character(Lieutenant)[Level 3]{Forest Gnome}@Warrior@s (Pair)</entry>
-		<entry>Character[Level 1]{Half-Orc}@Warrior@/1d10+10,Character(Sergeant)[Level 3]{Half-Orc}@Warrior@/2,Character(Leader)[1d4+2]{Half-Orc}@Warrior@ (Solitary)</entry>
-		<entry>Character[Level 1]{High Elf}@Warrior@/1d10+10,Character(Sergeant)[Level 3]{High Elf}@Warrior@/2,Character(Leader)[1d4+2]{High Elf}@Warrior@ (Solitary)</entry>
-		<entry>Character[Level 1]{Hill Dwarf}@Warrior@/1d10+10,Character(Sergeant)[Level 3]{Hill Dwarf}@Warrior@/2,Character(Leader)[1d4+2]{Hill Dwarf}@Warrior@ (Solitary)</entry>
-		<entry>Character[Level 1]{Kobold}@Warrior@/2d8+8,Dire weasel/1d3+1</entry>
-		<entry>Character[Level 1]{Lightfoot Halfling}@Warrior@/1d10+10,Character(Sergeant)[Level 3]{Lightfoot Halfling}@Warrior@/2,Character(Leader)[1d4+2]{Lightfoot Halfling}@Warrior@ (Solitary)</entry>
-		<entry>Character[Level 1]{Locathah}@Warrior@/1d10+10,Character(Sergeant)[Level 3]{Locathah}@Warrior@/2,Character(Leader)[1d4+2]{Locathah}@Warrior@ (Solitary)</entry>
-		<entry>Character[Level 1]{Merfolk}@Warrior@/1d10+10,Character(Lieutenant)[Level 3]{Merfolk}@Warrior@/2,Character(Leader)[1d4+2]{Merfolk}@Warrior@ (Solitary)</entry>
-		<entry>Character[Level 1]{Mountain Dwarf}@Warrior@/1d10+10,Character(Sergeant)[Level 3]{Mountain Dwarf}@Warrior@/2,Character(Leader)[1d4+2]{Mountain Dwarf}@Warrior@ (Solitary)</entry>
-		<entry>Character[Level 1]{Orc}@Warrior@/1d10+10,Character(Sergeant)[Level 3]{Orc}@Warrior@/2,Character(Leader)[1d4+2]{Orc}@Warrior@ (Solitary)</entry>
-		<entry>Character[Level 1]{Rock Gnome}@Warrior@/1d10+10,Character(Leader)[1d4+2]{Rock Gnome}@Warrior@/1,Character(Lieutenant)[Level 3]{Rock Gnome}@Warrior@s (Pair)</entry>
-		<entry>Character[Level 1]{Tallfellow Halfling}@Warrior@/1d10+10,Character(Sergeant)[Level 3]{Tallfellow Halfling}@Warrior@/2,Character(Leader)[1d4+2]{Tallfellow Halfling}@Warrior@ (Solitary)</entry>
+		<entry>Deep Dwarves (Squad)</entry>
+		<entry>Hill Dwarves (Squad)</entry>
+		<entry>Mountain Dwarves (Squad)</entry>
+		<entry>Deep Halflings (Squad)</entry>
+		<entry>Lightfoot Halflings (Squad)</entry>
+		<entry>Tallfellow Halflings (Squad)</entry>
+		<entry>Forest Gnomes (Squad)</entry>
+		<entry>Rock Gnomes (Squad)</entry>
+		<entry>Humans (Company)</entry>
+		<entry>Half-Orcs (Squad)</entry>
+		<entry>Orcs (Squad)</entry>
+		<entry>Kobolds (Warband)</entry>
+		<entry>Locathah (Patrol)</entry>
+		<entry>Merfolk (Patrol)</entry>
 		<entry>Vampires [Level 1] (Gang)</entry>
 		<entry>Local [Level 14-15] (with Heavy Warhorse)</entry>
-		<entry>Character[Level 3]{Githyanki}@Fighter@/1d3+1</entry>
+		<entry>Githyanki (Company)</entry>
 		<entry>Vampires [Level 3] (Pair)</entry>
 		<entry>Merrow Barbarian (Solitary)</entry>
 		<entry>Ogre Barbarian (Solitary)</entry>
@@ -874,104 +874,104 @@
 		<entry>Vampire [Level 5] (Solitary)</entry>
 		<entry>Chimera (Solitary)</entry>
 		<entry>Chuul (Solitary)</entry>
-		<entry>Cockatrice/1d3+2</entry>
-		<entry>Copper dragon$Wyrmling$/1d4+1</entry>
-		<entry>Copper dragon$Young$ (Solitary)</entry>
+		<entry>Cockatrices (Flight)</entry>
+		<entry>Wyrmling Copper Dragons (Clutch)</entry>
+		<entry>Young Copper Dragon (Solitary)</entry>
 		<entry>Criosphinx (Solitary)</entry>
 		<entry>Cryohydra (6 Heads) (Solitary)</entry>
-		<entry>Darkmantle/1d10+5</entry>
-		<entry>Dire bear (Solitary)</entry>
-		<entry>Dire lions (Pair)</entry>
+		<entry>Darkmantles (Swarm)</entry>
+		<entry>Dire Bear (Solitary)</entry>
+		<entry>Dire Lions (Pair)</entry>
 		<entry>Dragonne (Solitary)</entry>
 		<entry>Drider (Solitary)</entry>
 		<entry>Elasmosaurus (Solitary)</entry>
-		<entry>Elemental(Air)$Huge$ (Solitary)</entry>
-		<entry>Elemental(Earth)$Huge$ (Solitary)</entry>
-		<entry>Elemental(Fire)$Huge$ (Solitary)</entry>
-		<entry>Elemental(Water)$Huge$ (Solitary)</entry>
+		<entry>Huge Air Elemental (Solitary)</entry>
+		<entry>Huge Earth Elemental (Solitary)</entry>
+		<entry>Huge Fire Elemental (Solitary)</entry>
+		<entry>Huge Water Elemental (Solitary)</entry>
 		<entry>Elephant (Solitary)</entry>
-		<entry>Ghoul/1d6+6</entry>
-		<entry>Ghoul$Lacedon$/1d6+6</entry>
-		<entry>Giant ant$Worker$/1d6+5,Giant ant$Soldier$ (Solitary)</entry>
-		<entry>Giant owl/1d3+2</entry>
-		<entry>Giant wasp/1d4+1</entry>
-		<entry>Gold dragon$Very young$ (Solitary)</entry>
+		<entry>Ghouls (Pack)</entry>
+		<entry>Lacedons (Pack)</entry>
+		<entry>Giant Worker Ants (Crew)</entry>
+		<entry>Giant Owls (Company)</entry>
+		<entry>Giant Wasps (Swarm)</entry>
+		<entry>Very Young Gold Dragon (Solitary)</entry>
 		<entry>Flesh Golem (Solitary)</entry>
-		<entry>Green dragon$Wyrmling$/1d4+1</entry>
-		<entry>Hellcat(Bezekira) (Solitary)</entry>
-		<entry>Hieracosphinxs (Pair)</entry>
-		<entry>Hill giant (Solitary)</entry>
+		<entry>Wyrmling Green Dragons (Clutch)</entry>
+		<entry>Hellcat (Bezekira) (Solitary)</entry>
+		<entry>Hieracosphinxes (Pair)</entry>
+		<entry>Hill Giant (Solitary)</entry>
 		<entry>Hydra (8 Heads) (Solitary)</entry>
-		<entry>Hyena/1d10+6</entry>
-		<entry>Invisible stalker (Solitary)</entry>
-		<entry>Janni/1d3+1</entry>
-		<entry>Kuo-toa/1d3+1,Character(Whip)[Level 3]{Kuo-toa}@Cleric@ (Solitary)</entry>
-		<entry>Lemure/1d10+5</entry>
+		<entry>Hyenas (Pack)</entry>
+		<entry>Invisible Stalker (Solitary)</entry>
+		<entry>Jann (Company)</entry>
+		<entry>Kuo-toas (Patrol)</entry>
+		<entry>Lemures (Swarm)</entry>
 		<entry>Lillend (Solitary)</entry>
 		<entry>Manticores (Pair)</entry>
 		<entry>Medusa (Solitary)</entry>
-		<entry>Monstrous centipede$Huge Fiendish creature$/1d4+1</entry>
-		<entry>Monstrous scorpion$Huge$ (Solitary)</entry>
-		<entry>Monstrous scorpion$Large$/1d4+1</entry>
-		<entry>Naga$Water$ (Solitary)</entry>
+		<entry>Huge Fiendish Monstrous Centipedes (Colony)</entry>
+		<entry>Huge Monstrous Scorpion (Solitary)</entry>
+		<entry>Large Monstrous Scorpions (Colony)</entry>
+		<entry>Water Naga (Solitary)</entry>
 		<entry>Nymph (Solitary)</entry>
-		<entry>Ogre/1d2+2</entry>
-		<entry>Ogre$Merrow$/1d2+2</entry>
+		<entry>Ogres (Gang)</entry>
+		<entry>Merrows (Gang)</entry>
 		<entry>Phasm (Solitary)</entry>
-		<entry>Pixie/1d3+1</entry>
+		<entry>Pixies (Gang)</entry>
 		<entry>Pyrohydra (6 Heads) (Solitary)</entry>
 		<entry>Rasts (Pair)</entry>
-		<entry>Ravid/1,Animated object$Colossal$/1d6-5,Animated object$Gargantuan$/1d4-3,Animated object$Huge$/1d3-2,Animated object$Large$/1d2-1,Animated object$Medium$/1d2-1,Animated object$Small$/1d3-1,Animated object$Tiny$/2d3-2</entry>
-		<entry>Red dragon$Young$ (Solitary)</entry>
+		<entry>Ravid (with Animated Objects)</entry>
+		<entry>Young Red Dragon (Solitary)</entry>
 		<entry>Remorhaz (Solitary)</entry>
-		<entry>Salamander$Flamebrother$/1d3+2</entry>
-		<entry>Satyr$with pipes$/1,Satyr/1d3+1</entry>
+		<entry>Flamebrother Salamanders (Cluster)</entry>
+		<entry>Satyrs (Band)</entry>
 		<entry>Scorpionfolk (Solitary)</entry>
-		<entry>Shadow mastiffs (Pair)</entry>
-		<entry>Shadow/1d4+1</entry>
-		<entry>Silver dragon$Young$ (Solitary)</entry>
-		<entry>Skeleton$Chimera$/1d4</entry>
-		<entry>Slaad$Red$ (Solitary)</entry>
+		<entry>Shadow Mastiffs (Pair)</entry>
+		<entry>Shadows (Gang)</entry>
+		<entry>Young Silver Dragon (Solitary)</entry>
+		<entry>Chimera Skeletons (Small Group)</entry>
+		<entry>Red Slaad (Solitary)</entry>
 		<entry>Spectre (Solitary)</entry>
-		<entry>Spider swarm/1d6+6</entry>
+		<entry>Spider Swarms (Colony)</entry>
 		<entry>Succubus (Solitary)</entry>
-		<entry>Troglodyte/1d6+5,Monitor lizard/1d2</entry>
-		<entry>Umber hulk (Solitary)</entry>
-		<entry>Violet fungus/1d3+1,Shrieker/1d3+2</entry>
+		<entry>Troglodytes (Squad)</entry>
+		<entry>Umber Hulk (Solitary)</entry>
+		<entry>Violet Fungi (Mixed Patch)</entry>
 		<entry>Werebears (Pair)</entry>
-		<entry>Wererat/1d4+1,Dire rat/1d4+4</entry>
+		<entry>Wererats (Troupe)</entry>
 		<entry>Weretigers (Pair)</entry>
-		<entry>Whale$Cachalot$ (Solitary)</entry>
-		<entry>White dragon$Very young$/1d4+1</entry>
-		<entry>Wight/1d3+2</entry>
-		<entry>Winter wolfs (Pair)</entry>
-		<entry>Wolf/1d10+6</entry>
-		<entry>Xorn$Minor$/1d3+2</entry>
-		<entry>Yuan-ti$Abomination$ (Solitary)</entry>
-		<entry>Yuan-ti$Halfblood$s (Pair)</entry>
-		<entry>Yuan-ti$Pureblood$/1d2+2</entry>
-		<entry>Zombie$Minotaur$/1d4</entry>
-		<entry>Zombie$Wyvern$/1d4</entry>
+		<entry>Cachalot Whale (Solitary)</entry>
+		<entry>Very Young White Dragons (Clutch)</entry>
+		<entry>Wights (Gang)</entry>
+		<entry>Winter Wolves (Pair)</entry>
+		<entry>Wolves (Pack)</entry>
+		<entry>Minor Xorns (Cluster)</entry>
+		<entry>Yuan-ti Abomination (Solitary)</entry>
+		<entry>Yuan-ti Halfbloods (Pair)</entry>
+		<entry>Yuan-ti Purebloods (Gang)</entry>
+		<entry>Minotaur Zombies (Small Group)</entry>
+		<entry>Wyvern Zombies (Small Group)</entry>
 	</collection>
 	<collection>
 		<name>8</name>
-		<entry>Arrowhawk$Adult$/1d3+1</entry>
-		<entry>Arrowhawk$Elder$ (Solitary)</entry>
+		<entry>Adult Arrowhawks (Clutch)</entry>
+		<entry>Elder Arrowhawk (Solitary)</entry>
 		<entry>Athach (Solitary)</entry>
 		<entry>Behir (Solitary)</entry>
 		<entry>Belkers (Pair)</entry>
-		<entry>Black dragon$Very young$/1d4+1</entry>
-		<entry>Blue dragon$Juvenile$ (Solitary)</entry>
-		<entry>Blue dragon$Very young$/1d4+1</entry>
-		<entry>Boar/1d4+4</entry>
+		<entry>Very Young Black Dragons (Clutch)</entry>
+		<entry>Juvenile Blue Dragon (Solitary)</entry>
+		<entry>Very Young Blue Dragons (Clutch)</entry>
+		<entry>Boars (Herd)</entry>
 		<entry>Bodak (Solitary)</entry>
 		<entry>Bralanis (Pair)</entry>
-		<entry>Brass dragon$Juvenile$ (Solitary)</entry>
-		<entry>Brass dragon$Very young$/1d4+1</entry>
-		<entry>Camel/8d4-2</entry>
-		<entry>Carrion crawler/1d3+2</entry>
-		<entry>Character(Adventurer)[Level 5] (Party)</entry>
-		<entry>Character(Adventurer)[Level 8] (Solitary)</entry>
+		<entry>Juvenile Brass Dragon (Solitary)</entry>
+		<entry>Very Young Brass Dragons (Clutch)</entry>
+		<entry>Camels (Herd)</entry>
+		<entry>Carrion Crawlers (Cluster)</entry>
+		<entry>Adventurers [Level 5] (Party)</entry>
+		<entry>Adventurer [Level 8] (Solitary)</entry>
 		<entry>Animal Trainer [Level 8] (with Camel)</entry>
 		<entry>Animal Trainer [Level 8] (with Riding Dog)</entry>
 		<entry>Animal Trainer [Level 8] (with Heavy Horse)</entry>
@@ -984,26 +984,26 @@
 		<entry>Animal Trainer [Level 8] (with Donkey)</entry>
 		<entry>Animal Trainer [Level 8] (with Pony)</entry>
 		<entry>Animal Trainer [Level 8] (with Heavy Warhorse)</entry>
-		<entry>Artisan [Level 16-17]@Expert@ (Solitary)</entry>
-		<entry>Beggar [Level 16-17]@Commoner@ (Solitary)</entry>
+		<entry>Artisan [Level 16-17] (Solitary)</entry>
+		<entry>Beggar [Level 16-17] (Solitary)</entry>
 		<entry>Business People [Level 10-11] (Group)</entry>
-		<entry>Construction Workers [Level 6-7]@Commoner@/2d4,Character(Architect)[Level 6-7]@Expert@ (Solitary)</entry>
+		<entry>Construction Workers [Level 6-7] (Crew)</entry>
 		<entry>Crusaders [Level 5] (Band)</entry>
-		<entry>Doctor [Level 16-17]@Adept@ (Solitary)</entry>
+		<entry>Doctor [Level 16-17 Adept] (Solitary)</entry>
 		<entry>Doctor [Level 8] (Solitary)</entry>
 		<entry>Farmers [Level 10-11] (Group)</entry>
-		<entry>Character(Fortuneteller)[Level 16-17]@Adept@ (Solitary)</entry>
-		<entry>Gentry [Level 6-7]@Aristocrat@/1d2,Character(Servant)[Level 6-7]@Commoner@/1d3+1</entry>
-		<entry>Guards [Level 4-5]@Warrior@/2d4+1,Character(Captain)[Level 6-7]@Warrior@ (Solitary)</entry>
-		<entry>Guards [Level 4-5]@Warrior@/2d4+1,Character(Captain)[Level 3]@Fighter@ (Solitary)</entry>
+		<entry>Fortuneteller [Level 16-17] (Solitary)</entry>
+		<entry>Gentry [Level 6-7] (with Servants)</entry>
+		<entry>Guards [Level 4-5] (Patrol)</entry>
+		<entry>Guards [Level 4-5] (Patrol with Fighter)</entry>
 		<entry>Herders [Level 10-11] (Group)</entry>
 		<entry>Hitman [Level 8] (Solitary)</entry>
 		<entry>Hunters [Level 10-11] (Hunting Party)</entry>
-		<entry>Minstrels [Level 6-7]@Commoner&amp;Expert@/2d4+1,Character(Leader)[Level 4]@Bard@/1d10-9</entry>
-		<entry>Missionaries [Level 10-11 Adepts] (Crew)</entry>
+		<entry>Minstrels [Level 6-7] (Group)</entry>
+		<entry>Missionaries [Level 10-11 Adepts] (Mission Team)</entry>
 		<entry>Missionaries [Level 5] (Mission Team)</entry>
 		<entry>Pickpocket [Level 8] (Solitary)</entry>
-		<entry>Politician [Level 8-9]@Aristocrat@/1,Character(Adviser)[Level 8-9]@Expert@/1d3-1,Guards [Level 8-9]@Warrior@/2d3-2</entry>
+		<entry>Politician [Level 8-9] (with Advisers and Guards)</entry>
 		<entry>Protestors [Level 6-7] (Protest)</entry>
 		<entry>Scholar [Level 8] (Solitary)</entry>
 		<entry>Sellsword [Level 8] (Solitary)</entry>
@@ -1011,128 +1011,128 @@
 		<entry>Street Performers [Level 5] (Crew)</entry>
 		<entry>Travelers [Level 10-11] (Group)</entry>
 		<entry>Ghosts [Level 3] (Gang)</entry>
-		<entry>Character[Level 16-17]@Any NPC@ (Solitary)</entry>
-		<entry>Character[Level 16-17]@Any NPC@/1,Camel (Solitary)</entry>
-		<entry>Character[Level 16-17]@Any NPC@/1,Cat (Solitary)</entry>
-		<entry>Character[Level 16-17]@Any NPC@/1,Dog (Solitary)</entry>
-		<entry>Character[Level 16-17]@Any NPC@/1,Riding Dog (Solitary)</entry>
-		<entry>Character[Level 16-17]@Any NPC@/1,Donkey (Solitary)</entry>
-		<entry>Character[Level 16-17]@Any NPC@/1,Heavy horse (Solitary)</entry>
-		<entry>Character[Level 16-17]@Any NPC@/1,Pony (Solitary)</entry>
-		<entry>Character[Level 16-17]@Any NPC@/1,Warpony (Solitary)</entry>
-		<entry>Character[Level 16-17]@Any NPC@/1,Light horse (Solitary)</entry>
-		<entry>Character[Level 16-17]@Any NPC@/1,Light warhorse (Solitary)</entry>
-		<entry>Character[Level 16-17]@Any NPC@/1,Mule (Solitary)</entry>
-		<entry>Merchants [Level 4-5]@Commoner&amp;Expert@/1d4+1,Guards [Level 4-5]@Warrior@/1d4</entry>
-		<entry>Pilgrims [Level 2-3] (Protest)+6,Guards [Level 2-3]@Warrior@/1d6-1,Character(Leader)[Level 2]@Cleric@ (Solitary)</entry>
-		<entry>Character[Level 1]{Drow}@Warrior@/1d4+4,Character(Sergeant)[Level 2]{Drow}@Warrior@/2,Character(Leader)[1d4+2]{Drow}@Warrior@ (Solitary)</entry>
-		<entry>Character[Level 1]{Kobold}@Warrior@/10d10,Kobold$Noncombatant$/10d10,Character(Sergeant)[Level 3]{Kobold}@Warrior@/2d3-1,Character(Leader)[1d3+3]{Kobold}@Warrior@ (Solitary)</entry>
-		<entry>Character[Level 16-17]@Any NPC@/1,Heavy warhorse (Solitary)</entry>
+		<entry>Local [Level 16-17] (Solitary)</entry>
+		<entry>Local [Level 16-17] (with Camel)</entry>
+		<entry>Local [Level 16-17] (with Cat)</entry>
+		<entry>Local [Level 16-17] (with Dog)</entry>
+		<entry>Local [Level 16-17] (with Riding Dog)</entry>
+		<entry>Local [Level 16-17] (with Donkey)</entry>
+		<entry>Local [Level 16-17] (with Heavy Horse)</entry>
+		<entry>Local [Level 16-17] (with Pony)</entry>
+		<entry>Local [Level 16-17] (with Warpony)</entry>
+		<entry>Local [Level 16-17] (with Light Horse)</entry>
+		<entry>Local [Level 16-17] (with Light Warhorse)</entry>
+		<entry>Local [Level 16-17] (with Mule)</entry>
+		<entry>Merchants [Level 4-5] (Caravan)</entry>
+		<entry>Pilgrims [Level 2-3] (Caravan)</entry>
+		<entry>Drow (Patrol)</entry>
+		<entry>Kobolds (Band)</entry>
+		<entry>Local [Level 16-17] (with Heavy Warhorse)</entry>
 		<entry>Vampires [Level 2] (Gang)</entry>
-		<entry>Character[Level 4]{Merrow}@Barbarian@/1,Ogre$Merrow$/1d3</entry>
-		<entry>Character[Level 4]{Ogre}@Barbarian@/1,Ogre/1d3</entry>
+		<entry>Merrow Barbarian (Gang)</entry>
+		<entry>Ogre Barbarian (Gang)</entry>
 		<entry>Vampires [Level 4] (Pair)</entry>
 		<entry>Ghost [Level 6] (Solitary)</entry>
 		<entry>Vampire [Level 6] (Solitary)</entry>
-		<entry>Crocodile/1d6+5</entry>
+		<entry>Crocodiles (Colony)</entry>
 		<entry>Cryohydra (7 Heads) (Solitary)</entry>
-		<entry>Deinonychus/1d4+2</entry>
+		<entry>Deinonychuses (Pack)</entry>
 		<entry>Destrachan (Solitary)</entry>
-		<entry>Dire bat/1d4+4</entry>
-		<entry>Dire tiger (Solitary)</entry>
-		<entry>Djinni/1d3+1</entry>
-		<entry>Djinni$Noble$ (Solitary)</entry>
-		<entry>Doppelganger/1d4+2</entry>
-		<entry>Dryad/1d4+3</entry>
+		<entry>Dire Bats (Colony)</entry>
+		<entry>Dire Tiger (Solitary)</entry>
+		<entry>Djinn (Company)</entry>
+		<entry>Noble Djinni (Solitary)</entry>
+		<entry>Doppelgangers (Gang)</entry>
+		<entry>Dryads (Grove)</entry>
 		<entry>Efreeti (Solitary)</entry>
 		<entry>Erinyes (Solitary)</entry>
-		<entry>Formian$Taskmaster$/1,Dominated creature[Level 4] (Solitary)</entry>
-		<entry>Ghoul$Ghast$/1d3+1,Ghoul/1d6+6</entry>
-		<entry>Giant bee/1d10+10</entry>
-		<entry>Giant bombardier beetle/1d6+5</entry>
-		<entry>Giant octopus (Solitary)</entry>
-		<entry>Giant stag beetle/1d4+1</entry>
+		<entry>Formian Taskmaster (Solitary)</entry>
+		<entry>Ghasts (Pack)</entry>
+		<entry>Giant Bees (Hive)</entry>
+		<entry>Giant Bombardier Beetles (Click)</entry>
+		<entry>Giant Octopus (Solitary)</entry>
+		<entry>Giant Stag Beetles (Cluster)</entry>
 		<entry>Gorgon (Solitary)</entry>
-		<entry>Gray render (Solitary)</entry>
-		<entry>Green dragon$Juvenile$ (Solitary)</entry>
-		<entry>Green dragon$Very young$/1d4+1</entry>
-		<entry>Grimlock/2d6+8</entry>
+		<entry>Gray Render (Solitary)</entry>
+		<entry>Juvenile Green Dragon (Solitary)</entry>
+		<entry>Very Young Green Dragons (Clutch)</entry>
+		<entry>Grimlocks (Pack)</entry>
 		<entry>Gynosphinx (Solitary)</entry>
-		<entry>Hellwasp swarm (Solitary)</entry>
-		<entry>Hound archon/1d3+2</entry>
+		<entry>Hellwasp Swarm (Solitary)</entry>
+		<entry>Hound Archons (Squad)</entry>
 		<entry>Hydra (9 Heads) (Solitary)</entry>
 		<entry>Lamias (Pair)</entry>
 		<entry>Lammasu (Solitary)</entry>
-		<entry>Light horse/8d4-2</entry>
-		<entry>Lizardfolk/2d3+4,Lizardfolk$Noncombatant$/1d3+2,Character(Leader)[1d4+2]{Lizardfolk} (Solitary)</entry>
-		<entry>Locust swarm/1d6+1</entry>
+		<entry>Light Horses (Herd)</entry>
+		<entry>Lizardfolk (Band)</entry>
+		<entry>Locust Swarms (Cloud)</entry>
 		<entry>Megaraptors (Pair)</entry>
-		<entry>Mind flayer (Solitary)</entry>
-		<entry>Minotaur/1d2+2</entry>
+		<entry>Mind Flayer (Solitary)</entry>
+		<entry>Minotaurs (Gang)</entry>
 		<entry>Mohrg (Solitary)</entry>
-		<entry>Monstrous centipede$Gargantuan Fiendish creature$ (Solitary)</entry>
-		<entry>Monstrous spider$Gargantuan$ (Solitary)</entry>
-		<entry>Mummy/1d3+1</entry>
-		<entry>Naga$Dark$ (Solitary)</entry>
-		<entry>Ogre mage (Solitary)</entry>
-		<entry>Otyugh/1d2+2</entry>
+		<entry>Gargantuan Fiendish Monstrous Centipede (Solitary)</entry>
+		<entry>Gargantuan Monstrous Spider (Solitary)</entry>
+		<entry>Mummies (Warden Squad)</entry>
+		<entry>Dark Naga (Solitary)</entry>
+		<entry>Ogre Mage (Solitary)</entry>
+		<entry>Otyughs (Cluster)</entry>
 		<entry>Pyrohydra (7 Heads) (Solitary)</entry>
-		<entry>Red dragon$Wyrmling$/1d4+1</entry>
-		<entry>Sahuagin/1d4+4</entry>
-		<entry>Salamander$Average$s (Pair)</entry>
-		<entry>Shadow$Greater$ (Solitary)</entry>
-		<entry>Shark$Huge$/1d4+1</entry>
-		<entry>Shark$Large$/1d6+5</entry>
-		<entry>Shield guardian (Solitary)</entry>
-		<entry>Shocker lizard/1d6+5</entry>
-		<entry>Silver dragon$Wyrmling$/1d4+1</entry>
-		<entry>Skeleton$Ettin$/1d4</entry>
-		<entry>Skeleton$Owlbear (Group)</entry>
-		<entry>Skeleton$Wolf (Large Group)</entry>
-		<entry>Slaad$Blue$ (Solitary)</entry>
-		<entry>Stone giant (Solitary)</entry>
-		<entry>Tojanida$Adult$/1d3+1</entry>
+		<entry>Wyrmling Red Dragons (Clutch)</entry>
+		<entry>Sahuagins (Team)</entry>
+		<entry>Average Salamanders (Pair)</entry>
+		<entry>Greater Shadow (Solitary)</entry>
+		<entry>Huge Sharks (School)</entry>
+		<entry>Large Sharks (Pack)</entry>
+		<entry>Shield Guardian (Solitary)</entry>
+		<entry>Shocker Lizards (Colony)</entry>
+		<entry>Wyrmling Silver Dragons (Clutch)</entry>
+		<entry>Ettin Skeletons (Small Group)</entry>
+		<entry>Owlbear Skeletons (Group)</entry>
+		<entry>Wolf Skeletons (Large Group)</entry>
+		<entry>Blue Slaad (Solitary)</entry>
+		<entry>Stone Giant (Solitary)</entry>
+		<entry>Adult Tojanidas (Clutch)</entry>
 		<entry>Treant (Solitary)</entry>
-		<entry>Triton/1d6+5</entry>
-		<entry>Troll/1d3+1</entry>
-		<entry>Troll$Scrag$/1d3+1</entry>
+		<entry>Tritons (Squad)</entry>
+		<entry>Trolls (Gang)</entry>
+		<entry>Scrags (Gang)</entry>
 		<entry>Tyrannosaurus (Solitary)</entry>
-		<entry>Unicorn/1d4+2</entry>
-		<entry>Vampire spawn/1d4+1</entry>
-		<entry>Vargouille/1d6+5</entry>
-		<entry>Wereboar/1d2+2</entry>
-		<entry>Wereboar/1d3+1,Boar/1d4</entry>
-		<entry>Wererat/2d3+4</entry>
-		<entry>Werewolf/1d4+1,Wolf/1d4+4</entry>
-		<entry>White dragon$Young adult$ (Solitary)</entry>
-		<entry>White dragon$Young$/1d4+1</entry>
+		<entry>Unicorns (Grace)</entry>
+		<entry>Vampire Spawns (Pack)</entry>
+		<entry>Vargouilles (Mob)</entry>
+		<entry>Wereboars (Brood)</entry>
+		<entry>Wereboars (Troupe)</entry>
+		<entry>Wererats (Pack)</entry>
+		<entry>Werewolves (Troupe)</entry>
+		<entry>Young Adult White Dragon (Solitary)</entry>
+		<entry>Young White Dragons (Clutch)</entry>
 		<entry>Will-O'-Wisps (Pair)</entry>
-		<entry>Worg/1d6+5</entry>
+		<entry>Worgs (Pack)</entry>
 		<entry>Wyverns (Pair)</entry>
-		<entry>Xorn$Average$s (Pair)</entry>
-		<entry>Xorn$Elder$ (Solitary)</entry>
-		<entry>Zombie$Bugbear (Group)</entry>
-		<entry>Zombie$Troglodyte (Large Group)</entry>
+		<entry>Average Xorns (Pair)</entry>
+		<entry>Elder Xorn (Solitary)</entry>
+		<entry>Bugbear Zombies (Group)</entry>
+		<entry>Troglodyte Zombies (Large Group)</entry>
 	</collection>
 	<collection>
 		<name>9</name>
 		<entry>Androsphinx (Solitary)</entry>
-		<entry>Aranea/1d4+2</entry>
+		<entry>Araneas (Colony)</entry>
 		<entry>Avoral (Solitary)</entry>
-		<entry>Barghest/1d4+2</entry>
-		<entry>Bat swarm/1d6+6</entry>
-		<entry>Bearded Devil(Barbazu)/1d3+2</entry>
-		<entry>Black dragon$Young adult$ (Solitary)</entry>
-		<entry>Black dragon$Young$/1d4+1</entry>
-		<entry>Blink dog/1d10+6</entry>
-		<entry>Bone Devil(Osyluth) (Solitary)</entry>
-		<entry>Bronze dragon$Juvenile$ (Solitary)</entry>
-		<entry>Bronze dragon$Very young$/1d4+1</entry>
+		<entry>Barghests (Pack)</entry>
+		<entry>Bat Swarms (Colony)</entry>
+		<entry>Bearded Devils (Barbazus) (Team)</entry>
+		<entry>Young Adult Black Dragon (Solitary)</entry>
+		<entry>Young Black Dragons (Clutch)</entry>
+		<entry>Blink Dogs (Pack)</entry>
+		<entry>Bone Devil (Osyluth) (Solitary)</entry>
+		<entry>Juvenile Bronze Dragon (Solitary)</entry>
+		<entry>Very Young Bronze Dragons (Clutch)</entry>
 		<entry>Bulettes (Pair)</entry>
-		<entry>Centaur/1d4+4</entry>
-		<entry>Chain Devil(Kyton)/1d3+1</entry>
-		<entry>Character(Adventurer)[Level 6] (Party)</entry>
-		<entry>Character(Adventurer)[Level 9] (Solitary)</entry>
+		<entry>Centaurs (Company)</entry>
+		<entry>Chain Devils (Kytons) (Gang)</entry>
+		<entry>Adventurers [Level 6] (Party)</entry>
+		<entry>Adventurer [Level 9] (Solitary)</entry>
 		<entry>Animal Trainer [Level 9] (with Camel)</entry>
 		<entry>Animal Trainer [Level 9] (with Riding Dog)</entry>
 		<entry>Animal Trainer [Level 9] (with Heavy Horse)</entry>
@@ -1145,28 +1145,28 @@
 		<entry>Animal Trainer [Level 9] (with Donkey)</entry>
 		<entry>Animal Trainer [Level 9] (with Pony)</entry>
 		<entry>Animal Trainer [Level 9] (with Heavy Warhorse)</entry>
-		<entry>Artisan [Level 18-19]@Expert@ (Solitary)</entry>
-		<entry>Beggar [Level 18-19]@Commoner@ (Solitary)</entry>
-		<entry>Bandits [Level 4-5]@Warrior@/1d10+4,Character(Leader)[Level 6-7]@Warrior@ (Solitary)</entry>
-		<entry>Bandits [Level 4-5]@Warrior@/1d10+4,Character(Leader)[Level 3]@Fighter@ (Solitary)</entry>
+		<entry>Artisan [Level 18-19] (Solitary)</entry>
+		<entry>Beggar [Level 18-19] (Solitary)</entry>
+		<entry>Bandits [Level 4-5] (Gang)</entry>
+		<entry>Bandits [Level 4-5] (Gang with Fighter)</entry>
 		<entry>Business People [Level 12-13] (Group)</entry>
-		<entry>Construction Workers [Level 8-9]@Commoner@/2d4,Character(Architect)[Level 8-9]@Expert@ (Solitary)</entry>
+		<entry>Construction Workers [Level 8-9] (Crew)</entry>
 		<entry>Crusaders [Level 6] (Band)</entry>
-		<entry>Doctor [Level 18-19]@Adept@ (Solitary)</entry>
+		<entry>Doctor [Level 18-19 Adept] (Solitary)</entry>
 		<entry>Doctor [Level 9] (Solitary)</entry>
 		<entry>Farmers [Level 12-13] (Group)</entry>
-		<entry>Character(Fortuneteller)[Level 18-19]@Adept@ (Solitary)</entry>
-		<entry>Gentry [Level 8-9]@Aristocrat@/1d2,Character(Servant)[Level 8-9]@Commoner@/1d3+1</entry>
-		<entry>Guards [Level 6-7]@Warrior@/2d4+1,Character(Captain)[Level 8-9]@Warrior@ (Solitary)</entry>
-		<entry>Guards [Level 6-7]@Warrior@/2d4+1,Character(Captain)[Level 4]@Fighter@ (Solitary)</entry>
+		<entry>Fortuneteller [Level 18-19] (Solitary)</entry>
+		<entry>Gentry [Level 8-9] (with Servants)</entry>
+		<entry>Guards [Level 6-7] (Patrol)</entry>
+		<entry>Guards [Level 6-7] (Patrol with Fighter)</entry>
 		<entry>Herders [Level 12-13] (Group)</entry>
 		<entry>Hitman [Level 9] (Solitary)</entry>
 		<entry>Hunters [Level 12-13] (Hunting Party)</entry>
-		<entry>Minstrels [Level 8-9]@Commoner&amp;Expert@/2d4+1,Character(Leader)[Level 5]@Bard@/1d10-9</entry>
-		<entry>Missionaries [Level 12-13 Adepts] (Crew)</entry>
+		<entry>Minstrels [Level 8-9] (Group)</entry>
+		<entry>Missionaries [Level 12-13 Adepts] (Mission Team)</entry>
 		<entry>Missionaries [Level 6] (Mission Team)</entry>
 		<entry>Pickpocket [Level 9] (Solitary)</entry>
-		<entry>Politician [Level 10-11]@Aristocrat@/1,Character(Adviser)[Level 10-11]@Expert@/1d3-1,Guards [Level 10-11]@Warrior@/2d3-2</entry>
+		<entry>Politician [Level 10-11] (with Advisers and Guards)</entry>
 		<entry>Protestors [Level 8-9] (Protest)</entry>
 		<entry>Scholar [Level 9] (Solitary)</entry>
 		<entry>Sellsword [Level 9] (Solitary)</entry>
@@ -1175,26 +1175,26 @@
 		<entry>Travelers [Level 12-13] (Group)</entry>
 		<entry>Ghosts [Level 4] (Gang)</entry>
 		<entry>Merchants [Level 6-7] (Caravan)</entry>
-		<entry>Character[Level 1]{Goblin}@Warrior@/10d10,Goblin$Noncombatant$/10d10,Character(Sergeant)[Level 3]{Goblin}@Warrior@/2d3-1,Character(Leader)[1d3+3]{Goblin}@Warrior@ (Solitary)</entry>
-		<entry>Character[Level 1]{Svirfneblin}@Warrior@/1d10+10,Character(Leader)[1d4+2]{Svirfneblin}@Warrior@/1,Character(Lieutenant)[Level 3]{Svirfneblin}@Warrior@s (Pair)</entry>
-		<entry>Vampire [Level 1] (Troupe)</entry>
-		<entry>Character[Level 18-19] (Solitary)</entry>
-		<entry>Character[Level 18-19] (with Camel)</entry>
-		<entry>Character[Level 18-19] (with Cat)</entry>
-		<entry>Character[Level 18-19] (with Dog)</entry>
-		<entry>Character[Level 18-19] (with Riding Dog)</entry>
-		<entry>Character[Level 18-19] (with Donkey)</entry>
-		<entry>Character[Level 18-19] (with Heavy Horse)</entry>
-		<entry>Character[Level 18-19] (with Heavy Warhorse)</entry>
-		<entry>Character[Level 18-19] (with Pony)</entry>
-		<entry>Character[Level 18-19] (with Warpony)</entry>
-		<entry>Character[Level 18-19] (with Light Horse)</entry>
-		<entry>Character[Level 18-19] (with Light Warhorse)</entry>
-		<entry>Character[Level 18-19] (with Mule)</entry>
+		<entry>Goblins (Band)</entry>
+		<entry>Svirfnebli (Squad)</entry>
+		<entry>Vampires [Level 1] (Troupe)</entry>
+		<entry>Local [Level 18-19] (Solitary)</entry>
+		<entry>Local [Level 18-19] (with Camel)</entry>
+		<entry>Local [Level 18-19] (with Cat)</entry>
+		<entry>Local [Level 18-19] (with Dog)</entry>
+		<entry>Local [Level 18-19] (with Riding Dog)</entry>
+		<entry>Local [Level 18-19] (with Donkey)</entry>
+		<entry>Local [Level 18-19] (with Heavy Horse)</entry>
+		<entry>Local [Level 18-19] (with Heavy Warhorse)</entry>
+		<entry>Local [Level 18-19] (with Pony)</entry>
+		<entry>Local [Level 18-19] (with Warpony)</entry>
+		<entry>Local [Level 18-19] (with Light Horse)</entry>
+		<entry>Local [Level 18-19] (with Light Warhorse)</entry>
+		<entry>Local [Level 18-19] (with Mule)</entry>
 		<entry>Vampires [Level 2] (Troupe)</entry>
 		<entry>Vampires [Level 3] (Gang)</entry>
-		<entry>Character[Level 4]{Merrow}@Barbarian@s (Pair)</entry>
-		<entry>Character[Level 4]{Ogre}@Barbarian@s (Pair)</entry>
+		<entry>Merrow Barbarians (Pair)</entry>
+		<entry>Ogre Barbarians (Pair)</entry>
 		<entry>Vampires [Level 5] (Pair)</entry>
 		<entry>Ghost [Level 7] (Solitary)</entry>
 		<entry>Vampire [Level 7] (Solitary)</entry>
@@ -1209,67 +1209,67 @@
 		<entry>Dire Wolves (Pack)</entry>
 		<entry>Dragon Turtle (Solitary)</entry>
 		<entry>Dragonnes (Pair)</entry>
-		<entry>Dretch/1d10+5</entry>
+		<entry>Dretches (Crowd)</entry>
 		<entry>Driders (Pair)</entry>
 		<entry>Elasmosauruses (Pair)</entry>
 		<entry>Greater Air Elemental (Solitary)</entry>
 		<entry>Greater Earth Elemental (Solitary)</entry>
 		<entry>Greater Fire Elemental (Solitary)</entry>
 		<entry>Greater Water Elemental (Solitary)</entry>
-		<entry>Ettin/1d2,Brown bear/1d2</entry>
-		<entry>Ettin/1d3+1</entry>
-		<entry>Formian$Warrior$/1d6+5</entry>
+		<entry>Ettins (Gang)</entry>
+		<entry>Ettins (Troupe)</entry>
+		<entry>Formian Warriors (Troop)</entry>
 		<entry>Frost Giant (Solitary)</entry>
-		<entry>Giant Eagle/1d8+4</entry>
+		<entry>Giant Eagles (Eyrie)</entry>
 		<entry>Giant Squid (Solitary)</entry>
-		<entry>Gold dragon$Wyrmling$/1d4+1</entry>
-		<entry>Gold dragon$Young$ (Solitary)</entry>
-		<entry>Green dragon$Young$/1d4+1</entry>
-		<entry>Hell hound/1d8+4</entry>
-		<entry>Hellcat(Bezekira)s (Pair)</entry>
-		<entry>Hippogriff/1d6+6</entry>
-		<entry>Howler/2d3+4</entry>
+		<entry>Wyrmling Gold Dragons (Clutch)</entry>
+		<entry>Young Gold Dragon (Solitary)</entry>
+		<entry>Young Green Dragons (Clutch)</entry>
+		<entry>Hell Hounds (Pack)</entry>
+		<entry>Hellcats (Bezekiras) (Pair)</entry>
+		<entry>Hippogriffs (Flight)</entry>
+		<entry>Howlers (Pack)</entry>
 		<entry>Hydra (10 Heads) (Solitary)</entry>
-		<entry>Lemure/6d6+4</entry>
-		<entry>Lion/2d3+4</entry>
-		<entry>Magmin/2d3+4</entry>
-		<entry>Mephit[Level 3]/1d8+4</entry>
-		<entry>Monstrous centipede$Colossal$ (Solitary)</entry>
-		<entry>Monstrous spider$Huge$/1d4+1</entry>
-		<entry>Naga$Spirit$ (Solitary)</entry>
-		<entry>Naga$Water$s (Pair)</entry>
-		<entry>Nessian warhound (Solitary)</entry>
-		<entry>Night hag (Solitary)</entry>
-		<entry>Ogre/1d4+4</entry>
-		<entry>Ogre$Merrow$/1d4+4</entry>
-		<entry>Owlbear/1d6+2</entry>
-		<entry>Pegasus/2d3+4</entry>
-		<entry>Phase spider/1d4+1</entry>
+		<entry>Lemures (Mob)</entry>
+		<entry>Lions (Pride)</entry>
+		<entry>Magmins (Squad)</entry>
+		<entry>Mephits (Mob)</entry>
+		<entry>Colossal Monstrous Centipede (Solitary)</entry>
+		<entry>Huge Monstrous Spiders (Colony)</entry>
+		<entry>Spirit Naga (Solitary)</entry>
+		<entry>Water Nagas (Pair)</entry>
+		<entry>Nessian Warhound (Solitary)</entry>
+		<entry>Night Hag (Solitary)</entry>
+		<entry>Ogres (Band)</entry>
+		<entry>Merrows (Band)</entry>
+		<entry>Owlbears (Pack)</entry>
+		<entry>Pegasuses (Herd)</entry>
+		<entry>Phase Spiders (Cluster)</entry>
 		<entry>Pyrohydra (8 Heads) (Solitary)</entry>
-		<entry>Rat swarm/1d6+6</entry>
-		<entry>Red dragon$Very young$/1d4+1</entry>
+		<entry>Rat Swarms (Infestation)</entry>
+		<entry>Very Young Red Dragons (Clutch)</entry>
 		<entry>Roc (Solitary)</entry>
-		<entry>Satyr$with pipes$/1,Satyr/1d6+4</entry>
-		<entry>Scorpionfolks (Pair)</entry>
-		<entry>Shadow/1d6+5</entry>
+		<entry>Satyrs (Troop)</entry>
+		<entry>Scorpionfolk (Pair)</entry>
+		<entry>Shadows (Swarm)</entry>
 		<entry>Very Young Silver Dragons (Clutch)</entry>
 		<entry>Megaraptor Skeletons (Small Group)</entry>
 		<entry>Troll Skeletons (Group)</entry>
-		<entry>Skums/1d10+5</entry>
+		<entry>Skums (Pack)</entry>
 		<entry>Green Slaad (Solitary)</entry>
 		<entry>Red Slaadi (Pair)</entry>
 		<entry>Elder Tojanida (Solitary)</entry>
 		<entry>Triceratops (Solitary)</entry>
 		<entry>Vrock (Solitary)</entry>
-		<entry>Werebears/1d2+2</entry>
+		<entry>Werebears (Family)</entry>
 		<entry>Werewolves (Pack)</entry>
-		<entry>Wights/1d6+5</entry>
-		<entry>Winter Wolves/1d3+2</entry>
-		<entry>Wraiths/1d4+1</entry>
-		<entry>Yeth Hounds/1d6+5</entry>
+		<entry>Wights (Pack)</entry>
+		<entry>Winter Wolves (Pack)</entry>
+		<entry>Wraiths (Gang)</entry>
+		<entry>Yeth Hounds (Pack)</entry>
 		<entry>Yrthak (Solitary)</entry>
 		<entry>Yuan-ti Abominations (Pair)</entry>
-		<entry>Yuan-ti Halfbloods/1d2+2</entry>
+		<entry>Yuan-ti Halfbloods (Gang)</entry>
 		<entry>Zelekhut (Solitary)</entry>
 		<entry>Gray Render Zombies (Small Group)</entry>
 		<entry>Ogre Zombies (Group)</entry>

@@ -9,7 +9,7 @@ using System.Linq;
 namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
 {
     [TestFixture]
-    public class CrossEncounterGroupsTests : EncounterGroupsTests
+    public class CrossEncounterGroupsTests : EncounterGroupsTableTests
     {
         private IEncounterVerifier encounterVerifier;
 

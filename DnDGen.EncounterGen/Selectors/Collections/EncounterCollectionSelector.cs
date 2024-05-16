@@ -336,9 +336,7 @@ namespace DnDGen.EncounterGen.Selectors.Collections
             //Shortcuts
             if (string.IsNullOrEmpty(environment) && string.IsNullOrEmpty(temperature) && string.IsNullOrEmpty(timeOfDay) && level == 0)
             {
-                var shortcutEncounters = collectionSelector.SelectAllFrom(TableNameConstants.EncounterGroups).Values
-                    .SelectMany(g => g)
-                    .Distinct();
+                var shortcutEncounters = collectionSelector.SelectFrom(TableNameConstants.EncounterGroups, GroupConstants.All);
 
                 if (allowAquatic.HasValue && allowAquatic.Value == false)
                 {
