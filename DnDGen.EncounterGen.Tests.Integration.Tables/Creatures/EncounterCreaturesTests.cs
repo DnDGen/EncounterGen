@@ -106,37 +106,37 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures
             CreatureDataConstants.Commoner_Servant_Level18To19, AmountConstants.Range2To4)]
         [TestCase(EncounterConstants.Aristocrat_Gentry_Level20_WithServants, CreatureDataConstants.Aristocrat_Gentry_Level20, AmountConstants.Range1To2,
             CreatureDataConstants.Commoner_Servant_Level20, AmountConstants.Range2To4)]
-        [TestCase(EncounterConstants.Aristocrat_Politician_Level1_Solitary_WithGuards, CreatureDataConstants.Aristocrat_Politician_Level1, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Aristocrat_Politician_Level1_WithAdvisersAndGuards, CreatureDataConstants.Aristocrat_Politician_Level1, AmountConstants.Range1,
             CreatureDataConstants.Expert_Adviser_Level1, AmountConstants.Range0To2,
             CreatureDataConstants.Warrior_Guard_Level1, AmountConstants.Range0To4)]
-        [TestCase(EncounterConstants.Aristocrat_Politician_Level2To3_Solitary_WithGuards, CreatureDataConstants.Aristocrat_Politician_Level2To3, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Aristocrat_Politician_Level2To3_WithAdvisersAndGuards, CreatureDataConstants.Aristocrat_Politician_Level2To3, AmountConstants.Range1,
             CreatureDataConstants.Expert_Adviser_Level2To3, AmountConstants.Range0To2,
             CreatureDataConstants.Warrior_Guard_Level2To3, AmountConstants.Range0To4)]
-        [TestCase(EncounterConstants.Aristocrat_Politician_Level4To5_Solitary_WithGuards, CreatureDataConstants.Aristocrat_Politician_Level4To5, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Aristocrat_Politician_Level4To5_WithAdvisersAndGuards, CreatureDataConstants.Aristocrat_Politician_Level4To5, AmountConstants.Range1,
             CreatureDataConstants.Expert_Adviser_Level4To5, AmountConstants.Range0To2,
             CreatureDataConstants.Warrior_Guard_Level4To5, AmountConstants.Range0To4)]
-        [TestCase(EncounterConstants.Aristocrat_Politician_Level6To7_Solitary_WithGuards, CreatureDataConstants.Aristocrat_Politician_Level6To7, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Aristocrat_Politician_Level6To7_WithAdvisersAndGuards, CreatureDataConstants.Aristocrat_Politician_Level6To7, AmountConstants.Range1,
             CreatureDataConstants.Expert_Adviser_Level6To7, AmountConstants.Range0To2,
             CreatureDataConstants.Warrior_Guard_Level6To7, AmountConstants.Range0To4)]
-        [TestCase(EncounterConstants.Aristocrat_Politician_Level8To9_Solitary_WithGuards, CreatureDataConstants.Aristocrat_Politician_Level8To9, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Aristocrat_Politician_Level8To9_WithAdvisersAndGuards, CreatureDataConstants.Aristocrat_Politician_Level8To9, AmountConstants.Range1,
             CreatureDataConstants.Expert_Adviser_Level8To9, AmountConstants.Range0To2,
             CreatureDataConstants.Warrior_Guard_Level8To9, AmountConstants.Range0To4)]
-        [TestCase(EncounterConstants.Aristocrat_Politician_Level10To11_Solitary_WithGuards, CreatureDataConstants.Aristocrat_Politician_Level10To11, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Aristocrat_Politician_Level10To11_WithAdvisersAndGuards, CreatureDataConstants.Aristocrat_Politician_Level10To11, AmountConstants.Range1,
             CreatureDataConstants.Expert_Adviser_Level10To11, AmountConstants.Range0To2,
             CreatureDataConstants.Warrior_Guard_Level10To11, AmountConstants.Range0To4)]
-        [TestCase(EncounterConstants.Aristocrat_Politician_Level12To13_Solitary_WithGuards, CreatureDataConstants.Aristocrat_Politician_Level12To13, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Aristocrat_Politician_Level12To13_WithAdvisersAndGuards, CreatureDataConstants.Aristocrat_Politician_Level12To13, AmountConstants.Range1,
             CreatureDataConstants.Expert_Adviser_Level12To13, AmountConstants.Range0To2,
             CreatureDataConstants.Warrior_Guard_Level12To13, AmountConstants.Range0To4)]
-        [TestCase(EncounterConstants.Aristocrat_Politician_Level14To15_Solitary_WithGuards, CreatureDataConstants.Aristocrat_Politician_Level14To15, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Aristocrat_Politician_Level14To15_WithAdvisersAndGuards, CreatureDataConstants.Aristocrat_Politician_Level14To15, AmountConstants.Range1,
             CreatureDataConstants.Expert_Adviser_Level14To15, AmountConstants.Range0To2,
             CreatureDataConstants.Warrior_Guard_Level14To15, AmountConstants.Range0To4)]
-        [TestCase(EncounterConstants.Aristocrat_Politician_Level16To17_Solitary_WithGuards, CreatureDataConstants.Aristocrat_Politician_Level16To17, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Aristocrat_Politician_Level16To17_WithAdvisersAndGuards, CreatureDataConstants.Aristocrat_Politician_Level16To17, AmountConstants.Range1,
             CreatureDataConstants.Expert_Adviser_Level16To17, AmountConstants.Range0To2,
             CreatureDataConstants.Warrior_Guard_Level16To17, AmountConstants.Range0To4)]
-        [TestCase(EncounterConstants.Aristocrat_Politician_Level18To19_Solitary_WithGuards, CreatureDataConstants.Aristocrat_Politician_Level18To19, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Aristocrat_Politician_Level18To19_WithAdvisersAndGuards, CreatureDataConstants.Aristocrat_Politician_Level18To19, AmountConstants.Range1,
             CreatureDataConstants.Expert_Adviser_Level18To19, AmountConstants.Range0To2,
             CreatureDataConstants.Warrior_Guard_Level18To19, AmountConstants.Range0To4)]
-        [TestCase(EncounterConstants.Aristocrat_Politician_Level20_Solitary_WithGuards, CreatureDataConstants.Aristocrat_Politician_Level20, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Aristocrat_Politician_Level20_WithAdvisersAndGuards, CreatureDataConstants.Aristocrat_Politician_Level20, AmountConstants.Range1,
             CreatureDataConstants.Expert_Adviser_Level20, AmountConstants.Range0To2,
             CreatureDataConstants.Warrior_Guard_Level20, AmountConstants.Range0To4)]
         [TestCase(EncounterConstants.Allip_Solitary, CreatureDataConstants.Allip, AmountConstants.Range1)]

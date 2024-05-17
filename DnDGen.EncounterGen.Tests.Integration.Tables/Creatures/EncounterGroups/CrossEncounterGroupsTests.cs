@@ -27,69 +27,81 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
 
         private IEnumerable<string> GetTimesOfDayEncounters()
         {
-            var dayEncounters = GetEncountersFromCreatureGroup(EnvironmentConstants.TimesOfDay.Day);
-            var nightEncounters = GetEncountersFromCreatureGroup(EnvironmentConstants.TimesOfDay.Night);
+            var dayEncounters = table[EnvironmentConstants.TimesOfDay.Day];
+            var nightEncounters = table[EnvironmentConstants.TimesOfDay.Night];
 
             return dayEncounters.Union(nightEncounters);
-        }
-
-        private IEnumerable<string> GetUnfilteredEncounters()
-        {
-            var allEncounters = new List<string>();
-
-            var categories = new[] {
-                EnvironmentConstants.Aquatic,
-                EnvironmentConstants.Underground,
-                EnvironmentConstants.Land,
-                EnvironmentConstants.Any,
-                EnvironmentConstants.Civilized,
-                EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Aquatic,
-                EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic,
-                EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic,
-                EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Civilized,
-                EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Civilized,
-                EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Civilized,
-                EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Desert,
-                EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert,
-                EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert,
-                EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Forest,
-                EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest,
-                EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest,
-                EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Hills,
-                EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills,
-                EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills,
-                EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Marsh,
-                EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh,
-                EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh,
-                EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain,
-                EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain,
-                EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain,
-                EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Plains,
-                EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains,
-                EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains,
-                EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Underground,
-                EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Underground,
-                EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Underground,
-                EnvironmentConstants.Underground + EnvironmentConstants.Aquatic,
-                GroupConstants.Extraplanar,
-                GroupConstants.Wilderness,
-            };
-
-            foreach (var category in categories)
-            {
-                var categoryEncounters = GetEncountersFromCreatureGroup(category);
-                allEncounters.AddRange(categoryEncounters);
-            }
-
-            return allEncounters;
         }
 
         [Test]
         public void AllTimeOfDayEncountersArePresentInOtherCategories()
         {
             var allTimesOfDayEncounters = GetTimesOfDayEncounters();
-            var nonTimeOfDayEncounters = GetUnfilteredEncounters();
+            var nonTimeOfDayEncounters = EncounterConstants.GetAll();
             AssertContainedCollection(allTimesOfDayEncounters, nonTimeOfDayEncounters);
+        }
+
+        [Test]
+        public void AllEncountersAreInEnvironments()
+        {
+            var allEncounters = EncounterConstants.GetAll();
+            var environments = new[]
+            {
+                EnvironmentConstants.Aquatic,
+                EnvironmentConstants.Underground,
+                EnvironmentConstants.Any,
+                EnvironmentConstants.Land,
+                EnvironmentConstants.Civilized,
+                EnvironmentConstants.Underground + EnvironmentConstants.Aquatic,
+                EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Aquatic,
+                EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Civilized,
+                EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Desert,
+                EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Forest,
+                EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Hills,
+                EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Marsh,
+                EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain,
+                EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Plains,
+                EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Underground,
+                EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic,
+                EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Civilized,
+                EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert,
+                EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest,
+                EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills,
+                EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh,
+                EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain,
+                EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains,
+                EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Underground,
+                EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic,
+                EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Civilized,
+                EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert,
+                EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest,
+                EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills,
+                EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh,
+                EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain,
+                EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains,
+                EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Underground,
+                EnvironmentConstants.Plane_Air,
+                EnvironmentConstants.Plane_Astral,
+                EnvironmentConstants.Plane_Chaotic,
+                EnvironmentConstants.Plane_ChaoticEvil,
+                EnvironmentConstants.Plane_ChaoticGood,
+                EnvironmentConstants.Plane_Earth,
+                EnvironmentConstants.Plane_Ethereal,
+                EnvironmentConstants.Plane_Evil,
+                EnvironmentConstants.Plane_Fire,
+                EnvironmentConstants.Plane_Good,
+                EnvironmentConstants.Plane_Lawful,
+                EnvironmentConstants.Plane_LawfulEvil,
+                EnvironmentConstants.Plane_LawfulGood,
+                EnvironmentConstants.Plane_Limbo,
+                EnvironmentConstants.Plane_NeutralEvil,
+                EnvironmentConstants.Plane_PositiveEnergy,
+                EnvironmentConstants.Plane_Shadow,
+                EnvironmentConstants.Plane_Water,
+            };
+
+            var environmentEncounters = environments.SelectMany(e => table[e]).Distinct();
+            Assert.That(environmentEncounters, Is.EquivalentTo(allEncounters));
         }
 
         [Test]
