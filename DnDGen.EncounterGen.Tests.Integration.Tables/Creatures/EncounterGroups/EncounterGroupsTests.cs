@@ -244,104 +244,559 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
             EncounterConstants.Whale_Cachalot_Solitary)]
         [TestCase(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Civilized)]
         [TestCase(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert,
-            EncounterConstants.Bat,
-            EncounterConstants.Dragon_Blue,
-            EncounterConstants.Dragonne,
-            EncounterConstants.Donkey,
-            EncounterConstants.Lamia,
-            EncounterConstants.Lammasu)]
+            EncounterConstants.Bat_Colony,
+            EncounterConstants.Bat_Crowd,
+            EncounterConstants.Bat_Dire_Colony,
+            EncounterConstants.Bat_Dire_Solitary,
+            EncounterConstants.Bat_Swarm_Colony,
+            EncounterConstants.Bat_Swarm_Solitary,
+            EncounterConstants.Bat_Swarm_Tangle,
+            EncounterConstants.Dragon_Blue_Wyrmling_Solitary,
+            EncounterConstants.Dragon_Blue_Wyrmling_Clutch,
+            EncounterConstants.Dragon_Blue_VeryYoung_Solitary,
+            EncounterConstants.Dragon_Blue_VeryYoung_Clutch,
+            EncounterConstants.Dragon_Blue_Young_Solitary,
+            EncounterConstants.Dragon_Blue_Young_Clutch,
+            EncounterConstants.Dragon_Blue_Juvenile_Solitary,
+            EncounterConstants.Dragon_Blue_Juvenile_Clutch,
+            EncounterConstants.Dragon_Blue_YoungAdult_Solitary,
+            EncounterConstants.Dragon_Blue_YoungAdult_Clutch,
+            EncounterConstants.Dragon_Blue_Adult_Solitary,
+            EncounterConstants.Dragon_Blue_Adult_Pair,
+            EncounterConstants.Dragon_Blue_Adult_Family,
+            EncounterConstants.Dragon_Blue_MatureAdult_Solitary,
+            EncounterConstants.Dragon_Blue_MatureAdult_Pair,
+            EncounterConstants.Dragon_Blue_MatureAdult_Family,
+            EncounterConstants.Dragon_Blue_Old_Solitary,
+            EncounterConstants.Dragon_Blue_Old_Pair,
+            EncounterConstants.Dragon_Blue_Old_Family,
+            EncounterConstants.Dragon_Blue_VeryOld_Solitary,
+            EncounterConstants.Dragon_Blue_VeryOld_Pair,
+            EncounterConstants.Dragon_Blue_VeryOld_Family,
+            EncounterConstants.Dragon_Blue_Ancient_Solitary,
+            EncounterConstants.Dragon_Blue_Ancient_Pair,
+            EncounterConstants.Dragon_Blue_Ancient_Family,
+            EncounterConstants.Dragon_Blue_Wyrm_Solitary,
+            EncounterConstants.Dragon_Blue_Wyrm_Pair,
+            EncounterConstants.Dragon_Blue_Wyrm_Family,
+            EncounterConstants.Dragon_Blue_GreatWyrm_Solitary,
+            EncounterConstants.Dragon_Blue_GreatWyrm_Pair,
+            EncounterConstants.Dragon_Blue_GreatWyrm_Family,
+            EncounterConstants.Dragonne_Pair,
+            EncounterConstants.Dragonne_Pride,
+            EncounterConstants.Dragonne_Solitary,
+            EncounterConstants.Donkey_Solitary,
+            EncounterConstants.Lamia_Gang,
+            EncounterConstants.Lamia_Pair,
+            EncounterConstants.Lamia_Solitary,
+            EncounterConstants.Lammasu_Solitary)]
         [TestCase(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Underground)]
         [TestCase(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic,
-            EncounterConstants.Elasmosaurus,
-            EncounterConstants.Locathah,
-            EncounterConstants.MantaRay,
-            EncounterConstants.Octopus,
-            EncounterConstants.Sahuagin,
-            EncounterConstants.Whale_Baleen)]
+            EncounterConstants.Elasmosaurus_Herd,
+            EncounterConstants.Elasmosaurus_Pair,
+            EncounterConstants.Elasmosaurus_Solitary,
+            EncounterConstants.Locathah_Company,
+            EncounterConstants.Locathah_Patrol,
+            EncounterConstants.Locathah_Tribe,
+            EncounterConstants.MantaRay_School,
+            EncounterConstants.MantaRay_Solitary,
+            EncounterConstants.Octopus_Giant_Solitary,
+            EncounterConstants.Octopus_Solitary,
+            EncounterConstants.Sahuagin_Band_WithDireSharks,
+            EncounterConstants.Sahuagin_Band_WithHugeSharks,
+            EncounterConstants.Sahuagin_Band_WithLargeSharks,
+            EncounterConstants.Sahuagin_Band_WithMediumSharks,
+            EncounterConstants.Sahuagin_Pair,
+            EncounterConstants.Sahuagin_Patrol_WithDireSharks,
+            EncounterConstants.Sahuagin_Patrol_WithHugeSharks,
+            EncounterConstants.Sahuagin_Patrol_WithLargeSharks,
+            EncounterConstants.Sahuagin_Patrol_WithMediumSharks,
+            EncounterConstants.Sahuagin_Solitary,
+            EncounterConstants.Sahuagin_Team,
+            EncounterConstants.Sahuagin_Tribe_WithDireSharks,
+            EncounterConstants.Sahuagin_Tribe_WithHugeSharks,
+            EncounterConstants.Sahuagin_Tribe_WithLargeSharks,
+            EncounterConstants.Sahuagin_Tribe_WithMediumSharks,
+            EncounterConstants.Whale_Baleen_Solitary)]
         [TestCase(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Civilized)]
         [TestCase(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Underground)]
         [TestCase(EnvironmentConstants.Plane_Air,
-            EncounterConstants.Arrowhawk,
-            EncounterConstants.Belker,
-            EncounterConstants.Djinni,
-            EncounterConstants.Elemental_Air,
-            EncounterConstants.InvisibleStalker,
-            EncounterConstants.Mephit_Air,
-            EncounterConstants.Mephit_Dust,
-            EncounterConstants.Mephit_Ice)]
+            EncounterConstants.Arrowhawk_Adult_Clutch,
+            EncounterConstants.Arrowhawk_Adult_Solitary,
+            EncounterConstants.Arrowhawk_Elder_Clutch,
+            EncounterConstants.Arrowhawk_Elder_Solitary,
+            EncounterConstants.Arrowhawk_Juvenile_Clutch,
+            EncounterConstants.Arrowhawk_Juvenile_Solitary,
+            EncounterConstants.Belker_Clutch,
+            EncounterConstants.Belker_Pair,
+            EncounterConstants.Belker_Solitary,
+            EncounterConstants.Djinni_Band,
+            EncounterConstants.Djinni_Company,
+            EncounterConstants.Djinni_Noble_Solitary,
+            EncounterConstants.Djinni_Solitary,
+            EncounterConstants.Elemental_Air_Elder_Solitary,
+            EncounterConstants.Elemental_Air_Greater_Solitary,
+            EncounterConstants.Elemental_Air_Huge_Solitary,
+            EncounterConstants.Elemental_Air_Large_Solitary,
+            EncounterConstants.Elemental_Air_Medium_Solitary,
+            EncounterConstants.Elemental_Air_Small_Solitary,
+            EncounterConstants.InvisibleStalker_Solitary)]
         [TestCase(EnvironmentConstants.Plane_Astral,
-            EncounterConstants.Githyanki)]
+            EncounterConstants.Githyanki_Company,
+            EncounterConstants.Githyanki_Regiment,
+            EncounterConstants.Githyanki_Squad)]
         [TestCase(EnvironmentConstants.Plane_Chaotic,
-            EncounterConstants.Howler,
-            EncounterConstants.Lillend)]
+            EncounterConstants.Howler_Gang,
+            EncounterConstants.Howler_Pack,
+            EncounterConstants.Howler_Solitary,
+            EncounterConstants.Lillend_Covey,
+            EncounterConstants.Lillend_Solitary)]
         [TestCase(EnvironmentConstants.Plane_ChaoticEvil,
-            EncounterConstants.Demon,
-            EncounterConstants.Basilisk_AbyssalGreater,
-            EncounterConstants.Bodak)]
+            EncounterConstants.Babau_Gang,
+            EncounterConstants.Babau_Solitary,
+            EncounterConstants.Balor_Solitary,
+            EncounterConstants.Balor_Troupe,
+            EncounterConstants.Bebilith_Solitary,
+            EncounterConstants.Dretch_Crowd,
+            EncounterConstants.Dretch_Gang,
+            EncounterConstants.Dretch_Mob,
+            EncounterConstants.Dretch_Pair,
+            EncounterConstants.Dretch_Solitary,
+            EncounterConstants.Glabrezu_Solitary,
+            EncounterConstants.Glabrezu_Troupe,
+            EncounterConstants.Hezrou_Gang,
+            EncounterConstants.Hezrou_Solitary,
+            EncounterConstants.Marilith_Pair,
+            EncounterConstants.Marilith_Solitary,
+            EncounterConstants.Nalfeshnee_Solitary,
+            EncounterConstants.Nalfeshnee_Troupe,
+            EncounterConstants.Quasit_Solitary,
+            EncounterConstants.Retriever_Solitary,
+            EncounterConstants.Succubus_Solitary,
+            EncounterConstants.Vrock_Gang,
+            EncounterConstants.Vrock_Pair,
+            EncounterConstants.Vrock_Solitary,
+            EncounterConstants.Vrock_Squad,
+            EncounterConstants.Basilisk_AbyssalGreater_Colony,
+            EncounterConstants.Basilisk_AbyssalGreater_Solitary,
+            EncounterConstants.Bodak_Gang,
+            EncounterConstants.Bodak_Solitary,
+            //INFO: Chaotic-aligned planes
+            EncounterConstants.Howler_Gang,
+            EncounterConstants.Howler_Pack,
+            EncounterConstants.Howler_Solitary,
+            EncounterConstants.Lillend_Covey,
+            EncounterConstants.Lillend_Solitary,
+            //INFO: Evil-aligned planes
+            EncounterConstants.Centipede_Monstrous_Fiendish_Colossal_Solitary,
+            EncounterConstants.Centipede_Monstrous_Fiendish_Gargantuan_Solitary,
+            EncounterConstants.Centipede_Monstrous_Fiendish_Huge_Solitary,
+            EncounterConstants.Centipede_Monstrous_Fiendish_Huge_Colony,
+            EncounterConstants.Centipede_Monstrous_Fiendish_Large_Solitary,
+            EncounterConstants.Centipede_Monstrous_Fiendish_Large_Colony,
+            EncounterConstants.Centipede_Monstrous_Fiendish_Medium_Solitary,
+            EncounterConstants.Centipede_Monstrous_Fiendish_Medium_Colony,
+            EncounterConstants.Rat_Dire_Fiendish_Pack,
+            EncounterConstants.Rat_Dire_Fiendish_Solitary,
+            EncounterConstants.Raven_Fiendish_Solitary,
+            EncounterConstants.Barghest_Greater_Pack,
+            EncounterConstants.Barghest_Greater_Solitary,
+            EncounterConstants.Barghest_Pack,
+            EncounterConstants.Barghest_Solitary,
+            EncounterConstants.Hellwasp_Swarm_Fright,
+            EncounterConstants.Hellwasp_Swarm_Solitary,
+            EncounterConstants.Hellwasp_Swarm_Terror,
+            EncounterConstants.NightHag_Covey,
+            EncounterConstants.NightHag_Mounted,
+            EncounterConstants.NightHag_Solitary,
+            EncounterConstants.Nightmare_Solitary,
+            EncounterConstants.YethHound_Pack,
+            EncounterConstants.YethHound_Pair,
+            EncounterConstants.YethHound_Solitary,
+            EncounterConstants.Vargouille_Cluster,
+            EncounterConstants.Vargouille_Mob)]
         [TestCase(EnvironmentConstants.Plane_ChaoticGood,
-            EncounterConstants.Bralani,
-            EncounterConstants.Ghaele,
-            EncounterConstants.Titan,
-            EncounterConstants.Unicorn_CelestialCharger)]
+            EncounterConstants.Bralani_Pair,
+            EncounterConstants.Bralani_Solitary,
+            EncounterConstants.Bralani_Squad,
+            EncounterConstants.Ghaele_Pair,
+            EncounterConstants.Ghaele_Solitary,
+            EncounterConstants.Ghaele_Squad,
+            EncounterConstants.Titan_Pair,
+            EncounterConstants.Titan_Solitary,
+            EncounterConstants.Unicorn_CelestialCharger_Solitary,
+            //INFO: Chaotic-aligned planes
+            EncounterConstants.Howler_Gang,
+            EncounterConstants.Howler_Pack,
+            EncounterConstants.Howler_Solitary,
+            EncounterConstants.Lillend_Covey,
+            EncounterConstants.Lillend_Solitary,
+            //INFO: Good-aligned planes
+            EncounterConstants.AstralDeva_Pair,
+            EncounterConstants.AstralDeva_Solitary,
+            EncounterConstants.AstralDeva_Squad,
+            EncounterConstants.Planetar_Pair,
+            EncounterConstants.Planetar_Solitary,
+            EncounterConstants.Solar_Pair,
+            EncounterConstants.Solar_Solitary,
+            EncounterConstants.Avoral_Pair,
+            EncounterConstants.Avoral_Solitary,
+            EncounterConstants.Avoral_Squad,
+            EncounterConstants.Badger_Celestial_Cete,
+            EncounterConstants.Badger_Celestial_Pair,
+            EncounterConstants.Badger_Celestial_Solitary,
+            EncounterConstants.Dog_Celestial_Pack,
+            EncounterConstants.Dog_Celestial_Solitary,
+            EncounterConstants.FireBeetle_Giant_Celestial_Cluster,
+            EncounterConstants.FireBeetle_Giant_Celestial_Colony,
+            EncounterConstants.Monkey_Celestial_Troop,
+            EncounterConstants.Owl_Celestial_Solitary,
+            EncounterConstants.Porpoise_Celestial_Pair,
+            EncounterConstants.Porpoise_Celestial_School,
+            EncounterConstants.Porpoise_Celestial_Solitary,
+            EncounterConstants.Leonal_Pride,
+            EncounterConstants.Leonal_Solitary)]
         [TestCase(EnvironmentConstants.Plane_Earth,
-            EncounterConstants.Xorn,
-            EncounterConstants.Elemental_Earth,
-            EncounterConstants.Mephit_Earth,
-            EncounterConstants.Mephit_Salt)]
+            EncounterConstants.Xorn_Average_Cluster,
+            EncounterConstants.Xorn_Average_Pair,
+            EncounterConstants.Xorn_Average_Solitary,
+            EncounterConstants.Xorn_Elder_Pair,
+            EncounterConstants.Xorn_Elder_Party,
+            EncounterConstants.Xorn_Elder_Solitary,
+            EncounterConstants.Xorn_Minor_Cluster,
+            EncounterConstants.Xorn_Minor_Pair,
+            EncounterConstants.Xorn_Minor_Solitary,
+            EncounterConstants.Elemental_Earth_Elder_Solitary,
+            EncounterConstants.Elemental_Earth_Greater_Solitary,
+            EncounterConstants.Elemental_Earth_Huge_Solitary,
+            EncounterConstants.Elemental_Earth_Large_Solitary,
+            EncounterConstants.Elemental_Earth_Medium_Solitary,
+            EncounterConstants.Elemental_Earth_Small_Solitary)]
         [TestCase(EnvironmentConstants.Plane_Ethereal,
-            EncounterConstants.EtherealMarauder,
-            EncounterConstants.Xill)]
+            EncounterConstants.EtherealMarauder_Solitary,
+            EncounterConstants.Xill_Gang,
+            EncounterConstants.Xill_Solitary)]
         [TestCase(EnvironmentConstants.Plane_Evil,
-            EncounterConstants.FiendishCreature,
-            EncounterConstants.Barghest,
-            EncounterConstants.Hellwasp,
-            EncounterConstants.NightHag,
-            EncounterConstants.Nightmare,
-            EncounterConstants.YethHound,
-            EncounterConstants.Vargouille)]
+            EncounterConstants.Centipede_Monstrous_Fiendish_Colossal_Solitary,
+            EncounterConstants.Centipede_Monstrous_Fiendish_Gargantuan_Solitary,
+            EncounterConstants.Centipede_Monstrous_Fiendish_Huge_Solitary,
+            EncounterConstants.Centipede_Monstrous_Fiendish_Huge_Colony,
+            EncounterConstants.Centipede_Monstrous_Fiendish_Large_Solitary,
+            EncounterConstants.Centipede_Monstrous_Fiendish_Large_Colony,
+            EncounterConstants.Centipede_Monstrous_Fiendish_Medium_Solitary,
+            EncounterConstants.Centipede_Monstrous_Fiendish_Medium_Colony,
+            EncounterConstants.Rat_Dire_Fiendish_Pack,
+            EncounterConstants.Rat_Dire_Fiendish_Solitary,
+            EncounterConstants.Raven_Fiendish_Solitary,
+            EncounterConstants.Barghest_Greater_Pack,
+            EncounterConstants.Barghest_Greater_Solitary,
+            EncounterConstants.Barghest_Pack,
+            EncounterConstants.Barghest_Solitary,
+            EncounterConstants.Hellwasp_Swarm_Fright,
+            EncounterConstants.Hellwasp_Swarm_Solitary,
+            EncounterConstants.Hellwasp_Swarm_Terror,
+            EncounterConstants.NightHag_Covey,
+            EncounterConstants.NightHag_Mounted,
+            EncounterConstants.NightHag_Solitary,
+            EncounterConstants.Nightmare_Solitary,
+            EncounterConstants.YethHound_Pack,
+            EncounterConstants.YethHound_Pair,
+            EncounterConstants.YethHound_Solitary,
+            EncounterConstants.Vargouille_Cluster,
+            EncounterConstants.Vargouille_Mob)]
         [TestCase(EnvironmentConstants.Plane_Fire,
-            EncounterConstants.Azer,
-            EncounterConstants.Elemental_Fire,
-            EncounterConstants.Salamander,
-            EncounterConstants.Efreeti,
-            EncounterConstants.Magmin,
-            EncounterConstants.Mephit_Fire,
-            EncounterConstants.Mephit_Magma,
-            EncounterConstants.Mephit_Steam,
-            EncounterConstants.Rast,
-            EncounterConstants.Thoqqua)]
+            EncounterConstants.Azer_Clan,
+            EncounterConstants.Azer_Pair,
+            EncounterConstants.Azer_Solitary,
+            EncounterConstants.Azer_Squad,
+            EncounterConstants.Azer_Team,
+            EncounterConstants.Elemental_Fire_Elder_Solitary,
+            EncounterConstants.Elemental_Fire_Greater_Solitary,
+            EncounterConstants.Elemental_Fire_Huge_Solitary,
+            EncounterConstants.Elemental_Fire_Large_Solitary,
+            EncounterConstants.Elemental_Fire_Medium_Solitary,
+            EncounterConstants.Elemental_Fire_Small_Solitary,
+            EncounterConstants.Salamander_Average_Cluster,
+            EncounterConstants.Salamander_Average_Pair,
+            EncounterConstants.Salamander_Average_Solitary,
+            EncounterConstants.Salamander_Flamebrother_Cluster,
+            EncounterConstants.Salamander_Flamebrother_Pair,
+            EncounterConstants.Salamander_Flamebrother_Solitary,
+            EncounterConstants.Salamander_Noble_NobleParty,
+            EncounterConstants.Salamander_Noble_Pair,
+            EncounterConstants.Salamander_Noble_Solitary,
+            EncounterConstants.Efreeti_Band,
+            EncounterConstants.Efreeti_Company,
+            EncounterConstants.Efreeti_Solitary,
+            EncounterConstants.Magmin_Gang,
+            EncounterConstants.Magmin_Solitary,
+            EncounterConstants.Magmin_Squad,
+            EncounterConstants.Rast_Cluster,
+            EncounterConstants.Rast_Pair,
+            EncounterConstants.Rast_Solitary,
+            EncounterConstants.Thoqqua_Pair,
+            EncounterConstants.Thoqqua_Solitary)]
         [TestCase(EnvironmentConstants.Plane_Good,
-            EncounterConstants.Angel,
-            EncounterConstants.Avoral,
-            EncounterConstants.CelestialCreature,
-            EncounterConstants.Leonal)]
+            EncounterConstants.AstralDeva_Pair,
+            EncounterConstants.AstralDeva_Solitary,
+            EncounterConstants.AstralDeva_Squad,
+            EncounterConstants.Planetar_Pair,
+            EncounterConstants.Planetar_Solitary,
+            EncounterConstants.Solar_Pair,
+            EncounterConstants.Solar_Solitary,
+            EncounterConstants.Avoral_Pair,
+            EncounterConstants.Avoral_Solitary,
+            EncounterConstants.Avoral_Squad,
+            EncounterConstants.Badger_Celestial_Cete,
+            EncounterConstants.Badger_Celestial_Pair,
+            EncounterConstants.Badger_Celestial_Solitary,
+            EncounterConstants.Dog_Celestial_Pack,
+            EncounterConstants.Dog_Celestial_Solitary,
+            EncounterConstants.FireBeetle_Giant_Celestial_Cluster,
+            EncounterConstants.FireBeetle_Giant_Celestial_Colony,
+            EncounterConstants.Monkey_Celestial_Troop,
+            EncounterConstants.Owl_Celestial_Solitary,
+            EncounterConstants.Porpoise_Celestial_Pair,
+            EncounterConstants.Porpoise_Celestial_School,
+            EncounterConstants.Porpoise_Celestial_Solitary,
+            EncounterConstants.Leonal_Pride,
+            EncounterConstants.Leonal_Solitary)]
         [TestCase(EnvironmentConstants.Plane_Lawful,
-            EncounterConstants.Achaierai,
-            EncounterConstants.Formian,
-            EncounterConstants.Inevitable)]
+            EncounterConstants.Achaierai_Flock,
+            EncounterConstants.Achaierai_Solitary,
+            EncounterConstants.FormianMyrmarch_Platoon,
+            EncounterConstants.FormianMyrmarch_Solitary,
+            EncounterConstants.FormianMyrmarch_Team,
+            EncounterConstants.FormianQueen_Hive,
+            EncounterConstants.FormianTaskmaster_ConscriptionTeam,
+            EncounterConstants.FormianTaskmaster_Solitary,
+            EncounterConstants.FormianWarrior_Solitary,
+            EncounterConstants.FormianWarrior_Team,
+            EncounterConstants.FormianWarrior_Troop,
+            EncounterConstants.FormianWorker_Crew,
+            EncounterConstants.FormianWorker_Team,
+            EncounterConstants.Kolyarut_Solitary,
+            EncounterConstants.Marut_Solitary,
+            EncounterConstants.Zelekhut_Solitary)]
         [TestCase(EnvironmentConstants.Plane_LawfulEvil,
-            EncounterConstants.Devil,
-            EncounterConstants.HellHound,
-            EncounterConstants.NessianWarhound)]
+            EncounterConstants.BarbedDevil_Pair,
+            EncounterConstants.BarbedDevil_Solitary,
+            EncounterConstants.BarbedDevil_Squad,
+            EncounterConstants.BarbedDevil_Team,
+            EncounterConstants.BeardedDevil_Pair,
+            EncounterConstants.BeardedDevil_Solitary,
+            EncounterConstants.BeardedDevil_Squad,
+            EncounterConstants.BeardedDevil_Team,
+            EncounterConstants.BoneDevil_Solitary,
+            EncounterConstants.BoneDevil_Squad,
+            EncounterConstants.BoneDevil_Team,
+            EncounterConstants.ChainDevil_Band,
+            EncounterConstants.ChainDevil_Gang,
+            EncounterConstants.ChainDevil_Mob,
+            EncounterConstants.ChainDevil_Solitary,
+            EncounterConstants.Erinyes_Solitary,
+            EncounterConstants.Hellcat_Pair,
+            EncounterConstants.Hellcat_Pride,
+            EncounterConstants.Hellcat_Solitary,
+            EncounterConstants.HornedDevil_Solitary,
+            EncounterConstants.HornedDevil_Squad,
+            EncounterConstants.HornedDevil_Team,
+            EncounterConstants.IceDevil_Solitary,
+            EncounterConstants.IceDevil_Squad,
+            EncounterConstants.IceDevil_Team,
+            EncounterConstants.IceDevil_Troupe,
+            EncounterConstants.Imp_Solitary,
+            EncounterConstants.Lemure_Gang,
+            EncounterConstants.Lemure_Mob,
+            EncounterConstants.Lemure_Pair,
+            EncounterConstants.Lemure_Solitary,
+            EncounterConstants.Lemure_Swarm,
+            EncounterConstants.PitFiend_Pair,
+            EncounterConstants.PitFiend_Solitary,
+            EncounterConstants.PitFiend_Team,
+            EncounterConstants.PitFiend_Troupe,
+            EncounterConstants.HellHound_Pack,
+            EncounterConstants.HellHound_Pair,
+            EncounterConstants.HellHound_Solitary,
+            EncounterConstants.NessianWarhound_Pack,
+            EncounterConstants.NessianWarhound_Pair,
+            EncounterConstants.NessianWarhound_Solitary,
+            //INFO: Evil-aligned planes
+            EncounterConstants.Centipede_Monstrous_Fiendish_Colossal_Solitary,
+            EncounterConstants.Centipede_Monstrous_Fiendish_Gargantuan_Solitary,
+            EncounterConstants.Centipede_Monstrous_Fiendish_Huge_Solitary,
+            EncounterConstants.Centipede_Monstrous_Fiendish_Huge_Colony,
+            EncounterConstants.Centipede_Monstrous_Fiendish_Large_Solitary,
+            EncounterConstants.Centipede_Monstrous_Fiendish_Large_Colony,
+            EncounterConstants.Centipede_Monstrous_Fiendish_Medium_Solitary,
+            EncounterConstants.Centipede_Monstrous_Fiendish_Medium_Colony,
+            EncounterConstants.Rat_Dire_Fiendish_Pack,
+            EncounterConstants.Rat_Dire_Fiendish_Solitary,
+            EncounterConstants.Raven_Fiendish_Solitary,
+            EncounterConstants.Barghest_Greater_Pack,
+            EncounterConstants.Barghest_Greater_Solitary,
+            EncounterConstants.Barghest_Pack,
+            EncounterConstants.Barghest_Solitary,
+            EncounterConstants.Hellwasp_Swarm_Fright,
+            EncounterConstants.Hellwasp_Swarm_Solitary,
+            EncounterConstants.Hellwasp_Swarm_Terror,
+            EncounterConstants.NightHag_Covey,
+            EncounterConstants.NightHag_Mounted,
+            EncounterConstants.NightHag_Solitary,
+            EncounterConstants.Nightmare_Solitary,
+            EncounterConstants.YethHound_Pack,
+            EncounterConstants.YethHound_Pair,
+            EncounterConstants.YethHound_Solitary,
+            EncounterConstants.Vargouille_Cluster,
+            EncounterConstants.Vargouille_Mob,
+            //INFO: Lawful-aligned planes
+            EncounterConstants.Achaierai_Flock,
+            EncounterConstants.Achaierai_Solitary,
+            EncounterConstants.FormianMyrmarch_Platoon,
+            EncounterConstants.FormianMyrmarch_Solitary,
+            EncounterConstants.FormianMyrmarch_Team,
+            EncounterConstants.FormianQueen_Hive,
+            EncounterConstants.FormianTaskmaster_ConscriptionTeam,
+            EncounterConstants.FormianTaskmaster_Solitary,
+            EncounterConstants.FormianWarrior_Solitary,
+            EncounterConstants.FormianWarrior_Team,
+            EncounterConstants.FormianWarrior_Troop,
+            EncounterConstants.FormianWorker_Crew,
+            EncounterConstants.FormianWorker_Team,
+            EncounterConstants.Kolyarut_Solitary,
+            EncounterConstants.Marut_Solitary,
+            EncounterConstants.Zelekhut_Solitary)]
         [TestCase(EnvironmentConstants.Plane_LawfulGood,
-            EncounterConstants.Archon,
-            EncounterConstants.Lammasu_GoldenProtector)]
+            EncounterConstants.HoundArchon_Hero_Solitary,
+            EncounterConstants.HoundArchon_Hero_WithDragon,
+            EncounterConstants.HoundArchon_Pair,
+            EncounterConstants.HoundArchon_Solitary,
+            EncounterConstants.HoundArchon_Squad,
+            EncounterConstants.LanternArchon_Pair,
+            EncounterConstants.LanternArchon_Solitary,
+            EncounterConstants.LanternArchon_Squad,
+            EncounterConstants.TrumpetArchon_Pair,
+            EncounterConstants.TrumpetArchon_Solitary,
+            EncounterConstants.TrumpetArchon_Squad,
+            EncounterConstants.Lammasu_GoldenProtector_Solitary,
+            //INFO: Good-aligned planes
+            EncounterConstants.AstralDeva_Pair,
+            EncounterConstants.AstralDeva_Solitary,
+            EncounterConstants.AstralDeva_Squad,
+            EncounterConstants.Planetar_Pair,
+            EncounterConstants.Planetar_Solitary,
+            EncounterConstants.Solar_Pair,
+            EncounterConstants.Solar_Solitary,
+            EncounterConstants.Avoral_Pair,
+            EncounterConstants.Avoral_Solitary,
+            EncounterConstants.Avoral_Squad,
+            EncounterConstants.Badger_Celestial_Cete,
+            EncounterConstants.Badger_Celestial_Pair,
+            EncounterConstants.Badger_Celestial_Solitary,
+            EncounterConstants.Dog_Celestial_Pack,
+            EncounterConstants.Dog_Celestial_Solitary,
+            EncounterConstants.FireBeetle_Giant_Celestial_Cluster,
+            EncounterConstants.FireBeetle_Giant_Celestial_Colony,
+            EncounterConstants.Monkey_Celestial_Troop,
+            EncounterConstants.Owl_Celestial_Solitary,
+            EncounterConstants.Porpoise_Celestial_Pair,
+            EncounterConstants.Porpoise_Celestial_School,
+            EncounterConstants.Porpoise_Celestial_Solitary,
+            EncounterConstants.Leonal_Pride,
+            EncounterConstants.Leonal_Solitary,
+            //INFO: Lawful-aligned planes
+            EncounterConstants.Achaierai_Flock,
+            EncounterConstants.Achaierai_Solitary,
+            EncounterConstants.FormianMyrmarch_Platoon,
+            EncounterConstants.FormianMyrmarch_Solitary,
+            EncounterConstants.FormianMyrmarch_Team,
+            EncounterConstants.FormianQueen_Hive,
+            EncounterConstants.FormianTaskmaster_ConscriptionTeam,
+            EncounterConstants.FormianTaskmaster_Solitary,
+            EncounterConstants.FormianWarrior_Solitary,
+            EncounterConstants.FormianWarrior_Team,
+            EncounterConstants.FormianWarrior_Troop,
+            EncounterConstants.FormianWorker_Crew,
+            EncounterConstants.FormianWorker_Team,
+            EncounterConstants.Kolyarut_Solitary,
+            EncounterConstants.Marut_Solitary,
+            EncounterConstants.Zelekhut_Solitary)]
         [TestCase(EnvironmentConstants.Plane_Limbo,
-            EncounterConstants.ChaosBeast,
-            EncounterConstants.Githzerai,
-            EncounterConstants.Slaad)]
+            EncounterConstants.ChaosBeast_Solitary,
+            EncounterConstants.Githzerai_Fellowship,
+            EncounterConstants.Githzerai_Order,
+            EncounterConstants.Githzerai_Sect,
+            EncounterConstants.Slaad_Blue_Gang,
+            EncounterConstants.Slaad_Blue_Pack,
+            EncounterConstants.Slaad_Blue_Pair,
+            EncounterConstants.Slaad_Blue_Solitary,
+            EncounterConstants.Slaad_Death_Pair,
+            EncounterConstants.Slaad_Death_Solitary,
+            EncounterConstants.Slaad_Gray_Pair,
+            EncounterConstants.Slaad_Gray_Solitary,
+            EncounterConstants.Slaad_Green_Gang,
+            EncounterConstants.Slaad_Green_Solitary,
+            EncounterConstants.Slaad_Red_Gang,
+            EncounterConstants.Slaad_Red_Pack,
+            EncounterConstants.Slaad_Red_Pair,
+            EncounterConstants.Slaad_Red_Solitary)]
         [TestCase(EnvironmentConstants.Plane_NeutralEvil,
-            EncounterConstants.Nightmare_Cauchemar)]
+            EncounterConstants.Nightmare_Cauchemar_Solitary,
+            //INFO: Evil-aligned planes
+            EncounterConstants.Centipede_Monstrous_Fiendish_Colossal_Solitary,
+            EncounterConstants.Centipede_Monstrous_Fiendish_Gargantuan_Solitary,
+            EncounterConstants.Centipede_Monstrous_Fiendish_Huge_Solitary,
+            EncounterConstants.Centipede_Monstrous_Fiendish_Huge_Colony,
+            EncounterConstants.Centipede_Monstrous_Fiendish_Large_Solitary,
+            EncounterConstants.Centipede_Monstrous_Fiendish_Large_Colony,
+            EncounterConstants.Centipede_Monstrous_Fiendish_Medium_Solitary,
+            EncounterConstants.Centipede_Monstrous_Fiendish_Medium_Colony,
+            EncounterConstants.Rat_Dire_Fiendish_Pack,
+            EncounterConstants.Rat_Dire_Fiendish_Solitary,
+            EncounterConstants.Raven_Fiendish_Solitary,
+            EncounterConstants.Barghest_Greater_Pack,
+            EncounterConstants.Barghest_Greater_Solitary,
+            EncounterConstants.Barghest_Pack,
+            EncounterConstants.Barghest_Solitary,
+            EncounterConstants.Hellwasp_Swarm_Fright,
+            EncounterConstants.Hellwasp_Swarm_Solitary,
+            EncounterConstants.Hellwasp_Swarm_Terror,
+            EncounterConstants.NightHag_Covey,
+            EncounterConstants.NightHag_Mounted,
+            EncounterConstants.NightHag_Solitary,
+            EncounterConstants.Nightmare_Solitary,
+            EncounterConstants.YethHound_Pack,
+            EncounterConstants.YethHound_Pair,
+            EncounterConstants.YethHound_Solitary,
+            EncounterConstants.Vargouille_Cluster,
+            EncounterConstants.Vargouille_Mob)]
         [TestCase(EnvironmentConstants.Plane_PositiveEnergy,
-            EncounterConstants.Ravid)]
+            EncounterConstants.Ravid_Solitary)]
         [TestCase(EnvironmentConstants.Plane_Shadow,
-            EncounterConstants.Nightshade,
-            EncounterConstants.ShadowMastiff)]
+            EncounterConstants.Nightcrawler_Pair,
+            EncounterConstants.Nightcrawler_Solitary,
+            EncounterConstants.Nightwalker_Gang,
+            EncounterConstants.Nightwalker_Pair,
+            EncounterConstants.Nightwalker_Solitary,
+            EncounterConstants.Nightwing_Flock,
+            EncounterConstants.Nightwing_Pair,
+            EncounterConstants.Nightwing_Solitary,
+            EncounterConstants.ShadowMastiff_Pack,
+            EncounterConstants.ShadowMastiff_Pair,
+            EncounterConstants.ShadowMastiff_Solitary)]
         [TestCase(EnvironmentConstants.Plane_Water,
-            EncounterConstants.Tojanida,
-            EncounterConstants.Elemental_Water,
-            EncounterConstants.Mephit_Ooze,
-            EncounterConstants.Mephit_Water)]
+            EncounterConstants.Tojanida_Adult_Clutch,
+            EncounterConstants.Tojanida_Adult_Solitary,
+            EncounterConstants.Tojanida_Elder_Clutch,
+            EncounterConstants.Tojanida_Elder_Solitary,
+            EncounterConstants.Tojanida_Juvenile_Clutch,
+            EncounterConstants.Tojanida_Juvenile_Solitary,
+            EncounterConstants.Elemental_Water_Elder_Solitary,
+            EncounterConstants.Elemental_Water_Greater_Solitary,
+            EncounterConstants.Elemental_Water_Huge_Solitary,
+            EncounterConstants.Elemental_Water_Large_Solitary,
+            EncounterConstants.Elemental_Water_Medium_Solitary,
+            EncounterConstants.Elemental_Water_Small_Solitary)]
         public void EnvironmentEncounters(string environment, params string[] encounters)
         {
             base.DistinctCollection(environment, encounters);
@@ -1304,26 +1759,249 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
         {
             var creatures = new[]
             {
-                EncounterConstants.Allip,
-                EncounterConstants.AnimatedObject,
-                EncounterConstants.Mummy,
-                EncounterConstants.Lich,
-                EncounterConstants.Ghost,
-                EncounterConstants.Vampire,
-                EncounterConstants.Devourer,
-                EncounterConstants.Doppelganger,
-                EncounterConstants.Skeleton,
-                EncounterConstants.Gargoyle,
-                EncounterConstants.Ghoul,
-                EncounterConstants.Golem,
-                EncounterConstants.Homunculus,
-                EncounterConstants.Mohrg,
-                EncounterConstants.Shadow,
-                EncounterConstants.ShieldGuardian,
-                EncounterConstants.Tarrasque,
-                EncounterConstants.Wight,
-                EncounterConstants.Wraith,
-                EncounterConstants.Zombie_Human,
+                EncounterConstants.Allip_Solitary,
+                EncounterConstants.AnimatedObject_Colossal_Solitary,
+                EncounterConstants.AnimatedObject_Gargantuan_Solitary,
+                EncounterConstants.AnimatedObject_Huge_Solitary,
+                EncounterConstants.AnimatedObject_Large_Solitary,
+                EncounterConstants.AnimatedObject_Medium_Solitary,
+                EncounterConstants.AnimatedObject_Small_Pair,
+                EncounterConstants.AnimatedObject_Tiny_Group,
+                EncounterConstants.MummyLord_Solitary,
+                EncounterConstants.MummyLord_TombGuard,
+                EncounterConstants.Mummy_GuardianDetail,
+                EncounterConstants.Mummy_Solitary,
+                EncounterConstants.Mummy_WardenSquad,
+                EncounterConstants.Lich_Level11_Solitary,
+                EncounterConstants.Lich_Level11_Troupe,
+                EncounterConstants.Lich_Level12_Solitary,
+                EncounterConstants.Lich_Level12_Troupe,
+                EncounterConstants.Lich_Level13_Solitary,
+                EncounterConstants.Lich_Level13_Troupe,
+                EncounterConstants.Lich_Level14_Solitary,
+                EncounterConstants.Lich_Level14_Troupe,
+                EncounterConstants.Lich_Level15_Solitary,
+                EncounterConstants.Lich_Level15_Troupe,
+                EncounterConstants.Lich_Level16_Solitary,
+                EncounterConstants.Lich_Level16_Troupe,
+                EncounterConstants.Lich_Level17_Solitary,
+                EncounterConstants.Lich_Level17_Troupe,
+                EncounterConstants.Lich_Level18_Solitary,
+                EncounterConstants.Lich_Level18_Troupe,
+                EncounterConstants.Lich_Level19_Solitary,
+                EncounterConstants.Lich_Level19_Troupe,
+                EncounterConstants.Lich_Level20_Solitary,
+                EncounterConstants.Lich_Level20_Troupe,
+                EncounterConstants.Ghost_Level1_Gang,
+                EncounterConstants.Ghost_Level1_Mob,
+                EncounterConstants.Ghost_Level1_Solitary,
+                EncounterConstants.Ghost_Level2_Gang,
+                EncounterConstants.Ghost_Level2_Mob,
+                EncounterConstants.Ghost_Level2_Solitary,
+                EncounterConstants.Ghost_Level3_Gang,
+                EncounterConstants.Ghost_Level3_Mob,
+                EncounterConstants.Ghost_Level3_Solitary,
+                EncounterConstants.Ghost_Level4_Gang,
+                EncounterConstants.Ghost_Level4_Mob,
+                EncounterConstants.Ghost_Level4_Solitary,
+                EncounterConstants.Ghost_Level5_Gang,
+                EncounterConstants.Ghost_Level5_Mob,
+                EncounterConstants.Ghost_Level5_Solitary,
+                EncounterConstants.Ghost_Level6_Gang,
+                EncounterConstants.Ghost_Level6_Mob,
+                EncounterConstants.Ghost_Level6_Solitary,
+                EncounterConstants.Ghost_Level7_Gang,
+                EncounterConstants.Ghost_Level7_Mob,
+                EncounterConstants.Ghost_Level7_Solitary,
+                EncounterConstants.Ghost_Level8_Gang,
+                EncounterConstants.Ghost_Level8_Mob,
+                EncounterConstants.Ghost_Level8_Solitary,
+                EncounterConstants.Ghost_Level9_Gang,
+                EncounterConstants.Ghost_Level9_Mob,
+                EncounterConstants.Ghost_Level9_Solitary,
+                EncounterConstants.Ghost_Level10_Gang,
+                EncounterConstants.Ghost_Level10_Mob,
+                EncounterConstants.Ghost_Level10_Solitary,
+                EncounterConstants.Ghost_Level11_Gang,
+                EncounterConstants.Ghost_Level11_Mob,
+                EncounterConstants.Ghost_Level11_Solitary,
+                EncounterConstants.Ghost_Level12_Gang,
+                EncounterConstants.Ghost_Level12_Mob,
+                EncounterConstants.Ghost_Level12_Solitary,
+                EncounterConstants.Ghost_Level13_Gang,
+                EncounterConstants.Ghost_Level13_Mob,
+                EncounterConstants.Ghost_Level13_Solitary,
+                EncounterConstants.Ghost_Level14_Gang,
+                EncounterConstants.Ghost_Level14_Mob,
+                EncounterConstants.Ghost_Level14_Solitary,
+                EncounterConstants.Ghost_Level15_Gang,
+                EncounterConstants.Ghost_Level15_Mob,
+                EncounterConstants.Ghost_Level15_Solitary,
+                EncounterConstants.Ghost_Level16_Gang,
+                EncounterConstants.Ghost_Level16_Mob,
+                EncounterConstants.Ghost_Level16_Solitary,
+                EncounterConstants.Ghost_Level17_Gang,
+                EncounterConstants.Ghost_Level17_Mob,
+                EncounterConstants.Ghost_Level17_Solitary,
+                EncounterConstants.Ghost_Level18_Gang,
+                EncounterConstants.Ghost_Level18_Mob,
+                EncounterConstants.Ghost_Level18_Solitary,
+                EncounterConstants.Ghost_Level19_Gang,
+                EncounterConstants.Ghost_Level19_Mob,
+                EncounterConstants.Ghost_Level19_Solitary,
+                EncounterConstants.Ghost_Level20_Gang,
+                EncounterConstants.Ghost_Level20_Mob,
+                EncounterConstants.Ghost_Level20_Solitary,
+                EncounterConstants.VampireSpawn_Pack,
+                EncounterConstants.VampireSpawn_Solitary,
+                EncounterConstants.Vampire_Level1_Gang,
+                EncounterConstants.Vampire_Level1_Pair,
+                EncounterConstants.Vampire_Level1_Solitary,
+                EncounterConstants.Vampire_Level1_Troupe,
+                EncounterConstants.Vampire_Level2_Gang,
+                EncounterConstants.Vampire_Level2_Pair,
+                EncounterConstants.Vampire_Level2_Solitary,
+                EncounterConstants.Vampire_Level2_Troupe,
+                EncounterConstants.Vampire_Level3_Gang,
+                EncounterConstants.Vampire_Level3_Pair,
+                EncounterConstants.Vampire_Level3_Solitary,
+                EncounterConstants.Vampire_Level3_Troupe,
+                EncounterConstants.Vampire_Level4_Gang,
+                EncounterConstants.Vampire_Level4_Pair,
+                EncounterConstants.Vampire_Level4_Solitary,
+                EncounterConstants.Vampire_Level4_Troupe,
+                EncounterConstants.Vampire_Level5_Gang,
+                EncounterConstants.Vampire_Level5_Pair,
+                EncounterConstants.Vampire_Level5_Solitary,
+                EncounterConstants.Vampire_Level5_Troupe,
+                EncounterConstants.Vampire_Level6_Gang,
+                EncounterConstants.Vampire_Level6_Pair,
+                EncounterConstants.Vampire_Level6_Solitary,
+                EncounterConstants.Vampire_Level6_Troupe,
+                EncounterConstants.Vampire_Level7_Gang,
+                EncounterConstants.Vampire_Level7_Pair,
+                EncounterConstants.Vampire_Level7_Solitary,
+                EncounterConstants.Vampire_Level7_Troupe,
+                EncounterConstants.Vampire_Level8_Gang,
+                EncounterConstants.Vampire_Level8_Pair,
+                EncounterConstants.Vampire_Level8_Solitary,
+                EncounterConstants.Vampire_Level8_Troupe,
+                EncounterConstants.Vampire_Level9_Gang,
+                EncounterConstants.Vampire_Level9_Pair,
+                EncounterConstants.Vampire_Level9_Solitary,
+                EncounterConstants.Vampire_Level9_Troupe,
+                EncounterConstants.Vampire_Level10_Gang,
+                EncounterConstants.Vampire_Level10_Pair,
+                EncounterConstants.Vampire_Level10_Solitary,
+                EncounterConstants.Vampire_Level10_Troupe,
+                EncounterConstants.Vampire_Level11_Gang,
+                EncounterConstants.Vampire_Level11_Pair,
+                EncounterConstants.Vampire_Level11_Solitary,
+                EncounterConstants.Vampire_Level11_Troupe,
+                EncounterConstants.Vampire_Level12_Gang,
+                EncounterConstants.Vampire_Level12_Pair,
+                EncounterConstants.Vampire_Level12_Solitary,
+                EncounterConstants.Vampire_Level12_Troupe,
+                EncounterConstants.Vampire_Level13_Gang,
+                EncounterConstants.Vampire_Level13_Pair,
+                EncounterConstants.Vampire_Level13_Solitary,
+                EncounterConstants.Vampire_Level13_Troupe,
+                EncounterConstants.Vampire_Level14_Gang,
+                EncounterConstants.Vampire_Level14_Pair,
+                EncounterConstants.Vampire_Level14_Solitary,
+                EncounterConstants.Vampire_Level14_Troupe,
+                EncounterConstants.Vampire_Level15_Gang,
+                EncounterConstants.Vampire_Level15_Pair,
+                EncounterConstants.Vampire_Level15_Solitary,
+                EncounterConstants.Vampire_Level15_Troupe,
+                EncounterConstants.Vampire_Level16_Gang,
+                EncounterConstants.Vampire_Level16_Pair,
+                EncounterConstants.Vampire_Level16_Solitary,
+                EncounterConstants.Vampire_Level16_Troupe,
+                EncounterConstants.Vampire_Level17_Gang,
+                EncounterConstants.Vampire_Level17_Pair,
+                EncounterConstants.Vampire_Level17_Solitary,
+                EncounterConstants.Vampire_Level17_Troupe,
+                EncounterConstants.Vampire_Level18_Gang,
+                EncounterConstants.Vampire_Level18_Pair,
+                EncounterConstants.Vampire_Level18_Solitary,
+                EncounterConstants.Vampire_Level18_Troupe,
+                EncounterConstants.Vampire_Level19_Gang,
+                EncounterConstants.Vampire_Level19_Pair,
+                EncounterConstants.Vampire_Level19_Solitary,
+                EncounterConstants.Vampire_Level19_Troupe,
+                EncounterConstants.Vampire_Level20_Gang,
+                EncounterConstants.Vampire_Level20_Pair,
+                EncounterConstants.Vampire_Level20_Solitary,
+                EncounterConstants.Vampire_Level20_Troupe,
+                EncounterConstants.Devourer_Solitary,
+                EncounterConstants.Doppelganger_Gang,
+                EncounterConstants.Doppelganger_Pair,
+                EncounterConstants.Doppelganger_Solitary,
+                EncounterConstants.Skeleton_Chimera_SmallGroup,
+                EncounterConstants.Skeleton_Chimera_Group,
+                EncounterConstants.Skeleton_Chimera_LargeGroup,
+                EncounterConstants.Skeleton_Dragon_Red_YoungAdult_SmallGroup,
+                EncounterConstants.Skeleton_Dragon_Red_YoungAdult_Group,
+                EncounterConstants.Skeleton_Dragon_Red_YoungAdult_LargeGroup,
+                EncounterConstants.Skeleton_Ettin_SmallGroup,
+                EncounterConstants.Skeleton_Ettin_Group,
+                EncounterConstants.Skeleton_Ettin_LargeGroup,
+                EncounterConstants.Skeleton_Giant_Cloud_SmallGroup,
+                EncounterConstants.Skeleton_Giant_Cloud_Group,
+                EncounterConstants.Skeleton_Giant_Cloud_LargeGroup,
+                EncounterConstants.Skeleton_Human_SmallGroup,
+                EncounterConstants.Skeleton_Human_Group,
+                EncounterConstants.Skeleton_Human_LargeGroup,
+                EncounterConstants.Skeleton_Megaraptor_SmallGroup,
+                EncounterConstants.Skeleton_Megaraptor_Group,
+                EncounterConstants.Skeleton_Megaraptor_LargeGroup,
+                EncounterConstants.Skeleton_Owlbear_SmallGroup,
+                EncounterConstants.Skeleton_Owlbear_Group,
+                EncounterConstants.Skeleton_Owlbear_LargeGroup,
+                EncounterConstants.Skeleton_Troll_SmallGroup,
+                EncounterConstants.Skeleton_Troll_Group,
+                EncounterConstants.Skeleton_Troll_LargeGroup,
+                EncounterConstants.Skeleton_Wolf_SmallGroup,
+                EncounterConstants.Skeleton_Wolf_Group,
+                EncounterConstants.Skeleton_Wolf_LargeGroup,
+                EncounterConstants.Gargoyle_Pair,
+                EncounterConstants.Gargoyle_Solitary,
+                EncounterConstants.Gargoyle_Wing,
+                EncounterConstants.Ghoul_Gang,
+                EncounterConstants.Ghoul_Pack,
+                EncounterConstants.Ghoul_Solitary,
+                EncounterConstants.Golem_Clay_Gang,
+                EncounterConstants.Golem_Clay_Solitary,
+                EncounterConstants.Golem_Flesh_Gang,
+                EncounterConstants.Golem_Flesh_Solitary,
+                EncounterConstants.Golem_Iron_Gang,
+                EncounterConstants.Golem_Iron_Solitary,
+                EncounterConstants.Golem_Stone_Gang,
+                EncounterConstants.Golem_Stone_Greater_Gang,
+                EncounterConstants.Golem_Stone_Greater_Solitary,
+                EncounterConstants.Golem_Stone_Solitary,
+                EncounterConstants.Homunculus_Solitary,
+                EncounterConstants.Mohrg_Gang,
+                EncounterConstants.Mohrg_Mob,
+                EncounterConstants.Mohrg_Solitary,
+                EncounterConstants.Shadow_Gang,
+                EncounterConstants.Shadow_Greater_Solitary,
+                EncounterConstants.Shadow_Solitary,
+                EncounterConstants.Shadow_Swarm,
+                EncounterConstants.ShieldGuardian_Solitary,
+                EncounterConstants.Tarrasque_Solitary,
+                EncounterConstants.Wight_Gang,
+                EncounterConstants.Wight_Pack,
+                EncounterConstants.Wight_Pair,
+                EncounterConstants.Wight_Solitary,
+                EncounterConstants.Wraith_Dread_Solitary,
+                EncounterConstants.Wraith_Gang,
+                EncounterConstants.Wraith_Pack,
+                EncounterConstants.Wraith_Solitary,
+                EncounterConstants.Zombie_Human_SmallGroup,
+                EncounterConstants.Zombie_Human_Group,
+                EncounterConstants.Zombie_Human_LargeGroup,
             };
 
             base.DistinctCollection(EnvironmentConstants.Any, creatures);
@@ -1334,15 +2012,110 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
         {
             var creatures = new[]
             {
-                EncounterConstants.Character_Adventurer,
-                EncounterConstants.Character_Hunter,
-                EncounterConstants.Commoner_Farmer,
-                EncounterConstants.Commoner_Herder,
-                EncounterConstants.Commoner_Pilgrim,
-                EncounterConstants.Doppelganger,
-                EncounterConstants.Gargoyle,
-                EncounterConstants.NPC_Traveler,
-                EncounterConstants.Rat,
+                EncounterConstants.Character_Adventurer_Level1_Party,
+                EncounterConstants.Character_Adventurer_Level10_Party,
+                EncounterConstants.Character_Adventurer_Level11_Party,
+                EncounterConstants.Character_Adventurer_Level12_Party,
+                EncounterConstants.Character_Adventurer_Level13_Party,
+                EncounterConstants.Character_Adventurer_Level14_Party,
+                EncounterConstants.Character_Adventurer_Level15_Party,
+                EncounterConstants.Character_Adventurer_Level16_Party,
+                EncounterConstants.Character_Adventurer_Level17_Party,
+                EncounterConstants.Character_Adventurer_Level18_Party,
+                EncounterConstants.Character_Adventurer_Level19_Party,
+                EncounterConstants.Character_Adventurer_Level2_Party,
+                EncounterConstants.Character_Adventurer_Level20_Party,
+                EncounterConstants.Character_Adventurer_Level3_Party,
+                EncounterConstants.Character_Adventurer_Level4_Party,
+                EncounterConstants.Character_Adventurer_Level5_Party,
+                EncounterConstants.Character_Adventurer_Level6_Party,
+                EncounterConstants.Character_Adventurer_Level7_Party,
+                EncounterConstants.Character_Adventurer_Level8_Party,
+                EncounterConstants.Character_Adventurer_Level9_Party,
+                EncounterConstants.Character_Adventurer_Level1_Solitary,
+                EncounterConstants.Character_Adventurer_Level10_Solitary,
+                EncounterConstants.Character_Adventurer_Level11_Solitary,
+                EncounterConstants.Character_Adventurer_Level12_Solitary,
+                EncounterConstants.Character_Adventurer_Level13_Solitary,
+                EncounterConstants.Character_Adventurer_Level14_Solitary,
+                EncounterConstants.Character_Adventurer_Level15_Solitary,
+                EncounterConstants.Character_Adventurer_Level16_Solitary,
+                EncounterConstants.Character_Adventurer_Level17_Solitary,
+                EncounterConstants.Character_Adventurer_Level18_Solitary,
+                EncounterConstants.Character_Adventurer_Level19_Solitary,
+                EncounterConstants.Character_Adventurer_Level2_Solitary,
+                EncounterConstants.Character_Adventurer_Level20_Solitary,
+                EncounterConstants.Character_Adventurer_Level3_Solitary,
+                EncounterConstants.Character_Adventurer_Level4_Solitary,
+                EncounterConstants.Character_Adventurer_Level5_Solitary,
+                EncounterConstants.Character_Adventurer_Level6_Solitary,
+                EncounterConstants.Character_Adventurer_Level7_Solitary,
+                EncounterConstants.Character_Adventurer_Level8_Solitary,
+                EncounterConstants.Character_Adventurer_Level9_Solitary,
+                EncounterConstants.Character_Hunter_Level1_HuntingParty,
+                EncounterConstants.Character_Hunter_Level10To11_HuntingParty,
+                EncounterConstants.Character_Hunter_Level12To13_HuntingParty,
+                EncounterConstants.Character_Hunter_Level14To15_HuntingParty,
+                EncounterConstants.Character_Hunter_Level16To17_HuntingParty,
+                EncounterConstants.Character_Hunter_Level18To19_HuntingParty,
+                EncounterConstants.Character_Hunter_Level20_HuntingParty,
+                EncounterConstants.Character_Hunter_Level2To3_HuntingParty,
+                EncounterConstants.Character_Hunter_Level4To5_HuntingParty,
+                EncounterConstants.Character_Hunter_Level6To7_HuntingParty,
+                EncounterConstants.Character_Hunter_Level8To9_HuntingParty,
+                EncounterConstants.Commoner_Farmer_Level1_Group,
+                EncounterConstants.Commoner_Farmer_Level10To11_Group,
+                EncounterConstants.Commoner_Farmer_Level12To13_Group,
+                EncounterConstants.Commoner_Farmer_Level14To15_Group,
+                EncounterConstants.Commoner_Farmer_Level16To17_Group,
+                EncounterConstants.Commoner_Farmer_Level18To19_Group,
+                EncounterConstants.Commoner_Farmer_Level20_Group,
+                EncounterConstants.Commoner_Farmer_Level2To3_Group,
+                EncounterConstants.Commoner_Farmer_Level4To5_Group,
+                EncounterConstants.Commoner_Farmer_Level6To7_Group,
+                EncounterConstants.Commoner_Farmer_Level8To9_Group,
+                EncounterConstants.Commoner_Herder_Level1_Group,
+                EncounterConstants.Commoner_Herder_Level10To11_Group,
+                EncounterConstants.Commoner_Herder_Level12To13_Group,
+                EncounterConstants.Commoner_Herder_Level14To15_Group,
+                EncounterConstants.Commoner_Herder_Level16To17_Group,
+                EncounterConstants.Commoner_Herder_Level18To19_Group,
+                EncounterConstants.Commoner_Herder_Level20_Group,
+                EncounterConstants.Commoner_Herder_Level2To3_Group,
+                EncounterConstants.Commoner_Herder_Level4To5_Group,
+                EncounterConstants.Commoner_Herder_Level6To7_Group,
+                EncounterConstants.Commoner_Herder_Level8To9_Group,
+                EncounterConstants.Commoner_Pilgrim_Level1_Caravan,
+                EncounterConstants.Commoner_Pilgrim_Level10To11_Caravan,
+                EncounterConstants.Commoner_Pilgrim_Level12To13_Caravan,
+                EncounterConstants.Commoner_Pilgrim_Level14To15_Caravan,
+                EncounterConstants.Commoner_Pilgrim_Level16To17_Caravan,
+                EncounterConstants.Commoner_Pilgrim_Level18To19_Caravan,
+                EncounterConstants.Commoner_Pilgrim_Level20_Caravan,
+                EncounterConstants.Commoner_Pilgrim_Level2To3_Caravan,
+                EncounterConstants.Commoner_Pilgrim_Level4To5_Caravan,
+                EncounterConstants.Commoner_Pilgrim_Level6To7_Caravan,
+                EncounterConstants.Commoner_Pilgrim_Level8To9_Caravan,
+                EncounterConstants.Doppelganger_Gang,
+                EncounterConstants.Doppelganger_Pair,
+                EncounterConstants.Doppelganger_Solitary,
+                EncounterConstants.Traveler_Level1_Group,
+                EncounterConstants.Traveler_Level10To11_Group,
+                EncounterConstants.Traveler_Level12To13_Group,
+                EncounterConstants.Traveler_Level14To15_Group,
+                EncounterConstants.Traveler_Level16To17_Group,
+                EncounterConstants.Traveler_Level18To19_Group,
+                EncounterConstants.Traveler_Level20_Group,
+                EncounterConstants.Traveler_Level2To3_Group,
+                EncounterConstants.Traveler_Level4To5_Group,
+                EncounterConstants.Traveler_Level6To7_Group,
+                EncounterConstants.Traveler_Level8To9_Group,
+                EncounterConstants.Rat_Dire_Pack,
+                EncounterConstants.Rat_Dire_Solitary,
+                EncounterConstants.Rat_Plague,
+                EncounterConstants.Rat_Swarm_Infestation,
+                EncounterConstants.Rat_Swarm_Pack,
+                EncounterConstants.Rat_Swarm_Solitary,
                 EncounterConstants.Warrior_Bandit,
                 EncounterConstants.Character_AnimalTrainer,
                 EncounterConstants.Fighter_Captain,
@@ -1435,7 +2208,37 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
                 EncounterConstants.Bear_Black,
                 EncounterConstants.Boar,
                 EncounterConstants.Centaur,
-                EncounterConstants.Dragon_Green,
+                EncounterConstants.Dragon_Green_Wyrmling_Solitary,
+                EncounterConstants.Dragon_Green_Wyrmling_Clutch,
+                EncounterConstants.Dragon_Green_VeryYoung_Solitary,
+                EncounterConstants.Dragon_Green_VeryYoung_Clutch,
+                EncounterConstants.Dragon_Green_Young_Solitary,
+                EncounterConstants.Dragon_Green_Young_Clutch,
+                EncounterConstants.Dragon_Green_Juvenile_Solitary,
+                EncounterConstants.Dragon_Green_Juvenile_Clutch,
+                EncounterConstants.Dragon_Green_YoungAdult_Solitary,
+                EncounterConstants.Dragon_Green_YoungAdult_Clutch,
+                EncounterConstants.Dragon_Green_Adult_Solitary,
+                EncounterConstants.Dragon_Green_Adult_Pair,
+                EncounterConstants.Dragon_Green_Adult_Family,
+                EncounterConstants.Dragon_Green_MatureAdult_Solitary,
+                EncounterConstants.Dragon_Green_MatureAdult_Pair,
+                EncounterConstants.Dragon_Green_MatureAdult_Family,
+                EncounterConstants.Dragon_Green_Old_Solitary,
+                EncounterConstants.Dragon_Green_Old_Pair,
+                EncounterConstants.Dragon_Green_Old_Family,
+                EncounterConstants.Dragon_Green_VeryOld_Solitary,
+                EncounterConstants.Dragon_Green_VeryOld_Pair,
+                EncounterConstants.Dragon_Green_VeryOld_Family,
+                EncounterConstants.Dragon_Green_Ancient_Solitary,
+                EncounterConstants.Dragon_Green_Ancient_Pair,
+                EncounterConstants.Dragon_Green_Ancient_Family,
+                EncounterConstants.Dragon_Green_Wyrm_Solitary,
+                EncounterConstants.Dragon_Green_Wyrm_Pair,
+                EncounterConstants.Dragon_Green_Wyrm_Family,
+                EncounterConstants.Dragon_Green_GreatWyrm_Solitary,
+                EncounterConstants.Dragon_Green_GreatWyrm_Pair,
+                EncounterConstants.Dragon_Green_GreatWyrm_Family,
                 EncounterConstants.Dryad,
                 EncounterConstants.Elf_High,
                 EncounterConstants.Elf_Half,
@@ -1482,7 +2285,37 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
                 EncounterConstants.Chimera,
                 EncounterConstants.Skeleton_Chimera,
                 EncounterConstants.DisplacerBeast,
-                EncounterConstants.Dragon_Bronze,
+                EncounterConstants.Dragon_Bronze_Wyrmling_Solitary,
+                EncounterConstants.Dragon_Bronze_Wyrmling_Clutch,
+                EncounterConstants.Dragon_Bronze_VeryYoung_Solitary,
+                EncounterConstants.Dragon_Bronze_VeryYoung_Clutch,
+                EncounterConstants.Dragon_Bronze_Young_Solitary,
+                EncounterConstants.Dragon_Bronze_Young_Clutch,
+                EncounterConstants.Dragon_Bronze_Juvenile_Solitary,
+                EncounterConstants.Dragon_Bronze_Juvenile_Clutch,
+                EncounterConstants.Dragon_Bronze_YoungAdult_Solitary,
+                EncounterConstants.Dragon_Bronze_YoungAdult_Clutch,
+                EncounterConstants.Dragon_Bronze_Adult_Solitary,
+                EncounterConstants.Dragon_Bronze_Adult_Pair,
+                EncounterConstants.Dragon_Bronze_Adult_Family,
+                EncounterConstants.Dragon_Bronze_MatureAdult_Solitary,
+                EncounterConstants.Dragon_Bronze_MatureAdult_Pair,
+                EncounterConstants.Dragon_Bronze_MatureAdult_Family,
+                EncounterConstants.Dragon_Bronze_Old_Solitary,
+                EncounterConstants.Dragon_Bronze_Old_Pair,
+                EncounterConstants.Dragon_Bronze_Old_Family,
+                EncounterConstants.Dragon_Bronze_VeryOld_Solitary,
+                EncounterConstants.Dragon_Bronze_VeryOld_Pair,
+                EncounterConstants.Dragon_Bronze_VeryOld_Family,
+                EncounterConstants.Dragon_Bronze_Ancient_Solitary,
+                EncounterConstants.Dragon_Bronze_Ancient_Pair,
+                EncounterConstants.Dragon_Bronze_Ancient_Family,
+                EncounterConstants.Dragon_Bronze_Wyrm_Solitary,
+                EncounterConstants.Dragon_Bronze_Wyrm_Pair,
+                EncounterConstants.Dragon_Bronze_Wyrm_Family,
+                EncounterConstants.Dragon_Bronze_GreatWyrm_Solitary,
+                EncounterConstants.Dragon_Bronze_GreatWyrm_Pair,
+                EncounterConstants.Dragon_Bronze_GreatWyrm_Family,
                 EncounterConstants.Giant_Hill,
                 EncounterConstants.Wereboar_HillGiantDire,
                 EncounterConstants.Gnome_Rock,
@@ -1530,7 +2363,37 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
             {
                 EncounterConstants.Bugbear,
                 EncounterConstants.Zombie_Bugbear,
-                EncounterConstants.Dragon_Silver,
+                EncounterConstants.Dragon_Silver_Wyrmling_Solitary,
+                EncounterConstants.Dragon_Silver_Wyrmling_Clutch,
+                EncounterConstants.Dragon_Silver_VeryYoung_Solitary,
+                EncounterConstants.Dragon_Silver_VeryYoung_Clutch,
+                EncounterConstants.Dragon_Silver_Young_Solitary,
+                EncounterConstants.Dragon_Silver_Young_Clutch,
+                EncounterConstants.Dragon_Silver_Juvenile_Solitary,
+                EncounterConstants.Dragon_Silver_Juvenile_Clutch,
+                EncounterConstants.Dragon_Silver_YoungAdult_Solitary,
+                EncounterConstants.Dragon_Silver_YoungAdult_Clutch,
+                EncounterConstants.Dragon_Silver_Adult_Solitary,
+                EncounterConstants.Dragon_Silver_Adult_Pair,
+                EncounterConstants.Dragon_Silver_Adult_Family,
+                EncounterConstants.Dragon_Silver_MatureAdult_Solitary,
+                EncounterConstants.Dragon_Silver_MatureAdult_Pair,
+                EncounterConstants.Dragon_Silver_MatureAdult_Family,
+                EncounterConstants.Dragon_Silver_Old_Solitary,
+                EncounterConstants.Dragon_Silver_Old_Pair,
+                EncounterConstants.Dragon_Silver_Old_Family,
+                EncounterConstants.Dragon_Silver_VeryOld_Solitary,
+                EncounterConstants.Dragon_Silver_VeryOld_Pair,
+                EncounterConstants.Dragon_Silver_VeryOld_Family,
+                EncounterConstants.Dragon_Silver_Ancient_Solitary,
+                EncounterConstants.Dragon_Silver_Ancient_Pair,
+                EncounterConstants.Dragon_Silver_Ancient_Family,
+                EncounterConstants.Dragon_Silver_Wyrm_Solitary,
+                EncounterConstants.Dragon_Silver_Wyrm_Pair,
+                EncounterConstants.Dragon_Silver_Wyrm_Family,
+                EncounterConstants.Dragon_Silver_GreatWyrm_Solitary,
+                EncounterConstants.Dragon_Silver_GreatWyrm_Pair,
+                EncounterConstants.Dragon_Silver_GreatWyrm_Family,
                 EncounterConstants.Dwarf_Hill,
                 EncounterConstants.Dwarf_Mountain,
                 EncounterConstants.Eagle,
@@ -1584,7 +2447,37 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
                 EncounterConstants.Basilisk,
                 EncounterConstants.Camel,
                 EncounterConstants.Criosphinx,
-                EncounterConstants.Dragon_Brass,
+                EncounterConstants.Dragon_Brass_Wyrmling_Solitary,
+                EncounterConstants.Dragon_Brass_Wyrmling_Clutch,
+                EncounterConstants.Dragon_Brass_VeryYoung_Solitary,
+                EncounterConstants.Dragon_Brass_VeryYoung_Clutch,
+                EncounterConstants.Dragon_Brass_Young_Solitary,
+                EncounterConstants.Dragon_Brass_Young_Clutch,
+                EncounterConstants.Dragon_Brass_Juvenile_Solitary,
+                EncounterConstants.Dragon_Brass_Juvenile_Clutch,
+                EncounterConstants.Dragon_Brass_YoungAdult_Solitary,
+                EncounterConstants.Dragon_Brass_YoungAdult_Clutch,
+                EncounterConstants.Dragon_Brass_Adult_Solitary,
+                EncounterConstants.Dragon_Brass_Adult_Pair,
+                EncounterConstants.Dragon_Brass_Adult_Family,
+                EncounterConstants.Dragon_Brass_MatureAdult_Solitary,
+                EncounterConstants.Dragon_Brass_MatureAdult_Pair,
+                EncounterConstants.Dragon_Brass_MatureAdult_Family,
+                EncounterConstants.Dragon_Brass_Old_Solitary,
+                EncounterConstants.Dragon_Brass_Old_Pair,
+                EncounterConstants.Dragon_Brass_Old_Family,
+                EncounterConstants.Dragon_Brass_VeryOld_Solitary,
+                EncounterConstants.Dragon_Brass_VeryOld_Pair,
+                EncounterConstants.Dragon_Brass_VeryOld_Family,
+                EncounterConstants.Dragon_Brass_Ancient_Solitary,
+                EncounterConstants.Dragon_Brass_Ancient_Pair,
+                EncounterConstants.Dragon_Brass_Ancient_Family,
+                EncounterConstants.Dragon_Brass_Wyrm_Solitary,
+                EncounterConstants.Dragon_Brass_Wyrm_Pair,
+                EncounterConstants.Dragon_Brass_Wyrm_Family,
+                EncounterConstants.Dragon_Brass_GreatWyrm_Solitary,
+                EncounterConstants.Dragon_Brass_GreatWyrm_Pair,
+                EncounterConstants.Dragon_Brass_GreatWyrm_Family,
                 EncounterConstants.Gynosphinx,
                 EncounterConstants.Hieracosphinx,
                 EncounterConstants.Scorpion_Monstrous,
@@ -1630,7 +2523,37 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
             var creatures = new[]
             {
                 EncounterConstants.Behir,
-                EncounterConstants.Dragon_Copper,
+                EncounterConstants.Dragon_Copper_Wyrmling_Solitary,
+                EncounterConstants.Dragon_Copper_Wyrmling_Clutch,
+                EncounterConstants.Dragon_Copper_VeryYoung_Solitary,
+                EncounterConstants.Dragon_Copper_VeryYoung_Clutch,
+                EncounterConstants.Dragon_Copper_Young_Solitary,
+                EncounterConstants.Dragon_Copper_Young_Clutch,
+                EncounterConstants.Dragon_Copper_Juvenile_Solitary,
+                EncounterConstants.Dragon_Copper_Juvenile_Clutch,
+                EncounterConstants.Dragon_Copper_YoungAdult_Solitary,
+                EncounterConstants.Dragon_Copper_YoungAdult_Clutch,
+                EncounterConstants.Dragon_Copper_Adult_Solitary,
+                EncounterConstants.Dragon_Copper_Adult_Pair,
+                EncounterConstants.Dragon_Copper_Adult_Family,
+                EncounterConstants.Dragon_Copper_MatureAdult_Solitary,
+                EncounterConstants.Dragon_Copper_MatureAdult_Pair,
+                EncounterConstants.Dragon_Copper_MatureAdult_Family,
+                EncounterConstants.Dragon_Copper_Old_Solitary,
+                EncounterConstants.Dragon_Copper_Old_Pair,
+                EncounterConstants.Dragon_Copper_Old_Family,
+                EncounterConstants.Dragon_Copper_VeryOld_Solitary,
+                EncounterConstants.Dragon_Copper_VeryOld_Pair,
+                EncounterConstants.Dragon_Copper_VeryOld_Family,
+                EncounterConstants.Dragon_Copper_Ancient_Solitary,
+                EncounterConstants.Dragon_Copper_Ancient_Pair,
+                EncounterConstants.Dragon_Copper_Ancient_Family,
+                EncounterConstants.Dragon_Copper_Wyrm_Solitary,
+                EncounterConstants.Dragon_Copper_Wyrm_Pair,
+                EncounterConstants.Dragon_Copper_Wyrm_Family,
+                EncounterConstants.Dragon_Copper_GreatWyrm_Solitary,
+                EncounterConstants.Dragon_Copper_GreatWyrm_Pair,
+                EncounterConstants.Dragon_Copper_GreatWyrm_Family,
                 EncounterConstants.Halfling_Deep,
                 EncounterConstants.Hobgoblin,
                 EncounterConstants.PhaseSpider,
@@ -1648,7 +2571,37 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
             var creatures = new[]
             {
                 EncounterConstants.Crocodile,
-                EncounterConstants.Dragon_Black,
+                EncounterConstants.Dragon_Black_Wyrmling_Solitary,
+                EncounterConstants.Dragon_Black_Wyrmling_Clutch,
+                EncounterConstants.Dragon_Black_VeryYoung_Solitary,
+                EncounterConstants.Dragon_Black_VeryYoung_Clutch,
+                EncounterConstants.Dragon_Black_Young_Solitary,
+                EncounterConstants.Dragon_Black_Young_Clutch,
+                EncounterConstants.Dragon_Black_Juvenile_Solitary,
+                EncounterConstants.Dragon_Black_Juvenile_Clutch,
+                EncounterConstants.Dragon_Black_YoungAdult_Solitary,
+                EncounterConstants.Dragon_Black_YoungAdult_Clutch,
+                EncounterConstants.Dragon_Black_Adult_Solitary,
+                EncounterConstants.Dragon_Black_Adult_Pair,
+                EncounterConstants.Dragon_Black_Adult_Family,
+                EncounterConstants.Dragon_Black_MatureAdult_Solitary,
+                EncounterConstants.Dragon_Black_MatureAdult_Pair,
+                EncounterConstants.Dragon_Black_MatureAdult_Family,
+                EncounterConstants.Dragon_Black_Old_Solitary,
+                EncounterConstants.Dragon_Black_Old_Pair,
+                EncounterConstants.Dragon_Black_Old_Family,
+                EncounterConstants.Dragon_Black_VeryOld_Solitary,
+                EncounterConstants.Dragon_Black_VeryOld_Pair,
+                EncounterConstants.Dragon_Black_VeryOld_Family,
+                EncounterConstants.Dragon_Black_Ancient_Solitary,
+                EncounterConstants.Dragon_Black_Ancient_Pair,
+                EncounterConstants.Dragon_Black_Ancient_Family,
+                EncounterConstants.Dragon_Black_Wyrm_Solitary,
+                EncounterConstants.Dragon_Black_Wyrm_Pair,
+                EncounterConstants.Dragon_Black_Wyrm_Family,
+                EncounterConstants.Dragon_Black_GreatWyrm_Solitary,
+                EncounterConstants.Dragon_Black_GreatWyrm_Pair,
+                EncounterConstants.Dragon_Black_GreatWyrm_Family,
                 EncounterConstants.Manticore,
                 EncounterConstants.Pyrohydra,
                 EncounterConstants.Rakshasa,
@@ -1664,7 +2617,37 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
         {
             var creatures = new[]
             {
-                EncounterConstants.Dragon_Red,
+                EncounterConstants.Dragon_Red_Wyrmling_Solitary,
+                EncounterConstants.Dragon_Red_Wyrmling_Clutch,
+                EncounterConstants.Dragon_Red_VeryYoung_Solitary,
+                EncounterConstants.Dragon_Red_VeryYoung_Clutch,
+                EncounterConstants.Dragon_Red_Young_Solitary,
+                EncounterConstants.Dragon_Red_Young_Clutch,
+                EncounterConstants.Dragon_Red_Juvenile_Solitary,
+                EncounterConstants.Dragon_Red_Juvenile_Clutch,
+                EncounterConstants.Dragon_Red_YoungAdult_Solitary,
+                EncounterConstants.Dragon_Red_YoungAdult_Clutch,
+                EncounterConstants.Dragon_Red_Adult_Solitary,
+                EncounterConstants.Dragon_Red_Adult_Pair,
+                EncounterConstants.Dragon_Red_Adult_Family,
+                EncounterConstants.Dragon_Red_MatureAdult_Solitary,
+                EncounterConstants.Dragon_Red_MatureAdult_Pair,
+                EncounterConstants.Dragon_Red_MatureAdult_Family,
+                EncounterConstants.Dragon_Red_Old_Solitary,
+                EncounterConstants.Dragon_Red_Old_Pair,
+                EncounterConstants.Dragon_Red_Old_Family,
+                EncounterConstants.Dragon_Red_VeryOld_Solitary,
+                EncounterConstants.Dragon_Red_VeryOld_Pair,
+                EncounterConstants.Dragon_Red_VeryOld_Family,
+                EncounterConstants.Dragon_Red_Ancient_Solitary,
+                EncounterConstants.Dragon_Red_Ancient_Pair,
+                EncounterConstants.Dragon_Red_Ancient_Family,
+                EncounterConstants.Dragon_Red_Wyrm_Solitary,
+                EncounterConstants.Dragon_Red_Wyrm_Pair,
+                EncounterConstants.Dragon_Red_Wyrm_Family,
+                EncounterConstants.Dragon_Red_GreatWyrm_Solitary,
+                EncounterConstants.Dragon_Red_GreatWyrm_Pair,
+                EncounterConstants.Dragon_Red_GreatWyrm_Family,
                 EncounterConstants.Skeleton_Dragon_Red_YoungAdult,
                 EncounterConstants.Giant_Fire,
                 EncounterConstants.Giant_Storm,
@@ -1683,7 +2666,37 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
                 EncounterConstants.Ankheg,
                 EncounterConstants.Baboon,
                 EncounterConstants.Cheetah,
-                EncounterConstants.Dragon_Gold,
+                EncounterConstants.Dragon_Gold_Wyrmling_Solitary,
+                EncounterConstants.Dragon_Gold_Wyrmling_Clutch,
+                EncounterConstants.Dragon_Gold_VeryYoung_Solitary,
+                EncounterConstants.Dragon_Gold_VeryYoung_Clutch,
+                EncounterConstants.Dragon_Gold_Young_Solitary,
+                EncounterConstants.Dragon_Gold_Young_Clutch,
+                EncounterConstants.Dragon_Gold_Juvenile_Solitary,
+                EncounterConstants.Dragon_Gold_Juvenile_Clutch,
+                EncounterConstants.Dragon_Gold_YoungAdult_Solitary,
+                EncounterConstants.Dragon_Gold_YoungAdult_Clutch,
+                EncounterConstants.Dragon_Gold_Adult_Solitary,
+                EncounterConstants.Dragon_Gold_Adult_Pair,
+                EncounterConstants.Dragon_Gold_Adult_Family,
+                EncounterConstants.Dragon_Gold_MatureAdult_Solitary,
+                EncounterConstants.Dragon_Gold_MatureAdult_Pair,
+                EncounterConstants.Dragon_Gold_MatureAdult_Family,
+                EncounterConstants.Dragon_Gold_Old_Solitary,
+                EncounterConstants.Dragon_Gold_Old_Pair,
+                EncounterConstants.Dragon_Gold_Old_Family,
+                EncounterConstants.Dragon_Gold_VeryOld_Solitary,
+                EncounterConstants.Dragon_Gold_VeryOld_Pair,
+                EncounterConstants.Dragon_Gold_VeryOld_Family,
+                EncounterConstants.Dragon_Gold_Ancient_Solitary,
+                EncounterConstants.Dragon_Gold_Ancient_Pair,
+                EncounterConstants.Dragon_Gold_Ancient_Family,
+                EncounterConstants.Dragon_Gold_Wyrm_Solitary,
+                EncounterConstants.Dragon_Gold_Wyrm_Pair,
+                EncounterConstants.Dragon_Gold_Wyrm_Family,
+                EncounterConstants.Dragon_Gold_GreatWyrm_Solitary,
+                EncounterConstants.Dragon_Gold_GreatWyrm_Pair,
+                EncounterConstants.Dragon_Gold_GreatWyrm_Family,
                 EncounterConstants.Elephant,
                 EncounterConstants.FireBeetle_Giant,
                 EncounterConstants.Gnoll,
@@ -1809,126 +2822,316 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
         [TestCase(EncounterConstants.Wolf_Dire, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
         [TestCase(EncounterConstants.Wolverine_Dire, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Forest)]
         [TestCase(EncounterConstants.Doppelganger, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Dragon_Black_Adult, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Dragon_Black_Ancient, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Dragon_Black_GreatWyrm, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Dragon_Black_Juvenile, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Dragon_Black_MatureAdult, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Dragon_Black_Old, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Dragon_Black_VeryOld, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Dragon_Black_VeryYoung, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Dragon_Black_Wyrm, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Dragon_Black_Wyrmling, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Dragon_Black_Young, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Dragon_Black_YoungAdult, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Dragon_Blue_Adult, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Dragon_Blue_Ancient, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Dragon_Blue_GreatWyrm, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Dragon_Blue_Juvenile, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Dragon_Blue_MatureAdult, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Dragon_Blue_Old, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Dragon_Blue_VeryOld, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Dragon_Blue_VeryYoung, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Dragon_Blue_Wyrm, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Dragon_Blue_Wyrmling, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Dragon_Blue_Young, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Dragon_Blue_YoungAdult, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Dragon_Brass_Adult, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Dragon_Brass_Ancient, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Dragon_Brass_GreatWyrm, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Dragon_Brass_Juvenile, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Dragon_Brass_MatureAdult, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Dragon_Brass_Old, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Dragon_Brass_VeryOld, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Dragon_Brass_VeryYoung, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Dragon_Brass_Wyrm, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Dragon_Brass_Wyrmling, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Dragon_Brass_Young, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Dragon_Brass_YoungAdult, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Dragon_Bronze_Adult, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Dragon_Bronze_Ancient, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Dragon_Bronze_GreatWyrm, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Dragon_Bronze_Juvenile, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Dragon_Bronze_MatureAdult, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Dragon_Bronze_Old, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Dragon_Bronze_VeryOld, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Dragon_Bronze_VeryYoung, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Dragon_Bronze_Wyrm, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Dragon_Bronze_Wyrmling, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Dragon_Bronze_Young, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Dragon_Bronze_YoungAdult, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Dragon_Copper_Adult, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Dragon_Copper_Ancient, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Dragon_Copper_GreatWyrm, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Dragon_Copper_Juvenile, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Dragon_Copper_MatureAdult, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Dragon_Copper_Old, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Dragon_Copper_VeryOld, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Dragon_Copper_VeryYoung, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Dragon_Copper_Wyrm, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Dragon_Copper_Wyrmling, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Dragon_Copper_Young, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Dragon_Copper_YoungAdult, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Dragon_Gold_Adult, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Dragon_Gold_Ancient, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Dragon_Gold_GreatWyrm, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Dragon_Gold_Juvenile, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Dragon_Gold_MatureAdult, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Dragon_Gold_Old, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Dragon_Gold_VeryOld, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Dragon_Gold_VeryYoung, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Dragon_Gold_Wyrm, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Dragon_Gold_Wyrmling, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Dragon_Gold_Young, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Dragon_Gold_YoungAdult, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Dragon_Green_Adult, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Dragon_Green_Ancient, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Dragon_Green_GreatWyrm, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Dragon_Green_Juvenile, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Dragon_Green_MatureAdult, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Dragon_Green_Old, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Dragon_Green_VeryOld, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Dragon_Green_VeryYoung, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Dragon_Green_Wyrm, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Dragon_Green_Wyrmling, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Dragon_Green_Young, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Dragon_Green_YoungAdult, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Dragon_Red_Adult, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_Red_Ancient, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_Red_GreatWyrm, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_Red_Juvenile, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_Red_MatureAdult, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_Red_Old, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_Red_VeryOld, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_Red_VeryYoung, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_Red_Wyrm, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_Red_Wyrmling, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_Red_Young, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_Red_YoungAdult, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_Silver_Adult, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_Silver_Ancient, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_Silver_GreatWyrm, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_Silver_Juvenile, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_Silver_MatureAdult, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_Silver_Old, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_Silver_VeryOld, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_Silver_VeryYoung, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_Silver_Wyrm, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_Silver_Wyrmling, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_Silver_Young, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_Silver_YoungAdult, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_White_Adult, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_White_Ancient, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_White_GreatWyrm, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_White_Juvenile, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_White_MatureAdult, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_White_Old, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_White_VeryOld, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_White_VeryYoung, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_White_Wyrm, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_White_Wyrmling, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_White_Young, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_White_YoungAdult, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain)]
+        [TestCase(EncounterConstants.Dragon_Black_Adult_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh)]
+        [TestCase(EncounterConstants.Dragon_Black_Adult_Pair, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh)]
+        [TestCase(EncounterConstants.Dragon_Black_Adult_Family, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh)]
+        [TestCase(EncounterConstants.Dragon_Black_Ancient_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh)]
+        [TestCase(EncounterConstants.Dragon_Black_Ancient_Pair, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh)]
+        [TestCase(EncounterConstants.Dragon_Black_Ancient_Family, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh)]
+        [TestCase(EncounterConstants.Dragon_Black_GreatWyrm_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh)]
+        [TestCase(EncounterConstants.Dragon_Black_GreatWyrm_Pair, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh)]
+        [TestCase(EncounterConstants.Dragon_Black_GreatWyrm_Family, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh)]
+        [TestCase(EncounterConstants.Dragon_Black_Juvenile_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh)]
+        [TestCase(EncounterConstants.Dragon_Black_Juvenile_Clutch, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh)]
+        [TestCase(EncounterConstants.Dragon_Black_MatureAdult_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh)]
+        [TestCase(EncounterConstants.Dragon_Black_MatureAdult_Pair, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh)]
+        [TestCase(EncounterConstants.Dragon_Black_MatureAdult_Family, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh)]
+        [TestCase(EncounterConstants.Dragon_Black_Old_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh)]
+        [TestCase(EncounterConstants.Dragon_Black_Old_Pair, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh)]
+        [TestCase(EncounterConstants.Dragon_Black_Old_Family, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh)]
+        [TestCase(EncounterConstants.Dragon_Black_VeryOld_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh)]
+        [TestCase(EncounterConstants.Dragon_Black_VeryOld_Pair, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh)]
+        [TestCase(EncounterConstants.Dragon_Black_VeryOld_Family, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh)]
+        [TestCase(EncounterConstants.Dragon_Black_VeryYoung_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh)]
+        [TestCase(EncounterConstants.Dragon_Black_VeryYoung_Clutch, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh)]
+        [TestCase(EncounterConstants.Dragon_Black_Wyrm_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh)]
+        [TestCase(EncounterConstants.Dragon_Black_Wyrm_Pair, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh)]
+        [TestCase(EncounterConstants.Dragon_Black_Wyrm_Family, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh)]
+        [TestCase(EncounterConstants.Dragon_Black_Wyrmling_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh)]
+        [TestCase(EncounterConstants.Dragon_Black_Wyrmling_Clutch, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh)]
+        [TestCase(EncounterConstants.Dragon_Black_Young_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh)]
+        [TestCase(EncounterConstants.Dragon_Black_Young_Clutch, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh)]
+        [TestCase(EncounterConstants.Dragon_Black_YoungAdult_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh)]
+        [TestCase(EncounterConstants.Dragon_Black_YoungAdult_Clutch, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh)]
+        [TestCase(EncounterConstants.Dragon_Blue_Adult_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert)]
+        [TestCase(EncounterConstants.Dragon_Blue_Adult_Pair, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert)]
+        [TestCase(EncounterConstants.Dragon_Blue_Adult_Family, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert)]
+        [TestCase(EncounterConstants.Dragon_Blue_Ancient_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert)]
+        [TestCase(EncounterConstants.Dragon_Blue_Ancient_Pair, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert)]
+        [TestCase(EncounterConstants.Dragon_Blue_Ancient_Family, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert)]
+        [TestCase(EncounterConstants.Dragon_Blue_GreatWyrm_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert)]
+        [TestCase(EncounterConstants.Dragon_Blue_GreatWyrm_Pair, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert)]
+        [TestCase(EncounterConstants.Dragon_Blue_GreatWyrm_Family, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert)]
+        [TestCase(EncounterConstants.Dragon_Blue_Juvenile_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert)]
+        [TestCase(EncounterConstants.Dragon_Blue_Juvenile_Clutch, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert)]
+        [TestCase(EncounterConstants.Dragon_Blue_MatureAdult_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert)]
+        [TestCase(EncounterConstants.Dragon_Blue_MatureAdult_Pair, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert)]
+        [TestCase(EncounterConstants.Dragon_Blue_MatureAdult_Family, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert)]
+        [TestCase(EncounterConstants.Dragon_Blue_Old_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert)]
+        [TestCase(EncounterConstants.Dragon_Blue_Old_Pair, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert)]
+        [TestCase(EncounterConstants.Dragon_Blue_Old_Family, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert)]
+        [TestCase(EncounterConstants.Dragon_Blue_VeryOld_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert)]
+        [TestCase(EncounterConstants.Dragon_Blue_VeryOld_Pair, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert)]
+        [TestCase(EncounterConstants.Dragon_Blue_VeryOld_Family, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert)]
+        [TestCase(EncounterConstants.Dragon_Blue_VeryYoung_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert)]
+        [TestCase(EncounterConstants.Dragon_Blue_VeryYoung_Clutch, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert)]
+        [TestCase(EncounterConstants.Dragon_Blue_Wyrm_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert)]
+        [TestCase(EncounterConstants.Dragon_Blue_Wyrm_Pair, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert)]
+        [TestCase(EncounterConstants.Dragon_Blue_Wyrm_Family, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert)]
+        [TestCase(EncounterConstants.Dragon_Blue_Wyrmling_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert)]
+        [TestCase(EncounterConstants.Dragon_Blue_Wyrmling_Clutch, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert)]
+        [TestCase(EncounterConstants.Dragon_Blue_Young_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert)]
+        [TestCase(EncounterConstants.Dragon_Blue_Young_Clutch, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert)]
+        [TestCase(EncounterConstants.Dragon_Blue_YoungAdult_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert)]
+        [TestCase(EncounterConstants.Dragon_Blue_YoungAdult_Clutch, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert)]
+        [TestCase(EncounterConstants.Dragon_Brass_Adult_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
+        [TestCase(EncounterConstants.Dragon_Brass_Adult_Pair, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
+        [TestCase(EncounterConstants.Dragon_Brass_Adult_Family, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
+        [TestCase(EncounterConstants.Dragon_Brass_Ancient_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
+        [TestCase(EncounterConstants.Dragon_Brass_Ancient_Pair, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
+        [TestCase(EncounterConstants.Dragon_Brass_Ancient_Family, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
+        [TestCase(EncounterConstants.Dragon_Brass_GreatWyrm_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
+        [TestCase(EncounterConstants.Dragon_Brass_GreatWyrm_Pair, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
+        [TestCase(EncounterConstants.Dragon_Brass_GreatWyrm_Family, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
+        [TestCase(EncounterConstants.Dragon_Brass_Juvenile_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
+        [TestCase(EncounterConstants.Dragon_Brass_Juvenile_Clutch, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
+        [TestCase(EncounterConstants.Dragon_Brass_MatureAdult_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
+        [TestCase(EncounterConstants.Dragon_Brass_MatureAdult_Pair, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
+        [TestCase(EncounterConstants.Dragon_Brass_MatureAdult_Family, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
+        [TestCase(EncounterConstants.Dragon_Brass_Old_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
+        [TestCase(EncounterConstants.Dragon_Brass_Old_Pair, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
+        [TestCase(EncounterConstants.Dragon_Brass_Old_Family, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
+        [TestCase(EncounterConstants.Dragon_Brass_VeryOld_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
+        [TestCase(EncounterConstants.Dragon_Brass_VeryOld_Pair, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
+        [TestCase(EncounterConstants.Dragon_Brass_VeryOld_Family, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
+        [TestCase(EncounterConstants.Dragon_Brass_VeryYoung_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
+        [TestCase(EncounterConstants.Dragon_Brass_VeryYoung_Clutch, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
+        [TestCase(EncounterConstants.Dragon_Brass_Wyrm_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
+        [TestCase(EncounterConstants.Dragon_Brass_Wyrm_Pair, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
+        [TestCase(EncounterConstants.Dragon_Brass_Wyrm_Family, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
+        [TestCase(EncounterConstants.Dragon_Brass_Wyrmling_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
+        [TestCase(EncounterConstants.Dragon_Brass_Wyrmling_Clutch, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
+        [TestCase(EncounterConstants.Dragon_Brass_Young_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
+        [TestCase(EncounterConstants.Dragon_Brass_Young_Clutch, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
+        [TestCase(EncounterConstants.Dragon_Brass_YoungAdult_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
+        [TestCase(EncounterConstants.Dragon_Brass_YoungAdult_Clutch, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
+        [TestCase(EncounterConstants.Dragon_Bronze_Adult_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
+        [TestCase(EncounterConstants.Dragon_Bronze_Adult_Pair, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
+        [TestCase(EncounterConstants.Dragon_Bronze_Adult_Family, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
+        [TestCase(EncounterConstants.Dragon_Bronze_Ancient_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
+        [TestCase(EncounterConstants.Dragon_Bronze_Ancient_Pair, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
+        [TestCase(EncounterConstants.Dragon_Bronze_Ancient_Family, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
+        [TestCase(EncounterConstants.Dragon_Bronze_GreatWyrm_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
+        [TestCase(EncounterConstants.Dragon_Bronze_GreatWyrm_Pair, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
+        [TestCase(EncounterConstants.Dragon_Bronze_GreatWyrm_Family, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
+        [TestCase(EncounterConstants.Dragon_Bronze_Juvenile_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
+        [TestCase(EncounterConstants.Dragon_Bronze_Juvenile_Clutch, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
+        [TestCase(EncounterConstants.Dragon_Bronze_MatureAdult_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
+        [TestCase(EncounterConstants.Dragon_Bronze_MatureAdult_Pair, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
+        [TestCase(EncounterConstants.Dragon_Bronze_MatureAdult_Family, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
+        [TestCase(EncounterConstants.Dragon_Bronze_Old_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
+        [TestCase(EncounterConstants.Dragon_Bronze_Old_Pair, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
+        [TestCase(EncounterConstants.Dragon_Bronze_Old_Family, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
+        [TestCase(EncounterConstants.Dragon_Bronze_VeryOld_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
+        [TestCase(EncounterConstants.Dragon_Bronze_VeryOld_Pair, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
+        [TestCase(EncounterConstants.Dragon_Bronze_VeryOld_Family, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
+        [TestCase(EncounterConstants.Dragon_Bronze_VeryYoung_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
+        [TestCase(EncounterConstants.Dragon_Bronze_VeryYoung_Clutch, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
+        [TestCase(EncounterConstants.Dragon_Bronze_Wyrm_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
+        [TestCase(EncounterConstants.Dragon_Bronze_Wyrm_Pair, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
+        [TestCase(EncounterConstants.Dragon_Bronze_Wyrm_Family, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
+        [TestCase(EncounterConstants.Dragon_Bronze_Wyrmling_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
+        [TestCase(EncounterConstants.Dragon_Bronze_Wyrmling_Clutch, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
+        [TestCase(EncounterConstants.Dragon_Bronze_Young_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
+        [TestCase(EncounterConstants.Dragon_Bronze_Young_Clutch, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
+        [TestCase(EncounterConstants.Dragon_Bronze_YoungAdult_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
+        [TestCase(EncounterConstants.Dragon_Bronze_YoungAdult_Clutch, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
+        [TestCase(EncounterConstants.Dragon_Copper_Adult_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
+        [TestCase(EncounterConstants.Dragon_Copper_Adult_Pair, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
+        [TestCase(EncounterConstants.Dragon_Copper_Adult_Family, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
+        [TestCase(EncounterConstants.Dragon_Copper_Ancient_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
+        [TestCase(EncounterConstants.Dragon_Copper_Ancient_Pair, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
+        [TestCase(EncounterConstants.Dragon_Copper_Ancient_Family, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
+        [TestCase(EncounterConstants.Dragon_Copper_GreatWyrm_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
+        [TestCase(EncounterConstants.Dragon_Copper_GreatWyrm_Pair, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
+        [TestCase(EncounterConstants.Dragon_Copper_GreatWyrm_Family, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
+        [TestCase(EncounterConstants.Dragon_Copper_Juvenile_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
+        [TestCase(EncounterConstants.Dragon_Copper_Juvenile_Clutch, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
+        [TestCase(EncounterConstants.Dragon_Copper_MatureAdult_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
+        [TestCase(EncounterConstants.Dragon_Copper_MatureAdult_Pair, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
+        [TestCase(EncounterConstants.Dragon_Copper_MatureAdult_Family, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
+        [TestCase(EncounterConstants.Dragon_Copper_Old_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
+        [TestCase(EncounterConstants.Dragon_Copper_Old_Pair, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
+        [TestCase(EncounterConstants.Dragon_Copper_Old_Family, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
+        [TestCase(EncounterConstants.Dragon_Copper_VeryOld_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
+        [TestCase(EncounterConstants.Dragon_Copper_VeryOld_Pair, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
+        [TestCase(EncounterConstants.Dragon_Copper_VeryOld_Family, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
+        [TestCase(EncounterConstants.Dragon_Copper_VeryYoung_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
+        [TestCase(EncounterConstants.Dragon_Copper_VeryYoung_Clutch, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
+        [TestCase(EncounterConstants.Dragon_Copper_Wyrm_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
+        [TestCase(EncounterConstants.Dragon_Copper_Wyrm_Pair, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
+        [TestCase(EncounterConstants.Dragon_Copper_Wyrm_Family, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
+        [TestCase(EncounterConstants.Dragon_Copper_Wyrmling_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
+        [TestCase(EncounterConstants.Dragon_Copper_Wyrmling_Clutch, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
+        [TestCase(EncounterConstants.Dragon_Copper_Young_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
+        [TestCase(EncounterConstants.Dragon_Copper_Young_Clutch, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
+        [TestCase(EncounterConstants.Dragon_Copper_YoungAdult_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
+        [TestCase(EncounterConstants.Dragon_Copper_YoungAdult_Clutch, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
+        [TestCase(EncounterConstants.Dragon_Gold_Adult_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
+        [TestCase(EncounterConstants.Dragon_Gold_Adult_Pair, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
+        [TestCase(EncounterConstants.Dragon_Gold_Adult_Family, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
+        [TestCase(EncounterConstants.Dragon_Gold_Ancient_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
+        [TestCase(EncounterConstants.Dragon_Gold_Ancient_Pair, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
+        [TestCase(EncounterConstants.Dragon_Gold_Ancient_Family, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
+        [TestCase(EncounterConstants.Dragon_Gold_GreatWyrm_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
+        [TestCase(EncounterConstants.Dragon_Gold_GreatWyrm_Pair, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
+        [TestCase(EncounterConstants.Dragon_Gold_GreatWyrm_Family, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
+        [TestCase(EncounterConstants.Dragon_Gold_Juvenile_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
+        [TestCase(EncounterConstants.Dragon_Gold_Juvenile_Clutch, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
+        [TestCase(EncounterConstants.Dragon_Gold_MatureAdult_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
+        [TestCase(EncounterConstants.Dragon_Gold_MatureAdult_Pair, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
+        [TestCase(EncounterConstants.Dragon_Gold_MatureAdult_Family, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
+        [TestCase(EncounterConstants.Dragon_Gold_Old_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
+        [TestCase(EncounterConstants.Dragon_Gold_Old_Pair, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
+        [TestCase(EncounterConstants.Dragon_Gold_Old_Family, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
+        [TestCase(EncounterConstants.Dragon_Gold_VeryOld_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
+        [TestCase(EncounterConstants.Dragon_Gold_VeryOld_Pair, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
+        [TestCase(EncounterConstants.Dragon_Gold_VeryOld_Family, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
+        [TestCase(EncounterConstants.Dragon_Gold_VeryYoung_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
+        [TestCase(EncounterConstants.Dragon_Gold_VeryYoung_Clutch, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
+        [TestCase(EncounterConstants.Dragon_Gold_Wyrm_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
+        [TestCase(EncounterConstants.Dragon_Gold_Wyrm_Pair, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
+        [TestCase(EncounterConstants.Dragon_Gold_Wyrm_Family, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
+        [TestCase(EncounterConstants.Dragon_Gold_Wyrmling_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
+        [TestCase(EncounterConstants.Dragon_Gold_Wyrmling_Clutch, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
+        [TestCase(EncounterConstants.Dragon_Gold_Young_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
+        [TestCase(EncounterConstants.Dragon_Gold_Young_Clutch, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
+        [TestCase(EncounterConstants.Dragon_Gold_YoungAdult_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
+        [TestCase(EncounterConstants.Dragon_Gold_YoungAdult_Clutch, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
+        [TestCase(EncounterConstants.Dragon_Green_Adult_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
+        [TestCase(EncounterConstants.Dragon_Green_Adult_Pair, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
+        [TestCase(EncounterConstants.Dragon_Green_Adult_Family, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
+        [TestCase(EncounterConstants.Dragon_Green_Ancient_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
+        [TestCase(EncounterConstants.Dragon_Green_Ancient_Pair, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
+        [TestCase(EncounterConstants.Dragon_Green_Ancient_Family, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
+        [TestCase(EncounterConstants.Dragon_Green_GreatWyrm_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
+        [TestCase(EncounterConstants.Dragon_Green_GreatWyrm_Pair, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
+        [TestCase(EncounterConstants.Dragon_Green_GreatWyrm_Family, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
+        [TestCase(EncounterConstants.Dragon_Green_Juvenile_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
+        [TestCase(EncounterConstants.Dragon_Green_Juvenile_Clutch, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
+        [TestCase(EncounterConstants.Dragon_Green_MatureAdult_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
+        [TestCase(EncounterConstants.Dragon_Green_MatureAdult_Pair, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
+        [TestCase(EncounterConstants.Dragon_Green_MatureAdult_Family, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
+        [TestCase(EncounterConstants.Dragon_Green_Old_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
+        [TestCase(EncounterConstants.Dragon_Green_Old_Pair, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
+        [TestCase(EncounterConstants.Dragon_Green_Old_Family, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
+        [TestCase(EncounterConstants.Dragon_Green_VeryOld_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
+        [TestCase(EncounterConstants.Dragon_Green_VeryOld_Pair, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
+        [TestCase(EncounterConstants.Dragon_Green_VeryOld_Family, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
+        [TestCase(EncounterConstants.Dragon_Green_VeryYoung_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
+        [TestCase(EncounterConstants.Dragon_Green_VeryYoung_Clutch, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
+        [TestCase(EncounterConstants.Dragon_Green_Wyrm_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
+        [TestCase(EncounterConstants.Dragon_Green_Wyrm_Pair, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
+        [TestCase(EncounterConstants.Dragon_Green_Wyrm_Family, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
+        [TestCase(EncounterConstants.Dragon_Green_Wyrmling_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
+        [TestCase(EncounterConstants.Dragon_Green_Wyrmling_Clutch, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
+        [TestCase(EncounterConstants.Dragon_Green_Young_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
+        [TestCase(EncounterConstants.Dragon_Green_Young_Clutch, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
+        [TestCase(EncounterConstants.Dragon_Green_YoungAdult_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
+        [TestCase(EncounterConstants.Dragon_Green_YoungAdult_Clutch, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
+        [TestCase(EncounterConstants.Dragon_Red_Adult_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain)]
+        [TestCase(EncounterConstants.Dragon_Red_Adult_Pair, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain)]
+        [TestCase(EncounterConstants.Dragon_Red_Adult_Family, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain)]
+        [TestCase(EncounterConstants.Dragon_Red_Ancient_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain)]
+        [TestCase(EncounterConstants.Dragon_Red_Ancient_Pair, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain)]
+        [TestCase(EncounterConstants.Dragon_Red_Ancient_Family, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain)]
+        [TestCase(EncounterConstants.Dragon_Red_GreatWyrm_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain)]
+        [TestCase(EncounterConstants.Dragon_Red_GreatWyrm_Pair, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain)]
+        [TestCase(EncounterConstants.Dragon_Red_GreatWyrm_Family, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain)]
+        [TestCase(EncounterConstants.Dragon_Red_Juvenile_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain)]
+        [TestCase(EncounterConstants.Dragon_Red_Juvenile_Clutch, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain)]
+        [TestCase(EncounterConstants.Dragon_Red_MatureAdult_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain)]
+        [TestCase(EncounterConstants.Dragon_Red_MatureAdult_Pair, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain)]
+        [TestCase(EncounterConstants.Dragon_Red_MatureAdult_Family, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain)]
+        [TestCase(EncounterConstants.Dragon_Red_Old_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain)]
+        [TestCase(EncounterConstants.Dragon_Red_Old_Pair, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain)]
+        [TestCase(EncounterConstants.Dragon_Red_Old_Family, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain)]
+        [TestCase(EncounterConstants.Dragon_Red_VeryOld_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain)]
+        [TestCase(EncounterConstants.Dragon_Red_VeryOld_Pair, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain)]
+        [TestCase(EncounterConstants.Dragon_Red_VeryOld_Family, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain)]
+        [TestCase(EncounterConstants.Dragon_Red_VeryYoung_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain)]
+        [TestCase(EncounterConstants.Dragon_Red_VeryYoung_Clutch, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain)]
+        [TestCase(EncounterConstants.Dragon_Red_Wyrm_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain)]
+        [TestCase(EncounterConstants.Dragon_Red_Wyrm_Pair, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain)]
+        [TestCase(EncounterConstants.Dragon_Red_Wyrm_Family, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain)]
+        [TestCase(EncounterConstants.Dragon_Red_Wyrmling_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain)]
+        [TestCase(EncounterConstants.Dragon_Red_Wyrmling_Clutch, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain)]
+        [TestCase(EncounterConstants.Dragon_Red_Young_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain)]
+        [TestCase(EncounterConstants.Dragon_Red_Young_Clutch, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain)]
+        [TestCase(EncounterConstants.Dragon_Red_YoungAdult_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain)]
+        [TestCase(EncounterConstants.Dragon_Red_YoungAdult_Clutch, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain)]
+        [TestCase(EncounterConstants.Dragon_Silver_Adult_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
+        [TestCase(EncounterConstants.Dragon_Silver_Adult_Pair, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
+        [TestCase(EncounterConstants.Dragon_Silver_Adult_Family, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
+        [TestCase(EncounterConstants.Dragon_Silver_Ancient_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
+        [TestCase(EncounterConstants.Dragon_Silver_Ancient_Pair, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
+        [TestCase(EncounterConstants.Dragon_Silver_Ancient_Family, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
+        [TestCase(EncounterConstants.Dragon_Silver_GreatWyrm_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
+        [TestCase(EncounterConstants.Dragon_Silver_GreatWyrm_Pair, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
+        [TestCase(EncounterConstants.Dragon_Silver_GreatWyrm_Family, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
+        [TestCase(EncounterConstants.Dragon_Silver_Juvenile_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
+        [TestCase(EncounterConstants.Dragon_Silver_Juvenile_Clutch, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
+        [TestCase(EncounterConstants.Dragon_Silver_MatureAdult_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
+        [TestCase(EncounterConstants.Dragon_Silver_MatureAdult_Pair, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
+        [TestCase(EncounterConstants.Dragon_Silver_MatureAdult_Family, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
+        [TestCase(EncounterConstants.Dragon_Silver_Old_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
+        [TestCase(EncounterConstants.Dragon_Silver_Old_Pair, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
+        [TestCase(EncounterConstants.Dragon_Silver_Old_Family, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
+        [TestCase(EncounterConstants.Dragon_Silver_VeryOld_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
+        [TestCase(EncounterConstants.Dragon_Silver_VeryOld_Pair, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
+        [TestCase(EncounterConstants.Dragon_Silver_VeryOld_Family, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
+        [TestCase(EncounterConstants.Dragon_Silver_VeryYoung_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
+        [TestCase(EncounterConstants.Dragon_Silver_VeryYoung_Clutch, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
+        [TestCase(EncounterConstants.Dragon_Silver_Wyrm_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
+        [TestCase(EncounterConstants.Dragon_Silver_Wyrm_Pair, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
+        [TestCase(EncounterConstants.Dragon_Silver_Wyrm_Family, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
+        [TestCase(EncounterConstants.Dragon_Silver_Wyrmling_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
+        [TestCase(EncounterConstants.Dragon_Silver_Wyrmling_Clutch, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
+        [TestCase(EncounterConstants.Dragon_Silver_Young_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
+        [TestCase(EncounterConstants.Dragon_Silver_Young_Clutch, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
+        [TestCase(EncounterConstants.Dragon_Silver_YoungAdult_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
+        [TestCase(EncounterConstants.Dragon_Silver_YoungAdult_Clutch, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
+        [TestCase(EncounterConstants.Dragon_White_Adult_Solitary, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain)]
+        [TestCase(EncounterConstants.Dragon_White_Adult_Pair, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain)]
+        [TestCase(EncounterConstants.Dragon_White_Adult_Family, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain)]
+        [TestCase(EncounterConstants.Dragon_White_Ancient_Solitary, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain)]
+        [TestCase(EncounterConstants.Dragon_White_Ancient_Pair, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain)]
+        [TestCase(EncounterConstants.Dragon_White_Ancient_Family, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain)]
+        [TestCase(EncounterConstants.Dragon_White_GreatWyrm_Solitary, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain)]
+        [TestCase(EncounterConstants.Dragon_White_GreatWyrm_Pair, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain)]
+        [TestCase(EncounterConstants.Dragon_White_GreatWyrm_Family, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain)]
+        [TestCase(EncounterConstants.Dragon_White_Juvenile_Solitary, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain)]
+        [TestCase(EncounterConstants.Dragon_White_Juvenile_Clutch, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain)]
+        [TestCase(EncounterConstants.Dragon_White_MatureAdult_Solitary, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain)]
+        [TestCase(EncounterConstants.Dragon_White_MatureAdult_Pair, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain)]
+        [TestCase(EncounterConstants.Dragon_White_MatureAdult_Family, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain)]
+        [TestCase(EncounterConstants.Dragon_White_Old_Solitary, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain)]
+        [TestCase(EncounterConstants.Dragon_White_Old_Pair, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain)]
+        [TestCase(EncounterConstants.Dragon_White_Old_Family, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain)]
+        [TestCase(EncounterConstants.Dragon_White_VeryOld_Solitary, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain)]
+        [TestCase(EncounterConstants.Dragon_White_VeryOld_Pair, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain)]
+        [TestCase(EncounterConstants.Dragon_White_VeryOld_Family, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain)]
+        [TestCase(EncounterConstants.Dragon_White_VeryYoung_Solitary, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain)]
+        [TestCase(EncounterConstants.Dragon_White_VeryYoung_Clutch, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain)]
+        [TestCase(EncounterConstants.Dragon_White_Wyrm_Solitary, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain)]
+        [TestCase(EncounterConstants.Dragon_White_Wyrm_Pair, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain)]
+        [TestCase(EncounterConstants.Dragon_White_Wyrm_Family, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain)]
+        [TestCase(EncounterConstants.Dragon_White_Wyrmling_Solitary, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain)]
+        [TestCase(EncounterConstants.Dragon_White_Wyrmling_Clutch, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain)]
+        [TestCase(EncounterConstants.Dragon_White_Young_Solitary, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain)]
+        [TestCase(EncounterConstants.Dragon_White_Young_Clutch, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain)]
+        [TestCase(EncounterConstants.Dragon_White_YoungAdult_Solitary, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain)]
+        [TestCase(EncounterConstants.Dragon_White_YoungAdult_Clutch, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain)]
         [TestCase(EncounterConstants.DragonTurtle, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic)]
         [TestCase(EncounterConstants.Dragonne, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert)]
         [TestCase(EncounterConstants.Drider, EnvironmentConstants.Underground)]
@@ -3656,9 +4859,18 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
                 extraplanarEncounters.AddRange(table[plane]);
             }
 
-            DistinctCollection(GroupConstants.Extraplanar, extraplanarEncounters.ToArray());
+            //INFO: Since mephit encounters are mixed types, they don't appear in a single plane environment
+            extraplanarEncounters.Add(EncounterConstants.Mephit_Solitary);
+            extraplanarEncounters.Add(EncounterConstants.Mephit_Gang);
+            extraplanarEncounters.Add(EncounterConstants.Mephit_Mob);
+
+            DistinctCollection(GroupConstants.Extraplanar, extraplanarEncounters.Distinct().ToArray());
         }
 
-        //TODO: Wilderness
+        [Test]
+        public void WildernessEncounterGroup()
+        {
+            Assert.Fail("not yet written");
+        }
     }
 }
