@@ -1282,6 +1282,14 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
             var items = new[]
             {
                 CreatureDataConstants.Character_AnimalTrainer_Level1,
+                CreatureDataConstants.Character_AnimalTrainer_Level2,
+                CreatureDataConstants.Character_AnimalTrainer_Level3,
+                CreatureDataConstants.Character_AnimalTrainer_Level4,
+                CreatureDataConstants.Character_AnimalTrainer_Level5,
+                CreatureDataConstants.Character_AnimalTrainer_Level6,
+                CreatureDataConstants.Character_AnimalTrainer_Level7,
+                CreatureDataConstants.Character_AnimalTrainer_Level8,
+                CreatureDataConstants.Character_AnimalTrainer_Level9,
                 CreatureDataConstants.Character_AnimalTrainer_Level10,
                 CreatureDataConstants.Character_AnimalTrainer_Level11,
                 CreatureDataConstants.Character_AnimalTrainer_Level12,
@@ -1292,15 +1300,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
                 CreatureDataConstants.Character_AnimalTrainer_Level17,
                 CreatureDataConstants.Character_AnimalTrainer_Level18,
                 CreatureDataConstants.Character_AnimalTrainer_Level19,
-                CreatureDataConstants.Character_AnimalTrainer_Level2,
                 CreatureDataConstants.Character_AnimalTrainer_Level20,
-                CreatureDataConstants.Character_AnimalTrainer_Level3,
-                CreatureDataConstants.Character_AnimalTrainer_Level4,
-                CreatureDataConstants.Character_AnimalTrainer_Level5,
-                CreatureDataConstants.Character_AnimalTrainer_Level6,
-                CreatureDataConstants.Character_AnimalTrainer_Level7,
-                CreatureDataConstants.Character_AnimalTrainer_Level8,
-                CreatureDataConstants.Character_AnimalTrainer_Level9
             };
 
             base.DistinctCollection(CreatureDataConstants.Character_AnimalTrainer, items);

@@ -3418,27 +3418,27 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures
             CreatureDataConstants.Warrior_Leader_Level18To19, AmountConstants.Range1)]
         [TestCase(EncounterConstants.Warrior_Bandit_Level18To19_Gang, CreatureDataConstants.Warrior_Bandit_Level18To19, AmountConstants.Range5To14,
             CreatureDataConstants.Warrior_Leader_Level20, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.Warrior_Bandit_Level1_Gang_WithFighter, CreatureDataConstants.Warrior_Bandit_Level1, AmountConstants.Range5To14,
+        [TestCase(EncounterConstants.Warrior_Bandit_Level1_GangWithFighter, CreatureDataConstants.Warrior_Bandit_Level1, AmountConstants.Range5To14,
             CreatureDataConstants.Fighter_Leader_Level1, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.Warrior_Bandit_Level2To3_Gang_WithFighter, CreatureDataConstants.Warrior_Bandit_Level2To3, AmountConstants.Range5To14,
+        [TestCase(EncounterConstants.Warrior_Bandit_Level2To3_GangWithFighter, CreatureDataConstants.Warrior_Bandit_Level2To3, AmountConstants.Range5To14,
             CreatureDataConstants.Fighter_Leader_Level2, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.Warrior_Bandit_Level4To5_Gang_WithFighter, CreatureDataConstants.Warrior_Bandit_Level4To5, AmountConstants.Range5To14,
+        [TestCase(EncounterConstants.Warrior_Bandit_Level4To5_GangWithFighter, CreatureDataConstants.Warrior_Bandit_Level4To5, AmountConstants.Range5To14,
             CreatureDataConstants.Fighter_Leader_Level3, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.Warrior_Bandit_Level6To7_Gang_WithFighter, CreatureDataConstants.Warrior_Bandit_Level6To7, AmountConstants.Range5To14,
+        [TestCase(EncounterConstants.Warrior_Bandit_Level6To7_GangWithFighter, CreatureDataConstants.Warrior_Bandit_Level6To7, AmountConstants.Range5To14,
             CreatureDataConstants.Fighter_Leader_Level4, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.Warrior_Bandit_Level8To9_Gang_WithFighter, CreatureDataConstants.Warrior_Bandit_Level8To9, AmountConstants.Range5To14,
+        [TestCase(EncounterConstants.Warrior_Bandit_Level8To9_GangWithFighter, CreatureDataConstants.Warrior_Bandit_Level8To9, AmountConstants.Range5To14,
             CreatureDataConstants.Fighter_Leader_Level5, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.Warrior_Bandit_Level10To11_Gang_WithFighter, CreatureDataConstants.Warrior_Bandit_Level10To11, AmountConstants.Range5To14,
+        [TestCase(EncounterConstants.Warrior_Bandit_Level10To11_GangWithFighter, CreatureDataConstants.Warrior_Bandit_Level10To11, AmountConstants.Range5To14,
             CreatureDataConstants.Fighter_Leader_Level6, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.Warrior_Bandit_Level12To13_Gang_WithFighter, CreatureDataConstants.Warrior_Bandit_Level12To13, AmountConstants.Range5To14,
+        [TestCase(EncounterConstants.Warrior_Bandit_Level12To13_GangWithFighter, CreatureDataConstants.Warrior_Bandit_Level12To13, AmountConstants.Range5To14,
             CreatureDataConstants.Fighter_Leader_Level7, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.Warrior_Bandit_Level14To15_Gang_WithFighter, CreatureDataConstants.Warrior_Bandit_Level14To15, AmountConstants.Range5To14,
+        [TestCase(EncounterConstants.Warrior_Bandit_Level14To15_GangWithFighter, CreatureDataConstants.Warrior_Bandit_Level14To15, AmountConstants.Range5To14,
             CreatureDataConstants.Fighter_Leader_Level8, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.Warrior_Bandit_Level16To17_Gang_WithFighter, CreatureDataConstants.Warrior_Bandit_Level16To17, AmountConstants.Range5To14,
+        [TestCase(EncounterConstants.Warrior_Bandit_Level16To17_GangWithFighter, CreatureDataConstants.Warrior_Bandit_Level16To17, AmountConstants.Range5To14,
             CreatureDataConstants.Fighter_Leader_Level9, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.Warrior_Bandit_Level18To19_Gang_WithFighter, CreatureDataConstants.Warrior_Bandit_Level18To19, AmountConstants.Range5To14,
+        [TestCase(EncounterConstants.Warrior_Bandit_Level18To19_GangWithFighter, CreatureDataConstants.Warrior_Bandit_Level18To19, AmountConstants.Range5To14,
             CreatureDataConstants.Fighter_Leader_Level10, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.Warrior_Bandit_Level20_Gang_WithFighter, CreatureDataConstants.Warrior_Bandit_Level20, AmountConstants.Range5To14,
+        [TestCase(EncounterConstants.Warrior_Bandit_Level20_GangWithFighter, CreatureDataConstants.Warrior_Bandit_Level20, AmountConstants.Range5To14,
             CreatureDataConstants.Fighter_Leader_Level11, AmountConstants.Range1)]
         [TestCase(EncounterConstants.Warrior_Guard_Level1_Patrol, CreatureDataConstants.Warrior_Guard_Level1, AmountConstants.Range3To9,
             CreatureDataConstants.Warrior_Captain_Level2To3, AmountConstants.Range1)]
@@ -3460,27 +3460,27 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures
             CreatureDataConstants.Warrior_Captain_Level18To19, AmountConstants.Range1)]
         [TestCase(EncounterConstants.Warrior_Guard_Level18To19_Patrol, CreatureDataConstants.Warrior_Guard_Level18To19, AmountConstants.Range3To9,
             CreatureDataConstants.Warrior_Captain_Level20, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.Warrior_Guard_Level1_Patrol_WithFighter, CreatureDataConstants.Warrior_Guard_Level1, AmountConstants.Range3To9,
+        [TestCase(EncounterConstants.Warrior_Guard_Level1_PatrolWithFighter, CreatureDataConstants.Warrior_Guard_Level1, AmountConstants.Range3To9,
             CreatureDataConstants.Fighter_Captain_Level1, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.Warrior_Guard_Level2To3_Patrol_WithFighter, CreatureDataConstants.Warrior_Guard_Level2To3, AmountConstants.Range3To9,
+        [TestCase(EncounterConstants.Warrior_Guard_Level2To3_PatrolWithFighter, CreatureDataConstants.Warrior_Guard_Level2To3, AmountConstants.Range3To9,
             CreatureDataConstants.Fighter_Captain_Level2, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.Warrior_Guard_Level4To5_Patrol_WithFighter, CreatureDataConstants.Warrior_Guard_Level4To5, AmountConstants.Range3To9,
+        [TestCase(EncounterConstants.Warrior_Guard_Level4To5_PatrolWithFighter, CreatureDataConstants.Warrior_Guard_Level4To5, AmountConstants.Range3To9,
             CreatureDataConstants.Fighter_Captain_Level3, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.Warrior_Guard_Level6To7_Patrol_WithFighter, CreatureDataConstants.Warrior_Guard_Level6To7, AmountConstants.Range3To9,
+        [TestCase(EncounterConstants.Warrior_Guard_Level6To7_PatrolWithFighter, CreatureDataConstants.Warrior_Guard_Level6To7, AmountConstants.Range3To9,
             CreatureDataConstants.Fighter_Captain_Level4, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.Warrior_Guard_Level8To9_Patrol_WithFighter, CreatureDataConstants.Warrior_Guard_Level8To9, AmountConstants.Range3To9,
+        [TestCase(EncounterConstants.Warrior_Guard_Level8To9_PatrolWithFighter, CreatureDataConstants.Warrior_Guard_Level8To9, AmountConstants.Range3To9,
             CreatureDataConstants.Fighter_Captain_Level5, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.Warrior_Guard_Level10To11_Patrol_WithFighter, CreatureDataConstants.Warrior_Guard_Level10To11, AmountConstants.Range3To9,
+        [TestCase(EncounterConstants.Warrior_Guard_Level10To11_PatrolWithFighter, CreatureDataConstants.Warrior_Guard_Level10To11, AmountConstants.Range3To9,
             CreatureDataConstants.Fighter_Captain_Level6, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.Warrior_Guard_Level12To13_Patrol_WithFighter, CreatureDataConstants.Warrior_Guard_Level12To13, AmountConstants.Range3To9,
+        [TestCase(EncounterConstants.Warrior_Guard_Level12To13_PatrolWithFighter, CreatureDataConstants.Warrior_Guard_Level12To13, AmountConstants.Range3To9,
             CreatureDataConstants.Fighter_Captain_Level7, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.Warrior_Guard_Level14To15_Patrol_WithFighter, CreatureDataConstants.Warrior_Guard_Level14To15, AmountConstants.Range3To9,
+        [TestCase(EncounterConstants.Warrior_Guard_Level14To15_PatrolWithFighter, CreatureDataConstants.Warrior_Guard_Level14To15, AmountConstants.Range3To9,
             CreatureDataConstants.Fighter_Captain_Level8, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.Warrior_Guard_Level16To17_Patrol_WithFighter, CreatureDataConstants.Warrior_Guard_Level16To17, AmountConstants.Range3To9,
+        [TestCase(EncounterConstants.Warrior_Guard_Level16To17_PatrolWithFighter, CreatureDataConstants.Warrior_Guard_Level16To17, AmountConstants.Range3To9,
             CreatureDataConstants.Fighter_Captain_Level9, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.Warrior_Guard_Level18To19_Patrol_WithFighter, CreatureDataConstants.Warrior_Guard_Level18To19, AmountConstants.Range3To9,
+        [TestCase(EncounterConstants.Warrior_Guard_Level18To19_PatrolWithFighter, CreatureDataConstants.Warrior_Guard_Level18To19, AmountConstants.Range3To9,
             CreatureDataConstants.Fighter_Captain_Level10, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.Warrior_Guard_Level20_Patrol_WithFighter, CreatureDataConstants.Warrior_Guard_Level20, AmountConstants.Range3To9,
+        [TestCase(EncounterConstants.Warrior_Guard_Level20_PatrolWithFighter, CreatureDataConstants.Warrior_Guard_Level20, AmountConstants.Range3To9,
             CreatureDataConstants.Fighter_Captain_Level11, AmountConstants.Range1)]
         [TestCase(EncounterConstants.Wasp_Giant_Solitary, CreatureDataConstants.Wasp_Giant, AmountConstants.Range1)]
         [TestCase(EncounterConstants.Wasp_Giant_Swarm, CreatureDataConstants.Wasp_Giant, AmountConstants.Range2To5)]
