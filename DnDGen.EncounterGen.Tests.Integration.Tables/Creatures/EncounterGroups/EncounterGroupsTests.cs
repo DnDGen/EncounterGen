@@ -2995,7 +2995,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
         {
             var creatures = new[]
             {
-                EncounterConstants.Aranea,
+                EncounterConstants.Aranea_Colony,
                 EncounterConstants.AssassinVine,
                 EncounterConstants.Badger,
                 EncounterConstants.Bear_Black,
