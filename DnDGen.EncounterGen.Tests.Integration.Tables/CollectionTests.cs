@@ -32,9 +32,9 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables
 
         protected void AssertEntriesAreComplete(IEnumerable<string> entries)
         {
-            AssertNoDuplicates(entries);
-            AssertNoDuplicates(table.Keys);
-            AssertWholeCollection(entries, table.Keys);
+            Assert.That(entries, Is.Unique);
+            Assert.That(table.Keys, Is.Unique);
+            AssertCollection(entries, table.Keys);
         }
 
         protected IEnumerable<string> GetEntries()
@@ -98,9 +98,14 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables
             return allCreatures;
         }
 
-        protected void AssertWholeCollection(IEnumerable<string> expected, IEnumerable<string> actual)
+        protected void AssertCollection(IEnumerable<string> expected, IEnumerable<string> actual)
         {
             Assert.That(actual, Is.EquivalentTo(expected));
+        }
+
+        protected void AssertOrderedCollection(IEnumerable<string> expected, IEnumerable<string> actual)
+        {
+            Assert.That(actual, Is.EqualTo(expected));
         }
 
         protected void AssertContainedCollection(IEnumerable<string> contained, IEnumerable<string> container)
@@ -108,31 +113,29 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables
             Assert.That(contained, Is.SubsetOf(container));
         }
 
-        public virtual void Collection(string entry, params string[] items)
+        public virtual void AssertDistinctCollection(IEnumerable<string> expected, IEnumerable<string> actual)
         {
-            Assert.That(table.Keys, Contains.Item(entry));
-            AssertWholeCollection(items, table[entry]);
+            Assert.That(expected, Is.Unique, "Expected");
+            Assert.That(actual, Is.Unique, "Actual");
+            AssertCollection(expected, actual);
         }
 
-        public virtual void DistinctCollection(string entry, params string[] items)
+        public virtual void AssertCollection(string entry, params string[] items)
         {
-            AssertNoDuplicates(items);
-            Assert.That(table.Keys, Contains.Item(entry));
-            AssertNoDuplicates(table[entry]);
-
-            AssertWholeCollection(items, table[entry]);
+            Assert.That(table, Contains.Key(entry));
+            AssertCollection(items, table[entry]);
         }
 
-        private void AssertNoDuplicates(IEnumerable<string> collection)
+        public virtual void AssertDistinctCollection(string entry, params string[] items)
         {
-            var duplicates = collection.Where(i => collection.Count(ii => ii == i) > 1).Distinct();
-            Assert.That(collection, Is.Unique, $"Duplicates: {string.Join(", ", duplicates)}");
+            Assert.That(table, Contains.Key(entry));
+            AssertDistinctCollection(items, table[entry]);
         }
 
-        public virtual void OrderedCollection(string entry, params string[] items)
+        public virtual void AssertOrderedCollection(string entry, params string[] items)
         {
-            Collection(entry, items);
-            Assert.That(table[entry], Is.EqualTo(items));
+            Assert.That(table, Contains.Key(entry));
+            AssertOrderedCollection(items, table[entry]);
         }
     }
 }

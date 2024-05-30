@@ -229,7 +229,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
             var notSensitiveToSunlight = allCreatures.Except(explodedSensitiveToSunlight);
             var dayCreatures = ExplodeCollection(EnvironmentConstants.TimesOfDay.Day);
 
-            AssertWholeCollection(notSensitiveToSunlight, dayCreatures);
+            AssertCollection(notSensitiveToSunlight, dayCreatures);
         }
 
         [Test]

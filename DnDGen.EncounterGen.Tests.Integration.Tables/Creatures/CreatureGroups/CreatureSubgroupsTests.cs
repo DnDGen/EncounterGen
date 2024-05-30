@@ -1059,7 +1059,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
             CreatureDataConstants.Zombie_Wyvern)]
         public void CreatureSubgroup(string creature, params string[] subgroup)
         {
-            base.DistinctCollection(creature, subgroup);
+            base.AssertDistinctCollection(creature, subgroup);
         }
 
         [Test]
@@ -1080,7 +1080,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
                 CreatureDataConstants.Adept_Fortuneteller_Level8To9,
             };
 
-            base.DistinctCollection(CreatureDataConstants.Adept_Fortuneteller, items);
+            base.AssertDistinctCollection(CreatureDataConstants.Adept_Fortuneteller, items);
         }
 
         [Test]
@@ -1101,7 +1101,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
                 CreatureDataConstants.Adept_Missionary_Level8To9,
             };
 
-            base.DistinctCollection(CreatureDataConstants.Adept_Missionary, items);
+            base.AssertDistinctCollection(CreatureDataConstants.Adept_Missionary, items);
         }
 
         [Test]
@@ -1122,7 +1122,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
                 CreatureDataConstants.Adept_StreetPerformer_Level8To9,
             };
 
-            base.DistinctCollection(CreatureDataConstants.Adept_StreetPerformer, items);
+            base.AssertDistinctCollection(CreatureDataConstants.Adept_StreetPerformer, items);
         }
 
         [Test]
@@ -1143,7 +1143,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
                 CreatureDataConstants.Aristocrat_Businessman_Level8To9,
             };
 
-            base.DistinctCollection(CreatureDataConstants.Aristocrat_Businessman, items);
+            base.AssertDistinctCollection(CreatureDataConstants.Aristocrat_Businessman, items);
         }
 
         [Test]
@@ -1164,7 +1164,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
                 CreatureDataConstants.Aristocrat_Gentry_Level8To9,
             };
 
-            base.DistinctCollection(CreatureDataConstants.Aristocrat_Gentry, items);
+            base.AssertDistinctCollection(CreatureDataConstants.Aristocrat_Gentry, items);
         }
 
         [Test]
@@ -1185,7 +1185,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
                 CreatureDataConstants.Aristocrat_Politician_Level8To9,
             };
 
-            base.DistinctCollection(CreatureDataConstants.Aristocrat_Politician, items);
+            base.AssertDistinctCollection(CreatureDataConstants.Aristocrat_Politician, items);
         }
 
         [Test]
@@ -1243,7 +1243,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
                 CreatureDataConstants.Wizard_FamousResearcher,
             };
 
-            base.DistinctCollection(CreatureDataConstants.Character, items);
+            base.AssertDistinctCollection(CreatureDataConstants.Character, items);
         }
 
         [Test]
@@ -1273,7 +1273,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
                 CreatureDataConstants.Character_Adventurer_Level9
             };
 
-            base.DistinctCollection(CreatureDataConstants.Character_Adventurer, items);
+            base.AssertDistinctCollection(CreatureDataConstants.Character_Adventurer, items);
         }
 
         [Test]
@@ -1303,7 +1303,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
                 CreatureDataConstants.Character_AnimalTrainer_Level20,
             };
 
-            base.DistinctCollection(CreatureDataConstants.Character_AnimalTrainer, items);
+            base.AssertDistinctCollection(CreatureDataConstants.Character_AnimalTrainer, items);
         }
 
         [Test]
@@ -1333,7 +1333,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
                 CreatureDataConstants.Character_Doctor_Level9
             };
 
-            base.DistinctCollection(CreatureDataConstants.Character_Doctor, items);
+            base.AssertDistinctCollection(CreatureDataConstants.Character_Doctor, items);
         }
 
         [Test]
@@ -1353,7 +1353,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
                 CreatureDataConstants.Character_FamousEntertainer_Level20,
             };
 
-            base.DistinctCollection(CreatureDataConstants.Character_FamousEntertainer, items);
+            base.AssertDistinctCollection(CreatureDataConstants.Character_FamousEntertainer, items);
         }
 
         [Test]
@@ -1373,7 +1373,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
                 CreatureDataConstants.Character_FamousPriest_Level20,
             };
 
-            base.DistinctCollection(CreatureDataConstants.Character_FamousPriest, items);
+            base.AssertDistinctCollection(CreatureDataConstants.Character_FamousPriest, items);
         }
 
         [Test]
@@ -1403,7 +1403,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
                 CreatureDataConstants.Character_Hitman_Level9
             };
 
-            base.DistinctCollection(CreatureDataConstants.Character_Hitman, items);
+            base.AssertDistinctCollection(CreatureDataConstants.Character_Hitman, items);
         }
 
         [Test]
@@ -1424,7 +1424,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
                 CreatureDataConstants.Character_Hunter_Level8To9,
             };
 
-            base.DistinctCollection(CreatureDataConstants.Character_Hunter, items);
+            base.AssertDistinctCollection(CreatureDataConstants.Character_Hunter, items);
         }
 
         [Test]
@@ -1445,7 +1445,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
                 CreatureDataConstants.Character_Merchant_Level8To9,
             };
 
-            base.DistinctCollection(CreatureDataConstants.Character_Merchant, items);
+            base.AssertDistinctCollection(CreatureDataConstants.Character_Merchant, items);
         }
 
         [Test]
@@ -1466,7 +1466,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
                 CreatureDataConstants.Character_Minstrel_Level8To9,
             };
 
-            base.DistinctCollection(CreatureDataConstants.Character_Minstrel, items);
+            base.AssertDistinctCollection(CreatureDataConstants.Character_Minstrel, items);
         }
 
         [Test]
@@ -1496,7 +1496,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
                 CreatureDataConstants.Character_Missionary_Level9
             };
 
-            base.DistinctCollection(CreatureDataConstants.Character_Missionary, items);
+            base.AssertDistinctCollection(CreatureDataConstants.Character_Missionary, items);
         }
 
         [Test]
@@ -1526,7 +1526,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
                 CreatureDataConstants.Character_Scholar_Level9
             };
 
-            base.DistinctCollection(CreatureDataConstants.Character_Scholar, items);
+            base.AssertDistinctCollection(CreatureDataConstants.Character_Scholar, items);
         }
 
         [Test]
@@ -1556,7 +1556,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
                 CreatureDataConstants.Character_Sellsword_Level9
             };
 
-            base.DistinctCollection(CreatureDataConstants.Character_Sellsword, items);
+            base.AssertDistinctCollection(CreatureDataConstants.Character_Sellsword, items);
         }
 
         [Test]
@@ -1586,7 +1586,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
                 CreatureDataConstants.Character_StreetPerformer_Level9
             };
 
-            base.DistinctCollection(CreatureDataConstants.Character_StreetPerformer, items);
+            base.AssertDistinctCollection(CreatureDataConstants.Character_StreetPerformer, items);
         }
 
         [Test]
@@ -1606,7 +1606,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
                 CreatureDataConstants.Character_WarHero_Level20,
             };
 
-            base.DistinctCollection(CreatureDataConstants.Character_WarHero, items);
+            base.AssertDistinctCollection(CreatureDataConstants.Character_WarHero, items);
         }
 
         [Test]
@@ -1627,7 +1627,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
                 CreatureDataConstants.Commoner_Beggar_Level8To9,
             };
 
-            base.DistinctCollection(CreatureDataConstants.Commoner_Beggar, items);
+            base.AssertDistinctCollection(CreatureDataConstants.Commoner_Beggar, items);
         }
 
         [Test]
@@ -1648,7 +1648,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
                 CreatureDataConstants.Commoner_ConstructionWorker_Level8To9,
             };
 
-            base.DistinctCollection(CreatureDataConstants.Commoner_ConstructionWorker, items);
+            base.AssertDistinctCollection(CreatureDataConstants.Commoner_ConstructionWorker, items);
         }
 
         [Test]
@@ -1669,7 +1669,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
                 CreatureDataConstants.Commoner_Farmer_Level8To9,
             };
 
-            base.DistinctCollection(CreatureDataConstants.Commoner_Farmer, items);
+            base.AssertDistinctCollection(CreatureDataConstants.Commoner_Farmer, items);
         }
 
         [Test]
@@ -1690,7 +1690,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
                 CreatureDataConstants.Commoner_Herder_Level8To9,
             };
 
-            base.DistinctCollection(CreatureDataConstants.Commoner_Herder, items);
+            base.AssertDistinctCollection(CreatureDataConstants.Commoner_Herder, items);
         }
 
         [Test]
@@ -1711,7 +1711,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
                 CreatureDataConstants.Commoner_Pilgrim_Level8To9,
             };
 
-            base.DistinctCollection(CreatureDataConstants.Commoner_Pilgrim, items);
+            base.AssertDistinctCollection(CreatureDataConstants.Commoner_Pilgrim, items);
         }
 
         [Test]
@@ -1732,7 +1732,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
                 CreatureDataConstants.Commoner_Protestor_Level8To9,
             };
 
-            base.DistinctCollection(CreatureDataConstants.Commoner_Protestor, items);
+            base.AssertDistinctCollection(CreatureDataConstants.Commoner_Protestor, items);
         }
 
         [Test]
@@ -1753,7 +1753,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
                 CreatureDataConstants.Commoner_Servant_Level8To9,
             };
 
-            base.DistinctCollection(CreatureDataConstants.Commoner_Servant, items);
+            base.AssertDistinctCollection(CreatureDataConstants.Commoner_Servant, items);
         }
 
         [Test]
@@ -1827,7 +1827,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
                 CreatureDataConstants.Vrock,
             };
 
-            base.DistinctCollection(CreatureDataConstants.DominatedCreature, subcreatures);
+            base.AssertDistinctCollection(CreatureDataConstants.DominatedCreature, subcreatures);
         }
 
         [Test]
@@ -1848,7 +1848,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
                 CreatureDataConstants.Expert_Architect_Level8To9,
             };
 
-            base.DistinctCollection(CreatureDataConstants.Expert_Architect, items);
+            base.AssertDistinctCollection(CreatureDataConstants.Expert_Architect, items);
         }
 
         [Test]
@@ -1878,7 +1878,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
                 CreatureDataConstants.Ghost_Level20
             };
 
-            base.DistinctCollection(CreatureDataConstants.Ghost, items);
+            base.AssertDistinctCollection(CreatureDataConstants.Ghost, items);
         }
 
         [Test]
@@ -1898,7 +1898,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
                 CreatureDataConstants.Lich_Level20
             };
 
-            base.DistinctCollection(CreatureDataConstants.Lich, items);
+            base.AssertDistinctCollection(CreatureDataConstants.Lich, items);
         }
 
         [Test]
@@ -1919,7 +1919,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
                 CreatureDataConstants.NPC_Traveler_Level8To9,
             };
 
-            base.DistinctCollection(CreatureDataConstants.NPC_Traveler, items);
+            base.AssertDistinctCollection(CreatureDataConstants.NPC_Traveler, items);
         }
 
         [Test]
@@ -1949,7 +1949,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
                 CreatureDataConstants.Paladin_Crusader_Level20
             };
 
-            base.DistinctCollection(CreatureDataConstants.Paladin_Crusader, items);
+            base.AssertDistinctCollection(CreatureDataConstants.Paladin_Crusader, items);
         }
 
         [Test]
@@ -1979,7 +1979,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
                 CreatureDataConstants.Rogue_Pickpocket_Level20
             };
 
-            base.DistinctCollection(CreatureDataConstants.Rogue_Pickpocket, items);
+            base.AssertDistinctCollection(CreatureDataConstants.Rogue_Pickpocket, items);
         }
 
         [Test]
@@ -2010,7 +2010,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
                 CreatureDataConstants.VampireSpawn,
             };
 
-            base.DistinctCollection(CreatureDataConstants.Vampire, items);
+            base.AssertDistinctCollection(CreatureDataConstants.Vampire, items);
         }
 
         [Test]
@@ -2030,7 +2030,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
                 CreatureDataConstants.Wizard_FamousResearcher_Level20
             };
 
-            base.DistinctCollection(CreatureDataConstants.Wizard_FamousResearcher, items);
+            base.AssertDistinctCollection(CreatureDataConstants.Wizard_FamousResearcher, items);
         }
     }
 }

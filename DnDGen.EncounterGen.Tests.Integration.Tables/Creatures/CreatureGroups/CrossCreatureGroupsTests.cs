@@ -171,7 +171,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
                 .Except(undead);
 
             var dominatedCreatures = ExplodeCollection(CreatureDataConstants.DominatedCreature);
-            AssertWholeCollection(creaturesWithBrains, dominatedCreatures);
+            AssertCollection(creaturesWithBrains, dominatedCreatures);
         }
 
         [TestCase(CreatureDataConstants.Types.Construct)]

@@ -866,7 +866,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Treasures
                 Convert.ToString(items)
             };
 
-            base.OrderedCollection(entry, collection);
+            base.AssertOrderedCollection(entry, collection);
         }
 
         [Test]

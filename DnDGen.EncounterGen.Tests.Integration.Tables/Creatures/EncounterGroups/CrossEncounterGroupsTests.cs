@@ -151,7 +151,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
             allCreatures = allCreatures.Except(excludedCreatures);
 
             var creaturesWithType = allCreatures.Where(c => encounterVerifier.CreatureIsValid(c, types));
-            AssertWholeCollection(allCreatures, creaturesWithType);
+            AssertCollection(allCreatures, creaturesWithType);
         }
 
         [TestCase(EnvironmentConstants.Aquatic)]

@@ -19,14 +19,14 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
         [Test]
         public void EmptyEncounterGroupIsEmpty()
         {
-            DistinctCollection(string.Empty);
+            AssertDistinctCollection(string.Empty);
         }
 
         [Test]
         public void AllGroupHasAllEncounters()
         {
             var allEncounters = EncounterConstants.GetAll().ToArray();
-            DistinctCollection(GroupConstants.All, allEncounters);
+            AssertDistinctCollection(GroupConstants.All, allEncounters);
         }
 
         [TestCase(CreatureDataConstants.Types.Aberration)]
@@ -56,7 +56,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
                     encountersOfType.Add(encounter);
             }
 
-            DistinctCollection(creatureType, encountersOfType.ToArray());
+            AssertDistinctCollection(creatureType, encountersOfType.ToArray());
         }
 
         private IEnumerable<string> GetCreaturesOfType(string creatureType, string encounter)
@@ -799,7 +799,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
             EncounterConstants.Elemental_Water_Small_Solitary)]
         public void EnvironmentEncounters(string environment, params string[] encounters)
         {
-            base.DistinctCollection(environment, encounters);
+            base.AssertDistinctCollection(environment, encounters);
         }
 
         [Test]
@@ -1751,7 +1751,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
                 EncounterConstants.Warrior_Guard_Level8To9_PatrolWithFighter,
             };
 
-            base.DistinctCollection(EnvironmentConstants.Civilized, encounters);
+            base.AssertDistinctCollection(EnvironmentConstants.Civilized, encounters);
         }
 
         [Test]
@@ -2004,7 +2004,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
                 EncounterConstants.Zombie_Human_LargeGroup,
             };
 
-            base.DistinctCollection(EnvironmentConstants.Any, creatures);
+            base.AssertDistinctCollection(EnvironmentConstants.Any, creatures);
         }
 
         [Test]
@@ -2859,7 +2859,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
                 EncounterConstants.Zombie_Wyvern_SmallGroup,
             };
 
-            base.DistinctCollection(EnvironmentConstants.Land, creatures);
+            base.AssertDistinctCollection(EnvironmentConstants.Land, creatures);
         }
 
         [Test]
@@ -2987,7 +2987,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
                 EncounterConstants.Zombie_Wyvern_SmallGroup,
             };
 
-            base.DistinctCollection(EnvironmentConstants.Underground, encounters);
+            base.AssertDistinctCollection(EnvironmentConstants.Underground, encounters);
         }
 
         [Test]
@@ -2996,11 +2996,24 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
             var creatures = new[]
             {
                 EncounterConstants.Aranea_Colony,
-                EncounterConstants.AssassinVine,
-                EncounterConstants.Badger,
-                EncounterConstants.Bear_Black,
-                EncounterConstants.Boar,
-                EncounterConstants.Centaur,
+                EncounterConstants.Aranea_Solitary,
+                EncounterConstants.AssassinVine_Patch,
+                EncounterConstants.AssassinVine_Solitary,
+                EncounterConstants.Badger_Cete,
+                EncounterConstants.Badger_Dire_Cete,
+                EncounterConstants.Badger_Dire_Solitary,
+                EncounterConstants.Badger_Pair,
+                EncounterConstants.Badger_Solitary,
+                EncounterConstants.Bear_Black_Pair,
+                EncounterConstants.Bear_Black_Solitary,
+                EncounterConstants.Boar_Dire_Herd,
+                EncounterConstants.Boar_Dire_Solitary,
+                EncounterConstants.Boar_Herd,
+                EncounterConstants.Boar_Solitary,
+                EncounterConstants.Centaur_Company,
+                EncounterConstants.Centaur_Solitary,
+                EncounterConstants.Centaur_Tribe,
+                EncounterConstants.Centaur_Troop,
                 EncounterConstants.Dragon_Green_Wyrmling_Solitary,
                 EncounterConstants.Dragon_Green_Wyrmling_Clutch,
                 EncounterConstants.Dragon_Green_VeryYoung_Solitary,
@@ -3032,40 +3045,102 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
                 EncounterConstants.Dragon_Green_GreatWyrm_Solitary,
                 EncounterConstants.Dragon_Green_GreatWyrm_Pair,
                 EncounterConstants.Dragon_Green_GreatWyrm_Family,
-                EncounterConstants.Dryad,
-                EncounterConstants.Elf_High,
-                EncounterConstants.Elf_Half,
-                EncounterConstants.Elf_Wood,
-                EncounterConstants.Gnome_Forest,
-                EncounterConstants.Grig,
-                EncounterConstants.Halfling_Tallfellow,
-                EncounterConstants.Hawk,
-                EncounterConstants.Kobold,
-                EncounterConstants.Zombie_Kobold,
-                EncounterConstants.Krenshar,
-                EncounterConstants.Nymph,
-                EncounterConstants.Owl,
-                EncounterConstants.Owlbear,
-                EncounterConstants.Skeleton_Owlbear,
-                EncounterConstants.Pegasus,
-                EncounterConstants.Pixie,
-                EncounterConstants.PrayingMantis_Giant,
-                EncounterConstants.Pseudodragon,
-                EncounterConstants.Raven,
-                EncounterConstants.RazorBoar,
-                EncounterConstants.Satyr,
-                EncounterConstants.Spider_Monstrous,
-                EncounterConstants.SpiderEater,
-                EncounterConstants.StagBeetle_Giant,
-                EncounterConstants.Tendriculos,
-                EncounterConstants.Treant,
-                EncounterConstants.Unicorn,
-                EncounterConstants.Wasp_Giant,
-                EncounterConstants.Wolf,
-                EncounterConstants.Skeleton_Wolf,
+                EncounterConstants.Dryad_Grove,
+                EncounterConstants.Dryad_Solitary,
+                EncounterConstants.Elf_High_Band,
+                EncounterConstants.Elf_High_Company,
+                EncounterConstants.Elf_High_Squad,
+                EncounterConstants.Elf_Half_Band,
+                EncounterConstants.Elf_Half_Company,
+                EncounterConstants.Elf_Half_Squad,
+                EncounterConstants.Elf_Wood_Band,
+                EncounterConstants.Elf_Wood_Company,
+                EncounterConstants.Elf_Wood_Squad,
+                EncounterConstants.Gnome_Forest_Band,
+                EncounterConstants.Gnome_Forest_Company,
+                EncounterConstants.Gnome_Forest_Squad,
+                EncounterConstants.Grig_Band,
+                EncounterConstants.Grig_Gang,
+                EncounterConstants.Grig_Tribe,
+                EncounterConstants.Halfling_Tallfellow_Band,
+                EncounterConstants.Halfling_Tallfellow_Company,
+                EncounterConstants.Halfling_Tallfellow_Squad,
+                EncounterConstants.Hawk_Pair,
+                EncounterConstants.Hawk_Solitary,
+                EncounterConstants.Kobold_Band,
+                EncounterConstants.Kobold_Gang,
+                EncounterConstants.Kobold_Tribe,
+                EncounterConstants.Kobold_Warband,
+                EncounterConstants.Zombie_Kobold_Group,
+                EncounterConstants.Zombie_Kobold_LargeGroup,
+                EncounterConstants.Zombie_Kobold_SmallGroup,
+                EncounterConstants.Krenshar_Pair,
+                EncounterConstants.Krenshar_Pride,
+                EncounterConstants.Krenshar_Solitary,
+                EncounterConstants.Nymph_Solitary,
+                EncounterConstants.Owl_Solitary,
+                EncounterConstants.Owl_Giant_Company,
+                EncounterConstants.Owl_Giant_Pair,
+                EncounterConstants.Owl_Giant_Solitary,
+                EncounterConstants.Owlbear_Pack,
+                EncounterConstants.Owlbear_Pair,
+                EncounterConstants.Owlbear_Solitary,
+                EncounterConstants.Skeleton_Owlbear_Group,
+                EncounterConstants.Skeleton_Owlbear_LargeGroup,
+                EncounterConstants.Skeleton_Owlbear_SmallGroup,
+                EncounterConstants.Pegasus_Herd,
+                EncounterConstants.Pegasus_Pair,
+                EncounterConstants.Pegasus_Solitary,
+                EncounterConstants.Pixie_Band,
+                EncounterConstants.Pixie_Gang,
+                EncounterConstants.Pixie_Tribe,
+                EncounterConstants.Pixie_WithIrresistableDance_Band,
+                EncounterConstants.Pixie_WithIrresistableDance_Tribe,
+                EncounterConstants.PrayingMantis_Giant_Solitary,
+                EncounterConstants.Pseudodragon_Clutch,
+                EncounterConstants.Pseudodragon_Pair,
+                EncounterConstants.Pseudodragon_Solitary,
+                EncounterConstants.Raven_Solitary,
+                EncounterConstants.RazorBoar_Solitary,
+                EncounterConstants.Satyr_Band,
+                EncounterConstants.Satyr_Pair,
+                EncounterConstants.Satyr_Solitary,
+                EncounterConstants.Satyr_Troop,
+                EncounterConstants.Spider_Monstrous_Colossal_Solitary,
+                EncounterConstants.Spider_Monstrous_Gargantuan_Solitary,
+                EncounterConstants.Spider_Monstrous_Huge_Colony,
+                EncounterConstants.Spider_Monstrous_Huge_Solitary,
+                EncounterConstants.Spider_Monstrous_Large_Colony,
+                EncounterConstants.Spider_Monstrous_Large_Solitary,
+                EncounterConstants.Spider_Monstrous_Medium_Colony,
+                EncounterConstants.Spider_Monstrous_Medium_Solitary,
+                EncounterConstants.Spider_Monstrous_Small_Colony,
+                EncounterConstants.Spider_Monstrous_Small_Swarm,
+                EncounterConstants.Spider_Monstrous_Tiny_Colony,
+                EncounterConstants.SpiderEater_Solitary,
+                EncounterConstants.StagBeetle_Giant_Cluster,
+                EncounterConstants.StagBeetle_Giant_Mass,
+                EncounterConstants.Tendriculos_Solitary,
+                EncounterConstants.Treant_Grove,
+                EncounterConstants.Treant_Solitary,
+                EncounterConstants.Unicorn_Grace,
+                EncounterConstants.Unicorn_Pair,
+                EncounterConstants.Unicorn_Solitary,
+                EncounterConstants.Wasp_Giant_Nest,
+                EncounterConstants.Wasp_Giant_Solitary,
+                EncounterConstants.Wasp_Giant_Swarm,
+                EncounterConstants.Wolf_Dire_Pack,
+                EncounterConstants.Wolf_Dire_Pair,
+                EncounterConstants.Wolf_Dire_Solitary,
+                EncounterConstants.Wolf_Pack,
+                EncounterConstants.Wolf_Pair,
+                EncounterConstants.Wolf_Solitary,
+                EncounterConstants.Skeleton_Wolf_Group,
+                EncounterConstants.Skeleton_Wolf_LargeGroup,
+                EncounterConstants.Skeleton_Wolf_SmallGroup,
             };
 
-            base.DistinctCollection(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest, creatures);
+            base.AssertDistinctCollection(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest, creatures);
         }
 
         [Test]
@@ -3073,11 +3148,22 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
         {
             var creatures = new[]
             {
-                EncounterConstants.Athach,
-                EncounterConstants.Bulette,
-                EncounterConstants.Chimera,
-                EncounterConstants.Skeleton_Chimera,
-                EncounterConstants.DisplacerBeast,
+                EncounterConstants.Athach_Gang,
+                EncounterConstants.Athach_Solitary,
+                EncounterConstants.Athach_Tribe,
+                EncounterConstants.Bulette_Pair,
+                EncounterConstants.Bulette_Solitary,
+                EncounterConstants.Chimera_Flight,
+                EncounterConstants.Chimera_Pride,
+                EncounterConstants.Chimera_Solitary,
+                EncounterConstants.Skeleton_Chimera_Group,
+                EncounterConstants.Skeleton_Chimera_LargeGroup,
+                EncounterConstants.Skeleton_Chimera_SmallGroup,
+                EncounterConstants.DisplacerBeast_PackLord_Pair,
+                EncounterConstants.DisplacerBeast_PackLord_Solitary,
+                EncounterConstants.DisplacerBeast_Pair,
+                EncounterConstants.DisplacerBeast_Pride,
+                EncounterConstants.DisplacerBeast_Solitary,
                 EncounterConstants.Dragon_Bronze_Wyrmling_Solitary,
                 EncounterConstants.Dragon_Bronze_Wyrmling_Clutch,
                 EncounterConstants.Dragon_Bronze_VeryYoung_Solitary,
@@ -3109,20 +3195,46 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
                 EncounterConstants.Dragon_Bronze_GreatWyrm_Solitary,
                 EncounterConstants.Dragon_Bronze_GreatWyrm_Pair,
                 EncounterConstants.Dragon_Bronze_GreatWyrm_Family,
-                EncounterConstants.Giant_Hill,
-                EncounterConstants.Wereboar_HillGiantDire,
-                EncounterConstants.Gnome_Rock,
-                EncounterConstants.Griffon,
-                EncounterConstants.Hippogriff,
-                EncounterConstants.Naga_Dark,
-                EncounterConstants.Ogre,
-                EncounterConstants.Zombie_Ogre,
-                EncounterConstants.Orc,
-                EncounterConstants.Orc_Half,
-                EncounterConstants.Weasel,
+                EncounterConstants.Giant_Hill_Band,
+                EncounterConstants.Giant_Hill_Gang,
+                EncounterConstants.Giant_Hill_HuntingRaidingParty,
+                EncounterConstants.Giant_Hill_Solitary,
+                EncounterConstants.Giant_Hill_Tribe,
+                EncounterConstants.Wereboar_HillGiantDire_Brood,
+                EncounterConstants.Gnome_Rock_Band,
+                EncounterConstants.Gnome_Rock_Company,
+                EncounterConstants.Gnome_Rock_Squad,
+                EncounterConstants.Griffon_Pair,
+                EncounterConstants.Griffon_Pride,
+                EncounterConstants.Griffon_Solitary,
+                EncounterConstants.Hippogriff_Flight,
+                EncounterConstants.Hippogriff_Pair,
+                EncounterConstants.Hippogriff_Solitary,
+                EncounterConstants.Naga_Dark_Nest,
+                EncounterConstants.Naga_Dark_Solitary,
+                EncounterConstants.Ogre_Band,
+                EncounterConstants.Ogre_Barbarian_Band,
+                EncounterConstants.Ogre_Barbarian_Gang,
+                EncounterConstants.Ogre_Barbarian_Pair,
+                EncounterConstants.Ogre_Barbarian_Solitary,
+                EncounterConstants.Ogre_Gang,
+                EncounterConstants.Ogre_Pair,
+                EncounterConstants.Ogre_Solitary,
+                EncounterConstants.Zombie_Ogre_Group,
+                EncounterConstants.Zombie_Ogre_LargeGroup,
+                EncounterConstants.Zombie_Ogre_SmallGroup,
+                EncounterConstants.Orc_Band,
+                EncounterConstants.Orc_Gang,
+                EncounterConstants.Orc_Squad,
+                EncounterConstants.Orc_Half_Band,
+                EncounterConstants.Orc_Half_Gang,
+                EncounterConstants.Orc_Half_Squad,
+                EncounterConstants.Weasel_Dire_Pair,
+                EncounterConstants.Weasel_Dire_Solitary,
+                EncounterConstants.Weasel_Solitary,
             };
 
-            base.DistinctCollection(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills, creatures);
+            base.AssertDistinctCollection(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills, creatures);
         }
 
         [Test]
@@ -3130,23 +3242,51 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
         {
             var creatures = new[]
             {
-                EncounterConstants.Chuul,
-                EncounterConstants.GrayRender,
-                EncounterConstants.Zombie_GrayRender,
-                EncounterConstants.GreenHag,
-                EncounterConstants.Harpy,
-                EncounterConstants.Hydra,
-                EncounterConstants.Lizardfolk,
-                EncounterConstants.Medusa,
-                EncounterConstants.Naga_Spirit,
-                EncounterConstants.Ooze_OchreJelly,
-                EncounterConstants.ShamblingMound,
-                EncounterConstants.Snake_Viper,
-                EncounterConstants.Toad,
-                EncounterConstants.WillOWisp,
+                EncounterConstants.Chuul_Pack,
+                EncounterConstants.Chuul_Pair,
+                EncounterConstants.Chuul_Solitary,
+                EncounterConstants.GrayRender_Solitary,
+                EncounterConstants.Zombie_GrayRender_Group,
+                EncounterConstants.Zombie_GrayRender_LargeGroup,
+                EncounterConstants.Zombie_GrayRender_SmallGroup,
+                EncounterConstants.GreenHag_Solitary,
+                EncounterConstants.Hag_Covey_WithCloudGiants,
+                EncounterConstants.Hag_Covey_WithFireGiants,
+                EncounterConstants.Hag_Covey_WithFrostGiants,
+                EncounterConstants.Hag_Covey_WithHillGiants,
+                EncounterConstants.HarpyArcher_Solitary,
+                EncounterConstants.Harpy_Flight,
+                EncounterConstants.Harpy_Pair,
+                EncounterConstants.Harpy_Solitary,
+                EncounterConstants.Hydra_10Heads_Solitary,
+                EncounterConstants.Hydra_11Heads_Solitary,
+                EncounterConstants.Hydra_12Heads_Solitary,
+                EncounterConstants.Hydra_5Heads_Solitary,
+                EncounterConstants.Hydra_6Heads_Solitary,
+                EncounterConstants.Hydra_7Heads_Solitary,
+                EncounterConstants.Hydra_8Heads_Solitary,
+                EncounterConstants.Hydra_9Heads_Solitary,
+                EncounterConstants.Lizardfolk_Band,
+                EncounterConstants.Lizardfolk_Gang,
+                EncounterConstants.Lizardfolk_Tribe,
+                EncounterConstants.Medusa_Covey,
+                EncounterConstants.Medusa_Solitary,
+                EncounterConstants.Naga_Spirit_Nest,
+                EncounterConstants.Naga_Spirit_Solitary,
+                EncounterConstants.Ooze_OchreJelly_Solitary,
+                EncounterConstants.ShamblingMound_Solitary,
+                EncounterConstants.Snake_Viper_Huge_Solitary,
+                EncounterConstants.Snake_Viper_Large_Solitary,
+                EncounterConstants.Snake_Viper_Medium_Solitary,
+                EncounterConstants.Snake_Viper_Small_Solitary,
+                EncounterConstants.Snake_Viper_Tiny_Solitary,
+                EncounterConstants.Toad_Swarm,
+                EncounterConstants.WillOWisp_Pair,
+                EncounterConstants.WillOWisp_Solitary,
+                EncounterConstants.WillOWisp_String,
             };
 
-            base.DistinctCollection(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh, creatures);
+            base.AssertDistinctCollection(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh, creatures);
         }
 
         [Test]
@@ -3154,8 +3294,12 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
         {
             var creatures = new[]
             {
-                EncounterConstants.Bugbear,
-                EncounterConstants.Zombie_Bugbear,
+                EncounterConstants.Bugbear_Gang,
+                EncounterConstants.Bugbear_Solitary,
+                EncounterConstants.Bugbear_Tribe,
+                EncounterConstants.Zombie_Bugbear_Group,
+                EncounterConstants.Zombie_Bugbear_LargeGroup,
+                EncounterConstants.Zombie_Bugbear_SmallGroup,
                 EncounterConstants.Dragon_Silver_Wyrmling_Solitary,
                 EncounterConstants.Dragon_Silver_Wyrmling_Clutch,
                 EncounterConstants.Dragon_Silver_VeryYoung_Solitary,
@@ -3187,18 +3331,40 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
                 EncounterConstants.Dragon_Silver_GreatWyrm_Solitary,
                 EncounterConstants.Dragon_Silver_GreatWyrm_Pair,
                 EncounterConstants.Dragon_Silver_GreatWyrm_Family,
-                EncounterConstants.Dwarf_Hill,
-                EncounterConstants.Dwarf_Mountain,
-                EncounterConstants.Eagle,
-                EncounterConstants.Elf_Gray,
-                EncounterConstants.Giant_Cloud,
-                EncounterConstants.Skeleton_Giant_Cloud,
-                EncounterConstants.Giant_Stone,
-                EncounterConstants.RazorBoar,
-                EncounterConstants.Yrthak,
+                EncounterConstants.Dwarf_Hill_Clan,
+                EncounterConstants.Dwarf_Hill_Squad,
+                EncounterConstants.Dwarf_Hill_Team,
+                EncounterConstants.Dwarf_Mountain_Clan,
+                EncounterConstants.Dwarf_Mountain_Squad,
+                EncounterConstants.Dwarf_Mountain_Team,
+                EncounterConstants.Eagle_Giant_Eyrie,
+                EncounterConstants.Eagle_Giant_Pair,
+                EncounterConstants.Eagle_Giant_Solitary,
+                EncounterConstants.Eagle_Pair,
+                EncounterConstants.Eagle_Solitary,
+                EncounterConstants.Elf_Gray_Band,
+                EncounterConstants.Elf_Gray_Company,
+                EncounterConstants.Elf_Gray_Squad,
+                EncounterConstants.Giant_Cloud_Band_WithDireLions,
+                EncounterConstants.Giant_Cloud_Band_WithGriffons,
+                EncounterConstants.Giant_Cloud_Family_WithDireLions,
+                EncounterConstants.Giant_Cloud_Family_WithGriffons,
+                EncounterConstants.Giant_Cloud_Gang,
+                EncounterConstants.Giant_Cloud_Solitary,
+                EncounterConstants.Skeleton_Giant_Cloud_Group,
+                EncounterConstants.Skeleton_Giant_Cloud_LargeGroup,
+                EncounterConstants.Skeleton_Giant_Cloud_SmallGroup,
+                EncounterConstants.Giant_Stone_Band,
+                EncounterConstants.Giant_Stone_Gang,
+                EncounterConstants.Giant_Stone_HuntingRaidingTradingParty,
+                EncounterConstants.Giant_Stone_Solitary,
+                EncounterConstants.Giant_Stone_Tribe,
+                EncounterConstants.RazorBoar_Solitary,
+                EncounterConstants.Yrthak_Clutch,
+                EncounterConstants.Yrthak_Solitary,
             };
 
-            base.DistinctCollection(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain, creatures);
+            base.AssertDistinctCollection(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain, creatures);
         }
 
         [Test]
@@ -3206,29 +3372,67 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
         {
             var creatures = new[]
             {
-                EncounterConstants.Aasimar,
-                EncounterConstants.Ant_Giant,
-                EncounterConstants.Bee_Giant,
-                EncounterConstants.Bison,
-                EncounterConstants.BlinkDog,
-                EncounterConstants.Cat,
-                EncounterConstants.Cockatrice,
-                EncounterConstants.Dog,
-                EncounterConstants.Goblin,
-                EncounterConstants.Gorgon,
-                EncounterConstants.Horse,
-                EncounterConstants.Locust,
-                EncounterConstants.Naga_Guardian,
-                EncounterConstants.Pony,
-                EncounterConstants.Tiefling,
-                EncounterConstants.Triceratops,
-                EncounterConstants.Worg,
-                EncounterConstants.Orc_Half,
-                EncounterConstants.Skeleton_Human,
-                EncounterConstants.Human,
+                EncounterConstants.Aasimar_Pair,
+                EncounterConstants.Aasimar_Solitary,
+                EncounterConstants.Aasimar_Team,
+                EncounterConstants.Ant_Giant_Queen_Hive,
+                EncounterConstants.Ant_Giant_Soldier_Gang,
+                EncounterConstants.Ant_Giant_Soldier_Solitary,
+                EncounterConstants.Ant_Giant_Worker_Crew,
+                EncounterConstants.Ant_Giant_Worker_Gang,
+                EncounterConstants.Bee_Giant_Buzz,
+                EncounterConstants.Bee_Giant_Hive,
+                EncounterConstants.Bee_Giant_Solitary,
+                EncounterConstants.Bison_Herd,
+                EncounterConstants.Bison_Solitary,
+                EncounterConstants.BlinkDog_Pack,
+                EncounterConstants.BlinkDog_Pair,
+                EncounterConstants.BlinkDog_Solitary,
+                EncounterConstants.Cat_Solitary,
+                EncounterConstants.Cockatrice_Flight,
+                EncounterConstants.Cockatrice_Flock,
+                EncounterConstants.Cockatrice_Pair,
+                EncounterConstants.Cockatrice_Solitary,
+                EncounterConstants.Dog_Pack,
+                EncounterConstants.Dog_Riding_Pack,
+                EncounterConstants.Dog_Riding_Solitary,
+                EncounterConstants.Dog_Solitary,
+                EncounterConstants.Goblin_Band,
+                EncounterConstants.Goblin_Gang,
+                EncounterConstants.Goblin_Tribe,
+                EncounterConstants.Goblin_Warband,
+                EncounterConstants.Gorgon_Herd,
+                EncounterConstants.Gorgon_Pack,
+                EncounterConstants.Gorgon_Pair,
+                EncounterConstants.Gorgon_Solitary,
+                EncounterConstants.Horse_Light_Herd,
+                EncounterConstants.Locust_Swarm_Cloud,
+                EncounterConstants.Locust_Swarm_Plague,
+                EncounterConstants.Locust_Swarm_Solitary,
+                EncounterConstants.Naga_Guardian_Nest,
+                EncounterConstants.Naga_Guardian_Solitary,
+                EncounterConstants.Pony_Solitary,
+                EncounterConstants.Tiefling_Pair,
+                EncounterConstants.Tiefling_Solitary,
+                EncounterConstants.Tiefling_Team,
+                EncounterConstants.Triceratops_Herd,
+                EncounterConstants.Triceratops_Pair,
+                EncounterConstants.Triceratops_Solitary,
+                EncounterConstants.Worg_Pack,
+                EncounterConstants.Worg_Pair,
+                EncounterConstants.Worg_Solitary,
+                EncounterConstants.Orc_Half_Band,
+                EncounterConstants.Orc_Half_Gang,
+                EncounterConstants.Orc_Half_Squad,
+                EncounterConstants.Skeleton_Human_Group,
+                EncounterConstants.Skeleton_Human_LargeGroup,
+                EncounterConstants.Skeleton_Human_SmallGroup,
+                EncounterConstants.Human_Band,
+                EncounterConstants.Human_Company,
+                EncounterConstants.Human_Squad,
             };
 
-            base.DistinctCollection(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains, creatures);
+            base.AssertDistinctCollection(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains, creatures);
         }
 
         [Test]
@@ -3236,10 +3440,11 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
         {
             var creatures = new[]
             {
-                EncounterConstants.Androsphinx,
-                EncounterConstants.Basilisk,
-                EncounterConstants.Camel,
-                EncounterConstants.Criosphinx,
+                EncounterConstants.Androsphinx_Solitary,
+                EncounterConstants.Basilisk_Colony,
+                EncounterConstants.Basilisk_Solitary,
+                EncounterConstants.Camel_Herd,
+                EncounterConstants.Criosphinx_Solitary,
                 EncounterConstants.Dragon_Brass_Wyrmling_Solitary,
                 EncounterConstants.Dragon_Brass_Wyrmling_Clutch,
                 EncounterConstants.Dragon_Brass_VeryYoung_Solitary,
@@ -3271,15 +3476,36 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
                 EncounterConstants.Dragon_Brass_GreatWyrm_Solitary,
                 EncounterConstants.Dragon_Brass_GreatWyrm_Pair,
                 EncounterConstants.Dragon_Brass_GreatWyrm_Family,
-                EncounterConstants.Gynosphinx,
-                EncounterConstants.Hieracosphinx,
-                EncounterConstants.Scorpion_Monstrous,
-                EncounterConstants.Scorpionfolk,
-                EncounterConstants.Hyena,
-                EncounterConstants.Janni,
+                EncounterConstants.Gynosphinx_Covey,
+                EncounterConstants.Gynosphinx_Solitary,
+                EncounterConstants.Hieracosphinx_Flock,
+                EncounterConstants.Hieracosphinx_Pair,
+                EncounterConstants.Hieracosphinx_Solitary,
+                EncounterConstants.Scorpion_Monstrous_Colossal_Solitary,
+                EncounterConstants.Scorpion_Monstrous_Gargantuan_Solitary,
+                EncounterConstants.Scorpion_Monstrous_Huge_Colony,
+                EncounterConstants.Scorpion_Monstrous_Huge_Solitary,
+                EncounterConstants.Scorpion_Monstrous_Large_Colony,
+                EncounterConstants.Scorpion_Monstrous_Large_Solitary,
+                EncounterConstants.Scorpion_Monstrous_Medium_Colony,
+                EncounterConstants.Scorpion_Monstrous_Medium_Solitary,
+                EncounterConstants.Scorpion_Monstrous_Small_Colony,
+                EncounterConstants.Scorpion_Monstrous_Small_Swarm,
+                EncounterConstants.Scorpion_Monstrous_Tiny_Colony,
+                EncounterConstants.Scorpionfolk_Company,
+                EncounterConstants.Scorpionfolk_Pair,
+                EncounterConstants.Scorpionfolk_Patrol,
+                EncounterConstants.Scorpionfolk_Solitary,
+                EncounterConstants.Scorpionfolk_Troop,
+                EncounterConstants.Hyena_Pack,
+                EncounterConstants.Hyena_Pair,
+                EncounterConstants.Hyena_Solitary,
+                EncounterConstants.Janni_Band,
+                EncounterConstants.Janni_Company,
+                EncounterConstants.Janni_Solitary,
             };
 
-            base.DistinctCollection(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert, creatures);
+            base.AssertDistinctCollection(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert, creatures);
         }
 
         [Test]
@@ -3287,27 +3513,63 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
         {
             var creatures = new[]
             {
-                EncounterConstants.Ape,
-                EncounterConstants.BombardierBeetle_Giant,
-                EncounterConstants.Couatl,
-                EncounterConstants.Deinonychus,
-                EncounterConstants.Digester,
-                EncounterConstants.Elf_Wild,
-                EncounterConstants.Ettercap,
-                EncounterConstants.Girallon,
-                EncounterConstants.Leopard,
-                EncounterConstants.Lizard,
-                EncounterConstants.Megaraptor,
-                EncounterConstants.Skeleton_Megaraptor,
-                EncounterConstants.Monkey,
-                EncounterConstants.RazorBoar,
-                EncounterConstants.Snake_Constrictor,
-                EncounterConstants.Spider_Swarm,
-                EncounterConstants.Tiger,
-                EncounterConstants.YuanTi,
+                EncounterConstants.Ape_Company,
+                EncounterConstants.Ape_Dire_Company,
+                EncounterConstants.Ape_Dire_Solitary,
+                EncounterConstants.Ape_Pair,
+                EncounterConstants.Ape_Solitary,
+                EncounterConstants.BombardierBeetle_Giant_Click,
+                EncounterConstants.BombardierBeetle_Giant_Cluster,
+                EncounterConstants.Couatl_Flight,
+                EncounterConstants.Couatl_Pair,
+                EncounterConstants.Couatl_Solitary,
+                EncounterConstants.Deinonychus_Pack,
+                EncounterConstants.Deinonychus_Pair,
+                EncounterConstants.Deinonychus_Solitary,
+                EncounterConstants.Digester_Pack,
+                EncounterConstants.Digester_Solitary,
+                EncounterConstants.Elf_Wild_Band,
+                EncounterConstants.Elf_Wild_Company,
+                EncounterConstants.Elf_Wild_Squad,
+                EncounterConstants.Ettercap_Pair,
+                EncounterConstants.Ettercap_Solitary,
+                EncounterConstants.Ettercap_Troupe,
+                EncounterConstants.Girallon_Company,
+                EncounterConstants.Girallon_Solitary,
+                EncounterConstants.Leopard_Pair,
+                EncounterConstants.Leopard_Solitary,
+                EncounterConstants.Lizard_Monitor_Solitary,
+                EncounterConstants.Lizard_Solitary,
+                EncounterConstants.Megaraptor_Pack,
+                EncounterConstants.Megaraptor_Pair,
+                EncounterConstants.Megaraptor_Solitary,
+                EncounterConstants.Skeleton_Megaraptor_Group,
+                EncounterConstants.Skeleton_Megaraptor_LargeGroup,
+                EncounterConstants.Skeleton_Megaraptor_SmallGroup,
+                EncounterConstants.Monkey_Troop,
+                EncounterConstants.RazorBoar_Solitary,
+                EncounterConstants.Snake_Constrictor_Giant_Solitary,
+                EncounterConstants.Snake_Constrictor_Solitary,
+                EncounterConstants.Spider_Swarm_Colony,
+                EncounterConstants.Spider_Swarm_Solitary,
+                EncounterConstants.Spider_Swarm_Tangle,
+                EncounterConstants.Tiger_Dire_Pair,
+                EncounterConstants.Tiger_Dire_Solitary,
+                EncounterConstants.Tiger_Solitary,
+                EncounterConstants.YuanTi_Abomination_Gang,
+                EncounterConstants.YuanTi_Abomination_Pair,
+                EncounterConstants.YuanTi_Abomination_Solitary,
+                EncounterConstants.YuanTi_Halfblood_Gang,
+                EncounterConstants.YuanTi_Halfblood_Pair,
+                EncounterConstants.YuanTi_Halfblood_Solitary,
+                EncounterConstants.YuanTi_Pureblood_Gang,
+                EncounterConstants.YuanTi_Pureblood_Pair,
+                EncounterConstants.YuanTi_Pureblood_Solitary,
+                EncounterConstants.YuanTi_Tribe,
+                EncounterConstants.YuanTi_Troupe,
             };
 
-            base.DistinctCollection(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest, creatures);
+            base.AssertDistinctCollection(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest, creatures);
         }
 
         [Test]
@@ -3315,7 +3577,8 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
         {
             var creatures = new[]
             {
-                EncounterConstants.Behir,
+                EncounterConstants.Behir_Pair,
+                EncounterConstants.Behir_Solitary,
                 EncounterConstants.Dragon_Copper_Wyrmling_Solitary,
                 EncounterConstants.Dragon_Copper_Wyrmling_Clutch,
                 EncounterConstants.Dragon_Copper_VeryYoung_Solitary,
@@ -3347,15 +3610,30 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
                 EncounterConstants.Dragon_Copper_GreatWyrm_Solitary,
                 EncounterConstants.Dragon_Copper_GreatWyrm_Pair,
                 EncounterConstants.Dragon_Copper_GreatWyrm_Family,
-                EncounterConstants.Halfling_Deep,
-                EncounterConstants.Hobgoblin,
-                EncounterConstants.PhaseSpider,
-                EncounterConstants.Scorpionfolk,
-                EncounterConstants.Wyvern,
-                EncounterConstants.Zombie_Wyvern,
+                EncounterConstants.Halfling_Deep_Band,
+                EncounterConstants.Halfling_Deep_Company,
+                EncounterConstants.Halfling_Deep_Squad,
+                EncounterConstants.Hobgoblin_Band,
+                EncounterConstants.Hobgoblin_Gang,
+                EncounterConstants.Hobgoblin_Tribe_WithOgres,
+                EncounterConstants.Hobgoblin_Tribe_WithTrolls,
+                EncounterConstants.Hobgoblin_Warband,
+                EncounterConstants.PhaseSpider_Cluster,
+                EncounterConstants.PhaseSpider_Solitary,
+                EncounterConstants.Scorpionfolk_Company,
+                EncounterConstants.Scorpionfolk_Pair,
+                EncounterConstants.Scorpionfolk_Patrol,
+                EncounterConstants.Scorpionfolk_Solitary,
+                EncounterConstants.Scorpionfolk_Troop,
+                EncounterConstants.Wyvern_Flight,
+                EncounterConstants.Wyvern_Pair,
+                EncounterConstants.Wyvern_Solitary,
+                EncounterConstants.Zombie_Wyvern_Group,
+                EncounterConstants.Zombie_Wyvern_LargeGroup,
+                EncounterConstants.Zombie_Wyvern_SmallGroup,
             };
 
-            base.DistinctCollection(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills, creatures);
+            base.AssertDistinctCollection(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills, creatures);
         }
 
         [Test]
@@ -3363,7 +3641,10 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
         {
             var creatures = new[]
             {
-                EncounterConstants.Crocodile,
+                EncounterConstants.Crocodile_Colony,
+                EncounterConstants.Crocodile_Giant_Colony,
+                EncounterConstants.Crocodile_Giant_Solitary,
+                EncounterConstants.Crocodile_Solitary,
                 EncounterConstants.Dragon_Black_Wyrmling_Solitary,
                 EncounterConstants.Dragon_Black_Wyrmling_Clutch,
                 EncounterConstants.Dragon_Black_VeryYoung_Solitary,
@@ -3395,14 +3676,28 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
                 EncounterConstants.Dragon_Black_GreatWyrm_Solitary,
                 EncounterConstants.Dragon_Black_GreatWyrm_Pair,
                 EncounterConstants.Dragon_Black_GreatWyrm_Family,
-                EncounterConstants.Manticore,
-                EncounterConstants.Pyrohydra,
-                EncounterConstants.Rakshasa,
-                EncounterConstants.ShockerLizard,
-                EncounterConstants.Stirge,
+                EncounterConstants.Manticore_Pair,
+                EncounterConstants.Manticore_Pride,
+                EncounterConstants.Manticore_Solitary,
+                EncounterConstants.Pyrohydra_10Heads_Solitary,
+                EncounterConstants.Pyrohydra_11Heads_Solitary,
+                EncounterConstants.Pyrohydra_12Heads_Solitary,
+                EncounterConstants.Pyrohydra_5Heads_Solitary,
+                EncounterConstants.Pyrohydra_6Heads_Solitary,
+                EncounterConstants.Pyrohydra_7Heads_Solitary,
+                EncounterConstants.Pyrohydra_8Heads_Solitary,
+                EncounterConstants.Pyrohydra_9Heads_Solitary,
+                EncounterConstants.Rakshasa_Solitary,
+                EncounterConstants.ShockerLizard_Clutch,
+                EncounterConstants.ShockerLizard_Colony,
+                EncounterConstants.ShockerLizard_Pair,
+                EncounterConstants.ShockerLizard_Solitary,
+                EncounterConstants.Stirge_Colony,
+                EncounterConstants.Stirge_Flock,
+                EncounterConstants.Stirge_Storm,
             };
 
-            base.DistinctCollection(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh, creatures);
+            base.AssertDistinctCollection(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh, creatures);
         }
 
         [Test]
@@ -3441,14 +3736,28 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
                 EncounterConstants.Dragon_Red_GreatWyrm_Solitary,
                 EncounterConstants.Dragon_Red_GreatWyrm_Pair,
                 EncounterConstants.Dragon_Red_GreatWyrm_Family,
-                EncounterConstants.Skeleton_Dragon_Red_YoungAdult,
-                EncounterConstants.Giant_Fire,
-                EncounterConstants.Giant_Storm,
-                EncounterConstants.Roc,
-                EncounterConstants.RazorBoar,
+                EncounterConstants.Skeleton_Dragon_Red_YoungAdult_Group,
+                EncounterConstants.Skeleton_Dragon_Red_YoungAdult_LargeGroup,
+                EncounterConstants.Skeleton_Dragon_Red_YoungAdult_SmallGroup,
+                EncounterConstants.Giant_Fire_Band_WithAdept,
+                EncounterConstants.Giant_Fire_Band_WithCleric,
+                EncounterConstants.Giant_Fire_Gang,
+                EncounterConstants.Giant_Fire_HuntingRaidingParty_WithAdept_WithEttins,
+                EncounterConstants.Giant_Fire_HuntingRaidingParty_WithAdept_WithTrolls,
+                EncounterConstants.Giant_Fire_HuntingRaidingParty_WithSorcerer_WithEttins,
+                EncounterConstants.Giant_Fire_HuntingRaidingParty_WithSorcerer_WithTrolls,
+                EncounterConstants.Giant_Fire_Solitary,
+                EncounterConstants.Giant_Fire_Tribe_WithAdept,
+                EncounterConstants.Giant_Fire_Tribe_WithLeader,
+                EncounterConstants.Giant_Storm_Family_WithGriffons,
+                EncounterConstants.Giant_Storm_Family_WithRocs,
+                EncounterConstants.Giant_Storm_Solitary,
+                EncounterConstants.Roc_Pair,
+                EncounterConstants.Roc_Solitary,
+                EncounterConstants.RazorBoar_Solitary,
             };
 
-            base.DistinctCollection(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain, creatures);
+            base.AssertDistinctCollection(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain, creatures);
         }
 
         [Test]
@@ -3456,9 +3765,13 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
         {
             var creatures = new[]
             {
-                EncounterConstants.Ankheg,
-                EncounterConstants.Baboon,
-                EncounterConstants.Cheetah,
+                EncounterConstants.Ankheg_Cluster,
+                EncounterConstants.Ankheg_Solitary,
+                EncounterConstants.Baboon_Solitary,
+                EncounterConstants.Baboon_Troop,
+                EncounterConstants.Cheetah_Family,
+                EncounterConstants.Cheetah_Pair,
+                EncounterConstants.Cheetah_Solitary,
                 EncounterConstants.Dragon_Gold_Wyrmling_Solitary,
                 EncounterConstants.Dragon_Gold_Wyrmling_Clutch,
                 EncounterConstants.Dragon_Gold_VeryYoung_Solitary,
@@ -3490,10 +3803,21 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
                 EncounterConstants.Dragon_Gold_GreatWyrm_Solitary,
                 EncounterConstants.Dragon_Gold_GreatWyrm_Pair,
                 EncounterConstants.Dragon_Gold_GreatWyrm_Family,
-                EncounterConstants.Elephant,
-                EncounterConstants.FireBeetle_Giant,
-                EncounterConstants.Gnoll,
-                EncounterConstants.Halfling_Lightfoot,
+                EncounterConstants.Elephant_Herd,
+                EncounterConstants.Elephant_Solitary,
+                EncounterConstants.FireBeetle_Giant_Celestial_Cluster,
+                EncounterConstants.FireBeetle_Giant_Celestial_Colony,
+                EncounterConstants.FireBeetle_Giant_Cluster,
+                EncounterConstants.FireBeetle_Giant_Colony,
+                EncounterConstants.Gnoll_Band,
+                EncounterConstants.Gnoll_HuntingParty,
+                EncounterConstants.Gnoll_Pair,
+                EncounterConstants.Gnoll_Solitary,
+                EncounterConstants.Gnoll_Tribe,
+                EncounterConstants.Gnoll_Tribe_WithTrolls,
+                EncounterConstants.Halfling_Lightfoot_Band,
+                EncounterConstants.Halfling_Lightfoot_Company,
+                EncounterConstants.Halfling_Lightfoot_Squad,
                 EncounterConstants.Lion,
                 EncounterConstants.Rhinoceras,
                 EncounterConstants.Scorpionfolk,
@@ -3501,7 +3825,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
                 EncounterConstants.Mule,
             };
 
-            base.DistinctCollection(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains, creatures);
+            base.AssertDistinctCollection(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains, creatures);
         }
 
         [TestCase(EncounterConstants.Aboleth, EnvironmentConstants.Underground + EnvironmentConstants.Aquatic)]
@@ -5614,10 +5938,10 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
         [TestCase(EncounterConstants.YuanTi_Pureblood, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest)]
         [TestCase(EncounterConstants.YuanTi_Halfblood, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest)]
         [TestCase(EncounterConstants.YuanTi_Abomination, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest)]
-        public void EncounterIsInCorrectEnvironment(string creature, string environment)
+        public void EncounterIsInCorrectEnvironment(string encounter, string environment)
         {
-            var creatures = collectionSelector.SelectFrom(TableNameConstants.EncounterGroups, environment);
-            Assert.That(creatures, Contains.Item(creature));
+            Assert.That(table, Contains.Key(environment));
+            Assert.That(table[environment], Contains.Item(encounter));
         }
 
         [Test]
@@ -5657,7 +5981,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
             extraplanarEncounters.Add(EncounterConstants.Mephit_Gang);
             extraplanarEncounters.Add(EncounterConstants.Mephit_Mob);
 
-            DistinctCollection(GroupConstants.Extraplanar, extraplanarEncounters.Distinct().ToArray());
+            AssertDistinctCollection(GroupConstants.Extraplanar, extraplanarEncounters.Distinct().ToArray());
         }
 
         [Test]
