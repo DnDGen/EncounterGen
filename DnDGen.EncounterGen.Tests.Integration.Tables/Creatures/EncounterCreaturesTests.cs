@@ -2547,291 +2547,291 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures
         [TestCase(EncounterConstants.Nixie_Gang, CreatureDataConstants.Nixie, AmountConstants.Range2To4)]
         [TestCase(EncounterConstants.Nixie_Band, CreatureDataConstants.Nixie, AmountConstants.Range6To11)]
         [TestCase(EncounterConstants.Nixie_Tribe, CreatureDataConstants.Nixie, AmountConstants.Range20To80)]
-        [TestCase(EncounterConstants.NPC_Traveler_Level1_Group, CreatureDataConstants.NPC_Traveler_Level1, AmountConstants.Range1To4)]
-        [TestCase(EncounterConstants.NPC_Traveler_Level2To3_Group, CreatureDataConstants.NPC_Traveler_Level2To3, AmountConstants.Range1To4)]
-        [TestCase(EncounterConstants.NPC_Traveler_Level4To5_Group, CreatureDataConstants.NPC_Traveler_Level4To5, AmountConstants.Range1To4)]
-        [TestCase(EncounterConstants.NPC_Traveler_Level6To7_Group, CreatureDataConstants.NPC_Traveler_Level6To7, AmountConstants.Range1To4)]
-        [TestCase(EncounterConstants.NPC_Traveler_Level8To9_Group, CreatureDataConstants.NPC_Traveler_Level8To9, AmountConstants.Range1To4)]
-        [TestCase(EncounterConstants.NPC_Traveler_Level10To11_Group, CreatureDataConstants.NPC_Traveler_Level10To11, AmountConstants.Range1To4)]
-        [TestCase(EncounterConstants.NPC_Traveler_Level12To13_Group, CreatureDataConstants.NPC_Traveler_Level12To13, AmountConstants.Range1To4)]
-        [TestCase(EncounterConstants.NPC_Traveler_Level14To15_Group, CreatureDataConstants.NPC_Traveler_Level14To15, AmountConstants.Range1To4)]
-        [TestCase(EncounterConstants.NPC_Traveler_Level16To17_Group, CreatureDataConstants.NPC_Traveler_Level16To17, AmountConstants.Range1To4)]
-        [TestCase(EncounterConstants.NPC_Traveler_Level18To19_Group, CreatureDataConstants.NPC_Traveler_Level18To19, AmountConstants.Range1To4)]
-        [TestCase(EncounterConstants.NPC_Traveler_Level20_Group, CreatureDataConstants.NPC_Traveler_Level20, AmountConstants.Range1To4)]
-        [TestCase(EncounterConstants.NPC_Level1_Solitary, CreatureDataConstants.NPC_Level1, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level2To3_Solitary, CreatureDataConstants.NPC_Level2To3, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level4To5_Solitary, CreatureDataConstants.NPC_Level4To5, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level6To7_Solitary, CreatureDataConstants.NPC_Level6To7, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level8To9_Solitary, CreatureDataConstants.NPC_Level8To9, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level10To11_Solitary, CreatureDataConstants.NPC_Level10To11, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level12To13_Solitary, CreatureDataConstants.NPC_Level12To13, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level14To15_Solitary, CreatureDataConstants.NPC_Level14To15, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level16To17_Solitary, CreatureDataConstants.NPC_Level16To17, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level18To19_Solitary, CreatureDataConstants.NPC_Level18To19, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level20_Solitary, CreatureDataConstants.NPC_Level20, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level1_Solitary_WithCat, CreatureDataConstants.NPC_Level1, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Traveler_Level1_Group, CreatureDataConstants.NPC_Traveler_Level1, AmountConstants.Range1To4)]
+        [TestCase(EncounterConstants.Traveler_Level2To3_Group, CreatureDataConstants.NPC_Traveler_Level2To3, AmountConstants.Range1To4)]
+        [TestCase(EncounterConstants.Traveler_Level4To5_Group, CreatureDataConstants.NPC_Traveler_Level4To5, AmountConstants.Range1To4)]
+        [TestCase(EncounterConstants.Traveler_Level6To7_Group, CreatureDataConstants.NPC_Traveler_Level6To7, AmountConstants.Range1To4)]
+        [TestCase(EncounterConstants.Traveler_Level8To9_Group, CreatureDataConstants.NPC_Traveler_Level8To9, AmountConstants.Range1To4)]
+        [TestCase(EncounterConstants.Traveler_Level10To11_Group, CreatureDataConstants.NPC_Traveler_Level10To11, AmountConstants.Range1To4)]
+        [TestCase(EncounterConstants.Traveler_Level12To13_Group, CreatureDataConstants.NPC_Traveler_Level12To13, AmountConstants.Range1To4)]
+        [TestCase(EncounterConstants.Traveler_Level14To15_Group, CreatureDataConstants.NPC_Traveler_Level14To15, AmountConstants.Range1To4)]
+        [TestCase(EncounterConstants.Traveler_Level16To17_Group, CreatureDataConstants.NPC_Traveler_Level16To17, AmountConstants.Range1To4)]
+        [TestCase(EncounterConstants.Traveler_Level18To19_Group, CreatureDataConstants.NPC_Traveler_Level18To19, AmountConstants.Range1To4)]
+        [TestCase(EncounterConstants.Traveler_Level20_Group, CreatureDataConstants.NPC_Traveler_Level20, AmountConstants.Range1To4)]
+        [TestCase(EncounterConstants.Local_Level1_Solitary, CreatureDataConstants.NPC_Level1, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Local_Level2To3_Solitary, CreatureDataConstants.NPC_Level2To3, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Local_Level4To5_Solitary, CreatureDataConstants.NPC_Level4To5, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Local_Level6To7_Solitary, CreatureDataConstants.NPC_Level6To7, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Local_Level8To9_Solitary, CreatureDataConstants.NPC_Level8To9, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Local_Level10To11_Solitary, CreatureDataConstants.NPC_Level10To11, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Local_Level12To13_Solitary, CreatureDataConstants.NPC_Level12To13, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Local_Level14To15_Solitary, CreatureDataConstants.NPC_Level14To15, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Local_Level16To17_Solitary, CreatureDataConstants.NPC_Level16To17, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Local_Level18To19_Solitary, CreatureDataConstants.NPC_Level18To19, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Local_Level20_Solitary, CreatureDataConstants.NPC_Level20, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Local_Level1_WithCat, CreatureDataConstants.NPC_Level1, AmountConstants.Range1,
             CreatureDataConstants.Cat, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level2To3_Solitary_WithCat, CreatureDataConstants.NPC_Level2To3, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level2To3_WithCat, CreatureDataConstants.NPC_Level2To3, AmountConstants.Range1,
             CreatureDataConstants.Cat, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level4To5_Solitary_WithCat, CreatureDataConstants.NPC_Level4To5, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level4To5_WithCat, CreatureDataConstants.NPC_Level4To5, AmountConstants.Range1,
             CreatureDataConstants.Cat, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level6To7_Solitary_WithCat, CreatureDataConstants.NPC_Level6To7, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level6To7_WithCat, CreatureDataConstants.NPC_Level6To7, AmountConstants.Range1,
             CreatureDataConstants.Cat, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level8To9_Solitary_WithCat, CreatureDataConstants.NPC_Level8To9, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level8To9_WithCat, CreatureDataConstants.NPC_Level8To9, AmountConstants.Range1,
             CreatureDataConstants.Cat, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level10To11_Solitary_WithCat, CreatureDataConstants.NPC_Level10To11, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level10To11_WithCat, CreatureDataConstants.NPC_Level10To11, AmountConstants.Range1,
             CreatureDataConstants.Cat, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level12To13_Solitary_WithCat, CreatureDataConstants.NPC_Level12To13, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level12To13_WithCat, CreatureDataConstants.NPC_Level12To13, AmountConstants.Range1,
             CreatureDataConstants.Cat, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level14To15_Solitary_WithCat, CreatureDataConstants.NPC_Level14To15, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level14To15_WithCat, CreatureDataConstants.NPC_Level14To15, AmountConstants.Range1,
             CreatureDataConstants.Cat, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level16To17_Solitary_WithCat, CreatureDataConstants.NPC_Level16To17, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level16To17_WithCat, CreatureDataConstants.NPC_Level16To17, AmountConstants.Range1,
             CreatureDataConstants.Cat, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level18To19_Solitary_WithCat, CreatureDataConstants.NPC_Level18To19, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level18To19_WithCat, CreatureDataConstants.NPC_Level18To19, AmountConstants.Range1,
             CreatureDataConstants.Cat, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level20_Solitary_WithCat, CreatureDataConstants.NPC_Level20, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level20_WithCat, CreatureDataConstants.NPC_Level20, AmountConstants.Range1,
             CreatureDataConstants.Cat, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level1_Solitary_WithDog, CreatureDataConstants.NPC_Level1, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level1_WithDog, CreatureDataConstants.NPC_Level1, AmountConstants.Range1,
             CreatureDataConstants.Dog, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level2To3_Solitary_WithDog, CreatureDataConstants.NPC_Level2To3, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level2To3_WithDog, CreatureDataConstants.NPC_Level2To3, AmountConstants.Range1,
             CreatureDataConstants.Dog, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level4To5_Solitary_WithDog, CreatureDataConstants.NPC_Level4To5, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level4To5_WithDog, CreatureDataConstants.NPC_Level4To5, AmountConstants.Range1,
             CreatureDataConstants.Dog, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level6To7_Solitary_WithDog, CreatureDataConstants.NPC_Level6To7, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level6To7_WithDog, CreatureDataConstants.NPC_Level6To7, AmountConstants.Range1,
             CreatureDataConstants.Dog, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level8To9_Solitary_WithDog, CreatureDataConstants.NPC_Level8To9, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level8To9_WithDog, CreatureDataConstants.NPC_Level8To9, AmountConstants.Range1,
             CreatureDataConstants.Dog, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level10To11_Solitary_WithDog, CreatureDataConstants.NPC_Level10To11, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level10To11_WithDog, CreatureDataConstants.NPC_Level10To11, AmountConstants.Range1,
             CreatureDataConstants.Dog, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level12To13_Solitary_WithDog, CreatureDataConstants.NPC_Level12To13, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level12To13_WithDog, CreatureDataConstants.NPC_Level12To13, AmountConstants.Range1,
             CreatureDataConstants.Dog, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level14To15_Solitary_WithDog, CreatureDataConstants.NPC_Level14To15, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level14To15_WithDog, CreatureDataConstants.NPC_Level14To15, AmountConstants.Range1,
             CreatureDataConstants.Dog, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level16To17_Solitary_WithDog, CreatureDataConstants.NPC_Level16To17, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level16To17_WithDog, CreatureDataConstants.NPC_Level16To17, AmountConstants.Range1,
             CreatureDataConstants.Dog, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level18To19_Solitary_WithDog, CreatureDataConstants.NPC_Level18To19, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level18To19_WithDog, CreatureDataConstants.NPC_Level18To19, AmountConstants.Range1,
             CreatureDataConstants.Dog, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level20_Solitary_WithDog, CreatureDataConstants.NPC_Level20, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level20_WithDog, CreatureDataConstants.NPC_Level20, AmountConstants.Range1,
             CreatureDataConstants.Dog, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level1_Solitary_WithDonkey, CreatureDataConstants.NPC_Level1, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level1_WithDonkey, CreatureDataConstants.NPC_Level1, AmountConstants.Range1,
             CreatureDataConstants.Donkey, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level2To3_Solitary_WithDonkey, CreatureDataConstants.NPC_Level2To3, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level2To3_WithDonkey, CreatureDataConstants.NPC_Level2To3, AmountConstants.Range1,
             CreatureDataConstants.Donkey, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level4To5_Solitary_WithDonkey, CreatureDataConstants.NPC_Level4To5, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level4To5_WithDonkey, CreatureDataConstants.NPC_Level4To5, AmountConstants.Range1,
             CreatureDataConstants.Donkey, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level6To7_Solitary_WithDonkey, CreatureDataConstants.NPC_Level6To7, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level6To7_WithDonkey, CreatureDataConstants.NPC_Level6To7, AmountConstants.Range1,
             CreatureDataConstants.Donkey, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level8To9_Solitary_WithDonkey, CreatureDataConstants.NPC_Level8To9, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level8To9_WithDonkey, CreatureDataConstants.NPC_Level8To9, AmountConstants.Range1,
             CreatureDataConstants.Donkey, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level10To11_Solitary_WithDonkey, CreatureDataConstants.NPC_Level10To11, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level10To11_WithDonkey, CreatureDataConstants.NPC_Level10To11, AmountConstants.Range1,
             CreatureDataConstants.Donkey, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level12To13_Solitary_WithDonkey, CreatureDataConstants.NPC_Level12To13, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level12To13_WithDonkey, CreatureDataConstants.NPC_Level12To13, AmountConstants.Range1,
             CreatureDataConstants.Donkey, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level14To15_Solitary_WithDonkey, CreatureDataConstants.NPC_Level14To15, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level14To15_WithDonkey, CreatureDataConstants.NPC_Level14To15, AmountConstants.Range1,
             CreatureDataConstants.Donkey, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level16To17_Solitary_WithDonkey, CreatureDataConstants.NPC_Level16To17, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level16To17_WithDonkey, CreatureDataConstants.NPC_Level16To17, AmountConstants.Range1,
             CreatureDataConstants.Donkey, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level18To19_Solitary_WithDonkey, CreatureDataConstants.NPC_Level18To19, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level18To19_WithDonkey, CreatureDataConstants.NPC_Level18To19, AmountConstants.Range1,
             CreatureDataConstants.Donkey, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level20_Solitary_WithDonkey, CreatureDataConstants.NPC_Level20, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level20_WithDonkey, CreatureDataConstants.NPC_Level20, AmountConstants.Range1,
             CreatureDataConstants.Donkey, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level1_Solitary_WithMule, CreatureDataConstants.NPC_Level1, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level1_WithMule, CreatureDataConstants.NPC_Level1, AmountConstants.Range1,
             CreatureDataConstants.Mule, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level2To3_Solitary_WithMule, CreatureDataConstants.NPC_Level2To3, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level2To3_WithMule, CreatureDataConstants.NPC_Level2To3, AmountConstants.Range1,
             CreatureDataConstants.Mule, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level4To5_Solitary_WithMule, CreatureDataConstants.NPC_Level4To5, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level4To5_WithMule, CreatureDataConstants.NPC_Level4To5, AmountConstants.Range1,
             CreatureDataConstants.Mule, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level6To7_Solitary_WithMule, CreatureDataConstants.NPC_Level6To7, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level6To7_WithMule, CreatureDataConstants.NPC_Level6To7, AmountConstants.Range1,
             CreatureDataConstants.Mule, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level8To9_Solitary_WithMule, CreatureDataConstants.NPC_Level8To9, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level8To9_WithMule, CreatureDataConstants.NPC_Level8To9, AmountConstants.Range1,
             CreatureDataConstants.Mule, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level10To11_Solitary_WithMule, CreatureDataConstants.NPC_Level10To11, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level10To11_WithMule, CreatureDataConstants.NPC_Level10To11, AmountConstants.Range1,
             CreatureDataConstants.Mule, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level12To13_Solitary_WithMule, CreatureDataConstants.NPC_Level12To13, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level12To13_WithMule, CreatureDataConstants.NPC_Level12To13, AmountConstants.Range1,
             CreatureDataConstants.Mule, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level14To15_Solitary_WithMule, CreatureDataConstants.NPC_Level14To15, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level14To15_WithMule, CreatureDataConstants.NPC_Level14To15, AmountConstants.Range1,
             CreatureDataConstants.Mule, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level16To17_Solitary_WithMule, CreatureDataConstants.NPC_Level16To17, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level16To17_WithMule, CreatureDataConstants.NPC_Level16To17, AmountConstants.Range1,
             CreatureDataConstants.Mule, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level18To19_Solitary_WithMule, CreatureDataConstants.NPC_Level18To19, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level18To19_WithMule, CreatureDataConstants.NPC_Level18To19, AmountConstants.Range1,
             CreatureDataConstants.Mule, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level20_Solitary_WithMule, CreatureDataConstants.NPC_Level20, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level20_WithMule, CreatureDataConstants.NPC_Level20, AmountConstants.Range1,
             CreatureDataConstants.Mule, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level1_Solitary_WithLightHorse, CreatureDataConstants.NPC_Level1, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level1_WithLightHorse, CreatureDataConstants.NPC_Level1, AmountConstants.Range1,
             CreatureDataConstants.Horse_Light, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level2To3_Solitary_WithLightHorse, CreatureDataConstants.NPC_Level2To3, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level2To3_WithLightHorse, CreatureDataConstants.NPC_Level2To3, AmountConstants.Range1,
             CreatureDataConstants.Horse_Light, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level4To5_Solitary_WithLightHorse, CreatureDataConstants.NPC_Level4To5, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level4To5_WithLightHorse, CreatureDataConstants.NPC_Level4To5, AmountConstants.Range1,
             CreatureDataConstants.Horse_Light, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level6To7_Solitary_WithLightHorse, CreatureDataConstants.NPC_Level6To7, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level6To7_WithLightHorse, CreatureDataConstants.NPC_Level6To7, AmountConstants.Range1,
             CreatureDataConstants.Horse_Light, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level8To9_Solitary_WithLightHorse, CreatureDataConstants.NPC_Level8To9, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level8To9_WithLightHorse, CreatureDataConstants.NPC_Level8To9, AmountConstants.Range1,
             CreatureDataConstants.Horse_Light, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level10To11_Solitary_WithLightHorse, CreatureDataConstants.NPC_Level10To11, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level10To11_WithLightHorse, CreatureDataConstants.NPC_Level10To11, AmountConstants.Range1,
             CreatureDataConstants.Horse_Light, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level12To13_Solitary_WithLightHorse, CreatureDataConstants.NPC_Level12To13, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level12To13_WithLightHorse, CreatureDataConstants.NPC_Level12To13, AmountConstants.Range1,
             CreatureDataConstants.Horse_Light, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level14To15_Solitary_WithLightHorse, CreatureDataConstants.NPC_Level14To15, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level14To15_WithLightHorse, CreatureDataConstants.NPC_Level14To15, AmountConstants.Range1,
             CreatureDataConstants.Horse_Light, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level16To17_Solitary_WithLightHorse, CreatureDataConstants.NPC_Level16To17, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level16To17_WithLightHorse, CreatureDataConstants.NPC_Level16To17, AmountConstants.Range1,
             CreatureDataConstants.Horse_Light, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level18To19_Solitary_WithLightHorse, CreatureDataConstants.NPC_Level18To19, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level18To19_WithLightHorse, CreatureDataConstants.NPC_Level18To19, AmountConstants.Range1,
             CreatureDataConstants.Horse_Light, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level20_Solitary_WithLightHorse, CreatureDataConstants.NPC_Level20, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level20_WithLightHorse, CreatureDataConstants.NPC_Level20, AmountConstants.Range1,
             CreatureDataConstants.Horse_Light, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level1_Solitary_WithHeavyHorse, CreatureDataConstants.NPC_Level1, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level1_WithHeavyHorse, CreatureDataConstants.NPC_Level1, AmountConstants.Range1,
             CreatureDataConstants.Horse_Heavy, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level2To3_Solitary_WithHeavyHorse, CreatureDataConstants.NPC_Level2To3, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level2To3_WithHeavyHorse, CreatureDataConstants.NPC_Level2To3, AmountConstants.Range1,
             CreatureDataConstants.Horse_Heavy, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level4To5_Solitary_WithHeavyHorse, CreatureDataConstants.NPC_Level4To5, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level4To5_WithHeavyHorse, CreatureDataConstants.NPC_Level4To5, AmountConstants.Range1,
             CreatureDataConstants.Horse_Heavy, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level6To7_Solitary_WithHeavyHorse, CreatureDataConstants.NPC_Level6To7, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level6To7_WithHeavyHorse, CreatureDataConstants.NPC_Level6To7, AmountConstants.Range1,
             CreatureDataConstants.Horse_Heavy, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level8To9_Solitary_WithHeavyHorse, CreatureDataConstants.NPC_Level8To9, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level8To9_WithHeavyHorse, CreatureDataConstants.NPC_Level8To9, AmountConstants.Range1,
             CreatureDataConstants.Horse_Heavy, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level10To11_Solitary_WithHeavyHorse, CreatureDataConstants.NPC_Level10To11, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level10To11_WithHeavyHorse, CreatureDataConstants.NPC_Level10To11, AmountConstants.Range1,
             CreatureDataConstants.Horse_Heavy, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level12To13_Solitary_WithHeavyHorse, CreatureDataConstants.NPC_Level12To13, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level12To13_WithHeavyHorse, CreatureDataConstants.NPC_Level12To13, AmountConstants.Range1,
             CreatureDataConstants.Horse_Heavy, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level14To15_Solitary_WithHeavyHorse, CreatureDataConstants.NPC_Level14To15, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level14To15_WithHeavyHorse, CreatureDataConstants.NPC_Level14To15, AmountConstants.Range1,
             CreatureDataConstants.Horse_Heavy, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level16To17_Solitary_WithHeavyHorse, CreatureDataConstants.NPC_Level16To17, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level16To17_WithHeavyHorse, CreatureDataConstants.NPC_Level16To17, AmountConstants.Range1,
             CreatureDataConstants.Horse_Heavy, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level18To19_Solitary_WithHeavyHorse, CreatureDataConstants.NPC_Level18To19, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level18To19_WithHeavyHorse, CreatureDataConstants.NPC_Level18To19, AmountConstants.Range1,
             CreatureDataConstants.Horse_Heavy, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level20_Solitary_WithHeavyHorse, CreatureDataConstants.NPC_Level20, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level20_WithHeavyHorse, CreatureDataConstants.NPC_Level20, AmountConstants.Range1,
             CreatureDataConstants.Horse_Heavy, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level1_Solitary_WithLightWarhorse, CreatureDataConstants.NPC_Level1, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level1_WithLightWarhorse, CreatureDataConstants.NPC_Level1, AmountConstants.Range1,
             CreatureDataConstants.Horse_Light_War, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level2To3_Solitary_WithLightWarhorse, CreatureDataConstants.NPC_Level2To3, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level2To3_WithLightWarhorse, CreatureDataConstants.NPC_Level2To3, AmountConstants.Range1,
             CreatureDataConstants.Horse_Light_War, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level4To5_Solitary_WithLightWarhorse, CreatureDataConstants.NPC_Level4To5, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level4To5_WithLightWarhorse, CreatureDataConstants.NPC_Level4To5, AmountConstants.Range1,
             CreatureDataConstants.Horse_Light_War, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level6To7_Solitary_WithLightWarhorse, CreatureDataConstants.NPC_Level6To7, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level6To7_WithLightWarhorse, CreatureDataConstants.NPC_Level6To7, AmountConstants.Range1,
             CreatureDataConstants.Horse_Light_War, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level8To9_Solitary_WithLightWarhorse, CreatureDataConstants.NPC_Level8To9, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level8To9_WithLightWarhorse, CreatureDataConstants.NPC_Level8To9, AmountConstants.Range1,
             CreatureDataConstants.Horse_Light_War, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level10To11_Solitary_WithLightWarhorse, CreatureDataConstants.NPC_Level10To11, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level10To11_WithLightWarhorse, CreatureDataConstants.NPC_Level10To11, AmountConstants.Range1,
             CreatureDataConstants.Horse_Light_War, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level12To13_Solitary_WithLightWarhorse, CreatureDataConstants.NPC_Level12To13, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level12To13_WithLightWarhorse, CreatureDataConstants.NPC_Level12To13, AmountConstants.Range1,
             CreatureDataConstants.Horse_Light_War, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level14To15_Solitary_WithLightWarhorse, CreatureDataConstants.NPC_Level14To15, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level14To15_WithLightWarhorse, CreatureDataConstants.NPC_Level14To15, AmountConstants.Range1,
             CreatureDataConstants.Horse_Light_War, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level16To17_Solitary_WithLightWarhorse, CreatureDataConstants.NPC_Level16To17, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level16To17_WithLightWarhorse, CreatureDataConstants.NPC_Level16To17, AmountConstants.Range1,
             CreatureDataConstants.Horse_Light_War, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level18To19_Solitary_WithLightWarhorse, CreatureDataConstants.NPC_Level18To19, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level18To19_WithLightWarhorse, CreatureDataConstants.NPC_Level18To19, AmountConstants.Range1,
             CreatureDataConstants.Horse_Light_War, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level20_Solitary_WithLightWarhorse, CreatureDataConstants.NPC_Level20, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level20_WithLightWarhorse, CreatureDataConstants.NPC_Level20, AmountConstants.Range1,
             CreatureDataConstants.Horse_Light_War, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level1_Solitary_WithHeavyWarhorse, CreatureDataConstants.NPC_Level1, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level1_WithHeavyWarhorse, CreatureDataConstants.NPC_Level1, AmountConstants.Range1,
             CreatureDataConstants.Horse_Heavy_War, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level2To3_Solitary_WithHeavyWarhorse, CreatureDataConstants.NPC_Level2To3, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level2To3_WithHeavyWarhorse, CreatureDataConstants.NPC_Level2To3, AmountConstants.Range1,
             CreatureDataConstants.Horse_Heavy_War, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level4To5_Solitary_WithHeavyWarhorse, CreatureDataConstants.NPC_Level4To5, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level4To5_WithHeavyWarhorse, CreatureDataConstants.NPC_Level4To5, AmountConstants.Range1,
             CreatureDataConstants.Horse_Heavy_War, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level6To7_Solitary_WithHeavyWarhorse, CreatureDataConstants.NPC_Level6To7, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level6To7_WithHeavyWarhorse, CreatureDataConstants.NPC_Level6To7, AmountConstants.Range1,
             CreatureDataConstants.Horse_Heavy_War, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level8To9_Solitary_WithHeavyWarhorse, CreatureDataConstants.NPC_Level8To9, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level8To9_WithHeavyWarhorse, CreatureDataConstants.NPC_Level8To9, AmountConstants.Range1,
             CreatureDataConstants.Horse_Heavy_War, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level10To11_Solitary_WithHeavyWarhorse, CreatureDataConstants.NPC_Level10To11, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level10To11_WithHeavyWarhorse, CreatureDataConstants.NPC_Level10To11, AmountConstants.Range1,
             CreatureDataConstants.Horse_Heavy_War, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level12To13_Solitary_WithHeavyWarhorse, CreatureDataConstants.NPC_Level12To13, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level12To13_WithHeavyWarhorse, CreatureDataConstants.NPC_Level12To13, AmountConstants.Range1,
             CreatureDataConstants.Horse_Heavy_War, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level14To15_Solitary_WithHeavyWarhorse, CreatureDataConstants.NPC_Level14To15, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level14To15_WithHeavyWarhorse, CreatureDataConstants.NPC_Level14To15, AmountConstants.Range1,
             CreatureDataConstants.Horse_Heavy_War, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level16To17_Solitary_WithHeavyWarhorse, CreatureDataConstants.NPC_Level16To17, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level16To17_WithHeavyWarhorse, CreatureDataConstants.NPC_Level16To17, AmountConstants.Range1,
             CreatureDataConstants.Horse_Heavy_War, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level18To19_Solitary_WithHeavyWarhorse, CreatureDataConstants.NPC_Level18To19, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level18To19_WithHeavyWarhorse, CreatureDataConstants.NPC_Level18To19, AmountConstants.Range1,
             CreatureDataConstants.Horse_Heavy_War, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level20_Solitary_WithHeavyWarhorse, CreatureDataConstants.NPC_Level20, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level20_WithHeavyWarhorse, CreatureDataConstants.NPC_Level20, AmountConstants.Range1,
             CreatureDataConstants.Horse_Heavy_War, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level1_Solitary_WithCamel, CreatureDataConstants.NPC_Level1, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level1_WithCamel, CreatureDataConstants.NPC_Level1, AmountConstants.Range1,
             CreatureDataConstants.Camel, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level2To3_Solitary_WithCamel, CreatureDataConstants.NPC_Level2To3, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level2To3_WithCamel, CreatureDataConstants.NPC_Level2To3, AmountConstants.Range1,
             CreatureDataConstants.Camel, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level4To5_Solitary_WithCamel, CreatureDataConstants.NPC_Level4To5, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level4To5_WithCamel, CreatureDataConstants.NPC_Level4To5, AmountConstants.Range1,
             CreatureDataConstants.Camel, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level6To7_Solitary_WithCamel, CreatureDataConstants.NPC_Level6To7, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level6To7_WithCamel, CreatureDataConstants.NPC_Level6To7, AmountConstants.Range1,
             CreatureDataConstants.Camel, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level8To9_Solitary_WithCamel, CreatureDataConstants.NPC_Level8To9, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level8To9_WithCamel, CreatureDataConstants.NPC_Level8To9, AmountConstants.Range1,
             CreatureDataConstants.Camel, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level10To11_Solitary_WithCamel, CreatureDataConstants.NPC_Level10To11, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level10To11_WithCamel, CreatureDataConstants.NPC_Level10To11, AmountConstants.Range1,
             CreatureDataConstants.Camel, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level12To13_Solitary_WithCamel, CreatureDataConstants.NPC_Level12To13, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level12To13_WithCamel, CreatureDataConstants.NPC_Level12To13, AmountConstants.Range1,
             CreatureDataConstants.Camel, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level14To15_Solitary_WithCamel, CreatureDataConstants.NPC_Level14To15, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level14To15_WithCamel, CreatureDataConstants.NPC_Level14To15, AmountConstants.Range1,
             CreatureDataConstants.Camel, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level16To17_Solitary_WithCamel, CreatureDataConstants.NPC_Level16To17, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level16To17_WithCamel, CreatureDataConstants.NPC_Level16To17, AmountConstants.Range1,
             CreatureDataConstants.Camel, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level18To19_Solitary_WithCamel, CreatureDataConstants.NPC_Level18To19, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level18To19_WithCamel, CreatureDataConstants.NPC_Level18To19, AmountConstants.Range1,
             CreatureDataConstants.Camel, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level20_Solitary_WithCamel, CreatureDataConstants.NPC_Level20, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level20_WithCamel, CreatureDataConstants.NPC_Level20, AmountConstants.Range1,
             CreatureDataConstants.Camel, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level1_Solitary_WithPony, CreatureDataConstants.NPC_Level1, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level1_WithPony, CreatureDataConstants.NPC_Level1, AmountConstants.Range1,
             CreatureDataConstants.Pony, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level2To3_Solitary_WithPony, CreatureDataConstants.NPC_Level2To3, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level2To3_WithPony, CreatureDataConstants.NPC_Level2To3, AmountConstants.Range1,
             CreatureDataConstants.Pony, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level4To5_Solitary_WithPony, CreatureDataConstants.NPC_Level4To5, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level4To5_WithPony, CreatureDataConstants.NPC_Level4To5, AmountConstants.Range1,
             CreatureDataConstants.Pony, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level6To7_Solitary_WithPony, CreatureDataConstants.NPC_Level6To7, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level6To7_WithPony, CreatureDataConstants.NPC_Level6To7, AmountConstants.Range1,
             CreatureDataConstants.Pony, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level8To9_Solitary_WithPony, CreatureDataConstants.NPC_Level8To9, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level8To9_WithPony, CreatureDataConstants.NPC_Level8To9, AmountConstants.Range1,
             CreatureDataConstants.Pony, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level10To11_Solitary_WithPony, CreatureDataConstants.NPC_Level10To11, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level10To11_WithPony, CreatureDataConstants.NPC_Level10To11, AmountConstants.Range1,
             CreatureDataConstants.Pony, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level12To13_Solitary_WithPony, CreatureDataConstants.NPC_Level12To13, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level12To13_WithPony, CreatureDataConstants.NPC_Level12To13, AmountConstants.Range1,
             CreatureDataConstants.Pony, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level14To15_Solitary_WithPony, CreatureDataConstants.NPC_Level14To15, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level14To15_WithPony, CreatureDataConstants.NPC_Level14To15, AmountConstants.Range1,
             CreatureDataConstants.Pony, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level16To17_Solitary_WithPony, CreatureDataConstants.NPC_Level16To17, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level16To17_WithPony, CreatureDataConstants.NPC_Level16To17, AmountConstants.Range1,
             CreatureDataConstants.Pony, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level18To19_Solitary_WithPony, CreatureDataConstants.NPC_Level18To19, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level18To19_WithPony, CreatureDataConstants.NPC_Level18To19, AmountConstants.Range1,
             CreatureDataConstants.Pony, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level20_Solitary_WithPony, CreatureDataConstants.NPC_Level20, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level20_WithPony, CreatureDataConstants.NPC_Level20, AmountConstants.Range1,
             CreatureDataConstants.Pony, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level1_Solitary_WithWarpony, CreatureDataConstants.NPC_Level1, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level1_WithWarpony, CreatureDataConstants.NPC_Level1, AmountConstants.Range1,
             CreatureDataConstants.Pony_War, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level2To3_Solitary_WithWarpony, CreatureDataConstants.NPC_Level2To3, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level2To3_WithWarpony, CreatureDataConstants.NPC_Level2To3, AmountConstants.Range1,
             CreatureDataConstants.Pony_War, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level4To5_Solitary_WithWarpony, CreatureDataConstants.NPC_Level4To5, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level4To5_WithWarpony, CreatureDataConstants.NPC_Level4To5, AmountConstants.Range1,
             CreatureDataConstants.Pony_War, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level6To7_Solitary_WithWarpony, CreatureDataConstants.NPC_Level6To7, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level6To7_WithWarpony, CreatureDataConstants.NPC_Level6To7, AmountConstants.Range1,
             CreatureDataConstants.Pony_War, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level8To9_Solitary_WithWarpony, CreatureDataConstants.NPC_Level8To9, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level8To9_WithWarpony, CreatureDataConstants.NPC_Level8To9, AmountConstants.Range1,
             CreatureDataConstants.Pony_War, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level10To11_Solitary_WithWarpony, CreatureDataConstants.NPC_Level10To11, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level10To11_WithWarpony, CreatureDataConstants.NPC_Level10To11, AmountConstants.Range1,
             CreatureDataConstants.Pony_War, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level12To13_Solitary_WithWarpony, CreatureDataConstants.NPC_Level12To13, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level12To13_WithWarpony, CreatureDataConstants.NPC_Level12To13, AmountConstants.Range1,
             CreatureDataConstants.Pony_War, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level14To15_Solitary_WithWarpony, CreatureDataConstants.NPC_Level14To15, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level14To15_WithWarpony, CreatureDataConstants.NPC_Level14To15, AmountConstants.Range1,
             CreatureDataConstants.Pony_War, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level16To17_Solitary_WithWarpony, CreatureDataConstants.NPC_Level16To17, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level16To17_WithWarpony, CreatureDataConstants.NPC_Level16To17, AmountConstants.Range1,
             CreatureDataConstants.Pony_War, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level18To19_Solitary_WithWarpony, CreatureDataConstants.NPC_Level18To19, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level18To19_WithWarpony, CreatureDataConstants.NPC_Level18To19, AmountConstants.Range1,
             CreatureDataConstants.Pony_War, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level20_Solitary_WithWarpony, CreatureDataConstants.NPC_Level20, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level20_WithWarpony, CreatureDataConstants.NPC_Level20, AmountConstants.Range1,
             CreatureDataConstants.Pony_War, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level1_Solitary_WithRidingDog, CreatureDataConstants.NPC_Level1, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level1_WithRidingDog, CreatureDataConstants.NPC_Level1, AmountConstants.Range1,
             CreatureDataConstants.Dog_Riding, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level2To3_Solitary_WithRidingDog, CreatureDataConstants.NPC_Level2To3, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level2To3_WithRidingDog, CreatureDataConstants.NPC_Level2To3, AmountConstants.Range1,
             CreatureDataConstants.Dog_Riding, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level4To5_Solitary_WithRidingDog, CreatureDataConstants.NPC_Level4To5, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level4To5_WithRidingDog, CreatureDataConstants.NPC_Level4To5, AmountConstants.Range1,
             CreatureDataConstants.Dog_Riding, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level6To7_Solitary_WithRidingDog, CreatureDataConstants.NPC_Level6To7, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level6To7_WithRidingDog, CreatureDataConstants.NPC_Level6To7, AmountConstants.Range1,
             CreatureDataConstants.Dog_Riding, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level8To9_Solitary_WithRidingDog, CreatureDataConstants.NPC_Level8To9, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level8To9_WithRidingDog, CreatureDataConstants.NPC_Level8To9, AmountConstants.Range1,
             CreatureDataConstants.Dog_Riding, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level10To11_Solitary_WithRidingDog, CreatureDataConstants.NPC_Level10To11, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level10To11_WithRidingDog, CreatureDataConstants.NPC_Level10To11, AmountConstants.Range1,
             CreatureDataConstants.Dog_Riding, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level12To13_Solitary_WithRidingDog, CreatureDataConstants.NPC_Level12To13, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level12To13_WithRidingDog, CreatureDataConstants.NPC_Level12To13, AmountConstants.Range1,
             CreatureDataConstants.Dog_Riding, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level14To15_Solitary_WithRidingDog, CreatureDataConstants.NPC_Level14To15, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level14To15_WithRidingDog, CreatureDataConstants.NPC_Level14To15, AmountConstants.Range1,
             CreatureDataConstants.Dog_Riding, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level16To17_Solitary_WithRidingDog, CreatureDataConstants.NPC_Level16To17, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level16To17_WithRidingDog, CreatureDataConstants.NPC_Level16To17, AmountConstants.Range1,
             CreatureDataConstants.Dog_Riding, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level18To19_Solitary_WithRidingDog, CreatureDataConstants.NPC_Level18To19, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level18To19_WithRidingDog, CreatureDataConstants.NPC_Level18To19, AmountConstants.Range1,
             CreatureDataConstants.Dog_Riding, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.NPC_Level20_Solitary_WithRidingDog, CreatureDataConstants.NPC_Level20, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Local_Level20_WithRidingDog, CreatureDataConstants.NPC_Level20, AmountConstants.Range1,
             CreatureDataConstants.Dog_Riding, AmountConstants.Range1)]
         [TestCase(EncounterConstants.Nymph_Solitary, CreatureDataConstants.Nymph, AmountConstants.Range1)]
         [TestCase(EncounterConstants.Octopus_Solitary, CreatureDataConstants.Octopus, AmountConstants.Range1)]
