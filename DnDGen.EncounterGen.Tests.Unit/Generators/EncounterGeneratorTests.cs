@@ -176,8 +176,11 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
             Assert.That(creature.Creature.Name, Is.EqualTo("cleaned creature"));
         }
 
+        //INFO: This may occur if an encounter has a chance of a creature occurring that matches a filter
+        //Example: % chance of having a dragon in the encounter, so enocunter matches filter, but when actually generating, no dragon.
+        //Therefore, regenerate the entire encounter
         [Test]
-        public void RerollEncounter()
+        public void RerollEncounter_IfEncounterCreaturesDoNotMatchFilters_SameEncounter()
         {
             mockCreatureGenerator
                 .SetupSequence(g => g.GenerateFor("my encounter"))
@@ -205,8 +208,13 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
         }
 
         [Test]
-        public void RerollEntireEncounter()
+        public void RerollEncounter_IfEncounterCreaturesDoNotMatchFilters_DifferentEncounter()
         {
+            mockEncounterCollectionSelector
+                .SetupSequence(g => g.SelectRandomEncounterFrom(It.Is<EncounterSpecifications>(es => es.Level == EncounterLevel)))
+                .Returns("my encounter")
+                .Returns("my other encounter");
+
             var wrongCreatures = new[]
             {
                 new EncounterCreature(),
@@ -227,10 +235,12 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
             otherCreatures[0].Quantity = 600;
 
             mockCreatureGenerator
-                .SetupSequence(s => s.GenerateFor("my encounter"))
-                .Returns(wrongCreatures)
-                .Returns(otherCreatures)
-                .Returns(creatures);
+                .Setup(s => s.GenerateFor("my encounter"))
+                .Returns(wrongCreatures);
+
+            mockCreatureGenerator
+                .Setup(s => s.GenerateFor("my other encounter"))
+                .Returns(otherCreatures);
 
             mockEncounterVerifier
                 .Setup(v => v.EncounterIsValid(It.Is<Encounter>(e => e.Creatures.Any(c => c.Creature.Name == "other creature")), specifications.CreatureTypeFilters))
@@ -241,7 +251,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
 
             var encounter = encounterGenerator.Generate(specifications);
             Assert.That(encounter, Is.Not.Null);
-            Assert.That(encounter.Description, Is.EqualTo("my encounter"));
+            Assert.That(encounter.Description, Is.EqualTo("my other encounter"));
             Assert.That(encounter.Creatures, Is.EqualTo(otherCreatures));
 
             var creature = encounter.Creatures.Single();

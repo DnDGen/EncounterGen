@@ -44,6 +44,8 @@ namespace DnDGen.EncounterGen.Generators
             while (!encounterVerifier.EncounterIsValid(encounter, encounterSpecifications.CreatureTypeFilters))
                 encounter = GenerateEncounter(encounterSpecifications);
 
+            encounter.Characters = encounterCharacterGenerator.GenerateFrom(encounter.Creatures);
+            encounter.ActualEncounterLevel = amountSelector.Select(encounter);
             encounter.Treasures = encounterTreasureGenerator.GenerateFor(encounter.Creatures, encounter.ActualEncounterLevel);
             encounter.Creatures = creatureGenerator.CleanCreatures(encounter.Creatures);
 
@@ -57,11 +59,9 @@ namespace DnDGen.EncounterGen.Generators
 
             encounter.Description = encounterCollectionSelector.SelectRandomEncounterFrom(modifiedSpecifications);
             encounter.Creatures = creatureGenerator.GenerateFor(encounter.Description);
-            encounter.Characters = encounterCharacterGenerator.GenerateFrom(encounter.Creatures);
 
             encounter.TargetEncounterLevel = encounterSpecifications.Level;
             encounter.AverageEncounterLevel = modifiedSpecifications.Level;
-            encounter.ActualEncounterLevel = amountSelector.Select(encounter);
 
             return encounter;
         }
