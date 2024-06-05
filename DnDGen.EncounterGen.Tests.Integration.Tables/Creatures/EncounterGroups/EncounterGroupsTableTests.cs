@@ -2,8 +2,6 @@
 using DnDGen.EncounterGen.Selectors.Collections;
 using DnDGen.EncounterGen.Tables;
 using NUnit.Framework;
-using System;
-using System.Collections.Generic;
 
 namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
 {
@@ -99,16 +97,6 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
             };
 
             AssertEntriesAreComplete(names);
-        }
-
-        [Obsolete]
-        protected IEnumerable<string> GetEncountersFromCreatureGroup(string creatureGroup)
-        {
-            var creatures = collectionSelector.Explode(TableNameConstants.CreatureGroups, creatureGroup);
-            var allEncounters = collectionSelector.SelectAllFrom(TableNameConstants.EncounterGroups);
-            var encounters = collectionSelector.Flatten(allEncounters, creatures);
-
-            return encounters;
         }
     }
 }
