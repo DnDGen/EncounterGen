@@ -2967,7 +2967,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures
         [TestCase(EncounterConstants.Rat_Swarm_Pack, CreatureDataConstants.Rat_Swarm, AmountConstants.Range2To4)]
         [TestCase(EncounterConstants.Rat_Swarm_Infestation, CreatureDataConstants.Rat_Swarm, AmountConstants.Range7To12)]
         [TestCase(EncounterConstants.Raven_Solitary, CreatureDataConstants.Raven, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.Ravid_Solitary, CreatureDataConstants.Ravid, AmountConstants.Range1,
+        [TestCase(EncounterConstants.Ravid_WithAnimatedObjects, CreatureDataConstants.Ravid, AmountConstants.Range1,
             CreatureDataConstants.AnimatedObject_Colossal, AmountConstants.Range17PercentTo1,
             CreatureDataConstants.AnimatedObject_Gargantuan, AmountConstants.Range25PercentTo1,
             CreatureDataConstants.AnimatedObject_Huge, AmountConstants.Range33PercentTo1,

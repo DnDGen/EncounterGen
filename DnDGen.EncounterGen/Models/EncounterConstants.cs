@@ -1528,6 +1528,10 @@ namespace DnDGen.EncounterGen.Models
         public const string HornedDevil_Team = "Horned Devils (Cornugons) (Team)";
         public const string HornedDevil_Squad = "Horned Devils (Cornugons) (Squad)";
         public const string Horse_Light_Herd = "Light Horses (Herd)";
+        public const string Horse_Light_Solitary = "Light Horse (Solitary)";
+        public const string Horse_Light_War_Solitary = "Light Warhorse (Solitary)";
+        public const string Horse_Heavy_Solitary = "Heavy Horse (Solitary)";
+        public const string Horse_Heavy_War_Solitary = "Heavy Warhorse (Solitary)";
         public const string HoundArchon_Solitary = "Hound Archon (Solitary)";
         public const string HoundArchon_Pair = "Hound Archons (Pair)";
         public const string HoundArchon_Squad = "Hound Archons (Squad)";
@@ -1666,6 +1670,7 @@ namespace DnDGen.EncounterGen.Models
         public const string Mohrg_Mob = "Mohrgs (Mob)";
         public const string Monkey_Troop = "Monkeys (Troop)";
         public const string Monkey_Celestial_Troop = "Celestial Monkeys (Troop)";
+        public const string Mule_Solitary = "Mule (Solitary)";
         public const string Mummy_Solitary = "Mummy (Solitary)";
         public const string Mummy_WardenSquad = "Mummies (Warden Squad)";
         public const string Mummy_GuardianDetail = "Mummies (Guardian Detail)";
@@ -1935,6 +1940,7 @@ namespace DnDGen.EncounterGen.Models
         public const string Planetar_Solitary = "Planetar (Solitary)";
         public const string Planetar_Pair = "Planetars (Pair)";
         public const string Pony_Solitary = "Pony (Solitary)";
+        public const string Pony_War_Solitary = "Warpony (Solitary)";
         public const string Porpoise_Solitary = "Porpoise (Solitary)";
         public const string Porpoise_Pair = "Porpoises (Pair)";
         public const string Porpoise_School = "Porpoises (School)";
@@ -1969,7 +1975,7 @@ namespace DnDGen.EncounterGen.Models
         public const string Rat_Swarm_Infestation = "Rat Swarms (Infestation)";
         public const string Raven_Solitary = "Raven (Solitary)";
         public const string Raven_Fiendish_Solitary = "Fiendish Raven (Solitary)";
-        public const string Ravid_Solitary = "Ravid (with Animated Objects)";
+        public const string Ravid_WithAnimatedObjects = "Ravid (with Animated Objects)";
         public const string RazorBoar_Solitary = "Razor Boar (Solitary)";
         public const string Remorhaz_Solitary = "Remorhaz (Solitary)";
         public const string Retriever_Solitary = "Retriever (Solitary)";

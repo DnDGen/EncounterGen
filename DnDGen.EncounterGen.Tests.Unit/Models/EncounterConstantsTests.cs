@@ -1971,7 +1971,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Models
         [TestCase(EncounterConstants.Rat_Swarm_Infestation, "Rat Swarms (Infestation)")]
         [TestCase(EncounterConstants.Raven_Solitary, "Raven (Solitary)")]
         [TestCase(EncounterConstants.Raven_Fiendish_Solitary, "Fiendish Raven (Solitary)")]
-        [TestCase(EncounterConstants.Ravid_Solitary, "Ravid (with Animated Objects)")]
+        [TestCase(EncounterConstants.Ravid_WithAnimatedObjects, "Ravid (with Animated Objects)")]
         [TestCase(EncounterConstants.RazorBoar_Solitary, "Razor Boar (Solitary)")]
         [TestCase(EncounterConstants.Remorhaz_Solitary, "Remorhaz (Solitary)")]
         [TestCase(EncounterConstants.Retriever_Solitary, "Retriever (Solitary)")]
