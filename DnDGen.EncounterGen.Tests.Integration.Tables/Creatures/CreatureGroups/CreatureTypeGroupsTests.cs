@@ -42,7 +42,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
                 CreatureDataConstants.WillOWisp,
             };
 
-            base.DistinctCollection(CreatureDataConstants.Types.Aberration, creatures);
+            base.AssertDistinctCollection(CreatureDataConstants.Types.Aberration, creatures);
         }
 
         [Test]
@@ -97,7 +97,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
                 CreatureDataConstants.Wolverine,
             };
 
-            base.DistinctCollection(CreatureDataConstants.Types.Animal, creatures);
+            base.AssertDistinctCollection(CreatureDataConstants.Types.Animal, creatures);
         }
 
         [Test]
@@ -113,7 +113,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
                 CreatureDataConstants.ShieldGuardian,
             };
 
-            base.DistinctCollection(CreatureDataConstants.Types.Construct, creatures);
+            base.AssertDistinctCollection(CreatureDataConstants.Types.Construct, creatures);
         }
 
         [Test]
@@ -136,7 +136,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
                 CreatureDataConstants.Wyvern,
             };
 
-            base.DistinctCollection(CreatureDataConstants.Types.Dragon, creatures);
+            base.AssertDistinctCollection(CreatureDataConstants.Types.Dragon, creatures);
         }
 
         [Test]
@@ -154,7 +154,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
                 CreatureDataConstants.Thoqqua
             };
 
-            base.DistinctCollection(CreatureDataConstants.Types.Elemental, creatures);
+            base.AssertDistinctCollection(CreatureDataConstants.Types.Elemental, creatures);
         }
 
         [Test]
@@ -168,7 +168,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
                 CreatureDataConstants.Sprite,
             };
 
-            base.DistinctCollection(CreatureDataConstants.Types.Fey, creatures);
+            base.AssertDistinctCollection(CreatureDataConstants.Types.Fey, creatures);
         }
 
         [Test]
@@ -190,7 +190,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
                 CreatureDataConstants.Troll_Scrag,
             };
 
-            base.DistinctCollection(CreatureDataConstants.Types.Giant, creatures);
+            base.AssertDistinctCollection(CreatureDataConstants.Types.Giant, creatures);
         }
 
         [Test]
@@ -223,7 +223,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
                 CreatureDataConstants.Troglodyte,
             };
 
-            base.DistinctCollection(CreatureDataConstants.Types.Humanoid, creatures);
+            base.AssertDistinctCollection(CreatureDataConstants.Types.Humanoid, creatures);
         }
 
         [Test]
@@ -282,7 +282,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
                 CreatureDataConstants.Yrthak,
             };
 
-            base.DistinctCollection(CreatureDataConstants.Types.MagicalBeast, creatures);
+            base.AssertDistinctCollection(CreatureDataConstants.Types.MagicalBeast, creatures);
         }
 
         [Test]
@@ -306,7 +306,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
                 CreatureDataConstants.YuanTi,
             };
 
-            base.DistinctCollection(CreatureDataConstants.Types.MonstrousHumanoid, creatures);
+            base.AssertDistinctCollection(CreatureDataConstants.Types.MonstrousHumanoid, creatures);
         }
 
         [Test]
@@ -320,7 +320,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
                 CreatureDataConstants.Ooze_OchreJelly,
             };
 
-            base.DistinctCollection(CreatureDataConstants.Types.Ooze, creatures);
+            base.AssertDistinctCollection(CreatureDataConstants.Types.Ooze, creatures);
         }
 
         [Test]
@@ -375,7 +375,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
                 CreatureDataConstants.YethHound,
             };
 
-            base.DistinctCollection(CreatureDataConstants.Types.Outsider, creatures);
+            base.AssertDistinctCollection(CreatureDataConstants.Types.Outsider, creatures);
         }
 
         [Test]
@@ -391,7 +391,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
                 CreatureDataConstants.Treant,
             };
 
-            base.DistinctCollection(CreatureDataConstants.Types.Plant, creatures);
+            base.AssertDistinctCollection(CreatureDataConstants.Types.Plant, creatures);
         }
 
         [Test]
@@ -418,7 +418,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
                 CreatureDataConstants.Zombie,
             };
 
-            base.DistinctCollection(CreatureDataConstants.Types.Undead, creatures);
+            base.AssertDistinctCollection(CreatureDataConstants.Types.Undead, creatures);
         }
 
         [Test]
@@ -441,7 +441,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
                 CreatureDataConstants.Wasp_Giant,
             };
 
-            base.DistinctCollection(CreatureDataConstants.Types.Vermin, creatures);
+            base.AssertDistinctCollection(CreatureDataConstants.Types.Vermin, creatures);
         }
     }
 }

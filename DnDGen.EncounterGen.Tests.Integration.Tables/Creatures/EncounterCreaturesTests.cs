@@ -3753,7 +3753,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures
         public void EncounterCreatures(string encounter, params string[] creaturesAndAmounts)
         {
             var creatures = FormatCreatures(creaturesAndAmounts);
-            DistinctCollection(encounter, creatures);
+            AssertDistinctCollection(encounter, creatures);
         }
 
         private string[] FormatCreatures(params string[] creaturesAndAmounts)
@@ -3769,6 +3769,19 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures
                 formattedTypesAndAmounts.Add($"{creaturesAndAmounts[i]}/{creaturesAndAmounts[i + 1]}");
 
             return formattedTypesAndAmounts.ToArray();
+        }
+
+        [Test]
+        public void BUG_NoEncountersHaveMultipleEntriesOfSameCreature()
+        {
+            foreach (var kvp in table)
+            {
+                var encounter = kvp.Key;
+                var creaturesAndAmounts = kvp.Value;
+
+                var creatures = creaturesAndAmounts.Select(ca => ca.Split('/')[0]);
+                Assert.That(creatures, Is.Unique, encounter);
+            }
         }
     }
 }

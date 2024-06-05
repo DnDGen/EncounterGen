@@ -1515,7 +1515,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures
         [TestCase(CreatureDataConstants.Zombie_GrayRender, ChallengeRatingConstants.Six)]
         public void AverageChallengeRating(string creature, string averageChallengeRating)
         {
-            DistinctCollection(creature, averageChallengeRating);
+            AssertDistinctCollection(creature, averageChallengeRating);
         }
 
         [Test]
