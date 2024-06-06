@@ -25,7 +25,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Treasures
             var useSubcreatureForTreasure = collectionSelector.Explode(TableNameConstants.CreatureGroups, GroupConstants.UseSubcreatureForTreasure);
             allCreatures = allCreatures.Except(useSubcreatureForTreasure);
 
-            AssertEntriesAreComplete(allCreatures);
+            AssertNamesAreComplete(allCreatures);
         }
 
         [TestCase(CreatureDataConstants.Aasimar_Warrior, 1, 1, 1)]

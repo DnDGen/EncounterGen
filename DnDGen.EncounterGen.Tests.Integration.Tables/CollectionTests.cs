@@ -30,7 +30,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables
 
         public abstract void EntriesAreComplete();
 
-        protected void AssertEntriesAreComplete(IEnumerable<string> entries)
+        protected void AssertNamesAreComplete(IEnumerable<string> entries)
         {
             Assert.That(entries, Is.Unique);
             Assert.That(table.Keys, Is.Unique);

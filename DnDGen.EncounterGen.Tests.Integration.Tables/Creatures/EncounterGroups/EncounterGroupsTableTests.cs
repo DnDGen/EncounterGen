@@ -1,5 +1,4 @@
 ﻿using DnDGen.EncounterGen.Models;
-using DnDGen.EncounterGen.Selectors.Collections;
 using DnDGen.EncounterGen.Tables;
 using NUnit.Framework;
 
@@ -8,17 +7,9 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
     [TestFixture]
     public abstract class EncounterGroupsTableTests : CollectionTests
     {
-        internal IEncounterCollectionSelector encounterCollectionSelector;
-
         protected override string tableName => TableNameConstants.EncounterGroups;
 
-        [SetUp]
-        public void EncounterGroupsSetup()
-        {
-            encounterCollectionSelector = GetNewInstanceOf<IEncounterCollectionSelector>();
-        }
-
-        protected void AssertEncounterGroupEntriesAreComplete()
+        protected void AssertEncounterGroupNamesAreComplete()
         {
             var names = new[]
             {
@@ -96,7 +87,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
                 GroupConstants.Wilderness,
             };
 
-            AssertEntriesAreComplete(names);
+            AssertNamesAreComplete(names);
         }
     }
 }

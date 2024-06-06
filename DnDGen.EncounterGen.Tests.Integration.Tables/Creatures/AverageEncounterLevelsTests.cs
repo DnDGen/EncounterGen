@@ -74,7 +74,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures
         public override void EntriesAreComplete()
         {
             var levels = Enumerable.Range(EncounterSpecifications.MinimumLevel, EncounterSpecifications.MaximumLevel).Select(l => l.ToString());
-            AssertEntriesAreComplete(levels);
+            AssertNamesAreComplete(levels);
         }
 
         [TestCase(EncounterSpecifications.MinimumLevel)]

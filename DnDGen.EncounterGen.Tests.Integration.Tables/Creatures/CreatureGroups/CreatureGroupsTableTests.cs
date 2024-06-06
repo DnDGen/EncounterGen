@@ -244,7 +244,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
                 GroupConstants.UseSubcreatureForTreasure,
             };
 
-            AssertEntriesAreComplete(entries);
+            AssertNamesAreComplete(entries);
         }
 
         protected IEnumerable<string> GetAllCreatures()

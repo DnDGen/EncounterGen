@@ -12,7 +12,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
         [Test]
         public override void EntriesAreComplete()
         {
-            AssertEncounterGroupEntriesAreComplete();
+            AssertEncounterGroupNamesAreComplete();
         }
 
         [TestCase(CreatureDataConstants.Types.Aberration)]

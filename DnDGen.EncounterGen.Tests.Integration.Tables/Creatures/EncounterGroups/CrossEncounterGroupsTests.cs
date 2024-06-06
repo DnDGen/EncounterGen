@@ -1,5 +1,6 @@
 ﻿using DnDGen.EncounterGen.Generators;
 using DnDGen.EncounterGen.Models;
+using DnDGen.EncounterGen.Selectors.Collections;
 using DnDGen.EncounterGen.Tables;
 using NUnit.Framework;
 using System;
@@ -11,17 +12,19 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
     public class CrossEncounterGroupsTests : EncounterGroupsTableTests
     {
         private IEncounterVerifier encounterVerifier;
+        private IEncounterCollectionSelector encounterCollectionSelector;
 
         [SetUp]
         public void Setup()
         {
             encounterVerifier = GetNewInstanceOf<IEncounterVerifier>();
+            encounterCollectionSelector = GetNewInstanceOf<IEncounterCollectionSelector>();
         }
 
         [Test]
         public override void EntriesAreComplete()
         {
-            AssertEncounterGroupEntriesAreComplete();
+            AssertEncounterGroupNamesAreComplete();
         }
 
         [Test]
@@ -274,7 +277,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
 
         private bool IsUndead(string encounter)
         {
-            var undead = collectionSelector.Explode(TableNameConstants.EncounterGroups, CreatureDataConstants.Types.Undead);
+            var undead = collectionSelector.SelectFrom(TableNameConstants.EncounterGroups, CreatureDataConstants.Types.Undead);
             return undead.Contains(encounter);
         }
 

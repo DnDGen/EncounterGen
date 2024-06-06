@@ -14,7 +14,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures
         public override void EntriesAreComplete()
         {
             var allCreatures = GetAllCreaturesFromEncounters();
-            AssertEntriesAreComplete(allCreatures);
+            AssertNamesAreComplete(allCreatures);
         }
 
         [TestCase(CreatureDataConstants.Aasimar_Warrior, ChallengeRatingConstants.OneHalf)]
