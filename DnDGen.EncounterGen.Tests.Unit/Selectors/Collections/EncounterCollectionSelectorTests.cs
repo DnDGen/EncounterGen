@@ -91,6 +91,9 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
                 .Setup(s => s.SelectFrom(TableNameConstants.EncounterGroups, It.IsAny<string>()))
                 .Returns((string t, string n) => encounterGroups.ContainsKey(n) ? encounterGroups[n] : Enumerable.Empty<string>());
             mockCollectionSelector
+                .Setup(s => s.SelectFrom(TableNameConstants.EncounterGroups, GroupConstants.All))
+                .Returns(() => encounterGroups.Values.SelectMany(e => e).Distinct());
+            mockCollectionSelector
                 .Setup(s => s.SelectFrom(TableNameConstants.AverageEncounterLevels, It.IsAny<string>()))
                 .Returns((string t, string l) => GetEncounterLevel(l));
             mockCollectionSelector

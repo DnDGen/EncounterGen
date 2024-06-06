@@ -4,159 +4,6 @@
   <collection>
     <name></name>
   </collection>
-	<collection>
-		<name>Any</name>
-		<entry>Allip</entry>
-		<entry>Animated object</entry>
-		<entry>Mummy</entry>
-		<entry>Character#Ghost#</entry>
-		<entry>Character#Lich#</entry>
-		<entry>Character#Vampire#</entry>
-		<entry>Devourer</entry>
-		<entry>Doppelganger</entry>
-		<entry>Gargoyle</entry>
-		<entry>Ghoul</entry>
-		<entry>Golem</entry>
-		<entry>Homunculus</entry>
-		<entry>Mohrg</entry>
-		<entry>Shadow</entry>
-		<entry>Shield guardian</entry>
-		<entry>Skeleton</entry>
-    <entry>Tarrasque</entry>
-		<entry>Wight</entry>
-		<entry>Wraith</entry>
-		<entry>Zombie$Human$</entry>
-	</collection>
-	<collection>
-		<name>Civilized</name>
-		<entry>Cat</entry>
-		<entry>Character</entry>
-		<entry>Dog</entry>
-		<entry>Character(Traveler)@Any NPC@</entry>
-		<entry>Donkey</entry>
-		<entry>Horse</entry>
-		<entry>Livestock</entry>
-		<entry>Mule</entry>
-		<entry>Pony</entry>
-	</collection>
-	<collection>
-		<name>Elemental Plane of Air</name>
-		<entry>Arrowhawk</entry>
-		<entry>Belker</entry>
-		<entry>Djinni</entry>
-		<entry>Elemental(Air)</entry>
-		<entry>Invisible stalker</entry>
-		<entry>Mephit(Air)</entry>
-		<entry>Mephit(Dust)</entry>
-		<entry>Mephit(Ice)</entry>
-	</collection>
-	<collection>
-		<name>Elemental Plane of Earth</name>
-		<entry>Xorn</entry>
-		<entry>Elemental(Earth)</entry>
-		<entry>Mephit(Earth)</entry>
-		<entry>Mephit(Salt)</entry>
-	</collection>
-	<collection>
-		<name>Elemental Plane of Fire</name>
-		<entry>Azer</entry>
-		<entry>Efreeti</entry>
-		<entry>Elemental(Fire)</entry>
-		<entry>Magmin</entry>
-		<entry>Mephit(Fire)</entry>
-		<entry>Mephit(Magma)</entry>
-		<entry>Mephit(Steam)</entry>
-		<entry>Rast</entry>
-		<entry>Salamander</entry>
-		<entry>Thoqqua</entry>
-	</collection>
-	<collection>
-		<name>Elemental Plane of Water</name>
-		<entry>Tojanida</entry>
-		<entry>Elemental(Water)</entry>
-		<entry>Mephit(Ooze)</entry>
-		<entry>Mephit(Water)</entry>
-	</collection>
-	<collection>
-		<name>Astral Plane</name>
-		<entry>Githyanki</entry>
-	</collection>
-	<collection>
-		<name>A chaotic-aligned plane</name>
-		<entry>Howler</entry>
-		<entry>Lillend</entry>
-	</collection>
-	<collection>
-		<name>A chaotic-evil-aligned plane</name>
-		<entry>Demon</entry>
-		<entry>Basilisk$Abyssal Greater$</entry>
-		<entry>Bodak</entry>
-	</collection>
-	<collection>
-		<name>A chaotic-good-aligned plane</name>
-		<entry>Bralani</entry>
-		<entry>Ghaele</entry>
-		<entry>Titan</entry>
-		<entry>Unicorn$Celestial Charger$</entry>
-	</collection>
-	<collection>
-		<name>A lawful-aligned plane</name>
-		<entry>Achaierai</entry>
-		<entry>Formian</entry>
-		<entry>Inevitable</entry>
-	</collection>
-	<collection>
-		<name>A lawful-evil-aligned plane</name>
-		<entry>Devil</entry>
-		<entry>Hell hound</entry>
-		<entry>Nessian warhound</entry>
-	</collection>
-	<collection>
-		<name>A lawful-good-aligned plane</name>
-		<entry>Archon</entry>
-		<entry>Lammasu$Golden Protector$</entry>
-	</collection>
-	<collection>
-		<name>Ethereal Plane</name>
-		<entry>Ethereal marauder</entry>
-		<entry>Xill</entry>
-	</collection>
-	<collection>
-		<name>An evil-aligned plane</name>
-		<entry>Fiendish creature</entry>
-		<entry>Barghest</entry>
-		<entry>Hellwasp</entry>
-		<entry>Night hag</entry>
-		<entry>Nightmare</entry>
-		<entry>Vargouille</entry>
-		<entry>Yeth hound</entry>
-	</collection>
-	<collection>
-		<name>A good-aligned plane</name>
-		<entry>Angel</entry>
-		<entry>Avoral</entry>
-		<entry>Celestial creature</entry>
-		<entry>Leonal</entry>
-	</collection>
-	<collection>
-		<name>Plane of Limbo</name>
-		<entry>Chaos beast</entry>
-		<entry>Githzerai</entry>
-		<entry>Slaad</entry>
-	</collection>
-	<collection>
-		<name>A neutral-evil-aligned plane</name>
-		<entry>Nightmare$Cauchemar$</entry>
-	</collection>
-	<collection>
-		<name>Positive Energy Plane</name>
-		<entry>Ravid</entry>
-	</collection>
-	<collection>
-		<name>Plane of Shadow</name>
-		<entry>Nightshade</entry>
-		<entry>Shadow mastiff</entry>
-	</collection>
   <collection>
     <name>Aasimar</name>
     <entry>Character[1]{Aasimar}@Warrior@</entry>
@@ -260,11 +107,6 @@
     <name>Ape</name>
     <entry>Ape</entry>
     <entry>Dire ape</entry>
-  </collection>
-  <collection>
-    <name>Aquatic</name>
-    <entry>Gargoyle$Kapoacinth$</entry>
-    <entry>Ghoul$Lacedon$</entry>
   </collection>
   <collection>
     <name>Archon</name>
@@ -1284,53 +1126,6 @@
     <entry>Character[1d4+3]{Cloud Giant}@Cleric&amp;Sorcerer@</entry>
   </collection>
   <collection>
-    <name>ColdAquatic</name>
-    <entry>Shark</entry>
-    <entry>Troll$Scrag$</entry>
-    <entry>Whale$Orca$</entry>
-  </collection>
-  <collection>
-    <name>ColdCivilized</name>
-  </collection>
-  <collection>
-    <name>ColdDesert</name>
-    <entry>Remorhaz</entry>
-  </collection>
-  <collection>
-    <name>ColdUnderground</name>
-  </collection>
-  <collection>
-    <name>ColdForest</name>
-    <entry>Brown bear</entry>
-    <entry>Winter wolf</entry>
-    <entry>Wolverine</entry>
-  </collection>
-  <collection>
-    <name>ColdHills</name>
-    <entry>Beholder</entry>
-    <entry>Ettin</entry>
-    <entry>Skeleton$Ettin$</entry>
-    <entry>Ogre mage</entry>
-  </collection>
-  <collection>
-    <name>ColdMarsh</name>
-    <entry>Annis</entry>
-    <entry>Cryohydra</entry>
-    <entry>Gray ooze</entry>
-  </collection>
-  <collection>
-    <name>ColdMountain</name>
-    <entry>Troll</entry>
-    <entry>Skeleton$Troll$</entry>
-    <entry>White dragon</entry>
-    <entry>Frost giant</entry>
-  </collection>
-  <collection>
-    <name>ColdPlains</name>
-    <entry>Polar bear</entry>
-    <entry>Frost worm</entry>
-  </collection>
-  <collection>
     <name>Constrictor snake</name>
     <entry>Constrictor snake</entry>
     <entry>Giant constrictor snake</entry>
@@ -1374,104 +1169,6 @@
     <entry>Cryohydra$10 heads$</entry>
     <entry>Cryohydra$11 heads$</entry>
     <entry>Cryohydra$12 heads$</entry>
-  </collection>
-  <collection>
-    <name>Day</name>
-    <entry>Aasimar</entry>
-    <entry>Aberration</entry>
-    <entry>Achaierai</entry>
-    <entry>Allip</entry>
-    <entry>Angel</entry>
-    <entry>Animal</entry>
-    <entry>Archon</entry>
-    <entry>Arrowhawk</entry>
-    <entry>Avoral</entry>
-    <entry>Azer</entry>
-    <entry>Barghest</entry>
-    <entry>Basilisk$Abyssal Greater$</entry>
-    <entry>Bralani</entry>
-    <entry>Bugbear</entry>
-    <entry>Celestial creature</entry>
-    <entry>Centaur</entry>
-    <entry>Chaos beast</entry>
-    <entry>Character</entry>
-    <entry>Character#Ghost#</entry>
-    <entry>Character#Lich#</entry>
-    <entry>Construct</entry>
-    <entry>Couatl</entry>
-    <entry>Demon</entry>
-    <entry>Devil</entry>
-    <entry>Devourer</entry>
-    <entry>Doppelganger</entry>
-    <entry>Dragon</entry>
-    <entry>Dwarf</entry>
-    <entry>Elemental</entry>
-    <entry>Elf</entry>
-    <entry>Aquatic Elf</entry>
-    <entry>Fey</entry>
-    <entry>Fiendish creature</entry>
-    <entry>Formian</entry>
-    <entry>Gargoyle</entry>
-    <entry>Gargoyle$Kapoacinth$</entry>
-    <entry>Genie</entry>
-    <entry>Ghaele</entry>
-    <entry>Ghoul</entry>
-    <entry>Ghoul$Lacedon$</entry>
-    <entry>Giant</entry>
-    <entry>Githyanki</entry>
-    <entry>Githzerai</entry>
-    <entry>Gnoll</entry>
-    <entry>Gnome</entry>
-    <entry>Goblin</entry>
-    <entry>Grimlock</entry>
-    <entry>Hag</entry>
-    <entry>Half-Orc</entry>
-    <entry>Halfling</entry>
-    <entry>Harpy</entry>
-    <entry>Hell hound</entry>
-    <entry>Hellwasp</entry>
-    <entry>Hobgoblin</entry>
-    <entry>Howler</entry>
-    <entry>Inevitable</entry>
-    <entry>Kobold</entry>
-    <entry>Kuo-toa</entry>
-    <entry>Leonal</entry>
-    <entry>Lillend</entry>
-    <entry>Lizardfolk</entry>
-    <entry>Locathah</entry>
-    <entry>Lycanthrope</entry>
-    <entry>Magical Beast</entry>
-    <entry>Medusa</entry>
-    <entry>Mephit</entry>
-    <entry>Mephit[3]</entry>
-    <entry>Merfolk</entry>
-    <entry>Minotaur</entry>
-    <entry>Mohrg</entry>
-    <entry>Mummy</entry>
-    <entry>Nessian warhound</entry>
-    <entry>Ooze</entry>
-    <entry>Plant</entry>
-    <entry>Rakshasa</entry>
-    <entry>Rast</entry>
-    <entry>Ravid</entry>
-    <entry>Sahuagin</entry>
-    <entry>Salamander</entry>
-    <entry>Scorpionfolk</entry>
-    <entry>Skeleton</entry>
-    <entry>Slaad</entry>
-    <entry>Tiefling</entry>
-    <entry>Titan</entry>
-    <entry>Tojanida</entry>
-    <entry>Triton</entry>
-    <entry>Troglodyte</entry>
-    <entry>Vargouille</entry>
-    <entry>Vermin</entry>
-    <entry>Wight</entry>
-    <entry>Xill</entry>
-    <entry>Xorn</entry>
-    <entry>Yeth hound</entry>
-    <entry>Yuan-ti</entry>
-    <entry>Zombie</entry>
   </collection>
   <collection>
     <name>Demon</name>
@@ -1778,6 +1475,15 @@
     <entry>Character[1]{Wood Elf}@Warrior@</entry>
     <entry>Wood Elf$Noncombatant$</entry>
   </collection>
+	<collection>
+		<name>Human</name>
+		<entry>Character(Captain)[7]{Human}@Warrior@</entry>
+		<entry>Character(Leader)[1d4+2]{Human}@Warrior@</entry>
+		<entry>Character(Lieutenant)[5]{Human}@Warrior@</entry>
+		<entry>Character(Sergeant)[3]{Human}@Warrior@</entry>
+		<entry>Character[1]{Human}@Warrior@</entry>
+		<entry>Human$Noncombatant$</entry>
+	</collection>
   <collection>
     <name>Fey</name>
     <entry>Dryad</entry>
@@ -2108,49 +1814,6 @@
     <entry>Lammasu$Golden Protector$</entry>
   </collection>
   <collection>
-    <name>Land</name>
-	  <entry>Character(Adventurer)</entry>
-	  <entry>Character(Animal trainer)@Druid&amp;Ranger@</entry>
-    <entry>Character(Bandit)@Warrior@</entry>
-	  <entry>Character(Captain)@Fighter@</entry>
-	  <entry>Character(Captain)@Warrior@</entry>
-	  <entry>Character(Crusader)@Paladin@</entry>
-	  <entry>Character(Famous entertainer)@Bard&amp;Sorcerer@</entry>
-	  <entry>Character(Famous Priest)@Cleric&amp;Druid&amp;Monk&amp;Paladin@</entry>
-	  <entry>Character(Famous researcher)@Wizard@</entry>
-	  <entry>Character(Farmer)@Commoner@</entry>
-	  <entry>Character(Fortuneteller)@Adept@</entry>
-	  <entry>Character(Guard)@Warrior@</entry>
-	  <entry>Character(Herder)@Commoner@</entry>
-	  <entry>Character(Hitman)@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</entry>
-	  <entry>Character(Hunter)@Commoner&amp;Warrior@</entry>
-	  <entry>Character(Leader)@Bard@</entry>
-	  <entry>Character(Leader)@Cleric@</entry>
-	  <entry>Character(Leader)@Fighter@</entry>
-	  <entry>Character(Leader)@Warrior@</entry>
-	  <entry>Character(Merchant)@Commoner&amp;Expert@</entry>
-	  <entry>Character(Minstrel)@Commoner&amp;Expert@</entry>
-	  <entry>Character(Missionary)@Adept@</entry>
-	  <entry>Character(Missionary)@Cleric&amp;Druid&amp;Monk&amp;Paladin@</entry>
-    <entry>Character(Pickpocket)@Rogue@</entry>
-    <entry>Character(Pilgrim)@Commoner@</entry>
-	  <entry>Character(Retired adventurer)</entry>
-	  <entry>Character(Scholar)@Monk&amp;Wizard@</entry>
-	  <entry>Character(Sellsword)</entry>
-	  <entry>Character(Star Student)</entry>
-	  <entry>Character(Student)@Any NPC@</entry>
-	  <entry>Character(Teacher)</entry>
-	  <entry>Character(Traveler)@Any NPC@</entry>
-	  <entry>Character(War hero)@Barbarian&amp;Cleric&amp;Fighter&amp;Monk&amp;Paladin&amp;Ranger&amp;Sorcerer&amp;Wizard@</entry>
-	  <entry>Character@Any NPC@</entry>
-    <entry>Doppelganger</entry>
-    <entry>Gargoyle</entry>
-		<entry>Livestock</entry>
-    <entry>Rat</entry>
-	  <entry>Spectre</entry>
-	  <entry>Zombie</entry>
-  </collection>
-  <collection>
     <name>Lion</name>
     <entry>Lion</entry>
     <entry>Dire lion</entry>
@@ -2192,27 +1855,6 @@
     <entry>Wererat</entry>
     <entry>Weretiger</entry>
     <entry>Werewolf</entry>
-  </collection>
-  <collection>
-    <name>Extraplanar</name>
-	  <entry>Elemental Plane of Air</entry>
-	  <entry>Elemental Plane of Earth</entry>
-	  <entry>Elemental Plane of Fire</entry>
-	  <entry>Elemental Plane of Water</entry>
-	  <entry>Astral Plane</entry>
-	  <entry>Ethereal Plane</entry>
-	  <entry>Positive Energy Plane</entry>
-	  <entry>Plane of Limbo</entry>
-	  <entry>Plane of Shadow</entry>
-	  <entry>A chaotic-aligned plane</entry>
-	  <entry>A chaotic-evil-aligned plane</entry>
-	  <entry>A chaotic-good-aligned plane</entry>
-	  <entry>An evil-aligned plane</entry>
-	  <entry>A good-aligned plane</entry>
-	  <entry>A lawful-aligned plane</entry>
-	  <entry>A lawful-evil-aligned plane</entry>
-	  <entry>A lawful-good-aligned plane</entry>
-	  <entry>A neutral-evil-aligned plane</entry>
   </collection>
   <collection>
     <name>Magical Beast</name>
@@ -2351,24 +1993,6 @@
     <entry>Naga$Guardian$</entry>
     <entry>Naga$Spirit$</entry>
     <entry>Naga$Water$</entry>
-  </collection>
-  <collection>
-    <name>Night</name>
-    <entry>Aberration</entry>
-    <entry>Animal</entry>
-    <entry>Construct</entry>
-    <entry>Dragon</entry>
-    <entry>Elemental</entry>
-    <entry>Fey</entry>
-    <entry>Giant</entry>
-    <entry>Humanoid</entry>
-    <entry>Magical Beast</entry>
-    <entry>Monstrous Humanoid</entry>
-    <entry>Ooze</entry>
-    <entry>Outsider</entry>
-    <entry>Plant</entry>
-    <entry>Undead</entry>
-    <entry>Vermin</entry>
   </collection>
   <collection>
     <name>Nightmare</name>
@@ -2527,7 +2151,7 @@
     <entry>Red dragon$Great wyrm$</entry>
   </collection>
   <collection>
-    <name>Requires Subcreature</name>
+    <name>Requires Sub-creature</name>
     <entry>Mephit[3]</entry>
     <entry>Dominated creature[1]</entry>
     <entry>Dominated creature[2]</entry>
@@ -2655,153 +2279,6 @@
     <entry>Character[1]{Svirfneblin}@Warrior@</entry>
   </collection>
   <collection>
-    <name>TemperateAquatic</name>
-    <entry>Dragon turtle</entry>
-    <entry>Aquatic Elf</entry>
-    <entry>Kraken</entry>
-    <entry>Kuo-toa</entry>
-    <entry>Merfolk</entry>
-    <entry>Naga$Water$</entry>
-    <entry>Nixie</entry>
-    <entry>Ogre$Merrow$</entry>
-    <entry>Porpoise</entry>
-    <entry>Sea cat</entry>
-    <entry>Sea hag</entry>
-    <entry>Squid</entry>
-    <entry>Triton</entry>
-    <entry>Whale$Cachalot$</entry>
-  </collection>
-  <collection>
-    <name>TemperateCivilized</name>
-  </collection>
-  <collection>
-    <name>TemperateDesert</name>
-    <entry>Bat</entry>
-    <entry>Dragonne</entry>
-    <entry>Donkey</entry>
-    <entry>Blue dragon</entry>
-    <entry>Lamia</entry>
-    <entry>Lammasu</entry>
-  </collection>
-  <collection>
-    <name>TemperateUnderground</name>
-  </collection>
-  <collection>
-    <name>TemperateForest</name>
-    <entry>Aranea</entry>
-    <entry>Assassin vine</entry>
-    <entry>Badger</entry>
-    <entry>Black bear</entry>
-    <entry>Boar</entry>
-    <entry>Centaur</entry>
-    <entry>Dryad</entry>
-    <entry>Forest Gnome</entry>
-    <entry>Giant praying mantis</entry>
-    <entry>Giant stag beetle</entry>
-    <entry>Giant wasp</entry>
-    <entry>Green dragon</entry>
-    <entry>Grig</entry>
-    <entry>Half-Elf</entry>
-    <entry>Hawk</entry>
-    <entry>High Elf</entry>
-    <entry>Kobold</entry>
-    <entry>Zombie$Kobold$</entry>
-    <entry>Krenshar</entry>
-    <entry>Monstrous spider</entry>
-    <entry>Nymph</entry>
-    <entry>Owl</entry>
-    <entry>Owlbear</entry>
-    <entry>Skeleton$Owlbear$</entry>
-    <entry>Pegasus</entry>
-    <entry>Pixie</entry>
-    <entry>Pseudodragon</entry>
-    <entry>Raven</entry>
-    <entry>Razor boar</entry>
-    <entry>Satyr</entry>
-    <entry>Spider eater</entry>
-    <entry>Tallfellow Halfling</entry>
-    <entry>Tendriculos</entry>
-    <entry>Treant</entry>
-    <entry>Unicorn</entry>
-    <entry>Wolf</entry>
-    <entry>Skeleton$Wolf$</entry>
-    <entry>Wood Elf</entry>
-  </collection>
-  <collection>
-    <name>TemperateHills</name>
-    <entry>Athach</entry>
-    <entry>Bronze dragon</entry>
-    <entry>Bulette</entry>
-    <entry>Chimera</entry>
-    <entry>Skeleton$Chimera$</entry>
-    <entry>Displacer beast</entry>
-    <entry>Griffon</entry>
-    <entry>Half-Orc</entry>
-    <entry>Hill giant</entry>
-    <entry>Hill giant dire wereboar</entry>
-    <entry>Hippogriff</entry>
-    <entry>Naga$Dark$</entry>
-    <entry>Rock Gnome</entry>
-    <entry>Ogre</entry>
-    <entry>Zombie$Ogre$</entry>
-    <entry>Orc</entry>
-    <entry>Weasel</entry>
-  </collection>
-  <collection>
-    <name>TemperateMarsh</name>
-    <entry>Chuul</entry>
-    <entry>Gray render</entry>
-    <entry>Zombie$Gray render$</entry>
-    <entry>Green hag</entry>
-    <entry>Harpy</entry>
-    <entry>Hydra</entry>
-    <entry>Lizardfolk</entry>
-    <entry>Medusa</entry>
-    <entry>Naga$Spirit$</entry>
-    <entry>Ochre jelly</entry>
-    <entry>Shambling mound</entry>
-    <entry>Toad</entry>
-    <entry>Viper snake</entry>
-    <entry>Will-O'-Wisp</entry>
-  </collection>
-  <collection>
-    <name>TemperateMountain</name>
-    <entry>Bugbear</entry>
-    <entry>Zombie$Bugbear$</entry>
-    <entry>Cloud giant</entry>
-    <entry>Skeleton$Cloud giant$</entry>
-    <entry>Eagle</entry>
-    <entry>Gray Elf</entry>
-    <entry>Hill Dwarf</entry>
-    <entry>Mountain Dwarf</entry>
-    <entry>Razor boar</entry>
-    <entry>Silver dragon</entry>
-    <entry>Stone giant</entry>
-    <entry>Yrthak</entry>
-  </collection>
-  <collection>
-    <name>TemperatePlains</name>
-    <entry>Aasimar</entry>
-    <entry>Bison</entry>
-    <entry>Blink dog</entry>
-    <entry>Cat</entry>
-    <entry>Cockatrice</entry>
-    <entry>Dog</entry>
-    <entry>Giant ant</entry>
-    <entry>Giant bee</entry>
-    <entry>Goblin</entry>
-    <entry>Gorgon</entry>
-    <entry>Horse</entry>
-    <entry>Locust</entry>
-    <entry>Naga$Guardian$</entry>
-    <entry>Pony</entry>
-    <entry>Tiefling</entry>
-    <entry>Triceratops</entry>
-    <entry>Worg</entry>
-	  <entry>Half-Orc</entry>
-    <entry>Skeleton$Human$</entry>
-  </collection>
-  <collection>
     <name>Tiefling</name>
     <entry>Character[1]{Tiefling}@Warrior@</entry>
   </collection>
@@ -2863,50 +2340,7 @@
     <entry>Zombie</entry>
   </collection>
   <collection>
-    <name>Underground</name>
-    <entry>Black pudding</entry>
-    <entry>Carrion crawler</entry>
-    <entry>Centipede swarm</entry>
-    <entry>Choker</entry>
-    <entry>Cloaker</entry>
-    <entry>Darkmantle</entry>
-    <entry>Deep Dwarf</entry>
-    <entry>Delver</entry>
-    <entry>Derro</entry>
-    <entry>Destrachan</entry>
-    <entry>Drider</entry>
-    <entry>Drow</entry>
-    <entry>Duergar</entry>
-    <entry>Ethereal filcher</entry>
-    <entry>Fungus</entry>
-    <entry>Gelatinous cube</entry>
-    <entry>Gibbering mouther</entry>
-    <entry>Grick</entry>
-    <entry>Grimlock</entry>
-    <entry>Mimic</entry>
-    <entry>Mind flayer</entry>
-    <entry>Minotaur</entry>
-    <entry>Monstrous centipede</entry>
-    <entry>Otyugh</entry>
-    <entry>Phantom fungus</entry>
-    <entry>Phasm</entry>
-    <entry>Purple worm</entry>
-    <entry>Roper</entry>
-    <entry>Rust monster</entry>
-    <entry>Skum</entry>
-	  <entry>Spectre</entry>
-    <entry>Svirfneblin</entry>
-    <entry>Troglodyte</entry>
-    <entry>Umber hulk</entry>
-	  <entry>Zombie</entry>
-  </collection>
-  <collection>
-    <name>UndergroundAquatic</name>
-    <entry>Aboleth</entry>
-    <entry>Skum</entry>
-  </collection>
-  <collection>
-    <name>Use Subcreature for Treasure</name>
+    <name>Use Sub-creature for Treasure</name>
     <entry>Dominated creature[1]</entry>
     <entry>Dominated creature[2]</entry>
     <entry>Dominated creature[3]</entry>
@@ -2949,102 +2383,6 @@
     <entry>Viper snake$Tiny$</entry>
   </collection>
   <collection>
-    <name>WarmAquatic</name>
-    <entry>Elasmosaurus</entry>
-    <entry>Locathah</entry>
-    <entry>Manta ray</entry>
-    <entry>Octopus</entry>
-    <entry>Sahuagin</entry>
-    <entry>Whale$Baleen$</entry>
-  </collection>
-  <collection>
-    <name>WarmCivilized</name>
-  </collection>
-  <collection>
-    <name>WarmDesert</name>
-    <entry>Androsphinx</entry>
-    <entry>Brass dragon</entry>
-    <entry>Basilisk</entry>
-    <entry>Camel</entry>
-    <entry>Criosphinx</entry>
-    <entry>Gynosphinx</entry>
-    <entry>Hieracosphinx</entry>
-    <entry>Hyena</entry>
-    <entry>Monstrous scorpion</entry>
-    <entry>Scorpionfolk</entry>
-	  <entry>Janni</entry>
-  </collection>
-  <collection>
-    <name>WarmUnderground</name>
-  </collection>
-  <collection>
-    <name>WarmForest</name>
-    <entry>Ape</entry>
-    <entry>Couatl</entry>
-    <entry>Constrictor snake</entry>
-    <entry>Deinonychus</entry>
-    <entry>Digester</entry>
-    <entry>Ettercap</entry>
-    <entry>Giant bombardier beetle</entry>
-    <entry>Girallon</entry>
-    <entry>Leopard</entry>
-    <entry>Lizard</entry>
-    <entry>Megaraptor</entry>
-    <entry>Skeleton$Megaraptor$</entry>
-    <entry>Monkey</entry>
-    <entry>Razor boar</entry>
-    <entry>Spider swarm</entry>
-    <entry>Tiger</entry>
-    <entry>Wild Elf</entry>
-    <entry>Yuan-ti</entry>
-  </collection>
-  <collection>
-    <name>WarmHills</name>
-    <entry>Behir</entry>
-    <entry>Copper dragon</entry>
-    <entry>Deep Halfling</entry>
-    <entry>Hobgoblin</entry>
-    <entry>Phase spider</entry>
-    <entry>Scorpionfolk</entry>
-    <entry>Wyvern</entry>
-    <entry>Zombie$Wyvern$</entry>
-  </collection>
-  <collection>
-    <name>WarmMarsh</name>
-    <entry>Black dragon</entry>
-    <entry>Crocodile</entry>
-    <entry>Manticore</entry>
-    <entry>Pyrohydra</entry>
-    <entry>Rakshasa</entry>
-    <entry>Shocker lizard</entry>
-    <entry>Stirge</entry>
-  </collection>
-  <collection>
-    <name>WarmMountain</name>
-    <entry>Fire giant</entry>
-    <entry>Red dragon</entry>
-    <entry>Skeleton$Red dragon$Young adult$$</entry>
-    <entry>Razor boar</entry>
-    <entry>Roc</entry>
-    <entry>Storm giant</entry>
-  </collection>
-  <collection>
-    <name>WarmPlains</name>
-    <entry>Ankheg</entry>
-    <entry>Baboon</entry>
-    <entry>Cheetah</entry>
-    <entry>Elephant</entry>
-    <entry>Giant fire beetle</entry>
-    <entry>Gold dragon</entry>
-    <entry>Gnoll</entry>
-    <entry>Lightfoot Halfling</entry>
-    <entry>Lion</entry>
-    <entry>Rhinoceras</entry>
-    <entry>Scorpionfolk</entry>
-    <entry>Tyrannosaurus</entry>
-    <entry>Mule</entry>
-  </collection>
-  <collection>
     <name>Weasel</name>
     <entry>Weasel</entry>
     <entry>Dire weasel</entry>
@@ -3079,55 +2417,6 @@
     <entry>White dragon$Ancient$</entry>
     <entry>White dragon$Wyrm$</entry>
     <entry>White dragon$Great wyrm$</entry>
-  </collection>
-  <collection>
-    <name>Wilderness</name>
-    <entry>Aberration</entry>
-    <entry>Ape</entry>
-    <entry>Baboon</entry>
-    <entry>Badger</entry>
-    <entry>Bear</entry>
-    <entry>Bison</entry>
-    <entry>Boar</entry>
-    <entry>Bugbear</entry>
-    <entry>Cheetah</entry>
-    <entry>Constrictor snake</entry>
-    <entry>Crocodile</entry>
-    <entry>Deinonychus</entry>
-    <entry>Dragon</entry>
-    <entry>Eagle</entry>
-    <entry>Elemental</entry>
-    <entry>Elephant</entry>
-    <entry>Fey</entry>
-    <entry>Giant</entry>
-    <entry>Gnoll</entry>
-    <entry>Goblin</entry>
-    <entry>Hobgoblin</entry>
-    <entry>Hyena</entry>
-    <entry>Kobold</entry>
-    <entry>Kuo-toa</entry>
-    <entry>Leopard</entry>
-    <entry>Lion</entry>
-    <entry>Lizardfolk</entry>
-    <entry>Magical Beast</entry>
-    <entry>Megaraptor</entry>
-    <entry>Monitor lizard</entry>
-    <entry>Monkey</entry>
-    <entry>Monstrous Humanoid</entry>
-    <entry>Ooze</entry>
-    <entry>Orc</entry>
-    <entry>Outsider</entry>
-    <entry>Plant</entry>
-    <entry>Rhinoceras</entry>
-    <entry>Roc</entry>
-    <entry>Tiger</entry>
-    <entry>Triceratops</entry>
-    <entry>Troglodyte</entry>
-    <entry>Tyrannosaurus</entry>
-    <entry>Viper snake</entry>
-    <entry>Weasel</entry>
-    <entry>Wolf</entry>
-    <entry>Wolverine</entry>
   </collection>
   <collection>
     <name>Wolf</name>

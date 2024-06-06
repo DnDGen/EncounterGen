@@ -8450,6 +8450,22 @@
     <name>Light Horses (Herd)</name>
     <entry>Light horse/8d4-2</entry>
   </collection>
+	<collection>
+		<name>Light Horse (Solitary)</name>
+		<entry>Light horse/1</entry>
+	</collection>
+	<collection>
+		<name>Light Warhorse (Solitary)</name>
+		<entry>Light warhorse/1</entry>
+	</collection>
+	<collection>
+		<name>Heavy Horse (Solitary)</name>
+		<entry>Heavy horse/1</entry>
+	</collection>
+	<collection>
+		<name>Heavy Warhorse (Solitary)</name>
+		<entry>Heavy warhorse/1</entry>
+	</collection>
   <collection>
     <name>Howler (Solitary)</name>
     <entry>Howler/1</entry>
@@ -9096,6 +9112,10 @@
     <name>Celestial Monkeys (Troop)</name>
     <entry>Monkey$Celestial creature$/6d6+4</entry>
   </collection>
+	<collection>
+		<name>Mule (Solitary)</name>
+		<entry>Mule/1</entry>
+	</collection>
   <collection>
     <name>Mummy (Solitary)</name>
     <entry>Mummy/1</entry>
@@ -9448,6 +9468,10 @@
     <name>Pony (Solitary)</name>
     <entry>Pony/1</entry>
   </collection>
+	<collection>
+		<name>Warpony (Solitary)</name>
+		<entry>Warpony/1</entry>
+	</collection>
   <collection>
     <name>Porpoise (Solitary)</name>
     <entry>Porpoise/1</entry>

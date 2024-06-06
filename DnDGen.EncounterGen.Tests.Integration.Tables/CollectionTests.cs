@@ -100,6 +100,13 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables
 
         protected void AssertCollection(IEnumerable<string> expected, IEnumerable<string> actual)
         {
+            if (expected.Count() >= 300)
+            {
+                //When there are a lot of expected items, it truncated the test message and won't let you see what is missing
+                Assert.That(expected.Except(actual), Is.Empty, "Missing (Add to table)");
+                Assert.That(actual.Except(expected), Is.Empty, "Extra (Delete from table)");
+            }
+
             Assert.That(actual, Is.EquivalentTo(expected));
         }
 

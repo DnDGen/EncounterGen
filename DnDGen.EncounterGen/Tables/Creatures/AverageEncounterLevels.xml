@@ -97,6 +97,11 @@
 		<entry>Tiny Viper Snake (Solitary)</entry>
 		<entry>Weasel (Solitary)</entry>
 		<entry>Wolf (Solitary)</entry>
+		<entry>Heavy Horse (Solitary)</entry>
+		<entry>Light Horse (Solitary)</entry>
+		<entry>Light Warhorse (Solitary)</entry>
+		<entry>Mule (Solitary)</entry>
+		<entry>Warpony (Solitary)</entry>
 	</collection>
 	<collection>
 		<name>2</name>
@@ -227,6 +232,7 @@
 		<entry>Worg (Solitary)</entry>
 		<entry>Human Zombies (Small Group)</entry>
 		<entry>Kobold Zombies (Small Group)</entry>
+		<entry>Heavy Warhorse (Solitary)</entry>
 	</collection>
 	<collection>
 		<name>3</name>
