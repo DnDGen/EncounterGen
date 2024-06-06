@@ -215,7 +215,6 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
                 CreatureDataConstants.Warrior_Guard,
                 CreatureDataConstants.Warrior_Leader,
                 CreatureDataConstants.Weasel,
-                CreatureDataConstants.Wereboar,
                 CreatureDataConstants.Werewolf,
                 CreatureDataConstants.Whale,
                 CreatureDataConstants.Wizard_FamousResearcher,

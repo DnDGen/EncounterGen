@@ -807,6 +807,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         [TestCase(CreatureDataConstants.Lycanthrope,
             CreatureDataConstants.Werebear,
             CreatureDataConstants.Wereboar,
+            CreatureDataConstants.Wereboar_HillGiantDire,
             CreatureDataConstants.Wererat,
             CreatureDataConstants.Weretiger,
             CreatureDataConstants.Werewolf)]
@@ -1062,9 +1063,6 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         [TestCase(CreatureDataConstants.Weasel,
             CreatureDataConstants.Weasel,
             CreatureDataConstants.Weasel_Dire)]
-        [TestCase(CreatureDataConstants.Wereboar,
-            CreatureDataConstants.Wereboar,
-            CreatureDataConstants.Wereboar_HillGiantDire)]
         [TestCase(CreatureDataConstants.Werewolf,
             CreatureDataConstants.Werewolf,
             CreatureDataConstants.WerewolfLord)]

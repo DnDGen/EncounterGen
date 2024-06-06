@@ -25,6 +25,43 @@
 		<entry>Chuuls (Pair)</entry>
 		<entry>Cloaker (Solitary)</entry>
 		<entry>Cloakers (Flock)</entry>
+		<entry>Cloakers (Mob)</entry>
+		<entry>Dark Naga (Solitary)</entry>
+		<entry>Dark Nagas (Nest)</entry>
+		<entry>Guardian Naga (Solitary)</entry>
+		<entry>Guardian Nagas (Nest)</entry>
+		<entry>Spirit Naga (Solitary)</entry>
+		<entry>Spirit Nagas (Nest)</entry>
+		<entry>Water Naga (Solitary)</entry>
+		<entry>Water Nagas (Pair)</entry>
+		<entry>Water Nagas (Nest)</entry>
+		<entry>Delver (Solitary)</entry>
+		<entry>Destrachan (Solitary)</entry>
+		<entry>Destrachans (Pack)</entry>
+		<entry>Drider (Solitary)</entry>
+		<entry>Driders (Pair)</entry>
+		<entry>Driders (Troupe)</entry>
+		<entry>Ethereal Filcher (Solitary)</entry>
+		<entry>Ettercap (Solitary)</entry>
+		<entry>Ettercaps (Pair)</entry>
+		<entry>Ettercaps (Troupe)</entry>
+		<entry>Gibbering Mouther (Solitary)</entry>
+		<entry>Grick (Solitary)</entry>
+		<entry>Gricks (Cluster)</entry>
+		<entry>Mimic (Solitary)</entry>
+		<entry>Mind Flayer (Solitary)</entry>
+		<entry>Mind Flayer Sorcerer (Inquisition)</entry>
+		<entry>Mind Flayer Sorcerer (Solitary)</entry>
+		<entry>Mind Flayer Sorcerers (Cult)</entry>
+		<entry>Mind Flayers (Pair)</entry>
+		<entry>Mind Flayers (Cult)</entry>
+		<entry>Mind Flayers (Inquisition)</entry>
+		<entry>Otyugh (Solitary)</entry>
+		<entry>Otyughs (Cluster)</entry>
+		<entry>Otyughs (Pair)</entry>
+		<entry>Phasm (Solitary)</entry>
+		<entry>Rust Monster (Solitary)</entry>
+		<entry>Rust Monsters (Pair)</entry>
 	</collection>
 	<collection>
 		<name>Animal</name>
@@ -55,6 +92,273 @@
 		<entry>Dire Bears (Pair)</entry>
 		<entry>Polar Bear (Solitary)</entry>
 		<entry>Polar Bears (Pair)</entry>
+		<entry>Bison (Solitary)</entry>
+		<entry>Bison (Herd)</entry>
+		<entry>Boar (Solitary)</entry>
+		<entry>Boars (Herd)</entry>
+		<entry>Dire Boar (Solitary)</entry>
+		<entry>Dire Boars (Herd)</entry>
+		<entry>Camels (Herd)</entry>
+		<entry>Cat (Solitary)</entry>
+		<entry>Animal Trainer [Level 1] (with Cat)</entry>
+		<entry>Animal Trainer [Level 2] (with Cat)</entry>
+		<entry>Animal Trainer [Level 3] (with Cat)</entry>
+		<entry>Animal Trainer [Level 4] (with Cat)</entry>
+		<entry>Animal Trainer [Level 5] (with Cat)</entry>
+		<entry>Animal Trainer [Level 6] (with Cat)</entry>
+		<entry>Animal Trainer [Level 7] (with Cat)</entry>
+		<entry>Animal Trainer [Level 8] (with Cat)</entry>
+		<entry>Animal Trainer [Level 9] (with Cat)</entry>
+		<entry>Animal Trainer [Level 10] (with Cat)</entry>
+		<entry>Animal Trainer [Level 11] (with Cat)</entry>
+		<entry>Animal Trainer [Level 12] (with Cat)</entry>
+		<entry>Animal Trainer [Level 13] (with Cat)</entry>
+		<entry>Animal Trainer [Level 14] (with Cat)</entry>
+		<entry>Animal Trainer [Level 15] (with Cat)</entry>
+		<entry>Animal Trainer [Level 16] (with Cat)</entry>
+		<entry>Animal Trainer [Level 17] (with Cat)</entry>
+		<entry>Animal Trainer [Level 18] (with Cat)</entry>
+		<entry>Animal Trainer [Level 19] (with Cat)</entry>
+		<entry>Animal Trainer [Level 20] (with Cat)</entry>
+		<entry>Animal Trainer [Level 1] (with Dog)</entry>
+		<entry>Animal Trainer [Level 2] (with Dog)</entry>
+		<entry>Animal Trainer [Level 3] (with Dog)</entry>
+		<entry>Animal Trainer [Level 4] (with Dog)</entry>
+		<entry>Animal Trainer [Level 5] (with Dog)</entry>
+		<entry>Animal Trainer [Level 6] (with Dog)</entry>
+		<entry>Animal Trainer [Level 7] (with Dog)</entry>
+		<entry>Animal Trainer [Level 8] (with Dog)</entry>
+		<entry>Animal Trainer [Level 9] (with Dog)</entry>
+		<entry>Animal Trainer [Level 10] (with Dog)</entry>
+		<entry>Animal Trainer [Level 11] (with Dog)</entry>
+		<entry>Animal Trainer [Level 12] (with Dog)</entry>
+		<entry>Animal Trainer [Level 13] (with Dog)</entry>
+		<entry>Animal Trainer [Level 14] (with Dog)</entry>
+		<entry>Animal Trainer [Level 15] (with Dog)</entry>
+		<entry>Animal Trainer [Level 16] (with Dog)</entry>
+		<entry>Animal Trainer [Level 17] (with Dog)</entry>
+		<entry>Animal Trainer [Level 18] (with Dog)</entry>
+		<entry>Animal Trainer [Level 19] (with Dog)</entry>
+		<entry>Animal Trainer [Level 20] (with Dog)</entry>
+		<entry>Animal Trainer [Level 1] (with Riding Dog)</entry>
+		<entry>Animal Trainer [Level 2] (with Riding Dog)</entry>
+		<entry>Animal Trainer [Level 3] (with Riding Dog)</entry>
+		<entry>Animal Trainer [Level 4] (with Riding Dog)</entry>
+		<entry>Animal Trainer [Level 5] (with Riding Dog)</entry>
+		<entry>Animal Trainer [Level 6] (with Riding Dog)</entry>
+		<entry>Animal Trainer [Level 7] (with Riding Dog)</entry>
+		<entry>Animal Trainer [Level 8] (with Riding Dog)</entry>
+		<entry>Animal Trainer [Level 9] (with Riding Dog)</entry>
+		<entry>Animal Trainer [Level 10] (with Riding Dog)</entry>
+		<entry>Animal Trainer [Level 11] (with Riding Dog)</entry>
+		<entry>Animal Trainer [Level 12] (with Riding Dog)</entry>
+		<entry>Animal Trainer [Level 13] (with Riding Dog)</entry>
+		<entry>Animal Trainer [Level 14] (with Riding Dog)</entry>
+		<entry>Animal Trainer [Level 15] (with Riding Dog)</entry>
+		<entry>Animal Trainer [Level 16] (with Riding Dog)</entry>
+		<entry>Animal Trainer [Level 17] (with Riding Dog)</entry>
+		<entry>Animal Trainer [Level 18] (with Riding Dog)</entry>
+		<entry>Animal Trainer [Level 19] (with Riding Dog)</entry>
+		<entry>Animal Trainer [Level 20] (with Riding Dog)</entry>
+		<entry>Animal Trainer [Level 1] (with Donkey)</entry>
+		<entry>Animal Trainer [Level 2] (with Donkey)</entry>
+		<entry>Animal Trainer [Level 3] (with Donkey)</entry>
+		<entry>Animal Trainer [Level 4] (with Donkey)</entry>
+		<entry>Animal Trainer [Level 5] (with Donkey)</entry>
+		<entry>Animal Trainer [Level 6] (with Donkey)</entry>
+		<entry>Animal Trainer [Level 7] (with Donkey)</entry>
+		<entry>Animal Trainer [Level 8] (with Donkey)</entry>
+		<entry>Animal Trainer [Level 9] (with Donkey)</entry>
+		<entry>Animal Trainer [Level 10] (with Donkey)</entry>
+		<entry>Animal Trainer [Level 11] (with Donkey)</entry>
+		<entry>Animal Trainer [Level 12] (with Donkey)</entry>
+		<entry>Animal Trainer [Level 13] (with Donkey)</entry>
+		<entry>Animal Trainer [Level 14] (with Donkey)</entry>
+		<entry>Animal Trainer [Level 15] (with Donkey)</entry>
+		<entry>Animal Trainer [Level 16] (with Donkey)</entry>
+		<entry>Animal Trainer [Level 17] (with Donkey)</entry>
+		<entry>Animal Trainer [Level 18] (with Donkey)</entry>
+		<entry>Animal Trainer [Level 19] (with Donkey)</entry>
+		<entry>Animal Trainer [Level 20] (with Donkey)</entry>
+		<entry>Animal Trainer [Level 1] (with Mule)</entry>
+		<entry>Animal Trainer [Level 2] (with Mule)</entry>
+		<entry>Animal Trainer [Level 3] (with Mule)</entry>
+		<entry>Animal Trainer [Level 4] (with Mule)</entry>
+		<entry>Animal Trainer [Level 5] (with Mule)</entry>
+		<entry>Animal Trainer [Level 6] (with Mule)</entry>
+		<entry>Animal Trainer [Level 7] (with Mule)</entry>
+		<entry>Animal Trainer [Level 8] (with Mule)</entry>
+		<entry>Animal Trainer [Level 9] (with Mule)</entry>
+		<entry>Animal Trainer [Level 10] (with Mule)</entry>
+		<entry>Animal Trainer [Level 11] (with Mule)</entry>
+		<entry>Animal Trainer [Level 12] (with Mule)</entry>
+		<entry>Animal Trainer [Level 13] (with Mule)</entry>
+		<entry>Animal Trainer [Level 14] (with Mule)</entry>
+		<entry>Animal Trainer [Level 15] (with Mule)</entry>
+		<entry>Animal Trainer [Level 16] (with Mule)</entry>
+		<entry>Animal Trainer [Level 17] (with Mule)</entry>
+		<entry>Animal Trainer [Level 18] (with Mule)</entry>
+		<entry>Animal Trainer [Level 19] (with Mule)</entry>
+		<entry>Animal Trainer [Level 20] (with Mule)</entry>
+		<entry>Animal Trainer [Level 1] (with Camel)</entry>
+		<entry>Animal Trainer [Level 2] (with Camel)</entry>
+		<entry>Animal Trainer [Level 3] (with Camel)</entry>
+		<entry>Animal Trainer [Level 4] (with Camel)</entry>
+		<entry>Animal Trainer [Level 5] (with Camel)</entry>
+		<entry>Animal Trainer [Level 6] (with Camel)</entry>
+		<entry>Animal Trainer [Level 7] (with Camel)</entry>
+		<entry>Animal Trainer [Level 8] (with Camel)</entry>
+		<entry>Animal Trainer [Level 9] (with Camel)</entry>
+		<entry>Animal Trainer [Level 10] (with Camel)</entry>
+		<entry>Animal Trainer [Level 11] (with Camel)</entry>
+		<entry>Animal Trainer [Level 12] (with Camel)</entry>
+		<entry>Animal Trainer [Level 13] (with Camel)</entry>
+		<entry>Animal Trainer [Level 14] (with Camel)</entry>
+		<entry>Animal Trainer [Level 15] (with Camel)</entry>
+		<entry>Animal Trainer [Level 16] (with Camel)</entry>
+		<entry>Animal Trainer [Level 17] (with Camel)</entry>
+		<entry>Animal Trainer [Level 18] (with Camel)</entry>
+		<entry>Animal Trainer [Level 19] (with Camel)</entry>
+		<entry>Animal Trainer [Level 20] (with Camel)</entry>
+		<entry>Animal Trainer [Level 1] (with Light Horse)</entry>
+		<entry>Animal Trainer [Level 2] (with Light Horse)</entry>
+		<entry>Animal Trainer [Level 3] (with Light Horse)</entry>
+		<entry>Animal Trainer [Level 4] (with Light Horse)</entry>
+		<entry>Animal Trainer [Level 5] (with Light Horse)</entry>
+		<entry>Animal Trainer [Level 6] (with Light Horse)</entry>
+		<entry>Animal Trainer [Level 7] (with Light Horse)</entry>
+		<entry>Animal Trainer [Level 8] (with Light Horse)</entry>
+		<entry>Animal Trainer [Level 9] (with Light Horse)</entry>
+		<entry>Animal Trainer [Level 10] (with Light Horse)</entry>
+		<entry>Animal Trainer [Level 11] (with Light Horse)</entry>
+		<entry>Animal Trainer [Level 12] (with Light Horse)</entry>
+		<entry>Animal Trainer [Level 13] (with Light Horse)</entry>
+		<entry>Animal Trainer [Level 14] (with Light Horse)</entry>
+		<entry>Animal Trainer [Level 15] (with Light Horse)</entry>
+		<entry>Animal Trainer [Level 16] (with Light Horse)</entry>
+		<entry>Animal Trainer [Level 17] (with Light Horse)</entry>
+		<entry>Animal Trainer [Level 18] (with Light Horse)</entry>
+		<entry>Animal Trainer [Level 19] (with Light Horse)</entry>
+		<entry>Animal Trainer [Level 20] (with Light Horse)</entry>
+		<entry>Animal Trainer [Level 1] (with Light Warhorse)</entry>
+		<entry>Animal Trainer [Level 2] (with Light Warhorse)</entry>
+		<entry>Animal Trainer [Level 3] (with Light Warhorse)</entry>
+		<entry>Animal Trainer [Level 4] (with Light Warhorse)</entry>
+		<entry>Animal Trainer [Level 5] (with Light Warhorse)</entry>
+		<entry>Animal Trainer [Level 6] (with Light Warhorse)</entry>
+		<entry>Animal Trainer [Level 7] (with Light Warhorse)</entry>
+		<entry>Animal Trainer [Level 8] (with Light Warhorse)</entry>
+		<entry>Animal Trainer [Level 9] (with Light Warhorse)</entry>
+		<entry>Animal Trainer [Level 10] (with Light Warhorse)</entry>
+		<entry>Animal Trainer [Level 11] (with Light Warhorse)</entry>
+		<entry>Animal Trainer [Level 12] (with Light Warhorse)</entry>
+		<entry>Animal Trainer [Level 13] (with Light Warhorse)</entry>
+		<entry>Animal Trainer [Level 14] (with Light Warhorse)</entry>
+		<entry>Animal Trainer [Level 15] (with Light Warhorse)</entry>
+		<entry>Animal Trainer [Level 16] (with Light Warhorse)</entry>
+		<entry>Animal Trainer [Level 17] (with Light Warhorse)</entry>
+		<entry>Animal Trainer [Level 18] (with Light Warhorse)</entry>
+		<entry>Animal Trainer [Level 19] (with Light Warhorse)</entry>
+		<entry>Animal Trainer [Level 20] (with Light Warhorse)</entry>
+		<entry>Animal Trainer [Level 1] (with Heavy Horse)</entry>
+		<entry>Animal Trainer [Level 2] (with Heavy Horse)</entry>
+		<entry>Animal Trainer [Level 3] (with Heavy Horse)</entry>
+		<entry>Animal Trainer [Level 4] (with Heavy Horse)</entry>
+		<entry>Animal Trainer [Level 5] (with Heavy Horse)</entry>
+		<entry>Animal Trainer [Level 6] (with Heavy Horse)</entry>
+		<entry>Animal Trainer [Level 7] (with Heavy Horse)</entry>
+		<entry>Animal Trainer [Level 8] (with Heavy Horse)</entry>
+		<entry>Animal Trainer [Level 9] (with Heavy Horse)</entry>
+		<entry>Animal Trainer [Level 10] (with Heavy Horse)</entry>
+		<entry>Animal Trainer [Level 11] (with Heavy Horse)</entry>
+		<entry>Animal Trainer [Level 12] (with Heavy Horse)</entry>
+		<entry>Animal Trainer [Level 13] (with Heavy Horse)</entry>
+		<entry>Animal Trainer [Level 14] (with Heavy Horse)</entry>
+		<entry>Animal Trainer [Level 15] (with Heavy Horse)</entry>
+		<entry>Animal Trainer [Level 16] (with Heavy Horse)</entry>
+		<entry>Animal Trainer [Level 17] (with Heavy Horse)</entry>
+		<entry>Animal Trainer [Level 18] (with Heavy Horse)</entry>
+		<entry>Animal Trainer [Level 19] (with Heavy Horse)</entry>
+		<entry>Animal Trainer [Level 20] (with Heavy Horse)</entry>
+		<entry>Animal Trainer [Level 1] (with Heavy Warhorse)</entry>
+		<entry>Animal Trainer [Level 2] (with Heavy Warhorse)</entry>
+		<entry>Animal Trainer [Level 3] (with Heavy Warhorse)</entry>
+		<entry>Animal Trainer [Level 4] (with Heavy Warhorse)</entry>
+		<entry>Animal Trainer [Level 5] (with Heavy Warhorse)</entry>
+		<entry>Animal Trainer [Level 6] (with Heavy Warhorse)</entry>
+		<entry>Animal Trainer [Level 7] (with Heavy Warhorse)</entry>
+		<entry>Animal Trainer [Level 8] (with Heavy Warhorse)</entry>
+		<entry>Animal Trainer [Level 9] (with Heavy Warhorse)</entry>
+		<entry>Animal Trainer [Level 10] (with Heavy Warhorse)</entry>
+		<entry>Animal Trainer [Level 11] (with Heavy Warhorse)</entry>
+		<entry>Animal Trainer [Level 12] (with Heavy Warhorse)</entry>
+		<entry>Animal Trainer [Level 13] (with Heavy Warhorse)</entry>
+		<entry>Animal Trainer [Level 14] (with Heavy Warhorse)</entry>
+		<entry>Animal Trainer [Level 15] (with Heavy Warhorse)</entry>
+		<entry>Animal Trainer [Level 16] (with Heavy Warhorse)</entry>
+		<entry>Animal Trainer [Level 17] (with Heavy Warhorse)</entry>
+		<entry>Animal Trainer [Level 18] (with Heavy Warhorse)</entry>
+		<entry>Animal Trainer [Level 19] (with Heavy Warhorse)</entry>
+		<entry>Animal Trainer [Level 20] (with Heavy Warhorse)</entry>
+		<entry>Animal Trainer [Level 1] (with Pony)</entry>
+		<entry>Animal Trainer [Level 2] (with Pony)</entry>
+		<entry>Animal Trainer [Level 3] (with Pony)</entry>
+		<entry>Animal Trainer [Level 4] (with Pony)</entry>
+		<entry>Animal Trainer [Level 5] (with Pony)</entry>
+		<entry>Animal Trainer [Level 6] (with Pony)</entry>
+		<entry>Animal Trainer [Level 7] (with Pony)</entry>
+		<entry>Animal Trainer [Level 8] (with Pony)</entry>
+		<entry>Animal Trainer [Level 9] (with Pony)</entry>
+		<entry>Animal Trainer [Level 10] (with Pony)</entry>
+		<entry>Animal Trainer [Level 11] (with Pony)</entry>
+		<entry>Animal Trainer [Level 12] (with Pony)</entry>
+		<entry>Animal Trainer [Level 13] (with Pony)</entry>
+		<entry>Animal Trainer [Level 14] (with Pony)</entry>
+		<entry>Animal Trainer [Level 15] (with Pony)</entry>
+		<entry>Animal Trainer [Level 16] (with Pony)</entry>
+		<entry>Animal Trainer [Level 17] (with Pony)</entry>
+		<entry>Animal Trainer [Level 18] (with Pony)</entry>
+		<entry>Animal Trainer [Level 19] (with Pony)</entry>
+		<entry>Animal Trainer [Level 20] (with Pony)</entry>
+		<entry>Animal Trainer [Level 1] (with Warpony)</entry>
+		<entry>Animal Trainer [Level 2] (with Warpony)</entry>
+		<entry>Animal Trainer [Level 3] (with Warpony)</entry>
+		<entry>Animal Trainer [Level 4] (with Warpony)</entry>
+		<entry>Animal Trainer [Level 5] (with Warpony)</entry>
+		<entry>Animal Trainer [Level 6] (with Warpony)</entry>
+		<entry>Animal Trainer [Level 7] (with Warpony)</entry>
+		<entry>Animal Trainer [Level 8] (with Warpony)</entry>
+		<entry>Animal Trainer [Level 9] (with Warpony)</entry>
+		<entry>Animal Trainer [Level 10] (with Warpony)</entry>
+		<entry>Animal Trainer [Level 11] (with Warpony)</entry>
+		<entry>Animal Trainer [Level 12] (with Warpony)</entry>
+		<entry>Animal Trainer [Level 13] (with Warpony)</entry>
+		<entry>Animal Trainer [Level 14] (with Warpony)</entry>
+		<entry>Animal Trainer [Level 15] (with Warpony)</entry>
+		<entry>Animal Trainer [Level 16] (with Warpony)</entry>
+		<entry>Animal Trainer [Level 17] (with Warpony)</entry>
+		<entry>Animal Trainer [Level 18] (with Warpony)</entry>
+		<entry>Animal Trainer [Level 19] (with Warpony)</entry>
+		<entry>Animal Trainer [Level 20] (with Warpony)</entry>
+		<entry>Cheetah (Solitary)</entry>
+		<entry>Cheetahs (Pair)</entry>
+		<entry>Cheetahs (Family)</entry>
+		<entry>Herders [Level 1] (Group)</entry>
+		<entry>Herders [Level 2-3] (Group)</entry>
+		<entry>Herders [Level 4-5] (Group)</entry>
+		<entry>Herders [Level 6-7] (Group)</entry>
+		<entry>Herders [Level 8-9] (Group)</entry>
+		<entry>Herders [Level 10-11] (Group)</entry>
+		<entry>Herders [Level 12-13] (Group)</entry>
+		<entry>Herders [Level 14-15] (Group)</entry>
+		<entry>Herders [Level 16-17] (Group)</entry>
+		<entry>Herders [Level 18-19] (Group)</entry>
+		<entry>Herders [Level 20] (Group)</entry>
+		<entry>Crocodile (Solitary)</entry>
+		<entry>Crocodiles (Colony)</entry>
+		<entry>Giant Crocodile (Solitary)</entry>
+		<entry>Giant Crocodiles (Colony)</entry>
+		<entry>Deinonychus (Solitary)</entry>
 	</collection>
 	<collection>
 		<name>Construct</name>
@@ -73,8 +377,8 @@
 		<entry>Huge Animated Object (Solitary)</entry>
 		<entry>Large Animated Object (Solitary)</entry>
 		<entry>Medium Animated Object (Solitary)</entry>
-		<entry>Small Animated Object (Solitary)</entry>
-		<entry>Tiny Animated Object (Solitary)</entry>
+		<entry>Small Animated Objects (Pair)</entry>
+		<entry>Tiny Animated Objects (Group)</entry>
 		<entry>Famous Researcher [Level 11] (with Clay Golem)</entry>
 		<entry>Famous Researcher [Level 12] (with Clay Golem)</entry>
 		<entry>Famous Researcher [Level 13] (with Clay Golem)</entry>
@@ -105,6 +409,38 @@
 		<entry>Famous Researcher [Level 18] (with Homunculus)</entry>
 		<entry>Famous Researcher [Level 19] (with Homunculus)</entry>
 		<entry>Famous Researcher [Level 20] (with Homunculus)</entry>
+		<entry>Famous Researcher [Level 14] (with Greater Stone Golem)</entry>
+		<entry>Famous Researcher [Level 15] (with Greater Stone Golem)</entry>
+		<entry>Famous Researcher [Level 16] (with Greater Stone Golem)</entry>
+		<entry>Famous Researcher [Level 17] (with Greater Stone Golem)</entry>
+		<entry>Famous Researcher [Level 18] (with Greater Stone Golem)</entry>
+		<entry>Famous Researcher [Level 19] (with Greater Stone Golem)</entry>
+		<entry>Famous Researcher [Level 20] (with Greater Stone Golem)</entry>
+		<entry>Famous Researcher [Level 14] (with Stone Golem)</entry>
+		<entry>Famous Researcher [Level 15] (with Stone Golem)</entry>
+		<entry>Famous Researcher [Level 16] (with Stone Golem)</entry>
+		<entry>Famous Researcher [Level 17] (with Stone Golem)</entry>
+		<entry>Famous Researcher [Level 18] (with Stone Golem)</entry>
+		<entry>Famous Researcher [Level 19] (with Stone Golem)</entry>
+		<entry>Famous Researcher [Level 20] (with Stone Golem)</entry>
+		<entry>Famous Researcher [Level 15] (with Shield Guardian)</entry>
+		<entry>Famous Researcher [Level 16] (with Shield Guardian)</entry>
+		<entry>Famous Researcher [Level 17] (with Shield Guardian)</entry>
+		<entry>Famous Researcher [Level 18] (with Shield Guardian)</entry>
+		<entry>Famous Researcher [Level 19] (with Shield Guardian)</entry>
+		<entry>Famous Researcher [Level 20] (with Shield Guardian)</entry>
+		<entry>Famous Researcher [Level 16] (with Iron Golem)</entry>
+		<entry>Famous Researcher [Level 17] (with Iron Golem)</entry>
+		<entry>Famous Researcher [Level 18] (with Iron Golem)</entry>
+		<entry>Famous Researcher [Level 19] (with Iron Golem)</entry>
+		<entry>Famous Researcher [Level 20] (with Iron Golem)</entry>
+		<entry>Homunculus (Solitary)</entry>
+		<entry>Shield Guardian (Solitary)</entry>
+		<entry>Kolyarut (Solitary)</entry>
+		<entry>Marut (Solitary)</entry>
+		<entry>Zelekhut (Solitary)</entry>
+		<entry>Retriever (Solitary)</entry>
+		<entry>Ravid (with Animated Objects)</entry>
 	</collection>
 	<collection>
 		<name>Dragon</name>
@@ -418,6 +754,22 @@
 		<entry>Great Wyrm White Dragon (Solitary)</entry>
 		<entry>Great Wyrm White Dragons (Pair)</entry>
 		<entry>Great Wyrm White Dragons (Family)</entry>
+		<entry>Dragon Turtle (Solitary)</entry>
+		<entry>Fire Giants (Tribe with Adept)</entry>
+		<entry>Fire Giants (Tribe with Leader)</entry>
+		<entry>Frost Giants (Tribe with Adept)</entry>
+		<entry>Frost Giants (Tribe with Leader)</entry>
+		<entry>Frost Giants (Tribe with Adept and Jarl)</entry>
+		<entry>Frost Giants (Tribe with Leader and Jarl)</entry>
+		<entry>Githyanki (Squad)</entry>
+		<entry>Githyanki (Regiment)</entry>
+		<entry>Hound Archon Hero (with Mount)</entry>
+		<entry>Pseudodragon (Solitary)</entry>
+		<entry>Pseudodragons (Pair)</entry>
+		<entry>Pseudodragons (Clutch)</entry>
+		<entry>Wyvern (Solitary)</entry>
+		<entry>Wyverns (Pair)</entry>
+		<entry>Wyverns (Flight)</entry>
 	</collection>
 	<collection>
 		<name>Elemental</name>
@@ -448,6 +800,13 @@
 		<entry>Large Water Elemental (Solitary)</entry>
 		<entry>Medium Water Elemental (Solitary)</entry>
 		<entry>Small Water Elemental (Solitary)</entry>
+		<entry>Invisible Stalker (Solitary)</entry>
+		<entry>Magmin (Solitary)</entry>
+		<entry>Magmins (Gang)</entry>
+		<entry>Magmins (Squad)</entry>
+		<entry>Svirfnebli (Band)</entry>
+		<entry>Thoqqua (Solitary)</entry>
+		<entry>Thoqquas (Pair)</entry>
 	</collection>
 	<collection>
 		<name>Fey</name>
@@ -462,9 +821,13 @@
 		<entry>Pixies (Band)</entry>
 		<entry>Pixies (Gang)</entry>
 		<entry>Pixies (Tribe)</entry>
-		<entry>Pixie with Irresistable Dance (Gang)</entry>
+		<entry>Pixie with Irresistable Dance (Band)</entry>
 		<entry>Pixies with Irresistable Dance (Tribe)</entry>
 		<entry>Nymph (Solitary)</entry>
+		<entry>Satyr (Solitary)</entry>
+		<entry>Satyrs (Band)</entry>
+		<entry>Satyrs (Pair)</entry>
+		<entry>Satyrs (Troop)</entry>
 	</collection>
 	<collection>
 		<name>Giant</name>
@@ -478,12 +841,50 @@
 		<entry>Ettins (Band)</entry>
 		<entry>Ettins (Colony with Goblins)</entry>
 		<entry>Ettins (Colony with Orcs)</entry>
+		<entry>Ettins (Gang)</entry>
+		<entry>Ettins (Troupe)</entry>
+		<entry>Fire Giants (Tribe with Adept)</entry>
+		<entry>Fire Giants (Tribe with Leader)</entry>
+		<entry>Frost Giants (Tribe with Adept)</entry>
+		<entry>Frost Giants (Tribe with Leader)</entry>
+		<entry>Frost Giants (Tribe with Adept and Jarl)</entry>
+		<entry>Frost Giants (Tribe with Leader and Jarl)</entry>
+		<entry>Fire Giant (Solitary)</entry>
+		<entry>Fire Giants (Band with Adept)</entry>
+		<entry>Fire Giants (Band with Cleric)</entry>
+		<entry>Fire Giants (Gang)</entry>
+		<entry>Fire Giants (Hunting/Raiding Party with Adept and Ettins)</entry>
+		<entry>Fire Giants (Hunting/Raiding Party with Adept and Trolls)</entry>
+		<entry>Fire Giants (Hunting/Raiding Party with Sorcerer and Ettins)</entry>
+		<entry>Fire Giants (Hunting/Raiding Party with Sorcerer and Trolls)</entry>
+		<entry>Frost Giant (Solitary)</entry>
+		<entry>Frost Giant Jarl (Solitary)</entry>
+		<entry>Frost Giants (Band with Adept)</entry>
+		<entry>Frost Giants (Band with Cleric)</entry>
+		<entry>Frost Giants (Gang)</entry>
+		<entry>Frost Giants (Hunting/Raiding Party with Adept)</entry>
+		<entry>Frost Giants (Hunting/Raiding Party with Sorcerer)</entry>
+		<entry>Hill Giant (Solitary)</entry>
+		<entry>Stone Giant (Solitary)</entry>
+		<entry>Storm Giant (Solitary)</entry>
+		<entry>Hags (Covey with Cloud Giants)</entry>
+		<entry>Hags (Covey with Fire Giants)</entry>
+		<entry>Hags (Covey with Frost Giants)</entry>
+		<entry>Hags (Covey with Hill Giants)</entry>
+		<entry>Gnolls (Tribe with Trolls)</entry>
+		<entry>Hill Giant Dire Wereboar (Solitary)</entry>
+		<entry>Hill Giant Dire Wereboars (Brood)</entry>
+		<entry>Hill Giant Dire Wereboars (Pair)</entry>
+		<entry>Hill Giant Dire Wereboars (Troupe)</entry>
 	</collection>
 	<collection>
 		<name>Humanoid</name>
 		<entry>Aasimar (Solitary)</entry>
 		<entry>Aasimars (Pair)</entry>
 		<entry>Aasimars (Team)</entry>
+		<entry>Tiefling (Solitary)</entry>
+		<entry>Tieflings (Pair)</entry>
+		<entry>Tieflings (Team)</entry>
 		<entry>Doctor [Level 1] (Solitary)</entry>
 		<entry>Doctor [Level 2] (Solitary)</entry>
 		<entry>Doctor [Level 3] (Solitary)</entry>
@@ -515,6 +916,48 @@
 		<entry>Doctor [Level 16-17 Adept] (Solitary)</entry>
 		<entry>Doctor [Level 18-19 Adept] (Solitary)</entry>
 		<entry>Doctor [Level 20 Adept] (Solitary)</entry>
+		<entry>Fortuneteller [Level 1] (Solitary)</entry>
+		<entry>Fortuneteller [Level 2-3] (Solitary)</entry>
+		<entry>Fortuneteller [Level 4-5] (Solitary)</entry>
+		<entry>Fortuneteller [Level 6-7] (Solitary)</entry>
+		<entry>Fortuneteller [Level 8-9] (Solitary)</entry>
+		<entry>Fortuneteller [Level 10-11] (Solitary)</entry>
+		<entry>Fortuneteller [Level 12-13] (Solitary)</entry>
+		<entry>Fortuneteller [Level 14-15] (Solitary)</entry>
+		<entry>Fortuneteller [Level 16-17] (Solitary)</entry>
+		<entry>Fortuneteller [Level 18-19] (Solitary)</entry>
+		<entry>Fortuneteller [Level 20] (Solitary)</entry>
+		<entry>Missionaries [Level 1 Adepts] (Mission Team)</entry>
+		<entry>Missionaries [Level 2-3 Adepts] (Mission Team)</entry>
+		<entry>Missionaries [Level 4-5 Adepts] (Mission Team)</entry>
+		<entry>Missionaries [Level 6-7 Adepts] (Mission Team)</entry>
+		<entry>Missionaries [Level 8-9 Adepts] (Mission Team)</entry>
+		<entry>Missionaries [Level 10-11 Adepts] (Mission Team)</entry>
+		<entry>Missionaries [Level 12-13 Adepts] (Mission Team)</entry>
+		<entry>Missionaries [Level 14-15 Adepts] (Mission Team)</entry>
+		<entry>Missionaries [Level 16-17 Adepts] (Mission Team)</entry>
+		<entry>Missionaries [Level 18-19 Adepts] (Mission Team)</entry>
+		<entry>Missionaries [Level 20 Adepts] (Mission Team)</entry>
+		<entry>Missionaries [Level 1] (Mission Team)</entry>
+		<entry>Missionaries [Level 2] (Mission Team)</entry>
+		<entry>Missionaries [Level 3] (Mission Team)</entry>
+		<entry>Missionaries [Level 4] (Mission Team)</entry>
+		<entry>Missionaries [Level 5] (Mission Team)</entry>
+		<entry>Missionaries [Level 6] (Mission Team)</entry>
+		<entry>Missionaries [Level 7] (Mission Team)</entry>
+		<entry>Missionaries [Level 8] (Mission Team)</entry>
+		<entry>Missionaries [Level 9] (Mission Team)</entry>
+		<entry>Missionaries [Level 10] (Mission Team)</entry>
+		<entry>Missionaries [Level 11] (Mission Team)</entry>
+		<entry>Missionaries [Level 12] (Mission Team)</entry>
+		<entry>Missionaries [Level 13] (Mission Team)</entry>
+		<entry>Missionaries [Level 14] (Mission Team)</entry>
+		<entry>Missionaries [Level 15] (Mission Team)</entry>
+		<entry>Missionaries [Level 16] (Mission Team)</entry>
+		<entry>Missionaries [Level 17] (Mission Team)</entry>
+		<entry>Missionaries [Level 18] (Mission Team)</entry>
+		<entry>Missionaries [Level 19] (Mission Team)</entry>
+		<entry>Missionaries [Level 20] (Mission Team)</entry>
 	</collection>
 	<collection>
 		<name>Magical Beast</name>
@@ -528,25 +971,332 @@
 		<entry>Behir (Solitary)</entry>
 		<entry>Behirs (Pair)</entry>
 		<entry>Blink Dog (Solitary)</entry>
+		<entry>Blink Dogs (Pack)</entry>
+		<entry>Blink Dogs (Pair)</entry>
+		<entry>Bulette (Solitary)</entry>
+		<entry>Bulettes (Pair)</entry>
+		<entry>Celestial Badger (Solitary)</entry>
+		<entry>Celestial Badgers (Cete)</entry>
+		<entry>Celestial Badgers (Pair)</entry>
+		<entry>Celestial Charger Unicorn (Solitary)</entry>
+		<entry>Celestial Dog (Solitary)</entry>
+		<entry>Celestial Dogs (Pack)</entry>
+		<entry>Celestial Giant Fire Beetles (Cluster)</entry>
+		<entry>Celestial Giant Fire Beetles (Colony)</entry>
+		<entry>Celestial Monkeys (Troop)</entry>
+		<entry>Celestial Owl (Solitary)</entry>
+		<entry>Celestial Porpoise (Solitary)</entry>
+		<entry>Celestial Porpoises (Pair)</entry>
+		<entry>Celestial Porpoises (School)</entry>
+		<entry>Chimera (Solitary)</entry>
+		<entry>Chimeras (Flight)</entry>
+		<entry>Chimeras (Pride)</entry>
 	</collection>
 	<collection>
 		<name>Monstrous Humanoid</name>
 		<entry>Annis (Solitary)</entry>
+		<entry>Sea Hag (Solitary)</entry>
+		<entry>Green Hag (Solitary)</entry>
+		<entry>Centaur (Solitary)</entry>
+		<entry>Centaurs (Company)</entry>
+		<entry>Centaurs (Tribe)</entry>
+		<entry>Centaurs (Troop)</entry>
+		<entry>Derro (Band)</entry>
+		<entry>Derro (Squad)</entry>
+		<entry>Derro (Team)</entry>
+		<entry>Doppelganger (Solitary)</entry>
+		<entry>Doppelgangers (Gang)</entry>
+		<entry>Doppelgangers (Pair)</entry>
+		<entry>Gargoyle (Solitary)</entry>
+		<entry>Gargoyles (Pair)</entry>
+		<entry>Gargoyles (Wing)</entry>
+		<entry>Kapoacinth (Solitary)</entry>
+		<entry>Kapoacinths (Pair)</entry>
+		<entry>Kapoacinths (Wing)</entry>
+		<entry>Grimlocks (Gang)</entry>
+		<entry>Grimlocks (Pack)</entry>
+		<entry>Grimlocks (Tribe)</entry>
+		<entry>Hags (Covey with Cloud Giants)</entry>
+		<entry>Hags (Covey with Fire Giants)</entry>
+		<entry>Hags (Covey with Frost Giants)</entry>
+		<entry>Hags (Covey with Hill Giants)</entry>
+		<entry>Harpies (Flight)</entry>
+		<entry>Harpies (Pair)</entry>
+		<entry>Harpy (Solitary)</entry>
+		<entry>Harpy Archer (Solitary)</entry>
 	</collection>
 	<collection>
 		<name>Ooze</name>
+		<entry>Black Pudding (Solitary)</entry>
+		<entry>Elder Black Pudding (Solitary)</entry>
+		<entry>Gelatinous Cube (Solitary)</entry>
+		<entry>Gray Ooze (Solitary)</entry>
+		<entry>Ochre Jelly (Solitary)</entry>
 	</collection>
 	<collection>
 		<name>Outsider</name>
+		<entry>Abyssal Greater Basilisk (Solitary)</entry>
+		<entry>Abyssal Greater Basilisks (Colony)</entry>
+		<entry>Achaierai (Solitary)</entry>
+		<entry>Achaierais (Flock)</entry>
+		<entry>Adult Arrowhawk (Solitary)</entry>
+		<entry>Adult Arrowhawks (Clutch)</entry>
+		<entry>Juvenile Arrowhawk (Solitary)</entry>
+		<entry>Juvenile Arrowhawks (Clutch)</entry>
+		<entry>Elder Arrowhawk (Solitary)</entry>
+		<entry>Elder Arrowhawks (Clutch)</entry>
+		<entry>Adult Tojanida (Solitary)</entry>
+		<entry>Adult Tojanidas (Clutch)</entry>
+		<entry>Juvenile Tojanida (Solitary)</entry>
+		<entry>Juvenile Tojanidas (Clutch)</entry>
+		<entry>Elder Tojanida (Solitary)</entry>
+		<entry>Elder Tojanidas (Clutch)</entry>
+		<entry>Astral Deva (Solitary)</entry>
+		<entry>Astral Devas (Pair)</entry>
+		<entry>Astral Devas (Squad)</entry>
+		<entry>Planetar (Solitary)</entry>
+		<entry>Planetars (Pair)</entry>
+		<entry>Solar (Solitary)</entry>
+		<entry>Solars (Pair)</entry>
+		<entry>Flamebrother Salamander (Solitary)</entry>
+		<entry>Flamebrother Salamanders (Pair)</entry>
+		<entry>Flamebrother Salamanders (Cluster)</entry>
+		<entry>Average Salamander (Solitary)</entry>
+		<entry>Average Salamanders (Pair)</entry>
+		<entry>Average Salamanders (Cluster)</entry>
+		<entry>Noble Salamander (Solitary)</entry>
+		<entry>Noble Salamanders (Pair)</entry>
+		<entry>Noble Salamanders (Noble Party)</entry>
+		<entry>Minor Xorn (Solitary)</entry>
+		<entry>Minor Xorns (Pair)</entry>
+		<entry>Minor Xorns (Cluster)</entry>
+		<entry>Average Xorn (Solitary)</entry>
+		<entry>Average Xorns (Pair)</entry>
+		<entry>Average Xorns (Cluster)</entry>
+		<entry>Elder Xorn (Solitary)</entry>
+		<entry>Elder Xorns (Pair)</entry>
+		<entry>Elder Xorns (Cluster)</entry>
+		<entry>Avoral (Solitary)</entry>
+		<entry>Avorals (Pair)</entry>
+		<entry>Avorals (Squad)</entry>
+		<entry>Azer (Solitary)</entry>
+		<entry>Azers (Clan)</entry>
+		<entry>Azers (Pair)</entry>
+		<entry>Azers (Team)</entry>
+		<entry>Azers (Squad)</entry>
+		<entry>Babau (Solitary)</entry>
+		<entry>Babaus (Gang)</entry>
+		<entry>Balor (Solitary)</entry>
+		<entry>Balor (Troupe)</entry>
+		<entry>Barbed Devil (Hamatula) (Solitary)</entry>
+		<entry>Barbed Devils (Hamatulas) (Pair)</entry>
 	</collection>
 	<collection>
 		<name>Plant</name>
+		<entry>Assassin Vine (Solitary)</entry>
+		<entry>Assassin Vines (Patch)</entry>
+		<entry>Phantom Fungus (Solitary)</entry>
+		<entry>Shambling Mound (Solitary)</entry>
+		<entry>Shrieker (Solitary)</entry>
+		<entry>Shriekers (Patch)</entry>
+		<entry>Tendriculos (Solitary)</entry>
+		<entry>Treant (Solitary)</entry>
+		<entry>Treants (Grove)</entry>
+		<entry>Violet Fungus (Solitary)</entry>
+		<entry>Violet Fungi (Patch)</entry>
+		<entry>Violet Fungi (Mixed Patch)</entry>
 	</collection>
 	<collection>
 		<name>Undead</name>
+		<entry>Allip (Solitary)</entry>
+		<entry>Bodak (Solitary)</entry>
+		<entry>Bodaks (Gang)</entry>
+		<entry>Bugbear Zombies (Small Group)</entry>
+		<entry>Bugbear Zombies (Group)</entry>
+		<entry>Bugbear Zombies (Large Group)</entry>
+		<entry>Human Zombies (Small Group)</entry>
+		<entry>Human Zombies (Group)</entry>
+		<entry>Human Zombies (Large Group)</entry>
+		<entry>Kobold Zombies (Small Group)</entry>
+		<entry>Kobold Zombies (Group)</entry>
+		<entry>Kobold Zombies (Large Group)</entry>
+		<entry>Chimera Skeletons (Small Group)</entry>
+		<entry>Chimera Skeletons (Group)</entry>
+		<entry>Chimera Skeletons (Large Group)</entry>
+		<entry>Cloud Giant Skeletons (Small Group)</entry>
+		<entry>Cloud Giant Skeletons (Group)</entry>
+		<entry>Cloud Giant Skeletons (Large Group)</entry>
+		<entry>Devourer (Solitary)</entry>
+		<entry>Dread Wraith (Solitary)</entry>
+		<entry>Wraith (Solitary)</entry>
+		<entry>Ettin Skeletons (Small Group)</entry>
+		<entry>Ettin Skeletons (Group)</entry>
+		<entry>Ettin Skeletons (Large Group)</entry>
+		<entry>Ghast (Solitary)</entry>
+		<entry>Ghasts (Gang)</entry>
+		<entry>Ghasts (Pack)</entry>
+		<entry>Ghost [Level 1] (Solitary)</entry>
+		<entry>Ghost [Level 2] (Solitary)</entry>
+		<entry>Ghost [Level 3] (Solitary)</entry>
+		<entry>Ghost [Level 4] (Solitary)</entry>
+		<entry>Ghost [Level 5] (Solitary)</entry>
+		<entry>Ghost [Level 6] (Solitary)</entry>
+		<entry>Ghost [Level 7] (Solitary)</entry>
+		<entry>Ghost [Level 8] (Solitary)</entry>
+		<entry>Ghost [Level 9] (Solitary)</entry>
+		<entry>Ghost [Level 10] (Solitary)</entry>
+		<entry>Ghost [Level 11] (Solitary)</entry>
+		<entry>Ghost [Level 12] (Solitary)</entry>
+		<entry>Ghost [Level 13] (Solitary)</entry>
+		<entry>Ghost [Level 14] (Solitary)</entry>
+		<entry>Ghost [Level 15] (Solitary)</entry>
+		<entry>Ghost [Level 16] (Solitary)</entry>
+		<entry>Ghost [Level 17] (Solitary)</entry>
+		<entry>Ghost [Level 18] (Solitary)</entry>
+		<entry>Ghost [Level 19] (Solitary)</entry>
+		<entry>Ghost [Level 20] (Solitary)</entry>
+		<entry>Ghosts [Level 1] (Gang)</entry>
+		<entry>Ghosts [Level 2] (Gang)</entry>
+		<entry>Ghosts [Level 3] (Gang)</entry>
+		<entry>Ghosts [Level 4] (Gang)</entry>
+		<entry>Ghosts [Level 5] (Gang)</entry>
+		<entry>Ghosts [Level 6] (Gang)</entry>
+		<entry>Ghosts [Level 7] (Gang)</entry>
+		<entry>Ghosts [Level 8] (Gang)</entry>
+		<entry>Ghosts [Level 9] (Gang)</entry>
+		<entry>Ghosts [Level 10] (Gang)</entry>
+		<entry>Ghosts [Level 11] (Gang)</entry>
+		<entry>Ghosts [Level 12] (Gang)</entry>
+		<entry>Ghosts [Level 13] (Gang)</entry>
+		<entry>Ghosts [Level 14] (Gang)</entry>
+		<entry>Ghosts [Level 15] (Gang)</entry>
+		<entry>Ghosts [Level 16] (Gang)</entry>
+		<entry>Ghosts [Level 17] (Gang)</entry>
+		<entry>Ghosts [Level 18] (Gang)</entry>
+		<entry>Ghosts [Level 19] (Gang)</entry>
+		<entry>Ghosts [Level 20] (Gang)</entry>
+		<entry>Ghosts [Level 1] (Mob)</entry>
+		<entry>Ghosts [Level 2] (Mob)</entry>
+		<entry>Ghosts [Level 3] (Mob)</entry>
+		<entry>Ghosts [Level 4] (Mob)</entry>
+		<entry>Ghosts [Level 5] (Mob)</entry>
+		<entry>Ghosts [Level 6] (Mob)</entry>
+		<entry>Ghosts [Level 7] (Mob)</entry>
+		<entry>Ghosts [Level 8] (Mob)</entry>
+		<entry>Ghosts [Level 9] (Mob)</entry>
+		<entry>Ghosts [Level 10] (Mob)</entry>
+		<entry>Ghosts [Level 11] (Mob)</entry>
+		<entry>Ghosts [Level 12] (Mob)</entry>
+		<entry>Ghosts [Level 13] (Mob)</entry>
+		<entry>Ghosts [Level 14] (Mob)</entry>
+		<entry>Ghosts [Level 15] (Mob)</entry>
+		<entry>Ghosts [Level 16] (Mob)</entry>
+		<entry>Ghosts [Level 17] (Mob)</entry>
+		<entry>Ghosts [Level 18] (Mob)</entry>
+		<entry>Ghosts [Level 19] (Mob)</entry>
+		<entry>Ghosts [Level 20] (Mob)</entry>
+		<entry>Lich [Level 11] (Solitary)</entry>
+		<entry>Lich [Level 12] (Solitary)</entry>
+		<entry>Lich [Level 13] (Solitary)</entry>
+		<entry>Lich [Level 14] (Solitary)</entry>
+		<entry>Lich [Level 15] (Solitary)</entry>
+		<entry>Lich [Level 16] (Solitary)</entry>
+		<entry>Lich [Level 17] (Solitary)</entry>
+		<entry>Lich [Level 18] (Solitary)</entry>
+		<entry>Lich [Level 19] (Solitary)</entry>
+		<entry>Lich [Level 20] (Solitary)</entry>
+		<entry>Lich [Level 11] (Troupe)</entry>
+		<entry>Lich [Level 12] (Troupe)</entry>
+		<entry>Lich [Level 13] (Troupe)</entry>
+		<entry>Lich [Level 14] (Troupe)</entry>
+		<entry>Lich [Level 15] (Troupe)</entry>
+		<entry>Lich [Level 16] (Troupe)</entry>
+		<entry>Lich [Level 17] (Troupe)</entry>
+		<entry>Lich [Level 18] (Troupe)</entry>
+		<entry>Lich [Level 19] (Troupe)</entry>
+		<entry>Lich [Level 20] (Troupe)</entry>
+		<entry>Vampire [Level 1] (Solitary)</entry>
+		<entry>Vampire [Level 2] (Solitary)</entry>
+		<entry>Vampire [Level 3] (Solitary)</entry>
+		<entry>Vampire [Level 4] (Solitary)</entry>
+		<entry>Vampire [Level 5] (Solitary)</entry>
+		<entry>Vampire [Level 6] (Solitary)</entry>
+		<entry>Vampire [Level 7] (Solitary)</entry>
+		<entry>Vampire [Level 8] (Solitary)</entry>
+		<entry>Vampire [Level 9] (Solitary)</entry>
+		<entry>Vampire [Level 10] (Solitary)</entry>
+		<entry>Vampire [Level 11] (Solitary)</entry>
+		<entry>Vampire [Level 12] (Solitary)</entry>
+		<entry>Vampire [Level 13] (Solitary)</entry>
+		<entry>Vampire [Level 14] (Solitary)</entry>
+		<entry>Vampire [Level 15] (Solitary)</entry>
+		<entry>Vampire [Level 16] (Solitary)</entry>
+		<entry>Vampire [Level 17] (Solitary)</entry>
+		<entry>Vampire [Level 18] (Solitary)</entry>
+		<entry>Vampire [Level 19] (Solitary)</entry>
+		<entry>Vampire [Level 20] (Solitary)</entry>
 	</collection>
 	<collection>
 		<name>Vermin</name>
+		<entry>Centipede Swarm (Solitary)</entry>
+		<entry>Centipede Swarms (Colony)</entry>
+		<entry>Centipede Swarms (Tangle)</entry>
+		<entry>Colossal Monstrous Centipede (Solitary)</entry>
+		<entry>Gargantuan Monstrous Centipede (Solitary)</entry>
+		<entry>Huge Monstrous Centipede (Solitary)</entry>
+		<entry>Huge Monstrous Centipedes (Colony)</entry>
+		<entry>Large Monstrous Centipede (Solitary)</entry>
+		<entry>Large Monstrous Centipedes (Colony)</entry>
+		<entry>Medium Monstrous Centipede (Solitary)</entry>
+		<entry>Medium Monstrous Centipedes (Colony)</entry>
+		<entry>Small Monstrous Centipede (Solitary)</entry>
+		<entry>Small Monstrous Centipedes (Colony)</entry>
+		<entry>Tiny Monstrous Centipedes (Colony)</entry>
+		<entry>Colossal Monstrous Scorpion (Solitary)</entry>
+		<entry>Gargantuan Monstrous Scorpion (Solitary)</entry>
+		<entry>Huge Monstrous Scorpion (Solitary)</entry>
+		<entry>Huge Monstrous Scorpions (Colony)</entry>
+		<entry>Large Monstrous Scorpion (Solitary)</entry>
+		<entry>Large Monstrous Scorpions (Colony)</entry>
+		<entry>Medium Monstrous Scorpion (Solitary)</entry>
+		<entry>Medium Monstrous Scorpions (Colony)</entry>
+		<entry>Small Monstrous Scorpion (Solitary)</entry>
+		<entry>Small Monstrous Scorpions (Colony)</entry>
+		<entry>Tiny Monstrous Scorpions (Colony)</entry>
+		<entry>Colossal Monstrous Spider (Solitary)</entry>
+		<entry>Gargantuan Monstrous Spider (Solitary)</entry>
+		<entry>Huge Monstrous Spider (Solitary)</entry>
+		<entry>Huge Monstrous Spiders (Colony)</entry>
+		<entry>Large Monstrous Spider (Solitary)</entry>
+		<entry>Large Monstrous Spiders (Colony)</entry>
+		<entry>Medium Monstrous Spider (Solitary)</entry>
+		<entry>Medium Monstrous Spiders (Colony)</entry>
+		<entry>Small Monstrous Spider (Solitary)</entry>
+		<entry>Small Monstrous Spiders (Colony)</entry>
+		<entry>Tiny Monstrous Spiders (Colony)</entry>
+		<entry>Driders (Troupe)</entry>
+		<entry>Ettercaps (Troupe)</entry>
+		<entry>Giant Ant Queen (Hive)</entry>
+		<entry>Giant Bee (Solitary)</entry>
+		<entry>Giant Bees (Buzz)</entry>
+		<entry>Giant Bees (Hive)</entry>
+		<entry>Giant Bombardier Beetles (Click)</entry>
+		<entry>Giant Bombardier Beetles (Cluster)</entry>
+		<entry>Giant Fire Beetles (Cluster)</entry>
+		<entry>Giant Fire Beetles (Colony)</entry>
+		<entry>Giant Praying Mantis (Solitary)</entry>
+		<entry>Giant Soldier Ant (Solitary)</entry>
+		<entry>Giant Soldier Ants (Gang)</entry>
+		<entry>Giant Stag Beetles (Cluster)</entry>
+		<entry>Giant Stag Beetles (Mass)</entry>
+		<entry>Giant Wasp (Solitary)</entry>
+		<entry>Giant Wasps (Nest)</entry>
+		<entry>Giant Wasps (Swarm)</entry>
+		<entry>Giant Worker Ants (Crew)</entry>
+		<entry>Giant Worker Ants (Gang)</entry>
+		<entry>Locust Swarm (Solitary)</entry>
+		<entry>Locust Swarms (Cloud)</entry>
+		<entry>Locust Swarms (Plague)</entry>
 	</collection>
 	<collection>
 		<name>A chaotic-aligned plane</name>
@@ -583,5 +1333,137 @@
 	</collection>
 	<collection>
 		<name>Aquatic</name>
+	</collection>
+	<collection>
+		<name>Astral Plane</name>
+	</collection>
+	<collection>
+		<name>Civilized</name>
+	</collection>
+	<collection>
+		<name>ColdAquatic</name>
+	</collection>
+	<collection>
+		<name>ColdCivilized</name>
+	</collection>
+	<collection>
+		<name>ColdDesert</name>
+	</collection>
+	<collection>
+		<name>ColdForest</name>
+	</collection>
+	<collection>
+		<name>ColdHills</name>
+	</collection>
+	<collection>
+		<name>ColdMarsh</name>
+	</collection>
+	<collection>
+		<name>ColdMountain</name>
+	</collection>
+	<collection>
+		<name>ColdPlains</name>
+	</collection>
+	<collection>
+		<name>ColdUnderground</name>
+	</collection>
+	<collection>
+		<name>TemperateAquatic</name>
+	</collection>
+	<collection>
+		<name>TemperateCivilized</name>
+	</collection>
+	<collection>
+		<name>TemperateDesert</name>
+	</collection>
+	<collection>
+		<name>TemperateForest</name>
+	</collection>
+	<collection>
+		<name>TemperateHills</name>
+	</collection>
+	<collection>
+		<name>TemperateMarsh</name>
+	</collection>
+	<collection>
+		<name>TemperateMountain</name>
+	</collection>
+	<collection>
+		<name>TemperatePlains</name>
+	</collection>
+	<collection>
+		<name>TemperateUnderground</name>
+	</collection>
+	<collection>
+		<name>WarmAquatic</name>
+	</collection>
+	<collection>
+		<name>WarmCivilized</name>
+	</collection>
+	<collection>
+		<name>WarmDesert</name>
+	</collection>
+	<collection>
+		<name>WarmForest</name>
+	</collection>
+	<collection>
+		<name>WarmHills</name>
+	</collection>
+	<collection>
+		<name>WarmMarsh</name>
+	</collection>
+	<collection>
+		<name>WarmMountain</name>
+	</collection>
+	<collection>
+		<name>WarmPlains</name>
+	</collection>
+	<collection>
+		<name>WarmUnderground</name>
+	</collection>
+	<collection>
+		<name>Day</name>
+	</collection>
+	<collection>
+		<name>Elemental Plane of Air</name>
+	</collection>
+	<collection>
+		<name>Elemental Plane of Earth</name>
+	</collection>
+	<collection>
+		<name>Elemental Plane of Fire</name>
+	</collection>
+	<collection>
+		<name>Elemental Plane of Water</name>
+	</collection>
+	<collection>
+		<name>Ethereal Plane</name>
+	</collection>
+	<collection>
+		<name>Extraplanar</name>
+	</collection>
+	<collection>
+		<name>Land</name>
+	</collection>
+	<collection>
+		<name>Night</name>
+	</collection>
+	<collection>
+		<name>Plane of Limbo</name>
+	</collection>
+	<collection>
+		<name>Plane of Shadow</name>
+	</collection>
+	<collection>
+		<name>Positive Energy Plane</name>
+	</collection>
+	<collection>
+		<name>Underground</name>
+	</collection>
+	<collection>
+		<name>UndergroundAquatic</name>
+	</collection>
+	<collection>
+		<name>Wilderness</name>
 	</collection>
 </collections>

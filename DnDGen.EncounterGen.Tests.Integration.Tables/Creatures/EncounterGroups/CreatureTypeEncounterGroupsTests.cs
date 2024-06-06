@@ -30,7 +30,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
         [TestCase(CreatureDataConstants.Types.Plant)]
         [TestCase(CreatureDataConstants.Types.Undead)]
         [TestCase(CreatureDataConstants.Types.Vermin)]
-        public void CreatureTypeGroup_HasEncountersThatContainCreatureOfType(string creatureType)
+        public void CreatureTypeEncounterGroup(string creatureType)
         {
             var encounters = EncounterConstants.GetAll();
             var encountersOfType = new List<string>();

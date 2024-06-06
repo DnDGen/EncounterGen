@@ -1852,6 +1852,7 @@
     <name>Lycanthrope</name>
     <entry>Werebear</entry>
     <entry>Wereboar</entry>
+	  <entry>Hill giant dire wereboar</entry>
     <entry>Wererat</entry>
     <entry>Weretiger</entry>
     <entry>Werewolf</entry>
@@ -1955,7 +1956,11 @@
     <entry>Grimlock</entry>
     <entry>Hag</entry>
     <entry>Harpy</entry>
-    <entry>Lycanthrope</entry>
+	  <entry>Werebear</entry>
+	  <entry>Wereboar</entry>
+	  <entry>Wererat</entry>
+	  <entry>Weretiger</entry>
+	  <entry>Werewolf</entry>
     <entry>Medusa</entry>
     <entry>Minotaur</entry>
     <entry>Sahuagin</entry>
@@ -2386,11 +2391,6 @@
     <name>Weasel</name>
     <entry>Weasel</entry>
     <entry>Dire weasel</entry>
-  </collection>
-  <collection>
-    <name>Wereboar</name>
-    <entry>Wereboar</entry>
-    <entry>Hill giant dire wereboar</entry>
   </collection>
   <collection>
     <name>Werewolf</name>
