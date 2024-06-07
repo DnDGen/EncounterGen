@@ -7,7 +7,7 @@ using System.Linq;
 namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
 {
     [TestFixture]
-    public class TimeOfDayCreatureGroupsTests : EncounterGroupsTableTests
+    public class TimeOfDayEncounterGroupsTests : EncounterGroupsTableTests
     {
         private string[] creaturesSensitiveToSunlight = new[]
         {

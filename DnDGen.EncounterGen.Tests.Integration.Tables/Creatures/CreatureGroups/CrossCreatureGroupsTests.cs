@@ -60,7 +60,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         [TestCase(GroupConstants.Wilderness)]
         public void AllCreaturesArePresentInAtLeastOneTimeOfDay(string source)
         {
-            var sourceCreatures = ExplodeCollection(source);
+            var sourceCreatures = GetAllCreaturesFromEncounterGroup(source);
             var allTimesOfDayCreatures = GetTimesOfDayCreatures();
             AssertContainedCollection(sourceCreatures, allTimesOfDayCreatures);
         }
@@ -97,7 +97,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         [TestCase(GroupConstants.Wilderness)]
         public void AllCreaturesHaveType(string source)
         {
-            var sourceCreatures = ExplodeCollection(source);
+            var sourceCreatures = GetAllCreaturesFromEncounterGroup(source);
             var allTypes = new[]
             {
                 CreatureDataConstants.Types.Aberration,
@@ -117,9 +117,27 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
                 CreatureDataConstants.Types.Vermin,
             };
 
-            var excludedCreatures = new[] { CreatureDataConstants.DominatedCreature, CreatureDataConstants.Noncombatant };
-            var explodedExcludedCreatures = ExplodeCollections(excludedCreatures);
-            var creatures = sourceCreatures.Except(explodedExcludedCreatures);
+            var excludedCreatures = new[] 
+            { 
+                CreatureDataConstants.DominatedCreature_CR1, 
+                CreatureDataConstants.DominatedCreature_CR2, 
+                CreatureDataConstants.DominatedCreature_CR3, 
+                CreatureDataConstants.DominatedCreature_CR4, 
+                CreatureDataConstants.DominatedCreature_CR5, 
+                CreatureDataConstants.DominatedCreature_CR6, 
+                CreatureDataConstants.DominatedCreature_CR7, 
+                CreatureDataConstants.DominatedCreature_CR8, 
+                CreatureDataConstants.DominatedCreature_CR9, 
+                CreatureDataConstants.DominatedCreature_CR10,
+                CreatureDataConstants.DominatedCreature_CR11,
+                CreatureDataConstants.DominatedCreature_CR12,
+                CreatureDataConstants.DominatedCreature_CR13,
+                CreatureDataConstants.DominatedCreature_CR14,
+                CreatureDataConstants.DominatedCreature_CR15,
+                CreatureDataConstants.DominatedCreature_CR16,
+            };
+
+            var creatures = sourceCreatures.Except(excludedCreatures);
 
             var creaturesWithoutType = creatures.Where(c => encounterVerifier.CreatureIsValid(c, allTypes) == false);
             Assert.That(creaturesWithoutType, Is.Empty, "Creatures not in a type category");
@@ -127,8 +145,8 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
 
         private IEnumerable<string> GetTimesOfDayCreatures()
         {
-            var dayCreatures = ExplodeCollection(EnvironmentConstants.TimesOfDay.Day);
-            var nightCreatures = ExplodeCollection(EnvironmentConstants.TimesOfDay.Night);
+            var dayCreatures = GetAllCreaturesFromEncounterGroup(EnvironmentConstants.TimesOfDay.Day);
+            var nightCreatures = GetAllCreaturesFromEncounterGroup(EnvironmentConstants.TimesOfDay.Night);
 
             return dayCreatures.Union(nightCreatures);
         }

@@ -1074,26 +1074,26 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
                 EncounterConstants.Character_Merchant_Level4To5_Caravan,
                 EncounterConstants.Character_Merchant_Level6To7_Caravan,
                 EncounterConstants.Character_Merchant_Level8To9_Caravan,
-                EncounterConstants.Character_Hitman_Level1_Solitary,
-                EncounterConstants.Character_Hitman_Level10_Solitary,
-                EncounterConstants.Character_Hitman_Level11_Solitary,
-                EncounterConstants.Character_Hitman_Level12_Solitary,
-                EncounterConstants.Character_Hitman_Level13_Solitary,
-                EncounterConstants.Character_Hitman_Level14_Solitary,
-                EncounterConstants.Character_Hitman_Level15_Solitary,
-                EncounterConstants.Character_Hitman_Level16_Solitary,
-                EncounterConstants.Character_Hitman_Level17_Solitary,
-                EncounterConstants.Character_Hitman_Level18_Solitary,
-                EncounterConstants.Character_Hitman_Level19_Solitary,
-                EncounterConstants.Character_Hitman_Level2_Solitary,
-                EncounterConstants.Character_Hitman_Level20_Solitary,
-                EncounterConstants.Character_Hitman_Level3_Solitary,
-                EncounterConstants.Character_Hitman_Level4_Solitary,
-                EncounterConstants.Character_Hitman_Level5_Solitary,
-                EncounterConstants.Character_Hitman_Level6_Solitary,
-                EncounterConstants.Character_Hitman_Level7_Solitary,
-                EncounterConstants.Character_Hitman_Level8_Solitary,
-                EncounterConstants.Character_Hitman_Level9_Solitary,
+                EncounterConstants.Character_ContractKiller_Level1_Solitary,
+                EncounterConstants.Character_ContractKiller_Level10_Solitary,
+                EncounterConstants.Character_ContractKiller_Level11_Solitary,
+                EncounterConstants.Character_ContractKiller_Level12_Solitary,
+                EncounterConstants.Character_ContractKiller_Level13_Solitary,
+                EncounterConstants.Character_ContractKiller_Level14_Solitary,
+                EncounterConstants.Character_ContractKiller_Level15_Solitary,
+                EncounterConstants.Character_ContractKiller_Level16_Solitary,
+                EncounterConstants.Character_ContractKiller_Level17_Solitary,
+                EncounterConstants.Character_ContractKiller_Level18_Solitary,
+                EncounterConstants.Character_ContractKiller_Level19_Solitary,
+                EncounterConstants.Character_ContractKiller_Level2_Solitary,
+                EncounterConstants.Character_ContractKiller_Level20_Solitary,
+                EncounterConstants.Character_ContractKiller_Level3_Solitary,
+                EncounterConstants.Character_ContractKiller_Level4_Solitary,
+                EncounterConstants.Character_ContractKiller_Level5_Solitary,
+                EncounterConstants.Character_ContractKiller_Level6_Solitary,
+                EncounterConstants.Character_ContractKiller_Level7_Solitary,
+                EncounterConstants.Character_ContractKiller_Level8_Solitary,
+                EncounterConstants.Character_ContractKiller_Level9_Solitary,
                 EncounterConstants.Character_FamousPriest_Level11_Solitary,
                 EncounterConstants.Character_FamousPriest_Level12_Solitary,
                 EncounterConstants.Character_FamousPriest_Level13_Solitary,
@@ -2471,26 +2471,26 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
                 EncounterConstants.Warrior_Guard_Level4To5_PatrolWithFighter,
                 EncounterConstants.Warrior_Guard_Level6To7_PatrolWithFighter,
                 EncounterConstants.Warrior_Guard_Level8To9_PatrolWithFighter,
-                EncounterConstants.Character_Hitman_Level1_Solitary,
-                EncounterConstants.Character_Hitman_Level2_Solitary,
-                EncounterConstants.Character_Hitman_Level3_Solitary,
-                EncounterConstants.Character_Hitman_Level4_Solitary,
-                EncounterConstants.Character_Hitman_Level5_Solitary,
-                EncounterConstants.Character_Hitman_Level6_Solitary,
-                EncounterConstants.Character_Hitman_Level7_Solitary,
-                EncounterConstants.Character_Hitman_Level8_Solitary,
-                EncounterConstants.Character_Hitman_Level9_Solitary,
-                EncounterConstants.Character_Hitman_Level10_Solitary,
-                EncounterConstants.Character_Hitman_Level11_Solitary,
-                EncounterConstants.Character_Hitman_Level12_Solitary,
-                EncounterConstants.Character_Hitman_Level13_Solitary,
-                EncounterConstants.Character_Hitman_Level14_Solitary,
-                EncounterConstants.Character_Hitman_Level15_Solitary,
-                EncounterConstants.Character_Hitman_Level16_Solitary,
-                EncounterConstants.Character_Hitman_Level17_Solitary,
-                EncounterConstants.Character_Hitman_Level18_Solitary,
-                EncounterConstants.Character_Hitman_Level19_Solitary,
-                EncounterConstants.Character_Hitman_Level20_Solitary,
+                EncounterConstants.Character_ContractKiller_Level1_Solitary,
+                EncounterConstants.Character_ContractKiller_Level2_Solitary,
+                EncounterConstants.Character_ContractKiller_Level3_Solitary,
+                EncounterConstants.Character_ContractKiller_Level4_Solitary,
+                EncounterConstants.Character_ContractKiller_Level5_Solitary,
+                EncounterConstants.Character_ContractKiller_Level6_Solitary,
+                EncounterConstants.Character_ContractKiller_Level7_Solitary,
+                EncounterConstants.Character_ContractKiller_Level8_Solitary,
+                EncounterConstants.Character_ContractKiller_Level9_Solitary,
+                EncounterConstants.Character_ContractKiller_Level10_Solitary,
+                EncounterConstants.Character_ContractKiller_Level11_Solitary,
+                EncounterConstants.Character_ContractKiller_Level12_Solitary,
+                EncounterConstants.Character_ContractKiller_Level13_Solitary,
+                EncounterConstants.Character_ContractKiller_Level14_Solitary,
+                EncounterConstants.Character_ContractKiller_Level15_Solitary,
+                EncounterConstants.Character_ContractKiller_Level16_Solitary,
+                EncounterConstants.Character_ContractKiller_Level17_Solitary,
+                EncounterConstants.Character_ContractKiller_Level18_Solitary,
+                EncounterConstants.Character_ContractKiller_Level19_Solitary,
+                EncounterConstants.Character_ContractKiller_Level20_Solitary,
                 EncounterConstants.Character_Merchant_Level1_Caravan,
                 EncounterConstants.Character_Merchant_Level10To11_Caravan,
                 EncounterConstants.Character_Merchant_Level12To13_Caravan,
@@ -4909,26 +4909,26 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
         [TestCase(EncounterConstants.Character_FamousPriest_Level18_Solitary, EnvironmentConstants.Civilized)]
         [TestCase(EncounterConstants.Character_FamousPriest_Level19_Solitary, EnvironmentConstants.Civilized)]
         [TestCase(EncounterConstants.Character_FamousPriest_Level20_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Hitman_Level1_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Hitman_Level2_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Hitman_Level3_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Hitman_Level4_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Hitman_Level5_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Hitman_Level6_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Hitman_Level7_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Hitman_Level8_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Hitman_Level9_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Hitman_Level10_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Hitman_Level11_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Hitman_Level12_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Hitman_Level13_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Hitman_Level14_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Hitman_Level15_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Hitman_Level16_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Hitman_Level17_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Hitman_Level18_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Hitman_Level19_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Hitman_Level20_Solitary, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Character_ContractKiller_Level1_Solitary, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Character_ContractKiller_Level2_Solitary, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Character_ContractKiller_Level3_Solitary, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Character_ContractKiller_Level4_Solitary, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Character_ContractKiller_Level5_Solitary, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Character_ContractKiller_Level6_Solitary, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Character_ContractKiller_Level7_Solitary, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Character_ContractKiller_Level8_Solitary, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Character_ContractKiller_Level9_Solitary, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Character_ContractKiller_Level10_Solitary, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Character_ContractKiller_Level11_Solitary, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Character_ContractKiller_Level12_Solitary, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Character_ContractKiller_Level13_Solitary, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Character_ContractKiller_Level14_Solitary, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Character_ContractKiller_Level15_Solitary, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Character_ContractKiller_Level16_Solitary, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Character_ContractKiller_Level17_Solitary, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Character_ContractKiller_Level18_Solitary, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Character_ContractKiller_Level19_Solitary, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Character_ContractKiller_Level20_Solitary, EnvironmentConstants.Civilized)]
         [TestCase(EncounterConstants.Character_Hunter_Level1_HuntingParty, EnvironmentConstants.Civilized)]
         [TestCase(EncounterConstants.Character_Hunter_Level10To11_HuntingParty, EnvironmentConstants.Civilized)]
         [TestCase(EncounterConstants.Character_Hunter_Level12To13_HuntingParty, EnvironmentConstants.Civilized)]
@@ -5857,26 +5857,26 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
         [TestCase(EncounterConstants.Character_FamousPriest_Level18_Solitary, EnvironmentConstants.Land)]
         [TestCase(EncounterConstants.Character_FamousPriest_Level19_Solitary, EnvironmentConstants.Land)]
         [TestCase(EncounterConstants.Character_FamousPriest_Level20_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Hitman_Level1_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Hitman_Level2_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Hitman_Level3_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Hitman_Level4_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Hitman_Level5_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Hitman_Level6_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Hitman_Level7_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Hitman_Level8_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Hitman_Level9_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Hitman_Level10_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Hitman_Level11_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Hitman_Level12_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Hitman_Level13_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Hitman_Level14_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Hitman_Level15_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Hitman_Level16_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Hitman_Level17_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Hitman_Level18_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Hitman_Level19_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Hitman_Level20_Solitary, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Character_ContractKiller_Level1_Solitary, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Character_ContractKiller_Level2_Solitary, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Character_ContractKiller_Level3_Solitary, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Character_ContractKiller_Level4_Solitary, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Character_ContractKiller_Level5_Solitary, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Character_ContractKiller_Level6_Solitary, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Character_ContractKiller_Level7_Solitary, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Character_ContractKiller_Level8_Solitary, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Character_ContractKiller_Level9_Solitary, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Character_ContractKiller_Level10_Solitary, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Character_ContractKiller_Level11_Solitary, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Character_ContractKiller_Level12_Solitary, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Character_ContractKiller_Level13_Solitary, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Character_ContractKiller_Level14_Solitary, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Character_ContractKiller_Level15_Solitary, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Character_ContractKiller_Level16_Solitary, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Character_ContractKiller_Level17_Solitary, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Character_ContractKiller_Level18_Solitary, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Character_ContractKiller_Level19_Solitary, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Character_ContractKiller_Level20_Solitary, EnvironmentConstants.Land)]
         [TestCase(EncounterConstants.Character_Hunter_Level1_HuntingParty, EnvironmentConstants.Land)]
         [TestCase(EncounterConstants.Character_Hunter_Level10To11_HuntingParty, EnvironmentConstants.Land)]
         [TestCase(EncounterConstants.Character_Hunter_Level12To13_HuntingParty, EnvironmentConstants.Land)]

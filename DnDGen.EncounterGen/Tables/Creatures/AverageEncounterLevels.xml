@@ -23,7 +23,7 @@
 		<entry>Doctor [Level 2-3 Adept] (Solitary)</entry>
 		<entry>Fortuneteller [Level 1] (Solitary)</entry>
 		<entry>Fortuneteller [Level 2-3] (Solitary)</entry>
-		<entry>Hitman [Level 1] (Solitary)</entry>
+		<entry>Contract Killer [Level 1] (Solitary)</entry>
 		<entry>Pickpocket [Level 1] (Solitary)</entry>
 		<entry>Scholar [Level 1] (Solitary)</entry>
 		<entry>Sellsword [Level 1] (Solitary)</entry>
@@ -138,7 +138,7 @@
 		<entry>Farmers [Level 1] (Group)</entry>
 		<entry>Fortuneteller [Level 4-5] (Solitary)</entry>
 		<entry>Herders [Level 1] (Group)</entry>
-		<entry>Hitman [Level 2] (Solitary)</entry>
+		<entry>Contract Killer [Level 2] (Solitary)</entry>
 		<entry>Hunters [Level 1] (Hunting Party)</entry>
 		<entry>Missionaries [Level 1 Adepts] (Mission Team)</entry>
 		<entry>Pickpocket [Level 2] (Solitary)</entry>
@@ -274,7 +274,7 @@
 		<entry>Fortuneteller [Level 6-7] (Solitary)</entry>
 		<entry>Gentry [Level 1] (with Servants)</entry>
 		<entry>Herders [Level 2-3] (Group)</entry>
-		<entry>Hitman [Level 3] (Solitary)</entry>
+		<entry>Contract Killer [Level 3] (Solitary)</entry>
 		<entry>Hunters [Level 2-3] (Hunting Party)</entry>
 		<entry>Minstrels [Level 1] (Group)</entry>
 		<entry>Missionaries [Level 1] (Mission Team)</entry>
@@ -405,7 +405,7 @@
 		<entry>Fortuneteller [Level 8-9] (Solitary)</entry>
 		<entry>Guards [Level 1] (Patrol)</entry>
 		<entry>Guards [Level 1] (Patrol with Fighter)</entry>
-		<entry>Hitman [Level 4] (Solitary)</entry>
+		<entry>Contract Killer [Level 4] (Solitary)</entry>
 		<entry>Merchants [Level 1] (Caravan)</entry>
 		<entry>Pickpocket [Level 4] (Solitary)</entry>
 		<entry>Politician [Level 2-3] (with Advisers and Guards)</entry>
@@ -533,7 +533,7 @@
 		<entry>Fortuneteller [Level 10-11] (Solitary)</entry>
 		<entry>Gentry [Level 2-3] (with Servants)</entry>
 		<entry>Herders [Level 4-5] (Group)</entry>
-		<entry>Hitman [Level 5] (Solitary)</entry>
+		<entry>Contract Killer [Level 5] (Solitary)</entry>
 		<entry>Hunters [Level 4-5] (Hunting Party)</entry>
 		<entry>Minstrels [Level 2-3] (Group)</entry>
 		<entry>Missionaries [Level 4-5 Adepts] (Mission Team)</entry>
@@ -680,7 +680,7 @@
 		<entry>Guards [Level 2-3] (Patrol)</entry>
 		<entry>Guards [Level 2-3] (Patrol with Fighter)</entry>
 		<entry>Herders [Level 6-7] (Group)</entry>
-		<entry>Hitman [Level 6] (Solitary)</entry>
+		<entry>Contract Killer [Level 6] (Solitary)</entry>
 		<entry>Hunters [Level 6-7] (Hunting Party)</entry>
 		<entry>Merchants [Level 2-3] (Caravan)</entry>
 		<entry>Missionaries [Level 6-7 Adepts] (Mission Team)</entry>
@@ -823,7 +823,7 @@
 		<entry>Fortuneteller [Level 14-15] (Solitary)</entry>
 		<entry>Gentry [Level 4-5] (with Servants)</entry>
 		<entry>Herders [Level 8-9] (Group)</entry>
-		<entry>Hitman [Level 7] (Solitary)</entry>
+		<entry>Contract Killer [Level 7] (Solitary)</entry>
 		<entry>Hunters [Level 8-9] (Hunting Party)</entry>
 		<entry>Minstrels [Level 4-5] (Group)</entry>
 		<entry>Missionaries [Level 8-9 Adepts] (Mission Team)</entry>
@@ -1003,7 +1003,7 @@
 		<entry>Guards [Level 4-5] (Patrol)</entry>
 		<entry>Guards [Level 4-5] (Patrol with Fighter)</entry>
 		<entry>Herders [Level 10-11] (Group)</entry>
-		<entry>Hitman [Level 8] (Solitary)</entry>
+		<entry>Contract Killer [Level 8] (Solitary)</entry>
 		<entry>Hunters [Level 10-11] (Hunting Party)</entry>
 		<entry>Minstrels [Level 6-7] (Group)</entry>
 		<entry>Missionaries [Level 10-11 Adepts] (Mission Team)</entry>
@@ -1166,7 +1166,7 @@
 		<entry>Guards [Level 6-7] (Patrol)</entry>
 		<entry>Guards [Level 6-7] (Patrol with Fighter)</entry>
 		<entry>Herders [Level 12-13] (Group)</entry>
-		<entry>Hitman [Level 9] (Solitary)</entry>
+		<entry>Contract Killer [Level 9] (Solitary)</entry>
 		<entry>Hunters [Level 12-13] (Hunting Party)</entry>
 		<entry>Minstrels [Level 8-9] (Group)</entry>
 		<entry>Missionaries [Level 12-13 Adepts] (Mission Team)</entry>
@@ -1323,7 +1323,7 @@
 		<entry>Guards [Level 8-9] (Patrol)</entry>
 		<entry>Guards [Level 8-9] (Patrol with Fighter)</entry>
 		<entry>Herders [Level 14-15] (Group)</entry>
-		<entry>Hitman [Level 10] (Solitary)</entry>
+		<entry>Contract Killer [Level 10] (Solitary)</entry>
 		<entry>Hunters [Level 14-15] (Hunting Party)</entry>
 		<entry>Merchants [Level 8-9] (Caravan)</entry>
 		<entry>Minstrels [Level 10-11] (Group)</entry>
@@ -1473,7 +1473,7 @@
 		<entry>Guards [Level 10-11] (Patrol)</entry>
 		<entry>Guards [Level 10-11] (Patrol with Fighter)</entry>
 		<entry>Herders [Level 16-17] (Group)</entry>
-		<entry>Hitman [Level 11] (Solitary)</entry>
+		<entry>Contract Killer [Level 11] (Solitary)</entry>
 		<entry>Hunters [Level 16-17] (Hunting Party)</entry>
 		<entry>Scrag Hunter (Solitary)</entry>
 		<entry>Troll Hunter (Solitary)</entry>
@@ -1621,7 +1621,7 @@
 		<entry>Guards [Level 12-13] (Patrol)</entry>
 		<entry>Guards [Level 12-13] (Patrol with Fighter)</entry>
 		<entry>Herders [Level 18-19] (Group)</entry>
-		<entry>Hitman [Level 12] (Solitary)</entry>
+		<entry>Contract Killer [Level 12] (Solitary)</entry>
 		<entry>Hunters [Level 18-19] (Hunting Party)</entry>
 		<entry>Merchants [Level 12-13] (Caravan)</entry>
 		<entry>Minstrels [Level 14-15] (Group)</entry>
@@ -1746,7 +1746,7 @@
 		<entry>Guards [Level 14-15] (Patrol)</entry>
 		<entry>Guards [Level 14-15] (Patrol with Fighter)</entry>
 		<entry>Herders [Level 20] (Group)</entry>
-		<entry>Hitman [Level 13] (Solitary)</entry>
+		<entry>Contract Killer [Level 13] (Solitary)</entry>
 		<entry>Hunters [Level 20] (Hunting Party)</entry>
 		<entry>Merchants [Level 14-15] (Caravan)</entry>
 		<entry>Minstrels [Level 16-17] (Group)</entry>
@@ -1856,7 +1856,7 @@
 		<entry>Gentry [Level 18-19] (with Servants)</entry>
 		<entry>Guards [Level 16-17] (Patrol)</entry>
 		<entry>Guards [Level 16-17] (Patrol with Fighter)</entry>
-		<entry>Hitman [Level 14] (Solitary)</entry>
+		<entry>Contract Killer [Level 14] (Solitary)</entry>
 		<entry>Werewolf Lord (Solitary)</entry>
 		<entry>Merchants [Level 16-17] (Caravan)</entry>
 		<entry>Minstrels [Level 18-19] (Group)</entry>
@@ -1957,7 +1957,7 @@
 		<entry>Gentry [Level 20] (with Servants)</entry>
 		<entry>Guards [Level 18-19] (Patrol)</entry>
 		<entry>Guards [Level 18-19] (Patrol with Fighter)</entry>
-		<entry>Hitman [Level 15] (Solitary)</entry>
+		<entry>Contract Killer [Level 15] (Solitary)</entry>
 		<entry>Mummy Lord (Solitary)</entry>
 		<entry>Merchants [Level 18-19] (Caravan)</entry>
 		<entry>Minstrels [Level 20] (Group)</entry>
@@ -2053,7 +2053,7 @@
 		<entry>Guards [Level 20] (Patrol with Fighter)</entry>
 		<entry>Hound Archon Hero (Solitary)</entry>
 		<entry>Hound Archon Hero (with Mount)</entry>
-		<entry>Hitman [Level 16] (Solitary)</entry>
+		<entry>Contract Killer [Level 16] (Solitary)</entry>
 		<entry>Mummy Lord (Tomb Guard)</entry>
 		<entry>Werewolf Lords (Pack)</entry>
 		<entry>Werewolf Lords (Pair)</entry>
@@ -2135,7 +2135,7 @@
 		<entry>Famous Researcher [Level 17] (with Stone Golem)</entry>
 		<entry>Famous Researcher [Level 17] (with Homunculus)</entry>
 		<entry>Famous Researcher [Level 17] (with Shield Guardian)</entry>
-		<entry>Hitman [Level 17] (Solitary)</entry>
+		<entry>Contract Killer [Level 17] (Solitary)</entry>
 		<entry>Frost Giant Jarl (Solitary)</entry>
 		<entry>Missionaries [Level 14] (Mission Team)</entry>
 		<entry>Pickpocket [Level 17] (Solitary)</entry>
@@ -2219,7 +2219,7 @@
 		<entry>Famous Researcher [Level 18] (with Stone Golem)</entry>
 		<entry>Famous Researcher [Level 18] (with Homunculus)</entry>
 		<entry>Famous Researcher [Level 18] (with Shield Guardian)</entry>
-		<entry>Hitman [Level 18] (Solitary)</entry>
+		<entry>Contract Killer [Level 18] (Solitary)</entry>
 		<entry>Missionaries [Level 15] (Mission Team)</entry>
 		<entry>Pickpocket [Level 18] (Solitary)</entry>
 		<entry>Pilgrims [Level 20] (Caravan)</entry>
@@ -2298,7 +2298,7 @@
 		<entry>Famous Researcher [Level 19] (with Stone Golem)</entry>
 		<entry>Famous Researcher [Level 19] (with Homunculus)</entry>
 		<entry>Famous Researcher [Level 19] (with Shield Guardian)</entry>
-		<entry>Hitman [Level 19] (Solitary)</entry>
+		<entry>Contract Killer [Level 19] (Solitary)</entry>
 		<entry>Missionaries [Level 16] (Mission Team)</entry>
 		<entry>Pickpocket [Level 19] (Solitary)</entry>
 		<entry>Retired Adventurer [Level 19] (Solitary)</entry>
@@ -2372,7 +2372,7 @@
 		<entry>Famous Researcher [Level 20] (with Stone Golem)</entry>
 		<entry>Famous Researcher [Level 20] (with Homunculus)</entry>
 		<entry>Famous Researcher [Level 20] (with Shield Guardian)</entry>
-		<entry>Hitman [Level 20] (Solitary)</entry>
+		<entry>Contract Killer [Level 20] (Solitary)</entry>
 		<entry>Missionaries [Level 17] (Mission Team)</entry>
 		<entry>Pickpocket [Level 20] (Solitary)</entry>
 		<entry>Retired Adventurer [Level 20] (Solitary)</entry>

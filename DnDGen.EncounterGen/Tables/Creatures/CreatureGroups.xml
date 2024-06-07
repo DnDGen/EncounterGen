@@ -151,7 +151,6 @@
     <entry>Brown bear</entry>
     <entry>Dire bear</entry>
     <entry>Polar bear</entry>
-    <entry>Werebear</entry>
   </collection>
   <collection>
     <name>Black dragon</name>
@@ -192,8 +191,6 @@
     <name>Boar</name>
     <entry>Boar</entry>
     <entry>Dire boar</entry>
-    <entry>Wereboar</entry>
-    <entry>Hill giant dire wereboar</entry>
   </collection>
   <collection>
     <name>Brass dragon</name>
@@ -229,7 +226,6 @@
     <name>Brown bear</name>
     <entry>Brown bear</entry>
     <entry>Dire bear</entry>
-    <entry>Werebear</entry>
   </collection>
   <collection>
     <name>Bugbear</name>
@@ -280,7 +276,7 @@
     <entry>Character(Gentry)@Aristocrat@</entry>
     <entry>Character(Guard)@Warrior@</entry>
     <entry>Character(Herder)@Commoner@</entry>
-    <entry>Character(Hitman)@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</entry>
+    <entry>Character(Contract Killer)@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</entry>
     <entry>Character(Hunter)@Commoner&amp;Warrior@</entry>
     <entry>Character(Leader)@Bard@</entry>
     <entry>Character(Leader)@Cleric@</entry>
@@ -708,27 +704,27 @@
     <entry>Character(Herder)[20]@Commoner@</entry>
   </collection>
   <collection>
-    <name>Character(Hitman)@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</name>
-    <entry>Character(Hitman)[1]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</entry>
-    <entry>Character(Hitman)[2]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</entry>
-    <entry>Character(Hitman)[3]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</entry>
-    <entry>Character(Hitman)[4]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</entry>
-    <entry>Character(Hitman)[5]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</entry>
-    <entry>Character(Hitman)[6]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</entry>
-    <entry>Character(Hitman)[7]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</entry>
-    <entry>Character(Hitman)[8]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</entry>
-    <entry>Character(Hitman)[9]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</entry>
-    <entry>Character(Hitman)[10]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</entry>
-    <entry>Character(Hitman)[11]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</entry>
-    <entry>Character(Hitman)[12]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</entry>
-    <entry>Character(Hitman)[13]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</entry>
-    <entry>Character(Hitman)[14]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</entry>
-    <entry>Character(Hitman)[15]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</entry>
-    <entry>Character(Hitman)[16]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</entry>
-    <entry>Character(Hitman)[17]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</entry>
-    <entry>Character(Hitman)[18]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</entry>
-    <entry>Character(Hitman)[19]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</entry>
-    <entry>Character(Hitman)[20]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</entry>
+    <name>Character(Contract Killer)@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</name>
+    <entry>Character(Contract Killer)[1]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</entry>
+    <entry>Character(Contract Killer)[2]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</entry>
+    <entry>Character(Contract Killer)[3]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</entry>
+    <entry>Character(Contract Killer)[4]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</entry>
+    <entry>Character(Contract Killer)[5]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</entry>
+    <entry>Character(Contract Killer)[6]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</entry>
+    <entry>Character(Contract Killer)[7]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</entry>
+    <entry>Character(Contract Killer)[8]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</entry>
+    <entry>Character(Contract Killer)[9]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</entry>
+    <entry>Character(Contract Killer)[10]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</entry>
+    <entry>Character(Contract Killer)[11]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</entry>
+    <entry>Character(Contract Killer)[12]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</entry>
+    <entry>Character(Contract Killer)[13]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</entry>
+    <entry>Character(Contract Killer)[14]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</entry>
+    <entry>Character(Contract Killer)[15]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</entry>
+    <entry>Character(Contract Killer)[16]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</entry>
+    <entry>Character(Contract Killer)[17]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</entry>
+    <entry>Character(Contract Killer)[18]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</entry>
+    <entry>Character(Contract Killer)[19]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</entry>
+    <entry>Character(Contract Killer)[20]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</entry>
   </collection>
   <collection>
     <name>Character(Hunter)@Commoner&amp;Warrior@</name>
@@ -1309,6 +1305,7 @@
     <entry>Pseudodragon</entry>
     <entry>White dragon</entry>
     <entry>Wyvern</entry>
+	  <entry>Lammasu$Golden Protector$</entry>
   </collection>
   <collection>
     <name>Drow</name>
@@ -1360,11 +1357,6 @@
     <entry>Character(Sergeant)[3]{Mountain Dwarf}@Warrior@</entry>
     <entry>Character[1]{Mountain Dwarf}@Warrior@</entry>
     <entry>Mountain Dwarf$Noncombatant$</entry>
-  </collection>
-  <collection>
-    <name>Eagle</name>
-    <entry>Eagle</entry>
-    <entry>Giant eagle</entry>
   </collection>
   <collection>
     <name>Elemental</name>
@@ -1759,7 +1751,8 @@
     <entry>Goblin</entry>
     <entry>Half-Orc</entry>
     <entry>Halfling</entry>
-    <entry>Hobgoblin</entry>
+	  <entry>Hobgoblin</entry>
+	  <entry>Human</entry>
     <entry>Kobold</entry>
     <entry>Kuo-toa</entry>
     <entry>Lizardfolk</entry>
@@ -1807,11 +1800,6 @@
     <entry>Character[8]{Kuo-toa}@Fighter@</entry>
     <entry>Character[10]{Kuo-toa}@Fighter@</entry>
     <entry>Character(Whip)[10]{Kuo-toa}@Cleric@</entry>
-  </collection>
-  <collection>
-    <name>Lammasu</name>
-    <entry>Lammasu</entry>
-    <entry>Lammasu$Golden Protector$</entry>
   </collection>
   <collection>
     <name>Lion</name>
@@ -2051,11 +2039,6 @@
     <entry>Half-Orc$Noncombatant$</entry>
   </collection>
   <collection>
-    <name>Owl</name>
-    <entry>Owl</entry>
-    <entry>Giant owl</entry>
-  </collection>
-  <collection>
     <name>Outsider</name>
     <entry>Achaierai</entry>
     <entry>Angel</entry>
@@ -2066,13 +2049,20 @@
     <entry>Barghest</entry>
     <entry>Basilisk$Abyssal Greater$</entry>
     <entry>Bralani</entry>
-    <entry>Celestial creature</entry>
     <entry>Chaos beast</entry>
     <entry>Couatl</entry>
-    <entry>Demon</entry>
+	  <entry>Babau</entry>
+	  <entry>Balor</entry>
+	  <entry>Bebilith</entry>
+	  <entry>Dretch</entry>
+	  <entry>Glabrezu</entry>
+	  <entry>Hezrou</entry>
+	  <entry>Marilith</entry>
+	  <entry>Nalfeshnee</entry>
+	  <entry>Quasit</entry>
+	  <entry>Succubus</entry>
+	  <entry>Vrock</entry>
     <entry>Devil</entry>
-    <entry>Ethereal marauder</entry>
-    <entry>Fiendish creature</entry>
     <entry>Formian</entry>
     <entry>Genie</entry>
     <entry>Ghaele</entry>
@@ -2081,7 +2071,6 @@
     <entry>Hell hound</entry>
     <entry>Hellwasp</entry>
     <entry>Howler</entry>
-    <entry>Inevitable</entry>
     <entry>Leonal</entry>
     <entry>Lillend</entry>
     <entry>Mephit</entry>
@@ -2138,7 +2127,6 @@
     <entry>Rat</entry>
     <entry>Rat swarm</entry>
     <entry>Dire rat</entry>
-    <entry>Wererat</entry>
   </collection>
   <collection>
     <name>Red dragon</name>
@@ -2291,7 +2279,6 @@
     <name>Tiger</name>
     <entry>Tiger</entry>
     <entry>Dire tiger</entry>
-    <entry>Weretiger</entry>
   </collection>
   <collection>
     <name>Tojanida</name>
@@ -2422,7 +2409,6 @@
     <name>Wolf</name>
     <entry>Wolf</entry>
     <entry>Dire wolf</entry>
-    <entry>Werewolf</entry>
   </collection>
   <collection>
     <name>Wolverine</name>

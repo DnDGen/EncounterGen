@@ -68,10 +68,15 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables
             return collection.Distinct();
         }
 
-        protected IEnumerable<string> GetAllCreaturesFromEncounters()
+        protected IEnumerable<string> GetAllCreaturesFromEncounters() => GetAllCreaturesFromEncounterGroup(GroupConstants.All);
+
+        protected IEnumerable<string> GetAllCreaturesFromEncounterGroup(string group)
         {
+            var encounters = collectionSelector.SelectFrom(TableNameConstants.EncounterGroups, group);
             var creaturesAndAmounts = collectionSelector.SelectAllFrom(TableNameConstants.EncounterCreatures);
-            var allCreatures = creaturesAndAmounts.Values.SelectMany(e => encounterFormatter.SelectCreaturesAndAmountsFrom(e).Keys);
+            var allCreatures = creaturesAndAmounts
+                .Where(kvp => encounters.Contains(kvp.Key))
+                .SelectMany(kvp => encounterFormatter.SelectCreaturesAndAmountsFrom(kvp.Value).Keys);
 
             //INFO: These are creatues that do not explicitly appear in encounters, but we wish to include them anyway
             var extraCreatures = new[]

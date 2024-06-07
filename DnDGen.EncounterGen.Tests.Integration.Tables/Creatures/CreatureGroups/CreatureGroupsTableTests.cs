@@ -2,7 +2,6 @@
 using DnDGen.EncounterGen.Tables;
 using NUnit.Framework;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
 {
@@ -54,7 +53,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
                 CreatureDataConstants.Character_Doctor,
                 CreatureDataConstants.Character_FamousEntertainer,
                 CreatureDataConstants.Character_FamousPriest,
-                CreatureDataConstants.Character_Hitman,
+                CreatureDataConstants.Character_ContractKiller,
                 CreatureDataConstants.Character_Hunter,
                 CreatureDataConstants.Character_Merchant,
                 CreatureDataConstants.Character_Minstrel,
@@ -103,7 +102,6 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
                 CreatureDataConstants.Dwarf_Deep,
                 CreatureDataConstants.Dwarf_Hill,
                 CreatureDataConstants.Dwarf_Mountain,
-                CreatureDataConstants.Eagle,
                 CreatureDataConstants.Elemental_Air,
                 CreatureDataConstants.Elemental_Earth,
                 CreatureDataConstants.Elemental_Fire,
@@ -156,7 +154,6 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
                 CreatureDataConstants.Inevitable,
                 CreatureDataConstants.Kobold,
                 CreatureDataConstants.KuoToa,
-                CreatureDataConstants.Lammasu,
                 CreatureDataConstants.Lich,
                 CreatureDataConstants.Lion,
                 CreatureDataConstants.Livestock,
@@ -179,7 +176,6 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
                 CreatureDataConstants.Ogre_Merrow,
                 CreatureDataConstants.Orc,
                 CreatureDataConstants.Orc_Half,
-                CreatureDataConstants.Owl,
                 CreatureDataConstants.Paladin_Crusader,
                 CreatureDataConstants.Pixie,
                 CreatureDataConstants.Pony,
@@ -245,10 +241,6 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
 
             AssertNamesAreComplete(entries);
         }
-
-        protected IEnumerable<string> GetAllCreatures()
-        {
-            return table.Values.SelectMany(v => v).Distinct();
-        }
+        protected IEnumerable<string> GetAllCreatures() => ExplodeCollections(table.Keys);
     }
 }

@@ -131,20 +131,16 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
             CreatureDataConstants.Bear_Black,
             CreatureDataConstants.Bear_Brown,
             CreatureDataConstants.Bear_Dire,
-            CreatureDataConstants.Bear_Polar,
-            CreatureDataConstants.Werebear)]
+            CreatureDataConstants.Bear_Polar)]
         [TestCase(CreatureDataConstants.Bear_Brown,
             CreatureDataConstants.Bear_Brown,
-            CreatureDataConstants.Bear_Dire,
-            CreatureDataConstants.Werebear)]
+            CreatureDataConstants.Bear_Dire)]
         [TestCase(CreatureDataConstants.BlackPudding,
             CreatureDataConstants.BlackPudding,
             CreatureDataConstants.BlackPudding_Elder)]
         [TestCase(CreatureDataConstants.Boar,
             CreatureDataConstants.Boar,
-            CreatureDataConstants.Boar_Dire,
-            CreatureDataConstants.Wereboar,
-            CreatureDataConstants.Wereboar_HillGiantDire)]
+            CreatureDataConstants.Boar_Dire)]
         [TestCase(CreatureDataConstants.Bugbear,
             CreatureDataConstants.Bugbear,
             CreatureDataConstants.Bugbear_Leader,
@@ -454,9 +450,6 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
             CreatureDataConstants.Dwarf_Mountain_Noncombatant,
             CreatureDataConstants.Dwarf_Mountain_Sergeant,
             CreatureDataConstants.Dwarf_Mountain_Warrior)]
-        [TestCase(CreatureDataConstants.Eagle,
-            CreatureDataConstants.Eagle,
-            CreatureDataConstants.Eagle_Giant)]
         [TestCase(CreatureDataConstants.Elemental_Air,
             CreatureDataConstants.Elemental_Air_Elder,
             CreatureDataConstants.Elemental_Air_Greater,
@@ -778,9 +771,6 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
             CreatureDataConstants.KuoToa_Noncombatant,
             CreatureDataConstants.KuoToa_Fighter_10th,
             CreatureDataConstants.KuoToa_Whip_10th)]
-        [TestCase(CreatureDataConstants.Lammasu,
-            CreatureDataConstants.Lammasu,
-            CreatureDataConstants.Lammasu_GoldenProtector)]
         [TestCase(CreatureDataConstants.Lion,
             CreatureDataConstants.Lion,
             CreatureDataConstants.Lion_Dire)]
@@ -882,9 +872,6 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
             CreatureDataConstants.Orc_Half_Noncombatant,
             CreatureDataConstants.Orc_Half_Sergeant,
             CreatureDataConstants.Orc_Half_Warrior)]
-        [TestCase(CreatureDataConstants.Owl,
-            CreatureDataConstants.Owl,
-            CreatureDataConstants.Owl_Giant)]
         [TestCase(CreatureDataConstants.Pixie,
             CreatureDataConstants.Pixie,
             CreatureDataConstants.Pixie_WithIrresistableDance)]
@@ -903,8 +890,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         [TestCase(CreatureDataConstants.Rat,
             CreatureDataConstants.Rat,
             CreatureDataConstants.Rat_Dire,
-            CreatureDataConstants.Rat_Swarm,
-            CreatureDataConstants.Wererat)]
+            CreatureDataConstants.Rat_Swarm)]
         [TestCase(CreatureDataConstants.Sahuagin,
             CreatureDataConstants.Sahuagin,
             CreatureDataConstants.Sahuagin_Baron,
@@ -993,8 +979,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
             CreatureDataConstants.Tiefling_Warrior)]
         [TestCase(CreatureDataConstants.Tiger,
             CreatureDataConstants.Tiger,
-            CreatureDataConstants.Tiger_Dire,
-            CreatureDataConstants.Weretiger)]
+            CreatureDataConstants.Tiger_Dire)]
         [TestCase(CreatureDataConstants.Tojanida,
             CreatureDataConstants.Tojanida_Juvenile,
             CreatureDataConstants.Tojanida_Adult,
@@ -1071,7 +1056,6 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
             CreatureDataConstants.Whale_Cachalot,
             CreatureDataConstants.Whale_Orca)]
         [TestCase(CreatureDataConstants.Wolf,
-            CreatureDataConstants.Werewolf,
             CreatureDataConstants.Wolf,
             CreatureDataConstants.Wolf_Dire)]
         [TestCase(CreatureDataConstants.Wolverine,
@@ -1246,7 +1230,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
                 CreatureDataConstants.Character_Doctor,
                 CreatureDataConstants.Character_FamousEntertainer,
                 CreatureDataConstants.Character_FamousPriest,
-                CreatureDataConstants.Character_Hitman,
+                CreatureDataConstants.Character_ContractKiller,
                 CreatureDataConstants.Character_Hunter,
                 CreatureDataConstants.Character_Merchant,
                 CreatureDataConstants.Character_Minstrel,
@@ -1417,33 +1401,33 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         }
 
         [Test]
-        public void CharacterHitmanSubgroup()
+        public void CharacterContractKillerSubgroup()
         {
             var items = new[]
             {
-                CreatureDataConstants.Character_Hitman_Level1,
-                CreatureDataConstants.Character_Hitman_Level10,
-                CreatureDataConstants.Character_Hitman_Level11,
-                CreatureDataConstants.Character_Hitman_Level12,
-                CreatureDataConstants.Character_Hitman_Level13,
-                CreatureDataConstants.Character_Hitman_Level14,
-                CreatureDataConstants.Character_Hitman_Level15,
-                CreatureDataConstants.Character_Hitman_Level16,
-                CreatureDataConstants.Character_Hitman_Level17,
-                CreatureDataConstants.Character_Hitman_Level18,
-                CreatureDataConstants.Character_Hitman_Level19,
-                CreatureDataConstants.Character_Hitman_Level2,
-                CreatureDataConstants.Character_Hitman_Level20,
-                CreatureDataConstants.Character_Hitman_Level3,
-                CreatureDataConstants.Character_Hitman_Level4,
-                CreatureDataConstants.Character_Hitman_Level5,
-                CreatureDataConstants.Character_Hitman_Level6,
-                CreatureDataConstants.Character_Hitman_Level7,
-                CreatureDataConstants.Character_Hitman_Level8,
-                CreatureDataConstants.Character_Hitman_Level9
+                CreatureDataConstants.Character_ContractKiller_Level1,
+                CreatureDataConstants.Character_ContractKiller_Level10,
+                CreatureDataConstants.Character_ContractKiller_Level11,
+                CreatureDataConstants.Character_ContractKiller_Level12,
+                CreatureDataConstants.Character_ContractKiller_Level13,
+                CreatureDataConstants.Character_ContractKiller_Level14,
+                CreatureDataConstants.Character_ContractKiller_Level15,
+                CreatureDataConstants.Character_ContractKiller_Level16,
+                CreatureDataConstants.Character_ContractKiller_Level17,
+                CreatureDataConstants.Character_ContractKiller_Level18,
+                CreatureDataConstants.Character_ContractKiller_Level19,
+                CreatureDataConstants.Character_ContractKiller_Level2,
+                CreatureDataConstants.Character_ContractKiller_Level20,
+                CreatureDataConstants.Character_ContractKiller_Level3,
+                CreatureDataConstants.Character_ContractKiller_Level4,
+                CreatureDataConstants.Character_ContractKiller_Level5,
+                CreatureDataConstants.Character_ContractKiller_Level6,
+                CreatureDataConstants.Character_ContractKiller_Level7,
+                CreatureDataConstants.Character_ContractKiller_Level8,
+                CreatureDataConstants.Character_ContractKiller_Level9
             };
 
-            base.AssertDistinctCollection(CreatureDataConstants.Character_Hitman, items);
+            base.AssertDistinctCollection(CreatureDataConstants.Character_ContractKiller, items);
         }
 
         [Test]

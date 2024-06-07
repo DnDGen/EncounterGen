@@ -196,7 +196,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
 
             wildernessEncounters.AddRange(creatureEncounters);
 
-            AssertDistinctCollection(GroupConstants.Wilderness, wildernessEncounters.ToArray());
+            AssertDistinctCollection(GroupConstants.Wilderness, wildernessEncounters.Distinct().ToArray());
         }
 
         private IEnumerable<string> GetCreaturesInEncounter(string encounter)
