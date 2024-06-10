@@ -45,22 +45,11 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
                 CreatureDataConstants.Types.Plant,
             };
 
-            var creaturesOfWildernessTypes = new List<string>();
-
+            var wildernessEncounters = new List<string>();
             foreach(var creatureType in wildernessTypes)
             {
-                var creaturesOfType = collectionSelector.Explode(TableNameConstants.CreatureGroups, creatureType);
-                creaturesOfWildernessTypes.AddRange(creaturesOfType);
-            }
-
-            var encounters = EncounterConstants.GetAll();
-            var wildernessEncounters = new List<string>();
-
-            foreach (var encounter in encounters)
-            {
-                var encounterCreatures = GetCreaturesInEncounter(encounter);
-                if (encounterCreatures.Intersect(creaturesOfWildernessTypes).Any())
-                    wildernessEncounters.Add(encounter);
+                Assert.That(table, Contains.Key(creatureType));
+                wildernessEncounters.AddRange(table[creatureType]);
             }
 
             var creatureEncounters = new[]
@@ -107,6 +96,9 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
                 EncounterConstants.Eagle_Giant_Solitary,
                 EncounterConstants.Eagle_Pair,
                 EncounterConstants.Eagle_Solitary,
+                EncounterConstants.Elasmosaurus_Herd,
+                EncounterConstants.Elasmosaurus_Pair,
+                EncounterConstants.Elasmosaurus_Solitary,
                 EncounterConstants.Elephant_Herd,
                 EncounterConstants.Elephant_Solitary,
                 EncounterConstants.Hyena_Pack,
@@ -121,14 +113,32 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
                 EncounterConstants.Lion_Pride,
                 EncounterConstants.Lion_Solitary,
                 EncounterConstants.Lizard_Monitor_Solitary,
+                EncounterConstants.MantaRay_School,
+                EncounterConstants.MantaRay_Solitary,
                 EncounterConstants.Megaraptor_Pack,
                 EncounterConstants.Megaraptor_Pair,
                 EncounterConstants.Megaraptor_Solitary,
                 EncounterConstants.Monkey_Troop,
+                EncounterConstants.Octopus_Giant_Solitary,
+                EncounterConstants.Octopus_Solitary,
+                EncounterConstants.Porpoise_Pair,
+                EncounterConstants.Porpoise_School,
+                EncounterConstants.Porpoise_Solitary,
                 EncounterConstants.Rhinoceras_Herd,
                 EncounterConstants.Rhinoceras_Solitary,
                 EncounterConstants.Roc_Pair,
                 EncounterConstants.Roc_Solitary,
+                EncounterConstants.Shark_Dire_School,
+                EncounterConstants.Shark_Dire_Solitary,
+                EncounterConstants.Shark_Huge_Pack,
+                EncounterConstants.Shark_Huge_School,
+                EncounterConstants.Shark_Huge_Solitary,
+                EncounterConstants.Shark_Large_Pack,
+                EncounterConstants.Shark_Large_School,
+                EncounterConstants.Shark_Large_Solitary,
+                EncounterConstants.Shark_Medium_Pack,
+                EncounterConstants.Shark_Medium_School,
+                EncounterConstants.Shark_Medium_Solitary,
                 EncounterConstants.Snake_Constrictor_Giant_Solitary,
                 EncounterConstants.Snake_Constrictor_Solitary,
                 EncounterConstants.Snake_Viper_Huge_Solitary,
@@ -136,6 +146,14 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
                 EncounterConstants.Snake_Viper_Medium_Solitary,
                 EncounterConstants.Snake_Viper_Small_Solitary,
                 EncounterConstants.Snake_Viper_Tiny_Solitary,
+                EncounterConstants.Squid_Giant_Solitary,
+                EncounterConstants.Squid_School,
+                EncounterConstants.Squid_Solitary,
+                EncounterConstants.Whale_Baleen_Solitary,
+                EncounterConstants.Whale_Cachalot_Pod,
+                EncounterConstants.Whale_Cachalot_Solitary,
+                EncounterConstants.Whale_Orca_Pod,
+                EncounterConstants.Whale_Orca_Solitary,
                 EncounterConstants.Tiger_Dire_Pair,
                 EncounterConstants.Tiger_Dire_Solitary,
                 EncounterConstants.Tiger_Solitary,
@@ -197,14 +215,6 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
             wildernessEncounters.AddRange(creatureEncounters);
 
             AssertDistinctCollection(GroupConstants.Wilderness, wildernessEncounters.Distinct().ToArray());
-        }
-
-        private IEnumerable<string> GetCreaturesInEncounter(string encounter)
-        {
-            var encounterCreatures = collectionSelector.SelectFrom(TableNameConstants.EncounterCreatures, encounter);
-            var creatures = encounterFormatter.SelectCreaturesAndAmountsFrom(encounterCreatures).Keys;
-
-            return creatures;
         }
     }
 }

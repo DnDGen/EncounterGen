@@ -883,8 +883,10 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
                 EncounterConstants.Traveler_Level16To17_Group,
                 EncounterConstants.Traveler_Level18To19_Group,
                 EncounterConstants.Traveler_Level20_Group,
+                EncounterConstants.Mule_Solitary,
                 EncounterConstants.Donkey_Solitary,
                 EncounterConstants.Pony_Solitary,
+                EncounterConstants.Pony_War_Solitary,
                 EncounterConstants.Commoner_Protestor_Level1_Protest,
                 EncounterConstants.Commoner_Protestor_Level10To11_Protest,
                 EncounterConstants.Commoner_Protestor_Level12To13_Protest,
@@ -1696,6 +1698,21 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
                 EncounterConstants.Warrior_Guard_Level6To7_PatrolWithFighter,
                 EncounterConstants.Warrior_Guard_Level8To9_Patrol,
                 EncounterConstants.Warrior_Guard_Level8To9_PatrolWithFighter,
+                EncounterConstants.Horse_Heavy_Solitary,
+                EncounterConstants.Horse_Heavy_War_Solitary,
+                EncounterConstants.Horse_Light_Solitary,
+                EncounterConstants.Horse_Light_War_Solitary,
+                EncounterConstants.Character_Hunter_Level1_HuntingParty,
+                EncounterConstants.Character_Hunter_Level10To11_HuntingParty,
+                EncounterConstants.Character_Hunter_Level12To13_HuntingParty,
+                EncounterConstants.Character_Hunter_Level14To15_HuntingParty,
+                EncounterConstants.Character_Hunter_Level16To17_HuntingParty,
+                EncounterConstants.Character_Hunter_Level18To19_HuntingParty,
+                EncounterConstants.Character_Hunter_Level20_HuntingParty,
+                EncounterConstants.Character_Hunter_Level2To3_HuntingParty,
+                EncounterConstants.Character_Hunter_Level4To5_HuntingParty,
+                EncounterConstants.Character_Hunter_Level6To7_HuntingParty,
+                EncounterConstants.Character_Hunter_Level8To9_HuntingParty,
             };
 
             base.AssertDistinctCollection(EnvironmentConstants.Civilized, encounters);
@@ -7231,7 +7248,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
         public void EncounterIsInCorrectEnvironment(string encounter, string environment)
         {
             Assert.That(table, Contains.Key(environment));
-            Assert.That(table[environment], Contains.Item(encounter));
+            Assert.That(table[environment], Contains.Item(encounter), $"Env: {environment}");
         }
 
         [Test]

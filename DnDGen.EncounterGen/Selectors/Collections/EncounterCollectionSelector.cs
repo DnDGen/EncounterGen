@@ -77,7 +77,7 @@ namespace DnDGen.EncounterGen.Selectors.Collections
 
             var extraplanarEncounters = GetEncountersFromEncounterGroup(GroupConstants.Extraplanar);
             var aquaticEncounters = GetEncountersFromEncounterGroup(EnvironmentConstants.Aquatic);
-            var specificAquaticEncounters = GetEncountersFromEncounterGroup(encounterSpecifications.Temperature + EnvironmentConstants.Aquatic);
+            var tempAquaticEncounters = GetEncountersFromEncounterGroup(encounterSpecifications.Temperature + EnvironmentConstants.Aquatic);
             var undergroundAquaticEncounters = GetEncountersFromEncounterGroup(EnvironmentConstants.Underground + EnvironmentConstants.Aquatic);
             var undergroundEncounters = GetEncountersFromEncounterGroup(EnvironmentConstants.Underground);
             var undeadEncounters = GetEncountersFromEncounterGroup(CreatureDataConstants.Types.Undead);
@@ -89,7 +89,7 @@ namespace DnDGen.EncounterGen.Selectors.Collections
             if (encounterSpecifications.Environment != EnvironmentConstants.Aquatic)
             {
                 var toRemove = aquaticEncounters
-                    .Union(specificAquaticEncounters).Union(undergroundAquaticEncounters)
+                    .Union(tempAquaticEncounters).Union(undergroundAquaticEncounters)
                     .Except(anyEncounters).Except(landEncounters);
                 commonEncounters = commonEncounters.Except(toRemove);
             }
@@ -106,7 +106,7 @@ namespace DnDGen.EncounterGen.Selectors.Collections
                 commonEncounters = commonEncounters.Except(undeadEncounters);
 
             var potentialUncommonEncounters = aquaticEncounters
-                .Union(undergroundEncounters).Union(specificAquaticEncounters).Union(undergroundAquaticEncounters)
+                .Union(undergroundEncounters).Union(tempAquaticEncounters).Union(undergroundAquaticEncounters)
                 .Except(anyEncounters).Except(landEncounters);
 
             if (encounterSpecifications.Environment == EnvironmentConstants.Civilized)
@@ -132,9 +132,9 @@ namespace DnDGen.EncounterGen.Selectors.Collections
 
             var extraplanarEncounters = GetEncountersFromEncounterGroup(GroupConstants.Extraplanar);
             var anyEncounters = GetEncountersFromEncounterGroup(EnvironmentConstants.Any);
-            var specificEnvironmentEncounters = GetEncountersFromEncounterGroup(encounterSpecifications.SpecificEnvironment);
+            var tempEnvironmentEncounters = GetEncountersFromEncounterGroup(encounterSpecifications.SpecificEnvironment);
 
-            var allEncounters = specificEnvironmentEncounters.Union(anyEncounters).Union(extraplanarEncounters);
+            var allEncounters = tempEnvironmentEncounters.Union(anyEncounters).Union(extraplanarEncounters);
 
             if (encounterSpecifications.Environment != EnvironmentConstants.Aquatic)
             {
@@ -158,9 +158,9 @@ namespace DnDGen.EncounterGen.Selectors.Collections
                 {
                     var aquaticSpecifications = encounterSpecifications.Clone();
                     aquaticSpecifications.Environment = EnvironmentConstants.Aquatic;
-                    var specificAquaticEncounters = GetEncountersFromEncounterGroup(aquaticSpecifications.SpecificEnvironment);
+                    var tempAquaticEncounters = GetEncountersFromEncounterGroup(aquaticSpecifications.SpecificEnvironment);
 
-                    allEncounters = allEncounters.Union(specificAquaticEncounters);
+                    allEncounters = allEncounters.Union(tempAquaticEncounters);
                 }
             }
 
