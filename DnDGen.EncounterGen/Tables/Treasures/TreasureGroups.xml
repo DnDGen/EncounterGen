@@ -1124,64 +1124,64 @@
     <name>Character(Herder)[20]@Commoner@</name>
   </collection>
   <collection>
-    <name>Character(Hitman)[1]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</name>
+    <name>Character(Contract Killer)[1]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</name>
   </collection>
   <collection>
-    <name>Character(Hitman)[2]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</name>
+    <name>Character(Contract Killer)[2]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</name>
   </collection>
   <collection>
-    <name>Character(Hitman)[3]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</name>
+    <name>Character(Contract Killer)[3]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</name>
   </collection>
   <collection>
-    <name>Character(Hitman)[4]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</name>
+    <name>Character(Contract Killer)[4]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</name>
   </collection>
   <collection>
-    <name>Character(Hitman)[5]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</name>
+    <name>Character(Contract Killer)[5]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</name>
   </collection>
   <collection>
-    <name>Character(Hitman)[6]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</name>
+    <name>Character(Contract Killer)[6]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</name>
   </collection>
   <collection>
-    <name>Character(Hitman)[7]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</name>
+    <name>Character(Contract Killer)[7]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</name>
   </collection>
   <collection>
-    <name>Character(Hitman)[8]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</name>
+    <name>Character(Contract Killer)[8]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</name>
   </collection>
   <collection>
-    <name>Character(Hitman)[9]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</name>
+    <name>Character(Contract Killer)[9]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</name>
   </collection>
   <collection>
-    <name>Character(Hitman)[10]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</name>
+    <name>Character(Contract Killer)[10]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</name>
   </collection>
   <collection>
-    <name>Character(Hitman)[11]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</name>
+    <name>Character(Contract Killer)[11]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</name>
   </collection>
   <collection>
-    <name>Character(Hitman)[12]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</name>
+    <name>Character(Contract Killer)[12]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</name>
   </collection>
   <collection>
-    <name>Character(Hitman)[13]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</name>
+    <name>Character(Contract Killer)[13]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</name>
   </collection>
   <collection>
-    <name>Character(Hitman)[14]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</name>
+    <name>Character(Contract Killer)[14]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</name>
   </collection>
   <collection>
-    <name>Character(Hitman)[15]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</name>
+    <name>Character(Contract Killer)[15]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</name>
   </collection>
   <collection>
-    <name>Character(Hitman)[16]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</name>
+    <name>Character(Contract Killer)[16]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</name>
   </collection>
   <collection>
-    <name>Character(Hitman)[17]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</name>
+    <name>Character(Contract Killer)[17]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</name>
   </collection>
   <collection>
-    <name>Character(Hitman)[18]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</name>
+    <name>Character(Contract Killer)[18]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</name>
   </collection>
   <collection>
-    <name>Character(Hitman)[19]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</name>
+    <name>Character(Contract Killer)[19]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</name>
   </collection>
   <collection>
-    <name>Character(Hitman)[20]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</name>
+    <name>Character(Contract Killer)[20]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</name>
   </collection>
   <collection>
     <name>Character(Hunter)[1]@Commoner&amp;Warrior@</name>
@@ -2829,6 +2829,24 @@
   <collection>
     <name>Character(Lieutenant)[5]{Half-Elf}@Warrior@</name>
   </collection>
+	<collection>
+		<name>Character(Captain)[7]{Human}@Warrior@</name>
+	</collection>
+	<collection>
+		<name>Human$Noncombatant$</name>
+	</collection>
+	<collection>
+		<name>Character[1]{Human}@Warrior@</name>
+	</collection>
+	<collection>
+		<name>Character(Sergeant)[3]{Human}@Warrior@</name>
+	</collection>
+	<collection>
+		<name>Character(Leader)[1d4+2]{Human}@Warrior@</name>
+	</collection>
+	<collection>
+		<name>Character(Lieutenant)[5]{Human}@Warrior@</name>
+	</collection>
   <collection>
     <name>Character(Captain)[7]{High Elf}@Warrior@</name>
   </collection>

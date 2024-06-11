@@ -93,6 +93,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
                 EnvironmentConstants.Plane_PositiveEnergy,
                 EnvironmentConstants.Plane_Shadow,
                 EnvironmentConstants.Plane_Water,
+                GroupConstants.Extraplanar,
             };
 
             var environmentEncounters = environments.SelectMany(e => table[e]).Distinct();

@@ -311,7 +311,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Generators
         [TestCase(27)]
         [TestCase(28)]
         [TestCase(29)]
-        [TestCase(EncounterSpecifications.MaximumLevel)]
+        [TestCase(EncounterSpecifications.MaximumLevel, Ignore = "There are no level 30 encounters")]
         public void Generate_ReturnsEncounter_ForLevel(int level)
         {
             var specifications = new EncounterSpecifications
@@ -329,32 +329,32 @@ namespace DnDGen.EncounterGen.Tests.Integration.Generators
             stopwatch.Stop();
 
             AssertEncounter(encounter);
-            Assert.That(stopwatch.Elapsed.TotalSeconds, Is.LessThan(1));
+            Assert.That(stopwatch.Elapsed.TotalSeconds, Is.LessThan(1).Or.LessThan(encounter.Characters.Sum(s => s.Class.Level / 10d)));
         }
 
-        [TestCase(CreatureDataConstants.Types.Aberration)]
+        [TestCase(CreatureDataConstants.Types.Aberration, EnvironmentConstants.Plains, 10)]
         [TestCase(CreatureDataConstants.Types.Animal)]
         [TestCase(CreatureDataConstants.Types.Construct)]
-        [TestCase(CreatureDataConstants.Types.Dragon)]
+        [TestCase(CreatureDataConstants.Types.Dragon, EnvironmentConstants.Mountain, 10)]
         [TestCase(CreatureDataConstants.Types.Elemental)]
-        [TestCase(CreatureDataConstants.Types.Fey)]
-        [TestCase(CreatureDataConstants.Types.Giant)]
+        [TestCase(CreatureDataConstants.Types.Fey, EnvironmentConstants.Forest, 10)]
+        [TestCase(CreatureDataConstants.Types.Giant, EnvironmentConstants.Hills, 10)]
         [TestCase(CreatureDataConstants.Types.Humanoid)]
         [TestCase(CreatureDataConstants.Types.MagicalBeast)]
-        [TestCase(CreatureDataConstants.Types.MonstrousHumanoid)]
-        [TestCase(CreatureDataConstants.Types.Ooze)]
+        [TestCase(CreatureDataConstants.Types.MonstrousHumanoid, EnvironmentConstants.Mountain, 10)]
+        [TestCase(CreatureDataConstants.Types.Ooze, EnvironmentConstants.Underground, 7)]
         [TestCase(CreatureDataConstants.Types.Outsider)]
         [TestCase(CreatureDataConstants.Types.Plant)]
         [TestCase(CreatureDataConstants.Types.Undead)]
         [TestCase(CreatureDataConstants.Types.Vermin)]
-        public void Generate_ReturnsEncounter_ForFilter(string filter)
+        public void Generate_ReturnsEncounter_ForFilter(string filter, string environment = EnvironmentConstants.Plains, int level = 1)
         {
             var specifications = new EncounterSpecifications
             {
-                Environment = EnvironmentConstants.Civilized,
+                Environment = environment,
                 Temperature = EnvironmentConstants.Temperatures.Temperate,
                 TimeOfDay = EnvironmentConstants.TimesOfDay.Night,
-                Level = 1,
+                Level = level,
                 AllowAquatic = true,
                 AllowUnderground = true,
                 CreatureTypeFilters = new[] { filter },

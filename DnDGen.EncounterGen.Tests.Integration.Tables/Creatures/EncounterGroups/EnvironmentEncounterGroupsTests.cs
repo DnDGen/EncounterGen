@@ -52,6 +52,12 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
         [TestCase(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Forest,
             EncounterConstants.Bear_Brown_Solitary,
             EncounterConstants.Bear_Brown_Pair,
+            EncounterConstants.Bear_Dire_Solitary,
+            EncounterConstants.Bear_Dire_Pair,
+            EncounterConstants.Werebear_Family,
+            EncounterConstants.Werebear_Pair,
+            EncounterConstants.Werebear_Solitary,
+            EncounterConstants.Werebear_Troupe,
             EncounterConstants.WinterWolf_Solitary,
             EncounterConstants.WinterWolf_Pair,
             EncounterConstants.WinterWolf_Pack,
@@ -755,6 +761,8 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
             var encounters = new[]
             {
                 EncounterConstants.Cat_Solitary,
+                EncounterConstants.Dog_Pack,
+                EncounterConstants.Dog_Riding_Pack,
                 EncounterConstants.Wizard_FamousResearcher_Level11_Solitary,
                 EncounterConstants.Wizard_FamousResearcher_Level11_WithClayGolem,
                 EncounterConstants.Wizard_FamousResearcher_Level11_WithDominatedCreature,
@@ -1935,6 +1943,9 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
                 EncounterConstants.Ghoul_Gang,
                 EncounterConstants.Ghoul_Pack,
                 EncounterConstants.Ghoul_Solitary,
+                EncounterConstants.Ghast_Gang,
+                EncounterConstants.Ghast_Pack,
+                EncounterConstants.Ghast_Solitary,
                 EncounterConstants.Golem_Clay_Gang,
                 EncounterConstants.Golem_Clay_Solitary,
                 EncounterConstants.Golem_Flesh_Gang,
@@ -1976,6 +1987,37 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
         {
             var creatures = new[]
             {
+                EncounterConstants.Adept_Doctor_Level1_Solitary,
+                EncounterConstants.Adept_Doctor_Level10To11_Solitary,
+                EncounterConstants.Adept_Doctor_Level12To13_Solitary,
+                EncounterConstants.Adept_Doctor_Level14To15_Solitary,
+                EncounterConstants.Adept_Doctor_Level16To17_Solitary,
+                EncounterConstants.Adept_Doctor_Level18To19_Solitary,
+                EncounterConstants.Adept_Doctor_Level20_Solitary,
+                EncounterConstants.Adept_Doctor_Level2To3_Solitary,
+                EncounterConstants.Adept_Doctor_Level4To5_Solitary,
+                EncounterConstants.Adept_Doctor_Level6To7_Solitary,
+                EncounterConstants.Adept_Doctor_Level8To9_Solitary,
+                EncounterConstants.Character_Doctor_Level1_Solitary,
+                EncounterConstants.Character_Doctor_Level10_Solitary,
+                EncounterConstants.Character_Doctor_Level11_Solitary,
+                EncounterConstants.Character_Doctor_Level12_Solitary,
+                EncounterConstants.Character_Doctor_Level13_Solitary,
+                EncounterConstants.Character_Doctor_Level14_Solitary,
+                EncounterConstants.Character_Doctor_Level15_Solitary,
+                EncounterConstants.Character_Doctor_Level16_Solitary,
+                EncounterConstants.Character_Doctor_Level17_Solitary,
+                EncounterConstants.Character_Doctor_Level18_Solitary,
+                EncounterConstants.Character_Doctor_Level19_Solitary,
+                EncounterConstants.Character_Doctor_Level2_Solitary,
+                EncounterConstants.Character_Doctor_Level20_Solitary,
+                EncounterConstants.Character_Doctor_Level3_Solitary,
+                EncounterConstants.Character_Doctor_Level4_Solitary,
+                EncounterConstants.Character_Doctor_Level5_Solitary,
+                EncounterConstants.Character_Doctor_Level6_Solitary,
+                EncounterConstants.Character_Doctor_Level7_Solitary,
+                EncounterConstants.Character_Doctor_Level8_Solitary,
+                EncounterConstants.Character_Doctor_Level9_Solitary,
                 EncounterConstants.Character_Adventurer_Level1_Party,
                 EncounterConstants.Character_Adventurer_Level10_Party,
                 EncounterConstants.Character_Adventurer_Level11_Party,
@@ -2060,9 +2102,6 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
                 EncounterConstants.Commoner_Pilgrim_Level4To5_Caravan,
                 EncounterConstants.Commoner_Pilgrim_Level6To7_Caravan,
                 EncounterConstants.Commoner_Pilgrim_Level8To9_Caravan,
-                EncounterConstants.Doppelganger_Gang,
-                EncounterConstants.Doppelganger_Pair,
-                EncounterConstants.Doppelganger_Solitary,
                 EncounterConstants.Traveler_Level1_Group,
                 EncounterConstants.Traveler_Level10To11_Group,
                 EncounterConstants.Traveler_Level12To13_Group,
@@ -2797,6 +2836,10 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
                 EncounterConstants.Spectre_Gang,
                 EncounterConstants.Spectre_Solitary,
                 EncounterConstants.Spectre_Swarm,
+                EncounterConstants.Wererat_Pack,
+                EncounterConstants.Wererat_Pair,
+                EncounterConstants.Wererat_Solitary,
+                EncounterConstants.Wererat_Troupe,
                 EncounterConstants.Zombie_Bugbear_Group,
                 EncounterConstants.Zombie_Bugbear_LargeGroup,
                 EncounterConstants.Zombie_Bugbear_SmallGroup,
@@ -3093,6 +3136,17 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
                 EncounterConstants.Wasp_Giant_Nest,
                 EncounterConstants.Wasp_Giant_Solitary,
                 EncounterConstants.Wasp_Giant_Swarm,
+                EncounterConstants.Wereboar_Brood,
+                EncounterConstants.Wereboar_Pair,
+                EncounterConstants.Wereboar_Solitary,
+                EncounterConstants.Wereboar_Troupe,
+                EncounterConstants.WerewolfLord_Pack,
+                EncounterConstants.WerewolfLord_Pair,
+                EncounterConstants.WerewolfLord_Solitary,
+                EncounterConstants.Werewolf_Pack,
+                EncounterConstants.Werewolf_Pair,
+                EncounterConstants.Werewolf_Solitary,
+                EncounterConstants.Werewolf_Troupe,
                 EncounterConstants.Wolf_Dire_Pack,
                 EncounterConstants.Wolf_Dire_Pair,
                 EncounterConstants.Wolf_Dire_Solitary,
@@ -3165,6 +3219,9 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
                 EncounterConstants.Giant_Hill_Solitary,
                 EncounterConstants.Giant_Hill_Tribe,
                 EncounterConstants.Wereboar_HillGiantDire_Brood,
+                EncounterConstants.Wereboar_HillGiantDire_Pair,
+                EncounterConstants.Wereboar_HillGiantDire_Solitary,
+                EncounterConstants.Wereboar_HillGiantDire_Troupe,
                 EncounterConstants.Gnome_Rock_Band,
                 EncounterConstants.Gnome_Rock_Company,
                 EncounterConstants.Gnome_Rock_Squad,
@@ -3520,6 +3577,8 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
                 EncounterConstants.Tiger_Dire_Pair,
                 EncounterConstants.Tiger_Dire_Solitary,
                 EncounterConstants.Tiger_Solitary,
+                EncounterConstants.Weretiger_Pair,
+                EncounterConstants.Weretiger_Solitary,
                 EncounterConstants.YuanTi_Abomination_Gang,
                 EncounterConstants.YuanTi_Abomination_Pair,
                 EncounterConstants.YuanTi_Abomination_Solitary,
@@ -3769,8 +3828,6 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
                 EncounterConstants.Dragon_Gold_GreatWyrm_Family,
                 EncounterConstants.Elephant_Herd,
                 EncounterConstants.Elephant_Solitary,
-                EncounterConstants.FireBeetle_Giant_Celestial_Cluster,
-                EncounterConstants.FireBeetle_Giant_Celestial_Colony,
                 EncounterConstants.FireBeetle_Giant_Cluster,
                 EncounterConstants.FireBeetle_Giant_Colony,
                 EncounterConstants.Gnoll_Band,
@@ -4003,9 +4060,8 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
         [TestCase(EncounterConstants.Triceratops_Herd, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains)]
         [TestCase(EncounterConstants.Triceratops_Pair, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains)]
         [TestCase(EncounterConstants.Triceratops_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Triton_Band, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Triton_Company, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Triton_Squad, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
+        [TestCase(EncounterConstants.Tyrannosaurus_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
+        [TestCase(EncounterConstants.Tyrannosaurus_Pair, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
         [TestCase(EncounterConstants.Ape_Dire_Company, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest)]
         [TestCase(EncounterConstants.Ape_Dire_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest)]
         [TestCase(EncounterConstants.Badger_Dire_Cete, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
@@ -6766,8 +6822,8 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
         [TestCase(EncounterConstants.Skeleton_Wolf_Group, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
         [TestCase(EncounterConstants.Skeleton_Wolf_LargeGroup, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
         [TestCase(EncounterConstants.Skeleton_Wolf_SmallGroup, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Skum_Brood, EnvironmentConstants.Underground + EnvironmentConstants.Aquatic)]
-        [TestCase(EncounterConstants.Skum_Pack, EnvironmentConstants.Underground + EnvironmentConstants.Aquatic)]
+        [TestCase(EncounterConstants.Skum_Brood, EnvironmentConstants.Underground)]
+        [TestCase(EncounterConstants.Skum_Pack, EnvironmentConstants.Underground)]
         [TestCase(EncounterConstants.Spectre_Gang, EnvironmentConstants.Land)]
         [TestCase(EncounterConstants.Spectre_Solitary, EnvironmentConstants.Land)]
         [TestCase(EncounterConstants.Spectre_Swarm, EnvironmentConstants.Land)]

@@ -68,37 +68,42 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables
             return collection.Distinct();
         }
 
-        protected IEnumerable<string> GetAllCreaturesFromEncounters() => GetAllCreaturesFromEncounterGroup(GroupConstants.All);
+        protected IEnumerable<string> GetAllCreaturesFromEncounters(bool addExtra = true) => GetAllCreaturesFromEncounterGroup(GroupConstants.All, addExtra);
 
-        protected IEnumerable<string> GetAllCreaturesFromEncounterGroup(string group)
+        protected IEnumerable<string> GetAllCreaturesFromEncounterGroup(string group, bool addExtra = true)
         {
             var encounters = collectionSelector.SelectFrom(TableNameConstants.EncounterGroups, group);
             var creaturesAndAmounts = collectionSelector.SelectAllFrom(TableNameConstants.EncounterCreatures);
             var allCreatures = creaturesAndAmounts
                 .Where(kvp => encounters.Contains(kvp.Key))
-                .SelectMany(kvp => encounterFormatter.SelectCreaturesAndAmountsFrom(kvp.Value).Keys);
+                .SelectMany(kvp => encounterFormatter.SelectCreaturesAndAmountsFrom(kvp.Value).Keys)
+                .Distinct();
 
-            //INFO: These are creatues that do not explicitly appear in encounters, but we wish to include them anyway
-            var extraCreatures = new[]
+            if (group == GroupConstants.All && addExtra)
             {
-                CreatureDataConstants.DominatedCreature_CR1,
-                CreatureDataConstants.DominatedCreature_CR2,
-                CreatureDataConstants.DominatedCreature_CR3,
-                CreatureDataConstants.DominatedCreature_CR5,
-                CreatureDataConstants.DominatedCreature_CR6,
-                CreatureDataConstants.Mephit_Air,
-                CreatureDataConstants.Mephit_Dust,
-                CreatureDataConstants.Mephit_Earth,
-                CreatureDataConstants.Mephit_Fire,
-                CreatureDataConstants.Mephit_Ice,
-                CreatureDataConstants.Mephit_Magma,
-                CreatureDataConstants.Mephit_Ooze,
-                CreatureDataConstants.Mephit_Salt,
-                CreatureDataConstants.Mephit_Steam,
-                CreatureDataConstants.Mephit_Water,
-            };
+                //INFO: These are creatues that do not explicitly appear in encounters, but we wish to include them anyway
+                var extraCreatures = new[]
+                {
+                    CreatureDataConstants.DominatedCreature_CR1,
+                    CreatureDataConstants.DominatedCreature_CR2,
+                    CreatureDataConstants.DominatedCreature_CR3,
+                    CreatureDataConstants.DominatedCreature_CR4,
+                    CreatureDataConstants.DominatedCreature_CR5,
+                    CreatureDataConstants.DominatedCreature_CR6,
+                    CreatureDataConstants.Mephit_Air,
+                    CreatureDataConstants.Mephit_Dust,
+                    CreatureDataConstants.Mephit_Earth,
+                    CreatureDataConstants.Mephit_Fire,
+                    CreatureDataConstants.Mephit_Ice,
+                    CreatureDataConstants.Mephit_Magma,
+                    CreatureDataConstants.Mephit_Ooze,
+                    CreatureDataConstants.Mephit_Salt,
+                    CreatureDataConstants.Mephit_Steam,
+                    CreatureDataConstants.Mephit_Water,
+                };
 
-            allCreatures = allCreatures.Union(extraCreatures);
+                allCreatures = allCreatures.Union(extraCreatures);
+            }
 
             return allCreatures;
         }

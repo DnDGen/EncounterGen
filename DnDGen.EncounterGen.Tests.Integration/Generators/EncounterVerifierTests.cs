@@ -307,8 +307,8 @@ namespace DnDGen.EncounterGen.Tests.Integration.Generators
         [TestCase(27)]
         [TestCase(28)]
         [TestCase(29)]
-        [TestCase(EncounterSpecifications.MaximumLevel)]
-        public void ValidEncounterExists_ReturnsTrue_ForLevel(int level)
+        [TestCase(EncounterSpecifications.MaximumLevel, false)]
+        public void ValidEncounterExists_ReturnsValidity_ForLevel(int level, bool expectedValid = true)
         {
             var specifications = new EncounterSpecifications
             {
@@ -324,33 +324,57 @@ namespace DnDGen.EncounterGen.Tests.Integration.Generators
             var valid = encounterVerifier.ValidEncounterExists(specifications);
             stopwatch.Stop();
 
-            Assert.That(valid, Is.True);
+            Assert.That(valid, Is.EqualTo(expectedValid));
             Assert.That(stopwatch.Elapsed.TotalSeconds, Is.LessThan(1));
         }
 
-        [TestCase(CreatureDataConstants.Types.Aberration)]
+        [TestCase(CreatureDataConstants.Types.Aberration, EnvironmentConstants.Civilized, 1, false)]
+        [TestCase(CreatureDataConstants.Types.Aberration, EnvironmentConstants.Civilized, 10, false)]
+        [TestCase(CreatureDataConstants.Types.Aberration, EnvironmentConstants.Plains, 1, false)]
+        [TestCase(CreatureDataConstants.Types.Aberration, EnvironmentConstants.Plains, 10)]
         [TestCase(CreatureDataConstants.Types.Animal)]
         [TestCase(CreatureDataConstants.Types.Construct)]
-        [TestCase(CreatureDataConstants.Types.Dragon)]
+        [TestCase(CreatureDataConstants.Types.Dragon, EnvironmentConstants.Civilized, 1, false)]
+        [TestCase(CreatureDataConstants.Types.Dragon, EnvironmentConstants.Civilized, 10, false)]
+        [TestCase(CreatureDataConstants.Types.Dragon, EnvironmentConstants.Plains, 1, false)]
+        [TestCase(CreatureDataConstants.Types.Dragon, EnvironmentConstants.Plains, 10, false)]
+        [TestCase(CreatureDataConstants.Types.Dragon, EnvironmentConstants.Mountain, 1, false)]
+        [TestCase(CreatureDataConstants.Types.Dragon, EnvironmentConstants.Mountain, 10)]
         [TestCase(CreatureDataConstants.Types.Elemental)]
-        [TestCase(CreatureDataConstants.Types.Fey)]
-        [TestCase(CreatureDataConstants.Types.Giant)]
+        [TestCase(CreatureDataConstants.Types.Fey, EnvironmentConstants.Civilized, 1, false)]
+        [TestCase(CreatureDataConstants.Types.Fey, EnvironmentConstants.Civilized, 10, false)]
+        [TestCase(CreatureDataConstants.Types.Fey, EnvironmentConstants.Forest, 1, false)]
+        [TestCase(CreatureDataConstants.Types.Fey, EnvironmentConstants.Forest, 10)]
+        [TestCase(CreatureDataConstants.Types.Giant, EnvironmentConstants.Civilized, 1, false)]
+        [TestCase(CreatureDataConstants.Types.Giant, EnvironmentConstants.Civilized, 10, false)]
+        [TestCase(CreatureDataConstants.Types.Giant, EnvironmentConstants.Hills, 1, false)]
+        [TestCase(CreatureDataConstants.Types.Giant, EnvironmentConstants.Hills, 10)]
         [TestCase(CreatureDataConstants.Types.Humanoid)]
         [TestCase(CreatureDataConstants.Types.MagicalBeast)]
-        [TestCase(CreatureDataConstants.Types.MonstrousHumanoid)]
-        [TestCase(CreatureDataConstants.Types.Ooze)]
+        [TestCase(CreatureDataConstants.Types.MonstrousHumanoid, EnvironmentConstants.Civilized, 1, false)]
+        [TestCase(CreatureDataConstants.Types.MonstrousHumanoid, EnvironmentConstants.Civilized, 10, false)]
+        [TestCase(CreatureDataConstants.Types.MonstrousHumanoid, EnvironmentConstants.Mountain, 1, false)]
+        [TestCase(CreatureDataConstants.Types.MonstrousHumanoid, EnvironmentConstants.Mountain, 10)]
+        [TestCase(CreatureDataConstants.Types.Ooze, EnvironmentConstants.Civilized, 1, false)]
+        [TestCase(CreatureDataConstants.Types.Ooze, EnvironmentConstants.Civilized, 10, false)]
+        [TestCase(CreatureDataConstants.Types.Ooze, EnvironmentConstants.Plains, 1, false)]
+        [TestCase(CreatureDataConstants.Types.Ooze, EnvironmentConstants.Plains, 10, false)]
+        [TestCase(CreatureDataConstants.Types.Ooze, EnvironmentConstants.Underground, 10, false)]
+        [TestCase(CreatureDataConstants.Types.Ooze, EnvironmentConstants.Underground, 9, false)]
+        [TestCase(CreatureDataConstants.Types.Ooze, EnvironmentConstants.Underground, 8, false)]
+        [TestCase(CreatureDataConstants.Types.Ooze, EnvironmentConstants.Underground, 7)]
         [TestCase(CreatureDataConstants.Types.Outsider)]
         [TestCase(CreatureDataConstants.Types.Plant)]
         [TestCase(CreatureDataConstants.Types.Undead)]
         [TestCase(CreatureDataConstants.Types.Vermin)]
-        public void ValidEncounterExists_ReturnsTrue_ForFilter(string filter)
+        public void ValidEncounterExists_ReturnsValidity_ForFilter(string filter, string environment = EnvironmentConstants.Plains, int level = 1, bool expectedValid = true)
         {
             var specifications = new EncounterSpecifications
             {
-                Environment = EnvironmentConstants.Civilized,
+                Environment = environment,
                 Temperature = EnvironmentConstants.Temperatures.Temperate,
                 TimeOfDay = EnvironmentConstants.TimesOfDay.Night,
-                Level = 1,
+                Level = level,
                 AllowAquatic = true,
                 AllowUnderground = true,
                 CreatureTypeFilters = new[] { filter },
@@ -360,7 +384,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Generators
             var valid = encounterVerifier.ValidEncounterExists(specifications);
             stopwatch.Stop();
 
-            Assert.That(valid, Is.True);
+            Assert.That(valid, Is.EqualTo(expectedValid));
             Assert.That(stopwatch.Elapsed.TotalSeconds, Is.LessThan(1));
         }
     }
