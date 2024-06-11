@@ -11,11 +11,7 @@ namespace DnDGen.EncounterGen.Selectors
 {
     internal interface IEncounterFormatter
     {
-        [Obsolete]
-        Dictionary<string, string> SelectCreaturesAndAmountsFrom(string encounter);
         Dictionary<string, string> SelectCreaturesAndAmountsFrom(IEnumerable<string> encounterCreatureData);
-        [Obsolete]
-        string BuildEncounter(Dictionary<string, string> creaturesAndAmounts);
         string SelectNameFrom(string creature);
         string SelectDescriptionFrom(string creature);
         string SelectSubCreatureFrom(string creature);
