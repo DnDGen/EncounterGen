@@ -139,8 +139,6 @@ namespace DnDGen.EncounterGen.Generators
             var name = encounterFormatter.SelectNameFrom(sourceCreature.Name);
             var subcreatureNames = collectionSelector.Explode(TableNameConstants.CreatureGroups, name);
 
-            //var challengeRatings = collectionSelector.SelectAllFrom(TableNameConstants.AverageChallengeRatings);
-            //var validSubcreatureNames = subcreatureNames.Where(s => challengeRatings[s].Single() == setChallengeRating);
             var challengeRatingCreatures = collectionSelector.SelectFrom(TableNameConstants.AverageChallengeRatings, setChallengeRating);
             var validSubcreatureNames = subcreatureNames.Intersect(challengeRatingCreatures);
 

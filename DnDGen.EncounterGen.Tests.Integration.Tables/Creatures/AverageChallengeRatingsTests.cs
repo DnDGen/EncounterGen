@@ -1,4 +1,5 @@
-﻿using DnDGen.EncounterGen.Models;
+﻿using DnDGen.EncounterGen.Generators;
+using DnDGen.EncounterGen.Models;
 using DnDGen.EncounterGen.Tables;
 using NUnit.Framework;
 using System.Linq;
@@ -14,7 +15,21 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures
         public override void EntriesAreComplete()
         {
             var allCreatures = GetAllCreaturesFromEncounters();
-            AssertNamesAreComplete(allCreatures);
+            var levels = Enumerable.Range(EncounterSpecifications.MinimumLevel, EncounterSpecifications.MaximumLevel)
+                .Select(l => l.ToString())
+                .Union(new[]
+                {
+                    ChallengeRatingConstants.Zero,
+                    ChallengeRatingConstants.OneTenth,
+                    ChallengeRatingConstants.OneEighth,
+                    ChallengeRatingConstants.OneSixth,
+                    ChallengeRatingConstants.OneFourth,
+                    ChallengeRatingConstants.OneThird,
+                    ChallengeRatingConstants.OneHalf,
+                });
+            var names = allCreatures.Union(levels);
+
+            AssertNamesAreComplete(names);
         }
 
         [TestCase(CreatureDataConstants.Aasimar_Warrior, ChallengeRatingConstants.OneHalf)]
@@ -1534,14 +1549,62 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures
         [Test]
         public void OnlyNoncombatantsHaveChallengeRatingOfZero()
         {
-            var entries = GetEntries();
-            var combatants = entries.Where(e => !e.Contains(CreatureDataConstants.Noncombatant));
+            var creatures = GetAllCreaturesFromEncounters();
+            var combatants = creatures.Where(e => !e.Contains(CreatureDataConstants.Noncombatant));
 
             foreach (var combatant in combatants)
             {
                 var challengeRating = GetCollection(combatant).Single();
                 Assert.That(challengeRating, Is.Not.EqualTo(ChallengeRatingConstants.Zero), combatant);
             }
+        }
+
+        [TestCase(ChallengeRatingConstants.Zero)]
+        [TestCase(ChallengeRatingConstants.OneTenth)]
+        [TestCase(ChallengeRatingConstants.OneEighth)]
+        [TestCase(ChallengeRatingConstants.OneSixth)]
+        [TestCase(ChallengeRatingConstants.OneFourth)]
+        [TestCase(ChallengeRatingConstants.OneThird)]
+        [TestCase(ChallengeRatingConstants.OneHalf)]
+        [TestCase(ChallengeRatingConstants.One)]
+        [TestCase(ChallengeRatingConstants.Two)]
+        [TestCase(ChallengeRatingConstants.Three)]
+        [TestCase(ChallengeRatingConstants.Four)]
+        [TestCase(ChallengeRatingConstants.Five)]
+        [TestCase(ChallengeRatingConstants.Six)]
+        [TestCase(ChallengeRatingConstants.Seven)]
+        [TestCase(ChallengeRatingConstants.Eight)]
+        [TestCase(ChallengeRatingConstants.Nine)]
+        [TestCase(ChallengeRatingConstants.Ten)]
+        [TestCase(ChallengeRatingConstants.Eleven)]
+        [TestCase(ChallengeRatingConstants.Twelve)]
+        [TestCase(ChallengeRatingConstants.Thirteen)]
+        [TestCase(ChallengeRatingConstants.Fourteen)]
+        [TestCase(ChallengeRatingConstants.Fifteen)]
+        [TestCase(ChallengeRatingConstants.Sixteen)]
+        [TestCase(ChallengeRatingConstants.Seventeen)]
+        [TestCase(ChallengeRatingConstants.Eighteen)]
+        [TestCase(ChallengeRatingConstants.Nineteen)]
+        [TestCase(ChallengeRatingConstants.Twenty)]
+        [TestCase(ChallengeRatingConstants.TwentyOne)]
+        [TestCase(ChallengeRatingConstants.TwentyTwo)]
+        [TestCase(ChallengeRatingConstants.TwentyThree)]
+        [TestCase(ChallengeRatingConstants.TwentyFour)]
+        [TestCase(ChallengeRatingConstants.TwentyFive)]
+        [TestCase(ChallengeRatingConstants.TwentySix)]
+        [TestCase(ChallengeRatingConstants.TwentySeven)]
+        [TestCase(ChallengeRatingConstants.TwentyEight)]
+        [TestCase(ChallengeRatingConstants.TwentyNine)]
+        [TestCase(ChallengeRatingConstants.Thirty)]
+        public void AverageChallengeRatingGroup(string cr)
+        {
+            Assert.That(table, Contains.Key(cr));
+            var creatures = GetAllCreaturesFromEncounters();
+
+            var creaturesOfCR = table.Keys
+                .Intersect(creatures)
+                .Where(c => table[c].Single() == cr);
+            Assert.That(table[cr], Is.EquivalentTo(creaturesOfCR));
         }
     }
 }

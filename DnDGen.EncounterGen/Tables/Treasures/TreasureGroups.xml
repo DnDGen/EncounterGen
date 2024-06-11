@@ -587,37 +587,37 @@
     <name>Character(Beggar)[20]@Commoner@</name>
   </collection>
   <collection>
-    <name>Character(Businessman)[1]@Aristocrat@</name>
+    <name>Character(Business person)[1]@Aristocrat@</name>
   </collection>
   <collection>
-    <name>Character(Businessman)[1d2+1]@Aristocrat@</name>
+    <name>Character(Business person)[1d2+1]@Aristocrat@</name>
   </collection>
   <collection>
-    <name>Character(Businessman)[1d2+3]@Aristocrat@</name>
+    <name>Character(Business person)[1d2+3]@Aristocrat@</name>
   </collection>
   <collection>
-    <name>Character(Businessman)[1d2+5]@Aristocrat@</name>
+    <name>Character(Business person)[1d2+5]@Aristocrat@</name>
   </collection>
   <collection>
-    <name>Character(Businessman)[1d2+7]@Aristocrat@</name>
+    <name>Character(Business person)[1d2+7]@Aristocrat@</name>
   </collection>
   <collection>
-    <name>Character(Businessman)[1d2+9]@Aristocrat@</name>
+    <name>Character(Business person)[1d2+9]@Aristocrat@</name>
   </collection>
   <collection>
-    <name>Character(Businessman)[1d2+11]@Aristocrat@</name>
+    <name>Character(Business person)[1d2+11]@Aristocrat@</name>
   </collection>
   <collection>
-    <name>Character(Businessman)[1d2+13]@Aristocrat@</name>
+    <name>Character(Business person)[1d2+13]@Aristocrat@</name>
   </collection>
   <collection>
-    <name>Character(Businessman)[1d2+15]@Aristocrat@</name>
+    <name>Character(Business person)[1d2+15]@Aristocrat@</name>
   </collection>
   <collection>
-    <name>Character(Businessman)[1d2+17]@Aristocrat@</name>
+    <name>Character(Business person)[1d2+17]@Aristocrat@</name>
   </collection>
   <collection>
-    <name>Character(Businessman)[20]@Aristocrat@</name>
+    <name>Character(Business person)[20]@Aristocrat@</name>
   </collection>
   <collection>
     <name>Character(Captain)[1]@Fighter@</name>

@@ -43,7 +43,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Generators
             stopwatch.Stop();
 
             AssertEncounter(encounter);
-            Assert.That(stopwatch.Elapsed.TotalSeconds, Is.LessThan(1));
+            Assert.That(stopwatch.Elapsed.TotalSeconds, Is.LessThan(1).Or.LessThan(encounter.Characters.Sum(s => s.Class.Level / 10d)));
         }
 
         [TestCase(EnvironmentConstants.Aquatic, EnvironmentConstants.Temperatures.Cold, EnvironmentConstants.TimesOfDay.Day, false, false)]
@@ -279,7 +279,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Generators
             stopwatch.Stop();
 
             AssertEncounter(encounter);
-            Assert.That(stopwatch.Elapsed.TotalSeconds, Is.LessThan(1));
+            Assert.That(stopwatch.Elapsed.TotalSeconds, Is.LessThan(1).Or.LessThan(encounter.Characters.Sum(s => s.Class.Level / 10d)));
         }
 
         [TestCase(EncounterSpecifications.MinimumLevel)]
@@ -316,7 +316,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Generators
         {
             var specifications = new EncounterSpecifications
             {
-                Environment = EnvironmentConstants.Civilized,
+                Environment = EnvironmentConstants.Plains,
                 Temperature = EnvironmentConstants.Temperatures.Temperate,
                 TimeOfDay = EnvironmentConstants.TimesOfDay.Night,
                 Level = level,

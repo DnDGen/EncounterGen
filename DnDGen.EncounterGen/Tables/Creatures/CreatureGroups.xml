@@ -261,7 +261,7 @@
     <entry>Character(Artisan)@Expert@</entry>
     <entry>Character(Bandit)@Warrior@</entry>
     <entry>Character(Beggar)@Commoner@</entry>
-    <entry>Character(Businessman)@Aristocrat@</entry>
+    <entry>Character(Business person)@Aristocrat@</entry>
     <entry>Character(Captain)@Fighter@</entry>
     <entry>Character(Captain)@Warrior@</entry>
     <entry>Character(Construction Worker)@Commoner@</entry>
@@ -480,18 +480,18 @@
     <entry>Character(Beggar)[20]@Commoner@</entry>
   </collection>
   <collection>
-    <name>Character(Businessman)@Aristocrat@</name>
-    <entry>Character(Businessman)[1]@Aristocrat@</entry>
-    <entry>Character(Businessman)[1d2+1]@Aristocrat@</entry>
-    <entry>Character(Businessman)[1d2+3]@Aristocrat@</entry>
-    <entry>Character(Businessman)[1d2+5]@Aristocrat@</entry>
-    <entry>Character(Businessman)[1d2+7]@Aristocrat@</entry>
-    <entry>Character(Businessman)[1d2+9]@Aristocrat@</entry>
-    <entry>Character(Businessman)[1d2+11]@Aristocrat@</entry>
-    <entry>Character(Businessman)[1d2+13]@Aristocrat@</entry>
-    <entry>Character(Businessman)[1d2+15]@Aristocrat@</entry>
-    <entry>Character(Businessman)[1d2+17]@Aristocrat@</entry>
-    <entry>Character(Businessman)[20]@Aristocrat@</entry>
+    <name>Character(Business person)@Aristocrat@</name>
+    <entry>Character(Business person)[1]@Aristocrat@</entry>
+    <entry>Character(Business person)[1d2+1]@Aristocrat@</entry>
+    <entry>Character(Business person)[1d2+3]@Aristocrat@</entry>
+    <entry>Character(Business person)[1d2+5]@Aristocrat@</entry>
+    <entry>Character(Business person)[1d2+7]@Aristocrat@</entry>
+    <entry>Character(Business person)[1d2+9]@Aristocrat@</entry>
+    <entry>Character(Business person)[1d2+11]@Aristocrat@</entry>
+    <entry>Character(Business person)[1d2+13]@Aristocrat@</entry>
+    <entry>Character(Business person)[1d2+15]@Aristocrat@</entry>
+    <entry>Character(Business person)[1d2+17]@Aristocrat@</entry>
+    <entry>Character(Business person)[20]@Aristocrat@</entry>
   </collection>
   <collection>
     <name>Character(Captain)@Fighter@</name>

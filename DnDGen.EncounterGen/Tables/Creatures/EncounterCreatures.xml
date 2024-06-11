@@ -2471,47 +2471,47 @@
   </collection>
   <collection>
     <name>Business People [Level 1] (Group)</name>
-    <entry>Character(Businessman)[1]@Aristocrat@/1d4</entry>
+    <entry>Character(Business person)[1]@Aristocrat@/1d4</entry>
   </collection>
   <collection>
 	  <name>Business People [Level 2-3] (Group)</name>
-    <entry>Character(Businessman)[1d2+1]@Aristocrat@/1d4</entry>
+    <entry>Character(Business person)[1d2+1]@Aristocrat@/1d4</entry>
   </collection>
   <collection>
 	  <name>Business People [Level 4-5] (Group)</name>
-    <entry>Character(Businessman)[1d2+3]@Aristocrat@/1d4</entry>
+    <entry>Character(Business person)[1d2+3]@Aristocrat@/1d4</entry>
   </collection>
   <collection>
 	  <name>Business People [Level 6-7] (Group)</name>
-    <entry>Character(Businessman)[1d2+5]@Aristocrat@/1d4</entry>
+    <entry>Character(Business person)[1d2+5]@Aristocrat@/1d4</entry>
   </collection>
   <collection>
 	  <name>Business People [Level 8-9] (Group)</name>
-    <entry>Character(Businessman)[1d2+7]@Aristocrat@/1d4</entry>
+    <entry>Character(Business person)[1d2+7]@Aristocrat@/1d4</entry>
   </collection>
   <collection>
 	  <name>Business People [Level 10-11] (Group)</name>
-    <entry>Character(Businessman)[1d2+9]@Aristocrat@/1d4</entry>
+    <entry>Character(Business person)[1d2+9]@Aristocrat@/1d4</entry>
   </collection>
   <collection>
 	  <name>Business People [Level 12-13] (Group)</name>
-    <entry>Character(Businessman)[1d2+11]@Aristocrat@/1d4</entry>
+    <entry>Character(Business person)[1d2+11]@Aristocrat@/1d4</entry>
   </collection>
   <collection>
 	  <name>Business People [Level 14-15] (Group)</name>
-    <entry>Character(Businessman)[1d2+13]@Aristocrat@/1d4</entry>
+    <entry>Character(Business person)[1d2+13]@Aristocrat@/1d4</entry>
   </collection>
   <collection>
 	  <name>Business People [Level 16-17] (Group)</name>
-    <entry>Character(Businessman)[1d2+15]@Aristocrat@/1d4</entry>
+    <entry>Character(Business person)[1d2+15]@Aristocrat@/1d4</entry>
   </collection>
   <collection>
 	  <name>Business People [Level 18-19] (Group)</name>
-    <entry>Character(Businessman)[1d2+17]@Aristocrat@/1d4</entry>
+    <entry>Character(Business person)[1d2+17]@Aristocrat@/1d4</entry>
   </collection>
   <collection>
 	  <name>Business People [Level 20] (Group)</name>
-    <entry>Character(Businessman)[20]@Aristocrat@/1d4</entry>
+    <entry>Character(Business person)[20]@Aristocrat@/1d4</entry>
   </collection>
   <collection>
     <name>Crusaders [Level 1] (Band)</name>
