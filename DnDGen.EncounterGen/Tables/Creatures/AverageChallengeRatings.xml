@@ -6099,6 +6099,7 @@
 		<entry>Character(Street performer)[1]@Adept@</entry>
 		<entry>Character(Student)[1]@Any NPC@</entry>
 		<entry>Character(Traveler)[1]@Any NPC@</entry>
+		<entry>Character[1]@Any NPC@</entry>
 		<entry>Character[1]{Aasimar}@Warrior@</entry>
 		<entry>Character[1]{Tiefling}@Warrior@</entry>
 		<entry>Character[1]{Aquatic Elf}@Warrior@</entry>
@@ -6120,6 +6121,20 @@
 		<entry>Character[1]{Hobgoblin}@Warrior@</entry>
 		<entry>Character[1]{Locathah}@Warrior@</entry>
 		<entry>Character[1]{Merfolk}@Warrior@</entry>
+		<entry>Character[1]{Orc}@Warrior@</entry>
+		<entry>Eagle</entry>
+		<entry>Formian$Worker$</entry>
+		<entry>Monstrous centipede$Medium Fiendish creature$</entry>
+		<entry>Monstrous centipede$Medium$</entry>
+		<entry>Monstrous scorpion$Small$</entry>
+		<entry>Monstrous spider$Small$</entry>
+		<entry>Porpoise</entry>
+		<entry>Porpoise$Celestial creature$</entry>
+		<entry>Stirge</entry>
+		<entry>Viper snake$Small$</entry>
+		<entry>Warpony</entry>
+		<entry>Zombie$Human$</entry>
+		<entry>Zombie$Kobold$</entry>
 	</collection>
 	<collection>
 		<name>1</name>
@@ -6139,7 +6154,7 @@
 		<entry>Character(Scholar)[1]@Monk&amp;Wizard@</entry>
 		<entry>Character(Sellsword)[1]</entry>
 		<entry>Character(Street performer)[1]@Bard&amp;Rogue&amp;Sorcerer@</entry>
-		<entry>Character(Star student)[1]</entry>
+		<entry>Character(Star Student)[1]</entry>
 		<entry>Character(Adviser)[1d2+1]@Expert@</entry>
 		<entry>Character(Architect)[1d2+1]@Expert@</entry>
 		<entry>Character(Artisan)[1d2+1]@Expert@</entry>
@@ -6166,6 +6181,7 @@
 		<entry>Character(Street performer)[1d2+1]@Adept@</entry>
 		<entry>Character(Student)[1d2+1]@Any NPC@</entry>
 		<entry>Character(Traveler)[1d2+1]@Any NPC@</entry>
+		<entry>Character[1d2+1]@Any NPC@</entry>
 		<entry>Character(Lieutenant)[3]{Forest Gnome}@Warrior@</entry>
 		<entry>Character(Lieutenant)[3]{Merfolk}@Warrior@</entry>
 		<entry>Character(Lieutenant)[3]{Rock Gnome}@Warrior@</entry>
@@ -6189,7 +6205,51 @@
 		<entry>Character(Sergeant)[3]{Hobgoblin}@Warrior@</entry>
 		<entry>Character(Sergeant)[3]{Kobold}@Warrior@</entry>
 		<entry>Character(Sergeant)[3]{Locathah}@Warrior@</entry>
+		<entry>Character(Sergeant)[3]{Merfolk}@Warrior@</entry>
+		<entry>Character(Sergeant)[3]{Orc}@Warrior@</entry>
+		<entry>Character[1]{Drow}@Warrior@</entry>
+		<entry>Character[1]{Duergar Dwarf}@Warrior@</entry>
+		<entry>Character[1]{Svirfneblin}@Warrior@</entry>
 		<entry>Dominated creature[1]</entry>
+		<entry>Darkmantle</entry>
+		<entry>Dog$Riding$</entry>
+		<entry>Elemental(Air)$Small$</entry>
+		<entry>Elemental(Earth)$Small$</entry>
+		<entry>Elemental(Fire)$Small$</entry>
+		<entry>Elemental(Water)$Small$</entry>
+		<entry>Ghoul</entry>
+		<entry>Ghoul$Lacedon$</entry>
+		<entry>Giant ant$Worker$</entry>
+		<entry>Giant bee</entry>
+		<entry>Gnoll</entry>
+		<entry>Grimlock</entry>
+		<entry>Grig</entry>
+		<entry>Heavy horse</entry>
+		<entry>Homunculus</entry>
+		<entry>Hyena</entry>
+		<entry>Krenshar</entry>
+		<entry>Lemure</entry>
+		<entry>Light horse</entry>
+		<entry>Light warhorse</entry>
+		<entry>Lizardfolk</entry>
+		<entry>Manta ray</entry>
+		<entry>Monstrous centipede$Large Fiendish creature$</entry>
+		<entry>Monstrous centipede$Large$</entry>
+		<entry>Monstrous scorpion$Medium$</entry>
+		<entry>Monstrous spider$Medium$</entry>
+		<entry>Mule</entry>
+		<entry>Nixie</entry>
+		<entry>Octopus</entry>
+		<entry>Pseudodragon</entry>
+		<entry>Shark$Medium$</entry>
+		<entry>Shrieker</entry>
+		<entry>Skeleton$Wolf$</entry>
+		<entry>Spider swarm</entry>
+		<entry>Squid</entry>
+		<entry>Troglodyte</entry>
+		<entry>Viper snake$Medium$</entry>
+		<entry>Wolf</entry>
+		<entry>Zombie$Troglodyte$</entry>
 	</collection>
 	<collection>
 		<name>2</name>
@@ -6207,7 +6267,7 @@
 		<entry>Character(Scholar)[2]@Monk&amp;Wizard@</entry>
 		<entry>Character(Sellsword)[2]</entry>
 		<entry>Character(Street performer)[2]@Bard&amp;Rogue&amp;Sorcerer@</entry>
-		<entry>Character(Star student)[2]</entry>
+		<entry>Character(Star Student)[2]</entry>
 		<entry>Character(Adviser)[1d2+3]@Expert@</entry>
 		<entry>Character(Architect)[1d2+3]@Expert@</entry>
 		<entry>Character(Artisan)[1d2+3]@Expert@</entry>
@@ -6234,6 +6294,7 @@
 		<entry>Character(Street performer)[1d2+3]@Adept@</entry>
 		<entry>Character(Student)[1d2+3]@Any NPC@</entry>
 		<entry>Character(Traveler)[1d2+3]@Any NPC@</entry>
+		<entry>Character[1d2+3]@Any NPC@</entry>
 		<entry>Animated object$Medium$</entry>
 		<entry>Ape</entry>
 		<entry>Azer</entry>
@@ -6248,12 +6309,84 @@
 		<entry>Character(Leader)[1d3+3]{Hobgoblin}@Warrior@</entry>
 		<entry>Character(Leader)[1d3+3]{Kobold}@Warrior@</entry>
 		<entry>Character(Leader)[1d4+2]{Aquatic Elf}@Warrior@</entry>
-		<entry>Character(Leader)[1d4+2]{Deep Dwarf}@Warrior@</entry>
-		<entry>Character(Leader)[1d4+2]{Deep Halfling}@Warrior@</entry>
-		<entry>Character(Leader)[1d4+2]{Forest Gnome}@Warrior@</entry>
 		<entry>Character(Leader)[1d4+2]{Gray Elf}@Warrior@</entry>
 		<entry>Character(Leader)[1d4+2]{Half-Elf}@Warrior@</entry>
+		<entry>Character(Leader)[1d4+2]{High Elf}@Warrior@</entry>
+		<entry>Character(Leader)[1d4+2]{Wild Elf}@Warrior@</entry>
+		<entry>Character(Leader)[1d4+2]{Wood Elf}@Warrior@</entry>
+		<entry>Character(Leader)[1d4+2]{Deep Dwarf}@Warrior@</entry>
+		<entry>Character(Leader)[1d4+2]{Hill Dwarf}@Warrior@</entry>
+		<entry>Character(Leader)[1d4+2]{Mountain Dwarf}@Warrior@</entry>
+		<entry>Character(Leader)[1d4+2]{Deep Halfling}@Warrior@</entry>
+		<entry>Character(Leader)[1d4+2]{Lightfoot Halfling}@Warrior@</entry>
+		<entry>Character(Leader)[1d4+2]{Tallfellow Halfling}@Warrior@</entry>
+		<entry>Character(Leader)[1d4+2]{Forest Gnome}@Warrior@</entry>
+		<entry>Character(Leader)[1d4+2]{Rock Gnome}@Warrior@</entry>
 		<entry>Character(Leader)[1d4+2]{Half-Orc}@Warrior@</entry>
+		<entry>Character(Leader)[1d4+2]{Human}@Warrior@</entry>
+		<entry>Character(Leader)[1d4+2]{Locathah}@Warrior@</entry>
+		<entry>Character(Leader)[1d4+2]{Merfolk}@Warrior@</entry>
+		<entry>Character(Leader)[1d4+2]{Orc}@Warrior@</entry>
+		<entry>Character(Lieutenant)[1d2+3]{Goblin}@Warrior@</entry>
+		<entry>Character(Lieutenant)[1d2+3]{Hobgoblin}@Warrior@</entry>
+		<entry>Character(Lieutenant)[1d2+3]{Kobold}@Warrior@</entry>
+		<entry>Character(Lieutenant)[5]{Aquatic Elf}@Warrior@</entry>
+		<entry>Character(Lieutenant)[5]{Gray Elf}@Warrior@</entry>
+		<entry>Character(Lieutenant)[5]{Half-Elf}@Warrior@</entry>
+		<entry>Character(Lieutenant)[5]{High Elf}@Warrior@</entry>
+		<entry>Character(Lieutenant)[5]{Wild Elf}@Warrior@</entry>
+		<entry>Character(Lieutenant)[5]{Wood Elf}@Warrior@</entry>
+		<entry>Character(Lieutenant)[5]{Deep Dwarf}@Warrior@</entry>
+		<entry>Character(Lieutenant)[5]{Hill Dwarf}@Warrior@</entry>
+		<entry>Character(Lieutenant)[5]{Mountain Dwarf}@Warrior@</entry>
+		<entry>Character(Lieutenant)[5]{Deep Halfling}@Warrior@</entry>
+		<entry>Character(Lieutenant)[5]{Lightfoot Halfling}@Warrior@</entry>
+		<entry>Character(Lieutenant)[5]{Tallfellow Halfling}@Warrior@</entry>
+		<entry>Character(Lieutenant)[5]{Forest Gnome}@Warrior@</entry>
+		<entry>Character(Lieutenant)[5]{Rock Gnome}@Warrior@</entry>
+		<entry>Character(Lieutenant)[5]{Half-Orc}@Warrior@</entry>
+		<entry>Character(Lieutenant)[5]{Human}@Warrior@</entry>
+		<entry>Character(Lieutenant)[5]{Locathah}@Warrior@</entry>
+		<entry>Character(Lieutenant)[5]{Merfolk}@Warrior@</entry>
+		<entry>Character(Lieutenant)[5]{Orc}@Warrior@</entry>
+		<entry>Character(Sergeant)[2]{Drow}@Warrior@</entry>
+		<entry>Cheetah</entry>
+		<entry>Choker</entry>
+		<entry>Constrictor snake</entry>
+		<entry>Crocodile</entry>
+		<entry>Dire badger</entry>
+		<entry>Dire bat</entry>
+		<entry>Dire weasel</entry>
+		<entry>Dretch</entry>
+		<entry>Giant ant$Queen$</entry>
+		<entry>Giant ant$Soldier$</entry>
+		<entry>Giant bombardier beetle</entry>
+		<entry>Heavy warhorse</entry>
+		<entry>Hippogriff</entry>
+		<entry>Imp</entry>
+		<entry>Kuo-toa</entry>
+		<entry>Lantern archon</entry>
+		<entry>Leopard</entry>
+		<entry>Monitor lizard</entry>
+		<entry>Monstrous centipede$Huge$</entry>
+		<entry>Monstrous spider$Large$</entry>
+		<entry>Quasit</entry>
+		<entry>Rat swarm</entry>
+		<entry>Sahuagin</entry>
+		<entry>Satyr</entry>
+		<entry>Shark$Large$</entry>
+		<entry>Shocker lizard</entry>
+		<entry>Skeleton$Owlbear$</entry>
+		<entry>Skum</entry>
+		<entry>Thoqqua</entry>
+		<entry>Triton</entry>
+		<entry>Vargouille</entry>
+		<entry>Viper snake$Large$</entry>
+		<entry>Wererat</entry>
+		<entry>White dragon$Wyrmling$</entry>
+		<entry>Wolverine</entry>
+		<entry>Worg</entry>
+		<entry>Zombie$Bugbear$</entry>
 	</collection>
 	<collection>
 		<name>3</name>
@@ -6271,7 +6404,7 @@
 		<entry>Character(Scholar)[3]@Monk&amp;Wizard@</entry>
 		<entry>Character(Sellsword)[3]</entry>
 		<entry>Character(Street performer)[3]@Bard&amp;Rogue&amp;Sorcerer@</entry>
-		<entry>Character(Star student)[3]</entry>
+		<entry>Character(Star Student)[3]</entry>
 		<entry>Character(Adviser)[1d2+5]@Expert@</entry>
 		<entry>Character(Architect)[1d2+5]@Expert@</entry>
 		<entry>Character(Artisan)[1d2+5]@Expert@</entry>
@@ -6298,9 +6431,106 @@
 		<entry>Character(Street performer)[1d2+5]@Adept@</entry>
 		<entry>Character(Student)[1d2+5]@Any NPC@</entry>
 		<entry>Character(Traveler)[1d2+5]@Any NPC@</entry>
+		<entry>Character[1d2+5]@Any NPC@</entry>
 		<entry>Character[1]#Ghost#</entry>
 		<entry>Character[1]#Vampire#</entry>
 		<entry>Dominated creature[3]</entry>
+		<entry>Allip</entry>
+		<entry>Animated object$Large$</entry>
+		<entry>Ankheg</entry>
+		<entry>Arrowhawk$Juvenile$</entry>
+		<entry>Assassin vine</entry>
+		<entry>Black dragon$Wyrmling$</entry>
+		<entry>Blue dragon$Wyrmling$</entry>
+		<entry>Brass dragon$Wyrmling$</entry>
+		<entry>Bronze dragon$Wyrmling$</entry>
+		<entry>Centaur</entry>
+		<entry>Character(Captain)[7]{Aquatic Elf}@Warrior@</entry>
+		<entry>Character(Captain)[7]{Gray Elf}@Warrior@</entry>
+		<entry>Character(Captain)[7]{Half-Elf}@Warrior@</entry>
+		<entry>Character(Captain)[7]{High Elf}@Warrior@</entry>
+		<entry>Character(Captain)[7]{Wild Elf}@Warrior@</entry>
+		<entry>Character(Captain)[7]{Wood Elf}@Warrior@</entry>
+		<entry>Character(Captain)[7]{Deep Dwarf}@Warrior@</entry>
+		<entry>Character(Captain)[7]{Hill Dwarf}@Warrior@</entry>
+		<entry>Character(Captain)[7]{Mountain Dwarf}@Warrior@</entry>
+		<entry>Character(Captain)[7]{Deep Halfling}@Warrior@</entry>
+		<entry>Character(Captain)[7]{Lightfoot Halfling}@Warrior@</entry>
+		<entry>Character(Captain)[7]{Tallfellow Halfling}@Warrior@</entry>
+		<entry>Character(Captain)[7]{Forest Gnome}@Warrior@</entry>
+		<entry>Character(Captain)[7]{Rock Gnome}@Warrior@</entry>
+		<entry>Character(Captain)[7]{Half-Orc}@Warrior@</entry>
+		<entry>Character(Captain)[7]{Human}@Warrior@</entry>
+		<entry>Character(Captain)[7]{Locathah}@Warrior@</entry>
+		<entry>Character(Captain)[7]{Merfolk}@Warrior@</entry>
+		<entry>Character(Captain)[7]{Orc}@Warrior@</entry>
+		<entry>Character(Leader)[1d3+5]{Goblin}@Warrior@</entry>
+		<entry>Character(Leader)[1d3+5]{Hobgoblin}@Warrior@</entry>
+		<entry>Character(Leader)[1d3+5]{Kobold}@Warrior@</entry>
+		<entry>Character(Lieutenant)[3]{Svirfneblin}@Warrior@</entry>
+		<entry>Character(Sergeant)[3]{Duergar Dwarf}@Warrior@</entry>
+		<entry>Character(Sergeant)[3]{Svirfneblin}@Warrior@</entry>
+		<entry>Cockatrice</entry>
+		<entry>Copper dragon$Wyrmling$</entry>
+		<entry>Deinonychus</entry>
+		<entry>Derro</entry>
+		<entry>Dire ape</entry>
+		<entry>Dire wolf</entry>
+		<entry>Doppelganger</entry>
+		<entry>Dryad</entry>
+		<entry>Elemental(Air)$Medium$</entry>
+		<entry>Elemental(Earth)$Medium$</entry>
+		<entry>Elemental(Fire)$Medium$</entry>
+		<entry>Elemental(Water)$Medium$</entry>
+		<entry>Ethereal filcher</entry>
+		<entry>Ethereal marauder</entry>
+		<entry>Ettercap</entry>
+		<entry>Formian$Warrior$</entry>
+		<entry>Gelatinous cube</entry>
+		<entry>Ghoul$Ghast$</entry>
+		<entry>Giant eagle</entry>
+		<entry>Giant owl</entry>
+		<entry>Giant praying mantis</entry>
+		<entry>Giant wasp</entry>
+		<entry>Green dragon$Wyrmling$</entry>
+		<entry>Grick</entry>
+		<entry>Hell hound</entry>
+		<entry>Howler</entry>
+		<entry>Lion</entry>
+		<entry>Locust swarm</entry>
+		<entry>Magmin</entry>
+		<entry>Mephit(Air)</entry>
+		<entry>Mephit(Dust)</entry>
+		<entry>Mephit(Earth)</entry>
+		<entry>Mephit(Fire)</entry>
+		<entry>Mephit(Ice)</entry>
+		<entry>Mephit(Magma)</entry>
+		<entry>Mephit(Ooze)</entry>
+		<entry>Mephit(Salt)</entry>
+		<entry>Mephit(Steam)</entry>
+		<entry>Mephit(Water)</entry>
+		<entry>Mephit[3]</entry>
+		<entry>Monstrous centipede$Huge Fiendish creature$</entry>
+		<entry>Monstrous scorpion$Large$</entry>
+		<entry>Ogre</entry>
+		<entry>Ogre$Merrow$</entry>
+		<entry>Pegasus</entry>
+		<entry>Phantom fungus</entry>
+		<entry>Rust monster</entry>
+		<entry>Salamander$Flamebrother$</entry>
+		<entry>Shadow</entry>
+		<entry>Skeleton$Troll$</entry>
+		<entry>Tojanida$Juvenile$</entry>
+		<entry>Unicorn</entry>
+		<entry>Violet fungus</entry>
+		<entry>Viper snake$Huge$</entry>
+		<entry>Werewolf</entry>
+		<entry>White dragon$Very young$</entry>
+		<entry>Wight</entry>
+		<entry>Xorn$Minor$</entry>
+		<entry>Yeth hound</entry>
+		<entry>Yuan-ti$Pureblood$</entry>
+		<entry>Zombie$Ogre$</entry>
 	</collection>
 	<collection>
 		<name>4</name>
@@ -6318,7 +6548,7 @@
 		<entry>Character(Scholar)[4]@Monk&amp;Wizard@</entry>
 		<entry>Character(Sellsword)[4]</entry>
 		<entry>Character(Street performer)[4]@Bard&amp;Rogue&amp;Sorcerer@</entry>
-		<entry>Character(Star student)[4]</entry>
+		<entry>Character(Star Student)[4]</entry>
 		<entry>Character(Adviser)[1d2+7]@Expert@</entry>
 		<entry>Character(Architect)[1d2+7]@Expert@</entry>
 		<entry>Character(Artisan)[1d2+7]@Expert@</entry>
@@ -6345,9 +6575,58 @@
 		<entry>Character(Street performer)[1d2+7]@Adept@</entry>
 		<entry>Character(Student)[1d2+7]@Any NPC@</entry>
 		<entry>Character(Traveler)[1d2+7]@Any NPC@</entry>
+		<entry>Character[1d2+7]@Any NPC@</entry>
 		<entry>Character[2]#Ghost#</entry>
 		<entry>Character[2]#Vampire#</entry>
 		<entry>Dominated creature[4]</entry>
+		<entry>Hydra$5 heads$</entry>
+		<entry>Aranea</entry>
+		<entry>Barghest</entry>
+		<entry>Black dragon$Very young$</entry>
+		<entry>Blue dragon$Very young$</entry>
+		<entry>Brass dragon$Very young$</entry>
+		<entry>Brown bear</entry>
+		<entry>Carrion crawler</entry>
+		<entry>Centipede swarm</entry>
+		<entry>Character(Leader)[1d4+2]{Drow}@Warrior@</entry>
+		<entry>Character(Leader)[1d4+2]{Svirfneblin}@Warrior@</entry>
+		<entry>Character(Sergeant)[2]{Bugbear}</entry>
+		<entry>Character(Sergeant)[3]{Gnoll}</entry>
+		<entry>Character(Student)[3]{Githzerai}</entry>
+		<entry>Character[3]{Githyanki}@Fighter@</entry>
+		<entry>Dire boar</entry>
+		<entry>Dire wolverine</entry>
+		<entry>Displacer beast</entry>
+		<entry>Gargoyle</entry>
+		<entry>Gargoyle$Kapoacinth$</entry>
+		<entry>Giant crocodile</entry>
+		<entry>Giant stag beetle</entry>
+		<entry>Gray ooze</entry>
+		<entry>Green dragon$Very young$</entry>
+		<entry>Griffon</entry>
+		<entry>Harpy</entry>
+		<entry>Hound archon</entry>
+		<entry>Janni</entry>
+		<entry>Mimic</entry>
+		<entry>Minotaur</entry>
+		<entry>Otyugh</entry>
+		<entry>Owlbear</entry>
+		<entry>Pixie</entry>
+		<entry>Polar bear</entry>
+		<entry>Red dragon$Wyrmling$</entry>
+		<entry>Rhinoceras</entry>
+		<entry>Satyr$with pipes$</entry>
+		<entry>Sea cat</entry>
+		<entry>Sea hag</entry>
+		<entry>Shark$Huge$</entry>
+		<entry>Silver dragon$Wyrmling$</entry>
+		<entry>Skeleton$Chimera$</entry>
+		<entry>Tiger</entry>
+		<entry>Vampire spawn</entry>
+		<entry>Wereboar</entry>
+		<entry>White dragon$Young$</entry>
+		<entry>Zombie$Minotaur$</entry>
+		<entry>Zombie$Wyvern$</entry>
 	</collection>
 	<collection>
 		<name>5</name>
@@ -6365,7 +6644,7 @@
 		<entry>Character(Scholar)[5]@Monk&amp;Wizard@</entry>
 		<entry>Character(Sellsword)[5]</entry>
 		<entry>Character(Street performer)[5]@Bard&amp;Rogue&amp;Sorcerer@</entry>
-		<entry>Character(Star student)[5]</entry>
+		<entry>Character(Star Student)[5]</entry>
 		<entry>Character(Adviser)[1d2+9]@Expert@</entry>
 		<entry>Character(Architect)[1d2+9]@Expert@</entry>
 		<entry>Character(Artisan)[1d2+9]@Expert@</entry>
@@ -6392,9 +6671,66 @@
 		<entry>Character(Street performer)[1d2+9]@Adept@</entry>
 		<entry>Character(Student)[1d2+9]@Any NPC@</entry>
 		<entry>Character(Traveler)[1d2+9]@Any NPC@</entry>
+		<entry>Character[1d2+9]@Any NPC@</entry>
 		<entry>Character[3]#Ghost#</entry>
 		<entry>Character[3]#Vampire#</entry>
 		<entry>Dominated creature[5]</entry>
+		<entry>Hydra$6 heads$</entry>
+		<entry>Achaierai</entry>
+		<entry>Animated object$Huge$</entry>
+		<entry>Arrowhawk$Adult$</entry>
+		<entry>Barghest$Greater$</entry>
+		<entry>Basilisk</entry>
+		<entry>Bearded Devil(Barbazu)</entry>
+		<entry>Black dragon$Young$</entry>
+		<entry>Bronze dragon$Very young$</entry>
+		<entry>Character(Leader)[1d3+2]{Grimlock}</entry>
+		<entry>Character(Leader)[1d4+1]{Bugbear}</entry>
+		<entry>Character(Leader)[1d4+2]{Lizardfolk}</entry>
+		<entry>Character(Leader)[1d6+2]{Duergar Dwarf}@Warrior@</entry>
+		<entry>Character(Lieutenant)[1d2+3]{Gnoll}</entry>
+		<entry>Character(Lieutenant)[1d4+2]{Lizardfolk}</entry>
+		<entry>Character(Lieutenant)[3]{Sahuagin}</entry>
+		<entry>Character(Lieutenant)[5]{Svirfneblin}@Warrior@</entry>
+		<entry>Character(Sergeant)[3]{Azer}</entry>
+		<entry>Character(Whip)[3]{Kuo-toa}@Cleric@</entry>
+		<entry>Cloaker</entry>
+		<entry>Copper dragon$Very young$</entry>
+		<entry>Dire lion</entry>
+		<entry>Djinni</entry>
+		<entry>Elemental(Air)$Large$</entry>
+		<entry>Elemental(Earth)$Large$</entry>
+		<entry>Elemental(Fire)$Large$</entry>
+		<entry>Elemental(Water)$Large$</entry>
+		<entry>Giant constrictor snake</entry>
+		<entry>Gibbering mouther</entry>
+		<entry>Gold dragon$Wyrmling$</entry>
+		<entry>Green dragon$Young$</entry>
+		<entry>Green hag</entry>
+		<entry>Hieracosphinx</entry>
+		<entry>Manticore</entry>
+		<entry>Monstrous spider$Huge$</entry>
+		<entry>Mummy</entry>
+		<entry>Nightmare</entry>
+		<entry>Ochre jelly</entry>
+		<entry>Phase spider</entry>
+		<entry>Pixie$with Irresistable Dance$</entry>
+		<entry>Rast</entry>
+		<entry>Ravid</entry>
+		<entry>Red dragon$Very young$</entry>
+		<entry>Shadow mastiff</entry>
+		<entry>Silver dragon$Very young$</entry>
+		<entry>Skeleton$Ettin$</entry>
+		<entry>Spider eater</entry>
+		<entry>Tojanida$Adult$</entry>
+		<entry>Troll</entry>
+		<entry>Troll$Scrag$</entry>
+		<entry>Werebear</entry>
+		<entry>Weretiger</entry>
+		<entry>Whale$Orca$</entry>
+		<entry>Winter wolf</entry>
+		<entry>Wraith</entry>
+		<entry>Yuan-ti$Halfblood$</entry>
 	</collection>
 	<collection>
 		<name>6</name>
@@ -6412,7 +6748,7 @@
 		<entry>Character(Scholar)[6]@Monk&amp;Wizard@</entry>
 		<entry>Character(Sellsword)[6]</entry>
 		<entry>Character(Street performer)[6]@Bard&amp;Rogue&amp;Sorcerer@</entry>
-		<entry>Character(Star student)[6]</entry>
+		<entry>Character(Star Student)[6]</entry>
 		<entry>Character(Adviser)[1d2+11]@Expert@</entry>
 		<entry>Character(Architect)[1d2+11]@Expert@</entry>
 		<entry>Character(Artisan)[1d2+11]@Expert@</entry>
@@ -6439,11 +6775,48 @@
 		<entry>Character(Street performer)[1d2+11]@Adept@</entry>
 		<entry>Character(Student)[1d2+11]@Any NPC@</entry>
 		<entry>Character(Traveler)[1d2+11]@Any NPC@</entry>
+		<entry>Character[1d2+11]@Any NPC@</entry>
 		<entry>Character[4]#Ghost#</entry>
 		<entry>Character[4]#Vampire#</entry>
-		<entry>Cryohydro$5 heads$</entry>
-		<entry>Pyrohydro$5 heads$</entry>
+		<entry>Cryohydra$5 heads$</entry>
+		<entry>Pyrohydra$5 heads$</entry>
 		<entry>Dominated creature[6]</entry>
+		<entry>Hydra$7 heads$</entry>
+		<entry>Annis</entry>
+		<entry>Babau</entry>
+		<entry>Belker</entry>
+		<entry>Blue dragon$Young$</entry>
+		<entry>Bralani</entry>
+		<entry>Brass dragon$Young$</entry>
+		<entry>Chain Devil(Kyton)</entry>
+		<entry>Character(Chieftan)[4]{Sahuagin}</entry>
+		<entry>Character(Guard)[4]{Sahuagin}</entry>
+		<entry>Character(Leader)[1d3+3]{Gnoll}</entry>
+		<entry>Character(Leader)[1d4+1]{Centaur}@Druid@</entry>
+		<entry>Character(Leader)[1d4+2]{Azer}</entry>
+		<entry>Character(Lieutenant)[6]{Drow}@Warrior@</entry>
+		<entry>Character(Lieutenant)[6]{Duergar Dwarf}@Warrior@</entry>
+		<entry>Character(Monitor)[4]{Kuo-toa}@Monk@</entry>
+		<entry>Character(Sergeant)[3]{Centaur}</entry>
+		<entry>Character(Underpriest)[1d4+2]{Sahuagin}@Cleric@</entry>
+		<entry>Character[3]{Derro}@Sorcerer@</entry>
+		<entry>Digester</entry>
+		<entry>Ettin</entry>
+		<entry>Girallon</entry>
+		<entry>Lamia</entry>
+		<entry>Megaraptor</entry>
+		<entry>Monstrous centipede$Gargantuan$</entry>
+		<entry>Salamander$Average$</entry>
+		<entry>Shambling mound</entry>
+		<entry>Skeleton$Megaraptor$</entry>
+		<entry>Tendriculos</entry>
+		<entry>Whale$Baleen$</entry>
+		<entry>White dragon$Juvenile$</entry>
+		<entry>Will-O'-Wisp</entry>
+		<entry>Wyvern</entry>
+		<entry>Xill</entry>
+		<entry>Xorn$Average$</entry>
+		<entry>Zombie$Gray render$</entry>
 	</collection>
 	<collection>
 		<name>7</name>
@@ -6461,7 +6834,7 @@
 		<entry>Character(Scholar)[7]@Monk&amp;Wizard@</entry>
 		<entry>Character(Sellsword)[7]</entry>
 		<entry>Character(Street performer)[7]@Bard&amp;Rogue&amp;Sorcerer@</entry>
-		<entry>Character(Star student)[7]</entry>
+		<entry>Character(Star Student)[7]</entry>
 		<entry>Character(Adviser)[1d2+13]@Expert@</entry>
 		<entry>Character(Architect)[1d2+13]@Expert@</entry>
 		<entry>Character(Artisan)[1d2+13]@Expert@</entry>
@@ -6488,11 +6861,60 @@
 		<entry>Character(Street performer)[1d2+13]@Adept@</entry>
 		<entry>Character(Student)[1d2+13]@Any NPC@</entry>
 		<entry>Character(Traveler)[1d2+13]@Any NPC@</entry>
+		<entry>Character[1d2+13]@Any NPC@</entry>
 		<entry>Character[5]#Ghost#</entry>
 		<entry>Character[5]#Vampire#</entry>
-		<entry>Cryohydro$6 heads$</entry>
-		<entry>Pyrohydro$6 heads$</entry>
+		<entry>Cryohydra$6 heads$</entry>
+		<entry>Pyrohydra$6 heads$</entry>
 		<entry>Dominated creature[7]</entry>
+		<entry>Hydra$8 heads$</entry>
+		<entry>Aboleth</entry>
+		<entry>Animated object$Gargantuan$</entry>
+		<entry>Black dragon$Juvenile$</entry>
+		<entry>Black pudding</entry>
+		<entry>Bronze dragon$Young$</entry>
+		<entry>Bulette</entry>
+		<entry>Chaos beast</entry>
+		<entry>Character(Captain)[7]{Svirfneblin}@Warrior@</entry>
+		<entry>Character(Lieutenant)[5]{Azer}</entry>
+		<entry>Character[4]{Merrow}@Barbarian@</entry>
+		<entry>Character[4]{Ogre}@Barbarian@</entry>
+		<entry>Chimera</entry>
+		<entry>Chuul</entry>
+		<entry>Copper dragon$Young$</entry>
+		<entry>Criosphinx</entry>
+		<entry>Dire bear</entry>
+		<entry>Dragonne</entry>
+		<entry>Drider</entry>
+		<entry>Elasmosaurus</entry>
+		<entry>Elemental(Air)$Huge$</entry>
+		<entry>Elemental(Earth)$Huge$</entry>
+		<entry>Elemental(Fire)$Huge$</entry>
+		<entry>Elemental(Water)$Huge$</entry>
+		<entry>Elephant</entry>
+		<entry>Formian$Taskmaster$</entry>
+		<entry>Gold dragon$Very young$</entry>
+		<entry>Golem$Flesh$</entry>
+		<entry>Hellcat(Bezekira)</entry>
+		<entry>Hill giant</entry>
+		<entry>Invisible stalker</entry>
+		<entry>Lillend</entry>
+		<entry>Medusa</entry>
+		<entry>Monstrous scorpion$Huge$</entry>
+		<entry>Naga$Water$</entry>
+		<entry>Nymph</entry>
+		<entry>Phasm</entry>
+		<entry>Red dragon$Young$</entry>
+		<entry>Remorhaz</entry>
+		<entry>Scorpionfolk</entry>
+		<entry>Silver dragon$Young$</entry>
+		<entry>Skeleton$Cloud giant$</entry>
+		<entry>Slaad$Red$</entry>
+		<entry>Spectre</entry>
+		<entry>Succubus</entry>
+		<entry>Umber hulk</entry>
+		<entry>Whale$Cachalot$</entry>
+		<entry>Yuan-ti$Abomination$</entry>
 	</collection>
 	<collection>
 		<name>8</name>
@@ -6510,7 +6932,7 @@
 		<entry>Character(Scholar)[8]@Monk&amp;Wizard@</entry>
 		<entry>Character(Sellsword)[8]</entry>
 		<entry>Character(Street performer)[8]@Bard&amp;Rogue&amp;Sorcerer@</entry>
-		<entry>Character(Star student)[8]</entry>
+		<entry>Character(Star Student)[8]</entry>
 		<entry>Character(Adviser)[1d2+15]@Expert@</entry>
 		<entry>Character(Architect)[1d2+15]@Expert@</entry>
 		<entry>Character(Artisan)[1d2+15]@Expert@</entry>
@@ -6537,11 +6959,52 @@
 		<entry>Character(Street performer)[1d2+15]@Adept@</entry>
 		<entry>Character(Student)[1d2+15]@Any NPC@</entry>
 		<entry>Character(Traveler)[1d2+15]@Any NPC@</entry>
+		<entry>Character[1d2+15]@Any NPC@</entry>
 		<entry>Character[6]#Ghost#</entry>
 		<entry>Character[6]#Vampire#</entry>
-		<entry>Cryohydro$7 heads$</entry>
-		<entry>Pyrohydro$7 heads$</entry>
+		<entry>Cryohydra$7 heads$</entry>
+		<entry>Pyrohydra$7 heads$</entry>
 		<entry>Dominated creature[8]</entry>
+		<entry>Hydra$9 heads$</entry>
+		<entry>Arrowhawk$Elder$</entry>
+		<entry>Athach</entry>
+		<entry>Behir</entry>
+		<entry>Blue dragon$Juvenile$</entry>
+		<entry>Bodak</entry>
+		<entry>Brass dragon$Juvenile$</entry>
+		<entry>Character(Leader)[1d3+5]{Gnoll}</entry>
+		<entry>Character(Leader)[2d4+2]{Lizardfolk}</entry>
+		<entry>Character(Lieutenant)[5]{Centaur}</entry>
+		<entry>Character(Lieutenant)[7]{Githyanki}</entry>
+		<entry>Character(Sergeant)[7]{Githyanki}</entry>
+		<entry>Character(Teacher)[7]{Githzerai}</entry>
+		<entry>Destrachan</entry>
+		<entry>Dire tiger</entry>
+		<entry>Djinni$Noble$</entry>
+		<entry>Efreeti</entry>
+		<entry>Erinyes</entry>
+		<entry>Giant octopus</entry>
+		<entry>Gorgon</entry>
+		<entry>Gray render</entry>
+		<entry>Green dragon$Juvenile$</entry>
+		<entry>Gynosphinx</entry>
+		<entry>Hellwasp swarm</entry>
+		<entry>Lammasu</entry>
+		<entry>Mind flayer</entry>
+		<entry>Mohrg</entry>
+		<entry>Monstrous spider$Gargantuan$</entry>
+		<entry>Monstrous centipede$Gargantuan Fiendish creature$</entry>
+		<entry>Naga$Dark$</entry>
+		<entry>Ogre mage</entry>
+		<entry>Shadow$Greater$</entry>
+		<entry>Shield guardian</entry>
+		<entry>Skeleton$Red dragon$Young adult$$</entry>
+		<entry>Slaad$Blue$</entry>
+		<entry>Stone giant</entry>
+		<entry>Treant</entry>
+		<entry>Tyrannosaurus</entry>
+		<entry>White dragon$Young adult$</entry>
+		<entry>Xorn$Elder$</entry>
 	</collection>
 	<collection>
 		<name>9</name>
@@ -6559,7 +7022,7 @@
 		<entry>Character(Scholar)[9]@Monk&amp;Wizard@</entry>
 		<entry>Character(Sellsword)[9]</entry>
 		<entry>Character(Street performer)[9]@Bard&amp;Rogue&amp;Sorcerer@</entry>
-		<entry>Character(Star student)[9]</entry>
+		<entry>Character(Star Student)[9]</entry>
 		<entry>Character(Adviser)[1d2+17]@Expert@</entry>
 		<entry>Character(Architect)[1d2+17]@Expert@</entry>
 		<entry>Character(Artisan)[1d2+17]@Expert@</entry>
@@ -6586,11 +7049,48 @@
 		<entry>Character(Street performer)[1d2+17]@Adept@</entry>
 		<entry>Character(Student)[1d2+17]@Any NPC@</entry>
 		<entry>Character(Traveler)[1d2+17]@Any NPC@</entry>
+		<entry>Character[1d2+17]@Any NPC@</entry>
 		<entry>Character[7]#Ghost#</entry>
 		<entry>Character[7]#Vampire#</entry>
-		<entry>Cryohydro$8 heads$</entry>
-		<entry>Pyrohydro$8 heads$</entry>
+		<entry>Cryohydra$8 heads$</entry>
+		<entry>Pyrohydra$8 heads$</entry>
 		<entry>Dominated creature[9]</entry>
+		<entry>Hydra$10 heads$</entry>
+		<entry>Androsphinx</entry>
+		<entry>Avoral</entry>
+		<entry>Black dragon$Young adult$</entry>
+		<entry>Bone Devil(Osyluth)</entry>
+		<entry>Bronze dragon$Juvenile$</entry>
+		<entry>Character(Baron)[1d3+5]{Sahuagin}</entry>
+		<entry>Character(Captain)[7]{Azer}</entry>
+		<entry>Character(Captain)[9]{Drow}@Warrior@</entry>
+		<entry>Character(Captain)[9]{Duergar Dwarf}@Warrior@</entry>
+		<entry>Character(Priest)[7]{Sahuagin}@Cleric@</entry>
+		<entry>Character[1d2]{Frost Giant}@Adept@</entry>
+		<entry>Character[1d4+4]{Derro}@Sorcerer@</entry>
+		<entry>Copper dragon$Juvenile$</entry>
+		<entry>Delver</entry>
+		<entry>Dire shark</entry>
+		<entry>Dragon turtle</entry>
+		<entry>Elemental(Air)$Greater$</entry>
+		<entry>Elemental(Earth)$Greater$</entry>
+		<entry>Elemental(Fire)$Greater$</entry>
+		<entry>Elemental(Water)$Greater$</entry>
+		<entry>Frost giant</entry>
+		<entry>Giant squid</entry>
+		<entry>Gold dragon$Young$</entry>
+		<entry>Monstrous centipede$Colossal$</entry>
+		<entry>Naga$Spirit$</entry>
+		<entry>Nessian warhound</entry>
+		<entry>Night hag</entry>
+		<entry>Roc</entry>
+		<entry>Slaad$Green$</entry>
+		<entry>Stone giant$Elder$</entry>
+		<entry>Tojanida$Elder$</entry>
+		<entry>Triceratops</entry>
+		<entry>Vrock</entry>
+		<entry>Yrthak</entry>
+		<entry>Zelekhut</entry>
 	</collection>
 	<collection>
 		<name>10</name>
@@ -6611,7 +7111,7 @@
 		<entry>Character(Scholar)[10]@Monk&amp;Wizard@</entry>
 		<entry>Character(Sellsword)[10]</entry>
 		<entry>Character(Street performer)[10]@Bard&amp;Rogue&amp;Sorcerer@</entry>
-		<entry>Character(Star student)[10]</entry>
+		<entry>Character(Star Student)[10]</entry>
 		<entry>Character(Adviser)[20]@Expert@</entry>
 		<entry>Character(Architect)[20]@Expert@</entry>
 		<entry>Character(Artisan)[20]@Expert@</entry>
@@ -6636,8 +7136,8 @@
 		<entry>Character(Protestor)[20]@Commoner@</entry>
 		<entry>Character(Servant)[20]@Commoner@</entry>
 		<entry>Character(Street performer)[20]@Adept@</entry>
-		<entry>Character(Student)[20]@Any NPC@</entry>
 		<entry>Character(Traveler)[20]@Any NPC@</entry>
+		<entry>Character[20]@Any NPC@</entry>
 		<entry>Character(Captain)[9]{Githyanki}</entry>
 		<entry>Character[8]#Ghost#</entry>
 		<entry>Character[8]#Vampire#</entry>
@@ -6645,9 +7145,24 @@
 		<entry>Character(Mentor)[9]{Githzerai}</entry>
 		<entry>Character[1d2]{Fire Giant}@Adept@</entry>
 		<entry>Character[1d2]{Frost Giant}@Cleric@</entry>
-		<entry>Cryohydro$9 heads$</entry>
-		<entry>Pyrohydro$9 heads$</entry>
+		<entry>Character[8]{Kuo-toa}@Fighter@</entry>
+		<entry>Cryohydra$9 heads$</entry>
+		<entry>Pyrohydra$9 heads$</entry>
 		<entry>Dominated creature[10]</entry>
+		<entry>Couatl</entry>
+		<entry>Fire giant</entry>
+		<entry>Formian$Myrmarch$</entry>
+		<entry>Golem$Clay$</entry>
+		<entry>Hydra$11 heads$</entry>
+		<entry>Monstrous scorpion$Gargantuan$</entry>
+		<entry>Naga$Guardian$</entry>
+		<entry>Rakshasa</entry>
+		<entry>Razor boar</entry>
+		<entry>Red dragon$Juvenile$</entry>
+		<entry>Silver dragon$Juvenile$</entry>
+		<entry>Salamander$Noble$</entry>
+		<entry>Slaad$Gray$</entry>
+		<entry>White dragon$Adult$</entry>
 	</collection>
 	<collection>
 		<name>11</name>
@@ -6685,13 +7200,24 @@
 		<entry>Cloud giant</entry>
 		<entry>Copper dragon$Young adult$</entry>
 		<entry>Devourer</entry>
-		<entry>Cryohydro$10 heads$</entry>
-		<entry>Pyrohydro$10 heads$</entry>
+		<entry>Cryohydra$10 heads$</entry>
+		<entry>Pyrohydra$10 heads$</entry>
 		<entry>Dominated creature[11]</entry>
 		<entry>Elemental(Air)$Elder$</entry>
 		<entry>Elemental(Earth)$Elder$</entry>
 		<entry>Elemental(Fire)$Elder$</entry>
 		<entry>Elemental(Water)$Elder$</entry>
+		<entry>Hydra$12 heads$</entry>
+		<entry>Gold dragon$Juvenile$</entry>
+		<entry>Golem$Stone$</entry>
+		<entry>Green dragon$Young adult$</entry>
+		<entry>Hezrou</entry>
+		<entry>Hill giant dire wereboar</entry>
+		<entry>Monstrous centipede$Colossal Fiendish creature$</entry>
+		<entry>Monstrous spider$Colossal$</entry>
+		<entry>Nightmare$Cauchemar$</entry>
+		<entry>Retriever</entry>
+		<entry>Wraith$Dread$</entry>
 	</collection>
 	<collection>
 		<name>12</name>
@@ -6700,9 +7226,6 @@
 		<entry>Character(Contract Killer)[12]@Barbarian&amp;Fighter&amp;Ranger&amp;Rogue@</entry>
 		<entry>Character(Crusader)[12]@Paladin@</entry>
 		<entry>Character(Doctor)[12]@Cleric&amp;Druid@</entry>
-		<entry>Character(Leader)[12]@Bard@</entry>
-		<entry>Character(Leader)[12]@Cleric@</entry>
-		<entry>Character(Leader)[12]@Fighter@</entry>
 		<entry>Character(Famous entertainer)[12]@Bard&amp;Sorcerer@</entry>
 		<entry>Character(Famous Priest)[12]@Cleric&amp;Druid&amp;Monk&amp;Paladin@</entry>
 		<entry>Character(Famous researcher)[12]@Wizard@</entry>
@@ -6722,8 +7245,8 @@
 		<entry>Character[10]{Kuo-toa}@Fighter@</entry>
 		<entry>Character[10]#Ghost#</entry>
 		<entry>Character[10]#Vampire#</entry>
-		<entry>Cryohydro$11 heads$</entry>
-		<entry>Pyrohydro$11 heads$</entry>
+		<entry>Cryohydra$11 heads$</entry>
+		<entry>Pyrohydra$11 heads$</entry>
 		<entry>Dominated creature[12]</entry>
 		<entry>Character[1d2+5]{Frost Giant}@Adept@</entry>
 		<entry>Character[1d3+2]{Fire Giant}@Adept@</entry>
@@ -6733,6 +7256,9 @@
 		<entry>Kraken</entry>
 		<entry>Leonal</entry>
 		<entry>Monstrous scorpion$Colossal$</entry>
+		<entry>Purple worm</entry>
+		<entry>Roper</entry>
+		<entry>White dragon$Mature adult$</entry>
 	</collection>
 	<collection>
 		<name>13</name>
@@ -6756,8 +7282,8 @@
 		<entry>Character[11]#Ghost#</entry>
 		<entry>Character[11]#Lich#</entry>
 		<entry>Character[11]#Vampire#</entry>
-		<entry>Cryohydro$12 heads$</entry>
-		<entry>Pyrohydro$12 heads$</entry>
+		<entry>Cryohydra$12 heads$</entry>
+		<entry>Pyrohydra$12 heads$</entry>
 		<entry>Dominated creature[13]</entry>
 		<entry>Character[1d2+5]{Fire Giant}@Adept@</entry>
 		<entry>Character[1d3+2]{Frost Giant}@Sorcerer@</entry>
@@ -6767,6 +7293,11 @@
 		<entry>Green dragon$Adult$</entry>
 		<entry>Ice Devil(Gelugon)</entry>
 		<entry>Lammasu$Golden Protector$</entry>
+		<entry>Red dragon$Young adult$</entry>
+		<entry>Silver dragon$Young adult$</entry>
+		<entry>Slaad$Death$</entry>
+		<entry>Storm giant</entry>
+		<entry>Unicorn$Celestial Charger$</entry>
 	</collection>
 	<collection>
 		<name>14</name>
@@ -6803,6 +7334,7 @@
 		<entry>Nalfeshnee</entry>
 		<entry>Nightwing</entry>
 		<entry>Trumpet archon</entry>
+		<entry>Umber hulk$Truly horrid$</entry>
 	</collection>
 	<collection>
 		<name>15</name>
@@ -6897,7 +7429,6 @@
 		<entry>Character(Jarl)[8]{Frost Giant}@Barbarian&amp;Cleric&amp;Fighter&amp;Sorcerer@</entry>
 		<entry>Character(Sensei)[16]{Githzerai}</entry>
 		<entry>Character(Supreme Leader)[16]{Githyanki}</entry>
-		<entry>Dominated creature[17]</entry>
 		<entry>Character[9]{Mind Flayer}@Sorcerer@</entry>
 		<entry>Formian$Queen$</entry>
 		<entry>Marilith</entry>
@@ -6926,7 +7457,6 @@
 		<entry>Character[16]#Ghost#</entry>
 		<entry>Character[16]#Lich#</entry>
 		<entry>Character[16]#Vampire#</entry>
-		<entry>Dominated creature[18]</entry>
 		<entry>Green dragon$Old$</entry>
 		<entry>Nightcrawler</entry>
 		<entry>Red dragon$Mature adult$</entry>
@@ -6958,7 +7488,6 @@
 		<entry>Character[17]#Ghost#</entry>
 		<entry>Character[17]#Lich#</entry>
 		<entry>Character[17]#Vampire#</entry>
-		<entry>Dominated creature[19]</entry>
 		<entry>Copper dragon$Old$</entry>
 		<entry>Gold dragon$Mature adult$</entry>
 		<entry>Green dragon$Very old$</entry>
@@ -6989,7 +7518,6 @@
 		<entry>Black dragon$Wyrm$</entry>
 		<entry>Brass dragon$Ancient$</entry>
 		<entry>Bronze dragon$Very old$</entry>
-		<entry>Dominated creature[20]</entry>
 		<entry>Copper dragon$Very old$</entry>
 		<entry>Pit fiend</entry>
 		<entry>Red dragon$Old$</entry>
@@ -7041,12 +7569,19 @@
 	</collection>
 	<collection>
 		<name>25</name>
+		<entry>Blue dragon$Great wyrm$</entry>
+		<entry>Bronze dragon$Great wyrm$</entry>
+		<entry>Copper dragon$Great wyrm$</entry>
+		<entry>Gold dragon$Wyrm$</entry>
 	</collection>
 	<collection>
 		<name>26</name>
+		<entry>Red dragon$Great wyrm$</entry>
+		<entry>Silver dragon$Great wyrm$</entry>
 	</collection>
 	<collection>
 		<name>27</name>
+		<entry>Gold dragon$Great wyrm$</entry>
 	</collection>
 	<collection>
 		<name>28</name>
