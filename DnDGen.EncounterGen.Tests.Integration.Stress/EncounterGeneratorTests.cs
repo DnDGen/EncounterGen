@@ -40,12 +40,6 @@ namespace DnDGen.EncounterGen.Tests.Integration.Stress
             Console.WriteLine($"Did not stress the following filters: {string.Join(", ", untestedFilters.OrderBy(f => f))}");
         }
 
-        [Test]
-        public void BUG_StressCivilizedEncounter()
-        {
-            stressor.Stress(() => AssertEncounterInRandomEnvironment(EnvironmentConstants.Civilized, level: PresetLevel));
-        }
-
         private void AssertEncounterInRandomEnvironment(string environment = "", string temperature = "", string timeOfDay = "", int level = 0, string filter = "", bool useFilter = false)
         {
             var encounter = MakeEncounterInRandomEnvironment(level, environment, temperature, timeOfDay, filter, useFilter);
@@ -103,6 +97,30 @@ namespace DnDGen.EncounterGen.Tests.Integration.Stress
 
             if (creature.SubCreature != null)
                 AssertCreature(creature.SubCreature);
+        }
+
+        [Test]
+        public void BUG_StressEncounter()
+        {
+            stressor.Stress(TestProblemEnvironments);
+        }
+
+        private void TestProblemEnvironments()
+        {
+            var problemEnvironments = new (string Env, string Temp, string Time, int Level)[]
+            {
+                (EnvironmentConstants.Civilized, EnvironmentConstants.Temperatures.Cold, EnvironmentConstants.TimesOfDay.Day, 7),
+                (EnvironmentConstants.Civilized, EnvironmentConstants.Temperatures.Cold, EnvironmentConstants.TimesOfDay.Night, 7),
+                (EnvironmentConstants.Civilized, EnvironmentConstants.Temperatures.Temperate, EnvironmentConstants.TimesOfDay.Day, 7),
+                (EnvironmentConstants.Civilized, EnvironmentConstants.Temperatures.Temperate, EnvironmentConstants.TimesOfDay.Night, 7),
+                (EnvironmentConstants.Civilized, EnvironmentConstants.Temperatures.Warm, EnvironmentConstants.TimesOfDay.Day, 7),
+                (EnvironmentConstants.Civilized, EnvironmentConstants.Temperatures.Warm, EnvironmentConstants.TimesOfDay.Night, 7),
+                (EnvironmentConstants.Desert, EnvironmentConstants.Temperatures.Warm, EnvironmentConstants.TimesOfDay.Day, 1),
+            };
+
+            var problemEnvironment = collectionSelector.SelectRandomFrom(problemEnvironments);
+
+            AssertEncounterInRandomEnvironment(problemEnvironment.Env, problemEnvironment.Temp, problemEnvironment.Time, problemEnvironment.Level);
         }
     }
 }
