@@ -100,7 +100,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Stress
         }
 
         [Test]
-        public void BUG_StressEncounter()
+        public void BUG_StressEncounterInProblematicEnvironment()
         {
             stressor.Stress(TestProblemEnvironments);
         }
