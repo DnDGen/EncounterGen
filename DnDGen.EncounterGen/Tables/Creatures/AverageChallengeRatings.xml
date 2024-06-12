@@ -6100,10 +6100,26 @@
 		<entry>Character(Student)[1]@Any NPC@</entry>
 		<entry>Character(Traveler)[1]@Any NPC@</entry>
 		<entry>Character[1]{Aasimar}@Warrior@</entry>
+		<entry>Character[1]{Tiefling}@Warrior@</entry>
 		<entry>Character[1]{Aquatic Elf}@Warrior@</entry>
+		<entry>Character[1]{Gray Elf}@Warrior@</entry>
+		<entry>Character[1]{Half-Elf}@Warrior@</entry>
+		<entry>Character[1]{High Elf}@Warrior@</entry>
+		<entry>Character[1]{Wild Elf}@Warrior@</entry>
+		<entry>Character[1]{Wood Elf}@Warrior@</entry>
 		<entry>Character[1]{Deep Dwarf}@Warrior@</entry>
+		<entry>Character[1]{Hill Dwarf}@Warrior@</entry>
+		<entry>Character[1]{Mountain Dwarf}@Warrior@</entry>
 		<entry>Character[1]{Deep Halfling}@Warrior@</entry>
+		<entry>Character[1]{Lightfoot Halfling}@Warrior@</entry>
+		<entry>Character[1]{Tallfellow Halfling}@Warrior@</entry>
 		<entry>Character[1]{Forest Gnome}@Warrior@</entry>
+		<entry>Character[1]{Rock Gnome}@Warrior@</entry>
+		<entry>Character[1]{Half-Orc}@Warrior@</entry>
+		<entry>Character[1]{Human}@Warrior@</entry>
+		<entry>Character[1]{Hobgoblin}@Warrior@</entry>
+		<entry>Character[1]{Locathah}@Warrior@</entry>
+		<entry>Character[1]{Merfolk}@Warrior@</entry>
 	</collection>
 	<collection>
 		<name>1</name>
@@ -6155,9 +6171,24 @@
 		<entry>Character(Lieutenant)[3]{Rock Gnome}@Warrior@</entry>
 		<entry>Character(Sergeant)[3]{Aquatic Elf}@Warrior@</entry>
 		<entry>Character(Sergeant)[3]{Deep Dwarf}@Warrior@</entry>
+		<entry>Character(Sergeant)[3]{Hill Dwarf}@Warrior@</entry>
+		<entry>Character(Sergeant)[3]{Mountain Dwarf}@Warrior@</entry>
 		<entry>Character(Sergeant)[3]{Deep Halfling}@Warrior@</entry>
+		<entry>Character(Sergeant)[3]{Lightfoot Halfling}@Warrior@</entry>
+		<entry>Character(Sergeant)[3]{Tallfellow Halfling}@Warrior@</entry>
 		<entry>Character(Sergeant)[3]{Forest Gnome}@Warrior@</entry>
+		<entry>Character(Sergeant)[3]{Rock Gnome}@Warrior@</entry>
 		<entry>Character(Sergeant)[3]{Goblin}@Warrior@</entry>
+		<entry>Character(Sergeant)[3]{Gray Elf}@Warrior@</entry>
+		<entry>Character(Sergeant)[3]{High Elf}@Warrior@</entry>
+		<entry>Character(Sergeant)[3]{Half-Elf}@Warrior@</entry>
+		<entry>Character(Sergeant)[3]{Wild Elf}@Warrior@</entry>
+		<entry>Character(Sergeant)[3]{Wood Elf}@Warrior@</entry>
+		<entry>Character(Sergeant)[3]{Human}@Warrior@</entry>
+		<entry>Character(Sergeant)[3]{Half-Orc}@Warrior@</entry>
+		<entry>Character(Sergeant)[3]{Hobgoblin}@Warrior@</entry>
+		<entry>Character(Sergeant)[3]{Kobold}@Warrior@</entry>
+		<entry>Character(Sergeant)[3]{Locathah}@Warrior@</entry>
 		<entry>Dominated creature[1]</entry>
 	</collection>
 	<collection>
