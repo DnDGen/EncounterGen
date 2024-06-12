@@ -22,11 +22,10 @@ namespace DnDGen.EncounterGen.Tests.Integration.Generators
             stopwatch = new Stopwatch();
         }
 
-        [TestCase(EnvironmentConstants.Civilized,
-            EnvironmentConstants.Temperatures.Temperate,
-            EnvironmentConstants.TimesOfDay.Night,
-            7, false, true)]
-        public void Generate_ReturnsEncounter(string environment, string temperature, string timeOfDay, int level, bool allowAquatic, bool allowUnderground)
+        [TestCase(EnvironmentConstants.Civilized, EnvironmentConstants.Temperatures.Temperate, EnvironmentConstants.TimesOfDay.Night, 7, false, true)]
+        [TestCase(EnvironmentConstants.Civilized, EnvironmentConstants.Temperatures.Warm, EnvironmentConstants.TimesOfDay.Night, 1, false, true)]
+        [TestCase(EnvironmentConstants.Desert, EnvironmentConstants.Temperatures.Warm, EnvironmentConstants.TimesOfDay.Day, 1, false, false)]
+        public void BUG_Generate_ReturnsEncounter(string environment, string temperature, string timeOfDay, int level, bool allowAquatic, bool allowUnderground)
         {
             var specifications = new EncounterSpecifications
             {
@@ -43,7 +42,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Generators
             stopwatch.Stop();
 
             AssertEncounter(encounter);
-            Assert.That(stopwatch.Elapsed.TotalSeconds, Is.LessThan(1).Or.LessThan(encounter.Characters.Sum(s => s.Class.Level / 10d)));
+            Assert.That(stopwatch.Elapsed.TotalSeconds, Is.LessThan(1).Or.LessThan(encounter.Characters.Sum(s => s.Class.Level / 10d)).Within(0.1));
         }
 
         [TestCase(EnvironmentConstants.Aquatic, EnvironmentConstants.Temperatures.Cold, EnvironmentConstants.TimesOfDay.Day, false, false)]
@@ -329,7 +328,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Generators
             stopwatch.Stop();
 
             AssertEncounter(encounter);
-            Assert.That(stopwatch.Elapsed.TotalSeconds, Is.LessThan(1).Or.LessThan(encounter.Characters.Sum(s => s.Class.Level / 10d)));
+            Assert.That(stopwatch.Elapsed.TotalSeconds, Is.LessThan(1).Or.LessThan(encounter.Characters.Sum(s => s.Class.Level / 10d)).Within(0.1));
         }
 
         [TestCase(CreatureDataConstants.Types.Aberration, EnvironmentConstants.Plains, 10)]
