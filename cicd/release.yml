@@ -1,0 +1,35 @@
+pool:
+  vmImage: 'windows-latest'
+
+trigger: none
+pr: none
+
+resources:
+  pipelines:
+  - pipeline: DnDGen.EncounterGen
+    source: 'DnDGen.EncounterGen - Build'
+    trigger: 
+      branches:
+      - master
+
+jobs:
+
+- deployment: EncounterGen_Nuget
+  displayName: Deploy EncounterGen NuGet Package
+  environment: Prod
+  strategy:
+    runOnce:
+      deploy:
+        steps:
+        - task: NuGetCommand@2
+          displayName: 'NuGet push'
+          inputs:
+            command: push
+            packagesToPush: '$(Pipeline.Workspace)/**/DnDGen.EncounterGen.*.nupkg'
+            nuGetFeedType: external
+            publishFeedCredentials: NuGet.org
+        - task: GitHubRelease@1
+          displayName: 'GitHub release (create)'
+          inputs:
+            gitHubConnection: 'github.com_cidthecoatrack'
+            assets: '$(Pipeline.Workspace)/**/DnDGen.EncounterGen.*.nupkg'
