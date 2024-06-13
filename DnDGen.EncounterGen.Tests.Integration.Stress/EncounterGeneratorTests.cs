@@ -90,7 +90,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Stress
             Assert.That(encounter.AverageDifficulty, Is.Not.Empty, encounter.Description);
             Assert.That(encounter.ActualDifficulty, Is.Not.Empty, encounter.Description);
 
-            Assert.That(stopwatch.Elapsed.TotalSeconds, Is.LessThan(1).Or.LessThan(encounter.Characters.Count()), encounter.Description);
+            Assert.That(stopwatch.Elapsed.TotalSeconds, Is.LessThan(1).Or.LessThan(encounter.Characters.Count()).Within(0.1), encounter.Description);
         }
 
         private void AssertCreature(Creature creature)

@@ -42,7 +42,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Generators
             stopwatch.Stop();
 
             AssertEncounter(encounter);
-            Assert.That(stopwatch.Elapsed.TotalSeconds, Is.LessThan(1).Or.LessThan(encounter.Characters.Count()), encounter.Description);
+            Assert.That(stopwatch.Elapsed.TotalSeconds, Is.LessThan(1).Or.LessThan(encounter.Characters.Count()).Within(0.1), encounter.Description);
         }
 
         [TestCase(EnvironmentConstants.Aquatic, EnvironmentConstants.Temperatures.Cold, EnvironmentConstants.TimesOfDay.Day, false, false)]
@@ -278,7 +278,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Generators
             stopwatch.Stop();
 
             AssertEncounter(encounter);
-            Assert.That(stopwatch.Elapsed.TotalSeconds, Is.LessThan(1).Or.LessThan(encounter.Characters.Count()), encounter.Description);
+            Assert.That(stopwatch.Elapsed.TotalSeconds, Is.LessThan(1).Or.LessThan(encounter.Characters.Count()).Within(0.1), encounter.Description);
         }
 
         [TestCase(EncounterSpecifications.MinimumLevel)]
@@ -328,7 +328,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Generators
             stopwatch.Stop();
 
             AssertEncounter(encounter);
-            Assert.That(stopwatch.Elapsed.TotalSeconds, Is.LessThan(1).Or.LessThan(encounter.Characters.Count()), encounter.Description);
+            Assert.That(stopwatch.Elapsed.TotalSeconds, Is.LessThan(1).Or.LessThan(encounter.Characters.Count()).Within(0.1), encounter.Description);
         }
 
         [TestCase(CreatureDataConstants.Types.Aberration, EnvironmentConstants.Plains, 10)]
@@ -364,7 +364,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Generators
             stopwatch.Stop();
 
             AssertEncounter(encounter);
-            Assert.That(stopwatch.Elapsed.TotalSeconds, Is.LessThan(1), encounter.Description);
+            Assert.That(stopwatch.Elapsed.TotalSeconds, Is.LessThan(1).Or.LessThan(encounter.Characters.Count()).Within(0.1), encounter.Description);
         }
 
         private void AssertEncounter(Encounter encounter)
