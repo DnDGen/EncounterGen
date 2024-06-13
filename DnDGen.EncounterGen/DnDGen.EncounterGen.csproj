@@ -8,6 +8,8 @@
 	  <Description>This generates encounters for the Dungeons and Dragons 3.5 system.  One can generate encounters of particular levels, times of day, and environments.  One can also filter creature types.  Treasure and equipment are generated.</Description>
 	  <PackageReleaseNotes>
 		  4.0.0: .Net 6, consolidated nuget packages, removed EventGen, removed iterative generators, dependency-compatible Ninject module loading
+		  + #49: rebalance encounter rates
+		  + #35: encounter descriptions
 	  </PackageReleaseNotes>
 	  <PackageProjectUrl>https://github.com/DnDGen/EncounterGen</PackageProjectUrl>
 	  <RepositoryUrl>https://github.com/DnDGen/EncounterGen</RepositoryUrl>
@@ -21,6 +23,7 @@
     <None Remove="Tables\Creatures\AverageChallengeRatings.xml" />
     <None Remove="Tables\Creatures\AverageEncounterLevels.xml" />
     <None Remove="Tables\Creatures\CreatureGroups.xml" />
+    <None Remove="Tables\Creatures\EncounterCreatures.xml" />
     <None Remove="Tables\Creatures\EncounterGroups.xml" />
     <None Remove="Tables\EncounterDifficulty.xml" />
     <None Remove="Tables\EncounterLevelModifiers.xml" />
@@ -37,6 +40,9 @@
     <EmbeddedResource Include="Tables\Creatures\CreatureGroups.xml">
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Tables\Creatures\EncounterCreatures.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Tables\Creatures\EncounterGroups.xml">
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -50,13 +56,13 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="DnDGen.CharacterGen" Version="11.0.4" />
+    <PackageReference Include="DnDGen.CharacterGen" Version="11.0.5" />
     <PackageReference Include="DnDGen.Infrastructure" Version="4.4.3" />
     <PackageReference Include="DnDGen.RollGen" Version="15.5.7" />
     <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
     <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
   </ItemGroup>
 	<ItemGroup>
-		<None Include="18531-twenty-sided-dice-vector-thumb.png" Pack="true" PackagePath=""/>
+		<None Include="18531-twenty-sided-dice-vector-thumb.png" Pack="true" PackagePath="" />
 	</ItemGroup>
 </Project>

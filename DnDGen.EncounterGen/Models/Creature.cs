@@ -2,14 +2,29 @@
 {
     public class Creature
     {
-        public CreatureType Type { get; set; }
-        public int Quantity { get; set; }
-        public string ChallengeRating { get; set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
+        public Creature SubCreature { get; set; }
 
         public Creature()
         {
-            Type = new CreatureType();
-            ChallengeRating = string.Empty;
+            Name = string.Empty;
+            Description = string.Empty;
+        }
+
+        public static bool AreEqual(Creature source, Creature target)
+        {
+            if (source == null && target == null)
+                return true;
+
+            if (source == null ^ target == null)
+                return false;
+
+            var areEqual = source.Name == target.Name;
+            areEqual &= source.Description == target.Description;
+            areEqual &= AreEqual(source.SubCreature, target.SubCreature);
+
+            return areEqual;
         }
     }
 }

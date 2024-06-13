@@ -33,7 +33,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors
         [Test]
         public void BuildCreatureWithSubtype()
         {
-            var creature = encounterFormatter.BuildCreature("creature name", subtype: "subtype");
+            var creature = encounterFormatter.BuildCreature("creature name", subcreature: "subtype");
             Assert.That(creature, Is.EqualTo("creature name$subtype$"));
         }
 
@@ -77,27 +77,6 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors
         {
             var creature = encounterFormatter.BuildCreature("creature name", "description", "subtype", "challenge rating", "base race", "metarace", "class", "other class");
             Assert.That(creature, Is.EqualTo("creature name(description)$subtype$[challenge rating]{base race}#metarace#@class&other class@"));
-        }
-
-        [Test]
-        public void BuildEncounter()
-        {
-            var creaturesAndAmounts = new Dictionary<string, string>();
-            creaturesAndAmounts["creature"] = "amount";
-
-            var encounter = encounterFormatter.BuildEncounter(creaturesAndAmounts);
-            Assert.That(encounter, Is.EqualTo("creature/amount"));
-        }
-
-        [Test]
-        public void BuildEncounterWithMultipleCreaturesAndAmounts()
-        {
-            var creaturesAndAmounts = new Dictionary<string, string>();
-            creaturesAndAmounts["creature"] = "amount";
-            creaturesAndAmounts["other creature"] = "other amount";
-
-            var encounter = encounterFormatter.BuildEncounter(creaturesAndAmounts);
-            Assert.That(encounter, Is.EqualTo("creature/amount,other creature/other amount"));
         }
 
         [Test]
@@ -202,7 +181,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors
         public void SelectSubtype()
         {
             var creature = "creature name(description)$subtype$[challenge rating]{base race}#metarace#@class&other class@";
-            var subtype = encounterFormatter.SelectSubtypeFrom(creature);
+            var subtype = encounterFormatter.SelectSubCreatureFrom(creature);
             Assert.That(subtype, Is.EqualTo("subtype"));
         }
 
@@ -210,7 +189,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors
         public void SelectFurtherSubtype()
         {
             var creature = "creature name(description)$subtype$further subtype$$[challenge rating]{base race}#metarace#@class&other class@";
-            var subtype = encounterFormatter.SelectSubtypeFrom(creature);
+            var subtype = encounterFormatter.SelectSubCreatureFrom(creature);
             Assert.That(subtype, Is.EqualTo("subtype$further subtype$"));
         }
 
@@ -218,47 +197,51 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors
         public void SelectNoSubtype()
         {
             var creature = "creature name(description)[challenge rating]{base race}#metarace#@class&other class@";
-            var subtype = encounterFormatter.SelectSubtypeFrom(creature);
+            var subtype = encounterFormatter.SelectSubCreatureFrom(creature);
             Assert.That(subtype, Is.Empty);
         }
 
         [Test]
-        public void SelectCreatureAndAmount()
+        public void SelectCreatureAndAmount_FromEncounterCreatures()
         {
-            var encounter = "creature/amount";
+            var encounterCreatures = new[] { "creature/amount" };
 
-            var creaturesAndAmounts = encounterFormatter.SelectCreaturesAndAmountsFrom(encounter);
+            var creaturesAndAmounts = encounterFormatter.SelectCreaturesAndAmountsFrom(encounterCreatures);
             Assert.That(creaturesAndAmounts["creature"], Is.EqualTo("amount"));
             Assert.That(creaturesAndAmounts.Count, Is.EqualTo(1));
         }
 
         [Test]
-        public void SelectCreatureAndAmountWithEverything()
+        public void SelectCreatureAndAmountWithEverything_FromEncounterCreatures()
         {
-            var encounter = "creature name(description)$subtype$[challenge rating]{base race}#metarace#@class&other class@/amount";
+            var encounterCreatures = new[] { "creature name(description)$subtype$[challenge rating]{base race}#metarace#@class&other class@/amount" };
 
-            var creaturesAndAmounts = encounterFormatter.SelectCreaturesAndAmountsFrom(encounter);
+            var creaturesAndAmounts = encounterFormatter.SelectCreaturesAndAmountsFrom(encounterCreatures);
             Assert.That(creaturesAndAmounts["creature name(description)$subtype$[challenge rating]{base race}#metarace#@class&other class@"], Is.EqualTo("amount"));
             Assert.That(creaturesAndAmounts.Count, Is.EqualTo(1));
         }
 
         [Test]
-        public void SelectCreaturesAndAmounts()
+        public void SelectCreaturesAndAmounts_FromEncounterCreatures()
         {
-            var encounter = "creature/amount,other creature/other amount";
+            var encounterCreatures = new[] { "creature/amount", "other creature/other amount" };
 
-            var creaturesAndAmounts = encounterFormatter.SelectCreaturesAndAmountsFrom(encounter);
+            var creaturesAndAmounts = encounterFormatter.SelectCreaturesAndAmountsFrom(encounterCreatures);
             Assert.That(creaturesAndAmounts["creature"], Is.EqualTo("amount"));
             Assert.That(creaturesAndAmounts["other creature"], Is.EqualTo("other amount"));
             Assert.That(creaturesAndAmounts.Count, Is.EqualTo(2));
         }
 
         [Test]
-        public void SelectCreaturesAndAmountsWithEverything()
+        public void SelectCreaturesAndAmountsWithEverything_FromEncounterCreatures()
         {
-            var encounter = "creature name(description)$subtype$[challenge rating]{base race}#metarace#@class&other class@/amount,other creature/other amount";
+            var encounterCreatures = new[]
+            {
+                "creature name(description)$subtype$[challenge rating]{base race}#metarace#@class&other class@/amount",
+                "other creature/other amount"
+            };
 
-            var creaturesAndAmounts = encounterFormatter.SelectCreaturesAndAmountsFrom(encounter);
+            var creaturesAndAmounts = encounterFormatter.SelectCreaturesAndAmountsFrom(encounterCreatures);
             Assert.That(creaturesAndAmounts["creature name(description)$subtype$[challenge rating]{base race}#metarace#@class&other class@"], Is.EqualTo("amount"));
             Assert.That(creaturesAndAmounts["other creature"], Is.EqualTo("other amount"));
             Assert.That(creaturesAndAmounts.Count, Is.EqualTo(2));

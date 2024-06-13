@@ -9,6 +9,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Tables
         [TestCase(TableNameConstants.AverageChallengeRatings, "AverageChallengeRatings")]
         [TestCase(TableNameConstants.AverageEncounterLevels, "AverageEncounterLevels")]
         [TestCase(TableNameConstants.CreatureGroups, "CreatureGroups")]
+        [TestCase(TableNameConstants.EncounterCreatures, "EncounterCreatures")]
         [TestCase(TableNameConstants.EncounterGroups, "EncounterGroups")]
         [TestCase(TableNameConstants.EncounterLevelModifiers, "EncounterLevelModifiers")]
         [TestCase(TableNameConstants.TreasureGroups, "TreasureGroups")]

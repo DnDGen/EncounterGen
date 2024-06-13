@@ -30,11 +30,11 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables
 
         public abstract void EntriesAreComplete();
 
-        protected void AssertEntriesAreComplete(IEnumerable<string> entries)
+        protected void AssertNamesAreComplete(IEnumerable<string> entries)
         {
-            AssertNoDuplicates(entries);
-            AssertNoDuplicates(table.Keys);
-            AssertWholeCollection(entries, table.Keys);
+            Assert.That(entries, Is.Unique);
+            Assert.That(table.Keys, Is.Unique);
+            AssertCollection(entries, table.Keys);
         }
 
         protected IEnumerable<string> GetEntries()
@@ -68,84 +68,91 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables
             return collection.Distinct();
         }
 
-        protected IEnumerable<string> GetAllCreaturesFromEncounters()
+        protected IEnumerable<string> GetAllCreaturesFromEncounters(bool addExtra = true) => GetAllCreaturesFromEncounterGroup(GroupConstants.All, addExtra);
+
+        protected IEnumerable<string> GetAllCreaturesFromEncounterGroup(string group, bool addExtra = true)
         {
-            var allEncounters = collectionSelector.SelectAllFrom(TableNameConstants.EncounterGroups).Values.SelectMany(v => v);
-            var allCreatures = allEncounters.SelectMany(e => encounterFormatter.SelectCreaturesAndAmountsFrom(e).Keys);
+            var encounters = collectionSelector.SelectFrom(TableNameConstants.EncounterGroups, group);
+            var creaturesAndAmounts = collectionSelector.SelectAllFrom(TableNameConstants.EncounterCreatures);
+            var allCreatures = creaturesAndAmounts
+                .Where(kvp => encounters.Contains(kvp.Key))
+                .SelectMany(kvp => encounterFormatter.SelectCreaturesAndAmountsFrom(kvp.Value).Keys)
+                .Distinct();
 
-            //INFO: These are creatues that do not explicitly appear in encounters, but we wish to include them anyway
-            var extraCreatures = new[]
+            if (group == GroupConstants.All && addExtra)
             {
-                CreatureConstants.DominatedCreature_CR1,
-                CreatureConstants.DominatedCreature_CR2,
-                CreatureConstants.DominatedCreature_CR3,
-                CreatureConstants.DominatedCreature_CR5,
-                CreatureConstants.DominatedCreature_CR6,
-                CreatureConstants.Mephit_Air,
-                CreatureConstants.Mephit_Dust,
-                CreatureConstants.Mephit_Earth,
-                CreatureConstants.Mephit_Fire,
-                CreatureConstants.Mephit_Ice,
-                CreatureConstants.Mephit_Magma,
-                CreatureConstants.Mephit_Ooze,
-                CreatureConstants.Mephit_Salt,
-                CreatureConstants.Mephit_Steam,
-                CreatureConstants.Mephit_Water,
-            };
+                //INFO: These are creatues that do not explicitly appear in encounters, but we wish to include them anyway
+                var extraCreatures = new[]
+                {
+                    CreatureDataConstants.DominatedCreature_CR1,
+                    CreatureDataConstants.DominatedCreature_CR2,
+                    CreatureDataConstants.DominatedCreature_CR3,
+                    CreatureDataConstants.DominatedCreature_CR4,
+                    CreatureDataConstants.DominatedCreature_CR5,
+                    CreatureDataConstants.DominatedCreature_CR6,
+                    CreatureDataConstants.Mephit_Air,
+                    CreatureDataConstants.Mephit_Dust,
+                    CreatureDataConstants.Mephit_Earth,
+                    CreatureDataConstants.Mephit_Fire,
+                    CreatureDataConstants.Mephit_Ice,
+                    CreatureDataConstants.Mephit_Magma,
+                    CreatureDataConstants.Mephit_Ooze,
+                    CreatureDataConstants.Mephit_Salt,
+                    CreatureDataConstants.Mephit_Steam,
+                    CreatureDataConstants.Mephit_Water,
+                };
 
-            allCreatures = allCreatures.Union(extraCreatures);
+                allCreatures = allCreatures.Union(extraCreatures);
+            }
 
             return allCreatures;
         }
 
-        protected void AssertWholeCollection(IEnumerable<string> expected, IEnumerable<string> actual)
+        protected void AssertCollection(IEnumerable<string> expected, IEnumerable<string> actual)
         {
-            if (actual.Count() == 1 && expected.Count() == 1)
-                Assert.That(actual.Single(), Is.EqualTo(expected.Single()));
+            if (expected.Count() >= 300)
+            {
+                //When there are a lot of expected items, it truncates the test message and won't let you see what is missing
+                Assert.That(expected.Except(actual), Is.Empty, $"Missing {expected.Except(actual).Count()} (Add to table)");
+                Assert.That(actual.Except(expected), Is.Empty, $"Extra {actual.Except(expected).Count()} (Delete from table)");
+            }
 
-            var missing = expected.Except(actual);
-            Assert.That(missing, Is.Empty, $"{missing.Count()} of {expected.Count()} missing");
-
-            var extra = actual.Except(expected);
-            Assert.That(extra, Is.Empty, $"{extra.Count()} extra");
-
-            Assert.That(actual.Count, Is.EqualTo(expected.Count()));
             Assert.That(actual, Is.EquivalentTo(expected));
+        }
+
+        protected void AssertOrderedCollection(IEnumerable<string> expected, IEnumerable<string> actual)
+        {
+            Assert.That(actual, Is.EqualTo(expected));
         }
 
         protected void AssertContainedCollection(IEnumerable<string> contained, IEnumerable<string> container)
         {
-            var extra = contained.Except(container);
-            Assert.That(extra, Is.Empty, $"{extra.Count()} extra in contained collection that are not in container");
-
             Assert.That(contained, Is.SubsetOf(container));
         }
 
-        public virtual void Collection(string entry, params string[] items)
+        public virtual void AssertDistinctCollection(IEnumerable<string> expected, IEnumerable<string> actual)
         {
-            Assert.That(table.Keys, Contains.Item(entry));
-            AssertWholeCollection(items, table[entry]);
+            Assert.That(expected, Is.Unique, "Expected");
+            Assert.That(actual, Is.Unique, "Actual");
+            AssertCollection(expected, actual);
         }
 
-        public virtual void DistinctCollection(string entry, params string[] items)
+        public virtual void AssertCollection(string entry, params string[] items)
         {
-            AssertNoDuplicates(items);
-            Assert.That(table.Keys, Contains.Item(entry));
-            AssertNoDuplicates(table[entry]);
-
-            AssertWholeCollection(items, table[entry]);
+            Assert.That(table, Contains.Key(entry));
+            AssertCollection(items, table[entry]);
         }
 
-        private void AssertNoDuplicates(IEnumerable<string> collection)
+        public virtual void AssertDistinctCollection(string entry, params string[] items)
         {
-            var duplicates = collection.Where(i => collection.Count(ii => ii == i) > 1).Distinct();
-            Assert.That(collection, Is.Unique, $"Duplicates: {string.Join(", ", duplicates)}");
+            Assert.That(table, Contains.Key(entry));
+            AssertDistinctCollection(items, table[entry]);
         }
 
-        public virtual void OrderedCollection(string entry, params string[] items)
+        public virtual void AssertOrderedCollection(string entry, params string[] items)
         {
-            Collection(entry, items);
-            Assert.That(table[entry], Is.EqualTo(items));
+            Assert.That(table, Contains.Key(entry));
+            AssertOrderedCollection(items, table[entry]);
         }
     }
 }

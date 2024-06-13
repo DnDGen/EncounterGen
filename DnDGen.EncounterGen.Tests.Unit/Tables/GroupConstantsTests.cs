@@ -6,8 +6,8 @@ namespace DnDGen.EncounterGen.Tests.Unit.Tables
     [TestFixture]
     public class GroupConstantsTests
     {
-        [TestCase(GroupConstants.RequiresSubtype, "Requires Subtype")]
-        [TestCase(GroupConstants.UseSubtypeForTreasure, "Use Subtype for Treasure")]
+        [TestCase(GroupConstants.RequiresSubcreature, "Requires Sub-creature")]
+        [TestCase(GroupConstants.UseSubcreatureForTreasure, "Use Sub-creature for Treasure")]
         [TestCase(GroupConstants.Wilderness, "Wilderness")]
         [TestCase(GroupConstants.Extraplanar, "Extraplanar")]
         public void Constant(string constant, string value)

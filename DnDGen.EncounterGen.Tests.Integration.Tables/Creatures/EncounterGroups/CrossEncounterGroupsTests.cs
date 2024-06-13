@@ -1,95 +1,103 @@
 ﻿using DnDGen.EncounterGen.Generators;
 using DnDGen.EncounterGen.Models;
+using DnDGen.EncounterGen.Selectors.Collections;
 using DnDGen.EncounterGen.Tables;
 using NUnit.Framework;
 using System;
-using System.Collections.Generic;
 using System.Linq;
 
 namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
 {
     [TestFixture]
-    public class CrossEncounterGroupsTests : EncounterGroupsTests
+    public class CrossEncounterGroupsTests : EncounterGroupsTableTests
     {
         private IEncounterVerifier encounterVerifier;
+        private IEncounterCollectionSelector encounterCollectionSelector;
 
         [SetUp]
         public void Setup()
         {
             encounterVerifier = GetNewInstanceOf<IEncounterVerifier>();
+            encounterCollectionSelector = GetNewInstanceOf<IEncounterCollectionSelector>();
         }
 
         [Test]
         public override void EntriesAreComplete()
         {
-            AssertEncounterGroupEntriesAreComplete();
-        }
-
-        private IEnumerable<string> GetTimesOfDayEncounters()
-        {
-            var dayEncounters = GetEncountersFromCreatureGroup(EnvironmentConstants.TimesOfDay.Day);
-            var nightEncounters = GetEncountersFromCreatureGroup(EnvironmentConstants.TimesOfDay.Night);
-
-            return dayEncounters.Union(nightEncounters);
-        }
-
-        private IEnumerable<string> GetUnfilteredEncounters()
-        {
-            var allEncounters = new List<string>();
-
-            var categories = new[] {
-                EnvironmentConstants.Aquatic,
-                EnvironmentConstants.Underground,
-                EnvironmentConstants.Land,
-                EnvironmentConstants.Any,
-                EnvironmentConstants.Civilized,
-                EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Aquatic,
-                EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic,
-                EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic,
-                EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Civilized,
-                EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Civilized,
-                EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Civilized,
-                EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Desert,
-                EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert,
-                EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert,
-                EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Forest,
-                EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest,
-                EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest,
-                EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Hills,
-                EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills,
-                EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills,
-                EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Marsh,
-                EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh,
-                EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh,
-                EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain,
-                EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain,
-                EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain,
-                EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Plains,
-                EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains,
-                EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains,
-                EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Underground,
-                EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Underground,
-                EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Underground,
-                EnvironmentConstants.Underground + EnvironmentConstants.Aquatic,
-                GroupConstants.Extraplanar,
-                GroupConstants.Wilderness,
-            };
-
-            foreach (var category in categories)
-            {
-                var categoryEncounters = GetEncountersFromCreatureGroup(category);
-                allEncounters.AddRange(categoryEncounters);
-            }
-
-            return allEncounters;
+            AssertEncounterGroupNamesAreComplete();
         }
 
         [Test]
-        public void AllTimeOfDayEncountersArePresentInOtherCategories()
+        public void AllEncountersAreInTimesOfDay()
         {
-            var allTimesOfDayEncounters = GetTimesOfDayEncounters();
-            var nonTimeOfDayEncounters = GetUnfilteredEncounters();
-            AssertContainedCollection(allTimesOfDayEncounters, nonTimeOfDayEncounters);
+            var allEncounters = EncounterConstants.GetAll();
+            var timesOfDay = new[] { EnvironmentConstants.TimesOfDay.Day, EnvironmentConstants.TimesOfDay.Night };
+            var timesOfDayEncounters = timesOfDay.SelectMany(t => table[t]).Distinct();
+            Assert.That(timesOfDayEncounters, Is.EquivalentTo(allEncounters));
+        }
+
+        [Test]
+        public void AllEncountersAreInEnvironments()
+        {
+            var allEncounters = EncounterConstants.GetAll();
+            var environments = new[]
+            {
+                EnvironmentConstants.Aquatic,
+                EnvironmentConstants.Underground,
+                EnvironmentConstants.Any,
+                EnvironmentConstants.Land,
+                EnvironmentConstants.Civilized,
+                EnvironmentConstants.Underground + EnvironmentConstants.Aquatic,
+                EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Aquatic,
+                EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Civilized,
+                EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Desert,
+                EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Forest,
+                EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Hills,
+                EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Marsh,
+                EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain,
+                EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Plains,
+                EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Underground,
+                EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic,
+                EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Civilized,
+                EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert,
+                EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest,
+                EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills,
+                EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh,
+                EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain,
+                EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains,
+                EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Underground,
+                EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic,
+                EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Civilized,
+                EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert,
+                EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest,
+                EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills,
+                EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh,
+                EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain,
+                EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains,
+                EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Underground,
+                EnvironmentConstants.Plane_Air,
+                EnvironmentConstants.Plane_Astral,
+                EnvironmentConstants.Plane_Chaotic,
+                EnvironmentConstants.Plane_ChaoticEvil,
+                EnvironmentConstants.Plane_ChaoticGood,
+                EnvironmentConstants.Plane_Earth,
+                EnvironmentConstants.Plane_Ethereal,
+                EnvironmentConstants.Plane_Evil,
+                EnvironmentConstants.Plane_Fire,
+                EnvironmentConstants.Plane_Good,
+                EnvironmentConstants.Plane_Lawful,
+                EnvironmentConstants.Plane_LawfulEvil,
+                EnvironmentConstants.Plane_LawfulGood,
+                EnvironmentConstants.Plane_Limbo,
+                EnvironmentConstants.Plane_NeutralEvil,
+                EnvironmentConstants.Plane_PositiveEnergy,
+                EnvironmentConstants.Plane_Shadow,
+                EnvironmentConstants.Plane_Water,
+                GroupConstants.Extraplanar,
+            };
+
+            var environmentEncounters = environments.SelectMany(e => table[e]).Distinct();
+            Assert.That(environmentEncounters, Is.EquivalentTo(allEncounters));
         }
 
         [Test]
@@ -97,88 +105,49 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
         {
             var types = new[]
             {
-                CreatureConstants.Types.Aberration,
-                CreatureConstants.Types.Animal,
-                CreatureConstants.Types.Construct,
-                CreatureConstants.Types.Dragon,
-                CreatureConstants.Types.Elemental,
-                CreatureConstants.Types.Fey,
-                CreatureConstants.Types.Giant,
-                CreatureConstants.Types.Humanoid,
-                CreatureConstants.Types.MagicalBeast,
-                CreatureConstants.Types.MonstrousHumanoid,
-                CreatureConstants.Types.Ooze,
-                CreatureConstants.Types.Outsider,
-                CreatureConstants.Types.Plant,
-                CreatureConstants.Types.Undead,
-                CreatureConstants.Types.Vermin,
+                CreatureDataConstants.Types.Aberration,
+                CreatureDataConstants.Types.Animal,
+                CreatureDataConstants.Types.Construct,
+                CreatureDataConstants.Types.Dragon,
+                CreatureDataConstants.Types.Elemental,
+                CreatureDataConstants.Types.Fey,
+                CreatureDataConstants.Types.Giant,
+                CreatureDataConstants.Types.Humanoid,
+                CreatureDataConstants.Types.MagicalBeast,
+                CreatureDataConstants.Types.MonstrousHumanoid,
+                CreatureDataConstants.Types.Ooze,
+                CreatureDataConstants.Types.Outsider,
+                CreatureDataConstants.Types.Plant,
+                CreatureDataConstants.Types.Undead,
+                CreatureDataConstants.Types.Vermin,
             };
 
             var excludedCreatures = new[] {
-                CreatureConstants.DominatedCreature,
-                CreatureConstants.DominatedCreature_CR1,
-                CreatureConstants.DominatedCreature_CR10,
-                CreatureConstants.DominatedCreature_CR11,
-                CreatureConstants.DominatedCreature_CR12,
-                CreatureConstants.DominatedCreature_CR13,
-                CreatureConstants.DominatedCreature_CR14,
-                CreatureConstants.DominatedCreature_CR15,
-                CreatureConstants.DominatedCreature_CR16,
-                CreatureConstants.DominatedCreature_CR2,
-                CreatureConstants.DominatedCreature_CR3,
-                CreatureConstants.DominatedCreature_CR4,
-                CreatureConstants.DominatedCreature_CR5,
-                CreatureConstants.DominatedCreature_CR6,
-                CreatureConstants.DominatedCreature_CR7,
-                CreatureConstants.DominatedCreature_CR8,
-                CreatureConstants.DominatedCreature_CR9,
-                CreatureConstants.Noncombatant,
+                CreatureDataConstants.DominatedCreature,
+                CreatureDataConstants.DominatedCreature_CR1,
+                CreatureDataConstants.DominatedCreature_CR10,
+                CreatureDataConstants.DominatedCreature_CR11,
+                CreatureDataConstants.DominatedCreature_CR12,
+                CreatureDataConstants.DominatedCreature_CR13,
+                CreatureDataConstants.DominatedCreature_CR14,
+                CreatureDataConstants.DominatedCreature_CR15,
+                CreatureDataConstants.DominatedCreature_CR16,
+                CreatureDataConstants.DominatedCreature_CR2,
+                CreatureDataConstants.DominatedCreature_CR3,
+                CreatureDataConstants.DominatedCreature_CR4,
+                CreatureDataConstants.DominatedCreature_CR5,
+                CreatureDataConstants.DominatedCreature_CR6,
+                CreatureDataConstants.DominatedCreature_CR7,
+                CreatureDataConstants.DominatedCreature_CR8,
+                CreatureDataConstants.DominatedCreature_CR9,
+                CreatureDataConstants.Noncombatant,
             };
 
             var allCreatures = GetAllCreaturesFromEncounters();
             allCreatures = allCreatures.Except(excludedCreatures);
 
             var creaturesWithType = allCreatures.Where(c => encounterVerifier.CreatureIsValid(c, types));
-            AssertWholeCollection(allCreatures, creaturesWithType);
-        }
-
-        [TestCase(EnvironmentConstants.Aquatic)]
-        [TestCase(EnvironmentConstants.Underground)]
-        [TestCase(EnvironmentConstants.Land)]
-        [TestCase(EnvironmentConstants.Any)]
-        [TestCase(EnvironmentConstants.Civilized)]
-        [TestCase(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Aquatic)]
-        [TestCase(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Desert)]
-        [TestCase(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Forest)]
-        [TestCase(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Hills)]
-        [TestCase(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Marsh)]
-        [TestCase(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain)]
-        [TestCase(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Plains)]
-        [TestCase(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic)]
-        [TestCase(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert)]
-        [TestCase(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
-        [TestCase(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh)]
-        [TestCase(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
-        [TestCase(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains)]
-        [TestCase(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic)]
-        [TestCase(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
-        [TestCase(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest)]
-        [TestCase(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
-        [TestCase(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh)]
-        [TestCase(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain)]
-        [TestCase(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
-        [TestCase(GroupConstants.Extraplanar)]
-        [TestCase(GroupConstants.Wilderness)]
-        public void BUG_NoEncountersHaveMultipleEntriesOfSameCreature(string category)
-        {
-            var encounters = GetEncountersFromCreatureGroup(category);
-
-            foreach (var encounter in encounters)
-            {
-                var creatures = encounterFormatter.SelectCreaturesAndAmountsFrom(encounter).Keys;
-                Assert.That(creatures, Is.Unique, encounter);
-            }
+            AssertCollection(allCreatures, creaturesWithType);
         }
 
         [TestCase(EnvironmentConstants.Temperatures.Cold, EnvironmentConstants.TimesOfDay.Day, 1)]
@@ -307,10 +276,10 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
             Assert.That(percentage, Is.LessThanOrEqualTo(.10));
         }
 
-        private bool IsUndead(string creature)
+        private bool IsUndead(string encounter)
         {
-            var undead = collectionSelector.Explode(TableNameConstants.CreatureGroups, CreatureConstants.Types.Undead);
-            return undead.Contains(creature);
+            var undead = collectionSelector.SelectFrom(TableNameConstants.EncounterGroups, CreatureDataConstants.Types.Undead);
+            return undead.Contains(encounter);
         }
 
         private double GetPercentage(string environment, string temperature, string timeOfDay, int level, Func<string, bool> isInSubgroup)
@@ -321,10 +290,10 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
             specifications.Temperature = temperature;
             specifications.TimeOfDay = timeOfDay;
 
-            var encounters = encounterCollectionSelector.SelectAllWeightedFrom(specifications);
+            var encounters = encounterCollectionSelector.SelectAllWeightedEncountersFrom(specifications);
 
-            var subgroupCreatures = encounters.Where(e => isInSubgroup(e.First().Key));
-            var subgroupCount = subgroupCreatures.Count();
+            var subgroupEncounters = encounters.Where(isInSubgroup);
+            var subgroupCount = subgroupEncounters.Count();
             var encounterCount = (double)encounters.Count();
             var percentage = subgroupCount / encounterCount;
 
@@ -447,10 +416,11 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
             Assert.That(percentage, Is.Positive);
         }
 
-        private bool IsUndeadCharacter(string creature)
+        private bool IsUndeadCharacter(string encounter)
         {
-            var name = encounterFormatter.SelectNameFrom(creature);
-            return IsUndead(creature) && name == CreatureConstants.Character;
+            var creatures = collectionSelector.SelectFrom(TableNameConstants.EncounterCreatures, encounter);
+            var names = creatures.Select(encounterFormatter.SelectNameFrom);
+            return IsUndead(encounter) && names.Contains(CreatureDataConstants.Character);
         }
     }
 }

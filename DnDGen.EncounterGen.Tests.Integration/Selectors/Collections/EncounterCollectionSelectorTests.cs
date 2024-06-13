@@ -2,7 +2,6 @@
 using DnDGen.EncounterGen.Models;
 using DnDGen.EncounterGen.Selectors.Collections;
 using NUnit.Framework;
-using System.Collections.Generic;
 
 namespace DnDGen.EncounterGen.Tests.Integration.Selectors.Collections
 {
@@ -39,16 +38,8 @@ namespace DnDGen.EncounterGen.Tests.Integration.Selectors.Collections
             specifications.AllowUnderground = allowUnderground;
             specifications.CreatureTypeFilters = filters;
 
-            var encounter = encounterCollectionSelector.SelectRandomFrom(specifications);
-
-            AssertEncounter(encounter);
-        }
-
-        private void AssertEncounter(Dictionary<string, string> encounter)
-        {
+            var encounter = encounterCollectionSelector.SelectRandomEncounterFrom(specifications);
             Assert.That(encounter, Is.Not.Empty);
-            Assert.That(encounter.Keys, Is.All.Not.Empty);
-            Assert.That(encounter.Values, Is.All.Not.Empty);
         }
 
         [TestCase(1, EnvironmentConstants.Temperatures.Cold, EnvironmentConstants.Forest, EnvironmentConstants.TimesOfDay.Night, false, true)]
@@ -73,12 +64,9 @@ namespace DnDGen.EncounterGen.Tests.Integration.Selectors.Collections
             specifications.AllowUnderground = allowUnderground;
             specifications.CreatureTypeFilters = filters;
 
-            var collection = encounterCollectionSelector.SelectAllWeightedFrom(specifications);
-
+            var collection = encounterCollectionSelector.SelectAllWeightedEncountersFrom(specifications);
             Assert.That(collection, Is.Not.Empty);
-
-            foreach (var encounter in collection)
-                AssertEncounter(encounter);
+            Assert.That(collection, Is.All.Not.Empty);
         }
     }
 }

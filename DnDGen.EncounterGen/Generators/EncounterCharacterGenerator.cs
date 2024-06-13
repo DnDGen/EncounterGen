@@ -32,10 +32,10 @@ namespace DnDGen.EncounterGen.Generators
             this.characterGenerator = characterGenerator;
         }
 
-        public IEnumerable<Character> GenerateFrom(IEnumerable<Creature> creatures)
+        public IEnumerable<Character> GenerateFrom(IEnumerable<EncounterCreature> creatures)
         {
             var characters = new List<Character>();
-            var characterCreatures = creatures.Where(c => IsCharacter(c.Type));
+            var characterCreatures = creatures.Where(c => IsCharacter(c.Creature));
 
             foreach (var characterCreature in characterCreatures)
             {
@@ -51,13 +51,13 @@ namespace DnDGen.EncounterGen.Generators
             return characters;
         }
 
-        private bool IsCharacter(CreatureType creatureType)
+        private bool IsCharacter(Creature creature)
         {
-            if (IsCharacter(creatureType.Name))
+            if (IsCharacter(creature.Name))
                 return true;
 
-            if (creatureType.SubType != null)
-                return IsCharacter(creatureType.SubType);
+            if (creature.SubCreature != null)
+                return IsCharacter(creature.SubCreature);
 
             return false;
         }
@@ -65,12 +65,12 @@ namespace DnDGen.EncounterGen.Generators
         private bool IsCharacter(string creature)
         {
             var name = encounterFormatter.SelectNameFrom(creature);
-            return name == CreatureConstants.Character;
+            return name == CreatureDataConstants.Character;
         }
 
-        private Character GenerateCharacter(Creature creature)
+        private Character GenerateCharacter(EncounterCreature creature)
         {
-            var characterTemplate = GetCharacterTemplate(creature.Type);
+            var characterTemplate = GetCharacterTemplate(creature.Creature);
 
             var setBaseRace = encounterFormatter.SelectBaseRaceFrom(characterTemplate);
             var setMetarace = encounterFormatter.SelectMetaraceFrom(characterTemplate);
@@ -125,13 +125,13 @@ namespace DnDGen.EncounterGen.Generators
             return characterGenerator.GenerateWith(alignmentRandomizer, chosenClassNameRandomizer, setLevelRandomizer, chosenBaseRaceRandomizer, chosenMetaraceRandomizer, abilitiesRandomizer);
         }
 
-        private string GetCharacterTemplate(CreatureType creaturetype)
+        private string GetCharacterTemplate(Creature creature)
         {
-            if (IsCharacter(creaturetype.Name))
-                return creaturetype.Name;
+            if (IsCharacter(creature.Name))
+                return creature.Name;
 
-            if (creaturetype.SubType != null)
-                return GetCharacterTemplate(creaturetype.SubType);
+            if (creature.SubCreature != null)
+                return GetCharacterTemplate(creature.SubCreature);
 
             return string.Empty;
         }

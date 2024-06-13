@@ -48,45 +48,38 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
             mockCollectionSelector.Setup(s => s.Explode(TableNameConstants.CreatureGroups, Filter)).Returns(filterGroup);
         }
 
-        private void SetupCreaturesAndAmounts(int setupLevel, string creatureName = "creature", params string[] additionalCreaturesAndAmounts)
+        private void SetupEncounter(string encounter, int setupLevel)
         {
-            var encounter = SetUpEncounter(creatureName, "just the right amount");
-
-            for (var i = 0; i < additionalCreaturesAndAmounts.Length; i += 2)
-            {
-                encounter[additionalCreaturesAndAmounts[i]] = additionalCreaturesAndAmounts[i + 1];
-            }
-
-            var creaturesAndAmounts = new List<Dictionary<string, string>>();
-            creaturesAndAmounts.Add(encounter);
-
-            mockEncounterCollectionSelector.Setup(s => s.SelectAllWeightedFrom(It.Is<EncounterSpecifications>(es => es.Level == setupLevel))).Returns(creaturesAndAmounts);
+            mockEncounterCollectionSelector
+                .Setup(s => s.SelectPossibleEncountersFrom(
+                    It.IsAny<string>(),
+                    It.IsAny<string>(),
+                    It.IsAny<string>(),
+                    setupLevel,
+                    It.IsAny<bool>(),
+                    It.IsAny<bool>(),
+                    It.IsAny<string[]>()))
+                .Returns(new[] { encounter });
         }
 
-        private void SetupCreaturesAndAmountsWithFilters(int setupLevel)
+        private void SetupEncounterWithFilters(string encounter, int setupLevel)
         {
-            var encounter = SetUpEncounter("creature", "just the right amount");
-
-            var creaturesAndAmounts = new List<Dictionary<string, string>>();
-            creaturesAndAmounts.Add(encounter);
-
-            mockEncounterCollectionSelector.Setup(s => s.SelectAllWeightedFrom(It.Is<EncounterSpecifications>(es => es.Level == setupLevel))).Returns(creaturesAndAmounts);
-        }
-
-        private Dictionary<string, string> SetUpEncounter(params string[] creaturesAndAmounts)
-        {
-            var encounter = new Dictionary<string, string>();
-
-            for (var i = 0; i < creaturesAndAmounts.Length; i += 2)
-                encounter[creaturesAndAmounts[i]] = creaturesAndAmounts[i + 1];
-
-            return encounter;
+            mockEncounterCollectionSelector
+                .Setup(s => s.SelectPossibleEncountersFrom(
+                    It.IsAny<string>(),
+                    It.IsAny<string>(),
+                    It.IsAny<string>(),
+                    setupLevel,
+                    It.IsAny<bool>(),
+                    It.IsAny<bool>(),
+                    specifications.CreatureTypeFilters.ToArray()))
+                .Returns(new[] { encounter });
         }
 
         [Test]
         public void ValidEncounterExistsIfAnyCreaturesInEncounter()
         {
-            SetupCreaturesAndAmounts(Level);
+            SetupEncounter("my encounter", Level);
             var isValid = encounterVerifier.ValidEncounterExists(specifications);
             Assert.That(isValid, Is.True);
         }
@@ -95,7 +88,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
         public void ValidEncounterExistsIfAnyCreaturesInEncounterWithFilter()
         {
             specifications.CreatureTypeFilters = new[] { Filter };
-            SetupCreaturesAndAmountsWithFilters(Level);
+            SetupEncounterWithFilters("my encounter", Level);
 
             var isValid = encounterVerifier.ValidEncounterExists(specifications);
             Assert.That(isValid, Is.True);
@@ -108,7 +101,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
         public void ValidEncounterDoesNotExistAtLevelIfLevelInvalid(int level)
         {
             specifications.CreatureTypeFilters = new[] { Filter };
-            SetupCreaturesAndAmounts(level);
+            SetupEncounter("my encounter", level);
 
             var isValid = encounterVerifier.ValidEncounterExists(specifications);
             Assert.That(isValid, Is.False);
@@ -118,7 +111,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
         public void ValidEncounterDoesNotExistAtLevelIfNoCreaturesAvailable()
         {
             specifications.CreatureTypeFilters = new[] { Filter };
-            SetupCreaturesAndAmounts(Level - 1);
+            SetupEncounter("my encounter", Level - 1);
 
             var isValid = encounterVerifier.ValidEncounterExists(specifications);
             Assert.That(isValid, Is.False);
@@ -127,25 +120,25 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
         [Test]
         public void EncounterIsValidIfNoFiltersAreProvided()
         {
-            var encounter = SetUpEncounter("creature", "amount");
+            var creatures = new[] { "creature" };
 
-            var isValid = encounterVerifier.EncounterIsValid(encounter.Keys, specifications.CreatureTypeFilters);
+            var isValid = encounterVerifier.EncounterIsValid(creatures, specifications.CreatureTypeFilters);
             Assert.That(isValid, Is.True);
         }
 
         [Test]
         public void EncounterIsNotValidIfCreatureDoesNotMatchFilter()
         {
-            var encounter = SetUpEncounter("bogus creature", "amount");
-            var isValid = encounterVerifier.EncounterIsValid(encounter.Keys, new[] { Filter });
+            var creatures = new[] { "bogus creature" };
+            var isValid = encounterVerifier.EncounterIsValid(creatures, new[] { Filter });
             Assert.That(isValid, Is.False);
         }
 
         [Test]
         public void EncounterIsNotValidIfCreatureMatchesAnyFilter()
         {
-            var encounter = SetUpEncounter("bogus creature", "amount");
-            var isValid = encounterVerifier.EncounterIsValid(encounter.Keys, new[] { Filter, "other filter" });
+            var creatures = new[] { "bogus creature" };
+            var isValid = encounterVerifier.EncounterIsValid(creatures, new[] { Filter, "other filter" });
             Assert.That(isValid, Is.False);
         }
 
@@ -160,9 +153,9 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
 
             mockCollectionSelector.Setup(s => s.Explode(TableNameConstants.CreatureGroups, "other filter")).Returns(additionalFilterGroup);
 
-            var encounter = SetUpEncounter("creature", "amount");
+            var creatures = new[] { "creature" };
 
-            var isValid = encounterVerifier.EncounterIsValid(encounter.Keys, new[] { Filter, "other filter" });
+            var isValid = encounterVerifier.EncounterIsValid(creatures, new[] { Filter, "other filter" });
             Assert.That(isValid, Is.True);
         }
 
@@ -172,20 +165,20 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
             filterGroup.Remove("creature");
             filterGroup.Add("other creature");
 
-            var encounter = SetUpEncounter("creature", "amount", "other creature", "other amount");
-
-            var isValid = encounterVerifier.EncounterIsValid(encounter.Keys, new[] { Filter });
+            var creatures = new[] { "creature", "other creature" };
+            var isValid = encounterVerifier.EncounterIsValid(creatures, new[] { Filter });
             Assert.That(isValid, Is.True);
         }
 
         [Test]
         public void EncounterIsValidIfCreatureWithDescriptionMatches()
         {
-            var encounter = SetUpEncounter("creature (description)", "amount");
+            var creatures = new[] { "creature (description)" };
+
             filterGroup.Remove("creature");
             filterGroup.Add("creature (description)");
 
-            var isValid = encounterVerifier.EncounterIsValid(encounter.Keys, new[] { Filter });
+            var isValid = encounterVerifier.EncounterIsValid(creatures, new[] { Filter });
             Assert.That(isValid, Is.True);
         }
 
@@ -195,8 +188,8 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
             var encounter = new Encounter();
             encounter.Creatures = new[]
             {
-                new Creature { Type = new CreatureType { Name = "creature" }, Quantity = 9266 },
-                new Creature { Type = new CreatureType { Name = "other creature" }, Quantity = 90210 },
+                new EncounterCreature { Creature = new Creature { Name = "creature" }, Quantity = 9266 },
+                new EncounterCreature { Creature = new Creature { Name = "other creature" }, Quantity = 90210 },
             };
 
             mockAmountSelector.Setup(s => s.Select(encounter)).Returns(15);
@@ -211,7 +204,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
             var encounter = new Encounter();
             encounter.Creatures = new[]
             {
-                new Creature { Type = new CreatureType { Name = "bogus creature" }, Quantity = 9266 },
+                new EncounterCreature { Creature = new Creature { Name = "bogus creature" }, Quantity = 9266 },
             };
 
             mockAmountSelector.Setup(s => s.Select(encounter)).Returns(15);
@@ -226,7 +219,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
             var encounter = new Encounter();
             encounter.Creatures = new[]
             {
-                new Creature { Type = new CreatureType { Name = "creature" }, Quantity = 9266 },
+                new EncounterCreature { Creature = new Creature { Name = "creature" }, Quantity = 9266 },
             };
 
             mockAmountSelector.Setup(s => s.Select(encounter)).Returns(15);
@@ -252,8 +245,8 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
             var encounter = new Encounter();
             encounter.Creatures = new[]
             {
-                new Creature { Type = new CreatureType { Name = "creature" }, Quantity = 9266 },
-                new Creature { Type = new CreatureType { Name = "other creature" }, Quantity = 90210 },
+                new EncounterCreature { Creature = new Creature { Name = "creature" }, Quantity = 9266 },
+                new EncounterCreature { Creature = new Creature { Name = "other creature" }, Quantity = 90210 },
             };
 
             mockAmountSelector.Setup(s => s.Select(encounter)).Returns(15);
@@ -271,8 +264,8 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
             var encounter = new Encounter();
             encounter.Creatures = new[]
             {
-                new Creature { Type = new CreatureType { Name = "creature" }, Quantity = 9266 },
-                new Creature { Type = new CreatureType { Name = "other creature" }, Quantity = 90210 },
+                new EncounterCreature { Creature = new Creature { Name = "creature" }, Quantity = 9266 },
+                new EncounterCreature { Creature = new Creature { Name = "other creature" }, Quantity = 90210 },
             };
 
             mockAmountSelector.Setup(s => s.Select(encounter)).Returns(level);
@@ -357,14 +350,8 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
         public void ValidEncounterExists_ReturnsTrue_WhenThereIsAnEncounter(bool aquatic, bool underground)
         {
             mockEncounterCollectionSelector
-                .Setup(s => s.SelectPossibleFrom("environment", "temperature", "time of day", 9266, aquatic, underground, "filter 1", "filter 2"))
-                .Returns(new[]
-                {
-                    new Dictionary<string, string>
-                    {
-                        { "my creature", "my amount" }
-                    }
-                });
+                .Setup(s => s.SelectPossibleEncountersFrom("environment", "temperature", "time of day", 9266, aquatic, underground, "filter 1", "filter 2"))
+                .Returns(new[] { "my encounter" });
 
             var exists = encounterVerifier.ValidEncounterExists("environment", "temperature", "time of day", 9266, aquatic, underground, "filter 1", "filter 2");
             Assert.That(exists, Is.True);
@@ -377,8 +364,8 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
         public void ValidEncounterExists_ReturnsFalse_WhenThereIsNoEncounter(bool aquatic, bool underground)
         {
             mockEncounterCollectionSelector
-                .Setup(s => s.SelectPossibleFrom("environment", "temperature", "time of day", 9266, aquatic, underground, "filter 1", "filter 2"))
-                .Returns(Enumerable.Empty<Dictionary<string, string>>());
+                .Setup(s => s.SelectPossibleEncountersFrom("environment", "temperature", "time of day", 9266, aquatic, underground, "filter 1", "filter 2"))
+                .Returns(Enumerable.Empty<string>());
 
             var exists = encounterVerifier.ValidEncounterExists("environment", "temperature", "time of day", 9266, aquatic, underground, "filter 1", "filter 2");
             Assert.That(exists, Is.False);

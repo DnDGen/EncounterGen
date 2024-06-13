@@ -5,9 +5,9 @@ namespace DnDGen.EncounterGen.Selectors.Collections
 {
     internal interface IEncounterCollectionSelector
     {
-        Dictionary<string, string> SelectRandomFrom(EncounterSpecifications encounterSpecifications);
-        IEnumerable<Dictionary<string, string>> SelectAllWeightedFrom(EncounterSpecifications encounterSpecifications);
-        IEnumerable<Dictionary<string, string>> SelectPossibleFrom(
+        string SelectRandomEncounterFrom(EncounterSpecifications encounterSpecifications);
+        IEnumerable<string> SelectAllWeightedEncountersFrom(EncounterSpecifications encounterSpecifications);
+        IEnumerable<string> SelectPossibleEncountersFrom(
             string environment = "",
             string temperature = "",
             string timeOfDay = "",

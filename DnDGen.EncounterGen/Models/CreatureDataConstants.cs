@@ -1,6 +1,6 @@
 ﻿namespace DnDGen.EncounterGen.Models
 {
-    public static class CreatureConstants
+    public static class CreatureDataConstants
     {
         public static class Types
         {
@@ -95,18 +95,18 @@
         public const string Ape_Dire = "Dire ape";
         public const string Aranea = "Aranea";
         public const string Archon = "Archon";
-        public const string Aristocrat_Businessman = "Character(Businessman)@Aristocrat@";
-        public const string Aristocrat_Businessman_Level1 = "Character(Businessman)[1]@Aristocrat@";
-        public const string Aristocrat_Businessman_Level2To3 = "Character(Businessman)[1d2+1]@Aristocrat@";
-        public const string Aristocrat_Businessman_Level4To5 = "Character(Businessman)[1d2+3]@Aristocrat@";
-        public const string Aristocrat_Businessman_Level6To7 = "Character(Businessman)[1d2+5]@Aristocrat@";
-        public const string Aristocrat_Businessman_Level8To9 = "Character(Businessman)[1d2+7]@Aristocrat@";
-        public const string Aristocrat_Businessman_Level10To11 = "Character(Businessman)[1d2+9]@Aristocrat@";
-        public const string Aristocrat_Businessman_Level12To13 = "Character(Businessman)[1d2+11]@Aristocrat@";
-        public const string Aristocrat_Businessman_Level14To15 = "Character(Businessman)[1d2+13]@Aristocrat@";
-        public const string Aristocrat_Businessman_Level16To17 = "Character(Businessman)[1d2+15]@Aristocrat@";
-        public const string Aristocrat_Businessman_Level18To19 = "Character(Businessman)[1d2+17]@Aristocrat@";
-        public const string Aristocrat_Businessman_Level20 = "Character(Businessman)[20]@Aristocrat@";
+        public const string Aristocrat_Businessman = "Character(Business person)@Aristocrat@";
+        public const string Aristocrat_Businessman_Level1 = "Character(Business person)[1]@Aristocrat@";
+        public const string Aristocrat_Businessman_Level2To3 = "Character(Business person)[1d2+1]@Aristocrat@";
+        public const string Aristocrat_Businessman_Level4To5 = "Character(Business person)[1d2+3]@Aristocrat@";
+        public const string Aristocrat_Businessman_Level6To7 = "Character(Business person)[1d2+5]@Aristocrat@";
+        public const string Aristocrat_Businessman_Level8To9 = "Character(Business person)[1d2+7]@Aristocrat@";
+        public const string Aristocrat_Businessman_Level10To11 = "Character(Business person)[1d2+9]@Aristocrat@";
+        public const string Aristocrat_Businessman_Level12To13 = "Character(Business person)[1d2+11]@Aristocrat@";
+        public const string Aristocrat_Businessman_Level14To15 = "Character(Business person)[1d2+13]@Aristocrat@";
+        public const string Aristocrat_Businessman_Level16To17 = "Character(Business person)[1d2+15]@Aristocrat@";
+        public const string Aristocrat_Businessman_Level18To19 = "Character(Business person)[1d2+17]@Aristocrat@";
+        public const string Aristocrat_Businessman_Level20 = "Character(Business person)[20]@Aristocrat@";
         public const string Aristocrat_Gentry = "Character(Gentry)@Aristocrat@";
         public const string Aristocrat_Gentry_Level1 = "Character(Gentry)[1]@Aristocrat@";
         public const string Aristocrat_Gentry_Level2To3 = "Character(Gentry)[1d2+1]@Aristocrat@";
@@ -313,27 +313,27 @@
         public const string Character_FamousPriest_Level18 = "Character(Famous Priest)[18]@Cleric&Druid&Monk&Paladin@";
         public const string Character_FamousPriest_Level19 = "Character(Famous Priest)[19]@Cleric&Druid&Monk&Paladin@";
         public const string Character_FamousPriest_Level20 = "Character(Famous Priest)[20]@Cleric&Druid&Monk&Paladin@";
-        public const string Character_Hitman = "Character(Hitman)@Barbarian&Fighter&Ranger&Rogue@";
-        public const string Character_Hitman_Level1 = "Character(Hitman)[1]@Barbarian&Fighter&Ranger&Rogue@";
-        public const string Character_Hitman_Level2 = "Character(Hitman)[2]@Barbarian&Fighter&Ranger&Rogue@";
-        public const string Character_Hitman_Level3 = "Character(Hitman)[3]@Barbarian&Fighter&Ranger&Rogue@";
-        public const string Character_Hitman_Level4 = "Character(Hitman)[4]@Barbarian&Fighter&Ranger&Rogue@";
-        public const string Character_Hitman_Level5 = "Character(Hitman)[5]@Barbarian&Fighter&Ranger&Rogue@";
-        public const string Character_Hitman_Level6 = "Character(Hitman)[6]@Barbarian&Fighter&Ranger&Rogue@";
-        public const string Character_Hitman_Level7 = "Character(Hitman)[7]@Barbarian&Fighter&Ranger&Rogue@";
-        public const string Character_Hitman_Level8 = "Character(Hitman)[8]@Barbarian&Fighter&Ranger&Rogue@";
-        public const string Character_Hitman_Level9 = "Character(Hitman)[9]@Barbarian&Fighter&Ranger&Rogue@";
-        public const string Character_Hitman_Level10 = "Character(Hitman)[10]@Barbarian&Fighter&Ranger&Rogue@";
-        public const string Character_Hitman_Level11 = "Character(Hitman)[11]@Barbarian&Fighter&Ranger&Rogue@";
-        public const string Character_Hitman_Level12 = "Character(Hitman)[12]@Barbarian&Fighter&Ranger&Rogue@";
-        public const string Character_Hitman_Level13 = "Character(Hitman)[13]@Barbarian&Fighter&Ranger&Rogue@";
-        public const string Character_Hitman_Level14 = "Character(Hitman)[14]@Barbarian&Fighter&Ranger&Rogue@";
-        public const string Character_Hitman_Level15 = "Character(Hitman)[15]@Barbarian&Fighter&Ranger&Rogue@";
-        public const string Character_Hitman_Level16 = "Character(Hitman)[16]@Barbarian&Fighter&Ranger&Rogue@";
-        public const string Character_Hitman_Level17 = "Character(Hitman)[17]@Barbarian&Fighter&Ranger&Rogue@";
-        public const string Character_Hitman_Level18 = "Character(Hitman)[18]@Barbarian&Fighter&Ranger&Rogue@";
-        public const string Character_Hitman_Level19 = "Character(Hitman)[19]@Barbarian&Fighter&Ranger&Rogue@";
-        public const string Character_Hitman_Level20 = "Character(Hitman)[20]@Barbarian&Fighter&Ranger&Rogue@";
+        public const string Character_ContractKiller = "Character(Contract Killer)@Barbarian&Fighter&Ranger&Rogue@";
+        public const string Character_ContractKiller_Level1 = "Character(Contract Killer)[1]@Barbarian&Fighter&Ranger&Rogue@";
+        public const string Character_ContractKiller_Level2 = "Character(Contract Killer)[2]@Barbarian&Fighter&Ranger&Rogue@";
+        public const string Character_ContractKiller_Level3 = "Character(Contract Killer)[3]@Barbarian&Fighter&Ranger&Rogue@";
+        public const string Character_ContractKiller_Level4 = "Character(Contract Killer)[4]@Barbarian&Fighter&Ranger&Rogue@";
+        public const string Character_ContractKiller_Level5 = "Character(Contract Killer)[5]@Barbarian&Fighter&Ranger&Rogue@";
+        public const string Character_ContractKiller_Level6 = "Character(Contract Killer)[6]@Barbarian&Fighter&Ranger&Rogue@";
+        public const string Character_ContractKiller_Level7 = "Character(Contract Killer)[7]@Barbarian&Fighter&Ranger&Rogue@";
+        public const string Character_ContractKiller_Level8 = "Character(Contract Killer)[8]@Barbarian&Fighter&Ranger&Rogue@";
+        public const string Character_ContractKiller_Level9 = "Character(Contract Killer)[9]@Barbarian&Fighter&Ranger&Rogue@";
+        public const string Character_ContractKiller_Level10 = "Character(Contract Killer)[10]@Barbarian&Fighter&Ranger&Rogue@";
+        public const string Character_ContractKiller_Level11 = "Character(Contract Killer)[11]@Barbarian&Fighter&Ranger&Rogue@";
+        public const string Character_ContractKiller_Level12 = "Character(Contract Killer)[12]@Barbarian&Fighter&Ranger&Rogue@";
+        public const string Character_ContractKiller_Level13 = "Character(Contract Killer)[13]@Barbarian&Fighter&Ranger&Rogue@";
+        public const string Character_ContractKiller_Level14 = "Character(Contract Killer)[14]@Barbarian&Fighter&Ranger&Rogue@";
+        public const string Character_ContractKiller_Level15 = "Character(Contract Killer)[15]@Barbarian&Fighter&Ranger&Rogue@";
+        public const string Character_ContractKiller_Level16 = "Character(Contract Killer)[16]@Barbarian&Fighter&Ranger&Rogue@";
+        public const string Character_ContractKiller_Level17 = "Character(Contract Killer)[17]@Barbarian&Fighter&Ranger&Rogue@";
+        public const string Character_ContractKiller_Level18 = "Character(Contract Killer)[18]@Barbarian&Fighter&Ranger&Rogue@";
+        public const string Character_ContractKiller_Level19 = "Character(Contract Killer)[19]@Barbarian&Fighter&Ranger&Rogue@";
+        public const string Character_ContractKiller_Level20 = "Character(Contract Killer)[20]@Barbarian&Fighter&Ranger&Rogue@";
         public const string Character_Hunter = "Character(Hunter)@Commoner&Warrior@";
         public const string Character_Hunter_Level1 = "Character(Hunter)[1]@Commoner&Warrior@";
         public const string Character_Hunter_Level2To3 = "Character(Hunter)[1d2+1]@Commoner&Warrior@";
@@ -1159,6 +1159,12 @@
         public const string HoundArchon_Hero = "Character(Hero)[11]{Hound Archon}@Paladin@";
         public const string Howler = "Howler";
         public const string Human = "Human";
+        public const string Human_Captain = "Character(Captain)[7]{Human}@Warrior@";
+        public const string Human_Leader = "Character(Leader)[1d4+2]{Human}@Warrior@";
+        public const string Human_Lieutenant = "Character(Lieutenant)[5]{Human}@Warrior@";
+        public const string Human_Noncombatant = "Human$Noncombatant$";
+        public const string Human_Sergeant = "Character(Sergeant)[3]{Human}@Warrior@";
+        public const string Human_Warrior = "Character[1]{Human}@Warrior@";
         public const string Hydra = "Hydra";
         public const string Hydra_5Heads = "Hydra$5 heads$";
         public const string Hydra_6Heads = "Hydra$6 heads$";

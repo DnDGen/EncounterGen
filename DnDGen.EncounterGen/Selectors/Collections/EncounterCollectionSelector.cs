@@ -11,17 +11,15 @@ namespace DnDGen.EncounterGen.Selectors.Collections
     internal class EncounterCollectionSelector : IEncounterCollectionSelector
     {
         private readonly ICollectionSelector collectionSelector;
-        private readonly IEncounterFormatter encounterFormatter;
 
         private readonly IEnumerable<string> allEnvironments;
         private readonly IEnumerable<string> allTemperatures;
         private readonly IEnumerable<string> allTimesOfDay;
         private readonly IEnumerable<string> allFilters;
 
-        public EncounterCollectionSelector(ICollectionSelector collectionSelector, IEncounterFormatter encounterFormatter)
+        public EncounterCollectionSelector(ICollectionSelector collectionSelector)
         {
             this.collectionSelector = collectionSelector;
-            this.encounterFormatter = encounterFormatter;
 
             allEnvironments = new[]
             {
@@ -51,40 +49,22 @@ namespace DnDGen.EncounterGen.Selectors.Collections
 
             allFilters = new[]
             {
-                CreatureConstants.Types.Aberration,
-                CreatureConstants.Types.Animal,
-                CreatureConstants.Types.Construct,
-                CreatureConstants.Types.Dragon,
-                CreatureConstants.Types.Elemental,
-                CreatureConstants.Types.Fey,
-                CreatureConstants.Types.Giant,
-                CreatureConstants.Types.Humanoid,
-                CreatureConstants.Types.MagicalBeast,
-                CreatureConstants.Types.MonstrousHumanoid,
-                CreatureConstants.Types.Ooze,
-                CreatureConstants.Types.Outsider,
-                CreatureConstants.Types.Plant,
-                CreatureConstants.Types.Undead,
-                CreatureConstants.Types.Vermin,
+                CreatureDataConstants.Types.Aberration,
+                CreatureDataConstants.Types.Animal,
+                CreatureDataConstants.Types.Construct,
+                CreatureDataConstants.Types.Dragon,
+                CreatureDataConstants.Types.Elemental,
+                CreatureDataConstants.Types.Fey,
+                CreatureDataConstants.Types.Giant,
+                CreatureDataConstants.Types.Humanoid,
+                CreatureDataConstants.Types.MagicalBeast,
+                CreatureDataConstants.Types.MonstrousHumanoid,
+                CreatureDataConstants.Types.Ooze,
+                CreatureDataConstants.Types.Outsider,
+                CreatureDataConstants.Types.Plant,
+                CreatureDataConstants.Types.Undead,
+                CreatureDataConstants.Types.Vermin,
             };
-        }
-
-        public IEnumerable<Dictionary<string, string>> SelectAllWeightedFrom(EncounterSpecifications encounterSpecifications)
-        {
-            var weightedEncounters = GetWeightedEncounters(encounterSpecifications);
-            var weightedEncounterTypesAndAmounts = weightedEncounters.Select(encounterFormatter.SelectCreaturesAndAmountsFrom);
-
-            return weightedEncounterTypesAndAmounts;
-        }
-
-        public Dictionary<string, string> SelectRandomFrom(EncounterSpecifications encounterSpecifications)
-        {
-            var weightedEncounters = SelectAllWeightedFrom(encounterSpecifications);
-
-            if (!weightedEncounters.Any())
-                throw new ArgumentException($"No valid encounters exist for {encounterSpecifications.Description}");
-
-            return collectionSelector.SelectRandomFrom(weightedEncounters);
         }
 
         private IEnumerable<string> GetWeightedEncounters(EncounterSpecifications encounterSpecifications)
@@ -95,21 +75,21 @@ namespace DnDGen.EncounterGen.Selectors.Collections
                 return Enumerable.Empty<string>();
             }
 
-            var extraplanarEncounters = GetEncountersFromCreatureGroup(GroupConstants.Extraplanar);
-            var aquaticEncounters = GetEncountersFromCreatureGroup(EnvironmentConstants.Aquatic);
-            var specificAquaticEncounters = GetEncountersFromCreatureGroup(encounterSpecifications.Temperature + EnvironmentConstants.Aquatic);
-            var undergroundAquaticEncounters = GetEncountersFromCreatureGroup(EnvironmentConstants.Underground + EnvironmentConstants.Aquatic);
-            var undergroundEncounters = GetEncountersFromCreatureGroup(EnvironmentConstants.Underground);
-            var undeadEncounters = GetEncountersFromCreatureGroup(CreatureConstants.Types.Undead);
-            var anyEncounters = GetEncountersFromCreatureGroup(EnvironmentConstants.Any);
-            var landEncounters = GetEncountersFromCreatureGroup(EnvironmentConstants.Land);
+            var extraplanarEncounters = GetEncountersFromEncounterGroup(GroupConstants.Extraplanar);
+            var aquaticEncounters = GetEncountersFromEncounterGroup(EnvironmentConstants.Aquatic);
+            var tempAquaticEncounters = GetEncountersFromEncounterGroup(encounterSpecifications.Temperature + EnvironmentConstants.Aquatic);
+            var undergroundAquaticEncounters = GetEncountersFromEncounterGroup(EnvironmentConstants.Underground + EnvironmentConstants.Aquatic);
+            var undergroundEncounters = GetEncountersFromEncounterGroup(EnvironmentConstants.Underground);
+            var undeadEncounters = GetEncountersFromEncounterGroup(CreatureDataConstants.Types.Undead);
+            var anyEncounters = GetEncountersFromEncounterGroup(EnvironmentConstants.Any);
+            var landEncounters = GetEncountersFromEncounterGroup(EnvironmentConstants.Land);
 
             var commonEncounters = validEncounters.Except(extraplanarEncounters);
 
             if (encounterSpecifications.Environment != EnvironmentConstants.Aquatic)
             {
                 var toRemove = aquaticEncounters
-                    .Union(specificAquaticEncounters).Union(undergroundAquaticEncounters)
+                    .Union(tempAquaticEncounters).Union(undergroundAquaticEncounters)
                     .Except(anyEncounters).Except(landEncounters);
                 commonEncounters = commonEncounters.Except(toRemove);
             }
@@ -126,7 +106,7 @@ namespace DnDGen.EncounterGen.Selectors.Collections
                 commonEncounters = commonEncounters.Except(undeadEncounters);
 
             var potentialUncommonEncounters = aquaticEncounters
-                .Union(undergroundEncounters).Union(specificAquaticEncounters).Union(undergroundAquaticEncounters)
+                .Union(undergroundEncounters).Union(tempAquaticEncounters).Union(undergroundAquaticEncounters)
                 .Except(anyEncounters).Except(landEncounters);
 
             if (encounterSpecifications.Environment == EnvironmentConstants.Civilized)
@@ -150,27 +130,27 @@ namespace DnDGen.EncounterGen.Selectors.Collections
                 encounterSpecifications.TimeOfDay = EnvironmentConstants.TimesOfDay.Night;
             }
 
-            var extraplanarEncounters = GetEncountersFromCreatureGroup(GroupConstants.Extraplanar);
-            var anyEncounters = GetEncountersFromCreatureGroup(EnvironmentConstants.Any);
-            var specificEnvironmentEncounters = GetEncountersFromCreatureGroup(encounterSpecifications.SpecificEnvironment);
+            var extraplanarEncounters = GetEncountersFromEncounterGroup(GroupConstants.Extraplanar);
+            var anyEncounters = GetEncountersFromEncounterGroup(EnvironmentConstants.Any);
+            var tempEnvironmentEncounters = GetEncountersFromEncounterGroup(encounterSpecifications.SpecificEnvironment);
 
-            var allEncounters = specificEnvironmentEncounters.Union(anyEncounters).Union(extraplanarEncounters);
+            var allEncounters = tempEnvironmentEncounters.Union(anyEncounters).Union(extraplanarEncounters);
 
             if (encounterSpecifications.Environment != EnvironmentConstants.Aquatic)
             {
-                var landEncounters = GetEncountersFromCreatureGroup(EnvironmentConstants.Land);
+                var landEncounters = GetEncountersFromEncounterGroup(EnvironmentConstants.Land);
                 allEncounters = allEncounters.Union(landEncounters);
             }
 
             if (ShouldGetCivilized(encounterSpecifications))
             {
-                var civilizedEncounters = GetEncountersFromCreatureGroup(EnvironmentConstants.Civilized);
+                var civilizedEncounters = GetEncountersFromEncounterGroup(EnvironmentConstants.Civilized);
                 allEncounters = allEncounters.Union(civilizedEncounters);
             }
 
             if (ShouldGetAquatic(encounterSpecifications))
             {
-                var aquaticEncounters = GetEncountersFromCreatureGroup(EnvironmentConstants.Aquatic);
+                var aquaticEncounters = GetEncountersFromEncounterGroup(EnvironmentConstants.Aquatic);
                 allEncounters = allEncounters.Union(aquaticEncounters);
 
                 //INFO: If the environment is aquatic, we already have these encounters as the specific environment
@@ -178,25 +158,25 @@ namespace DnDGen.EncounterGen.Selectors.Collections
                 {
                     var aquaticSpecifications = encounterSpecifications.Clone();
                     aquaticSpecifications.Environment = EnvironmentConstants.Aquatic;
-                    var specificAquaticEncounters = GetEncountersFromCreatureGroup(aquaticSpecifications.SpecificEnvironment);
+                    var tempAquaticEncounters = GetEncountersFromEncounterGroup(aquaticSpecifications.SpecificEnvironment);
 
-                    allEncounters = allEncounters.Union(specificAquaticEncounters);
+                    allEncounters = allEncounters.Union(tempAquaticEncounters);
                 }
             }
 
             if (ShouldGetUnderground(encounterSpecifications))
             {
-                var undergroundEncounters = GetEncountersFromCreatureGroup(EnvironmentConstants.Underground);
+                var undergroundEncounters = GetEncountersFromEncounterGroup(EnvironmentConstants.Underground);
                 allEncounters = allEncounters.Union(undergroundEncounters);
             }
 
             if (ShouldGetUndergroundAquatic(encounterSpecifications))
             {
-                var undergroundAquaticEncounters = GetEncountersFromCreatureGroup(EnvironmentConstants.Underground + EnvironmentConstants.Aquatic);
+                var undergroundAquaticEncounters = GetEncountersFromEncounterGroup(EnvironmentConstants.Underground + EnvironmentConstants.Aquatic);
                 allEncounters = allEncounters.Union(undergroundAquaticEncounters);
             }
 
-            var validEncounters = GetValidEncounters(allEncounters, encounterSpecifications);
+            var validEncounters = FilterOutInvalidEncounters(allEncounters, encounterSpecifications);
 
             return validEncounters;
         }
@@ -211,16 +191,10 @@ namespace DnDGen.EncounterGen.Selectors.Collections
         private bool ShouldGetAquatic(EncounterSpecifications specifications) =>
             specifications.Environment == EnvironmentConstants.Aquatic || specifications.AllowAquatic;
 
-        private IEnumerable<string> GetEncountersFromCreatureGroup(string creatureGroup)
-        {
-            var creatures = collectionSelector.Explode(TableNameConstants.CreatureGroups, creatureGroup);
-            var allEncounters = collectionSelector.SelectAllFrom(TableNameConstants.EncounterGroups);
-            var encounters = collectionSelector.Flatten(allEncounters, creatures);
+        private IEnumerable<string> GetEncountersFromEncounterGroup(string encounterGroup) =>
+            collectionSelector.SelectFrom(TableNameConstants.EncounterGroups, encounterGroup);
 
-            return encounters;
-        }
-
-        private IEnumerable<string> GetValidEncounters(IEnumerable<string> source, EncounterSpecifications specifications)
+        private IEnumerable<string> FilterOutInvalidEncounters(IEnumerable<string> source, EncounterSpecifications specifications)
         {
             var validEncounters = source;
 
@@ -235,8 +209,8 @@ namespace DnDGen.EncounterGen.Selectors.Collections
 
             if (specifications.CreatureTypeFilters.Any())
             {
-                var allowedCreatureNames = GetAllowedCreatureNames(specifications.CreatureTypeFilters);
-                validEncounters = validEncounters.Where(e => EncounterIsValid(e, allowedCreatureNames));
+                var filterEncounters = GetEncountersFromFilters(specifications.CreatureTypeFilters);
+                validEncounters = validEncounters.Intersect(filterEncounters);
             }
 
             if (!validEncounters.Any())
@@ -244,184 +218,30 @@ namespace DnDGen.EncounterGen.Selectors.Collections
 
             if (specifications.Environment == EnvironmentConstants.Civilized)
             {
-                var wildlife = GetEncountersFromCreatureGroup(GroupConstants.Wilderness);
+                var wildlife = GetEncountersFromEncounterGroup(GroupConstants.Wilderness);
                 validEncounters = validEncounters.Except(wildlife);
             }
 
             if (!validEncounters.Any())
                 return Enumerable.Empty<string>();
 
-            var timeOfDayEncounters = GetEncountersFromCreatureGroup(specifications.TimeOfDay);
+            var timeOfDayEncounters = GetEncountersFromEncounterGroup(specifications.TimeOfDay);
             validEncounters = validEncounters.Intersect(timeOfDayEncounters);
 
             return validEncounters;
         }
 
-        //INFO: This method exists here because we cannot use the EncounterVerifier on the selector level, only the generator level
-        private bool EncounterIsValid(string encounter, IEnumerable<string> allowedCreatureNames)
+        private IEnumerable<string> GetEncountersFromFilters(IEnumerable<string> creatureTypeFilters)
         {
-            var creaturesAndAmounts = encounterFormatter.SelectCreaturesAndAmountsFrom(encounter);
-            var creatureNames = creaturesAndAmounts.Keys;
-            return creatureNames.Any(c => CreatureIsValid(c, allowedCreatureNames));
-        }
-
-        //INFO: This method exists here because we cannot use the EncounterVerifier on the selector level, only the generator level
-        private bool CreatureIsValid(string creatureName, IEnumerable<string> allowedCreatureNames)
-        {
-            return allowedCreatureNames.Contains(creatureName);
-        }
-
-        private IEnumerable<string> GetAllowedCreatureNames(IEnumerable<string> creatureTypeFilters)
-        {
-            var creatureNames = new List<string>();
+            var encounters = new List<string>();
 
             foreach (var filter in creatureTypeFilters)
             {
-                var filterCreatures = collectionSelector.Explode(TableNameConstants.CreatureGroups, filter);
-                creatureNames.AddRange(filterCreatures);
+                var filterCreatures = GetEncountersFromEncounterGroup(filter);
+                encounters.AddRange(filterCreatures);
             }
 
-            return creatureNames.Distinct();
-        }
-
-        public IEnumerable<Dictionary<string, string>> SelectPossibleFrom(
-            string environment = "",
-            string temperature = "",
-            string timeOfDay = "",
-            int level = 0,
-            bool? allowAquatic = null,
-            bool? allowUnderground = null,
-            params string[] filters)
-        {
-            //Shortcuts
-            if (string.IsNullOrEmpty(environment) && string.IsNullOrEmpty(temperature) && string.IsNullOrEmpty(timeOfDay) && level == 0)
-            {
-                var shortcutEncounters = collectionSelector.SelectAllFrom(TableNameConstants.EncounterGroups).Values
-                    .SelectMany(g => g)
-                    .Distinct();
-
-                if (allowAquatic.HasValue && allowAquatic.Value == false)
-                {
-                    var aquatic = GetEncountersFromCreatureGroup(EnvironmentConstants.Aquatic)
-                        .Concat(GetEncountersFromCreatureGroup(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic))
-                        .Concat(GetEncountersFromCreatureGroup(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic))
-                        .Concat(GetEncountersFromCreatureGroup(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Aquatic))
-                        .Concat(GetEncountersFromCreatureGroup(EnvironmentConstants.Underground + EnvironmentConstants.Aquatic));
-
-                    shortcutEncounters = shortcutEncounters.Except(aquatic);
-                }
-
-                if (allowUnderground.HasValue && allowUnderground.Value == false)
-                {
-                    var underground = GetEncountersFromCreatureGroup(EnvironmentConstants.Underground)
-                        .Concat(GetEncountersFromCreatureGroup(EnvironmentConstants.Underground + EnvironmentConstants.Aquatic));
-
-                    shortcutEncounters = shortcutEncounters.Except(underground);
-                }
-
-                if (filters.Any())
-                {
-                    var allowedCreatureNames = GetAllowedCreatureNames(filters);
-                    shortcutEncounters = shortcutEncounters.Where(e => EncounterIsValid(e, allowedCreatureNames));
-                }
-
-                var shortcutEncounterTypesAndAmounts = shortcutEncounters.Select(encounterFormatter.SelectCreaturesAndAmountsFrom);
-                return shortcutEncounterTypesAndAmounts;
-            }
-
-            //Full
-            IEnumerable<string> environments = new[] { environment };
-            if (string.IsNullOrEmpty(environment))
-                environments = allEnvironments;
-
-            IEnumerable<string> temperatures = new[] { temperature };
-            if (string.IsNullOrEmpty(temperature))
-                temperatures = environments
-                    .SelectMany(SelectPossibleTemperatures)
-                    .Distinct();
-
-            if (!temperatures.Any())
-                return Enumerable.Empty<Dictionary<string, string>>();
-
-            IEnumerable<string> timesOfDay = new[] { timeOfDay };
-            if (string.IsNullOrEmpty(timeOfDay))
-                timesOfDay = environments
-                    .SelectMany(e => temperatures
-                        .SelectMany(t => SelectPossibleTimesOfDay(e, t)))
-                    .Distinct();
-
-            if (!timesOfDay.Any())
-                return Enumerable.Empty<Dictionary<string, string>>();
-
-            IEnumerable<int> levels = new[] { level };
-            if (level == 0)
-                levels = environments
-                    .SelectMany(e => temperatures
-                        .SelectMany(t => timesOfDay.
-                            SelectMany(d => SelectPossibleLevels(e, t, d))))
-                    .Distinct();
-
-            if (!levels.Any())
-                return Enumerable.Empty<Dictionary<string, string>>();
-
-            IEnumerable<bool> aquatics;
-            if (allowAquatic.HasValue)
-            {
-                aquatics = new[] { allowAquatic.Value };
-            }
-            else
-            {
-                aquatics = environments
-                    .SelectMany(e => temperatures
-                        .SelectMany(t => timesOfDay.
-                            SelectMany(d => levels.
-                                SelectMany(l => SelectPossibleAllowAquatic(e, t, d, l)))))
-                    .Distinct();
-            }
-
-            if (!aquatics.Any())
-                return Enumerable.Empty<Dictionary<string, string>>();
-
-            IEnumerable<bool> undergrounds;
-            if (allowUnderground.HasValue)
-            {
-                undergrounds = new[] { allowUnderground.Value };
-            }
-            else
-            {
-                undergrounds = environments
-                    .SelectMany(e => temperatures
-                        .SelectMany(t => timesOfDay.
-                            SelectMany(d => levels.
-                                SelectMany(l => aquatics.
-                                    SelectMany(a => SelectPossibleAllowUnderground(e, t, d, l, a))))))
-                    .Distinct();
-            }
-
-            if (!undergrounds.Any())
-                return Enumerable.Empty<Dictionary<string, string>>();
-
-            var specs = environments
-                    .SelectMany(e => temperatures
-                        .SelectMany(t => timesOfDay.
-                            SelectMany(d => levels.
-                                SelectMany(l => aquatics.
-                                    SelectMany(a => undergrounds.
-                                        Select(u => new EncounterSpecifications
-                                        {
-                                            Environment = e,
-                                            Temperature = t,
-                                            TimeOfDay = d,
-                                            Level = l,
-                                            AllowAquatic = a,
-                                            AllowUnderground = u,
-                                            CreatureTypeFilters = filters,
-                                        }))))));
-
-            var encounters = specs.SelectMany(GetValidEncounters);
-            var encounterTypesAndAmounts = encounters.Select(encounterFormatter.SelectCreaturesAndAmountsFrom);
-
-            return encounterTypesAndAmounts;
+            return encounters.Distinct();
         }
 
         public IEnumerable<string> SelectPossibleTemperatures(string environment)
@@ -493,6 +313,151 @@ namespace DnDGen.EncounterGen.Selectors.Collections
                     AllowUnderground = allowUnderground,
                     CreatureTypeFilters = new[] { f },
                 }).Any());
+        }
+
+        public string SelectRandomEncounterFrom(EncounterSpecifications encounterSpecifications)
+        {
+            var weightedEncounters = GetWeightedEncounters(encounterSpecifications);
+
+            if (!weightedEncounters.Any())
+                throw new ArgumentException($"No valid encounters exist for {encounterSpecifications.Description}");
+
+            return collectionSelector.SelectRandomFrom(weightedEncounters);
+        }
+
+        public IEnumerable<string> SelectAllWeightedEncountersFrom(EncounterSpecifications encounterSpecifications)
+        {
+            var weightedEncounters = GetWeightedEncounters(encounterSpecifications);
+            return weightedEncounters;
+        }
+
+        public IEnumerable<string> SelectPossibleEncountersFrom(string environment = "", string temperature = "", string timeOfDay = "", int level = 0, bool? allowAquatic = null, bool? allowUnderground = null, params string[] filters)
+        {
+            //Shortcuts
+            if (string.IsNullOrEmpty(environment) && string.IsNullOrEmpty(temperature) && string.IsNullOrEmpty(timeOfDay) && level == 0)
+            {
+                var shortcutEncounters = collectionSelector.SelectFrom(TableNameConstants.EncounterGroups, GroupConstants.All);
+
+                if (allowAquatic.HasValue && allowAquatic.Value == false)
+                {
+                    var aquatic = GetEncountersFromEncounterGroup(EnvironmentConstants.Aquatic)
+                        .Concat(GetEncountersFromEncounterGroup(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic))
+                        .Concat(GetEncountersFromEncounterGroup(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic))
+                        .Concat(GetEncountersFromEncounterGroup(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Aquatic))
+                        .Concat(GetEncountersFromEncounterGroup(EnvironmentConstants.Underground + EnvironmentConstants.Aquatic));
+
+                    shortcutEncounters = shortcutEncounters.Except(aquatic);
+                }
+
+                if (allowUnderground.HasValue && allowUnderground.Value == false)
+                {
+                    var underground = GetEncountersFromEncounterGroup(EnvironmentConstants.Underground)
+                        .Concat(GetEncountersFromEncounterGroup(EnvironmentConstants.Underground + EnvironmentConstants.Aquatic));
+
+                    shortcutEncounters = shortcutEncounters.Except(underground);
+                }
+
+                if (filters.Any())
+                {
+                    var filterEncounters = GetEncountersFromFilters(filters);
+                    shortcutEncounters = shortcutEncounters.Intersect(filterEncounters);
+                }
+
+                return shortcutEncounters;
+            }
+
+            //Full
+            IEnumerable<string> environments = new[] { environment };
+            if (string.IsNullOrEmpty(environment))
+                environments = allEnvironments;
+
+            IEnumerable<string> temperatures = new[] { temperature };
+            if (string.IsNullOrEmpty(temperature))
+                temperatures = environments
+                    .SelectMany(SelectPossibleTemperatures)
+                    .Distinct();
+
+            if (!temperatures.Any())
+                return Enumerable.Empty<string>();
+
+            IEnumerable<string> timesOfDay = new[] { timeOfDay };
+            if (string.IsNullOrEmpty(timeOfDay))
+                timesOfDay = environments
+                    .SelectMany(e => temperatures
+                        .SelectMany(t => SelectPossibleTimesOfDay(e, t)))
+                    .Distinct();
+
+            if (!timesOfDay.Any())
+                return Enumerable.Empty<string>();
+
+            IEnumerable<int> levels = new[] { level };
+            if (level == 0)
+                levels = environments
+                    .SelectMany(e => temperatures
+                        .SelectMany(t => timesOfDay.
+                            SelectMany(d => SelectPossibleLevels(e, t, d))))
+                    .Distinct();
+
+            if (!levels.Any())
+                return Enumerable.Empty<string>();
+
+            IEnumerable<bool> aquatics;
+            if (allowAquatic.HasValue)
+            {
+                aquatics = new[] { allowAquatic.Value };
+            }
+            else
+            {
+                aquatics = environments
+                    .SelectMany(e => temperatures
+                        .SelectMany(t => timesOfDay.
+                            SelectMany(d => levels.
+                                SelectMany(l => SelectPossibleAllowAquatic(e, t, d, l)))))
+                    .Distinct();
+            }
+
+            if (!aquatics.Any())
+                return Enumerable.Empty<string>();
+
+            IEnumerable<bool> undergrounds;
+            if (allowUnderground.HasValue)
+            {
+                undergrounds = new[] { allowUnderground.Value };
+            }
+            else
+            {
+                undergrounds = environments
+                    .SelectMany(e => temperatures
+                        .SelectMany(t => timesOfDay.
+                            SelectMany(d => levels.
+                                SelectMany(l => aquatics.
+                                    SelectMany(a => SelectPossibleAllowUnderground(e, t, d, l, a))))))
+                    .Distinct();
+            }
+
+            if (!undergrounds.Any())
+                return Enumerable.Empty<string>();
+
+            var specs = environments
+                    .SelectMany(e => temperatures
+                        .SelectMany(t => timesOfDay.
+                            SelectMany(d => levels.
+                                SelectMany(l => aquatics.
+                                    SelectMany(a => undergrounds.
+                                        Select(u => new EncounterSpecifications
+                                        {
+                                            Environment = e,
+                                            Temperature = t,
+                                            TimeOfDay = d,
+                                            Level = l,
+                                            AllowAquatic = a,
+                                            AllowUnderground = u,
+                                            CreatureTypeFilters = filters,
+                                        }))))));
+
+            var encounters = specs.SelectMany(GetValidEncounters);
+
+            return encounters;
         }
     }
 }

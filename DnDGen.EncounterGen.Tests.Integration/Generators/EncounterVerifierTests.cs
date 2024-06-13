@@ -1,31 +1,28 @@
 ﻿using DnDGen.EncounterGen.Generators;
 using DnDGen.EncounterGen.Models;
-using DnDGen.RollGen;
 using NUnit.Framework;
 using System.Diagnostics;
-using System.Linq;
 
 namespace DnDGen.EncounterGen.Tests.Integration.Generators
 {
     [TestFixture]
-    internal class EncounterGeneratorTests : IntegrationTests
+    internal class EncounterVerifierTests : IntegrationTests
     {
-        private IEncounterGenerator encounterGenerator;
-        private Dice dice;
+        private IEncounterVerifier encounterVerifier;
         private Stopwatch stopwatch;
 
         [SetUp]
         public void Setup()
         {
-            encounterGenerator = GetNewInstanceOf<IEncounterGenerator>();
-            dice = GetNewInstanceOf<Dice>();
+            encounterVerifier = GetNewInstanceOf<IEncounterVerifier>();
             stopwatch = new Stopwatch();
         }
 
-        [TestCase(EnvironmentConstants.Civilized, EnvironmentConstants.Temperatures.Temperate, EnvironmentConstants.TimesOfDay.Night, 7, false, true)]
-        [TestCase(EnvironmentConstants.Civilized, EnvironmentConstants.Temperatures.Warm, EnvironmentConstants.TimesOfDay.Night, 1, false, true)]
-        [TestCase(EnvironmentConstants.Desert, EnvironmentConstants.Temperatures.Warm, EnvironmentConstants.TimesOfDay.Day, 1, false, false)]
-        public void BUG_Generate_ReturnsEncounter(string environment, string temperature, string timeOfDay, int level, bool allowAquatic, bool allowUnderground)
+        [TestCase(EnvironmentConstants.Civilized,
+            EnvironmentConstants.Temperatures.Temperate,
+            EnvironmentConstants.TimesOfDay.Night,
+            7, false, true)]
+        public void ValidEncounterExists_ReturnsTrue(string environment, string temperature, string timeOfDay, int level, bool allowAquatic, bool allowUnderground)
         {
             var specifications = new EncounterSpecifications
             {
@@ -38,11 +35,11 @@ namespace DnDGen.EncounterGen.Tests.Integration.Generators
             };
 
             stopwatch.Start();
-            var encounter = encounterGenerator.Generate(specifications);
+            var valid = encounterVerifier.ValidEncounterExists(specifications);
             stopwatch.Stop();
 
-            AssertEncounter(encounter);
-            Assert.That(stopwatch.Elapsed.TotalSeconds, Is.LessThan(1).Or.LessThan(encounter.Characters.Count()), encounter.Description);
+            Assert.That(valid, Is.True);
+            Assert.That(stopwatch.Elapsed.TotalSeconds, Is.LessThan(1));
         }
 
         [TestCase(EnvironmentConstants.Aquatic, EnvironmentConstants.Temperatures.Cold, EnvironmentConstants.TimesOfDay.Day, false, false)]
@@ -261,7 +258,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Generators
         [TestCase(EnvironmentConstants.Underground, EnvironmentConstants.Temperatures.Warm, EnvironmentConstants.TimesOfDay.Night, false, true)]
         [TestCase(EnvironmentConstants.Underground, EnvironmentConstants.Temperatures.Warm, EnvironmentConstants.TimesOfDay.Night, true, false)]
         [TestCase(EnvironmentConstants.Underground, EnvironmentConstants.Temperatures.Warm, EnvironmentConstants.TimesOfDay.Night, true, true)]
-        public void Generate_ReturnsEncounter_ForEnvironment(string environment, string temperature, string timeOfDay, bool allowAquatic, bool allowUnderground)
+        public void ValidEncounterExists_ReturnsTrue_ForEnvironment(string environment, string temperature, string timeOfDay, bool allowAquatic, bool allowUnderground)
         {
             var specifications = new EncounterSpecifications
             {
@@ -274,11 +271,11 @@ namespace DnDGen.EncounterGen.Tests.Integration.Generators
             };
 
             stopwatch.Start();
-            var encounter = encounterGenerator.Generate(specifications);
+            var valid = encounterVerifier.ValidEncounterExists(specifications);
             stopwatch.Stop();
 
-            AssertEncounter(encounter);
-            Assert.That(stopwatch.Elapsed.TotalSeconds, Is.LessThan(1).Or.LessThan(encounter.Characters.Count()), encounter.Description);
+            Assert.That(valid, Is.True);
+            Assert.That(stopwatch.Elapsed.TotalSeconds, Is.LessThan(1));
         }
 
         [TestCase(EncounterSpecifications.MinimumLevel)]
@@ -310,12 +307,12 @@ namespace DnDGen.EncounterGen.Tests.Integration.Generators
         [TestCase(27)]
         [TestCase(28)]
         [TestCase(29)]
-        [TestCase(EncounterSpecifications.MaximumLevel, Ignore = "There are no level 30 encounters")]
-        public void Generate_ReturnsEncounter_ForLevel(int level)
+        [TestCase(EncounterSpecifications.MaximumLevel, false)]
+        public void ValidEncounterExists_ReturnsValidity_ForLevel(int level, bool expectedValid = true)
         {
             var specifications = new EncounterSpecifications
             {
-                Environment = EnvironmentConstants.Plains,
+                Environment = EnvironmentConstants.Civilized,
                 Temperature = EnvironmentConstants.Temperatures.Temperate,
                 TimeOfDay = EnvironmentConstants.TimesOfDay.Night,
                 Level = level,
@@ -324,29 +321,53 @@ namespace DnDGen.EncounterGen.Tests.Integration.Generators
             };
 
             stopwatch.Start();
-            var encounter = encounterGenerator.Generate(specifications);
+            var valid = encounterVerifier.ValidEncounterExists(specifications);
             stopwatch.Stop();
 
-            AssertEncounter(encounter);
-            Assert.That(stopwatch.Elapsed.TotalSeconds, Is.LessThan(1).Or.LessThan(encounter.Characters.Count()), encounter.Description);
+            Assert.That(valid, Is.EqualTo(expectedValid));
+            Assert.That(stopwatch.Elapsed.TotalSeconds, Is.LessThan(1));
         }
 
+        [TestCase(CreatureDataConstants.Types.Aberration, EnvironmentConstants.Civilized, 1, false)]
+        [TestCase(CreatureDataConstants.Types.Aberration, EnvironmentConstants.Civilized, 10, false)]
+        [TestCase(CreatureDataConstants.Types.Aberration, EnvironmentConstants.Plains, 1, false)]
         [TestCase(CreatureDataConstants.Types.Aberration, EnvironmentConstants.Plains, 10)]
         [TestCase(CreatureDataConstants.Types.Animal)]
         [TestCase(CreatureDataConstants.Types.Construct)]
+        [TestCase(CreatureDataConstants.Types.Dragon, EnvironmentConstants.Civilized, 1, false)]
+        [TestCase(CreatureDataConstants.Types.Dragon, EnvironmentConstants.Civilized, 10, false)]
+        [TestCase(CreatureDataConstants.Types.Dragon, EnvironmentConstants.Plains, 1, false)]
+        [TestCase(CreatureDataConstants.Types.Dragon, EnvironmentConstants.Plains, 10, false)]
+        [TestCase(CreatureDataConstants.Types.Dragon, EnvironmentConstants.Mountain, 1, false)]
         [TestCase(CreatureDataConstants.Types.Dragon, EnvironmentConstants.Mountain, 10)]
         [TestCase(CreatureDataConstants.Types.Elemental)]
+        [TestCase(CreatureDataConstants.Types.Fey, EnvironmentConstants.Civilized, 1, false)]
+        [TestCase(CreatureDataConstants.Types.Fey, EnvironmentConstants.Civilized, 10, false)]
+        [TestCase(CreatureDataConstants.Types.Fey, EnvironmentConstants.Forest, 1, false)]
         [TestCase(CreatureDataConstants.Types.Fey, EnvironmentConstants.Forest, 10)]
+        [TestCase(CreatureDataConstants.Types.Giant, EnvironmentConstants.Civilized, 1, false)]
+        [TestCase(CreatureDataConstants.Types.Giant, EnvironmentConstants.Civilized, 10, false)]
+        [TestCase(CreatureDataConstants.Types.Giant, EnvironmentConstants.Hills, 1, false)]
         [TestCase(CreatureDataConstants.Types.Giant, EnvironmentConstants.Hills, 10)]
         [TestCase(CreatureDataConstants.Types.Humanoid)]
         [TestCase(CreatureDataConstants.Types.MagicalBeast)]
+        [TestCase(CreatureDataConstants.Types.MonstrousHumanoid, EnvironmentConstants.Civilized, 1, false)]
+        [TestCase(CreatureDataConstants.Types.MonstrousHumanoid, EnvironmentConstants.Civilized, 10, false)]
+        [TestCase(CreatureDataConstants.Types.MonstrousHumanoid, EnvironmentConstants.Mountain, 1, false)]
         [TestCase(CreatureDataConstants.Types.MonstrousHumanoid, EnvironmentConstants.Mountain, 10)]
+        [TestCase(CreatureDataConstants.Types.Ooze, EnvironmentConstants.Civilized, 1, false)]
+        [TestCase(CreatureDataConstants.Types.Ooze, EnvironmentConstants.Civilized, 10, false)]
+        [TestCase(CreatureDataConstants.Types.Ooze, EnvironmentConstants.Plains, 1, false)]
+        [TestCase(CreatureDataConstants.Types.Ooze, EnvironmentConstants.Plains, 10, false)]
+        [TestCase(CreatureDataConstants.Types.Ooze, EnvironmentConstants.Underground, 10, false)]
+        [TestCase(CreatureDataConstants.Types.Ooze, EnvironmentConstants.Underground, 9, false)]
+        [TestCase(CreatureDataConstants.Types.Ooze, EnvironmentConstants.Underground, 8, false)]
         [TestCase(CreatureDataConstants.Types.Ooze, EnvironmentConstants.Underground, 7)]
         [TestCase(CreatureDataConstants.Types.Outsider)]
         [TestCase(CreatureDataConstants.Types.Plant)]
         [TestCase(CreatureDataConstants.Types.Undead)]
         [TestCase(CreatureDataConstants.Types.Vermin)]
-        public void Generate_ReturnsEncounter_ForFilter(string filter, string environment = EnvironmentConstants.Plains, int level = 1)
+        public void ValidEncounterExists_ReturnsValidity_ForFilter(string filter, string environment = EnvironmentConstants.Plains, int level = 1, bool expectedValid = true)
         {
             var specifications = new EncounterSpecifications
             {
@@ -360,54 +381,11 @@ namespace DnDGen.EncounterGen.Tests.Integration.Generators
             };
 
             stopwatch.Start();
-            var encounter = encounterGenerator.Generate(specifications);
+            var valid = encounterVerifier.ValidEncounterExists(specifications);
             stopwatch.Stop();
 
-            AssertEncounter(encounter);
-            Assert.That(stopwatch.Elapsed.TotalSeconds, Is.LessThan(1), encounter.Description);
-        }
-
-        private void AssertEncounter(Encounter encounter)
-        {
-            Assert.That(encounter.Description, Is.Not.Empty);
-            Assert.That(encounter.Creatures, Is.Not.Empty, encounter.Description);
-            Assert.That(encounter.Creatures, Is.All.Not.Null, encounter.Description);
-            Assert.That(encounter.Characters, Is.Not.Null, encounter.Description);
-            Assert.That(encounter.Characters, Is.All.Not.Null, encounter.Description);
-
-            foreach (var creature in encounter.Creatures)
-            {
-                AssertCreature(creature.Creature);
-                Assert.That(creature.Quantity, Is.Positive, creature.Creature.Name);
-                Assert.That(creature.ChallengeRating, Is.Not.Empty, creature.Creature.Name);
-            }
-
-            Assert.That(encounter.Treasures, Is.Not.Null, encounter.Description);
-            Assert.That(encounter.Treasures, Is.All.Not.Null, encounter.Description);
-            Assert.That(encounter.Treasures.Select(t => t.IsAny), Is.All.True, encounter.Description);
-
-            var totalCreatures = encounter.Creatures.Sum(c => c.Quantity);
-            Assert.That(encounter.Characters.Count, Is.LessThanOrEqualTo(totalCreatures), encounter.Description);
-            Assert.That(encounter.Treasures.Count, Is.LessThanOrEqualTo(encounter.Creatures.Count()), encounter.Description);
-
-            Assert.That(encounter.TargetEncounterLevel, Is.Positive, encounter.Description);
-            Assert.That(encounter.AverageEncounterLevel, Is.Positive, encounter.Description);
-            Assert.That(encounter.ActualEncounterLevel, Is.Positive, encounter.Description);
-
-            Assert.That(encounter.AverageDifficulty, Is.Not.Empty, encounter.Description);
-            Assert.That(encounter.ActualDifficulty, Is.Not.Empty, encounter.Description);
-        }
-
-        private void AssertCreature(Creature creature)
-        {
-            Assert.That(creature.Name, Is.Not.Empty);
-            Assert.That(creature.Description, Is.Not.Null, creature.Name);
-
-            Assert.That(dice.ContainsRoll(creature.Name), Is.False, creature.Name);
-            Assert.That(dice.ContainsRoll(creature.Description), Is.False, creature.Name);
-
-            if (creature.SubCreature != null)
-                AssertCreature(creature.SubCreature);
+            Assert.That(valid, Is.EqualTo(expectedValid));
+            Assert.That(stopwatch.Elapsed.TotalSeconds, Is.LessThan(1));
         }
     }
 }

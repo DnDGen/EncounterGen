@@ -21,7 +21,7 @@ namespace DnDGen.EncounterGen.Selectors
         public int Select(Encounter encounter)
         {
             var challengeRatingsAndAmounts = new Dictionary<string, double>();
-            var nonCharacterCreatures = encounter.Creatures.Where(c => !IsCharacter(c.Type));
+            var nonCharacterCreatures = encounter.Creatures.Where(c => !IsCharacter(c.Creature));
 
             foreach (var creature in nonCharacterCreatures)
             {
@@ -86,16 +86,16 @@ namespace DnDGen.EncounterGen.Selectors
             return Convert.ToInt32(encounterLevel);
         }
 
-        private bool IsCharacter(CreatureType creatureType)
+        private bool IsCharacter(Creature creature)
         {
-            if (creatureType == null)
+            if (creature == null)
                 return false;
 
-            var name = encounterFormatter.SelectNameFrom(creatureType.Name);
-            if (name == CreatureConstants.Character)
+            var name = encounterFormatter.SelectNameFrom(creature.Name);
+            if (name == CreatureDataConstants.Character)
                 return true;
 
-            return IsCharacter(creatureType.SubType);
+            return IsCharacter(creature.SubCreature);
         }
     }
 }

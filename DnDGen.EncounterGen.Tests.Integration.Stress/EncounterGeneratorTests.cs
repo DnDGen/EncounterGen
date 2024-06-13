@@ -3,6 +3,7 @@ using DnDGen.EncounterGen.Models;
 using NUnit.Framework;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 
 namespace DnDGen.EncounterGen.Tests.Integration.Stress
@@ -11,18 +12,15 @@ namespace DnDGen.EncounterGen.Tests.Integration.Stress
     public class EncounterGeneratorTests : StressTests
     {
         private IEncounterGenerator encounterGenerator;
-        private IEncounterVerifier encounterVerifier;
-
-        private const int PresetLevel = 7;
-
         private HashSet<string> testedFilters;
+        private Stopwatch stopwatch;
 
         [SetUp]
         public void Setup()
         {
             testedFilters = new HashSet<string>();
             encounterGenerator = GetNewInstanceOf<IEncounterGenerator>();
-            encounterVerifier = GetNewInstanceOf<IEncounterVerifier>();
+            stopwatch = new Stopwatch();
         }
 
         [Test]
@@ -42,12 +40,6 @@ namespace DnDGen.EncounterGen.Tests.Integration.Stress
             Console.WriteLine($"Did not stress the following filters: {string.Join(", ", untestedFilters.OrderBy(f => f))}");
         }
 
-        [Test]
-        public void BUG_StressCivilizedEncounter()
-        {
-            stressor.Stress(() => AssertEncounterInRandomEnvironment(EnvironmentConstants.Civilized, level: PresetLevel));
-        }
-
         private void AssertEncounterInRandomEnvironment(string environment = "", string temperature = "", string timeOfDay = "", int level = 0, string filter = "", bool useFilter = false)
         {
             var encounter = MakeEncounterInRandomEnvironment(level, environment, temperature, timeOfDay, filter, useFilter);
@@ -61,49 +53,76 @@ namespace DnDGen.EncounterGen.Tests.Integration.Stress
             if (specifications.CreatureTypeFilters.Any())
                 testedFilters.Add(specifications.CreatureTypeFilters.Single());
 
-            return encounterGenerator.Generate(specifications);
+            stopwatch.Restart();
+            var encounter = encounterGenerator.Generate(specifications);
+            stopwatch.Stop();
+
+            return encounter;
         }
 
         private void AssertEncounter(Encounter encounter)
         {
-            Assert.That(encounter.Creatures, Is.Not.Empty);
-            Assert.That(encounter.Creatures, Is.All.Not.Null);
-            Assert.That(encounter.Characters, Is.Not.Null);
-            Assert.That(encounter.Characters, Is.All.Not.Null);
+            Assert.That(encounter.Description, Is.Not.Empty);
+            Assert.That(encounter.Creatures, Is.Not.Empty, encounter.Description);
+            Assert.That(encounter.Creatures, Is.All.Not.Null, encounter.Description);
+            Assert.That(encounter.Characters, Is.Not.Null, encounter.Description);
+            Assert.That(encounter.Characters, Is.All.Not.Null, encounter.Description);
 
             foreach (var creature in encounter.Creatures)
             {
-                AssertCreatureType(creature.Type);
-                Assert.That(creature.Quantity, Is.Positive);
-                Assert.That(creature.ChallengeRating, Is.Not.Empty);
+                AssertCreature(creature.Creature);
+                Assert.That(creature.Quantity, Is.Positive, creature.Creature.Name);
+                Assert.That(creature.ChallengeRating, Is.Not.Empty, creature.Creature.Name);
             }
 
-            Assert.That(encounter.Treasures, Is.Not.Null);
-            Assert.That(encounter.Treasures, Is.All.Not.Null);
-            Assert.That(encounter.Treasures.Select(t => t.IsAny), Is.All.True);
+            Assert.That(encounter.Treasures, Is.Not.Null, encounter.Description);
+            Assert.That(encounter.Treasures, Is.All.Not.Null, encounter.Description);
+            Assert.That(encounter.Treasures.Select(t => t.IsAny), Is.All.True, encounter.Description);
 
             var totalCreatures = encounter.Creatures.Sum(c => c.Quantity);
-            Assert.That(encounter.Characters.Count, Is.LessThanOrEqualTo(totalCreatures));
-            Assert.That(encounter.Treasures.Count, Is.LessThanOrEqualTo(encounter.Creatures.Count()));
+            Assert.That(encounter.Characters.Count, Is.LessThanOrEqualTo(totalCreatures), encounter.Description);
+            Assert.That(encounter.Treasures.Count, Is.LessThanOrEqualTo(encounter.Creatures.Count()), encounter.Description);
 
-            Assert.That(encounter.TargetEncounterLevel, Is.Positive);
-            Assert.That(encounter.AverageEncounterLevel, Is.Positive);
-            Assert.That(encounter.ActualEncounterLevel, Is.Positive);
+            Assert.That(encounter.TargetEncounterLevel, Is.Positive, encounter.Description);
+            Assert.That(encounter.AverageEncounterLevel, Is.Positive, encounter.Description);
+            Assert.That(encounter.ActualEncounterLevel, Is.Positive, encounter.Description);
 
-            Assert.That(encounter.AverageDifficulty, Is.Not.Empty);
-            Assert.That(encounter.ActualDifficulty, Is.Not.Empty);
+            Assert.That(encounter.AverageDifficulty, Is.Not.Empty, encounter.Description);
+            Assert.That(encounter.ActualDifficulty, Is.Not.Empty, encounter.Description);
+
+            Assert.That(stopwatch.Elapsed.TotalSeconds, Is.LessThan(1).Or.LessThan(encounter.Characters.Count()), encounter.Description);
         }
 
-        private void AssertCreatureType(CreatureType creatureType)
+        private void AssertCreature(Creature creature)
         {
-            Assert.That(creatureType.Name, Is.Not.Empty);
-            Assert.That(creatureType.Description, Is.Not.Null);
+            Assert.That(creature.Name, Is.Not.Empty);
+            Assert.That(creature.Description, Is.Not.Null, creature.Name);
 
-            Assert.That(dice.ContainsRoll(creatureType.Name), Is.False);
-            Assert.That(dice.ContainsRoll(creatureType.Description), Is.False);
+            Assert.That(dice.ContainsRoll(creature.Name), Is.False, creature.Name);
+            Assert.That(dice.ContainsRoll(creature.Description), Is.False, creature.Name);
 
-            if (creatureType.SubType != null)
-                AssertCreatureType(creatureType.SubType);
+            if (creature.SubCreature != null)
+                AssertCreature(creature.SubCreature);
+        }
+
+        [Test]
+        public void BUG_StressEncounterInProblematicEnvironment()
+        {
+            stressor.Stress(TestProblemEnvironments);
+        }
+
+        private void TestProblemEnvironments()
+        {
+            var problemEnvironments = new (string Env, string Temp, string Time, int Level)[]
+            {
+                (EnvironmentConstants.Civilized, EnvironmentConstants.Temperatures.Temperate, EnvironmentConstants.TimesOfDay.Night, 7),
+                (EnvironmentConstants.Civilized, EnvironmentConstants.Temperatures.Warm, EnvironmentConstants.TimesOfDay.Night, 1),
+                (EnvironmentConstants.Desert, EnvironmentConstants.Temperatures.Warm, EnvironmentConstants.TimesOfDay.Day, 1),
+            };
+
+            var problemEnvironment = collectionSelector.SelectRandomFrom(problemEnvironments);
+
+            AssertEncounterInRandomEnvironment(problemEnvironment.Env, problemEnvironment.Temp, problemEnvironment.Time, problemEnvironment.Level);
         }
     }
 }

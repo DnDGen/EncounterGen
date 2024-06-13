@@ -57,7 +57,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors
         {
             encounter.Creatures = new[]
             {
-                new Creature { Type = new CreatureType { Name = "creature" }, Quantity = 90210, ChallengeRating = "42" }
+                new EncounterCreature { Creature = new Creature { Name = "creature" }, Quantity = 90210, ChallengeRating = "42" }
             };
 
             var encounterLevel = encounterLevelSelector.Select(encounter);
@@ -1028,7 +1028,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors
         {
             encounter.Creatures = new[]
             {
-                new Creature { Type = new CreatureType { Name = "creature" }, Quantity = quantity, ChallengeRating = challengeRating }
+                new EncounterCreature { Creature = new Creature { Name = "creature" }, Quantity = quantity, ChallengeRating = challengeRating }
             };
 
             var computedEncounterLevel = encounterLevelSelector.Select(encounter);
@@ -1068,8 +1068,8 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors
             var numericChallengeRating = Convert.ToInt32(challengeRating);
             var difference = numericChallengeRating - 2;
 
-            var creature = new Creature { Type = new CreatureType { Name = "creature" }, Quantity = 0, ChallengeRating = challengeRating };
-            var cr2Creature = new Creature { Type = new CreatureType { Name = "creature" }, Quantity = 0, ChallengeRating = ChallengeRatingConstants.Two };
+            var creature = new EncounterCreature { Creature = new Creature { Name = "creature" }, Quantity = 0, ChallengeRating = challengeRating };
+            var cr2Creature = new EncounterCreature { Creature = new Creature { Name = "creature" }, Quantity = 0, ChallengeRating = ChallengeRatingConstants.Two };
             encounter.Creatures = new[] { creature };
 
             var cr2Encounter = new Encounter();
@@ -1092,8 +1092,8 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors
         {
             encounter.Creatures = new[]
             {
-                new Creature { Type = new CreatureType { Name = "creature" }, Quantity = 90210, ChallengeRating = "42" },
-                new Creature { Type = new CreatureType { Name = "other creature" }, Quantity = 1337, ChallengeRating = "600" },
+                new EncounterCreature { Creature = new Creature { Name = "creature" }, Quantity = 90210, ChallengeRating = "42" },
+                new EncounterCreature { Creature = new Creature { Name = "other creature" }, Quantity = 1337, ChallengeRating = "600" },
             };
 
             var encounterLevel = encounterLevelSelector.Select(encounter);
@@ -1105,15 +1105,15 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors
         {
             encounter.Creatures = new[]
             {
-                new Creature { Type = new CreatureType { Name = "creature" }, Quantity = 90210, ChallengeRating = "42" },
-                new Creature { Type = new CreatureType { Name = "other creature" }, Quantity = 1337, ChallengeRating = "42" },
+                new EncounterCreature { Creature = new Creature { Name = "creature" }, Quantity = 90210, ChallengeRating = "42" },
+                new EncounterCreature { Creature = new Creature { Name = "other creature" }, Quantity = 1337, ChallengeRating = "42" },
             };
 
             var encounterLevel = encounterLevelSelector.Select(encounter);
 
             encounter.Creatures = new[]
             {
-                new Creature { Type = new CreatureType { Name = "creature" }, Quantity = 90210 + 1337, ChallengeRating = "42" },
+                new EncounterCreature { Creature = new Creature { Name = "creature" }, Quantity = 90210 + 1337, ChallengeRating = "42" },
             };
 
             var doubledEncounterLevel = encounterLevelSelector.Select(encounter);
@@ -1127,8 +1127,8 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors
         {
             encounter.Creatures = new[]
             {
-                new Creature { Type = new CreatureType { Name = "creature" }, Quantity = 1, ChallengeRating = ChallengeRatingConstants.One },
-                new Creature { Type = new CreatureType { Name = "other creature" }, Quantity = 100, ChallengeRating = ChallengeRatingConstants.Zero },
+                new EncounterCreature { Creature = new Creature { Name = "creature" }, Quantity = 1, ChallengeRating = ChallengeRatingConstants.One },
+                new EncounterCreature { Creature = new Creature { Name = "other creature" }, Quantity = 100, ChallengeRating = ChallengeRatingConstants.Zero },
             };
 
             var encounterLevel = encounterLevelSelector.Select(encounter);
@@ -1140,8 +1140,8 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors
         {
             encounter.Creatures = new[]
             {
-                new Creature { Type = new CreatureType { Name = "creature" }, Quantity = 1, ChallengeRating = ChallengeRatingConstants.One },
-                new Creature { Type = new CreatureType { Name = "other creature" }, Quantity = 0, ChallengeRating = "42" },
+                new EncounterCreature { Creature = new Creature { Name = "creature" }, Quantity = 1, ChallengeRating = ChallengeRatingConstants.One },
+                new EncounterCreature { Creature = new Creature { Name = "other creature" }, Quantity = 0, ChallengeRating = "42" },
             };
 
             var encounterLevel = encounterLevelSelector.Select(encounter);
@@ -1153,8 +1153,8 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors
         {
             encounter.Creatures = new[]
             {
-                new Creature { Type = new CreatureType { Name = "creature" }, Quantity = 1, ChallengeRating = ChallengeRatingConstants.One },
-                new Creature { Type = new CreatureType { Name = "other creature" }, Quantity = -1, ChallengeRating = "42" },
+                new EncounterCreature { Creature = new Creature { Name = "creature" }, Quantity = 1, ChallengeRating = ChallengeRatingConstants.One },
+                new EncounterCreature { Creature = new Creature { Name = "other creature" }, Quantity = -1, ChallengeRating = "42" },
             };
 
             var encounterLevel = encounterLevelSelector.Select(encounter);
@@ -1166,8 +1166,8 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors
         {
             encounter.Creatures = new[]
             {
-                new Creature { Type = new CreatureType { Name = "creature" }, Quantity = 2, ChallengeRating = ChallengeRatingConstants.One },
-                new Creature { Type = new CreatureType { Name = "other creature" }, Quantity = -1, ChallengeRating = ChallengeRatingConstants.One },
+                new EncounterCreature { Creature = new Creature { Name = "creature" }, Quantity = 2, ChallengeRating = ChallengeRatingConstants.One },
+                new EncounterCreature { Creature = new Creature { Name = "other creature" }, Quantity = -1, ChallengeRating = ChallengeRatingConstants.One },
             };
 
             var encounterLevel = encounterLevelSelector.Select(encounter);
@@ -1179,8 +1179,8 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors
         {
             encounter.Creatures = new[]
             {
-                new Creature { Type = new CreatureType { Name = CreatureConstants.Character }, Quantity = 90210, ChallengeRating = "42" },
-                new Creature { Type = new CreatureType { Name = CreatureConstants.Character }, Quantity = 1337, ChallengeRating = "600" },
+                new EncounterCreature { Creature = new Creature { Name = CreatureDataConstants.Character }, Quantity = 90210, ChallengeRating = "42" },
+                new EncounterCreature { Creature = new Creature { Name = CreatureDataConstants.Character }, Quantity = 1337, ChallengeRating = "600" },
             };
 
             encounter.Characters = new[]
@@ -1203,8 +1203,8 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors
         {
             encounter.Creatures = new[]
             {
-                new Creature { Type = new CreatureType { Name = "creature" }, Quantity = 90210, ChallengeRating = "42" },
-                new Creature { Type = new CreatureType { Name = "other creature" }, Quantity = 1337, ChallengeRating = "600" },
+                new EncounterCreature { Creature = new Creature { Name = "creature" }, Quantity = 90210, ChallengeRating = "42" },
+                new EncounterCreature { Creature = new Creature { Name = "other creature" }, Quantity = 1337, ChallengeRating = "600" },
             };
 
             encounter.Characters = new[]
@@ -1218,8 +1218,8 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors
             encounter.Characters.Last().Class.Level = 66;
             encounter.Characters.Last().Race.ChallengeRating = 123;
 
-            mockEncounterFormatter.Setup(s => s.SelectNameFrom("creature")).Returns(CreatureConstants.Character);
-            mockEncounterFormatter.Setup(s => s.SelectNameFrom("other creature")).Returns(CreatureConstants.Character);
+            mockEncounterFormatter.Setup(s => s.SelectNameFrom("creature")).Returns(CreatureDataConstants.Character);
+            mockEncounterFormatter.Setup(s => s.SelectNameFrom("other creature")).Returns(CreatureDataConstants.Character);
 
             var encounterLevel = encounterLevelSelector.Select(encounter);
             Assert.That(encounterLevel, Is.EqualTo(189));
@@ -1230,10 +1230,10 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors
         {
             encounter.Creatures = new[]
             {
-                new Creature { Type = new CreatureType { Name = "creature" }, Quantity = 90, ChallengeRating = "21" },
-                new Creature { Type = new CreatureType { Name = "other creature" }, Quantity = 13, ChallengeRating = "37" },
-                new Creature { Type = new CreatureType { Name = CreatureConstants.Character }, Quantity = 12, ChallengeRating = "34" },
-                new Creature { Type = new CreatureType { Name = CreatureConstants.Character }, Quantity = 23, ChallengeRating = "45" },
+                new EncounterCreature { Creature = new Creature { Name = "creature" }, Quantity = 90, ChallengeRating = "21" },
+                new EncounterCreature { Creature = new Creature { Name = "other creature" }, Quantity = 13, ChallengeRating = "37" },
+                new EncounterCreature { Creature = new Creature { Name = CreatureDataConstants.Character }, Quantity = 12, ChallengeRating = "34" },
+                new EncounterCreature { Creature = new Creature { Name = CreatureDataConstants.Character }, Quantity = 23, ChallengeRating = "45" },
             };
 
             encounter.Characters = new[]
@@ -1256,8 +1256,20 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors
         {
             encounter.Creatures = new[]
             {
-                new Creature { Type = new CreatureType { Name = "creature", SubType = new CreatureType { Name = CreatureConstants.Character } }, Quantity = 90210, ChallengeRating = "42" },
-                new Creature { Type = new CreatureType { Name = "creature", SubType = new CreatureType { Name = CreatureConstants.Character } }, Quantity = 1337, ChallengeRating = "600" },
+                new EncounterCreature { Creature = new Creature 
+                { 
+                    Name = "creature", 
+                    SubCreature = new Creature { Name = CreatureDataConstants.Character } },
+                    Quantity = 90210, 
+                    ChallengeRating = "42"
+                },
+                new EncounterCreature { Creature = new Creature 
+                { 
+                    Name = "creature",
+                    SubCreature = new Creature { Name = CreatureDataConstants.Character } },
+                    Quantity = 1337, 
+                    ChallengeRating = "600"
+                },
             };
 
             encounter.Characters = new[]

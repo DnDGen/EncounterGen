@@ -6,6 +6,6 @@ namespace DnDGen.EncounterGen.Generators
 {
     internal interface IEncounterTreasureGenerator
     {
-        IEnumerable<Treasure> GenerateFor(IEnumerable<Creature> creatures, int level);
+        IEnumerable<Treasure> GenerateFor(IEnumerable<EncounterCreature> creatures, int level);
     }
 }
