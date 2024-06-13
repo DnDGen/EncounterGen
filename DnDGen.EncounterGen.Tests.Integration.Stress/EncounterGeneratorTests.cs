@@ -3,6 +3,7 @@ using DnDGen.EncounterGen.Models;
 using NUnit.Framework;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 
 namespace DnDGen.EncounterGen.Tests.Integration.Stress
@@ -12,12 +13,14 @@ namespace DnDGen.EncounterGen.Tests.Integration.Stress
     {
         private IEncounterGenerator encounterGenerator;
         private HashSet<string> testedFilters;
+        private Stopwatch stopwatch;
 
         [SetUp]
         public void Setup()
         {
             testedFilters = new HashSet<string>();
             encounterGenerator = GetNewInstanceOf<IEncounterGenerator>();
+            stopwatch = new Stopwatch();
         }
 
         [Test]
@@ -50,7 +53,11 @@ namespace DnDGen.EncounterGen.Tests.Integration.Stress
             if (specifications.CreatureTypeFilters.Any())
                 testedFilters.Add(specifications.CreatureTypeFilters.Single());
 
-            return encounterGenerator.Generate(specifications);
+            stopwatch.Restart();
+            var encounter = encounterGenerator.Generate(specifications);
+            stopwatch.Stop();
+
+            return encounter;
         }
 
         private void AssertEncounter(Encounter encounter)
@@ -82,6 +89,8 @@ namespace DnDGen.EncounterGen.Tests.Integration.Stress
 
             Assert.That(encounter.AverageDifficulty, Is.Not.Empty, encounter.Description);
             Assert.That(encounter.ActualDifficulty, Is.Not.Empty, encounter.Description);
+
+            Assert.That(stopwatch.Elapsed.TotalSeconds, Is.LessThan(1).Or.LessThan(encounter.Characters.Count()), encounter.Description);
         }
 
         private void AssertCreature(Creature creature)
