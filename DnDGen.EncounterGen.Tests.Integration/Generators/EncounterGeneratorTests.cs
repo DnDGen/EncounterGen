@@ -42,7 +42,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Generators
             stopwatch.Stop();
 
             AssertEncounter(encounter);
-            Assert.That(stopwatch.Elapsed.TotalSeconds, Is.LessThan(1).Or.LessThan(encounter.Characters.Sum(s => s.Class.Level / 10d)).Within(0.1));
+            Assert.That(stopwatch.Elapsed.TotalSeconds, Is.LessThan(1).Or.LessThan(encounter.Characters.Sum(s => s.Class.Level / 10d)).Within(0.1), encounter.Description);
         }
 
         [TestCase(EnvironmentConstants.Aquatic, EnvironmentConstants.Temperatures.Cold, EnvironmentConstants.TimesOfDay.Day, false, false)]
@@ -278,7 +278,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Generators
             stopwatch.Stop();
 
             AssertEncounter(encounter);
-            Assert.That(stopwatch.Elapsed.TotalSeconds, Is.LessThan(1).Or.LessThan(encounter.Characters.Sum(s => s.Class.Level / 10d)).Within(0.1));
+            Assert.That(stopwatch.Elapsed.TotalSeconds, Is.LessThan(1).Or.LessThan(encounter.Characters.Sum(s => s.Class.Level / 10d)).Within(0.1), encounter.Description);
         }
 
         [TestCase(EncounterSpecifications.MinimumLevel)]
@@ -328,7 +328,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Generators
             stopwatch.Stop();
 
             AssertEncounter(encounter);
-            Assert.That(stopwatch.Elapsed.TotalSeconds, Is.LessThan(1).Or.LessThan(encounter.Characters.Sum(s => s.Class.Level / 10d)).Within(0.1));
+            Assert.That(stopwatch.Elapsed.TotalSeconds, Is.LessThan(1).Or.LessThan(encounter.Characters.Sum(s => s.Class.Level / 10d)).Within(0.1), encounter.Description);
         }
 
         [TestCase(CreatureDataConstants.Types.Aberration, EnvironmentConstants.Plains, 10)]
@@ -364,47 +364,47 @@ namespace DnDGen.EncounterGen.Tests.Integration.Generators
             stopwatch.Stop();
 
             AssertEncounter(encounter);
-            Assert.That(stopwatch.Elapsed.TotalSeconds, Is.LessThan(1));
+            Assert.That(stopwatch.Elapsed.TotalSeconds, Is.LessThan(1), encounter.Description);
         }
 
         private void AssertEncounter(Encounter encounter)
         {
             Assert.That(encounter.Description, Is.Not.Empty);
-            Assert.That(encounter.Creatures, Is.Not.Empty);
-            Assert.That(encounter.Creatures, Is.All.Not.Null);
-            Assert.That(encounter.Characters, Is.Not.Null);
-            Assert.That(encounter.Characters, Is.All.Not.Null);
+            Assert.That(encounter.Creatures, Is.Not.Empty, encounter.Description);
+            Assert.That(encounter.Creatures, Is.All.Not.Null, encounter.Description);
+            Assert.That(encounter.Characters, Is.Not.Null, encounter.Description);
+            Assert.That(encounter.Characters, Is.All.Not.Null, encounter.Description);
 
             foreach (var creature in encounter.Creatures)
             {
                 AssertCreature(creature.Creature);
-                Assert.That(creature.Quantity, Is.Positive);
-                Assert.That(creature.ChallengeRating, Is.Not.Empty);
+                Assert.That(creature.Quantity, Is.Positive, creature.Creature.Name);
+                Assert.That(creature.ChallengeRating, Is.Not.Empty, creature.Creature.Name);
             }
 
-            Assert.That(encounter.Treasures, Is.Not.Null);
-            Assert.That(encounter.Treasures, Is.All.Not.Null);
-            Assert.That(encounter.Treasures.Select(t => t.IsAny), Is.All.True);
+            Assert.That(encounter.Treasures, Is.Not.Null, encounter.Description);
+            Assert.That(encounter.Treasures, Is.All.Not.Null, encounter.Description);
+            Assert.That(encounter.Treasures.Select(t => t.IsAny), Is.All.True, encounter.Description);
 
             var totalCreatures = encounter.Creatures.Sum(c => c.Quantity);
-            Assert.That(encounter.Characters.Count, Is.LessThanOrEqualTo(totalCreatures));
-            Assert.That(encounter.Treasures.Count, Is.LessThanOrEqualTo(encounter.Creatures.Count()));
+            Assert.That(encounter.Characters.Count, Is.LessThanOrEqualTo(totalCreatures), encounter.Description);
+            Assert.That(encounter.Treasures.Count, Is.LessThanOrEqualTo(encounter.Creatures.Count()), encounter.Description);
 
-            Assert.That(encounter.TargetEncounterLevel, Is.Positive);
-            Assert.That(encounter.AverageEncounterLevel, Is.Positive);
-            Assert.That(encounter.ActualEncounterLevel, Is.Positive);
+            Assert.That(encounter.TargetEncounterLevel, Is.Positive, encounter.Description);
+            Assert.That(encounter.AverageEncounterLevel, Is.Positive, encounter.Description);
+            Assert.That(encounter.ActualEncounterLevel, Is.Positive, encounter.Description);
 
-            Assert.That(encounter.AverageDifficulty, Is.Not.Empty);
-            Assert.That(encounter.ActualDifficulty, Is.Not.Empty);
+            Assert.That(encounter.AverageDifficulty, Is.Not.Empty, encounter.Description);
+            Assert.That(encounter.ActualDifficulty, Is.Not.Empty, encounter.Description);
         }
 
         private void AssertCreature(Creature creature)
         {
             Assert.That(creature.Name, Is.Not.Empty);
-            Assert.That(creature.Description, Is.Not.Null);
+            Assert.That(creature.Description, Is.Not.Null, creature.Name);
 
-            Assert.That(dice.ContainsRoll(creature.Name), Is.False);
-            Assert.That(dice.ContainsRoll(creature.Description), Is.False);
+            Assert.That(dice.ContainsRoll(creature.Name), Is.False, creature.Name);
+            Assert.That(dice.ContainsRoll(creature.Description), Is.False, creature.Name);
 
             if (creature.SubCreature != null)
                 AssertCreature(creature.SubCreature);
