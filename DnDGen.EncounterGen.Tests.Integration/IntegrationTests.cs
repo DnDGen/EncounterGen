@@ -8,7 +8,7 @@ namespace DnDGen.EncounterGen.Tests.Integration
     public abstract class IntegrationTests
     {
         protected IKernel kernel;
-        protected const double characterDivisor = 3;
+        protected const double characterDivisor = 2;
         protected const double encounterLevelDivisor = 100;
 
         [OneTimeSetUp]
