@@ -1,23 +1,21 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-	  <TargetFramework>net6.0</TargetFramework>
-	  <Version>4.0.0</Version>
-	  <Authors>Karl M. Speer</Authors>
-	  <Company>DnDGen</Company>
-	  <Product>EncounterGen</Product>
-	  <Description>This generates encounters for the Dungeons and Dragons 3.5 system.  One can generate encounters of particular levels, times of day, and environments.  One can also filter creature types.  Treasure and equipment are generated.</Description>
-	  <PackageReleaseNotes>
-		  4.0.0: .Net 6, consolidated nuget packages, removed EventGen, removed iterative generators, dependency-compatible Ninject module loading
-		  + #49: rebalance encounter rates
-		  + #35: encounter descriptions
+    <TargetFramework>net8.0</TargetFramework>
+    <Version>5.0.0</Version>
+    <Authors>Karl M. Speer</Authors>
+    <Company>DnDGen</Company>
+    <Product>EncounterGen</Product>
+    <Description>This generates encounters for the Dungeons and Dragons 3.5 system.  One can generate encounters of particular levels, times of day, and environments.  One can also filter creature types.  Treasure and equipment are generated.</Description>
+    <PackageReleaseNotes>
+		  5.0.0: .Net 8
 	  </PackageReleaseNotes>
-	  <PackageProjectUrl>https://github.com/DnDGen/EncounterGen</PackageProjectUrl>
-	  <RepositoryUrl>https://github.com/DnDGen/EncounterGen</RepositoryUrl>
-	  <PackageTags>encounter npc character equipment treasure generator dice dungeons dragons d20 dnd 3.5 gen</PackageTags>
-	  <PackageIcon>18531-twenty-sided-dice-vector-thumb.png</PackageIcon>
-	  <PackageIconUrl />
-	  <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
-	  <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageProjectUrl>https://github.com/DnDGen/EncounterGen</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/DnDGen/EncounterGen</RepositoryUrl>
+    <PackageTags>encounter npc character equipment treasure generator dice dungeons dragons d20 dnd 3.5 gen</PackageTags>
+    <PackageIcon>18531-twenty-sided-dice-vector-thumb.png</PackageIcon>
+    <PackageIconUrl />
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
   <ItemGroup>
     <None Remove="Tables\Creatures\AverageChallengeRatings.xml" />
@@ -60,9 +58,8 @@
     <PackageReference Include="DnDGen.Infrastructure" Version="4.4.3" />
     <PackageReference Include="DnDGen.RollGen" Version="15.5.7" />
     <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
-    <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
   </ItemGroup>
-	<ItemGroup>
-		<None Include="18531-twenty-sided-dice-vector-thumb.png" Pack="true" PackagePath="" />
-	</ItemGroup>
+  <ItemGroup>
+    <None Include="18531-twenty-sided-dice-vector-thumb.png" Pack="true" PackagePath="" />
+  </ItemGroup>
 </Project>

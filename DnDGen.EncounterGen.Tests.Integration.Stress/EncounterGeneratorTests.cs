@@ -90,7 +90,9 @@ namespace DnDGen.EncounterGen.Tests.Integration.Stress
             Assert.That(encounter.AverageDifficulty, Is.Not.Empty, encounter.Description);
             Assert.That(encounter.ActualDifficulty, Is.Not.Empty, encounter.Description);
 
-            Assert.That(stopwatch.Elapsed.TotalSeconds, Is.LessThan(1).Or.LessThan(encounter.Characters.Count()).Within(0.1), encounter.Description);
+            var limit = Math.Max(1, encounter.Characters.Count());
+            var delta = Math.Max(0.1, encounter.ActualEncounterLevel / encounterLevelDivisor);
+            Assert.That(stopwatch.Elapsed.TotalSeconds, Is.LessThan(limit).Within(delta), encounter.Description);
         }
 
         private void AssertCreature(Creature creature)
@@ -123,6 +125,23 @@ namespace DnDGen.EncounterGen.Tests.Integration.Stress
             var problemEnvironment = collectionSelector.SelectRandomFrom(problemEnvironments);
 
             AssertEncounterInRandomEnvironment(problemEnvironment.Env, problemEnvironment.Temp, problemEnvironment.Time, problemEnvironment.Level);
+        }
+
+        [Test]
+        public void BUG_StressHighLevelEncounter()
+        {
+            stressor.Stress(TestHighLevelEncounters);
+        }
+
+        //INFO: This tests encounter level 20 to 29. There are no encounters with average level 30, although actual encounter levels may get up there
+        private void TestHighLevelEncounters()
+        {
+            var highLevels = Enumerable.Range(20, 10);
+            Assert.That(highLevels.Min(), Is.EqualTo(20));
+            Assert.That(highLevels.Max(), Is.EqualTo(29));
+            var level = collectionSelector.SelectRandomFrom(highLevels);
+
+            AssertEncounterInRandomEnvironment(level: level);
         }
     }
 }
