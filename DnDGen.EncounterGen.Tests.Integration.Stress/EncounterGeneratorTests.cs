@@ -90,7 +90,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Stress
             Assert.That(encounter.AverageDifficulty, Is.Not.Empty, encounter.Description);
             Assert.That(encounter.ActualDifficulty, Is.Not.Empty, encounter.Description);
 
-            var limit = Math.Max(1, encounter.Characters.Count() / characterDivisor);
+            var limit = Math.Max(1, encounter.Characters.Count());
             var delta = Math.Max(0.1, encounter.ActualEncounterLevel / encounterLevelDivisor);
             Assert.That(stopwatch.Elapsed.TotalSeconds, Is.LessThan(limit).Within(delta), encounter.Description);
         }

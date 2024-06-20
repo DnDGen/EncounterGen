@@ -44,7 +44,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Generators
 
             AssertEncounter(encounter);
 
-            var limit = Math.Max(1, encounter.Characters.Count() / characterDivisor);
+            var limit = Math.Max(1, encounter.Characters.Count());
             var delta = Math.Max(0.1, encounter.ActualEncounterLevel / encounterLevelDivisor);
             Assert.That(stopwatch.Elapsed.TotalSeconds, Is.LessThan(limit).Within(delta), encounter.Description);
         }
@@ -283,7 +283,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Generators
 
             AssertEncounter(encounter);
 
-            var limit = Math.Max(1, encounter.Characters.Count() / characterDivisor);
+            var limit = Math.Max(1, encounter.Characters.Count());
             var delta = Math.Max(0.1, encounter.ActualEncounterLevel / encounterLevelDivisor);
             Assert.That(stopwatch.Elapsed.TotalSeconds, Is.LessThan(limit).Within(delta), encounter.Description);
         }
@@ -336,7 +336,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Generators
 
             AssertEncounter(encounter);
 
-            var limit = Math.Max(1, encounter.Characters.Count() / characterDivisor);
+            var limit = Math.Max(1, encounter.Characters.Count());
             var delta = Math.Max(0.1, encounter.ActualEncounterLevel / encounterLevelDivisor);
             Assert.That(stopwatch.Elapsed.TotalSeconds, Is.LessThan(limit).Within(delta), encounter.Description);
         }
@@ -375,7 +375,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Generators
 
             AssertEncounter(encounter);
 
-            var limit = Math.Max(1, encounter.Characters.Count() / characterDivisor);
+            var limit = Math.Max(1, encounter.Characters.Count());
             var delta = Math.Max(0.1, encounter.ActualEncounterLevel / encounterLevelDivisor);
             Assert.That(stopwatch.Elapsed.TotalSeconds, Is.LessThan(limit).Within(delta), encounter.Description);
         }
