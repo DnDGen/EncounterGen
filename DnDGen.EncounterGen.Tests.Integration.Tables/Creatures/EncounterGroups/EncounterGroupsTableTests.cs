@@ -85,6 +85,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
                 EnvironmentConstants.Plane_Water,
                 GroupConstants.Extraplanar,
                 GroupConstants.Wilderness,
+                GroupConstants.Character,
             };
 
             AssertNamesAreComplete(names);

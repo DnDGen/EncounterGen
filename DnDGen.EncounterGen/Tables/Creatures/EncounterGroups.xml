@@ -11210,6 +11210,732 @@
 		<entry>Merchants [Level 16-17] (Caravan)</entry>
 		<entry>Merchants [Level 18-19] (Caravan)</entry>
 		<entry>Merchants [Level 20] (Caravan)</entry>
+		<entry>Hunters [Level 1] (Hunting Party)</entry>
+		<entry>Hunters [Level 2-3] (Hunting Party)</entry>
+		<entry>Hunters [Level 4-5] (Hunting Party)</entry>
+		<entry>Hunters [Level 6-7] (Hunting Party)</entry>
+		<entry>Hunters [Level 8-9] (Hunting Party)</entry>
+		<entry>Hunters [Level 10-11] (Hunting Party)</entry>
+		<entry>Hunters [Level 12-13] (Hunting Party)</entry>
+		<entry>Hunters [Level 14-15] (Hunting Party)</entry>
+		<entry>Hunters [Level 16-17] (Hunting Party)</entry>
+		<entry>Hunters [Level 18-19] (Hunting Party)</entry>
+		<entry>Hunters [Level 20] (Hunting Party)</entry>
+		<entry>Herders [Level 1] (Group)</entry>
+		<entry>Herders [Level 2-3] (Group)</entry>
+		<entry>Herders [Level 4-5] (Group)</entry>
+		<entry>Herders [Level 6-7] (Group)</entry>
+		<entry>Herders [Level 8-9] (Group)</entry>
+		<entry>Herders [Level 10-11] (Group)</entry>
+		<entry>Herders [Level 12-13] (Group)</entry>
+		<entry>Herders [Level 14-15] (Group)</entry>
+		<entry>Herders [Level 16-17] (Group)</entry>
+		<entry>Herders [Level 18-19] (Group)</entry>
+		<entry>Herders [Level 20] (Group)</entry>
+		<entry>Fortuneteller [Level 1] (Solitary)</entry>
+		<entry>Fortuneteller [Level 2-3] (Solitary)</entry>
+		<entry>Fortuneteller [Level 4-5] (Solitary)</entry>
+		<entry>Fortuneteller [Level 6-7] (Solitary)</entry>
+		<entry>Fortuneteller [Level 8-9] (Solitary)</entry>
+		<entry>Fortuneteller [Level 10-11] (Solitary)</entry>
+		<entry>Fortuneteller [Level 12-13] (Solitary)</entry>
+		<entry>Fortuneteller [Level 14-15] (Solitary)</entry>
+		<entry>Fortuneteller [Level 16-17] (Solitary)</entry>
+		<entry>Fortuneteller [Level 18-19] (Solitary)</entry>
+		<entry>Fortuneteller [Level 20] (Solitary)</entry>
+		<entry>Missionaries [Level 1 Adepts] (Mission Team)</entry>
+		<entry>Missionaries [Level 2-3 Adepts] (Mission Team)</entry>
+		<entry>Missionaries [Level 4-5 Adepts] (Mission Team)</entry>
+		<entry>Missionaries [Level 6-7 Adepts] (Mission Team)</entry>
+		<entry>Missionaries [Level 8-9 Adepts] (Mission Team)</entry>
+		<entry>Missionaries [Level 10-11 Adepts] (Mission Team)</entry>
+		<entry>Missionaries [Level 12-13 Adepts] (Mission Team)</entry>
+		<entry>Missionaries [Level 14-15 Adepts] (Mission Team)</entry>
+		<entry>Missionaries [Level 16-17 Adepts] (Mission Team)</entry>
+		<entry>Missionaries [Level 18-19 Adepts] (Mission Team)</entry>
+		<entry>Missionaries [Level 20 Adepts] (Mission Team)</entry>
+		<entry>Missionaries [Level 1] (Mission Team)</entry>
+		<entry>Missionaries [Level 2] (Mission Team)</entry>
+		<entry>Missionaries [Level 3] (Mission Team)</entry>
+		<entry>Missionaries [Level 4] (Mission Team)</entry>
+		<entry>Missionaries [Level 5] (Mission Team)</entry>
+		<entry>Missionaries [Level 6] (Mission Team)</entry>
+		<entry>Missionaries [Level 7] (Mission Team)</entry>
+		<entry>Missionaries [Level 8] (Mission Team)</entry>
+		<entry>Missionaries [Level 9] (Mission Team)</entry>
+		<entry>Missionaries [Level 10] (Mission Team)</entry>
+		<entry>Missionaries [Level 11] (Mission Team)</entry>
+		<entry>Missionaries [Level 12] (Mission Team)</entry>
+		<entry>Missionaries [Level 13] (Mission Team)</entry>
+		<entry>Missionaries [Level 14] (Mission Team)</entry>
+		<entry>Missionaries [Level 15] (Mission Team)</entry>
+		<entry>Missionaries [Level 16] (Mission Team)</entry>
+		<entry>Missionaries [Level 17] (Mission Team)</entry>
+		<entry>Missionaries [Level 18] (Mission Team)</entry>
+		<entry>Missionaries [Level 19] (Mission Team)</entry>
+		<entry>Missionaries [Level 20] (Mission Team)</entry>
+		<entry>Farmers [Level 1] (Group)</entry>
+		<entry>Farmers [Level 2-3] (Group)</entry>
+		<entry>Farmers [Level 4-5] (Group)</entry>
+		<entry>Farmers [Level 6-7] (Group)</entry>
+		<entry>Farmers [Level 8-9] (Group)</entry>
+		<entry>Farmers [Level 10-11] (Group)</entry>
+		<entry>Farmers [Level 12-13] (Group)</entry>
+		<entry>Farmers [Level 14-15] (Group)</entry>
+		<entry>Farmers [Level 16-17] (Group)</entry>
+		<entry>Farmers [Level 18-19] (Group)</entry>
+		<entry>Farmers [Level 20] (Group)</entry>
+		<entry>Pilgrims [Level 1] (Caravan)</entry>
+		<entry>Pilgrims [Level 2-3] (Caravan)</entry>
+		<entry>Pilgrims [Level 4-5] (Caravan)</entry>
+		<entry>Pilgrims [Level 6-7] (Caravan)</entry>
+		<entry>Pilgrims [Level 8-9] (Caravan)</entry>
+		<entry>Pilgrims [Level 10-11] (Caravan)</entry>
+		<entry>Pilgrims [Level 12-13] (Caravan)</entry>
+		<entry>Pilgrims [Level 14-15] (Caravan)</entry>
+		<entry>Pilgrims [Level 16-17] (Caravan)</entry>
+		<entry>Pilgrims [Level 18-19] (Caravan)</entry>
+		<entry>Pilgrims [Level 20] (Caravan)</entry>
+		<entry>Famous Researcher [Level 11] (with Dominated Creature)</entry>
+		<entry>Famous Researcher [Level 12] (with Dominated Creature)</entry>
+		<entry>Famous Researcher [Level 13] (with Dominated Creature)</entry>
+		<entry>Famous Researcher [Level 14] (with Dominated Creature)</entry>
+		<entry>Famous Researcher [Level 15] (with Dominated Creature)</entry>
+		<entry>Famous Researcher [Level 16] (with Dominated Creature)</entry>
+		<entry>Famous Researcher [Level 17] (with Dominated Creature)</entry>
+		<entry>Famous Researcher [Level 18] (with Dominated Creature)</entry>
+		<entry>Famous Researcher [Level 19] (with Dominated Creature)</entry>
+		<entry>Famous Researcher [Level 20] (with Dominated Creature)</entry>
+		<entry>Famous Entertainer [Level 11] (Solitary)</entry>
+		<entry>Famous Entertainer [Level 12] (Solitary)</entry>
+		<entry>Famous Entertainer [Level 13] (Solitary)</entry>
+		<entry>Famous Entertainer [Level 14] (Solitary)</entry>
+		<entry>Famous Entertainer [Level 15] (Solitary)</entry>
+		<entry>Famous Entertainer [Level 16] (Solitary)</entry>
+		<entry>Famous Entertainer [Level 17] (Solitary)</entry>
+		<entry>Famous Entertainer [Level 18] (Solitary)</entry>
+		<entry>Famous Entertainer [Level 19] (Solitary)</entry>
+		<entry>Famous Entertainer [Level 20] (Solitary)</entry>
+		<entry>Famous Priest [Level 11] (Solitary)</entry>
+		<entry>Famous Priest [Level 12] (Solitary)</entry>
+		<entry>Famous Priest [Level 13] (Solitary)</entry>
+		<entry>Famous Priest [Level 14] (Solitary)</entry>
+		<entry>Famous Priest [Level 15] (Solitary)</entry>
+		<entry>Famous Priest [Level 16] (Solitary)</entry>
+		<entry>Famous Priest [Level 17] (Solitary)</entry>
+		<entry>Famous Priest [Level 18] (Solitary)</entry>
+		<entry>Famous Priest [Level 19] (Solitary)</entry>
+		<entry>Famous Priest [Level 20] (Solitary)</entry>
+		<entry>War Hero [Level 11] (Solitary)</entry>
+		<entry>War Hero [Level 12] (Solitary)</entry>
+		<entry>War Hero [Level 13] (Solitary)</entry>
+		<entry>War Hero [Level 14] (Solitary)</entry>
+		<entry>War Hero [Level 15] (Solitary)</entry>
+		<entry>War Hero [Level 16] (Solitary)</entry>
+		<entry>War Hero [Level 17] (Solitary)</entry>
+		<entry>War Hero [Level 18] (Solitary)</entry>
+		<entry>War Hero [Level 19] (Solitary)</entry>
+		<entry>War Hero [Level 20] (Solitary)</entry>
+		<entry>Retired Adventurer [Level 11] (Solitary)</entry>
+		<entry>Retired Adventurer [Level 12] (Solitary)</entry>
+		<entry>Retired Adventurer [Level 13] (Solitary)</entry>
+		<entry>Retired Adventurer [Level 14] (Solitary)</entry>
+		<entry>Retired Adventurer [Level 15] (Solitary)</entry>
+		<entry>Retired Adventurer [Level 16] (Solitary)</entry>
+		<entry>Retired Adventurer [Level 17] (Solitary)</entry>
+		<entry>Retired Adventurer [Level 18] (Solitary)</entry>
+		<entry>Retired Adventurer [Level 19] (Solitary)</entry>
+		<entry>Retired Adventurer [Level 20] (Solitary)</entry>
+		<entry>Teacher [Level 11] (with Students)</entry>
+		<entry>Teacher [Level 12] (with Students)</entry>
+		<entry>Teacher [Level 13] (with Students)</entry>
+		<entry>Teacher [Level 14] (with Students)</entry>
+		<entry>Teacher [Level 15] (with Students)</entry>
+		<entry>Teacher [Level 16] (with Students)</entry>
+		<entry>Teacher [Level 17] (with Students)</entry>
+		<entry>Teacher [Level 18] (with Students)</entry>
+		<entry>Teacher [Level 19] (with Students)</entry>
+		<entry>Teacher [Level 20] (with Students)</entry>
+		<entry>Famous Researcher [Level 11] (Solitary)</entry>
+		<entry>Famous Researcher [Level 12] (Solitary)</entry>
+		<entry>Famous Researcher [Level 13] (Solitary)</entry>
+		<entry>Famous Researcher [Level 14] (Solitary)</entry>
+		<entry>Famous Researcher [Level 15] (Solitary)</entry>
+		<entry>Famous Researcher [Level 16] (Solitary)</entry>
+		<entry>Famous Researcher [Level 17] (Solitary)</entry>
+		<entry>Famous Researcher [Level 18] (Solitary)</entry>
+		<entry>Famous Researcher [Level 19] (Solitary)</entry>
+		<entry>Famous Researcher [Level 20] (Solitary)</entry>
+		<entry>Famous Researcher [Level 11] (with Clay Golem)</entry>
+		<entry>Famous Researcher [Level 12] (with Clay Golem)</entry>
+		<entry>Famous Researcher [Level 13] (with Clay Golem)</entry>
+		<entry>Famous Researcher [Level 14] (with Clay Golem)</entry>
+		<entry>Famous Researcher [Level 15] (with Clay Golem)</entry>
+		<entry>Famous Researcher [Level 16] (with Clay Golem)</entry>
+		<entry>Famous Researcher [Level 17] (with Clay Golem)</entry>
+		<entry>Famous Researcher [Level 18] (with Clay Golem)</entry>
+		<entry>Famous Researcher [Level 19] (with Clay Golem)</entry>
+		<entry>Famous Researcher [Level 20] (with Clay Golem)</entry>
+		<entry>Famous Researcher [Level 11] (with Flesh Golem)</entry>
+		<entry>Famous Researcher [Level 12] (with Flesh Golem)</entry>
+		<entry>Famous Researcher [Level 13] (with Flesh Golem)</entry>
+		<entry>Famous Researcher [Level 14] (with Flesh Golem)</entry>
+		<entry>Famous Researcher [Level 15] (with Flesh Golem)</entry>
+		<entry>Famous Researcher [Level 16] (with Flesh Golem)</entry>
+		<entry>Famous Researcher [Level 17] (with Flesh Golem)</entry>
+		<entry>Famous Researcher [Level 18] (with Flesh Golem)</entry>
+		<entry>Famous Researcher [Level 19] (with Flesh Golem)</entry>
+		<entry>Famous Researcher [Level 20] (with Flesh Golem)</entry>
+		<entry>Famous Researcher [Level 11] (with Homunculus)</entry>
+		<entry>Famous Researcher [Level 12] (with Homunculus)</entry>
+		<entry>Famous Researcher [Level 13] (with Homunculus)</entry>
+		<entry>Famous Researcher [Level 14] (with Homunculus)</entry>
+		<entry>Famous Researcher [Level 15] (with Homunculus)</entry>
+		<entry>Famous Researcher [Level 16] (with Homunculus)</entry>
+		<entry>Famous Researcher [Level 17] (with Homunculus)</entry>
+		<entry>Famous Researcher [Level 18] (with Homunculus)</entry>
+		<entry>Famous Researcher [Level 19] (with Homunculus)</entry>
+		<entry>Famous Researcher [Level 20] (with Homunculus)</entry>
+		<entry>Famous Researcher [Level 14] (with Greater Stone Golem)</entry>
+		<entry>Famous Researcher [Level 15] (with Greater Stone Golem)</entry>
+		<entry>Famous Researcher [Level 16] (with Greater Stone Golem)</entry>
+		<entry>Famous Researcher [Level 17] (with Greater Stone Golem)</entry>
+		<entry>Famous Researcher [Level 18] (with Greater Stone Golem)</entry>
+		<entry>Famous Researcher [Level 19] (with Greater Stone Golem)</entry>
+		<entry>Famous Researcher [Level 20] (with Greater Stone Golem)</entry>
+		<entry>Famous Researcher [Level 14] (with Stone Golem)</entry>
+		<entry>Famous Researcher [Level 15] (with Stone Golem)</entry>
+		<entry>Famous Researcher [Level 16] (with Stone Golem)</entry>
+		<entry>Famous Researcher [Level 17] (with Stone Golem)</entry>
+		<entry>Famous Researcher [Level 18] (with Stone Golem)</entry>
+		<entry>Famous Researcher [Level 19] (with Stone Golem)</entry>
+		<entry>Famous Researcher [Level 20] (with Stone Golem)</entry>
+		<entry>Famous Researcher [Level 15] (with Shield Guardian)</entry>
+		<entry>Famous Researcher [Level 16] (with Shield Guardian)</entry>
+		<entry>Famous Researcher [Level 17] (with Shield Guardian)</entry>
+		<entry>Famous Researcher [Level 18] (with Shield Guardian)</entry>
+		<entry>Famous Researcher [Level 19] (with Shield Guardian)</entry>
+		<entry>Famous Researcher [Level 20] (with Shield Guardian)</entry>
+		<entry>Famous Researcher [Level 16] (with Iron Golem)</entry>
+		<entry>Famous Researcher [Level 17] (with Iron Golem)</entry>
+		<entry>Famous Researcher [Level 18] (with Iron Golem)</entry>
+		<entry>Famous Researcher [Level 19] (with Iron Golem)</entry>
+		<entry>Famous Researcher [Level 20] (with Iron Golem)</entry>
+		<entry>Dire Rat (Solitary)</entry>
+		<entry>Dire Rats (Pack)</entry>
+		<entry>Crusaders [Level 1] (Band)</entry>
+		<entry>Crusaders [Level 2] (Band)</entry>
+		<entry>Crusaders [Level 3] (Band)</entry>
+		<entry>Crusaders [Level 4] (Band)</entry>
+		<entry>Crusaders [Level 5] (Band)</entry>
+		<entry>Crusaders [Level 6] (Band)</entry>
+		<entry>Crusaders [Level 7] (Band)</entry>
+		<entry>Crusaders [Level 8] (Band)</entry>
+		<entry>Crusaders [Level 9] (Band)</entry>
+		<entry>Crusaders [Level 10] (Band)</entry>
+		<entry>Crusaders [Level 11] (Band)</entry>
+		<entry>Crusaders [Level 12] (Band)</entry>
+		<entry>Crusaders [Level 13] (Band)</entry>
+		<entry>Crusaders [Level 14] (Band)</entry>
+		<entry>Crusaders [Level 15] (Band)</entry>
+		<entry>Crusaders [Level 16] (Band)</entry>
+		<entry>Crusaders [Level 17] (Band)</entry>
+		<entry>Crusaders [Level 18] (Band)</entry>
+		<entry>Crusaders [Level 19] (Band)</entry>
+		<entry>Crusaders [Level 20] (Band)</entry>
+		<entry>Contract Killer [Level 1] (Solitary)</entry>
+		<entry>Contract Killer [Level 2] (Solitary)</entry>
+		<entry>Contract Killer [Level 3] (Solitary)</entry>
+		<entry>Contract Killer [Level 4] (Solitary)</entry>
+		<entry>Contract Killer [Level 5] (Solitary)</entry>
+		<entry>Contract Killer [Level 6] (Solitary)</entry>
+		<entry>Contract Killer [Level 7] (Solitary)</entry>
+		<entry>Contract Killer [Level 8] (Solitary)</entry>
+		<entry>Contract Killer [Level 9] (Solitary)</entry>
+		<entry>Contract Killer [Level 10] (Solitary)</entry>
+		<entry>Contract Killer [Level 11] (Solitary)</entry>
+		<entry>Contract Killer [Level 12] (Solitary)</entry>
+		<entry>Contract Killer [Level 13] (Solitary)</entry>
+		<entry>Contract Killer [Level 14] (Solitary)</entry>
+		<entry>Contract Killer [Level 15] (Solitary)</entry>
+		<entry>Contract Killer [Level 16] (Solitary)</entry>
+		<entry>Contract Killer [Level 17] (Solitary)</entry>
+		<entry>Contract Killer [Level 18] (Solitary)</entry>
+		<entry>Contract Killer [Level 19] (Solitary)</entry>
+		<entry>Contract Killer [Level 20] (Solitary)</entry>
+		<entry>Bugbear Zombies (Small Group)</entry>
+		<entry>Bugbear Zombies (Group)</entry>
+		<entry>Bugbear Zombies (Large Group)</entry>
+		<entry>Human Zombies (Small Group)</entry>
+		<entry>Human Zombies (Group)</entry>
+		<entry>Human Zombies (Large Group)</entry>
+		<entry>Kobold Zombies (Small Group)</entry>
+		<entry>Kobold Zombies (Group)</entry>
+		<entry>Kobold Zombies (Large Group)</entry>
+		<entry>Gray Render Zombies (Small Group)</entry>
+		<entry>Gray Render Zombies (Group)</entry>
+		<entry>Gray Render Zombies (Large Group)</entry>
+		<entry>Minotaur Zombies (Small Group)</entry>
+		<entry>Minotaur Zombies (Group)</entry>
+		<entry>Minotaur Zombies (Large Group)</entry>
+		<entry>Troglodyte Zombies (Small Group)</entry>
+		<entry>Troglodyte Zombies (Group)</entry>
+		<entry>Troglodyte Zombies (Large Group)</entry>
+		<entry>Ogre Zombies (Small Group)</entry>
+		<entry>Ogre Zombies (Group)</entry>
+		<entry>Ogre Zombies (Large Group)</entry>
+		<entry>Wyvern Zombies (Small Group)</entry>
+		<entry>Wyvern Zombies (Group)</entry>
+		<entry>Wyvern Zombies (Large Group)</entry>
+		<entry>Bandits [Level 1] (Gang)</entry>
+		<entry>Bandits [Level 2-3] (Gang)</entry>
+		<entry>Bandits [Level 4-5] (Gang)</entry>
+		<entry>Bandits [Level 6-7] (Gang)</entry>
+		<entry>Bandits [Level 8-9] (Gang)</entry>
+		<entry>Bandits [Level 10-11] (Gang)</entry>
+		<entry>Bandits [Level 12-13] (Gang)</entry>
+		<entry>Bandits [Level 14-15] (Gang)</entry>
+		<entry>Bandits [Level 16-17] (Gang)</entry>
+		<entry>Bandits [Level 18-19] (Gang)</entry>
+		<entry>Bandits [Level 1] (Gang with Fighter)</entry>
+		<entry>Bandits [Level 2-3] (Gang with Fighter)</entry>
+		<entry>Bandits [Level 4-5] (Gang with Fighter)</entry>
+		<entry>Bandits [Level 6-7] (Gang with Fighter)</entry>
+		<entry>Bandits [Level 8-9] (Gang with Fighter)</entry>
+		<entry>Bandits [Level 10-11] (Gang with Fighter)</entry>
+		<entry>Bandits [Level 12-13] (Gang with Fighter)</entry>
+		<entry>Bandits [Level 14-15] (Gang with Fighter)</entry>
+		<entry>Bandits [Level 16-17] (Gang with Fighter)</entry>
+		<entry>Bandits [Level 18-19] (Gang with Fighter)</entry>
+		<entry>Bandits [Level 20] (Gang with Fighter)</entry>
+		<entry>Guards [Level 1] (Patrol)</entry>
+		<entry>Guards [Level 2-3] (Patrol)</entry>
+		<entry>Guards [Level 4-5] (Patrol)</entry>
+		<entry>Guards [Level 6-7] (Patrol)</entry>
+		<entry>Guards [Level 8-9] (Patrol)</entry>
+		<entry>Guards [Level 10-11] (Patrol)</entry>
+		<entry>Guards [Level 12-13] (Patrol)</entry>
+		<entry>Guards [Level 14-15] (Patrol)</entry>
+		<entry>Guards [Level 16-17] (Patrol)</entry>
+		<entry>Guards [Level 18-19] (Patrol)</entry>
+		<entry>Guards [Level 1] (Patrol with Fighter)</entry>
+		<entry>Guards [Level 2-3] (Patrol with Fighter)</entry>
+		<entry>Guards [Level 4-5] (Patrol with Fighter)</entry>
+		<entry>Guards [Level 6-7] (Patrol with Fighter)</entry>
+		<entry>Guards [Level 8-9] (Patrol with Fighter)</entry>
+		<entry>Guards [Level 10-11] (Patrol with Fighter)</entry>
+		<entry>Guards [Level 12-13] (Patrol with Fighter)</entry>
+		<entry>Guards [Level 14-15] (Patrol with Fighter)</entry>
+		<entry>Guards [Level 16-17] (Patrol with Fighter)</entry>
+		<entry>Guards [Level 18-19] (Patrol with Fighter)</entry>
+		<entry>Guards [Level 20] (Patrol with Fighter)</entry>
+		<entry>Animal Trainer [Level 1] (with Cat)</entry>
+		<entry>Animal Trainer [Level 2] (with Cat)</entry>
+		<entry>Animal Trainer [Level 3] (with Cat)</entry>
+		<entry>Animal Trainer [Level 4] (with Cat)</entry>
+		<entry>Animal Trainer [Level 5] (with Cat)</entry>
+		<entry>Animal Trainer [Level 6] (with Cat)</entry>
+		<entry>Animal Trainer [Level 7] (with Cat)</entry>
+		<entry>Animal Trainer [Level 8] (with Cat)</entry>
+		<entry>Animal Trainer [Level 9] (with Cat)</entry>
+		<entry>Animal Trainer [Level 10] (with Cat)</entry>
+		<entry>Animal Trainer [Level 11] (with Cat)</entry>
+		<entry>Animal Trainer [Level 12] (with Cat)</entry>
+		<entry>Animal Trainer [Level 13] (with Cat)</entry>
+		<entry>Animal Trainer [Level 14] (with Cat)</entry>
+		<entry>Animal Trainer [Level 15] (with Cat)</entry>
+		<entry>Animal Trainer [Level 16] (with Cat)</entry>
+		<entry>Animal Trainer [Level 17] (with Cat)</entry>
+		<entry>Animal Trainer [Level 18] (with Cat)</entry>
+		<entry>Animal Trainer [Level 19] (with Cat)</entry>
+		<entry>Animal Trainer [Level 20] (with Cat)</entry>
+		<entry>Animal Trainer [Level 1] (with Dog)</entry>
+		<entry>Animal Trainer [Level 2] (with Dog)</entry>
+		<entry>Animal Trainer [Level 3] (with Dog)</entry>
+		<entry>Animal Trainer [Level 4] (with Dog)</entry>
+		<entry>Animal Trainer [Level 5] (with Dog)</entry>
+		<entry>Animal Trainer [Level 6] (with Dog)</entry>
+		<entry>Animal Trainer [Level 7] (with Dog)</entry>
+		<entry>Animal Trainer [Level 8] (with Dog)</entry>
+		<entry>Animal Trainer [Level 9] (with Dog)</entry>
+		<entry>Animal Trainer [Level 10] (with Dog)</entry>
+		<entry>Animal Trainer [Level 11] (with Dog)</entry>
+		<entry>Animal Trainer [Level 12] (with Dog)</entry>
+		<entry>Animal Trainer [Level 13] (with Dog)</entry>
+		<entry>Animal Trainer [Level 14] (with Dog)</entry>
+		<entry>Animal Trainer [Level 15] (with Dog)</entry>
+		<entry>Animal Trainer [Level 16] (with Dog)</entry>
+		<entry>Animal Trainer [Level 17] (with Dog)</entry>
+		<entry>Animal Trainer [Level 18] (with Dog)</entry>
+		<entry>Animal Trainer [Level 19] (with Dog)</entry>
+		<entry>Animal Trainer [Level 20] (with Dog)</entry>
+		<entry>Animal Trainer [Level 1] (with Riding Dog)</entry>
+		<entry>Animal Trainer [Level 2] (with Riding Dog)</entry>
+		<entry>Animal Trainer [Level 3] (with Riding Dog)</entry>
+		<entry>Animal Trainer [Level 4] (with Riding Dog)</entry>
+		<entry>Animal Trainer [Level 5] (with Riding Dog)</entry>
+		<entry>Animal Trainer [Level 6] (with Riding Dog)</entry>
+		<entry>Animal Trainer [Level 7] (with Riding Dog)</entry>
+		<entry>Animal Trainer [Level 8] (with Riding Dog)</entry>
+		<entry>Animal Trainer [Level 9] (with Riding Dog)</entry>
+		<entry>Animal Trainer [Level 10] (with Riding Dog)</entry>
+		<entry>Animal Trainer [Level 11] (with Riding Dog)</entry>
+		<entry>Animal Trainer [Level 12] (with Riding Dog)</entry>
+		<entry>Animal Trainer [Level 13] (with Riding Dog)</entry>
+		<entry>Animal Trainer [Level 14] (with Riding Dog)</entry>
+		<entry>Animal Trainer [Level 15] (with Riding Dog)</entry>
+		<entry>Animal Trainer [Level 16] (with Riding Dog)</entry>
+		<entry>Animal Trainer [Level 17] (with Riding Dog)</entry>
+		<entry>Animal Trainer [Level 18] (with Riding Dog)</entry>
+		<entry>Animal Trainer [Level 19] (with Riding Dog)</entry>
+		<entry>Animal Trainer [Level 20] (with Riding Dog)</entry>
+		<entry>Animal Trainer [Level 1] (with Donkey)</entry>
+		<entry>Animal Trainer [Level 2] (with Donkey)</entry>
+		<entry>Animal Trainer [Level 3] (with Donkey)</entry>
+		<entry>Animal Trainer [Level 4] (with Donkey)</entry>
+		<entry>Animal Trainer [Level 5] (with Donkey)</entry>
+		<entry>Animal Trainer [Level 6] (with Donkey)</entry>
+		<entry>Animal Trainer [Level 7] (with Donkey)</entry>
+		<entry>Animal Trainer [Level 8] (with Donkey)</entry>
+		<entry>Animal Trainer [Level 9] (with Donkey)</entry>
+		<entry>Animal Trainer [Level 10] (with Donkey)</entry>
+		<entry>Animal Trainer [Level 11] (with Donkey)</entry>
+		<entry>Animal Trainer [Level 12] (with Donkey)</entry>
+		<entry>Animal Trainer [Level 13] (with Donkey)</entry>
+		<entry>Animal Trainer [Level 14] (with Donkey)</entry>
+		<entry>Animal Trainer [Level 15] (with Donkey)</entry>
+		<entry>Animal Trainer [Level 16] (with Donkey)</entry>
+		<entry>Animal Trainer [Level 17] (with Donkey)</entry>
+		<entry>Animal Trainer [Level 18] (with Donkey)</entry>
+		<entry>Animal Trainer [Level 19] (with Donkey)</entry>
+		<entry>Animal Trainer [Level 20] (with Donkey)</entry>
+		<entry>Animal Trainer [Level 1] (with Mule)</entry>
+		<entry>Animal Trainer [Level 2] (with Mule)</entry>
+		<entry>Animal Trainer [Level 3] (with Mule)</entry>
+		<entry>Animal Trainer [Level 4] (with Mule)</entry>
+		<entry>Animal Trainer [Level 5] (with Mule)</entry>
+		<entry>Animal Trainer [Level 6] (with Mule)</entry>
+		<entry>Animal Trainer [Level 7] (with Mule)</entry>
+		<entry>Animal Trainer [Level 8] (with Mule)</entry>
+		<entry>Animal Trainer [Level 9] (with Mule)</entry>
+		<entry>Animal Trainer [Level 10] (with Mule)</entry>
+		<entry>Animal Trainer [Level 11] (with Mule)</entry>
+		<entry>Animal Trainer [Level 12] (with Mule)</entry>
+		<entry>Animal Trainer [Level 13] (with Mule)</entry>
+		<entry>Animal Trainer [Level 14] (with Mule)</entry>
+		<entry>Animal Trainer [Level 15] (with Mule)</entry>
+		<entry>Animal Trainer [Level 16] (with Mule)</entry>
+		<entry>Animal Trainer [Level 17] (with Mule)</entry>
+		<entry>Animal Trainer [Level 18] (with Mule)</entry>
+		<entry>Animal Trainer [Level 19] (with Mule)</entry>
+		<entry>Animal Trainer [Level 20] (with Mule)</entry>
+		<entry>Animal Trainer [Level 1] (with Camel)</entry>
+		<entry>Animal Trainer [Level 2] (with Camel)</entry>
+		<entry>Animal Trainer [Level 3] (with Camel)</entry>
+		<entry>Animal Trainer [Level 4] (with Camel)</entry>
+		<entry>Animal Trainer [Level 5] (with Camel)</entry>
+		<entry>Animal Trainer [Level 6] (with Camel)</entry>
+		<entry>Animal Trainer [Level 7] (with Camel)</entry>
+		<entry>Animal Trainer [Level 8] (with Camel)</entry>
+		<entry>Animal Trainer [Level 9] (with Camel)</entry>
+		<entry>Animal Trainer [Level 10] (with Camel)</entry>
+		<entry>Animal Trainer [Level 11] (with Camel)</entry>
+		<entry>Animal Trainer [Level 12] (with Camel)</entry>
+		<entry>Animal Trainer [Level 13] (with Camel)</entry>
+		<entry>Animal Trainer [Level 14] (with Camel)</entry>
+		<entry>Animal Trainer [Level 15] (with Camel)</entry>
+		<entry>Animal Trainer [Level 16] (with Camel)</entry>
+		<entry>Animal Trainer [Level 17] (with Camel)</entry>
+		<entry>Animal Trainer [Level 18] (with Camel)</entry>
+		<entry>Animal Trainer [Level 19] (with Camel)</entry>
+		<entry>Animal Trainer [Level 20] (with Camel)</entry>
+		<entry>Animal Trainer [Level 1] (with Light Horse)</entry>
+		<entry>Animal Trainer [Level 2] (with Light Horse)</entry>
+		<entry>Animal Trainer [Level 3] (with Light Horse)</entry>
+		<entry>Animal Trainer [Level 4] (with Light Horse)</entry>
+		<entry>Animal Trainer [Level 5] (with Light Horse)</entry>
+		<entry>Animal Trainer [Level 6] (with Light Horse)</entry>
+		<entry>Animal Trainer [Level 7] (with Light Horse)</entry>
+		<entry>Animal Trainer [Level 8] (with Light Horse)</entry>
+		<entry>Animal Trainer [Level 9] (with Light Horse)</entry>
+		<entry>Animal Trainer [Level 10] (with Light Horse)</entry>
+		<entry>Animal Trainer [Level 11] (with Light Horse)</entry>
+		<entry>Animal Trainer [Level 12] (with Light Horse)</entry>
+		<entry>Animal Trainer [Level 13] (with Light Horse)</entry>
+		<entry>Animal Trainer [Level 14] (with Light Horse)</entry>
+		<entry>Animal Trainer [Level 15] (with Light Horse)</entry>
+		<entry>Animal Trainer [Level 16] (with Light Horse)</entry>
+		<entry>Animal Trainer [Level 17] (with Light Horse)</entry>
+		<entry>Animal Trainer [Level 18] (with Light Horse)</entry>
+		<entry>Animal Trainer [Level 19] (with Light Horse)</entry>
+		<entry>Animal Trainer [Level 20] (with Light Horse)</entry>
+		<entry>Animal Trainer [Level 1] (with Light Warhorse)</entry>
+		<entry>Animal Trainer [Level 2] (with Light Warhorse)</entry>
+		<entry>Animal Trainer [Level 3] (with Light Warhorse)</entry>
+		<entry>Animal Trainer [Level 4] (with Light Warhorse)</entry>
+		<entry>Animal Trainer [Level 5] (with Light Warhorse)</entry>
+		<entry>Animal Trainer [Level 6] (with Light Warhorse)</entry>
+		<entry>Animal Trainer [Level 7] (with Light Warhorse)</entry>
+		<entry>Animal Trainer [Level 8] (with Light Warhorse)</entry>
+		<entry>Animal Trainer [Level 9] (with Light Warhorse)</entry>
+		<entry>Animal Trainer [Level 10] (with Light Warhorse)</entry>
+		<entry>Animal Trainer [Level 11] (with Light Warhorse)</entry>
+		<entry>Animal Trainer [Level 12] (with Light Warhorse)</entry>
+		<entry>Animal Trainer [Level 13] (with Light Warhorse)</entry>
+		<entry>Animal Trainer [Level 14] (with Light Warhorse)</entry>
+		<entry>Animal Trainer [Level 15] (with Light Warhorse)</entry>
+		<entry>Animal Trainer [Level 16] (with Light Warhorse)</entry>
+		<entry>Animal Trainer [Level 17] (with Light Warhorse)</entry>
+		<entry>Animal Trainer [Level 18] (with Light Warhorse)</entry>
+		<entry>Animal Trainer [Level 19] (with Light Warhorse)</entry>
+		<entry>Animal Trainer [Level 20] (with Light Warhorse)</entry>
+		<entry>Animal Trainer [Level 1] (with Heavy Horse)</entry>
+		<entry>Animal Trainer [Level 2] (with Heavy Horse)</entry>
+		<entry>Animal Trainer [Level 3] (with Heavy Horse)</entry>
+		<entry>Animal Trainer [Level 4] (with Heavy Horse)</entry>
+		<entry>Animal Trainer [Level 5] (with Heavy Horse)</entry>
+		<entry>Animal Trainer [Level 6] (with Heavy Horse)</entry>
+		<entry>Animal Trainer [Level 7] (with Heavy Horse)</entry>
+		<entry>Animal Trainer [Level 8] (with Heavy Horse)</entry>
+		<entry>Animal Trainer [Level 9] (with Heavy Horse)</entry>
+		<entry>Animal Trainer [Level 10] (with Heavy Horse)</entry>
+		<entry>Animal Trainer [Level 11] (with Heavy Horse)</entry>
+		<entry>Animal Trainer [Level 12] (with Heavy Horse)</entry>
+		<entry>Animal Trainer [Level 13] (with Heavy Horse)</entry>
+		<entry>Animal Trainer [Level 14] (with Heavy Horse)</entry>
+		<entry>Animal Trainer [Level 15] (with Heavy Horse)</entry>
+		<entry>Animal Trainer [Level 16] (with Heavy Horse)</entry>
+		<entry>Animal Trainer [Level 17] (with Heavy Horse)</entry>
+		<entry>Animal Trainer [Level 18] (with Heavy Horse)</entry>
+		<entry>Animal Trainer [Level 19] (with Heavy Horse)</entry>
+		<entry>Animal Trainer [Level 20] (with Heavy Horse)</entry>
+		<entry>Animal Trainer [Level 1] (with Heavy Warhorse)</entry>
+		<entry>Animal Trainer [Level 2] (with Heavy Warhorse)</entry>
+		<entry>Animal Trainer [Level 3] (with Heavy Warhorse)</entry>
+		<entry>Animal Trainer [Level 4] (with Heavy Warhorse)</entry>
+		<entry>Animal Trainer [Level 5] (with Heavy Warhorse)</entry>
+		<entry>Animal Trainer [Level 6] (with Heavy Warhorse)</entry>
+		<entry>Animal Trainer [Level 7] (with Heavy Warhorse)</entry>
+		<entry>Animal Trainer [Level 8] (with Heavy Warhorse)</entry>
+		<entry>Animal Trainer [Level 9] (with Heavy Warhorse)</entry>
+		<entry>Animal Trainer [Level 10] (with Heavy Warhorse)</entry>
+		<entry>Animal Trainer [Level 11] (with Heavy Warhorse)</entry>
+		<entry>Animal Trainer [Level 12] (with Heavy Warhorse)</entry>
+		<entry>Animal Trainer [Level 13] (with Heavy Warhorse)</entry>
+		<entry>Animal Trainer [Level 14] (with Heavy Warhorse)</entry>
+		<entry>Animal Trainer [Level 15] (with Heavy Warhorse)</entry>
+		<entry>Animal Trainer [Level 16] (with Heavy Warhorse)</entry>
+		<entry>Animal Trainer [Level 17] (with Heavy Warhorse)</entry>
+		<entry>Animal Trainer [Level 18] (with Heavy Warhorse)</entry>
+		<entry>Animal Trainer [Level 19] (with Heavy Warhorse)</entry>
+		<entry>Animal Trainer [Level 20] (with Heavy Warhorse)</entry>
+		<entry>Animal Trainer [Level 1] (with Pony)</entry>
+		<entry>Animal Trainer [Level 2] (with Pony)</entry>
+		<entry>Animal Trainer [Level 3] (with Pony)</entry>
+		<entry>Animal Trainer [Level 4] (with Pony)</entry>
+		<entry>Animal Trainer [Level 5] (with Pony)</entry>
+		<entry>Animal Trainer [Level 6] (with Pony)</entry>
+		<entry>Animal Trainer [Level 7] (with Pony)</entry>
+		<entry>Animal Trainer [Level 8] (with Pony)</entry>
+		<entry>Animal Trainer [Level 9] (with Pony)</entry>
+		<entry>Animal Trainer [Level 10] (with Pony)</entry>
+		<entry>Animal Trainer [Level 11] (with Pony)</entry>
+		<entry>Animal Trainer [Level 12] (with Pony)</entry>
+		<entry>Animal Trainer [Level 13] (with Pony)</entry>
+		<entry>Animal Trainer [Level 14] (with Pony)</entry>
+		<entry>Animal Trainer [Level 15] (with Pony)</entry>
+		<entry>Animal Trainer [Level 16] (with Pony)</entry>
+		<entry>Animal Trainer [Level 17] (with Pony)</entry>
+		<entry>Animal Trainer [Level 18] (with Pony)</entry>
+		<entry>Animal Trainer [Level 19] (with Pony)</entry>
+		<entry>Animal Trainer [Level 20] (with Pony)</entry>
+		<entry>Animal Trainer [Level 1] (with Warpony)</entry>
+		<entry>Animal Trainer [Level 2] (with Warpony)</entry>
+		<entry>Animal Trainer [Level 3] (with Warpony)</entry>
+		<entry>Animal Trainer [Level 4] (with Warpony)</entry>
+		<entry>Animal Trainer [Level 5] (with Warpony)</entry>
+		<entry>Animal Trainer [Level 6] (with Warpony)</entry>
+		<entry>Animal Trainer [Level 7] (with Warpony)</entry>
+		<entry>Animal Trainer [Level 8] (with Warpony)</entry>
+		<entry>Animal Trainer [Level 9] (with Warpony)</entry>
+		<entry>Animal Trainer [Level 10] (with Warpony)</entry>
+		<entry>Animal Trainer [Level 11] (with Warpony)</entry>
+		<entry>Animal Trainer [Level 12] (with Warpony)</entry>
+		<entry>Animal Trainer [Level 13] (with Warpony)</entry>
+		<entry>Animal Trainer [Level 14] (with Warpony)</entry>
+		<entry>Animal Trainer [Level 15] (with Warpony)</entry>
+		<entry>Animal Trainer [Level 16] (with Warpony)</entry>
+		<entry>Animal Trainer [Level 17] (with Warpony)</entry>
+		<entry>Animal Trainer [Level 18] (with Warpony)</entry>
+		<entry>Animal Trainer [Level 19] (with Warpony)</entry>
+		<entry>Animal Trainer [Level 20] (with Warpony)</entry>
+		<entry>Adventurer [Level 1] (Solitary)</entry>
+		<entry>Adventurer [Level 2] (Solitary)</entry>
+		<entry>Adventurer [Level 3] (Solitary)</entry>
+		<entry>Adventurer [Level 4] (Solitary)</entry>
+		<entry>Adventurer [Level 5] (Solitary)</entry>
+		<entry>Adventurer [Level 6] (Solitary)</entry>
+		<entry>Adventurer [Level 7] (Solitary)</entry>
+		<entry>Adventurer [Level 8] (Solitary)</entry>
+		<entry>Adventurer [Level 9] (Solitary)</entry>
+		<entry>Adventurer [Level 10] (Solitary)</entry>
+		<entry>Adventurer [Level 11] (Solitary)</entry>
+		<entry>Adventurer [Level 12] (Solitary)</entry>
+		<entry>Adventurer [Level 13] (Solitary)</entry>
+		<entry>Adventurer [Level 14] (Solitary)</entry>
+		<entry>Adventurer [Level 15] (Solitary)</entry>
+		<entry>Adventurer [Level 16] (Solitary)</entry>
+		<entry>Adventurer [Level 17] (Solitary)</entry>
+		<entry>Adventurer [Level 18] (Solitary)</entry>
+		<entry>Adventurer [Level 19] (Solitary)</entry>
+		<entry>Adventurer [Level 20] (Solitary)</entry>
+		<entry>Adventurers [Level 1] (Party)</entry>
+		<entry>Adventurers [Level 2] (Party)</entry>
+		<entry>Adventurers [Level 3] (Party)</entry>
+		<entry>Adventurers [Level 4] (Party)</entry>
+		<entry>Adventurers [Level 5] (Party)</entry>
+		<entry>Adventurers [Level 6] (Party)</entry>
+		<entry>Adventurers [Level 7] (Party)</entry>
+		<entry>Adventurers [Level 8] (Party)</entry>
+		<entry>Adventurers [Level 9] (Party)</entry>
+		<entry>Adventurers [Level 10] (Party)</entry>
+		<entry>Adventurers [Level 11] (Party)</entry>
+		<entry>Adventurers [Level 12] (Party)</entry>
+		<entry>Adventurers [Level 13] (Party)</entry>
+		<entry>Adventurers [Level 14] (Party)</entry>
+		<entry>Adventurers [Level 15] (Party)</entry>
+		<entry>Adventurers [Level 16] (Party)</entry>
+		<entry>Adventurers [Level 17] (Party)</entry>
+		<entry>Adventurers [Level 18] (Party)</entry>
+		<entry>Adventurers [Level 19] (Party)</entry>
+		<entry>Adventurers [Level 20] (Party)</entry>
+	</collection>
+	<collection>
+		<name>Character</name>
+		<entry>Doctor [Level 1] (Solitary)</entry>
+		<entry>Doctor [Level 2] (Solitary)</entry>
+		<entry>Doctor [Level 3] (Solitary)</entry>
+		<entry>Doctor [Level 4] (Solitary)</entry>
+		<entry>Doctor [Level 5] (Solitary)</entry>
+		<entry>Doctor [Level 6] (Solitary)</entry>
+		<entry>Doctor [Level 7] (Solitary)</entry>
+		<entry>Doctor [Level 8] (Solitary)</entry>
+		<entry>Doctor [Level 9] (Solitary)</entry>
+		<entry>Doctor [Level 10] (Solitary)</entry>
+		<entry>Doctor [Level 11] (Solitary)</entry>
+		<entry>Doctor [Level 12] (Solitary)</entry>
+		<entry>Doctor [Level 13] (Solitary)</entry>
+		<entry>Doctor [Level 14] (Solitary)</entry>
+		<entry>Doctor [Level 15] (Solitary)</entry>
+		<entry>Doctor [Level 16] (Solitary)</entry>
+		<entry>Doctor [Level 17] (Solitary)</entry>
+		<entry>Doctor [Level 18] (Solitary)</entry>
+		<entry>Doctor [Level 19] (Solitary)</entry>
+		<entry>Doctor [Level 20] (Solitary)</entry>
+		<entry>Doctor [Level 1 Adept] (Solitary)</entry>
+		<entry>Doctor [Level 2-3 Adept] (Solitary)</entry>
+		<entry>Doctor [Level 4-5 Adept] (Solitary)</entry>
+		<entry>Doctor [Level 6-7 Adept] (Solitary)</entry>
+		<entry>Doctor [Level 8-9 Adept] (Solitary)</entry>
+		<entry>Doctor [Level 10-11 Adept] (Solitary)</entry>
+		<entry>Doctor [Level 12-13 Adept] (Solitary)</entry>
+		<entry>Doctor [Level 14-15 Adept] (Solitary)</entry>
+		<entry>Doctor [Level 16-17 Adept] (Solitary)</entry>
+		<entry>Doctor [Level 18-19 Adept] (Solitary)</entry>
+		<entry>Doctor [Level 20 Adept] (Solitary)</entry>
+		<entry>Travelers [Level 1] (Group)</entry>
+		<entry>Travelers [Level 2-3] (Group)</entry>
+		<entry>Travelers [Level 4-5] (Group)</entry>
+		<entry>Travelers [Level 6-7] (Group)</entry>
+		<entry>Travelers [Level 8-9] (Group)</entry>
+		<entry>Travelers [Level 10-11] (Group)</entry>
+		<entry>Travelers [Level 12-13] (Group)</entry>
+		<entry>Travelers [Level 14-15] (Group)</entry>
+		<entry>Travelers [Level 16-17] (Group)</entry>
+		<entry>Travelers [Level 18-19] (Group)</entry>
+		<entry>Travelers [Level 20] (Group)</entry>
+		<entry>Sellsword [Level 1] (Solitary)</entry>
+		<entry>Sellsword [Level 2] (Solitary)</entry>
+		<entry>Sellsword [Level 3] (Solitary)</entry>
+		<entry>Sellsword [Level 4] (Solitary)</entry>
+		<entry>Sellsword [Level 5] (Solitary)</entry>
+		<entry>Sellsword [Level 6] (Solitary)</entry>
+		<entry>Sellsword [Level 7] (Solitary)</entry>
+		<entry>Sellsword [Level 8] (Solitary)</entry>
+		<entry>Sellsword [Level 9] (Solitary)</entry>
+		<entry>Sellsword [Level 10] (Solitary)</entry>
+		<entry>Sellsword [Level 11] (Solitary)</entry>
+		<entry>Sellsword [Level 12] (Solitary)</entry>
+		<entry>Sellsword [Level 13] (Solitary)</entry>
+		<entry>Sellsword [Level 14] (Solitary)</entry>
+		<entry>Sellsword [Level 15] (Solitary)</entry>
+		<entry>Sellsword [Level 16] (Solitary)</entry>
+		<entry>Sellsword [Level 17] (Solitary)</entry>
+		<entry>Sellsword [Level 18] (Solitary)</entry>
+		<entry>Sellsword [Level 19] (Solitary)</entry>
+		<entry>Sellsword [Level 20] (Solitary)</entry>
+		<entry>Scholar [Level 1] (Solitary)</entry>
+		<entry>Scholar [Level 2] (Solitary)</entry>
+		<entry>Scholar [Level 3] (Solitary)</entry>
+		<entry>Scholar [Level 4] (Solitary)</entry>
+		<entry>Scholar [Level 5] (Solitary)</entry>
+		<entry>Scholar [Level 6] (Solitary)</entry>
+		<entry>Scholar [Level 7] (Solitary)</entry>
+		<entry>Scholar [Level 8] (Solitary)</entry>
+		<entry>Scholar [Level 9] (Solitary)</entry>
+		<entry>Scholar [Level 10] (Solitary)</entry>
+		<entry>Scholar [Level 11] (Solitary)</entry>
+		<entry>Scholar [Level 12] (Solitary)</entry>
+		<entry>Scholar [Level 13] (Solitary)</entry>
+		<entry>Scholar [Level 14] (Solitary)</entry>
+		<entry>Scholar [Level 15] (Solitary)</entry>
+		<entry>Scholar [Level 16] (Solitary)</entry>
+		<entry>Scholar [Level 17] (Solitary)</entry>
+		<entry>Scholar [Level 18] (Solitary)</entry>
+		<entry>Scholar [Level 19] (Solitary)</entry>
+		<entry>Scholar [Level 20] (Solitary)</entry>
+		<entry>Pickpocket [Level 1] (Solitary)</entry>
+		<entry>Pickpocket [Level 2] (Solitary)</entry>
+		<entry>Pickpocket [Level 3] (Solitary)</entry>
+		<entry>Pickpocket [Level 4] (Solitary)</entry>
+		<entry>Pickpocket [Level 5] (Solitary)</entry>
+		<entry>Pickpocket [Level 6] (Solitary)</entry>
+		<entry>Pickpocket [Level 7] (Solitary)</entry>
+		<entry>Pickpocket [Level 8] (Solitary)</entry>
+		<entry>Pickpocket [Level 9] (Solitary)</entry>
+		<entry>Pickpocket [Level 10] (Solitary)</entry>
+		<entry>Pickpocket [Level 11] (Solitary)</entry>
+		<entry>Pickpocket [Level 12] (Solitary)</entry>
+		<entry>Pickpocket [Level 13] (Solitary)</entry>
+		<entry>Pickpocket [Level 14] (Solitary)</entry>
+		<entry>Pickpocket [Level 15] (Solitary)</entry>
+		<entry>Pickpocket [Level 16] (Solitary)</entry>
+		<entry>Pickpocket [Level 17] (Solitary)</entry>
+		<entry>Pickpocket [Level 18] (Solitary)</entry>
+		<entry>Pickpocket [Level 19] (Solitary)</entry>
+		<entry>Pickpocket [Level 20] (Solitary)</entry>
+		<entry>Minstrels [Level 1] (Group)</entry>
+		<entry>Minstrels [Level 2-3] (Group)</entry>
+		<entry>Minstrels [Level 4-5] (Group)</entry>
+		<entry>Minstrels [Level 6-7] (Group)</entry>
+		<entry>Minstrels [Level 8-9] (Group)</entry>
+		<entry>Minstrels [Level 10-11] (Group)</entry>
+		<entry>Minstrels [Level 12-13] (Group)</entry>
+		<entry>Minstrels [Level 14-15] (Group)</entry>
+		<entry>Minstrels [Level 16-17] (Group)</entry>
+		<entry>Minstrels [Level 18-19] (Group)</entry>
+		<entry>Minstrels [Level 20] (Group)</entry>
+		<entry>Merchants [Level 1] (Caravan)</entry>
+		<entry>Merchants [Level 2-3] (Caravan)</entry>
+		<entry>Merchants [Level 4-5] (Caravan)</entry>
+		<entry>Merchants [Level 6-7] (Caravan)</entry>
+		<entry>Merchants [Level 8-9] (Caravan)</entry>
+		<entry>Merchants [Level 10-11] (Caravan)</entry>
+		<entry>Merchants [Level 12-13] (Caravan)</entry>
+		<entry>Merchants [Level 14-15] (Caravan)</entry>
+		<entry>Merchants [Level 16-17] (Caravan)</entry>
+		<entry>Merchants [Level 18-19] (Caravan)</entry>
+		<entry>Merchants [Level 20] (Caravan)</entry>
 		<entry>Local [Level 1] (with Cat)</entry>
 		<entry>Local [Level 1] (with Dog)</entry>
 		<entry>Local [Level 1] (with Riding Dog)</entry>
@@ -11564,8 +12290,6 @@
 		<entry>Famous Researcher [Level 18] (with Iron Golem)</entry>
 		<entry>Famous Researcher [Level 19] (with Iron Golem)</entry>
 		<entry>Famous Researcher [Level 20] (with Iron Golem)</entry>
-		<entry>Dire Rat (Solitary)</entry>
-		<entry>Dire Rats (Pack)</entry>
 		<entry>Crusaders [Level 1] (Band)</entry>
 		<entry>Crusaders [Level 2] (Band)</entry>
 		<entry>Crusaders [Level 3] (Band)</entry>
@@ -11606,30 +12330,6 @@
 		<entry>Contract Killer [Level 18] (Solitary)</entry>
 		<entry>Contract Killer [Level 19] (Solitary)</entry>
 		<entry>Contract Killer [Level 20] (Solitary)</entry>
-		<entry>Bugbear Zombies (Small Group)</entry>
-		<entry>Bugbear Zombies (Group)</entry>
-		<entry>Bugbear Zombies (Large Group)</entry>
-		<entry>Human Zombies (Small Group)</entry>
-		<entry>Human Zombies (Group)</entry>
-		<entry>Human Zombies (Large Group)</entry>
-		<entry>Kobold Zombies (Small Group)</entry>
-		<entry>Kobold Zombies (Group)</entry>
-		<entry>Kobold Zombies (Large Group)</entry>
-		<entry>Gray Render Zombies (Small Group)</entry>
-		<entry>Gray Render Zombies (Group)</entry>
-		<entry>Gray Render Zombies (Large Group)</entry>
-		<entry>Minotaur Zombies (Small Group)</entry>
-		<entry>Minotaur Zombies (Group)</entry>
-		<entry>Minotaur Zombies (Large Group)</entry>
-		<entry>Troglodyte Zombies (Small Group)</entry>
-		<entry>Troglodyte Zombies (Group)</entry>
-		<entry>Troglodyte Zombies (Large Group)</entry>
-		<entry>Ogre Zombies (Small Group)</entry>
-		<entry>Ogre Zombies (Group)</entry>
-		<entry>Ogre Zombies (Large Group)</entry>
-		<entry>Wyvern Zombies (Small Group)</entry>
-		<entry>Wyvern Zombies (Group)</entry>
-		<entry>Wyvern Zombies (Large Group)</entry>
 		<entry>Bandits [Level 1] (Gang)</entry>
 		<entry>Bandits [Level 2-3] (Gang)</entry>
 		<entry>Bandits [Level 4-5] (Gang)</entry>
