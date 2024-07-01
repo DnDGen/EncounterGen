@@ -20,15 +20,9 @@ namespace DnDGen.EncounterGen.Tests.Integration.IoC.Modules
         }
 
         [Test]
-        public void EncounterCollectionSelectorIsASingleton()
+        public void EncounterCollectionSelectorIsNotASingleton()
         {
-            AssertSingleton<IEncounterCollectionSelector>();
-        }
-
-        [Test]
-        public void EncounterCollectionSelectorIsDecorated()
-        {
-            AssertInstanceOf<IEncounterCollectionSelector, EncounterCollectionSelectorCachingProxy>();
+            AssertNotSingleton<IEncounterCollectionSelector>();
         }
 
         [Test]

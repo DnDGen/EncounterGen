@@ -44,9 +44,8 @@ namespace DnDGen.EncounterGen.Tests.Integration.Generators
 
             AssertEncounter(encounter);
 
-            var limit = Math.Max(1, encounter.Characters.Count());
-            var delta = Math.Max(0.1, encounter.ActualEncounterLevel / encounterLevelDivisor);
-            Assert.That(stopwatch.Elapsed.TotalSeconds, Is.LessThan(limit).Within(delta), encounter.Description);
+            var timeLimit = GetTimeLimitInSeconds(encounter);
+            Assert.That(stopwatch.Elapsed.TotalSeconds, Is.LessThan(timeLimit), encounter.Description);
         }
 
         [TestCase(EnvironmentConstants.Aquatic, EnvironmentConstants.Temperatures.Cold, EnvironmentConstants.TimesOfDay.Day, false, false)]
@@ -283,9 +282,8 @@ namespace DnDGen.EncounterGen.Tests.Integration.Generators
 
             AssertEncounter(encounter);
 
-            var limit = Math.Max(1, encounter.Characters.Count());
-            var delta = Math.Max(0.1, encounter.ActualEncounterLevel / encounterLevelDivisor);
-            Assert.That(stopwatch.Elapsed.TotalSeconds, Is.LessThan(limit).Within(delta), encounter.Description);
+            var timeLimit = GetTimeLimitInSeconds(encounter);
+            Assert.That(stopwatch.Elapsed.TotalSeconds, Is.LessThan(timeLimit), encounter.Description);
         }
 
         [TestCase(EncounterSpecifications.MinimumLevel)]
@@ -336,9 +334,8 @@ namespace DnDGen.EncounterGen.Tests.Integration.Generators
 
             AssertEncounter(encounter);
 
-            var limit = Math.Max(1, encounter.Characters.Count());
-            var delta = Math.Max(0.1, encounter.ActualEncounterLevel / encounterLevelDivisor);
-            Assert.That(stopwatch.Elapsed.TotalSeconds, Is.LessThan(limit).Within(delta), encounter.Description);
+            var timeLimit = GetTimeLimitInSeconds(encounter);
+            Assert.That(stopwatch.Elapsed.TotalSeconds, Is.LessThan(timeLimit), encounter.Description);
         }
 
         [TestCase(CreatureDataConstants.Types.Aberration, EnvironmentConstants.Plains, 10)]
@@ -375,9 +372,8 @@ namespace DnDGen.EncounterGen.Tests.Integration.Generators
 
             AssertEncounter(encounter);
 
-            var limit = Math.Max(1, encounter.Characters.Count());
-            var delta = Math.Max(0.1, encounter.ActualEncounterLevel / encounterLevelDivisor);
-            Assert.That(stopwatch.Elapsed.TotalSeconds, Is.LessThan(limit).Within(delta), encounter.Description);
+            var timeLimit = GetTimeLimitInSeconds(encounter);
+            Assert.That(stopwatch.Elapsed.TotalSeconds, Is.LessThan(timeLimit), encounter.Description);
         }
 
         private void AssertEncounter(Encounter encounter)

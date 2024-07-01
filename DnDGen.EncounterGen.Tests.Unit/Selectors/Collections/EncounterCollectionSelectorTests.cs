@@ -34,6 +34,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
         private List<string> undeadEncounters;
         private Dictionary<string, List<string>> filters;
         private List<string> wildernessEncounters;
+        private List<string> characterEncounters;
         private EncounterSpecifications specifications;
         private Dictionary<string, IEnumerable<string>> encounterGroups;
         private Dictionary<string, IEnumerable<string>> encounterLevels;
@@ -44,23 +45,24 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
             mockCollectionSelector = new Mock<ICollectionSelector>();
             encounterCollectionSelector = new EncounterCollectionSelector(mockCollectionSelector.Object);
 
-            levelEncounters = new List<string>();
-            timeOfDayEncounters = new List<string>();
-            extraplanarEncounters = new List<string> { "extraplanar encounter", "other extraplanar encounter" };
-            anyEncounters = new List<string> { "any encounter", "other any encounter" };
-            civilizedEncounters = new List<string> { "civilized encounter", "other civilized encounter" };
-            undeadEncounters = new List<string> { "undead encounter", "other undead encounter" };
-            specificEnvironmentEncounters = new List<string>
-            {
+            levelEncounters = [];
+            timeOfDayEncounters = [];
+            extraplanarEncounters = ["extraplanar encounter", "other extraplanar encounter"];
+            anyEncounters = ["any encounter", "other any encounter"];
+            civilizedEncounters = ["civilized encounter", "other civilized encounter"];
+            undeadEncounters = ["undead encounter", "other undead encounter"];
+            specificEnvironmentEncounters =
+            [
                 "specific environment encounter",
                 "other specific environment encounter"
-            };
-            landEncounters = new List<string> { "land encounter", "other land encounter" };
-            filters = new Dictionary<string, List<string>>();
-            wildernessEncounters = new List<string>();
+            ];
+            landEncounters = ["land encounter", "other land encounter"];
+            filters = [];
+            wildernessEncounters = [];
+            characterEncounters = [];
             specifications = new EncounterSpecifications();
-            encounterGroups = new Dictionary<string, IEnumerable<string>>();
-            encounterLevels = new Dictionary<string, IEnumerable<string>>();
+            encounterGroups = [];
+            encounterLevels = [];
 
             SetupEncounterLevel(specificEnvironmentEncounters[0], 9266);
             SetupEncounterLevel("level encounter", 9266);
@@ -78,18 +80,19 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
 
             SetUpEncounterGroup(timeOfDay, timeOfDayEncounters);
             SetUpEncounterGroup(GroupConstants.Extraplanar, extraplanarEncounters);
-            SetUpEncounterGroup(string.Empty, Enumerable.Empty<string>());
+            SetUpEncounterGroup(string.Empty, []);
             SetUpEncounterGroup(specifications.SpecificEnvironment, specificEnvironmentEncounters);
             SetUpEncounterGroup(EnvironmentConstants.Land, landEncounters);
             SetUpEncounterGroup(EnvironmentConstants.Any, anyEncounters);
             SetUpEncounterGroup(EnvironmentConstants.Civilized, civilizedEncounters);
             SetUpEncounterGroup(CreatureDataConstants.Types.Undead, undeadEncounters);
             SetUpEncounterGroup(GroupConstants.Wilderness, wildernessEncounters);
+            SetUpEncounterGroup(GroupConstants.Character, characterEncounters);
 
             mockCollectionSelector.Setup(s => s.SelectAllFrom(TableNameConstants.EncounterGroups)).Returns(encounterGroups);
             mockCollectionSelector
                 .Setup(s => s.SelectFrom(TableNameConstants.EncounterGroups, It.IsAny<string>()))
-                .Returns((string t, string n) => encounterGroups.ContainsKey(n) ? encounterGroups[n] : Enumerable.Empty<string>());
+                .Returns((string t, string n) => encounterGroups.ContainsKey(n) ? encounterGroups[n] : []);
             mockCollectionSelector
                 .Setup(s => s.SelectFrom(TableNameConstants.EncounterGroups, GroupConstants.All))
                 .Returns(() => encounterGroups.Values.SelectMany(e => e).Distinct());
@@ -111,7 +114,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
         private IEnumerable<string> GetEncounterLevel(string level)
         {
             if (!encounterLevels.ContainsKey(level))
-                return Enumerable.Empty<string>();
+                return [];
 
             return encounterLevels[level].Where(levelEncounters.Contains);
         }
@@ -146,9 +149,9 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
             levelEncounters.Add(encounter);
 
             if (!encounterLevels.ContainsKey(level.ToString()))
-                encounterLevels[level.ToString()] = new List<string>();
+                encounterLevels[level.ToString()] = [];
 
-            encounterLevels[level.ToString()] = encounterLevels[level.ToString()].Concat(new[] { encounter });
+            encounterLevels[level.ToString()] = encounterLevels[level.ToString()].Concat([encounter]);
         }
 
         private void SetUpEncounterGroup(string name, IEnumerable<string> encounters)
@@ -167,7 +170,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
 
             foreach (var expectedEncounter in expectedEncounters)
             {
-                Assert.That(weightedEncounters.Count(e => e == expectedEncounter.Encounter), Is.EqualTo(expectedEncounter.Weight));
+                Assert.That(weightedEncounters.Count(e => e == expectedEncounter.Encounter), Is.EqualTo(expectedEncounter.Weight), expectedEncounter.Encounter);
             }
 
             Assert.That(weightedEncounters.Count, Is.EqualTo(expectedEncounters.Sum(e => e.Weight)));
@@ -220,7 +223,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
         [Test]
         public void SelectAllWeightedEncountersFrom_ReturnEmptyWhenNoneMatchFilter()
         {
-            specifications.CreatureTypeFilters = new[] { "filter" };
+            specifications.CreatureTypeFilters = ["filter"];
 
             var weightedEncounters = encounterCollectionSelector.SelectAllWeightedEncountersFrom(specifications);
 
@@ -362,6 +365,116 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
                 ("extraplanar encounter", rareWeight),
                 ("other extraplanar encounter", rareWeight),
                 ("specific environment encounter", commonWeight),
+            };
+
+            AssertEncounterWeight(expectedEncounters, weightedEncounters);
+        }
+
+        [Test]
+        public void SelectAllWeightedEncountersFrom_WeightCharacterEncounters_WhenNotCivilized()
+        {
+            characterEncounters.Add("character encounter");
+            landEncounters.Add("character encounter");
+
+            SetupEncounterLevel("character encounter", 9266);
+            timeOfDayEncounters.Add("character encounter");
+
+            var weightedEncounters = encounterCollectionSelector.SelectAllWeightedEncountersFrom(specifications);
+
+            var expectedEncounters = new[]
+            {
+                ("specific environment encounter", commonWeight),
+                ("character encounter", uncommonWeight),
+            };
+
+            AssertEncounterWeight(expectedEncounters, weightedEncounters);
+        }
+
+        [Test]
+        public void SelectAllWeightedEncountersFrom_WeightAllCharacterEncounters_WhenNotCivilized()
+        {
+            characterEncounters.Add("character encounter");
+            characterEncounters.Add("other character encounter");
+            landEncounters.Add("character encounter");
+            landEncounters.Add("other character encounter");
+
+            SetupEncounterLevel("character encounter", 9266);
+            SetupEncounterLevel("other character encounter", 9266);
+            timeOfDayEncounters.Add("character encounter");
+            timeOfDayEncounters.Add("other character encounter");
+
+            var weightedEncounters = encounterCollectionSelector.SelectAllWeightedEncountersFrom(specifications);
+
+            var expectedEncounters = new[]
+            {
+                ("specific environment encounter", commonWeight),
+                ("character encounter", uncommonWeight),
+                ("other character encounter", uncommonWeight),
+            };
+
+            AssertEncounterWeight(expectedEncounters, weightedEncounters);
+        }
+
+        [Test]
+        public void SelectAllWeightedEncountersFrom_WeightCharacterEncounters_WhenCivilized()
+        {
+            var specificCivilizedEncounters = new[] { "specific civilized encounter", "other specific civilized encounter" };
+            SetUpEncounterGroup(temperature + EnvironmentConstants.Civilized, specificCivilizedEncounters);
+
+            characterEncounters.Add("character encounter");
+            landEncounters.Add("character encounter");
+
+            SetupEncounterLevel("character encounter", 9266);
+            SetupEncounterLevel(civilizedEncounters[0], 9266);
+            SetupEncounterLevel(specificCivilizedEncounters[0], 9266);
+            timeOfDayEncounters.Add("character encounter");
+            timeOfDayEncounters.Add(civilizedEncounters[0]);
+            timeOfDayEncounters.Add(specificCivilizedEncounters[0]);
+
+            specifications.Environment = EnvironmentConstants.Civilized;
+
+            var weightedEncounters = encounterCollectionSelector.SelectAllWeightedEncountersFrom(specifications);
+
+            var expectedEncounters = new[]
+            {
+                ("character encounter", commonWeight),
+                ("specific civilized encounter", commonWeight),
+                ("civilized encounter", commonWeight),
+            };
+
+            AssertEncounterWeight(expectedEncounters, weightedEncounters);
+        }
+
+        [Test]
+        public void SelectAllWeightedEncountersFrom_WeightAllCharacterEncounters_WhenCivilized()
+        {
+            var specificCivilizedEncounters = new[] { "specific civilized encounter", "other specific civilized encounter" };
+            SetUpEncounterGroup(temperature + EnvironmentConstants.Civilized, specificCivilizedEncounters);
+
+            characterEncounters.Add("character encounter");
+            characterEncounters.Add("other character encounter");
+            landEncounters.Add("character encounter");
+            landEncounters.Add("other character encounter");
+
+            SetupEncounterLevel("character encounter", 9266);
+            SetupEncounterLevel("other character encounter", 9266);
+            SetupEncounterLevel(civilizedEncounters[0], 9266);
+            SetupEncounterLevel(specificCivilizedEncounters[0], 9266);
+            timeOfDayEncounters.Add("character encounter");
+            timeOfDayEncounters.Add("other character encounter");
+            timeOfDayEncounters.Add(civilizedEncounters[0]);
+            timeOfDayEncounters.Add(specificCivilizedEncounters[0]);
+
+            specifications.Environment = EnvironmentConstants.Civilized;
+
+            var weightedEncounters = encounterCollectionSelector.SelectAllWeightedEncountersFrom(specifications);
+
+            var expectedEncounters = new[]
+            {
+                ("character encounter", commonWeight),
+                ("other character encounter", commonWeight),
+                ("specific civilized encounter", commonWeight),
+                ("civilized encounter", commonWeight),
             };
 
             AssertEncounterWeight(expectedEncounters, weightedEncounters);
@@ -790,9 +903,11 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
 
             SetupEncounterLevel(undergroundAquaticEncounters[0], 9266);
 
-            var nightEncounters = new List<string>();
-            nightEncounters.Add(specificEnvironmentEncounters[0]);
-            nightEncounters.Add(undergroundAquaticEncounters[0]);
+            var nightEncounters = new List<string>
+            {
+                specificEnvironmentEncounters[0],
+                undergroundAquaticEncounters[0]
+            };
 
             SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Night, nightEncounters);
 
@@ -954,8 +1069,10 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
             levelEncounters.Clear();
             SetupEncounterLevel(undergroundAquaticEncounters[0], 9266);
 
-            var nightEncounters = new List<string>();
-            nightEncounters.Add(undergroundAquaticEncounters[0]);
+            var nightEncounters = new List<string>
+            {
+                undergroundAquaticEncounters[0]
+            };
 
             SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Night, nightEncounters);
 
