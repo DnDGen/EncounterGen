@@ -77,7 +77,7 @@ namespace DnDGen.EncounterGen.Generators
             creature.Creature = GetCreature(fullCreature);
             creature.ChallengeRating = challengeRatingSelector.SelectAverageForCreature(fullCreature);
 
-            var creaturesRequiringSubcreatures = collectionSelector.SelectFrom(TableNameConstants.CreatureGroups, GroupConstants.RequiresSubcreature);
+            var creaturesRequiringSubcreatures = collectionSelector.SelectFrom(Config.Name, TableNameConstants.CreatureGroups, GroupConstants.RequiresSubcreature);
 
             if (creaturesRequiringSubcreatures.Contains(fullCreature) && SubcreatureNotFilled(creature))
                 return GetCreaturesWithRandomSubcreature(creature);
@@ -137,9 +137,9 @@ namespace DnDGen.EncounterGen.Generators
                 throw new InvalidOperationException($"Cannot generate random sub-creature of {sourceCreature.Name} without a set challenge rating");
 
             var name = encounterFormatter.SelectNameFrom(sourceCreature.Name);
-            var subcreatureNames = collectionSelector.Explode(TableNameConstants.CreatureGroups, name);
+            var subcreatureNames = collectionSelector.Explode(Config.Name, TableNameConstants.CreatureGroups, name);
 
-            var challengeRatingCreatures = collectionSelector.SelectFrom(TableNameConstants.AverageChallengeRatings, setChallengeRating);
+            var challengeRatingCreatures = collectionSelector.SelectFrom(Config.Name, TableNameConstants.AverageChallengeRatings, setChallengeRating);
             var validSubcreatureNames = subcreatureNames.Intersect(challengeRatingCreatures);
 
             var fullSubcreature = collectionSelector.SelectRandomFrom(validSubcreatureNames);
@@ -148,7 +148,7 @@ namespace DnDGen.EncounterGen.Generators
             subcreature.Name = fullSubcreature;
             subcreature.Description = encounterFormatter.SelectDescriptionFrom(fullSubcreature);
 
-            var creaturesRequiringSubcreatures = collectionSelector.SelectFrom(TableNameConstants.CreatureGroups, GroupConstants.RequiresSubcreature);
+            var creaturesRequiringSubcreatures = collectionSelector.SelectFrom(Config.Name, TableNameConstants.CreatureGroups, GroupConstants.RequiresSubcreature);
             var furtherFullSubcreature = encounterFormatter.SelectSubCreatureFrom(fullSubcreature);
 
             if (!string.IsNullOrEmpty(furtherFullSubcreature))
@@ -165,7 +165,7 @@ namespace DnDGen.EncounterGen.Generators
 
         public IEnumerable<EncounterCreature> GenerateFor(string encounter)
         {
-            var creatureData = collectionSelector.SelectFrom(TableNameConstants.EncounterCreatures, encounter);
+            var creatureData = collectionSelector.SelectFrom(Config.Name, TableNameConstants.EncounterCreatures, encounter);
             var creaturesAndAmounts = encounterFormatter.SelectCreaturesAndAmountsFrom(creatureData);
             var creatures = new List<EncounterCreature>();
 

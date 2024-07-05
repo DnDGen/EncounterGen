@@ -22,7 +22,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
         [Test]
         public void SelectTreasureRates()
         {
-            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.TreasureRates, "entry")).Returns(new[] { "92.66", "902.1", "42" });
+            mockCollectionSelector.Setup(s => s.SelectFrom(Config.Name, TableNameConstants.TreasureRates, "entry")).Returns(["92.66", "902.1", "42"]);
 
             var treasureRates = treasureRatesSelector.SelectFor("entry");
             Assert.That(treasureRates.Coin, Is.EqualTo(92.66));

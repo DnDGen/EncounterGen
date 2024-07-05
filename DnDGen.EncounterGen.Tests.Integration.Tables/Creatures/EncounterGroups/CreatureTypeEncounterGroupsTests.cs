@@ -35,7 +35,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
             var encounters = EncounterConstants.GetAll();
             var encountersOfType = new List<string>();
 
-            foreach(var encounter in encounters)
+            foreach (var encounter in encounters)
             {
                 var creaturesOfType = GetCreaturesOfTypeInEncounter(creatureType, encounter);
                 if (creaturesOfType.Any())
@@ -47,8 +47,8 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
 
         private IEnumerable<string> GetCreaturesOfTypeInEncounter(string creatureType, string encounter)
         {
-            var creaturesOfType = collectionSelector.Explode(TableNameConstants.CreatureGroups, creatureType);
-            var encounterCreatures = collectionSelector.SelectFrom(TableNameConstants.EncounterCreatures, encounter);
+            var creaturesOfType = collectionSelector.Explode(Config.Name, TableNameConstants.CreatureGroups, creatureType);
+            var encounterCreatures = collectionSelector.SelectFrom(Config.Name, TableNameConstants.EncounterCreatures, encounter);
             var creatures = encounterFormatter.SelectCreaturesAndAmountsFrom(encounterCreatures).Keys;
 
             return creatures.Intersect(creaturesOfType);

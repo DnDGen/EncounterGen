@@ -17,7 +17,7 @@ namespace DnDGen.EncounterGen.Selectors.Collections
 
         public TreasureRatesSelection SelectFor(string creature)
         {
-            var collection = collectionSelector.SelectFrom(TableNameConstants.TreasureRates, creature).ToArray();
+            var collection = collectionSelector.SelectFrom(Config.Name, TableNameConstants.TreasureRates, creature).ToArray();
             var treasureRates = new TreasureRatesSelection();
 
             treasureRates.Coin = Convert.ToDouble(collection[TreasureConstants.CoinIndex]);

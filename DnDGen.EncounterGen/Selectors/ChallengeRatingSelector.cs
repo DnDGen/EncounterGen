@@ -43,7 +43,7 @@ namespace DnDGen.EncounterGen.Selectors
 
         public string SelectAverageForCreature(string creature)
         {
-            var challengeRating = collectionSelector.SelectFrom(TableNameConstants.AverageChallengeRatings, creature).Single();
+            var challengeRating = collectionSelector.SelectFrom(Config.Name, TableNameConstants.AverageChallengeRatings, creature).Single();
 
             return challengeRating;
         }

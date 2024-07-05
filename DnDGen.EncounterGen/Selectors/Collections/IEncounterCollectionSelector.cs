@@ -6,7 +6,7 @@ namespace DnDGen.EncounterGen.Selectors.Collections
     internal interface IEncounterCollectionSelector
     {
         string SelectRandomEncounterFrom(EncounterSpecifications encounterSpecifications);
-        IEnumerable<string> SelectAllWeightedEncountersFrom(EncounterSpecifications encounterSpecifications);
+        //IEnumerable<string> SelectAllWeightedEncountersFrom(EncounterSpecifications encounterSpecifications);
         IEnumerable<string> SelectPossibleEncountersFrom(
             string environment = "",
             string temperature = "",

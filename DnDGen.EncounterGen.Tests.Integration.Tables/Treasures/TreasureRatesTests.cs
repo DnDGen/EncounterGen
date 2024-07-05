@@ -10,19 +10,13 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Treasures
     [TestFixture]
     public class TreasureRatesTests : CollectionTests
     {
-        protected override string tableName
-        {
-            get
-            {
-                return TableNameConstants.TreasureRates;
-            }
-        }
+        protected override string tableName => TableNameConstants.TreasureRates;
 
         [Test]
         public override void EntriesAreComplete()
         {
             var allCreatures = GetAllCreaturesFromEncounters();
-            var useSubcreatureForTreasure = collectionSelector.Explode(TableNameConstants.CreatureGroups, GroupConstants.UseSubcreatureForTreasure);
+            var useSubcreatureForTreasure = collectionSelector.Explode(Config.Name, TableNameConstants.CreatureGroups, GroupConstants.UseSubcreatureForTreasure);
             allCreatures = allCreatures.Except(useSubcreatureForTreasure);
 
             AssertNamesAreComplete(allCreatures);

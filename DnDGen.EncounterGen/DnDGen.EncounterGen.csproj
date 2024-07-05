@@ -56,8 +56,8 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="DnDGen.CharacterGen" Version="11.0.5" />
-    <PackageReference Include="DnDGen.Infrastructure" Version="4.4.3" />
+    <PackageReference Include="DnDGen.CharacterGen" Version="11.0.6" />
+    <PackageReference Include="DnDGen.Infrastructure" Version="5.1.0" />
     <PackageReference Include="DnDGen.RollGen" Version="15.5.7" />
     <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
   </ItemGroup>

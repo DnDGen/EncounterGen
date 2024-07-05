@@ -131,7 +131,7 @@ namespace DnDGen.EncounterGen.Generators
         private IEnumerable<Item> GetSetItems(string creatureName, int quantity)
         {
             var setItems = new List<Item>();
-            var setTreasure = collectionSelector.SelectFrom(TableNameConstants.TreasureGroups, creatureName);
+            var setTreasure = collectionSelector.SelectFrom(Config.Name, TableNameConstants.TreasureGroups, creatureName);
             var setItemTemplates = GetTemplates(setTreasure);
 
             while (quantity-- > 0)
@@ -173,7 +173,7 @@ namespace DnDGen.EncounterGen.Generators
 
         private string GetCreatureNameForTreasure(Creature creature)
         {
-            var useSubcreatureForTreasure = collectionSelector.SelectFrom(TableNameConstants.CreatureGroups, GroupConstants.UseSubcreatureForTreasure);
+            var useSubcreatureForTreasure = collectionSelector.SelectFrom(Config.Name, TableNameConstants.CreatureGroups, GroupConstants.UseSubcreatureForTreasure);
 
             if (useSubcreatureForTreasure.Contains(creature.Name))
             {
