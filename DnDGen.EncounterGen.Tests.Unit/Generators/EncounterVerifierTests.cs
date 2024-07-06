@@ -45,7 +45,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
             filterGroup.Add("creature");
             filterGroup.Add("other creature");
 
-            mockCollectionSelector.Setup(s => s.Explode(TableNameConstants.CreatureGroups, Filter)).Returns(filterGroup);
+            mockCollectionSelector.Setup(s => s.Explode(Config.Name, TableNameConstants.CreatureGroups, Filter)).Returns(filterGroup);
         }
 
         private void SetupEncounter(string encounter, int setupLevel)
@@ -151,7 +151,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
             additionalFilterGroup.Add("creature");
             additionalFilterGroup.Add("other creature");
 
-            mockCollectionSelector.Setup(s => s.Explode(TableNameConstants.CreatureGroups, "other filter")).Returns(additionalFilterGroup);
+            mockCollectionSelector.Setup(s => s.Explode(Config.Name, TableNameConstants.CreatureGroups, "other filter")).Returns(additionalFilterGroup);
 
             var creatures = new[] { "creature" };
 
@@ -230,7 +230,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
             additionalFilterGroup.Add("creature");
             additionalFilterGroup.Add("other creature");
 
-            mockCollectionSelector.Setup(s => s.Explode(TableNameConstants.CreatureGroups, "other filter")).Returns(additionalFilterGroup);
+            mockCollectionSelector.Setup(s => s.Explode(Config.Name, TableNameConstants.CreatureGroups, "other filter")).Returns(additionalFilterGroup);
 
             var isValid = encounterVerifier.EncounterIsValid(encounter, new[] { Filter, "other filter" });
             Assert.That(isValid, Is.True);
@@ -312,7 +312,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
             additionalFilterGroup.Add("creature");
             additionalFilterGroup.Add("other creature");
 
-            mockCollectionSelector.Setup(s => s.Explode(TableNameConstants.CreatureGroups, "additional filter")).Returns(additionalFilterGroup);
+            mockCollectionSelector.Setup(s => s.Explode(Config.Name, TableNameConstants.CreatureGroups, "additional filter")).Returns(additionalFilterGroup);
 
             var isValid = encounterVerifier.CreatureIsValid("creature", new[] { Filter, "additional filter" });
             Assert.That(isValid, Is.True);
@@ -327,7 +327,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
             additionalFilterGroup.Add("creature");
             additionalFilterGroup.Add("other creature");
 
-            mockCollectionSelector.Setup(s => s.Explode(TableNameConstants.CreatureGroups, "additional filter")).Returns(additionalFilterGroup);
+            mockCollectionSelector.Setup(s => s.Explode(Config.Name, TableNameConstants.CreatureGroups, "additional filter")).Returns(additionalFilterGroup);
 
             var isValid = encounterVerifier.CreatureIsValid("wrong creature", new[] { Filter, "additional filter" });
             Assert.That(isValid, Is.False);

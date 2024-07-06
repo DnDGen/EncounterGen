@@ -1,6 +1,7 @@
 ﻿using DnDGen.CharacterGen.Generators.Characters;
 using DnDGen.EncounterGen.Generators;
 using DnDGen.Infrastructure.Generators;
+using DnDGen.RollGen;
 using DnDGen.TreasureGen.Coins;
 using DnDGen.TreasureGen.Generators;
 using DnDGen.TreasureGen.Goods;
@@ -70,6 +71,12 @@ namespace DnDGen.EncounterGen.Tests.Integration.IoC.Modules
         public void EXTERNAL_ItemsGeneratorIsInjected()
         {
             AssertNotSingleton<IItemsGenerator>();
+        }
+
+        [Test]
+        public void EXTERNAL_DiceIsInjected()
+        {
+            AssertNotSingleton<Dice>();
         }
 
         [Test]

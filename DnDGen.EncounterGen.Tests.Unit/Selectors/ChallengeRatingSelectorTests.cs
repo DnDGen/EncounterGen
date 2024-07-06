@@ -27,7 +27,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors
         {
             var creature = Guid.NewGuid().ToString();
             var averageChallengeRating = Guid.NewGuid().ToString();
-            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.AverageChallengeRatings, creature)).Returns(new[] { averageChallengeRating });
+            mockCollectionSelector.Setup(s => s.SelectFrom(Config.Name, TableNameConstants.AverageChallengeRatings, creature)).Returns([averageChallengeRating]);
 
             var challengeRating = challengeRatingSelector.SelectAverageForCreature(creature);
             Assert.That(challengeRating, Is.EqualTo(averageChallengeRating));
@@ -37,7 +37,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors
         public void ThrowExceptionIfNoChallengeRating()
         {
             var creature = Guid.NewGuid().ToString();
-            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.AverageChallengeRatings, creature)).Returns(Enumerable.Empty<string>());
+            mockCollectionSelector.Setup(s => s.SelectFrom(Config.Name, TableNameConstants.AverageChallengeRatings, creature)).Returns(Enumerable.Empty<string>());
 
             Assert.That(() => challengeRatingSelector.SelectAverageForCreature(creature), Throws.Exception);
         }
@@ -47,7 +47,9 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors
         {
             var creature = Guid.NewGuid().ToString();
             var averageChallengeRating = Guid.NewGuid().ToString();
-            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.AverageChallengeRatings, creature)).Returns(new[] { averageChallengeRating, "other challenge rating" });
+            mockCollectionSelector
+                .Setup(s => s.SelectFrom(Config.Name, TableNameConstants.AverageChallengeRatings, creature))
+                .Returns([averageChallengeRating, "other challenge rating"]);
 
             Assert.That(() => challengeRatingSelector.SelectAverageForCreature(creature), Throws.Exception);
         }

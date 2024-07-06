@@ -79,7 +79,9 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
             mockGoodsGenerator.Setup(g => g.GenerateAtLevel(level)).Returns(goods);
             mockItemsGenerator.Setup(g => g.GenerateRandomAtLevel(level)).Returns(items);
 
-            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.CreatureGroups, GroupConstants.UseSubcreatureForTreasure)).Returns(usesSubtypeForTreasure);
+            mockCollectionSelector
+                .Setup(s => s.SelectFrom(Config.Name, TableNameConstants.CreatureGroups, GroupConstants.UseSubcreatureForTreasure))
+                .Returns(usesSubtypeForTreasure);
         }
 
         [Test]
@@ -539,7 +541,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
         public void GetSetTreasure()
         {
             var setTreasureItems = new[] { "item 1", "item 2" };
-            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.TreasureGroups, encounterCreature.Creature.Name)).Returns(setTreasureItems);
+            mockCollectionSelector.Setup(s => s.SelectFrom(Config.Name, TableNameConstants.TreasureGroups, encounterCreature.Creature.Name)).Returns(setTreasureItems);
 
             var template1 = new Item();
             var template2 = new Item();
@@ -579,7 +581,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
         public void GetSetMagicalTreasure()
         {
             var setTreasureItems = new[] { "item 1", "item 2" };
-            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.TreasureGroups, encounterCreature.Creature.Name)).Returns(setTreasureItems);
+            mockCollectionSelector.Setup(s => s.SelectFrom(Config.Name, TableNameConstants.TreasureGroups, encounterCreature.Creature.Name)).Returns(setTreasureItems);
 
             var template1 = new Item();
             var template2 = new Item();
@@ -621,7 +623,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
         public void GetSetTreasurePerCreature()
         {
             var setTreasureItems = new[] { "item 1", "item 2" };
-            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.TreasureGroups, encounterCreature.Creature.Name)).Returns(setTreasureItems);
+            mockCollectionSelector.Setup(s => s.SelectFrom(Config.Name, TableNameConstants.TreasureGroups, encounterCreature.Creature.Name)).Returns(setTreasureItems);
 
             var template1 = new Item();
             var template2 = new Item();
@@ -676,7 +678,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
             mockItemsGenerator.SetupSequence(g => g.GenerateRandomAtLevel(level)).Returns(items).Returns(secondItems);
 
             var setTreasureItems = new[] { "item 1", "item 2" };
-            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.TreasureGroups, encounterCreature.Creature.SubCreature.Name)).Returns(setTreasureItems);
+            mockCollectionSelector.Setup(s => s.SelectFrom(Config.Name, TableNameConstants.TreasureGroups, encounterCreature.Creature.SubCreature.Name)).Returns(setTreasureItems);
 
             var template1 = new Item();
             var template2 = new Item();
@@ -737,7 +739,9 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
             mockItemsGenerator.SetupSequence(g => g.GenerateRandomAtLevel(level)).Returns(items).Returns(secondItems);
 
             var setTreasureItems = new[] { "item 1", "item 2" };
-            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.TreasureGroups, encounterCreature.Creature.SubCreature.SubCreature.Name)).Returns(setTreasureItems);
+            mockCollectionSelector
+                .Setup(s => s.SelectFrom(Config.Name, TableNameConstants.TreasureGroups, encounterCreature.Creature.SubCreature.SubCreature.Name))
+                .Returns(setTreasureItems);
 
             var template1 = new Item();
             var template2 = new Item();

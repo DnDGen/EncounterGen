@@ -13,13 +13,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Treasures
     {
         internal IItemSelector itemSelector;
 
-        protected override string tableName
-        {
-            get
-            {
-                return TableNameConstants.TreasureGroups;
-            }
-        }
+        protected override string tableName => TableNameConstants.TreasureGroups;
 
         [SetUp]
         public void Setup()
@@ -31,7 +25,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Treasures
         public override void EntriesAreComplete()
         {
             var allCreatures = GetAllCreaturesFromEncounters();
-            var useSubcreatureForTreasure = collectionSelector.Explode(TableNameConstants.CreatureGroups, GroupConstants.UseSubcreatureForTreasure);
+            var useSubcreatureForTreasure = collectionSelector.Explode(Config.Name, TableNameConstants.CreatureGroups, GroupConstants.UseSubcreatureForTreasure);
             allCreatures = allCreatures.Except(useSubcreatureForTreasure);
 
             AssertNamesAreComplete(allCreatures);

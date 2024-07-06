@@ -25,7 +25,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables
             collectionSelector = GetNewInstanceOf<ICollectionSelector>();
             encounterFormatter = GetNewInstanceOf<IEncounterFormatter>();
 
-            table = collectionMapper.Map(tableName);
+            table = collectionMapper.Map(Config.Name, tableName);
         }
 
         public abstract void EntriesAreComplete();
@@ -49,8 +49,8 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables
 
         protected IEnumerable<string> ExplodeCollection(string name)
         {
-            if (collectionSelector.IsCollection(tableName, name))
-                return collectionSelector.Explode(tableName, name);
+            if (collectionSelector.IsCollection(Config.Name, tableName, name))
+                return collectionSelector.Explode(Config.Name, tableName, name);
 
             return new[] { name };
         }
@@ -72,8 +72,8 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables
 
         protected IEnumerable<string> GetAllCreaturesFromEncounterGroup(string group, bool addExtra = true)
         {
-            var encounters = collectionSelector.SelectFrom(TableNameConstants.EncounterGroups, group);
-            var creaturesAndAmounts = collectionSelector.SelectAllFrom(TableNameConstants.EncounterCreatures);
+            var encounters = collectionSelector.SelectFrom(Config.Name, TableNameConstants.EncounterGroups, group);
+            var creaturesAndAmounts = collectionSelector.SelectAllFrom(Config.Name, TableNameConstants.EncounterCreatures);
             var allCreatures = creaturesAndAmounts
                 .Where(kvp => encounters.Contains(kvp.Key))
                 .SelectMany(kvp => encounterFormatter.SelectCreaturesAndAmountsFrom(kvp.Value).Keys)
