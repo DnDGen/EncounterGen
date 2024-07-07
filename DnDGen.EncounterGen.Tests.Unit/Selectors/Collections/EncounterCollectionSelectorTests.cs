@@ -17,10 +17,6 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
         private const string environment = "environment";
         private const string temperature = "temperature";
         private const string timeOfDay = "time of day";
-        private const int commonWeight = 4;
-        private const int uncommonWeight = 3;
-        private const int rareWeight = 2;
-        private const int veryRareWeight = 1;
 
         private IEncounterCollectionSelector encounterCollectionSelector;
         private Mock<ICollectionSelector> mockCollectionSelector;
@@ -34,9 +30,11 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
         private List<string> undeadEncounters;
         private Dictionary<string, List<string>> filters;
         private List<string> wildernessEncounters;
+        private List<string> characterEncounters;
         private EncounterSpecifications specifications;
         private Dictionary<string, IEnumerable<string>> encounterGroups;
         private Dictionary<string, IEnumerable<string>> encounterLevels;
+        private Dictionary<char, IEnumerable<string>> weightedEncounters;
 
         [SetUp]
         public void Setup()
@@ -44,23 +42,25 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
             mockCollectionSelector = new Mock<ICollectionSelector>();
             encounterCollectionSelector = new EncounterCollectionSelector(mockCollectionSelector.Object);
 
-            levelEncounters = new List<string>();
-            timeOfDayEncounters = new List<string>();
-            extraplanarEncounters = new List<string> { "extraplanar encounter", "other extraplanar encounter" };
-            anyEncounters = new List<string> { "any encounter", "other any encounter" };
-            civilizedEncounters = new List<string> { "civilized encounter", "other civilized encounter" };
-            undeadEncounters = new List<string> { "undead encounter", "other undead encounter" };
-            specificEnvironmentEncounters = new List<string>
-            {
+            levelEncounters = [];
+            timeOfDayEncounters = [];
+            extraplanarEncounters = ["extraplanar encounter", "other extraplanar encounter"];
+            anyEncounters = ["any encounter", "other any encounter"];
+            civilizedEncounters = ["civilized encounter", "other civilized encounter"];
+            undeadEncounters = ["undead encounter", "other undead encounter"];
+            specificEnvironmentEncounters =
+            [
                 "specific environment encounter",
                 "other specific environment encounter"
-            };
-            landEncounters = new List<string> { "land encounter", "other land encounter" };
-            filters = new Dictionary<string, List<string>>();
-            wildernessEncounters = new List<string>();
+            ];
+            landEncounters = ["land encounter", "other land encounter"];
+            filters = [];
+            wildernessEncounters = [];
+            characterEncounters = [];
             specifications = new EncounterSpecifications();
-            encounterGroups = new Dictionary<string, IEnumerable<string>>();
-            encounterLevels = new Dictionary<string, IEnumerable<string>>();
+            encounterGroups = [];
+            encounterLevels = [];
+            weightedEncounters = [];
 
             SetupEncounterLevel(specificEnvironmentEncounters[0], 9266);
             SetupEncounterLevel("level encounter", 9266);
@@ -78,40 +78,40 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
 
             SetUpEncounterGroup(timeOfDay, timeOfDayEncounters);
             SetUpEncounterGroup(GroupConstants.Extraplanar, extraplanarEncounters);
-            SetUpEncounterGroup(string.Empty, Enumerable.Empty<string>());
+            SetUpEncounterGroup(string.Empty, []);
             SetUpEncounterGroup(specifications.SpecificEnvironment, specificEnvironmentEncounters);
             SetUpEncounterGroup(EnvironmentConstants.Land, landEncounters);
             SetUpEncounterGroup(EnvironmentConstants.Any, anyEncounters);
             SetUpEncounterGroup(EnvironmentConstants.Civilized, civilizedEncounters);
             SetUpEncounterGroup(CreatureDataConstants.Types.Undead, undeadEncounters);
             SetUpEncounterGroup(GroupConstants.Wilderness, wildernessEncounters);
+            SetUpEncounterGroup(GroupConstants.Character, characterEncounters);
 
-            mockCollectionSelector.Setup(s => s.SelectAllFrom(TableNameConstants.EncounterGroups)).Returns(encounterGroups);
+            mockCollectionSelector.Setup(s => s.SelectAllFrom(Config.Name, TableNameConstants.EncounterGroups)).Returns(encounterGroups);
             mockCollectionSelector
-                .Setup(s => s.SelectFrom(TableNameConstants.EncounterGroups, It.IsAny<string>()))
-                .Returns((string t, string n) => encounterGroups.ContainsKey(n) ? encounterGroups[n] : Enumerable.Empty<string>());
+                .Setup(s => s.SelectFrom(Config.Name, TableNameConstants.EncounterGroups, It.IsAny<string>()))
+                .Returns((string a, string t, string n) => encounterGroups.ContainsKey(n) ? encounterGroups[n] : []);
             mockCollectionSelector
-                .Setup(s => s.SelectFrom(TableNameConstants.EncounterGroups, GroupConstants.All))
+                .Setup(s => s.SelectFrom(Config.Name, TableNameConstants.EncounterGroups, GroupConstants.All))
                 .Returns(() => encounterGroups.Values.SelectMany(e => e).Distinct());
             mockCollectionSelector
-                .Setup(s => s.SelectFrom(TableNameConstants.AverageEncounterLevels, It.IsAny<string>()))
-                .Returns((string t, string l) => GetEncounterLevel(l));
+                .Setup(s => s.SelectFrom(Config.Name, TableNameConstants.AverageEncounterLevels, It.IsAny<string>()))
+                .Returns((string a, string t, string l) => GetEncounterLevel(l));
             mockCollectionSelector
-                .Setup(s => s.SelectRandomFrom(It.IsAny<IEnumerable<string>>()))
-                .Returns((IEnumerable<string> collection) => collection.Last());
-            mockCollectionSelector
-                .Setup(s => s.CreateWeighted(
-                    It.IsAny<IEnumerable<string>>(),
-                    It.IsAny<IEnumerable<string>>(),
-                    It.IsAny<IEnumerable<string>>(),
-                    It.IsAny<IEnumerable<string>>()))
-                .Returns(CreateWeighted);
+                .Setup(s => s.SelectRandomFrom(It.IsAny<IEnumerable<string>>(), It.IsAny<IEnumerable<string>>(), It.IsAny<IEnumerable<string>>(), null))
+                .Callback((IEnumerable<string> c, IEnumerable<string> u, IEnumerable<string> r, IEnumerable<string> v) =>
+                {
+                    weightedEncounters['c'] = c;
+                    weightedEncounters['u'] = u;
+                    weightedEncounters['r'] = r;
+                })
+                .Returns("my random encounter");
         }
 
         private IEnumerable<string> GetEncounterLevel(string level)
         {
             if (!encounterLevels.ContainsKey(level))
-                return Enumerable.Empty<string>();
+                return [];
 
             return encounterLevels[level].Where(levelEncounters.Contains);
         }
@@ -122,33 +122,14 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
             SetUpEncounterGroup(filter, filters[filter]);
         }
 
-        private IEnumerable<string> CreateWeighted(IEnumerable<string> common, IEnumerable<string> uncommon, IEnumerable<string> rare, IEnumerable<string> veryRare)
-        {
-            var weighted = Enumerable.Empty<string>();
-
-            if (common?.Any() == true)
-                weighted = weighted.Concat(Enumerable.Repeat(common, commonWeight).SelectMany(e => e));
-
-            if (uncommon?.Any() == true)
-                weighted = weighted.Concat(Enumerable.Repeat(uncommon, uncommonWeight).SelectMany(e => e));
-
-            if (rare?.Any() == true)
-                weighted = weighted.Concat(Enumerable.Repeat(rare, rareWeight).SelectMany(e => e));
-
-            if (veryRare?.Any() == true)
-                weighted = weighted.Concat(Enumerable.Repeat(veryRare, veryRareWeight).SelectMany(e => e));
-
-            return weighted;
-        }
-
         private void SetupEncounterLevel(string encounter, int level)
         {
             levelEncounters.Add(encounter);
 
             if (!encounterLevels.ContainsKey(level.ToString()))
-                encounterLevels[level.ToString()] = new List<string>();
+                encounterLevels[level.ToString()] = [];
 
-            encounterLevels[level.ToString()] = encounterLevels[level.ToString()].Concat(new[] { encounter });
+            encounterLevels[level.ToString()] = encounterLevels[level.ToString()].Concat([encounter]);
         }
 
         private void SetUpEncounterGroup(string name, IEnumerable<string> encounters)
@@ -156,32 +137,31 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
             encounterGroups[name] = encounters;
         }
 
-        private void AssertEncounterWeight(
-            IEnumerable<(string Encounter, int Weight)> expectedEncounters,
-            IEnumerable<string> weightedEncounters)
+        private void AssertEncounterWeight(IEnumerable<string> common, IEnumerable<string> uncommon, IEnumerable<string> rare)
         {
-            if (expectedEncounters.Any())
-                Assert.That(weightedEncounters, Is.Not.Empty);
-            else
-                Assert.That(weightedEncounters, Is.Empty);
+            Assert.That(weightedEncounters, Has.Count.EqualTo(3)
+                .And.ContainKey('c')
+                .And.ContainKey('u')
+                .And.ContainKey('r'));
+            Assert.That(weightedEncounters['c'], Is.EquivalentTo(common));
+            Assert.That(weightedEncounters['u'], Is.EquivalentTo(uncommon));
+            Assert.That(weightedEncounters['r'], Is.EquivalentTo(rare));
 
-            foreach (var expectedEncounter in expectedEncounters)
-            {
-                Assert.That(weightedEncounters.Count(e => e == expectedEncounter.Encounter), Is.EqualTo(expectedEncounter.Weight));
-            }
-
-            Assert.That(weightedEncounters.Count, Is.EqualTo(expectedEncounters.Sum(e => e.Weight)));
+            mockCollectionSelector.Verify(
+                s => s.SelectRandomFrom(It.IsAny<IEnumerable<string>>(), It.IsAny<IEnumerable<string>>(), It.IsAny<IEnumerable<string>>(), null),
+                Times.Once);
         }
 
         [Test]
         public void SelectRandomEncounterFrom_SelectingRandomGetsEncounterFromSelector()
         {
             var encounter = encounterCollectionSelector.SelectRandomEncounterFrom(specifications);
-            Assert.That(encounter, Is.EqualTo("specific environment encounter"));
+            Assert.That(encounter, Is.EqualTo("my random encounter"));
+            AssertEncounterWeight(["specific environment encounter"], [], []);
         }
 
         [Test]
-        public void SelectRandomEncounterFrom_IfSelectingRandomAndNoEncountersExist_ThrowException()
+        public void SelectRandomEncounterFrom_ThrowsException_WhenNoneMatchLevel()
         {
             levelEncounters.Clear();
 
@@ -190,46 +170,16 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
         }
 
         [Test]
-        public void SelectRandomEncounterFrom_GetRandomEncounterFromSelector()
+        public void SelectRandomEncounterFrom_ThrowsException_WhenNoneMatchFilter()
         {
-            mockCollectionSelector
-                .Setup(s => s.SelectRandomFrom(It.IsAny<IEnumerable<string>>()))
-                .Returns((IEnumerable<string> collection) => collection.ElementAt(1));
+            specifications.CreatureTypeFilters = ["filter"];
 
-            specificEnvironmentEncounters.Add("wrong encounter/wrong amount");
-            SetupEncounterLevel(specificEnvironmentEncounters[1], 9266);
-            SetupEncounterLevel(specificEnvironmentEncounters[2], 9266);
-            timeOfDayEncounters.Add(specificEnvironmentEncounters[1]);
-            timeOfDayEncounters.Add(specificEnvironmentEncounters[2]);
-
-            var encounter = encounterCollectionSelector.SelectRandomEncounterFrom(specifications);
-            Assert.That(encounter, Is.EqualTo("other specific environment encounter"));
+            Assert.That(() => encounterCollectionSelector.SelectRandomEncounterFrom(specifications),
+                Throws.ArgumentException.With.Message.EqualTo($"No valid encounters exist for {specifications.Description}"));
         }
 
         [Test]
-        public void SelectAllWeightedEncountersFrom_ReturnEmptyWhenNoneMatchLevel()
-        {
-            levelEncounters.Clear();
-
-            var weightedEncounters = encounterCollectionSelector.SelectAllWeightedEncountersFrom(specifications);
-
-            var expectedEncounters = Enumerable.Empty<(string, int)>();
-            AssertEncounterWeight(expectedEncounters, weightedEncounters);
-        }
-
-        [Test]
-        public void SelectAllWeightedEncountersFrom_ReturnEmptyWhenNoneMatchFilter()
-        {
-            specifications.CreatureTypeFilters = new[] { "filter" };
-
-            var weightedEncounters = encounterCollectionSelector.SelectAllWeightedEncountersFrom(specifications);
-
-            var expectedEncounters = Enumerable.Empty<(string, int)>();
-            AssertEncounterWeight(expectedEncounters, weightedEncounters);
-        }
-
-        [Test]
-        public void SelectAllWeightedEncountersFrom_ReturnEmptyWhenCivilizedAndAllAreWilderness()
+        public void SelectRandomEncounterFrom_ThrowsException_WhenCivilizedAndAllAreWilderness()
         {
             var specificCivilizedEncounters = new[] { "specific civilized encounter", "other specific civilized encounter" };
             SetUpEncounterGroup(temperature + EnvironmentConstants.Civilized, specificCivilizedEncounters);
@@ -240,55 +190,43 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
 
             specifications.Environment = EnvironmentConstants.Civilized;
 
-            var weightedEncounters = encounterCollectionSelector.SelectAllWeightedEncountersFrom(specifications);
-
-            var expectedEncounters = Enumerable.Empty<(string, int)>();
-            AssertEncounterWeight(expectedEncounters, weightedEncounters);
+            Assert.That(() => encounterCollectionSelector.SelectRandomEncounterFrom(specifications),
+                Throws.ArgumentException.With.Message.EqualTo($"No valid encounters exist for {specifications.Description}"));
         }
 
         [Test]
-        public void SelectAllWeightedEncountersFrom_ReturnEmptyWhenNoneMatchTimeOfDay()
+        public void SelectRandomEncounterFrom_ThrowsException_WhenNoneMatchTimeOfDay()
         {
             timeOfDayEncounters.Clear();
 
-            var weightedEncounters = encounterCollectionSelector.SelectAllWeightedEncountersFrom(specifications);
-
-            var expectedEncounters = Enumerable.Empty<(string, int)>();
-            AssertEncounterWeight(expectedEncounters, weightedEncounters);
+            Assert.That(() => encounterCollectionSelector.SelectRandomEncounterFrom(specifications),
+                Throws.ArgumentException.With.Message.EqualTo($"No valid encounters exist for {specifications.Description}"));
         }
 
         [Test]
-        public void SelectAllWeightedEncountersFrom_FilterOutEncountersThatDoNotMatchLevel()
+        public void SelectRandomEncounterFrom_FilterOutEncountersThatDoNotMatchLevel()
         {
             timeOfDayEncounters.Add(extraplanarEncounters[0]);
 
-            var weightedEncounters = encounterCollectionSelector.SelectAllWeightedEncountersFrom(specifications);
+            var encounter = encounterCollectionSelector.SelectRandomEncounterFrom(specifications);
 
-            var expectedEncounters = new[]
-            {
-                ("specific environment encounter", commonWeight),
-            };
-
-            AssertEncounterWeight(expectedEncounters, weightedEncounters);
+            Assert.That(encounter, Is.EqualTo("my random encounter"));
+            AssertEncounterWeight(["specific environment encounter"], [], []);
         }
 
         [Test]
-        public void SelectAllWeightedEncountersFrom_FilterOutEncountersThatDoNotMatchTimeOfDay()
+        public void SelectRandomEncounterFrom_FilterOutEncountersThatDoNotMatchTimeOfDay()
         {
             SetupEncounterLevel(extraplanarEncounters[0], 9266);
 
-            var weightedEncounters = encounterCollectionSelector.SelectAllWeightedEncountersFrom(specifications);
+            var encounter = encounterCollectionSelector.SelectRandomEncounterFrom(specifications);
 
-            var expectedEncounters = new[]
-            {
-                ("specific environment encounter", commonWeight),
-            };
-
-            AssertEncounterWeight(expectedEncounters, weightedEncounters);
+            Assert.That(encounter, Is.EqualTo("my random encounter"));
+            AssertEncounterWeight(["specific environment encounter"], [], []);
         }
 
         [Test]
-        public void SelectAllWeightedEncountersFrom_FilterOutEncountersThatDoNotMatchFilter()
+        public void SelectRandomEncounterFrom_FilterOutEncountersThatDoNotMatchFilter()
         {
             SetupEncounterLevel(extraplanarEncounters[0], 9266);
             timeOfDayEncounters.Add(extraplanarEncounters[0]);
@@ -296,20 +234,16 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
             filters["filter"].Add("specific environment encounter");
             filters["other filter"].Add("extraplanar encounter");
 
-            specifications.CreatureTypeFilters = new[] { "filter" };
+            specifications.CreatureTypeFilters = ["filter"];
 
-            var weightedEncounters = encounterCollectionSelector.SelectAllWeightedEncountersFrom(specifications);
+            var encounter = encounterCollectionSelector.SelectRandomEncounterFrom(specifications);
 
-            var expectedEncounters = new[]
-            {
-                ("specific environment encounter", commonWeight),
-            };
-
-            AssertEncounterWeight(expectedEncounters, weightedEncounters);
+            Assert.That(encounter, Is.EqualTo("my random encounter"));
+            AssertEncounterWeight(["specific environment encounter"], [], []);
         }
 
         [Test]
-        public void SelectAllWeightedEncountersFrom_DoNotFilterOutEncountersThatMatchFilter()
+        public void SelectRandomEncounterFrom_DoNotFilterOutEncountersThatMatchFilter()
         {
             SetupEncounterLevel(extraplanarEncounters[0], 9266);
             timeOfDayEncounters.Add(extraplanarEncounters[0]);
@@ -317,58 +251,128 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
             filters["filter"].Add("specific environment encounter");
             filters["filter"].Add("extraplanar encounter");
 
-            specifications.CreatureTypeFilters = new[] { "filter" };
+            specifications.CreatureTypeFilters = ["filter"];
 
-            var weightedEncounters = encounterCollectionSelector.SelectAllWeightedEncountersFrom(specifications);
+            var encounter = encounterCollectionSelector.SelectRandomEncounterFrom(specifications);
 
-            var expectedEncounters = new[]
-            {
-                ("extraplanar encounter", rareWeight),
-                ("specific environment encounter", commonWeight),
-            };
-
-            AssertEncounterWeight(expectedEncounters, weightedEncounters);
+            Assert.That(encounter, Is.EqualTo("my random encounter"));
+            AssertEncounterWeight(["specific environment encounter"], [], ["extraplanar encounter"]);
         }
 
         [Test]
-        public void SelectAllWeightedEncountersFrom_WeightExtraplanarEncounters()
+        public void SelectRandomEncounterFrom_WeightExtraplanarEncounters()
         {
             SetupEncounterLevel(extraplanarEncounters[0], 9266);
             timeOfDayEncounters.Add(extraplanarEncounters[0]);
 
-            var weightedEncounters = encounterCollectionSelector.SelectAllWeightedEncountersFrom(specifications);
+            var encounter = encounterCollectionSelector.SelectRandomEncounterFrom(specifications);
 
-            var expectedEncounters = new[]
-            {
-                ("extraplanar encounter", rareWeight),
-                ("specific environment encounter", commonWeight),
-            };
-
-            AssertEncounterWeight(expectedEncounters, weightedEncounters);
+            Assert.That(encounter, Is.EqualTo("my random encounter"));
+            AssertEncounterWeight(["specific environment encounter"], [], ["extraplanar encounter"]);
         }
 
         [Test]
-        public void SelectAllWeightedEncountersFrom_WeightAllExtraplanarEncounters()
+        public void SelectRandomEncounterFrom_WeightAllExtraplanarEncounters()
         {
             SetupEncounterLevel(extraplanarEncounters[0], 9266);
             SetupEncounterLevel(extraplanarEncounters[1], 9266);
             timeOfDayEncounters.Add(extraplanarEncounters[0]);
             timeOfDayEncounters.Add(extraplanarEncounters[1]);
 
-            var weightedEncounters = encounterCollectionSelector.SelectAllWeightedEncountersFrom(specifications);
+            var encounter = encounterCollectionSelector.SelectRandomEncounterFrom(specifications);
 
-            var expectedEncounters = new[]
-            {
-                ("extraplanar encounter", rareWeight),
-                ("other extraplanar encounter", rareWeight),
-                ("specific environment encounter", commonWeight),
-            };
-
-            AssertEncounterWeight(expectedEncounters, weightedEncounters);
+            Assert.That(encounter, Is.EqualTo("my random encounter"));
+            AssertEncounterWeight(["specific environment encounter"], [], ["extraplanar encounter", "other extraplanar encounter"]);
         }
 
         [Test]
-        public void SelectAllWeightedEncountersFrom_WeightAdditionalAquaticEncounters()
+        public void SelectRandomEncounterFrom_WeightCharacterEncounters_WhenNotCivilized()
+        {
+            characterEncounters.Add("character encounter");
+            landEncounters.Add("character encounter");
+
+            SetupEncounterLevel("character encounter", 9266);
+            timeOfDayEncounters.Add("character encounter");
+
+            var encounter = encounterCollectionSelector.SelectRandomEncounterFrom(specifications);
+
+            Assert.That(encounter, Is.EqualTo("my random encounter"));
+            AssertEncounterWeight(["specific environment encounter"], ["character encounter"], []);
+        }
+
+        [Test]
+        public void SelectRandomEncounterFrom_WeightAllCharacterEncounters_WhenNotCivilized()
+        {
+            characterEncounters.Add("character encounter");
+            characterEncounters.Add("other character encounter");
+            landEncounters.Add("character encounter");
+            landEncounters.Add("other character encounter");
+
+            SetupEncounterLevel("character encounter", 9266);
+            SetupEncounterLevel("other character encounter", 9266);
+            timeOfDayEncounters.Add("character encounter");
+            timeOfDayEncounters.Add("other character encounter");
+
+            var encounter = encounterCollectionSelector.SelectRandomEncounterFrom(specifications);
+
+            Assert.That(encounter, Is.EqualTo("my random encounter"));
+            AssertEncounterWeight(["specific environment encounter"], ["character encounter", "other character encounter"], []);
+        }
+
+        [Test]
+        public void SelectRandomEncounterFrom_WeightCharacterEncounters_WhenCivilized()
+        {
+            var specificCivilizedEncounters = new[] { "specific civilized encounter", "other specific civilized encounter" };
+            SetUpEncounterGroup(temperature + EnvironmentConstants.Civilized, specificCivilizedEncounters);
+
+            characterEncounters.Add("character encounter");
+            landEncounters.Add("character encounter");
+
+            SetupEncounterLevel("character encounter", 9266);
+            SetupEncounterLevel(civilizedEncounters[0], 9266);
+            SetupEncounterLevel(specificCivilizedEncounters[0], 9266);
+            timeOfDayEncounters.Add("character encounter");
+            timeOfDayEncounters.Add(civilizedEncounters[0]);
+            timeOfDayEncounters.Add(specificCivilizedEncounters[0]);
+
+            specifications.Environment = EnvironmentConstants.Civilized;
+
+            var encounter = encounterCollectionSelector.SelectRandomEncounterFrom(specifications);
+
+            Assert.That(encounter, Is.EqualTo("my random encounter"));
+            AssertEncounterWeight(["specific civilized encounter", "civilized encounter", "character encounter"], [], []);
+        }
+
+        [Test]
+        public void SelectRandomEncounterFrom_WeightAllCharacterEncounters_WhenCivilized()
+        {
+            var specificCivilizedEncounters = new[] { "specific civilized encounter", "other specific civilized encounter" };
+            SetUpEncounterGroup(temperature + EnvironmentConstants.Civilized, specificCivilizedEncounters);
+
+            characterEncounters.Add("character encounter");
+            characterEncounters.Add("other character encounter");
+            landEncounters.Add("character encounter");
+            landEncounters.Add("other character encounter");
+
+            SetupEncounterLevel("character encounter", 9266);
+            SetupEncounterLevel("other character encounter", 9266);
+            SetupEncounterLevel(civilizedEncounters[0], 9266);
+            SetupEncounterLevel(specificCivilizedEncounters[0], 9266);
+            timeOfDayEncounters.Add("character encounter");
+            timeOfDayEncounters.Add("other character encounter");
+            timeOfDayEncounters.Add(civilizedEncounters[0]);
+            timeOfDayEncounters.Add(specificCivilizedEncounters[0]);
+
+            specifications.Environment = EnvironmentConstants.Civilized;
+
+            var encounter = encounterCollectionSelector.SelectRandomEncounterFrom(specifications);
+
+            Assert.That(encounter, Is.EqualTo("my random encounter"));
+            AssertEncounterWeight(["specific civilized encounter", "character encounter", "other character encounter", "civilized encounter"], [], []);
+        }
+
+        [Test]
+        public void SelectRandomEncounterFrom_WeightAdditionalAquaticEncounters()
         {
             var aquaticEncounters = new[] { "aquatic encounter", "other aquatic encounter" };
             var specificAquaticEncounters = new[] { "specific aquatic encounter", "other specific aquatic encounter" };
@@ -381,37 +385,28 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
 
             specifications.AllowAquatic = true;
 
-            var weightedEncounters = encounterCollectionSelector.SelectAllWeightedEncountersFrom(specifications);
+            var encounter = encounterCollectionSelector.SelectRandomEncounterFrom(specifications);
 
-            var expectedEncounters = new[]
-            {
-                ("specific environment encounter", commonWeight),
-                ("aquatic encounter", uncommonWeight),
-            };
-
-            AssertEncounterWeight(expectedEncounters, weightedEncounters);
+            Assert.That(encounter, Is.EqualTo("my random encounter"));
+            AssertEncounterWeight(["specific environment encounter"], ["aquatic encounter"], []);
         }
 
         [Test]
-        public void SelectAllWeightedEncountersFrom_DoNotWeightCommonEncountersIfNone()
+        public void SelectRandomEncounterFrom_DoNotWeightCommonEncountersIfNone()
         {
             SetupEncounterLevel(extraplanarEncounters[0], 9266);
             timeOfDayEncounters.Add(extraplanarEncounters[0]);
 
             specificEnvironmentEncounters.Clear();
 
-            var weightedEncounters = encounterCollectionSelector.SelectAllWeightedEncountersFrom(specifications);
+            var encounter = encounterCollectionSelector.SelectRandomEncounterFrom(specifications);
 
-            var expectedEncounters = new[]
-            {
-                ("extraplanar encounter", rareWeight),
-            };
-
-            AssertEncounterWeight(expectedEncounters, weightedEncounters);
+            Assert.That(encounter, Is.EqualTo("my random encounter"));
+            AssertEncounterWeight([], [], ["extraplanar encounter"]);
         }
 
         [Test]
-        public void SelectAllWeightedEncountersFrom_DoNotWeightSpecificEncountersIfNone()
+        public void SelectRandomEncounterFrom_DoNotWeightSpecificEncountersIfNone()
         {
             var undergroundAquaticEncounters = new[] { "underground aquatic encounter", "other underground aquatic encounter" };
             var nightEncounters = new List<string>();
@@ -433,21 +428,14 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
             specifications.AllowAquatic = true;
             specifications.AllowUnderground = true;
 
-            var weightedEncounters = encounterCollectionSelector.SelectAllWeightedEncountersFrom(specifications);
+            var encounter = encounterCollectionSelector.SelectRandomEncounterFrom(specifications);
 
-            var expectedEncounters = new[]
-            {
-                ("extraplanar encounter", rareWeight),
-                ("land encounter", commonWeight),
-                ("any encounter", commonWeight),
-                ("underground aquatic encounter", uncommonWeight),
-            };
-
-            AssertEncounterWeight(expectedEncounters, weightedEncounters);
+            Assert.That(encounter, Is.EqualTo("my random encounter"));
+            AssertEncounterWeight(["land encounter", "any encounter"], ["underground aquatic encounter"], ["extraplanar encounter"]);
         }
 
         [Test]
-        public void SelectAllWeightedEncountersFrom_DoNotWeightUndergroundAquaticEncountersIfNone()
+        public void SelectRandomEncounterFrom_DoNotWeightUndergroundAquaticEncountersIfNone()
         {
             var undergroundAquaticEncounters = new[] { "underground aquatic encounter", "other underground aquatic encounter" };
             var nightEncounters = new List<string>();
@@ -467,21 +455,14 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
             specifications.AllowAquatic = true;
             specifications.AllowUnderground = true;
 
-            var weightedEncounters = encounterCollectionSelector.SelectAllWeightedEncountersFrom(specifications);
+            var encounter = encounterCollectionSelector.SelectRandomEncounterFrom(specifications);
 
-            var expectedEncounters = new[]
-            {
-                ("extraplanar encounter", rareWeight),
-                ("specific environment encounter", commonWeight),
-                ("land encounter", commonWeight),
-                ("any encounter", commonWeight),
-            };
-
-            AssertEncounterWeight(expectedEncounters, weightedEncounters);
+            Assert.That(encounter, Is.EqualTo("my random encounter"));
+            AssertEncounterWeight(["specific environment encounter", "land encounter", "any encounter"], [], ["extraplanar encounter"]);
         }
 
         [Test]
-        public void SelectAllWeightedEncountersFrom_WeightAdditionalUndergroundEncounters()
+        public void SelectRandomEncounterFrom_WeightAdditionalUndergroundEncounters()
         {
             var undergroundEncounters = new[] { "underground encounter", "other underground encounter" };
             SetUpEncounterGroup(EnvironmentConstants.Underground, undergroundEncounters);
@@ -496,36 +477,26 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
 
             specifications.AllowUnderground = true;
 
-            var weightedEncounters = encounterCollectionSelector.SelectAllWeightedEncountersFrom(specifications);
+            var encounter = encounterCollectionSelector.SelectRandomEncounterFrom(specifications);
 
-            var expectedEncounters = new[]
-            {
-                ("specific environment encounter", commonWeight),
-                ("underground encounter", uncommonWeight),
-            };
-
-            AssertEncounterWeight(expectedEncounters, weightedEncounters);
+            Assert.That(encounter, Is.EqualTo("my random encounter"));
+            AssertEncounterWeight(["specific environment encounter"], ["underground encounter"], []);
         }
 
         [Test]
-        public void SelectAllWeightedEncountersFrom_WeightLandEncounters()
+        public void SelectRandomEncounterFrom_WeightLandEncounters()
         {
             SetupEncounterLevel(landEncounters[0], 9266);
             timeOfDayEncounters.Add(landEncounters[0]);
 
-            var weightedEncounters = encounterCollectionSelector.SelectAllWeightedEncountersFrom(specifications);
+            var encounter = encounterCollectionSelector.SelectRandomEncounterFrom(specifications);
 
-            var expectedEncounters = new[]
-            {
-                ("specific environment encounter", commonWeight),
-                ("land encounter", commonWeight),
-            };
-
-            AssertEncounterWeight(expectedEncounters, weightedEncounters);
+            Assert.That(encounter, Is.EqualTo("my random encounter"));
+            AssertEncounterWeight(["specific environment encounter", "land encounter"], [], []);
         }
 
         [Test]
-        public void SelectAllWeightedEncountersFrom_WeightAllLandEncounters()
+        public void SelectRandomEncounterFrom_WeightAllLandEncounters()
         {
             SetupEncounterLevel(specificEnvironmentEncounters[1], 9266);
             timeOfDayEncounters.Add(specificEnvironmentEncounters[1]);
@@ -534,38 +505,26 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
             SetupEncounterLevel(landEncounters[1], 9266);
             timeOfDayEncounters.Add(landEncounters[1]);
 
-            var weightedEncounters = encounterCollectionSelector.SelectAllWeightedEncountersFrom(specifications);
+            var encounter = encounterCollectionSelector.SelectRandomEncounterFrom(specifications);
 
-            var expectedEncounters = new[]
-            {
-                ("specific environment encounter", commonWeight),
-                ("other specific environment encounter", commonWeight),
-                ("land encounter", commonWeight),
-                ("other land encounter", commonWeight),
-            };
-
-            AssertEncounterWeight(expectedEncounters, weightedEncounters);
+            Assert.That(encounter, Is.EqualTo("my random encounter"));
+            AssertEncounterWeight(["specific environment encounter", "other specific environment encounter", "land encounter", "other land encounter"], [], []);
         }
 
         [Test]
-        public void SelectAllWeightedEncountersFrom_WeightAnyEncounters()
+        public void SelectRandomEncounterFrom_WeightAnyEncounters()
         {
             SetupEncounterLevel(anyEncounters[0], 9266);
             timeOfDayEncounters.Add(anyEncounters[0]);
 
-            var weightedEncounters = encounterCollectionSelector.SelectAllWeightedEncountersFrom(specifications);
+            var encounter = encounterCollectionSelector.SelectRandomEncounterFrom(specifications);
 
-            var expectedEncounters = new[]
-            {
-                ("specific environment encounter", commonWeight),
-                ("any encounter", commonWeight),
-            };
-
-            AssertEncounterWeight(expectedEncounters, weightedEncounters);
+            Assert.That(encounter, Is.EqualTo("my random encounter"));
+            AssertEncounterWeight(["specific environment encounter", "any encounter"], [], []);
         }
 
         [Test]
-        public void SelectAllWeightedEncountersFrom_WeightAllAnyEncounters()
+        public void SelectRandomEncounterFrom_WeightAllAnyEncounters()
         {
             SetupEncounterLevel(specificEnvironmentEncounters[1], 9266);
             timeOfDayEncounters.Add(specificEnvironmentEncounters[1]);
@@ -574,21 +533,14 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
             SetupEncounterLevel(anyEncounters[1], 9266);
             timeOfDayEncounters.Add(anyEncounters[1]);
 
-            var weightedEncounters = encounterCollectionSelector.SelectAllWeightedEncountersFrom(specifications);
+            var encounter = encounterCollectionSelector.SelectRandomEncounterFrom(specifications);
 
-            var expectedEncounters = new[]
-            {
-                ("specific environment encounter", commonWeight),
-                ("other specific environment encounter", commonWeight),
-                ("any encounter", commonWeight),
-                ("other any encounter", commonWeight),
-            };
-
-            AssertEncounterWeight(expectedEncounters, weightedEncounters);
+            Assert.That(encounter, Is.EqualTo("my random encounter"));
+            AssertEncounterWeight(["specific environment encounter", "other specific environment encounter", "any encounter", "other any encounter"], [], []);
         }
 
         [Test]
-        public void SelectAllWeightedEncountersFrom_WeightNativeAquaticEncounters()
+        public void SelectRandomEncounterFrom_WeightNativeAquaticEncounters()
         {
             var aquaticEncounters = new[] { "aquatic encounter", "other aquatic encounter" };
             var specificAquaticEncounters = new[] { "specific aquatic encounter", "other specific aquatic encounter" };
@@ -603,19 +555,14 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
 
             specifications.Environment = EnvironmentConstants.Aquatic;
 
-            var weightedEncounters = encounterCollectionSelector.SelectAllWeightedEncountersFrom(specifications);
+            var encounter = encounterCollectionSelector.SelectRandomEncounterFrom(specifications);
 
-            var expectedEncounters = new[]
-            {
-                ("specific aquatic encounter", commonWeight),
-                ("aquatic encounter", commonWeight),
-            };
-
-            AssertEncounterWeight(expectedEncounters, weightedEncounters);
+            Assert.That(encounter, Is.EqualTo("my random encounter"));
+            AssertEncounterWeight(["specific aquatic encounter", "aquatic encounter"], [], []);
         }
 
         [Test]
-        public void SelectAllWeightedEncountersFrom_WeightAllNativeAquaticEncounters()
+        public void SelectRandomEncounterFrom_WeightAllNativeAquaticEncounters()
         {
             var aquaticEncounters = new[] { "aquatic encounter", "other aquatic encounter" };
             var specificAquaticEncounters = new[] { "specific aquatic encounter", "other specific aquatic encounter" };
@@ -636,21 +583,14 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
 
             specifications.Environment = EnvironmentConstants.Aquatic;
 
-            var weightedEncounters = encounterCollectionSelector.SelectAllWeightedEncountersFrom(specifications);
+            var encounter = encounterCollectionSelector.SelectRandomEncounterFrom(specifications);
 
-            var expectedEncounters = new[]
-            {
-                ("specific aquatic encounter", commonWeight),
-                ("other specific aquatic encounter", commonWeight),
-                ("aquatic encounter", commonWeight),
-                ("other aquatic encounter", commonWeight),
-            };
-
-            AssertEncounterWeight(expectedEncounters, weightedEncounters);
+            Assert.That(encounter, Is.EqualTo("my random encounter"));
+            AssertEncounterWeight(["specific aquatic encounter", "other specific aquatic encounter", "aquatic encounter", "other aquatic encounter"], [], []);
         }
 
         [Test]
-        public void SelectAllWeightedEncountersFrom_WeightNativeUndergroundEncounters()
+        public void SelectRandomEncounterFrom_WeightNativeUndergroundEncounters()
         {
             var undergroundEncounters = new[] { "underground encounter", "other underground encounter" };
             var specificUndergroundEncounters = new[] { "specific underground encounter", "other specific underground encounter" };
@@ -669,19 +609,14 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
 
             specifications.Environment = EnvironmentConstants.Underground;
 
-            var weightedEncounters = encounterCollectionSelector.SelectAllWeightedEncountersFrom(specifications);
+            var encounter = encounterCollectionSelector.SelectRandomEncounterFrom(specifications);
 
-            var expectedEncounters = new[]
-            {
-                ("specific underground encounter", commonWeight),
-                ("underground encounter", commonWeight),
-            };
-
-            AssertEncounterWeight(expectedEncounters, weightedEncounters);
+            Assert.That(encounter, Is.EqualTo("my random encounter"));
+            AssertEncounterWeight(["specific underground encounter", "underground encounter"], [], []);
         }
 
         [Test]
-        public void SelectAllWeightedEncountersFrom_WeightAllNativeUndergroundEncounters()
+        public void SelectRandomEncounterFrom_WeightAllNativeUndergroundEncounters()
         {
             var undergroundEncounters = new[] { "underground encounter", "other underground encounter" };
             var specificUndergroundEncounters = new[] { "specific underground encounter", "other specific underground encounter" };
@@ -706,21 +641,14 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
 
             specifications.Environment = EnvironmentConstants.Underground;
 
-            var weightedEncounters = encounterCollectionSelector.SelectAllWeightedEncountersFrom(specifications);
+            var encounter = encounterCollectionSelector.SelectRandomEncounterFrom(specifications);
 
-            var expectedEncounters = new[]
-            {
-                ("specific underground encounter", commonWeight),
-                ("other specific underground encounter", commonWeight),
-                ("underground encounter", commonWeight),
-                ("other underground encounter", commonWeight),
-            };
-
-            AssertEncounterWeight(expectedEncounters, weightedEncounters);
+            Assert.That(encounter, Is.EqualTo("my random encounter"));
+            AssertEncounterWeight(["specific underground encounter", "other specific underground encounter", "underground encounter", "other underground encounter"], [], []);
         }
 
         [Test]
-        public void SelectAllWeightedEncountersFrom_WeightAdditionalSpecificAquaticEncounters()
+        public void SelectRandomEncounterFrom_WeightAdditionalSpecificAquaticEncounters()
         {
             var aquaticEncounters = new[] { "aquatic encounter", "other aquatic encounter" };
             var specificAquaticEncounters = new[] { "specific aquatic encounter", "other specific aquatic encounter" };
@@ -733,19 +661,14 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
 
             specifications.AllowAquatic = true;
 
-            var weightedEncounters = encounterCollectionSelector.SelectAllWeightedEncountersFrom(specifications);
+            var encounter = encounterCollectionSelector.SelectRandomEncounterFrom(specifications);
 
-            var expectedEncounters = new[]
-            {
-                ("specific environment encounter", commonWeight),
-                ("specific aquatic encounter", uncommonWeight),
-            };
-
-            AssertEncounterWeight(expectedEncounters, weightedEncounters);
+            Assert.That(encounter, Is.EqualTo("my random encounter"));
+            AssertEncounterWeight(["specific environment encounter"], ["specific aquatic encounter"], []);
         }
 
         [Test]
-        public void SelectAllWeightedEncountersFrom_WeightAllAdditionalSpecificAquaticEncounters()
+        public void SelectRandomEncounterFrom_WeightAllAdditionalSpecificAquaticEncounters()
         {
             var aquaticEncounters = new[] { "aquatic encounter", "other aquatic encounter" };
             var specificAquaticEncounters = new[] { "specific aquatic encounter", "other specific aquatic encounter" };
@@ -762,21 +685,17 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
 
             specifications.AllowAquatic = true;
 
-            var weightedEncounters = encounterCollectionSelector.SelectAllWeightedEncountersFrom(specifications);
+            var encounter = encounterCollectionSelector.SelectRandomEncounterFrom(specifications);
 
-            var expectedEncounters = new[]
-            {
-                ("specific environment encounter", commonWeight),
-                ("other specific environment encounter", commonWeight),
-                ("specific aquatic encounter", uncommonWeight),
-                ("other specific aquatic encounter", uncommonWeight),
-            };
-
-            AssertEncounterWeight(expectedEncounters, weightedEncounters);
+            Assert.That(encounter, Is.EqualTo("my random encounter"));
+            AssertEncounterWeight(
+                ["specific environment encounter", "other specific environment encounter"],
+                ["specific aquatic encounter", "other specific aquatic encounter"],
+                []);
         }
 
         [Test]
-        public void SelectAllWeightedEncountersFrom_WeightAdditionalUndergroundAquaticEncounters()
+        public void SelectRandomEncounterFrom_WeightAdditionalUndergroundAquaticEncounters()
         {
             var aquaticEncounters = new[] { "aquatic encounter", "other aquatic encounter" };
             var specificAquaticEncounters = new[] { "specific aquatic encounter", "other specific aquatic encounter" };
@@ -790,28 +709,25 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
 
             SetupEncounterLevel(undergroundAquaticEncounters[0], 9266);
 
-            var nightEncounters = new List<string>();
-            nightEncounters.Add(specificEnvironmentEncounters[0]);
-            nightEncounters.Add(undergroundAquaticEncounters[0]);
+            var nightEncounters = new List<string>
+            {
+                specificEnvironmentEncounters[0],
+                undergroundAquaticEncounters[0]
+            };
 
             SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Night, nightEncounters);
 
             specifications.AllowAquatic = true;
             specifications.AllowUnderground = true;
 
-            var weightedEncounters = encounterCollectionSelector.SelectAllWeightedEncountersFrom(specifications);
+            var encounter = encounterCollectionSelector.SelectRandomEncounterFrom(specifications);
 
-            var expectedEncounters = new[]
-            {
-                ("specific environment encounter", commonWeight),
-                ("underground aquatic encounter", uncommonWeight),
-            };
-
-            AssertEncounterWeight(expectedEncounters, weightedEncounters);
+            Assert.That(encounter, Is.EqualTo("my random encounter"));
+            AssertEncounterWeight(["specific environment encounter"], ["underground aquatic encounter"], []);
         }
 
         [Test]
-        public void SelectAllWeightedEncountersFrom_WeightAllAdditionalUndergroundAquaticEncounters()
+        public void SelectRandomEncounterFrom_WeightAllAdditionalUndergroundAquaticEncounters()
         {
             var aquaticEncounters = new[] { "aquatic encounter", "other aquatic encounter" };
             var specificAquaticEncounters = new[] { "specific aquatic encounter", "other specific aquatic encounter" };
@@ -839,51 +755,38 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
             specifications.AllowAquatic = true;
             specifications.AllowUnderground = true;
 
-            var weightedEncounters = encounterCollectionSelector.SelectAllWeightedEncountersFrom(specifications);
+            var encounter = encounterCollectionSelector.SelectRandomEncounterFrom(specifications);
 
-            var expectedEncounters = new[]
-            {
-                ("specific environment encounter", commonWeight),
-                ("other specific environment encounter", commonWeight),
-                ("underground aquatic encounter", uncommonWeight),
-                ("other underground aquatic encounter", uncommonWeight),
-            };
-
-            AssertEncounterWeight(expectedEncounters, weightedEncounters);
+            Assert.That(encounter, Is.EqualTo("my random encounter"));
+            AssertEncounterWeight(
+                ["specific environment encounter", "other specific environment encounter"],
+                ["underground aquatic encounter", "other underground aquatic encounter"],
+                []);
         }
 
         [Test]
-        public void SelectAllWeightedEncountersFrom_WeightSpecificEncounters()
+        public void SelectRandomEncounterFrom_WeightSpecificEncounters()
         {
-            var weightedEncounters = encounterCollectionSelector.SelectAllWeightedEncountersFrom(specifications);
+            var encounter = encounterCollectionSelector.SelectRandomEncounterFrom(specifications);
 
-            var expectedEncounters = new[]
-            {
-                ("specific environment encounter", commonWeight),
-            };
-
-            AssertEncounterWeight(expectedEncounters, weightedEncounters);
+            Assert.That(encounter, Is.EqualTo("my random encounter"));
+            AssertEncounterWeight(["specific environment encounter"], [], []);
         }
 
         [Test]
-        public void SelectAllWeightedEncountersFrom_WeightAllSpecificEncounters()
+        public void SelectRandomEncounterFrom_WeightAllSpecificEncounters()
         {
             SetupEncounterLevel(specificEnvironmentEncounters[1], 9266);
             timeOfDayEncounters.Add(specificEnvironmentEncounters[1]);
 
-            var weightedEncounters = encounterCollectionSelector.SelectAllWeightedEncountersFrom(specifications);
+            var encounter = encounterCollectionSelector.SelectRandomEncounterFrom(specifications);
 
-            var expectedEncounters = new[]
-            {
-                ("specific environment encounter", commonWeight),
-                ("other specific environment encounter", commonWeight),
-            };
-
-            AssertEncounterWeight(expectedEncounters, weightedEncounters);
+            Assert.That(encounter, Is.EqualTo("my random encounter"));
+            AssertEncounterWeight(["specific environment encounter", "other specific environment encounter"], [], []);
         }
 
         [Test]
-        public void SelectAllWeightedEncountersFrom_WeightNativeSpecificAquaticEncounters()
+        public void SelectRandomEncounterFrom_WeightNativeSpecificAquaticEncounters()
         {
             var aquaticEncounters = new[] { "aquatic encounter", "other aquatic encounter" };
             var specificAquaticEncounters = new[] { "specific aquatic encounter", "other specific aquatic encounter" };
@@ -896,18 +799,14 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
 
             specifications.Environment = EnvironmentConstants.Aquatic;
 
-            var weightedEncounters = encounterCollectionSelector.SelectAllWeightedEncountersFrom(specifications);
+            var encounter = encounterCollectionSelector.SelectRandomEncounterFrom(specifications);
 
-            var expectedEncounters = new[]
-            {
-                ("specific aquatic encounter", commonWeight),
-            };
-
-            AssertEncounterWeight(expectedEncounters, weightedEncounters);
+            Assert.That(encounter, Is.EqualTo("my random encounter"));
+            AssertEncounterWeight(["specific aquatic encounter"], [], []);
         }
 
         [Test]
-        public void SelectAllWeightedEncountersFrom_WeightAllNativeSpecificAquaticEncounters()
+        public void SelectRandomEncounterFrom_WeightAllNativeSpecificAquaticEncounters()
         {
             var aquaticEncounters = new[] { "aquatic encounter", "other aquatic encounter" };
             var specificAquaticEncounters = new[] { "specific aquatic encounter", "other specific aquatic encounter" };
@@ -922,22 +821,17 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
 
             specifications.Environment = EnvironmentConstants.Aquatic;
 
-            var weightedEncounters = encounterCollectionSelector.SelectAllWeightedEncountersFrom(specifications);
+            var encounter = encounterCollectionSelector.SelectRandomEncounterFrom(specifications);
 
-            var expectedEncounters = new[]
-            {
-                ("specific aquatic encounter", commonWeight),
-                ("other specific aquatic encounter", commonWeight),
-            };
-
-            AssertEncounterWeight(expectedEncounters, weightedEncounters);
+            Assert.That(encounter, Is.EqualTo("my random encounter"));
+            AssertEncounterWeight(["specific aquatic encounter", "other specific aquatic encounter"], [], []);
         }
 
         [TestCase(EnvironmentConstants.Aquatic, false, true)]
         [TestCase(EnvironmentConstants.Aquatic, true, true)]
         [TestCase(EnvironmentConstants.Underground, true, false)]
         [TestCase(EnvironmentConstants.Underground, true, true)]
-        public void SelectAllWeightedEncountersFrom_WeightNativeUndergroundAquaticEncounters(string environment, bool allowAquatic, bool allowUnderground)
+        public void SelectRandomEncounterFrom_WeightNativeUndergroundAquaticEncounters(string environment, bool allowAquatic, bool allowUnderground)
         {
             var aquaticEncounters = new[] { "aquatic encounter", "other aquatic encounter" };
             var specificAquaticEncounters = new[] { "specific aquatic encounter", "other specific aquatic encounter" };
@@ -954,8 +848,10 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
             levelEncounters.Clear();
             SetupEncounterLevel(undergroundAquaticEncounters[0], 9266);
 
-            var nightEncounters = new List<string>();
-            nightEncounters.Add(undergroundAquaticEncounters[0]);
+            var nightEncounters = new List<string>
+            {
+                undergroundAquaticEncounters[0]
+            };
 
             SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Night, nightEncounters);
 
@@ -963,21 +859,17 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
             specifications.AllowAquatic = allowAquatic;
             specifications.AllowUnderground = allowUnderground;
 
-            var weightedEncounters = encounterCollectionSelector.SelectAllWeightedEncountersFrom(specifications);
+            var encounter = encounterCollectionSelector.SelectRandomEncounterFrom(specifications);
 
-            var expectedEncounters = new[]
-            {
-                ("underground aquatic encounter", uncommonWeight),
-            };
-
-            AssertEncounterWeight(expectedEncounters, weightedEncounters);
+            Assert.That(encounter, Is.EqualTo("my random encounter"));
+            AssertEncounterWeight([], ["underground aquatic encounter"], []);
         }
 
         [TestCase(EnvironmentConstants.Aquatic, false, true)]
         [TestCase(EnvironmentConstants.Aquatic, true, true)]
         [TestCase(EnvironmentConstants.Underground, true, false)]
         [TestCase(EnvironmentConstants.Underground, true, true)]
-        public void SelectAllWeightedEncountersFrom_WeightAllNativeUndergroundAquaticEncounters(string environment, bool allowAquatic, bool allowUnderground)
+        public void SelectRandomEncounterFrom_WeightAllNativeUndergroundAquaticEncounters(string environment, bool allowAquatic, bool allowUnderground)
         {
             var aquaticEncounters = new[] { "aquatic encounter", "other aquatic encounter" };
             var specificAquaticEncounters = new[] { "specific aquatic encounter", "other specific aquatic encounter" };
@@ -1005,15 +897,10 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
             specifications.AllowAquatic = allowAquatic;
             specifications.AllowUnderground = allowUnderground;
 
-            var weightedEncounters = encounterCollectionSelector.SelectAllWeightedEncountersFrom(specifications);
+            var encounter = encounterCollectionSelector.SelectRandomEncounterFrom(specifications);
 
-            var expectedEncounters = new[]
-            {
-                ("underground aquatic encounter", uncommonWeight),
-                ("other underground aquatic encounter", uncommonWeight),
-            };
-
-            AssertEncounterWeight(expectedEncounters, weightedEncounters);
+            Assert.That(encounter, Is.EqualTo("my random encounter"));
+            AssertEncounterWeight([], ["underground aquatic encounter", "other underground aquatic encounter"], []);
         }
 
         [TestCase("environment", false, false, false)]
@@ -1028,7 +915,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
         [TestCase(EnvironmentConstants.Underground, true, false, true)]
         [TestCase(EnvironmentConstants.Underground, false, true, false)]
         [TestCase(EnvironmentConstants.Underground, true, true, true)]
-        public void SelectAllWeightedEncountersFrom_ShouldAddUndergroundAquaticEncounters(
+        public void SelectRandomEncounterFrom_ShouldAddUndergroundAquaticEncounters(
             string environment,
             bool allowAquatic,
             bool allowUnderground,
@@ -1071,13 +958,15 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
             specifications.AllowAquatic = allowAquatic;
             specifications.AllowUnderground = allowUnderground;
 
-            var weightedEncounters = encounterCollectionSelector.SelectAllWeightedEncountersFrom(specifications);
+            var encounter = encounterCollectionSelector.SelectRandomEncounterFrom(specifications);
+
+            Assert.That(encounter, Is.EqualTo("my random encounter"));
             Assert.That(weightedEncounters, Is.Not.Empty);
-            Assert.That(weightedEncounters.Any(e => e.Contains("underground aquatic encounter")), Is.EqualTo(hasUndergroundAquatic));
+            Assert.That(weightedEncounters.Values.Any(e => e.Contains("underground aquatic encounter")), Is.EqualTo(hasUndergroundAquatic));
         }
 
         [Test]
-        public void SelectAllWeightedEncountersFrom_IfCivilized_DoNotGetWildlife()
+        public void SelectRandomEncounterFrom_IfCivilized_DoNotGetWildlife()
         {
             var specificCivilizedEncounters = new[] { "specific civilized encounter", "other specific civilized encounter" };
             SetUpEncounterGroup(temperature + EnvironmentConstants.Civilized, specificCivilizedEncounters);
@@ -1106,22 +995,14 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
 
             specifications.Environment = EnvironmentConstants.Civilized;
 
-            var weightedEncounters = encounterCollectionSelector.SelectAllWeightedEncountersFrom(specifications);
+            var encounter = encounterCollectionSelector.SelectRandomEncounterFrom(specifications);
 
-            var expectedEncounters = new[]
-            {
-                ("other extraplanar encounter", rareWeight),
-                ("specific civilized encounter", commonWeight),
-                ("civilized encounter", commonWeight),
-                ("other land encounter", commonWeight),
-                ("other any encounter", commonWeight),
-            };
-
-            AssertEncounterWeight(expectedEncounters, weightedEncounters);
+            Assert.That(encounter, Is.EqualTo("my random encounter"));
+            AssertEncounterWeight(["specific civilized encounter", "civilized encounter", "other land encounter", "other any encounter"], [], ["other extraplanar encounter"]);
         }
 
         [Test]
-        public void BUG_SelectAllWeightedEncountersFrom_IfCivilized_UndeadFromAnyAreRare()
+        public void BUG_SelectRandomEncounterFrom_IfCivilized_UndeadFromAnyAreRare()
         {
             var specificCivilizedEncounters = new[] { "specific civilized encounter", "other specific civilized encounter" };
             SetUpEncounterGroup(temperature + EnvironmentConstants.Civilized, specificCivilizedEncounters);
@@ -1155,23 +1036,17 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
 
             specifications.Environment = EnvironmentConstants.Civilized;
 
-            var weightedEncounters = encounterCollectionSelector.SelectAllWeightedEncountersFrom(specifications);
+            var encounter = encounterCollectionSelector.SelectRandomEncounterFrom(specifications);
 
-            var expectedEncounters = new[]
-            {
-                ("other extraplanar encounter", rareWeight),
-                ("specific civilized encounter", commonWeight),
-                ("civilized encounter", commonWeight),
-                ("undead encounter", rareWeight),
-                ("other land encounter", commonWeight),
-                ("other any encounter", commonWeight),
-            };
-
-            AssertEncounterWeight(expectedEncounters, weightedEncounters);
+            Assert.That(encounter, Is.EqualTo("my random encounter"));
+            AssertEncounterWeight(
+                ["specific civilized encounter", "civilized encounter", "other land encounter", "other any encounter"],
+                [],
+                ["other extraplanar encounter", "undead encounter"]);
         }
 
         [Test]
-        public void BUG_SelectAllWeightedEncountersFrom_IfNotCivilized_UndeadFromAnyAreCommon()
+        public void BUG_SelectRandomEncounterFrom_IfNotCivilized_UndeadFromAnyAreCommon()
         {
             anyEncounters.AddRange(undeadEncounters);
 
@@ -1200,25 +1075,18 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
             wildernessEncounters.Add(landEncounters[0]);
             wildernessEncounters.Add(anyEncounters[0]);
 
-            var weightedEncounters = encounterCollectionSelector.SelectAllWeightedEncountersFrom(specifications);
+            var encounter = encounterCollectionSelector.SelectRandomEncounterFrom(specifications);
 
-            var expectedEncounters = new[]
-            {
-                ("extraplanar encounter", rareWeight),
-                ("other extraplanar encounter", rareWeight),
-                ("specific environment encounter", commonWeight),
-                ("undead encounter", commonWeight),
-                ("land encounter", commonWeight),
-                ("other land encounter", commonWeight),
-                ("any encounter", commonWeight),
-                ("other any encounter", commonWeight),
-            };
+            Assert.That(encounter, Is.EqualTo("my random encounter"));
+            AssertEncounterWeight(
+                ["specific environment encounter", "undead encounter", "land encounter", "other land encounter", "any encounter", "other any encounter"],
+                [],
+                ["extraplanar encounter", "other extraplanar encounter"]);
 
-            AssertEncounterWeight(expectedEncounters, weightedEncounters);
         }
 
         [Test]
-        public void BUG_SelectAllWeightedEncountersFrom_IfCivilized_UndeadFromLandAreRare()
+        public void BUG_SelectRandomEncounterFrom_IfCivilized_UndeadFromLandAreRare()
         {
             var specificCivilizedEncounters = new[] { "specific civilized encounter", "other specific civilized encounter" };
             SetUpEncounterGroup(temperature + EnvironmentConstants.Civilized, specificCivilizedEncounters);
@@ -1252,23 +1120,17 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
 
             specifications.Environment = EnvironmentConstants.Civilized;
 
-            var weightedEncounters = encounterCollectionSelector.SelectAllWeightedEncountersFrom(specifications);
+            var encounter = encounterCollectionSelector.SelectRandomEncounterFrom(specifications);
 
-            var expectedEncounters = new[]
-            {
-                ("other extraplanar encounter", rareWeight),
-                ("specific civilized encounter", commonWeight),
-                ("civilized encounter", commonWeight),
-                ("undead encounter", rareWeight),
-                ("other land encounter", commonWeight),
-                ("other any encounter", commonWeight),
-            };
-
-            AssertEncounterWeight(expectedEncounters, weightedEncounters);
+            Assert.That(encounter, Is.EqualTo("my random encounter"));
+            AssertEncounterWeight(
+                ["specific civilized encounter", "civilized encounter", "other land encounter", "other any encounter"],
+                [],
+                ["other extraplanar encounter", "undead encounter"]);
         }
 
         [Test]
-        public void BUG_SelectAllWeightedEncountersFrom_IfNotCivilized_UndeadFromLandAreCommon()
+        public void BUG_SelectRandomEncounterFrom_IfNotCivilized_UndeadFromLandAreCommon()
         {
             landEncounters.AddRange(undeadEncounters);
 
@@ -1297,25 +1159,17 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
             wildernessEncounters.Add(landEncounters[0]);
             wildernessEncounters.Add(anyEncounters[0]);
 
-            var weightedEncounters = encounterCollectionSelector.SelectAllWeightedEncountersFrom(specifications);
+            var encounter = encounterCollectionSelector.SelectRandomEncounterFrom(specifications);
 
-            var expectedEncounters = new[]
-            {
-                ("extraplanar encounter", rareWeight),
-                ("other extraplanar encounter", rareWeight),
-                ("specific environment encounter", commonWeight),
-                ("undead encounter", commonWeight),
-                ("land encounter", commonWeight),
-                ("other land encounter", commonWeight),
-                ("any encounter", commonWeight),
-                ("other any encounter", commonWeight),
-            };
-
-            AssertEncounterWeight(expectedEncounters, weightedEncounters);
+            Assert.That(encounter, Is.EqualTo("my random encounter"));
+            AssertEncounterWeight(
+                ["specific environment encounter", "undead encounter", "land encounter", "other land encounter", "any encounter", "other any encounter"],
+                [],
+                ["extraplanar encounter", "other extraplanar encounter"]);
         }
 
         [Test]
-        public void BUG_SelectAllWeightedEncountersFrom_IfCivilized_UndergroundUndeadAreRare()
+        public void BUG_SelectRandomEncounterFrom_IfCivilized_UndergroundUndeadAreRare()
         {
             var specificCivilizedEncounters = new[] { "specific civilized encounter", "other specific civilized encounter" };
             SetUpEncounterGroup(temperature + EnvironmentConstants.Civilized, specificCivilizedEncounters);
@@ -1362,24 +1216,17 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
             specifications.Environment = EnvironmentConstants.Civilized;
             specifications.AllowUnderground = true;
 
-            var weightedEncounters = encounterCollectionSelector.SelectAllWeightedEncountersFrom(specifications);
+            var encounter = encounterCollectionSelector.SelectRandomEncounterFrom(specifications);
 
-            var expectedEncounters = new[]
-            {
-                ("other extraplanar encounter", rareWeight),
-                ("specific civilized encounter", commonWeight),
-                ("civilized encounter", commonWeight),
-                ("undead encounter", rareWeight),
-                ("other land encounter", commonWeight),
-                ("other any encounter", commonWeight),
-                ("other underground encounter", uncommonWeight),
-            };
-
-            AssertEncounterWeight(expectedEncounters, weightedEncounters);
+            Assert.That(encounter, Is.EqualTo("my random encounter"));
+            AssertEncounterWeight(
+                ["specific civilized encounter", "civilized encounter", "other land encounter", "other any encounter"],
+                ["other underground encounter"],
+                ["other extraplanar encounter", "undead encounter"]);
         }
 
         [Test]
-        public void BUG_SelectAllWeightedEncountersFrom_IfNotCivilized_UndergroundUndeadFromAnyAreCommon()
+        public void BUG_SelectRandomEncounterFrom_IfNotCivilized_UndergroundUndeadFromAnyAreCommon()
         {
             var undergroundEncounters = new List<string> { "underground encounter", "other underground encounter" };
             SetUpEncounterGroup(EnvironmentConstants.Underground, undergroundEncounters);
@@ -1422,27 +1269,17 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
 
             specifications.AllowUnderground = true;
 
-            var weightedEncounters = encounterCollectionSelector.SelectAllWeightedEncountersFrom(specifications);
+            var encounter = encounterCollectionSelector.SelectRandomEncounterFrom(specifications);
 
-            var expectedEncounters = new[]
-            {
-                ("extraplanar encounter", rareWeight),
-                ("other extraplanar encounter", rareWeight),
-                ("specific environment encounter", commonWeight),
-                ("undead encounter", commonWeight),
-                ("land encounter", commonWeight),
-                ("other land encounter", commonWeight),
-                ("any encounter", commonWeight),
-                ("other any encounter", commonWeight),
-                ("other underground encounter", uncommonWeight),
-                ("underground encounter", uncommonWeight),
-            };
-
-            AssertEncounterWeight(expectedEncounters, weightedEncounters);
+            Assert.That(encounter, Is.EqualTo("my random encounter"));
+            AssertEncounterWeight(
+                ["specific environment encounter", "undead encounter", "land encounter", "other land encounter", "any encounter", "other any encounter"],
+                ["other underground encounter", "underground encounter"],
+                ["extraplanar encounter", "other extraplanar encounter"]);
         }
 
         [Test]
-        public void BUG_SelectAllWeightedEncountersFrom_IfNotCivilized_UndergroundUndeadFromLandAreCommon()
+        public void BUG_SelectRandomEncounterFrom_IfNotCivilized_UndergroundUndeadFromLandAreCommon()
         {
             var undergroundEncounters = new List<string> { "underground encounter", "other underground encounter" };
             SetUpEncounterGroup(EnvironmentConstants.Underground, undergroundEncounters);
@@ -1485,27 +1322,17 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
 
             specifications.AllowUnderground = true;
 
-            var weightedEncounters = encounterCollectionSelector.SelectAllWeightedEncountersFrom(specifications);
+            var encounter = encounterCollectionSelector.SelectRandomEncounterFrom(specifications);
 
-            var expectedEncounters = new[]
-            {
-                ("extraplanar encounter", rareWeight),
-                ("other extraplanar encounter", rareWeight),
-                ("specific environment encounter", commonWeight),
-                ("undead encounter", commonWeight),
-                ("land encounter", commonWeight),
-                ("other land encounter", commonWeight),
-                ("any encounter", commonWeight),
-                ("other any encounter", commonWeight),
-                ("other underground encounter", uncommonWeight),
-                ("underground encounter", uncommonWeight),
-            };
-
-            AssertEncounterWeight(expectedEncounters, weightedEncounters);
+            Assert.That(encounter, Is.EqualTo("my random encounter"));
+            AssertEncounterWeight(
+                ["specific environment encounter", "undead encounter", "land encounter", "other land encounter", "any encounter", "other any encounter"],
+                ["other underground encounter", "underground encounter"],
+                ["extraplanar encounter", "other extraplanar encounter"]);
         }
 
         [Test]
-        public void BUG_SelectAllWeightedEncountersFrom_IfNotCivilized_UndergroundUndeadAreUncommon()
+        public void BUG_SelectRandomEncounterFrom_IfNotCivilized_UndergroundUndeadAreUncommon()
         {
             var undergroundEncounters = new List<string> { "underground encounter", "other underground encounter" };
             SetUpEncounterGroup(EnvironmentConstants.Underground, undergroundEncounters);
@@ -1547,27 +1374,17 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
 
             specifications.AllowUnderground = true;
 
-            var weightedEncounters = encounterCollectionSelector.SelectAllWeightedEncountersFrom(specifications);
+            var encounter = encounterCollectionSelector.SelectRandomEncounterFrom(specifications);
 
-            var expectedEncounters = new[]
-            {
-                ("extraplanar encounter", rareWeight),
-                ("other extraplanar encounter", rareWeight),
-                ("specific environment encounter", commonWeight),
-                ("undead encounter", uncommonWeight),
-                ("land encounter", commonWeight),
-                ("other land encounter", commonWeight),
-                ("any encounter", commonWeight),
-                ("other any encounter", commonWeight),
-                ("other underground encounter", uncommonWeight),
-                ("underground encounter", uncommonWeight),
-            };
-
-            AssertEncounterWeight(expectedEncounters, weightedEncounters);
+            Assert.That(encounter, Is.EqualTo("my random encounter"));
+            AssertEncounterWeight(
+                ["specific environment encounter", "land encounter", "other land encounter", "any encounter", "other any encounter"],
+                ["undead encounter", "other underground encounter", "underground encounter"],
+                ["extraplanar encounter", "other extraplanar encounter"]);
         }
 
         [Test]
-        public void SelectAllWeightedEncountersFrom_IfUndergroundEnvironment_SetTimeOfDayToNight()
+        public void SelectRandomEncounterFrom_IfUndergroundEnvironment_SetTimeOfDayToNight()
         {
             var undergroundEncounters = new[] { "underground encounter", "other underground encounter" };
             var specificUndergroundEncounters = new[] { "specific underground encounter", "other specific underground encounter" };
@@ -1595,22 +1412,14 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
 
             specifications.Environment = EnvironmentConstants.Underground;
 
-            var weightedEncounters = encounterCollectionSelector.SelectAllWeightedEncountersFrom(specifications);
+            var encounter = encounterCollectionSelector.SelectRandomEncounterFrom(specifications);
 
-            var expectedEncounters = new[]
-            {
-                ("extraplanar encounter", rareWeight),
-                ("specific underground encounter", commonWeight),
-                ("land encounter", commonWeight),
-                ("any encounter", commonWeight),
-                ("underground encounter", commonWeight),
-            };
-
-            AssertEncounterWeight(expectedEncounters, weightedEncounters);
+            Assert.That(encounter, Is.EqualTo("my random encounter"));
+            AssertEncounterWeight(["specific underground encounter", "land encounter", "any encounter", "underground encounter"], [], ["extraplanar encounter"]);
         }
 
         [Test]
-        public void SelectAllWeightedEncountersFrom_IfAllowingUnderground_SetTimeOfDayToNight()
+        public void SelectRandomEncounterFrom_IfAllowingUnderground_SetTimeOfDayToNight()
         {
             var undergroundEncounters = new[] { "underground encounter", "other underground encounter" };
             SetUpEncounterGroup(EnvironmentConstants.Underground, undergroundEncounters);
@@ -1635,22 +1444,14 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
 
             specifications.AllowUnderground = true;
 
-            var weightedEncounters = encounterCollectionSelector.SelectAllWeightedEncountersFrom(specifications);
+            var encounter = encounterCollectionSelector.SelectRandomEncounterFrom(specifications);
 
-            var expectedEncounters = new[]
-            {
-                ("extraplanar encounter", rareWeight),
-                ("specific environment encounter", commonWeight),
-                ("land encounter", commonWeight),
-                ("any encounter", commonWeight),
-                ("underground encounter", uncommonWeight),
-            };
-
-            AssertEncounterWeight(expectedEncounters, weightedEncounters);
+            Assert.That(encounter, Is.EqualTo("my random encounter"));
+            AssertEncounterWeight(["specific environment encounter", "land encounter", "any encounter"], ["underground encounter"], ["extraplanar encounter"]);
         }
 
         [Test]
-        public void SelectAllWeightedEncountersFrom_GetAllPossibleWeightedEncounters_WithoutAquaticOrUnderground()
+        public void SelectRandomEncounterFrom_GetAllPossibleWeightedEncounters_WithoutAquaticOrUnderground()
         {
             SetupEncounterLevel(extraplanarEncounters[0], 9266);
             SetupEncounterLevel(landEncounters[0], 9266);
@@ -1662,21 +1463,14 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
             timeOfDayEncounters.Add(anyEncounters[0]);
             timeOfDayEncounters.Add(specificEnvironmentEncounters[0]);
 
-            var weightedEncounters = encounterCollectionSelector.SelectAllWeightedEncountersFrom(specifications);
+            var encounter = encounterCollectionSelector.SelectRandomEncounterFrom(specifications);
 
-            var expectedEncounters = new[]
-            {
-                ("extraplanar encounter", rareWeight),
-                ("specific environment encounter", commonWeight),
-                ("land encounter", commonWeight),
-                ("any encounter", commonWeight),
-            };
-
-            AssertEncounterWeight(expectedEncounters, weightedEncounters);
+            Assert.That(encounter, Is.EqualTo("my random encounter"));
+            AssertEncounterWeight(["specific environment encounter", "land encounter", "any encounter"], [], ["extraplanar encounter"]);
         }
 
         [Test]
-        public void SelectAllWeightedEncountersFrom_GetAllPossibleWeightedCivilizedEncounters()
+        public void SelectRandomEncounterFrom_GetAllPossibleWeightedCivilizedEncounters()
         {
             var specificCivilizedEncounters = new[] { "specific civilized encounter", "other specific civilized encounter" };
             SetUpEncounterGroup(temperature + EnvironmentConstants.Civilized, specificCivilizedEncounters);
@@ -1705,26 +1499,10 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
 
             specifications.Environment = EnvironmentConstants.Civilized;
 
-            var weightedEncounters = encounterCollectionSelector.SelectAllWeightedEncountersFrom(specifications);
+            var encounter = encounterCollectionSelector.SelectRandomEncounterFrom(specifications);
 
-            var expectedEncounters = new[]
-            {
-                ("other extraplanar encounter", rareWeight),
-                ("specific civilized encounter", commonWeight),
-                ("civilized encounter", commonWeight),
-                ("other land encounter", commonWeight),
-                ("other any encounter", commonWeight),
-            };
-
-            AssertEncounterWeight(expectedEncounters, weightedEncounters);
-        }
-
-        [Test]
-        public void SelectAllWeightedEncountersFrom_SelectAllWeightedReturnsNoEncounters()
-        {
-            levelEncounters.Clear();
-            var allEncounters = encounterCollectionSelector.SelectAllWeightedEncountersFrom(specifications);
-            Assert.That(allEncounters, Is.Empty);
+            Assert.That(encounter, Is.EqualTo("my random encounter"));
+            AssertEncounterWeight(["specific civilized encounter", "civilized encounter", "other land encounter", "other any encounter"], [], ["other extraplanar encounter"]);
         }
 
         [Test]
@@ -1736,10 +1514,11 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
 
             filters["filter"].Add("specific environment encounter");
 
-            specifications.CreatureTypeFilters = new[] { "filter" };
+            specifications.CreatureTypeFilters = ["filter"];
 
             var encounter = encounterCollectionSelector.SelectRandomEncounterFrom(specifications);
-            Assert.That(encounter, Is.EqualTo("specific environment encounter"));
+            Assert.That(encounter, Is.EqualTo("my random encounter"));
+            AssertEncounterWeight(["specific environment encounter"], [], []);
         }
 
         [Test]
@@ -1759,10 +1538,11 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
             filters["filter"].Add("encounter");
             filters["filter"].Add("other encounter");
 
-            specifications.CreatureTypeFilters = new[] { "filter" };
+            specifications.CreatureTypeFilters = ["filter"];
 
             var encounter = encounterCollectionSelector.SelectRandomEncounterFrom(specifications);
-            Assert.That(encounter, Is.EqualTo("other encounter"));
+            Assert.That(encounter, Is.EqualTo("my random encounter"));
+            AssertEncounterWeight(["other encounter"], [], []);
         }
 
         [Test]
@@ -1782,14 +1562,15 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
             filters["filter"].Add("encounter");
             filters["other filter"].Add("other encounter");
 
-            specifications.CreatureTypeFilters = new[] { "filter", "other filter" };
+            specifications.CreatureTypeFilters = ["filter", "other filter"];
 
             var encounter = encounterCollectionSelector.SelectRandomEncounterFrom(specifications);
-            Assert.That(encounter, Is.EqualTo("other encounter"));
+            Assert.That(encounter, Is.EqualTo("my random encounter"));
+            AssertEncounterWeight(["other encounter"], [], []);
         }
 
         [Test]
-        public void SelectAllWeightedEncountersFrom_ApplyFiltersToAllWeightedEncounters()
+        public void SelectRandomEncounterFrom_ApplyFiltersToAllWeightedEncounters()
         {
             specificEnvironmentEncounters.Add("wrong encounter");
             SetupEncounterLevel("wrong encounter", 9266);
@@ -1797,15 +1578,16 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
 
             filters["filter"].Add("specific environment encounter");
 
-            specifications.CreatureTypeFilters = new[] { "filter" };
+            specifications.CreatureTypeFilters = ["filter"];
 
-            var allEncounters = encounterCollectionSelector.SelectAllWeightedEncountersFrom(specifications);
-            var expected = new[] { ("specific environment encounter", commonWeight) };
-            AssertEncounterWeight(expected, allEncounters);
+            var encounter = encounterCollectionSelector.SelectRandomEncounterFrom(specifications);
+
+            Assert.That(encounter, Is.EqualTo("my random encounter"));
+            AssertEncounterWeight(["specific environment encounter"], [], []);
         }
 
         [Test]
-        public void SelectAllWeightedEncountersFrom_AquaticEnvironmentDoesNotHaveNonAquaticEncounters()
+        public void SelectRandomEncounterFrom_AquaticEnvironmentDoesNotHaveNonAquaticEncounters()
         {
             var aquaticEncounters = new[] { "aquatic encounter", "other aquatic encounter" };
             var specificAquaticEncounters = new[] { "specific aquatic encounter", "other specific aquatic encounter" };
@@ -1827,21 +1609,14 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
 
             specifications.Environment = EnvironmentConstants.Aquatic;
 
-            var weightedEncounters = encounterCollectionSelector.SelectAllWeightedEncountersFrom(specifications);
+            var encounter = encounterCollectionSelector.SelectRandomEncounterFrom(specifications);
 
-            var expectedEncounters = new[]
-            {
-                ("extraplanar encounter", rareWeight),
-                ("specific aquatic encounter", commonWeight),
-                ("aquatic encounter", commonWeight),
-                ("any encounter", commonWeight),
-            };
-
-            AssertEncounterWeight(expectedEncounters, weightedEncounters);
+            Assert.That(encounter, Is.EqualTo("my random encounter"));
+            AssertEncounterWeight(["specific aquatic encounter", "aquatic encounter", "any encounter"], [], ["extraplanar encounter"]);
         }
 
         [Test]
-        public void SelectAllWeightedEncountersFrom_CanAddAquaticToAnEnvironment()
+        public void SelectRandomEncounterFrom_CanAddAquaticToAnEnvironment()
         {
             var aquaticEncounters = new[] { "aquatic encounter", "other aquatic encounter" };
             var specificAquaticEncounters = new[] { "specific aquatic encounter", "other specific aquatic encounter" };
@@ -1865,23 +1640,18 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
 
             specifications.AllowAquatic = true;
 
-            var weightedEncounters = encounterCollectionSelector.SelectAllWeightedEncountersFrom(specifications);
+            var encounter = encounterCollectionSelector.SelectRandomEncounterFrom(specifications);
 
-            var expectedEncounters = new[]
-            {
-                ("extraplanar encounter", rareWeight),
-                ("specific environment encounter", commonWeight),
-                ("any encounter", commonWeight),
-                ("land encounter", commonWeight),
-                ("aquatic encounter", uncommonWeight),
-                ("specific aquatic encounter", uncommonWeight),
-            };
+            Assert.That(encounter, Is.EqualTo("my random encounter"));
+            AssertEncounterWeight(
+                ["specific environment encounter", "any encounter", "land encounter"],
+                ["aquatic encounter", "specific aquatic encounter"],
+                ["extraplanar encounter"]);
 
-            AssertEncounterWeight(expectedEncounters, weightedEncounters);
         }
 
         [Test]
-        public void SelectAllWeightedEncountersFrom_AddingAquaticToAquatic()
+        public void SelectRandomEncounterFrom_AddingAquaticToAquatic()
         {
             var aquaticEncounters = new[] { "aquatic encounter", "other aquatic encounter" };
             var specificAquaticEncounters = new[] { "specific aquatic encounter", "other specific aquatic encounter" };
@@ -1904,21 +1674,14 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
             specifications.Environment = EnvironmentConstants.Aquatic;
             specifications.AllowAquatic = true;
 
-            var weightedEncounters = encounterCollectionSelector.SelectAllWeightedEncountersFrom(specifications);
+            var encounter = encounterCollectionSelector.SelectRandomEncounterFrom(specifications);
 
-            var expectedEncounters = new[]
-            {
-                ("extraplanar encounter", rareWeight),
-                ("specific aquatic encounter", commonWeight),
-                ("aquatic encounter", commonWeight),
-                ("any encounter", commonWeight),
-            };
-
-            AssertEncounterWeight(expectedEncounters, weightedEncounters);
+            Assert.That(encounter, Is.EqualTo("my random encounter"));
+            AssertEncounterWeight(["specific aquatic encounter", "aquatic encounter", "any encounter"], [], ["extraplanar encounter"]);
         }
 
         [Test]
-        public void SelectAllWeightedEncountersFrom_AddAquaticToUnderground()
+        public void SelectRandomEncounterFrom_AddAquaticToUnderground()
         {
             var undergroundEncounters = new[] { "underground encounter", "other underground encounter" };
             var specificUndergroundEncounters = new[] { "specific underground encounter", "other specific underground encounter" };
@@ -1962,25 +1725,17 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
             specifications.Environment = EnvironmentConstants.Underground;
             specifications.AllowAquatic = true;
 
-            var weightedEncounters = encounterCollectionSelector.SelectAllWeightedEncountersFrom(specifications);
+            var encounter = encounterCollectionSelector.SelectRandomEncounterFrom(specifications);
 
-            var expectedEncounters = new[]
-            {
-                ("extraplanar encounter", rareWeight),
-                ("specific underground encounter", commonWeight),
-                ("any encounter", commonWeight),
-                ("land encounter", commonWeight),
-                ("aquatic encounter", uncommonWeight),
-                ("specific aquatic encounter", uncommonWeight),
-                ("underground encounter", commonWeight),
-                ("underground aquatic encounter", uncommonWeight),
-            };
-
-            AssertEncounterWeight(expectedEncounters, weightedEncounters);
+            Assert.That(encounter, Is.EqualTo("my random encounter"));
+            AssertEncounterWeight(
+                ["specific underground encounter", "any encounter", "land encounter", "underground encounter"],
+                ["aquatic encounter", "specific aquatic encounter", "underground aquatic encounter"],
+                ["extraplanar encounter"]);
         }
 
         [Test]
-        public void SelectAllWeightedEncountersFrom_AddAquaticToCivilized()
+        public void SelectRandomEncounterFrom_AddAquaticToCivilized()
         {
             var aquaticEncounters = new[] { "aquatic encounter", "other aquatic encounter" };
             var specificAquaticEncounters = new[] { "specific aquatic encounter", "other specific aquatic encounter" };
@@ -2021,23 +1776,17 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
             specifications.Environment = EnvironmentConstants.Civilized;
             specifications.AllowAquatic = true;
 
-            var weightedEncounters = encounterCollectionSelector.SelectAllWeightedEncountersFrom(specifications);
+            var encounter = encounterCollectionSelector.SelectRandomEncounterFrom(specifications);
 
-            var expectedEncounters = new[]
-            {
-                ("civilized encounter", commonWeight),
-                ("other specific aquatic encounter", uncommonWeight),
-                ("other extraplanar encounter", rareWeight),
-                ("other any encounter", commonWeight),
-                ("other land encounter", commonWeight),
-                ("other aquatic encounter", uncommonWeight),
-            };
-
-            AssertEncounterWeight(expectedEncounters, weightedEncounters);
+            Assert.That(encounter, Is.EqualTo("my random encounter"));
+            AssertEncounterWeight(
+                ["civilized encounter", "other any encounter", "other land encounter"],
+                ["other specific aquatic encounter", "other aquatic encounter"],
+                ["other extraplanar encounter"]);
         }
 
         [Test]
-        public void SelectAllWeightedEncountersFrom_CanAddUndergroundToAnEnvironment()
+        public void SelectRandomEncounterFrom_CanAddUndergroundToAnEnvironment()
         {
             var undergroundEncounters = new[] { "underground encounter", "other underground encounter" };
             SetUpEncounterGroup(EnvironmentConstants.Underground, undergroundEncounters);
@@ -2063,22 +1812,14 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
 
             specifications.AllowUnderground = true;
 
-            var weightedEncounters = encounterCollectionSelector.SelectAllWeightedEncountersFrom(specifications);
+            var encounter = encounterCollectionSelector.SelectRandomEncounterFrom(specifications);
 
-            var expectedEncounters = new[]
-            {
-                ("extraplanar encounter", rareWeight),
-                ("specific environment encounter", commonWeight),
-                ("any encounter", commonWeight),
-                ("land encounter", commonWeight),
-                ("underground encounter", uncommonWeight),
-            };
-
-            AssertEncounterWeight(expectedEncounters, weightedEncounters);
+            Assert.That(encounter, Is.EqualTo("my random encounter"));
+            AssertEncounterWeight(["specific environment encounter", "any encounter", "land encounter"], ["underground encounter"], ["extraplanar encounter"]);
         }
 
         [Test]
-        public void SelectAllWeightedEncountersFrom_AddingUndergroundToUnderground()
+        public void SelectRandomEncounterFrom_AddingUndergroundToUnderground()
         {
             var undergroundEncounters = new[] { "underground encounter", "other underground encounter" };
             var specificUndergroundEncounters = new[] { "specific underground encounter", "other specific underground encounter" };
@@ -2104,22 +1845,14 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
             specifications.Environment = EnvironmentConstants.Underground;
             specifications.AllowUnderground = true;
 
-            var weightedEncounters = encounterCollectionSelector.SelectAllWeightedEncountersFrom(specifications);
+            var encounter = encounterCollectionSelector.SelectRandomEncounterFrom(specifications);
 
-            var expectedEncounters = new[]
-            {
-                ("extraplanar encounter", rareWeight),
-                ("specific underground encounter", commonWeight),
-                ("any encounter", commonWeight),
-                ("land encounter", commonWeight),
-                ("underground encounter", commonWeight),
-            };
-
-            AssertEncounterWeight(expectedEncounters, weightedEncounters);
+            Assert.That(encounter, Is.EqualTo("my random encounter"));
+            AssertEncounterWeight(["specific underground encounter", "any encounter", "land encounter", "underground encounter"], [], ["extraplanar encounter"]);
         }
 
         [Test]
-        public void SelectAllWeightedEncountersFrom_GetAllPossibleWeightedEncounters_AddUndergroundAndAquatic()
+        public void SelectRandomEncounterFrom_GetAllPossibleWeightedEncounters_AddUndergroundAndAquatic()
         {
             var undergroundEncounters = new[] { "underground encounter", "other underground encounter" };
             var undergroundAquaticEncounters = new[] { "underground aquatic encounter", "other underground aquatic encounter" };
@@ -2160,25 +1893,17 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
             specifications.AllowAquatic = true;
             specifications.AllowUnderground = true;
 
-            var weightedEncounters = encounterCollectionSelector.SelectAllWeightedEncountersFrom(specifications);
+            var encounter = encounterCollectionSelector.SelectRandomEncounterFrom(specifications);
 
-            var expectedEncounters = new[]
-            {
-                ("extraplanar encounter", rareWeight),
-                ("specific environment encounter", commonWeight),
-                ("any encounter", commonWeight),
-                ("land encounter", commonWeight),
-                ("aquatic encounter", uncommonWeight),
-                ("specific aquatic encounter", uncommonWeight),
-                ("underground encounter", uncommonWeight),
-                ("underground aquatic encounter", uncommonWeight),
-            };
-
-            AssertEncounterWeight(expectedEncounters, weightedEncounters);
+            Assert.That(encounter, Is.EqualTo("my random encounter"));
+            AssertEncounterWeight(
+                ["specific environment encounter", "any encounter", "land encounter"],
+                ["aquatic encounter", "specific aquatic encounter", "underground encounter", "underground aquatic encounter"],
+                ["extraplanar encounter"]);
         }
 
         [Test]
-        public void SelectAllWeightedEncountersFrom_AddUndergroundToCivilized()
+        public void SelectRandomEncounterFrom_AddUndergroundToCivilized()
         {
             var specificCivilizedEncounters = new[] { "specific civilized encounter", "other specific civilized encounter" };
             var undergroundEncounters = new[] { "underground encounter", "other underground encounter" };
@@ -2197,17 +1922,19 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
             SetupEncounterLevel(undergroundEncounters[0], 9266);
             SetupEncounterLevel(undergroundEncounters[1], 9266);
 
-            var nightEncounters = new List<string>();
-            nightEncounters.Add(extraplanarEncounters[0]);
-            nightEncounters.Add(extraplanarEncounters[1]);
-            nightEncounters.Add(anyEncounters[0]);
-            nightEncounters.Add(anyEncounters[1]);
-            nightEncounters.Add(landEncounters[0]);
-            nightEncounters.Add(landEncounters[1]);
-            nightEncounters.Add(civilizedEncounters[0]);
-            nightEncounters.Add(specificCivilizedEncounters[0]);
-            nightEncounters.Add(undergroundEncounters[0]);
-            nightEncounters.Add(undergroundEncounters[1]);
+            var nightEncounters = new List<string>
+            {
+                extraplanarEncounters[0],
+                extraplanarEncounters[1],
+                anyEncounters[0],
+                anyEncounters[1],
+                landEncounters[0],
+                landEncounters[1],
+                civilizedEncounters[0],
+                specificCivilizedEncounters[0],
+                undergroundEncounters[0],
+                undergroundEncounters[1]
+            };
 
             SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Night, nightEncounters);
 
@@ -2219,23 +1946,17 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
             specifications.Environment = EnvironmentConstants.Civilized;
             specifications.AllowUnderground = true;
 
-            var weightedEncounters = encounterCollectionSelector.SelectAllWeightedEncountersFrom(specifications);
+            var encounter = encounterCollectionSelector.SelectRandomEncounterFrom(specifications);
 
-            var expectedEncounters = new[]
-            {
-                ("other extraplanar encounter", rareWeight),
-                ("specific civilized encounter", commonWeight),
-                ("civilized encounter", commonWeight),
-                ("other any encounter", commonWeight),
-                ("other land encounter", commonWeight),
-                ("other underground encounter", uncommonWeight),
-            };
-
-            AssertEncounterWeight(expectedEncounters, weightedEncounters);
+            Assert.That(encounter, Is.EqualTo("my random encounter"));
+            AssertEncounterWeight(
+                ["specific civilized encounter", "civilized encounter", "other any encounter", "other land encounter"],
+                ["other underground encounter"],
+                ["other extraplanar encounter"]);
         }
 
         [Test]
-        public void SelectAllWeightedEncountersFrom_AddUndergroundAndAquaticToCivilized()
+        public void SelectRandomEncounterFrom_AddUndergroundAndAquaticToCivilized()
         {
             var specificCivilizedEncounters = new[] { "specific civilized encounter", "other specific civilized encounter" };
             var undergroundEncounters = new[] { "underground encounter", "other underground encounter" };
@@ -2266,23 +1987,25 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
             SetupEncounterLevel(specificAquaticEncounters[0], 9266);
             SetupEncounterLevel(specificAquaticEncounters[1], 9266);
 
-            var nightEncounters = new List<string>();
-            nightEncounters.Add(extraplanarEncounters[0]);
-            nightEncounters.Add(extraplanarEncounters[1]);
-            nightEncounters.Add(anyEncounters[0]);
-            nightEncounters.Add(anyEncounters[1]);
-            nightEncounters.Add(landEncounters[0]);
-            nightEncounters.Add(landEncounters[1]);
-            nightEncounters.Add(civilizedEncounters[0]);
-            nightEncounters.Add(specificCivilizedEncounters[0]);
-            nightEncounters.Add(undergroundEncounters[0]);
-            nightEncounters.Add(undergroundEncounters[1]);
-            nightEncounters.Add(undergroundAquaticEncounters[0]);
-            nightEncounters.Add(undergroundAquaticEncounters[1]);
-            nightEncounters.Add(aquaticEncounters[0]);
-            nightEncounters.Add(aquaticEncounters[1]);
-            nightEncounters.Add(specificAquaticEncounters[0]);
-            nightEncounters.Add(specificAquaticEncounters[1]);
+            var nightEncounters = new List<string>
+            {
+                extraplanarEncounters[0],
+                extraplanarEncounters[1],
+                anyEncounters[0],
+                anyEncounters[1],
+                landEncounters[0],
+                landEncounters[1],
+                civilizedEncounters[0],
+                specificCivilizedEncounters[0],
+                undergroundEncounters[0],
+                undergroundEncounters[1],
+                undergroundAquaticEncounters[0],
+                undergroundAquaticEncounters[1],
+                aquaticEncounters[0],
+                aquaticEncounters[1],
+                specificAquaticEncounters[0],
+                specificAquaticEncounters[1]
+            };
 
             SetUpEncounterGroup(EnvironmentConstants.TimesOfDay.Night, nightEncounters);
 
@@ -2298,22 +2021,13 @@ namespace DnDGen.EncounterGen.Tests.Unit.Selectors.Collections
             specifications.AllowAquatic = true;
             specifications.AllowUnderground = true;
 
-            var weightedEncounters = encounterCollectionSelector.SelectAllWeightedEncountersFrom(specifications);
+            var encounter = encounterCollectionSelector.SelectRandomEncounterFrom(specifications);
 
-            var expectedEncounters = new[]
-            {
-                ("other extraplanar encounter", rareWeight),
-                ("specific civilized encounter", commonWeight),
-                ("civilized encounter", commonWeight),
-                ("other any encounter", commonWeight),
-                ("other land encounter", commonWeight),
-                ("other aquatic encounter", uncommonWeight),
-                ("other specific aquatic encounter", uncommonWeight),
-                ("other underground encounter", uncommonWeight),
-                ("other underground aquatic encounter", uncommonWeight),
-            };
-
-            AssertEncounterWeight(expectedEncounters, weightedEncounters);
+            Assert.That(encounter, Is.EqualTo("my random encounter"));
+            AssertEncounterWeight(
+                ["specific civilized encounter", "civilized encounter", "other any encounter", "other land encounter"],
+                ["other aquatic encounter", "other specific aquatic encounter", "other underground encounter", "other underground aquatic encounter"],
+                ["other extraplanar encounter"]);
         }
 
         [Test]

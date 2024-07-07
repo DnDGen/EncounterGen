@@ -229,7 +229,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
 
         private IEnumerable<string> GetCreaturesInEncounter(string encounter)
         {
-            var encounterCreatures = collectionSelector.SelectFrom(TableNameConstants.EncounterCreatures, encounter);
+            var encounterCreatures = collectionSelector.SelectFrom(Config.Name, TableNameConstants.EncounterCreatures, encounter);
             var creatures = encounterFormatter.SelectCreaturesAndAmountsFrom(encounterCreatures).Keys;
 
             return creatures;

@@ -13,9 +13,7 @@ namespace DnDGen.EncounterGen.IoC.Modules
             Bind<IEncounterLevelSelector>().To<EncounterLevelSelector>();
             Bind<IItemSelector>().To<ItemSelector>();
             Bind<IChallengeRatingSelector>().To<ChallengeRatingSelector>();
-
-            Bind<IEncounterCollectionSelector>().To<EncounterCollectionSelector>().WhenInjectedInto<EncounterCollectionSelectorCachingProxy>();
-            Bind<IEncounterCollectionSelector>().To<EncounterCollectionSelectorCachingProxy>().InSingletonScope();
+            Bind<IEncounterCollectionSelector>().To<EncounterCollectionSelector>();
         }
     }
 }

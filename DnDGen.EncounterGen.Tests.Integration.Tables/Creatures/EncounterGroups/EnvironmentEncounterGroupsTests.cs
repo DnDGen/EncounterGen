@@ -1729,7 +1729,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
         [Test]
         public void AnyEncounters()
         {
-            var creatures = new[]
+            var encounters = new[]
             {
                 EncounterConstants.Allip_Solitary,
                 EncounterConstants.AnimatedObject_Colossal_Solitary,
@@ -1979,13 +1979,13 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
                 EncounterConstants.Zombie_Human_LargeGroup,
             };
 
-            base.AssertDistinctCollection(EnvironmentConstants.Any, creatures);
+            base.AssertDistinctCollection(EnvironmentConstants.Any, encounters);
         }
 
         [Test]
         public void LandEncounters()
         {
-            var creatures = new[]
+            var encounters = new[]
             {
                 EncounterConstants.Adept_Doctor_Level1_Solitary,
                 EncounterConstants.Adept_Doctor_Level10To11_Solitary,
@@ -2690,149 +2690,6 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
                 EncounterConstants.Character_WarHero_Level18_Solitary,
                 EncounterConstants.Character_WarHero_Level19_Solitary,
                 EncounterConstants.Character_WarHero_Level20_Solitary,
-                EncounterConstants.Local_Level1_Solitary,
-                EncounterConstants.Local_Level10To11_Solitary,
-                EncounterConstants.Local_Level12To13_Solitary,
-                EncounterConstants.Local_Level14To15_Solitary,
-                EncounterConstants.Local_Level16To17_Solitary,
-                EncounterConstants.Local_Level18To19_Solitary,
-                EncounterConstants.Local_Level20_Solitary,
-                EncounterConstants.Local_Level2To3_Solitary,
-                EncounterConstants.Local_Level4To5_Solitary,
-                EncounterConstants.Local_Level6To7_Solitary,
-                EncounterConstants.Local_Level8To9_Solitary,
-                EncounterConstants.Local_Level1_WithWarpony,
-                EncounterConstants.Local_Level10To11_WithWarpony,
-                EncounterConstants.Local_Level12To13_WithWarpony,
-                EncounterConstants.Local_Level14To15_WithWarpony,
-                EncounterConstants.Local_Level16To17_WithWarpony,
-                EncounterConstants.Local_Level18To19_WithWarpony,
-                EncounterConstants.Local_Level20_WithWarpony,
-                EncounterConstants.Local_Level2To3_WithWarpony,
-                EncounterConstants.Local_Level4To5_WithWarpony,
-                EncounterConstants.Local_Level6To7_WithWarpony,
-                EncounterConstants.Local_Level8To9_WithWarpony,
-                EncounterConstants.Local_Level1_WithRidingDog,
-                EncounterConstants.Local_Level10To11_WithRidingDog,
-                EncounterConstants.Local_Level12To13_WithRidingDog,
-                EncounterConstants.Local_Level14To15_WithRidingDog,
-                EncounterConstants.Local_Level16To17_WithRidingDog,
-                EncounterConstants.Local_Level18To19_WithRidingDog,
-                EncounterConstants.Local_Level20_WithRidingDog,
-                EncounterConstants.Local_Level2To3_WithRidingDog,
-                EncounterConstants.Local_Level4To5_WithRidingDog,
-                EncounterConstants.Local_Level6To7_WithRidingDog,
-                EncounterConstants.Local_Level8To9_WithRidingDog,
-                EncounterConstants.Local_Level1_WithPony,
-                EncounterConstants.Local_Level10To11_WithPony,
-                EncounterConstants.Local_Level12To13_WithPony,
-                EncounterConstants.Local_Level14To15_WithPony,
-                EncounterConstants.Local_Level16To17_WithPony,
-                EncounterConstants.Local_Level18To19_WithPony,
-                EncounterConstants.Local_Level20_WithPony,
-                EncounterConstants.Local_Level2To3_WithPony,
-                EncounterConstants.Local_Level4To5_WithPony,
-                EncounterConstants.Local_Level6To7_WithPony,
-                EncounterConstants.Local_Level8To9_WithPony,
-                EncounterConstants.Local_Level1_WithMule,
-                EncounterConstants.Local_Level10To11_WithMule,
-                EncounterConstants.Local_Level12To13_WithMule,
-                EncounterConstants.Local_Level14To15_WithMule,
-                EncounterConstants.Local_Level16To17_WithMule,
-                EncounterConstants.Local_Level18To19_WithMule,
-                EncounterConstants.Local_Level20_WithMule,
-                EncounterConstants.Local_Level2To3_WithMule,
-                EncounterConstants.Local_Level4To5_WithMule,
-                EncounterConstants.Local_Level6To7_WithMule,
-                EncounterConstants.Local_Level8To9_WithMule,
-                EncounterConstants.Local_Level1_WithLightWarhorse,
-                EncounterConstants.Local_Level10To11_WithLightWarhorse,
-                EncounterConstants.Local_Level12To13_WithLightWarhorse,
-                EncounterConstants.Local_Level14To15_WithLightWarhorse,
-                EncounterConstants.Local_Level16To17_WithLightWarhorse,
-                EncounterConstants.Local_Level18To19_WithLightWarhorse,
-                EncounterConstants.Local_Level20_WithLightWarhorse,
-                EncounterConstants.Local_Level2To3_WithLightWarhorse,
-                EncounterConstants.Local_Level4To5_WithLightWarhorse,
-                EncounterConstants.Local_Level6To7_WithLightWarhorse,
-                EncounterConstants.Local_Level8To9_WithLightWarhorse,
-                EncounterConstants.Local_Level1_WithLightHorse,
-                EncounterConstants.Local_Level10To11_WithLightHorse,
-                EncounterConstants.Local_Level12To13_WithLightHorse,
-                EncounterConstants.Local_Level14To15_WithLightHorse,
-                EncounterConstants.Local_Level16To17_WithLightHorse,
-                EncounterConstants.Local_Level18To19_WithLightHorse,
-                EncounterConstants.Local_Level20_WithLightHorse,
-                EncounterConstants.Local_Level2To3_WithLightHorse,
-                EncounterConstants.Local_Level4To5_WithLightHorse,
-                EncounterConstants.Local_Level6To7_WithLightHorse,
-                EncounterConstants.Local_Level8To9_WithLightHorse,
-                EncounterConstants.Local_Level1_WithHeavyWarhorse,
-                EncounterConstants.Local_Level10To11_WithHeavyWarhorse,
-                EncounterConstants.Local_Level12To13_WithHeavyWarhorse,
-                EncounterConstants.Local_Level14To15_WithHeavyWarhorse,
-                EncounterConstants.Local_Level16To17_WithHeavyWarhorse,
-                EncounterConstants.Local_Level18To19_WithHeavyWarhorse,
-                EncounterConstants.Local_Level20_WithHeavyWarhorse,
-                EncounterConstants.Local_Level2To3_WithHeavyWarhorse,
-                EncounterConstants.Local_Level4To5_WithHeavyWarhorse,
-                EncounterConstants.Local_Level6To7_WithHeavyWarhorse,
-                EncounterConstants.Local_Level8To9_WithHeavyWarhorse,
-                EncounterConstants.Local_Level1_WithHeavyHorse,
-                EncounterConstants.Local_Level10To11_WithHeavyHorse,
-                EncounterConstants.Local_Level12To13_WithHeavyHorse,
-                EncounterConstants.Local_Level14To15_WithHeavyHorse,
-                EncounterConstants.Local_Level16To17_WithHeavyHorse,
-                EncounterConstants.Local_Level18To19_WithHeavyHorse,
-                EncounterConstants.Local_Level20_WithHeavyHorse,
-                EncounterConstants.Local_Level2To3_WithHeavyHorse,
-                EncounterConstants.Local_Level4To5_WithHeavyHorse,
-                EncounterConstants.Local_Level6To7_WithHeavyHorse,
-                EncounterConstants.Local_Level8To9_WithHeavyHorse,
-                EncounterConstants.Local_Level1_WithDonkey,
-                EncounterConstants.Local_Level10To11_WithDonkey,
-                EncounterConstants.Local_Level12To13_WithDonkey,
-                EncounterConstants.Local_Level14To15_WithDonkey,
-                EncounterConstants.Local_Level16To17_WithDonkey,
-                EncounterConstants.Local_Level18To19_WithDonkey,
-                EncounterConstants.Local_Level20_WithDonkey,
-                EncounterConstants.Local_Level2To3_WithDonkey,
-                EncounterConstants.Local_Level4To5_WithDonkey,
-                EncounterConstants.Local_Level6To7_WithDonkey,
-                EncounterConstants.Local_Level8To9_WithDonkey,
-                EncounterConstants.Local_Level1_WithDog,
-                EncounterConstants.Local_Level10To11_WithDog,
-                EncounterConstants.Local_Level12To13_WithDog,
-                EncounterConstants.Local_Level14To15_WithDog,
-                EncounterConstants.Local_Level16To17_WithDog,
-                EncounterConstants.Local_Level18To19_WithDog,
-                EncounterConstants.Local_Level20_WithDog,
-                EncounterConstants.Local_Level2To3_WithDog,
-                EncounterConstants.Local_Level4To5_WithDog,
-                EncounterConstants.Local_Level6To7_WithDog,
-                EncounterConstants.Local_Level8To9_WithDog,
-                EncounterConstants.Local_Level1_WithCamel,
-                EncounterConstants.Local_Level10To11_WithCamel,
-                EncounterConstants.Local_Level12To13_WithCamel,
-                EncounterConstants.Local_Level14To15_WithCamel,
-                EncounterConstants.Local_Level16To17_WithCamel,
-                EncounterConstants.Local_Level18To19_WithCamel,
-                EncounterConstants.Local_Level20_WithCamel,
-                EncounterConstants.Local_Level2To3_WithCamel,
-                EncounterConstants.Local_Level4To5_WithCamel,
-                EncounterConstants.Local_Level6To7_WithCamel,
-                EncounterConstants.Local_Level8To9_WithCamel,
-                EncounterConstants.Local_Level1_WithCat,
-                EncounterConstants.Local_Level10To11_WithCat,
-                EncounterConstants.Local_Level12To13_WithCat,
-                EncounterConstants.Local_Level14To15_WithCat,
-                EncounterConstants.Local_Level16To17_WithCat,
-                EncounterConstants.Local_Level18To19_WithCat,
-                EncounterConstants.Local_Level20_WithCat,
-                EncounterConstants.Local_Level2To3_WithCat,
-                EncounterConstants.Local_Level4To5_WithCat,
-                EncounterConstants.Local_Level6To7_WithCat,
-                EncounterConstants.Local_Level8To9_WithCat,
                 EncounterConstants.Spectre_Gang,
                 EncounterConstants.Spectre_Solitary,
                 EncounterConstants.Spectre_Swarm,
@@ -2866,7 +2723,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
                 EncounterConstants.Zombie_Wyvern_SmallGroup,
             };
 
-            base.AssertDistinctCollection(EnvironmentConstants.Land, creatures);
+            base.AssertDistinctCollection(EnvironmentConstants.Land, encounters);
         }
 
         [Test]
@@ -6203,149 +6060,6 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
         [TestCase(EncounterConstants.Commoner_Pilgrim_Level4To5_Caravan, EnvironmentConstants.Land)]
         [TestCase(EncounterConstants.Commoner_Pilgrim_Level6To7_Caravan, EnvironmentConstants.Land)]
         [TestCase(EncounterConstants.Commoner_Pilgrim_Level8To9_Caravan, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level1_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level10To11_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level12To13_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level14To15_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level16To17_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level18To19_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level20_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level2To3_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level4To5_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level6To7_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level8To9_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level1_WithCat, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level10To11_WithCat, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level12To13_WithCat, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level14To15_WithCat, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level16To17_WithCat, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level18To19_WithCat, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level20_WithCat, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level2To3_WithCat, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level4To5_WithCat, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level6To7_WithCat, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level8To9_WithCat, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level1_WithCamel, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level10To11_WithCamel, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level12To13_WithCamel, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level14To15_WithCamel, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level16To17_WithCamel, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level18To19_WithCamel, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level20_WithCamel, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level2To3_WithCamel, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level4To5_WithCamel, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level6To7_WithCamel, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level8To9_WithCamel, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level1_WithDog, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level10To11_WithDog, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level12To13_WithDog, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level14To15_WithDog, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level16To17_WithDog, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level18To19_WithDog, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level20_WithDog, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level2To3_WithDog, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level4To5_WithDog, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level6To7_WithDog, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level8To9_WithDog, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level1_WithRidingDog, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level10To11_WithRidingDog, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level12To13_WithRidingDog, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level14To15_WithRidingDog, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level16To17_WithRidingDog, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level18To19_WithRidingDog, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level20_WithRidingDog, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level2To3_WithRidingDog, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level4To5_WithRidingDog, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level6To7_WithRidingDog, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level8To9_WithRidingDog, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level1_WithDonkey, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level10To11_WithDonkey, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level12To13_WithDonkey, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level14To15_WithDonkey, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level16To17_WithDonkey, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level18To19_WithDonkey, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level20_WithDonkey, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level2To3_WithDonkey, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level4To5_WithDonkey, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level6To7_WithDonkey, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level8To9_WithDonkey, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level1_WithMule, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level10To11_WithMule, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level12To13_WithMule, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level14To15_WithMule, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level16To17_WithMule, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level18To19_WithMule, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level20_WithMule, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level2To3_WithMule, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level4To5_WithMule, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level6To7_WithMule, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level8To9_WithMule, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level1_WithPony, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level10To11_WithPony, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level12To13_WithPony, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level14To15_WithPony, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level16To17_WithPony, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level18To19_WithPony, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level20_WithPony, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level2To3_WithPony, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level4To5_WithPony, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level6To7_WithPony, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level8To9_WithPony, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level1_WithWarpony, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level10To11_WithWarpony, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level12To13_WithWarpony, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level14To15_WithWarpony, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level16To17_WithWarpony, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level18To19_WithWarpony, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level20_WithWarpony, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level2To3_WithWarpony, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level4To5_WithWarpony, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level6To7_WithWarpony, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level8To9_WithWarpony, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level1_WithLightHorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level10To11_WithLightHorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level12To13_WithLightHorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level14To15_WithLightHorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level16To17_WithLightHorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level18To19_WithLightHorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level20_WithLightHorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level2To3_WithLightHorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level4To5_WithLightHorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level6To7_WithLightHorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level8To9_WithLightHorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level1_WithLightWarhorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level10To11_WithLightWarhorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level12To13_WithLightWarhorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level14To15_WithLightWarhorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level16To17_WithLightWarhorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level18To19_WithLightWarhorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level20_WithLightWarhorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level2To3_WithLightWarhorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level4To5_WithLightWarhorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level6To7_WithLightWarhorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level8To9_WithLightWarhorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level1_WithHeavyHorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level10To11_WithHeavyHorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level12To13_WithHeavyHorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level14To15_WithHeavyHorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level16To17_WithHeavyHorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level18To19_WithHeavyHorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level20_WithHeavyHorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level2To3_WithHeavyHorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level4To5_WithHeavyHorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level6To7_WithHeavyHorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level8To9_WithHeavyHorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level1_WithHeavyWarhorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level10To11_WithHeavyWarhorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level12To13_WithHeavyWarhorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level14To15_WithHeavyWarhorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level16To17_WithHeavyWarhorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level18To19_WithHeavyWarhorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level20_WithHeavyWarhorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level2To3_WithHeavyWarhorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level4To5_WithHeavyWarhorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level6To7_WithHeavyWarhorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Local_Level8To9_WithHeavyWarhorse, EnvironmentConstants.Land)]
         [TestCase(EncounterConstants.Traveler_Level1_Group, EnvironmentConstants.Land)]
         [TestCase(EncounterConstants.Traveler_Level10To11_Group, EnvironmentConstants.Land)]
         [TestCase(EncounterConstants.Traveler_Level12To13_Group, EnvironmentConstants.Land)]
@@ -7334,7 +7048,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
 
             var extraplanarEncounters = new List<string>();
 
-            foreach(var plane in otherPlanes)
+            foreach (var plane in otherPlanes)
             {
                 extraplanarEncounters.AddRange(table[plane]);
             }

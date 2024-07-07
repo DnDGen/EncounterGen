@@ -49,9 +49,9 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
             mockDice.Setup(d => d.Roll("creature amount")).Returns(ParseRoll("42"));
 
             mockCollectionSelector
-                .Setup(s => s.SelectFrom(TableNameConstants.AverageChallengeRatings, It.IsAny<string>()))
-                .Returns((string t, string g) => challengeRatings.ContainsKey(g) ? challengeRatings[g] : Enumerable.Empty<string>());
-            mockCollectionSelector.Setup(s => s.SelectFrom(TableNameConstants.CreatureGroups, GroupConstants.RequiresSubcreature)).Returns(requiresSubcreature);
+                .Setup(s => s.SelectFrom(Config.Name, TableNameConstants.AverageChallengeRatings, It.IsAny<string>()))
+                .Returns((string a, string t, string g) => challengeRatings.ContainsKey(g) ? challengeRatings[g] : Enumerable.Empty<string>());
+            mockCollectionSelector.Setup(s => s.SelectFrom(Config.Name, TableNameConstants.CreatureGroups, GroupConstants.RequiresSubcreature)).Returns(requiresSubcreature);
             mockCollectionSelector.Setup(s => s.SelectRandomFrom(It.IsAny<IEnumerable<string>>())).Returns((IEnumerable<string> c) => c.Last());
 
             mockChallengeRatingSelector.Setup(s => s.SelectAverageForCreature(It.IsAny<string>())).Returns((string s) => challengeRatings[s].Single());
@@ -99,7 +99,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
         {
             var creatureData = creaturesAndAmounts.Select(kvp => $"{kvp.Key}/{kvp.Value}");
             mockCollectionSelector
-                .Setup(s => s.SelectFrom(TableNameConstants.EncounterCreatures, "my encounter"))
+                .Setup(s => s.SelectFrom(Config.Name, TableNameConstants.EncounterCreatures, "my encounter"))
                 .Returns(creatureData);
             mockEncounterFormatter
                 .Setup(f => f.SelectCreaturesAndAmountsFrom(creatureData))
@@ -127,7 +127,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
 
             var creatureData = creaturesAndAmounts.Select(kvp => $"{kvp.Key}/{kvp.Value}");
             mockCollectionSelector
-                .Setup(s => s.SelectFrom(TableNameConstants.EncounterCreatures, "my encounter"))
+                .Setup(s => s.SelectFrom(Config.Name, TableNameConstants.EncounterCreatures, "my encounter"))
                 .Returns(creatureData);
             mockEncounterFormatter
                 .Setup(f => f.SelectCreaturesAndAmountsFrom(creatureData))
@@ -157,7 +157,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
 
             var creatureData = creaturesAndAmounts.Select(kvp => $"{kvp.Key}/{kvp.Value}");
             mockCollectionSelector
-                .Setup(s => s.SelectFrom(TableNameConstants.EncounterCreatures, "my encounter"))
+                .Setup(s => s.SelectFrom(Config.Name, TableNameConstants.EncounterCreatures, "my encounter"))
                 .Returns(creatureData);
             mockEncounterFormatter
                 .Setup(f => f.SelectCreaturesAndAmountsFrom(creatureData))
@@ -183,7 +183,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
 
             var creatureData = creaturesAndAmounts.Select(kvp => $"{kvp.Key}/{kvp.Value}");
             mockCollectionSelector
-                .Setup(s => s.SelectFrom(TableNameConstants.EncounterCreatures, "my encounter"))
+                .Setup(s => s.SelectFrom(Config.Name, TableNameConstants.EncounterCreatures, "my encounter"))
                 .Returns(creatureData);
             mockEncounterFormatter
                 .Setup(f => f.SelectCreaturesAndAmountsFrom(creatureData))
@@ -208,7 +208,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
         {
             var creatureData = creaturesAndAmounts.Select(kvp => $"{kvp.Key}/{kvp.Value}");
             mockCollectionSelector
-                .Setup(s => s.SelectFrom(TableNameConstants.EncounterCreatures, "my encounter"))
+                .Setup(s => s.SelectFrom(Config.Name, TableNameConstants.EncounterCreatures, "my encounter"))
                 .Returns(creatureData);
             mockEncounterFormatter
                 .Setup(f => f.SelectCreaturesAndAmountsFrom(creatureData))
@@ -219,7 +219,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
             requiresSubcreature.Add("creature");
 
             var subcreatures = new[] { "wrong creature", "other creature" };
-            mockCollectionSelector.Setup(s => s.Explode(TableNameConstants.CreatureGroups, "creature")).Returns(subcreatures);
+            mockCollectionSelector.Setup(s => s.Explode(Config.Name, TableNameConstants.CreatureGroups, "creature")).Returns(subcreatures);
 
             mockCollectionSelector.SetupSequence(s => s.SelectRandomFrom(subcreatures)).Returns(subcreatures.First()).Returns(subcreatures.Last());
 
@@ -243,7 +243,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
         {
             var creatureData = creaturesAndAmounts.Select(kvp => $"{kvp.Key}/{kvp.Value}");
             mockCollectionSelector
-                .Setup(s => s.SelectFrom(TableNameConstants.EncounterCreatures, "my encounter"))
+                .Setup(s => s.SelectFrom(Config.Name, TableNameConstants.EncounterCreatures, "my encounter"))
                 .Returns(creatureData);
             mockEncounterFormatter
                 .Setup(f => f.SelectCreaturesAndAmountsFrom(creatureData))
@@ -254,7 +254,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
             requiresSubcreature.Add("creature");
 
             var subcreatures = new[] { "other creature", "random creature" };
-            mockCollectionSelector.Setup(s => s.Explode(TableNameConstants.CreatureGroups, "creature")).Returns(subcreatures);
+            mockCollectionSelector.Setup(s => s.Explode(Config.Name, TableNameConstants.CreatureGroups, "creature")).Returns(subcreatures);
 
             var count = 0;
             mockCollectionSelector.Setup(s => s.SelectRandomFrom(subcreatures)).Returns((IEnumerable<string> c) => c.ElementAt(GetIndex(count++)));
@@ -287,7 +287,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
         {
             var creatureData = creaturesAndAmounts.Select(kvp => $"{kvp.Key}/{kvp.Value}");
             mockCollectionSelector
-                .Setup(s => s.SelectFrom(TableNameConstants.EncounterCreatures, "my encounter"))
+                .Setup(s => s.SelectFrom(Config.Name, TableNameConstants.EncounterCreatures, "my encounter"))
                 .Returns(creatureData);
             mockEncounterFormatter
                 .Setup(f => f.SelectCreaturesAndAmountsFrom(creatureData))
@@ -296,7 +296,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
             requiresSubcreature.Add("creature");
 
             var subcreatures = new[] { "wrong creature", "other creature" };
-            mockCollectionSelector.Setup(s => s.Explode(TableNameConstants.CreatureGroups, "creature")).Returns(subcreatures);
+            mockCollectionSelector.Setup(s => s.Explode(Config.Name, TableNameConstants.CreatureGroups, "creature")).Returns(subcreatures);
 
             mockCollectionSelector.SetupSequence(s => s.SelectRandomFrom(subcreatures)).Returns(subcreatures.First()).Returns(subcreatures.Last());
 
@@ -313,7 +313,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
         {
             var creatureData = creaturesAndAmounts.Select(kvp => $"{kvp.Key}/{kvp.Value}");
             mockCollectionSelector
-                .Setup(s => s.SelectFrom(TableNameConstants.EncounterCreatures, "my encounter"))
+                .Setup(s => s.SelectFrom(Config.Name, TableNameConstants.EncounterCreatures, "my encounter"))
                 .Returns(creatureData);
             mockEncounterFormatter
                 .Setup(f => f.SelectCreaturesAndAmountsFrom(creatureData))
@@ -325,7 +325,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
             requiresSubcreature.Add("creature");
 
             var subcreatures = new[] { "wrong creature", "other creature" };
-            mockCollectionSelector.Setup(s => s.Explode(TableNameConstants.CreatureGroups, "creature")).Returns(subcreatures);
+            mockCollectionSelector.Setup(s => s.Explode(Config.Name, TableNameConstants.CreatureGroups, "creature")).Returns(subcreatures);
 
             mockCollectionSelector.SetupSequence(s => s.SelectRandomFrom(subcreatures)).Returns(subcreatures.First()).Returns(subcreatures.Last());
 
@@ -351,7 +351,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
         {
             var creatureData = creaturesAndAmounts.Select(kvp => $"{kvp.Key}/{kvp.Value}");
             mockCollectionSelector
-                .Setup(s => s.SelectFrom(TableNameConstants.EncounterCreatures, "my encounter"))
+                .Setup(s => s.SelectFrom(Config.Name, TableNameConstants.EncounterCreatures, "my encounter"))
                 .Returns(creatureData);
             mockEncounterFormatter
                 .Setup(f => f.SelectCreaturesAndAmountsFrom(creatureData))
@@ -365,8 +365,8 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
             requiresSubcreature.Add("other creature");
 
             var subSubcreatures = new[] { "wrong sub-creature", "sub-creature" };
-            mockCollectionSelector.Setup(s => s.Explode(TableNameConstants.CreatureGroups, "other creature")).Returns(subSubcreatures);
-            mockCollectionSelector.Setup(s => s.Explode(TableNameConstants.CreatureGroups, "creature")).Returns(new[] { "wrong creature", "other creature" });
+            mockCollectionSelector.Setup(s => s.Explode(Config.Name, TableNameConstants.CreatureGroups, "other creature")).Returns(subSubcreatures);
+            mockCollectionSelector.Setup(s => s.Explode(Config.Name, TableNameConstants.CreatureGroups, "creature")).Returns(new[] { "wrong creature", "other creature" });
 
             mockCollectionSelector.SetupSequence(s => s.SelectRandomFrom(subSubcreatures)).Returns(subSubcreatures.First()).Returns(subSubcreatures.Last());
 
@@ -394,7 +394,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
         {
             var creatureData = creaturesAndAmounts.Select(kvp => $"{kvp.Key}/{kvp.Value}");
             mockCollectionSelector
-                .Setup(s => s.SelectFrom(TableNameConstants.EncounterCreatures, "my encounter"))
+                .Setup(s => s.SelectFrom(Config.Name, TableNameConstants.EncounterCreatures, "my encounter"))
                 .Returns(creatureData);
             mockEncounterFormatter
                 .Setup(f => f.SelectCreaturesAndAmountsFrom(creatureData))
@@ -407,10 +407,10 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
             requiresSubcreature.Add("other creature");
 
             var subtypes = new[] { "wrong creature", "random creature", "other creature" };
-            mockCollectionSelector.Setup(s => s.Explode(TableNameConstants.CreatureGroups, "creature")).Returns(subtypes);
+            mockCollectionSelector.Setup(s => s.Explode(Config.Name, TableNameConstants.CreatureGroups, "creature")).Returns(subtypes);
 
             var subSubtypes = new[] { "wrong sub-creature", "other sub-creature", "sub-creature" };
-            mockCollectionSelector.Setup(s => s.Explode(TableNameConstants.CreatureGroups, "other creature")).Returns(subSubtypes);
+            mockCollectionSelector.Setup(s => s.Explode(Config.Name, TableNameConstants.CreatureGroups, "other creature")).Returns(subSubtypes);
 
             var count = 0;
             mockCollectionSelector.Setup(s => s.SelectRandomFrom(It.IsAny<IEnumerable<string>>())).Returns((IEnumerable<string> c) => c.ElementAt(GetIndex(count++)));
@@ -451,7 +451,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
         {
             var creatureData = creaturesAndAmounts.Select(kvp => $"{kvp.Key}/{kvp.Value}");
             mockCollectionSelector
-                .Setup(s => s.SelectFrom(TableNameConstants.EncounterCreatures, "my encounter"))
+                .Setup(s => s.SelectFrom(Config.Name, TableNameConstants.EncounterCreatures, "my encounter"))
                 .Returns(creatureData);
             mockEncounterFormatter
                 .Setup(f => f.SelectCreaturesAndAmountsFrom(creatureData))
@@ -465,7 +465,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
             mockEncounterFormatter.Setup(s => s.SelectDescriptionFrom("sub-creature")).Returns("sub-creature description");
 
             requiresSubcreature.Add("creature");
-            mockCollectionSelector.Setup(s => s.Explode(TableNameConstants.CreatureGroups, "creature")).Returns(new[] { "wrong sub-creature" });
+            mockCollectionSelector.Setup(s => s.Explode(Config.Name, TableNameConstants.CreatureGroups, "creature")).Returns(new[] { "wrong sub-creature" });
 
             AddChallengeRating("wrong sub-creature", "creature challenge rating");
 
@@ -487,7 +487,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
         {
             var creatureData = creaturesAndAmounts.Select(kvp => $"{kvp.Key}/{kvp.Value}");
             mockCollectionSelector
-                .Setup(s => s.SelectFrom(TableNameConstants.EncounterCreatures, "my encounter"))
+                .Setup(s => s.SelectFrom(Config.Name, TableNameConstants.EncounterCreatures, "my encounter"))
                 .Returns(creatureData);
             mockEncounterFormatter
                 .Setup(f => f.SelectCreaturesAndAmountsFrom(creatureData))
@@ -507,8 +507,8 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
 
             requiresSubcreature.Add(creaturesAndAmounts.First().Key);
             requiresSubcreature.Add("sub-creature");
-            mockCollectionSelector.Setup(s => s.Explode(TableNameConstants.CreatureGroups, "creature name")).Returns(new[] { "sub-creature" });
-            mockCollectionSelector.Setup(s => s.Explode(TableNameConstants.CreatureGroups, "sub-creature name")).Returns(new[] { "further sub-creature" });
+            mockCollectionSelector.Setup(s => s.Explode(Config.Name, TableNameConstants.CreatureGroups, "creature name")).Returns(new[] { "sub-creature" });
+            mockCollectionSelector.Setup(s => s.Explode(Config.Name, TableNameConstants.CreatureGroups, "sub-creature name")).Returns(new[] { "further sub-creature" });
 
             AddChallengeRating("sub-creature", "creature challenge rating");
             AddChallengeRating("further sub-creature", "sub-creature challenge rating");
@@ -537,7 +537,7 @@ namespace DnDGen.EncounterGen.Tests.Unit.Generators
 
             var creatureData = creaturesAndAmounts.Select(kvp => $"{kvp.Key}/{kvp.Value}");
             mockCollectionSelector
-                .Setup(s => s.SelectFrom(TableNameConstants.EncounterCreatures, "my encounter"))
+                .Setup(s => s.SelectFrom(Config.Name, TableNameConstants.EncounterCreatures, "my encounter"))
                 .Returns(creatureData);
             mockEncounterFormatter
                 .Setup(f => f.SelectCreaturesAndAmountsFrom(creatureData))

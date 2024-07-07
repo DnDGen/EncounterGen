@@ -72,7 +72,7 @@ namespace DnDGen.EncounterGen.Generators
 
             do
             {
-                var encounterLevelModifier = percentileSelector.SelectFrom<int>(TableNameConstants.EncounterLevelModifiers);
+                var encounterLevelModifier = percentileSelector.SelectFrom<int>(Config.Name, TableNameConstants.EncounterLevelModifiers);
                 modifiedSpecifications.Level = source.Level + encounterLevelModifier;
             }
             while (!encounterVerifier.ValidEncounterExists(modifiedSpecifications));

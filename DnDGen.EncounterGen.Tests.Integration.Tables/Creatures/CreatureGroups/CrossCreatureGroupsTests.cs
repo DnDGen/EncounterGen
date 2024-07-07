@@ -117,17 +117,17 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
                 CreatureDataConstants.Types.Vermin,
             };
 
-            var excludedCreatures = new[] 
-            { 
-                CreatureDataConstants.DominatedCreature_CR1, 
-                CreatureDataConstants.DominatedCreature_CR2, 
-                CreatureDataConstants.DominatedCreature_CR3, 
-                CreatureDataConstants.DominatedCreature_CR4, 
-                CreatureDataConstants.DominatedCreature_CR5, 
-                CreatureDataConstants.DominatedCreature_CR6, 
-                CreatureDataConstants.DominatedCreature_CR7, 
-                CreatureDataConstants.DominatedCreature_CR8, 
-                CreatureDataConstants.DominatedCreature_CR9, 
+            var excludedCreatures = new[]
+            {
+                CreatureDataConstants.DominatedCreature_CR1,
+                CreatureDataConstants.DominatedCreature_CR2,
+                CreatureDataConstants.DominatedCreature_CR3,
+                CreatureDataConstants.DominatedCreature_CR4,
+                CreatureDataConstants.DominatedCreature_CR5,
+                CreatureDataConstants.DominatedCreature_CR6,
+                CreatureDataConstants.DominatedCreature_CR7,
+                CreatureDataConstants.DominatedCreature_CR8,
+                CreatureDataConstants.DominatedCreature_CR9,
                 CreatureDataConstants.DominatedCreature_CR10,
                 CreatureDataConstants.DominatedCreature_CR11,
                 CreatureDataConstants.DominatedCreature_CR12,
@@ -206,7 +206,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         [Test]
         public void NoCircularSubgroups()
         {
-            var table = collectionMapper.Map(tableName);
+            var table = collectionMapper.Map(Config.Name, tableName);
 
             foreach (var kvp in table)
             {
@@ -216,7 +216,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
 
         private void AssertGroupDoesNotContain(string name, string forbiddenEntry)
         {
-            var table = collectionMapper.Map(tableName);
+            var table = collectionMapper.Map(Config.Name, tableName);
             var group = table[name];
 
             if (name != forbiddenEntry)

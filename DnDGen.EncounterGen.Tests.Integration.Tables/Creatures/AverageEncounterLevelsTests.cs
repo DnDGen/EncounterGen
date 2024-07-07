@@ -42,7 +42,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures
 
             foreach (var encounter in encounters)
             {
-                var rawCreaturesAndAmounts = collectionSelector.SelectFrom(TableNameConstants.EncounterCreatures, encounter);
+                var rawCreaturesAndAmounts = collectionSelector.SelectFrom(Config.Name, TableNameConstants.EncounterCreatures, encounter);
                 var creaturesAndAmounts = encounterFormatter.SelectCreaturesAndAmountsFrom(rawCreaturesAndAmounts);
                 var creatures = new List<EncounterCreature>();
 
