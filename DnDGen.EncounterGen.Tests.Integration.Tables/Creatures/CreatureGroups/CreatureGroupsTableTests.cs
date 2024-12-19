@@ -117,7 +117,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
                 CreatureDataConstants.Expert_Architect,
                 CreatureDataConstants.Expert_Artisan,
                 CreatureDataConstants.FiendishCreature,
-                CreatureDataConstants.Fighter_Captain,
+                CreatureDataConstants.Guard_Captain,
                 CreatureDataConstants.Fighter_Leader,
                 CreatureDataConstants.Formian,
                 CreatureDataConstants.Fungus,

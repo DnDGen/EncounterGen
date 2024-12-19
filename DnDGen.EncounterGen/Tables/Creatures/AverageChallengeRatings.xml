@@ -778,45 +778,81 @@
     <entry>1/2</entry>
   </collection>
   <collection>
-    <name>Character(Adviser)[1d2+1]@Expert@</name>
+    <name>Character(Adviser)[2]@Expert@</name>
     <entry>1</entry>
   </collection>
   <collection>
-    <name>Character(Adviser)[1d2+3]@Expert@</name>
+    <name>Character(Adviser)[3]@Expert@</name>
     <entry>2</entry>
   </collection>
   <collection>
-    <name>Character(Adviser)[1d2+5]@Expert@</name>
+    <name>Character(Adviser)[4]@Expert@</name>
     <entry>3</entry>
   </collection>
   <collection>
-    <name>Character(Adviser)[1d2+7]@Expert@</name>
+    <name>Character(Adviser)[5]@Expert@</name>
     <entry>4</entry>
   </collection>
   <collection>
-    <name>Character(Adviser)[1d2+9]@Expert@</name>
+    <name>Character(Adviser)[6]@Expert@</name>
     <entry>5</entry>
   </collection>
   <collection>
-    <name>Character(Adviser)[1d2+11]@Expert@</name>
+    <name>Character(Adviser)[7]@Expert@</name>
     <entry>6</entry>
   </collection>
   <collection>
-    <name>Character(Adviser)[1d2+13]@Expert@</name>
+    <name>Character(Adviser)[8]@Expert@</name>
     <entry>7</entry>
   </collection>
   <collection>
-    <name>Character(Adviser)[1d2+15]@Expert@</name>
+    <name>Character(Adviser)[9]@Expert@</name>
     <entry>8</entry>
   </collection>
   <collection>
-    <name>Character(Adviser)[1d2+17]@Expert@</name>
+    <name>Character(Adviser)[10]@Expert@</name>
     <entry>9</entry>
   </collection>
-  <collection>
-    <name>Character(Adviser)[20]@Expert@</name>
-    <entry>10</entry>
-  </collection>
+	<collection>
+		<name>Character(Adviser)[11]@Expert@</name>
+		<entry>10</entry>
+	</collection>
+	<collection>
+		<name>Character(Adviser)[12]@Expert@</name>
+		<entry>11</entry>
+	</collection>
+	<collection>
+		<name>Character(Adviser)[13]@Expert@</name>
+		<entry>12</entry>
+	</collection>
+	<collection>
+		<name>Character(Adviser)[14]@Expert@</name>
+		<entry>13</entry>
+	</collection>
+	<collection>
+		<name>Character(Adviser)[15]@Expert@</name>
+		<entry>14</entry>
+	</collection>
+	<collection>
+		<name>Character(Adviser)[16]@Expert@</name>
+		<entry>15</entry>
+	</collection>
+	<collection>
+		<name>Character(Adviser)[17]@Expert@</name>
+		<entry>16</entry>
+	</collection>
+	<collection>
+		<name>Character(Adviser)[18]@Expert@</name>
+		<entry>17</entry>
+	</collection>
+	<collection>
+		<name>Character(Adviser)[19]@Expert@</name>
+		<entry>18</entry>
+	</collection>
+	<collection>
+		<name>Character(Adviser)[20]@Expert@</name>
+		<entry>19</entry>
+	</collection>
   <collection>
     <name>Character(Animal trainer)[1]@Druid&amp;Ranger@</name>
     <entry>1</entry>
@@ -897,94 +933,166 @@
     <name>Character(Animal trainer)[20]@Druid&amp;Ranger@</name>
     <entry>20</entry>
   </collection>
-  <collection>
-    <name>Character(Architect)[1]@Expert@</name>
-    <entry>1/2</entry>
-  </collection>
-  <collection>
-    <name>Character(Architect)[1d2+1]@Expert@</name>
-    <entry>1</entry>
-  </collection>
-  <collection>
-    <name>Character(Architect)[1d2+3]@Expert@</name>
-    <entry>2</entry>
-  </collection>
-  <collection>
-    <name>Character(Architect)[1d2+5]@Expert@</name>
-    <entry>3</entry>
-  </collection>
-  <collection>
-    <name>Character(Architect)[1d2+7]@Expert@</name>
-    <entry>4</entry>
-  </collection>
-  <collection>
-    <name>Character(Architect)[1d2+9]@Expert@</name>
-    <entry>5</entry>
-  </collection>
-  <collection>
-    <name>Character(Architect)[1d2+11]@Expert@</name>
-    <entry>6</entry>
-  </collection>
-  <collection>
-    <name>Character(Architect)[1d2+13]@Expert@</name>
-    <entry>7</entry>
-  </collection>
-  <collection>
-    <name>Character(Architect)[1d2+15]@Expert@</name>
-    <entry>8</entry>
-  </collection>
-  <collection>
-    <name>Character(Architect)[1d2+17]@Expert@</name>
-    <entry>9</entry>
-  </collection>
-  <collection>
-    <name>Character(Architect)[20]@Expert@</name>
-    <entry>10</entry>
-  </collection>
-  <collection>
-    <name>Character(Artisan)[1]@Expert@</name>
-    <entry>1/2</entry>
-  </collection>
-  <collection>
-    <name>Character(Artisan)[1d2+1]@Expert@</name>
-    <entry>1</entry>
-  </collection>
-  <collection>
-    <name>Character(Artisan)[1d2+3]@Expert@</name>
-    <entry>2</entry>
-  </collection>
-  <collection>
-    <name>Character(Artisan)[1d2+5]@Expert@</name>
-    <entry>3</entry>
-  </collection>
-  <collection>
-    <name>Character(Artisan)[1d2+7]@Expert@</name>
-    <entry>4</entry>
-  </collection>
-  <collection>
-    <name>Character(Artisan)[1d2+9]@Expert@</name>
-    <entry>5</entry>
-  </collection>
-  <collection>
-    <name>Character(Artisan)[1d2+11]@Expert@</name>
-    <entry>6</entry>
-  </collection>
-  <collection>
-    <name>Character(Artisan)[1d2+13]@Expert@</name>
-    <entry>7</entry>
-  </collection>
-  <collection>
-    <name>Character(Artisan)[1d2+15]@Expert@</name>
-    <entry>8</entry>
-  </collection>
-  <collection>
-    <name>Character(Artisan)[1d2+17]@Expert@</name>
-    <entry>9</entry>
-  </collection>
-  <collection>
-    <name>Character(Artisan)[20]@Expert@</name>
-    <entry>10</entry>
-  </collection>
+	<collection>
+		<name>Character(Architect)[1]@Expert@</name>
+		<entry>1/2</entry>
+	</collection>
+	<collection>
+		<name>Character(Architect)[2]@Expert@</name>
+		<entry>1</entry>
+	</collection>
+	<collection>
+		<name>Character(Architect)[3]@Expert@</name>
+		<entry>2</entry>
+	</collection>
+	<collection>
+		<name>Character(Architect)[4]@Expert@</name>
+		<entry>3</entry>
+	</collection>
+	<collection>
+		<name>Character(Architect)[5]@Expert@</name>
+		<entry>4</entry>
+	</collection>
+	<collection>
+		<name>Character(Architect)[6]@Expert@</name>
+		<entry>5</entry>
+	</collection>
+	<collection>
+		<name>Character(Architect)[7]@Expert@</name>
+		<entry>6</entry>
+	</collection>
+	<collection>
+		<name>Character(Architect)[8]@Expert@</name>
+		<entry>7</entry>
+	</collection>
+	<collection>
+		<name>Character(Architect)[9]@Expert@</name>
+		<entry>8</entry>
+	</collection>
+	<collection>
+		<name>Character(Architect)[10]@Expert@</name>
+		<entry>9</entry>
+	</collection>
+	<collection>
+		<name>Character(Architect)[11]@Expert@</name>
+		<entry>10</entry>
+	</collection>
+	<collection>
+		<name>Character(Architect)[12]@Expert@</name>
+		<entry>11</entry>
+	</collection>
+	<collection>
+		<name>Character(Architect)[13]@Expert@</name>
+		<entry>12</entry>
+	</collection>
+	<collection>
+		<name>Character(Architect)[14]@Expert@</name>
+		<entry>13</entry>
+	</collection>
+	<collection>
+		<name>Character(Architect)[15]@Expert@</name>
+		<entry>14</entry>
+	</collection>
+	<collection>
+		<name>Character(Architect)[16]@Expert@</name>
+		<entry>15</entry>
+	</collection>
+	<collection>
+		<name>Character(Architect)[17]@Expert@</name>
+		<entry>16</entry>
+	</collection>
+	<collection>
+		<name>Character(Architect)[18]@Expert@</name>
+		<entry>17</entry>
+	</collection>
+	<collection>
+		<name>Character(Architect)[19]@Expert@</name>
+		<entry>18</entry>
+	</collection>
+	<collection>
+		<name>Character(Architect)[20]@Expert@</name>
+		<entry>19</entry>
+	</collection>
+	<collection>
+		<name>Character(Artisan)[1]@Expert@</name>
+		<entry>1/2</entry>
+	</collection>
+	<collection>
+		<name>Character(Artisan)[2]@Expert@</name>
+		<entry>1</entry>
+	</collection>
+	<collection>
+		<name>Character(Artisan)[3]@Expert@</name>
+		<entry>2</entry>
+	</collection>
+	<collection>
+		<name>Character(Artisan)[4]@Expert@</name>
+		<entry>3</entry>
+	</collection>
+	<collection>
+		<name>Character(Artisan)[5]@Expert@</name>
+		<entry>4</entry>
+	</collection>
+	<collection>
+		<name>Character(Artisan)[6]@Expert@</name>
+		<entry>5</entry>
+	</collection>
+	<collection>
+		<name>Character(Artisan)[7]@Expert@</name>
+		<entry>6</entry>
+	</collection>
+	<collection>
+		<name>Character(Artisan)[8]@Expert@</name>
+		<entry>7</entry>
+	</collection>
+	<collection>
+		<name>Character(Artisan)[9]@Expert@</name>
+		<entry>8</entry>
+	</collection>
+	<collection>
+		<name>Character(Artisan)[10]@Expert@</name>
+		<entry>9</entry>
+	</collection>
+	<collection>
+		<name>Character(Artisan)[11]@Expert@</name>
+		<entry>10</entry>
+	</collection>
+	<collection>
+		<name>Character(Artisan)[12]@Expert@</name>
+		<entry>11</entry>
+	</collection>
+	<collection>
+		<name>Character(Artisan)[13]@Expert@</name>
+		<entry>12</entry>
+	</collection>
+	<collection>
+		<name>Character(Artisan)[14]@Expert@</name>
+		<entry>13</entry>
+	</collection>
+	<collection>
+		<name>Character(Artisan)[15]@Expert@</name>
+		<entry>14</entry>
+	</collection>
+	<collection>
+		<name>Character(Artisan)[16]@Expert@</name>
+		<entry>15</entry>
+	</collection>
+	<collection>
+		<name>Character(Artisan)[17]@Expert@</name>
+		<entry>16</entry>
+	</collection>
+	<collection>
+		<name>Character(Artisan)[18]@Expert@</name>
+		<entry>17</entry>
+	</collection>
+	<collection>
+		<name>Character(Artisan)[19]@Expert@</name>
+		<entry>18</entry>
+	</collection>
+	<collection>
+		<name>Character(Artisan)[20]@Expert@</name>
+		<entry>19</entry>
+	</collection>
   <collection>
     <name>Character(Bandit)[1]@Warrior@</name>
     <entry>1/2</entry>
@@ -1074,44 +1182,44 @@
     <entry>10</entry>
   </collection>
   <collection>
-    <name>Character(Captain)[1d2+1]@Warrior@</name>
-    <entry>1</entry>
+    <name>Character(Captain)[11]@Warrior@</name>
+    <entry>10</entry>
   </collection>
   <collection>
-    <name>Character(Captain)[1d2+3]@Warrior@</name>
-    <entry>2</entry>
+    <name>Character(Captain)[12]@Warrior@</name>
+    <entry>11</entry>
   </collection>
   <collection>
-    <name>Character(Captain)[1d2+5]@Warrior@</name>
-    <entry>3</entry>
+    <name>Character(Captain)[13]@Warrior@</name>
+    <entry>12</entry>
   </collection>
   <collection>
-    <name>Character(Captain)[1d2+7]@Warrior@</name>
-    <entry>4</entry>
+    <name>Character(Captain)[14]@Warrior@</name>
+    <entry>13</entry>
   </collection>
   <collection>
-    <name>Character(Captain)[1d2+9]@Warrior@</name>
-    <entry>5</entry>
+    <name>Character(Captain)[15]@Warrior@</name>
+    <entry>14</entry>
   </collection>
   <collection>
-    <name>Character(Captain)[1d2+11]@Warrior@</name>
-    <entry>6</entry>
+    <name>Character(Captain)[16]@Warrior@</name>
+    <entry>15</entry>
   </collection>
   <collection>
-    <name>Character(Captain)[1d2+13]@Warrior@</name>
-    <entry>7</entry>
+    <name>Character(Captain)[17]@Warrior@</name>
+    <entry>16</entry>
   </collection>
   <collection>
-    <name>Character(Captain)[1d2+15]@Warrior@</name>
-    <entry>8</entry>
+    <name>Character(Captain)[18]@Warrior@</name>
+    <entry>17</entry>
   </collection>
   <collection>
-    <name>Character(Captain)[1d2+17]@Warrior@</name>
-    <entry>9</entry>
+    <name>Character(Captain)[19]@Warrior@</name>
+    <entry>18</entry>
   </collection>
   <collection>
     <name>Character(Captain)[20]@Warrior@</name>
-    <entry>10</entry>
+    <entry>19</entry>
   </collection>
   <collection>
     <name>Character(Captain)[1]@Fighter@</name>
