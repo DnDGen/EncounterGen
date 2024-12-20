@@ -30,82 +30,155 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures
         [TestCase(EncounterConstants.Achaierai_Solitary, CreatureDataConstants.Achaierai, AmountConstants.Range1)]
         [TestCase(EncounterConstants.Achaierai_Flock, CreatureDataConstants.Achaierai, AmountConstants.Range5To8)]
         [TestCase(EncounterConstants.Adept_Doctor_Level1_Solitary, CreatureDataConstants.Adept_Doctor_Level1, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.Adept_Doctor_Level2To3_Solitary, CreatureDataConstants.Adept_Doctor_Level2To3, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.Adept_Doctor_Level4To5_Solitary, CreatureDataConstants.Adept_Doctor_Level4To5, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.Adept_Doctor_Level6To7_Solitary, CreatureDataConstants.Adept_Doctor_Level6To7, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.Adept_Doctor_Level8To9_Solitary, CreatureDataConstants.Adept_Doctor_Level8To9, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.Adept_Doctor_Level10To11_Solitary, CreatureDataConstants.Adept_Doctor_Level10To11, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.Adept_Doctor_Level12To13_Solitary, CreatureDataConstants.Adept_Doctor_Level12To13, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.Adept_Doctor_Level14To15_Solitary, CreatureDataConstants.Adept_Doctor_Level14To15, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.Adept_Doctor_Level16To17_Solitary, CreatureDataConstants.Adept_Doctor_Level16To17, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.Adept_Doctor_Level18To19_Solitary, CreatureDataConstants.Adept_Doctor_Level18To19, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Adept_Doctor_Level2_Solitary, CreatureDataConstants.Adept_Doctor_Level2, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Adept_Doctor_Level3_Solitary, CreatureDataConstants.Adept_Doctor_Level3, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Adept_Doctor_Level4_Solitary, CreatureDataConstants.Adept_Doctor_Level4, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Adept_Doctor_Level5_Solitary, CreatureDataConstants.Adept_Doctor_Level5, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Adept_Doctor_Level6_Solitary, CreatureDataConstants.Adept_Doctor_Level6, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Adept_Doctor_Level7_Solitary, CreatureDataConstants.Adept_Doctor_Level7, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Adept_Doctor_Level8_Solitary, CreatureDataConstants.Adept_Doctor_Level8, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Adept_Doctor_Level9_Solitary, CreatureDataConstants.Adept_Doctor_Level9, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Adept_Doctor_Level10_Solitary, CreatureDataConstants.Adept_Doctor_Level10, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Adept_Doctor_Level11_Solitary, CreatureDataConstants.Adept_Doctor_Level11, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Adept_Doctor_Level12_Solitary, CreatureDataConstants.Adept_Doctor_Level12, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Adept_Doctor_Level13_Solitary, CreatureDataConstants.Adept_Doctor_Level13, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Adept_Doctor_Level14_Solitary, CreatureDataConstants.Adept_Doctor_Level14, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Adept_Doctor_Level15_Solitary, CreatureDataConstants.Adept_Doctor_Level15, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Adept_Doctor_Level16_Solitary, CreatureDataConstants.Adept_Doctor_Level16, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Adept_Doctor_Level17_Solitary, CreatureDataConstants.Adept_Doctor_Level17, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Adept_Doctor_Level18_Solitary, CreatureDataConstants.Adept_Doctor_Level18, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Adept_Doctor_Level19_Solitary, CreatureDataConstants.Adept_Doctor_Level19, AmountConstants.Range1)]
         [TestCase(EncounterConstants.Adept_Doctor_Level20_Solitary, CreatureDataConstants.Adept_Doctor_Level20, AmountConstants.Range1)]
         [TestCase(EncounterConstants.Adept_Fortuneteller_Level1_Solitary, CreatureDataConstants.Adept_Fortuneteller_Level1, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.Adept_Fortuneteller_Level2To3_Solitary, CreatureDataConstants.Adept_Fortuneteller_Level2To3, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.Adept_Fortuneteller_Level4To5_Solitary, CreatureDataConstants.Adept_Fortuneteller_Level4To5, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.Adept_Fortuneteller_Level6To7_Solitary, CreatureDataConstants.Adept_Fortuneteller_Level6To7, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.Adept_Fortuneteller_Level8To9_Solitary, CreatureDataConstants.Adept_Fortuneteller_Level8To9, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.Adept_Fortuneteller_Level10To11_Solitary, CreatureDataConstants.Adept_Fortuneteller_Level10To11, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.Adept_Fortuneteller_Level12To13_Solitary, CreatureDataConstants.Adept_Fortuneteller_Level12To13, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.Adept_Fortuneteller_Level14To15_Solitary, CreatureDataConstants.Adept_Fortuneteller_Level14To15, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.Adept_Fortuneteller_Level16To17_Solitary, CreatureDataConstants.Adept_Fortuneteller_Level16To17, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.Adept_Fortuneteller_Level18To19_Solitary, CreatureDataConstants.Adept_Fortuneteller_Level18To19, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Adept_Fortuneteller_Level2_Solitary, CreatureDataConstants.Adept_Fortuneteller_Level2, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Adept_Fortuneteller_Level3_Solitary, CreatureDataConstants.Adept_Fortuneteller_Level3, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Adept_Fortuneteller_Level4_Solitary, CreatureDataConstants.Adept_Fortuneteller_Level4, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Adept_Fortuneteller_Level5_Solitary, CreatureDataConstants.Adept_Fortuneteller_Level5, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Adept_Fortuneteller_Level6_Solitary, CreatureDataConstants.Adept_Fortuneteller_Level6, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Adept_Fortuneteller_Level7_Solitary, CreatureDataConstants.Adept_Fortuneteller_Level7, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Adept_Fortuneteller_Level8_Solitary, CreatureDataConstants.Adept_Fortuneteller_Level8, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Adept_Fortuneteller_Level9_Solitary, CreatureDataConstants.Adept_Fortuneteller_Level9, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Adept_Fortuneteller_Level10_Solitary, CreatureDataConstants.Adept_Fortuneteller_Level10, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Adept_Fortuneteller_Level11_Solitary, CreatureDataConstants.Adept_Fortuneteller_Level11, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Adept_Fortuneteller_Level12_Solitary, CreatureDataConstants.Adept_Fortuneteller_Level12, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Adept_Fortuneteller_Level13_Solitary, CreatureDataConstants.Adept_Fortuneteller_Level13, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Adept_Fortuneteller_Level14_Solitary, CreatureDataConstants.Adept_Fortuneteller_Level14, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Adept_Fortuneteller_Level15_Solitary, CreatureDataConstants.Adept_Fortuneteller_Level15, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Adept_Fortuneteller_Level16_Solitary, CreatureDataConstants.Adept_Fortuneteller_Level16, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Adept_Fortuneteller_Level17_Solitary, CreatureDataConstants.Adept_Fortuneteller_Level17, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Adept_Fortuneteller_Level18_Solitary, CreatureDataConstants.Adept_Fortuneteller_Level18, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Adept_Fortuneteller_Level19_Solitary, CreatureDataConstants.Adept_Fortuneteller_Level19, AmountConstants.Range1)]
         [TestCase(EncounterConstants.Adept_Fortuneteller_Level20_Solitary, CreatureDataConstants.Adept_Fortuneteller_Level20, AmountConstants.Range1)]
         [TestCase(EncounterConstants.Adept_Missionary_Level1_MissionTeam, CreatureDataConstants.Adept_Missionary_Level1, AmountConstants.Range1To4)]
-        [TestCase(EncounterConstants.Adept_Missionary_Level2To3_MissionTeam, CreatureDataConstants.Adept_Missionary_Level2To3, AmountConstants.Range1To4)]
-        [TestCase(EncounterConstants.Adept_Missionary_Level4To5_MissionTeam, CreatureDataConstants.Adept_Missionary_Level4To5, AmountConstants.Range1To4)]
-        [TestCase(EncounterConstants.Adept_Missionary_Level6To7_MissionTeam, CreatureDataConstants.Adept_Missionary_Level6To7, AmountConstants.Range1To4)]
-        [TestCase(EncounterConstants.Adept_Missionary_Level8To9_MissionTeam, CreatureDataConstants.Adept_Missionary_Level8To9, AmountConstants.Range1To4)]
-        [TestCase(EncounterConstants.Adept_Missionary_Level10To11_MissionTeam, CreatureDataConstants.Adept_Missionary_Level10To11, AmountConstants.Range1To4)]
-        [TestCase(EncounterConstants.Adept_Missionary_Level12To13_MissionTeam, CreatureDataConstants.Adept_Missionary_Level12To13, AmountConstants.Range1To4)]
-        [TestCase(EncounterConstants.Adept_Missionary_Level14To15_MissionTeam, CreatureDataConstants.Adept_Missionary_Level14To15, AmountConstants.Range1To4)]
-        [TestCase(EncounterConstants.Adept_Missionary_Level16To17_MissionTeam, CreatureDataConstants.Adept_Missionary_Level16To17, AmountConstants.Range1To4)]
-        [TestCase(EncounterConstants.Adept_Missionary_Level18To19_MissionTeam, CreatureDataConstants.Adept_Missionary_Level18To19, AmountConstants.Range1To4)]
+        [TestCase(EncounterConstants.Adept_Missionary_Level2_MissionTeam, CreatureDataConstants.Adept_Missionary_Level2, AmountConstants.Range1To4)]
+        [TestCase(EncounterConstants.Adept_Missionary_Level3_MissionTeam, CreatureDataConstants.Adept_Missionary_Level3, AmountConstants.Range1To4)]
+        [TestCase(EncounterConstants.Adept_Missionary_Level4_MissionTeam, CreatureDataConstants.Adept_Missionary_Level4, AmountConstants.Range1To4)]
+        [TestCase(EncounterConstants.Adept_Missionary_Level5_MissionTeam, CreatureDataConstants.Adept_Missionary_Level5, AmountConstants.Range1To4)]
+        [TestCase(EncounterConstants.Adept_Missionary_Level6_MissionTeam, CreatureDataConstants.Adept_Missionary_Level6, AmountConstants.Range1To4)]
+        [TestCase(EncounterConstants.Adept_Missionary_Level7_MissionTeam, CreatureDataConstants.Adept_Missionary_Level7, AmountConstants.Range1To4)]
+        [TestCase(EncounterConstants.Adept_Missionary_Level8_MissionTeam, CreatureDataConstants.Adept_Missionary_Level8, AmountConstants.Range1To4)]
+        [TestCase(EncounterConstants.Adept_Missionary_Level9_MissionTeam, CreatureDataConstants.Adept_Missionary_Level9, AmountConstants.Range1To4)]
+        [TestCase(EncounterConstants.Adept_Missionary_Level10_MissionTeam, CreatureDataConstants.Adept_Missionary_Level10, AmountConstants.Range1To4)]
+        [TestCase(EncounterConstants.Adept_Missionary_Level11_MissionTeam, CreatureDataConstants.Adept_Missionary_Level11, AmountConstants.Range1To4)]
+        [TestCase(EncounterConstants.Adept_Missionary_Level12_MissionTeam, CreatureDataConstants.Adept_Missionary_Level12, AmountConstants.Range1To4)]
+        [TestCase(EncounterConstants.Adept_Missionary_Level13_MissionTeam, CreatureDataConstants.Adept_Missionary_Level13, AmountConstants.Range1To4)]
+        [TestCase(EncounterConstants.Adept_Missionary_Level14_MissionTeam, CreatureDataConstants.Adept_Missionary_Level14, AmountConstants.Range1To4)]
+        [TestCase(EncounterConstants.Adept_Missionary_Level15_MissionTeam, CreatureDataConstants.Adept_Missionary_Level15, AmountConstants.Range1To4)]
+        [TestCase(EncounterConstants.Adept_Missionary_Level16_MissionTeam, CreatureDataConstants.Adept_Missionary_Level16, AmountConstants.Range1To4)]
+        [TestCase(EncounterConstants.Adept_Missionary_Level17_MissionTeam, CreatureDataConstants.Adept_Missionary_Level17, AmountConstants.Range1To4)]
+        [TestCase(EncounterConstants.Adept_Missionary_Level18_MissionTeam, CreatureDataConstants.Adept_Missionary_Level18, AmountConstants.Range1To4)]
+        [TestCase(EncounterConstants.Adept_Missionary_Level19_MissionTeam, CreatureDataConstants.Adept_Missionary_Level19, AmountConstants.Range1To4)]
         [TestCase(EncounterConstants.Adept_Missionary_Level20_MissionTeam, CreatureDataConstants.Adept_Missionary_Level20, AmountConstants.Range1To4)]
         [TestCase(EncounterConstants.Adept_StreetPerformer_Level1_Crew, CreatureDataConstants.Adept_StreetPerformer_Level1, AmountConstants.Range1To4)]
-        [TestCase(EncounterConstants.Adept_StreetPerformer_Level2To3_Crew, CreatureDataConstants.Adept_StreetPerformer_Level2To3, AmountConstants.Range1To4)]
-        [TestCase(EncounterConstants.Adept_StreetPerformer_Level4To5_Crew, CreatureDataConstants.Adept_StreetPerformer_Level4To5, AmountConstants.Range1To4)]
-        [TestCase(EncounterConstants.Adept_StreetPerformer_Level6To7_Crew, CreatureDataConstants.Adept_StreetPerformer_Level6To7, AmountConstants.Range1To4)]
-        [TestCase(EncounterConstants.Adept_StreetPerformer_Level8To9_Crew, CreatureDataConstants.Adept_StreetPerformer_Level8To9, AmountConstants.Range1To4)]
-        [TestCase(EncounterConstants.Adept_StreetPerformer_Level10To11_Crew, CreatureDataConstants.Adept_StreetPerformer_Level10To11, AmountConstants.Range1To4)]
-        [TestCase(EncounterConstants.Adept_StreetPerformer_Level12To13_Crew, CreatureDataConstants.Adept_StreetPerformer_Level12To13, AmountConstants.Range1To4)]
-        [TestCase(EncounterConstants.Adept_StreetPerformer_Level14To15_Crew, CreatureDataConstants.Adept_StreetPerformer_Level14To15, AmountConstants.Range1To4)]
-        [TestCase(EncounterConstants.Adept_StreetPerformer_Level16To17_Crew, CreatureDataConstants.Adept_StreetPerformer_Level16To17, AmountConstants.Range1To4)]
-        [TestCase(EncounterConstants.Adept_StreetPerformer_Level18To19_Crew, CreatureDataConstants.Adept_StreetPerformer_Level18To19, AmountConstants.Range1To4)]
+        [TestCase(EncounterConstants.Adept_StreetPerformer_Level2_Crew, CreatureDataConstants.Adept_StreetPerformer_Level2, AmountConstants.Range1To4)]
+        [TestCase(EncounterConstants.Adept_StreetPerformer_Level3_Crew, CreatureDataConstants.Adept_StreetPerformer_Level3, AmountConstants.Range1To4)]
+        [TestCase(EncounterConstants.Adept_StreetPerformer_Level4_Crew, CreatureDataConstants.Adept_StreetPerformer_Level4, AmountConstants.Range1To4)]
+        [TestCase(EncounterConstants.Adept_StreetPerformer_Level5_Crew, CreatureDataConstants.Adept_StreetPerformer_Level5, AmountConstants.Range1To4)]
+        [TestCase(EncounterConstants.Adept_StreetPerformer_Level6_Crew, CreatureDataConstants.Adept_StreetPerformer_Level6, AmountConstants.Range1To4)]
+        [TestCase(EncounterConstants.Adept_StreetPerformer_Level7_Crew, CreatureDataConstants.Adept_StreetPerformer_Level7, AmountConstants.Range1To4)]
+        [TestCase(EncounterConstants.Adept_StreetPerformer_Level8_Crew, CreatureDataConstants.Adept_StreetPerformer_Level8, AmountConstants.Range1To4)]
+        [TestCase(EncounterConstants.Adept_StreetPerformer_Level9_Crew, CreatureDataConstants.Adept_StreetPerformer_Level9, AmountConstants.Range1To4)]
+        [TestCase(EncounterConstants.Adept_StreetPerformer_Level10_Crew, CreatureDataConstants.Adept_StreetPerformer_Level10, AmountConstants.Range1To4)]
+        [TestCase(EncounterConstants.Adept_StreetPerformer_Level11_Crew, CreatureDataConstants.Adept_StreetPerformer_Level11, AmountConstants.Range1To4)]
+        [TestCase(EncounterConstants.Adept_StreetPerformer_Level12_Crew, CreatureDataConstants.Adept_StreetPerformer_Level12, AmountConstants.Range1To4)]
+        [TestCase(EncounterConstants.Adept_StreetPerformer_Level13_Crew, CreatureDataConstants.Adept_StreetPerformer_Level13, AmountConstants.Range1To4)]
+        [TestCase(EncounterConstants.Adept_StreetPerformer_Level14_Crew, CreatureDataConstants.Adept_StreetPerformer_Level14, AmountConstants.Range1To4)]
+        [TestCase(EncounterConstants.Adept_StreetPerformer_Level15_Crew, CreatureDataConstants.Adept_StreetPerformer_Level15, AmountConstants.Range1To4)]
+        [TestCase(EncounterConstants.Adept_StreetPerformer_Level16_Crew, CreatureDataConstants.Adept_StreetPerformer_Level16, AmountConstants.Range1To4)]
+        [TestCase(EncounterConstants.Adept_StreetPerformer_Level17_Crew, CreatureDataConstants.Adept_StreetPerformer_Level17, AmountConstants.Range1To4)]
+        [TestCase(EncounterConstants.Adept_StreetPerformer_Level18_Crew, CreatureDataConstants.Adept_StreetPerformer_Level18, AmountConstants.Range1To4)]
+        [TestCase(EncounterConstants.Adept_StreetPerformer_Level19_Crew, CreatureDataConstants.Adept_StreetPerformer_Level19, AmountConstants.Range1To4)]
         [TestCase(EncounterConstants.Adept_StreetPerformer_Level20_Crew, CreatureDataConstants.Adept_StreetPerformer_Level20, AmountConstants.Range1To4)]
-        [TestCase(EncounterConstants.Aristocrat_BusinessPeople_Level1_Group, CreatureDataConstants.Aristocrat_Businessman_Level1, AmountConstants.Range1To4)]
-        [TestCase(EncounterConstants.Aristocrat_BusinessPeople_Level2To3_Group, CreatureDataConstants.Aristocrat_Businessman_Level2To3, AmountConstants.Range1To4)]
-        [TestCase(EncounterConstants.Aristocrat_BusinessPeople_Level4To5_Group, CreatureDataConstants.Aristocrat_Businessman_Level4To5, AmountConstants.Range1To4)]
-        [TestCase(EncounterConstants.Aristocrat_BusinessPeople_Level6To7_Group, CreatureDataConstants.Aristocrat_Businessman_Level6To7, AmountConstants.Range1To4)]
-        [TestCase(EncounterConstants.Aristocrat_BusinessPeople_Level8To9_Group, CreatureDataConstants.Aristocrat_Businessman_Level8To9, AmountConstants.Range1To4)]
-        [TestCase(EncounterConstants.Aristocrat_BusinessPeople_Level10To11_Group, CreatureDataConstants.Aristocrat_Businessman_Level10To11, AmountConstants.Range1To4)]
-        [TestCase(EncounterConstants.Aristocrat_BusinessPeople_Level12To13_Group, CreatureDataConstants.Aristocrat_Businessman_Level12To13, AmountConstants.Range1To4)]
-        [TestCase(EncounterConstants.Aristocrat_BusinessPeople_Level14To15_Group, CreatureDataConstants.Aristocrat_Businessman_Level14To15, AmountConstants.Range1To4)]
-        [TestCase(EncounterConstants.Aristocrat_BusinessPeople_Level16To17_Group, CreatureDataConstants.Aristocrat_Businessman_Level16To17, AmountConstants.Range1To4)]
-        [TestCase(EncounterConstants.Aristocrat_BusinessPeople_Level18To19_Group, CreatureDataConstants.Aristocrat_Businessman_Level18To19, AmountConstants.Range1To4)]
-        [TestCase(EncounterConstants.Aristocrat_BusinessPeople_Level20_Group, CreatureDataConstants.Aristocrat_Businessman_Level20, AmountConstants.Range1To4)]
-        [TestCase(EncounterConstants.Aristocrat_Gentry_Level1_WithServants, CreatureDataConstants.Aristocrat_Gentry_Level1, AmountConstants.Range1To2,
+        [TestCase(EncounterConstants.Aristocrat_BusinessPeople_Level1_Group, CreatureDataConstants.Aristocrat_BusinessPerson_Level1, AmountConstants.Range1To4)]
+        [TestCase(EncounterConstants.Aristocrat_BusinessPeople_Level2_Group, CreatureDataConstants.Aristocrat_BusinessPerson_Level2, AmountConstants.Range1To4)]
+        [TestCase(EncounterConstants.Aristocrat_BusinessPeople_Level3_Group, CreatureDataConstants.Aristocrat_BusinessPerson_Level3, AmountConstants.Range1To4)]
+        [TestCase(EncounterConstants.Aristocrat_BusinessPeople_Level4_Group, CreatureDataConstants.Aristocrat_BusinessPerson_Level4, AmountConstants.Range1To4)]
+        [TestCase(EncounterConstants.Aristocrat_BusinessPeople_Level5_Group, CreatureDataConstants.Aristocrat_BusinessPerson_Level5, AmountConstants.Range1To4)]
+        [TestCase(EncounterConstants.Aristocrat_BusinessPeople_Level6_Group, CreatureDataConstants.Aristocrat_BusinessPerson_Level6, AmountConstants.Range1To4)]
+        [TestCase(EncounterConstants.Aristocrat_BusinessPeople_Level7_Group, CreatureDataConstants.Aristocrat_BusinessPerson_Level7, AmountConstants.Range1To4)]
+        [TestCase(EncounterConstants.Aristocrat_BusinessPeople_Level8_Group, CreatureDataConstants.Aristocrat_BusinessPerson_Level8, AmountConstants.Range1To4)]
+        [TestCase(EncounterConstants.Aristocrat_BusinessPeople_Level9_Group, CreatureDataConstants.Aristocrat_BusinessPerson_Level9, AmountConstants.Range1To4)]
+        [TestCase(EncounterConstants.Aristocrat_BusinessPeople_Level10_Group, CreatureDataConstants.Aristocrat_BusinessPerson_Level10, AmountConstants.Range1To4)]
+        [TestCase(EncounterConstants.Aristocrat_BusinessPeople_Level11_Group, CreatureDataConstants.Aristocrat_BusinessPerson_Level11, AmountConstants.Range1To4)]
+        [TestCase(EncounterConstants.Aristocrat_BusinessPeople_Level12_Group, CreatureDataConstants.Aristocrat_BusinessPerson_Level12, AmountConstants.Range1To4)]
+        [TestCase(EncounterConstants.Aristocrat_BusinessPeople_Level13_Group, CreatureDataConstants.Aristocrat_BusinessPerson_Level13, AmountConstants.Range1To4)]
+        [TestCase(EncounterConstants.Aristocrat_BusinessPeople_Level14_Group, CreatureDataConstants.Aristocrat_BusinessPerson_Level14, AmountConstants.Range1To4)]
+        [TestCase(EncounterConstants.Aristocrat_BusinessPeople_Level15_Group, CreatureDataConstants.Aristocrat_BusinessPerson_Level15, AmountConstants.Range1To4)]
+        [TestCase(EncounterConstants.Aristocrat_BusinessPeople_Level16_Group, CreatureDataConstants.Aristocrat_BusinessPerson_Level16, AmountConstants.Range1To4)]
+        [TestCase(EncounterConstants.Aristocrat_BusinessPeople_Level17_Group, CreatureDataConstants.Aristocrat_BusinessPerson_Level17, AmountConstants.Range1To4)]
+        [TestCase(EncounterConstants.Aristocrat_BusinessPeople_Level18_Group, CreatureDataConstants.Aristocrat_BusinessPerson_Level18, AmountConstants.Range1To4)]
+        [TestCase(EncounterConstants.Aristocrat_BusinessPeople_Level19_Group, CreatureDataConstants.Aristocrat_BusinessPerson_Level19, AmountConstants.Range1To4)]
+        [TestCase(EncounterConstants.Aristocrat_BusinessPeople_Level20_Group, CreatureDataConstants.Aristocrat_BusinessPerson_Level20, AmountConstants.Range1To4)]
+        [TestCase(EncounterConstants.Aristocrat_Gentry_Level1, CreatureDataConstants.Aristocrat_Gentry_Level1, AmountConstants.Range1To2)]
+        [TestCase(EncounterConstants.Aristocrat_Gentry_Level2, CreatureDataConstants.Aristocrat_Gentry_Level2, AmountConstants.Range1To2)]
+        [TestCase(EncounterConstants.Aristocrat_Gentry_Level3, CreatureDataConstants.Aristocrat_Gentry_Level3, AmountConstants.Range1To2)]
+        [TestCase(EncounterConstants.Aristocrat_Gentry_Level4, CreatureDataConstants.Aristocrat_Gentry_Level4, AmountConstants.Range1To2)]
+        [TestCase(EncounterConstants.Aristocrat_Gentry_Level5, CreatureDataConstants.Aristocrat_Gentry_Level5, AmountConstants.Range1To2)]
+        [TestCase(EncounterConstants.Aristocrat_Gentry_Level6_WithServants,
+            CreatureDataConstants.Aristocrat_Gentry_Level6, AmountConstants.Range1To2,
             CreatureDataConstants.Commoner_Servant_Level1, AmountConstants.Range2To4)]
-        [TestCase(EncounterConstants.Aristocrat_Gentry_Level2To3_WithServants, CreatureDataConstants.Aristocrat_Gentry_Level2To3, AmountConstants.Range1To2,
-            CreatureDataConstants.Commoner_Servant_Level2To3, AmountConstants.Range2To4)]
-        [TestCase(EncounterConstants.Aristocrat_Gentry_Level4To5_WithServants, CreatureDataConstants.Aristocrat_Gentry_Level4To5, AmountConstants.Range1To2,
-            CreatureDataConstants.Commoner_Servant_Level4To5, AmountConstants.Range2To4)]
-        [TestCase(EncounterConstants.Aristocrat_Gentry_Level6To7_WithServants, CreatureDataConstants.Aristocrat_Gentry_Level6To7, AmountConstants.Range1To2,
-            CreatureDataConstants.Commoner_Servant_Level6To7, AmountConstants.Range2To4)]
-        [TestCase(EncounterConstants.Aristocrat_Gentry_Level8To9_WithServants, CreatureDataConstants.Aristocrat_Gentry_Level8To9, AmountConstants.Range1To2,
-            CreatureDataConstants.Commoner_Servant_Level8To9, AmountConstants.Range2To4)]
-        [TestCase(EncounterConstants.Aristocrat_Gentry_Level10To11_WithServants, CreatureDataConstants.Aristocrat_Gentry_Level10To11, AmountConstants.Range1To2,
-            CreatureDataConstants.Commoner_Servant_Level10To11, AmountConstants.Range2To4)]
-        [TestCase(EncounterConstants.Aristocrat_Gentry_Level12To13_WithServants, CreatureDataConstants.Aristocrat_Gentry_Level12To13, AmountConstants.Range1To2,
-            CreatureDataConstants.Commoner_Servant_Level12To13, AmountConstants.Range2To4)]
-        [TestCase(EncounterConstants.Aristocrat_Gentry_Level14To15_WithServants, CreatureDataConstants.Aristocrat_Gentry_Level14To15, AmountConstants.Range1To2,
-            CreatureDataConstants.Commoner_Servant_Level14To15, AmountConstants.Range2To4)]
-        [TestCase(EncounterConstants.Aristocrat_Gentry_Level16To17_WithServants, CreatureDataConstants.Aristocrat_Gentry_Level16To17, AmountConstants.Range1To2,
-            CreatureDataConstants.Commoner_Servant_Level16To17, AmountConstants.Range2To4)]
-        [TestCase(EncounterConstants.Aristocrat_Gentry_Level18To19_WithServants, CreatureDataConstants.Aristocrat_Gentry_Level18To19, AmountConstants.Range1To2,
-            CreatureDataConstants.Commoner_Servant_Level18To19, AmountConstants.Range2To4)]
-        [TestCase(EncounterConstants.Aristocrat_Gentry_Level20_WithServants, CreatureDataConstants.Aristocrat_Gentry_Level20, AmountConstants.Range1To2,
-            CreatureDataConstants.Commoner_Servant_Level20, AmountConstants.Range2To4)]
+        [TestCase(EncounterConstants.Aristocrat_Gentry_Level8_WithServants,
+            CreatureDataConstants.Aristocrat_Gentry_Level8, AmountConstants.Range1To2,
+            CreatureDataConstants.Commoner_Servant_Level3, AmountConstants.Range2To4)]
+        [TestCase(EncounterConstants.Aristocrat_Gentry_Level10_WithServants,
+            CreatureDataConstants.Aristocrat_Gentry_Level10, AmountConstants.Range1To2,
+            CreatureDataConstants.Commoner_Servant_Level5, AmountConstants.Range2To4)]
+        [TestCase(EncounterConstants.Aristocrat_Gentry_Level12_WithServants,
+            CreatureDataConstants.Aristocrat_Gentry_Level12, AmountConstants.Range1To2,
+            CreatureDataConstants.Commoner_Servant_Level7, AmountConstants.Range2To4)]
+        [TestCase(EncounterConstants.Aristocrat_Gentry_Level14_WithServants,
+            CreatureDataConstants.Aristocrat_Gentry_Level14, AmountConstants.Range1To2,
+            CreatureDataConstants.Commoner_Servant_Level9, AmountConstants.Range2To4)]
+        [TestCase(EncounterConstants.Aristocrat_Gentry_Level16_WithServants,
+            CreatureDataConstants.Aristocrat_Gentry_Level16, AmountConstants.Range1To2,
+            CreatureDataConstants.Commoner_Servant_Level11, AmountConstants.Range2To4)]
+        [TestCase(EncounterConstants.Aristocrat_Gentry_Level18_WithServants,
+            CreatureDataConstants.Aristocrat_Gentry_Level18, AmountConstants.Range1To2,
+            CreatureDataConstants.Commoner_Servant_Level13, AmountConstants.Range2To4)]
+        [TestCase(EncounterConstants.Aristocrat_Gentry_Level7_WithServants,
+            CreatureDataConstants.Aristocrat_Gentry_Level7, AmountConstants.Range1To2,
+            CreatureDataConstants.Commoner_Servant_Level2, AmountConstants.Range2To4)]
+        [TestCase(EncounterConstants.Aristocrat_Gentry_Level9_WithServants,
+            CreatureDataConstants.Aristocrat_Gentry_Level9, AmountConstants.Range1To2,
+            CreatureDataConstants.Commoner_Servant_Level4, AmountConstants.Range2To4)]
+        [TestCase(EncounterConstants.Aristocrat_Gentry_Level11_WithServants,
+            CreatureDataConstants.Aristocrat_Gentry_Level11, AmountConstants.Range1To2,
+            CreatureDataConstants.Commoner_Servant_Level6, AmountConstants.Range2To4)]
+        [TestCase(EncounterConstants.Aristocrat_Gentry_Level13_WithServants,
+            CreatureDataConstants.Aristocrat_Gentry_Level13, AmountConstants.Range1To2,
+            CreatureDataConstants.Commoner_Servant_Level8, AmountConstants.Range2To4)]
+        [TestCase(EncounterConstants.Aristocrat_Gentry_Level15_WithServants,
+            CreatureDataConstants.Aristocrat_Gentry_Level15, AmountConstants.Range1To2,
+            CreatureDataConstants.Commoner_Servant_Level10, AmountConstants.Range2To4)]
+        [TestCase(EncounterConstants.Aristocrat_Gentry_Level17_WithServants,
+            CreatureDataConstants.Aristocrat_Gentry_Level17, AmountConstants.Range1To2,
+            CreatureDataConstants.Commoner_Servant_Level12, AmountConstants.Range2To4)]
+        [TestCase(EncounterConstants.Aristocrat_Gentry_Level19_WithServants,
+            CreatureDataConstants.Aristocrat_Gentry_Level19, AmountConstants.Range1To2,
+            CreatureDataConstants.Commoner_Servant_Level14, AmountConstants.Range2To4)]
+        [TestCase(EncounterConstants.Aristocrat_Gentry_Level20_WithServants,
+            CreatureDataConstants.Aristocrat_Gentry_Level20, AmountConstants.Range1To2,
+            CreatureDataConstants.Commoner_Servant_Level15, AmountConstants.Range2To4)]
         [TestCase(EncounterConstants.Aristocrat_Politician_Level1_WithAdvisersAndGuards,
             CreatureDataConstants.Aristocrat_Politician_Level1, AmountConstants.Range1,
             CreatureDataConstants.Expert_Adviser_Level1, AmountConstants.Range0To2,
@@ -2702,26 +2775,44 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures
         [TestCase(EncounterConstants.Nixie_Band, CreatureDataConstants.Nixie, AmountConstants.Range6To11)]
         [TestCase(EncounterConstants.Nixie_Tribe, CreatureDataConstants.Nixie, AmountConstants.Range20To80)]
         [TestCase(EncounterConstants.Traveler_Level1_Group, CreatureDataConstants.NPC_Traveler_Level1, AmountConstants.Range1To4)]
-        [TestCase(EncounterConstants.Traveler_Level2To3_Group, CreatureDataConstants.NPC_Traveler_Level2To3, AmountConstants.Range1To4)]
-        [TestCase(EncounterConstants.Traveler_Level4To5_Group, CreatureDataConstants.NPC_Traveler_Level4To5, AmountConstants.Range1To4)]
-        [TestCase(EncounterConstants.Traveler_Level6To7_Group, CreatureDataConstants.NPC_Traveler_Level6To7, AmountConstants.Range1To4)]
-        [TestCase(EncounterConstants.Traveler_Level8To9_Group, CreatureDataConstants.NPC_Traveler_Level8To9, AmountConstants.Range1To4)]
-        [TestCase(EncounterConstants.Traveler_Level10To11_Group, CreatureDataConstants.NPC_Traveler_Level10To11, AmountConstants.Range1To4)]
-        [TestCase(EncounterConstants.Traveler_Level12To13_Group, CreatureDataConstants.NPC_Traveler_Level12To13, AmountConstants.Range1To4)]
-        [TestCase(EncounterConstants.Traveler_Level14To15_Group, CreatureDataConstants.NPC_Traveler_Level14To15, AmountConstants.Range1To4)]
-        [TestCase(EncounterConstants.Traveler_Level16To17_Group, CreatureDataConstants.NPC_Traveler_Level16To17, AmountConstants.Range1To4)]
-        [TestCase(EncounterConstants.Traveler_Level18To19_Group, CreatureDataConstants.NPC_Traveler_Level18To19, AmountConstants.Range1To4)]
+        [TestCase(EncounterConstants.Traveler_Level2_Group, CreatureDataConstants.NPC_Traveler_Level2, AmountConstants.Range1To4)]
+        [TestCase(EncounterConstants.Traveler_Level3_Group, CreatureDataConstants.NPC_Traveler_Level3, AmountConstants.Range1To4)]
+        [TestCase(EncounterConstants.Traveler_Level4_Group, CreatureDataConstants.NPC_Traveler_Level4, AmountConstants.Range1To4)]
+        [TestCase(EncounterConstants.Traveler_Level5_Group, CreatureDataConstants.NPC_Traveler_Level5, AmountConstants.Range1To4)]
+        [TestCase(EncounterConstants.Traveler_Level6_Group, CreatureDataConstants.NPC_Traveler_Level6, AmountConstants.Range1To4)]
+        [TestCase(EncounterConstants.Traveler_Level7_Group, CreatureDataConstants.NPC_Traveler_Level7, AmountConstants.Range1To4)]
+        [TestCase(EncounterConstants.Traveler_Level8_Group, CreatureDataConstants.NPC_Traveler_Level8, AmountConstants.Range1To4)]
+        [TestCase(EncounterConstants.Traveler_Level9_Group, CreatureDataConstants.NPC_Traveler_Level9, AmountConstants.Range1To4)]
+        [TestCase(EncounterConstants.Traveler_Level10_Group, CreatureDataConstants.NPC_Traveler_Level10, AmountConstants.Range1To4)]
+        [TestCase(EncounterConstants.Traveler_Level11_Group, CreatureDataConstants.NPC_Traveler_Level11, AmountConstants.Range1To4)]
+        [TestCase(EncounterConstants.Traveler_Level12_Group, CreatureDataConstants.NPC_Traveler_Level12, AmountConstants.Range1To4)]
+        [TestCase(EncounterConstants.Traveler_Level13_Group, CreatureDataConstants.NPC_Traveler_Level13, AmountConstants.Range1To4)]
+        [TestCase(EncounterConstants.Traveler_Level14_Group, CreatureDataConstants.NPC_Traveler_Level14, AmountConstants.Range1To4)]
+        [TestCase(EncounterConstants.Traveler_Level15_Group, CreatureDataConstants.NPC_Traveler_Level15, AmountConstants.Range1To4)]
+        [TestCase(EncounterConstants.Traveler_Level16_Group, CreatureDataConstants.NPC_Traveler_Level16, AmountConstants.Range1To4)]
+        [TestCase(EncounterConstants.Traveler_Level17_Group, CreatureDataConstants.NPC_Traveler_Level17, AmountConstants.Range1To4)]
+        [TestCase(EncounterConstants.Traveler_Level18_Group, CreatureDataConstants.NPC_Traveler_Level18, AmountConstants.Range1To4)]
+        [TestCase(EncounterConstants.Traveler_Level19_Group, CreatureDataConstants.NPC_Traveler_Level19, AmountConstants.Range1To4)]
         [TestCase(EncounterConstants.Traveler_Level20_Group, CreatureDataConstants.NPC_Traveler_Level20, AmountConstants.Range1To4)]
         [TestCase(EncounterConstants.Local_Level1_Solitary, CreatureDataConstants.NPC_Level1, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.Local_Level2To3_Solitary, CreatureDataConstants.NPC_Level2To3, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.Local_Level4To5_Solitary, CreatureDataConstants.NPC_Level4To5, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.Local_Level6To7_Solitary, CreatureDataConstants.NPC_Level6To7, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.Local_Level8To9_Solitary, CreatureDataConstants.NPC_Level8To9, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.Local_Level10To11_Solitary, CreatureDataConstants.NPC_Level10To11, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.Local_Level12To13_Solitary, CreatureDataConstants.NPC_Level12To13, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.Local_Level14To15_Solitary, CreatureDataConstants.NPC_Level14To15, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.Local_Level16To17_Solitary, CreatureDataConstants.NPC_Level16To17, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.Local_Level18To19_Solitary, CreatureDataConstants.NPC_Level18To19, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Local_Level2_Solitary, CreatureDataConstants.NPC_Level2, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Local_Level3_Solitary, CreatureDataConstants.NPC_Level3, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Local_Level4_Solitary, CreatureDataConstants.NPC_Level4, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Local_Level5_Solitary, CreatureDataConstants.NPC_Level5, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Local_Level6_Solitary, CreatureDataConstants.NPC_Level6, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Local_Level7_Solitary, CreatureDataConstants.NPC_Level7, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Local_Level8_Solitary, CreatureDataConstants.NPC_Level8, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Local_Level9_Solitary, CreatureDataConstants.NPC_Level9, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Local_Level10_Solitary, CreatureDataConstants.NPC_Level10, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Local_Level11_Solitary, CreatureDataConstants.NPC_Level11, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Local_Level12_Solitary, CreatureDataConstants.NPC_Level12, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Local_Level13_Solitary, CreatureDataConstants.NPC_Level13, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Local_Level14_Solitary, CreatureDataConstants.NPC_Level14, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Local_Level15_Solitary, CreatureDataConstants.NPC_Level15, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Local_Level16_Solitary, CreatureDataConstants.NPC_Level16, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Local_Level17_Solitary, CreatureDataConstants.NPC_Level17, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Local_Level18_Solitary, CreatureDataConstants.NPC_Level18, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Local_Level19_Solitary, CreatureDataConstants.NPC_Level19, AmountConstants.Range1)]
         [TestCase(EncounterConstants.Local_Level20_Solitary, CreatureDataConstants.NPC_Level20, AmountConstants.Range1)]
         [TestCase(EncounterConstants.Local_Level1_WithCat, CreatureDataConstants.NPC_Level1, AmountConstants.Range1,
             CreatureDataConstants.Cat, AmountConstants.Range1)]
@@ -3605,36 +3696,76 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures
         [TestCase(EncounterConstants.Warrior_Guard_Level5_Patrol, CreatureDataConstants.Warrior_Guard_Level5, AmountConstants.Range3To9)]
         [TestCase(EncounterConstants.Warrior_Guard_Level7_Patrol, CreatureDataConstants.Warrior_Guard_Level7, AmountConstants.Range3To9)]
         [TestCase(EncounterConstants.Warrior_Guard_Level9_Patrol, CreatureDataConstants.Warrior_Guard_Level9, AmountConstants.Range3To9)]
+        [TestCase(EncounterConstants.Warrior_Guard_Level1_PatrolWithLieutenant,
+            CreatureDataConstants.Warrior_Guard_Level1, AmountConstants.Range3To9,
+            CreatureDataConstants.Warrior_Lieutenant_Level6, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Warrior_Guard_Level2_PatrolWithLieutenant,
+            CreatureDataConstants.Warrior_Guard_Level2, AmountConstants.Range3To9,
+            CreatureDataConstants.Warrior_Lieutenant_Level7, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Warrior_Guard_Level3_PatrolWithLieutenant,
+            CreatureDataConstants.Warrior_Guard_Level3, AmountConstants.Range3To9,
+            CreatureDataConstants.Warrior_Lieutenant_Level8, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Warrior_Guard_Level4_PatrolWithLieutenant,
+            CreatureDataConstants.Warrior_Guard_Level4, AmountConstants.Range3To9,
+            CreatureDataConstants.Warrior_Lieutenant_Level9, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Warrior_Guard_Level5_PatrolWithLieutenant,
+            CreatureDataConstants.Warrior_Guard_Level5, AmountConstants.Range3To9,
+            CreatureDataConstants.Warrior_Lieutenant_Level10, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Warrior_Guard_Level6_PatrolWithLieutenant,
+            CreatureDataConstants.Warrior_Guard_Level6, AmountConstants.Range3To9,
+            CreatureDataConstants.Warrior_Lieutenant_Level11, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Warrior_Guard_Level7_PatrolWithLieutenant,
+            CreatureDataConstants.Warrior_Guard_Level7, AmountConstants.Range3To9,
+            CreatureDataConstants.Warrior_Lieutenant_Level12, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Warrior_Guard_Level8_PatrolWithLieutenant,
+            CreatureDataConstants.Warrior_Guard_Level8, AmountConstants.Range3To9,
+            CreatureDataConstants.Warrior_Lieutenant_Level13, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Warrior_Guard_Level9_PatrolWithLieutenant,
+            CreatureDataConstants.Warrior_Guard_Level9, AmountConstants.Range3To9,
+            CreatureDataConstants.Warrior_Lieutenant_Level14, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Warrior_Guard_Level10_PatrolWithLieutenant,
+            CreatureDataConstants.Warrior_Guard_Level10, AmountConstants.Range3To9,
+            CreatureDataConstants.Warrior_Lieutenant_Level15, AmountConstants.Range1)]
         [TestCase(EncounterConstants.Warrior_Guard_Level1_PatrolWithCaptain,
             CreatureDataConstants.Warrior_Guard_Level1, AmountConstants.Range3To9,
-            CreatureDataConstants.Guard_Captain_Level11, AmountConstants.Range1)]
+            CreatureDataConstants.Warrior_Lieutenant_Level6, AmountConstants.Range2To3,
+            CreatureDataConstants.Fighter_Captain_Level11, AmountConstants.Range1)]
         [TestCase(EncounterConstants.Warrior_Guard_Level2_PatrolWithCaptain,
             CreatureDataConstants.Warrior_Guard_Level2, AmountConstants.Range3To9,
-            CreatureDataConstants.Guard_Captain_Level12, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.Warrior_Guard_Level4_PatrolWithCaptain,
-            CreatureDataConstants.Warrior_Guard_Level4, AmountConstants.Range3To9,
-            CreatureDataConstants.Guard_Captain_Level14, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.Warrior_Guard_Level6_PatrolWithCaptain,
-            CreatureDataConstants.Warrior_Guard_Level6, AmountConstants.Range3To9,
-            CreatureDataConstants.Guard_Captain_Level16, AmountConstants.Range1)]
-        [TestCase(EncounterConstants.Warrior_Guard_Level8_PatrolWithCaptain,
-            CreatureDataConstants.Warrior_Guard_Level8, AmountConstants.Range3To9,
-            CreatureDataConstants.Guard_Captain_Level18, AmountConstants.Range1)]
+            CreatureDataConstants.Warrior_Lieutenant_Level7, AmountConstants.Range2To3,
+            CreatureDataConstants.Fighter_Captain_Level12, AmountConstants.Range1)]
         [TestCase(EncounterConstants.Warrior_Guard_Level3_PatrolWithCaptain,
             CreatureDataConstants.Warrior_Guard_Level3, AmountConstants.Range3To9,
-            CreatureDataConstants.Guard_Captain_Level13, AmountConstants.Range1)]
+            CreatureDataConstants.Warrior_Lieutenant_Level8, AmountConstants.Range2To3,
+            CreatureDataConstants.Fighter_Captain_Level13, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Warrior_Guard_Level4_PatrolWithCaptain,
+            CreatureDataConstants.Warrior_Guard_Level4, AmountConstants.Range3To9,
+            CreatureDataConstants.Warrior_Lieutenant_Level9, AmountConstants.Range2To3,
+            CreatureDataConstants.Fighter_Captain_Level14, AmountConstants.Range1)]
         [TestCase(EncounterConstants.Warrior_Guard_Level5_PatrolWithCaptain,
             CreatureDataConstants.Warrior_Guard_Level5, AmountConstants.Range3To9,
-            CreatureDataConstants.Guard_Captain_Level15, AmountConstants.Range1)]
+            CreatureDataConstants.Warrior_Lieutenant_Level10, AmountConstants.Range2To3,
+            CreatureDataConstants.Fighter_Captain_Level15, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Warrior_Guard_Level6_PatrolWithCaptain,
+            CreatureDataConstants.Warrior_Guard_Level6, AmountConstants.Range3To9,
+            CreatureDataConstants.Warrior_Lieutenant_Level11, AmountConstants.Range2To3,
+            CreatureDataConstants.Fighter_Captain_Level16, AmountConstants.Range1)]
         [TestCase(EncounterConstants.Warrior_Guard_Level7_PatrolWithCaptain,
             CreatureDataConstants.Warrior_Guard_Level7, AmountConstants.Range3To9,
-            CreatureDataConstants.Guard_Captain_Level17, AmountConstants.Range1)]
+            CreatureDataConstants.Warrior_Lieutenant_Level12, AmountConstants.Range2To3,
+            CreatureDataConstants.Fighter_Captain_Level17, AmountConstants.Range1)]
+        [TestCase(EncounterConstants.Warrior_Guard_Level8_PatrolWithCaptain,
+            CreatureDataConstants.Warrior_Guard_Level8, AmountConstants.Range3To9,
+            CreatureDataConstants.Warrior_Lieutenant_Level13, AmountConstants.Range2To3,
+            CreatureDataConstants.Fighter_Captain_Level18, AmountConstants.Range1)]
         [TestCase(EncounterConstants.Warrior_Guard_Level9_PatrolWithCaptain,
             CreatureDataConstants.Warrior_Guard_Level9, AmountConstants.Range3To9,
-            CreatureDataConstants.Guard_Captain_Level19, AmountConstants.Range1)]
+            CreatureDataConstants.Warrior_Lieutenant_Level14, AmountConstants.Range2To3,
+            CreatureDataConstants.Fighter_Captain_Level19, AmountConstants.Range1)]
         [TestCase(EncounterConstants.Warrior_Guard_Level10_PatrolWithCaptain,
             CreatureDataConstants.Warrior_Guard_Level10, AmountConstants.Range3To9,
-            CreatureDataConstants.Guard_Captain_Level20, AmountConstants.Range1)]
+            CreatureDataConstants.Warrior_Lieutenant_Level15, AmountConstants.Range2To3,
+            CreatureDataConstants.Fighter_Captain_Level20, AmountConstants.Range1)]
         [TestCase(EncounterConstants.Wasp_Giant_Solitary, CreatureDataConstants.Wasp_Giant, AmountConstants.Range1)]
         [TestCase(EncounterConstants.Wasp_Giant_Swarm, CreatureDataConstants.Wasp_Giant, AmountConstants.Range2To5)]
         [TestCase(EncounterConstants.Wasp_Giant_Nest, CreatureDataConstants.Wasp_Giant, AmountConstants.Range11To20)]

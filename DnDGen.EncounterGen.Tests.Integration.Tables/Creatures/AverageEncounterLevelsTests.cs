@@ -30,12 +30,12 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures
             encounterFormatter = GetNewInstanceOf<IEncounterFormatter>();
             dice = GetNewInstanceOf<Dice>();
 
-            encounterLevels = new Dictionary<int, List<string>>();
+            encounterLevels = [];
             var levels = Enumerable.Range(EncounterSpecifications.MinimumLevel, EncounterSpecifications.MaximumLevel);
 
             foreach (var level in levels)
             {
-                encounterLevels[level] = new List<string>();
+                encounterLevels[level] = [];
             }
 
             var encounters = EncounterConstants.GetAll();

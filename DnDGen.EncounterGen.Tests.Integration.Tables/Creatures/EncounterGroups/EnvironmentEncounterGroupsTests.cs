@@ -1000,16 +1000,25 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
                 EncounterConstants.Character_StreetPerformer_Level8_Crew,
                 EncounterConstants.Character_StreetPerformer_Level9_Crew,
                 EncounterConstants.Adept_StreetPerformer_Level1_Crew,
-                EncounterConstants.Adept_StreetPerformer_Level10To11_Crew,
-                EncounterConstants.Adept_StreetPerformer_Level12To13_Crew,
-                EncounterConstants.Adept_StreetPerformer_Level14To15_Crew,
-                EncounterConstants.Adept_StreetPerformer_Level16To17_Crew,
-                EncounterConstants.Adept_StreetPerformer_Level18To19_Crew,
+                EncounterConstants.Adept_StreetPerformer_Level10_Crew,
+                EncounterConstants.Adept_StreetPerformer_Level11_Crew,
+                EncounterConstants.Adept_StreetPerformer_Level12_Crew,
+                EncounterConstants.Adept_StreetPerformer_Level13_Crew,
+                EncounterConstants.Adept_StreetPerformer_Level14_Crew,
+                EncounterConstants.Adept_StreetPerformer_Level15_Crew,
+                EncounterConstants.Adept_StreetPerformer_Level16_Crew,
+                EncounterConstants.Adept_StreetPerformer_Level17_Crew,
+                EncounterConstants.Adept_StreetPerformer_Level18_Crew,
+                EncounterConstants.Adept_StreetPerformer_Level19_Crew,
                 EncounterConstants.Adept_StreetPerformer_Level20_Crew,
-                EncounterConstants.Adept_StreetPerformer_Level2To3_Crew,
-                EncounterConstants.Adept_StreetPerformer_Level4To5_Crew,
-                EncounterConstants.Adept_StreetPerformer_Level6To7_Crew,
-                EncounterConstants.Adept_StreetPerformer_Level8To9_Crew,
+                EncounterConstants.Adept_StreetPerformer_Level2_Crew,
+                EncounterConstants.Adept_StreetPerformer_Level3_Crew,
+                EncounterConstants.Adept_StreetPerformer_Level4_Crew,
+                EncounterConstants.Adept_StreetPerformer_Level5_Crew,
+                EncounterConstants.Adept_StreetPerformer_Level6_Crew,
+                EncounterConstants.Adept_StreetPerformer_Level7_Crew,
+                EncounterConstants.Adept_StreetPerformer_Level8_Crew,
+                EncounterConstants.Adept_StreetPerformer_Level9_Crew,
                 EncounterConstants.Character_Sellsword_Level1_Solitary,
                 EncounterConstants.Character_Sellsword_Level10_Solitary,
                 EncounterConstants.Character_Sellsword_Level11_Solitary,
@@ -1442,61 +1451,114 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
                 EncounterConstants.Character_Adventurer_Level19_Party,
                 EncounterConstants.Character_Adventurer_Level20_Party,
                 EncounterConstants.Adept_Doctor_Level1_Solitary,
-                EncounterConstants.Adept_Doctor_Level10To11_Solitary,
-                EncounterConstants.Adept_Doctor_Level12To13_Solitary,
-                EncounterConstants.Adept_Doctor_Level14To15_Solitary,
-                EncounterConstants.Adept_Doctor_Level16To17_Solitary,
-                EncounterConstants.Adept_Doctor_Level18To19_Solitary,
+                EncounterConstants.Adept_Doctor_Level10_Solitary,
+                EncounterConstants.Adept_Doctor_Level11_Solitary,
+                EncounterConstants.Adept_Doctor_Level12_Solitary,
+                EncounterConstants.Adept_Doctor_Level13_Solitary,
+                EncounterConstants.Adept_Doctor_Level14_Solitary,
+                EncounterConstants.Adept_Doctor_Level15_Solitary,
+                EncounterConstants.Adept_Doctor_Level16_Solitary,
+                EncounterConstants.Adept_Doctor_Level17_Solitary,
+                EncounterConstants.Adept_Doctor_Level18_Solitary,
+                EncounterConstants.Adept_Doctor_Level19_Solitary,
                 EncounterConstants.Adept_Doctor_Level20_Solitary,
-                EncounterConstants.Adept_Doctor_Level2To3_Solitary,
-                EncounterConstants.Adept_Doctor_Level4To5_Solitary,
-                EncounterConstants.Adept_Doctor_Level6To7_Solitary,
-                EncounterConstants.Adept_Doctor_Level8To9_Solitary,
+                EncounterConstants.Adept_Doctor_Level2_Solitary,
+                EncounterConstants.Adept_Doctor_Level3_Solitary,
+                EncounterConstants.Adept_Doctor_Level4_Solitary,
+                EncounterConstants.Adept_Doctor_Level5_Solitary,
+                EncounterConstants.Adept_Doctor_Level6_Solitary,
+                EncounterConstants.Adept_Doctor_Level7_Solitary,
+                EncounterConstants.Adept_Doctor_Level8_Solitary,
+                EncounterConstants.Adept_Doctor_Level9_Solitary,
                 EncounterConstants.Adept_Fortuneteller_Level1_Solitary,
-                EncounterConstants.Adept_Fortuneteller_Level10To11_Solitary,
-                EncounterConstants.Adept_Fortuneteller_Level12To13_Solitary,
-                EncounterConstants.Adept_Fortuneteller_Level14To15_Solitary,
-                EncounterConstants.Adept_Fortuneteller_Level16To17_Solitary,
-                EncounterConstants.Adept_Fortuneteller_Level18To19_Solitary,
+                EncounterConstants.Adept_Fortuneteller_Level10_Solitary,
+                EncounterConstants.Adept_Fortuneteller_Level11_Solitary,
+                EncounterConstants.Adept_Fortuneteller_Level12_Solitary,
+                EncounterConstants.Adept_Fortuneteller_Level13_Solitary,
+                EncounterConstants.Adept_Fortuneteller_Level14_Solitary,
+                EncounterConstants.Adept_Fortuneteller_Level15_Solitary,
+                EncounterConstants.Adept_Fortuneteller_Level16_Solitary,
+                EncounterConstants.Adept_Fortuneteller_Level17_Solitary,
+                EncounterConstants.Adept_Fortuneteller_Level18_Solitary,
+                EncounterConstants.Adept_Fortuneteller_Level19_Solitary,
                 EncounterConstants.Adept_Fortuneteller_Level20_Solitary,
-                EncounterConstants.Adept_Fortuneteller_Level2To3_Solitary,
-                EncounterConstants.Adept_Fortuneteller_Level4To5_Solitary,
-                EncounterConstants.Adept_Fortuneteller_Level6To7_Solitary,
-                EncounterConstants.Adept_Fortuneteller_Level8To9_Solitary,
+                EncounterConstants.Adept_Fortuneteller_Level2_Solitary,
+                EncounterConstants.Adept_Fortuneteller_Level3_Solitary,
+                EncounterConstants.Adept_Fortuneteller_Level4_Solitary,
+                EncounterConstants.Adept_Fortuneteller_Level5_Solitary,
+                EncounterConstants.Adept_Fortuneteller_Level6_Solitary,
+                EncounterConstants.Adept_Fortuneteller_Level7_Solitary,
+                EncounterConstants.Adept_Fortuneteller_Level8_Solitary,
+                EncounterConstants.Adept_Fortuneteller_Level9_Solitary,
                 EncounterConstants.Adept_Missionary_Level1_MissionTeam,
-                EncounterConstants.Adept_Missionary_Level10To11_MissionTeam,
-                EncounterConstants.Adept_Missionary_Level12To13_MissionTeam,
-                EncounterConstants.Adept_Missionary_Level14To15_MissionTeam,
-                EncounterConstants.Adept_Missionary_Level16To17_MissionTeam,
-                EncounterConstants.Adept_Missionary_Level18To19_MissionTeam,
+                EncounterConstants.Adept_Missionary_Level10_MissionTeam,
+                EncounterConstants.Adept_Missionary_Level11_MissionTeam,
+                EncounterConstants.Adept_Missionary_Level12_MissionTeam,
+                EncounterConstants.Adept_Missionary_Level13_MissionTeam,
+                EncounterConstants.Adept_Missionary_Level14_MissionTeam,
+                EncounterConstants.Adept_Missionary_Level15_MissionTeam,
+                EncounterConstants.Adept_Missionary_Level16_MissionTeam,
+                EncounterConstants.Adept_Missionary_Level17_MissionTeam,
+                EncounterConstants.Adept_Missionary_Level18_MissionTeam,
+                EncounterConstants.Adept_Missionary_Level19_MissionTeam,
                 EncounterConstants.Adept_Missionary_Level20_MissionTeam,
-                EncounterConstants.Adept_Missionary_Level2To3_MissionTeam,
-                EncounterConstants.Adept_Missionary_Level4To5_MissionTeam,
-                EncounterConstants.Adept_Missionary_Level6To7_MissionTeam,
-                EncounterConstants.Adept_Missionary_Level8To9_MissionTeam,
+                EncounterConstants.Adept_Missionary_Level2_MissionTeam,
+                EncounterConstants.Adept_Missionary_Level3_MissionTeam,
+                EncounterConstants.Adept_Missionary_Level4_MissionTeam,
+                EncounterConstants.Adept_Missionary_Level5_MissionTeam,
+                EncounterConstants.Adept_Missionary_Level6_MissionTeam,
+                EncounterConstants.Adept_Missionary_Level7_MissionTeam,
+                EncounterConstants.Adept_Missionary_Level8_MissionTeam,
+                EncounterConstants.Adept_Missionary_Level9_MissionTeam,
                 EncounterConstants.Aristocrat_BusinessPeople_Level1_Group,
-                EncounterConstants.Aristocrat_BusinessPeople_Level10To11_Group,
-                EncounterConstants.Aristocrat_BusinessPeople_Level12To13_Group,
-                EncounterConstants.Aristocrat_BusinessPeople_Level14To15_Group,
-                EncounterConstants.Aristocrat_BusinessPeople_Level16To17_Group,
-                EncounterConstants.Aristocrat_BusinessPeople_Level18To19_Group,
+                EncounterConstants.Aristocrat_BusinessPeople_Level2_Group,
+                EncounterConstants.Aristocrat_BusinessPeople_Level3_Group,
+                EncounterConstants.Aristocrat_BusinessPeople_Level4_Group,
+                EncounterConstants.Aristocrat_BusinessPeople_Level5_Group,
+                EncounterConstants.Aristocrat_BusinessPeople_Level6_Group,
+                EncounterConstants.Aristocrat_BusinessPeople_Level7_Group,
+                EncounterConstants.Aristocrat_BusinessPeople_Level8_Group,
+                EncounterConstants.Aristocrat_BusinessPeople_Level9_Group,
+                EncounterConstants.Aristocrat_BusinessPeople_Level10_Group,
+                EncounterConstants.Aristocrat_BusinessPeople_Level11_Group,
+                EncounterConstants.Aristocrat_BusinessPeople_Level12_Group,
+                EncounterConstants.Aristocrat_BusinessPeople_Level13_Group,
+                EncounterConstants.Aristocrat_BusinessPeople_Level14_Group,
+                EncounterConstants.Aristocrat_BusinessPeople_Level15_Group,
+                EncounterConstants.Aristocrat_BusinessPeople_Level16_Group,
+                EncounterConstants.Aristocrat_BusinessPeople_Level17_Group,
+                EncounterConstants.Aristocrat_BusinessPeople_Level18_Group,
+                EncounterConstants.Aristocrat_BusinessPeople_Level19_Group,
                 EncounterConstants.Aristocrat_BusinessPeople_Level20_Group,
-                EncounterConstants.Aristocrat_BusinessPeople_Level2To3_Group,
-                EncounterConstants.Aristocrat_BusinessPeople_Level4To5_Group,
-                EncounterConstants.Aristocrat_BusinessPeople_Level6To7_Group,
-                EncounterConstants.Aristocrat_BusinessPeople_Level8To9_Group,
-                EncounterConstants.Aristocrat_Gentry_Level1_WithServants,
-                EncounterConstants.Aristocrat_Gentry_Level10To11_WithServants,
-                EncounterConstants.Aristocrat_Gentry_Level12To13_WithServants,
-                EncounterConstants.Aristocrat_Gentry_Level14To15_WithServants,
-                EncounterConstants.Aristocrat_Gentry_Level16To17_WithServants,
-                EncounterConstants.Aristocrat_Gentry_Level18To19_WithServants,
+                EncounterConstants.Aristocrat_Gentry_Level1,
+                EncounterConstants.Aristocrat_Gentry_Level2,
+                EncounterConstants.Aristocrat_Gentry_Level3,
+                EncounterConstants.Aristocrat_Gentry_Level4,
+                EncounterConstants.Aristocrat_Gentry_Level5,
+                EncounterConstants.Aristocrat_Gentry_Level6_WithServants,
+                EncounterConstants.Aristocrat_Gentry_Level7_WithServants,
+                EncounterConstants.Aristocrat_Gentry_Level8_WithServants,
+                EncounterConstants.Aristocrat_Gentry_Level9_WithServants,
+                EncounterConstants.Aristocrat_Gentry_Level10_WithServants,
+                EncounterConstants.Aristocrat_Gentry_Level11_WithServants,
+                EncounterConstants.Aristocrat_Gentry_Level12_WithServants,
+                EncounterConstants.Aristocrat_Gentry_Level13_WithServants,
+                EncounterConstants.Aristocrat_Gentry_Level14_WithServants,
+                EncounterConstants.Aristocrat_Gentry_Level15_WithServants,
+                EncounterConstants.Aristocrat_Gentry_Level16_WithServants,
+                EncounterConstants.Aristocrat_Gentry_Level17_WithServants,
+                EncounterConstants.Aristocrat_Gentry_Level18_WithServants,
+                EncounterConstants.Aristocrat_Gentry_Level19_WithServants,
                 EncounterConstants.Aristocrat_Gentry_Level20_WithServants,
-                EncounterConstants.Aristocrat_Gentry_Level2To3_WithServants,
-                EncounterConstants.Aristocrat_Gentry_Level4To5_WithServants,
-                EncounterConstants.Aristocrat_Gentry_Level6To7_WithServants,
-                EncounterConstants.Aristocrat_Gentry_Level8To9_WithServants,
                 EncounterConstants.Aristocrat_Politician_Level1_WithAdvisersAndGuards,
+                EncounterConstants.Aristocrat_Politician_Level2_WithAdvisersAndGuards,
+                EncounterConstants.Aristocrat_Politician_Level3_WithAdvisersAndGuards,
+                EncounterConstants.Aristocrat_Politician_Level4_WithAdvisersAndGuards,
+                EncounterConstants.Aristocrat_Politician_Level5_WithAdvisersAndGuards,
+                EncounterConstants.Aristocrat_Politician_Level6_WithAdvisersAndGuards,
+                EncounterConstants.Aristocrat_Politician_Level7_WithAdvisersAndGuards,
+                EncounterConstants.Aristocrat_Politician_Level8_WithAdvisersAndGuards,
+                EncounterConstants.Aristocrat_Politician_Level9_WithAdvisersAndGuards,
                 EncounterConstants.Aristocrat_Politician_Level10_WithAdvisersAndGuards,
                 EncounterConstants.Aristocrat_Politician_Level11_WithAdvisersAndGuards,
                 EncounterConstants.Aristocrat_Politician_Level12_WithAdvisersAndGuards,
@@ -1508,14 +1570,6 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
                 EncounterConstants.Aristocrat_Politician_Level18_WithAdvisersAndGuards,
                 EncounterConstants.Aristocrat_Politician_Level19_WithAdvisersAndGuards,
                 EncounterConstants.Aristocrat_Politician_Level20_WithAdvisersAndGuards,
-                EncounterConstants.Aristocrat_Politician_Level2_WithAdvisersAndGuards,
-                EncounterConstants.Aristocrat_Politician_Level3_WithAdvisersAndGuards,
-                EncounterConstants.Aristocrat_Politician_Level4_WithAdvisersAndGuards,
-                EncounterConstants.Aristocrat_Politician_Level5_WithAdvisersAndGuards,
-                EncounterConstants.Aristocrat_Politician_Level6_WithAdvisersAndGuards,
-                EncounterConstants.Aristocrat_Politician_Level7_WithAdvisersAndGuards,
-                EncounterConstants.Aristocrat_Politician_Level8_WithAdvisersAndGuards,
-                EncounterConstants.Aristocrat_Politician_Level9_WithAdvisersAndGuards,
                 EncounterConstants.Character_RetiredAdventurer_Level11_Solitary,
                 EncounterConstants.Character_RetiredAdventurer_Level12_Solitary,
                 EncounterConstants.Character_RetiredAdventurer_Level13_Solitary,
@@ -1740,6 +1794,16 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
                 EncounterConstants.Warrior_Guard_Level7_PatrolWithCaptain,
                 EncounterConstants.Warrior_Guard_Level9_Patrol,
                 EncounterConstants.Warrior_Guard_Level9_PatrolWithCaptain,
+                EncounterConstants.Warrior_Guard_Level1_PatrolWithLieutenant,
+                EncounterConstants.Warrior_Guard_Level10_PatrolWithLieutenant,
+                EncounterConstants.Warrior_Guard_Level2_PatrolWithLieutenant,
+                EncounterConstants.Warrior_Guard_Level3_PatrolWithLieutenant,
+                EncounterConstants.Warrior_Guard_Level4_PatrolWithLieutenant,
+                EncounterConstants.Warrior_Guard_Level5_PatrolWithLieutenant,
+                EncounterConstants.Warrior_Guard_Level6_PatrolWithLieutenant,
+                EncounterConstants.Warrior_Guard_Level7_PatrolWithLieutenant,
+                EncounterConstants.Warrior_Guard_Level8_PatrolWithLieutenant,
+                EncounterConstants.Warrior_Guard_Level9_PatrolWithLieutenant,
                 EncounterConstants.Horse_Heavy_Solitary,
                 EncounterConstants.Horse_Heavy_War_Solitary,
                 EncounterConstants.Horse_Light_Solitary,
@@ -2022,16 +2086,25 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
             var encounters = new[]
             {
                 EncounterConstants.Adept_Doctor_Level1_Solitary,
-                EncounterConstants.Adept_Doctor_Level10To11_Solitary,
-                EncounterConstants.Adept_Doctor_Level12To13_Solitary,
-                EncounterConstants.Adept_Doctor_Level14To15_Solitary,
-                EncounterConstants.Adept_Doctor_Level16To17_Solitary,
-                EncounterConstants.Adept_Doctor_Level18To19_Solitary,
+                EncounterConstants.Adept_Doctor_Level10_Solitary,
+                EncounterConstants.Adept_Doctor_Level11_Solitary,
+                EncounterConstants.Adept_Doctor_Level12_Solitary,
+                EncounterConstants.Adept_Doctor_Level13_Solitary,
+                EncounterConstants.Adept_Doctor_Level14_Solitary,
+                EncounterConstants.Adept_Doctor_Level15_Solitary,
+                EncounterConstants.Adept_Doctor_Level16_Solitary,
+                EncounterConstants.Adept_Doctor_Level17_Solitary,
+                EncounterConstants.Adept_Doctor_Level18_Solitary,
+                EncounterConstants.Adept_Doctor_Level19_Solitary,
                 EncounterConstants.Adept_Doctor_Level20_Solitary,
-                EncounterConstants.Adept_Doctor_Level2To3_Solitary,
-                EncounterConstants.Adept_Doctor_Level4To5_Solitary,
-                EncounterConstants.Adept_Doctor_Level6To7_Solitary,
-                EncounterConstants.Adept_Doctor_Level8To9_Solitary,
+                EncounterConstants.Adept_Doctor_Level2_Solitary,
+                EncounterConstants.Adept_Doctor_Level3_Solitary,
+                EncounterConstants.Adept_Doctor_Level4_Solitary,
+                EncounterConstants.Adept_Doctor_Level5_Solitary,
+                EncounterConstants.Adept_Doctor_Level6_Solitary,
+                EncounterConstants.Adept_Doctor_Level7_Solitary,
+                EncounterConstants.Adept_Doctor_Level8_Solitary,
+                EncounterConstants.Adept_Doctor_Level9_Solitary,
                 EncounterConstants.Character_Doctor_Level1_Solitary,
                 EncounterConstants.Character_Doctor_Level10_Solitary,
                 EncounterConstants.Character_Doctor_Level11_Solitary,
@@ -2539,16 +2612,25 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
                 EncounterConstants.Wizard_FamousResearcher_Level20_WithShieldGuardian,
                 EncounterConstants.Wizard_FamousResearcher_Level20_WithStoneGolem,
                 EncounterConstants.Adept_Fortuneteller_Level1_Solitary,
-                EncounterConstants.Adept_Fortuneteller_Level10To11_Solitary,
-                EncounterConstants.Adept_Fortuneteller_Level12To13_Solitary,
-                EncounterConstants.Adept_Fortuneteller_Level14To15_Solitary,
-                EncounterConstants.Adept_Fortuneteller_Level16To17_Solitary,
-                EncounterConstants.Adept_Fortuneteller_Level18To19_Solitary,
+                EncounterConstants.Adept_Fortuneteller_Level10_Solitary,
+                EncounterConstants.Adept_Fortuneteller_Level11_Solitary,
+                EncounterConstants.Adept_Fortuneteller_Level12_Solitary,
+                EncounterConstants.Adept_Fortuneteller_Level13_Solitary,
+                EncounterConstants.Adept_Fortuneteller_Level14_Solitary,
+                EncounterConstants.Adept_Fortuneteller_Level15_Solitary,
+                EncounterConstants.Adept_Fortuneteller_Level16_Solitary,
+                EncounterConstants.Adept_Fortuneteller_Level17_Solitary,
+                EncounterConstants.Adept_Fortuneteller_Level18_Solitary,
+                EncounterConstants.Adept_Fortuneteller_Level19_Solitary,
                 EncounterConstants.Adept_Fortuneteller_Level20_Solitary,
-                EncounterConstants.Adept_Fortuneteller_Level2To3_Solitary,
-                EncounterConstants.Adept_Fortuneteller_Level4To5_Solitary,
-                EncounterConstants.Adept_Fortuneteller_Level6To7_Solitary,
-                EncounterConstants.Adept_Fortuneteller_Level8To9_Solitary,
+                EncounterConstants.Adept_Fortuneteller_Level2_Solitary,
+                EncounterConstants.Adept_Fortuneteller_Level3_Solitary,
+                EncounterConstants.Adept_Fortuneteller_Level4_Solitary,
+                EncounterConstants.Adept_Fortuneteller_Level5_Solitary,
+                EncounterConstants.Adept_Fortuneteller_Level6_Solitary,
+                EncounterConstants.Adept_Fortuneteller_Level7_Solitary,
+                EncounterConstants.Adept_Fortuneteller_Level8_Solitary,
+                EncounterConstants.Adept_Fortuneteller_Level9_Solitary,
                 EncounterConstants.Warrior_Guard_Level1_Patrol,
                 EncounterConstants.Warrior_Guard_Level10_Patrol,
                 EncounterConstants.Warrior_Guard_Level2_Patrol,
@@ -2559,6 +2641,16 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
                 EncounterConstants.Warrior_Guard_Level7_Patrol,
                 EncounterConstants.Warrior_Guard_Level8_Patrol,
                 EncounterConstants.Warrior_Guard_Level9_Patrol,
+                EncounterConstants.Warrior_Guard_Level1_PatrolWithLieutenant,
+                EncounterConstants.Warrior_Guard_Level10_PatrolWithLieutenant,
+                EncounterConstants.Warrior_Guard_Level2_PatrolWithLieutenant,
+                EncounterConstants.Warrior_Guard_Level3_PatrolWithLieutenant,
+                EncounterConstants.Warrior_Guard_Level4_PatrolWithLieutenant,
+                EncounterConstants.Warrior_Guard_Level5_PatrolWithLieutenant,
+                EncounterConstants.Warrior_Guard_Level6_PatrolWithLieutenant,
+                EncounterConstants.Warrior_Guard_Level7_PatrolWithLieutenant,
+                EncounterConstants.Warrior_Guard_Level8_PatrolWithLieutenant,
+                EncounterConstants.Warrior_Guard_Level9_PatrolWithLieutenant,
                 EncounterConstants.Warrior_Guard_Level1_PatrolWithCaptain,
                 EncounterConstants.Warrior_Guard_Level10_PatrolWithCaptain,
                 EncounterConstants.Warrior_Guard_Level2_PatrolWithCaptain,
@@ -2621,16 +2713,25 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
                 EncounterConstants.Character_Minstrel_Level6To7_Group,
                 EncounterConstants.Character_Minstrel_Level8To9_Group,
                 EncounterConstants.Adept_Missionary_Level1_MissionTeam,
-                EncounterConstants.Adept_Missionary_Level10To11_MissionTeam,
-                EncounterConstants.Adept_Missionary_Level12To13_MissionTeam,
-                EncounterConstants.Adept_Missionary_Level14To15_MissionTeam,
-                EncounterConstants.Adept_Missionary_Level16To17_MissionTeam,
-                EncounterConstants.Adept_Missionary_Level18To19_MissionTeam,
+                EncounterConstants.Adept_Missionary_Level10_MissionTeam,
+                EncounterConstants.Adept_Missionary_Level11_MissionTeam,
+                EncounterConstants.Adept_Missionary_Level12_MissionTeam,
+                EncounterConstants.Adept_Missionary_Level13_MissionTeam,
+                EncounterConstants.Adept_Missionary_Level14_MissionTeam,
+                EncounterConstants.Adept_Missionary_Level15_MissionTeam,
+                EncounterConstants.Adept_Missionary_Level16_MissionTeam,
+                EncounterConstants.Adept_Missionary_Level17_MissionTeam,
+                EncounterConstants.Adept_Missionary_Level18_MissionTeam,
+                EncounterConstants.Adept_Missionary_Level19_MissionTeam,
                 EncounterConstants.Adept_Missionary_Level20_MissionTeam,
-                EncounterConstants.Adept_Missionary_Level2To3_MissionTeam,
-                EncounterConstants.Adept_Missionary_Level4To5_MissionTeam,
-                EncounterConstants.Adept_Missionary_Level6To7_MissionTeam,
-                EncounterConstants.Adept_Missionary_Level8To9_MissionTeam,
+                EncounterConstants.Adept_Missionary_Level2_MissionTeam,
+                EncounterConstants.Adept_Missionary_Level3_MissionTeam,
+                EncounterConstants.Adept_Missionary_Level4_MissionTeam,
+                EncounterConstants.Adept_Missionary_Level5_MissionTeam,
+                EncounterConstants.Adept_Missionary_Level6_MissionTeam,
+                EncounterConstants.Adept_Missionary_Level7_MissionTeam,
+                EncounterConstants.Adept_Missionary_Level8_MissionTeam,
+                EncounterConstants.Adept_Missionary_Level9_MissionTeam,
                 EncounterConstants.Character_Missionary_Level1_MissionTeam,
                 EncounterConstants.Character_Missionary_Level2_MissionTeam,
                 EncounterConstants.Character_Missionary_Level3_MissionTeam,
@@ -5138,71 +5239,125 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
         [TestCase(EncounterConstants.Wizard_FamousResearcher_Level20_WithShieldGuardian, EnvironmentConstants.Civilized)]
         [TestCase(EncounterConstants.Wizard_FamousResearcher_Level20_WithStoneGolem, EnvironmentConstants.Civilized)]
         [TestCase(EncounterConstants.Adept_Doctor_Level1_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Adept_Doctor_Level10To11_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Adept_Doctor_Level12To13_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Adept_Doctor_Level14To15_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Adept_Doctor_Level16To17_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Adept_Doctor_Level18To19_Solitary, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Adept_Doctor_Level10_Solitary, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Adept_Doctor_Level11_Solitary, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Adept_Doctor_Level12_Solitary, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Adept_Doctor_Level13_Solitary, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Adept_Doctor_Level14_Solitary, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Adept_Doctor_Level15_Solitary, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Adept_Doctor_Level16_Solitary, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Adept_Doctor_Level17_Solitary, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Adept_Doctor_Level18_Solitary, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Adept_Doctor_Level19_Solitary, EnvironmentConstants.Civilized)]
         [TestCase(EncounterConstants.Adept_Doctor_Level20_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Adept_Doctor_Level2To3_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Adept_Doctor_Level4To5_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Adept_Doctor_Level6To7_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Adept_Doctor_Level8To9_Solitary, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Adept_Doctor_Level2_Solitary, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Adept_Doctor_Level3_Solitary, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Adept_Doctor_Level4_Solitary, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Adept_Doctor_Level5_Solitary, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Adept_Doctor_Level6_Solitary, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Adept_Doctor_Level7_Solitary, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Adept_Doctor_Level8_Solitary, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Adept_Doctor_Level9_Solitary, EnvironmentConstants.Civilized)]
         [TestCase(EncounterConstants.Adept_Fortuneteller_Level1_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Adept_Fortuneteller_Level10To11_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Adept_Fortuneteller_Level12To13_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Adept_Fortuneteller_Level14To15_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Adept_Fortuneteller_Level16To17_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Adept_Fortuneteller_Level18To19_Solitary, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Adept_Fortuneteller_Level10_Solitary, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Adept_Fortuneteller_Level11_Solitary, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Adept_Fortuneteller_Level12_Solitary, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Adept_Fortuneteller_Level13_Solitary, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Adept_Fortuneteller_Level14_Solitary, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Adept_Fortuneteller_Level15_Solitary, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Adept_Fortuneteller_Level16_Solitary, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Adept_Fortuneteller_Level17_Solitary, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Adept_Fortuneteller_Level18_Solitary, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Adept_Fortuneteller_Level19_Solitary, EnvironmentConstants.Civilized)]
         [TestCase(EncounterConstants.Adept_Fortuneteller_Level20_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Adept_Fortuneteller_Level2To3_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Adept_Fortuneteller_Level4To5_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Adept_Fortuneteller_Level6To7_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Adept_Fortuneteller_Level8To9_Solitary, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Adept_Fortuneteller_Level2_Solitary, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Adept_Fortuneteller_Level3_Solitary, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Adept_Fortuneteller_Level4_Solitary, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Adept_Fortuneteller_Level5_Solitary, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Adept_Fortuneteller_Level6_Solitary, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Adept_Fortuneteller_Level7_Solitary, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Adept_Fortuneteller_Level8_Solitary, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Adept_Fortuneteller_Level9_Solitary, EnvironmentConstants.Civilized)]
         [TestCase(EncounterConstants.Adept_Missionary_Level1_MissionTeam, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Adept_Missionary_Level10To11_MissionTeam, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Adept_Missionary_Level12To13_MissionTeam, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Adept_Missionary_Level14To15_MissionTeam, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Adept_Missionary_Level16To17_MissionTeam, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Adept_Missionary_Level18To19_MissionTeam, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Adept_Missionary_Level10_MissionTeam, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Adept_Missionary_Level11_MissionTeam, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Adept_Missionary_Level12_MissionTeam, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Adept_Missionary_Level13_MissionTeam, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Adept_Missionary_Level14_MissionTeam, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Adept_Missionary_Level15_MissionTeam, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Adept_Missionary_Level16_MissionTeam, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Adept_Missionary_Level17_MissionTeam, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Adept_Missionary_Level18_MissionTeam, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Adept_Missionary_Level19_MissionTeam, EnvironmentConstants.Civilized)]
         [TestCase(EncounterConstants.Adept_Missionary_Level20_MissionTeam, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Adept_Missionary_Level2To3_MissionTeam, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Adept_Missionary_Level4To5_MissionTeam, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Adept_Missionary_Level6To7_MissionTeam, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Adept_Missionary_Level8To9_MissionTeam, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Adept_Missionary_Level2_MissionTeam, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Adept_Missionary_Level3_MissionTeam, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Adept_Missionary_Level4_MissionTeam, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Adept_Missionary_Level5_MissionTeam, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Adept_Missionary_Level6_MissionTeam, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Adept_Missionary_Level7_MissionTeam, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Adept_Missionary_Level8_MissionTeam, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Adept_Missionary_Level9_MissionTeam, EnvironmentConstants.Civilized)]
         [TestCase(EncounterConstants.Adept_StreetPerformer_Level1_Crew, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Adept_StreetPerformer_Level10To11_Crew, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Adept_StreetPerformer_Level12To13_Crew, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Adept_StreetPerformer_Level14To15_Crew, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Adept_StreetPerformer_Level16To17_Crew, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Adept_StreetPerformer_Level18To19_Crew, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Adept_StreetPerformer_Level10_Crew, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Adept_StreetPerformer_Level11_Crew, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Adept_StreetPerformer_Level12_Crew, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Adept_StreetPerformer_Level13_Crew, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Adept_StreetPerformer_Level14_Crew, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Adept_StreetPerformer_Level15_Crew, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Adept_StreetPerformer_Level16_Crew, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Adept_StreetPerformer_Level17_Crew, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Adept_StreetPerformer_Level18_Crew, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Adept_StreetPerformer_Level19_Crew, EnvironmentConstants.Civilized)]
         [TestCase(EncounterConstants.Adept_StreetPerformer_Level20_Crew, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Adept_StreetPerformer_Level2To3_Crew, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Adept_StreetPerformer_Level4To5_Crew, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Adept_StreetPerformer_Level6To7_Crew, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Adept_StreetPerformer_Level8To9_Crew, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Adept_StreetPerformer_Level2_Crew, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Adept_StreetPerformer_Level3_Crew, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Adept_StreetPerformer_Level4_Crew, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Adept_StreetPerformer_Level5_Crew, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Adept_StreetPerformer_Level6_Crew, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Adept_StreetPerformer_Level7_Crew, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Adept_StreetPerformer_Level8_Crew, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Adept_StreetPerformer_Level9_Crew, EnvironmentConstants.Civilized)]
         [TestCase(EncounterConstants.Aristocrat_BusinessPeople_Level1_Group, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Aristocrat_BusinessPeople_Level10To11_Group, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Aristocrat_BusinessPeople_Level12To13_Group, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Aristocrat_BusinessPeople_Level14To15_Group, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Aristocrat_BusinessPeople_Level16To17_Group, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Aristocrat_BusinessPeople_Level18To19_Group, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Aristocrat_BusinessPeople_Level2_Group, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Aristocrat_BusinessPeople_Level3_Group, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Aristocrat_BusinessPeople_Level4_Group, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Aristocrat_BusinessPeople_Level5_Group, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Aristocrat_BusinessPeople_Level6_Group, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Aristocrat_BusinessPeople_Level7_Group, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Aristocrat_BusinessPeople_Level8_Group, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Aristocrat_BusinessPeople_Level9_Group, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Aristocrat_BusinessPeople_Level10_Group, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Aristocrat_BusinessPeople_Level11_Group, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Aristocrat_BusinessPeople_Level12_Group, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Aristocrat_BusinessPeople_Level13_Group, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Aristocrat_BusinessPeople_Level14_Group, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Aristocrat_BusinessPeople_Level15_Group, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Aristocrat_BusinessPeople_Level16_Group, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Aristocrat_BusinessPeople_Level17_Group, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Aristocrat_BusinessPeople_Level18_Group, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Aristocrat_BusinessPeople_Level19_Group, EnvironmentConstants.Civilized)]
         [TestCase(EncounterConstants.Aristocrat_BusinessPeople_Level20_Group, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Aristocrat_BusinessPeople_Level2To3_Group, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Aristocrat_BusinessPeople_Level4To5_Group, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Aristocrat_BusinessPeople_Level6To7_Group, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Aristocrat_BusinessPeople_Level8To9_Group, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Aristocrat_Gentry_Level1_WithServants, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Aristocrat_Gentry_Level10To11_WithServants, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Aristocrat_Gentry_Level12To13_WithServants, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Aristocrat_Gentry_Level14To15_WithServants, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Aristocrat_Gentry_Level16To17_WithServants, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Aristocrat_Gentry_Level18To19_WithServants, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Aristocrat_Gentry_Level1, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Aristocrat_Gentry_Level2, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Aristocrat_Gentry_Level3, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Aristocrat_Gentry_Level4, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Aristocrat_Gentry_Level5, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Aristocrat_Gentry_Level6_WithServants, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Aristocrat_Gentry_Level7_WithServants, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Aristocrat_Gentry_Level8_WithServants, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Aristocrat_Gentry_Level9_WithServants, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Aristocrat_Gentry_Level10_WithServants, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Aristocrat_Gentry_Level11_WithServants, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Aristocrat_Gentry_Level12_WithServants, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Aristocrat_Gentry_Level13_WithServants, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Aristocrat_Gentry_Level14_WithServants, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Aristocrat_Gentry_Level15_WithServants, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Aristocrat_Gentry_Level16_WithServants, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Aristocrat_Gentry_Level17_WithServants, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Aristocrat_Gentry_Level18_WithServants, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Aristocrat_Gentry_Level19_WithServants, EnvironmentConstants.Civilized)]
         [TestCase(EncounterConstants.Aristocrat_Gentry_Level20_WithServants, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Aristocrat_Gentry_Level2To3_WithServants, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Aristocrat_Gentry_Level4To5_WithServants, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Aristocrat_Gentry_Level6To7_WithServants, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Aristocrat_Gentry_Level8To9_WithServants, EnvironmentConstants.Civilized)]
         [TestCase(EncounterConstants.Aristocrat_Politician_Level1_WithAdvisersAndGuards, EnvironmentConstants.Civilized)]
         [TestCase(EncounterConstants.Aristocrat_Politician_Level10_WithAdvisersAndGuards, EnvironmentConstants.Civilized)]
         [TestCase(EncounterConstants.Aristocrat_Politician_Level11_WithAdvisersAndGuards, EnvironmentConstants.Civilized)]
@@ -5552,6 +5707,16 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
         [TestCase(EncounterConstants.Warrior_Guard_Level7_Patrol, EnvironmentConstants.Civilized)]
         [TestCase(EncounterConstants.Warrior_Guard_Level8_Patrol, EnvironmentConstants.Civilized)]
         [TestCase(EncounterConstants.Warrior_Guard_Level9_Patrol, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Warrior_Guard_Level1_PatrolWithLieutenant, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Warrior_Guard_Level10_PatrolWithLieutenant, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Warrior_Guard_Level2_PatrolWithLieutenant, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Warrior_Guard_Level3_PatrolWithLieutenant, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Warrior_Guard_Level4_PatrolWithLieutenant, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Warrior_Guard_Level5_PatrolWithLieutenant, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Warrior_Guard_Level6_PatrolWithLieutenant, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Warrior_Guard_Level7_PatrolWithLieutenant, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Warrior_Guard_Level8_PatrolWithLieutenant, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Warrior_Guard_Level9_PatrolWithLieutenant, EnvironmentConstants.Civilized)]
         [TestCase(EncounterConstants.Warrior_Guard_Level1_PatrolWithCaptain, EnvironmentConstants.Civilized)]
         [TestCase(EncounterConstants.Warrior_Guard_Level10_PatrolWithCaptain, EnvironmentConstants.Civilized)]
         [TestCase(EncounterConstants.Warrior_Guard_Level2_PatrolWithCaptain, EnvironmentConstants.Civilized)]
@@ -6110,27 +6275,45 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
         [TestCase(EncounterConstants.Wizard_FamousResearcher_Level20_WithShieldGuardian, EnvironmentConstants.Land)]
         [TestCase(EncounterConstants.Wizard_FamousResearcher_Level20_WithStoneGolem, EnvironmentConstants.Land)]
         [TestCase(EncounterConstants.Adept_Fortuneteller_Level1_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Adept_Fortuneteller_Level10To11_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Adept_Fortuneteller_Level12To13_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Adept_Fortuneteller_Level14To15_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Adept_Fortuneteller_Level16To17_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Adept_Fortuneteller_Level18To19_Solitary, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Adept_Fortuneteller_Level10_Solitary, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Adept_Fortuneteller_Level11_Solitary, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Adept_Fortuneteller_Level12_Solitary, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Adept_Fortuneteller_Level13_Solitary, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Adept_Fortuneteller_Level14_Solitary, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Adept_Fortuneteller_Level15_Solitary, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Adept_Fortuneteller_Level16_Solitary, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Adept_Fortuneteller_Level17_Solitary, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Adept_Fortuneteller_Level18_Solitary, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Adept_Fortuneteller_Level19_Solitary, EnvironmentConstants.Land)]
         [TestCase(EncounterConstants.Adept_Fortuneteller_Level20_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Adept_Fortuneteller_Level2To3_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Adept_Fortuneteller_Level4To5_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Adept_Fortuneteller_Level6To7_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Adept_Fortuneteller_Level8To9_Solitary, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Adept_Fortuneteller_Level2_Solitary, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Adept_Fortuneteller_Level3_Solitary, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Adept_Fortuneteller_Level4_Solitary, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Adept_Fortuneteller_Level5_Solitary, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Adept_Fortuneteller_Level6_Solitary, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Adept_Fortuneteller_Level7_Solitary, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Adept_Fortuneteller_Level8_Solitary, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Adept_Fortuneteller_Level9_Solitary, EnvironmentConstants.Land)]
         [TestCase(EncounterConstants.Adept_Missionary_Level1_MissionTeam, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Adept_Missionary_Level10To11_MissionTeam, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Adept_Missionary_Level12To13_MissionTeam, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Adept_Missionary_Level14To15_MissionTeam, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Adept_Missionary_Level16To17_MissionTeam, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Adept_Missionary_Level18To19_MissionTeam, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Adept_Missionary_Level10_MissionTeam, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Adept_Missionary_Level11_MissionTeam, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Adept_Missionary_Level12_MissionTeam, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Adept_Missionary_Level13_MissionTeam, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Adept_Missionary_Level14_MissionTeam, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Adept_Missionary_Level15_MissionTeam, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Adept_Missionary_Level16_MissionTeam, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Adept_Missionary_Level17_MissionTeam, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Adept_Missionary_Level18_MissionTeam, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Adept_Missionary_Level19_MissionTeam, EnvironmentConstants.Land)]
         [TestCase(EncounterConstants.Adept_Missionary_Level20_MissionTeam, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Adept_Missionary_Level2To3_MissionTeam, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Adept_Missionary_Level4To5_MissionTeam, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Adept_Missionary_Level6To7_MissionTeam, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Adept_Missionary_Level8To9_MissionTeam, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Adept_Missionary_Level2_MissionTeam, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Adept_Missionary_Level3_MissionTeam, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Adept_Missionary_Level4_MissionTeam, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Adept_Missionary_Level5_MissionTeam, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Adept_Missionary_Level6_MissionTeam, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Adept_Missionary_Level7_MissionTeam, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Adept_Missionary_Level8_MissionTeam, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Adept_Missionary_Level9_MissionTeam, EnvironmentConstants.Land)]
         [TestCase(EncounterConstants.Commoner_Farmer_Level1_Group, EnvironmentConstants.Land)]
         [TestCase(EncounterConstants.Commoner_Farmer_Level10To11_Group, EnvironmentConstants.Land)]
         [TestCase(EncounterConstants.Commoner_Farmer_Level12To13_Group, EnvironmentConstants.Land)]
@@ -6255,6 +6438,16 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
         [TestCase(EncounterConstants.Warrior_Guard_Level7_Patrol, EnvironmentConstants.Land)]
         [TestCase(EncounterConstants.Warrior_Guard_Level8_Patrol, EnvironmentConstants.Land)]
         [TestCase(EncounterConstants.Warrior_Guard_Level9_Patrol, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Warrior_Guard_Level1_PatrolWithLieutenant, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Warrior_Guard_Level10_PatrolWithLieutenant, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Warrior_Guard_Level2_PatrolWithLieutenant, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Warrior_Guard_Level3_PatrolWithLieutenant, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Warrior_Guard_Level4_PatrolWithLieutenant, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Warrior_Guard_Level5_PatrolWithLieutenant, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Warrior_Guard_Level6_PatrolWithLieutenant, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Warrior_Guard_Level7_PatrolWithLieutenant, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Warrior_Guard_Level8_PatrolWithLieutenant, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Warrior_Guard_Level9_PatrolWithLieutenant, EnvironmentConstants.Land)]
         [TestCase(EncounterConstants.Warrior_Guard_Level1_PatrolWithCaptain, EnvironmentConstants.Land)]
         [TestCase(EncounterConstants.Warrior_Guard_Level10_PatrolWithCaptain, EnvironmentConstants.Land)]
         [TestCase(EncounterConstants.Warrior_Guard_Level2_PatrolWithCaptain, EnvironmentConstants.Land)]
