@@ -1386,45 +1386,81 @@
     <entry>1/2</entry>
   </collection>
   <collection>
-    <name>Character(Bandit)[1d2+1]@Warrior@</name>
+    <name>Character(Bandit)[2]@Warrior@</name>
     <entry>1</entry>
   </collection>
   <collection>
-    <name>Character(Bandit)[1d2+3]@Warrior@</name>
+    <name>Character(Bandit)[3]@Warrior@</name>
     <entry>2</entry>
   </collection>
   <collection>
-    <name>Character(Bandit)[1d2+5]@Warrior@</name>
+    <name>Character(Bandit)[4]@Warrior@</name>
     <entry>3</entry>
   </collection>
   <collection>
-    <name>Character(Bandit)[1d2+7]@Warrior@</name>
+    <name>Character(Bandit)[5]@Warrior@</name>
     <entry>4</entry>
   </collection>
   <collection>
-    <name>Character(Bandit)[1d2+9]@Warrior@</name>
+    <name>Character(Bandit)[6]@Warrior@</name>
     <entry>5</entry>
   </collection>
   <collection>
-    <name>Character(Bandit)[1d2+11]@Warrior@</name>
+    <name>Character(Bandit)[7]@Warrior@</name>
     <entry>6</entry>
   </collection>
   <collection>
-    <name>Character(Bandit)[1d2+13]@Warrior@</name>
+    <name>Character(Bandit)[8]@Warrior@</name>
     <entry>7</entry>
   </collection>
   <collection>
-    <name>Character(Bandit)[1d2+15]@Warrior@</name>
+    <name>Character(Bandit)[9]@Warrior@</name>
     <entry>8</entry>
   </collection>
   <collection>
-    <name>Character(Bandit)[1d2+17]@Warrior@</name>
+    <name>Character(Bandit)[10]@Warrior@</name>
     <entry>9</entry>
   </collection>
   <collection>
-    <name>Character(Bandit)[20]@Warrior@</name>
+    <name>Character(Bandit)[11]@Warrior@</name>
     <entry>10</entry>
   </collection>
+	<collection>
+		<name>Character(Bandit)[12]@Warrior@</name>
+		<entry>11</entry>
+	</collection>
+	<collection>
+		<name>Character(Bandit)[13]@Warrior@</name>
+		<entry>12</entry>
+	</collection>
+	<collection>
+		<name>Character(Bandit)[14]@Warrior@</name>
+		<entry>13</entry>
+	</collection>
+	<collection>
+		<name>Character(Bandit)[15]@Warrior@</name>
+		<entry>14</entry>
+	</collection>
+	<collection>
+		<name>Character(Bandit)[16]@Warrior@</name>
+		<entry>15</entry>
+	</collection>
+	<collection>
+		<name>Character(Bandit)[17]@Warrior@</name>
+		<entry>16</entry>
+	</collection>
+	<collection>
+		<name>Character(Bandit)[18]@Warrior@</name>
+		<entry>17</entry>
+	</collection>
+	<collection>
+		<name>Character(Bandit)[19]@Warrior@</name>
+		<entry>18</entry>
+	</collection>
+	<collection>
+		<name>Character(Bandit)[20]@Warrior@</name>
+		<entry>19</entry>
+	</collection>
   <collection>
     <name>Character(Beggar)[1]@Commoner@</name>
     <entry>1/2</entry>
