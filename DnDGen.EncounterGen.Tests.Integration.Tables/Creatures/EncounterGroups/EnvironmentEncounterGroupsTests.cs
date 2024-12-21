@@ -905,16 +905,25 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
                 EncounterConstants.Pony_Solitary,
                 EncounterConstants.Pony_War_Solitary,
                 EncounterConstants.Commoner_Protestor_Level1_Protest,
-                EncounterConstants.Commoner_Protestor_Level10To11_Protest,
-                EncounterConstants.Commoner_Protestor_Level12To13_Protest,
-                EncounterConstants.Commoner_Protestor_Level14To15_Protest,
-                EncounterConstants.Commoner_Protestor_Level16To17_Protest,
-                EncounterConstants.Commoner_Protestor_Level18To19_Protest,
+                EncounterConstants.Commoner_Protestor_Level10_Protest,
+                EncounterConstants.Commoner_Protestor_Level11_Protest,
+                EncounterConstants.Commoner_Protestor_Level12_Protest,
+                EncounterConstants.Commoner_Protestor_Level13_Protest,
+                EncounterConstants.Commoner_Protestor_Level14_Protest,
+                EncounterConstants.Commoner_Protestor_Level15_Protest,
+                EncounterConstants.Commoner_Protestor_Level16_Protest,
+                EncounterConstants.Commoner_Protestor_Level17_Protest,
+                EncounterConstants.Commoner_Protestor_Level18_Protest,
+                EncounterConstants.Commoner_Protestor_Level19_Protest,
                 EncounterConstants.Commoner_Protestor_Level20_Protest,
-                EncounterConstants.Commoner_Protestor_Level2To3_Protest,
-                EncounterConstants.Commoner_Protestor_Level4To5_Protest,
-                EncounterConstants.Commoner_Protestor_Level6To7_Protest,
-                EncounterConstants.Commoner_Protestor_Level8To9_Protest,
+                EncounterConstants.Commoner_Protestor_Level2_Protest,
+                EncounterConstants.Commoner_Protestor_Level3_Protest,
+                EncounterConstants.Commoner_Protestor_Level4_Protest,
+                EncounterConstants.Commoner_Protestor_Level5_Protest,
+                EncounterConstants.Commoner_Protestor_Level6_Protest,
+                EncounterConstants.Commoner_Protestor_Level7_Protest,
+                EncounterConstants.Commoner_Protestor_Level8_Protest,
+                EncounterConstants.Commoner_Protestor_Level9_Protest,
                 EncounterConstants.Commoner_Pilgrim_Level1_Caravan,
                 EncounterConstants.Commoner_Pilgrim_Level10_Caravan,
                 EncounterConstants.Commoner_Pilgrim_Level2_Caravan,
@@ -926,27 +935,45 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
                 EncounterConstants.Commoner_Pilgrim_Level8_Caravan,
                 EncounterConstants.Commoner_Pilgrim_Level9_Caravan,
                 EncounterConstants.Commoner_Herder_Level1_Group,
-                EncounterConstants.Commoner_Herder_Level10To11_Group,
-                EncounterConstants.Commoner_Herder_Level12To13_Group,
-                EncounterConstants.Commoner_Herder_Level14To15_Group,
-                EncounterConstants.Commoner_Herder_Level16To17_Group,
-                EncounterConstants.Commoner_Herder_Level18To19_Group,
+                EncounterConstants.Commoner_Herder_Level10_Group,
+                EncounterConstants.Commoner_Herder_Level11_Group,
+                EncounterConstants.Commoner_Herder_Level12_Group,
+                EncounterConstants.Commoner_Herder_Level13_Group,
+                EncounterConstants.Commoner_Herder_Level14_Group,
+                EncounterConstants.Commoner_Herder_Level15_Group,
+                EncounterConstants.Commoner_Herder_Level16_Group,
+                EncounterConstants.Commoner_Herder_Level17_Group,
+                EncounterConstants.Commoner_Herder_Level18_Group,
+                EncounterConstants.Commoner_Herder_Level19_Group,
                 EncounterConstants.Commoner_Herder_Level20_Group,
-                EncounterConstants.Commoner_Herder_Level2To3_Group,
-                EncounterConstants.Commoner_Herder_Level4To5_Group,
-                EncounterConstants.Commoner_Herder_Level6To7_Group,
-                EncounterConstants.Commoner_Herder_Level8To9_Group,
+                EncounterConstants.Commoner_Herder_Level2_Group,
+                EncounterConstants.Commoner_Herder_Level3_Group,
+                EncounterConstants.Commoner_Herder_Level4_Group,
+                EncounterConstants.Commoner_Herder_Level5_Group,
+                EncounterConstants.Commoner_Herder_Level6_Group,
+                EncounterConstants.Commoner_Herder_Level7_Group,
+                EncounterConstants.Commoner_Herder_Level8_Group,
+                EncounterConstants.Commoner_Herder_Level9_Group,
                 EncounterConstants.Commoner_Farmer_Level1_Group,
-                EncounterConstants.Commoner_Farmer_Level10To11_Group,
-                EncounterConstants.Commoner_Farmer_Level12To13_Group,
-                EncounterConstants.Commoner_Farmer_Level14To15_Group,
-                EncounterConstants.Commoner_Farmer_Level16To17_Group,
-                EncounterConstants.Commoner_Farmer_Level18To19_Group,
+                EncounterConstants.Commoner_Farmer_Level10_Group,
+                EncounterConstants.Commoner_Farmer_Level11_Group,
+                EncounterConstants.Commoner_Farmer_Level12_Group,
+                EncounterConstants.Commoner_Farmer_Level13_Group,
+                EncounterConstants.Commoner_Farmer_Level14_Group,
+                EncounterConstants.Commoner_Farmer_Level15_Group,
+                EncounterConstants.Commoner_Farmer_Level16_Group,
+                EncounterConstants.Commoner_Farmer_Level17_Group,
+                EncounterConstants.Commoner_Farmer_Level18_Group,
+                EncounterConstants.Commoner_Farmer_Level19_Group,
                 EncounterConstants.Commoner_Farmer_Level20_Group,
-                EncounterConstants.Commoner_Farmer_Level2To3_Group,
-                EncounterConstants.Commoner_Farmer_Level4To5_Group,
-                EncounterConstants.Commoner_Farmer_Level6To7_Group,
-                EncounterConstants.Commoner_Farmer_Level8To9_Group,
+                EncounterConstants.Commoner_Farmer_Level2_Group,
+                EncounterConstants.Commoner_Farmer_Level3_Group,
+                EncounterConstants.Commoner_Farmer_Level4_Group,
+                EncounterConstants.Commoner_Farmer_Level5_Group,
+                EncounterConstants.Commoner_Farmer_Level6_Group,
+                EncounterConstants.Commoner_Farmer_Level7_Group,
+                EncounterConstants.Commoner_Farmer_Level8_Group,
+                EncounterConstants.Commoner_Farmer_Level9_Group,
                 EncounterConstants.Commoner_ConstructionWorker_Level1_Crew,
                 EncounterConstants.Commoner_ConstructionWorker_Level10_Crew,
                 EncounterConstants.Commoner_ConstructionWorker_Level11_Crew,
@@ -968,16 +995,25 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
                 EncounterConstants.Commoner_ConstructionWorker_Level8_Crew,
                 EncounterConstants.Commoner_ConstructionWorker_Level9_Crew,
                 EncounterConstants.Commoner_Beggar_Level1_Solitary,
-                EncounterConstants.Commoner_Beggar_Level10To11_Solitary,
-                EncounterConstants.Commoner_Beggar_Level12To13_Solitary,
-                EncounterConstants.Commoner_Beggar_Level14To15_Solitary,
-                EncounterConstants.Commoner_Beggar_Level16To17_Solitary,
-                EncounterConstants.Commoner_Beggar_Level18To19_Solitary,
+                EncounterConstants.Commoner_Beggar_Level10_Solitary,
+                EncounterConstants.Commoner_Beggar_Level11_Solitary,
+                EncounterConstants.Commoner_Beggar_Level12_Solitary,
+                EncounterConstants.Commoner_Beggar_Level13_Solitary,
+                EncounterConstants.Commoner_Beggar_Level14_Solitary,
+                EncounterConstants.Commoner_Beggar_Level15_Solitary,
+                EncounterConstants.Commoner_Beggar_Level16_Solitary,
+                EncounterConstants.Commoner_Beggar_Level17_Solitary,
+                EncounterConstants.Commoner_Beggar_Level18_Solitary,
+                EncounterConstants.Commoner_Beggar_Level19_Solitary,
                 EncounterConstants.Commoner_Beggar_Level20_Solitary,
-                EncounterConstants.Commoner_Beggar_Level2To3_Solitary,
-                EncounterConstants.Commoner_Beggar_Level4To5_Solitary,
-                EncounterConstants.Commoner_Beggar_Level6To7_Solitary,
-                EncounterConstants.Commoner_Beggar_Level8To9_Solitary,
+                EncounterConstants.Commoner_Beggar_Level2_Solitary,
+                EncounterConstants.Commoner_Beggar_Level3_Solitary,
+                EncounterConstants.Commoner_Beggar_Level4_Solitary,
+                EncounterConstants.Commoner_Beggar_Level5_Solitary,
+                EncounterConstants.Commoner_Beggar_Level6_Solitary,
+                EncounterConstants.Commoner_Beggar_Level7_Solitary,
+                EncounterConstants.Commoner_Beggar_Level8_Solitary,
+                EncounterConstants.Commoner_Beggar_Level9_Solitary,
                 EncounterConstants.Character_WarHero_Level11_Solitary,
                 EncounterConstants.Character_WarHero_Level12_Solitary,
                 EncounterConstants.Character_WarHero_Level13_Solitary,
@@ -1953,16 +1989,25 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
                 EncounterConstants.Horse_Light_Solitary,
                 EncounterConstants.Horse_Light_War_Solitary,
                 EncounterConstants.Character_Hunter_Level1_HuntingParty,
-                EncounterConstants.Character_Hunter_Level10To11_HuntingParty,
-                EncounterConstants.Character_Hunter_Level12To13_HuntingParty,
-                EncounterConstants.Character_Hunter_Level14To15_HuntingParty,
-                EncounterConstants.Character_Hunter_Level16To17_HuntingParty,
-                EncounterConstants.Character_Hunter_Level18To19_HuntingParty,
+                EncounterConstants.Character_Hunter_Level10_HuntingParty,
+                EncounterConstants.Character_Hunter_Level11_HuntingParty,
+                EncounterConstants.Character_Hunter_Level12_HuntingParty,
+                EncounterConstants.Character_Hunter_Level13_HuntingParty,
+                EncounterConstants.Character_Hunter_Level14_HuntingParty,
+                EncounterConstants.Character_Hunter_Level15_HuntingParty,
+                EncounterConstants.Character_Hunter_Level16_HuntingParty,
+                EncounterConstants.Character_Hunter_Level17_HuntingParty,
+                EncounterConstants.Character_Hunter_Level18_HuntingParty,
+                EncounterConstants.Character_Hunter_Level19_HuntingParty,
                 EncounterConstants.Character_Hunter_Level20_HuntingParty,
-                EncounterConstants.Character_Hunter_Level2To3_HuntingParty,
-                EncounterConstants.Character_Hunter_Level4To5_HuntingParty,
-                EncounterConstants.Character_Hunter_Level6To7_HuntingParty,
-                EncounterConstants.Character_Hunter_Level8To9_HuntingParty,
+                EncounterConstants.Character_Hunter_Level2_HuntingParty,
+                EncounterConstants.Character_Hunter_Level3_HuntingParty,
+                EncounterConstants.Character_Hunter_Level4_HuntingParty,
+                EncounterConstants.Character_Hunter_Level5_HuntingParty,
+                EncounterConstants.Character_Hunter_Level6_HuntingParty,
+                EncounterConstants.Character_Hunter_Level7_HuntingParty,
+                EncounterConstants.Character_Hunter_Level8_HuntingParty,
+                EncounterConstants.Character_Hunter_Level9_HuntingParty,
             };
 
             base.AssertDistinctCollection(EnvironmentConstants.Civilized, encounters);
@@ -2310,38 +2355,65 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
                 EncounterConstants.Character_Adventurer_Level8_Solitary,
                 EncounterConstants.Character_Adventurer_Level9_Solitary,
                 EncounterConstants.Character_Hunter_Level1_HuntingParty,
-                EncounterConstants.Character_Hunter_Level10To11_HuntingParty,
-                EncounterConstants.Character_Hunter_Level12To13_HuntingParty,
-                EncounterConstants.Character_Hunter_Level14To15_HuntingParty,
-                EncounterConstants.Character_Hunter_Level16To17_HuntingParty,
-                EncounterConstants.Character_Hunter_Level18To19_HuntingParty,
+                EncounterConstants.Character_Hunter_Level10_HuntingParty,
+                EncounterConstants.Character_Hunter_Level11_HuntingParty,
+                EncounterConstants.Character_Hunter_Level12_HuntingParty,
+                EncounterConstants.Character_Hunter_Level13_HuntingParty,
+                EncounterConstants.Character_Hunter_Level14_HuntingParty,
+                EncounterConstants.Character_Hunter_Level15_HuntingParty,
+                EncounterConstants.Character_Hunter_Level16_HuntingParty,
+                EncounterConstants.Character_Hunter_Level17_HuntingParty,
+                EncounterConstants.Character_Hunter_Level18_HuntingParty,
+                EncounterConstants.Character_Hunter_Level19_HuntingParty,
                 EncounterConstants.Character_Hunter_Level20_HuntingParty,
-                EncounterConstants.Character_Hunter_Level2To3_HuntingParty,
-                EncounterConstants.Character_Hunter_Level4To5_HuntingParty,
-                EncounterConstants.Character_Hunter_Level6To7_HuntingParty,
-                EncounterConstants.Character_Hunter_Level8To9_HuntingParty,
-                EncounterConstants.Commoner_Farmer_Level1_Group,
-                EncounterConstants.Commoner_Farmer_Level10To11_Group,
-                EncounterConstants.Commoner_Farmer_Level12To13_Group,
-                EncounterConstants.Commoner_Farmer_Level14To15_Group,
-                EncounterConstants.Commoner_Farmer_Level16To17_Group,
-                EncounterConstants.Commoner_Farmer_Level18To19_Group,
-                EncounterConstants.Commoner_Farmer_Level20_Group,
-                EncounterConstants.Commoner_Farmer_Level2To3_Group,
-                EncounterConstants.Commoner_Farmer_Level4To5_Group,
-                EncounterConstants.Commoner_Farmer_Level6To7_Group,
-                EncounterConstants.Commoner_Farmer_Level8To9_Group,
+                EncounterConstants.Character_Hunter_Level2_HuntingParty,
+                EncounterConstants.Character_Hunter_Level3_HuntingParty,
+                EncounterConstants.Character_Hunter_Level4_HuntingParty,
+                EncounterConstants.Character_Hunter_Level5_HuntingParty,
+                EncounterConstants.Character_Hunter_Level6_HuntingParty,
+                EncounterConstants.Character_Hunter_Level7_HuntingParty,
+                EncounterConstants.Character_Hunter_Level8_HuntingParty,
+                EncounterConstants.Character_Hunter_Level9_HuntingParty,
                 EncounterConstants.Commoner_Herder_Level1_Group,
-                EncounterConstants.Commoner_Herder_Level10To11_Group,
-                EncounterConstants.Commoner_Herder_Level12To13_Group,
-                EncounterConstants.Commoner_Herder_Level14To15_Group,
-                EncounterConstants.Commoner_Herder_Level16To17_Group,
-                EncounterConstants.Commoner_Herder_Level18To19_Group,
+                EncounterConstants.Commoner_Herder_Level10_Group,
+                EncounterConstants.Commoner_Herder_Level11_Group,
+                EncounterConstants.Commoner_Herder_Level12_Group,
+                EncounterConstants.Commoner_Herder_Level13_Group,
+                EncounterConstants.Commoner_Herder_Level14_Group,
+                EncounterConstants.Commoner_Herder_Level15_Group,
+                EncounterConstants.Commoner_Herder_Level16_Group,
+                EncounterConstants.Commoner_Herder_Level17_Group,
+                EncounterConstants.Commoner_Herder_Level18_Group,
+                EncounterConstants.Commoner_Herder_Level19_Group,
                 EncounterConstants.Commoner_Herder_Level20_Group,
-                EncounterConstants.Commoner_Herder_Level2To3_Group,
-                EncounterConstants.Commoner_Herder_Level4To5_Group,
-                EncounterConstants.Commoner_Herder_Level6To7_Group,
-                EncounterConstants.Commoner_Herder_Level8To9_Group,
+                EncounterConstants.Commoner_Herder_Level2_Group,
+                EncounterConstants.Commoner_Herder_Level3_Group,
+                EncounterConstants.Commoner_Herder_Level4_Group,
+                EncounterConstants.Commoner_Herder_Level5_Group,
+                EncounterConstants.Commoner_Herder_Level6_Group,
+                EncounterConstants.Commoner_Herder_Level7_Group,
+                EncounterConstants.Commoner_Herder_Level8_Group,
+                EncounterConstants.Commoner_Herder_Level9_Group,
+                EncounterConstants.Commoner_Farmer_Level1_Group,
+                EncounterConstants.Commoner_Farmer_Level10_Group,
+                EncounterConstants.Commoner_Farmer_Level11_Group,
+                EncounterConstants.Commoner_Farmer_Level12_Group,
+                EncounterConstants.Commoner_Farmer_Level13_Group,
+                EncounterConstants.Commoner_Farmer_Level14_Group,
+                EncounterConstants.Commoner_Farmer_Level15_Group,
+                EncounterConstants.Commoner_Farmer_Level16_Group,
+                EncounterConstants.Commoner_Farmer_Level17_Group,
+                EncounterConstants.Commoner_Farmer_Level18_Group,
+                EncounterConstants.Commoner_Farmer_Level19_Group,
+                EncounterConstants.Commoner_Farmer_Level20_Group,
+                EncounterConstants.Commoner_Farmer_Level2_Group,
+                EncounterConstants.Commoner_Farmer_Level3_Group,
+                EncounterConstants.Commoner_Farmer_Level4_Group,
+                EncounterConstants.Commoner_Farmer_Level5_Group,
+                EncounterConstants.Commoner_Farmer_Level6_Group,
+                EncounterConstants.Commoner_Farmer_Level7_Group,
+                EncounterConstants.Commoner_Farmer_Level8_Group,
+                EncounterConstants.Commoner_Farmer_Level9_Group,
                 EncounterConstants.Commoner_Pilgrim_Level1_Caravan,
                 EncounterConstants.Commoner_Pilgrim_Level10_Caravan,
                 EncounterConstants.Commoner_Pilgrim_Level2_Caravan,
@@ -5183,16 +5255,25 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
         [TestCase(EncounterConstants.Character_ContractKiller_Level19_Solitary, EnvironmentConstants.Civilized)]
         [TestCase(EncounterConstants.Character_ContractKiller_Level20_Solitary, EnvironmentConstants.Civilized)]
         [TestCase(EncounterConstants.Character_Hunter_Level1_HuntingParty, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Hunter_Level10To11_HuntingParty, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Hunter_Level12To13_HuntingParty, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Hunter_Level14To15_HuntingParty, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Hunter_Level16To17_HuntingParty, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Hunter_Level18To19_HuntingParty, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Character_Hunter_Level10_HuntingParty, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Character_Hunter_Level11_HuntingParty, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Character_Hunter_Level12_HuntingParty, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Character_Hunter_Level13_HuntingParty, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Character_Hunter_Level14_HuntingParty, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Character_Hunter_Level15_HuntingParty, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Character_Hunter_Level16_HuntingParty, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Character_Hunter_Level17_HuntingParty, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Character_Hunter_Level18_HuntingParty, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Character_Hunter_Level19_HuntingParty, EnvironmentConstants.Civilized)]
         [TestCase(EncounterConstants.Character_Hunter_Level20_HuntingParty, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Hunter_Level2To3_HuntingParty, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Hunter_Level4To5_HuntingParty, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Hunter_Level6To7_HuntingParty, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Hunter_Level8To9_HuntingParty, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Character_Hunter_Level2_HuntingParty, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Character_Hunter_Level3_HuntingParty, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Character_Hunter_Level4_HuntingParty, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Character_Hunter_Level5_HuntingParty, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Character_Hunter_Level6_HuntingParty, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Character_Hunter_Level7_HuntingParty, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Character_Hunter_Level8_HuntingParty, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Character_Hunter_Level9_HuntingParty, EnvironmentConstants.Civilized)]
         [TestCase(EncounterConstants.Character_Merchant_Level1_Caravan, EnvironmentConstants.Civilized)]
         [TestCase(EncounterConstants.Character_Merchant_Level10_Caravan, EnvironmentConstants.Civilized)]
         [TestCase(EncounterConstants.Character_Merchant_Level11_Caravan, EnvironmentConstants.Civilized)]
@@ -5550,16 +5631,25 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
         [TestCase(EncounterConstants.Aristocrat_Politician_Level8_WithAdvisersAndGuards, EnvironmentConstants.Civilized)]
         [TestCase(EncounterConstants.Aristocrat_Politician_Level9_WithAdvisersAndGuards, EnvironmentConstants.Civilized)]
         [TestCase(EncounterConstants.Commoner_Beggar_Level1_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Commoner_Beggar_Level10To11_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Commoner_Beggar_Level12To13_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Commoner_Beggar_Level14To15_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Commoner_Beggar_Level16To17_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Commoner_Beggar_Level18To19_Solitary, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Commoner_Beggar_Level10_Solitary, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Commoner_Beggar_Level11_Solitary, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Commoner_Beggar_Level12_Solitary, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Commoner_Beggar_Level13_Solitary, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Commoner_Beggar_Level14_Solitary, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Commoner_Beggar_Level15_Solitary, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Commoner_Beggar_Level16_Solitary, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Commoner_Beggar_Level17_Solitary, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Commoner_Beggar_Level18_Solitary, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Commoner_Beggar_Level19_Solitary, EnvironmentConstants.Civilized)]
         [TestCase(EncounterConstants.Commoner_Beggar_Level20_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Commoner_Beggar_Level2To3_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Commoner_Beggar_Level4To5_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Commoner_Beggar_Level6To7_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Commoner_Beggar_Level8To9_Solitary, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Commoner_Beggar_Level2_Solitary, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Commoner_Beggar_Level3_Solitary, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Commoner_Beggar_Level4_Solitary, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Commoner_Beggar_Level5_Solitary, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Commoner_Beggar_Level6_Solitary, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Commoner_Beggar_Level7_Solitary, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Commoner_Beggar_Level8_Solitary, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Commoner_Beggar_Level9_Solitary, EnvironmentConstants.Civilized)]
         [TestCase(EncounterConstants.Commoner_ConstructionWorker_Level1_Crew, EnvironmentConstants.Civilized)]
         [TestCase(EncounterConstants.Commoner_ConstructionWorker_Level10_Crew, EnvironmentConstants.Civilized)]
         [TestCase(EncounterConstants.Commoner_ConstructionWorker_Level11_Crew, EnvironmentConstants.Civilized)]
@@ -5581,27 +5671,45 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
         [TestCase(EncounterConstants.Commoner_ConstructionWorker_Level8_Crew, EnvironmentConstants.Civilized)]
         [TestCase(EncounterConstants.Commoner_ConstructionWorker_Level9_Crew, EnvironmentConstants.Civilized)]
         [TestCase(EncounterConstants.Commoner_Farmer_Level1_Group, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Commoner_Farmer_Level10To11_Group, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Commoner_Farmer_Level12To13_Group, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Commoner_Farmer_Level14To15_Group, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Commoner_Farmer_Level16To17_Group, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Commoner_Farmer_Level18To19_Group, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Commoner_Farmer_Level10_Group, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Commoner_Farmer_Level11_Group, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Commoner_Farmer_Level12_Group, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Commoner_Farmer_Level13_Group, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Commoner_Farmer_Level14_Group, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Commoner_Farmer_Level15_Group, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Commoner_Farmer_Level16_Group, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Commoner_Farmer_Level17_Group, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Commoner_Farmer_Level18_Group, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Commoner_Farmer_Level19_Group, EnvironmentConstants.Civilized)]
         [TestCase(EncounterConstants.Commoner_Farmer_Level20_Group, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Commoner_Farmer_Level2To3_Group, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Commoner_Farmer_Level4To5_Group, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Commoner_Farmer_Level6To7_Group, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Commoner_Farmer_Level8To9_Group, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Commoner_Farmer_Level2_Group, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Commoner_Farmer_Level3_Group, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Commoner_Farmer_Level4_Group, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Commoner_Farmer_Level5_Group, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Commoner_Farmer_Level6_Group, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Commoner_Farmer_Level7_Group, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Commoner_Farmer_Level8_Group, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Commoner_Farmer_Level9_Group, EnvironmentConstants.Civilized)]
         [TestCase(EncounterConstants.Commoner_Herder_Level1_Group, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Commoner_Herder_Level10To11_Group, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Commoner_Herder_Level12To13_Group, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Commoner_Herder_Level14To15_Group, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Commoner_Herder_Level16To17_Group, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Commoner_Herder_Level18To19_Group, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Commoner_Herder_Level10_Group, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Commoner_Herder_Level11_Group, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Commoner_Herder_Level12_Group, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Commoner_Herder_Level13_Group, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Commoner_Herder_Level14_Group, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Commoner_Herder_Level15_Group, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Commoner_Herder_Level16_Group, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Commoner_Herder_Level17_Group, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Commoner_Herder_Level18_Group, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Commoner_Herder_Level19_Group, EnvironmentConstants.Civilized)]
         [TestCase(EncounterConstants.Commoner_Herder_Level20_Group, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Commoner_Herder_Level2To3_Group, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Commoner_Herder_Level4To5_Group, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Commoner_Herder_Level6To7_Group, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Commoner_Herder_Level8To9_Group, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Commoner_Herder_Level2_Group, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Commoner_Herder_Level3_Group, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Commoner_Herder_Level4_Group, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Commoner_Herder_Level5_Group, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Commoner_Herder_Level6_Group, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Commoner_Herder_Level7_Group, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Commoner_Herder_Level8_Group, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Commoner_Herder_Level9_Group, EnvironmentConstants.Civilized)]
         [TestCase(EncounterConstants.Commoner_Pilgrim_Level1_Caravan, EnvironmentConstants.Civilized)]
         [TestCase(EncounterConstants.Commoner_Pilgrim_Level10_Caravan, EnvironmentConstants.Civilized)]
         [TestCase(EncounterConstants.Commoner_Pilgrim_Level2_Caravan, EnvironmentConstants.Civilized)]
@@ -5623,16 +5731,25 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
         [TestCase(EncounterConstants.Commoner_Pilgrim_Level8_CaravanWithLeader, EnvironmentConstants.Civilized)]
         [TestCase(EncounterConstants.Commoner_Pilgrim_Level9_CaravanWithLeader, EnvironmentConstants.Civilized)]
         [TestCase(EncounterConstants.Commoner_Protestor_Level1_Protest, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Commoner_Protestor_Level10To11_Protest, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Commoner_Protestor_Level12To13_Protest, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Commoner_Protestor_Level14To15_Protest, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Commoner_Protestor_Level16To17_Protest, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Commoner_Protestor_Level18To19_Protest, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Commoner_Protestor_Level10_Protest, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Commoner_Protestor_Level11_Protest, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Commoner_Protestor_Level12_Protest, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Commoner_Protestor_Level13_Protest, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Commoner_Protestor_Level14_Protest, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Commoner_Protestor_Level15_Protest, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Commoner_Protestor_Level16_Protest, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Commoner_Protestor_Level17_Protest, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Commoner_Protestor_Level18_Protest, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Commoner_Protestor_Level19_Protest, EnvironmentConstants.Civilized)]
         [TestCase(EncounterConstants.Commoner_Protestor_Level20_Protest, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Commoner_Protestor_Level2To3_Protest, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Commoner_Protestor_Level4To5_Protest, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Commoner_Protestor_Level6To7_Protest, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Commoner_Protestor_Level8To9_Protest, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Commoner_Protestor_Level2_Protest, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Commoner_Protestor_Level3_Protest, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Commoner_Protestor_Level4_Protest, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Commoner_Protestor_Level5_Protest, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Commoner_Protestor_Level6_Protest, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Commoner_Protestor_Level7_Protest, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Commoner_Protestor_Level8_Protest, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Commoner_Protestor_Level9_Protest, EnvironmentConstants.Civilized)]
         [TestCase(EncounterConstants.Expert_Artisan_Level1_Solitary, EnvironmentConstants.Civilized)]
         [TestCase(EncounterConstants.Expert_Artisan_Level10_Solitary, EnvironmentConstants.Civilized)]
         [TestCase(EncounterConstants.Expert_Artisan_Level11_Solitary, EnvironmentConstants.Civilized)]
@@ -6383,16 +6500,25 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
         [TestCase(EncounterConstants.Character_ContractKiller_Level19_Solitary, EnvironmentConstants.Land)]
         [TestCase(EncounterConstants.Character_ContractKiller_Level20_Solitary, EnvironmentConstants.Land)]
         [TestCase(EncounterConstants.Character_Hunter_Level1_HuntingParty, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Hunter_Level10To11_HuntingParty, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Hunter_Level12To13_HuntingParty, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Hunter_Level14To15_HuntingParty, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Hunter_Level16To17_HuntingParty, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Hunter_Level18To19_HuntingParty, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Character_Hunter_Level10_HuntingParty, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Character_Hunter_Level11_HuntingParty, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Character_Hunter_Level12_HuntingParty, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Character_Hunter_Level13_HuntingParty, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Character_Hunter_Level14_HuntingParty, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Character_Hunter_Level15_HuntingParty, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Character_Hunter_Level16_HuntingParty, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Character_Hunter_Level17_HuntingParty, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Character_Hunter_Level18_HuntingParty, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Character_Hunter_Level19_HuntingParty, EnvironmentConstants.Land)]
         [TestCase(EncounterConstants.Character_Hunter_Level20_HuntingParty, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Hunter_Level2To3_HuntingParty, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Hunter_Level4To5_HuntingParty, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Hunter_Level6To7_HuntingParty, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Hunter_Level8To9_HuntingParty, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Character_Hunter_Level2_HuntingParty, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Character_Hunter_Level3_HuntingParty, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Character_Hunter_Level4_HuntingParty, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Character_Hunter_Level5_HuntingParty, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Character_Hunter_Level6_HuntingParty, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Character_Hunter_Level7_HuntingParty, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Character_Hunter_Level8_HuntingParty, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Character_Hunter_Level9_HuntingParty, EnvironmentConstants.Land)]
         [TestCase(EncounterConstants.Character_Merchant_Level1_Caravan, EnvironmentConstants.Land)]
         [TestCase(EncounterConstants.Character_Merchant_Level10_Caravan, EnvironmentConstants.Land)]
         [TestCase(EncounterConstants.Character_Merchant_Level11_Caravan, EnvironmentConstants.Land)]
@@ -6630,27 +6756,45 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
         [TestCase(EncounterConstants.Adept_Missionary_Level8_MissionTeam, EnvironmentConstants.Land)]
         [TestCase(EncounterConstants.Adept_Missionary_Level9_MissionTeam, EnvironmentConstants.Land)]
         [TestCase(EncounterConstants.Commoner_Farmer_Level1_Group, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Commoner_Farmer_Level10To11_Group, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Commoner_Farmer_Level12To13_Group, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Commoner_Farmer_Level14To15_Group, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Commoner_Farmer_Level16To17_Group, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Commoner_Farmer_Level18To19_Group, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Commoner_Farmer_Level10_Group, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Commoner_Farmer_Level11_Group, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Commoner_Farmer_Level12_Group, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Commoner_Farmer_Level13_Group, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Commoner_Farmer_Level14_Group, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Commoner_Farmer_Level15_Group, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Commoner_Farmer_Level16_Group, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Commoner_Farmer_Level17_Group, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Commoner_Farmer_Level18_Group, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Commoner_Farmer_Level19_Group, EnvironmentConstants.Land)]
         [TestCase(EncounterConstants.Commoner_Farmer_Level20_Group, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Commoner_Farmer_Level2To3_Group, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Commoner_Farmer_Level4To5_Group, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Commoner_Farmer_Level6To7_Group, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Commoner_Farmer_Level8To9_Group, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Commoner_Farmer_Level2_Group, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Commoner_Farmer_Level3_Group, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Commoner_Farmer_Level4_Group, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Commoner_Farmer_Level5_Group, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Commoner_Farmer_Level6_Group, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Commoner_Farmer_Level7_Group, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Commoner_Farmer_Level8_Group, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Commoner_Farmer_Level9_Group, EnvironmentConstants.Land)]
         [TestCase(EncounterConstants.Commoner_Herder_Level1_Group, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Commoner_Herder_Level10To11_Group, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Commoner_Herder_Level12To13_Group, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Commoner_Herder_Level14To15_Group, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Commoner_Herder_Level16To17_Group, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Commoner_Herder_Level18To19_Group, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Commoner_Herder_Level10_Group, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Commoner_Herder_Level11_Group, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Commoner_Herder_Level12_Group, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Commoner_Herder_Level13_Group, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Commoner_Herder_Level14_Group, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Commoner_Herder_Level15_Group, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Commoner_Herder_Level16_Group, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Commoner_Herder_Level17_Group, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Commoner_Herder_Level18_Group, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Commoner_Herder_Level19_Group, EnvironmentConstants.Land)]
         [TestCase(EncounterConstants.Commoner_Herder_Level20_Group, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Commoner_Herder_Level2To3_Group, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Commoner_Herder_Level4To5_Group, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Commoner_Herder_Level6To7_Group, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Commoner_Herder_Level8To9_Group, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Commoner_Herder_Level2_Group, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Commoner_Herder_Level3_Group, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Commoner_Herder_Level4_Group, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Commoner_Herder_Level5_Group, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Commoner_Herder_Level6_Group, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Commoner_Herder_Level7_Group, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Commoner_Herder_Level8_Group, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Commoner_Herder_Level9_Group, EnvironmentConstants.Land)]
         [TestCase(EncounterConstants.Commoner_Pilgrim_Level1_Caravan, EnvironmentConstants.Land)]
         [TestCase(EncounterConstants.Commoner_Pilgrim_Level10_Caravan, EnvironmentConstants.Land)]
         [TestCase(EncounterConstants.Commoner_Pilgrim_Level2_Caravan, EnvironmentConstants.Land)]
