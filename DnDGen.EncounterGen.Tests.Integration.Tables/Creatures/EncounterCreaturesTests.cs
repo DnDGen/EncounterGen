@@ -1234,35 +1234,35 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures
         [TestCase(EncounterConstants.Character_StreetPerformer_Level19_Crew, CreatureDataConstants.Character_StreetPerformer_Level19, AmountConstants.Range1To4)]
         [TestCase(EncounterConstants.Character_StreetPerformer_Level20_Crew, CreatureDataConstants.Character_StreetPerformer_Level20, AmountConstants.Range1To4)]
         [TestCase(EncounterConstants.Character_Teacher_Level11_WithStudents, CreatureDataConstants.Character_Teacher_Level11, AmountConstants.Range1,
-            CreatureDataConstants.Character_StarStudent_Level1, AmountConstants.Range0To2,
+            CreatureDataConstants.Character_StarStudent_Level6, AmountConstants.Range0To2,
             CreatureDataConstants.Character_Student_Level1, AmountConstants.Range2To4)]
         [TestCase(EncounterConstants.Character_Teacher_Level12_WithStudents, CreatureDataConstants.Character_Teacher_Level12, AmountConstants.Range1,
-            CreatureDataConstants.Character_StarStudent_Level2, AmountConstants.Range0To2,
-            CreatureDataConstants.Character_Student_Level2To3, AmountConstants.Range2To4)]
-        [TestCase(EncounterConstants.Character_Teacher_Level13_WithStudents, CreatureDataConstants.Character_Teacher_Level13, AmountConstants.Range1,
-            CreatureDataConstants.Character_StarStudent_Level3, AmountConstants.Range0To2,
-            CreatureDataConstants.Character_Student_Level4To5, AmountConstants.Range2To4)]
-        [TestCase(EncounterConstants.Character_Teacher_Level14_WithStudents, CreatureDataConstants.Character_Teacher_Level14, AmountConstants.Range1,
-            CreatureDataConstants.Character_StarStudent_Level4, AmountConstants.Range0To2,
-            CreatureDataConstants.Character_Student_Level6To7, AmountConstants.Range2To4)]
-        [TestCase(EncounterConstants.Character_Teacher_Level15_WithStudents, CreatureDataConstants.Character_Teacher_Level15, AmountConstants.Range1,
-            CreatureDataConstants.Character_StarStudent_Level5, AmountConstants.Range0To2,
-            CreatureDataConstants.Character_Student_Level8To9, AmountConstants.Range2To4)]
-        [TestCase(EncounterConstants.Character_Teacher_Level16_WithStudents, CreatureDataConstants.Character_Teacher_Level16, AmountConstants.Range1,
-            CreatureDataConstants.Character_StarStudent_Level6, AmountConstants.Range0To2,
-            CreatureDataConstants.Character_Student_Level10To11, AmountConstants.Range2To4)]
-        [TestCase(EncounterConstants.Character_Teacher_Level17_WithStudents, CreatureDataConstants.Character_Teacher_Level17, AmountConstants.Range1,
             CreatureDataConstants.Character_StarStudent_Level7, AmountConstants.Range0To2,
-            CreatureDataConstants.Character_Student_Level12To13, AmountConstants.Range2To4)]
-        [TestCase(EncounterConstants.Character_Teacher_Level18_WithStudents, CreatureDataConstants.Character_Teacher_Level18, AmountConstants.Range1,
+            CreatureDataConstants.Character_Student_Level2, AmountConstants.Range2To4)]
+        [TestCase(EncounterConstants.Character_Teacher_Level13_WithStudents, CreatureDataConstants.Character_Teacher_Level13, AmountConstants.Range1,
             CreatureDataConstants.Character_StarStudent_Level8, AmountConstants.Range0To2,
-            CreatureDataConstants.Character_Student_Level14To15, AmountConstants.Range2To4)]
-        [TestCase(EncounterConstants.Character_Teacher_Level19_WithStudents, CreatureDataConstants.Character_Teacher_Level19, AmountConstants.Range1,
+            CreatureDataConstants.Character_Student_Level3, AmountConstants.Range2To4)]
+        [TestCase(EncounterConstants.Character_Teacher_Level14_WithStudents, CreatureDataConstants.Character_Teacher_Level14, AmountConstants.Range1,
             CreatureDataConstants.Character_StarStudent_Level9, AmountConstants.Range0To2,
-            CreatureDataConstants.Character_Student_Level16To17, AmountConstants.Range2To4)]
-        [TestCase(EncounterConstants.Character_Teacher_Level20_WithStudents, CreatureDataConstants.Character_Teacher_Level20, AmountConstants.Range1,
+            CreatureDataConstants.Character_Student_Level4, AmountConstants.Range2To4)]
+        [TestCase(EncounterConstants.Character_Teacher_Level15_WithStudents, CreatureDataConstants.Character_Teacher_Level15, AmountConstants.Range1,
             CreatureDataConstants.Character_StarStudent_Level10, AmountConstants.Range0To2,
-            CreatureDataConstants.Character_Student_Level18To19, AmountConstants.Range2To4)]
+            CreatureDataConstants.Character_Student_Level5, AmountConstants.Range2To4)]
+        [TestCase(EncounterConstants.Character_Teacher_Level16_WithStudents, CreatureDataConstants.Character_Teacher_Level16, AmountConstants.Range1,
+            CreatureDataConstants.Character_StarStudent_Level11, AmountConstants.Range0To2,
+            CreatureDataConstants.Character_Student_Level6, AmountConstants.Range2To4)]
+        [TestCase(EncounterConstants.Character_Teacher_Level17_WithStudents, CreatureDataConstants.Character_Teacher_Level17, AmountConstants.Range1,
+            CreatureDataConstants.Character_StarStudent_Level12, AmountConstants.Range0To2,
+            CreatureDataConstants.Character_Student_Level7, AmountConstants.Range2To4)]
+        [TestCase(EncounterConstants.Character_Teacher_Level18_WithStudents, CreatureDataConstants.Character_Teacher_Level18, AmountConstants.Range1,
+            CreatureDataConstants.Character_StarStudent_Level13, AmountConstants.Range0To2,
+            CreatureDataConstants.Character_Student_Level8, AmountConstants.Range2To4)]
+        [TestCase(EncounterConstants.Character_Teacher_Level19_WithStudents, CreatureDataConstants.Character_Teacher_Level19, AmountConstants.Range1,
+            CreatureDataConstants.Character_StarStudent_Level14, AmountConstants.Range0To2,
+            CreatureDataConstants.Character_Student_Level9, AmountConstants.Range2To4)]
+        [TestCase(EncounterConstants.Character_Teacher_Level20_WithStudents, CreatureDataConstants.Character_Teacher_Level20, AmountConstants.Range1,
+            CreatureDataConstants.Character_StarStudent_Level15, AmountConstants.Range0To2,
+            CreatureDataConstants.Character_Student_Level10, AmountConstants.Range2To4)]
         [TestCase(EncounterConstants.Character_WarHero_Level11_Solitary, CreatureDataConstants.Character_WarHero_Level11, AmountConstants.Range1)]
         [TestCase(EncounterConstants.Character_WarHero_Level12_Solitary, CreatureDataConstants.Character_WarHero_Level12, AmountConstants.Range1)]
         [TestCase(EncounterConstants.Character_WarHero_Level13_Solitary, CreatureDataConstants.Character_WarHero_Level13, AmountConstants.Range1)]

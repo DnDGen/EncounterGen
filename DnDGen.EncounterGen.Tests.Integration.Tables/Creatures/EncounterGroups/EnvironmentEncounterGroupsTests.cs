@@ -1115,8 +1115,8 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
                 EncounterConstants.Character_Missionary_Level17_MissionTeam,
                 EncounterConstants.Character_Missionary_Level18_MissionTeam,
                 EncounterConstants.Character_Missionary_Level19_MissionTeam,
-                EncounterConstants.Character_Missionary_Level2_MissionTeam,
                 EncounterConstants.Character_Missionary_Level20_MissionTeam,
+                EncounterConstants.Character_Missionary_Level2_MissionTeam,
                 EncounterConstants.Character_Missionary_Level3_MissionTeam,
                 EncounterConstants.Character_Missionary_Level4_MissionTeam,
                 EncounterConstants.Character_Missionary_Level5_MissionTeam,
@@ -1125,16 +1125,25 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
                 EncounterConstants.Character_Missionary_Level8_MissionTeam,
                 EncounterConstants.Character_Missionary_Level9_MissionTeam,
                 EncounterConstants.Character_Minstrel_Level1_Group,
-                EncounterConstants.Character_Minstrel_Level10To11_Group,
-                EncounterConstants.Character_Minstrel_Level12To13_Group,
-                EncounterConstants.Character_Minstrel_Level14To15_Group,
-                EncounterConstants.Character_Minstrel_Level16To17_Group,
-                EncounterConstants.Character_Minstrel_Level18To19_Group,
+                EncounterConstants.Character_Minstrel_Level10_Group,
+                EncounterConstants.Character_Minstrel_Level11_Group,
+                EncounterConstants.Character_Minstrel_Level12_Group,
+                EncounterConstants.Character_Minstrel_Level13_Group,
+                EncounterConstants.Character_Minstrel_Level14_Group,
+                EncounterConstants.Character_Minstrel_Level15_Group,
+                EncounterConstants.Character_Minstrel_Level16_Group,
+                EncounterConstants.Character_Minstrel_Level17_Group,
+                EncounterConstants.Character_Minstrel_Level18_Group,
+                EncounterConstants.Character_Minstrel_Level19_Group,
                 EncounterConstants.Character_Minstrel_Level20_Group,
-                EncounterConstants.Character_Minstrel_Level2To3_Group,
-                EncounterConstants.Character_Minstrel_Level4To5_Group,
-                EncounterConstants.Character_Minstrel_Level6To7_Group,
-                EncounterConstants.Character_Minstrel_Level8To9_Group,
+                EncounterConstants.Character_Minstrel_Level2_Group,
+                EncounterConstants.Character_Minstrel_Level3_Group,
+                EncounterConstants.Character_Minstrel_Level4_Group,
+                EncounterConstants.Character_Minstrel_Level5_Group,
+                EncounterConstants.Character_Minstrel_Level6_Group,
+                EncounterConstants.Character_Minstrel_Level7_Group,
+                EncounterConstants.Character_Minstrel_Level8_Group,
+                EncounterConstants.Character_Minstrel_Level9_Group,
                 EncounterConstants.Character_Merchant_Level1_Caravan,
                 EncounterConstants.Character_Merchant_Level10_Caravan,
                 EncounterConstants.Character_Merchant_Level11_Caravan,
@@ -2945,16 +2954,25 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
                 EncounterConstants.Character_Merchant_Level8_Caravan,
                 EncounterConstants.Character_Merchant_Level9_Caravan,
                 EncounterConstants.Character_Minstrel_Level1_Group,
-                EncounterConstants.Character_Minstrel_Level10To11_Group,
-                EncounterConstants.Character_Minstrel_Level12To13_Group,
-                EncounterConstants.Character_Minstrel_Level14To15_Group,
-                EncounterConstants.Character_Minstrel_Level16To17_Group,
-                EncounterConstants.Character_Minstrel_Level18To19_Group,
+                EncounterConstants.Character_Minstrel_Level10_Group,
+                EncounterConstants.Character_Minstrel_Level11_Group,
+                EncounterConstants.Character_Minstrel_Level12_Group,
+                EncounterConstants.Character_Minstrel_Level13_Group,
+                EncounterConstants.Character_Minstrel_Level14_Group,
+                EncounterConstants.Character_Minstrel_Level15_Group,
+                EncounterConstants.Character_Minstrel_Level16_Group,
+                EncounterConstants.Character_Minstrel_Level17_Group,
+                EncounterConstants.Character_Minstrel_Level18_Group,
+                EncounterConstants.Character_Minstrel_Level19_Group,
                 EncounterConstants.Character_Minstrel_Level20_Group,
-                EncounterConstants.Character_Minstrel_Level2To3_Group,
-                EncounterConstants.Character_Minstrel_Level4To5_Group,
-                EncounterConstants.Character_Minstrel_Level6To7_Group,
-                EncounterConstants.Character_Minstrel_Level8To9_Group,
+                EncounterConstants.Character_Minstrel_Level2_Group,
+                EncounterConstants.Character_Minstrel_Level3_Group,
+                EncounterConstants.Character_Minstrel_Level4_Group,
+                EncounterConstants.Character_Minstrel_Level5_Group,
+                EncounterConstants.Character_Minstrel_Level6_Group,
+                EncounterConstants.Character_Minstrel_Level7_Group,
+                EncounterConstants.Character_Minstrel_Level8_Group,
+                EncounterConstants.Character_Minstrel_Level9_Group,
                 EncounterConstants.Adept_Missionary_Level1_MissionTeam,
                 EncounterConstants.Adept_Missionary_Level10_MissionTeam,
                 EncounterConstants.Adept_Missionary_Level11_MissionTeam,
@@ -5295,16 +5313,25 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
         [TestCase(EncounterConstants.Character_Merchant_Level8_Caravan, EnvironmentConstants.Civilized)]
         [TestCase(EncounterConstants.Character_Merchant_Level9_Caravan, EnvironmentConstants.Civilized)]
         [TestCase(EncounterConstants.Character_Minstrel_Level1_Group, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Minstrel_Level10To11_Group, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Minstrel_Level12To13_Group, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Minstrel_Level14To15_Group, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Minstrel_Level16To17_Group, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Minstrel_Level18To19_Group, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Character_Minstrel_Level10_Group, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Character_Minstrel_Level11_Group, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Character_Minstrel_Level12_Group, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Character_Minstrel_Level13_Group, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Character_Minstrel_Level14_Group, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Character_Minstrel_Level15_Group, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Character_Minstrel_Level16_Group, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Character_Minstrel_Level17_Group, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Character_Minstrel_Level18_Group, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Character_Minstrel_Level19_Group, EnvironmentConstants.Civilized)]
         [TestCase(EncounterConstants.Character_Minstrel_Level20_Group, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Minstrel_Level2To3_Group, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Minstrel_Level4To5_Group, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Minstrel_Level6To7_Group, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Minstrel_Level8To9_Group, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Character_Minstrel_Level2_Group, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Character_Minstrel_Level3_Group, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Character_Minstrel_Level4_Group, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Character_Minstrel_Level5_Group, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Character_Minstrel_Level6_Group, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Character_Minstrel_Level7_Group, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Character_Minstrel_Level8_Group, EnvironmentConstants.Civilized)]
+        [TestCase(EncounterConstants.Character_Minstrel_Level9_Group, EnvironmentConstants.Civilized)]
         [TestCase(EncounterConstants.Character_Missionary_Level1_MissionTeam, EnvironmentConstants.Civilized)]
         [TestCase(EncounterConstants.Character_Missionary_Level2_MissionTeam, EnvironmentConstants.Civilized)]
         [TestCase(EncounterConstants.Character_Missionary_Level3_MissionTeam, EnvironmentConstants.Civilized)]
@@ -6540,16 +6567,25 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
         [TestCase(EncounterConstants.Character_Merchant_Level8_Caravan, EnvironmentConstants.Land)]
         [TestCase(EncounterConstants.Character_Merchant_Level9_Caravan, EnvironmentConstants.Land)]
         [TestCase(EncounterConstants.Character_Minstrel_Level1_Group, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Minstrel_Level10To11_Group, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Minstrel_Level12To13_Group, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Minstrel_Level14To15_Group, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Minstrel_Level16To17_Group, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Minstrel_Level18To19_Group, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Character_Minstrel_Level10_Group, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Character_Minstrel_Level11_Group, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Character_Minstrel_Level12_Group, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Character_Minstrel_Level13_Group, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Character_Minstrel_Level14_Group, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Character_Minstrel_Level15_Group, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Character_Minstrel_Level16_Group, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Character_Minstrel_Level17_Group, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Character_Minstrel_Level18_Group, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Character_Minstrel_Level19_Group, EnvironmentConstants.Land)]
         [TestCase(EncounterConstants.Character_Minstrel_Level20_Group, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Minstrel_Level2To3_Group, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Minstrel_Level4To5_Group, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Minstrel_Level6To7_Group, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Minstrel_Level8To9_Group, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Character_Minstrel_Level2_Group, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Character_Minstrel_Level3_Group, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Character_Minstrel_Level4_Group, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Character_Minstrel_Level5_Group, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Character_Minstrel_Level6_Group, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Character_Minstrel_Level7_Group, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Character_Minstrel_Level8_Group, EnvironmentConstants.Land)]
+        [TestCase(EncounterConstants.Character_Minstrel_Level9_Group, EnvironmentConstants.Land)]
         [TestCase(EncounterConstants.Character_Missionary_Level1_MissionTeam, EnvironmentConstants.Land)]
         [TestCase(EncounterConstants.Character_Missionary_Level2_MissionTeam, EnvironmentConstants.Land)]
         [TestCase(EncounterConstants.Character_Missionary_Level3_MissionTeam, EnvironmentConstants.Land)]

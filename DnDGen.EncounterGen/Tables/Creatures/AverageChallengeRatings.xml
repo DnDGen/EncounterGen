@@ -3326,26 +3326,6 @@
 		<entry>14</entry>
 	</collection>
   <collection>
-    <name>Character(Star Student)[1]</name>
-    <entry>1</entry>
-  </collection>
-  <collection>
-    <name>Character(Star Student)[2]</name>
-    <entry>2</entry>
-  </collection>
-  <collection>
-    <name>Character(Star Student)[3]</name>
-    <entry>3</entry>
-  </collection>
-  <collection>
-    <name>Character(Star Student)[4]</name>
-    <entry>4</entry>
-  </collection>
-  <collection>
-    <name>Character(Star Student)[5]</name>
-    <entry>5</entry>
-  </collection>
-  <collection>
     <name>Character(Star Student)[6]</name>
     <entry>6</entry>
   </collection>
@@ -3365,6 +3345,26 @@
     <name>Character(Star Student)[10]</name>
     <entry>10</entry>
   </collection>
+	<collection>
+		<name>Character(Star Student)[11]</name>
+		<entry>11</entry>
+	</collection>
+	<collection>
+		<name>Character(Star Student)[12]</name>
+		<entry>12</entry>
+	</collection>
+	<collection>
+		<name>Character(Star Student)[13]</name>
+		<entry>13</entry>
+	</collection>
+	<collection>
+		<name>Character(Star Student)[14]</name>
+		<entry>14</entry>
+	</collection>
+	<collection>
+		<name>Character(Star Student)[15]</name>
+		<entry>15</entry>
+	</collection>
   <collection>
     <name>Character(Street performer)[1]@Bard&amp;Rogue&amp;Sorcerer@</name>
     <entry>1</entry>
@@ -3450,39 +3450,39 @@
     <entry>1/2</entry>
   </collection>
   <collection>
-    <name>Character(Student)[1d2+1]@Any NPC@</name>
+    <name>Character(Student)[2]@Any NPC@</name>
     <entry>1</entry>
   </collection>
   <collection>
-    <name>Character(Student)[1d2+3]@Any NPC@</name>
+    <name>Character(Student)[3]@Any NPC@</name>
     <entry>2</entry>
   </collection>
   <collection>
-    <name>Character(Student)[1d2+5]@Any NPC@</name>
+    <name>Character(Student)[4]@Any NPC@</name>
     <entry>3</entry>
   </collection>
   <collection>
-    <name>Character(Student)[1d2+7]@Any NPC@</name>
+    <name>Character(Student)[5]@Any NPC@</name>
     <entry>4</entry>
   </collection>
   <collection>
-    <name>Character(Student)[1d2+9]@Any NPC@</name>
+    <name>Character(Student)[6]@Any NPC@</name>
     <entry>5</entry>
   </collection>
   <collection>
-    <name>Character(Student)[1d2+11]@Any NPC@</name>
+    <name>Character(Student)[7]@Any NPC@</name>
     <entry>6</entry>
   </collection>
   <collection>
-    <name>Character(Student)[1d2+13]@Any NPC@</name>
+    <name>Character(Student)[8]@Any NPC@</name>
     <entry>7</entry>
   </collection>
   <collection>
-    <name>Character(Student)[1d2+15]@Any NPC@</name>
+    <name>Character(Student)[9]@Any NPC@</name>
     <entry>8</entry>
   </collection>
   <collection>
-    <name>Character(Student)[1d2+17]@Any NPC@</name>
+    <name>Character(Student)[10]@Any NPC@</name>
     <entry>9</entry>
   </collection>
   <collection>
@@ -4415,19 +4415,19 @@
   </collection>
   <collection>
     <name>Character(Sergeant)[3]{Deep Dwarf}@Warrior@</name>
-    <entry>1</entry>
+    <entry>2</entry>
   </collection>
   <collection>
     <name>Character(Leader)[1d4+2]{Deep Dwarf}@Warrior@</name>
-    <entry>2</entry>
-  </collection>
-  <collection>
-    <name>Character(Captain)[7]{Deep Dwarf}@Warrior@</name>
     <entry>3</entry>
   </collection>
   <collection>
+    <name>Character(Captain)[7]{Deep Dwarf}@Warrior@</name>
+    <entry>6</entry>
+  </collection>
+  <collection>
     <name>Character(Lieutenant)[5]{Deep Dwarf}@Warrior@</name>
-    <entry>2</entry>
+    <entry>4</entry>
   </collection>
   <collection>
     <name>Character[1]{Hill Dwarf}@Warrior@</name>
@@ -4439,19 +4439,19 @@
   </collection>
   <collection>
     <name>Character(Sergeant)[3]{Hill Dwarf}@Warrior@</name>
-    <entry>1</entry>
+    <entry>2</entry>
   </collection>
   <collection>
     <name>Character(Leader)[1d4+2]{Hill Dwarf}@Warrior@</name>
-    <entry>2</entry>
-  </collection>
-  <collection>
-    <name>Character(Captain)[7]{Hill Dwarf}@Warrior@</name>
     <entry>3</entry>
   </collection>
   <collection>
+    <name>Character(Captain)[7]{Hill Dwarf}@Warrior@</name>
+    <entry>6</entry>
+  </collection>
+  <collection>
     <name>Character(Lieutenant)[5]{Hill Dwarf}@Warrior@</name>
-    <entry>2</entry>
+    <entry>4</entry>
   </collection>
   <collection>
     <name>Character[1]{Mountain Dwarf}@Warrior@</name>
@@ -4463,19 +4463,19 @@
   </collection>
   <collection>
     <name>Character(Sergeant)[3]{Mountain Dwarf}@Warrior@</name>
-    <entry>1</entry>
+    <entry>2</entry>
   </collection>
   <collection>
     <name>Character(Leader)[1d4+2]{Mountain Dwarf}@Warrior@</name>
-    <entry>2</entry>
-  </collection>
-  <collection>
-    <name>Character(Captain)[7]{Mountain Dwarf}@Warrior@</name>
     <entry>3</entry>
   </collection>
   <collection>
+    <name>Character(Captain)[7]{Mountain Dwarf}@Warrior@</name>
+    <entry>6</entry>
+  </collection>
+  <collection>
     <name>Character(Lieutenant)[5]{Mountain Dwarf}@Warrior@</name>
-    <entry>2</entry>
+    <entry>4</entry>
   </collection>
   <collection>
     <name>Eagle</name>
