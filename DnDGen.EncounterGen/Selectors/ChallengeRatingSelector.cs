@@ -16,13 +16,15 @@ namespace DnDGen.EncounterGen.Selectors
         {
             this.collectionSelector = collectionSelector;
 
-            fractionalChallengeRatings = new Dictionary<string, double>();
-            fractionalChallengeRatings[ChallengeRatingConstants.OneEighth] = 1 / 8d;
-            fractionalChallengeRatings[ChallengeRatingConstants.OneFourth] = 1 / 4d;
-            fractionalChallengeRatings[ChallengeRatingConstants.OneHalf] = 1 / 2d;
-            fractionalChallengeRatings[ChallengeRatingConstants.OneSixth] = 1 / 6d;
-            fractionalChallengeRatings[ChallengeRatingConstants.OneTenth] = 1 / 10d;
-            fractionalChallengeRatings[ChallengeRatingConstants.OneThird] = 1 / 3d;
+            fractionalChallengeRatings = new Dictionary<string, double>
+            {
+                [ChallengeRatingConstants.OneEighth] = 1 / 8d,
+                [ChallengeRatingConstants.OneFourth] = 1 / 4d,
+                [ChallengeRatingConstants.OneHalf] = 1 / 2d,
+                [ChallengeRatingConstants.OneSixth] = 1 / 6d,
+                [ChallengeRatingConstants.OneTenth] = 1 / 10d,
+                [ChallengeRatingConstants.OneThird] = 1 / 3d
+            };
         }
 
         public string Select(double numericChallengeRating)

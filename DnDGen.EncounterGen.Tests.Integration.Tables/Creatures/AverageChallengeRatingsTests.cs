@@ -1084,7 +1084,6 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures
         [TestCase(CreatureDataConstants.Fighter_Captain_Level18, ChallengeRatingConstants.Eighteen)]
         [TestCase(CreatureDataConstants.Fighter_Captain_Level19, ChallengeRatingConstants.Nineteen)]
         [TestCase(CreatureDataConstants.Fighter_Captain_Level20, ChallengeRatingConstants.Twenty)]
-        [TestCase(CreatureDataConstants.Fighter_Leader_Level1, ChallengeRatingConstants.One)]
         [TestCase(CreatureDataConstants.Fighter_Leader_Level2, ChallengeRatingConstants.Two)]
         [TestCase(CreatureDataConstants.Fighter_Leader_Level3, ChallengeRatingConstants.Three)]
         [TestCase(CreatureDataConstants.Fighter_Leader_Level4, ChallengeRatingConstants.Four)]
@@ -1095,6 +1094,15 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures
         [TestCase(CreatureDataConstants.Fighter_Leader_Level9, ChallengeRatingConstants.Nine)]
         [TestCase(CreatureDataConstants.Fighter_Leader_Level10, ChallengeRatingConstants.Ten)]
         [TestCase(CreatureDataConstants.Fighter_Leader_Level11, ChallengeRatingConstants.Eleven)]
+        [TestCase(CreatureDataConstants.Fighter_Leader_Level12, ChallengeRatingConstants.Twelve)]
+        [TestCase(CreatureDataConstants.Fighter_Leader_Level13, ChallengeRatingConstants.Thirteen)]
+        [TestCase(CreatureDataConstants.Fighter_Leader_Level14, ChallengeRatingConstants.Fourteen)]
+        [TestCase(CreatureDataConstants.Fighter_Leader_Level15, ChallengeRatingConstants.Fifteen)]
+        [TestCase(CreatureDataConstants.Fighter_Leader_Level16, ChallengeRatingConstants.Sixteen)]
+        [TestCase(CreatureDataConstants.Fighter_Leader_Level17, ChallengeRatingConstants.Seventeen)]
+        [TestCase(CreatureDataConstants.Fighter_Leader_Level18, ChallengeRatingConstants.Eighteen)]
+        [TestCase(CreatureDataConstants.Fighter_Leader_Level19, ChallengeRatingConstants.Nineteen)]
+        [TestCase(CreatureDataConstants.Fighter_Leader_Level20, ChallengeRatingConstants.Twenty)]
         [TestCase(CreatureDataConstants.FireBeetle_Giant, ChallengeRatingConstants.OneThird)]
         [TestCase(CreatureDataConstants.FireBeetle_Giant_Celestial, ChallengeRatingConstants.OneThird)]
         [TestCase(CreatureDataConstants.FormianMyrmarch, ChallengeRatingConstants.Ten)]
@@ -1841,7 +1849,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures
             var creaturesOfCR = table.Keys
                 .Intersect(creatures)
                 .Where(c => table[c].Single() == cr);
-            Assert.That(table[cr], Is.EquivalentTo(creaturesOfCR));
+            Assert.That(table[cr], Is.Unique.And.EquivalentTo(creaturesOfCR));
         }
 
         private bool IsCharacter(string creature)

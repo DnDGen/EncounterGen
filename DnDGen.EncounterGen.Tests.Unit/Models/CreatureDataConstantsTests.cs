@@ -1526,7 +1526,6 @@ namespace DnDGen.EncounterGen.Tests.Unit.Models
         [TestCase(CreatureDataConstants.Fighter_Captain_Level19, CreatureDataConstants.Character, "Captain", "", AmountConstants.Range19, "", "", CharacterClassConstants.Fighter)]
         [TestCase(CreatureDataConstants.Fighter_Captain_Level20, CreatureDataConstants.Character, "Captain", "", AmountConstants.Range20, "", "", CharacterClassConstants.Fighter)]
         [TestCase(CreatureDataConstants.Fighter_Leader, CreatureDataConstants.Character, "Leader", "", "", "", "", CharacterClassConstants.Fighter)]
-        [TestCase(CreatureDataConstants.Fighter_Leader_Level1, CreatureDataConstants.Character, "Leader", "", AmountConstants.Range1, "", "", CharacterClassConstants.Fighter)]
         [TestCase(CreatureDataConstants.Fighter_Leader_Level2, CreatureDataConstants.Character, "Leader", "", AmountConstants.Range2, "", "", CharacterClassConstants.Fighter)]
         [TestCase(CreatureDataConstants.Fighter_Leader_Level3, CreatureDataConstants.Character, "Leader", "", AmountConstants.Range3, "", "", CharacterClassConstants.Fighter)]
         [TestCase(CreatureDataConstants.Fighter_Leader_Level4, CreatureDataConstants.Character, "Leader", "", AmountConstants.Range4, "", "", CharacterClassConstants.Fighter)]

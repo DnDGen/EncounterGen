@@ -1128,7 +1128,6 @@
         public const string Expert_Artisan_Level20 = "Character(Artisan)[20]@Expert@";
         public const string FiendishCreature = "Fiendish creature";
         public const string Fighter_Leader = "Character(Leader)@Fighter@";
-        public const string Fighter_Leader_Level1 = "Character(Leader)[1]@Fighter@";
         public const string Fighter_Leader_Level2 = "Character(Leader)[2]@Fighter@";
         public const string Fighter_Leader_Level3 = "Character(Leader)[3]@Fighter@";
         public const string Fighter_Leader_Level4 = "Character(Leader)[4]@Fighter@";
