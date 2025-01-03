@@ -119,8 +119,6 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
             CreatureDataConstants.Badger_Dire)]
         [TestCase(CreatureDataConstants.Bard_Leader,
             CreatureDataConstants.Bard_Leader_Level1,
-            CreatureDataConstants.Bard_Leader_Level10,
-            CreatureDataConstants.Bard_Leader_Level11,
             CreatureDataConstants.Bard_Leader_Level2,
             CreatureDataConstants.Bard_Leader_Level3,
             CreatureDataConstants.Bard_Leader_Level4,
@@ -128,7 +126,18 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
             CreatureDataConstants.Bard_Leader_Level6,
             CreatureDataConstants.Bard_Leader_Level7,
             CreatureDataConstants.Bard_Leader_Level8,
-            CreatureDataConstants.Bard_Leader_Level9)]
+            CreatureDataConstants.Bard_Leader_Level9,
+            CreatureDataConstants.Bard_Leader_Level10,
+            CreatureDataConstants.Bard_Leader_Level11,
+            CreatureDataConstants.Bard_Leader_Level12,
+            CreatureDataConstants.Bard_Leader_Level13,
+            CreatureDataConstants.Bard_Leader_Level14,
+            CreatureDataConstants.Bard_Leader_Level15,
+            CreatureDataConstants.Bard_Leader_Level16,
+            CreatureDataConstants.Bard_Leader_Level17,
+            CreatureDataConstants.Bard_Leader_Level18,
+            CreatureDataConstants.Bard_Leader_Level19,
+            CreatureDataConstants.Bard_Leader_Level20)]
         [TestCase(CreatureDataConstants.Barghest,
             CreatureDataConstants.Barghest,
             CreatureDataConstants.Barghest_Greater)]

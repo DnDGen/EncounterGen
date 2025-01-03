@@ -2227,50 +2227,95 @@
     <entry>Character(Architect)[1]@Expert@/1</entry>
   </collection>
   <collection>
-    <name>Construction Workers [Level 2-3] (Crew)</name>
-    <entry>Character(Construction Worker)[1d2+1]@Commoner@/2d4</entry>
-    <entry>Character(Architect)[1d2+1]@Expert@/1</entry>
+    <name>Construction Workers [Level 3] (Crew)</name>
+    <entry>Character(Construction Worker)[3]@Commoner@/2d4</entry>
+    <entry>Character(Architect)[3]@Expert@/1</entry>
   </collection>
   <collection>
-    <name>Construction Workers [Level 4-5] (Crew)</name>
-    <entry>Character(Construction Worker)[1d2+3]@Commoner@/2d4</entry>
-    <entry>Character(Architect)[1d2+3]@Expert@/1</entry>
+    <name>Construction Workers [Level 5] (Crew)</name>
+    <entry>Character(Construction Worker)[5]@Commoner@/2d4</entry>
+    <entry>Character(Architect)[5]@Expert@/1</entry>
   </collection>
   <collection>
-    <name>Construction Workers [Level 6-7] (Crew)</name>
-    <entry>Character(Construction Worker)[1d2+5]@Commoner@/2d4</entry>
-    <entry>Character(Architect)[1d2+5]@Expert@/1</entry>
+    <name>Construction Workers [Level 7] (Crew)</name>
+    <entry>Character(Construction Worker)[7]@Commoner@/2d4</entry>
+    <entry>Character(Architect)[7]@Expert@/1</entry>
   </collection>
   <collection>
-    <name>Construction Workers [Level 8-9] (Crew)</name>
-    <entry>Character(Construction Worker)[1d2+7]@Commoner@/2d4</entry>
-    <entry>Character(Architect)[1d2+7]@Expert@/1</entry>
+    <name>Construction Workers [Level 9] (Crew)</name>
+    <entry>Character(Construction Worker)[9]@Commoner@/2d4</entry>
+    <entry>Character(Architect)[9]@Expert@/1</entry>
   </collection>
   <collection>
-    <name>Construction Workers [Level 10-11] (Crew)</name>
-    <entry>Character(Construction Worker)[1d2+9]@Commoner@/2d4</entry>
-    <entry>Character(Architect)[1d2+9]@Expert@/1</entry>
+    <name>Construction Workers [Level 11] (Crew)</name>
+    <entry>Character(Construction Worker)[11]@Commoner@/2d4</entry>
+    <entry>Character(Architect)[11]@Expert@/1</entry>
   </collection>
   <collection>
-    <name>Construction Workers [Level 12-13] (Crew)</name>
-    <entry>Character(Construction Worker)[1d2+11]@Commoner@/2d4</entry>
-    <entry>Character(Architect)[1d2+11]@Expert@/1</entry>
+    <name>Construction Workers [Level 13] (Crew)</name>
+    <entry>Character(Construction Worker)[13]@Commoner@/2d4</entry>
+    <entry>Character(Architect)[13]@Expert@/1</entry>
   </collection>
   <collection>
-    <name>Construction Workers [Level 14-15] (Crew)</name>
-    <entry>Character(Construction Worker)[1d2+13]@Commoner@/2d4</entry>
-    <entry>Character(Architect)[1d2+13]@Expert@/1</entry>
+    <name>Construction Workers [Level 15] (Crew)</name>
+    <entry>Character(Construction Worker)[15]@Commoner@/2d4</entry>
+    <entry>Character(Architect)[15]@Expert@/1</entry>
   </collection>
   <collection>
-    <name>Construction Workers [Level 16-17] (Crew)</name>
-    <entry>Character(Construction Worker)[1d2+15]@Commoner@/2d4</entry>
-    <entry>Character(Architect)[1d2+15]@Expert@/1</entry>
+    <name>Construction Workers [Level 17] (Crew)</name>
+    <entry>Character(Construction Worker)[17]@Commoner@/2d4</entry>
+    <entry>Character(Architect)[17]@Expert@/1</entry>
   </collection>
   <collection>
-    <name>Construction Workers [Level 18-19] (Crew)</name>
-    <entry>Character(Construction Worker)[1d2+17]@Commoner@/2d4</entry>
-    <entry>Character(Architect)[1d2+17]@Expert@/1</entry>
+    <name>Construction Workers [Level 19] (Crew)</name>
+    <entry>Character(Construction Worker)[19]@Commoner@/2d4</entry>
+    <entry>Character(Architect)[19]@Expert@/1</entry>
   </collection>
+	<collection>
+		<name>Construction Workers [Level 2] (Crew)</name>
+		<entry>Character(Construction Worker)[2]@Commoner@/2d4</entry>
+		<entry>Character(Architect)[2]@Expert@/1</entry>
+	</collection>
+	<collection>
+		<name>Construction Workers [Level 4] (Crew)</name>
+		<entry>Character(Construction Worker)[4]@Commoner@/2d4</entry>
+		<entry>Character(Architect)[4]@Expert@/1</entry>
+	</collection>
+	<collection>
+		<name>Construction Workers [Level 6] (Crew)</name>
+		<entry>Character(Construction Worker)[6]@Commoner@/2d4</entry>
+		<entry>Character(Architect)[6]@Expert@/1</entry>
+	</collection>
+	<collection>
+		<name>Construction Workers [Level 8] (Crew)</name>
+		<entry>Character(Construction Worker)[8]@Commoner@/2d4</entry>
+		<entry>Character(Architect)[8]@Expert@/1</entry>
+	</collection>
+	<collection>
+		<name>Construction Workers [Level 10] (Crew)</name>
+		<entry>Character(Construction Worker)[10]@Commoner@/2d4</entry>
+		<entry>Character(Architect)[10]@Expert@/1</entry>
+	</collection>
+	<collection>
+		<name>Construction Workers [Level 12] (Crew)</name>
+		<entry>Character(Construction Worker)[12]@Commoner@/2d4</entry>
+		<entry>Character(Architect)[12]@Expert@/1</entry>
+	</collection>
+	<collection>
+		<name>Construction Workers [Level 14] (Crew)</name>
+		<entry>Character(Construction Worker)[14]@Commoner@/2d4</entry>
+		<entry>Character(Architect)[14]@Expert@/1</entry>
+	</collection>
+	<collection>
+		<name>Construction Workers [Level 16] (Crew)</name>
+		<entry>Character(Construction Worker)[16]@Commoner@/2d4</entry>
+		<entry>Character(Architect)[16]@Expert@/1</entry>
+	</collection>
+	<collection>
+		<name>Construction Workers [Level 18] (Crew)</name>
+		<entry>Character(Construction Worker)[18]@Commoner@/2d4</entry>
+		<entry>Character(Architect)[18]@Expert@/1</entry>
+	</collection>
   <collection>
     <name>Construction Workers [Level 20] (Crew)</name>
     <entry>Character(Construction Worker)[20]@Commoner@/2d4</entry>
@@ -2281,40 +2326,76 @@
     <entry>Character(Artisan)[1]@Expert@/1</entry>
   </collection>
 	<collection>
-		<name>Artisan [Level 2-3] (Solitary)</name>
-		<entry>Character(Artisan)[1d2+1]@Expert@/1</entry>
+		<name>Artisan [Level 3] (Solitary)</name>
+		<entry>Character(Artisan)[3]@Expert@/1</entry>
 	</collection>
 	<collection>
-		<name>Artisan [Level 4-5] (Solitary)</name>
-		<entry>Character(Artisan)[1d2+3]@Expert@/1</entry>
+		<name>Artisan [Level 5] (Solitary)</name>
+		<entry>Character(Artisan)[5]@Expert@/1</entry>
 	</collection>
 	<collection>
-		<name>Artisan [Level 6-7] (Solitary)</name>
-		<entry>Character(Artisan)[1d2+5]@Expert@/1</entry>
+		<name>Artisan [Level 7] (Solitary)</name>
+		<entry>Character(Artisan)[7]@Expert@/1</entry>
 	</collection>
 	<collection>
-		<name>Artisan [Level 8-9] (Solitary)</name>
-		<entry>Character(Artisan)[1d2+7]@Expert@/1</entry>
+		<name>Artisan [Level 9] (Solitary)</name>
+		<entry>Character(Artisan)[9]@Expert@/1</entry>
 	</collection>
 	<collection>
-		<name>Artisan [Level 10-11] (Solitary)</name>
-		<entry>Character(Artisan)[1d2+9]@Expert@/1</entry>
+		<name>Artisan [Level 11] (Solitary)</name>
+		<entry>Character(Artisan)[11]@Expert@/1</entry>
 	</collection>
 	<collection>
-		<name>Artisan [Level 12-13] (Solitary)</name>
-		<entry>Character(Artisan)[1d2+11]@Expert@/1</entry>
+		<name>Artisan [Level 13] (Solitary)</name>
+		<entry>Character(Artisan)[13]@Expert@/1</entry>
 	</collection>
 	<collection>
-		<name>Artisan [Level 14-15] (Solitary)</name>
-		<entry>Character(Artisan)[1d2+13]@Expert@/1</entry>
+		<name>Artisan [Level 15] (Solitary)</name>
+		<entry>Character(Artisan)[15]@Expert@/1</entry>
 	</collection>
 	<collection>
-		<name>Artisan [Level 16-17] (Solitary)</name>
-		<entry>Character(Artisan)[1d2+15]@Expert@/1</entry>
+		<name>Artisan [Level 17] (Solitary)</name>
+		<entry>Character(Artisan)[17]@Expert@/1</entry>
 	</collection>
 	<collection>
-		<name>Artisan [Level 18-19] (Solitary)</name>
-		<entry>Character(Artisan)[1d2+17]@Expert@/1</entry>
+		<name>Artisan [Level 19] (Solitary)</name>
+		<entry>Character(Artisan)[19]@Expert@/1</entry>
+	</collection>
+	<collection>
+		<name>Artisan [Level 2] (Solitary)</name>
+		<entry>Character(Artisan)[2]@Expert@/1</entry>
+	</collection>
+	<collection>
+		<name>Artisan [Level 4] (Solitary)</name>
+		<entry>Character(Artisan)[4]@Expert@/1</entry>
+	</collection>
+	<collection>
+		<name>Artisan [Level 6] (Solitary)</name>
+		<entry>Character(Artisan)[6]@Expert@/1</entry>
+	</collection>
+	<collection>
+		<name>Artisan [Level 8] (Solitary)</name>
+		<entry>Character(Artisan)[8]@Expert@/1</entry>
+	</collection>
+	<collection>
+		<name>Artisan [Level 10] (Solitary)</name>
+		<entry>Character(Artisan)[10]@Expert@/1</entry>
+	</collection>
+	<collection>
+		<name>Artisan [Level 12] (Solitary)</name>
+		<entry>Character(Artisan)[12]@Expert@/1</entry>
+	</collection>
+	<collection>
+		<name>Artisan [Level 14] (Solitary)</name>
+		<entry>Character(Artisan)[14]@Expert@/1</entry>
+	</collection>
+	<collection>
+		<name>Artisan [Level 16] (Solitary)</name>
+		<entry>Character(Artisan)[16]@Expert@/1</entry>
+	</collection>
+	<collection>
+		<name>Artisan [Level 18] (Solitary)</name>
+		<entry>Character(Artisan)[18]@Expert@/1</entry>
 	</collection>
 	<collection>
 		<name>Artisan [Level 20] (Solitary)</name>
@@ -2323,148 +2404,274 @@
 	<collection>
 		<name>Bandits [Level 1] (Gang with Fighter)</name>
 		<entry>Character(Bandit)[1]@Warrior@/1d10+4</entry>
-		<entry>Character(Leader)[1]@Fighter@/1</entry>
+		<entry>Character(Leader)[2]@Fighter@/1</entry>
 	</collection>
   <collection>
     <name>Bandits [Level 1] (Gang)</name>
 	  <entry>Character(Bandit)[1]@Warrior@/1d10+4</entry>
-	  <entry>Character(Leader)[1d2+1]@Warrior@/1</entry>
+	  <entry>Character(Leader)[2]@Warrior@/1</entry>
   </collection>
 	<collection>
-		<name>Bandits [Level 2-3] (Gang with Fighter)</name>
-		<entry>Character(Bandit)[1d2+1]@Warrior@/1d10+4</entry>
-		<entry>Character(Leader)[2]@Fighter@/1</entry>
-	</collection>
-	<collection>
-		<name>Bandits [Level 2-3] (Gang)</name>
-		<entry>Character(Bandit)[1d2+1]@Warrior@/1d10+4</entry>
-		<entry>Character(Leader)[1d2+3]@Warrior@/1</entry>
-	</collection>
-	<collection>
-		<name>Bandits [Level 4-5] (Gang with Fighter)</name>
-		<entry>Character(Bandit)[1d2+3]@Warrior@/1d10+4</entry>
-		<entry>Character(Leader)[3]@Fighter@/1</entry>
-	</collection>
-	<collection>
-		<name>Bandits [Level 4-5] (Gang)</name>
-		<entry>Character(Bandit)[1d2+3]@Warrior@/1d10+4</entry>
-		<entry>Character(Leader)[1d2+5]@Warrior@/1</entry>
-	</collection>
-	<collection>
-		<name>Bandits [Level 6-7] (Gang with Fighter)</name>
-		<entry>Character(Bandit)[1d2+5]@Warrior@/1d10+4</entry>
+		<name>Bandits [Level 3] (Gang with Fighter)</name>
+		<entry>Character(Bandit)[3]@Warrior@/1d10+4</entry>
 		<entry>Character(Leader)[4]@Fighter@/1</entry>
 	</collection>
 	<collection>
-		<name>Bandits [Level 6-7] (Gang)</name>
-		<entry>Character(Bandit)[1d2+5]@Warrior@/1d10+4</entry>
-		<entry>Character(Leader)[1d2+7]@Warrior@/1</entry>
+		<name>Bandits [Level 3] (Gang)</name>
+		<entry>Character(Bandit)[3]@Warrior@/1d10+4</entry>
+		<entry>Character(Leader)[4]@Warrior@/1</entry>
 	</collection>
 	<collection>
-		<name>Bandits [Level 8-9] (Gang with Fighter)</name>
-		<entry>Character(Bandit)[1d2+7]@Warrior@/1d10+4</entry>
-		<entry>Character(Leader)[5]@Fighter@/1</entry>
-	</collection>
-	<collection>
-		<name>Bandits [Level 8-9] (Gang)</name>
-		<entry>Character(Bandit)[1d2+7]@Warrior@/1d10+4</entry>
-		<entry>Character(Leader)[1d2+9]@Warrior@/1</entry>
-	</collection>
-	<collection>
-		<name>Bandits [Level 10-11] (Gang with Fighter)</name>
-		<entry>Character(Bandit)[1d2+9]@Warrior@/1d10+4</entry>
+		<name>Bandits [Level 5] (Gang with Fighter)</name>
+		<entry>Character(Bandit)[5]@Warrior@/1d10+4</entry>
 		<entry>Character(Leader)[6]@Fighter@/1</entry>
 	</collection>
 	<collection>
-		<name>Bandits [Level 10-11] (Gang)</name>
-		<entry>Character(Bandit)[1d2+9]@Warrior@/1d10+4</entry>
-		<entry>Character(Leader)[1d2+11]@Warrior@/1</entry>
+		<name>Bandits [Level 5] (Gang)</name>
+		<entry>Character(Bandit)[5]@Warrior@/1d10+4</entry>
+		<entry>Character(Leader)[6]@Warrior@/1</entry>
 	</collection>
 	<collection>
-		<name>Bandits [Level 12-13] (Gang with Fighter)</name>
-		<entry>Character(Bandit)[1d2+11]@Warrior@/1d10+4</entry>
-		<entry>Character(Leader)[7]@Fighter@/1</entry>
-	</collection>
-	<collection>
-		<name>Bandits [Level 12-13] (Gang)</name>
-		<entry>Character(Bandit)[1d2+11]@Warrior@/1d10+4</entry>
-		<entry>Character(Leader)[1d2+13]@Warrior@/1</entry>
-	</collection>
-	<collection>
-		<name>Bandits [Level 14-15] (Gang with Fighter)</name>
-		<entry>Character(Bandit)[1d2+13]@Warrior@/1d10+4</entry>
+		<name>Bandits [Level 7] (Gang with Fighter)</name>
+		<entry>Character(Bandit)[7]@Warrior@/1d10+4</entry>
 		<entry>Character(Leader)[8]@Fighter@/1</entry>
 	</collection>
 	<collection>
-		<name>Bandits [Level 14-15] (Gang)</name>
-		<entry>Character(Bandit)[1d2+13]@Warrior@/1d10+4</entry>
-		<entry>Character(Leader)[1d2+15]@Warrior@/1</entry>
+		<name>Bandits [Level 7] (Gang)</name>
+		<entry>Character(Bandit)[7]@Warrior@/1d10+4</entry>
+		<entry>Character(Leader)[8]@Warrior@/1</entry>
 	</collection>
 	<collection>
-		<name>Bandits [Level 16-17] (Gang with Fighter)</name>
-		<entry>Character(Bandit)[1d2+15]@Warrior@/1d10+4</entry>
-		<entry>Character(Leader)[9]@Fighter@/1</entry>
-	</collection>
-	<collection>
-		<name>Bandits [Level 16-17] (Gang)</name>
-		<entry>Character(Bandit)[1d2+15]@Warrior@/1d10+4</entry>
-		<entry>Character(Leader)[1d2+17]@Warrior@/1</entry>
-	</collection>
-	<collection>
-		<name>Bandits [Level 18-19] (Gang with Fighter)</name>
-		<entry>Character(Bandit)[1d2+17]@Warrior@/1d10+4</entry>
+		<name>Bandits [Level 9] (Gang with Fighter)</name>
+		<entry>Character(Bandit)[9]@Warrior@/1d10+4</entry>
 		<entry>Character(Leader)[10]@Fighter@/1</entry>
 	</collection>
 	<collection>
-		<name>Bandits [Level 18-19] (Gang)</name>
-		<entry>Character(Bandit)[1d2+17]@Warrior@/1d10+4</entry>
+		<name>Bandits [Level 9] (Gang)</name>
+		<entry>Character(Bandit)[9]@Warrior@/1d10+4</entry>
+		<entry>Character(Leader)[10]@Warrior@/1</entry>
+	</collection>
+	<collection>
+		<name>Bandits [Level 11] (Gang with Fighter)</name>
+		<entry>Character(Bandit)[11]@Warrior@/1d10+4</entry>
+		<entry>Character(Leader)[12]@Fighter@/1</entry>
+	</collection>
+	<collection>
+		<name>Bandits [Level 11] (Gang)</name>
+		<entry>Character(Bandit)[11]@Warrior@/1d10+4</entry>
+		<entry>Character(Leader)[12]@Warrior@/1</entry>
+	</collection>
+	<collection>
+		<name>Bandits [Level 13] (Gang with Fighter)</name>
+		<entry>Character(Bandit)[13]@Warrior@/1d10+4</entry>
+		<entry>Character(Leader)[14]@Fighter@/1</entry>
+	</collection>
+	<collection>
+		<name>Bandits [Level 13] (Gang)</name>
+		<entry>Character(Bandit)[13]@Warrior@/1d10+4</entry>
+		<entry>Character(Leader)[14]@Warrior@/1</entry>
+	</collection>
+	<collection>
+		<name>Bandits [Level 15] (Gang with Fighter)</name>
+		<entry>Character(Bandit)[15]@Warrior@/1d10+4</entry>
+		<entry>Character(Leader)[16]@Fighter@/1</entry>
+	</collection>
+	<collection>
+		<name>Bandits [Level 15] (Gang)</name>
+		<entry>Character(Bandit)[15]@Warrior@/1d10+4</entry>
+		<entry>Character(Leader)[16]@Warrior@/1</entry>
+	</collection>
+	<collection>
+		<name>Bandits [Level 17] (Gang with Fighter)</name>
+		<entry>Character(Bandit)[17]@Warrior@/1d10+4</entry>
+		<entry>Character(Leader)[18]@Fighter@/1</entry>
+	</collection>
+	<collection>
+		<name>Bandits [Level 17] (Gang)</name>
+		<entry>Character(Bandit)[17]@Warrior@/1d10+4</entry>
+		<entry>Character(Leader)[18]@Warrior@/1</entry>
+	</collection>
+	<collection>
+		<name>Bandits [Level 19] (Gang with Fighter)</name>
+		<entry>Character(Bandit)[19]@Warrior@/1d10+4</entry>
+		<entry>Character(Leader)[20]@Fighter@/1</entry>
+	</collection>
+	<collection>
+		<name>Bandits [Level 19] (Gang)</name>
+		<entry>Character(Bandit)[19]@Warrior@/1d10+4</entry>
 		<entry>Character(Leader)[20]@Warrior@/1</entry>
+	</collection>
+	<collection>
+		<name>Bandits [Level 2] (Gang with Fighter)</name>
+		<entry>Character(Bandit)[2]@Warrior@/1d10+4</entry>
+		<entry>Character(Leader)[3]@Fighter@/1</entry>
+	</collection>
+	<collection>
+		<name>Bandits [Level 2] (Gang)</name>
+		<entry>Character(Bandit)[2]@Warrior@/1d10+4</entry>
+		<entry>Character(Leader)[3]@Warrior@/1</entry>
+	</collection>
+	<collection>
+		<name>Bandits [Level 4] (Gang with Fighter)</name>
+		<entry>Character(Bandit)[4]@Warrior@/1d10+4</entry>
+		<entry>Character(Leader)[5]@Fighter@/1</entry>
+	</collection>
+	<collection>
+		<name>Bandits [Level 4] (Gang)</name>
+		<entry>Character(Bandit)[4]@Warrior@/1d10+4</entry>
+		<entry>Character(Leader)[5]@Warrior@/1</entry>
+	</collection>
+	<collection>
+		<name>Bandits [Level 6] (Gang with Fighter)</name>
+		<entry>Character(Bandit)[6]@Warrior@/1d10+4</entry>
+		<entry>Character(Leader)[7]@Fighter@/1</entry>
+	</collection>
+	<collection>
+		<name>Bandits [Level 6] (Gang)</name>
+		<entry>Character(Bandit)[6]@Warrior@/1d10+4</entry>
+		<entry>Character(Leader)[7]@Warrior@/1</entry>
+	</collection>
+	<collection>
+		<name>Bandits [Level 8] (Gang with Fighter)</name>
+		<entry>Character(Bandit)[8]@Warrior@/1d10+4</entry>
+		<entry>Character(Leader)[9]@Fighter@/1</entry>
+	</collection>
+	<collection>
+		<name>Bandits [Level 8] (Gang)</name>
+		<entry>Character(Bandit)[8]@Warrior@/1d10+4</entry>
+		<entry>Character(Leader)[9]@Warrior@/1</entry>
+	</collection>
+	<collection>
+		<name>Bandits [Level 10] (Gang with Fighter)</name>
+		<entry>Character(Bandit)[10]@Warrior@/1d10+4</entry>
+		<entry>Character(Leader)[11]@Fighter@/1</entry>
+	</collection>
+	<collection>
+		<name>Bandits [Level 10] (Gang)</name>
+		<entry>Character(Bandit)[10]@Warrior@/1d10+4</entry>
+		<entry>Character(Leader)[11]@Warrior@/1</entry>
+	</collection>
+	<collection>
+		<name>Bandits [Level 12] (Gang with Fighter)</name>
+		<entry>Character(Bandit)[12]@Warrior@/1d10+4</entry>
+		<entry>Character(Leader)[13]@Fighter@/1</entry>
+	</collection>
+	<collection>
+		<name>Bandits [Level 12] (Gang)</name>
+		<entry>Character(Bandit)[12]@Warrior@/1d10+4</entry>
+		<entry>Character(Leader)[13]@Warrior@/1</entry>
+	</collection>
+	<collection>
+		<name>Bandits [Level 14] (Gang with Fighter)</name>
+		<entry>Character(Bandit)[14]@Warrior@/1d10+4</entry>
+		<entry>Character(Leader)[15]@Fighter@/1</entry>
+	</collection>
+	<collection>
+		<name>Bandits [Level 14] (Gang)</name>
+		<entry>Character(Bandit)[14]@Warrior@/1d10+4</entry>
+		<entry>Character(Leader)[15]@Warrior@/1</entry>
+	</collection>
+	<collection>
+		<name>Bandits [Level 16] (Gang with Fighter)</name>
+		<entry>Character(Bandit)[16]@Warrior@/1d10+4</entry>
+		<entry>Character(Leader)[17]@Fighter@/1</entry>
+	</collection>
+	<collection>
+		<name>Bandits [Level 16] (Gang)</name>
+		<entry>Character(Bandit)[16]@Warrior@/1d10+4</entry>
+		<entry>Character(Leader)[17]@Warrior@/1</entry>
+	</collection>
+	<collection>
+		<name>Bandits [Level 18] (Gang with Fighter)</name>
+		<entry>Character(Bandit)[18]@Warrior@/1d10+4</entry>
+		<entry>Character(Leader)[19]@Fighter@/1</entry>
+	</collection>
+	<collection>
+		<name>Bandits [Level 18] (Gang)</name>
+		<entry>Character(Bandit)[18]@Warrior@/1d10+4</entry>
+		<entry>Character(Leader)[19]@Warrior@/1</entry>
 	</collection>
 	<collection>
 		<name>Bandits [Level 20] (Gang with Fighter)</name>
 		<entry>Character(Bandit)[20]@Warrior@/1d10+4</entry>
-		<entry>Character(Leader)[11]@Fighter@/1</entry>
+		<entry>Character(Leader)[20]@Fighter@/1</entry>
 	</collection>
   <collection>
     <name>Beggar [Level 1] (Solitary)</name>
     <entry>Character(Beggar)[1]@Commoner@/1</entry>
   </collection>
   <collection>
-    <name>Beggar [Level 2-3] (Solitary)</name>
-    <entry>Character(Beggar)[1d2+1]@Commoner@/1</entry>
+    <name>Beggar [Level 3] (Solitary)</name>
+    <entry>Character(Beggar)[3]@Commoner@/1</entry>
   </collection>
   <collection>
-    <name>Beggar [Level 4-5] (Solitary)</name>
-    <entry>Character(Beggar)[1d2+3]@Commoner@/1</entry>
+    <name>Beggar [Level 5] (Solitary)</name>
+    <entry>Character(Beggar)[5]@Commoner@/1</entry>
   </collection>
   <collection>
-    <name>Beggar [Level 6-7] (Solitary)</name>
-    <entry>Character(Beggar)[1d2+5]@Commoner@/1</entry>
+    <name>Beggar [Level 7] (Solitary)</name>
+    <entry>Character(Beggar)[7]@Commoner@/1</entry>
   </collection>
   <collection>
-    <name>Beggar [Level 8-9] (Solitary)</name>
-    <entry>Character(Beggar)[1d2+7]@Commoner@/1</entry>
+    <name>Beggar [Level 9] (Solitary)</name>
+    <entry>Character(Beggar)[9]@Commoner@/1</entry>
   </collection>
   <collection>
-    <name>Beggar [Level 10-11] (Solitary)</name>
-    <entry>Character(Beggar)[1d2+9]@Commoner@/1</entry>
+    <name>Beggar [Level 11] (Solitary)</name>
+    <entry>Character(Beggar)[11]@Commoner@/1</entry>
   </collection>
   <collection>
-    <name>Beggar [Level 12-13] (Solitary)</name>
-    <entry>Character(Beggar)[1d2+11]@Commoner@/1</entry>
+    <name>Beggar [Level 13] (Solitary)</name>
+    <entry>Character(Beggar)[13]@Commoner@/1</entry>
   </collection>
   <collection>
-    <name>Beggar [Level 14-15] (Solitary)</name>
-    <entry>Character(Beggar)[1d2+13]@Commoner@/1</entry>
+    <name>Beggar [Level 15] (Solitary)</name>
+    <entry>Character(Beggar)[15]@Commoner@/1</entry>
   </collection>
   <collection>
-    <name>Beggar [Level 16-17] (Solitary)</name>
-    <entry>Character(Beggar)[1d2+15]@Commoner@/1</entry>
+    <name>Beggar [Level 17] (Solitary)</name>
+    <entry>Character(Beggar)[17]@Commoner@/1</entry>
   </collection>
   <collection>
-    <name>Beggar [Level 18-19] (Solitary)</name>
-    <entry>Character(Beggar)[1d2+17]@Commoner@/1</entry>
+    <name>Beggar [Level 19] (Solitary)</name>
+    <entry>Character(Beggar)[19]@Commoner@/1</entry>
   </collection>
+	<collection>
+		<name>Beggar [Level 2] (Solitary)</name>
+		<entry>Character(Beggar)[2]@Commoner@/1</entry>
+	</collection>
+	<collection>
+		<name>Beggar [Level 4] (Solitary)</name>
+		<entry>Character(Beggar)[4]@Commoner@/1</entry>
+	</collection>
+	<collection>
+		<name>Beggar [Level 6] (Solitary)</name>
+		<entry>Character(Beggar)[6]@Commoner@/1</entry>
+	</collection>
+	<collection>
+		<name>Beggar [Level 8] (Solitary)</name>
+		<entry>Character(Beggar)[8]@Commoner@/1</entry>
+	</collection>
+	<collection>
+		<name>Beggar [Level 10] (Solitary)</name>
+		<entry>Character(Beggar)[10]@Commoner@/1</entry>
+	</collection>
+	<collection>
+		<name>Beggar [Level 12] (Solitary)</name>
+		<entry>Character(Beggar)[12]@Commoner@/1</entry>
+	</collection>
+	<collection>
+		<name>Beggar [Level 14] (Solitary)</name>
+		<entry>Character(Beggar)[14]@Commoner@/1</entry>
+	</collection>
+	<collection>
+		<name>Beggar [Level 16] (Solitary)</name>
+		<entry>Character(Beggar)[16]@Commoner@/1</entry>
+	</collection>
+	<collection>
+		<name>Beggar [Level 18] (Solitary)</name>
+		<entry>Character(Beggar)[18]@Commoner@/1</entry>
+	</collection>
   <collection>
     <name>Beggar [Level 20] (Solitary)</name>
     <entry>Character(Beggar)[20]@Commoner@/1</entry>
@@ -2474,41 +2681,77 @@
     <entry>Character(Business person)[1]@Aristocrat@/1d4</entry>
   </collection>
   <collection>
-	  <name>Business People [Level 2-3] (Group)</name>
-    <entry>Character(Business person)[1d2+1]@Aristocrat@/1d4</entry>
+	  <name>Business People [Level 3] (Group)</name>
+    <entry>Character(Business person)[3]@Aristocrat@/1d4</entry>
   </collection>
   <collection>
-	  <name>Business People [Level 4-5] (Group)</name>
-    <entry>Character(Business person)[1d2+3]@Aristocrat@/1d4</entry>
+	  <name>Business People [Level 5] (Group)</name>
+    <entry>Character(Business person)[5]@Aristocrat@/1d4</entry>
   </collection>
   <collection>
-	  <name>Business People [Level 6-7] (Group)</name>
-    <entry>Character(Business person)[1d2+5]@Aristocrat@/1d4</entry>
+	  <name>Business People [Level 7] (Group)</name>
+    <entry>Character(Business person)[7]@Aristocrat@/1d4</entry>
   </collection>
   <collection>
-	  <name>Business People [Level 8-9] (Group)</name>
-    <entry>Character(Business person)[1d2+7]@Aristocrat@/1d4</entry>
+	  <name>Business People [Level 9] (Group)</name>
+    <entry>Character(Business person)[9]@Aristocrat@/1d4</entry>
   </collection>
   <collection>
-	  <name>Business People [Level 10-11] (Group)</name>
-    <entry>Character(Business person)[1d2+9]@Aristocrat@/1d4</entry>
+	  <name>Business People [Level 11] (Group)</name>
+    <entry>Character(Business person)[11]@Aristocrat@/1d4</entry>
   </collection>
   <collection>
-	  <name>Business People [Level 12-13] (Group)</name>
-    <entry>Character(Business person)[1d2+11]@Aristocrat@/1d4</entry>
+	  <name>Business People [Level 13] (Group)</name>
+    <entry>Character(Business person)[13]@Aristocrat@/1d4</entry>
   </collection>
   <collection>
-	  <name>Business People [Level 14-15] (Group)</name>
-    <entry>Character(Business person)[1d2+13]@Aristocrat@/1d4</entry>
+	  <name>Business People [Level 15] (Group)</name>
+    <entry>Character(Business person)[15]@Aristocrat@/1d4</entry>
   </collection>
   <collection>
-	  <name>Business People [Level 16-17] (Group)</name>
-    <entry>Character(Business person)[1d2+15]@Aristocrat@/1d4</entry>
+	  <name>Business People [Level 17] (Group)</name>
+    <entry>Character(Business person)[17]@Aristocrat@/1d4</entry>
   </collection>
   <collection>
-	  <name>Business People [Level 18-19] (Group)</name>
-    <entry>Character(Business person)[1d2+17]@Aristocrat@/1d4</entry>
+	  <name>Business People [Level 19] (Group)</name>
+    <entry>Character(Business person)[19]@Aristocrat@/1d4</entry>
   </collection>
+	<collection>
+		<name>Business People [Level 2] (Group)</name>
+		<entry>Character(Business person)[2]@Aristocrat@/1d4</entry>
+	</collection>
+	<collection>
+		<name>Business People [Level 4] (Group)</name>
+		<entry>Character(Business person)[4]@Aristocrat@/1d4</entry>
+	</collection>
+	<collection>
+		<name>Business People [Level 6] (Group)</name>
+		<entry>Character(Business person)[6]@Aristocrat@/1d4</entry>
+	</collection>
+	<collection>
+		<name>Business People [Level 8] (Group)</name>
+		<entry>Character(Business person)[8]@Aristocrat@/1d4</entry>
+	</collection>
+	<collection>
+		<name>Business People [Level 10] (Group)</name>
+		<entry>Character(Business person)[10]@Aristocrat@/1d4</entry>
+	</collection>
+	<collection>
+		<name>Business People [Level 12] (Group)</name>
+		<entry>Character(Business person)[12]@Aristocrat@/1d4</entry>
+	</collection>
+	<collection>
+		<name>Business People [Level 14] (Group)</name>
+		<entry>Character(Business person)[14]@Aristocrat@/1d4</entry>
+	</collection>
+	<collection>
+		<name>Business People [Level 16] (Group)</name>
+		<entry>Character(Business person)[16]@Aristocrat@/1d4</entry>
+	</collection>
+	<collection>
+		<name>Business People [Level 18] (Group)</name>
+		<entry>Character(Business person)[18]@Aristocrat@/1d4</entry>
+	</collection>
   <collection>
 	  <name>Business People [Level 20] (Group)</name>
     <entry>Character(Business person)[20]@Aristocrat@/1d4</entry>
@@ -2598,41 +2841,77 @@
     <entry>Character(Doctor)[1]@Adept@/1</entry>
   </collection>
   <collection>
-    <name>Doctor [Level 2-3 Adept] (Solitary)</name>
-    <entry>Character(Doctor)[1d2+1]@Adept@/1</entry>
+    <name>Doctor [Level 3 Adept] (Solitary)</name>
+    <entry>Character(Doctor)[3]@Adept@/1</entry>
   </collection>
   <collection>
-    <name>Doctor [Level 4-5 Adept] (Solitary)</name>
-    <entry>Character(Doctor)[1d2+3]@Adept@/1</entry>
+    <name>Doctor [Level 5 Adept] (Solitary)</name>
+    <entry>Character(Doctor)[5]@Adept@/1</entry>
   </collection>
   <collection>
-    <name>Doctor [Level 6-7 Adept] (Solitary)</name>
-    <entry>Character(Doctor)[1d2+5]@Adept@/1</entry>
+    <name>Doctor [Level 7 Adept] (Solitary)</name>
+    <entry>Character(Doctor)[7]@Adept@/1</entry>
   </collection>
   <collection>
-    <name>Doctor [Level 8-9 Adept] (Solitary)</name>
-    <entry>Character(Doctor)[1d2+7]@Adept@/1</entry>
+    <name>Doctor [Level 9 Adept] (Solitary)</name>
+    <entry>Character(Doctor)[9]@Adept@/1</entry>
   </collection>
   <collection>
-    <name>Doctor [Level 10-11 Adept] (Solitary)</name>
-    <entry>Character(Doctor)[1d2+9]@Adept@/1</entry>
+    <name>Doctor [Level 11 Adept] (Solitary)</name>
+    <entry>Character(Doctor)[11]@Adept@/1</entry>
   </collection>
   <collection>
-    <name>Doctor [Level 12-13 Adept] (Solitary)</name>
-    <entry>Character(Doctor)[1d2+11]@Adept@/1</entry>
+    <name>Doctor [Level 13 Adept] (Solitary)</name>
+    <entry>Character(Doctor)[13]@Adept@/1</entry>
   </collection>
   <collection>
-    <name>Doctor [Level 14-15 Adept] (Solitary)</name>
-    <entry>Character(Doctor)[1d2+13]@Adept@/1</entry>
+    <name>Doctor [Level 15 Adept] (Solitary)</name>
+    <entry>Character(Doctor)[15]@Adept@/1</entry>
   </collection>
   <collection>
-    <name>Doctor [Level 16-17 Adept] (Solitary)</name>
-    <entry>Character(Doctor)[1d2+15]@Adept@/1</entry>
+    <name>Doctor [Level 17 Adept] (Solitary)</name>
+    <entry>Character(Doctor)[17]@Adept@/1</entry>
   </collection>
   <collection>
-    <name>Doctor [Level 18-19 Adept] (Solitary)</name>
-    <entry>Character(Doctor)[1d2+17]@Adept@/1</entry>
+    <name>Doctor [Level 19 Adept] (Solitary)</name>
+    <entry>Character(Doctor)[19]@Adept@/1</entry>
   </collection>
+	<collection>
+		<name>Doctor [Level 2 Adept] (Solitary)</name>
+		<entry>Character(Doctor)[2]@Adept@/1</entry>
+	</collection>
+	<collection>
+		<name>Doctor [Level 4 Adept] (Solitary)</name>
+		<entry>Character(Doctor)[4]@Adept@/1</entry>
+	</collection>
+	<collection>
+		<name>Doctor [Level 6 Adept] (Solitary)</name>
+		<entry>Character(Doctor)[6]@Adept@/1</entry>
+	</collection>
+	<collection>
+		<name>Doctor [Level 8 Adept] (Solitary)</name>
+		<entry>Character(Doctor)[8]@Adept@/1</entry>
+	</collection>
+	<collection>
+		<name>Doctor [Level 10 Adept] (Solitary)</name>
+		<entry>Character(Doctor)[10]@Adept@/1</entry>
+	</collection>
+	<collection>
+		<name>Doctor [Level 12 Adept] (Solitary)</name>
+		<entry>Character(Doctor)[12]@Adept@/1</entry>
+	</collection>
+	<collection>
+		<name>Doctor [Level 14 Adept] (Solitary)</name>
+		<entry>Character(Doctor)[14]@Adept@/1</entry>
+	</collection>
+	<collection>
+		<name>Doctor [Level 16 Adept] (Solitary)</name>
+		<entry>Character(Doctor)[16]@Adept@/1</entry>
+	</collection>
+	<collection>
+		<name>Doctor [Level 18 Adept] (Solitary)</name>
+		<entry>Character(Doctor)[18]@Adept@/1</entry>
+	</collection>
   <collection>
     <name>Doctor [Level 20 Adept] (Solitary)</name>
     <entry>Character(Doctor)[20]@Adept@/1</entry>
@@ -3167,41 +3446,77 @@
     <entry>Character(Farmer)[1]@Commoner@/1d4</entry>
   </collection>
   <collection>
-    <name>Farmers [Level 2-3] (Group)</name>
-    <entry>Character(Farmer)[1d2+1]@Commoner@/1d4</entry>
+    <name>Farmers [Level 3] (Group)</name>
+    <entry>Character(Farmer)[3]@Commoner@/1d4</entry>
   </collection>
   <collection>
-    <name>Farmers [Level 4-5] (Group)</name>
-    <entry>Character(Farmer)[1d2+3]@Commoner@/1d4</entry>
+    <name>Farmers [Level 5] (Group)</name>
+    <entry>Character(Farmer)[5]@Commoner@/1d4</entry>
   </collection>
   <collection>
-    <name>Farmers [Level 6-7] (Group)</name>
-    <entry>Character(Farmer)[1d2+5]@Commoner@/1d4</entry>
+    <name>Farmers [Level 7] (Group)</name>
+    <entry>Character(Farmer)[7]@Commoner@/1d4</entry>
   </collection>
   <collection>
-    <name>Farmers [Level 8-9] (Group)</name>
-    <entry>Character(Farmer)[1d2+7]@Commoner@/1d4</entry>
+    <name>Farmers [Level 9] (Group)</name>
+    <entry>Character(Farmer)[9]@Commoner@/1d4</entry>
   </collection>
   <collection>
-    <name>Farmers [Level 10-11] (Group)</name>
-    <entry>Character(Farmer)[1d2+9]@Commoner@/1d4</entry>
+    <name>Farmers [Level 11] (Group)</name>
+    <entry>Character(Farmer)[11]@Commoner@/1d4</entry>
   </collection>
   <collection>
-    <name>Farmers [Level 12-13] (Group)</name>
-    <entry>Character(Farmer)[1d2+11]@Commoner@/1d4</entry>
+    <name>Farmers [Level 13] (Group)</name>
+    <entry>Character(Farmer)[13]@Commoner@/1d4</entry>
   </collection>
   <collection>
-    <name>Farmers [Level 14-15] (Group)</name>
-    <entry>Character(Farmer)[1d2+13]@Commoner@/1d4</entry>
+    <name>Farmers [Level 15] (Group)</name>
+    <entry>Character(Farmer)[15]@Commoner@/1d4</entry>
   </collection>
   <collection>
-    <name>Farmers [Level 16-17] (Group)</name>
-    <entry>Character(Farmer)[1d2+15]@Commoner@/1d4</entry>
+    <name>Farmers [Level 17] (Group)</name>
+    <entry>Character(Farmer)[17]@Commoner@/1d4</entry>
   </collection>
   <collection>
-    <name>Farmers [Level 18-19] (Group)</name>
-    <entry>Character(Farmer)[1d2+17]@Commoner@/1d4</entry>
+    <name>Farmers [Level 19] (Group)</name>
+    <entry>Character(Farmer)[19]@Commoner@/1d4</entry>
   </collection>
+	<collection>
+		<name>Farmers [Level 2] (Group)</name>
+		<entry>Character(Farmer)[2]@Commoner@/1d4</entry>
+	</collection>
+	<collection>
+		<name>Farmers [Level 4] (Group)</name>
+		<entry>Character(Farmer)[4]@Commoner@/1d4</entry>
+	</collection>
+	<collection>
+		<name>Farmers [Level 6] (Group)</name>
+		<entry>Character(Farmer)[6]@Commoner@/1d4</entry>
+	</collection>
+	<collection>
+		<name>Farmers [Level 8] (Group)</name>
+		<entry>Character(Farmer)[8]@Commoner@/1d4</entry>
+	</collection>
+	<collection>
+		<name>Farmers [Level 10] (Group)</name>
+		<entry>Character(Farmer)[10]@Commoner@/1d4</entry>
+	</collection>
+	<collection>
+		<name>Farmers [Level 12] (Group)</name>
+		<entry>Character(Farmer)[12]@Commoner@/1d4</entry>
+	</collection>
+	<collection>
+		<name>Farmers [Level 14] (Group)</name>
+		<entry>Character(Farmer)[14]@Commoner@/1d4</entry>
+	</collection>
+	<collection>
+		<name>Farmers [Level 16] (Group)</name>
+		<entry>Character(Farmer)[16]@Commoner@/1d4</entry>
+	</collection>
+	<collection>
+		<name>Farmers [Level 18] (Group)</name>
+		<entry>Character(Farmer)[18]@Commoner@/1d4</entry>
+	</collection>
   <collection>
     <name>Farmers [Level 20] (Group)</name>
     <entry>Character(Farmer)[20]@Commoner@/1d4</entry>
@@ -3211,204 +3526,325 @@
     <entry>Character(Fortuneteller)[1]@Adept@/1</entry>
   </collection>
   <collection>
-    <name>Fortuneteller [Level 2-3] (Solitary)</name>
-    <entry>Character(Fortuneteller)[1d2+1]@Adept@/1</entry>
+    <name>Fortuneteller [Level 3] (Solitary)</name>
+    <entry>Character(Fortuneteller)[3]@Adept@/1</entry>
   </collection>
   <collection>
-    <name>Fortuneteller [Level 4-5] (Solitary)</name>
-    <entry>Character(Fortuneteller)[1d2+3]@Adept@/1</entry>
+    <name>Fortuneteller [Level 5] (Solitary)</name>
+    <entry>Character(Fortuneteller)[5]@Adept@/1</entry>
   </collection>
   <collection>
-    <name>Fortuneteller [Level 6-7] (Solitary)</name>
-    <entry>Character(Fortuneteller)[1d2+5]@Adept@/1</entry>
+    <name>Fortuneteller [Level 7] (Solitary)</name>
+    <entry>Character(Fortuneteller)[7]@Adept@/1</entry>
   </collection>
   <collection>
-    <name>Fortuneteller [Level 8-9] (Solitary)</name>
-    <entry>Character(Fortuneteller)[1d2+7]@Adept@/1</entry>
+    <name>Fortuneteller [Level 9] (Solitary)</name>
+    <entry>Character(Fortuneteller)[9]@Adept@/1</entry>
   </collection>
   <collection>
-    <name>Fortuneteller [Level 10-11] (Solitary)</name>
-    <entry>Character(Fortuneteller)[1d2+9]@Adept@/1</entry>
+    <name>Fortuneteller [Level 11] (Solitary)</name>
+    <entry>Character(Fortuneteller)[11]@Adept@/1</entry>
   </collection>
   <collection>
-    <name>Fortuneteller [Level 12-13] (Solitary)</name>
-    <entry>Character(Fortuneteller)[1d2+11]@Adept@/1</entry>
+    <name>Fortuneteller [Level 13] (Solitary)</name>
+    <entry>Character(Fortuneteller)[13]@Adept@/1</entry>
   </collection>
   <collection>
-    <name>Fortuneteller [Level 14-15] (Solitary)</name>
-    <entry>Character(Fortuneteller)[1d2+13]@Adept@/1</entry>
+    <name>Fortuneteller [Level 15] (Solitary)</name>
+    <entry>Character(Fortuneteller)[15]@Adept@/1</entry>
   </collection>
   <collection>
-    <name>Fortuneteller [Level 16-17] (Solitary)</name>
-    <entry>Character(Fortuneteller)[1d2+15]@Adept@/1</entry>
+    <name>Fortuneteller [Level 17] (Solitary)</name>
+    <entry>Character(Fortuneteller)[17]@Adept@/1</entry>
   </collection>
   <collection>
-    <name>Fortuneteller [Level 18-19] (Solitary)</name>
-    <entry>Character(Fortuneteller)[1d2+17]@Adept@/1</entry>
+    <name>Fortuneteller [Level 19] (Solitary)</name>
+    <entry>Character(Fortuneteller)[19]@Adept@/1</entry>
   </collection>
+	<collection>
+		<name>Fortuneteller [Level 2] (Solitary)</name>
+		<entry>Character(Fortuneteller)[2]@Adept@/1</entry>
+	</collection>
+	<collection>
+		<name>Fortuneteller [Level 4] (Solitary)</name>
+		<entry>Character(Fortuneteller)[4]@Adept@/1</entry>
+	</collection>
+	<collection>
+		<name>Fortuneteller [Level 6] (Solitary)</name>
+		<entry>Character(Fortuneteller)[6]@Adept@/1</entry>
+	</collection>
+	<collection>
+		<name>Fortuneteller [Level 8] (Solitary)</name>
+		<entry>Character(Fortuneteller)[8]@Adept@/1</entry>
+	</collection>
+	<collection>
+		<name>Fortuneteller [Level 10] (Solitary)</name>
+		<entry>Character(Fortuneteller)[10]@Adept@/1</entry>
+	</collection>
+	<collection>
+		<name>Fortuneteller [Level 12] (Solitary)</name>
+		<entry>Character(Fortuneteller)[12]@Adept@/1</entry>
+	</collection>
+	<collection>
+		<name>Fortuneteller [Level 14] (Solitary)</name>
+		<entry>Character(Fortuneteller)[14]@Adept@/1</entry>
+	</collection>
+	<collection>
+		<name>Fortuneteller [Level 16] (Solitary)</name>
+		<entry>Character(Fortuneteller)[16]@Adept@/1</entry>
+	</collection>
+	<collection>
+		<name>Fortuneteller [Level 18] (Solitary)</name>
+		<entry>Character(Fortuneteller)[18]@Adept@/1</entry>
+	</collection>
   <collection>
     <name>Fortuneteller [Level 20] (Solitary)</name>
     <entry>Character(Fortuneteller)[20]@Adept@/1</entry>
   </collection>
   <collection>
-    <name>Gentry [Level 1] (with Servants)</name>
+    <name>Gentry [Level 1]</name>
     <entry>Character(Gentry)[1]@Aristocrat@/1d2</entry>
-    <entry>Character(Servant)[1]@Commoner@/1d3+1</entry>
   </collection>
   <collection>
-    <name>Gentry [Level 2-3] (with Servants)</name>
-    <entry>Character(Gentry)[1d2+1]@Aristocrat@/1d2</entry>
-    <entry>Character(Servant)[1d2+1]@Commoner@/1d3+1</entry>
+    <name>Gentry [Level 3]</name>
+    <entry>Character(Gentry)[3]@Aristocrat@/1d2</entry>
   </collection>
   <collection>
-    <name>Gentry [Level 4-5] (with Servants)</name>
-    <entry>Character(Gentry)[1d2+3]@Aristocrat@/1d2</entry>
-    <entry>Character(Servant)[1d2+3]@Commoner@/1d3+1</entry>
+    <name>Gentry [Level 5]</name>
+    <entry>Character(Gentry)[5]@Aristocrat@/1d2</entry>
   </collection>
   <collection>
-    <name>Gentry [Level 6-7] (with Servants)</name>
-    <entry>Character(Gentry)[1d2+5]@Aristocrat@/1d2</entry>
-    <entry>Character(Servant)[1d2+5]@Commoner@/1d3+1</entry>
+    <name>Gentry [Level 7] (with Servants)</name>
+    <entry>Character(Gentry)[7]@Aristocrat@/1d2</entry>
+    <entry>Character(Servant)[2]@Commoner@/1d3+1</entry>
   </collection>
   <collection>
-    <name>Gentry [Level 8-9] (with Servants)</name>
-    <entry>Character(Gentry)[1d2+7]@Aristocrat@/1d2</entry>
-    <entry>Character(Servant)[1d2+7]@Commoner@/1d3+1</entry>
+    <name>Gentry [Level 9] (with Servants)</name>
+    <entry>Character(Gentry)[9]@Aristocrat@/1d2</entry>
+    <entry>Character(Servant)[4]@Commoner@/1d3+1</entry>
   </collection>
   <collection>
-    <name>Gentry [Level 10-11] (with Servants)</name>
-    <entry>Character(Gentry)[1d2+9]@Aristocrat@/1d2</entry>
-    <entry>Character(Servant)[1d2+9]@Commoner@/1d3+1</entry>
+    <name>Gentry [Level 11] (with Servants)</name>
+    <entry>Character(Gentry)[11]@Aristocrat@/1d2</entry>
+    <entry>Character(Servant)[6]@Commoner@/1d3+1</entry>
   </collection>
   <collection>
-    <name>Gentry [Level 12-13] (with Servants)</name>
-    <entry>Character(Gentry)[1d2+11]@Aristocrat@/1d2</entry>
-    <entry>Character(Servant)[1d2+11]@Commoner@/1d3+1</entry>
+    <name>Gentry [Level 13] (with Servants)</name>
+    <entry>Character(Gentry)[13]@Aristocrat@/1d2</entry>
+    <entry>Character(Servant)[8]@Commoner@/1d3+1</entry>
   </collection>
   <collection>
-    <name>Gentry [Level 14-15] (with Servants)</name>
-    <entry>Character(Gentry)[1d2+13]@Aristocrat@/1d2</entry>
-    <entry>Character(Servant)[1d2+13]@Commoner@/1d3+1</entry>
+    <name>Gentry [Level 15] (with Servants)</name>
+    <entry>Character(Gentry)[15]@Aristocrat@/1d2</entry>
+    <entry>Character(Servant)[10]@Commoner@/1d3+1</entry>
   </collection>
   <collection>
-    <name>Gentry [Level 16-17] (with Servants)</name>
-    <entry>Character(Gentry)[1d2+15]@Aristocrat@/1d2</entry>
-    <entry>Character(Servant)[1d2+15]@Commoner@/1d3+1</entry>
+    <name>Gentry [Level 17] (with Servants)</name>
+    <entry>Character(Gentry)[17]@Aristocrat@/1d2</entry>
+    <entry>Character(Servant)[12]@Commoner@/1d3+1</entry>
   </collection>
   <collection>
-    <name>Gentry [Level 18-19] (with Servants)</name>
-    <entry>Character(Gentry)[1d2+17]@Aristocrat@/1d2</entry>
-    <entry>Character(Servant)[1d2+17]@Commoner@/1d3+1</entry>
+    <name>Gentry [Level 19] (with Servants)</name>
+    <entry>Character(Gentry)[19]@Aristocrat@/1d2</entry>
+    <entry>Character(Servant)[14]@Commoner@/1d3+1</entry>
   </collection>
+	<collection>
+		<name>Gentry [Level 2]</name>
+		<entry>Character(Gentry)[2]@Aristocrat@/1d2</entry>
+	</collection>
+	<collection>
+		<name>Gentry [Level 4]</name>
+		<entry>Character(Gentry)[4]@Aristocrat@/1d2</entry>
+	</collection>
+	<collection>
+		<name>Gentry [Level 6] (with Servants)</name>
+		<entry>Character(Gentry)[6]@Aristocrat@/1d2</entry>
+		<entry>Character(Servant)[1]@Commoner@/1d3+1</entry>
+	</collection>
+	<collection>
+		<name>Gentry [Level 8] (with Servants)</name>
+		<entry>Character(Gentry)[8]@Aristocrat@/1d2</entry>
+		<entry>Character(Servant)[3]@Commoner@/1d3+1</entry>
+	</collection>
+	<collection>
+		<name>Gentry [Level 10] (with Servants)</name>
+		<entry>Character(Gentry)[10]@Aristocrat@/1d2</entry>
+		<entry>Character(Servant)[5]@Commoner@/1d3+1</entry>
+	</collection>
+	<collection>
+		<name>Gentry [Level 12] (with Servants)</name>
+		<entry>Character(Gentry)[12]@Aristocrat@/1d2</entry>
+		<entry>Character(Servant)[7]@Commoner@/1d3+1</entry>
+	</collection>
+	<collection>
+		<name>Gentry [Level 14] (with Servants)</name>
+		<entry>Character(Gentry)[14]@Aristocrat@/1d2</entry>
+		<entry>Character(Servant)[9]@Commoner@/1d3+1</entry>
+	</collection>
+	<collection>
+		<name>Gentry [Level 16] (with Servants)</name>
+		<entry>Character(Gentry)[16]@Aristocrat@/1d2</entry>
+		<entry>Character(Servant)[11]@Commoner@/1d3+1</entry>
+	</collection>
+	<collection>
+		<name>Gentry [Level 18] (with Servants)</name>
+		<entry>Character(Gentry)[18]@Aristocrat@/1d2</entry>
+		<entry>Character(Servant)[13]@Commoner@/1d3+1</entry>
+	</collection>
   <collection>
     <name>Gentry [Level 20] (with Servants)</name>
     <entry>Character(Gentry)[20]@Aristocrat@/1d2</entry>
-    <entry>Character(Servant)[20]@Commoner@/1d3+1</entry>
+    <entry>Character(Servant)[15]@Commoner@/1d3+1</entry>
   </collection>
   <collection>
     <name>Guards [Level 1] (Patrol)</name>
 	  <entry>Character(Guard)[1]@Warrior@/2d4+1</entry>
-	  <entry>Character(Captain)[1d2+1]@Warrior@/1</entry>
   </collection>
 	<collection>
-		<name>Guards [Level 1] (Patrol with Fighter)</name>
+		<name>Guards [Level 1] (Patrol with Lieutenant)</name>
 		<entry>Character(Guard)[1]@Warrior@/2d4+1</entry>
-		<entry>Character(Captain)[1]@Fighter@/1</entry>
+		<entry>Character(Lieutenant)[6]@Warrior@/1</entry>
 	</collection>
 	<collection>
-		<name>Guards [Level 2-3] (Patrol)</name>
-		<entry>Character(Guard)[1d2+1]@Warrior@/2d4+1</entry>
-		<entry>Character(Captain)[1d2+3]@Warrior@/1</entry>
-	</collection>
-	<collection>
-		<name>Guards [Level 2-3] (Patrol with Fighter)</name>
-		<entry>Character(Guard)[1d2+1]@Warrior@/2d4+1</entry>
-		<entry>Character(Captain)[2]@Fighter@/1</entry>
-	</collection>
-	<collection>
-		<name>Guards [Level 4-5] (Patrol)</name>
-		<entry>Character(Guard)[1d2+3]@Warrior@/2d4+1</entry>
-		<entry>Character(Captain)[1d2+5]@Warrior@/1</entry>
-	</collection>
-	<collection>
-		<name>Guards [Level 4-5] (Patrol with Fighter)</name>
-		<entry>Character(Guard)[1d2+3]@Warrior@/2d4+1</entry>
-		<entry>Character(Captain)[3]@Fighter@/1</entry>
-	</collection>
-	<collection>
-		<name>Guards [Level 6-7] (Patrol)</name>
-		<entry>Character(Guard)[1d2+5]@Warrior@/2d4+1</entry>
-		<entry>Character(Captain)[1d2+7]@Warrior@/1</entry>
-	</collection>
-	<collection>
-		<name>Guards [Level 6-7] (Patrol with Fighter)</name>
-		<entry>Character(Guard)[1d2+5]@Warrior@/2d4+1</entry>
-		<entry>Character(Captain)[4]@Fighter@/1</entry>
-	</collection>
-	<collection>
-		<name>Guards [Level 8-9] (Patrol)</name>
-		<entry>Character(Guard)[1d2+7]@Warrior@/2d4+1</entry>
-		<entry>Character(Captain)[1d2+9]@Warrior@/1</entry>
-	</collection>
-	<collection>
-		<name>Guards [Level 8-9] (Patrol with Fighter)</name>
-		<entry>Character(Guard)[1d2+7]@Warrior@/2d4+1</entry>
-		<entry>Character(Captain)[5]@Fighter@/1</entry>
-	</collection>
-	<collection>
-		<name>Guards [Level 10-11] (Patrol)</name>
-		<entry>Character(Guard)[1d2+9]@Warrior@/2d4+1</entry>
-		<entry>Character(Captain)[1d2+11]@Warrior@/1</entry>
-	</collection>
-	<collection>
-		<name>Guards [Level 10-11] (Patrol with Fighter)</name>
-		<entry>Character(Guard)[1d2+9]@Warrior@/2d4+1</entry>
-		<entry>Character(Captain)[6]@Fighter@/1</entry>
-	</collection>
-	<collection>
-		<name>Guards [Level 12-13] (Patrol)</name>
-		<entry>Character(Guard)[1d2+11]@Warrior@/2d4+1</entry>
-		<entry>Character(Captain)[1d2+13]@Warrior@/1</entry>
-	</collection>
-	<collection>
-		<name>Guards [Level 12-13] (Patrol with Fighter)</name>
-		<entry>Character(Guard)[1d2+11]@Warrior@/2d4+1</entry>
-		<entry>Character(Captain)[7]@Fighter@/1</entry>
-	</collection>
-	<collection>
-		<name>Guards [Level 14-15] (Patrol)</name>
-		<entry>Character(Guard)[1d2+13]@Warrior@/2d4+1</entry>
-		<entry>Character(Captain)[1d2+15]@Warrior@/1</entry>
-	</collection>
-	<collection>
-		<name>Guards [Level 14-15] (Patrol with Fighter)</name>
-		<entry>Character(Guard)[1d2+13]@Warrior@/2d4+1</entry>
-		<entry>Character(Captain)[8]@Fighter@/1</entry>
-	</collection>
-	<collection>
-		<name>Guards [Level 16-17] (Patrol)</name>
-		<entry>Character(Guard)[1d2+15]@Warrior@/2d4+1</entry>
-		<entry>Character(Captain)[1d2+17]@Warrior@/1</entry>
-	</collection>
-	<collection>
-		<name>Guards [Level 16-17] (Patrol with Fighter)</name>
-		<entry>Character(Guard)[1d2+15]@Warrior@/2d4+1</entry>
-		<entry>Character(Captain)[9]@Fighter@/1</entry>
-	</collection>
-	<collection>
-		<name>Guards [Level 18-19] (Patrol)</name>
-		<entry>Character(Guard)[1d2+17]@Warrior@/2d4+1</entry>
-		<entry>Character(Captain)[20]@Warrior@/1</entry>
-	</collection>
-	<collection>
-		<name>Guards [Level 18-19] (Patrol with Fighter)</name>
-		<entry>Character(Guard)[1d2+17]@Warrior@/2d4+1</entry>
-		<entry>Character(Captain)[10]@Fighter@/1</entry>
-	</collection>
-	<collection>
-		<name>Guards [Level 20] (Patrol with Fighter)</name>
-		<entry>Character(Guard)[20]@Warrior@/2d4+1</entry>
+		<name>Guards [Level 1] (Patrol with Captain)</name>
+		<entry>Character(Guard)[1]@Warrior@/2d4+1</entry>
+		<entry>Character(Lieutenant)[6]@Warrior@/1d2+1</entry>
 		<entry>Character(Captain)[11]@Fighter@/1</entry>
+	</collection>
+	<collection>
+		<name>Guards [Level 2] (Patrol)</name>
+		<entry>Character(Guard)[2]@Warrior@/2d4+1</entry>
+	</collection>
+	<collection>
+		<name>Guards [Level 2] (Patrol with Lieutenant)</name>
+		<entry>Character(Guard)[2]@Warrior@/2d4+1</entry>
+		<entry>Character(Lieutenant)[7]@Warrior@/1</entry>
+	</collection>
+	<collection>
+		<name>Guards [Level 2] (Patrol with Captain)</name>
+		<entry>Character(Guard)[2]@Warrior@/2d4+1</entry>
+		<entry>Character(Lieutenant)[7]@Warrior@/1d2+1</entry>
+		<entry>Character(Captain)[12]@Fighter@/1</entry>
+	</collection>
+	<collection>
+		<name>Guards [Level 3] (Patrol)</name>
+		<entry>Character(Guard)[3]@Warrior@/2d4+1</entry>
+	</collection>
+	<collection>
+		<name>Guards [Level 3] (Patrol with Lieutenant)</name>
+		<entry>Character(Guard)[3]@Warrior@/2d4+1</entry>
+		<entry>Character(Lieutenant)[8]@Warrior@/1</entry>
+	</collection>
+	<collection>
+		<name>Guards [Level 3] (Patrol with Captain)</name>
+		<entry>Character(Guard)[3]@Warrior@/2d4+1</entry>
+		<entry>Character(Lieutenant)[8]@Warrior@/1d2+1</entry>
+		<entry>Character(Captain)[13]@Fighter@/1</entry>
+	</collection>
+	<collection>
+		<name>Guards [Level 4] (Patrol)</name>
+		<entry>Character(Guard)[4]@Warrior@/2d4+1</entry>
+	</collection>
+	<collection>
+		<name>Guards [Level 4] (Patrol with Lieutenant)</name>
+		<entry>Character(Guard)[4]@Warrior@/2d4+1</entry>
+		<entry>Character(Lieutenant)[9]@Warrior@/1</entry>
+	</collection>
+	<collection>
+		<name>Guards [Level 4] (Patrol with Captain)</name>
+		<entry>Character(Guard)[4]@Warrior@/2d4+1</entry>
+		<entry>Character(Lieutenant)[9]@Warrior@/1d2+1</entry>
+		<entry>Character(Captain)[14]@Fighter@/1</entry>
+	</collection>
+	<collection>
+		<name>Guards [Level 5] (Patrol)</name>
+		<entry>Character(Guard)[5]@Warrior@/2d4+1</entry>
+	</collection>
+	<collection>
+		<name>Guards [Level 5] (Patrol with Lieutenant)</name>
+		<entry>Character(Guard)[5]@Warrior@/2d4+1</entry>
+		<entry>Character(Lieutenant)[10]@Warrior@/1</entry>
+	</collection>
+	<collection>
+		<name>Guards [Level 5] (Patrol with Captain)</name>
+		<entry>Character(Guard)[5]@Warrior@/2d4+1</entry>
+		<entry>Character(Lieutenant)[10]@Warrior@/1d2+1</entry>
+		<entry>Character(Captain)[15]@Fighter@/1</entry>
+	</collection>
+	<collection>
+		<name>Guards [Level 6] (Patrol)</name>
+		<entry>Character(Guard)[6]@Warrior@/2d4+1</entry>
+	</collection>
+	<collection>
+		<name>Guards [Level 6] (Patrol with Lieutenant)</name>
+		<entry>Character(Guard)[6]@Warrior@/2d4+1</entry>
+		<entry>Character(Lieutenant)[11]@Warrior@/1</entry>
+	</collection>
+	<collection>
+		<name>Guards [Level 6] (Patrol with Captain)</name>
+		<entry>Character(Guard)[6]@Warrior@/2d4+1</entry>
+		<entry>Character(Lieutenant)[11]@Warrior@/1d2+1</entry>
+		<entry>Character(Captain)[16]@Fighter@/1</entry>
+	</collection>
+	<collection>
+		<name>Guards [Level 7] (Patrol)</name>
+		<entry>Character(Guard)[7]@Warrior@/2d4+1</entry>
+	</collection>
+	<collection>
+		<name>Guards [Level 7] (Patrol with Lieutenant)</name>
+		<entry>Character(Guard)[7]@Warrior@/2d4+1</entry>
+		<entry>Character(Lieutenant)[12]@Warrior@/1</entry>
+	</collection>
+	<collection>
+		<name>Guards [Level 7] (Patrol with Captain)</name>
+		<entry>Character(Guard)[7]@Warrior@/2d4+1</entry>
+		<entry>Character(Lieutenant)[12]@Warrior@/1d2+1</entry>
+		<entry>Character(Captain)[17]@Fighter@/1</entry>
+	</collection>
+	<collection>
+		<name>Guards [Level 8] (Patrol)</name>
+		<entry>Character(Guard)[8]@Warrior@/2d4+1</entry>
+	</collection>
+	<collection>
+		<name>Guards [Level 8] (Patrol with Lieutenant)</name>
+		<entry>Character(Guard)[8]@Warrior@/2d4+1</entry>
+		<entry>Character(Lieutenant)[13]@Warrior@/1</entry>
+	</collection>
+	<collection>
+		<name>Guards [Level 8] (Patrol with Captain)</name>
+		<entry>Character(Guard)[8]@Warrior@/2d4+1</entry>
+		<entry>Character(Lieutenant)[13]@Warrior@/1d2+1</entry>
+		<entry>Character(Captain)[18]@Fighter@/1</entry>
+	</collection>
+	<collection>
+		<name>Guards [Level 9] (Patrol)</name>
+		<entry>Character(Guard)[9]@Warrior@/2d4+1</entry>
+	</collection>
+	<collection>
+		<name>Guards [Level 9] (Patrol with Lieutenant)</name>
+		<entry>Character(Guard)[9]@Warrior@/2d4+1</entry>
+		<entry>Character(Lieutenant)[14]@Warrior@/1</entry>
+	</collection>
+	<collection>
+		<name>Guards [Level 9] (Patrol with Captain)</name>
+		<entry>Character(Guard)[9]@Warrior@/2d4+1</entry>
+		<entry>Character(Lieutenant)[14]@Warrior@/1d2+1</entry>
+		<entry>Character(Captain)[19]@Fighter@/1</entry>
+	</collection>
+	<collection>
+		<name>Guards [Level 10] (Patrol)</name>
+		<entry>Character(Guard)[10]@Warrior@/2d4+1</entry>
+	</collection>
+	<collection>
+		<name>Guards [Level 10] (Patrol with Lieutenant)</name>
+		<entry>Character(Guard)[10]@Warrior@/2d4+1</entry>
+		<entry>Character(Lieutenant)[15]@Warrior@/1</entry>
+	</collection>
+	<collection>
+		<name>Guards [Level 10] (Patrol with Captain)</name>
+		<entry>Character(Guard)[10]@Warrior@/2d4+1</entry>
+		<entry>Character(Lieutenant)[15]@Warrior@/1d2+1</entry>
+		<entry>Character(Captain)[20]@Fighter@/1</entry>
 	</collection>
   <collection>
     <name>Herders [Level 1] (Group)</name>
@@ -3416,50 +3852,95 @@
 	  <entry>Livestock$Noncombatant$/5d6</entry>
   </collection>
   <collection>
-	  <name>Herders [Level 2-3] (Group)</name>
-	  <entry>Character(Herder)[1d2+1]@Commoner@/1d4</entry>
+	  <name>Herders [Level 3] (Group)</name>
+	  <entry>Character(Herder)[3]@Commoner@/1d4</entry>
 	  <entry>Livestock$Noncombatant$/5d6</entry>
   </collection>
   <collection>
-	  <name>Herders [Level 4-5] (Group)</name>
-	  <entry>Character(Herder)[1d2+3]@Commoner@/1d4</entry>
+	  <name>Herders [Level 5] (Group)</name>
+	  <entry>Character(Herder)[5]@Commoner@/1d4</entry>
 	  <entry>Livestock$Noncombatant$/5d6</entry>
   </collection>
   <collection>
-	  <name>Herders [Level 6-7] (Group)</name>
-    <entry>Character(Herder)[1d2+5]@Commoner@/1d4</entry>
+	  <name>Herders [Level 7] (Group)</name>
+    <entry>Character(Herder)[7]@Commoner@/1d4</entry>
 	  <entry>Livestock$Noncombatant$/5d6</entry>
   </collection>
   <collection>
-	  <name>Herders [Level 8-9] (Group)</name>
-	  <entry>Character(Herder)[1d2+7]@Commoner@/1d4</entry>
+	  <name>Herders [Level 9] (Group)</name>
+	  <entry>Character(Herder)[9]@Commoner@/1d4</entry>
 	  <entry>Livestock$Noncombatant$/5d6</entry>
   </collection>
   <collection>
-	  <name>Herders [Level 10-11] (Group)</name>
-	  <entry>Character(Herder)[1d2+9]@Commoner@/1d4</entry>
+	  <name>Herders [Level 11] (Group)</name>
+	  <entry>Character(Herder)[11]@Commoner@/1d4</entry>
 	  <entry>Livestock$Noncombatant$/5d6</entry>
   </collection>
   <collection>
-	  <name>Herders [Level 12-13] (Group)</name>
-    <entry>Character(Herder)[1d2+11]@Commoner@/1d4</entry>
+	  <name>Herders [Level 13] (Group)</name>
+    <entry>Character(Herder)[13]@Commoner@/1d4</entry>
 	  <entry>Livestock$Noncombatant$/5d6</entry>
   </collection>
   <collection>
-	  <name>Herders [Level 14-15] (Group)</name>
-	  <entry>Character(Herder)[1d2+13]@Commoner@/1d4</entry>
+	  <name>Herders [Level 15] (Group)</name>
+	  <entry>Character(Herder)[15]@Commoner@/1d4</entry>
 	  <entry>Livestock$Noncombatant$/5d6</entry>
   </collection>
   <collection>
-	  <name>Herders [Level 16-17] (Group)</name>
-	  <entry>Character(Herder)[1d2+15]@Commoner@/1d4</entry>
+	  <name>Herders [Level 17] (Group)</name>
+	  <entry>Character(Herder)[17]@Commoner@/1d4</entry>
 	  <entry>Livestock$Noncombatant$/5d6</entry>
   </collection>
   <collection>
-	  <name>Herders [Level 18-19] (Group)</name>
-    <entry>Character(Herder)[1d2+17]@Commoner@/1d4</entry>
+	  <name>Herders [Level 19] (Group)</name>
+    <entry>Character(Herder)[19]@Commoner@/1d4</entry>
 	  <entry>Livestock$Noncombatant$/5d6</entry>
   </collection>
+	<collection>
+		<name>Herders [Level 2] (Group)</name>
+		<entry>Character(Herder)[2]@Commoner@/1d4</entry>
+		<entry>Livestock$Noncombatant$/5d6</entry>
+	</collection>
+	<collection>
+		<name>Herders [Level 4] (Group)</name>
+		<entry>Character(Herder)[4]@Commoner@/1d4</entry>
+		<entry>Livestock$Noncombatant$/5d6</entry>
+	</collection>
+	<collection>
+		<name>Herders [Level 6] (Group)</name>
+		<entry>Character(Herder)[6]@Commoner@/1d4</entry>
+		<entry>Livestock$Noncombatant$/5d6</entry>
+	</collection>
+	<collection>
+		<name>Herders [Level 8] (Group)</name>
+		<entry>Character(Herder)[8]@Commoner@/1d4</entry>
+		<entry>Livestock$Noncombatant$/5d6</entry>
+	</collection>
+	<collection>
+		<name>Herders [Level 10] (Group)</name>
+		<entry>Character(Herder)[10]@Commoner@/1d4</entry>
+		<entry>Livestock$Noncombatant$/5d6</entry>
+	</collection>
+	<collection>
+		<name>Herders [Level 12] (Group)</name>
+		<entry>Character(Herder)[12]@Commoner@/1d4</entry>
+		<entry>Livestock$Noncombatant$/5d6</entry>
+	</collection>
+	<collection>
+		<name>Herders [Level 14] (Group)</name>
+		<entry>Character(Herder)[14]@Commoner@/1d4</entry>
+		<entry>Livestock$Noncombatant$/5d6</entry>
+	</collection>
+	<collection>
+		<name>Herders [Level 16] (Group)</name>
+		<entry>Character(Herder)[16]@Commoner@/1d4</entry>
+		<entry>Livestock$Noncombatant$/5d6</entry>
+	</collection>
+	<collection>
+		<name>Herders [Level 18] (Group)</name>
+		<entry>Character(Herder)[18]@Commoner@/1d4</entry>
+		<entry>Livestock$Noncombatant$/5d6</entry>
+	</collection>
   <collection>
 	  <name>Herders [Level 20] (Group)</name>
     <entry>Character(Herder)[20]@Commoner@/1d4</entry>
@@ -3550,41 +4031,77 @@
     <entry>Character(Hunter)[1]@Commoner&amp;Warrior@/1d4</entry>
   </collection>
   <collection>
-	  <name>Hunters [Level 2-3] (Hunting Party)</name>
-    <entry>Character(Hunter)[1d2+1]@Commoner&amp;Warrior@/1d4</entry>
+	  <name>Hunters [Level 2] (Hunting Party)</name>
+    <entry>Character(Hunter)[2]@Commoner&amp;Warrior@/1d4</entry>
   </collection>
   <collection>
-	  <name>Hunters [Level 4-5] (Hunting Party)</name>
-    <entry>Character(Hunter)[1d2+3]@Commoner&amp;Warrior@/1d4</entry>
+	  <name>Hunters [Level 4] (Hunting Party)</name>
+    <entry>Character(Hunter)[4]@Commoner&amp;Warrior@/1d4</entry>
   </collection>
   <collection>
-	  <name>Hunters [Level 6-7] (Hunting Party)</name>
-    <entry>Character(Hunter)[1d2+5]@Commoner&amp;Warrior@/1d4</entry>
+	  <name>Hunters [Level 6] (Hunting Party)</name>
+    <entry>Character(Hunter)[6]@Commoner&amp;Warrior@/1d4</entry>
   </collection>
   <collection>
-	  <name>Hunters [Level 8-9] (Hunting Party)</name>
-	  <entry>Character(Hunter)[1d2+7]@Commoner&amp;Warrior@/1d4</entry>
+	  <name>Hunters [Level 8] (Hunting Party)</name>
+	  <entry>Character(Hunter)[8]@Commoner&amp;Warrior@/1d4</entry>
   </collection>
   <collection>
-	  <name>Hunters [Level 10-11] (Hunting Party)</name>
-    <entry>Character(Hunter)[1d2+9]@Commoner&amp;Warrior@/1d4</entry>
+	  <name>Hunters [Level 10] (Hunting Party)</name>
+    <entry>Character(Hunter)[10]@Commoner&amp;Warrior@/1d4</entry>
   </collection>
   <collection>
-	  <name>Hunters [Level 12-13] (Hunting Party)</name>
-    <entry>Character(Hunter)[1d2+11]@Commoner&amp;Warrior@/1d4</entry>
+	  <name>Hunters [Level 12] (Hunting Party)</name>
+    <entry>Character(Hunter)[12]@Commoner&amp;Warrior@/1d4</entry>
   </collection>
   <collection>
-	  <name>Hunters [Level 14-15] (Hunting Party)</name>
-    <entry>Character(Hunter)[1d2+13]@Commoner&amp;Warrior@/1d4</entry>
+	  <name>Hunters [Level 14] (Hunting Party)</name>
+    <entry>Character(Hunter)[14]@Commoner&amp;Warrior@/1d4</entry>
   </collection>
   <collection>
-	  <name>Hunters [Level 16-17] (Hunting Party)</name>
-    <entry>Character(Hunter)[1d2+15]@Commoner&amp;Warrior@/1d4</entry>
+	  <name>Hunters [Level 16] (Hunting Party)</name>
+    <entry>Character(Hunter)[16]@Commoner&amp;Warrior@/1d4</entry>
   </collection>
   <collection>
-	  <name>Hunters [Level 18-19] (Hunting Party)</name>
-    <entry>Character(Hunter)[1d2+17]@Commoner&amp;Warrior@/1d4</entry>
+	  <name>Hunters [Level 18] (Hunting Party)</name>
+    <entry>Character(Hunter)[18]@Commoner&amp;Warrior@/1d4</entry>
   </collection>
+	<collection>
+		<name>Hunters [Level 3] (Hunting Party)</name>
+		<entry>Character(Hunter)[3]@Commoner&amp;Warrior@/1d4</entry>
+	</collection>
+	<collection>
+		<name>Hunters [Level 5] (Hunting Party)</name>
+		<entry>Character(Hunter)[5]@Commoner&amp;Warrior@/1d4</entry>
+	</collection>
+	<collection>
+		<name>Hunters [Level 7] (Hunting Party)</name>
+		<entry>Character(Hunter)[7]@Commoner&amp;Warrior@/1d4</entry>
+	</collection>
+	<collection>
+		<name>Hunters [Level 9] (Hunting Party)</name>
+		<entry>Character(Hunter)[9]@Commoner&amp;Warrior@/1d4</entry>
+	</collection>
+	<collection>
+		<name>Hunters [Level 11] (Hunting Party)</name>
+		<entry>Character(Hunter)[11]@Commoner&amp;Warrior@/1d4</entry>
+	</collection>
+	<collection>
+		<name>Hunters [Level 13] (Hunting Party)</name>
+		<entry>Character(Hunter)[13]@Commoner&amp;Warrior@/1d4</entry>
+	</collection>
+	<collection>
+		<name>Hunters [Level 15] (Hunting Party)</name>
+		<entry>Character(Hunter)[15]@Commoner&amp;Warrior@/1d4</entry>
+	</collection>
+	<collection>
+		<name>Hunters [Level 17] (Hunting Party)</name>
+		<entry>Character(Hunter)[17]@Commoner&amp;Warrior@/1d4</entry>
+	</collection>
+	<collection>
+		<name>Hunters [Level 19] (Hunting Party)</name>
+		<entry>Character(Hunter)[19]@Commoner&amp;Warrior@/1d4</entry>
+	</collection>
   <collection>
 	  <name>Hunters [Level 20] (Hunting Party)</name>
     <entry>Character(Hunter)[20]@Commoner&amp;Warrior@/1d4</entry>
@@ -3595,49 +4112,94 @@
 	  <entry>Character(Guard)[1]@Warrior@/1d4</entry>
   </collection>
 	<collection>
-		<name>Merchants [Level 2-3] (Caravan)</name>
-		<entry>Character(Merchant)[1d2+1]@Commoner&amp;Expert@/1d4+1</entry>
-		<entry>Character(Guard)[1d2+1]@Warrior@/1d4</entry>
+		<name>Merchants [Level 2] (Caravan)</name>
+		<entry>Character(Merchant)[2]@Commoner&amp;Expert@/1d4+1</entry>
+		<entry>Character(Guard)[2]@Warrior@/1d4</entry>
 	</collection>
 	<collection>
-		<name>Merchants [Level 4-5] (Caravan)</name>
-		<entry>Character(Merchant)[1d2+3]@Commoner&amp;Expert@/1d4+1</entry>
-		<entry>Character(Guard)[1d2+3]@Warrior@/1d4</entry>
+		<name>Merchants [Level 4] (Caravan)</name>
+		<entry>Character(Merchant)[4]@Commoner&amp;Expert@/1d4+1</entry>
+		<entry>Character(Guard)[4]@Warrior@/1d4</entry>
 	</collection>
 	<collection>
-		<name>Merchants [Level 6-7] (Caravan)</name>
-		<entry>Character(Merchant)[1d2+5]@Commoner&amp;Expert@/1d4+1</entry>
-		<entry>Character(Guard)[1d2+5]@Warrior@/1d4</entry>
+		<name>Merchants [Level 6] (Caravan)</name>
+		<entry>Character(Merchant)[6]@Commoner&amp;Expert@/1d4+1</entry>
+		<entry>Character(Guard)[6]@Warrior@/1d4</entry>
 	</collection>
 	<collection>
-		<name>Merchants [Level 8-9] (Caravan)</name>
-		<entry>Character(Merchant)[1d2+7]@Commoner&amp;Expert@/1d4+1</entry>
-		<entry>Character(Guard)[1d2+7]@Warrior@/1d4</entry>
+		<name>Merchants [Level 8] (Caravan)</name>
+		<entry>Character(Merchant)[8]@Commoner&amp;Expert@/1d4+1</entry>
+		<entry>Character(Guard)[8]@Warrior@/1d4</entry>
 	</collection>
 	<collection>
-		<name>Merchants [Level 10-11] (Caravan)</name>
-		<entry>Character(Merchant)[1d2+9]@Commoner&amp;Expert@/1d4+1</entry>
-		<entry>Character(Guard)[1d2+9]@Warrior@/1d4</entry>
+		<name>Merchants [Level 10] (Caravan)</name>
+		<entry>Character(Merchant)[10]@Commoner&amp;Expert@/1d4+1</entry>
+		<entry>Character(Guard)[10]@Warrior@/1d4</entry>
 	</collection>
 	<collection>
-		<name>Merchants [Level 12-13] (Caravan)</name>
-		<entry>Character(Merchant)[1d2+11]@Commoner&amp;Expert@/1d4+1</entry>
-		<entry>Character(Guard)[1d2+11]@Warrior@/1d4</entry>
+		<name>Merchants [Level 12] (Caravan)</name>
+		<entry>Character(Merchant)[12]@Commoner&amp;Expert@/1d4+1</entry>
+		<entry>Character(Guard)[12]@Warrior@/1d4</entry>
 	</collection>
 	<collection>
-		<name>Merchants [Level 14-15] (Caravan)</name>
-		<entry>Character(Merchant)[1d2+13]@Commoner&amp;Expert@/1d4+1</entry>
-		<entry>Character(Guard)[1d2+13]@Warrior@/1d4</entry>
+		<name>Merchants [Level 14] (Caravan)</name>
+		<entry>Character(Merchant)[14]@Commoner&amp;Expert@/1d4+1</entry>
+		<entry>Character(Guard)[14]@Warrior@/1d4</entry>
 	</collection>
 	<collection>
-		<name>Merchants [Level 16-17] (Caravan)</name>
-		<entry>Character(Merchant)[1d2+15]@Commoner&amp;Expert@/1d4+1</entry>
-		<entry>Character(Guard)[1d2+15]@Warrior@/1d4</entry>
+		<name>Merchants [Level 16] (Caravan)</name>
+		<entry>Character(Merchant)[16]@Commoner&amp;Expert@/1d4+1</entry>
+		<entry>Character(Guard)[16]@Warrior@/1d4</entry>
 	</collection>
 	<collection>
-		<name>Merchants [Level 18-19] (Caravan)</name>
-		<entry>Character(Merchant)[1d2+17]@Commoner&amp;Expert@/1d4+1</entry>
-		<entry>Character(Guard)[1d2+17]@Warrior@/1d4</entry>
+		<name>Merchants [Level 18] (Caravan)</name>
+		<entry>Character(Merchant)[18]@Commoner&amp;Expert@/1d4+1</entry>
+		<entry>Character(Guard)[18]@Warrior@/1d4</entry>
+	</collection>
+	<collection>
+		<name>Merchants [Level 3] (Caravan)</name>
+		<entry>Character(Merchant)[3]@Commoner&amp;Expert@/1d4+1</entry>
+		<entry>Character(Guard)[3]@Warrior@/1d4</entry>
+	</collection>
+	<collection>
+		<name>Merchants [Level 5] (Caravan)</name>
+		<entry>Character(Merchant)[5]@Commoner&amp;Expert@/1d4+1</entry>
+		<entry>Character(Guard)[5]@Warrior@/1d4</entry>
+	</collection>
+	<collection>
+		<name>Merchants [Level 7] (Caravan)</name>
+		<entry>Character(Merchant)[7]@Commoner&amp;Expert@/1d4+1</entry>
+		<entry>Character(Guard)[7]@Warrior@/1d4</entry>
+	</collection>
+	<collection>
+		<name>Merchants [Level 9] (Caravan)</name>
+		<entry>Character(Merchant)[9]@Commoner&amp;Expert@/1d4+1</entry>
+		<entry>Character(Guard)[9]@Warrior@/1d4</entry>
+	</collection>
+	<collection>
+		<name>Merchants [Level 11] (Caravan)</name>
+		<entry>Character(Merchant)[11]@Commoner&amp;Expert@/1d4+1</entry>
+		<entry>Character(Guard)[11]@Warrior@/1d4</entry>
+	</collection>
+	<collection>
+		<name>Merchants [Level 13] (Caravan)</name>
+		<entry>Character(Merchant)[13]@Commoner&amp;Expert@/1d4+1</entry>
+		<entry>Character(Guard)[13]@Warrior@/1d4</entry>
+	</collection>
+	<collection>
+		<name>Merchants [Level 15] (Caravan)</name>
+		<entry>Character(Merchant)[15]@Commoner&amp;Expert@/1d4+1</entry>
+		<entry>Character(Guard)[15]@Warrior@/1d4</entry>
+	</collection>
+	<collection>
+		<name>Merchants [Level 17] (Caravan)</name>
+		<entry>Character(Merchant)[17]@Commoner&amp;Expert@/1d4+1</entry>
+		<entry>Character(Guard)[17]@Warrior@/1d4</entry>
+	</collection>
+	<collection>
+		<name>Merchants [Level 19] (Caravan)</name>
+		<entry>Character(Merchant)[19]@Commoner&amp;Expert@/1d4+1</entry>
+		<entry>Character(Guard)[19]@Warrior@/1d4</entry>
 	</collection>
 	<collection>
 		<name>Merchants [Level 20] (Caravan)</name>
@@ -3650,95 +4212,176 @@
 	  <entry>Character(Leader)[1]@Bard@/1d10-9</entry>
   </collection>
   <collection>
-	  <name>Minstrels [Level 2-3] (Group)</name>
-	  <entry>Character(Minstrel)[1d2+1]@Commoner&amp;Expert@/2d4+1</entry>
-	  <entry>Character(Leader)[2]@Bard@/1d10-9</entry>
-  </collection>
-  <collection>
-	  <name>Minstrels [Level 4-5] (Group)</name>
-	  <entry>Character(Minstrel)[1d2+3]@Commoner&amp;Expert@/2d4+1</entry>
+	  <name>Minstrels [Level 3] (Group)</name>
+	  <entry>Character(Minstrel)[3]@Commoner&amp;Expert@/2d4+1</entry>
 	  <entry>Character(Leader)[3]@Bard@/1d10-9</entry>
   </collection>
   <collection>
-	  <name>Minstrels [Level 6-7] (Group)</name>
-	  <entry>Character(Minstrel)[1d2+5]@Commoner&amp;Expert@/2d4+1</entry>
-	  <entry>Character(Leader)[4]@Bard@/1d10-9</entry>
-  </collection>
-  <collection>
-	  <name>Minstrels [Level 8-9] (Group)</name>
-	  <entry>Character(Minstrel)[1d2+7]@Commoner&amp;Expert@/2d4+1</entry>
+	  <name>Minstrels [Level 5] (Group)</name>
+	  <entry>Character(Minstrel)[5]@Commoner&amp;Expert@/2d4+1</entry>
 	  <entry>Character(Leader)[5]@Bard@/1d10-9</entry>
   </collection>
   <collection>
-	  <name>Minstrels [Level 10-11] (Group)</name>
-	  <entry>Character(Minstrel)[1d2+9]@Commoner&amp;Expert@/2d4+1</entry>
-	  <entry>Character(Leader)[6]@Bard@/1d10-9</entry>
-  </collection>
-  <collection>
-	  <name>Minstrels [Level 12-13] (Group)</name>
-	  <entry>Character(Minstrel)[1d2+11]@Commoner&amp;Expert@/2d4+1</entry>
+	  <name>Minstrels [Level 7] (Group)</name>
+	  <entry>Character(Minstrel)[7]@Commoner&amp;Expert@/2d4+1</entry>
 	  <entry>Character(Leader)[7]@Bard@/1d10-9</entry>
   </collection>
   <collection>
-	  <name>Minstrels [Level 14-15] (Group)</name>
-	  <entry>Character(Minstrel)[1d2+13]@Commoner&amp;Expert@/2d4+1</entry>
-	  <entry>Character(Leader)[8]@Bard@/1d10-9</entry>
-  </collection>
-  <collection>
-	  <name>Minstrels [Level 16-17] (Group)</name>
-	  <entry>Character(Minstrel)[1d2+15]@Commoner&amp;Expert@/2d4+1</entry>
+	  <name>Minstrels [Level 9] (Group)</name>
+	  <entry>Character(Minstrel)[9]@Commoner&amp;Expert@/2d4+1</entry>
 	  <entry>Character(Leader)[9]@Bard@/1d10-9</entry>
   </collection>
   <collection>
-	  <name>Minstrels [Level 18-19] (Group)</name>
-	  <entry>Character(Minstrel)[1d2+17]@Commoner&amp;Expert@/2d4+1</entry>
-	  <entry>Character(Leader)[10]@Bard@/1d10-9</entry>
-  </collection>
-  <collection>
-	  <name>Minstrels [Level 20] (Group)</name>
-	  <entry>Character(Minstrel)[20]@Commoner&amp;Expert@/2d4+1</entry>
+	  <name>Minstrels [Level 11] (Group)</name>
+	  <entry>Character(Minstrel)[11]@Commoner&amp;Expert@/2d4+1</entry>
 	  <entry>Character(Leader)[11]@Bard@/1d10-9</entry>
   </collection>
+  <collection>
+	  <name>Minstrels [Level 13] (Group)</name>
+	  <entry>Character(Minstrel)[13]@Commoner&amp;Expert@/2d4+1</entry>
+	  <entry>Character(Leader)[13]@Bard@/1d10-9</entry>
+  </collection>
+  <collection>
+	  <name>Minstrels [Level 15] (Group)</name>
+	  <entry>Character(Minstrel)[15]@Commoner&amp;Expert@/2d4+1</entry>
+	  <entry>Character(Leader)[15]@Bard@/1d10-9</entry>
+  </collection>
+	<collection>
+		<name>Minstrels [Level 17] (Group)</name>
+		<entry>Character(Minstrel)[17]@Commoner&amp;Expert@/2d4+1</entry>
+		<entry>Character(Leader)[17]@Bard@/1d10-9</entry>
+	</collection>
+	<collection>
+		<name>Minstrels [Level 19] (Group)</name>
+		<entry>Character(Minstrel)[19]@Commoner&amp;Expert@/2d4+1</entry>
+		<entry>Character(Leader)[19]@Bard@/1d10-9</entry>
+	</collection>
+	<collection>
+		<name>Minstrels [Level 2] (Group)</name>
+		<entry>Character(Minstrel)[2]@Commoner&amp;Expert@/2d4+1</entry>
+		<entry>Character(Leader)[2]@Bard@/1d10-9</entry>
+	</collection>
+	<collection>
+		<name>Minstrels [Level 4] (Group)</name>
+		<entry>Character(Minstrel)[4]@Commoner&amp;Expert@/2d4+1</entry>
+		<entry>Character(Leader)[4]@Bard@/1d10-9</entry>
+	</collection>
+	<collection>
+		<name>Minstrels [Level 6] (Group)</name>
+		<entry>Character(Minstrel)[6]@Commoner&amp;Expert@/2d4+1</entry>
+		<entry>Character(Leader)[6]@Bard@/1d10-9</entry>
+	</collection>
+	<collection>
+		<name>Minstrels [Level 8] (Group)</name>
+		<entry>Character(Minstrel)[8]@Commoner&amp;Expert@/2d4+1</entry>
+		<entry>Character(Leader)[8]@Bard@/1d10-9</entry>
+	</collection>
+	<collection>
+		<name>Minstrels [Level 10] (Group)</name>
+		<entry>Character(Minstrel)[10]@Commoner&amp;Expert@/2d4+1</entry>
+		<entry>Character(Leader)[10]@Bard@/1d10-9</entry>
+	</collection>
+	<collection>
+		<name>Minstrels [Level 12] (Group)</name>
+		<entry>Character(Minstrel)[12]@Commoner&amp;Expert@/2d4+1</entry>
+		<entry>Character(Leader)[12]@Bard@/1d10-9</entry>
+	</collection>
+	<collection>
+		<name>Minstrels [Level 14] (Group)</name>
+		<entry>Character(Minstrel)[14]@Commoner&amp;Expert@/2d4+1</entry>
+		<entry>Character(Leader)[14]@Bard@/1d10-9</entry>
+	</collection>
+	<collection>
+		<name>Minstrels [Level 16] (Group)</name>
+		<entry>Character(Minstrel)[16]@Commoner&amp;Expert@/2d4+1</entry>
+		<entry>Character(Leader)[16]@Bard@/1d10-9</entry>
+	</collection>
+	<collection>
+		<name>Minstrels [Level 18] (Group)</name>
+		<entry>Character(Minstrel)[18]@Commoner&amp;Expert@/2d4+1</entry>
+		<entry>Character(Leader)[18]@Bard@/1d10-9</entry>
+	</collection>
+	<collection>
+		<name>Minstrels [Level 20] (Group)</name>
+		<entry>Character(Minstrel)[20]@Commoner&amp;Expert@/2d4+1</entry>
+		<entry>Character(Leader)[20]@Bard@/1d10-9</entry>
+	</collection>
   <collection>
     <name>Missionaries [Level 1 Adepts] (Mission Team)</name>
     <entry>Character(Missionary)[1]@Adept@/1d4</entry>
   </collection>
   <collection>
-	  <name>Missionaries [Level 2-3 Adepts] (Mission Team)</name>
-    <entry>Character(Missionary)[1d2+1]@Adept@/1d4</entry>
+	  <name>Missionaries [Level 3 Adepts] (Mission Team)</name>
+    <entry>Character(Missionary)[3]@Adept@/1d4</entry>
   </collection>
   <collection>
-	  <name>Missionaries [Level 4-5 Adepts] (Mission Team)</name>
-    <entry>Character(Missionary)[1d2+3]@Adept@/1d4</entry>
+	  <name>Missionaries [Level 5 Adepts] (Mission Team)</name>
+    <entry>Character(Missionary)[5]@Adept@/1d4</entry>
   </collection>
   <collection>
-	  <name>Missionaries [Level 6-7 Adepts] (Mission Team)</name>
-	  <entry>Character(Missionary)[1d2+5]@Adept@/1d4</entry>
+	  <name>Missionaries [Level 7 Adepts] (Mission Team)</name>
+	  <entry>Character(Missionary)[7]@Adept@/1d4</entry>
   </collection>
   <collection>
-	  <name>Missionaries [Level 8-9 Adepts] (Mission Team)</name>
-	  <entry>Character(Missionary)[1d2+7]@Adept@/1d4</entry>
+	  <name>Missionaries [Level 9 Adepts] (Mission Team)</name>
+	  <entry>Character(Missionary)[9]@Adept@/1d4</entry>
   </collection>
   <collection>
-	  <name>Missionaries [Level 10-11 Adepts] (Mission Team)</name>
-    <entry>Character(Missionary)[1d2+9]@Adept@/1d4</entry>
+	  <name>Missionaries [Level 11 Adepts] (Mission Team)</name>
+    <entry>Character(Missionary)[11]@Adept@/1d4</entry>
   </collection>
   <collection>
-	  <name>Missionaries [Level 12-13 Adepts] (Mission Team)</name>
-	  <entry>Character(Missionary)[1d2+11]@Adept@/1d4</entry>
+	  <name>Missionaries [Level 13 Adepts] (Mission Team)</name>
+	  <entry>Character(Missionary)[13]@Adept@/1d4</entry>
   </collection>
   <collection>
-	  <name>Missionaries [Level 14-15 Adepts] (Mission Team)</name>
-	  <entry>Character(Missionary)[1d2+13]@Adept@/1d4</entry>
+	  <name>Missionaries [Level 15 Adepts] (Mission Team)</name>
+	  <entry>Character(Missionary)[15]@Adept@/1d4</entry>
   </collection>
   <collection>
-	  <name>Missionaries [Level 16-17 Adepts] (Mission Team)</name>
-    <entry>Character(Missionary)[1d2+15]@Adept@/1d4</entry>
+	  <name>Missionaries [Level 17 Adepts] (Mission Team)</name>
+    <entry>Character(Missionary)[17]@Adept@/1d4</entry>
   </collection>
   <collection>
-	  <name>Missionaries [Level 18-19 Adepts] (Mission Team)</name>
-	  <entry>Character(Missionary)[1d2+17]@Adept@/1d4</entry>
+	  <name>Missionaries [Level 19 Adepts] (Mission Team)</name>
+	  <entry>Character(Missionary)[19]@Adept@/1d4</entry>
   </collection>
+	<collection>
+		<name>Missionaries [Level 2 Adepts] (Mission Team)</name>
+		<entry>Character(Missionary)[2]@Adept@/1d4</entry>
+	</collection>
+	<collection>
+		<name>Missionaries [Level 4 Adepts] (Mission Team)</name>
+		<entry>Character(Missionary)[4]@Adept@/1d4</entry>
+	</collection>
+	<collection>
+		<name>Missionaries [Level 6 Adepts] (Mission Team)</name>
+		<entry>Character(Missionary)[6]@Adept@/1d4</entry>
+	</collection>
+	<collection>
+		<name>Missionaries [Level 8 Adepts] (Mission Team)</name>
+		<entry>Character(Missionary)[8]@Adept@/1d4</entry>
+	</collection>
+	<collection>
+		<name>Missionaries [Level 10 Adepts] (Mission Team)</name>
+		<entry>Character(Missionary)[10]@Adept@/1d4</entry>
+	</collection>
+	<collection>
+		<name>Missionaries [Level 12 Adepts] (Mission Team)</name>
+		<entry>Character(Missionary)[12]@Adept@/1d4</entry>
+	</collection>
+	<collection>
+		<name>Missionaries [Level 14 Adepts] (Mission Team)</name>
+		<entry>Character(Missionary)[14]@Adept@/1d4</entry>
+	</collection>
+	<collection>
+		<name>Missionaries [Level 16 Adepts] (Mission Team)</name>
+		<entry>Character(Missionary)[16]@Adept@/1d4</entry>
+	</collection>
+	<collection>
+		<name>Missionaries [Level 18 Adepts] (Mission Team)</name>
+		<entry>Character(Missionary)[18]@Adept@/1d4</entry>
+	</collection>
   <collection>
 	  <name>Missionaries [Level 20 Adepts] (Mission Team)</name>
     <entry>Character(Missionary)[20]@Adept@/1d4</entry>
@@ -3906,69 +4549,103 @@
   <collection>
     <name>Pilgrims [Level 1] (Caravan)</name>
 	  <entry>Character(Pilgrim)[1]@Commoner@/1d10+6</entry>
-	  <entry>Character(Guard)[1]@Warrior@/1d6-1</entry>
-	  <entry>Character(Leader)[1]@Cleric@/1</entry>
   </collection>
   <collection>
-	  <name>Pilgrims [Level 2-3] (Caravan)</name>
-	  <entry>Character(Pilgrim)[1d2+1]@Commoner@/1d10+6</entry>
-	  <entry>Character(Guard)[1d2+1]@Warrior@/1d6-1</entry>
-	  <entry>Character(Leader)[2]@Cleric@/1</entry>
+	  <name>Pilgrims [Level 3] (Caravan)</name>
+	  <entry>Character(Pilgrim)[3]@Commoner@/1d10+6</entry>
   </collection>
   <collection>
-	  <name>Pilgrims [Level 4-5] (Caravan)</name>
-	  <entry>Character(Pilgrim)[1d2+3]@Commoner@/1d10+6</entry>
-	  <entry>Character(Guard)[1d2+3]@Warrior@/1d6-1</entry>
-	  <entry>Character(Leader)[3]@Cleric@/1</entry>
+	  <name>Pilgrims [Level 5] (Caravan)</name>
+	  <entry>Character(Pilgrim)[5]@Commoner@/1d10+6</entry>
   </collection>
   <collection>
-	  <name>Pilgrims [Level 6-7] (Caravan)</name>
-	  <entry>Character(Pilgrim)[1d2+5]@Commoner@/1d10+6</entry>
-	  <entry>Character(Guard)[1d2+5]@Warrior@/1d6-1</entry>
-	  <entry>Character(Leader)[4]@Cleric@/1</entry>
+	  <name>Pilgrims [Level 7] (Caravan)</name>
+	  <entry>Character(Pilgrim)[7]@Commoner@/1d10+6</entry>
   </collection>
   <collection>
-	  <name>Pilgrims [Level 8-9] (Caravan)</name>
-	  <entry>Character(Pilgrim)[1d2+7]@Commoner@/1d10+6</entry>
-	  <entry>Character(Guard)[1d2+7]@Warrior@/1d6-1</entry>
-	  <entry>Character(Leader)[5]@Cleric@/1</entry>
+	  <name>Pilgrims [Level 9] (Caravan)</name>
+	  <entry>Character(Pilgrim)[9]@Commoner@/1d10+6</entry>
   </collection>
-  <collection>
-	  <name>Pilgrims [Level 10-11] (Caravan)</name>
-	  <entry>Character(Pilgrim)[1d2+9]@Commoner@/1d10+6</entry>
-	  <entry>Character(Guard)[1d2+9]@Warrior@/1d6-1</entry>
-	  <entry>Character(Leader)[6]@Cleric@/1</entry>
-  </collection>
-  <collection>
-	  <name>Pilgrims [Level 12-13] (Caravan)</name>
-	  <entry>Character(Pilgrim)[1d2+11]@Commoner@/1d10+6</entry>
-	  <entry>Character(Guard)[1d2+11]@Warrior@/1d6-1</entry>
-	  <entry>Character(Leader)[7]@Cleric@/1</entry>
-  </collection>
-  <collection>
-	  <name>Pilgrims [Level 14-15] (Caravan)</name>
-	  <entry>Character(Pilgrim)[1d2+13]@Commoner@/1d10+6</entry>
-	  <entry>Character(Guard)[1d2+13]@Warrior@/1d6-1</entry>
-	  <entry>Character(Leader)[8]@Cleric@/1</entry>
-  </collection>
-  <collection>
-	  <name>Pilgrims [Level 16-17] (Caravan)</name>
-	  <entry>Character(Pilgrim)[1d2+15]@Commoner@/1d10+6</entry>
-	  <entry>Character(Guard)[1d2+15]@Warrior@/1d6-1</entry>
-	  <entry>Character(Leader)[9]@Cleric@/1</entry>
-  </collection>
-  <collection>
-	  <name>Pilgrims [Level 18-19] (Caravan)</name>
-	  <entry>Character(Pilgrim)[1d2+17]@Commoner@/1d10+6</entry>
-	  <entry>Character(Guard)[1d2+17]@Warrior@/1d6-1</entry>
-	  <entry>Character(Leader)[10]@Cleric@/1</entry>
-  </collection>
-  <collection>
-	  <name>Pilgrims [Level 20] (Caravan)</name>
-	  <entry>Character(Pilgrim)[20]@Commoner@/1d10+6</entry>
-	  <entry>Character(Guard)[20]@Warrior@/1d6-1</entry>
-	  <entry>Character(Leader)[11]@Cleric@/1</entry>
-  </collection>
+	<collection>
+		<name>Pilgrims [Level 2] (Caravan)</name>
+		<entry>Character(Pilgrim)[2]@Commoner@/1d10+6</entry>
+	</collection>
+	<collection>
+		<name>Pilgrims [Level 4] (Caravan)</name>
+		<entry>Character(Pilgrim)[4]@Commoner@/1d10+6</entry>
+	</collection>
+	<collection>
+		<name>Pilgrims [Level 6] (Caravan)</name>
+		<entry>Character(Pilgrim)[6]@Commoner@/1d10+6</entry>
+	</collection>
+	<collection>
+		<name>Pilgrims [Level 8] (Caravan)</name>
+		<entry>Character(Pilgrim)[8]@Commoner@/1d10+6</entry>
+	</collection>
+	<collection>
+		<name>Pilgrims [Level 10] (Caravan)</name>
+		<entry>Character(Pilgrim)[10]@Commoner@/1d10+6</entry>
+	</collection>
+	<collection>
+		<name>Pilgrims [Level 1] (Caravan with Leader)</name>
+		<entry>Character(Pilgrim)[1]@Commoner@/1d10+6</entry>
+		<entry>Character(Guard)[1]@Warrior@/1d6-1</entry>
+		<entry>Character(Leader)[11]@Cleric@/1</entry>
+	</collection>
+	<collection>
+		<name>Pilgrims [Level 3] (Caravan with Leader)</name>
+		<entry>Character(Pilgrim)[3]@Commoner@/1d10+6</entry>
+		<entry>Character(Guard)[3]@Warrior@/1d6-1</entry>
+		<entry>Character(Leader)[13]@Cleric@/1</entry>
+	</collection>
+	<collection>
+		<name>Pilgrims [Level 5] (Caravan with Leader)</name>
+		<entry>Character(Pilgrim)[5]@Commoner@/1d10+6</entry>
+		<entry>Character(Guard)[5]@Warrior@/1d6-1</entry>
+		<entry>Character(Leader)[15]@Cleric@/1</entry>
+	</collection>
+	<collection>
+		<name>Pilgrims [Level 7] (Caravan with Leader)</name>
+		<entry>Character(Pilgrim)[7]@Commoner@/1d10+6</entry>
+		<entry>Character(Guard)[7]@Warrior@/1d6-1</entry>
+		<entry>Character(Leader)[17]@Cleric@/1</entry>
+	</collection>
+	<collection>
+		<name>Pilgrims [Level 9] (Caravan with Leader)</name>
+		<entry>Character(Pilgrim)[9]@Commoner@/1d10+6</entry>
+		<entry>Character(Guard)[9]@Warrior@/1d6-1</entry>
+		<entry>Character(Leader)[19]@Cleric@/1</entry>
+	</collection>
+	<collection>
+		<name>Pilgrims [Level 2] (Caravan with Leader)</name>
+		<entry>Character(Pilgrim)[2]@Commoner@/1d10+6</entry>
+		<entry>Character(Guard)[2]@Warrior@/1d6-1</entry>
+		<entry>Character(Leader)[12]@Cleric@/1</entry>
+	</collection>
+	<collection>
+		<name>Pilgrims [Level 4] (Caravan with Leader)</name>
+		<entry>Character(Pilgrim)[4]@Commoner@/1d10+6</entry>
+		<entry>Character(Guard)[4]@Warrior@/1d6-1</entry>
+		<entry>Character(Leader)[14]@Cleric@/1</entry>
+	</collection>
+	<collection>
+		<name>Pilgrims [Level 6] (Caravan with Leader)</name>
+		<entry>Character(Pilgrim)[6]@Commoner@/1d10+6</entry>
+		<entry>Character(Guard)[6]@Warrior@/1d6-1</entry>
+		<entry>Character(Leader)[16]@Cleric@/1</entry>
+	</collection>
+	<collection>
+		<name>Pilgrims [Level 8] (Caravan with Leader)</name>
+		<entry>Character(Pilgrim)[8]@Commoner@/1d10+6</entry>
+		<entry>Character(Guard)[8]@Warrior@/1d6-1</entry>
+		<entry>Character(Leader)[18]@Cleric@/1</entry>
+	</collection>
+	<collection>
+		<name>Pilgrims [Level 10] (Caravan with Leader)</name>
+		<entry>Character(Pilgrim)[10]@Commoner@/1d10+6</entry>
+		<entry>Character(Guard)[10]@Warrior@/1d6-1</entry>
+		<entry>Character(Leader)[20]@Cleric@/1</entry>
+	</collection>
   <collection>
     <name>Politician [Level 1] (with Advisers and Guards)</name>
 	  <entry>Character(Politician)[1]@Aristocrat@/1</entry>
@@ -3976,59 +4653,113 @@
 	  <entry>Character(Guard)[1]@Warrior@/2d3-2</entry>
   </collection>
   <collection>
-	  <name>Politician [Level 2-3] (with Advisers and Guards)</name>
-	  <entry>Character(Politician)[1d2+1]@Aristocrat@/1</entry>
-	  <entry>Character(Adviser)[1d2+1]@Expert@/1d3-1</entry>
-	  <entry>Character(Guard)[1d2+1]@Warrior@/2d3-2</entry>
+	  <name>Politician [Level 3] (with Advisers and Guards)</name>
+	  <entry>Character(Politician)[3]@Aristocrat@/1</entry>
+	  <entry>Character(Adviser)[3]@Expert@/1d3-1</entry>
+	  <entry>Character(Guard)[3]@Warrior@/2d3-2</entry>
   </collection>
   <collection>
-	  <name>Politician [Level 4-5] (with Advisers and Guards)</name>
-	  <entry>Character(Politician)[1d2+3]@Aristocrat@/1</entry>
-	  <entry>Character(Adviser)[1d2+3]@Expert@/1d3-1</entry>
-	  <entry>Character(Guard)[1d2+3]@Warrior@/2d3-2</entry>
+	  <name>Politician [Level 5] (with Advisers and Guards)</name>
+	  <entry>Character(Politician)[5]@Aristocrat@/1</entry>
+	  <entry>Character(Adviser)[5]@Expert@/1d3-1</entry>
+	  <entry>Character(Guard)[5]@Warrior@/2d3-2</entry>
   </collection>
   <collection>
-	  <name>Politician [Level 6-7] (with Advisers and Guards)</name>
-	  <entry>Character(Politician)[1d2+5]@Aristocrat@/1</entry>
-	  <entry>Character(Adviser)[1d2+5]@Expert@/1d3-1</entry>
-	  <entry>Character(Guard)[1d2+5]@Warrior@/2d3-2</entry>
+	  <name>Politician [Level 7] (with Advisers and Guards)</name>
+	  <entry>Character(Politician)[7]@Aristocrat@/1</entry>
+	  <entry>Character(Adviser)[7]@Expert@/1d3-1</entry>
+	  <entry>Character(Guard)[7]@Warrior@/2d3-2</entry>
   </collection>
   <collection>
-	  <name>Politician [Level 8-9] (with Advisers and Guards)</name>
-	  <entry>Character(Politician)[1d2+7]@Aristocrat@/1</entry>
-	  <entry>Character(Adviser)[1d2+7]@Expert@/1d3-1</entry>
-	  <entry>Character(Guard)[1d2+7]@Warrior@/2d3-2</entry>
+	  <name>Politician [Level 9] (with Advisers and Guards)</name>
+	  <entry>Character(Politician)[9]@Aristocrat@/1</entry>
+	  <entry>Character(Adviser)[9]@Expert@/1d3-1</entry>
+	  <entry>Character(Guard)[9]@Warrior@/2d3-2</entry>
+  </collection>
+	<collection>
+		<name>Politician [Level 2] (with Advisers and Guards)</name>
+		<entry>Character(Politician)[2]@Aristocrat@/1</entry>
+		<entry>Character(Adviser)[2]@Expert@/1d3-1</entry>
+		<entry>Character(Guard)[2]@Warrior@/2d3-2</entry>
+	</collection>
+	<collection>
+		<name>Politician [Level 4] (with Advisers and Guards)</name>
+		<entry>Character(Politician)[4]@Aristocrat@/1</entry>
+		<entry>Character(Adviser)[4]@Expert@/1d3-1</entry>
+		<entry>Character(Guard)[4]@Warrior@/2d3-2</entry>
+	</collection>
+	<collection>
+		<name>Politician [Level 6] (with Advisers and Guards)</name>
+		<entry>Character(Politician)[6]@Aristocrat@/1</entry>
+		<entry>Character(Adviser)[6]@Expert@/1d3-1</entry>
+		<entry>Character(Guard)[6]@Warrior@/2d3-2</entry>
+	</collection>
+	<collection>
+		<name>Politician [Level 8] (with Advisers and Guards)</name>
+		<entry>Character(Politician)[8]@Aristocrat@/1</entry>
+		<entry>Character(Adviser)[8]@Expert@/1d3-1</entry>
+		<entry>Character(Guard)[8]@Warrior@/2d3-2</entry>
+	</collection>
+  <collection>
+	  <name>Politician [Level 10] (with Advisers and Guards)</name>
+	  <entry>Character(Politician)[10]@Aristocrat@/1</entry>
+	  <entry>Character(Adviser)[10]@Expert@/1d3-1</entry>
+	  <entry>Character(Guard)[10]@Warrior@/2d3-2</entry>
   </collection>
   <collection>
-	  <name>Politician [Level 10-11] (with Advisers and Guards)</name>
-	  <entry>Character(Politician)[1d2+9]@Aristocrat@/1</entry>
-	  <entry>Character(Adviser)[1d2+9]@Expert@/1d3-1</entry>
-	  <entry>Character(Guard)[1d2+9]@Warrior@/2d3-2</entry>
+	  <name>Politician [Level 12] (with Advisers and Guards)</name>
+	  <entry>Character(Politician)[12]@Aristocrat@/1</entry>
+	  <entry>Character(Adviser)[12]@Expert@/1d3-1</entry>
+	  <entry>Character(Guard)[12]@Warrior@/2d3-2</entry>
   </collection>
   <collection>
-	  <name>Politician [Level 12-13] (with Advisers and Guards)</name>
-	  <entry>Character(Politician)[1d2+11]@Aristocrat@/1</entry>
-	  <entry>Character(Adviser)[1d2+11]@Expert@/1d3-1</entry>
-	  <entry>Character(Guard)[1d2+11]@Warrior@/2d3-2</entry>
+	  <name>Politician [Level 14] (with Advisers and Guards)</name>
+	  <entry>Character(Politician)[14]@Aristocrat@/1</entry>
+	  <entry>Character(Adviser)[14]@Expert@/1d3-1</entry>
+	  <entry>Character(Guard)[14]@Warrior@/2d3-2</entry>
   </collection>
   <collection>
-	  <name>Politician [Level 14-15] (with Advisers and Guards)</name>
-	  <entry>Character(Politician)[1d2+13]@Aristocrat@/1</entry>
-	  <entry>Character(Adviser)[1d2+13]@Expert@/1d3-1</entry>
-	  <entry>Character(Guard)[1d2+13]@Warrior@/2d3-2</entry>
+	  <name>Politician [Level 16] (with Advisers and Guards)</name>
+	  <entry>Character(Politician)[16]@Aristocrat@/1</entry>
+	  <entry>Character(Adviser)[16]@Expert@/1d3-1</entry>
+	  <entry>Character(Guard)[16]@Warrior@/2d3-2</entry>
   </collection>
   <collection>
-	  <name>Politician [Level 16-17] (with Advisers and Guards)</name>
-	  <entry>Character(Politician)[1d2+15]@Aristocrat@/1</entry>
-	  <entry>Character(Adviser)[1d2+15]@Expert@/1d3-1</entry>
-	  <entry>Character(Guard)[1d2+15]@Warrior@/2d3-2</entry>
+	  <name>Politician [Level 18] (with Advisers and Guards)</name>
+	  <entry>Character(Politician)[18]@Aristocrat@/1</entry>
+	  <entry>Character(Adviser)[18]@Expert@/1d3-1</entry>
+	  <entry>Character(Guard)[18]@Warrior@/2d3-2</entry>
   </collection>
-  <collection>
-	  <name>Politician [Level 18-19] (with Advisers and Guards)</name>
-	  <entry>Character(Politician)[1d2+17]@Aristocrat@/1</entry>
-	  <entry>Character(Adviser)[1d2+17]@Expert@/1d3-1</entry>
-	  <entry>Character(Guard)[1d2+17]@Warrior@/2d3-2</entry>
-  </collection>
+	<collection>
+		<name>Politician [Level 11] (with Advisers and Guards)</name>
+		<entry>Character(Politician)[11]@Aristocrat@/1</entry>
+		<entry>Character(Adviser)[11]@Expert@/1d3-1</entry>
+		<entry>Character(Guard)[11]@Warrior@/2d3-2</entry>
+	</collection>
+	<collection>
+		<name>Politician [Level 13] (with Advisers and Guards)</name>
+		<entry>Character(Politician)[13]@Aristocrat@/1</entry>
+		<entry>Character(Adviser)[13]@Expert@/1d3-1</entry>
+		<entry>Character(Guard)[13]@Warrior@/2d3-2</entry>
+	</collection>
+	<collection>
+		<name>Politician [Level 15] (with Advisers and Guards)</name>
+		<entry>Character(Politician)[15]@Aristocrat@/1</entry>
+		<entry>Character(Adviser)[15]@Expert@/1d3-1</entry>
+		<entry>Character(Guard)[15]@Warrior@/2d3-2</entry>
+	</collection>
+	<collection>
+		<name>Politician [Level 17] (with Advisers and Guards)</name>
+		<entry>Character(Politician)[17]@Aristocrat@/1</entry>
+		<entry>Character(Adviser)[17]@Expert@/1d3-1</entry>
+		<entry>Character(Guard)[17]@Warrior@/2d3-2</entry>
+	</collection>
+	<collection>
+		<name>Politician [Level 19] (with Advisers and Guards)</name>
+		<entry>Character(Politician)[19]@Aristocrat@/1</entry>
+		<entry>Character(Adviser)[19]@Expert@/1d3-1</entry>
+		<entry>Character(Guard)[19]@Warrior@/2d3-2</entry>
+	</collection>
   <collection>
 	  <name>Politician [Level 20] (with Advisers and Guards)</name>
 	  <entry>Character(Politician)[20]@Aristocrat@/1</entry>
@@ -4040,41 +4771,77 @@
     <entry>Character(Protestor)[1]@Commoner@/1d10</entry>
   </collection>
   <collection>
-	  <name>Protestors [Level 2-3] (Protest)</name>
-    <entry>Character(Protestor)[1d2+1]@Commoner@/1d10</entry>
+	  <name>Protestors [Level 3] (Protest)</name>
+    <entry>Character(Protestor)[3]@Commoner@/1d10</entry>
   </collection>
   <collection>
-	  <name>Protestors [Level 4-5] (Protest)</name>
-	  <entry>Character(Protestor)[1d2+3]@Commoner@/1d10</entry>
+	  <name>Protestors [Level 5] (Protest)</name>
+	  <entry>Character(Protestor)[5]@Commoner@/1d10</entry>
   </collection>
   <collection>
-	  <name>Protestors [Level 6-7] (Protest)</name>
-	  <entry>Character(Protestor)[1d2+5]@Commoner@/1d10</entry>
+	  <name>Protestors [Level 7] (Protest)</name>
+	  <entry>Character(Protestor)[7]@Commoner@/1d10</entry>
   </collection>
   <collection>
-	  <name>Protestors [Level 8-9] (Protest)</name>
-	  <entry>Character(Protestor)[1d2+7]@Commoner@/1d10</entry>
+	  <name>Protestors [Level 9] (Protest)</name>
+	  <entry>Character(Protestor)[9]@Commoner@/1d10</entry>
   </collection>
   <collection>
-	  <name>Protestors [Level 10-11] (Protest)</name>
-	  <entry>Character(Protestor)[1d2+9]@Commoner@/1d10</entry>
+	  <name>Protestors [Level 11] (Protest)</name>
+	  <entry>Character(Protestor)[11]@Commoner@/1d10</entry>
   </collection>
   <collection>
-	  <name>Protestors [Level 12-13] (Protest)</name>
-    <entry>Character(Protestor)[1d2+11]@Commoner@/1d10</entry>
+	  <name>Protestors [Level 13] (Protest)</name>
+    <entry>Character(Protestor)[13]@Commoner@/1d10</entry>
   </collection>
   <collection>
-	  <name>Protestors [Level 14-15] (Protest)</name>
-    <entry>Character(Protestor)[1d2+13]@Commoner@/1d10</entry>
+	  <name>Protestors [Level 15] (Protest)</name>
+    <entry>Character(Protestor)[15]@Commoner@/1d10</entry>
   </collection>
   <collection>
-	  <name>Protestors [Level 16-17] (Protest)</name>
-    <entry>Character(Protestor)[1d2+15]@Commoner@/1d10</entry>
+	  <name>Protestors [Level 17] (Protest)</name>
+    <entry>Character(Protestor)[17]@Commoner@/1d10</entry>
   </collection>
   <collection>
-	  <name>Protestors [Level 18-19] (Protest)</name>
-    <entry>Character(Protestor)[1d2+17]@Commoner@/1d10</entry>
+	  <name>Protestors [Level 19] (Protest)</name>
+    <entry>Character(Protestor)[19]@Commoner@/1d10</entry>
   </collection>
+	<collection>
+		<name>Protestors [Level 2] (Protest)</name>
+		<entry>Character(Protestor)[2]@Commoner@/1d10</entry>
+	</collection>
+	<collection>
+		<name>Protestors [Level 4] (Protest)</name>
+		<entry>Character(Protestor)[4]@Commoner@/1d10</entry>
+	</collection>
+	<collection>
+		<name>Protestors [Level 6] (Protest)</name>
+		<entry>Character(Protestor)[6]@Commoner@/1d10</entry>
+	</collection>
+	<collection>
+		<name>Protestors [Level 8] (Protest)</name>
+		<entry>Character(Protestor)[8]@Commoner@/1d10</entry>
+	</collection>
+	<collection>
+		<name>Protestors [Level 10] (Protest)</name>
+		<entry>Character(Protestor)[10]@Commoner@/1d10</entry>
+	</collection>
+	<collection>
+		<name>Protestors [Level 12] (Protest)</name>
+		<entry>Character(Protestor)[12]@Commoner@/1d10</entry>
+	</collection>
+	<collection>
+		<name>Protestors [Level 14] (Protest)</name>
+		<entry>Character(Protestor)[14]@Commoner@/1d10</entry>
+	</collection>
+	<collection>
+		<name>Protestors [Level 16] (Protest)</name>
+		<entry>Character(Protestor)[16]@Commoner@/1d10</entry>
+	</collection>
+	<collection>
+		<name>Protestors [Level 18] (Protest)</name>
+		<entry>Character(Protestor)[18]@Commoner@/1d10</entry>
+	</collection>
   <collection>
 	  <name>Protestors [Level 20] (Protest)</name>
     <entry>Character(Protestor)[20]@Commoner@/1d10</entry>
@@ -4284,41 +5051,77 @@
     <entry>Character(Street performer)[1]@Adept@/1d4</entry>
   </collection>
   <collection>
-	  <name>Street Performers [Level 2-3 Adepts] (Crew)</name>
-    <entry>Character(Street performer)[1d2+1]@Adept@/1d4</entry>
+	  <name>Street Performers [Level 3 Adepts] (Crew)</name>
+    <entry>Character(Street performer)[3]@Adept@/1d4</entry>
   </collection>
   <collection>
-	  <name>Street Performers [Level 4-5 Adepts] (Crew)</name>
-    <entry>Character(Street performer)[1d2+3]@Adept@/1d4</entry>
+	  <name>Street Performers [Level 5 Adepts] (Crew)</name>
+    <entry>Character(Street performer)[5]@Adept@/1d4</entry>
   </collection>
   <collection>
-	  <name>Street Performers [Level 6-7 Adepts] (Crew)</name>
-    <entry>Character(Street performer)[1d2+5]@Adept@/1d4</entry>
+	  <name>Street Performers [Level 7 Adepts] (Crew)</name>
+    <entry>Character(Street performer)[7]@Adept@/1d4</entry>
   </collection>
   <collection>
-	  <name>Street Performers [Level 8-9 Adepts] (Crew)</name>
-	  <entry>Character(Street performer)[1d2+7]@Adept@/1d4</entry>
+	  <name>Street Performers [Level 9 Adepts] (Crew)</name>
+	  <entry>Character(Street performer)[9]@Adept@/1d4</entry>
   </collection>
   <collection>
-	  <name>Street Performers [Level 10-11 Adepts] (Crew)</name>
-    <entry>Character(Street performer)[1d2+9]@Adept@/1d4</entry>
+	  <name>Street Performers [Level 11 Adepts] (Crew)</name>
+    <entry>Character(Street performer)[11]@Adept@/1d4</entry>
   </collection>
   <collection>
-	  <name>Street Performers [Level 12-13 Adepts] (Crew)</name>
-    <entry>Character(Street performer)[1d2+11]@Adept@/1d4</entry>
+	  <name>Street Performers [Level 13 Adepts] (Crew)</name>
+    <entry>Character(Street performer)[13]@Adept@/1d4</entry>
   </collection>
   <collection>
-	  <name>Street Performers [Level 14-15 Adepts] (Crew)</name>
-	  <entry>Character(Street performer)[1d2+13]@Adept@/1d4</entry>
+	  <name>Street Performers [Level 15 Adepts] (Crew)</name>
+	  <entry>Character(Street performer)[15]@Adept@/1d4</entry>
   </collection>
   <collection>
-	  <name>Street Performers [Level 16-17 Adepts] (Crew)</name>
-	  <entry>Character(Street performer)[1d2+15]@Adept@/1d4</entry>
+	  <name>Street Performers [Level 17 Adepts] (Crew)</name>
+	  <entry>Character(Street performer)[17]@Adept@/1d4</entry>
   </collection>
   <collection>
-	  <name>Street Performers [Level 18-19 Adepts] (Crew)</name>
-	  <entry>Character(Street performer)[1d2+17]@Adept@/1d4</entry>
+	  <name>Street Performers [Level 19 Adepts] (Crew)</name>
+	  <entry>Character(Street performer)[19]@Adept@/1d4</entry>
   </collection>
+	<collection>
+		<name>Street Performers [Level 2 Adepts] (Crew)</name>
+		<entry>Character(Street performer)[2]@Adept@/1d4</entry>
+	</collection>
+	<collection>
+		<name>Street Performers [Level 4 Adepts] (Crew)</name>
+		<entry>Character(Street performer)[4]@Adept@/1d4</entry>
+	</collection>
+	<collection>
+		<name>Street Performers [Level 6 Adepts] (Crew)</name>
+		<entry>Character(Street performer)[6]@Adept@/1d4</entry>
+	</collection>
+	<collection>
+		<name>Street Performers [Level 8 Adepts] (Crew)</name>
+		<entry>Character(Street performer)[8]@Adept@/1d4</entry>
+	</collection>
+	<collection>
+		<name>Street Performers [Level 10 Adepts] (Crew)</name>
+		<entry>Character(Street performer)[10]@Adept@/1d4</entry>
+	</collection>
+	<collection>
+		<name>Street Performers [Level 12 Adepts] (Crew)</name>
+		<entry>Character(Street performer)[12]@Adept@/1d4</entry>
+	</collection>
+	<collection>
+		<name>Street Performers [Level 14 Adepts] (Crew)</name>
+		<entry>Character(Street performer)[14]@Adept@/1d4</entry>
+	</collection>
+	<collection>
+		<name>Street Performers [Level 16 Adepts] (Crew)</name>
+		<entry>Character(Street performer)[16]@Adept@/1d4</entry>
+	</collection>
+	<collection>
+		<name>Street Performers [Level 18 Adepts] (Crew)</name>
+		<entry>Character(Street performer)[18]@Adept@/1d4</entry>
+	</collection>
   <collection>
 	  <name>Street Performers [Level 20 Adepts] (Crew)</name>
     <entry>Character(Street performer)[20]@Adept@/1d4</entry>
@@ -4406,103 +5209,139 @@
   <collection>
     <name>Teacher [Level 11] (with Students)</name>
 	  <entry>Character(Teacher)[11]/1</entry>
-	  <entry>Character(Star Student)[1]/1d3-1</entry>
+	  <entry>Character(Star Student)[6]/1d3-1</entry>
 	  <entry>Character(Student)[1]@Any NPC@/1d3+1</entry>
   </collection>
   <collection>
 	  <name>Teacher [Level 12] (with Students)</name>
 	  <entry>Character(Teacher)[12]/1</entry>
-	  <entry>Character(Star Student)[2]/1d3-1</entry>
-	  <entry>Character(Student)[1d2+1]@Any NPC@/1d3+1</entry>
+	  <entry>Character(Star Student)[7]/1d3-1</entry>
+	  <entry>Character(Student)[2]@Any NPC@/1d3+1</entry>
   </collection>
   <collection>
 	  <name>Teacher [Level 13] (with Students)</name>
 	  <entry>Character(Teacher)[13]/1</entry>
-	  <entry>Character(Star Student)[3]/1d3-1</entry>
-	  <entry>Character(Student)[1d2+3]@Any NPC@/1d3+1</entry>
+	  <entry>Character(Star Student)[8]/1d3-1</entry>
+	  <entry>Character(Student)[3]@Any NPC@/1d3+1</entry>
   </collection>
   <collection>
 	  <name>Teacher [Level 14] (with Students)</name>
 	  <entry>Character(Teacher)[14]/1</entry>
-	  <entry>Character(Star Student)[4]/1d3-1</entry>
-	  <entry>Character(Student)[1d2+5]@Any NPC@/1d3+1</entry>
+	  <entry>Character(Star Student)[9]/1d3-1</entry>
+	  <entry>Character(Student)[4]@Any NPC@/1d3+1</entry>
   </collection>
   <collection>
 	  <name>Teacher [Level 15] (with Students)</name>
 	  <entry>Character(Teacher)[15]/1</entry>
-	  <entry>Character(Star Student)[5]/1d3-1</entry>
-	  <entry>Character(Student)[1d2+7]@Any NPC@/1d3+1</entry>
+	  <entry>Character(Star Student)[10]/1d3-1</entry>
+	  <entry>Character(Student)[5]@Any NPC@/1d3+1</entry>
   </collection>
   <collection>
 	  <name>Teacher [Level 16] (with Students)</name>
 	  <entry>Character(Teacher)[16]/1</entry>
-	  <entry>Character(Star Student)[6]/1d3-1</entry>
-	  <entry>Character(Student)[1d2+9]@Any NPC@/1d3+1</entry>
+	  <entry>Character(Star Student)[11]/1d3-1</entry>
+	  <entry>Character(Student)[6]@Any NPC@/1d3+1</entry>
   </collection>
   <collection>
 	  <name>Teacher [Level 17] (with Students)</name>
 	  <entry>Character(Teacher)[17]/1</entry>
-	  <entry>Character(Star Student)[7]/1d3-1</entry>
-	  <entry>Character(Student)[1d2+11]@Any NPC@/1d3+1</entry>
+	  <entry>Character(Star Student)[12]/1d3-1</entry>
+	  <entry>Character(Student)[7]@Any NPC@/1d3+1</entry>
   </collection>
   <collection>
     <name>Teacher [Level 18] (with Students)</name>
 	  <entry>Character(Teacher)[18]/1</entry>
-	  <entry>Character(Star Student)[8]/1d3-1</entry>
-	  <entry>Character(Student)[1d2+13]@Any NPC@/1d3+1</entry>
+	  <entry>Character(Star Student)[13]/1d3-1</entry>
+	  <entry>Character(Student)[8]@Any NPC@/1d3+1</entry>
   </collection>
   <collection>
 	  <name>Teacher [Level 19] (with Students)</name>
 	  <entry>Character(Teacher)[19]/1</entry>
-	  <entry>Character(Star Student)[9]/1d3-1</entry>
-	  <entry>Character(Student)[1d2+15]@Any NPC@/1d3+1</entry>
+	  <entry>Character(Star Student)[14]/1d3-1</entry>
+	  <entry>Character(Student)[9]@Any NPC@/1d3+1</entry>
   </collection>
   <collection>
 	  <name>Teacher [Level 20] (with Students)</name>
 	  <entry>Character(Teacher)[20]/1</entry>
-	  <entry>Character(Star Student)[10]/1d3-1</entry>
-	  <entry>Character(Student)[1d2+17]@Any NPC@/1d3+1</entry>
+	  <entry>Character(Star Student)[15]/1d3-1</entry>
+	  <entry>Character(Student)[10]@Any NPC@/1d3+1</entry>
   </collection>
   <collection>
     <name>Travelers [Level 1] (Group)</name>
     <entry>Character(Traveler)[1]@Any NPC@/1d4</entry>
   </collection>
   <collection>
-	  <name>Travelers [Level 2-3] (Group)</name>
-    <entry>Character(Traveler)[1d2+1]@Any NPC@/1d4</entry>
+	  <name>Travelers [Level 3] (Group)</name>
+    <entry>Character(Traveler)[3]@Any NPC@/1d4</entry>
   </collection>
   <collection>
-	  <name>Travelers [Level 4-5] (Group)</name>
-    <entry>Character(Traveler)[1d2+3]@Any NPC@/1d4</entry>
+	  <name>Travelers [Level 5] (Group)</name>
+    <entry>Character(Traveler)[5]@Any NPC@/1d4</entry>
   </collection>
   <collection>
-	  <name>Travelers [Level 6-7] (Group)</name>
-    <entry>Character(Traveler)[1d2+5]@Any NPC@/1d4</entry>
+	  <name>Travelers [Level 7] (Group)</name>
+    <entry>Character(Traveler)[7]@Any NPC@/1d4</entry>
   </collection>
   <collection>
-	  <name>Travelers [Level 8-9] (Group)</name>
-    <entry>Character(Traveler)[1d2+7]@Any NPC@/1d4</entry>
+	  <name>Travelers [Level 9] (Group)</name>
+    <entry>Character(Traveler)[9]@Any NPC@/1d4</entry>
   </collection>
   <collection>
-	  <name>Travelers [Level 10-11] (Group)</name>
-	  <entry>Character(Traveler)[1d2+9]@Any NPC@/1d4</entry>
+	  <name>Travelers [Level 11] (Group)</name>
+	  <entry>Character(Traveler)[11]@Any NPC@/1d4</entry>
   </collection>
   <collection>
-	  <name>Travelers [Level 12-13] (Group)</name>
-	  <entry>Character(Traveler)[1d2+11]@Any NPC@/1d4</entry>
+	  <name>Travelers [Level 13] (Group)</name>
+	  <entry>Character(Traveler)[13]@Any NPC@/1d4</entry>
   </collection>
   <collection>
-	  <name>Travelers [Level 14-15] (Group)</name>
-	  <entry>Character(Traveler)[1d2+13]@Any NPC@/1d4</entry>
+	  <name>Travelers [Level 15] (Group)</name>
+	  <entry>Character(Traveler)[15]@Any NPC@/1d4</entry>
   </collection>
   <collection>
-	  <name>Travelers [Level 16-17] (Group)</name>
-    <entry>Character(Traveler)[1d2+15]@Any NPC@/1d4</entry>
+	  <name>Travelers [Level 17] (Group)</name>
+    <entry>Character(Traveler)[17]@Any NPC@/1d4</entry>
   </collection>
   <collection>
-	  <name>Travelers [Level 18-19] (Group)</name>
-    <entry>Character(Traveler)[1d2+17]@Any NPC@/1d4</entry>
+	  <name>Travelers [Level 19] (Group)</name>
+    <entry>Character(Traveler)[19]@Any NPC@/1d4</entry>
   </collection>
+	<collection>
+		<name>Travelers [Level 2] (Group)</name>
+		<entry>Character(Traveler)[2]@Any NPC@/1d4</entry>
+	</collection>
+	<collection>
+		<name>Travelers [Level 4] (Group)</name>
+		<entry>Character(Traveler)[4]@Any NPC@/1d4</entry>
+	</collection>
+	<collection>
+		<name>Travelers [Level 6] (Group)</name>
+		<entry>Character(Traveler)[6]@Any NPC@/1d4</entry>
+	</collection>
+	<collection>
+		<name>Travelers [Level 8] (Group)</name>
+		<entry>Character(Traveler)[8]@Any NPC@/1d4</entry>
+	</collection>
+	<collection>
+		<name>Travelers [Level 10] (Group)</name>
+		<entry>Character(Traveler)[10]@Any NPC@/1d4</entry>
+	</collection>
+	<collection>
+		<name>Travelers [Level 12] (Group)</name>
+		<entry>Character(Traveler)[12]@Any NPC@/1d4</entry>
+	</collection>
+	<collection>
+		<name>Travelers [Level 14] (Group)</name>
+		<entry>Character(Traveler)[14]@Any NPC@/1d4</entry>
+	</collection>
+	<collection>
+		<name>Travelers [Level 16] (Group)</name>
+		<entry>Character(Traveler)[16]@Any NPC@/1d4</entry>
+	</collection>
+	<collection>
+		<name>Travelers [Level 18] (Group)</name>
+		<entry>Character(Traveler)[18]@Any NPC@/1d4</entry>
+	</collection>
   <collection>
 	  <name>Travelers [Level 20] (Group)</name>
     <entry>Character(Traveler)[20]@Any NPC@/1d4</entry>
@@ -4612,579 +5451,1155 @@
 		<entry>Dog$Riding$/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 2-3] (Solitary)</name>
-		<entry>Character[1d2+1]@Any NPC@/1</entry>
+		<name>Local [Level 3] (Solitary)</name>
+		<entry>Character[3]@Any NPC@/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 2-3] (with Cat)</name>
-		<entry>Character[1d2+1]@Any NPC@/1</entry>
+		<name>Local [Level 3] (with Cat)</name>
+		<entry>Character[3]@Any NPC@/1</entry>
 		<entry>Cat/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 2-3] (with Dog)</name>
-		<entry>Character[1d2+1]@Any NPC@/1</entry>
+		<name>Local [Level 3] (with Dog)</name>
+		<entry>Character[3]@Any NPC@/1</entry>
 		<entry>Dog/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 2-3] (with Donkey)</name>
-		<entry>Character[1d2+1]@Any NPC@/1</entry>
+		<name>Local [Level 3] (with Donkey)</name>
+		<entry>Character[3]@Any NPC@/1</entry>
 		<entry>Donkey/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 2-3] (with Mule)</name>
-		<entry>Character[1d2+1]@Any NPC@/1</entry>
+		<name>Local [Level 3] (with Mule)</name>
+		<entry>Character[3]@Any NPC@/1</entry>
 		<entry>Mule/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 2-3] (with Light Horse)</name>
-		<entry>Character[1d2+1]@Any NPC@/1</entry>
+		<name>Local [Level 3] (with Light Horse)</name>
+		<entry>Character[3]@Any NPC@/1</entry>
 		<entry>Light horse/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 2-3] (with Heavy Horse)</name>
-		<entry>Character[1d2+1]@Any NPC@/1</entry>
+		<name>Local [Level 3] (with Heavy Horse)</name>
+		<entry>Character[3]@Any NPC@/1</entry>
 		<entry>Heavy horse/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 2-3] (with Light Warhorse)</name>
-		<entry>Character[1d2+1]@Any NPC@/1</entry>
+		<name>Local [Level 3] (with Light Warhorse)</name>
+		<entry>Character[3]@Any NPC@/1</entry>
 		<entry>Light warhorse/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 2-3] (with Heavy Warhorse)</name>
-		<entry>Character[1d2+1]@Any NPC@/1</entry>
+		<name>Local [Level 3] (with Heavy Warhorse)</name>
+		<entry>Character[3]@Any NPC@/1</entry>
 		<entry>Heavy warhorse/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 2-3] (with Camel)</name>
-		<entry>Character[1d2+1]@Any NPC@/1</entry>
+		<name>Local [Level 3] (with Camel)</name>
+		<entry>Character[3]@Any NPC@/1</entry>
 		<entry>Camel/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 2-3] (with Pony)</name>
-		<entry>Character[1d2+1]@Any NPC@/1</entry>
+		<name>Local [Level 3] (with Pony)</name>
+		<entry>Character[3]@Any NPC@/1</entry>
 		<entry>Pony/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 2-3] (with Warpony)</name>
-		<entry>Character[1d2+1]@Any NPC@/1</entry>
+		<name>Local [Level 3] (with Warpony)</name>
+		<entry>Character[3]@Any NPC@/1</entry>
 		<entry>Warpony/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 2-3] (with Riding Dog)</name>
-		<entry>Character[1d2+1]@Any NPC@/1</entry>
+		<name>Local [Level 3] (with Riding Dog)</name>
+		<entry>Character[3]@Any NPC@/1</entry>
 		<entry>Dog$Riding$/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 4-5] (Solitary)</name>
-		<entry>Character[1d2+3]@Any NPC@/1</entry>
+		<name>Local [Level 5] (Solitary)</name>
+		<entry>Character[5]@Any NPC@/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 4-5] (with Cat)</name>
-		<entry>Character[1d2+3]@Any NPC@/1</entry>
+		<name>Local [Level 5] (with Cat)</name>
+		<entry>Character[5]@Any NPC@/1</entry>
 		<entry>Cat/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 4-5] (with Dog)</name>
-		<entry>Character[1d2+3]@Any NPC@/1</entry>
+		<name>Local [Level 5] (with Dog)</name>
+		<entry>Character[5]@Any NPC@/1</entry>
 		<entry>Dog/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 4-5] (with Donkey)</name>
-		<entry>Character[1d2+3]@Any NPC@/1</entry>
+		<name>Local [Level 5] (with Donkey)</name>
+		<entry>Character[5]@Any NPC@/1</entry>
 		<entry>Donkey/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 4-5] (with Mule)</name>
-		<entry>Character[1d2+3]@Any NPC@/1</entry>
+		<name>Local [Level 5] (with Mule)</name>
+		<entry>Character[5]@Any NPC@/1</entry>
 		<entry>Mule/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 4-5] (with Light Horse)</name>
-		<entry>Character[1d2+3]@Any NPC@/1</entry>
+		<name>Local [Level 5] (with Light Horse)</name>
+		<entry>Character[5]@Any NPC@/1</entry>
 		<entry>Light horse/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 4-5] (with Heavy Horse)</name>
-		<entry>Character[1d2+3]@Any NPC@/1</entry>
+		<name>Local [Level 5] (with Heavy Horse)</name>
+		<entry>Character[5]@Any NPC@/1</entry>
 		<entry>Heavy horse/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 4-5] (with Light Warhorse)</name>
-		<entry>Character[1d2+3]@Any NPC@/1</entry>
+		<name>Local [Level 5] (with Light Warhorse)</name>
+		<entry>Character[5]@Any NPC@/1</entry>
 		<entry>Light warhorse/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 4-5] (with Heavy Warhorse)</name>
-		<entry>Character[1d2+3]@Any NPC@/1</entry>
+		<name>Local [Level 5] (with Heavy Warhorse)</name>
+		<entry>Character[5]@Any NPC@/1</entry>
 		<entry>Heavy warhorse/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 4-5] (with Camel)</name>
-		<entry>Character[1d2+3]@Any NPC@/1</entry>
+		<name>Local [Level 5] (with Camel)</name>
+		<entry>Character[5]@Any NPC@/1</entry>
 		<entry>Camel/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 4-5] (with Pony)</name>
-		<entry>Character[1d2+3]@Any NPC@/1</entry>
+		<name>Local [Level 5] (with Pony)</name>
+		<entry>Character[5]@Any NPC@/1</entry>
 		<entry>Pony/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 4-5] (with Warpony)</name>
-		<entry>Character[1d2+3]@Any NPC@/1</entry>
+		<name>Local [Level 5] (with Warpony)</name>
+		<entry>Character[5]@Any NPC@/1</entry>
 		<entry>Warpony/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 4-5] (with Riding Dog)</name>
-		<entry>Character[1d2+3]@Any NPC@/1</entry>
+		<name>Local [Level 5] (with Riding Dog)</name>
+		<entry>Character[5]@Any NPC@/1</entry>
 		<entry>Dog$Riding$/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 6-7] (Solitary)</name>
-		<entry>Character[1d2+5]@Any NPC@/1</entry>
+		<name>Local [Level 7] (Solitary)</name>
+		<entry>Character[7]@Any NPC@/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 6-7] (with Cat)</name>
-		<entry>Character[1d2+5]@Any NPC@/1</entry>
+		<name>Local [Level 7] (with Cat)</name>
+		<entry>Character[7]@Any NPC@/1</entry>
 		<entry>Cat/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 6-7] (with Dog)</name>
-		<entry>Character[1d2+5]@Any NPC@/1</entry>
+		<name>Local [Level 7] (with Dog)</name>
+		<entry>Character[7]@Any NPC@/1</entry>
 		<entry>Dog/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 6-7] (with Donkey)</name>
-		<entry>Character[1d2+5]@Any NPC@/1</entry>
+		<name>Local [Level 7] (with Donkey)</name>
+		<entry>Character[7]@Any NPC@/1</entry>
 		<entry>Donkey/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 6-7] (with Mule)</name>
-		<entry>Character[1d2+5]@Any NPC@/1</entry>
+		<name>Local [Level 7] (with Mule)</name>
+		<entry>Character[7]@Any NPC@/1</entry>
 		<entry>Mule/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 6-7] (with Light Horse)</name>
-		<entry>Character[1d2+5]@Any NPC@/1</entry>
+		<name>Local [Level 7] (with Light Horse)</name>
+		<entry>Character[7]@Any NPC@/1</entry>
 		<entry>Light horse/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 6-7] (with Heavy Horse)</name>
-		<entry>Character[1d2+5]@Any NPC@/1</entry>
+		<name>Local [Level 7] (with Heavy Horse)</name>
+		<entry>Character[7]@Any NPC@/1</entry>
 		<entry>Heavy horse/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 6-7] (with Light Warhorse)</name>
-		<entry>Character[1d2+5]@Any NPC@/1</entry>
+		<name>Local [Level 7] (with Light Warhorse)</name>
+		<entry>Character[7]@Any NPC@/1</entry>
 		<entry>Light warhorse/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 6-7] (with Heavy Warhorse)</name>
-		<entry>Character[1d2+5]@Any NPC@/1</entry>
+		<name>Local [Level 7] (with Heavy Warhorse)</name>
+		<entry>Character[7]@Any NPC@/1</entry>
 		<entry>Heavy warhorse/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 6-7] (with Camel)</name>
-		<entry>Character[1d2+5]@Any NPC@/1</entry>
+		<name>Local [Level 7] (with Camel)</name>
+		<entry>Character[7]@Any NPC@/1</entry>
 		<entry>Camel/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 6-7] (with Pony)</name>
-		<entry>Character[1d2+5]@Any NPC@/1</entry>
+		<name>Local [Level 7] (with Pony)</name>
+		<entry>Character[7]@Any NPC@/1</entry>
 		<entry>Pony/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 6-7] (with Warpony)</name>
-		<entry>Character[1d2+5]@Any NPC@/1</entry>
+		<name>Local [Level 7] (with Warpony)</name>
+		<entry>Character[7]@Any NPC@/1</entry>
 		<entry>Warpony/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 6-7] (with Riding Dog)</name>
-		<entry>Character[1d2+5]@Any NPC@/1</entry>
+		<name>Local [Level 7] (with Riding Dog)</name>
+		<entry>Character[7]@Any NPC@/1</entry>
 		<entry>Dog$Riding$/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 8-9] (Solitary)</name>
-		<entry>Character[1d2+7]@Any NPC@/1</entry>
+		<name>Local [Level 9] (Solitary)</name>
+		<entry>Character[9]@Any NPC@/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 8-9] (with Cat)</name>
-		<entry>Character[1d2+7]@Any NPC@/1</entry>
+		<name>Local [Level 9] (with Cat)</name>
+		<entry>Character[9]@Any NPC@/1</entry>
 		<entry>Cat/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 8-9] (with Dog)</name>
-		<entry>Character[1d2+7]@Any NPC@/1</entry>
+		<name>Local [Level 9] (with Dog)</name>
+		<entry>Character[9]@Any NPC@/1</entry>
 		<entry>Dog/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 8-9] (with Donkey)</name>
-		<entry>Character[1d2+7]@Any NPC@/1</entry>
+		<name>Local [Level 9] (with Donkey)</name>
+		<entry>Character[9]@Any NPC@/1</entry>
 		<entry>Donkey/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 8-9] (with Mule)</name>
-		<entry>Character[1d2+7]@Any NPC@/1</entry>
+		<name>Local [Level 9] (with Mule)</name>
+		<entry>Character[9]@Any NPC@/1</entry>
 		<entry>Mule/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 8-9] (with Light Horse)</name>
-		<entry>Character[1d2+7]@Any NPC@/1</entry>
+		<name>Local [Level 9] (with Light Horse)</name>
+		<entry>Character[9]@Any NPC@/1</entry>
 		<entry>Light horse/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 8-9] (with Heavy Horse)</name>
-		<entry>Character[1d2+7]@Any NPC@/1</entry>
+		<name>Local [Level 9] (with Heavy Horse)</name>
+		<entry>Character[9]@Any NPC@/1</entry>
 		<entry>Heavy horse/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 8-9] (with Light Warhorse)</name>
-		<entry>Character[1d2+7]@Any NPC@/1</entry>
+		<name>Local [Level 9] (with Light Warhorse)</name>
+		<entry>Character[9]@Any NPC@/1</entry>
 		<entry>Light warhorse/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 8-9] (with Heavy Warhorse)</name>
-		<entry>Character[1d2+7]@Any NPC@/1</entry>
+		<name>Local [Level 9] (with Heavy Warhorse)</name>
+		<entry>Character[9]@Any NPC@/1</entry>
 		<entry>Heavy warhorse/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 8-9] (with Camel)</name>
-		<entry>Character[1d2+7]@Any NPC@/1</entry>
+		<name>Local [Level 9] (with Camel)</name>
+		<entry>Character[9]@Any NPC@/1</entry>
 		<entry>Camel/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 8-9] (with Pony)</name>
-		<entry>Character[1d2+7]@Any NPC@/1</entry>
+		<name>Local [Level 9] (with Pony)</name>
+		<entry>Character[9]@Any NPC@/1</entry>
 		<entry>Pony/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 8-9] (with Warpony)</name>
-		<entry>Character[1d2+7]@Any NPC@/1</entry>
+		<name>Local [Level 9] (with Warpony)</name>
+		<entry>Character[9]@Any NPC@/1</entry>
 		<entry>Warpony/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 8-9] (with Riding Dog)</name>
-		<entry>Character[1d2+7]@Any NPC@/1</entry>
+		<name>Local [Level 9] (with Riding Dog)</name>
+		<entry>Character[9]@Any NPC@/1</entry>
 		<entry>Dog$Riding$/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 10-11] (Solitary)</name>
-		<entry>Character[1d2+9]@Any NPC@/1</entry>
+		<name>Local [Level 11] (Solitary)</name>
+		<entry>Character[11]@Any NPC@/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 10-11] (with Cat)</name>
-		<entry>Character[1d2+9]@Any NPC@/1</entry>
+		<name>Local [Level 11] (with Cat)</name>
+		<entry>Character[11]@Any NPC@/1</entry>
 		<entry>Cat/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 10-11] (with Dog)</name>
-		<entry>Character[1d2+9]@Any NPC@/1</entry>
+		<name>Local [Level 11] (with Dog)</name>
+		<entry>Character[11]@Any NPC@/1</entry>
 		<entry>Dog/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 10-11] (with Donkey)</name>
-		<entry>Character[1d2+9]@Any NPC@/1</entry>
+		<name>Local [Level 11] (with Donkey)</name>
+		<entry>Character[11]@Any NPC@/1</entry>
 		<entry>Donkey/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 10-11] (with Mule)</name>
-		<entry>Character[1d2+9]@Any NPC@/1</entry>
+		<name>Local [Level 11] (with Mule)</name>
+		<entry>Character[11]@Any NPC@/1</entry>
 		<entry>Mule/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 10-11] (with Light Horse)</name>
-		<entry>Character[1d2+9]@Any NPC@/1</entry>
+		<name>Local [Level 11] (with Light Horse)</name>
+		<entry>Character[11]@Any NPC@/1</entry>
 		<entry>Light horse/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 10-11] (with Heavy Horse)</name>
-		<entry>Character[1d2+9]@Any NPC@/1</entry>
+		<name>Local [Level 11] (with Heavy Horse)</name>
+		<entry>Character[11]@Any NPC@/1</entry>
 		<entry>Heavy horse/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 10-11] (with Light Warhorse)</name>
-		<entry>Character[1d2+9]@Any NPC@/1</entry>
+		<name>Local [Level 11] (with Light Warhorse)</name>
+		<entry>Character[11]@Any NPC@/1</entry>
 		<entry>Light warhorse/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 10-11] (with Heavy Warhorse)</name>
-		<entry>Character[1d2+9]@Any NPC@/1</entry>
+		<name>Local [Level 11] (with Heavy Warhorse)</name>
+		<entry>Character[11]@Any NPC@/1</entry>
 		<entry>Heavy warhorse/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 10-11] (with Camel)</name>
-		<entry>Character[1d2+9]@Any NPC@/1</entry>
+		<name>Local [Level 11] (with Camel)</name>
+		<entry>Character[11]@Any NPC@/1</entry>
 		<entry>Camel/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 10-11] (with Pony)</name>
-		<entry>Character[1d2+9]@Any NPC@/1</entry>
+		<name>Local [Level 11] (with Pony)</name>
+		<entry>Character[11]@Any NPC@/1</entry>
 		<entry>Pony/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 10-11] (with Warpony)</name>
-		<entry>Character[1d2+9]@Any NPC@/1</entry>
+		<name>Local [Level 11] (with Warpony)</name>
+		<entry>Character[11]@Any NPC@/1</entry>
 		<entry>Warpony/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 10-11] (with Riding Dog)</name>
-		<entry>Character[1d2+9]@Any NPC@/1</entry>
+		<name>Local [Level 11] (with Riding Dog)</name>
+		<entry>Character[11]@Any NPC@/1</entry>
 		<entry>Dog$Riding$/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 12-13] (Solitary)</name>
-		<entry>Character[1d2+11]@Any NPC@/1</entry>
+		<name>Local [Level 13] (Solitary)</name>
+		<entry>Character[13]@Any NPC@/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 12-13] (with Cat)</name>
-		<entry>Character[1d2+11]@Any NPC@/1</entry>
+		<name>Local [Level 13] (with Cat)</name>
+		<entry>Character[13]@Any NPC@/1</entry>
 		<entry>Cat/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 12-13] (with Dog)</name>
-		<entry>Character[1d2+11]@Any NPC@/1</entry>
+		<name>Local [Level 13] (with Dog)</name>
+		<entry>Character[13]@Any NPC@/1</entry>
 		<entry>Dog/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 12-13] (with Donkey)</name>
-		<entry>Character[1d2+11]@Any NPC@/1</entry>
+		<name>Local [Level 13] (with Donkey)</name>
+		<entry>Character[13]@Any NPC@/1</entry>
 		<entry>Donkey/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 12-13] (with Mule)</name>
-		<entry>Character[1d2+11]@Any NPC@/1</entry>
+		<name>Local [Level 13] (with Mule)</name>
+		<entry>Character[13]@Any NPC@/1</entry>
 		<entry>Mule/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 12-13] (with Light Horse)</name>
-		<entry>Character[1d2+11]@Any NPC@/1</entry>
+		<name>Local [Level 13] (with Light Horse)</name>
+		<entry>Character[13]@Any NPC@/1</entry>
 		<entry>Light horse/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 12-13] (with Heavy Horse)</name>
-		<entry>Character[1d2+11]@Any NPC@/1</entry>
+		<name>Local [Level 13] (with Heavy Horse)</name>
+		<entry>Character[13]@Any NPC@/1</entry>
 		<entry>Heavy horse/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 12-13] (with Light Warhorse)</name>
-		<entry>Character[1d2+11]@Any NPC@/1</entry>
+		<name>Local [Level 13] (with Light Warhorse)</name>
+		<entry>Character[13]@Any NPC@/1</entry>
 		<entry>Light warhorse/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 12-13] (with Heavy Warhorse)</name>
-		<entry>Character[1d2+11]@Any NPC@/1</entry>
+		<name>Local [Level 13] (with Heavy Warhorse)</name>
+		<entry>Character[13]@Any NPC@/1</entry>
 		<entry>Heavy warhorse/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 12-13] (with Camel)</name>
-		<entry>Character[1d2+11]@Any NPC@/1</entry>
+		<name>Local [Level 13] (with Camel)</name>
+		<entry>Character[13]@Any NPC@/1</entry>
 		<entry>Camel/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 12-13] (with Pony)</name>
-		<entry>Character[1d2+11]@Any NPC@/1</entry>
+		<name>Local [Level 13] (with Pony)</name>
+		<entry>Character[13]@Any NPC@/1</entry>
 		<entry>Pony/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 12-13] (with Warpony)</name>
-		<entry>Character[1d2+11]@Any NPC@/1</entry>
+		<name>Local [Level 13] (with Warpony)</name>
+		<entry>Character[13]@Any NPC@/1</entry>
 		<entry>Warpony/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 12-13] (with Riding Dog)</name>
-		<entry>Character[1d2+11]@Any NPC@/1</entry>
+		<name>Local [Level 13] (with Riding Dog)</name>
+		<entry>Character[13]@Any NPC@/1</entry>
 		<entry>Dog$Riding$/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 14-15] (Solitary)</name>
-		<entry>Character[1d2+13]@Any NPC@/1</entry>
+		<name>Local [Level 15] (Solitary)</name>
+		<entry>Character[15]@Any NPC@/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 14-15] (with Cat)</name>
-		<entry>Character[1d2+13]@Any NPC@/1</entry>
+		<name>Local [Level 15] (with Cat)</name>
+		<entry>Character[15]@Any NPC@/1</entry>
 		<entry>Cat/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 14-15] (with Dog)</name>
-		<entry>Character[1d2+13]@Any NPC@/1</entry>
+		<name>Local [Level 15] (with Dog)</name>
+		<entry>Character[15]@Any NPC@/1</entry>
 		<entry>Dog/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 14-15] (with Donkey)</name>
-		<entry>Character[1d2+13]@Any NPC@/1</entry>
+		<name>Local [Level 15] (with Donkey)</name>
+		<entry>Character[15]@Any NPC@/1</entry>
 		<entry>Donkey/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 14-15] (with Mule)</name>
-		<entry>Character[1d2+13]@Any NPC@/1</entry>
+		<name>Local [Level 15] (with Mule)</name>
+		<entry>Character[15]@Any NPC@/1</entry>
 		<entry>Mule/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 14-15] (with Light Horse)</name>
-		<entry>Character[1d2+13]@Any NPC@/1</entry>
+		<name>Local [Level 15] (with Light Horse)</name>
+		<entry>Character[15]@Any NPC@/1</entry>
 		<entry>Light horse/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 14-15] (with Heavy Horse)</name>
-		<entry>Character[1d2+13]@Any NPC@/1</entry>
+		<name>Local [Level 15] (with Heavy Horse)</name>
+		<entry>Character[15]@Any NPC@/1</entry>
 		<entry>Heavy horse/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 14-15] (with Light Warhorse)</name>
-		<entry>Character[1d2+13]@Any NPC@/1</entry>
+		<name>Local [Level 15] (with Light Warhorse)</name>
+		<entry>Character[15]@Any NPC@/1</entry>
 		<entry>Light warhorse/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 14-15] (with Heavy Warhorse)</name>
-		<entry>Character[1d2+13]@Any NPC@/1</entry>
+		<name>Local [Level 15] (with Heavy Warhorse)</name>
+		<entry>Character[15]@Any NPC@/1</entry>
 		<entry>Heavy warhorse/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 14-15] (with Camel)</name>
-		<entry>Character[1d2+13]@Any NPC@/1</entry>
+		<name>Local [Level 15] (with Camel)</name>
+		<entry>Character[15]@Any NPC@/1</entry>
 		<entry>Camel/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 14-15] (with Pony)</name>
-		<entry>Character[1d2+13]@Any NPC@/1</entry>
+		<name>Local [Level 15] (with Pony)</name>
+		<entry>Character[15]@Any NPC@/1</entry>
 		<entry>Pony/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 14-15] (with Warpony)</name>
-		<entry>Character[1d2+13]@Any NPC@/1</entry>
+		<name>Local [Level 15] (with Warpony)</name>
+		<entry>Character[15]@Any NPC@/1</entry>
 		<entry>Warpony/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 14-15] (with Riding Dog)</name>
-		<entry>Character[1d2+13]@Any NPC@/1</entry>
+		<name>Local [Level 15] (with Riding Dog)</name>
+		<entry>Character[15]@Any NPC@/1</entry>
 		<entry>Dog$Riding$/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 16-17] (Solitary)</name>
-		<entry>Character[1d2+15]@Any NPC@/1</entry>
+		<name>Local [Level 17] (Solitary)</name>
+		<entry>Character[17]@Any NPC@/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 16-17] (with Cat)</name>
-		<entry>Character[1d2+15]@Any NPC@/1</entry>
+		<name>Local [Level 17] (with Cat)</name>
+		<entry>Character[17]@Any NPC@/1</entry>
 		<entry>Cat/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 16-17] (with Dog)</name>
-		<entry>Character[1d2+15]@Any NPC@/1</entry>
+		<name>Local [Level 17] (with Dog)</name>
+		<entry>Character[17]@Any NPC@/1</entry>
 		<entry>Dog/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 16-17] (with Donkey)</name>
-		<entry>Character[1d2+15]@Any NPC@/1</entry>
+		<name>Local [Level 17] (with Donkey)</name>
+		<entry>Character[17]@Any NPC@/1</entry>
 		<entry>Donkey/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 16-17] (with Mule)</name>
-		<entry>Character[1d2+15]@Any NPC@/1</entry>
+		<name>Local [Level 17] (with Mule)</name>
+		<entry>Character[17]@Any NPC@/1</entry>
 		<entry>Mule/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 16-17] (with Light Horse)</name>
-		<entry>Character[1d2+15]@Any NPC@/1</entry>
+		<name>Local [Level 17] (with Light Horse)</name>
+		<entry>Character[17]@Any NPC@/1</entry>
 		<entry>Light horse/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 16-17] (with Heavy Horse)</name>
-		<entry>Character[1d2+15]@Any NPC@/1</entry>
+		<name>Local [Level 17] (with Heavy Horse)</name>
+		<entry>Character[17]@Any NPC@/1</entry>
 		<entry>Heavy horse/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 16-17] (with Light Warhorse)</name>
-		<entry>Character[1d2+15]@Any NPC@/1</entry>
+		<name>Local [Level 17] (with Light Warhorse)</name>
+		<entry>Character[17]@Any NPC@/1</entry>
 		<entry>Light warhorse/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 16-17] (with Heavy Warhorse)</name>
-		<entry>Character[1d2+15]@Any NPC@/1</entry>
+		<name>Local [Level 17] (with Heavy Warhorse)</name>
+		<entry>Character[17]@Any NPC@/1</entry>
 		<entry>Heavy warhorse/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 16-17] (with Camel)</name>
-		<entry>Character[1d2+15]@Any NPC@/1</entry>
+		<name>Local [Level 17] (with Camel)</name>
+		<entry>Character[17]@Any NPC@/1</entry>
 		<entry>Camel/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 16-17] (with Pony)</name>
-		<entry>Character[1d2+15]@Any NPC@/1</entry>
+		<name>Local [Level 17] (with Pony)</name>
+		<entry>Character[17]@Any NPC@/1</entry>
 		<entry>Pony/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 16-17] (with Warpony)</name>
-		<entry>Character[1d2+15]@Any NPC@/1</entry>
+		<name>Local [Level 17] (with Warpony)</name>
+		<entry>Character[17]@Any NPC@/1</entry>
 		<entry>Warpony/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 16-17] (with Riding Dog)</name>
-		<entry>Character[1d2+15]@Any NPC@/1</entry>
+		<name>Local [Level 17] (with Riding Dog)</name>
+		<entry>Character[17]@Any NPC@/1</entry>
 		<entry>Dog$Riding$/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 18-19] (Solitary)</name>
-		<entry>Character[1d2+17]@Any NPC@/1</entry>
+		<name>Local [Level 19] (Solitary)</name>
+		<entry>Character[19]@Any NPC@/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 18-19] (with Cat)</name>
-		<entry>Character[1d2+17]@Any NPC@/1</entry>
+		<name>Local [Level 19] (with Cat)</name>
+		<entry>Character[19]@Any NPC@/1</entry>
 		<entry>Cat/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 18-19] (with Dog)</name>
-		<entry>Character[1d2+17]@Any NPC@/1</entry>
+		<name>Local [Level 19] (with Dog)</name>
+		<entry>Character[19]@Any NPC@/1</entry>
 		<entry>Dog/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 18-19] (with Donkey)</name>
-		<entry>Character[1d2+17]@Any NPC@/1</entry>
+		<name>Local [Level 19] (with Donkey)</name>
+		<entry>Character[19]@Any NPC@/1</entry>
 		<entry>Donkey/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 18-19] (with Mule)</name>
-		<entry>Character[1d2+17]@Any NPC@/1</entry>
+		<name>Local [Level 19] (with Mule)</name>
+		<entry>Character[19]@Any NPC@/1</entry>
 		<entry>Mule/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 18-19] (with Light Horse)</name>
-		<entry>Character[1d2+17]@Any NPC@/1</entry>
+		<name>Local [Level 19] (with Light Horse)</name>
+		<entry>Character[19]@Any NPC@/1</entry>
 		<entry>Light horse/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 18-19] (with Heavy Horse)</name>
-		<entry>Character[1d2+17]@Any NPC@/1</entry>
+		<name>Local [Level 19] (with Heavy Horse)</name>
+		<entry>Character[19]@Any NPC@/1</entry>
 		<entry>Heavy horse/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 18-19] (with Light Warhorse)</name>
-		<entry>Character[1d2+17]@Any NPC@/1</entry>
+		<name>Local [Level 19] (with Light Warhorse)</name>
+		<entry>Character[19]@Any NPC@/1</entry>
 		<entry>Light warhorse/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 18-19] (with Heavy Warhorse)</name>
-		<entry>Character[1d2+17]@Any NPC@/1</entry>
+		<name>Local [Level 19] (with Heavy Warhorse)</name>
+		<entry>Character[19]@Any NPC@/1</entry>
 		<entry>Heavy warhorse/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 18-19] (with Camel)</name>
-		<entry>Character[1d2+17]@Any NPC@/1</entry>
+		<name>Local [Level 19] (with Camel)</name>
+		<entry>Character[19]@Any NPC@/1</entry>
 		<entry>Camel/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 18-19] (with Pony)</name>
-		<entry>Character[1d2+17]@Any NPC@/1</entry>
+		<name>Local [Level 19] (with Pony)</name>
+		<entry>Character[19]@Any NPC@/1</entry>
 		<entry>Pony/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 18-19] (with Warpony)</name>
-		<entry>Character[1d2+17]@Any NPC@/1</entry>
+		<name>Local [Level 19] (with Warpony)</name>
+		<entry>Character[19]@Any NPC@/1</entry>
 		<entry>Warpony/1</entry>
 	</collection>
 	<collection>
-		<name>Local [Level 18-19] (with Riding Dog)</name>
-		<entry>Character[1d2+17]@Any NPC@/1</entry>
+		<name>Local [Level 19] (with Riding Dog)</name>
+		<entry>Character[19]@Any NPC@/1</entry>
+		<entry>Dog$Riding$/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 2] (Solitary)</name>
+		<entry>Character[2]@Any NPC@/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 2] (with Cat)</name>
+		<entry>Character[2]@Any NPC@/1</entry>
+		<entry>Cat/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 2] (with Dog)</name>
+		<entry>Character[2]@Any NPC@/1</entry>
+		<entry>Dog/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 2] (with Donkey)</name>
+		<entry>Character[2]@Any NPC@/1</entry>
+		<entry>Donkey/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 2] (with Mule)</name>
+		<entry>Character[2]@Any NPC@/1</entry>
+		<entry>Mule/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 2] (with Light Horse)</name>
+		<entry>Character[2]@Any NPC@/1</entry>
+		<entry>Light horse/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 2] (with Heavy Horse)</name>
+		<entry>Character[2]@Any NPC@/1</entry>
+		<entry>Heavy horse/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 2] (with Light Warhorse)</name>
+		<entry>Character[2]@Any NPC@/1</entry>
+		<entry>Light warhorse/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 2] (with Heavy Warhorse)</name>
+		<entry>Character[2]@Any NPC@/1</entry>
+		<entry>Heavy warhorse/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 2] (with Camel)</name>
+		<entry>Character[2]@Any NPC@/1</entry>
+		<entry>Camel/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 2] (with Pony)</name>
+		<entry>Character[2]@Any NPC@/1</entry>
+		<entry>Pony/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 2] (with Warpony)</name>
+		<entry>Character[2]@Any NPC@/1</entry>
+		<entry>Warpony/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 2] (with Riding Dog)</name>
+		<entry>Character[2]@Any NPC@/1</entry>
+		<entry>Dog$Riding$/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 4] (Solitary)</name>
+		<entry>Character[4]@Any NPC@/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 4] (with Cat)</name>
+		<entry>Character[4]@Any NPC@/1</entry>
+		<entry>Cat/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 4] (with Dog)</name>
+		<entry>Character[4]@Any NPC@/1</entry>
+		<entry>Dog/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 4] (with Donkey)</name>
+		<entry>Character[4]@Any NPC@/1</entry>
+		<entry>Donkey/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 4] (with Mule)</name>
+		<entry>Character[4]@Any NPC@/1</entry>
+		<entry>Mule/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 4] (with Light Horse)</name>
+		<entry>Character[4]@Any NPC@/1</entry>
+		<entry>Light horse/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 4] (with Heavy Horse)</name>
+		<entry>Character[4]@Any NPC@/1</entry>
+		<entry>Heavy horse/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 4] (with Light Warhorse)</name>
+		<entry>Character[4]@Any NPC@/1</entry>
+		<entry>Light warhorse/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 4] (with Heavy Warhorse)</name>
+		<entry>Character[4]@Any NPC@/1</entry>
+		<entry>Heavy warhorse/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 4] (with Camel)</name>
+		<entry>Character[4]@Any NPC@/1</entry>
+		<entry>Camel/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 4] (with Pony)</name>
+		<entry>Character[4]@Any NPC@/1</entry>
+		<entry>Pony/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 4] (with Warpony)</name>
+		<entry>Character[4]@Any NPC@/1</entry>
+		<entry>Warpony/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 4] (with Riding Dog)</name>
+		<entry>Character[4]@Any NPC@/1</entry>
+		<entry>Dog$Riding$/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 6] (Solitary)</name>
+		<entry>Character[6]@Any NPC@/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 6] (with Cat)</name>
+		<entry>Character[6]@Any NPC@/1</entry>
+		<entry>Cat/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 6] (with Dog)</name>
+		<entry>Character[6]@Any NPC@/1</entry>
+		<entry>Dog/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 6] (with Donkey)</name>
+		<entry>Character[6]@Any NPC@/1</entry>
+		<entry>Donkey/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 6] (with Mule)</name>
+		<entry>Character[6]@Any NPC@/1</entry>
+		<entry>Mule/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 6] (with Light Horse)</name>
+		<entry>Character[6]@Any NPC@/1</entry>
+		<entry>Light horse/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 6] (with Heavy Horse)</name>
+		<entry>Character[6]@Any NPC@/1</entry>
+		<entry>Heavy horse/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 6] (with Light Warhorse)</name>
+		<entry>Character[6]@Any NPC@/1</entry>
+		<entry>Light warhorse/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 6] (with Heavy Warhorse)</name>
+		<entry>Character[6]@Any NPC@/1</entry>
+		<entry>Heavy warhorse/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 6] (with Camel)</name>
+		<entry>Character[6]@Any NPC@/1</entry>
+		<entry>Camel/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 6] (with Pony)</name>
+		<entry>Character[6]@Any NPC@/1</entry>
+		<entry>Pony/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 6] (with Warpony)</name>
+		<entry>Character[6]@Any NPC@/1</entry>
+		<entry>Warpony/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 6] (with Riding Dog)</name>
+		<entry>Character[6]@Any NPC@/1</entry>
+		<entry>Dog$Riding$/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 8] (Solitary)</name>
+		<entry>Character[8]@Any NPC@/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 8] (with Cat)</name>
+		<entry>Character[8]@Any NPC@/1</entry>
+		<entry>Cat/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 8] (with Dog)</name>
+		<entry>Character[8]@Any NPC@/1</entry>
+		<entry>Dog/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 8] (with Donkey)</name>
+		<entry>Character[8]@Any NPC@/1</entry>
+		<entry>Donkey/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 8] (with Mule)</name>
+		<entry>Character[8]@Any NPC@/1</entry>
+		<entry>Mule/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 8] (with Light Horse)</name>
+		<entry>Character[8]@Any NPC@/1</entry>
+		<entry>Light horse/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 8] (with Heavy Horse)</name>
+		<entry>Character[8]@Any NPC@/1</entry>
+		<entry>Heavy horse/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 8] (with Light Warhorse)</name>
+		<entry>Character[8]@Any NPC@/1</entry>
+		<entry>Light warhorse/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 8] (with Heavy Warhorse)</name>
+		<entry>Character[8]@Any NPC@/1</entry>
+		<entry>Heavy warhorse/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 8] (with Camel)</name>
+		<entry>Character[8]@Any NPC@/1</entry>
+		<entry>Camel/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 8] (with Pony)</name>
+		<entry>Character[8]@Any NPC@/1</entry>
+		<entry>Pony/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 8] (with Warpony)</name>
+		<entry>Character[8]@Any NPC@/1</entry>
+		<entry>Warpony/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 8] (with Riding Dog)</name>
+		<entry>Character[8]@Any NPC@/1</entry>
+		<entry>Dog$Riding$/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 10] (Solitary)</name>
+		<entry>Character[10]@Any NPC@/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 10] (with Cat)</name>
+		<entry>Character[10]@Any NPC@/1</entry>
+		<entry>Cat/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 10] (with Dog)</name>
+		<entry>Character[10]@Any NPC@/1</entry>
+		<entry>Dog/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 10] (with Donkey)</name>
+		<entry>Character[10]@Any NPC@/1</entry>
+		<entry>Donkey/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 10] (with Mule)</name>
+		<entry>Character[10]@Any NPC@/1</entry>
+		<entry>Mule/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 10] (with Light Horse)</name>
+		<entry>Character[10]@Any NPC@/1</entry>
+		<entry>Light horse/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 10] (with Heavy Horse)</name>
+		<entry>Character[10]@Any NPC@/1</entry>
+		<entry>Heavy horse/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 10] (with Light Warhorse)</name>
+		<entry>Character[10]@Any NPC@/1</entry>
+		<entry>Light warhorse/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 10] (with Heavy Warhorse)</name>
+		<entry>Character[10]@Any NPC@/1</entry>
+		<entry>Heavy warhorse/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 10] (with Camel)</name>
+		<entry>Character[10]@Any NPC@/1</entry>
+		<entry>Camel/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 10] (with Pony)</name>
+		<entry>Character[10]@Any NPC@/1</entry>
+		<entry>Pony/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 10] (with Warpony)</name>
+		<entry>Character[10]@Any NPC@/1</entry>
+		<entry>Warpony/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 10] (with Riding Dog)</name>
+		<entry>Character[10]@Any NPC@/1</entry>
+		<entry>Dog$Riding$/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 12] (Solitary)</name>
+		<entry>Character[12]@Any NPC@/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 12] (with Cat)</name>
+		<entry>Character[12]@Any NPC@/1</entry>
+		<entry>Cat/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 12] (with Dog)</name>
+		<entry>Character[12]@Any NPC@/1</entry>
+		<entry>Dog/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 12] (with Donkey)</name>
+		<entry>Character[12]@Any NPC@/1</entry>
+		<entry>Donkey/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 12] (with Mule)</name>
+		<entry>Character[12]@Any NPC@/1</entry>
+		<entry>Mule/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 12] (with Light Horse)</name>
+		<entry>Character[12]@Any NPC@/1</entry>
+		<entry>Light horse/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 12] (with Heavy Horse)</name>
+		<entry>Character[12]@Any NPC@/1</entry>
+		<entry>Heavy horse/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 12] (with Light Warhorse)</name>
+		<entry>Character[12]@Any NPC@/1</entry>
+		<entry>Light warhorse/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 12] (with Heavy Warhorse)</name>
+		<entry>Character[12]@Any NPC@/1</entry>
+		<entry>Heavy warhorse/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 12] (with Camel)</name>
+		<entry>Character[12]@Any NPC@/1</entry>
+		<entry>Camel/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 12] (with Pony)</name>
+		<entry>Character[12]@Any NPC@/1</entry>
+		<entry>Pony/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 12] (with Warpony)</name>
+		<entry>Character[12]@Any NPC@/1</entry>
+		<entry>Warpony/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 12] (with Riding Dog)</name>
+		<entry>Character[12]@Any NPC@/1</entry>
+		<entry>Dog$Riding$/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 14] (Solitary)</name>
+		<entry>Character[14]@Any NPC@/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 14] (with Cat)</name>
+		<entry>Character[14]@Any NPC@/1</entry>
+		<entry>Cat/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 14] (with Dog)</name>
+		<entry>Character[14]@Any NPC@/1</entry>
+		<entry>Dog/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 14] (with Donkey)</name>
+		<entry>Character[14]@Any NPC@/1</entry>
+		<entry>Donkey/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 14] (with Mule)</name>
+		<entry>Character[14]@Any NPC@/1</entry>
+		<entry>Mule/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 14] (with Light Horse)</name>
+		<entry>Character[14]@Any NPC@/1</entry>
+		<entry>Light horse/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 14] (with Heavy Horse)</name>
+		<entry>Character[14]@Any NPC@/1</entry>
+		<entry>Heavy horse/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 14] (with Light Warhorse)</name>
+		<entry>Character[14]@Any NPC@/1</entry>
+		<entry>Light warhorse/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 14] (with Heavy Warhorse)</name>
+		<entry>Character[14]@Any NPC@/1</entry>
+		<entry>Heavy warhorse/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 14] (with Camel)</name>
+		<entry>Character[14]@Any NPC@/1</entry>
+		<entry>Camel/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 14] (with Pony)</name>
+		<entry>Character[14]@Any NPC@/1</entry>
+		<entry>Pony/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 14] (with Warpony)</name>
+		<entry>Character[14]@Any NPC@/1</entry>
+		<entry>Warpony/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 14] (with Riding Dog)</name>
+		<entry>Character[14]@Any NPC@/1</entry>
+		<entry>Dog$Riding$/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 16] (Solitary)</name>
+		<entry>Character[16]@Any NPC@/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 16] (with Cat)</name>
+		<entry>Character[16]@Any NPC@/1</entry>
+		<entry>Cat/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 16] (with Dog)</name>
+		<entry>Character[16]@Any NPC@/1</entry>
+		<entry>Dog/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 16] (with Donkey)</name>
+		<entry>Character[16]@Any NPC@/1</entry>
+		<entry>Donkey/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 16] (with Mule)</name>
+		<entry>Character[16]@Any NPC@/1</entry>
+		<entry>Mule/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 16] (with Light Horse)</name>
+		<entry>Character[16]@Any NPC@/1</entry>
+		<entry>Light horse/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 16] (with Heavy Horse)</name>
+		<entry>Character[16]@Any NPC@/1</entry>
+		<entry>Heavy horse/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 16] (with Light Warhorse)</name>
+		<entry>Character[16]@Any NPC@/1</entry>
+		<entry>Light warhorse/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 16] (with Heavy Warhorse)</name>
+		<entry>Character[16]@Any NPC@/1</entry>
+		<entry>Heavy warhorse/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 16] (with Camel)</name>
+		<entry>Character[16]@Any NPC@/1</entry>
+		<entry>Camel/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 16] (with Pony)</name>
+		<entry>Character[16]@Any NPC@/1</entry>
+		<entry>Pony/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 16] (with Warpony)</name>
+		<entry>Character[16]@Any NPC@/1</entry>
+		<entry>Warpony/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 16] (with Riding Dog)</name>
+		<entry>Character[16]@Any NPC@/1</entry>
+		<entry>Dog$Riding$/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 18] (Solitary)</name>
+		<entry>Character[18]@Any NPC@/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 18] (with Cat)</name>
+		<entry>Character[18]@Any NPC@/1</entry>
+		<entry>Cat/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 18] (with Dog)</name>
+		<entry>Character[18]@Any NPC@/1</entry>
+		<entry>Dog/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 18] (with Donkey)</name>
+		<entry>Character[18]@Any NPC@/1</entry>
+		<entry>Donkey/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 18] (with Mule)</name>
+		<entry>Character[18]@Any NPC@/1</entry>
+		<entry>Mule/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 18] (with Light Horse)</name>
+		<entry>Character[18]@Any NPC@/1</entry>
+		<entry>Light horse/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 18] (with Heavy Horse)</name>
+		<entry>Character[18]@Any NPC@/1</entry>
+		<entry>Heavy horse/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 18] (with Light Warhorse)</name>
+		<entry>Character[18]@Any NPC@/1</entry>
+		<entry>Light warhorse/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 18] (with Heavy Warhorse)</name>
+		<entry>Character[18]@Any NPC@/1</entry>
+		<entry>Heavy warhorse/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 18] (with Camel)</name>
+		<entry>Character[18]@Any NPC@/1</entry>
+		<entry>Camel/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 18] (with Pony)</name>
+		<entry>Character[18]@Any NPC@/1</entry>
+		<entry>Pony/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 18] (with Warpony)</name>
+		<entry>Character[18]@Any NPC@/1</entry>
+		<entry>Warpony/1</entry>
+	</collection>
+	<collection>
+		<name>Local [Level 18] (with Riding Dog)</name>
+		<entry>Character[18]@Any NPC@/1</entry>
 		<entry>Dog$Riding$/1</entry>
 	</collection>
 	<collection>
@@ -9130,11 +10545,11 @@
 	</collection>
   <collection>
     <name>Mummy Lord (Solitary)</name>
-    <entry>Character(Lord)[10]#Mummy#@Cleric@/1</entry>
+    <entry>Character(Mummy Lord)[10]{Mummy}@Cleric@/1</entry>
   </collection>
 	<collection>
 		<name>Mummy Lord (Tomb Guard)</name>
-		<entry>Character(Lord)[10]#Mummy#@Cleric@/1</entry>
+		<entry>Character(Mummy Lord)[10]{Mummy}@Cleric@/1</entry>
 		<entry>Mummy/2d3+4</entry>
 	</collection>
   <collection>
@@ -11051,15 +12466,15 @@
 	</collection>
   <collection>
     <name>Werewolf Lord (Solitary)</name>
-    <entry>Character(Lord)[10]#Werewolf#@Fighter@/1</entry>
+    <entry>Character(Werewolf Lord)[10]#Dire Werewolf#@Fighter@/1</entry>
   </collection>
 	<collection>
 		<name>Werewolf Lords (Pair)</name>
-		<entry>Character(Lord)[10]#Werewolf#@Fighter@/2</entry>
+		<entry>Character(Werewolf Lord)[10]#Dire Werewolf#@Fighter@/2</entry>
 	</collection>
 	<collection>
 		<name>Werewolf Lords (Pack)</name>
-		<entry>Character(Lord)[10]#Werewolf#@Fighter@/1d2</entry>
+		<entry>Character(Werewolf Lord)[10]#Dire Werewolf#@Fighter@/1d2</entry>
 		<entry>Werewolf/1d3+1</entry>
 		<entry>Wolf/1d4+4</entry>
 	</collection>

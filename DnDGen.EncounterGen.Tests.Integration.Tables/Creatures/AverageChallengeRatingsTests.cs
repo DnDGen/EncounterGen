@@ -246,6 +246,15 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures
         [TestCase(CreatureDataConstants.Bard_Leader_Level9, ChallengeRatingConstants.Nine)]
         [TestCase(CreatureDataConstants.Bard_Leader_Level10, ChallengeRatingConstants.Ten)]
         [TestCase(CreatureDataConstants.Bard_Leader_Level11, ChallengeRatingConstants.Eleven)]
+        [TestCase(CreatureDataConstants.Bard_Leader_Level12, ChallengeRatingConstants.Twelve)]
+        [TestCase(CreatureDataConstants.Bard_Leader_Level13, ChallengeRatingConstants.Thirteen)]
+        [TestCase(CreatureDataConstants.Bard_Leader_Level14, ChallengeRatingConstants.Fourteen)]
+        [TestCase(CreatureDataConstants.Bard_Leader_Level15, ChallengeRatingConstants.Fifteen)]
+        [TestCase(CreatureDataConstants.Bard_Leader_Level16, ChallengeRatingConstants.Sixteen)]
+        [TestCase(CreatureDataConstants.Bard_Leader_Level17, ChallengeRatingConstants.Seventeen)]
+        [TestCase(CreatureDataConstants.Bard_Leader_Level18, ChallengeRatingConstants.Eighteen)]
+        [TestCase(CreatureDataConstants.Bard_Leader_Level19, ChallengeRatingConstants.Nineteen)]
+        [TestCase(CreatureDataConstants.Bard_Leader_Level20, ChallengeRatingConstants.Twenty)]
         [TestCase(CreatureDataConstants.Barghest, ChallengeRatingConstants.Four)]
         [TestCase(CreatureDataConstants.Barghest_Greater, ChallengeRatingConstants.Five)]
         [TestCase(CreatureDataConstants.Basilisk, ChallengeRatingConstants.Five)]
@@ -1126,16 +1135,16 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures
         [TestCase(CreatureDataConstants.Giant_Cloud_Noncombatant, ChallengeRatingConstants.Zero)]
         [TestCase(CreatureDataConstants.Giant_Fire, ChallengeRatingConstants.Ten)]
         [TestCase(CreatureDataConstants.Giant_Fire_Adept_1stTo2nd, ChallengeRatingConstants.Ten)]
-        [TestCase(CreatureDataConstants.Giant_Fire_Adept_3rdTo5th, ChallengeRatingConstants.Twelve)]
-        [TestCase(CreatureDataConstants.Giant_Fire_Adept_6thTo7th, ChallengeRatingConstants.Thirteen)]
+        [TestCase(CreatureDataConstants.Giant_Fire_Adept_3rdTo5th, ChallengeRatingConstants.Thirteen)]
+        [TestCase(CreatureDataConstants.Giant_Fire_Adept_6thTo7th, ChallengeRatingConstants.Fifteen)]
         [TestCase(CreatureDataConstants.Giant_Fire_Cleric_1stTo2nd, ChallengeRatingConstants.Eleven)]
         [TestCase(CreatureDataConstants.Giant_Fire_Leader_6thTo7th, ChallengeRatingConstants.Sixteen)]
         [TestCase(CreatureDataConstants.Giant_Fire_Noncombatant, ChallengeRatingConstants.Zero)]
         [TestCase(CreatureDataConstants.Giant_Fire_Sorcerer_3rdTo5th, ChallengeRatingConstants.Fourteen)]
         [TestCase(CreatureDataConstants.Giant_Frost, ChallengeRatingConstants.Nine)]
         [TestCase(CreatureDataConstants.Giant_Frost_Adept_1stTo2nd, ChallengeRatingConstants.Nine)]
-        [TestCase(CreatureDataConstants.Giant_Frost_Adept_3rdTo5th, ChallengeRatingConstants.Eleven)]
-        [TestCase(CreatureDataConstants.Giant_Frost_Adept_6thTo7th, ChallengeRatingConstants.Twelve)]
+        [TestCase(CreatureDataConstants.Giant_Frost_Adept_3rdTo5th, ChallengeRatingConstants.Twelve)]
+        [TestCase(CreatureDataConstants.Giant_Frost_Adept_6thTo7th, ChallengeRatingConstants.Fourteen)]
         [TestCase(CreatureDataConstants.Giant_Frost_Cleric_1stTo2nd, ChallengeRatingConstants.Ten)]
         [TestCase(CreatureDataConstants.Giant_Frost_Leader_6thTo7th, ChallengeRatingConstants.Fifteen)]
         [TestCase(CreatureDataConstants.Giant_Frost_Noncombatant, ChallengeRatingConstants.Zero)]
@@ -1169,20 +1178,20 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures
         [TestCase(CreatureDataConstants.Gnoll_Noncombatant, ChallengeRatingConstants.Zero)]
         [TestCase(CreatureDataConstants.Gnoll_Sergeant, ChallengeRatingConstants.Four)]
         [TestCase(CreatureDataConstants.Gnome_Forest_Warrior, ChallengeRatingConstants.OneHalf)]
-        [TestCase(CreatureDataConstants.Gnome_Forest_Captain, ChallengeRatingConstants.Three)]
-        [TestCase(CreatureDataConstants.Gnome_Forest_Leader, ChallengeRatingConstants.Two)]
-        [TestCase(CreatureDataConstants.Gnome_Forest_Lieutenant_3rd, ChallengeRatingConstants.One)]
-        [TestCase(CreatureDataConstants.Gnome_Forest_Lieutenant_5th, ChallengeRatingConstants.Two)]
-        [TestCase(CreatureDataConstants.Gnome_Forest_Sergeant, ChallengeRatingConstants.One)]
+        [TestCase(CreatureDataConstants.Gnome_Forest_Captain, ChallengeRatingConstants.Six)]
+        [TestCase(CreatureDataConstants.Gnome_Forest_Leader, ChallengeRatingConstants.Three)]
+        [TestCase(CreatureDataConstants.Gnome_Forest_Lieutenant_3rd, ChallengeRatingConstants.Two)]
+        [TestCase(CreatureDataConstants.Gnome_Forest_Lieutenant_5th, ChallengeRatingConstants.Four)]
+        [TestCase(CreatureDataConstants.Gnome_Forest_Sergeant, ChallengeRatingConstants.Two)]
         [TestCase(CreatureDataConstants.Gnome_Rock_Warrior, ChallengeRatingConstants.OneHalf)]
-        [TestCase(CreatureDataConstants.Gnome_Rock_Captain, ChallengeRatingConstants.Three)]
-        [TestCase(CreatureDataConstants.Gnome_Rock_Leader, ChallengeRatingConstants.Two)]
-        [TestCase(CreatureDataConstants.Gnome_Rock_Lieutenant_3rd, ChallengeRatingConstants.One)]
-        [TestCase(CreatureDataConstants.Gnome_Rock_Lieutenant_5th, ChallengeRatingConstants.Two)]
-        [TestCase(CreatureDataConstants.Gnome_Rock_Sergeant, ChallengeRatingConstants.One)]
+        [TestCase(CreatureDataConstants.Gnome_Rock_Captain, ChallengeRatingConstants.Six)]
+        [TestCase(CreatureDataConstants.Gnome_Rock_Leader, ChallengeRatingConstants.Three)]
+        [TestCase(CreatureDataConstants.Gnome_Rock_Lieutenant_3rd, ChallengeRatingConstants.Two)]
+        [TestCase(CreatureDataConstants.Gnome_Rock_Lieutenant_5th, ChallengeRatingConstants.Four)]
+        [TestCase(CreatureDataConstants.Gnome_Rock_Sergeant, ChallengeRatingConstants.Two)]
         [TestCase(CreatureDataConstants.Goblin_Warrior, ChallengeRatingConstants.OneThird)]
-        [TestCase(CreatureDataConstants.Goblin_Leader_4thTo6th, ChallengeRatingConstants.Two)]
-        [TestCase(CreatureDataConstants.Goblin_Leader_6thTo8th, ChallengeRatingConstants.Three)]
+        [TestCase(CreatureDataConstants.Goblin_Leader_4thTo6th, ChallengeRatingConstants.Three)]
+        [TestCase(CreatureDataConstants.Goblin_Leader_6thTo8th, ChallengeRatingConstants.Five)]
         [TestCase(CreatureDataConstants.Goblin_Lieutenant, ChallengeRatingConstants.Two)]
         [TestCase(CreatureDataConstants.Goblin_Noncombatant, ChallengeRatingConstants.Zero)]
         [TestCase(CreatureDataConstants.Goblin_Sergeant, ChallengeRatingConstants.One)]
@@ -1201,23 +1210,23 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures
         [TestCase(CreatureDataConstants.Grimlock_Leader, ChallengeRatingConstants.Five)]
         [TestCase(CreatureDataConstants.Gynosphinx, ChallengeRatingConstants.Eight)]
         [TestCase(CreatureDataConstants.Halfling_Deep_Warrior, ChallengeRatingConstants.OneHalf)]
-        [TestCase(CreatureDataConstants.Halfling_Deep_Captain, ChallengeRatingConstants.Three)]
-        [TestCase(CreatureDataConstants.Halfling_Deep_Leader, ChallengeRatingConstants.Two)]
-        [TestCase(CreatureDataConstants.Halfling_Deep_Lieutenant, ChallengeRatingConstants.Two)]
+        [TestCase(CreatureDataConstants.Halfling_Deep_Captain, ChallengeRatingConstants.Six)]
+        [TestCase(CreatureDataConstants.Halfling_Deep_Leader, ChallengeRatingConstants.Three)]
+        [TestCase(CreatureDataConstants.Halfling_Deep_Lieutenant, ChallengeRatingConstants.Four)]
         [TestCase(CreatureDataConstants.Halfling_Deep_Noncombatant, ChallengeRatingConstants.Zero)]
-        [TestCase(CreatureDataConstants.Halfling_Deep_Sergeant, ChallengeRatingConstants.One)]
+        [TestCase(CreatureDataConstants.Halfling_Deep_Sergeant, ChallengeRatingConstants.Two)]
         [TestCase(CreatureDataConstants.Halfling_Lightfoot_Warrior, ChallengeRatingConstants.OneHalf)]
-        [TestCase(CreatureDataConstants.Halfling_Lightfoot_Captain, ChallengeRatingConstants.Three)]
-        [TestCase(CreatureDataConstants.Halfling_Lightfoot_Leader, ChallengeRatingConstants.Two)]
-        [TestCase(CreatureDataConstants.Halfling_Lightfoot_Lieutenant, ChallengeRatingConstants.Two)]
+        [TestCase(CreatureDataConstants.Halfling_Lightfoot_Captain, ChallengeRatingConstants.Six)]
+        [TestCase(CreatureDataConstants.Halfling_Lightfoot_Leader, ChallengeRatingConstants.Three)]
+        [TestCase(CreatureDataConstants.Halfling_Lightfoot_Lieutenant, ChallengeRatingConstants.Four)]
         [TestCase(CreatureDataConstants.Halfling_Lightfoot_Noncombatant, ChallengeRatingConstants.Zero)]
-        [TestCase(CreatureDataConstants.Halfling_Lightfoot_Sergeant, ChallengeRatingConstants.One)]
+        [TestCase(CreatureDataConstants.Halfling_Lightfoot_Sergeant, ChallengeRatingConstants.Two)]
         [TestCase(CreatureDataConstants.Halfling_Tallfellow_Warrior, ChallengeRatingConstants.OneHalf)]
-        [TestCase(CreatureDataConstants.Halfling_Tallfellow_Captain, ChallengeRatingConstants.Three)]
-        [TestCase(CreatureDataConstants.Halfling_Tallfellow_Leader, ChallengeRatingConstants.Two)]
-        [TestCase(CreatureDataConstants.Halfling_Tallfellow_Lieutenant, ChallengeRatingConstants.Two)]
+        [TestCase(CreatureDataConstants.Halfling_Tallfellow_Captain, ChallengeRatingConstants.Six)]
+        [TestCase(CreatureDataConstants.Halfling_Tallfellow_Leader, ChallengeRatingConstants.Three)]
+        [TestCase(CreatureDataConstants.Halfling_Tallfellow_Lieutenant, ChallengeRatingConstants.Four)]
         [TestCase(CreatureDataConstants.Halfling_Tallfellow_Noncombatant, ChallengeRatingConstants.Zero)]
-        [TestCase(CreatureDataConstants.Halfling_Tallfellow_Sergeant, ChallengeRatingConstants.One)]
+        [TestCase(CreatureDataConstants.Halfling_Tallfellow_Sergeant, ChallengeRatingConstants.Two)]
         [TestCase(CreatureDataConstants.Harpy, ChallengeRatingConstants.Four)]
         [TestCase(CreatureDataConstants.HarpyArcher, ChallengeRatingConstants.Eleven)]
         [TestCase(CreatureDataConstants.Hawk, ChallengeRatingConstants.OneThird)]
@@ -1228,11 +1237,11 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures
         [TestCase(CreatureDataConstants.Hieracosphinx, ChallengeRatingConstants.Five)]
         [TestCase(CreatureDataConstants.Hippogriff, ChallengeRatingConstants.Two)]
         [TestCase(CreatureDataConstants.Hobgoblin_Warrior, ChallengeRatingConstants.OneHalf)]
-        [TestCase(CreatureDataConstants.Hobgoblin_Leader_4thTo6th, ChallengeRatingConstants.Two)]
-        [TestCase(CreatureDataConstants.Hobgoblin_Leader_6thTo8th, ChallengeRatingConstants.Three)]
-        [TestCase(CreatureDataConstants.Hobgoblin_Lieutenant, ChallengeRatingConstants.Two)]
+        [TestCase(CreatureDataConstants.Hobgoblin_Leader_4thTo6th, ChallengeRatingConstants.Four)]
+        [TestCase(CreatureDataConstants.Hobgoblin_Leader_6thTo8th, ChallengeRatingConstants.Six)]
+        [TestCase(CreatureDataConstants.Hobgoblin_Lieutenant, ChallengeRatingConstants.Three)]
         [TestCase(CreatureDataConstants.Hobgoblin_Noncombatant, ChallengeRatingConstants.Zero)]
-        [TestCase(CreatureDataConstants.Hobgoblin_Sergeant, ChallengeRatingConstants.One)]
+        [TestCase(CreatureDataConstants.Hobgoblin_Sergeant, ChallengeRatingConstants.Two)]
         [TestCase(CreatureDataConstants.Homunculus, ChallengeRatingConstants.One)]
         [TestCase(CreatureDataConstants.HornedDevil_Cornugon, ChallengeRatingConstants.Sixteen)]
         [TestCase(CreatureDataConstants.Horse_Heavy, ChallengeRatingConstants.One)]
@@ -1243,11 +1252,11 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures
         [TestCase(CreatureDataConstants.HoundArchon_Hero, ChallengeRatingConstants.Sixteen)]
         [TestCase(CreatureDataConstants.Howler, ChallengeRatingConstants.Three)]
         [TestCase(CreatureDataConstants.Human_Warrior, ChallengeRatingConstants.OneHalf)]
-        [TestCase(CreatureDataConstants.Human_Captain, ChallengeRatingConstants.Three)]
-        [TestCase(CreatureDataConstants.Human_Leader, ChallengeRatingConstants.Two)]
-        [TestCase(CreatureDataConstants.Human_Lieutenant, ChallengeRatingConstants.Two)]
+        [TestCase(CreatureDataConstants.Human_Captain, ChallengeRatingConstants.Six)]
+        [TestCase(CreatureDataConstants.Human_Leader, ChallengeRatingConstants.Three)]
+        [TestCase(CreatureDataConstants.Human_Lieutenant, ChallengeRatingConstants.Four)]
         [TestCase(CreatureDataConstants.Human_Noncombatant, ChallengeRatingConstants.Zero)]
-        [TestCase(CreatureDataConstants.Human_Sergeant, ChallengeRatingConstants.One)]
+        [TestCase(CreatureDataConstants.Human_Sergeant, ChallengeRatingConstants.Two)]
         [TestCase(CreatureDataConstants.Hydra_5Heads, ChallengeRatingConstants.Four)]
         [TestCase(CreatureDataConstants.Hydra_6Heads, ChallengeRatingConstants.Five)]
         [TestCase(CreatureDataConstants.Hydra_7Heads, ChallengeRatingConstants.Six)]
@@ -1263,10 +1272,10 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures
         [TestCase(CreatureDataConstants.Janni, ChallengeRatingConstants.Four)]
         [TestCase(CreatureDataConstants.Kobold_Warrior, ChallengeRatingConstants.OneFourth)]
         [TestCase(CreatureDataConstants.Kobold_Leader_4thTo6th, ChallengeRatingConstants.Two)]
-        [TestCase(CreatureDataConstants.Kobold_Leader_6thTo8th, ChallengeRatingConstants.Three)]
-        [TestCase(CreatureDataConstants.Kobold_Lieutenant, ChallengeRatingConstants.Two)]
+        [TestCase(CreatureDataConstants.Kobold_Leader_6thTo8th, ChallengeRatingConstants.Four)]
+        [TestCase(CreatureDataConstants.Kobold_Lieutenant, ChallengeRatingConstants.One)]
         [TestCase(CreatureDataConstants.Kobold_Noncombatant, ChallengeRatingConstants.Zero)]
-        [TestCase(CreatureDataConstants.Kobold_Sergeant, ChallengeRatingConstants.One)]
+        [TestCase(CreatureDataConstants.Kobold_Sergeant, ChallengeRatingConstants.OneHalf)]
         [TestCase(CreatureDataConstants.Kolyarut, ChallengeRatingConstants.Twelve)]
         [TestCase(CreatureDataConstants.Kraken, ChallengeRatingConstants.Twelve)]
         [TestCase(CreatureDataConstants.Krenshar, ChallengeRatingConstants.One)]
@@ -1305,11 +1314,11 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures
         [TestCase(CreatureDataConstants.Lizardfolk_Leader_4thTo10th, ChallengeRatingConstants.Eight)]
         [TestCase(CreatureDataConstants.Lizardfolk_Lieutenant, ChallengeRatingConstants.Five)]
         [TestCase(CreatureDataConstants.Lizardfolk_Noncombatant, ChallengeRatingConstants.Zero)]
-        [TestCase(CreatureDataConstants.Locathah_Captain, ChallengeRatingConstants.Three)]
-        [TestCase(CreatureDataConstants.Locathah_Leader, ChallengeRatingConstants.Two)]
-        [TestCase(CreatureDataConstants.Locathah_Lieutenant, ChallengeRatingConstants.Two)]
+        [TestCase(CreatureDataConstants.Locathah_Captain, ChallengeRatingConstants.Six)]
+        [TestCase(CreatureDataConstants.Locathah_Leader, ChallengeRatingConstants.Three)]
+        [TestCase(CreatureDataConstants.Locathah_Lieutenant, ChallengeRatingConstants.Four)]
         [TestCase(CreatureDataConstants.Locathah_Noncombatant, ChallengeRatingConstants.Zero)]
-        [TestCase(CreatureDataConstants.Locathah_Sergeant, ChallengeRatingConstants.One)]
+        [TestCase(CreatureDataConstants.Locathah_Sergeant, ChallengeRatingConstants.Two)]
         [TestCase(CreatureDataConstants.Locathah_Warrior, ChallengeRatingConstants.OneHalf)]
         [TestCase(CreatureDataConstants.Locust_Swarm, ChallengeRatingConstants.Three)]
         [TestCase(CreatureDataConstants.Magmin, ChallengeRatingConstants.Three)]
@@ -1330,11 +1339,11 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures
         [TestCase(CreatureDataConstants.Mephit_Salt, ChallengeRatingConstants.Three)]
         [TestCase(CreatureDataConstants.Mephit_Steam, ChallengeRatingConstants.Three)]
         [TestCase(CreatureDataConstants.Mephit_Water, ChallengeRatingConstants.Three)]
-        [TestCase(CreatureDataConstants.Merfolk_Captain, ChallengeRatingConstants.Three)]
-        [TestCase(CreatureDataConstants.Merfolk_Leader, ChallengeRatingConstants.Two)]
-        [TestCase(CreatureDataConstants.Merfolk_Lieutenant_3rd, ChallengeRatingConstants.One)]
-        [TestCase(CreatureDataConstants.Merfolk_Lieutenant_5th, ChallengeRatingConstants.Two)]
-        [TestCase(CreatureDataConstants.Merfolk_Sergeant, ChallengeRatingConstants.One)]
+        [TestCase(CreatureDataConstants.Merfolk_Captain, ChallengeRatingConstants.Six)]
+        [TestCase(CreatureDataConstants.Merfolk_Leader, ChallengeRatingConstants.Three)]
+        [TestCase(CreatureDataConstants.Merfolk_Lieutenant_3rd, ChallengeRatingConstants.Two)]
+        [TestCase(CreatureDataConstants.Merfolk_Lieutenant_5th, ChallengeRatingConstants.Four)]
+        [TestCase(CreatureDataConstants.Merfolk_Sergeant, ChallengeRatingConstants.Two)]
         [TestCase(CreatureDataConstants.Merfolk_Warrior, ChallengeRatingConstants.OneHalf)]
         [TestCase(CreatureDataConstants.Mimic, ChallengeRatingConstants.Four)]
         [TestCase(CreatureDataConstants.MindFlayer, ChallengeRatingConstants.Eight)]
@@ -1410,17 +1419,17 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures
         [TestCase(CreatureDataConstants.Ooze_Gray, ChallengeRatingConstants.Four)]
         [TestCase(CreatureDataConstants.Ooze_OchreJelly, ChallengeRatingConstants.Five)]
         [TestCase(CreatureDataConstants.Orc_Warrior, ChallengeRatingConstants.OneHalf)]
-        [TestCase(CreatureDataConstants.Orc_Captain, ChallengeRatingConstants.Three)]
-        [TestCase(CreatureDataConstants.Orc_Leader, ChallengeRatingConstants.Two)]
-        [TestCase(CreatureDataConstants.Orc_Lieutenant, ChallengeRatingConstants.Two)]
+        [TestCase(CreatureDataConstants.Orc_Captain, ChallengeRatingConstants.Six)]
+        [TestCase(CreatureDataConstants.Orc_Leader, ChallengeRatingConstants.Three)]
+        [TestCase(CreatureDataConstants.Orc_Lieutenant, ChallengeRatingConstants.Four)]
         [TestCase(CreatureDataConstants.Orc_Noncombatant, ChallengeRatingConstants.Zero)]
-        [TestCase(CreatureDataConstants.Orc_Sergeant, ChallengeRatingConstants.One)]
+        [TestCase(CreatureDataConstants.Orc_Sergeant, ChallengeRatingConstants.Two)]
         [TestCase(CreatureDataConstants.Orc_Half_Warrior, ChallengeRatingConstants.OneHalf)]
-        [TestCase(CreatureDataConstants.Orc_Half_Captain, ChallengeRatingConstants.Three)]
-        [TestCase(CreatureDataConstants.Orc_Half_Leader, ChallengeRatingConstants.Two)]
-        [TestCase(CreatureDataConstants.Orc_Half_Lieutenant, ChallengeRatingConstants.Two)]
+        [TestCase(CreatureDataConstants.Orc_Half_Captain, ChallengeRatingConstants.Six)]
+        [TestCase(CreatureDataConstants.Orc_Half_Leader, ChallengeRatingConstants.Three)]
+        [TestCase(CreatureDataConstants.Orc_Half_Lieutenant, ChallengeRatingConstants.Four)]
         [TestCase(CreatureDataConstants.Orc_Half_Noncombatant, ChallengeRatingConstants.Zero)]
-        [TestCase(CreatureDataConstants.Orc_Half_Sergeant, ChallengeRatingConstants.One)]
+        [TestCase(CreatureDataConstants.Orc_Half_Sergeant, ChallengeRatingConstants.Two)]
         [TestCase(CreatureDataConstants.Otyugh, ChallengeRatingConstants.Four)]
         [TestCase(CreatureDataConstants.Owl, ChallengeRatingConstants.OneFourth)]
         [TestCase(CreatureDataConstants.Owl_Celestial, ChallengeRatingConstants.OneFourth)]
@@ -1760,27 +1769,31 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures
         [TestCase(CreatureDataConstants.Zombie_GrayRender, ChallengeRatingConstants.Six)]
         public void AverageChallengeRating(string creature, string averageChallengeRating)
         {
-            AssertDistinctCollection(creature, averageChallengeRating);
-        }
+            Assert.That(table, Contains.Key(creature));
 
-        [Test]
-        public void OnlyNoncombatantsHaveChallengeRatingOfZero()
-        {
-            var creatures = GetAllCreaturesFromEncounters();
-            var entries = GetEntries();
-
-            Assert.That(creatures, Is.SubsetOf(entries));
-
-            foreach (var creature in creatures)
+            //Character CR
+            if (IsCharacter(creature))
             {
-                var challengeRating = GetCollection(creature).Single();
+                var encounterCreature = new EncounterCreature
+                {
+                    Quantity = 1,
+                    Creature = GetCreature(creature),
+                    ChallengeRating = table[creature].Single()
+                };
 
-                if (creature.Contains(CreatureDataConstants.Noncombatant))
-                    Assert.That(challengeRating, Is.EqualTo(ChallengeRatingConstants.Zero), creature);
-                else
-                    Assert.That(challengeRating, Is.Not.EqualTo(ChallengeRatingConstants.Zero), creature);
-
+                var character = GenerateCharacter(encounterCreature);
+                var characterCR = GetCharacterChallengeRating(character.ChallengeRating);
+                Assert.That(averageChallengeRating, Is.EqualTo(characterCR), $"Creature: {creature}\nCharacter: {character.Summary}");
             }
+
+            //Noncombatant CR
+            if (creature.Contains(CreatureDataConstants.Noncombatant))
+                Assert.That(averageChallengeRating, Is.EqualTo(ChallengeRatingConstants.Zero), creature);
+            else
+                Assert.That(averageChallengeRating, Is.Not.EqualTo(ChallengeRatingConstants.Zero), creature);
+
+            //Table
+            AssertDistinctCollection(creature, averageChallengeRating);
         }
 
         [TestCase(ChallengeRatingConstants.Zero)]
@@ -1829,27 +1842,6 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures
                 .Intersect(creatures)
                 .Where(c => table[c].Single() == cr);
             Assert.That(table[cr], Is.EquivalentTo(creaturesOfCR));
-        }
-
-        [Test]
-        public void BUG_AverageChallengeRating_MatchesGeneratedCharacterChallengeRating()
-        {
-            var entries = GetEntries();
-            var characters = entries.Where(IsCharacter);
-
-            foreach (var creatureData in characters)
-            {
-                var creature = new EncounterCreature
-                {
-                    Quantity = 1,
-                    Creature = GetCreature(creatureData),
-                    ChallengeRating = table[creatureData].Single()
-                };
-
-                var character = GenerateCharacter(creature);
-                var characterCR = GetCharacterChallengeRating(character.ChallengeRating);
-                Assert.That(creature.ChallengeRating, Is.EqualTo(characterCR), $"Creature: {creatureData}\nCharacter: {character.Summary}");
-            }
         }
 
         private bool IsCharacter(string creature)
@@ -1955,6 +1947,8 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures
         private string GetCharacterChallengeRating(double cr) => cr switch
         {
             0.5 => ChallengeRatingConstants.OneHalf,
+            1 / 3d => ChallengeRatingConstants.OneThird,
+            0.25 => ChallengeRatingConstants.OneFourth,
             _ => cr.ToString(),
         };
     }

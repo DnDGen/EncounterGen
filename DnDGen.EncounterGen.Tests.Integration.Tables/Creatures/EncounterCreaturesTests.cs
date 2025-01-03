@@ -1063,46 +1063,66 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures
         [TestCase(EncounterConstants.Character_Merchant_Level20_Caravan,
             CreatureDataConstants.Character_Merchant_Level20, AmountConstants.Range2To5,
             CreatureDataConstants.Warrior_Guard_Level20, AmountConstants.Range1To4)]
-        [TestCase(EncounterConstants.Character_Minstrel_Level1_Group, CreatureDataConstants.Character_Minstrel_Level1, AmountConstants.Range3To9,
+        [TestCase(EncounterConstants.Character_Minstrel_Level1_Group,
+            CreatureDataConstants.Character_Minstrel_Level1, AmountConstants.Range3To9,
             CreatureDataConstants.Bard_Leader_Level1, AmountConstants.Range10PercentTo1)]
-        [TestCase(EncounterConstants.Character_Minstrel_Level2_Group, CreatureDataConstants.Character_Minstrel_Level2, AmountConstants.Range3To9,
+        [TestCase(EncounterConstants.Character_Minstrel_Level2_Group,
+            CreatureDataConstants.Character_Minstrel_Level2, AmountConstants.Range3To9,
             CreatureDataConstants.Bard_Leader_Level2, AmountConstants.Range10PercentTo1)]
-        [TestCase(EncounterConstants.Character_Minstrel_Level4_Group, CreatureDataConstants.Character_Minstrel_Level4, AmountConstants.Range3To9,
-            CreatureDataConstants.Bard_Leader_Level3, AmountConstants.Range10PercentTo1)]
-        [TestCase(EncounterConstants.Character_Minstrel_Level6_Group, CreatureDataConstants.Character_Minstrel_Level6, AmountConstants.Range3To9,
+        [TestCase(EncounterConstants.Character_Minstrel_Level4_Group,
+            CreatureDataConstants.Character_Minstrel_Level4, AmountConstants.Range3To9,
             CreatureDataConstants.Bard_Leader_Level4, AmountConstants.Range10PercentTo1)]
-        [TestCase(EncounterConstants.Character_Minstrel_Level8_Group, CreatureDataConstants.Character_Minstrel_Level8, AmountConstants.Range3To9,
-            CreatureDataConstants.Bard_Leader_Level5, AmountConstants.Range10PercentTo1)]
-        [TestCase(EncounterConstants.Character_Minstrel_Level10_Group, CreatureDataConstants.Character_Minstrel_Level10, AmountConstants.Range3To9,
+        [TestCase(EncounterConstants.Character_Minstrel_Level6_Group,
+            CreatureDataConstants.Character_Minstrel_Level6, AmountConstants.Range3To9,
             CreatureDataConstants.Bard_Leader_Level6, AmountConstants.Range10PercentTo1)]
-        [TestCase(EncounterConstants.Character_Minstrel_Level12_Group, CreatureDataConstants.Character_Minstrel_Level12, AmountConstants.Range3To9,
-            CreatureDataConstants.Bard_Leader_Level7, AmountConstants.Range10PercentTo1)]
-        [TestCase(EncounterConstants.Character_Minstrel_Level14_Group, CreatureDataConstants.Character_Minstrel_Level14, AmountConstants.Range3To9,
+        [TestCase(EncounterConstants.Character_Minstrel_Level8_Group,
+            CreatureDataConstants.Character_Minstrel_Level8, AmountConstants.Range3To9,
             CreatureDataConstants.Bard_Leader_Level8, AmountConstants.Range10PercentTo1)]
-        [TestCase(EncounterConstants.Character_Minstrel_Level16_Group, CreatureDataConstants.Character_Minstrel_Level16, AmountConstants.Range3To9,
-            CreatureDataConstants.Bard_Leader_Level9, AmountConstants.Range10PercentTo1)]
-        [TestCase(EncounterConstants.Character_Minstrel_Level18_Group, CreatureDataConstants.Character_Minstrel_Level18, AmountConstants.Range3To9,
+        [TestCase(EncounterConstants.Character_Minstrel_Level10_Group,
+            CreatureDataConstants.Character_Minstrel_Level10, AmountConstants.Range3To9,
             CreatureDataConstants.Bard_Leader_Level10, AmountConstants.Range10PercentTo1)]
-        [TestCase(EncounterConstants.Character_Minstrel_Level3_Group, CreatureDataConstants.Character_Minstrel_Level3, AmountConstants.Range3To9,
-            CreatureDataConstants.Bard_Leader_Level2, AmountConstants.Range10PercentTo1)]
-        [TestCase(EncounterConstants.Character_Minstrel_Level5_Group, CreatureDataConstants.Character_Minstrel_Level5, AmountConstants.Range3To9,
+        [TestCase(EncounterConstants.Character_Minstrel_Level12_Group,
+            CreatureDataConstants.Character_Minstrel_Level12, AmountConstants.Range3To9,
+            CreatureDataConstants.Bard_Leader_Level12, AmountConstants.Range10PercentTo1)]
+        [TestCase(EncounterConstants.Character_Minstrel_Level14_Group,
+            CreatureDataConstants.Character_Minstrel_Level14, AmountConstants.Range3To9,
+            CreatureDataConstants.Bard_Leader_Level14, AmountConstants.Range10PercentTo1)]
+        [TestCase(EncounterConstants.Character_Minstrel_Level16_Group,
+            CreatureDataConstants.Character_Minstrel_Level16, AmountConstants.Range3To9,
+            CreatureDataConstants.Bard_Leader_Level16, AmountConstants.Range10PercentTo1)]
+        [TestCase(EncounterConstants.Character_Minstrel_Level18_Group,
+            CreatureDataConstants.Character_Minstrel_Level18, AmountConstants.Range3To9,
+            CreatureDataConstants.Bard_Leader_Level18, AmountConstants.Range10PercentTo1)]
+        [TestCase(EncounterConstants.Character_Minstrel_Level3_Group,
+            CreatureDataConstants.Character_Minstrel_Level3, AmountConstants.Range3To9,
             CreatureDataConstants.Bard_Leader_Level3, AmountConstants.Range10PercentTo1)]
-        [TestCase(EncounterConstants.Character_Minstrel_Level7_Group, CreatureDataConstants.Character_Minstrel_Level7, AmountConstants.Range3To9,
-            CreatureDataConstants.Bard_Leader_Level4, AmountConstants.Range10PercentTo1)]
-        [TestCase(EncounterConstants.Character_Minstrel_Level9_Group, CreatureDataConstants.Character_Minstrel_Level9, AmountConstants.Range3To9,
+        [TestCase(EncounterConstants.Character_Minstrel_Level5_Group,
+            CreatureDataConstants.Character_Minstrel_Level5, AmountConstants.Range3To9,
             CreatureDataConstants.Bard_Leader_Level5, AmountConstants.Range10PercentTo1)]
-        [TestCase(EncounterConstants.Character_Minstrel_Level11_Group, CreatureDataConstants.Character_Minstrel_Level11, AmountConstants.Range3To9,
-            CreatureDataConstants.Bard_Leader_Level6, AmountConstants.Range10PercentTo1)]
-        [TestCase(EncounterConstants.Character_Minstrel_Level13_Group, CreatureDataConstants.Character_Minstrel_Level13, AmountConstants.Range3To9,
+        [TestCase(EncounterConstants.Character_Minstrel_Level7_Group,
+            CreatureDataConstants.Character_Minstrel_Level7, AmountConstants.Range3To9,
             CreatureDataConstants.Bard_Leader_Level7, AmountConstants.Range10PercentTo1)]
-        [TestCase(EncounterConstants.Character_Minstrel_Level15_Group, CreatureDataConstants.Character_Minstrel_Level15, AmountConstants.Range3To9,
-            CreatureDataConstants.Bard_Leader_Level8, AmountConstants.Range10PercentTo1)]
-        [TestCase(EncounterConstants.Character_Minstrel_Level17_Group, CreatureDataConstants.Character_Minstrel_Level17, AmountConstants.Range3To9,
+        [TestCase(EncounterConstants.Character_Minstrel_Level9_Group,
+            CreatureDataConstants.Character_Minstrel_Level9, AmountConstants.Range3To9,
             CreatureDataConstants.Bard_Leader_Level9, AmountConstants.Range10PercentTo1)]
-        [TestCase(EncounterConstants.Character_Minstrel_Level19_Group, CreatureDataConstants.Character_Minstrel_Level19, AmountConstants.Range3To9,
-            CreatureDataConstants.Bard_Leader_Level10, AmountConstants.Range10PercentTo1)]
-        [TestCase(EncounterConstants.Character_Minstrel_Level20_Group, CreatureDataConstants.Character_Minstrel_Level20, AmountConstants.Range3To9,
+        [TestCase(EncounterConstants.Character_Minstrel_Level11_Group,
+            CreatureDataConstants.Character_Minstrel_Level11, AmountConstants.Range3To9,
             CreatureDataConstants.Bard_Leader_Level11, AmountConstants.Range10PercentTo1)]
+        [TestCase(EncounterConstants.Character_Minstrel_Level13_Group,
+            CreatureDataConstants.Character_Minstrel_Level13, AmountConstants.Range3To9,
+            CreatureDataConstants.Bard_Leader_Level13, AmountConstants.Range10PercentTo1)]
+        [TestCase(EncounterConstants.Character_Minstrel_Level15_Group,
+            CreatureDataConstants.Character_Minstrel_Level15, AmountConstants.Range3To9,
+            CreatureDataConstants.Bard_Leader_Level15, AmountConstants.Range10PercentTo1)]
+        [TestCase(EncounterConstants.Character_Minstrel_Level17_Group,
+            CreatureDataConstants.Character_Minstrel_Level17, AmountConstants.Range3To9,
+            CreatureDataConstants.Bard_Leader_Level17, AmountConstants.Range10PercentTo1)]
+        [TestCase(EncounterConstants.Character_Minstrel_Level19_Group,
+            CreatureDataConstants.Character_Minstrel_Level19, AmountConstants.Range3To9,
+            CreatureDataConstants.Bard_Leader_Level19, AmountConstants.Range10PercentTo1)]
+        [TestCase(EncounterConstants.Character_Minstrel_Level20_Group,
+            CreatureDataConstants.Character_Minstrel_Level20, AmountConstants.Range3To9,
+            CreatureDataConstants.Bard_Leader_Level20, AmountConstants.Range10PercentTo1)]
         [TestCase(EncounterConstants.Character_ContractKiller_Level1_Solitary, CreatureDataConstants.Character_ContractKiller_Level1, AmountConstants.Range1)]
         [TestCase(EncounterConstants.Character_ContractKiller_Level2_Solitary, CreatureDataConstants.Character_ContractKiller_Level2, AmountConstants.Range1)]
         [TestCase(EncounterConstants.Character_ContractKiller_Level3_Solitary, CreatureDataConstants.Character_ContractKiller_Level3, AmountConstants.Range1)]

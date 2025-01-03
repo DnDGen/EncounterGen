@@ -228,6 +228,15 @@
         public const string Bard_Leader_Level9 = "Character(Leader)[9]@Bard@";
         public const string Bard_Leader_Level10 = "Character(Leader)[10]@Bard@";
         public const string Bard_Leader_Level11 = "Character(Leader)[11]@Bard@";
+        public const string Bard_Leader_Level12 = "Character(Leader)[12]@Bard@";
+        public const string Bard_Leader_Level13 = "Character(Leader)[13]@Bard@";
+        public const string Bard_Leader_Level14 = "Character(Leader)[14]@Bard@";
+        public const string Bard_Leader_Level15 = "Character(Leader)[15]@Bard@";
+        public const string Bard_Leader_Level16 = "Character(Leader)[16]@Bard@";
+        public const string Bard_Leader_Level17 = "Character(Leader)[17]@Bard@";
+        public const string Bard_Leader_Level18 = "Character(Leader)[18]@Bard@";
+        public const string Bard_Leader_Level19 = "Character(Leader)[19]@Bard@";
+        public const string Bard_Leader_Level20 = "Character(Leader)[20]@Bard@";
         public const string Barghest = "Barghest";
         public const string Barghest_Greater = "Barghest$Greater$";
         public const string Basilisk = "Basilisk";
@@ -1442,7 +1451,7 @@
         public const string Monkey_Celestial = "Monkey$Celestial creature$";
         public const string Mule = "Mule";
         public const string Mummy = "Mummy";
-        public const string MummyLord = "Character(Lord)[10]#Mummy#@Cleric@";
+        public const string MummyLord = "Character(Mummy Lord)[10]{Mummy}@Cleric@";
         public const string Naga = "Naga";
         public const string Naga_Dark = "Naga$Dark$";
         public const string Naga_Guardian = "Naga$Guardian$";
@@ -1838,7 +1847,7 @@
         public const string Wererat = "Wererat";
         public const string Weretiger = "Weretiger";
         public const string Werewolf = "Werewolf";
-        public const string WerewolfLord = "Character(Lord)[10]#Werewolf#@Fighter@";
+        public const string WerewolfLord = "Character(Werewolf Lord)[10]#Dire Werewolf#@Fighter@";
         public const string Whale = "Whale";
         public const string Whale_Baleen = "Whale$Baleen$";
         public const string Whale_Cachalot = "Whale$Cachalot$";
