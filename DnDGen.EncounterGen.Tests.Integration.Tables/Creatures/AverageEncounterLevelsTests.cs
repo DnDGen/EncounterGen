@@ -109,8 +109,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures
         [TestCase(EncounterSpecifications.MaximumLevel)]
         public void AverageEncounterLevelGroup(int level)
         {
-            Assert.That(table, Contains.Key(level.ToString()));
-            Assert.That(table[level.ToString()], Is.EquivalentTo(encounterLevels[level]));
+            AssertDistinctCollection(level.ToString(), encounterLevels[level].ToArray());
         }
     }
 }
