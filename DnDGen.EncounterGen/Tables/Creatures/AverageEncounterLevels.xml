@@ -238,6 +238,7 @@
 	</collection>
 	<collection>
 		<name>3</name>
+		<entry>Guards [Level 1] (Patrol)</entry>
 		<entry>Business People [Level 2] (Group)</entry>
 		<entry>Farmers [Level 2] (Group)</entry>
 		<entry>Herders [Level 2] (Group)</entry>
@@ -274,46 +275,39 @@
 		<entry>Animal Trainer [Level 3] (with Warpony)</entry>
 		<entry>Artisan [Level 4] (Solitary)</entry>
 		<entry>Beggar [Level 4] (Solitary)</entry>
-		<entry>Business People [Level 2-3] (Group)</entry>
 		<entry>Construction Workers [Level 1] (Crew)</entry>
 		<entry>Crusaders [Level 1] (Band)</entry>
 		<entry>Doctor [Level 4 Adept] (Solitary)</entry>
 		<entry>Doctor [Level 3] (Solitary)</entry>
-		<entry>Farmers [Level 2-3] (Group)</entry>
 		<entry>Fortuneteller [Level 4] (Solitary)</entry>
-		<entry>Herders [Level 2-3] (Group)</entry>
 		<entry>Contract Killer [Level 3] (Solitary)</entry>
-		<entry>Hunters [Level 2-3] (Hunting Party)</entry>
 		<entry>Minstrels [Level 1] (Group)</entry>
 		<entry>Missionaries [Level 1] (Mission Team)</entry>
-		<entry>Missionaries [Level 2-3 Adepts] (Mission Team)</entry>
 		<entry>Pickpocket [Level 3] (Solitary)</entry>
 		<entry>Protestors [Level 1] (Protest)</entry>
 		<entry>Scholar [Level 3] (Solitary)</entry>
 		<entry>Sellsword [Level 3] (Solitary)</entry>
 		<entry>Street Performers [Level 1] (Crew)</entry>
-		<entry>Street Performers [Level 2-3 Adepts] (Crew)</entry>
-		<entry>Travelers [Level 2-3] (Group)</entry>
 		<entry>Drow (Squad)</entry>
 		<entry>Duergars (Team)</entry>
 		<entry>Svirfnebli (Company)</entry>
 		<entry>Local [Level 1] (with Heavy Warhorse)</entry>
 		<entry>Ghost [Level 1] (Solitary)</entry>
 		<entry>Vampire [Level 1] (Solitary)</entry>
-		<entry>Local [Level 2-3] (with Heavy Warhorse)</entry>
-		<entry>Local [Level 4-5] (with Camel)</entry>
-		<entry>Local [Level 4-5] (with Riding Dog)</entry>
-		<entry>Local [Level 4-5] (with Heavy Horse)</entry>
-		<entry>Local [Level 4-5] (with Light Horse)</entry>
-		<entry>Local [Level 4-5] (with Light Warhorse)</entry>
-		<entry>Local [Level 4-5] (with Mule)</entry>
-		<entry>Local [Level 4-5] (with Warpony)</entry>
-		<entry>Local [Level 6-7] (Solitary)</entry>
-		<entry>Local [Level 6-7] (with Cat)</entry>
-		<entry>Local [Level 6-7] (with Dog)</entry>
-		<entry>Local [Level 6-7] (with Donkey)</entry>
-		<entry>Local [Level 6-7] (with Pony)</entry>
-		<entry>Local [Level 6-7] (with Warpony)</entry>
+		<entry>Local [Level 2] (with Heavy Warhorse)</entry>
+		<entry>Local [Level 3] (with Camel)</entry>
+		<entry>Local [Level 3] (with Riding Dog)</entry>
+		<entry>Local [Level 3] (with Heavy Horse)</entry>
+		<entry>Local [Level 3] (with Light Horse)</entry>
+		<entry>Local [Level 3] (with Light Warhorse)</entry>
+		<entry>Local [Level 3] (with Mule)</entry>
+		<entry>Local [Level 3] (with Warpony)</entry>
+		<entry>Local [Level 4] (Solitary)</entry>
+		<entry>Local [Level 4] (with Cat)</entry>
+		<entry>Local [Level 4] (with Dog)</entry>
+		<entry>Local [Level 4] (with Donkey)</entry>
+		<entry>Local [Level 4] (with Pony)</entry>
+		<entry>Local [Level 4] (with Warpony)</entry>
 		<entry>Cockatrice (Solitary)</entry>
 		<entry>Wyrmling Copper Dragon (Solitary)</entry>
 		<entry>Deinonychus (Solitary)</entry>
@@ -378,17 +372,9 @@
 		<entry>Yeth Hound (Solitary)</entry>
 		<entry>Yuan-ti Pureblood (Solitary)</entry>
 		<entry>Troglodyte Zombies (Small Group)</entry>
-		<entry>Gentry [Level 4]</entry>
 	</collection>
 	<collection>
 		<name>4</name>
-		<entry>Business People [Level 3] (Group)</entry>
-		<entry>Farmers [Level 3] (Group)</entry>
-		<entry>Herders [Level 3] (Group)</entry>
-		<entry>Hunters [Level 3] (Hunting Party)</entry>
-		<entry>Missionaries [Level 3 Adepts] (Mission Team)</entry>
-		<entry>Street Performers [Level 3 Adepts] (Crew)</entry>
-		<entry>Travelers [Level 3] (Group)</entry>
 		<entry>Apes (Pair)</entry>
 		<entry>Aranea (Solitary)</entry>
 		<entry>Azers (Pair)</entry>
@@ -419,28 +405,26 @@
 		<entry>Doctor [Level 5 Adept] (Solitary)</entry>
 		<entry>Doctor [Level 4] (Solitary)</entry>
 		<entry>Fortuneteller [Level 5] (Solitary)</entry>
-		<entry>Guards [Level 1] (Patrol)</entry>
-		<entry>Guards [Level 1] (Patrol with Fighter)</entry>
 		<entry>Contract Killer [Level 4] (Solitary)</entry>
 		<entry>Merchants [Level 1] (Caravan)</entry>
 		<entry>Pickpocket [Level 4] (Solitary)</entry>
-		<entry>Politician [Level 2-3] (with Advisers and Guards)</entry>
+		<entry>Politician [Level 2] (with Advisers and Guards)</entry>
 		<entry>Scholar [Level 4] (Solitary)</entry>
 		<entry>Sellsword [Level 4] (Solitary)</entry>
 		<entry>Hobgoblins (Gang)</entry>
-		<entry>Local [Level 4-5] (with Heavy Warhorse)</entry>
-		<entry>Local [Level 6-7] (with Camel)</entry>
-		<entry>Local [Level 6-7] (with Riding Dog)</entry>
-		<entry>Local [Level 6-7] (with Heavy Horse)</entry>
-		<entry>Local [Level 6-7] (with Light Horse)</entry>
-		<entry>Local [Level 6-7] (with Light Warhorse)</entry>
-		<entry>Local [Level 6-7] (with Mule)</entry>
-		<entry>Local [Level 8-9] (Solitary)</entry>
-		<entry>Local [Level 8-9] (with Cat)</entry>
-		<entry>Local [Level 8-9] (with Dog)</entry>
-		<entry>Local [Level 8-9] (with Donkey)</entry>
-		<entry>Local [Level 8-9] (with Pony)</entry>
-		<entry>Local [Level 8-9] (with Warpony)</entry>
+		<entry>Local [Level 3] (with Heavy Warhorse)</entry>
+		<entry>Local [Level 4] (with Camel)</entry>
+		<entry>Local [Level 4] (with Riding Dog)</entry>
+		<entry>Local [Level 4] (with Heavy Horse)</entry>
+		<entry>Local [Level 4] (with Light Horse)</entry>
+		<entry>Local [Level 4] (with Light Warhorse)</entry>
+		<entry>Local [Level 4] (with Mule)</entry>
+		<entry>Local [Level 5] (Solitary)</entry>
+		<entry>Local [Level 5] (with Cat)</entry>
+		<entry>Local [Level 5] (with Dog)</entry>
+		<entry>Local [Level 5] (with Donkey)</entry>
+		<entry>Local [Level 5] (with Pony)</entry>
+		<entry>Local [Level 5] (with Warpony)</entry>
 		<entry>Ghost [Level 2] (Solitary)</entry>
 		<entry>Vampire [Level 2] (Solitary)</entry>
 		<entry>Cheetahs (Pair)</entry>
@@ -506,13 +490,6 @@
 	</collection>
 	<collection>
 		<name>5</name>
-		<entry>Business People [Level 3] (Group)</entry>
-		<entry>Farmers [Level 3] (Group)</entry>
-		<entry>Herders [Level 3] (Group)</entry>
-		<entry>Hunters [Level 3] (Hunting Party)</entry>
-		<entry>Missionaries [Level 3 Adepts] (Mission Team)</entry>
-		<entry>Street Performers [Level 3 Adepts] (Crew)</entry>
-		<entry>Travelers [Level 3] (Group)</entry>
 		<entry>Achaierai (Solitary)</entry>
 		<entry>Huge Animated Object (Solitary)</entry>
 		<entry>Adult Arrowhawk (Solitary)</entry>
@@ -547,49 +524,48 @@
 		<entry>Artisan [Level 6] (Solitary)</entry>
 		<entry>Beggar [Level 6] (Solitary)</entry>
 		<entry>Bandits [Level 1] (Gang)</entry>
-		<entry>Bandits [Level 1] (Gang with Fighter)</entry>
-		<entry>Business People [Level 4-5] (Group)</entry>
-		<entry>Construction Workers [Level 2-3] (Crew)</entry>
+		<entry>Business People [Level 3] (Group)</entry>
+		<entry>Construction Workers [Level 2] (Crew)</entry>
 		<entry>Crusaders [Level 2] (Band)</entry>
 		<entry>Doctor [Level 6 Adept] (Solitary)</entry>
 		<entry>Doctor [Level 5] (Solitary)</entry>
-		<entry>Farmers [Level 4-5] (Group)</entry>
+		<entry>Farmers [Level 3] (Group)</entry>
 		<entry>Fortuneteller [Level 6] (Solitary)</entry>
-		<entry>Gentry [Level 2-3]</entry>
-		<entry>Herders [Level 4-5] (Group)</entry>
+		<entry>Herders [Level 3] (Group)</entry>
 		<entry>Contract Killer [Level 5] (Solitary)</entry>
-		<entry>Hunters [Level 4-5] (Hunting Party)</entry>
-		<entry>Minstrels [Level 2-3] (Group)</entry>
-		<entry>Missionaries [Level 4-5 Adepts] (Mission Team)</entry>
+		<entry>Hunters [Level 3] (Hunting Party)</entry>
+		<entry>Missionaries [Level 3 Adepts] (Mission Team)</entry>
 		<entry>Missionaries [Level 2] (Mission Team)</entry>
 		<entry>Pickpocket [Level 5] (Solitary)</entry>
-		<entry>Protestors [Level 2-3] (Protest)</entry>
+		<entry>Gentry [Level 4]</entry>
+		<entry>Minstrels [Level 4] (Group)</entry>
+		<entry>Protestors [Level 4] (Protest)</entry>
 		<entry>Scholar [Level 5] (Solitary)</entry>
 		<entry>Sellsword [Level 5] (Solitary)</entry>
-		<entry>Street Performers [Level 4-5 Adepts] (Crew)</entry>
+		<entry>Street Performers [Level 3 Adepts] (Crew)</entry>
 		<entry>Street Performers [Level 2] (Crew)</entry>
-		<entry>Travelers [Level 4-5] (Group)</entry>
+		<entry>Travelers [Level 3] (Group)</entry>
 		<entry>Vampires [Level 1] (Pair)</entry>
-		<entry>Local [Level 6-7] (with Heavy Warhorse)</entry>
-		<entry>Local [Level 8-9] (with Camel)</entry>
-		<entry>Local [Level 8-9] (with Riding Dog)</entry>
-		<entry>Local [Level 8-9] (with Heavy Horse)</entry>
-		<entry>Local [Level 8-9] (with Heavy Warhorse)</entry>
-		<entry>Local [Level 8-9] (with Light Horse)</entry>
-		<entry>Local [Level 8-9] (with Light Warhorse)</entry>
-		<entry>Local [Level 8-9] (with Mule)</entry>
-		<entry>Local [Level 10-11] (Solitary)</entry>
-		<entry>Local [Level 10-11] (with Cat)</entry>
-		<entry>Local [Level 10-11] (with Dog)</entry>
-		<entry>Local [Level 10-11] (with Donkey)</entry>
-		<entry>Local [Level 10-11] (with Pony)</entry>
-		<entry>Local [Level 10-11] (with Warpony)</entry>
-		<entry>Local [Level 10-11] (with Camel)</entry>
-		<entry>Local [Level 10-11] (with Riding Dog)</entry>
-		<entry>Local [Level 10-11] (with Heavy Horse)</entry>
-		<entry>Local [Level 10-11] (with Light Horse)</entry>
-		<entry>Local [Level 10-11] (with Light Warhorse)</entry>
-		<entry>Local [Level 10-11] (with Mule)</entry>
+		<entry>Local [Level 4] (with Heavy Warhorse)</entry>
+		<entry>Local [Level 5] (with Camel)</entry>
+		<entry>Local [Level 5] (with Riding Dog)</entry>
+		<entry>Local [Level 5] (with Heavy Horse)</entry>
+		<entry>Local [Level 5] (with Heavy Warhorse)</entry>
+		<entry>Local [Level 5] (with Light Horse)</entry>
+		<entry>Local [Level 5] (with Light Warhorse)</entry>
+		<entry>Local [Level 5] (with Mule)</entry>
+		<entry>Local [Level 6] (Solitary)</entry>
+		<entry>Local [Level 6] (with Cat)</entry>
+		<entry>Local [Level 6] (with Dog)</entry>
+		<entry>Local [Level 6] (with Donkey)</entry>
+		<entry>Local [Level 6] (with Pony)</entry>
+		<entry>Local [Level 6] (with Warpony)</entry>
+		<entry>Local [Level 6] (with Camel)</entry>
+		<entry>Local [Level 6] (with Riding Dog)</entry>
+		<entry>Local [Level 6] (with Heavy Horse)</entry>
+		<entry>Local [Level 6] (with Light Horse)</entry>
+		<entry>Local [Level 6] (with Light Warhorse)</entry>
+		<entry>Local [Level 6] (with Mule)</entry>
 		<entry>Ghost [Level 3] (Solitary)</entry>
 		<entry>Vampire [Level 3] (Solitary)</entry>
 		<entry>Cloaker (Solitary)</entry>
@@ -665,6 +641,8 @@
 	</collection>
 	<collection>
 		<name>6</name>
+		<entry>Gentry [Level 5]</entry>
+		<entry>Bandits [Level 1] (Gang with Fighter)</entry>
 		<entry>Business People [Level 4] (Group)</entry>
 		<entry>Farmers [Level 4] (Group)</entry>
 		<entry>Herders [Level 4] (Group)</entry>
@@ -702,43 +680,34 @@
 		<entry>Animal Trainer [Level 6] (with Pony)</entry>
 		<entry>Artisan [Level 7] (Solitary)</entry>
 		<entry>Beggar [Level 7] (Solitary)</entry>
-		<entry>Business People [Level 6-7] (Group)</entry>
 		<entry>Crusaders [Level 3] (Band)</entry>
 		<entry>Doctor [Level 7 Adept] (Solitary)</entry>
 		<entry>Doctor [Level 6] (Solitary)</entry>
-		<entry>Farmers [Level 6-7] (Group)</entry>
 		<entry>Fortuneteller [Level 7] (Solitary)</entry>
-		<entry>Guards [Level 2-3] (Patrol)</entry>
-		<entry>Guards [Level 2-3] (Patrol with Fighter)</entry>
-		<entry>Herders [Level 6-7] (Group)</entry>
+		<entry>Guards [Level 1] (Patrol with Lieutenant)</entry>
 		<entry>Contract Killer [Level 6] (Solitary)</entry>
-		<entry>Hunters [Level 6-7] (Hunting Party)</entry>
-		<entry>Merchants [Level 2-3] (Caravan)</entry>
-		<entry>Missionaries [Level 6-7 Adepts] (Mission Team)</entry>
+		<entry>Merchants [Level 2] (Caravan)</entry>
 		<entry>Missionaries [Level 3] (Mission Team)</entry>
 		<entry>Pickpocket [Level 6] (Solitary)</entry>
 		<entry>Pilgrims [Level 1] (Caravan)</entry>
-		<entry>Politician [Level 4-5] (with Advisers and Guards)</entry>
 		<entry>Scholar [Level 6] (Solitary)</entry>
 		<entry>Sellsword [Level 6] (Solitary)</entry>
-		<entry>Street Performers [Level 6-7 Adepts] (Crew)</entry>
 		<entry>Street Performers [Level 3] (Crew)</entry>
-		<entry>Travelers [Level 6-7] (Group)</entry>
 		<entry>Hobgoblins (Warband)</entry>
 		<entry>Ghosts [Level 1] (Gang)</entry>
-		<entry>Local [Level 12-13] (Solitary)</entry>
-		<entry>Local [Level 12-13] (with Camel)</entry>
-		<entry>Local [Level 12-13] (with Cat)</entry>
-		<entry>Local [Level 12-13] (with Dog)</entry>
-		<entry>Local [Level 12-13] (with Riding Dog)</entry>
-		<entry>Local [Level 12-13] (with Donkey)</entry>
-		<entry>Local [Level 12-13] (with Heavy Horse)</entry>
-		<entry>Local [Level 12-13] (with Pony)</entry>
-		<entry>Local [Level 12-13] (with Warpony)</entry>
-		<entry>Local [Level 12-13] (with Light Horse)</entry>
-		<entry>Local [Level 12-13] (with Light Warhorse)</entry>
-		<entry>Local [Level 12-13] (with Mule)</entry>
-		<entry>Local [Level 10-11] (with Heavy Warhorse)</entry>
+		<entry>Local [Level 7] (Solitary)</entry>
+		<entry>Local [Level 7] (with Camel)</entry>
+		<entry>Local [Level 7] (with Cat)</entry>
+		<entry>Local [Level 7] (with Dog)</entry>
+		<entry>Local [Level 7] (with Riding Dog)</entry>
+		<entry>Local [Level 7] (with Donkey)</entry>
+		<entry>Local [Level 7] (with Heavy Horse)</entry>
+		<entry>Local [Level 7] (with Pony)</entry>
+		<entry>Local [Level 7] (with Warpony)</entry>
+		<entry>Local [Level 7] (with Light Horse)</entry>
+		<entry>Local [Level 7] (with Light Warhorse)</entry>
+		<entry>Local [Level 7] (with Mule)</entry>
+		<entry>Local [Level 6] (with Heavy Warhorse)</entry>
 		<entry>Vampires [Level 2] (Pair)</entry>
 		<entry>Ghost [Level 4] (Solitary)</entry>
 		<entry>Vampire [Level 4] (Solitary)</entry>
@@ -812,6 +781,7 @@
 	</collection>
 	<collection>
 		<name>7</name>
+		<entry>Gentry [Level 6] (with Servants)</entry>
 		<entry>Business People [Level 5] (Group)</entry>
 		<entry>Farmers [Level 5] (Group)</entry>
 		<entry>Herders [Level 5] (Group)</entry>
@@ -850,32 +820,21 @@
 		<entry>Animal Trainer [Level 7] (with Heavy Warhorse)</entry>
 		<entry>Artisan [Level 8] (Solitary)</entry>
 		<entry>Beggar [Level 8] (Solitary)</entry>
-		<entry>Bandits [Level 2-3] (Gang)</entry>
-		<entry>Bandits [Level 2-3] (Gang with Fighter)</entry>
-		<entry>Business People [Level 8-9] (Group)</entry>
-		<entry>Construction Workers [Level 4-5] (Crew)</entry>
+		<entry>Bandits [Level 2] (Gang)</entry>
+		<entry>Bandits [Level 2] (Gang with Fighter)</entry>
+		<entry>Construction Workers [Level 3] (Crew)</entry>
 		<entry>Crusaders [Level 4] (Band)</entry>
 		<entry>Doctor [Level 8 Adept] (Solitary)</entry>
 		<entry>Doctor [Level 7] (Solitary)</entry>
-		<entry>Farmers [Level 8-9] (Group)</entry>
 		<entry>Fortuneteller [Level 8] (Solitary)</entry>
-		<entry>Gentry [Level 4-5]</entry>
-		<entry>Herders [Level 8-9] (Group)</entry>
 		<entry>Contract Killer [Level 7] (Solitary)</entry>
-		<entry>Hunters [Level 8-9] (Hunting Party)</entry>
-		<entry>Minstrels [Level 4-5] (Group)</entry>
-		<entry>Missionaries [Level 8-9 Adepts] (Mission Team)</entry>
 		<entry>Missionaries [Level 4] (Mission Team)</entry>
 		<entry>Pickpocket [Level 7] (Solitary)</entry>
-		<entry>Politician [Level 6-7] (with Advisers and Guards)</entry>
-		<entry>Protestors [Level 4-5] (Protest)</entry>
 		<entry>Scholar [Level 7] (Solitary)</entry>
 		<entry>Sellsword [Level 7] (Solitary)</entry>
-		<entry>Street Performers [Level 8-9 Adepts] (Crew)</entry>
 		<entry>Street Performers [Level 4] (Crew)</entry>
-		<entry>Travelers [Level 8-9] (Group)</entry>
 		<entry>Ghosts [Level 2] (Gang)</entry>
-		<entry>Local [Level 12-13] (with Heavy Warhorse)</entry>
+		<entry>Local [Level 7] (with Heavy Warhorse)</entry>
 		<entry>Local [Level 8] (Solitary)</entry>
 		<entry>Local [Level 8] (with Camel)</entry>
 		<entry>Local [Level 8] (with Cat)</entry>
@@ -888,17 +847,7 @@
 		<entry>Local [Level 8] (with Light Horse)</entry>
 		<entry>Local [Level 8] (with Light Warhorse)</entry>
 		<entry>Local [Level 8] (with Mule)</entry>
-		<entry>Deep Dwarves (Squad)</entry>
-		<entry>Hill Dwarves (Squad)</entry>
-		<entry>Mountain Dwarves (Squad)</entry>
-		<entry>Deep Halflings (Squad)</entry>
-		<entry>Lightfoot Halflings (Squad)</entry>
-		<entry>Tallfellow Halflings (Squad)</entry>
-		<entry>Forest Gnomes (Squad)</entry>
-		<entry>Rock Gnomes (Squad)</entry>
 		<entry>Humans (Company)</entry>
-		<entry>Half-Orcs (Squad)</entry>
-		<entry>Orcs (Squad)</entry>
 		<entry>Kobolds (Warband)</entry>
 		<entry>Locathah (Patrol)</entry>
 		<entry>Merfolk (Patrol)</entry>
@@ -993,6 +942,16 @@
 	</collection>
 	<collection>
 		<name>8</name>
+		<entry>Forest Gnomes (Squad)</entry>
+		<entry>Rock Gnomes (Squad)</entry>
+		<entry>Half-Orcs (Squad)</entry>
+		<entry>Orcs (Squad)</entry>
+		<entry>Deep Halflings (Squad)</entry>
+		<entry>Lightfoot Halflings (Squad)</entry>
+		<entry>Tallfellow Halflings (Squad)</entry>
+		<entry>Deep Dwarves (Squad)</entry>
+		<entry>Hill Dwarves (Squad)</entry>
+		<entry>Mountain Dwarves (Squad)</entry>
 		<entry>Aquatic Elves (Company)</entry>
 		<entry>Half-Elves (Company)</entry>
 		<entry>High Elves (Company)</entry>
@@ -1037,48 +996,33 @@
 		<entry>Animal Trainer [Level 8] (with Heavy Warhorse)</entry>
 		<entry>Artisan [Level 9] (Solitary)</entry>
 		<entry>Beggar [Level 9] (Solitary)</entry>
-		<entry>Business People [Level 10-11] (Group)</entry>
-		<entry>Construction Workers [Level 6-7] (Crew)</entry>
+		<entry>Construction Workers [Level 4] (Crew)</entry>
 		<entry>Crusaders [Level 5] (Band)</entry>
 		<entry>Doctor [Level 9 Adept] (Solitary)</entry>
 		<entry>Doctor [Level 8] (Solitary)</entry>
-		<entry>Farmers [Level 10-11] (Group)</entry>
 		<entry>Fortuneteller [Level 9] (Solitary)</entry>
-		<entry>Gentry [Level 6-7] (with Servants)</entry>
-		<entry>Guards [Level 4-5] (Patrol)</entry>
-		<entry>Guards [Level 4-5] (Patrol with Fighter)</entry>
-		<entry>Herders [Level 10-11] (Group)</entry>
 		<entry>Contract Killer [Level 8] (Solitary)</entry>
-		<entry>Hunters [Level 10-11] (Hunting Party)</entry>
-		<entry>Minstrels [Level 6-7] (Group)</entry>
-		<entry>Missionaries [Level 10-11 Adepts] (Mission Team)</entry>
 		<entry>Missionaries [Level 5] (Mission Team)</entry>
 		<entry>Pickpocket [Level 8] (Solitary)</entry>
-		<entry>Politician [Level 8-9] (with Advisers and Guards)</entry>
-		<entry>Protestors [Level 6-7] (Protest)</entry>
 		<entry>Scholar [Level 8] (Solitary)</entry>
 		<entry>Sellsword [Level 8] (Solitary)</entry>
-		<entry>Street Performers [Level 10-11 Adepts] (Crew)</entry>
 		<entry>Street Performers [Level 5] (Crew)</entry>
-		<entry>Travelers [Level 10-11] (Group)</entry>
 		<entry>Ghosts [Level 3] (Gang)</entry>
-		<entry>Local [Level 16-17] (Solitary)</entry>
-		<entry>Local [Level 16-17] (with Camel)</entry>
-		<entry>Local [Level 16-17] (with Cat)</entry>
-		<entry>Local [Level 16-17] (with Dog)</entry>
-		<entry>Local [Level 16-17] (with Riding Dog)</entry>
-		<entry>Local [Level 16-17] (with Donkey)</entry>
-		<entry>Local [Level 16-17] (with Heavy Horse)</entry>
-		<entry>Local [Level 16-17] (with Pony)</entry>
-		<entry>Local [Level 16-17] (with Warpony)</entry>
-		<entry>Local [Level 16-17] (with Light Horse)</entry>
-		<entry>Local [Level 16-17] (with Light Warhorse)</entry>
-		<entry>Local [Level 16-17] (with Mule)</entry>
-		<entry>Merchants [Level 4-5] (Caravan)</entry>
-		<entry>Pilgrims [Level 2-3] (Caravan)</entry>
+		<entry>Local [Level 9] (Solitary)</entry>
+		<entry>Local [Level 9] (with Camel)</entry>
+		<entry>Local [Level 9] (with Cat)</entry>
+		<entry>Local [Level 9] (with Dog)</entry>
+		<entry>Local [Level 9] (with Riding Dog)</entry>
+		<entry>Local [Level 9] (with Donkey)</entry>
+		<entry>Local [Level 9] (with Heavy Horse)</entry>
+		<entry>Local [Level 9] (with Pony)</entry>
+		<entry>Local [Level 9] (with Warpony)</entry>
+		<entry>Local [Level 9] (with Light Horse)</entry>
+		<entry>Local [Level 9] (with Light Warhorse)</entry>
+		<entry>Local [Level 9] (with Mule)</entry>
 		<entry>Drow (Patrol)</entry>
 		<entry>Kobolds (Band)</entry>
-		<entry>Local [Level 16-17] (with Heavy Warhorse)</entry>
+		<entry>Local [Level 9] (with Heavy Warhorse)</entry>
 		<entry>Vampires [Level 2] (Gang)</entry>
 		<entry>Merrow Barbarian (Gang)</entry>
 		<entry>Ogre Barbarian (Gang)</entry>
@@ -1167,6 +1111,13 @@
 	</collection>
 	<collection>
 		<name>9</name>
+		<entry>Guards [Level 3] (Patrol with Lieutenant)</entry>
+		<entry>Guards [Level 5] (Patrol)</entry>
+		<entry>Merchants [Level 4] (Caravan)</entry>
+		<entry>Minstrels [Level 5] (Group)</entry>
+		<entry>Pilgrims [Level 3] (Caravan)</entry>
+		<entry>Politician [Level 6] (with Advisers and Guards)</entry>
+		<entry>Protestors [Level 5] (Protest)</entry>
 		<entry>Business People [Level 7] (Group)</entry>
 		<entry>Farmers [Level 7] (Group)</entry>
 		<entry>Herders [Level 7] (Group)</entry>
@@ -1205,50 +1156,36 @@
 		<entry>Animal Trainer [Level 9] (with Heavy Warhorse)</entry>
 		<entry>Artisan [Level 10] (Solitary)</entry>
 		<entry>Beggar [Level 10] (Solitary)</entry>
-		<entry>Bandits [Level 4-5] (Gang)</entry>
-		<entry>Bandits [Level 4-5] (Gang with Fighter)</entry>
-		<entry>Business People [Level 12-13] (Group)</entry>
-		<entry>Construction Workers [Level 8-9] (Crew)</entry>
+		<entry>Bandits [Level 3] (Gang)</entry>
+		<entry>Bandits [Level 3] (Gang with Fighter)</entry>
+		<entry>Construction Workers [Level 5] (Crew)</entry>
 		<entry>Crusaders [Level 6] (Band)</entry>
 		<entry>Doctor [Level 10 Adept] (Solitary)</entry>
 		<entry>Doctor [Level 9] (Solitary)</entry>
-		<entry>Farmers [Level 12-13] (Group)</entry>
 		<entry>Fortuneteller [Level 10] (Solitary)</entry>
-		<entry>Gentry [Level 8-9] (with Servants)</entry>
-		<entry>Guards [Level 6-7] (Patrol)</entry>
-		<entry>Guards [Level 6-7] (Patrol with Fighter)</entry>
-		<entry>Herders [Level 12-13] (Group)</entry>
 		<entry>Contract Killer [Level 9] (Solitary)</entry>
-		<entry>Hunters [Level 12-13] (Hunting Party)</entry>
-		<entry>Minstrels [Level 8-9] (Group)</entry>
-		<entry>Missionaries [Level 12-13 Adepts] (Mission Team)</entry>
 		<entry>Missionaries [Level 6] (Mission Team)</entry>
 		<entry>Pickpocket [Level 9] (Solitary)</entry>
-		<entry>Politician [Level 10-11] (with Advisers and Guards)</entry>
-		<entry>Protestors [Level 8-9] (Protest)</entry>
 		<entry>Scholar [Level 9] (Solitary)</entry>
 		<entry>Sellsword [Level 9] (Solitary)</entry>
-		<entry>Street Performers [Level 12-13 Adepts] (Crew)</entry>
 		<entry>Street Performers [Level 6] (Crew)</entry>
-		<entry>Travelers [Level 12-13] (Group)</entry>
 		<entry>Ghosts [Level 4] (Gang)</entry>
-		<entry>Merchants [Level 6-7] (Caravan)</entry>
 		<entry>Goblins (Band)</entry>
 		<entry>Svirfnebli (Squad)</entry>
 		<entry>Vampires [Level 1] (Troupe)</entry>
-		<entry>Local [Level 18-19] (Solitary)</entry>
-		<entry>Local [Level 18-19] (with Camel)</entry>
-		<entry>Local [Level 18-19] (with Cat)</entry>
-		<entry>Local [Level 18-19] (with Dog)</entry>
-		<entry>Local [Level 18-19] (with Riding Dog)</entry>
-		<entry>Local [Level 18-19] (with Donkey)</entry>
-		<entry>Local [Level 18-19] (with Heavy Horse)</entry>
-		<entry>Local [Level 18-19] (with Heavy Warhorse)</entry>
-		<entry>Local [Level 18-19] (with Pony)</entry>
-		<entry>Local [Level 18-19] (with Warpony)</entry>
-		<entry>Local [Level 18-19] (with Light Horse)</entry>
-		<entry>Local [Level 18-19] (with Light Warhorse)</entry>
-		<entry>Local [Level 18-19] (with Mule)</entry>
+		<entry>Local [Level 10] (Solitary)</entry>
+		<entry>Local [Level 10] (with Camel)</entry>
+		<entry>Local [Level 10] (with Cat)</entry>
+		<entry>Local [Level 10] (with Dog)</entry>
+		<entry>Local [Level 10] (with Riding Dog)</entry>
+		<entry>Local [Level 10] (with Donkey)</entry>
+		<entry>Local [Level 10] (with Heavy Horse)</entry>
+		<entry>Local [Level 10] (with Heavy Warhorse)</entry>
+		<entry>Local [Level 10] (with Pony)</entry>
+		<entry>Local [Level 10] (with Warpony)</entry>
+		<entry>Local [Level 10] (with Light Horse)</entry>
+		<entry>Local [Level 10] (with Light Warhorse)</entry>
+		<entry>Local [Level 10] (with Mule)</entry>
 		<entry>Vampires [Level 2] (Troupe)</entry>
 		<entry>Vampires [Level 3] (Gang)</entry>
 		<entry>Merrow Barbarians (Pair)</entry>
@@ -1525,11 +1462,11 @@
 		<entry>Contract Killer [Level 11] (Solitary)</entry>
 		<entry>Scrag Hunter (Solitary)</entry>
 		<entry>Troll Hunter (Solitary)</entry>
-		<entry>Merchants [Level 10-11] (Caravan)</entry>
+		<entry>Merchants [Level 6] (Caravan)</entry>
 		<entry>Missionaries [Level 8] (Mission Team)</entry>
 	    <entry>Pickpocket [Level 11] (Solitary)</entry>
-	    <entry>Pilgrims [Level 6-7] (Caravan)</entry>
-	    <entry>Politician [Level 14-15] (with Advisers and Guards)</entry>
+	    <entry>Pilgrims [Level 1] (Caravan with Leader)</entry>
+	    <entry>Politician [Level 8] (with Advisers and Guards)</entry>
 		<entry>Construction Workers [Level 7] (Crew)</entry>
 		<entry>Minstrels [Level 7] (Group)</entry>
 	    <entry>Protestors [Level 7] (Protest)</entry>
@@ -1537,7 +1474,6 @@
 	    <entry>Scholar [Level 11] (Solitary)</entry>
 	    <entry>Sellsword [Level 11] (Solitary)</entry>
 	    <entry>Street Performers [Level 8] (Crew)</entry>
-	    <entry>Teacher [Level 11] (with Students)</entry>
 		<entry>Business People [Level 9] (Group)</entry>
 		<entry>Farmers [Level 9] (Group)</entry>
 		<entry>Herders [Level 9] (Group)</entry>
@@ -1547,7 +1483,6 @@
 		<entry>Travelers [Level 9] (Group)</entry>
 		<entry>War Hero [Level 11] (Solitary)</entry>
 		<entry>Goblins (Warband)</entry>
-		<entry>Merfolk (Band)</entry>
 		<entry>Ghosts [Level 2] (Mob)</entry>
 		<entry>Vampires [Level 5] (Troupe)</entry>
 		<entry>Vampires [Level 5] (Gang)</entry>
@@ -1648,11 +1583,7 @@
 	<collection>
 		<name>12</name>
 		<entry>Farmers [Level 10] (Group)</entry>
-		<entry>Herders [Level 10] (Group)</entry>
-		<entry>Hunters [Level 10] (Hunting Party)</entry>
-		<entry>Missionaries [Level 10 Adepts] (Mission Team)</entry>
 		<entry>Street Performers [Level 10 Adepts] (Crew)</entry>
-		<entry>Travelers [Level 10] (Group)</entry>
 		<entry>Guards [Level 8] (Patrol)</entry>
 		<entry>Bandits [Level 6] (Gang)</entry>
 		<entry>Bandits [Level 6] (Gang with Fighter)</entry>
@@ -1696,26 +1627,21 @@
 		<entry>Missionaries [Level 9] (Mission Team)</entry>
 		<entry>Pickpocket [Level 12] (Solitary)</entry>
 		<entry>Pilgrims [Level 6] (Caravan)</entry>
-		<entry>Politician [Level 16-17] (with Advisers and Guards)</entry>
+		<entry>Politician [Level 9] (with Advisers and Guards)</entry>
 		<entry>Construction Workers [Level 8] (Crew)</entry>
 		<entry>Minstrels [Level 8] (Group)</entry>
 		<entry>Protestors [Level 8] (Protest)</entry>
 		<entry>Retired Adventurer [Level 12] (Solitary)</entry>
 		<entry>Scholar [Level 12] (Solitary)</entry>
 		<entry>Sellsword [Level 12] (Solitary)</entry>
-		<entry>Street Performers [Level 18-19 Adepts] (Crew)</entry>
 		<entry>Street Performers [Level 9] (Crew)</entry>
-		<entry>Teacher [Level 12] (with Students)</entry>
+		<entry>Teacher [Level 11] (with Students)</entry>
 		<entry>Business People [Level 10] (Group)</entry>
 		<entry>Herders [Level 10] (Group)</entry>
 		<entry>Hunters [Level 10] (Hunting Party)</entry>
 		<entry>Missionaries [Level 10 Adepts] (Mission Team)</entry>
 		<entry>Travelers [Level 10] (Group)</entry>
 		<entry>War Hero [Level 12] (Solitary)</entry>
-		<entry>Half-Orcs (Band)</entry>
-		<entry>Humans (Band)</entry>
-		<entry>Locathah (Tribe)</entry>
-		<entry>Orcs (Band)</entry>
 		<entry>Ghost [Level 10] (Solitary)</entry>
 		<entry>Vampire [Level 10] (Solitary)</entry>
 		<entry>Ghosts [Level 3] (Mob)</entry>
@@ -1781,11 +1707,16 @@
 		<entry>Local [Level 13] (with Pony)</entry>
 		<entry>Local [Level 13] (with Warpony)</entry>
 		<entry>Gentry [Level 10] (with Servants)</entry>
-		<entry>Minstrels [Level 10] (Group)</entry>
-		<entry>Protestors [Level 10] (Protest)</entry>
 	</collection>
 	<collection>
 		<name>13</name>
+		<entry>Pilgrims [Level 2] (Caravan with Leader)</entry>
+		<entry>Pilgrims [Level 7] (Caravan)</entry>
+		<entry>Merfolk (Band)</entry>
+		<entry>Humans (Band)</entry>
+		<entry>Locathah (Tribe)</entry>
+		<entry>Half-Orcs (Band)</entry>
+		<entry>Orcs (Band)</entry>
 		<entry>Forest Gnomes (Band)</entry>
 		<entry>Rock Gnomes (Band)</entry>
 		<entry>Deep Halflings (Band)</entry>
@@ -1812,8 +1743,6 @@
 		<entry>Guards [Level 9] (Patrol)</entry>
 		<entry>Guards [Level 7] (Patrol with Lieutenant)</entry>
 		<entry>Gentry [Level 11] (with Servants)</entry>
-		<entry>Minstrels [Level 11] (Group)</entry>
-		<entry>Protestors [Level 11] (Protest)</entry>
 		<entry>Bandits [Level 7] (Gang)</entry>
 		<entry>Bandits [Level 7] (Gang with Fighter)</entry>
 		<entry>Hags (Covey with Fire Giants)</entry>
@@ -1849,11 +1778,8 @@
 		<entry>Famous Researcher [Level 13] (with Flesh Golem)</entry>
 		<entry>Famous Researcher [Level 13] (with Homunculus)</entry>
 		<entry>Contract Killer [Level 13] (Solitary)</entry>
-		<entry>Merchants [Level 14-15] (Caravan)</entry>
 		<entry>Missionaries [Level 10] (Mission Team)</entry>
 		<entry>Pickpocket [Level 13] (Solitary)</entry>
-		<entry>Pilgrims [Level 10-11] (Caravan)</entry>
-		<entry>Politician [Level 18-19] (with Advisers and Guards)</entry>
 		<entry>Construction Workers [Level 9] (Crew)</entry>
 		<entry>Minstrels [Level 9] (Group)</entry>
 		<entry>Protestors [Level 9] (Protest)</entry>
@@ -1861,9 +1787,6 @@
 		<entry>Scholar [Level 13] (Solitary)</entry>
 		<entry>Sellsword [Level 13] (Solitary)</entry>
 		<entry>Street Performers [Level 10] (Crew)</entry>
-		<entry>Street Performers [Level 20 Adepts] (Crew)</entry>
-		<entry>Teacher [Level 13] (with Students)</entry>
-		<entry>Travelers [Level 20] (Group)</entry>
 		<entry>War Hero [Level 13] (Solitary)</entry>
 		<entry>Kobolds (Tribe)</entry>
 		<entry>Ghost [Level 11] (Solitary)</entry>
@@ -1934,6 +1857,7 @@
 		<entry>Local [Level 14] (with Mule)</entry>
 		<entry>Local [Level 14] (with Pony)</entry>
 		<entry>Local [Level 14] (with Warpony)</entry>
+		<entry>Politician [Level 10] (with Advisers and Guards)</entry>
 	</collection>
 	<collection>
 		<name>14</name>
@@ -1984,14 +1908,12 @@
 		<entry>Guards [Level 3] (Patrol with Captain)</entry>
 		<entry>Contract Killer [Level 14] (Solitary)</entry>
 		<entry>Werewolf Lord (Solitary)</entry>
-		<entry>Merchants [Level 16-17] (Caravan)</entry>
 		<entry>Missionaries [Level 11] (Mission Team)</entry>
 		<entry>Pickpocket [Level 14] (Solitary)</entry>
-		<entry>Pilgrims [Level 12-13] (Caravan)</entry>
-		<entry>Politician [Level 20] (with Advisers and Guards)</entry>
+		<entry>Pilgrims [Level 8] (Caravan)</entry>
+		<entry>Pilgrims [Level 3] (Caravan with Leader)</entry>
 		<entry>Gentry [Level 12] (with Servants)</entry>
-		<entry>Minstrels [Level 12] (Group)</entry>
-		<entry>Protestors [Level 12] (Protest)</entry>
+		<entry>Minstrels [Level 10] (Group)</entry>
 		<entry>Retired Adventurer [Level 14] (Solitary)</entry>
 		<entry>Scholar [Level 14] (Solitary)</entry>
 		<entry>Sellsword [Level 14] (Solitary)</entry>
@@ -2059,12 +1981,13 @@
 		<entry>Local [Level 15] (with Mule)</entry>
 		<entry>Local [Level 15] (with Pony)</entry>
 		<entry>Local [Level 15] (with Warpony)</entry>
+		<entry>Politician [Level 11] (with Advisers and Guards)</entry>
 	</collection>
 	<collection>
 		<name>15</name>
 		<entry>Gentry [Level 13] (with Servants)</entry>
-		<entry>Minstrels [Level 13] (Group)</entry>
-		<entry>Protestors [Level 13] (Protest)</entry>
+		<entry>Minstrels [Level 11] (Group)</entry>
+		<entry>Protestors [Level 11] (Protest)</entry>
 		<entry>Politician [Level 12] (with Advisers and Guards)</entry>
 		<entry>Business People [Level 13] (Group)</entry>
 		<entry>Farmers [Level 13] (Group)</entry>
@@ -2114,16 +2037,14 @@
 		<entry>Contract Killer [Level 15] (Solitary)</entry>
 		<entry>Mummy Lord (Solitary)</entry>
 		<entry>Merchants [Level 10] (Caravan)</entry>
-		<entry>Minstrels [Level 20] (Group)</entry>
 		<entry>Missionaries [Level 12] (Mission Team)</entry>
 		<entry>Pickpocket [Level 15] (Solitary)</entry>
-		<entry>Pilgrims [Level 14-15] (Caravan)</entry>
-		<entry>Protestors [Level 20] (Protest)</entry>
+		<entry>Pilgrims [Level 9] (Caravan)</entry>
+		<entry>Pilgrims [Level 4] (Caravan with Leader)</entry>
 		<entry>Retired Adventurer [Level 15] (Solitary)</entry>
 		<entry>Scholar [Level 15] (Solitary)</entry>
 		<entry>Sellsword [Level 15] (Solitary)</entry>
 		<entry>Street Performers [Level 12] (Crew)</entry>
-		<entry>Teacher [Level 15] (with Students)</entry>
 		<entry>War Hero [Level 15] (Solitary)</entry>
 		<entry>Drow (Band)</entry>
 		<entry>Duergars (Clan)</entry>
@@ -2181,6 +2102,7 @@
 		<entry>Local [Level 16] (with Mule)</entry>
 		<entry>Local [Level 16] (with Pony)</entry>
 		<entry>Local [Level 16] (with Warpony)</entry>
+		<entry>Teacher [Level 14] (with Students)</entry>
 	</collection>
 	<collection>
 		<name>16</name>
@@ -2244,12 +2166,13 @@
 		<entry>Merchants [Level 11] (Caravan)</entry>
 		<entry>Missionaries [Level 13] (Mission Team)</entry>
 		<entry>Pickpocket [Level 16] (Solitary)</entry>
-		<entry>Pilgrims [Level 16-17] (Caravan)</entry>
+		<entry>Pilgrims [Level 10] (Caravan)</entry>
+		<entry>Pilgrims [Level 5] (Caravan with Leader)</entry>
 		<entry>Retired Adventurer [Level 16] (Solitary)</entry>
 		<entry>Scholar [Level 16] (Solitary)</entry>
 		<entry>Sellsword [Level 16] (Solitary)</entry>
 		<entry>Street Performers [Level 13] (Crew)</entry>
-		<entry>Teacher [Level 16] (with Students)</entry>
+		<entry>Teacher [Level 15] (with Students)</entry>
 		<entry>War Hero [Level 16] (Solitary)</entry>
 		<entry>Vampires [Level 10] (Gang)</entry>
 		<entry>Ghosts [Level 11] (Gang)</entry>
@@ -2299,6 +2222,9 @@
 	</collection>
 	<collection>
 		<name>17</name>
+		<entry>Politician [Level 14] (with Advisers and Guards)</entry>
+		<entry>Teacher [Level 16] (with Students)</entry>
+		<entry>Pilgrims [Level 6] (Caravan with Leader)</entry>
 		<entry>Merchants [Level 12] (Caravan)</entry>
 		<entry>Guards [Level 6] (Patrol with Captain)</entry>
 		<entry>Construction Workers [Level 13] (Crew)</entry>
@@ -2358,7 +2284,6 @@
 		<entry>Scholar [Level 17] (Solitary)</entry>
 		<entry>Sellsword [Level 17] (Solitary)</entry>
 		<entry>Street Performers [Level 14] (Crew)</entry>
-		<entry>Teacher [Level 17] (with Students)</entry>
 		<entry>War Hero [Level 17] (Solitary)</entry>
 		<entry>Vampires [Level 11] (Gang)</entry>
 		<entry>Ghosts [Level 12] (Gang)</entry>
@@ -2412,6 +2337,9 @@
 	</collection>
 	<collection>
 		<name>18</name>
+		<entry>Politician [Level 15] (with Advisers and Guards)</entry>
+		<entry>Teacher [Level 17] (with Students)</entry>
+		<entry>Pilgrims [Level 7] (Caravan with Leader)</entry>
 		<entry>Merchants [Level 13] (Caravan)</entry>
 		<entry>Guards [Level 7] (Patrol with Captain)</entry>
 		<entry>Bandits [Level 12] (Gang)</entry>
@@ -2472,7 +2400,6 @@
 		<entry>Scholar [Level 18] (Solitary)</entry>
 		<entry>Sellsword [Level 18] (Solitary)</entry>
 		<entry>Street Performers [Level 15] (Crew)</entry>
-		<entry>Teacher [Level 18] (with Students)</entry>
 		<entry>War Hero [Level 18] (Solitary)</entry>
 		<entry>Vampires [Level 12] (Gang)</entry>
 		<entry>Ghosts [Level 13] (Gang)</entry>
@@ -2524,6 +2451,9 @@
 	</collection>
 	<collection>
 		<name>19</name>
+		<entry>Politician [Level 16] (with Advisers and Guards)</entry>
+		<entry>Teacher [Level 18] (with Students)</entry>
+		<entry>Pilgrims [Level 8] (Caravan with Leader)</entry>
 		<entry>Merchants [Level 14] (Caravan)</entry>
 		<entry>Guards [Level 8] (Patrol with Captain)</entry>
 		<entry>Bandits [Level 13] (Gang)</entry>
@@ -2582,7 +2512,6 @@
 		<entry>Scholar [Level 19] (Solitary)</entry>
 		<entry>Sellsword [Level 19] (Solitary)</entry>
 		<entry>Street Performers [Level 16] (Crew)</entry>
-		<entry>Teacher [Level 19] (with Students)</entry>
 		<entry>War Hero [Level 19] (Solitary)</entry>
 		<entry>Ghosts [Level 10] (Mob)</entry>
 		<entry>Vampires [Level 13] (Gang)</entry>
@@ -2630,8 +2559,6 @@
 	</collection>
 	<collection>
 		<name>20</name>
-		<entry>Guards [Level 14] (Patrol with Lieutenant)</entry>
-		<entry>Guards [Level 9] (Patrol with Captain)</entry>
 		<entry>Frost Giants (Tribe with Adept)</entry>
 		<entry>Gentry [Level 18] (with Servants)</entry>
 		<entry>Guards [Level 9] (Patrol with Captain)</entry>
@@ -2725,8 +2652,6 @@
 	</collection>
 	<collection>
 		<name>21</name>
-		<entry>Guards [Level 15] (Patrol with Lieutenant)</entry>
-		<entry>Guards [Level 10] (Patrol with Captain)</entry>
 		<entry>Fire Giants (Tribe with Adept)</entry>
 		<entry>Frost Giants (Tribe with Adept and Jarl)</entry>
 		<entry>Gentry [Level 19] (with Servants)</entry>
