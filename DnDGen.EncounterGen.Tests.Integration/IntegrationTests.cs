@@ -36,7 +36,8 @@ namespace DnDGen.EncounterGen.Tests.Integration
         protected double GetTimeLimitInSeconds(Encounter encounter)
         {
             //INFO: Since the limit in CharacterGen is 1 second per character, we will use that summation as our limit as well
-            var limit = Math.Max(1, encounter.Characters.Count());
+            //Sometimes even a low-level character can take a while to generate, so we buffer in an extra second
+            var limit = encounter.Characters.Count() + 1;
 
             //INFO: Higher-level encounters may take longer to generate (even for non-characters) due to increased treasure amounts
             var delta = Math.Max(0.1, encounter.ActualEncounterLevel / encounterLevelDivisor);

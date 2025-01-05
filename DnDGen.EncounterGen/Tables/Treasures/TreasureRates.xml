@@ -589,60 +589,114 @@
     <entry>0</entry>
     <entry>0</entry>
   </collection>
-  <collection>
-    <name>Character(Adviser)[1d2+1]@Expert@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Adviser)[1d2+3]@Expert@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Adviser)[1d2+5]@Expert@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Adviser)[1d2+7]@Expert@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Adviser)[1d2+9]@Expert@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Adviser)[1d2+11]@Expert@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Adviser)[1d2+13]@Expert@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Adviser)[1d2+15]@Expert@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Adviser)[1d2+17]@Expert@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
+	<collection>
+		<name>Character(Adviser)[2]@Expert@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Adviser)[3]@Expert@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Adviser)[4]@Expert@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Adviser)[5]@Expert@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Adviser)[6]@Expert@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Adviser)[7]@Expert@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Adviser)[8]@Expert@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Adviser)[9]@Expert@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Adviser)[10]@Expert@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Adviser)[11]@Expert@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Adviser)[12]@Expert@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Adviser)[13]@Expert@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Adviser)[14]@Expert@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Adviser)[15]@Expert@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Adviser)[16]@Expert@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Adviser)[17]@Expert@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Adviser)[18]@Expert@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Adviser)[19]@Expert@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
   <collection>
     <name>Character(Adviser)[20]@Expert@</name>
     <entry>0</entry>
@@ -775,60 +829,114 @@
     <entry>0</entry>
     <entry>0</entry>
   </collection>
-  <collection>
-    <name>Character(Architect)[1d2+1]@Expert@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Architect)[1d2+3]@Expert@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Architect)[1d2+5]@Expert@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Architect)[1d2+7]@Expert@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Architect)[1d2+9]@Expert@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Architect)[1d2+11]@Expert@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Architect)[1d2+13]@Expert@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Architect)[1d2+15]@Expert@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Architect)[1d2+17]@Expert@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
+	<collection>
+		<name>Character(Architect)[2]@Expert@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Architect)[3]@Expert@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Architect)[4]@Expert@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Architect)[5]@Expert@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Architect)[6]@Expert@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Architect)[7]@Expert@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Architect)[8]@Expert@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Architect)[9]@Expert@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Architect)[10]@Expert@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Architect)[11]@Expert@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Architect)[12]@Expert@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Architect)[13]@Expert@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Architect)[14]@Expert@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Architect)[15]@Expert@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Architect)[16]@Expert@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Architect)[17]@Expert@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Architect)[18]@Expert@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Architect)[19]@Expert@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
   <collection>
     <name>Character(Architect)[20]@Expert@</name>
     <entry>0</entry>
@@ -841,60 +949,114 @@
     <entry>0</entry>
     <entry>0</entry>
   </collection>
-  <collection>
-    <name>Character(Artisan)[1d2+1]@Expert@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Artisan)[1d2+3]@Expert@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Artisan)[1d2+5]@Expert@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Artisan)[1d2+7]@Expert@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Artisan)[1d2+9]@Expert@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Artisan)[1d2+11]@Expert@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Artisan)[1d2+13]@Expert@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Artisan)[1d2+15]@Expert@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Artisan)[1d2+17]@Expert@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
+	<collection>
+		<name>Character(Artisan)[2]@Expert@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Artisan)[3]@Expert@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Artisan)[4]@Expert@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Artisan)[5]@Expert@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Artisan)[6]@Expert@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Artisan)[7]@Expert@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Artisan)[8]@Expert@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Artisan)[9]@Expert@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Artisan)[10]@Expert@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Artisan)[11]@Expert@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Artisan)[12]@Expert@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Artisan)[13]@Expert@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Artisan)[14]@Expert@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Artisan)[15]@Expert@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Artisan)[16]@Expert@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Artisan)[17]@Expert@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Artisan)[18]@Expert@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Artisan)[19]@Expert@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
   <collection>
     <name>Character(Artisan)[20]@Expert@</name>
     <entry>0</entry>
@@ -907,60 +1069,114 @@
     <entry>0</entry>
     <entry>0</entry>
   </collection>
-  <collection>
-    <name>Character(Bandit)[1d2+1]@Warrior@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Bandit)[1d2+3]@Warrior@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Bandit)[1d2+5]@Warrior@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Bandit)[1d2+7]@Warrior@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Bandit)[1d2+9]@Warrior@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Bandit)[1d2+11]@Warrior@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Bandit)[1d2+13]@Warrior@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Bandit)[1d2+15]@Warrior@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Bandit)[1d2+17]@Warrior@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
+	<collection>
+		<name>Character(Bandit)[2]@Warrior@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Bandit)[3]@Warrior@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Bandit)[4]@Warrior@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Bandit)[5]@Warrior@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Bandit)[6]@Warrior@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Bandit)[7]@Warrior@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Bandit)[8]@Warrior@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Bandit)[9]@Warrior@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Bandit)[10]@Warrior@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Bandit)[11]@Warrior@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Bandit)[12]@Warrior@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Bandit)[13]@Warrior@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Bandit)[14]@Warrior@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Bandit)[15]@Warrior@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Bandit)[16]@Warrior@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Bandit)[17]@Warrior@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Bandit)[18]@Warrior@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Bandit)[19]@Warrior@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
   <collection>
     <name>Character(Bandit)[20]@Warrior@</name>
     <entry>0</entry>
@@ -973,60 +1189,114 @@
     <entry>0</entry>
     <entry>0</entry>
   </collection>
-  <collection>
-    <name>Character(Beggar)[1d2+1]@Commoner@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Beggar)[1d2+3]@Commoner@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Beggar)[1d2+5]@Commoner@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Beggar)[1d2+7]@Commoner@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Beggar)[1d2+9]@Commoner@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Beggar)[1d2+11]@Commoner@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Beggar)[1d2+13]@Commoner@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Beggar)[1d2+15]@Commoner@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Beggar)[1d2+17]@Commoner@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
+	<collection>
+		<name>Character(Beggar)[2]@Commoner@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Beggar)[3]@Commoner@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Beggar)[4]@Commoner@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Beggar)[5]@Commoner@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Beggar)[6]@Commoner@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Beggar)[7]@Commoner@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Beggar)[8]@Commoner@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Beggar)[9]@Commoner@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Beggar)[10]@Commoner@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Beggar)[11]@Commoner@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Beggar)[12]@Commoner@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Beggar)[13]@Commoner@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Beggar)[14]@Commoner@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Beggar)[15]@Commoner@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Beggar)[16]@Commoner@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Beggar)[17]@Commoner@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Beggar)[18]@Commoner@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Beggar)[19]@Commoner@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
   <collection>
     <name>Character(Beggar)[20]@Commoner@</name>
     <entry>0</entry>
@@ -1039,60 +1309,114 @@
     <entry>0</entry>
     <entry>0</entry>
   </collection>
-  <collection>
-    <name>Character(Business person)[1d2+1]@Aristocrat@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Business person)[1d2+3]@Aristocrat@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Business person)[1d2+5]@Aristocrat@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Business person)[1d2+7]@Aristocrat@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Business person)[1d2+9]@Aristocrat@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Business person)[1d2+11]@Aristocrat@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Business person)[1d2+13]@Aristocrat@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Business person)[1d2+15]@Aristocrat@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Business person)[1d2+17]@Aristocrat@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
+	<collection>
+		<name>Character(Business person)[2]@Aristocrat@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Business person)[3]@Aristocrat@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Business person)[4]@Aristocrat@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Business person)[5]@Aristocrat@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Business person)[6]@Aristocrat@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Business person)[7]@Aristocrat@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Business person)[8]@Aristocrat@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Business person)[9]@Aristocrat@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Business person)[10]@Aristocrat@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Business person)[11]@Aristocrat@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Business person)[12]@Aristocrat@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Business person)[13]@Aristocrat@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Business person)[14]@Aristocrat@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Business person)[15]@Aristocrat@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Business person)[16]@Aristocrat@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Business person)[17]@Aristocrat@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Business person)[18]@Aristocrat@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Business person)[19]@Aristocrat@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
   <collection>
     <name>Character(Business person)[20]@Aristocrat@</name>
     <entry>0</entry>
@@ -1100,61 +1424,55 @@
     <entry>0</entry>
   </collection>
   <collection>
-    <name>Character(Captain)[1]@Fighter@</name>
+    <name>Character(Captain)[12]@Fighter@</name>
     <entry>0</entry>
     <entry>0</entry>
     <entry>0</entry>
   </collection>
   <collection>
-    <name>Character(Captain)[2]@Fighter@</name>
+    <name>Character(Captain)[13]@Fighter@</name>
     <entry>0</entry>
     <entry>0</entry>
     <entry>0</entry>
   </collection>
   <collection>
-    <name>Character(Captain)[3]@Fighter@</name>
+    <name>Character(Captain)[14]@Fighter@</name>
     <entry>0</entry>
     <entry>0</entry>
     <entry>0</entry>
   </collection>
   <collection>
-    <name>Character(Captain)[4]@Fighter@</name>
+    <name>Character(Captain)[15]@Fighter@</name>
     <entry>0</entry>
     <entry>0</entry>
     <entry>0</entry>
   </collection>
   <collection>
-    <name>Character(Captain)[5]@Fighter@</name>
+    <name>Character(Captain)[16]@Fighter@</name>
     <entry>0</entry>
     <entry>0</entry>
     <entry>0</entry>
   </collection>
   <collection>
-    <name>Character(Captain)[6]@Fighter@</name>
+    <name>Character(Captain)[17]@Fighter@</name>
     <entry>0</entry>
     <entry>0</entry>
     <entry>0</entry>
   </collection>
   <collection>
-    <name>Character(Captain)[7]@Fighter@</name>
+    <name>Character(Captain)[18]@Fighter@</name>
     <entry>0</entry>
     <entry>0</entry>
     <entry>0</entry>
   </collection>
   <collection>
-    <name>Character(Captain)[8]@Fighter@</name>
+    <name>Character(Captain)[19]@Fighter@</name>
     <entry>0</entry>
     <entry>0</entry>
     <entry>0</entry>
   </collection>
   <collection>
-    <name>Character(Captain)[9]@Fighter@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Captain)[10]@Fighter@</name>
+    <name>Character(Captain)[20]@Fighter@</name>
     <entry>0</entry>
     <entry>0</entry>
     <entry>0</entry>
@@ -1166,61 +1484,61 @@
     <entry>0</entry>
   </collection>
   <collection>
-    <name>Character(Captain)[1d2+1]@Warrior@</name>
+    <name>Character(Lieutenant)[6]@Warrior@</name>
     <entry>0</entry>
     <entry>0</entry>
     <entry>0</entry>
   </collection>
   <collection>
-    <name>Character(Captain)[1d2+3]@Warrior@</name>
+    <name>Character(Lieutenant)[7]@Warrior@</name>
     <entry>0</entry>
     <entry>0</entry>
     <entry>0</entry>
   </collection>
   <collection>
-    <name>Character(Captain)[1d2+5]@Warrior@</name>
+    <name>Character(Lieutenant)[8]@Warrior@</name>
     <entry>0</entry>
     <entry>0</entry>
     <entry>0</entry>
   </collection>
   <collection>
-    <name>Character(Captain)[1d2+7]@Warrior@</name>
+    <name>Character(Lieutenant)[9]@Warrior@</name>
     <entry>0</entry>
     <entry>0</entry>
     <entry>0</entry>
   </collection>
   <collection>
-    <name>Character(Captain)[1d2+9]@Warrior@</name>
+    <name>Character(Lieutenant)[10]@Warrior@</name>
     <entry>0</entry>
     <entry>0</entry>
     <entry>0</entry>
   </collection>
   <collection>
-    <name>Character(Captain)[1d2+11]@Warrior@</name>
+    <name>Character(Lieutenant)[11]@Warrior@</name>
     <entry>0</entry>
     <entry>0</entry>
     <entry>0</entry>
   </collection>
   <collection>
-    <name>Character(Captain)[1d2+13]@Warrior@</name>
+    <name>Character(Lieutenant)[12]@Warrior@</name>
     <entry>0</entry>
     <entry>0</entry>
     <entry>0</entry>
   </collection>
   <collection>
-    <name>Character(Captain)[1d2+15]@Warrior@</name>
+    <name>Character(Lieutenant)[13]@Warrior@</name>
     <entry>0</entry>
     <entry>0</entry>
     <entry>0</entry>
   </collection>
   <collection>
-    <name>Character(Captain)[1d2+17]@Warrior@</name>
+    <name>Character(Lieutenant)[14]@Warrior@</name>
     <entry>0</entry>
     <entry>0</entry>
     <entry>0</entry>
   </collection>
   <collection>
-    <name>Character(Captain)[20]@Warrior@</name>
+    <name>Character(Lieutenant)[15]@Warrior@</name>
     <entry>0</entry>
     <entry>0</entry>
     <entry>0</entry>
@@ -1232,59 +1550,113 @@
     <entry>0</entry>
   </collection>
   <collection>
-    <name>Character(Construction Worker)[1d2+1]@Commoner@</name>
+    <name>Character(Construction Worker)[2]@Commoner@</name>
     <entry>0</entry>
     <entry>0</entry>
     <entry>0</entry>
   </collection>
   <collection>
-    <name>Character(Construction Worker)[1d2+3]@Commoner@</name>
+    <name>Character(Construction Worker)[3]@Commoner@</name>
     <entry>0</entry>
     <entry>0</entry>
     <entry>0</entry>
   </collection>
   <collection>
-    <name>Character(Construction Worker)[1d2+5]@Commoner@</name>
+    <name>Character(Construction Worker)[4]@Commoner@</name>
     <entry>0</entry>
     <entry>0</entry>
     <entry>0</entry>
   </collection>
   <collection>
-    <name>Character(Construction Worker)[1d2+7]@Commoner@</name>
+    <name>Character(Construction Worker)[5]@Commoner@</name>
     <entry>0</entry>
     <entry>0</entry>
     <entry>0</entry>
   </collection>
   <collection>
-    <name>Character(Construction Worker)[1d2+9]@Commoner@</name>
+    <name>Character(Construction Worker)[6]@Commoner@</name>
     <entry>0</entry>
     <entry>0</entry>
     <entry>0</entry>
   </collection>
   <collection>
-    <name>Character(Construction Worker)[1d2+11]@Commoner@</name>
+    <name>Character(Construction Worker)[7]@Commoner@</name>
     <entry>0</entry>
     <entry>0</entry>
     <entry>0</entry>
   </collection>
   <collection>
-    <name>Character(Construction Worker)[1d2+13]@Commoner@</name>
+    <name>Character(Construction Worker)[8]@Commoner@</name>
     <entry>0</entry>
     <entry>0</entry>
     <entry>0</entry>
   </collection>
   <collection>
-    <name>Character(Construction Worker)[1d2+15]@Commoner@</name>
+    <name>Character(Construction Worker)[9]@Commoner@</name>
     <entry>0</entry>
     <entry>0</entry>
     <entry>0</entry>
   </collection>
   <collection>
-    <name>Character(Construction Worker)[1d2+17]@Commoner@</name>
+    <name>Character(Construction Worker)[10]@Commoner@</name>
     <entry>0</entry>
     <entry>0</entry>
     <entry>0</entry>
   </collection>
+	<collection>
+		<name>Character(Construction Worker)[11]@Commoner@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Construction Worker)[12]@Commoner@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Construction Worker)[13]@Commoner@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Construction Worker)[14]@Commoner@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Construction Worker)[15]@Commoner@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Construction Worker)[16]@Commoner@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Construction Worker)[17]@Commoner@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Construction Worker)[18]@Commoner@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Construction Worker)[19]@Commoner@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
   <collection>
     <name>Character(Construction Worker)[20]@Commoner@</name>
     <entry>0</entry>
@@ -1417,60 +1789,114 @@
     <entry>0</entry>
     <entry>0</entry>
   </collection>
-  <collection>
-    <name>Character(Doctor)[1d2+1]@Adept@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Doctor)[1d2+3]@Adept@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Doctor)[1d2+5]@Adept@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Doctor)[1d2+7]@Adept@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Doctor)[1d2+9]@Adept@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Doctor)[1d2+11]@Adept@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Doctor)[1d2+13]@Adept@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Doctor)[1d2+15]@Adept@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Doctor)[1d2+17]@Adept@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
+	<collection>
+		<name>Character(Doctor)[2]@Adept@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Doctor)[3]@Adept@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Doctor)[4]@Adept@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Doctor)[5]@Adept@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Doctor)[6]@Adept@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Doctor)[7]@Adept@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Doctor)[8]@Adept@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Doctor)[9]@Adept@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Doctor)[10]@Adept@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Doctor)[11]@Adept@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Doctor)[12]@Adept@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Doctor)[13]@Adept@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Doctor)[14]@Adept@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Doctor)[15]@Adept@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Doctor)[16]@Adept@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Doctor)[17]@Adept@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Doctor)[18]@Adept@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Doctor)[19]@Adept@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
   <collection>
     <name>Character(Doctor)[20]@Adept@</name>
     <entry>0</entry>
@@ -1783,60 +2209,114 @@
     <entry>0</entry>
     <entry>0</entry>
   </collection>
-  <collection>
-    <name>Character(Farmer)[1d2+1]@Commoner@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Farmer)[1d2+3]@Commoner@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Farmer)[1d2+5]@Commoner@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Farmer)[1d2+7]@Commoner@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Farmer)[1d2+9]@Commoner@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Farmer)[1d2+11]@Commoner@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Farmer)[1d2+13]@Commoner@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Farmer)[1d2+15]@Commoner@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Farmer)[1d2+17]@Commoner@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
+	<collection>
+		<name>Character(Farmer)[2]@Commoner@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Farmer)[3]@Commoner@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Farmer)[4]@Commoner@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Farmer)[5]@Commoner@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Farmer)[6]@Commoner@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Farmer)[7]@Commoner@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Farmer)[8]@Commoner@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Farmer)[9]@Commoner@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Farmer)[10]@Commoner@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Farmer)[11]@Commoner@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Farmer)[12]@Commoner@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Farmer)[13]@Commoner@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Farmer)[14]@Commoner@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Farmer)[15]@Commoner@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Farmer)[16]@Commoner@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Farmer)[17]@Commoner@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Farmer)[18]@Commoner@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Farmer)[19]@Commoner@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
   <collection>
     <name>Character(Farmer)[20]@Commoner@</name>
     <entry>0</entry>
@@ -1849,60 +2329,114 @@
     <entry>0</entry>
     <entry>0</entry>
   </collection>
-  <collection>
-    <name>Character(Fortuneteller)[1d2+1]@Adept@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Fortuneteller)[1d2+3]@Adept@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Fortuneteller)[1d2+5]@Adept@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Fortuneteller)[1d2+7]@Adept@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Fortuneteller)[1d2+9]@Adept@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Fortuneteller)[1d2+11]@Adept@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Fortuneteller)[1d2+13]@Adept@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Fortuneteller)[1d2+15]@Adept@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Fortuneteller)[1d2+17]@Adept@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
+	<collection>
+		<name>Character(Fortuneteller)[2]@Adept@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Fortuneteller)[3]@Adept@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Fortuneteller)[4]@Adept@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Fortuneteller)[5]@Adept@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Fortuneteller)[6]@Adept@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Fortuneteller)[7]@Adept@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Fortuneteller)[8]@Adept@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Fortuneteller)[9]@Adept@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Fortuneteller)[10]@Adept@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Fortuneteller)[11]@Adept@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Fortuneteller)[12]@Adept@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Fortuneteller)[13]@Adept@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Fortuneteller)[14]@Adept@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Fortuneteller)[15]@Adept@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Fortuneteller)[16]@Adept@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Fortuneteller)[17]@Adept@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Fortuneteller)[18]@Adept@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Fortuneteller)[19]@Adept@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
   <collection>
     <name>Character(Fortuneteller)[20]@Adept@</name>
     <entry>0</entry>
@@ -1915,60 +2449,114 @@
     <entry>0</entry>
     <entry>0</entry>
   </collection>
-  <collection>
-    <name>Character(Gentry)[1d2+1]@Aristocrat@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Gentry)[1d2+3]@Aristocrat@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Gentry)[1d2+5]@Aristocrat@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Gentry)[1d2+7]@Aristocrat@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Gentry)[1d2+9]@Aristocrat@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Gentry)[1d2+11]@Aristocrat@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Gentry)[1d2+13]@Aristocrat@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Gentry)[1d2+15]@Aristocrat@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Gentry)[1d2+17]@Aristocrat@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
+	<collection>
+		<name>Character(Gentry)[2]@Aristocrat@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Gentry)[3]@Aristocrat@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Gentry)[4]@Aristocrat@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Gentry)[5]@Aristocrat@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Gentry)[6]@Aristocrat@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Gentry)[7]@Aristocrat@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Gentry)[8]@Aristocrat@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Gentry)[9]@Aristocrat@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Gentry)[10]@Aristocrat@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Gentry)[11]@Aristocrat@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Gentry)[12]@Aristocrat@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Gentry)[13]@Aristocrat@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Gentry)[14]@Aristocrat@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Gentry)[15]@Aristocrat@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Gentry)[16]@Aristocrat@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Gentry)[17]@Aristocrat@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Gentry)[18]@Aristocrat@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Gentry)[19]@Aristocrat@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
   <collection>
     <name>Character(Gentry)[20]@Aristocrat@</name>
     <entry>0</entry>
@@ -1981,60 +2569,114 @@
     <entry>0</entry>
     <entry>0</entry>
   </collection>
-  <collection>
-    <name>Character(Guard)[1d2+1]@Warrior@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Guard)[1d2+3]@Warrior@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Guard)[1d2+5]@Warrior@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Guard)[1d2+7]@Warrior@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Guard)[1d2+9]@Warrior@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Guard)[1d2+11]@Warrior@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Guard)[1d2+13]@Warrior@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Guard)[1d2+15]@Warrior@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Guard)[1d2+17]@Warrior@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
+	<collection>
+		<name>Character(Guard)[2]@Warrior@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Guard)[3]@Warrior@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Guard)[4]@Warrior@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Guard)[5]@Warrior@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Guard)[6]@Warrior@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Guard)[7]@Warrior@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Guard)[8]@Warrior@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Guard)[9]@Warrior@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Guard)[10]@Warrior@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Guard)[11]@Warrior@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Guard)[12]@Warrior@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Guard)[13]@Warrior@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Guard)[14]@Warrior@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Guard)[15]@Warrior@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Guard)[16]@Warrior@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Guard)[17]@Warrior@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Guard)[18]@Warrior@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Guard)[19]@Warrior@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
   <collection>
     <name>Character(Guard)[20]@Warrior@</name>
     <entry>0</entry>
@@ -2047,60 +2689,114 @@
     <entry>0</entry>
     <entry>0</entry>
   </collection>
-  <collection>
-    <name>Character(Herder)[1d2+1]@Commoner@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Herder)[1d2+3]@Commoner@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Herder)[1d2+5]@Commoner@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Herder)[1d2+7]@Commoner@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Herder)[1d2+9]@Commoner@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Herder)[1d2+11]@Commoner@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Herder)[1d2+13]@Commoner@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Herder)[1d2+15]@Commoner@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Herder)[1d2+17]@Commoner@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
+	<collection>
+		<name>Character(Herder)[2]@Commoner@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Herder)[3]@Commoner@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Herder)[4]@Commoner@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Herder)[5]@Commoner@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Herder)[6]@Commoner@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Herder)[7]@Commoner@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Herder)[8]@Commoner@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Herder)[9]@Commoner@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Herder)[10]@Commoner@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Herder)[11]@Commoner@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Herder)[12]@Commoner@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Herder)[13]@Commoner@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Herder)[14]@Commoner@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Herder)[15]@Commoner@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Herder)[16]@Commoner@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Herder)[17]@Commoner@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Herder)[18]@Commoner@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Herder)[19]@Commoner@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
   <collection>
     <name>Character(Herder)[20]@Commoner@</name>
     <entry>0</entry>
@@ -2233,60 +2929,114 @@
     <entry>0</entry>
     <entry>0</entry>
   </collection>
-  <collection>
-    <name>Character(Hunter)[1d2+1]@Commoner&amp;Warrior@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Hunter)[1d2+3]@Commoner&amp;Warrior@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Hunter)[1d2+5]@Commoner&amp;Warrior@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Hunter)[1d2+7]@Commoner&amp;Warrior@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Hunter)[1d2+9]@Commoner&amp;Warrior@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Hunter)[1d2+11]@Commoner&amp;Warrior@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Hunter)[1d2+13]@Commoner&amp;Warrior@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Hunter)[1d2+15]@Commoner&amp;Warrior@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Hunter)[1d2+17]@Commoner&amp;Warrior@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
+	<collection>
+		<name>Character(Hunter)[2]@Commoner&amp;Warrior@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Hunter)[3]@Commoner&amp;Warrior@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Hunter)[4]@Commoner&amp;Warrior@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Hunter)[5]@Commoner&amp;Warrior@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Hunter)[6]@Commoner&amp;Warrior@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Hunter)[7]@Commoner&amp;Warrior@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Hunter)[8]@Commoner&amp;Warrior@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Hunter)[9]@Commoner&amp;Warrior@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Hunter)[10]@Commoner&amp;Warrior@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Hunter)[11]@Commoner&amp;Warrior@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Hunter)[12]@Commoner&amp;Warrior@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Hunter)[13]@Commoner&amp;Warrior@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Hunter)[14]@Commoner&amp;Warrior@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Hunter)[15]@Commoner&amp;Warrior@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Hunter)[16]@Commoner&amp;Warrior@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Hunter)[17]@Commoner&amp;Warrior@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Hunter)[18]@Commoner&amp;Warrior@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Hunter)[19]@Commoner&amp;Warrior@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
   <collection>
     <name>Character(Hunter)[20]@Commoner&amp;Warrior@</name>
     <entry>0</entry>
@@ -2359,78 +3109,120 @@
     <entry>0</entry>
     <entry>0</entry>
   </collection>
-  <collection>
-    <name>Character(Leader)[1]@Cleric@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Leader)[2]@Cleric@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Leader)[3]@Cleric@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Leader)[4]@Cleric@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Leader)[5]@Cleric@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Leader)[6]@Cleric@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Leader)[7]@Cleric@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Leader)[8]@Cleric@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Leader)[9]@Cleric@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Leader)[10]@Cleric@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
+	<collection>
+		<name>Character(Leader)[12]@Bard@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Leader)[13]@Bard@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Leader)[14]@Bard@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Leader)[15]@Bard@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Leader)[16]@Bard@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Leader)[17]@Bard@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Leader)[18]@Bard@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Leader)[19]@Bard@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Leader)[20]@Bard@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
   <collection>
     <name>Character(Leader)[11]@Cleric@</name>
     <entry>0</entry>
     <entry>0</entry>
     <entry>0</entry>
   </collection>
-  <collection>
-    <name>Character(Leader)[1]@Fighter@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
+	<collection>
+		<name>Character(Leader)[12]@Cleric@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Leader)[13]@Cleric@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Leader)[14]@Cleric@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Leader)[15]@Cleric@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Leader)[16]@Cleric@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Leader)[17]@Cleric@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Leader)[18]@Cleric@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Leader)[19]@Cleric@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Leader)[20]@Cleric@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
   <collection>
     <name>Character(Leader)[2]@Fighter@</name>
     <entry>0</entry>
@@ -2491,60 +3283,168 @@
     <entry>0</entry>
     <entry>0</entry>
   </collection>
-  <collection>
-    <name>Character(Leader)[1d2+1]@Warrior@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Leader)[1d2+3]@Warrior@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Leader)[1d2+5]@Warrior@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Leader)[1d2+7]@Warrior@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Leader)[1d2+9]@Warrior@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Leader)[1d2+11]@Warrior@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Leader)[1d2+13]@Warrior@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Leader)[1d2+15]@Warrior@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Leader)[1d2+17]@Warrior@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
+	<collection>
+		<name>Character(Leader)[12]@Fighter@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Leader)[13]@Fighter@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Leader)[14]@Fighter@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Leader)[15]@Fighter@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Leader)[16]@Fighter@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Leader)[17]@Fighter@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Leader)[18]@Fighter@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Leader)[19]@Fighter@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Leader)[20]@Fighter@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Leader)[2]@Warrior@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Leader)[3]@Warrior@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Leader)[4]@Warrior@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Leader)[5]@Warrior@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Leader)[6]@Warrior@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Leader)[7]@Warrior@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Leader)[8]@Warrior@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Leader)[9]@Warrior@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Leader)[10]@Warrior@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Leader)[11]@Warrior@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Leader)[12]@Warrior@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Leader)[13]@Warrior@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Leader)[14]@Warrior@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Leader)[15]@Warrior@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Leader)[16]@Warrior@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Leader)[17]@Warrior@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Leader)[18]@Warrior@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Leader)[19]@Warrior@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
   <collection>
     <name>Character(Leader)[20]@Warrior@</name>
     <entry>0</entry>
@@ -2557,60 +3457,114 @@
     <entry>0</entry>
     <entry>0</entry>
   </collection>
-  <collection>
-    <name>Character(Merchant)[1d2+1]@Commoner&amp;Expert@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Merchant)[1d2+3]@Commoner&amp;Expert@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Merchant)[1d2+5]@Commoner&amp;Expert@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Merchant)[1d2+7]@Commoner&amp;Expert@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Merchant)[1d2+9]@Commoner&amp;Expert@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Merchant)[1d2+11]@Commoner&amp;Expert@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Merchant)[1d2+13]@Commoner&amp;Expert@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Merchant)[1d2+15]@Commoner&amp;Expert@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Merchant)[1d2+17]@Commoner&amp;Expert@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
+	<collection>
+		<name>Character(Merchant)[2]@Commoner&amp;Expert@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Merchant)[3]@Commoner&amp;Expert@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Merchant)[4]@Commoner&amp;Expert@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Merchant)[5]@Commoner&amp;Expert@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Merchant)[6]@Commoner&amp;Expert@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Merchant)[7]@Commoner&amp;Expert@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Merchant)[8]@Commoner&amp;Expert@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Merchant)[9]@Commoner&amp;Expert@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Merchant)[10]@Commoner&amp;Expert@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Merchant)[11]@Commoner&amp;Expert@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Merchant)[12]@Commoner&amp;Expert@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Merchant)[13]@Commoner&amp;Expert@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Merchant)[14]@Commoner&amp;Expert@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Merchant)[15]@Commoner&amp;Expert@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Merchant)[16]@Commoner&amp;Expert@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Merchant)[17]@Commoner&amp;Expert@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Merchant)[18]@Commoner&amp;Expert@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Merchant)[19]@Commoner&amp;Expert@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
   <collection>
     <name>Character(Merchant)[20]@Commoner&amp;Expert@</name>
     <entry>0</entry>
@@ -2623,60 +3577,114 @@
     <entry>0</entry>
     <entry>0</entry>
   </collection>
-  <collection>
-    <name>Character(Minstrel)[1d2+1]@Commoner&amp;Expert@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Minstrel)[1d2+3]@Commoner&amp;Expert@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Minstrel)[1d2+5]@Commoner&amp;Expert@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Minstrel)[1d2+7]@Commoner&amp;Expert@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Minstrel)[1d2+9]@Commoner&amp;Expert@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Minstrel)[1d2+11]@Commoner&amp;Expert@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Minstrel)[1d2+13]@Commoner&amp;Expert@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Minstrel)[1d2+15]@Commoner&amp;Expert@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Minstrel)[1d2+17]@Commoner&amp;Expert@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
+	<collection>
+		<name>Character(Minstrel)[2]@Commoner&amp;Expert@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Minstrel)[3]@Commoner&amp;Expert@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Minstrel)[4]@Commoner&amp;Expert@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Minstrel)[5]@Commoner&amp;Expert@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Minstrel)[6]@Commoner&amp;Expert@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Minstrel)[7]@Commoner&amp;Expert@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Minstrel)[8]@Commoner&amp;Expert@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Minstrel)[9]@Commoner&amp;Expert@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Minstrel)[10]@Commoner&amp;Expert@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Minstrel)[11]@Commoner&amp;Expert@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Minstrel)[12]@Commoner&amp;Expert@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Minstrel)[13]@Commoner&amp;Expert@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Minstrel)[14]@Commoner&amp;Expert@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Minstrel)[15]@Commoner&amp;Expert@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Minstrel)[16]@Commoner&amp;Expert@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Minstrel)[17]@Commoner&amp;Expert@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Minstrel)[18]@Commoner&amp;Expert@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Minstrel)[19]@Commoner&amp;Expert@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
   <collection>
     <name>Character(Minstrel)[20]@Commoner&amp;Expert@</name>
     <entry>0</entry>
@@ -2689,60 +3697,114 @@
     <entry>0</entry>
     <entry>0</entry>
   </collection>
-  <collection>
-    <name>Character(Missionary)[1d2+1]@Adept@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Missionary)[1d2+3]@Adept@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Missionary)[1d2+5]@Adept@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Missionary)[1d2+7]@Adept@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Missionary)[1d2+9]@Adept@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Missionary)[1d2+11]@Adept@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Missionary)[1d2+13]@Adept@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Missionary)[1d2+15]@Adept@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Missionary)[1d2+17]@Adept@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
+	<collection>
+		<name>Character(Missionary)[2]@Adept@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Missionary)[3]@Adept@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Missionary)[4]@Adept@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Missionary)[5]@Adept@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Missionary)[6]@Adept@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Missionary)[7]@Adept@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Missionary)[8]@Adept@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Missionary)[9]@Adept@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Missionary)[10]@Adept@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Missionary)[11]@Adept@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Missionary)[12]@Adept@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Missionary)[13]@Adept@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Missionary)[14]@Adept@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Missionary)[15]@Adept@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Missionary)[16]@Adept@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Missionary)[17]@Adept@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Missionary)[18]@Adept@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Missionary)[19]@Adept@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
   <collection>
     <name>Character(Missionary)[20]@Adept@</name>
     <entry>0</entry>
@@ -2995,126 +4057,174 @@
     <entry>0</entry>
     <entry>0</entry>
   </collection>
-  <collection>
-    <name>Character(Pilgrim)[1d2+1]@Commoner@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Pilgrim)[1d2+3]@Commoner@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Pilgrim)[1d2+5]@Commoner@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Pilgrim)[1d2+7]@Commoner@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Pilgrim)[1d2+9]@Commoner@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Pilgrim)[1d2+11]@Commoner@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Pilgrim)[1d2+13]@Commoner@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Pilgrim)[1d2+15]@Commoner@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Pilgrim)[1d2+17]@Commoner@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Pilgrim)[20]@Commoner@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
+	<collection>
+		<name>Character(Pilgrim)[2]@Commoner@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Pilgrim)[3]@Commoner@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Pilgrim)[4]@Commoner@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Pilgrim)[5]@Commoner@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Pilgrim)[6]@Commoner@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Pilgrim)[7]@Commoner@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Pilgrim)[8]@Commoner@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Pilgrim)[9]@Commoner@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Pilgrim)[10]@Commoner@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
   <collection>
     <name>Character(Politician)[1]@Aristocrat@</name>
     <entry>0</entry>
     <entry>0</entry>
     <entry>0</entry>
   </collection>
-  <collection>
-    <name>Character(Politician)[1d2+1]@Aristocrat@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Politician)[1d2+3]@Aristocrat@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Politician)[1d2+5]@Aristocrat@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Politician)[1d2+7]@Aristocrat@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Politician)[1d2+9]@Aristocrat@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Politician)[1d2+11]@Aristocrat@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Politician)[1d2+13]@Aristocrat@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Politician)[1d2+15]@Aristocrat@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Politician)[1d2+17]@Aristocrat@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
+	<collection>
+		<name>Character(Politician)[2]@Aristocrat@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Politician)[3]@Aristocrat@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Politician)[4]@Aristocrat@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Politician)[5]@Aristocrat@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Politician)[6]@Aristocrat@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Politician)[7]@Aristocrat@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Politician)[8]@Aristocrat@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Politician)[9]@Aristocrat@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Politician)[10]@Aristocrat@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Politician)[11]@Aristocrat@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Politician)[12]@Aristocrat@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Politician)[13]@Aristocrat@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Politician)[14]@Aristocrat@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Politician)[15]@Aristocrat@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Politician)[16]@Aristocrat@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Politician)[17]@Aristocrat@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Politician)[18]@Aristocrat@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Politician)[19]@Aristocrat@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
   <collection>
     <name>Character(Politician)[20]@Aristocrat@</name>
     <entry>0</entry>
@@ -3127,60 +4237,114 @@
     <entry>0</entry>
     <entry>0</entry>
   </collection>
-  <collection>
-    <name>Character(Protestor)[1d2+1]@Commoner@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Protestor)[1d2+3]@Commoner@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Protestor)[1d2+5]@Commoner@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Protestor)[1d2+7]@Commoner@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Protestor)[1d2+9]@Commoner@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Protestor)[1d2+11]@Commoner@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Protestor)[1d2+13]@Commoner@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Protestor)[1d2+15]@Commoner@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Protestor)[1d2+17]@Commoner@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
+	<collection>
+		<name>Character(Protestor)[2]@Commoner@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Protestor)[3]@Commoner@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Protestor)[4]@Commoner@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Protestor)[5]@Commoner@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Protestor)[6]@Commoner@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Protestor)[7]@Commoner@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Protestor)[8]@Commoner@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Protestor)[9]@Commoner@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Protestor)[10]@Commoner@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Protestor)[11]@Commoner@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Protestor)[12]@Commoner@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Protestor)[13]@Commoner@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Protestor)[14]@Commoner@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Protestor)[15]@Commoner@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Protestor)[16]@Commoner@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Protestor)[17]@Commoner@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Protestor)[18]@Commoner@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Protestor)[19]@Commoner@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
   <collection>
     <name>Character(Protestor)[20]@Commoner@</name>
     <entry>0</entry>
@@ -3493,92 +4657,116 @@
     <entry>0</entry>
     <entry>0</entry>
   </collection>
+	<collection>
+		<name>Character(Servant)[2]@Commoner@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Servant)[3]@Commoner@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Servant)[4]@Commoner@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Servant)[5]@Commoner@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Servant)[6]@Commoner@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Servant)[7]@Commoner@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Servant)[8]@Commoner@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Servant)[9]@Commoner@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Servant)[10]@Commoner@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Servant)[11]@Commoner@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Servant)[12]@Commoner@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Servant)[13]@Commoner@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Servant)[14]@Commoner@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Servant)[15]@Commoner@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
   <collection>
-    <name>Character(Servant)[1d2+1]@Commoner@</name>
+    <name>Character(Star Student)[11]</name>
     <entry>0</entry>
     <entry>0</entry>
     <entry>0</entry>
   </collection>
   <collection>
-    <name>Character(Servant)[1d2+3]@Commoner@</name>
+    <name>Character(Star Student)[12]</name>
     <entry>0</entry>
     <entry>0</entry>
     <entry>0</entry>
   </collection>
   <collection>
-    <name>Character(Servant)[1d2+5]@Commoner@</name>
+    <name>Character(Star Student)[13]</name>
     <entry>0</entry>
     <entry>0</entry>
     <entry>0</entry>
   </collection>
   <collection>
-    <name>Character(Servant)[1d2+7]@Commoner@</name>
+    <name>Character(Star Student)[14]</name>
     <entry>0</entry>
     <entry>0</entry>
     <entry>0</entry>
   </collection>
   <collection>
-    <name>Character(Servant)[1d2+9]@Commoner@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Servant)[1d2+11]@Commoner@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Servant)[1d2+13]@Commoner@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Servant)[1d2+15]@Commoner@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Servant)[1d2+17]@Commoner@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Servant)[20]@Commoner@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Star Student)[1]</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Star Student)[2]</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Star Student)[3]</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Star Student)[4]</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Star Student)[5]</name>
+    <name>Character(Star Student)[15]</name>
     <entry>0</entry>
     <entry>0</entry>
     <entry>0</entry>
@@ -3619,60 +4807,114 @@
     <entry>0</entry>
     <entry>0</entry>
   </collection>
-  <collection>
-    <name>Character(Street performer)[1d2+1]@Adept@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Street performer)[1d2+3]@Adept@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Street performer)[1d2+5]@Adept@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Street performer)[1d2+7]@Adept@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Street performer)[1d2+9]@Adept@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Street performer)[1d2+11]@Adept@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Street performer)[1d2+13]@Adept@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Street performer)[1d2+15]@Adept@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Street performer)[1d2+17]@Adept@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
+	<collection>
+		<name>Character(Street performer)[2]@Adept@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Street performer)[3]@Adept@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Street performer)[4]@Adept@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Street performer)[5]@Adept@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Street performer)[6]@Adept@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Street performer)[7]@Adept@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Street performer)[8]@Adept@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Street performer)[9]@Adept@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Street performer)[10]@Adept@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Street performer)[11]@Adept@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Street performer)[12]@Adept@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Street performer)[13]@Adept@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Street performer)[14]@Adept@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Street performer)[15]@Adept@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Street performer)[16]@Adept@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Street performer)[17]@Adept@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Street performer)[18]@Adept@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Street performer)[19]@Adept@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
   <collection>
     <name>Character(Street performer)[20]@Adept@</name>
     <entry>0</entry>
@@ -3805,60 +5047,60 @@
     <entry>0</entry>
     <entry>0</entry>
   </collection>
-  <collection>
-    <name>Character(Student)[1d2+1]@Any NPC@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Student)[1d2+3]@Any NPC@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Student)[1d2+5]@Any NPC@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Student)[1d2+7]@Any NPC@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Student)[1d2+9]@Any NPC@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Student)[1d2+11]@Any NPC@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Student)[1d2+13]@Any NPC@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Student)[1d2+15]@Any NPC@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Student)[1d2+17]@Any NPC@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
+	<collection>
+		<name>Character(Student)[2]@Any NPC@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Student)[3]@Any NPC@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Student)[4]@Any NPC@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Student)[5]@Any NPC@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Student)[6]@Any NPC@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Student)[7]@Any NPC@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Student)[8]@Any NPC@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Student)[9]@Any NPC@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Student)[10]@Any NPC@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
   <collection>
     <name>Character(Teacher)[11]</name>
     <entry>0</entry>
@@ -3925,60 +5167,114 @@
     <entry>0</entry>
     <entry>0</entry>
   </collection>
-  <collection>
-    <name>Character(Traveler)[1d2+1]@Any NPC@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Traveler)[1d2+3]@Any NPC@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Traveler)[1d2+5]@Any NPC@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Traveler)[1d2+7]@Any NPC@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Traveler)[1d2+9]@Any NPC@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Traveler)[1d2+11]@Any NPC@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Traveler)[1d2+13]@Any NPC@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Traveler)[1d2+15]@Any NPC@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character(Traveler)[1d2+17]@Any NPC@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
+	<collection>
+		<name>Character(Traveler)[2]@Any NPC@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Traveler)[3]@Any NPC@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Traveler)[4]@Any NPC@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Traveler)[5]@Any NPC@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Traveler)[6]@Any NPC@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Traveler)[7]@Any NPC@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Traveler)[8]@Any NPC@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Traveler)[9]@Any NPC@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Traveler)[10]@Any NPC@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Traveler)[11]@Any NPC@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Traveler)[12]@Any NPC@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Traveler)[13]@Any NPC@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Traveler)[14]@Any NPC@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Traveler)[15]@Any NPC@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Traveler)[16]@Any NPC@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Traveler)[17]@Any NPC@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Traveler)[18]@Any NPC@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character(Traveler)[19]@Any NPC@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
   <collection>
     <name>Character(Traveler)[20]@Any NPC@</name>
     <entry>0</entry>
@@ -4051,60 +5347,114 @@
     <entry>0</entry>
     <entry>0</entry>
   </collection>
-  <collection>
-    <name>Character[1d2+1]@Any NPC@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character[1d2+3]@Any NPC@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character[1d2+5]@Any NPC@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character[1d2+7]@Any NPC@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character[1d2+9]@Any NPC@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character[1d2+11]@Any NPC@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character[1d2+13]@Any NPC@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character[1d2+15]@Any NPC@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
-  <collection>
-    <name>Character[1d2+17]@Any NPC@</name>
-    <entry>0</entry>
-    <entry>0</entry>
-    <entry>0</entry>
-  </collection>
+	<collection>
+		<name>Character[2]@Any NPC@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character[3]@Any NPC@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character[4]@Any NPC@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character[5]@Any NPC@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character[6]@Any NPC@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character[7]@Any NPC@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character[8]@Any NPC@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character[9]@Any NPC@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character[10]@Any NPC@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character[11]@Any NPC@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character[12]@Any NPC@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character[13]@Any NPC@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character[14]@Any NPC@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character[15]@Any NPC@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character[16]@Any NPC@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character[17]@Any NPC@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character[18]@Any NPC@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
+	<collection>
+		<name>Character[19]@Any NPC@</name>
+		<entry>0</entry>
+		<entry>0</entry>
+		<entry>0</entry>
+	</collection>
   <collection>
     <name>Character[20]@Any NPC@</name>
     <entry>0</entry>
@@ -7490,7 +8840,7 @@
     <entry>1</entry>
   </collection>
   <collection>
-    <name>Character(Lord)[10]#Mummy#@Cleric@</name>
+    <name>Character(Mummy Lord)[10]{Mummy}@Cleric@</name>
     <entry>1</entry>
     <entry>1</entry>
     <entry>1</entry>
@@ -8690,7 +10040,7 @@
     <entry>1</entry>
   </collection>
   <collection>
-    <name>Character(Lord)[10]#Werewolf#@Fighter@</name>
+    <name>Character(Werewolf Lord)[10]#Dire Werewolf#@Fighter@</name>
     <entry>1</entry>
     <entry>1</entry>
     <entry>1</entry>

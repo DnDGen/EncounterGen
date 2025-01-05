@@ -30,12 +30,12 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures
             encounterFormatter = GetNewInstanceOf<IEncounterFormatter>();
             dice = GetNewInstanceOf<Dice>();
 
-            encounterLevels = new Dictionary<int, List<string>>();
+            encounterLevels = [];
             var levels = Enumerable.Range(EncounterSpecifications.MinimumLevel, EncounterSpecifications.MaximumLevel);
 
             foreach (var level in levels)
             {
-                encounterLevels[level] = new List<string>();
+                encounterLevels[level] = [];
             }
 
             var encounters = EncounterConstants.GetAll();
@@ -56,6 +56,10 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures
                     //INFO: Using a GUID and not the actual creature name so that characters are computed like other creatures
                     creature.Creature.Name = Guid.NewGuid().ToString();
                     creature.ChallengeRating = challengeRatingSelector.SelectAverageForCreature(creatureName);
+
+                    //INFO: Rounding away from zero, so that we over-estimate the CR of encounters
+                    //Otherwise, you have Adult White Dragon (Solitary) [1] and Adult White Dragons (Family) [1d2 + kids] have the same average CR,
+                    //which doesn't make sense
                     creature.Quantity = Convert.ToInt32(Math.Round(averageQuantity, MidpointRounding.AwayFromZero));
 
                     creatures.Add(creature);
@@ -109,8 +113,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures
         [TestCase(EncounterSpecifications.MaximumLevel)]
         public void AverageEncounterLevelGroup(int level)
         {
-            Assert.That(table, Contains.Key(level.ToString()));
-            Assert.That(table[level.ToString()], Is.EquivalentTo(encounterLevels[level]));
+            AssertDistinctCollection(level.ToString(), encounterLevels[level].ToArray());
         }
     }
 }

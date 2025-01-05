@@ -113,6 +113,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables
             if (expected.Count() >= 300)
             {
                 //When there are a lot of expected items, it truncates the test message and won't let you see what is missing
+                //Example tests that run into this are EncounterGroupTests: AllGroupHasAllEncounters and CharacterEncounterGroup
                 Assert.That(expected.Except(actual), Is.Empty, $"Missing {expected.Except(actual).Count()} (Add to table)");
                 Assert.That(actual.Except(expected), Is.Empty, $"Extra {actual.Except(expected).Count()} (Delete from table)");
             }

@@ -881,86 +881,149 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
                 EncounterConstants.Dog_Solitary,
                 EncounterConstants.Dog_Riding_Solitary,
                 EncounterConstants.Traveler_Level1_Group,
-                EncounterConstants.Traveler_Level2To3_Group,
-                EncounterConstants.Traveler_Level4To5_Group,
-                EncounterConstants.Traveler_Level6To7_Group,
-                EncounterConstants.Traveler_Level8To9_Group,
-                EncounterConstants.Traveler_Level10To11_Group,
-                EncounterConstants.Traveler_Level12To13_Group,
-                EncounterConstants.Traveler_Level14To15_Group,
-                EncounterConstants.Traveler_Level16To17_Group,
-                EncounterConstants.Traveler_Level18To19_Group,
+                EncounterConstants.Traveler_Level2_Group,
+                EncounterConstants.Traveler_Level3_Group,
+                EncounterConstants.Traveler_Level4_Group,
+                EncounterConstants.Traveler_Level5_Group,
+                EncounterConstants.Traveler_Level6_Group,
+                EncounterConstants.Traveler_Level7_Group,
+                EncounterConstants.Traveler_Level8_Group,
+                EncounterConstants.Traveler_Level9_Group,
+                EncounterConstants.Traveler_Level10_Group,
+                EncounterConstants.Traveler_Level11_Group,
+                EncounterConstants.Traveler_Level12_Group,
+                EncounterConstants.Traveler_Level13_Group,
+                EncounterConstants.Traveler_Level14_Group,
+                EncounterConstants.Traveler_Level15_Group,
+                EncounterConstants.Traveler_Level16_Group,
+                EncounterConstants.Traveler_Level17_Group,
+                EncounterConstants.Traveler_Level18_Group,
+                EncounterConstants.Traveler_Level19_Group,
                 EncounterConstants.Traveler_Level20_Group,
                 EncounterConstants.Mule_Solitary,
                 EncounterConstants.Donkey_Solitary,
                 EncounterConstants.Pony_Solitary,
                 EncounterConstants.Pony_War_Solitary,
                 EncounterConstants.Commoner_Protestor_Level1_Protest,
-                EncounterConstants.Commoner_Protestor_Level10To11_Protest,
-                EncounterConstants.Commoner_Protestor_Level12To13_Protest,
-                EncounterConstants.Commoner_Protestor_Level14To15_Protest,
-                EncounterConstants.Commoner_Protestor_Level16To17_Protest,
-                EncounterConstants.Commoner_Protestor_Level18To19_Protest,
+                EncounterConstants.Commoner_Protestor_Level10_Protest,
+                EncounterConstants.Commoner_Protestor_Level11_Protest,
+                EncounterConstants.Commoner_Protestor_Level12_Protest,
+                EncounterConstants.Commoner_Protestor_Level13_Protest,
+                EncounterConstants.Commoner_Protestor_Level14_Protest,
+                EncounterConstants.Commoner_Protestor_Level15_Protest,
+                EncounterConstants.Commoner_Protestor_Level16_Protest,
+                EncounterConstants.Commoner_Protestor_Level17_Protest,
+                EncounterConstants.Commoner_Protestor_Level18_Protest,
+                EncounterConstants.Commoner_Protestor_Level19_Protest,
                 EncounterConstants.Commoner_Protestor_Level20_Protest,
-                EncounterConstants.Commoner_Protestor_Level2To3_Protest,
-                EncounterConstants.Commoner_Protestor_Level4To5_Protest,
-                EncounterConstants.Commoner_Protestor_Level6To7_Protest,
-                EncounterConstants.Commoner_Protestor_Level8To9_Protest,
+                EncounterConstants.Commoner_Protestor_Level2_Protest,
+                EncounterConstants.Commoner_Protestor_Level3_Protest,
+                EncounterConstants.Commoner_Protestor_Level4_Protest,
+                EncounterConstants.Commoner_Protestor_Level5_Protest,
+                EncounterConstants.Commoner_Protestor_Level6_Protest,
+                EncounterConstants.Commoner_Protestor_Level7_Protest,
+                EncounterConstants.Commoner_Protestor_Level8_Protest,
+                EncounterConstants.Commoner_Protestor_Level9_Protest,
                 EncounterConstants.Commoner_Pilgrim_Level1_Caravan,
-                EncounterConstants.Commoner_Pilgrim_Level10To11_Caravan,
-                EncounterConstants.Commoner_Pilgrim_Level12To13_Caravan,
-                EncounterConstants.Commoner_Pilgrim_Level14To15_Caravan,
-                EncounterConstants.Commoner_Pilgrim_Level16To17_Caravan,
-                EncounterConstants.Commoner_Pilgrim_Level18To19_Caravan,
-                EncounterConstants.Commoner_Pilgrim_Level20_Caravan,
-                EncounterConstants.Commoner_Pilgrim_Level2To3_Caravan,
-                EncounterConstants.Commoner_Pilgrim_Level4To5_Caravan,
-                EncounterConstants.Commoner_Pilgrim_Level6To7_Caravan,
-                EncounterConstants.Commoner_Pilgrim_Level8To9_Caravan,
+                EncounterConstants.Commoner_Pilgrim_Level2_Caravan,
+                EncounterConstants.Commoner_Pilgrim_Level3_Caravan,
+                EncounterConstants.Commoner_Pilgrim_Level4_Caravan,
+                EncounterConstants.Commoner_Pilgrim_Level5_Caravan,
+                EncounterConstants.Commoner_Pilgrim_Level6_Caravan,
+                EncounterConstants.Commoner_Pilgrim_Level7_Caravan,
+                EncounterConstants.Commoner_Pilgrim_Level8_Caravan,
+                EncounterConstants.Commoner_Pilgrim_Level9_Caravan,
+                EncounterConstants.Commoner_Pilgrim_Level10_Caravan,
+                EncounterConstants.Commoner_Pilgrim_Level1_CaravanWithLeader,
+                EncounterConstants.Commoner_Pilgrim_Level2_CaravanWithLeader,
+                EncounterConstants.Commoner_Pilgrim_Level3_CaravanWithLeader,
+                EncounterConstants.Commoner_Pilgrim_Level4_CaravanWithLeader,
+                EncounterConstants.Commoner_Pilgrim_Level5_CaravanWithLeader,
+                EncounterConstants.Commoner_Pilgrim_Level6_CaravanWithLeader,
+                EncounterConstants.Commoner_Pilgrim_Level7_CaravanWithLeader,
+                EncounterConstants.Commoner_Pilgrim_Level8_CaravanWithLeader,
+                EncounterConstants.Commoner_Pilgrim_Level9_CaravanWithLeader,
+                EncounterConstants.Commoner_Pilgrim_Level10_CaravanWithLeader,
                 EncounterConstants.Commoner_Herder_Level1_Group,
-                EncounterConstants.Commoner_Herder_Level10To11_Group,
-                EncounterConstants.Commoner_Herder_Level12To13_Group,
-                EncounterConstants.Commoner_Herder_Level14To15_Group,
-                EncounterConstants.Commoner_Herder_Level16To17_Group,
-                EncounterConstants.Commoner_Herder_Level18To19_Group,
+                EncounterConstants.Commoner_Herder_Level10_Group,
+                EncounterConstants.Commoner_Herder_Level11_Group,
+                EncounterConstants.Commoner_Herder_Level12_Group,
+                EncounterConstants.Commoner_Herder_Level13_Group,
+                EncounterConstants.Commoner_Herder_Level14_Group,
+                EncounterConstants.Commoner_Herder_Level15_Group,
+                EncounterConstants.Commoner_Herder_Level16_Group,
+                EncounterConstants.Commoner_Herder_Level17_Group,
+                EncounterConstants.Commoner_Herder_Level18_Group,
+                EncounterConstants.Commoner_Herder_Level19_Group,
                 EncounterConstants.Commoner_Herder_Level20_Group,
-                EncounterConstants.Commoner_Herder_Level2To3_Group,
-                EncounterConstants.Commoner_Herder_Level4To5_Group,
-                EncounterConstants.Commoner_Herder_Level6To7_Group,
-                EncounterConstants.Commoner_Herder_Level8To9_Group,
+                EncounterConstants.Commoner_Herder_Level2_Group,
+                EncounterConstants.Commoner_Herder_Level3_Group,
+                EncounterConstants.Commoner_Herder_Level4_Group,
+                EncounterConstants.Commoner_Herder_Level5_Group,
+                EncounterConstants.Commoner_Herder_Level6_Group,
+                EncounterConstants.Commoner_Herder_Level7_Group,
+                EncounterConstants.Commoner_Herder_Level8_Group,
+                EncounterConstants.Commoner_Herder_Level9_Group,
                 EncounterConstants.Commoner_Farmer_Level1_Group,
-                EncounterConstants.Commoner_Farmer_Level10To11_Group,
-                EncounterConstants.Commoner_Farmer_Level12To13_Group,
-                EncounterConstants.Commoner_Farmer_Level14To15_Group,
-                EncounterConstants.Commoner_Farmer_Level16To17_Group,
-                EncounterConstants.Commoner_Farmer_Level18To19_Group,
+                EncounterConstants.Commoner_Farmer_Level10_Group,
+                EncounterConstants.Commoner_Farmer_Level11_Group,
+                EncounterConstants.Commoner_Farmer_Level12_Group,
+                EncounterConstants.Commoner_Farmer_Level13_Group,
+                EncounterConstants.Commoner_Farmer_Level14_Group,
+                EncounterConstants.Commoner_Farmer_Level15_Group,
+                EncounterConstants.Commoner_Farmer_Level16_Group,
+                EncounterConstants.Commoner_Farmer_Level17_Group,
+                EncounterConstants.Commoner_Farmer_Level18_Group,
+                EncounterConstants.Commoner_Farmer_Level19_Group,
                 EncounterConstants.Commoner_Farmer_Level20_Group,
-                EncounterConstants.Commoner_Farmer_Level2To3_Group,
-                EncounterConstants.Commoner_Farmer_Level4To5_Group,
-                EncounterConstants.Commoner_Farmer_Level6To7_Group,
-                EncounterConstants.Commoner_Farmer_Level8To9_Group,
+                EncounterConstants.Commoner_Farmer_Level2_Group,
+                EncounterConstants.Commoner_Farmer_Level3_Group,
+                EncounterConstants.Commoner_Farmer_Level4_Group,
+                EncounterConstants.Commoner_Farmer_Level5_Group,
+                EncounterConstants.Commoner_Farmer_Level6_Group,
+                EncounterConstants.Commoner_Farmer_Level7_Group,
+                EncounterConstants.Commoner_Farmer_Level8_Group,
+                EncounterConstants.Commoner_Farmer_Level9_Group,
                 EncounterConstants.Commoner_ConstructionWorker_Level1_Crew,
-                EncounterConstants.Commoner_ConstructionWorker_Level10To11_Crew,
-                EncounterConstants.Commoner_ConstructionWorker_Level12To13_Crew,
-                EncounterConstants.Commoner_ConstructionWorker_Level14To15_Crew,
-                EncounterConstants.Commoner_ConstructionWorker_Level16To17_Crew,
-                EncounterConstants.Commoner_ConstructionWorker_Level18To19_Crew,
+                EncounterConstants.Commoner_ConstructionWorker_Level10_Crew,
+                EncounterConstants.Commoner_ConstructionWorker_Level11_Crew,
+                EncounterConstants.Commoner_ConstructionWorker_Level12_Crew,
+                EncounterConstants.Commoner_ConstructionWorker_Level13_Crew,
+                EncounterConstants.Commoner_ConstructionWorker_Level14_Crew,
+                EncounterConstants.Commoner_ConstructionWorker_Level15_Crew,
+                EncounterConstants.Commoner_ConstructionWorker_Level16_Crew,
+                EncounterConstants.Commoner_ConstructionWorker_Level17_Crew,
+                EncounterConstants.Commoner_ConstructionWorker_Level18_Crew,
+                EncounterConstants.Commoner_ConstructionWorker_Level19_Crew,
                 EncounterConstants.Commoner_ConstructionWorker_Level20_Crew,
-                EncounterConstants.Commoner_ConstructionWorker_Level2To3_Crew,
-                EncounterConstants.Commoner_ConstructionWorker_Level4To5_Crew,
-                EncounterConstants.Commoner_ConstructionWorker_Level6To7_Crew,
-                EncounterConstants.Commoner_ConstructionWorker_Level8To9_Crew,
+                EncounterConstants.Commoner_ConstructionWorker_Level2_Crew,
+                EncounterConstants.Commoner_ConstructionWorker_Level3_Crew,
+                EncounterConstants.Commoner_ConstructionWorker_Level4_Crew,
+                EncounterConstants.Commoner_ConstructionWorker_Level5_Crew,
+                EncounterConstants.Commoner_ConstructionWorker_Level6_Crew,
+                EncounterConstants.Commoner_ConstructionWorker_Level7_Crew,
+                EncounterConstants.Commoner_ConstructionWorker_Level8_Crew,
+                EncounterConstants.Commoner_ConstructionWorker_Level9_Crew,
                 EncounterConstants.Commoner_Beggar_Level1_Solitary,
-                EncounterConstants.Commoner_Beggar_Level10To11_Solitary,
-                EncounterConstants.Commoner_Beggar_Level12To13_Solitary,
-                EncounterConstants.Commoner_Beggar_Level14To15_Solitary,
-                EncounterConstants.Commoner_Beggar_Level16To17_Solitary,
-                EncounterConstants.Commoner_Beggar_Level18To19_Solitary,
+                EncounterConstants.Commoner_Beggar_Level10_Solitary,
+                EncounterConstants.Commoner_Beggar_Level11_Solitary,
+                EncounterConstants.Commoner_Beggar_Level12_Solitary,
+                EncounterConstants.Commoner_Beggar_Level13_Solitary,
+                EncounterConstants.Commoner_Beggar_Level14_Solitary,
+                EncounterConstants.Commoner_Beggar_Level15_Solitary,
+                EncounterConstants.Commoner_Beggar_Level16_Solitary,
+                EncounterConstants.Commoner_Beggar_Level17_Solitary,
+                EncounterConstants.Commoner_Beggar_Level18_Solitary,
+                EncounterConstants.Commoner_Beggar_Level19_Solitary,
                 EncounterConstants.Commoner_Beggar_Level20_Solitary,
-                EncounterConstants.Commoner_Beggar_Level2To3_Solitary,
-                EncounterConstants.Commoner_Beggar_Level4To5_Solitary,
-                EncounterConstants.Commoner_Beggar_Level6To7_Solitary,
-                EncounterConstants.Commoner_Beggar_Level8To9_Solitary,
+                EncounterConstants.Commoner_Beggar_Level2_Solitary,
+                EncounterConstants.Commoner_Beggar_Level3_Solitary,
+                EncounterConstants.Commoner_Beggar_Level4_Solitary,
+                EncounterConstants.Commoner_Beggar_Level5_Solitary,
+                EncounterConstants.Commoner_Beggar_Level6_Solitary,
+                EncounterConstants.Commoner_Beggar_Level7_Solitary,
+                EncounterConstants.Commoner_Beggar_Level8_Solitary,
+                EncounterConstants.Commoner_Beggar_Level9_Solitary,
                 EncounterConstants.Character_WarHero_Level11_Solitary,
                 EncounterConstants.Character_WarHero_Level12_Solitary,
                 EncounterConstants.Character_WarHero_Level13_Solitary,
@@ -992,16 +1055,25 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
                 EncounterConstants.Character_StreetPerformer_Level8_Crew,
                 EncounterConstants.Character_StreetPerformer_Level9_Crew,
                 EncounterConstants.Adept_StreetPerformer_Level1_Crew,
-                EncounterConstants.Adept_StreetPerformer_Level10To11_Crew,
-                EncounterConstants.Adept_StreetPerformer_Level12To13_Crew,
-                EncounterConstants.Adept_StreetPerformer_Level14To15_Crew,
-                EncounterConstants.Adept_StreetPerformer_Level16To17_Crew,
-                EncounterConstants.Adept_StreetPerformer_Level18To19_Crew,
+                EncounterConstants.Adept_StreetPerformer_Level10_Crew,
+                EncounterConstants.Adept_StreetPerformer_Level11_Crew,
+                EncounterConstants.Adept_StreetPerformer_Level12_Crew,
+                EncounterConstants.Adept_StreetPerformer_Level13_Crew,
+                EncounterConstants.Adept_StreetPerformer_Level14_Crew,
+                EncounterConstants.Adept_StreetPerformer_Level15_Crew,
+                EncounterConstants.Adept_StreetPerformer_Level16_Crew,
+                EncounterConstants.Adept_StreetPerformer_Level17_Crew,
+                EncounterConstants.Adept_StreetPerformer_Level18_Crew,
+                EncounterConstants.Adept_StreetPerformer_Level19_Crew,
                 EncounterConstants.Adept_StreetPerformer_Level20_Crew,
-                EncounterConstants.Adept_StreetPerformer_Level2To3_Crew,
-                EncounterConstants.Adept_StreetPerformer_Level4To5_Crew,
-                EncounterConstants.Adept_StreetPerformer_Level6To7_Crew,
-                EncounterConstants.Adept_StreetPerformer_Level8To9_Crew,
+                EncounterConstants.Adept_StreetPerformer_Level2_Crew,
+                EncounterConstants.Adept_StreetPerformer_Level3_Crew,
+                EncounterConstants.Adept_StreetPerformer_Level4_Crew,
+                EncounterConstants.Adept_StreetPerformer_Level5_Crew,
+                EncounterConstants.Adept_StreetPerformer_Level6_Crew,
+                EncounterConstants.Adept_StreetPerformer_Level7_Crew,
+                EncounterConstants.Adept_StreetPerformer_Level8_Crew,
+                EncounterConstants.Adept_StreetPerformer_Level9_Crew,
                 EncounterConstants.Character_Sellsword_Level1_Solitary,
                 EncounterConstants.Character_Sellsword_Level10_Solitary,
                 EncounterConstants.Character_Sellsword_Level11_Solitary,
@@ -1053,8 +1125,8 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
                 EncounterConstants.Character_Missionary_Level17_MissionTeam,
                 EncounterConstants.Character_Missionary_Level18_MissionTeam,
                 EncounterConstants.Character_Missionary_Level19_MissionTeam,
-                EncounterConstants.Character_Missionary_Level2_MissionTeam,
                 EncounterConstants.Character_Missionary_Level20_MissionTeam,
+                EncounterConstants.Character_Missionary_Level2_MissionTeam,
                 EncounterConstants.Character_Missionary_Level3_MissionTeam,
                 EncounterConstants.Character_Missionary_Level4_MissionTeam,
                 EncounterConstants.Character_Missionary_Level5_MissionTeam,
@@ -1063,27 +1135,45 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
                 EncounterConstants.Character_Missionary_Level8_MissionTeam,
                 EncounterConstants.Character_Missionary_Level9_MissionTeam,
                 EncounterConstants.Character_Minstrel_Level1_Group,
-                EncounterConstants.Character_Minstrel_Level10To11_Group,
-                EncounterConstants.Character_Minstrel_Level12To13_Group,
-                EncounterConstants.Character_Minstrel_Level14To15_Group,
-                EncounterConstants.Character_Minstrel_Level16To17_Group,
-                EncounterConstants.Character_Minstrel_Level18To19_Group,
+                EncounterConstants.Character_Minstrel_Level10_Group,
+                EncounterConstants.Character_Minstrel_Level11_Group,
+                EncounterConstants.Character_Minstrel_Level12_Group,
+                EncounterConstants.Character_Minstrel_Level13_Group,
+                EncounterConstants.Character_Minstrel_Level14_Group,
+                EncounterConstants.Character_Minstrel_Level15_Group,
+                EncounterConstants.Character_Minstrel_Level16_Group,
+                EncounterConstants.Character_Minstrel_Level17_Group,
+                EncounterConstants.Character_Minstrel_Level18_Group,
+                EncounterConstants.Character_Minstrel_Level19_Group,
                 EncounterConstants.Character_Minstrel_Level20_Group,
-                EncounterConstants.Character_Minstrel_Level2To3_Group,
-                EncounterConstants.Character_Minstrel_Level4To5_Group,
-                EncounterConstants.Character_Minstrel_Level6To7_Group,
-                EncounterConstants.Character_Minstrel_Level8To9_Group,
+                EncounterConstants.Character_Minstrel_Level2_Group,
+                EncounterConstants.Character_Minstrel_Level3_Group,
+                EncounterConstants.Character_Minstrel_Level4_Group,
+                EncounterConstants.Character_Minstrel_Level5_Group,
+                EncounterConstants.Character_Minstrel_Level6_Group,
+                EncounterConstants.Character_Minstrel_Level7_Group,
+                EncounterConstants.Character_Minstrel_Level8_Group,
+                EncounterConstants.Character_Minstrel_Level9_Group,
                 EncounterConstants.Character_Merchant_Level1_Caravan,
-                EncounterConstants.Character_Merchant_Level10To11_Caravan,
-                EncounterConstants.Character_Merchant_Level12To13_Caravan,
-                EncounterConstants.Character_Merchant_Level14To15_Caravan,
-                EncounterConstants.Character_Merchant_Level16To17_Caravan,
-                EncounterConstants.Character_Merchant_Level18To19_Caravan,
+                EncounterConstants.Character_Merchant_Level10_Caravan,
+                EncounterConstants.Character_Merchant_Level11_Caravan,
+                EncounterConstants.Character_Merchant_Level12_Caravan,
+                EncounterConstants.Character_Merchant_Level13_Caravan,
+                EncounterConstants.Character_Merchant_Level14_Caravan,
+                EncounterConstants.Character_Merchant_Level15_Caravan,
+                EncounterConstants.Character_Merchant_Level16_Caravan,
+                EncounterConstants.Character_Merchant_Level17_Caravan,
+                EncounterConstants.Character_Merchant_Level18_Caravan,
+                EncounterConstants.Character_Merchant_Level19_Caravan,
                 EncounterConstants.Character_Merchant_Level20_Caravan,
-                EncounterConstants.Character_Merchant_Level2To3_Caravan,
-                EncounterConstants.Character_Merchant_Level4To5_Caravan,
-                EncounterConstants.Character_Merchant_Level6To7_Caravan,
-                EncounterConstants.Character_Merchant_Level8To9_Caravan,
+                EncounterConstants.Character_Merchant_Level2_Caravan,
+                EncounterConstants.Character_Merchant_Level3_Caravan,
+                EncounterConstants.Character_Merchant_Level4_Caravan,
+                EncounterConstants.Character_Merchant_Level5_Caravan,
+                EncounterConstants.Character_Merchant_Level6_Caravan,
+                EncounterConstants.Character_Merchant_Level7_Caravan,
+                EncounterConstants.Character_Merchant_Level8_Caravan,
+                EncounterConstants.Character_Merchant_Level9_Caravan,
                 EncounterConstants.Character_ContractKiller_Level1_Solitary,
                 EncounterConstants.Character_ContractKiller_Level10_Solitary,
                 EncounterConstants.Character_ContractKiller_Level11_Solitary,
@@ -1425,71 +1515,125 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
                 EncounterConstants.Character_Adventurer_Level19_Party,
                 EncounterConstants.Character_Adventurer_Level20_Party,
                 EncounterConstants.Adept_Doctor_Level1_Solitary,
-                EncounterConstants.Adept_Doctor_Level10To11_Solitary,
-                EncounterConstants.Adept_Doctor_Level12To13_Solitary,
-                EncounterConstants.Adept_Doctor_Level14To15_Solitary,
-                EncounterConstants.Adept_Doctor_Level16To17_Solitary,
-                EncounterConstants.Adept_Doctor_Level18To19_Solitary,
+                EncounterConstants.Adept_Doctor_Level10_Solitary,
+                EncounterConstants.Adept_Doctor_Level11_Solitary,
+                EncounterConstants.Adept_Doctor_Level12_Solitary,
+                EncounterConstants.Adept_Doctor_Level13_Solitary,
+                EncounterConstants.Adept_Doctor_Level14_Solitary,
+                EncounterConstants.Adept_Doctor_Level15_Solitary,
+                EncounterConstants.Adept_Doctor_Level16_Solitary,
+                EncounterConstants.Adept_Doctor_Level17_Solitary,
+                EncounterConstants.Adept_Doctor_Level18_Solitary,
+                EncounterConstants.Adept_Doctor_Level19_Solitary,
                 EncounterConstants.Adept_Doctor_Level20_Solitary,
-                EncounterConstants.Adept_Doctor_Level2To3_Solitary,
-                EncounterConstants.Adept_Doctor_Level4To5_Solitary,
-                EncounterConstants.Adept_Doctor_Level6To7_Solitary,
-                EncounterConstants.Adept_Doctor_Level8To9_Solitary,
+                EncounterConstants.Adept_Doctor_Level2_Solitary,
+                EncounterConstants.Adept_Doctor_Level3_Solitary,
+                EncounterConstants.Adept_Doctor_Level4_Solitary,
+                EncounterConstants.Adept_Doctor_Level5_Solitary,
+                EncounterConstants.Adept_Doctor_Level6_Solitary,
+                EncounterConstants.Adept_Doctor_Level7_Solitary,
+                EncounterConstants.Adept_Doctor_Level8_Solitary,
+                EncounterConstants.Adept_Doctor_Level9_Solitary,
                 EncounterConstants.Adept_Fortuneteller_Level1_Solitary,
-                EncounterConstants.Adept_Fortuneteller_Level10To11_Solitary,
-                EncounterConstants.Adept_Fortuneteller_Level12To13_Solitary,
-                EncounterConstants.Adept_Fortuneteller_Level14To15_Solitary,
-                EncounterConstants.Adept_Fortuneteller_Level16To17_Solitary,
-                EncounterConstants.Adept_Fortuneteller_Level18To19_Solitary,
+                EncounterConstants.Adept_Fortuneteller_Level10_Solitary,
+                EncounterConstants.Adept_Fortuneteller_Level11_Solitary,
+                EncounterConstants.Adept_Fortuneteller_Level12_Solitary,
+                EncounterConstants.Adept_Fortuneteller_Level13_Solitary,
+                EncounterConstants.Adept_Fortuneteller_Level14_Solitary,
+                EncounterConstants.Adept_Fortuneteller_Level15_Solitary,
+                EncounterConstants.Adept_Fortuneteller_Level16_Solitary,
+                EncounterConstants.Adept_Fortuneteller_Level17_Solitary,
+                EncounterConstants.Adept_Fortuneteller_Level18_Solitary,
+                EncounterConstants.Adept_Fortuneteller_Level19_Solitary,
                 EncounterConstants.Adept_Fortuneteller_Level20_Solitary,
-                EncounterConstants.Adept_Fortuneteller_Level2To3_Solitary,
-                EncounterConstants.Adept_Fortuneteller_Level4To5_Solitary,
-                EncounterConstants.Adept_Fortuneteller_Level6To7_Solitary,
-                EncounterConstants.Adept_Fortuneteller_Level8To9_Solitary,
+                EncounterConstants.Adept_Fortuneteller_Level2_Solitary,
+                EncounterConstants.Adept_Fortuneteller_Level3_Solitary,
+                EncounterConstants.Adept_Fortuneteller_Level4_Solitary,
+                EncounterConstants.Adept_Fortuneteller_Level5_Solitary,
+                EncounterConstants.Adept_Fortuneteller_Level6_Solitary,
+                EncounterConstants.Adept_Fortuneteller_Level7_Solitary,
+                EncounterConstants.Adept_Fortuneteller_Level8_Solitary,
+                EncounterConstants.Adept_Fortuneteller_Level9_Solitary,
                 EncounterConstants.Adept_Missionary_Level1_MissionTeam,
-                EncounterConstants.Adept_Missionary_Level10To11_MissionTeam,
-                EncounterConstants.Adept_Missionary_Level12To13_MissionTeam,
-                EncounterConstants.Adept_Missionary_Level14To15_MissionTeam,
-                EncounterConstants.Adept_Missionary_Level16To17_MissionTeam,
-                EncounterConstants.Adept_Missionary_Level18To19_MissionTeam,
+                EncounterConstants.Adept_Missionary_Level10_MissionTeam,
+                EncounterConstants.Adept_Missionary_Level11_MissionTeam,
+                EncounterConstants.Adept_Missionary_Level12_MissionTeam,
+                EncounterConstants.Adept_Missionary_Level13_MissionTeam,
+                EncounterConstants.Adept_Missionary_Level14_MissionTeam,
+                EncounterConstants.Adept_Missionary_Level15_MissionTeam,
+                EncounterConstants.Adept_Missionary_Level16_MissionTeam,
+                EncounterConstants.Adept_Missionary_Level17_MissionTeam,
+                EncounterConstants.Adept_Missionary_Level18_MissionTeam,
+                EncounterConstants.Adept_Missionary_Level19_MissionTeam,
                 EncounterConstants.Adept_Missionary_Level20_MissionTeam,
-                EncounterConstants.Adept_Missionary_Level2To3_MissionTeam,
-                EncounterConstants.Adept_Missionary_Level4To5_MissionTeam,
-                EncounterConstants.Adept_Missionary_Level6To7_MissionTeam,
-                EncounterConstants.Adept_Missionary_Level8To9_MissionTeam,
+                EncounterConstants.Adept_Missionary_Level2_MissionTeam,
+                EncounterConstants.Adept_Missionary_Level3_MissionTeam,
+                EncounterConstants.Adept_Missionary_Level4_MissionTeam,
+                EncounterConstants.Adept_Missionary_Level5_MissionTeam,
+                EncounterConstants.Adept_Missionary_Level6_MissionTeam,
+                EncounterConstants.Adept_Missionary_Level7_MissionTeam,
+                EncounterConstants.Adept_Missionary_Level8_MissionTeam,
+                EncounterConstants.Adept_Missionary_Level9_MissionTeam,
                 EncounterConstants.Aristocrat_BusinessPeople_Level1_Group,
-                EncounterConstants.Aristocrat_BusinessPeople_Level10To11_Group,
-                EncounterConstants.Aristocrat_BusinessPeople_Level12To13_Group,
-                EncounterConstants.Aristocrat_BusinessPeople_Level14To15_Group,
-                EncounterConstants.Aristocrat_BusinessPeople_Level16To17_Group,
-                EncounterConstants.Aristocrat_BusinessPeople_Level18To19_Group,
+                EncounterConstants.Aristocrat_BusinessPeople_Level2_Group,
+                EncounterConstants.Aristocrat_BusinessPeople_Level3_Group,
+                EncounterConstants.Aristocrat_BusinessPeople_Level4_Group,
+                EncounterConstants.Aristocrat_BusinessPeople_Level5_Group,
+                EncounterConstants.Aristocrat_BusinessPeople_Level6_Group,
+                EncounterConstants.Aristocrat_BusinessPeople_Level7_Group,
+                EncounterConstants.Aristocrat_BusinessPeople_Level8_Group,
+                EncounterConstants.Aristocrat_BusinessPeople_Level9_Group,
+                EncounterConstants.Aristocrat_BusinessPeople_Level10_Group,
+                EncounterConstants.Aristocrat_BusinessPeople_Level11_Group,
+                EncounterConstants.Aristocrat_BusinessPeople_Level12_Group,
+                EncounterConstants.Aristocrat_BusinessPeople_Level13_Group,
+                EncounterConstants.Aristocrat_BusinessPeople_Level14_Group,
+                EncounterConstants.Aristocrat_BusinessPeople_Level15_Group,
+                EncounterConstants.Aristocrat_BusinessPeople_Level16_Group,
+                EncounterConstants.Aristocrat_BusinessPeople_Level17_Group,
+                EncounterConstants.Aristocrat_BusinessPeople_Level18_Group,
+                EncounterConstants.Aristocrat_BusinessPeople_Level19_Group,
                 EncounterConstants.Aristocrat_BusinessPeople_Level20_Group,
-                EncounterConstants.Aristocrat_BusinessPeople_Level2To3_Group,
-                EncounterConstants.Aristocrat_BusinessPeople_Level4To5_Group,
-                EncounterConstants.Aristocrat_BusinessPeople_Level6To7_Group,
-                EncounterConstants.Aristocrat_BusinessPeople_Level8To9_Group,
-                EncounterConstants.Aristocrat_Gentry_Level1_WithServants,
-                EncounterConstants.Aristocrat_Gentry_Level10To11_WithServants,
-                EncounterConstants.Aristocrat_Gentry_Level12To13_WithServants,
-                EncounterConstants.Aristocrat_Gentry_Level14To15_WithServants,
-                EncounterConstants.Aristocrat_Gentry_Level16To17_WithServants,
-                EncounterConstants.Aristocrat_Gentry_Level18To19_WithServants,
+                EncounterConstants.Aristocrat_Gentry_Level1,
+                EncounterConstants.Aristocrat_Gentry_Level2,
+                EncounterConstants.Aristocrat_Gentry_Level3,
+                EncounterConstants.Aristocrat_Gentry_Level4,
+                EncounterConstants.Aristocrat_Gentry_Level5,
+                EncounterConstants.Aristocrat_Gentry_Level6_WithServants,
+                EncounterConstants.Aristocrat_Gentry_Level7_WithServants,
+                EncounterConstants.Aristocrat_Gentry_Level8_WithServants,
+                EncounterConstants.Aristocrat_Gentry_Level9_WithServants,
+                EncounterConstants.Aristocrat_Gentry_Level10_WithServants,
+                EncounterConstants.Aristocrat_Gentry_Level11_WithServants,
+                EncounterConstants.Aristocrat_Gentry_Level12_WithServants,
+                EncounterConstants.Aristocrat_Gentry_Level13_WithServants,
+                EncounterConstants.Aristocrat_Gentry_Level14_WithServants,
+                EncounterConstants.Aristocrat_Gentry_Level15_WithServants,
+                EncounterConstants.Aristocrat_Gentry_Level16_WithServants,
+                EncounterConstants.Aristocrat_Gentry_Level17_WithServants,
+                EncounterConstants.Aristocrat_Gentry_Level18_WithServants,
+                EncounterConstants.Aristocrat_Gentry_Level19_WithServants,
                 EncounterConstants.Aristocrat_Gentry_Level20_WithServants,
-                EncounterConstants.Aristocrat_Gentry_Level2To3_WithServants,
-                EncounterConstants.Aristocrat_Gentry_Level4To5_WithServants,
-                EncounterConstants.Aristocrat_Gentry_Level6To7_WithServants,
-                EncounterConstants.Aristocrat_Gentry_Level8To9_WithServants,
                 EncounterConstants.Aristocrat_Politician_Level1_WithAdvisersAndGuards,
-                EncounterConstants.Aristocrat_Politician_Level10To11_WithAdvisersAndGuards,
-                EncounterConstants.Aristocrat_Politician_Level12To13_WithAdvisersAndGuards,
-                EncounterConstants.Aristocrat_Politician_Level14To15_WithAdvisersAndGuards,
-                EncounterConstants.Aristocrat_Politician_Level16To17_WithAdvisersAndGuards,
-                EncounterConstants.Aristocrat_Politician_Level18To19_WithAdvisersAndGuards,
+                EncounterConstants.Aristocrat_Politician_Level2_WithAdvisersAndGuards,
+                EncounterConstants.Aristocrat_Politician_Level3_WithAdvisersAndGuards,
+                EncounterConstants.Aristocrat_Politician_Level4_WithAdvisersAndGuards,
+                EncounterConstants.Aristocrat_Politician_Level5_WithAdvisersAndGuards,
+                EncounterConstants.Aristocrat_Politician_Level6_WithAdvisersAndGuards,
+                EncounterConstants.Aristocrat_Politician_Level7_WithAdvisersAndGuards,
+                EncounterConstants.Aristocrat_Politician_Level8_WithAdvisersAndGuards,
+                EncounterConstants.Aristocrat_Politician_Level9_WithAdvisersAndGuards,
+                EncounterConstants.Aristocrat_Politician_Level10_WithAdvisersAndGuards,
+                EncounterConstants.Aristocrat_Politician_Level11_WithAdvisersAndGuards,
+                EncounterConstants.Aristocrat_Politician_Level12_WithAdvisersAndGuards,
+                EncounterConstants.Aristocrat_Politician_Level13_WithAdvisersAndGuards,
+                EncounterConstants.Aristocrat_Politician_Level14_WithAdvisersAndGuards,
+                EncounterConstants.Aristocrat_Politician_Level15_WithAdvisersAndGuards,
+                EncounterConstants.Aristocrat_Politician_Level16_WithAdvisersAndGuards,
+                EncounterConstants.Aristocrat_Politician_Level17_WithAdvisersAndGuards,
+                EncounterConstants.Aristocrat_Politician_Level18_WithAdvisersAndGuards,
+                EncounterConstants.Aristocrat_Politician_Level19_WithAdvisersAndGuards,
                 EncounterConstants.Aristocrat_Politician_Level20_WithAdvisersAndGuards,
-                EncounterConstants.Aristocrat_Politician_Level2To3_WithAdvisersAndGuards,
-                EncounterConstants.Aristocrat_Politician_Level4To5_WithAdvisersAndGuards,
-                EncounterConstants.Aristocrat_Politician_Level6To7_WithAdvisersAndGuards,
-                EncounterConstants.Aristocrat_Politician_Level8To9_WithAdvisersAndGuards,
                 EncounterConstants.Character_RetiredAdventurer_Level11_Solitary,
                 EncounterConstants.Character_RetiredAdventurer_Level12_Solitary,
                 EncounterConstants.Character_RetiredAdventurer_Level13_Solitary,
@@ -1511,16 +1655,25 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
                 EncounterConstants.Character_Teacher_Level19_WithStudents,
                 EncounterConstants.Character_Teacher_Level20_WithStudents,
                 EncounterConstants.Expert_Artisan_Level1_Solitary,
-                EncounterConstants.Expert_Artisan_Level10To11_Solitary,
-                EncounterConstants.Expert_Artisan_Level12To13_Solitary,
-                EncounterConstants.Expert_Artisan_Level14To15_Solitary,
-                EncounterConstants.Expert_Artisan_Level16To17_Solitary,
-                EncounterConstants.Expert_Artisan_Level18To19_Solitary,
+                EncounterConstants.Expert_Artisan_Level10_Solitary,
+                EncounterConstants.Expert_Artisan_Level11_Solitary,
+                EncounterConstants.Expert_Artisan_Level12_Solitary,
+                EncounterConstants.Expert_Artisan_Level13_Solitary,
+                EncounterConstants.Expert_Artisan_Level14_Solitary,
+                EncounterConstants.Expert_Artisan_Level15_Solitary,
+                EncounterConstants.Expert_Artisan_Level16_Solitary,
+                EncounterConstants.Expert_Artisan_Level17_Solitary,
+                EncounterConstants.Expert_Artisan_Level18_Solitary,
+                EncounterConstants.Expert_Artisan_Level19_Solitary,
                 EncounterConstants.Expert_Artisan_Level20_Solitary,
-                EncounterConstants.Expert_Artisan_Level2To3_Solitary,
-                EncounterConstants.Expert_Artisan_Level4To5_Solitary,
-                EncounterConstants.Expert_Artisan_Level6To7_Solitary,
-                EncounterConstants.Expert_Artisan_Level8To9_Solitary,
+                EncounterConstants.Expert_Artisan_Level2_Solitary,
+                EncounterConstants.Expert_Artisan_Level3_Solitary,
+                EncounterConstants.Expert_Artisan_Level4_Solitary,
+                EncounterConstants.Expert_Artisan_Level5_Solitary,
+                EncounterConstants.Expert_Artisan_Level6_Solitary,
+                EncounterConstants.Expert_Artisan_Level7_Solitary,
+                EncounterConstants.Expert_Artisan_Level8_Solitary,
+                EncounterConstants.Expert_Artisan_Level9_Solitary,
                 EncounterConstants.Local_Level1_Solitary,
                 EncounterConstants.Local_Level1_WithCamel,
                 EncounterConstants.Local_Level1_WithCat,
@@ -1534,71 +1687,136 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
                 EncounterConstants.Local_Level1_WithPony,
                 EncounterConstants.Local_Level1_WithRidingDog,
                 EncounterConstants.Local_Level1_WithWarpony,
-                EncounterConstants.Local_Level10To11_Solitary,
-                EncounterConstants.Local_Level10To11_WithCamel,
-                EncounterConstants.Local_Level10To11_WithCat,
-                EncounterConstants.Local_Level10To11_WithDog,
-                EncounterConstants.Local_Level10To11_WithDonkey,
-                EncounterConstants.Local_Level10To11_WithHeavyHorse,
-                EncounterConstants.Local_Level10To11_WithHeavyWarhorse,
-                EncounterConstants.Local_Level10To11_WithLightHorse,
-                EncounterConstants.Local_Level10To11_WithLightWarhorse,
-                EncounterConstants.Local_Level10To11_WithMule,
-                EncounterConstants.Local_Level10To11_WithPony,
-                EncounterConstants.Local_Level10To11_WithRidingDog,
-                EncounterConstants.Local_Level10To11_WithWarpony,
-                EncounterConstants.Local_Level12To13_Solitary,
-                EncounterConstants.Local_Level12To13_WithCamel,
-                EncounterConstants.Local_Level12To13_WithCat,
-                EncounterConstants.Local_Level12To13_WithDog,
-                EncounterConstants.Local_Level12To13_WithDonkey,
-                EncounterConstants.Local_Level12To13_WithHeavyHorse,
-                EncounterConstants.Local_Level12To13_WithHeavyWarhorse,
-                EncounterConstants.Local_Level12To13_WithLightHorse,
-                EncounterConstants.Local_Level12To13_WithLightWarhorse,
-                EncounterConstants.Local_Level12To13_WithMule,
-                EncounterConstants.Local_Level12To13_WithPony,
-                EncounterConstants.Local_Level12To13_WithRidingDog,
-                EncounterConstants.Local_Level12To13_WithWarpony,
-                EncounterConstants.Local_Level14To15_Solitary,
-                EncounterConstants.Local_Level14To15_WithCamel,
-                EncounterConstants.Local_Level14To15_WithCat,
-                EncounterConstants.Local_Level14To15_WithDog,
-                EncounterConstants.Local_Level14To15_WithDonkey,
-                EncounterConstants.Local_Level14To15_WithHeavyHorse,
-                EncounterConstants.Local_Level14To15_WithHeavyWarhorse,
-                EncounterConstants.Local_Level14To15_WithLightHorse,
-                EncounterConstants.Local_Level14To15_WithLightWarhorse,
-                EncounterConstants.Local_Level14To15_WithMule,
-                EncounterConstants.Local_Level14To15_WithPony,
-                EncounterConstants.Local_Level14To15_WithRidingDog,
-                EncounterConstants.Local_Level14To15_WithWarpony,
-                EncounterConstants.Local_Level16To17_Solitary,
-                EncounterConstants.Local_Level16To17_WithCamel,
-                EncounterConstants.Local_Level16To17_WithCat,
-                EncounterConstants.Local_Level16To17_WithDog,
-                EncounterConstants.Local_Level16To17_WithDonkey,
-                EncounterConstants.Local_Level16To17_WithHeavyHorse,
-                EncounterConstants.Local_Level16To17_WithHeavyWarhorse,
-                EncounterConstants.Local_Level16To17_WithLightHorse,
-                EncounterConstants.Local_Level16To17_WithLightWarhorse,
-                EncounterConstants.Local_Level16To17_WithMule,
-                EncounterConstants.Local_Level16To17_WithPony,
-                EncounterConstants.Local_Level16To17_WithRidingDog,
-                EncounterConstants.Local_Level16To17_WithWarpony,
-                EncounterConstants.Local_Level18To19_Solitary,
-                EncounterConstants.Local_Level18To19_WithCamel,
-                EncounterConstants.Local_Level18To19_WithCat,
-                EncounterConstants.Local_Level18To19_WithDog,
-                EncounterConstants.Local_Level18To19_WithDonkey,
-                EncounterConstants.Local_Level18To19_WithHeavyHorse,
-                EncounterConstants.Local_Level18To19_WithHeavyWarhorse,
-                EncounterConstants.Local_Level18To19_WithLightHorse,
-                EncounterConstants.Local_Level18To19_WithLightWarhorse,
-                EncounterConstants.Local_Level18To19_WithMule,
-                EncounterConstants.Local_Level18To19_WithPony,
-                EncounterConstants.Local_Level18To19_WithRidingDog,
-                EncounterConstants.Local_Level18To19_WithWarpony,
+                EncounterConstants.Local_Level10_Solitary,
+                EncounterConstants.Local_Level10_WithCamel,
+                EncounterConstants.Local_Level10_WithCat,
+                EncounterConstants.Local_Level10_WithDog,
+                EncounterConstants.Local_Level10_WithDonkey,
+                EncounterConstants.Local_Level10_WithHeavyHorse,
+                EncounterConstants.Local_Level10_WithHeavyWarhorse,
+                EncounterConstants.Local_Level10_WithLightHorse,
+                EncounterConstants.Local_Level10_WithLightWarhorse,
+                EncounterConstants.Local_Level10_WithMule,
+                EncounterConstants.Local_Level10_WithPony,
+                EncounterConstants.Local_Level10_WithRidingDog,
+                EncounterConstants.Local_Level10_WithWarpony,
+                EncounterConstants.Local_Level12_Solitary,
+                EncounterConstants.Local_Level12_WithCamel,
+                EncounterConstants.Local_Level12_WithCat,
+                EncounterConstants.Local_Level12_WithDog,
+                EncounterConstants.Local_Level12_WithDonkey,
+                EncounterConstants.Local_Level12_WithHeavyHorse,
+                EncounterConstants.Local_Level12_WithHeavyWarhorse,
+                EncounterConstants.Local_Level12_WithLightHorse,
+                EncounterConstants.Local_Level12_WithLightWarhorse,
+                EncounterConstants.Local_Level12_WithMule,
+                EncounterConstants.Local_Level12_WithPony,
+                EncounterConstants.Local_Level12_WithRidingDog,
+                EncounterConstants.Local_Level12_WithWarpony,
+                EncounterConstants.Local_Level14_Solitary,
+                EncounterConstants.Local_Level14_WithCamel,
+                EncounterConstants.Local_Level14_WithCat,
+                EncounterConstants.Local_Level14_WithDog,
+                EncounterConstants.Local_Level14_WithDonkey,
+                EncounterConstants.Local_Level14_WithHeavyHorse,
+                EncounterConstants.Local_Level14_WithHeavyWarhorse,
+                EncounterConstants.Local_Level14_WithLightHorse,
+                EncounterConstants.Local_Level14_WithLightWarhorse,
+                EncounterConstants.Local_Level14_WithMule,
+                EncounterConstants.Local_Level14_WithPony,
+                EncounterConstants.Local_Level14_WithRidingDog,
+                EncounterConstants.Local_Level14_WithWarpony,
+                EncounterConstants.Local_Level16_Solitary,
+                EncounterConstants.Local_Level16_WithCamel,
+                EncounterConstants.Local_Level16_WithCat,
+                EncounterConstants.Local_Level16_WithDog,
+                EncounterConstants.Local_Level16_WithDonkey,
+                EncounterConstants.Local_Level16_WithHeavyHorse,
+                EncounterConstants.Local_Level16_WithHeavyWarhorse,
+                EncounterConstants.Local_Level16_WithLightHorse,
+                EncounterConstants.Local_Level16_WithLightWarhorse,
+                EncounterConstants.Local_Level16_WithMule,
+                EncounterConstants.Local_Level16_WithPony,
+                EncounterConstants.Local_Level16_WithRidingDog,
+                EncounterConstants.Local_Level16_WithWarpony,
+                EncounterConstants.Local_Level18_Solitary,
+                EncounterConstants.Local_Level18_WithCamel,
+                EncounterConstants.Local_Level18_WithCat,
+                EncounterConstants.Local_Level18_WithDog,
+                EncounterConstants.Local_Level18_WithDonkey,
+                EncounterConstants.Local_Level18_WithHeavyHorse,
+                EncounterConstants.Local_Level18_WithHeavyWarhorse,
+                EncounterConstants.Local_Level18_WithLightHorse,
+                EncounterConstants.Local_Level18_WithLightWarhorse,
+                EncounterConstants.Local_Level18_WithMule,
+                EncounterConstants.Local_Level18_WithPony,
+                EncounterConstants.Local_Level18_WithRidingDog,
+                EncounterConstants.Local_Level18_WithWarpony,
+                EncounterConstants.Local_Level11_Solitary,
+                EncounterConstants.Local_Level11_WithCamel,
+                EncounterConstants.Local_Level11_WithCat,
+                EncounterConstants.Local_Level11_WithDog,
+                EncounterConstants.Local_Level11_WithDonkey,
+                EncounterConstants.Local_Level11_WithHeavyHorse,
+                EncounterConstants.Local_Level11_WithHeavyWarhorse,
+                EncounterConstants.Local_Level11_WithLightHorse,
+                EncounterConstants.Local_Level11_WithLightWarhorse,
+                EncounterConstants.Local_Level11_WithMule,
+                EncounterConstants.Local_Level11_WithPony,
+                EncounterConstants.Local_Level11_WithRidingDog,
+                EncounterConstants.Local_Level11_WithWarpony,
+                EncounterConstants.Local_Level13_Solitary,
+                EncounterConstants.Local_Level13_WithCamel,
+                EncounterConstants.Local_Level13_WithCat,
+                EncounterConstants.Local_Level13_WithDog,
+                EncounterConstants.Local_Level13_WithDonkey,
+                EncounterConstants.Local_Level13_WithHeavyHorse,
+                EncounterConstants.Local_Level13_WithHeavyWarhorse,
+                EncounterConstants.Local_Level13_WithLightHorse,
+                EncounterConstants.Local_Level13_WithLightWarhorse,
+                EncounterConstants.Local_Level13_WithMule,
+                EncounterConstants.Local_Level13_WithPony,
+                EncounterConstants.Local_Level13_WithRidingDog,
+                EncounterConstants.Local_Level13_WithWarpony,
+                EncounterConstants.Local_Level15_Solitary,
+                EncounterConstants.Local_Level15_WithCamel,
+                EncounterConstants.Local_Level15_WithCat,
+                EncounterConstants.Local_Level15_WithDog,
+                EncounterConstants.Local_Level15_WithDonkey,
+                EncounterConstants.Local_Level15_WithHeavyHorse,
+                EncounterConstants.Local_Level15_WithHeavyWarhorse,
+                EncounterConstants.Local_Level15_WithLightHorse,
+                EncounterConstants.Local_Level15_WithLightWarhorse,
+                EncounterConstants.Local_Level15_WithMule,
+                EncounterConstants.Local_Level15_WithPony,
+                EncounterConstants.Local_Level15_WithRidingDog,
+                EncounterConstants.Local_Level15_WithWarpony,
+                EncounterConstants.Local_Level17_Solitary,
+                EncounterConstants.Local_Level17_WithCamel,
+                EncounterConstants.Local_Level17_WithCat,
+                EncounterConstants.Local_Level17_WithDog,
+                EncounterConstants.Local_Level17_WithDonkey,
+                EncounterConstants.Local_Level17_WithHeavyHorse,
+                EncounterConstants.Local_Level17_WithHeavyWarhorse,
+                EncounterConstants.Local_Level17_WithLightHorse,
+                EncounterConstants.Local_Level17_WithLightWarhorse,
+                EncounterConstants.Local_Level17_WithMule,
+                EncounterConstants.Local_Level17_WithPony,
+                EncounterConstants.Local_Level17_WithRidingDog,
+                EncounterConstants.Local_Level17_WithWarpony,
+                EncounterConstants.Local_Level19_Solitary,
+                EncounterConstants.Local_Level19_WithCamel,
+                EncounterConstants.Local_Level19_WithCat,
+                EncounterConstants.Local_Level19_WithDog,
+                EncounterConstants.Local_Level19_WithDonkey,
+                EncounterConstants.Local_Level19_WithHeavyHorse,
+                EncounterConstants.Local_Level19_WithHeavyWarhorse,
+                EncounterConstants.Local_Level19_WithLightHorse,
+                EncounterConstants.Local_Level19_WithLightWarhorse,
+                EncounterConstants.Local_Level19_WithMule,
+                EncounterConstants.Local_Level19_WithPony,
+                EncounterConstants.Local_Level19_WithRidingDog,
+                EncounterConstants.Local_Level19_WithWarpony,
                 EncounterConstants.Local_Level20_Solitary,
                 EncounterConstants.Local_Level20_WithCamel,
                 EncounterConstants.Local_Level20_WithCat,
@@ -1612,115 +1830,203 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
                 EncounterConstants.Local_Level20_WithPony,
                 EncounterConstants.Local_Level20_WithRidingDog,
                 EncounterConstants.Local_Level20_WithWarpony,
-                EncounterConstants.Local_Level2To3_Solitary,
-                EncounterConstants.Local_Level2To3_WithCamel,
-                EncounterConstants.Local_Level2To3_WithCat,
-                EncounterConstants.Local_Level2To3_WithDog,
-                EncounterConstants.Local_Level2To3_WithDonkey,
-                EncounterConstants.Local_Level2To3_WithHeavyHorse,
-                EncounterConstants.Local_Level2To3_WithHeavyWarhorse,
-                EncounterConstants.Local_Level2To3_WithLightHorse,
-                EncounterConstants.Local_Level2To3_WithLightWarhorse,
-                EncounterConstants.Local_Level2To3_WithMule,
-                EncounterConstants.Local_Level2To3_WithPony,
-                EncounterConstants.Local_Level2To3_WithRidingDog,
-                EncounterConstants.Local_Level2To3_WithWarpony,
-                EncounterConstants.Local_Level4To5_Solitary,
-                EncounterConstants.Local_Level4To5_WithCamel,
-                EncounterConstants.Local_Level4To5_WithCat,
-                EncounterConstants.Local_Level4To5_WithDog,
-                EncounterConstants.Local_Level4To5_WithDonkey,
-                EncounterConstants.Local_Level4To5_WithHeavyHorse,
-                EncounterConstants.Local_Level4To5_WithHeavyWarhorse,
-                EncounterConstants.Local_Level4To5_WithLightHorse,
-                EncounterConstants.Local_Level4To5_WithLightWarhorse,
-                EncounterConstants.Local_Level4To5_WithMule,
-                EncounterConstants.Local_Level4To5_WithPony,
-                EncounterConstants.Local_Level4To5_WithRidingDog,
-                EncounterConstants.Local_Level4To5_WithWarpony,
-                EncounterConstants.Local_Level6To7_Solitary,
-                EncounterConstants.Local_Level6To7_WithCamel,
-                EncounterConstants.Local_Level6To7_WithCat,
-                EncounterConstants.Local_Level6To7_WithDog,
-                EncounterConstants.Local_Level6To7_WithDonkey,
-                EncounterConstants.Local_Level6To7_WithHeavyHorse,
-                EncounterConstants.Local_Level6To7_WithHeavyWarhorse,
-                EncounterConstants.Local_Level6To7_WithLightHorse,
-                EncounterConstants.Local_Level6To7_WithLightWarhorse,
-                EncounterConstants.Local_Level6To7_WithMule,
-                EncounterConstants.Local_Level6To7_WithPony,
-                EncounterConstants.Local_Level6To7_WithRidingDog,
-                EncounterConstants.Local_Level6To7_WithWarpony,
-                EncounterConstants.Local_Level8To9_Solitary,
-                EncounterConstants.Local_Level8To9_WithCamel,
-                EncounterConstants.Local_Level8To9_WithCat,
-                EncounterConstants.Local_Level8To9_WithDog,
-                EncounterConstants.Local_Level8To9_WithDonkey,
-                EncounterConstants.Local_Level8To9_WithHeavyHorse,
-                EncounterConstants.Local_Level8To9_WithHeavyWarhorse,
-                EncounterConstants.Local_Level8To9_WithLightHorse,
-                EncounterConstants.Local_Level8To9_WithLightWarhorse,
-                EncounterConstants.Local_Level8To9_WithMule,
-                EncounterConstants.Local_Level8To9_WithPony,
-                EncounterConstants.Local_Level8To9_WithRidingDog,
-                EncounterConstants.Local_Level8To9_WithWarpony,
+                EncounterConstants.Local_Level2_Solitary,
+                EncounterConstants.Local_Level2_WithCamel,
+                EncounterConstants.Local_Level2_WithCat,
+                EncounterConstants.Local_Level2_WithDog,
+                EncounterConstants.Local_Level2_WithDonkey,
+                EncounterConstants.Local_Level2_WithHeavyHorse,
+                EncounterConstants.Local_Level2_WithHeavyWarhorse,
+                EncounterConstants.Local_Level2_WithLightHorse,
+                EncounterConstants.Local_Level2_WithLightWarhorse,
+                EncounterConstants.Local_Level2_WithMule,
+                EncounterConstants.Local_Level2_WithPony,
+                EncounterConstants.Local_Level2_WithRidingDog,
+                EncounterConstants.Local_Level2_WithWarpony,
+                EncounterConstants.Local_Level4_Solitary,
+                EncounterConstants.Local_Level4_WithCamel,
+                EncounterConstants.Local_Level4_WithCat,
+                EncounterConstants.Local_Level4_WithDog,
+                EncounterConstants.Local_Level4_WithDonkey,
+                EncounterConstants.Local_Level4_WithHeavyHorse,
+                EncounterConstants.Local_Level4_WithHeavyWarhorse,
+                EncounterConstants.Local_Level4_WithLightHorse,
+                EncounterConstants.Local_Level4_WithLightWarhorse,
+                EncounterConstants.Local_Level4_WithMule,
+                EncounterConstants.Local_Level4_WithPony,
+                EncounterConstants.Local_Level4_WithRidingDog,
+                EncounterConstants.Local_Level4_WithWarpony,
+                EncounterConstants.Local_Level6_Solitary,
+                EncounterConstants.Local_Level6_WithCamel,
+                EncounterConstants.Local_Level6_WithCat,
+                EncounterConstants.Local_Level6_WithDog,
+                EncounterConstants.Local_Level6_WithDonkey,
+                EncounterConstants.Local_Level6_WithHeavyHorse,
+                EncounterConstants.Local_Level6_WithHeavyWarhorse,
+                EncounterConstants.Local_Level6_WithLightHorse,
+                EncounterConstants.Local_Level6_WithLightWarhorse,
+                EncounterConstants.Local_Level6_WithMule,
+                EncounterConstants.Local_Level6_WithPony,
+                EncounterConstants.Local_Level6_WithRidingDog,
+                EncounterConstants.Local_Level6_WithWarpony,
+                EncounterConstants.Local_Level8_Solitary,
+                EncounterConstants.Local_Level8_WithCamel,
+                EncounterConstants.Local_Level8_WithCat,
+                EncounterConstants.Local_Level8_WithDog,
+                EncounterConstants.Local_Level8_WithDonkey,
+                EncounterConstants.Local_Level8_WithHeavyHorse,
+                EncounterConstants.Local_Level8_WithHeavyWarhorse,
+                EncounterConstants.Local_Level8_WithLightHorse,
+                EncounterConstants.Local_Level8_WithLightWarhorse,
+                EncounterConstants.Local_Level8_WithMule,
+                EncounterConstants.Local_Level8_WithPony,
+                EncounterConstants.Local_Level8_WithRidingDog,
+                EncounterConstants.Local_Level8_WithWarpony,
+                EncounterConstants.Local_Level3_Solitary,
+                EncounterConstants.Local_Level3_WithCamel,
+                EncounterConstants.Local_Level3_WithCat,
+                EncounterConstants.Local_Level3_WithDog,
+                EncounterConstants.Local_Level3_WithDonkey,
+                EncounterConstants.Local_Level3_WithHeavyHorse,
+                EncounterConstants.Local_Level3_WithHeavyWarhorse,
+                EncounterConstants.Local_Level3_WithLightHorse,
+                EncounterConstants.Local_Level3_WithLightWarhorse,
+                EncounterConstants.Local_Level3_WithMule,
+                EncounterConstants.Local_Level3_WithPony,
+                EncounterConstants.Local_Level3_WithRidingDog,
+                EncounterConstants.Local_Level3_WithWarpony,
+                EncounterConstants.Local_Level5_Solitary,
+                EncounterConstants.Local_Level5_WithCamel,
+                EncounterConstants.Local_Level5_WithCat,
+                EncounterConstants.Local_Level5_WithDog,
+                EncounterConstants.Local_Level5_WithDonkey,
+                EncounterConstants.Local_Level5_WithHeavyHorse,
+                EncounterConstants.Local_Level5_WithHeavyWarhorse,
+                EncounterConstants.Local_Level5_WithLightHorse,
+                EncounterConstants.Local_Level5_WithLightWarhorse,
+                EncounterConstants.Local_Level5_WithMule,
+                EncounterConstants.Local_Level5_WithPony,
+                EncounterConstants.Local_Level5_WithRidingDog,
+                EncounterConstants.Local_Level5_WithWarpony,
+                EncounterConstants.Local_Level7_Solitary,
+                EncounterConstants.Local_Level7_WithCamel,
+                EncounterConstants.Local_Level7_WithCat,
+                EncounterConstants.Local_Level7_WithDog,
+                EncounterConstants.Local_Level7_WithDonkey,
+                EncounterConstants.Local_Level7_WithHeavyHorse,
+                EncounterConstants.Local_Level7_WithHeavyWarhorse,
+                EncounterConstants.Local_Level7_WithLightHorse,
+                EncounterConstants.Local_Level7_WithLightWarhorse,
+                EncounterConstants.Local_Level7_WithMule,
+                EncounterConstants.Local_Level7_WithPony,
+                EncounterConstants.Local_Level7_WithRidingDog,
+                EncounterConstants.Local_Level7_WithWarpony,
+                EncounterConstants.Local_Level9_Solitary,
+                EncounterConstants.Local_Level9_WithCamel,
+                EncounterConstants.Local_Level9_WithCat,
+                EncounterConstants.Local_Level9_WithDog,
+                EncounterConstants.Local_Level9_WithDonkey,
+                EncounterConstants.Local_Level9_WithHeavyHorse,
+                EncounterConstants.Local_Level9_WithHeavyWarhorse,
+                EncounterConstants.Local_Level9_WithLightHorse,
+                EncounterConstants.Local_Level9_WithLightWarhorse,
+                EncounterConstants.Local_Level9_WithMule,
+                EncounterConstants.Local_Level9_WithPony,
+                EncounterConstants.Local_Level9_WithRidingDog,
+                EncounterConstants.Local_Level9_WithWarpony,
                 EncounterConstants.Warrior_Bandit_Level1_Gang,
                 EncounterConstants.Warrior_Bandit_Level1_GangWithFighter,
-                EncounterConstants.Warrior_Bandit_Level10To11_Gang,
-                EncounterConstants.Warrior_Bandit_Level10To11_GangWithFighter,
-                EncounterConstants.Warrior_Bandit_Level12To13_Gang,
-                EncounterConstants.Warrior_Bandit_Level12To13_GangWithFighter,
-                EncounterConstants.Warrior_Bandit_Level14To15_Gang,
-                EncounterConstants.Warrior_Bandit_Level14To15_GangWithFighter,
-                EncounterConstants.Warrior_Bandit_Level16To17_Gang,
-                EncounterConstants.Warrior_Bandit_Level16To17_GangWithFighter,
-                EncounterConstants.Warrior_Bandit_Level18To19_Gang,
-                EncounterConstants.Warrior_Bandit_Level18To19_GangWithFighter,
+                EncounterConstants.Warrior_Bandit_Level10_Gang,
+                EncounterConstants.Warrior_Bandit_Level11_Gang,
+                EncounterConstants.Warrior_Bandit_Level12_Gang,
+                EncounterConstants.Warrior_Bandit_Level13_Gang,
+                EncounterConstants.Warrior_Bandit_Level14_Gang,
+                EncounterConstants.Warrior_Bandit_Level15_Gang,
+                EncounterConstants.Warrior_Bandit_Level16_Gang,
+                EncounterConstants.Warrior_Bandit_Level17_Gang,
+                EncounterConstants.Warrior_Bandit_Level18_Gang,
+                EncounterConstants.Warrior_Bandit_Level19_Gang,
+                EncounterConstants.Warrior_Bandit_Level10_GangWithFighter,
+                EncounterConstants.Warrior_Bandit_Level11_GangWithFighter,
+                EncounterConstants.Warrior_Bandit_Level12_GangWithFighter,
+                EncounterConstants.Warrior_Bandit_Level13_GangWithFighter,
+                EncounterConstants.Warrior_Bandit_Level14_GangWithFighter,
+                EncounterConstants.Warrior_Bandit_Level15_GangWithFighter,
+                EncounterConstants.Warrior_Bandit_Level16_GangWithFighter,
+                EncounterConstants.Warrior_Bandit_Level17_GangWithFighter,
+                EncounterConstants.Warrior_Bandit_Level18_GangWithFighter,
+                EncounterConstants.Warrior_Bandit_Level19_GangWithFighter,
                 EncounterConstants.Warrior_Bandit_Level20_GangWithFighter,
-                EncounterConstants.Warrior_Bandit_Level2To3_Gang,
-                EncounterConstants.Warrior_Bandit_Level2To3_GangWithFighter,
-                EncounterConstants.Warrior_Bandit_Level4To5_Gang,
-                EncounterConstants.Warrior_Bandit_Level4To5_GangWithFighter,
-                EncounterConstants.Warrior_Bandit_Level6To7_Gang,
-                EncounterConstants.Warrior_Bandit_Level6To7_GangWithFighter,
-                EncounterConstants.Warrior_Bandit_Level8To9_Gang,
-                EncounterConstants.Warrior_Bandit_Level8To9_GangWithFighter,
+                EncounterConstants.Warrior_Bandit_Level2_Gang,
+                EncounterConstants.Warrior_Bandit_Level3_Gang,
+                EncounterConstants.Warrior_Bandit_Level4_Gang,
+                EncounterConstants.Warrior_Bandit_Level5_Gang,
+                EncounterConstants.Warrior_Bandit_Level6_Gang,
+                EncounterConstants.Warrior_Bandit_Level7_Gang,
+                EncounterConstants.Warrior_Bandit_Level8_Gang,
+                EncounterConstants.Warrior_Bandit_Level9_Gang,
+                EncounterConstants.Warrior_Bandit_Level2_GangWithFighter,
+                EncounterConstants.Warrior_Bandit_Level3_GangWithFighter,
+                EncounterConstants.Warrior_Bandit_Level4_GangWithFighter,
+                EncounterConstants.Warrior_Bandit_Level5_GangWithFighter,
+                EncounterConstants.Warrior_Bandit_Level6_GangWithFighter,
+                EncounterConstants.Warrior_Bandit_Level7_GangWithFighter,
+                EncounterConstants.Warrior_Bandit_Level8_GangWithFighter,
+                EncounterConstants.Warrior_Bandit_Level9_GangWithFighter,
                 EncounterConstants.Warrior_Guard_Level1_Patrol,
-                EncounterConstants.Warrior_Guard_Level1_PatrolWithFighter,
-                EncounterConstants.Warrior_Guard_Level10To11_Patrol,
-                EncounterConstants.Warrior_Guard_Level10To11_PatrolWithFighter,
-                EncounterConstants.Warrior_Guard_Level12To13_Patrol,
-                EncounterConstants.Warrior_Guard_Level12To13_PatrolWithFighter,
-                EncounterConstants.Warrior_Guard_Level14To15_Patrol,
-                EncounterConstants.Warrior_Guard_Level14To15_PatrolWithFighter,
-                EncounterConstants.Warrior_Guard_Level16To17_Patrol,
-                EncounterConstants.Warrior_Guard_Level16To17_PatrolWithFighter,
-                EncounterConstants.Warrior_Guard_Level18To19_Patrol,
-                EncounterConstants.Warrior_Guard_Level18To19_PatrolWithFighter,
-                EncounterConstants.Warrior_Guard_Level20_PatrolWithFighter,
-                EncounterConstants.Warrior_Guard_Level2To3_Patrol,
-                EncounterConstants.Warrior_Guard_Level2To3_PatrolWithFighter,
-                EncounterConstants.Warrior_Guard_Level4To5_Patrol,
-                EncounterConstants.Warrior_Guard_Level4To5_PatrolWithFighter,
-                EncounterConstants.Warrior_Guard_Level6To7_Patrol,
-                EncounterConstants.Warrior_Guard_Level6To7_PatrolWithFighter,
-                EncounterConstants.Warrior_Guard_Level8To9_Patrol,
-                EncounterConstants.Warrior_Guard_Level8To9_PatrolWithFighter,
+                EncounterConstants.Warrior_Guard_Level1_PatrolWithCaptain,
+                EncounterConstants.Warrior_Guard_Level10_Patrol,
+                EncounterConstants.Warrior_Guard_Level10_PatrolWithCaptain,
+                EncounterConstants.Warrior_Guard_Level2_Patrol,
+                EncounterConstants.Warrior_Guard_Level2_PatrolWithCaptain,
+                EncounterConstants.Warrior_Guard_Level4_Patrol,
+                EncounterConstants.Warrior_Guard_Level4_PatrolWithCaptain,
+                EncounterConstants.Warrior_Guard_Level6_Patrol,
+                EncounterConstants.Warrior_Guard_Level6_PatrolWithCaptain,
+                EncounterConstants.Warrior_Guard_Level8_Patrol,
+                EncounterConstants.Warrior_Guard_Level8_PatrolWithCaptain,
+                EncounterConstants.Warrior_Guard_Level3_Patrol,
+                EncounterConstants.Warrior_Guard_Level3_PatrolWithCaptain,
+                EncounterConstants.Warrior_Guard_Level5_Patrol,
+                EncounterConstants.Warrior_Guard_Level5_PatrolWithCaptain,
+                EncounterConstants.Warrior_Guard_Level7_Patrol,
+                EncounterConstants.Warrior_Guard_Level7_PatrolWithCaptain,
+                EncounterConstants.Warrior_Guard_Level9_Patrol,
+                EncounterConstants.Warrior_Guard_Level9_PatrolWithCaptain,
+                EncounterConstants.Warrior_Guard_Level1_PatrolWithLieutenant,
+                EncounterConstants.Warrior_Guard_Level10_PatrolWithLieutenant,
+                EncounterConstants.Warrior_Guard_Level2_PatrolWithLieutenant,
+                EncounterConstants.Warrior_Guard_Level3_PatrolWithLieutenant,
+                EncounterConstants.Warrior_Guard_Level4_PatrolWithLieutenant,
+                EncounterConstants.Warrior_Guard_Level5_PatrolWithLieutenant,
+                EncounterConstants.Warrior_Guard_Level6_PatrolWithLieutenant,
+                EncounterConstants.Warrior_Guard_Level7_PatrolWithLieutenant,
+                EncounterConstants.Warrior_Guard_Level8_PatrolWithLieutenant,
+                EncounterConstants.Warrior_Guard_Level9_PatrolWithLieutenant,
                 EncounterConstants.Horse_Heavy_Solitary,
                 EncounterConstants.Horse_Heavy_War_Solitary,
                 EncounterConstants.Horse_Light_Solitary,
                 EncounterConstants.Horse_Light_War_Solitary,
                 EncounterConstants.Character_Hunter_Level1_HuntingParty,
-                EncounterConstants.Character_Hunter_Level10To11_HuntingParty,
-                EncounterConstants.Character_Hunter_Level12To13_HuntingParty,
-                EncounterConstants.Character_Hunter_Level14To15_HuntingParty,
-                EncounterConstants.Character_Hunter_Level16To17_HuntingParty,
-                EncounterConstants.Character_Hunter_Level18To19_HuntingParty,
+                EncounterConstants.Character_Hunter_Level10_HuntingParty,
+                EncounterConstants.Character_Hunter_Level11_HuntingParty,
+                EncounterConstants.Character_Hunter_Level12_HuntingParty,
+                EncounterConstants.Character_Hunter_Level13_HuntingParty,
+                EncounterConstants.Character_Hunter_Level14_HuntingParty,
+                EncounterConstants.Character_Hunter_Level15_HuntingParty,
+                EncounterConstants.Character_Hunter_Level16_HuntingParty,
+                EncounterConstants.Character_Hunter_Level17_HuntingParty,
+                EncounterConstants.Character_Hunter_Level18_HuntingParty,
+                EncounterConstants.Character_Hunter_Level19_HuntingParty,
                 EncounterConstants.Character_Hunter_Level20_HuntingParty,
-                EncounterConstants.Character_Hunter_Level2To3_HuntingParty,
-                EncounterConstants.Character_Hunter_Level4To5_HuntingParty,
-                EncounterConstants.Character_Hunter_Level6To7_HuntingParty,
-                EncounterConstants.Character_Hunter_Level8To9_HuntingParty,
+                EncounterConstants.Character_Hunter_Level2_HuntingParty,
+                EncounterConstants.Character_Hunter_Level3_HuntingParty,
+                EncounterConstants.Character_Hunter_Level4_HuntingParty,
+                EncounterConstants.Character_Hunter_Level5_HuntingParty,
+                EncounterConstants.Character_Hunter_Level6_HuntingParty,
+                EncounterConstants.Character_Hunter_Level7_HuntingParty,
+                EncounterConstants.Character_Hunter_Level8_HuntingParty,
+                EncounterConstants.Character_Hunter_Level9_HuntingParty,
             };
 
             base.AssertDistinctCollection(EnvironmentConstants.Civilized, encounters);
@@ -1988,16 +2294,25 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
             var encounters = new[]
             {
                 EncounterConstants.Adept_Doctor_Level1_Solitary,
-                EncounterConstants.Adept_Doctor_Level10To11_Solitary,
-                EncounterConstants.Adept_Doctor_Level12To13_Solitary,
-                EncounterConstants.Adept_Doctor_Level14To15_Solitary,
-                EncounterConstants.Adept_Doctor_Level16To17_Solitary,
-                EncounterConstants.Adept_Doctor_Level18To19_Solitary,
+                EncounterConstants.Adept_Doctor_Level10_Solitary,
+                EncounterConstants.Adept_Doctor_Level11_Solitary,
+                EncounterConstants.Adept_Doctor_Level12_Solitary,
+                EncounterConstants.Adept_Doctor_Level13_Solitary,
+                EncounterConstants.Adept_Doctor_Level14_Solitary,
+                EncounterConstants.Adept_Doctor_Level15_Solitary,
+                EncounterConstants.Adept_Doctor_Level16_Solitary,
+                EncounterConstants.Adept_Doctor_Level17_Solitary,
+                EncounterConstants.Adept_Doctor_Level18_Solitary,
+                EncounterConstants.Adept_Doctor_Level19_Solitary,
                 EncounterConstants.Adept_Doctor_Level20_Solitary,
-                EncounterConstants.Adept_Doctor_Level2To3_Solitary,
-                EncounterConstants.Adept_Doctor_Level4To5_Solitary,
-                EncounterConstants.Adept_Doctor_Level6To7_Solitary,
-                EncounterConstants.Adept_Doctor_Level8To9_Solitary,
+                EncounterConstants.Adept_Doctor_Level2_Solitary,
+                EncounterConstants.Adept_Doctor_Level3_Solitary,
+                EncounterConstants.Adept_Doctor_Level4_Solitary,
+                EncounterConstants.Adept_Doctor_Level5_Solitary,
+                EncounterConstants.Adept_Doctor_Level6_Solitary,
+                EncounterConstants.Adept_Doctor_Level7_Solitary,
+                EncounterConstants.Adept_Doctor_Level8_Solitary,
+                EncounterConstants.Adept_Doctor_Level9_Solitary,
                 EncounterConstants.Character_Doctor_Level1_Solitary,
                 EncounterConstants.Character_Doctor_Level10_Solitary,
                 EncounterConstants.Character_Doctor_Level11_Solitary,
@@ -2059,60 +2374,105 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
                 EncounterConstants.Character_Adventurer_Level8_Solitary,
                 EncounterConstants.Character_Adventurer_Level9_Solitary,
                 EncounterConstants.Character_Hunter_Level1_HuntingParty,
-                EncounterConstants.Character_Hunter_Level10To11_HuntingParty,
-                EncounterConstants.Character_Hunter_Level12To13_HuntingParty,
-                EncounterConstants.Character_Hunter_Level14To15_HuntingParty,
-                EncounterConstants.Character_Hunter_Level16To17_HuntingParty,
-                EncounterConstants.Character_Hunter_Level18To19_HuntingParty,
+                EncounterConstants.Character_Hunter_Level10_HuntingParty,
+                EncounterConstants.Character_Hunter_Level11_HuntingParty,
+                EncounterConstants.Character_Hunter_Level12_HuntingParty,
+                EncounterConstants.Character_Hunter_Level13_HuntingParty,
+                EncounterConstants.Character_Hunter_Level14_HuntingParty,
+                EncounterConstants.Character_Hunter_Level15_HuntingParty,
+                EncounterConstants.Character_Hunter_Level16_HuntingParty,
+                EncounterConstants.Character_Hunter_Level17_HuntingParty,
+                EncounterConstants.Character_Hunter_Level18_HuntingParty,
+                EncounterConstants.Character_Hunter_Level19_HuntingParty,
                 EncounterConstants.Character_Hunter_Level20_HuntingParty,
-                EncounterConstants.Character_Hunter_Level2To3_HuntingParty,
-                EncounterConstants.Character_Hunter_Level4To5_HuntingParty,
-                EncounterConstants.Character_Hunter_Level6To7_HuntingParty,
-                EncounterConstants.Character_Hunter_Level8To9_HuntingParty,
-                EncounterConstants.Commoner_Farmer_Level1_Group,
-                EncounterConstants.Commoner_Farmer_Level10To11_Group,
-                EncounterConstants.Commoner_Farmer_Level12To13_Group,
-                EncounterConstants.Commoner_Farmer_Level14To15_Group,
-                EncounterConstants.Commoner_Farmer_Level16To17_Group,
-                EncounterConstants.Commoner_Farmer_Level18To19_Group,
-                EncounterConstants.Commoner_Farmer_Level20_Group,
-                EncounterConstants.Commoner_Farmer_Level2To3_Group,
-                EncounterConstants.Commoner_Farmer_Level4To5_Group,
-                EncounterConstants.Commoner_Farmer_Level6To7_Group,
-                EncounterConstants.Commoner_Farmer_Level8To9_Group,
+                EncounterConstants.Character_Hunter_Level2_HuntingParty,
+                EncounterConstants.Character_Hunter_Level3_HuntingParty,
+                EncounterConstants.Character_Hunter_Level4_HuntingParty,
+                EncounterConstants.Character_Hunter_Level5_HuntingParty,
+                EncounterConstants.Character_Hunter_Level6_HuntingParty,
+                EncounterConstants.Character_Hunter_Level7_HuntingParty,
+                EncounterConstants.Character_Hunter_Level8_HuntingParty,
+                EncounterConstants.Character_Hunter_Level9_HuntingParty,
                 EncounterConstants.Commoner_Herder_Level1_Group,
-                EncounterConstants.Commoner_Herder_Level10To11_Group,
-                EncounterConstants.Commoner_Herder_Level12To13_Group,
-                EncounterConstants.Commoner_Herder_Level14To15_Group,
-                EncounterConstants.Commoner_Herder_Level16To17_Group,
-                EncounterConstants.Commoner_Herder_Level18To19_Group,
+                EncounterConstants.Commoner_Herder_Level10_Group,
+                EncounterConstants.Commoner_Herder_Level11_Group,
+                EncounterConstants.Commoner_Herder_Level12_Group,
+                EncounterConstants.Commoner_Herder_Level13_Group,
+                EncounterConstants.Commoner_Herder_Level14_Group,
+                EncounterConstants.Commoner_Herder_Level15_Group,
+                EncounterConstants.Commoner_Herder_Level16_Group,
+                EncounterConstants.Commoner_Herder_Level17_Group,
+                EncounterConstants.Commoner_Herder_Level18_Group,
+                EncounterConstants.Commoner_Herder_Level19_Group,
                 EncounterConstants.Commoner_Herder_Level20_Group,
-                EncounterConstants.Commoner_Herder_Level2To3_Group,
-                EncounterConstants.Commoner_Herder_Level4To5_Group,
-                EncounterConstants.Commoner_Herder_Level6To7_Group,
-                EncounterConstants.Commoner_Herder_Level8To9_Group,
+                EncounterConstants.Commoner_Herder_Level2_Group,
+                EncounterConstants.Commoner_Herder_Level3_Group,
+                EncounterConstants.Commoner_Herder_Level4_Group,
+                EncounterConstants.Commoner_Herder_Level5_Group,
+                EncounterConstants.Commoner_Herder_Level6_Group,
+                EncounterConstants.Commoner_Herder_Level7_Group,
+                EncounterConstants.Commoner_Herder_Level8_Group,
+                EncounterConstants.Commoner_Herder_Level9_Group,
+                EncounterConstants.Commoner_Farmer_Level1_Group,
+                EncounterConstants.Commoner_Farmer_Level10_Group,
+                EncounterConstants.Commoner_Farmer_Level11_Group,
+                EncounterConstants.Commoner_Farmer_Level12_Group,
+                EncounterConstants.Commoner_Farmer_Level13_Group,
+                EncounterConstants.Commoner_Farmer_Level14_Group,
+                EncounterConstants.Commoner_Farmer_Level15_Group,
+                EncounterConstants.Commoner_Farmer_Level16_Group,
+                EncounterConstants.Commoner_Farmer_Level17_Group,
+                EncounterConstants.Commoner_Farmer_Level18_Group,
+                EncounterConstants.Commoner_Farmer_Level19_Group,
+                EncounterConstants.Commoner_Farmer_Level20_Group,
+                EncounterConstants.Commoner_Farmer_Level2_Group,
+                EncounterConstants.Commoner_Farmer_Level3_Group,
+                EncounterConstants.Commoner_Farmer_Level4_Group,
+                EncounterConstants.Commoner_Farmer_Level5_Group,
+                EncounterConstants.Commoner_Farmer_Level6_Group,
+                EncounterConstants.Commoner_Farmer_Level7_Group,
+                EncounterConstants.Commoner_Farmer_Level8_Group,
+                EncounterConstants.Commoner_Farmer_Level9_Group,
                 EncounterConstants.Commoner_Pilgrim_Level1_Caravan,
-                EncounterConstants.Commoner_Pilgrim_Level10To11_Caravan,
-                EncounterConstants.Commoner_Pilgrim_Level12To13_Caravan,
-                EncounterConstants.Commoner_Pilgrim_Level14To15_Caravan,
-                EncounterConstants.Commoner_Pilgrim_Level16To17_Caravan,
-                EncounterConstants.Commoner_Pilgrim_Level18To19_Caravan,
-                EncounterConstants.Commoner_Pilgrim_Level20_Caravan,
-                EncounterConstants.Commoner_Pilgrim_Level2To3_Caravan,
-                EncounterConstants.Commoner_Pilgrim_Level4To5_Caravan,
-                EncounterConstants.Commoner_Pilgrim_Level6To7_Caravan,
-                EncounterConstants.Commoner_Pilgrim_Level8To9_Caravan,
+                EncounterConstants.Commoner_Pilgrim_Level2_Caravan,
+                EncounterConstants.Commoner_Pilgrim_Level3_Caravan,
+                EncounterConstants.Commoner_Pilgrim_Level4_Caravan,
+                EncounterConstants.Commoner_Pilgrim_Level5_Caravan,
+                EncounterConstants.Commoner_Pilgrim_Level6_Caravan,
+                EncounterConstants.Commoner_Pilgrim_Level7_Caravan,
+                EncounterConstants.Commoner_Pilgrim_Level8_Caravan,
+                EncounterConstants.Commoner_Pilgrim_Level9_Caravan,
+                EncounterConstants.Commoner_Pilgrim_Level10_Caravan,
+                EncounterConstants.Commoner_Pilgrim_Level1_CaravanWithLeader,
+                EncounterConstants.Commoner_Pilgrim_Level2_CaravanWithLeader,
+                EncounterConstants.Commoner_Pilgrim_Level3_CaravanWithLeader,
+                EncounterConstants.Commoner_Pilgrim_Level4_CaravanWithLeader,
+                EncounterConstants.Commoner_Pilgrim_Level5_CaravanWithLeader,
+                EncounterConstants.Commoner_Pilgrim_Level6_CaravanWithLeader,
+                EncounterConstants.Commoner_Pilgrim_Level7_CaravanWithLeader,
+                EncounterConstants.Commoner_Pilgrim_Level8_CaravanWithLeader,
+                EncounterConstants.Commoner_Pilgrim_Level9_CaravanWithLeader,
+                EncounterConstants.Commoner_Pilgrim_Level10_CaravanWithLeader,
                 EncounterConstants.Traveler_Level1_Group,
-                EncounterConstants.Traveler_Level10To11_Group,
-                EncounterConstants.Traveler_Level12To13_Group,
-                EncounterConstants.Traveler_Level14To15_Group,
-                EncounterConstants.Traveler_Level16To17_Group,
-                EncounterConstants.Traveler_Level18To19_Group,
+                EncounterConstants.Traveler_Level2_Group,
+                EncounterConstants.Traveler_Level3_Group,
+                EncounterConstants.Traveler_Level4_Group,
+                EncounterConstants.Traveler_Level5_Group,
+                EncounterConstants.Traveler_Level6_Group,
+                EncounterConstants.Traveler_Level7_Group,
+                EncounterConstants.Traveler_Level8_Group,
+                EncounterConstants.Traveler_Level9_Group,
+                EncounterConstants.Traveler_Level10_Group,
+                EncounterConstants.Traveler_Level11_Group,
+                EncounterConstants.Traveler_Level12_Group,
+                EncounterConstants.Traveler_Level13_Group,
+                EncounterConstants.Traveler_Level14_Group,
+                EncounterConstants.Traveler_Level15_Group,
+                EncounterConstants.Traveler_Level16_Group,
+                EncounterConstants.Traveler_Level17_Group,
+                EncounterConstants.Traveler_Level18_Group,
+                EncounterConstants.Traveler_Level19_Group,
                 EncounterConstants.Traveler_Level20_Group,
-                EncounterConstants.Traveler_Level2To3_Group,
-                EncounterConstants.Traveler_Level4To5_Group,
-                EncounterConstants.Traveler_Level6To7_Group,
-                EncounterConstants.Traveler_Level8To9_Group,
                 EncounterConstants.Rat_Dire_Pack,
                 EncounterConstants.Rat_Dire_Solitary,
                 EncounterConstants.Rat_Plague,
@@ -2121,25 +2481,43 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
                 EncounterConstants.Rat_Swarm_Solitary,
                 EncounterConstants.Warrior_Bandit_Level1_Gang,
                 EncounterConstants.Warrior_Bandit_Level1_GangWithFighter,
-                EncounterConstants.Warrior_Bandit_Level10To11_Gang,
-                EncounterConstants.Warrior_Bandit_Level12To13_Gang,
-                EncounterConstants.Warrior_Bandit_Level14To15_Gang,
-                EncounterConstants.Warrior_Bandit_Level16To17_Gang,
-                EncounterConstants.Warrior_Bandit_Level18To19_Gang,
-                EncounterConstants.Warrior_Bandit_Level10To11_GangWithFighter,
-                EncounterConstants.Warrior_Bandit_Level12To13_GangWithFighter,
-                EncounterConstants.Warrior_Bandit_Level14To15_GangWithFighter,
-                EncounterConstants.Warrior_Bandit_Level16To17_GangWithFighter,
-                EncounterConstants.Warrior_Bandit_Level18To19_GangWithFighter,
+                EncounterConstants.Warrior_Bandit_Level10_Gang,
+                EncounterConstants.Warrior_Bandit_Level11_Gang,
+                EncounterConstants.Warrior_Bandit_Level12_Gang,
+                EncounterConstants.Warrior_Bandit_Level13_Gang,
+                EncounterConstants.Warrior_Bandit_Level14_Gang,
+                EncounterConstants.Warrior_Bandit_Level15_Gang,
+                EncounterConstants.Warrior_Bandit_Level16_Gang,
+                EncounterConstants.Warrior_Bandit_Level17_Gang,
+                EncounterConstants.Warrior_Bandit_Level18_Gang,
+                EncounterConstants.Warrior_Bandit_Level19_Gang,
+                EncounterConstants.Warrior_Bandit_Level10_GangWithFighter,
+                EncounterConstants.Warrior_Bandit_Level11_GangWithFighter,
+                EncounterConstants.Warrior_Bandit_Level12_GangWithFighter,
+                EncounterConstants.Warrior_Bandit_Level13_GangWithFighter,
+                EncounterConstants.Warrior_Bandit_Level14_GangWithFighter,
+                EncounterConstants.Warrior_Bandit_Level15_GangWithFighter,
+                EncounterConstants.Warrior_Bandit_Level16_GangWithFighter,
+                EncounterConstants.Warrior_Bandit_Level17_GangWithFighter,
+                EncounterConstants.Warrior_Bandit_Level18_GangWithFighter,
+                EncounterConstants.Warrior_Bandit_Level19_GangWithFighter,
                 EncounterConstants.Warrior_Bandit_Level20_GangWithFighter,
-                EncounterConstants.Warrior_Bandit_Level2To3_Gang,
-                EncounterConstants.Warrior_Bandit_Level4To5_Gang,
-                EncounterConstants.Warrior_Bandit_Level6To7_Gang,
-                EncounterConstants.Warrior_Bandit_Level8To9_Gang,
-                EncounterConstants.Warrior_Bandit_Level2To3_GangWithFighter,
-                EncounterConstants.Warrior_Bandit_Level4To5_GangWithFighter,
-                EncounterConstants.Warrior_Bandit_Level6To7_GangWithFighter,
-                EncounterConstants.Warrior_Bandit_Level8To9_GangWithFighter,
+                EncounterConstants.Warrior_Bandit_Level2_Gang,
+                EncounterConstants.Warrior_Bandit_Level3_Gang,
+                EncounterConstants.Warrior_Bandit_Level4_Gang,
+                EncounterConstants.Warrior_Bandit_Level5_Gang,
+                EncounterConstants.Warrior_Bandit_Level6_Gang,
+                EncounterConstants.Warrior_Bandit_Level7_Gang,
+                EncounterConstants.Warrior_Bandit_Level8_Gang,
+                EncounterConstants.Warrior_Bandit_Level9_Gang,
+                EncounterConstants.Warrior_Bandit_Level2_GangWithFighter,
+                EncounterConstants.Warrior_Bandit_Level3_GangWithFighter,
+                EncounterConstants.Warrior_Bandit_Level4_GangWithFighter,
+                EncounterConstants.Warrior_Bandit_Level5_GangWithFighter,
+                EncounterConstants.Warrior_Bandit_Level6_GangWithFighter,
+                EncounterConstants.Warrior_Bandit_Level7_GangWithFighter,
+                EncounterConstants.Warrior_Bandit_Level8_GangWithFighter,
+                EncounterConstants.Warrior_Bandit_Level9_GangWithFighter,
                 EncounterConstants.Character_AnimalTrainer_Level1_WithCamel,
                 EncounterConstants.Character_AnimalTrainer_Level1_WithCat,
                 EncounterConstants.Character_AnimalTrainer_Level1_WithDog,
@@ -2496,37 +2874,55 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
                 EncounterConstants.Wizard_FamousResearcher_Level20_WithShieldGuardian,
                 EncounterConstants.Wizard_FamousResearcher_Level20_WithStoneGolem,
                 EncounterConstants.Adept_Fortuneteller_Level1_Solitary,
-                EncounterConstants.Adept_Fortuneteller_Level10To11_Solitary,
-                EncounterConstants.Adept_Fortuneteller_Level12To13_Solitary,
-                EncounterConstants.Adept_Fortuneteller_Level14To15_Solitary,
-                EncounterConstants.Adept_Fortuneteller_Level16To17_Solitary,
-                EncounterConstants.Adept_Fortuneteller_Level18To19_Solitary,
+                EncounterConstants.Adept_Fortuneteller_Level10_Solitary,
+                EncounterConstants.Adept_Fortuneteller_Level11_Solitary,
+                EncounterConstants.Adept_Fortuneteller_Level12_Solitary,
+                EncounterConstants.Adept_Fortuneteller_Level13_Solitary,
+                EncounterConstants.Adept_Fortuneteller_Level14_Solitary,
+                EncounterConstants.Adept_Fortuneteller_Level15_Solitary,
+                EncounterConstants.Adept_Fortuneteller_Level16_Solitary,
+                EncounterConstants.Adept_Fortuneteller_Level17_Solitary,
+                EncounterConstants.Adept_Fortuneteller_Level18_Solitary,
+                EncounterConstants.Adept_Fortuneteller_Level19_Solitary,
                 EncounterConstants.Adept_Fortuneteller_Level20_Solitary,
-                EncounterConstants.Adept_Fortuneteller_Level2To3_Solitary,
-                EncounterConstants.Adept_Fortuneteller_Level4To5_Solitary,
-                EncounterConstants.Adept_Fortuneteller_Level6To7_Solitary,
-                EncounterConstants.Adept_Fortuneteller_Level8To9_Solitary,
+                EncounterConstants.Adept_Fortuneteller_Level2_Solitary,
+                EncounterConstants.Adept_Fortuneteller_Level3_Solitary,
+                EncounterConstants.Adept_Fortuneteller_Level4_Solitary,
+                EncounterConstants.Adept_Fortuneteller_Level5_Solitary,
+                EncounterConstants.Adept_Fortuneteller_Level6_Solitary,
+                EncounterConstants.Adept_Fortuneteller_Level7_Solitary,
+                EncounterConstants.Adept_Fortuneteller_Level8_Solitary,
+                EncounterConstants.Adept_Fortuneteller_Level9_Solitary,
                 EncounterConstants.Warrior_Guard_Level1_Patrol,
-                EncounterConstants.Warrior_Guard_Level10To11_Patrol,
-                EncounterConstants.Warrior_Guard_Level12To13_Patrol,
-                EncounterConstants.Warrior_Guard_Level14To15_Patrol,
-                EncounterConstants.Warrior_Guard_Level16To17_Patrol,
-                EncounterConstants.Warrior_Guard_Level18To19_Patrol,
-                EncounterConstants.Warrior_Guard_Level20_PatrolWithFighter,
-                EncounterConstants.Warrior_Guard_Level2To3_Patrol,
-                EncounterConstants.Warrior_Guard_Level4To5_Patrol,
-                EncounterConstants.Warrior_Guard_Level6To7_Patrol,
-                EncounterConstants.Warrior_Guard_Level8To9_Patrol,
-                EncounterConstants.Warrior_Guard_Level1_PatrolWithFighter,
-                EncounterConstants.Warrior_Guard_Level10To11_PatrolWithFighter,
-                EncounterConstants.Warrior_Guard_Level12To13_PatrolWithFighter,
-                EncounterConstants.Warrior_Guard_Level14To15_PatrolWithFighter,
-                EncounterConstants.Warrior_Guard_Level16To17_PatrolWithFighter,
-                EncounterConstants.Warrior_Guard_Level18To19_PatrolWithFighter,
-                EncounterConstants.Warrior_Guard_Level2To3_PatrolWithFighter,
-                EncounterConstants.Warrior_Guard_Level4To5_PatrolWithFighter,
-                EncounterConstants.Warrior_Guard_Level6To7_PatrolWithFighter,
-                EncounterConstants.Warrior_Guard_Level8To9_PatrolWithFighter,
+                EncounterConstants.Warrior_Guard_Level10_Patrol,
+                EncounterConstants.Warrior_Guard_Level2_Patrol,
+                EncounterConstants.Warrior_Guard_Level3_Patrol,
+                EncounterConstants.Warrior_Guard_Level4_Patrol,
+                EncounterConstants.Warrior_Guard_Level5_Patrol,
+                EncounterConstants.Warrior_Guard_Level6_Patrol,
+                EncounterConstants.Warrior_Guard_Level7_Patrol,
+                EncounterConstants.Warrior_Guard_Level8_Patrol,
+                EncounterConstants.Warrior_Guard_Level9_Patrol,
+                EncounterConstants.Warrior_Guard_Level1_PatrolWithLieutenant,
+                EncounterConstants.Warrior_Guard_Level10_PatrolWithLieutenant,
+                EncounterConstants.Warrior_Guard_Level2_PatrolWithLieutenant,
+                EncounterConstants.Warrior_Guard_Level3_PatrolWithLieutenant,
+                EncounterConstants.Warrior_Guard_Level4_PatrolWithLieutenant,
+                EncounterConstants.Warrior_Guard_Level5_PatrolWithLieutenant,
+                EncounterConstants.Warrior_Guard_Level6_PatrolWithLieutenant,
+                EncounterConstants.Warrior_Guard_Level7_PatrolWithLieutenant,
+                EncounterConstants.Warrior_Guard_Level8_PatrolWithLieutenant,
+                EncounterConstants.Warrior_Guard_Level9_PatrolWithLieutenant,
+                EncounterConstants.Warrior_Guard_Level1_PatrolWithCaptain,
+                EncounterConstants.Warrior_Guard_Level10_PatrolWithCaptain,
+                EncounterConstants.Warrior_Guard_Level2_PatrolWithCaptain,
+                EncounterConstants.Warrior_Guard_Level3_PatrolWithCaptain,
+                EncounterConstants.Warrior_Guard_Level4_PatrolWithCaptain,
+                EncounterConstants.Warrior_Guard_Level5_PatrolWithCaptain,
+                EncounterConstants.Warrior_Guard_Level6_PatrolWithCaptain,
+                EncounterConstants.Warrior_Guard_Level7_PatrolWithCaptain,
+                EncounterConstants.Warrior_Guard_Level8_PatrolWithCaptain,
+                EncounterConstants.Warrior_Guard_Level9_PatrolWithCaptain,
                 EncounterConstants.Character_ContractKiller_Level1_Solitary,
                 EncounterConstants.Character_ContractKiller_Level2_Solitary,
                 EncounterConstants.Character_ContractKiller_Level3_Solitary,
@@ -2548,38 +2944,65 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
                 EncounterConstants.Character_ContractKiller_Level19_Solitary,
                 EncounterConstants.Character_ContractKiller_Level20_Solitary,
                 EncounterConstants.Character_Merchant_Level1_Caravan,
-                EncounterConstants.Character_Merchant_Level10To11_Caravan,
-                EncounterConstants.Character_Merchant_Level12To13_Caravan,
-                EncounterConstants.Character_Merchant_Level14To15_Caravan,
-                EncounterConstants.Character_Merchant_Level16To17_Caravan,
-                EncounterConstants.Character_Merchant_Level18To19_Caravan,
+                EncounterConstants.Character_Merchant_Level10_Caravan,
+                EncounterConstants.Character_Merchant_Level11_Caravan,
+                EncounterConstants.Character_Merchant_Level12_Caravan,
+                EncounterConstants.Character_Merchant_Level13_Caravan,
+                EncounterConstants.Character_Merchant_Level14_Caravan,
+                EncounterConstants.Character_Merchant_Level15_Caravan,
+                EncounterConstants.Character_Merchant_Level16_Caravan,
+                EncounterConstants.Character_Merchant_Level17_Caravan,
+                EncounterConstants.Character_Merchant_Level18_Caravan,
+                EncounterConstants.Character_Merchant_Level19_Caravan,
                 EncounterConstants.Character_Merchant_Level20_Caravan,
-                EncounterConstants.Character_Merchant_Level2To3_Caravan,
-                EncounterConstants.Character_Merchant_Level4To5_Caravan,
-                EncounterConstants.Character_Merchant_Level6To7_Caravan,
-                EncounterConstants.Character_Merchant_Level8To9_Caravan,
+                EncounterConstants.Character_Merchant_Level2_Caravan,
+                EncounterConstants.Character_Merchant_Level3_Caravan,
+                EncounterConstants.Character_Merchant_Level4_Caravan,
+                EncounterConstants.Character_Merchant_Level5_Caravan,
+                EncounterConstants.Character_Merchant_Level6_Caravan,
+                EncounterConstants.Character_Merchant_Level7_Caravan,
+                EncounterConstants.Character_Merchant_Level8_Caravan,
+                EncounterConstants.Character_Merchant_Level9_Caravan,
                 EncounterConstants.Character_Minstrel_Level1_Group,
-                EncounterConstants.Character_Minstrel_Level10To11_Group,
-                EncounterConstants.Character_Minstrel_Level12To13_Group,
-                EncounterConstants.Character_Minstrel_Level14To15_Group,
-                EncounterConstants.Character_Minstrel_Level16To17_Group,
-                EncounterConstants.Character_Minstrel_Level18To19_Group,
+                EncounterConstants.Character_Minstrel_Level10_Group,
+                EncounterConstants.Character_Minstrel_Level11_Group,
+                EncounterConstants.Character_Minstrel_Level12_Group,
+                EncounterConstants.Character_Minstrel_Level13_Group,
+                EncounterConstants.Character_Minstrel_Level14_Group,
+                EncounterConstants.Character_Minstrel_Level15_Group,
+                EncounterConstants.Character_Minstrel_Level16_Group,
+                EncounterConstants.Character_Minstrel_Level17_Group,
+                EncounterConstants.Character_Minstrel_Level18_Group,
+                EncounterConstants.Character_Minstrel_Level19_Group,
                 EncounterConstants.Character_Minstrel_Level20_Group,
-                EncounterConstants.Character_Minstrel_Level2To3_Group,
-                EncounterConstants.Character_Minstrel_Level4To5_Group,
-                EncounterConstants.Character_Minstrel_Level6To7_Group,
-                EncounterConstants.Character_Minstrel_Level8To9_Group,
+                EncounterConstants.Character_Minstrel_Level2_Group,
+                EncounterConstants.Character_Minstrel_Level3_Group,
+                EncounterConstants.Character_Minstrel_Level4_Group,
+                EncounterConstants.Character_Minstrel_Level5_Group,
+                EncounterConstants.Character_Minstrel_Level6_Group,
+                EncounterConstants.Character_Minstrel_Level7_Group,
+                EncounterConstants.Character_Minstrel_Level8_Group,
+                EncounterConstants.Character_Minstrel_Level9_Group,
                 EncounterConstants.Adept_Missionary_Level1_MissionTeam,
-                EncounterConstants.Adept_Missionary_Level10To11_MissionTeam,
-                EncounterConstants.Adept_Missionary_Level12To13_MissionTeam,
-                EncounterConstants.Adept_Missionary_Level14To15_MissionTeam,
-                EncounterConstants.Adept_Missionary_Level16To17_MissionTeam,
-                EncounterConstants.Adept_Missionary_Level18To19_MissionTeam,
+                EncounterConstants.Adept_Missionary_Level10_MissionTeam,
+                EncounterConstants.Adept_Missionary_Level11_MissionTeam,
+                EncounterConstants.Adept_Missionary_Level12_MissionTeam,
+                EncounterConstants.Adept_Missionary_Level13_MissionTeam,
+                EncounterConstants.Adept_Missionary_Level14_MissionTeam,
+                EncounterConstants.Adept_Missionary_Level15_MissionTeam,
+                EncounterConstants.Adept_Missionary_Level16_MissionTeam,
+                EncounterConstants.Adept_Missionary_Level17_MissionTeam,
+                EncounterConstants.Adept_Missionary_Level18_MissionTeam,
+                EncounterConstants.Adept_Missionary_Level19_MissionTeam,
                 EncounterConstants.Adept_Missionary_Level20_MissionTeam,
-                EncounterConstants.Adept_Missionary_Level2To3_MissionTeam,
-                EncounterConstants.Adept_Missionary_Level4To5_MissionTeam,
-                EncounterConstants.Adept_Missionary_Level6To7_MissionTeam,
-                EncounterConstants.Adept_Missionary_Level8To9_MissionTeam,
+                EncounterConstants.Adept_Missionary_Level2_MissionTeam,
+                EncounterConstants.Adept_Missionary_Level3_MissionTeam,
+                EncounterConstants.Adept_Missionary_Level4_MissionTeam,
+                EncounterConstants.Adept_Missionary_Level5_MissionTeam,
+                EncounterConstants.Adept_Missionary_Level6_MissionTeam,
+                EncounterConstants.Adept_Missionary_Level7_MissionTeam,
+                EncounterConstants.Adept_Missionary_Level8_MissionTeam,
+                EncounterConstants.Adept_Missionary_Level9_MissionTeam,
                 EncounterConstants.Character_Missionary_Level1_MissionTeam,
                 EncounterConstants.Character_Missionary_Level2_MissionTeam,
                 EncounterConstants.Character_Missionary_Level3_MissionTeam,
@@ -3716,3309 +4139,3741 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.EncounterGroups
             base.AssertDistinctCollection(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains, creatures);
         }
 
-        [TestCase(EncounterConstants.Aboleth_Brood, EnvironmentConstants.Underground + EnvironmentConstants.Aquatic)]
-        [TestCase(EncounterConstants.Aboleth_Mage_Solitary, EnvironmentConstants.Underground + EnvironmentConstants.Aquatic)]
-        [TestCase(EncounterConstants.Aboleth_SlaverBrood, EnvironmentConstants.Underground + EnvironmentConstants.Aquatic)]
-        [TestCase(EncounterConstants.Aboleth_Solitary, EnvironmentConstants.Underground + EnvironmentConstants.Aquatic)]
-        [TestCase(EncounterConstants.Achaierai_Flock, EnvironmentConstants.Plane_Lawful)]
-        [TestCase(EncounterConstants.Achaierai_Solitary, EnvironmentConstants.Plane_Lawful)]
-        [TestCase(EncounterConstants.Allip_Solitary, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.AstralDeva_Pair, EnvironmentConstants.Plane_Good)]
-        [TestCase(EncounterConstants.AstralDeva_Solitary, EnvironmentConstants.Plane_Good)]
-        [TestCase(EncounterConstants.AstralDeva_Squad, EnvironmentConstants.Plane_Good)]
-        [TestCase(EncounterConstants.Planetar_Pair, EnvironmentConstants.Plane_Good)]
-        [TestCase(EncounterConstants.Planetar_Solitary, EnvironmentConstants.Plane_Good)]
-        [TestCase(EncounterConstants.Solar_Pair, EnvironmentConstants.Plane_Good)]
-        [TestCase(EncounterConstants.Solar_Solitary, EnvironmentConstants.Plane_Good)]
-        [TestCase(EncounterConstants.AnimatedObject_Colossal_Solitary, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.AnimatedObject_Gargantuan_Solitary, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.AnimatedObject_Huge_Solitary, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.AnimatedObject_Large_Solitary, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.AnimatedObject_Medium_Solitary, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.AnimatedObject_Small_Pair, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.AnimatedObject_Tiny_Group, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Ankheg_Cluster, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Ankheg_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Aranea_Colony, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Aranea_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.LanternArchon_Pair, EnvironmentConstants.Plane_LawfulGood)]
-        [TestCase(EncounterConstants.LanternArchon_Solitary, EnvironmentConstants.Plane_LawfulGood)]
-        [TestCase(EncounterConstants.LanternArchon_Squad, EnvironmentConstants.Plane_LawfulGood)]
-        [TestCase(EncounterConstants.HoundArchon_Hero_Solitary, EnvironmentConstants.Plane_LawfulGood)]
-        [TestCase(EncounterConstants.HoundArchon_Hero_WithDragon, EnvironmentConstants.Plane_LawfulGood)]
-        [TestCase(EncounterConstants.HoundArchon_Pair, EnvironmentConstants.Plane_LawfulGood)]
-        [TestCase(EncounterConstants.HoundArchon_Solitary, EnvironmentConstants.Plane_LawfulGood)]
-        [TestCase(EncounterConstants.HoundArchon_Squad, EnvironmentConstants.Plane_LawfulGood)]
-        [TestCase(EncounterConstants.TrumpetArchon_Pair, EnvironmentConstants.Plane_LawfulGood)]
-        [TestCase(EncounterConstants.TrumpetArchon_Solitary, EnvironmentConstants.Plane_LawfulGood)]
-        [TestCase(EncounterConstants.TrumpetArchon_Squad, EnvironmentConstants.Plane_LawfulGood)]
-        [TestCase(EncounterConstants.Arrowhawk_Adult_Clutch, EnvironmentConstants.Plane_Air)]
-        [TestCase(EncounterConstants.Arrowhawk_Adult_Solitary, EnvironmentConstants.Plane_Air)]
-        [TestCase(EncounterConstants.Arrowhawk_Elder_Clutch, EnvironmentConstants.Plane_Air)]
-        [TestCase(EncounterConstants.Arrowhawk_Elder_Solitary, EnvironmentConstants.Plane_Air)]
-        [TestCase(EncounterConstants.Arrowhawk_Juvenile_Clutch, EnvironmentConstants.Plane_Air)]
-        [TestCase(EncounterConstants.Arrowhawk_Juvenile_Solitary, EnvironmentConstants.Plane_Air)]
-        [TestCase(EncounterConstants.AssassinVine_Patch, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.AssassinVine_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Athach_Gang, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Athach_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Athach_Tribe, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Avoral_Pair, EnvironmentConstants.Plane_Good)]
-        [TestCase(EncounterConstants.Avoral_Solitary, EnvironmentConstants.Plane_Good)]
-        [TestCase(EncounterConstants.Avoral_Squad, EnvironmentConstants.Plane_Good)]
-        [TestCase(EncounterConstants.Azer_Clan, EnvironmentConstants.Plane_Fire)]
-        [TestCase(EncounterConstants.Azer_Pair, EnvironmentConstants.Plane_Fire)]
-        [TestCase(EncounterConstants.Azer_Solitary, EnvironmentConstants.Plane_Fire)]
-        [TestCase(EncounterConstants.Azer_Squad, EnvironmentConstants.Plane_Fire)]
-        [TestCase(EncounterConstants.Azer_Team, EnvironmentConstants.Plane_Fire)]
-        [TestCase(EncounterConstants.Barghest_Greater_Pack, EnvironmentConstants.Plane_Evil)]
-        [TestCase(EncounterConstants.Barghest_Greater_Solitary, EnvironmentConstants.Plane_Evil)]
-        [TestCase(EncounterConstants.Barghest_Pack, EnvironmentConstants.Plane_Evil)]
-        [TestCase(EncounterConstants.Barghest_Solitary, EnvironmentConstants.Plane_Evil)]
-        [TestCase(EncounterConstants.Basilisk_Colony, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Basilisk_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Basilisk_AbyssalGreater_Colony, EnvironmentConstants.Plane_ChaoticEvil)]
-        [TestCase(EncounterConstants.Basilisk_AbyssalGreater_Solitary, EnvironmentConstants.Plane_ChaoticEvil)]
-        [TestCase(EncounterConstants.Behir_Pair, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Behir_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Belker_Clutch, EnvironmentConstants.Plane_Air)]
-        [TestCase(EncounterConstants.Belker_Pair, EnvironmentConstants.Plane_Air)]
-        [TestCase(EncounterConstants.Belker_Solitary, EnvironmentConstants.Plane_Air)]
-        [TestCase(EncounterConstants.BlinkDog_Pack, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.BlinkDog_Pair, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.BlinkDog_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Bodak_Gang, EnvironmentConstants.Plane_ChaoticEvil)]
-        [TestCase(EncounterConstants.Bodak_Solitary, EnvironmentConstants.Plane_ChaoticEvil)]
-        [TestCase(EncounterConstants.Bralani_Pair, EnvironmentConstants.Plane_ChaoticGood)]
-        [TestCase(EncounterConstants.Bralani_Solitary, EnvironmentConstants.Plane_ChaoticGood)]
-        [TestCase(EncounterConstants.Bralani_Squad, EnvironmentConstants.Plane_ChaoticGood)]
-        [TestCase(EncounterConstants.Bugbear_Gang, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Bugbear_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Bugbear_Tribe, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Bulette_Pair, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Bulette_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Badger_Celestial_Cete, EnvironmentConstants.Plane_Good)]
-        [TestCase(EncounterConstants.Badger_Celestial_Pair, EnvironmentConstants.Plane_Good)]
-        [TestCase(EncounterConstants.Badger_Celestial_Solitary, EnvironmentConstants.Plane_Good)]
-        [TestCase(EncounterConstants.Dog_Celestial_Pack, EnvironmentConstants.Plane_Good)]
-        [TestCase(EncounterConstants.Dog_Celestial_Solitary, EnvironmentConstants.Plane_Good)]
-        [TestCase(EncounterConstants.FireBeetle_Giant_Celestial_Cluster, EnvironmentConstants.Plane_Good)]
-        [TestCase(EncounterConstants.FireBeetle_Giant_Celestial_Colony, EnvironmentConstants.Plane_Good)]
-        [TestCase(EncounterConstants.Monkey_Celestial_Troop, EnvironmentConstants.Plane_Good)]
-        [TestCase(EncounterConstants.Owl_Celestial_Solitary, EnvironmentConstants.Plane_Good)]
-        [TestCase(EncounterConstants.Porpoise_Celestial_Pair, EnvironmentConstants.Plane_Good)]
-        [TestCase(EncounterConstants.Porpoise_Celestial_School, EnvironmentConstants.Plane_Good)]
-        [TestCase(EncounterConstants.Porpoise_Celestial_Solitary, EnvironmentConstants.Plane_Good)]
-        [TestCase(EncounterConstants.Centaur_Company, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Centaur_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Centaur_Tribe, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Centaur_Troop, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.ChaosBeast_Solitary, EnvironmentConstants.Plane_Limbo)]
-        [TestCase(EncounterConstants.Chimera_Flight, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Chimera_Pride, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Chimera_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Choker_Solitary, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.Chuul_Pack, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Chuul_Pair, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Chuul_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Cloaker_Flock, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.Cloaker_Mob, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.Cloaker_Solitary, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.Cockatrice_Flight, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Cockatrice_Flock, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Cockatrice_Pair, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Cockatrice_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Couatl_Flight, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Couatl_Pair, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Couatl_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Darkmantle_Clutch, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.Darkmantle_Pair, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.Darkmantle_Solitary, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.Darkmantle_Swarm, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.Delver_Solitary, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.Babau_Gang, EnvironmentConstants.Plane_ChaoticEvil)]
-        [TestCase(EncounterConstants.Babau_Solitary, EnvironmentConstants.Plane_ChaoticEvil)]
-        [TestCase(EncounterConstants.Balor_Solitary, EnvironmentConstants.Plane_ChaoticEvil)]
-        [TestCase(EncounterConstants.Balor_Troupe, EnvironmentConstants.Plane_ChaoticEvil)]
-        [TestCase(EncounterConstants.Bebilith_Solitary, EnvironmentConstants.Plane_ChaoticEvil)]
-        [TestCase(EncounterConstants.Dretch_Crowd, EnvironmentConstants.Plane_ChaoticEvil)]
-        [TestCase(EncounterConstants.Dretch_Gang, EnvironmentConstants.Plane_ChaoticEvil)]
-        [TestCase(EncounterConstants.Dretch_Mob, EnvironmentConstants.Plane_ChaoticEvil)]
-        [TestCase(EncounterConstants.Dretch_Pair, EnvironmentConstants.Plane_ChaoticEvil)]
-        [TestCase(EncounterConstants.Dretch_Solitary, EnvironmentConstants.Plane_ChaoticEvil)]
-        [TestCase(EncounterConstants.Glabrezu_Solitary, EnvironmentConstants.Plane_ChaoticEvil)]
-        [TestCase(EncounterConstants.Glabrezu_Troupe, EnvironmentConstants.Plane_ChaoticEvil)]
-        [TestCase(EncounterConstants.Hezrou_Gang, EnvironmentConstants.Plane_ChaoticEvil)]
-        [TestCase(EncounterConstants.Hezrou_Solitary, EnvironmentConstants.Plane_ChaoticEvil)]
-        [TestCase(EncounterConstants.Marilith_Pair, EnvironmentConstants.Plane_ChaoticEvil)]
-        [TestCase(EncounterConstants.Marilith_Solitary, EnvironmentConstants.Plane_ChaoticEvil)]
-        [TestCase(EncounterConstants.Nalfeshnee_Solitary, EnvironmentConstants.Plane_ChaoticEvil)]
-        [TestCase(EncounterConstants.Nalfeshnee_Troupe, EnvironmentConstants.Plane_ChaoticEvil)]
-        [TestCase(EncounterConstants.Quasit_Solitary, EnvironmentConstants.Plane_ChaoticEvil)]
-        [TestCase(EncounterConstants.Retriever_Solitary, EnvironmentConstants.Plane_ChaoticEvil)]
-        [TestCase(EncounterConstants.Succubus_Solitary, EnvironmentConstants.Plane_ChaoticEvil)]
-        [TestCase(EncounterConstants.Vrock_Gang, EnvironmentConstants.Plane_ChaoticEvil)]
-        [TestCase(EncounterConstants.Vrock_Pair, EnvironmentConstants.Plane_ChaoticEvil)]
-        [TestCase(EncounterConstants.Vrock_Solitary, EnvironmentConstants.Plane_ChaoticEvil)]
-        [TestCase(EncounterConstants.Vrock_Squad, EnvironmentConstants.Plane_ChaoticEvil)]
-        [TestCase(EncounterConstants.Derro_Band, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.Derro_Squad, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.Derro_Team, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.Destrachan_Pack, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.Destrachan_Solitary, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.BarbedDevil_Pair, EnvironmentConstants.Plane_LawfulEvil)]
-        [TestCase(EncounterConstants.BarbedDevil_Solitary, EnvironmentConstants.Plane_LawfulEvil)]
-        [TestCase(EncounterConstants.BarbedDevil_Squad, EnvironmentConstants.Plane_LawfulEvil)]
-        [TestCase(EncounterConstants.BarbedDevil_Team, EnvironmentConstants.Plane_LawfulEvil)]
-        [TestCase(EncounterConstants.BeardedDevil_Pair, EnvironmentConstants.Plane_LawfulEvil)]
-        [TestCase(EncounterConstants.BeardedDevil_Solitary, EnvironmentConstants.Plane_LawfulEvil)]
-        [TestCase(EncounterConstants.BeardedDevil_Squad, EnvironmentConstants.Plane_LawfulEvil)]
-        [TestCase(EncounterConstants.BeardedDevil_Team, EnvironmentConstants.Plane_LawfulEvil)]
-        [TestCase(EncounterConstants.BoneDevil_Solitary, EnvironmentConstants.Plane_LawfulEvil)]
-        [TestCase(EncounterConstants.BoneDevil_Squad, EnvironmentConstants.Plane_LawfulEvil)]
-        [TestCase(EncounterConstants.BoneDevil_Team, EnvironmentConstants.Plane_LawfulEvil)]
-        [TestCase(EncounterConstants.ChainDevil_Band, EnvironmentConstants.Plane_LawfulEvil)]
-        [TestCase(EncounterConstants.ChainDevil_Gang, EnvironmentConstants.Plane_LawfulEvil)]
-        [TestCase(EncounterConstants.ChainDevil_Mob, EnvironmentConstants.Plane_LawfulEvil)]
-        [TestCase(EncounterConstants.ChainDevil_Solitary, EnvironmentConstants.Plane_LawfulEvil)]
-        [TestCase(EncounterConstants.Erinyes_Solitary, EnvironmentConstants.Plane_LawfulEvil)]
-        [TestCase(EncounterConstants.Hellcat_Pair, EnvironmentConstants.Plane_LawfulEvil)]
-        [TestCase(EncounterConstants.Hellcat_Pride, EnvironmentConstants.Plane_LawfulEvil)]
-        [TestCase(EncounterConstants.Hellcat_Solitary, EnvironmentConstants.Plane_LawfulEvil)]
-        [TestCase(EncounterConstants.HornedDevil_Solitary, EnvironmentConstants.Plane_LawfulEvil)]
-        [TestCase(EncounterConstants.HornedDevil_Squad, EnvironmentConstants.Plane_LawfulEvil)]
-        [TestCase(EncounterConstants.HornedDevil_Team, EnvironmentConstants.Plane_LawfulEvil)]
-        [TestCase(EncounterConstants.IceDevil_Solitary, EnvironmentConstants.Plane_LawfulEvil)]
-        [TestCase(EncounterConstants.IceDevil_Squad, EnvironmentConstants.Plane_LawfulEvil)]
-        [TestCase(EncounterConstants.IceDevil_Team, EnvironmentConstants.Plane_LawfulEvil)]
-        [TestCase(EncounterConstants.IceDevil_Troupe, EnvironmentConstants.Plane_LawfulEvil)]
-        [TestCase(EncounterConstants.Imp_Solitary, EnvironmentConstants.Plane_LawfulEvil)]
-        [TestCase(EncounterConstants.Lemure_Gang, EnvironmentConstants.Plane_LawfulEvil)]
-        [TestCase(EncounterConstants.Lemure_Mob, EnvironmentConstants.Plane_LawfulEvil)]
-        [TestCase(EncounterConstants.Lemure_Pair, EnvironmentConstants.Plane_LawfulEvil)]
-        [TestCase(EncounterConstants.Lemure_Solitary, EnvironmentConstants.Plane_LawfulEvil)]
-        [TestCase(EncounterConstants.Lemure_Swarm, EnvironmentConstants.Plane_LawfulEvil)]
-        [TestCase(EncounterConstants.PitFiend_Pair, EnvironmentConstants.Plane_LawfulEvil)]
-        [TestCase(EncounterConstants.PitFiend_Solitary, EnvironmentConstants.Plane_LawfulEvil)]
-        [TestCase(EncounterConstants.PitFiend_Team, EnvironmentConstants.Plane_LawfulEvil)]
-        [TestCase(EncounterConstants.PitFiend_Troupe, EnvironmentConstants.Plane_LawfulEvil)]
-        [TestCase(EncounterConstants.Devourer_Solitary, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Digester_Pack, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Digester_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Deinonychus_Pack, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Deinonychus_Pair, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Deinonychus_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Elasmosaurus_Herd, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic)]
-        [TestCase(EncounterConstants.Elasmosaurus_Pair, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic)]
-        [TestCase(EncounterConstants.Elasmosaurus_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic)]
-        [TestCase(EncounterConstants.Megaraptor_Pack, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Megaraptor_Pair, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Megaraptor_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Triceratops_Herd, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Triceratops_Pair, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Triceratops_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Tyrannosaurus_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Tyrannosaurus_Pair, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Ape_Dire_Company, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Ape_Dire_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Badger_Dire_Cete, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Badger_Dire_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Bat_Dire_Colony, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Bat_Dire_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Bear_Dire_Pair, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Bear_Dire_Solitary, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Boar_Dire_Herd, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Boar_Dire_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Lion_Dire_Pair, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Lion_Dire_Pride, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Lion_Dire_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Rat_Dire_Pack, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Rat_Dire_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Rat_Dire_Fiendish_Pack, EnvironmentConstants.Plane_Evil)]
-        [TestCase(EncounterConstants.Rat_Dire_Fiendish_Solitary, EnvironmentConstants.Plane_Evil)]
-        [TestCase(EncounterConstants.Shark_Dire_School, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Aquatic)]
-        [TestCase(EncounterConstants.Shark_Dire_Solitary, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Aquatic)]
-        [TestCase(EncounterConstants.Tiger_Dire_Pair, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Tiger_Dire_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Weasel_Dire_Pair, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Weasel_Dire_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Wolf_Dire_Pack, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Wolf_Dire_Pair, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Wolf_Dire_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Wolverine_Dire_Pair, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Wolverine_Dire_Solitary, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Doppelganger_Gang, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Doppelganger_Pair, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Doppelganger_Solitary, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Dragon_Black_Adult_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Dragon_Black_Adult_Pair, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Dragon_Black_Adult_Family, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Dragon_Black_Ancient_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Dragon_Black_Ancient_Pair, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Dragon_Black_Ancient_Family, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Dragon_Black_GreatWyrm_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Dragon_Black_GreatWyrm_Pair, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Dragon_Black_GreatWyrm_Family, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Dragon_Black_Juvenile_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Dragon_Black_Juvenile_Clutch, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Dragon_Black_MatureAdult_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Dragon_Black_MatureAdult_Pair, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Dragon_Black_MatureAdult_Family, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Dragon_Black_Old_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Dragon_Black_Old_Pair, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Dragon_Black_Old_Family, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Dragon_Black_VeryOld_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Dragon_Black_VeryOld_Pair, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Dragon_Black_VeryOld_Family, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Dragon_Black_VeryYoung_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Dragon_Black_VeryYoung_Clutch, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Dragon_Black_Wyrm_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Dragon_Black_Wyrm_Pair, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Dragon_Black_Wyrm_Family, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Dragon_Black_Wyrmling_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Dragon_Black_Wyrmling_Clutch, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Dragon_Black_Young_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Dragon_Black_Young_Clutch, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Dragon_Black_YoungAdult_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Dragon_Black_YoungAdult_Clutch, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Dragon_Blue_Adult_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Dragon_Blue_Adult_Pair, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Dragon_Blue_Adult_Family, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Dragon_Blue_Ancient_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Dragon_Blue_Ancient_Pair, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Dragon_Blue_Ancient_Family, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Dragon_Blue_GreatWyrm_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Dragon_Blue_GreatWyrm_Pair, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Dragon_Blue_GreatWyrm_Family, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Dragon_Blue_Juvenile_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Dragon_Blue_Juvenile_Clutch, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Dragon_Blue_MatureAdult_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Dragon_Blue_MatureAdult_Pair, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Dragon_Blue_MatureAdult_Family, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Dragon_Blue_Old_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Dragon_Blue_Old_Pair, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Dragon_Blue_Old_Family, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Dragon_Blue_VeryOld_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Dragon_Blue_VeryOld_Pair, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Dragon_Blue_VeryOld_Family, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Dragon_Blue_VeryYoung_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Dragon_Blue_VeryYoung_Clutch, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Dragon_Blue_Wyrm_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Dragon_Blue_Wyrm_Pair, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Dragon_Blue_Wyrm_Family, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Dragon_Blue_Wyrmling_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Dragon_Blue_Wyrmling_Clutch, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Dragon_Blue_Young_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Dragon_Blue_Young_Clutch, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Dragon_Blue_YoungAdult_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Dragon_Blue_YoungAdult_Clutch, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Dragon_Brass_Adult_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Dragon_Brass_Adult_Pair, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Dragon_Brass_Adult_Family, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Dragon_Brass_Ancient_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Dragon_Brass_Ancient_Pair, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Dragon_Brass_Ancient_Family, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Dragon_Brass_GreatWyrm_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Dragon_Brass_GreatWyrm_Pair, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Dragon_Brass_GreatWyrm_Family, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Dragon_Brass_Juvenile_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Dragon_Brass_Juvenile_Clutch, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Dragon_Brass_MatureAdult_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Dragon_Brass_MatureAdult_Pair, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Dragon_Brass_MatureAdult_Family, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Dragon_Brass_Old_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Dragon_Brass_Old_Pair, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Dragon_Brass_Old_Family, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Dragon_Brass_VeryOld_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Dragon_Brass_VeryOld_Pair, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Dragon_Brass_VeryOld_Family, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Dragon_Brass_VeryYoung_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Dragon_Brass_VeryYoung_Clutch, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Dragon_Brass_Wyrm_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Dragon_Brass_Wyrm_Pair, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Dragon_Brass_Wyrm_Family, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Dragon_Brass_Wyrmling_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Dragon_Brass_Wyrmling_Clutch, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Dragon_Brass_Young_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Dragon_Brass_Young_Clutch, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Dragon_Brass_YoungAdult_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Dragon_Brass_YoungAdult_Clutch, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Dragon_Bronze_Adult_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Dragon_Bronze_Adult_Pair, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Dragon_Bronze_Adult_Family, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Dragon_Bronze_Ancient_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Dragon_Bronze_Ancient_Pair, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Dragon_Bronze_Ancient_Family, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Dragon_Bronze_GreatWyrm_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Dragon_Bronze_GreatWyrm_Pair, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Dragon_Bronze_GreatWyrm_Family, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Dragon_Bronze_Juvenile_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Dragon_Bronze_Juvenile_Clutch, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Dragon_Bronze_MatureAdult_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Dragon_Bronze_MatureAdult_Pair, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Dragon_Bronze_MatureAdult_Family, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Dragon_Bronze_Old_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Dragon_Bronze_Old_Pair, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Dragon_Bronze_Old_Family, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Dragon_Bronze_VeryOld_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Dragon_Bronze_VeryOld_Pair, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Dragon_Bronze_VeryOld_Family, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Dragon_Bronze_VeryYoung_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Dragon_Bronze_VeryYoung_Clutch, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Dragon_Bronze_Wyrm_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Dragon_Bronze_Wyrm_Pair, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Dragon_Bronze_Wyrm_Family, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Dragon_Bronze_Wyrmling_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Dragon_Bronze_Wyrmling_Clutch, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Dragon_Bronze_Young_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Dragon_Bronze_Young_Clutch, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Dragon_Bronze_YoungAdult_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Dragon_Bronze_YoungAdult_Clutch, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Dragon_Copper_Adult_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Dragon_Copper_Adult_Pair, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Dragon_Copper_Adult_Family, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Dragon_Copper_Ancient_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Dragon_Copper_Ancient_Pair, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Dragon_Copper_Ancient_Family, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Dragon_Copper_GreatWyrm_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Dragon_Copper_GreatWyrm_Pair, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Dragon_Copper_GreatWyrm_Family, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Dragon_Copper_Juvenile_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Dragon_Copper_Juvenile_Clutch, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Dragon_Copper_MatureAdult_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Dragon_Copper_MatureAdult_Pair, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Dragon_Copper_MatureAdult_Family, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Dragon_Copper_Old_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Dragon_Copper_Old_Pair, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Dragon_Copper_Old_Family, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Dragon_Copper_VeryOld_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Dragon_Copper_VeryOld_Pair, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Dragon_Copper_VeryOld_Family, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Dragon_Copper_VeryYoung_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Dragon_Copper_VeryYoung_Clutch, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Dragon_Copper_Wyrm_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Dragon_Copper_Wyrm_Pair, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Dragon_Copper_Wyrm_Family, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Dragon_Copper_Wyrmling_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Dragon_Copper_Wyrmling_Clutch, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Dragon_Copper_Young_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Dragon_Copper_Young_Clutch, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Dragon_Copper_YoungAdult_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Dragon_Copper_YoungAdult_Clutch, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Dragon_Gold_Adult_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Dragon_Gold_Adult_Pair, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Dragon_Gold_Adult_Family, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Dragon_Gold_Ancient_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Dragon_Gold_Ancient_Pair, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Dragon_Gold_Ancient_Family, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Dragon_Gold_GreatWyrm_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Dragon_Gold_GreatWyrm_Pair, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Dragon_Gold_GreatWyrm_Family, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Dragon_Gold_Juvenile_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Dragon_Gold_Juvenile_Clutch, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Dragon_Gold_MatureAdult_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Dragon_Gold_MatureAdult_Pair, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Dragon_Gold_MatureAdult_Family, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Dragon_Gold_Old_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Dragon_Gold_Old_Pair, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Dragon_Gold_Old_Family, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Dragon_Gold_VeryOld_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Dragon_Gold_VeryOld_Pair, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Dragon_Gold_VeryOld_Family, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Dragon_Gold_VeryYoung_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Dragon_Gold_VeryYoung_Clutch, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Dragon_Gold_Wyrm_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Dragon_Gold_Wyrm_Pair, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Dragon_Gold_Wyrm_Family, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Dragon_Gold_Wyrmling_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Dragon_Gold_Wyrmling_Clutch, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Dragon_Gold_Young_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Dragon_Gold_Young_Clutch, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Dragon_Gold_YoungAdult_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Dragon_Gold_YoungAdult_Clutch, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Dragon_Green_Adult_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Dragon_Green_Adult_Pair, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Dragon_Green_Adult_Family, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Dragon_Green_Ancient_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Dragon_Green_Ancient_Pair, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Dragon_Green_Ancient_Family, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Dragon_Green_GreatWyrm_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Dragon_Green_GreatWyrm_Pair, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Dragon_Green_GreatWyrm_Family, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Dragon_Green_Juvenile_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Dragon_Green_Juvenile_Clutch, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Dragon_Green_MatureAdult_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Dragon_Green_MatureAdult_Pair, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Dragon_Green_MatureAdult_Family, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Dragon_Green_Old_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Dragon_Green_Old_Pair, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Dragon_Green_Old_Family, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Dragon_Green_VeryOld_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Dragon_Green_VeryOld_Pair, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Dragon_Green_VeryOld_Family, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Dragon_Green_VeryYoung_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Dragon_Green_VeryYoung_Clutch, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Dragon_Green_Wyrm_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Dragon_Green_Wyrm_Pair, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Dragon_Green_Wyrm_Family, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Dragon_Green_Wyrmling_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Dragon_Green_Wyrmling_Clutch, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Dragon_Green_Young_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Dragon_Green_Young_Clutch, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Dragon_Green_YoungAdult_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Dragon_Green_YoungAdult_Clutch, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Dragon_Red_Adult_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_Red_Adult_Pair, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_Red_Adult_Family, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_Red_Ancient_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_Red_Ancient_Pair, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_Red_Ancient_Family, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_Red_GreatWyrm_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_Red_GreatWyrm_Pair, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_Red_GreatWyrm_Family, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_Red_Juvenile_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_Red_Juvenile_Clutch, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_Red_MatureAdult_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_Red_MatureAdult_Pair, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_Red_MatureAdult_Family, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_Red_Old_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_Red_Old_Pair, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_Red_Old_Family, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_Red_VeryOld_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_Red_VeryOld_Pair, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_Red_VeryOld_Family, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_Red_VeryYoung_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_Red_VeryYoung_Clutch, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_Red_Wyrm_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_Red_Wyrm_Pair, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_Red_Wyrm_Family, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_Red_Wyrmling_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_Red_Wyrmling_Clutch, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_Red_Young_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_Red_Young_Clutch, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_Red_YoungAdult_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_Red_YoungAdult_Clutch, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_Silver_Adult_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_Silver_Adult_Pair, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_Silver_Adult_Family, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_Silver_Ancient_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_Silver_Ancient_Pair, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_Silver_Ancient_Family, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_Silver_GreatWyrm_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_Silver_GreatWyrm_Pair, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_Silver_GreatWyrm_Family, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_Silver_Juvenile_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_Silver_Juvenile_Clutch, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_Silver_MatureAdult_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_Silver_MatureAdult_Pair, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_Silver_MatureAdult_Family, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_Silver_Old_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_Silver_Old_Pair, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_Silver_Old_Family, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_Silver_VeryOld_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_Silver_VeryOld_Pair, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_Silver_VeryOld_Family, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_Silver_VeryYoung_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_Silver_VeryYoung_Clutch, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_Silver_Wyrm_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_Silver_Wyrm_Pair, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_Silver_Wyrm_Family, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_Silver_Wyrmling_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_Silver_Wyrmling_Clutch, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_Silver_Young_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_Silver_Young_Clutch, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_Silver_YoungAdult_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_Silver_YoungAdult_Clutch, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_White_Adult_Solitary, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_White_Adult_Pair, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_White_Adult_Family, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_White_Ancient_Solitary, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_White_Ancient_Pair, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_White_Ancient_Family, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_White_GreatWyrm_Solitary, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_White_GreatWyrm_Pair, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_White_GreatWyrm_Family, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_White_Juvenile_Solitary, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_White_Juvenile_Clutch, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_White_MatureAdult_Solitary, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_White_MatureAdult_Pair, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_White_MatureAdult_Family, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_White_Old_Solitary, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_White_Old_Pair, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_White_Old_Family, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_White_VeryOld_Solitary, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_White_VeryOld_Pair, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_White_VeryOld_Family, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_White_VeryYoung_Solitary, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_White_VeryYoung_Clutch, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_White_Wyrm_Solitary, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_White_Wyrm_Pair, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_White_Wyrm_Family, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_White_Wyrmling_Solitary, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_White_Wyrmling_Clutch, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_White_Young_Solitary, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_White_Young_Clutch, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_White_YoungAdult_Solitary, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dragon_White_YoungAdult_Clutch, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.DragonTurtle_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic)]
-        [TestCase(EncounterConstants.Dragonne_Pair, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Dragonne_Pride, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Dragonne_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Drider_Pair, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.Drider_Solitary, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.Drider_Troupe, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.Dryad_Grove, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Dryad_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Dwarf_Hill_Clan, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dwarf_Hill_Squad, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dwarf_Hill_Team, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dwarf_Mountain_Clan, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dwarf_Mountain_Squad, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dwarf_Mountain_Team, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Dwarf_Deep_Clan, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.Dwarf_Deep_Squad, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.Dwarf_Deep_Team, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.Duergar_Clan, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.Duergar_Squad, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.Duergar_Team, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.Eagle_Giant_Eyrie, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Eagle_Giant_Pair, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Eagle_Giant_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Elemental_Air_Elder_Solitary, EnvironmentConstants.Plane_Air)]
-        [TestCase(EncounterConstants.Elemental_Air_Greater_Solitary, EnvironmentConstants.Plane_Air)]
-        [TestCase(EncounterConstants.Elemental_Air_Huge_Solitary, EnvironmentConstants.Plane_Air)]
-        [TestCase(EncounterConstants.Elemental_Air_Large_Solitary, EnvironmentConstants.Plane_Air)]
-        [TestCase(EncounterConstants.Elemental_Air_Medium_Solitary, EnvironmentConstants.Plane_Air)]
-        [TestCase(EncounterConstants.Elemental_Air_Small_Solitary, EnvironmentConstants.Plane_Air)]
-        [TestCase(EncounterConstants.Elemental_Earth_Elder_Solitary, EnvironmentConstants.Plane_Earth)]
-        [TestCase(EncounterConstants.Elemental_Earth_Greater_Solitary, EnvironmentConstants.Plane_Earth)]
-        [TestCase(EncounterConstants.Elemental_Earth_Huge_Solitary, EnvironmentConstants.Plane_Earth)]
-        [TestCase(EncounterConstants.Elemental_Earth_Large_Solitary, EnvironmentConstants.Plane_Earth)]
-        [TestCase(EncounterConstants.Elemental_Earth_Medium_Solitary, EnvironmentConstants.Plane_Earth)]
-        [TestCase(EncounterConstants.Elemental_Earth_Small_Solitary, EnvironmentConstants.Plane_Earth)]
-        [TestCase(EncounterConstants.Elemental_Fire_Elder_Solitary, EnvironmentConstants.Plane_Fire)]
-        [TestCase(EncounterConstants.Elemental_Fire_Greater_Solitary, EnvironmentConstants.Plane_Fire)]
-        [TestCase(EncounterConstants.Elemental_Fire_Huge_Solitary, EnvironmentConstants.Plane_Fire)]
-        [TestCase(EncounterConstants.Elemental_Fire_Large_Solitary, EnvironmentConstants.Plane_Fire)]
-        [TestCase(EncounterConstants.Elemental_Fire_Medium_Solitary, EnvironmentConstants.Plane_Fire)]
-        [TestCase(EncounterConstants.Elemental_Fire_Small_Solitary, EnvironmentConstants.Plane_Fire)]
-        [TestCase(EncounterConstants.Elemental_Water_Elder_Solitary, EnvironmentConstants.Plane_Water)]
-        [TestCase(EncounterConstants.Elemental_Water_Greater_Solitary, EnvironmentConstants.Plane_Water)]
-        [TestCase(EncounterConstants.Elemental_Water_Huge_Solitary, EnvironmentConstants.Plane_Water)]
-        [TestCase(EncounterConstants.Elemental_Water_Large_Solitary, EnvironmentConstants.Plane_Water)]
-        [TestCase(EncounterConstants.Elemental_Water_Medium_Solitary, EnvironmentConstants.Plane_Water)]
-        [TestCase(EncounterConstants.Elemental_Water_Small_Solitary, EnvironmentConstants.Plane_Water)]
-        [TestCase(EncounterConstants.Elf_High_Band, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Elf_High_Company, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Elf_High_Squad, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Elf_Half_Band, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Elf_Half_Company, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Elf_Half_Squad, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Elf_Aquatic_Band, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic)]
-        [TestCase(EncounterConstants.Elf_Aquatic_Company, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic)]
-        [TestCase(EncounterConstants.Elf_Aquatic_Squad, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic)]
-        [TestCase(EncounterConstants.Elf_Gray_Band, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Elf_Gray_Company, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Elf_Gray_Squad, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Elf_Wild_Band, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Elf_Wild_Company, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Elf_Wild_Squad, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Elf_Wood_Band, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Elf_Wood_Company, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Elf_Wood_Squad, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Drow_Band, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.Drow_Patrol, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.Drow_Squad, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.EtherealFilcher_Solitary, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.EtherealMarauder_Solitary, EnvironmentConstants.Plane_Ethereal)]
-        [TestCase(EncounterConstants.Ettercap_Pair, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Ettercap_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Ettercap_Troupe, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Ettin_Band, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Ettin_Colony_WithGoblins, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Ettin_Colony_WithOrcs, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Ettin_Gang, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Ettin_Solitary, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Ettin_Troupe, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Centipede_Monstrous_Fiendish_Colossal_Solitary, EnvironmentConstants.Plane_Evil)]
-        [TestCase(EncounterConstants.Centipede_Monstrous_Fiendish_Gargantuan_Solitary, EnvironmentConstants.Plane_Evil)]
-        [TestCase(EncounterConstants.Centipede_Monstrous_Fiendish_Huge_Solitary, EnvironmentConstants.Plane_Evil)]
-        [TestCase(EncounterConstants.Centipede_Monstrous_Fiendish_Huge_Colony, EnvironmentConstants.Plane_Evil)]
-        [TestCase(EncounterConstants.Centipede_Monstrous_Fiendish_Large_Solitary, EnvironmentConstants.Plane_Evil)]
-        [TestCase(EncounterConstants.Centipede_Monstrous_Fiendish_Large_Colony, EnvironmentConstants.Plane_Evil)]
-        [TestCase(EncounterConstants.Centipede_Monstrous_Fiendish_Medium_Solitary, EnvironmentConstants.Plane_Evil)]
-        [TestCase(EncounterConstants.Centipede_Monstrous_Fiendish_Medium_Colony, EnvironmentConstants.Plane_Evil)]
-        [TestCase(EncounterConstants.Raven_Fiendish_Solitary, EnvironmentConstants.Plane_Evil)]
-        [TestCase(EncounterConstants.FormianMyrmarch_Platoon, EnvironmentConstants.Plane_Lawful)]
-        [TestCase(EncounterConstants.FormianMyrmarch_Solitary, EnvironmentConstants.Plane_Lawful)]
-        [TestCase(EncounterConstants.FormianMyrmarch_Team, EnvironmentConstants.Plane_Lawful)]
-        [TestCase(EncounterConstants.FormianQueen_Hive, EnvironmentConstants.Plane_Lawful)]
-        [TestCase(EncounterConstants.FormianTaskmaster_ConscriptionTeam, EnvironmentConstants.Plane_Lawful)]
-        [TestCase(EncounterConstants.FormianTaskmaster_Solitary, EnvironmentConstants.Plane_Lawful)]
-        [TestCase(EncounterConstants.FormianWarrior_Solitary, EnvironmentConstants.Plane_Lawful)]
-        [TestCase(EncounterConstants.FormianWarrior_Team, EnvironmentConstants.Plane_Lawful)]
-        [TestCase(EncounterConstants.FormianWarrior_Troop, EnvironmentConstants.Plane_Lawful)]
-        [TestCase(EncounterConstants.FormianWorker_Crew, EnvironmentConstants.Plane_Lawful)]
-        [TestCase(EncounterConstants.FormianWorker_Team, EnvironmentConstants.Plane_Lawful)]
-        [TestCase(EncounterConstants.FrostWorm_Solitary, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Shrieker_Patch, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.Shrieker_Solitary, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.VioletFungus_MixedPatch, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.VioletFungus_Patch, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.VioletFungus_Solitary, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.Gargoyle_Pair, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Gargoyle_Solitary, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Gargoyle_Wing, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Gargoyle_Kapoacinth_Pair, EnvironmentConstants.Aquatic)]
-        [TestCase(EncounterConstants.Gargoyle_Kapoacinth_Solitary, EnvironmentConstants.Aquatic)]
-        [TestCase(EncounterConstants.Gargoyle_Kapoacinth_Wing, EnvironmentConstants.Aquatic)]
-        [TestCase(EncounterConstants.Djinni_Band, EnvironmentConstants.Plane_Air)]
-        [TestCase(EncounterConstants.Djinni_Company, EnvironmentConstants.Plane_Air)]
-        [TestCase(EncounterConstants.Djinni_Noble_Solitary, EnvironmentConstants.Plane_Air)]
-        [TestCase(EncounterConstants.Djinni_Solitary, EnvironmentConstants.Plane_Air)]
-        [TestCase(EncounterConstants.Efreeti_Band, EnvironmentConstants.Plane_Fire)]
-        [TestCase(EncounterConstants.Efreeti_Company, EnvironmentConstants.Plane_Fire)]
-        [TestCase(EncounterConstants.Efreeti_Solitary, EnvironmentConstants.Plane_Fire)]
-        [TestCase(EncounterConstants.Janni_Band, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Janni_Company, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Janni_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Ghaele_Pair, EnvironmentConstants.Plane_ChaoticGood)]
-        [TestCase(EncounterConstants.Ghaele_Solitary, EnvironmentConstants.Plane_ChaoticGood)]
-        [TestCase(EncounterConstants.Ghaele_Squad, EnvironmentConstants.Plane_ChaoticGood)]
-        [TestCase(EncounterConstants.Ghost_Level1_Gang, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Ghost_Level1_Mob, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Ghost_Level1_Solitary, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Ghost_Level2_Gang, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Ghost_Level2_Mob, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Ghost_Level2_Solitary, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Ghost_Level3_Gang, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Ghost_Level3_Mob, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Ghost_Level3_Solitary, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Ghost_Level4_Gang, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Ghost_Level4_Mob, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Ghost_Level4_Solitary, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Ghost_Level5_Gang, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Ghost_Level5_Mob, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Ghost_Level5_Solitary, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Ghost_Level6_Gang, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Ghost_Level6_Mob, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Ghost_Level6_Solitary, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Ghost_Level7_Gang, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Ghost_Level7_Mob, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Ghost_Level7_Solitary, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Ghost_Level8_Gang, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Ghost_Level8_Mob, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Ghost_Level8_Solitary, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Ghost_Level9_Gang, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Ghost_Level9_Mob, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Ghost_Level9_Solitary, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Ghost_Level10_Gang, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Ghost_Level10_Mob, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Ghost_Level10_Solitary, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Ghost_Level11_Gang, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Ghost_Level11_Mob, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Ghost_Level11_Solitary, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Ghost_Level12_Gang, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Ghost_Level12_Mob, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Ghost_Level12_Solitary, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Ghost_Level13_Gang, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Ghost_Level13_Mob, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Ghost_Level13_Solitary, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Ghost_Level14_Gang, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Ghost_Level14_Mob, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Ghost_Level14_Solitary, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Ghost_Level15_Gang, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Ghost_Level15_Mob, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Ghost_Level15_Solitary, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Ghost_Level16_Gang, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Ghost_Level16_Mob, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Ghost_Level16_Solitary, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Ghost_Level17_Gang, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Ghost_Level17_Mob, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Ghost_Level17_Solitary, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Ghost_Level18_Gang, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Ghost_Level18_Mob, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Ghost_Level18_Solitary, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Ghost_Level19_Gang, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Ghost_Level19_Mob, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Ghost_Level19_Solitary, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Ghost_Level20_Gang, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Ghost_Level20_Mob, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Ghost_Level20_Solitary, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Ghoul_Gang, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Ghoul_Pack, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Ghoul_Solitary, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Ghast_Gang, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Ghast_Pack, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Ghast_Solitary, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Ghoul_Lacedon_Gang, EnvironmentConstants.Aquatic)]
-        [TestCase(EncounterConstants.Ghoul_Lacedon_Pack, EnvironmentConstants.Aquatic)]
-        [TestCase(EncounterConstants.Ghoul_Lacedon_Solitary, EnvironmentConstants.Aquatic)]
-        [TestCase(EncounterConstants.Giant_Cloud_Band_WithDireLions, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Giant_Cloud_Band_WithGriffons, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Giant_Cloud_Family_WithDireLions, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Giant_Cloud_Family_WithGriffons, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Giant_Cloud_Gang, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Giant_Cloud_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Giant_Fire_Band_WithAdept, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Giant_Fire_Band_WithCleric, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Giant_Fire_Gang, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Giant_Fire_HuntingRaidingParty_WithAdept_WithEttins, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Giant_Fire_HuntingRaidingParty_WithAdept_WithTrolls, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Giant_Fire_HuntingRaidingParty_WithSorcerer_WithEttins, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Giant_Fire_HuntingRaidingParty_WithSorcerer_WithTrolls, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Giant_Fire_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Giant_Fire_Tribe_WithAdept, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Giant_Fire_Tribe_WithLeader, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Giant_Frost_Band_WithAdept, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Giant_Frost_Band_WithCleric, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Giant_Frost_Gang, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Giant_Frost_HuntingRaidingParty_WithAdept, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Giant_Frost_HuntingRaidingParty_WithSorcerer, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Giant_Frost_Jarl_Solitary, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Giant_Frost_Solitary, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Giant_Frost_Tribe_WithAdept, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Giant_Frost_Tribe_WithAdept_WithJarl, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Giant_Frost_Tribe_WithLeader, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Giant_Frost_Tribe_WithLeader_WithJarl, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Giant_Hill_Band, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Giant_Hill_Gang, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Giant_Hill_HuntingRaidingParty, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Giant_Hill_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Giant_Hill_Tribe, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Giant_Stone_Band, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Giant_Stone_Gang, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Giant_Stone_HuntingRaidingTradingParty, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Giant_Stone_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Giant_Stone_Tribe, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Giant_Storm_Family_WithGriffons, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Giant_Storm_Family_WithRocs, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Giant_Storm_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.GibberingMouther_Solitary, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.Girallon_Company, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Girallon_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Gnoll_Band, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Gnoll_HuntingParty, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Gnoll_Pair, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Gnoll_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Gnoll_Tribe, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Gnoll_Tribe_WithTrolls, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Gnome_Rock_Band, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Gnome_Rock_Company, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Gnome_Rock_Squad, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Gnome_Forest_Band, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Gnome_Forest_Company, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Gnome_Forest_Squad, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Svirfneblin_Band, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.Svirfneblin_Company, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.Svirfneblin_Squad, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.Goblin_Band, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Goblin_Gang, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Goblin_Tribe, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Goblin_Warband, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Golem_Clay_Gang, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Golem_Clay_Solitary, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Golem_Flesh_Gang, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Golem_Flesh_Solitary, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Golem_Iron_Gang, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Golem_Iron_Solitary, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Golem_Stone_Gang, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Golem_Stone_Greater_Gang, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Golem_Stone_Greater_Solitary, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Golem_Stone_Solitary, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Gorgon_Herd, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Gorgon_Pack, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Gorgon_Pair, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Gorgon_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.GrayRender_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Grick_Cluster, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.Grick_Solitary, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.Griffon_Pair, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Griffon_Pride, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Griffon_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Grimlock_Gang, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.Grimlock_Pack, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.Grimlock_Tribe, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.Character_Adventurer_Level1_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Adventurer_Level2_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Adventurer_Level3_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Adventurer_Level4_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Adventurer_Level5_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Adventurer_Level6_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Adventurer_Level7_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Adventurer_Level8_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Adventurer_Level9_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Adventurer_Level10_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Adventurer_Level11_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Adventurer_Level12_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Adventurer_Level13_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Adventurer_Level14_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Adventurer_Level15_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Adventurer_Level16_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Adventurer_Level17_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Adventurer_Level18_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Adventurer_Level19_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Adventurer_Level20_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Adventurer_Level1_Party, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Adventurer_Level2_Party, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Adventurer_Level3_Party, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Adventurer_Level4_Party, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Adventurer_Level5_Party, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Adventurer_Level6_Party, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Adventurer_Level7_Party, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Adventurer_Level8_Party, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Adventurer_Level9_Party, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Adventurer_Level10_Party, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Adventurer_Level11_Party, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Adventurer_Level12_Party, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Adventurer_Level13_Party, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Adventurer_Level14_Party, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Adventurer_Level15_Party, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Adventurer_Level16_Party, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Adventurer_Level17_Party, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Adventurer_Level18_Party, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Adventurer_Level19_Party, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Adventurer_Level20_Party, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level1_WithCat, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level2_WithCat, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level3_WithCat, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level4_WithCat, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level5_WithCat, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level6_WithCat, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level7_WithCat, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level8_WithCat, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level9_WithCat, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level10_WithCat, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level11_WithCat, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level12_WithCat, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level13_WithCat, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level14_WithCat, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level15_WithCat, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level16_WithCat, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level17_WithCat, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level18_WithCat, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level19_WithCat, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level20_WithCat, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level1_WithCamel, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level2_WithCamel, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level3_WithCamel, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level4_WithCamel, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level5_WithCamel, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level6_WithCamel, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level7_WithCamel, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level8_WithCamel, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level9_WithCamel, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level10_WithCamel, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level11_WithCamel, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level12_WithCamel, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level13_WithCamel, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level14_WithCamel, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level15_WithCamel, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level16_WithCamel, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level17_WithCamel, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level18_WithCamel, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level19_WithCamel, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level20_WithCamel, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level1_WithDog, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level2_WithDog, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level3_WithDog, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level4_WithDog, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level5_WithDog, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level6_WithDog, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level7_WithDog, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level8_WithDog, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level9_WithDog, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level10_WithDog, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level11_WithDog, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level12_WithDog, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level13_WithDog, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level14_WithDog, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level15_WithDog, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level16_WithDog, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level17_WithDog, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level18_WithDog, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level19_WithDog, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level20_WithDog, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level1_WithDonkey, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level2_WithDonkey, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level3_WithDonkey, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level4_WithDonkey, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level5_WithDonkey, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level6_WithDonkey, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level7_WithDonkey, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level8_WithDonkey, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level9_WithDonkey, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level10_WithDonkey, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level11_WithDonkey, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level12_WithDonkey, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level13_WithDonkey, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level14_WithDonkey, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level15_WithDonkey, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level16_WithDonkey, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level17_WithDonkey, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level18_WithDonkey, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level19_WithDonkey, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level20_WithDonkey, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level1_WithHeavyHorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level2_WithHeavyHorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level3_WithHeavyHorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level4_WithHeavyHorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level5_WithHeavyHorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level6_WithHeavyHorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level7_WithHeavyHorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level8_WithHeavyHorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level9_WithHeavyHorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level10_WithHeavyHorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level11_WithHeavyHorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level12_WithHeavyHorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level13_WithHeavyHorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level14_WithHeavyHorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level15_WithHeavyHorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level16_WithHeavyHorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level17_WithHeavyHorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level18_WithHeavyHorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level19_WithHeavyHorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level20_WithHeavyHorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level1_WithHeavyWarhorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level2_WithHeavyWarhorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level3_WithHeavyWarhorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level4_WithHeavyWarhorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level5_WithHeavyWarhorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level6_WithHeavyWarhorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level7_WithHeavyWarhorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level8_WithHeavyWarhorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level9_WithHeavyWarhorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level10_WithHeavyWarhorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level11_WithHeavyWarhorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level12_WithHeavyWarhorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level13_WithHeavyWarhorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level14_WithHeavyWarhorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level15_WithHeavyWarhorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level16_WithHeavyWarhorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level17_WithHeavyWarhorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level18_WithHeavyWarhorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level19_WithHeavyWarhorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level20_WithHeavyWarhorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level1_WithLightHorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level2_WithLightHorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level3_WithLightHorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level4_WithLightHorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level5_WithLightHorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level6_WithLightHorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level7_WithLightHorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level8_WithLightHorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level9_WithLightHorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level10_WithLightHorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level11_WithLightHorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level12_WithLightHorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level13_WithLightHorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level14_WithLightHorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level15_WithLightHorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level16_WithLightHorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level17_WithLightHorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level18_WithLightHorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level19_WithLightHorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level20_WithLightHorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level1_WithLightWarhorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level2_WithLightWarhorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level3_WithLightWarhorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level4_WithLightWarhorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level5_WithLightWarhorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level6_WithLightWarhorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level7_WithLightWarhorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level8_WithLightWarhorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level9_WithLightWarhorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level10_WithLightWarhorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level11_WithLightWarhorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level12_WithLightWarhorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level13_WithLightWarhorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level14_WithLightWarhorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level15_WithLightWarhorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level16_WithLightWarhorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level17_WithLightWarhorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level18_WithLightWarhorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level19_WithLightWarhorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level20_WithLightWarhorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level1_WithPony, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level2_WithPony, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level3_WithPony, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level4_WithPony, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level5_WithPony, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level6_WithPony, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level7_WithPony, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level8_WithPony, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level9_WithPony, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level10_WithPony, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level11_WithPony, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level12_WithPony, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level13_WithPony, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level14_WithPony, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level15_WithPony, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level16_WithPony, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level17_WithPony, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level18_WithPony, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level19_WithPony, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level20_WithPony, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level1_WithWarpony, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level2_WithWarpony, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level3_WithWarpony, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level4_WithWarpony, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level5_WithWarpony, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level6_WithWarpony, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level7_WithWarpony, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level8_WithWarpony, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level9_WithWarpony, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level10_WithWarpony, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level11_WithWarpony, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level12_WithWarpony, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level13_WithWarpony, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level14_WithWarpony, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level15_WithWarpony, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level16_WithWarpony, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level17_WithWarpony, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level18_WithWarpony, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level19_WithWarpony, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level20_WithWarpony, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level1_WithRidingDog, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level2_WithRidingDog, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level3_WithRidingDog, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level4_WithRidingDog, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level5_WithRidingDog, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level6_WithRidingDog, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level7_WithRidingDog, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level8_WithRidingDog, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level9_WithRidingDog, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level10_WithRidingDog, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level11_WithRidingDog, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level12_WithRidingDog, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level13_WithRidingDog, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level14_WithRidingDog, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level15_WithRidingDog, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level16_WithRidingDog, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level17_WithRidingDog, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level18_WithRidingDog, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level19_WithRidingDog, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level20_WithRidingDog, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level1_WithMule, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level2_WithMule, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level3_WithMule, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level4_WithMule, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level5_WithMule, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level6_WithMule, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level7_WithMule, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level8_WithMule, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level9_WithMule, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level10_WithMule, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level11_WithMule, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level12_WithMule, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level13_WithMule, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level14_WithMule, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level15_WithMule, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level16_WithMule, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level17_WithMule, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level18_WithMule, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level19_WithMule, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level20_WithMule, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_FamousEntertainer_Level11_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_FamousEntertainer_Level12_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_FamousEntertainer_Level13_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_FamousEntertainer_Level14_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_FamousEntertainer_Level15_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_FamousEntertainer_Level16_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_FamousEntertainer_Level17_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_FamousEntertainer_Level18_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_FamousEntertainer_Level19_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_FamousEntertainer_Level20_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_FamousPriest_Level11_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_FamousPriest_Level12_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_FamousPriest_Level13_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_FamousPriest_Level14_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_FamousPriest_Level15_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_FamousPriest_Level16_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_FamousPriest_Level17_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_FamousPriest_Level18_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_FamousPriest_Level19_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_FamousPriest_Level20_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_ContractKiller_Level1_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_ContractKiller_Level2_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_ContractKiller_Level3_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_ContractKiller_Level4_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_ContractKiller_Level5_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_ContractKiller_Level6_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_ContractKiller_Level7_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_ContractKiller_Level8_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_ContractKiller_Level9_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_ContractKiller_Level10_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_ContractKiller_Level11_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_ContractKiller_Level12_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_ContractKiller_Level13_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_ContractKiller_Level14_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_ContractKiller_Level15_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_ContractKiller_Level16_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_ContractKiller_Level17_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_ContractKiller_Level18_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_ContractKiller_Level19_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_ContractKiller_Level20_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Hunter_Level1_HuntingParty, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Hunter_Level10To11_HuntingParty, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Hunter_Level12To13_HuntingParty, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Hunter_Level14To15_HuntingParty, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Hunter_Level16To17_HuntingParty, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Hunter_Level18To19_HuntingParty, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Hunter_Level20_HuntingParty, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Hunter_Level2To3_HuntingParty, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Hunter_Level4To5_HuntingParty, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Hunter_Level6To7_HuntingParty, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Hunter_Level8To9_HuntingParty, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Merchant_Level1_Caravan, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Merchant_Level10To11_Caravan, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Merchant_Level12To13_Caravan, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Merchant_Level14To15_Caravan, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Merchant_Level16To17_Caravan, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Merchant_Level18To19_Caravan, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Merchant_Level20_Caravan, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Merchant_Level2To3_Caravan, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Merchant_Level4To5_Caravan, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Merchant_Level6To7_Caravan, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Merchant_Level8To9_Caravan, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Minstrel_Level1_Group, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Minstrel_Level10To11_Group, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Minstrel_Level12To13_Group, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Minstrel_Level14To15_Group, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Minstrel_Level16To17_Group, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Minstrel_Level18To19_Group, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Minstrel_Level20_Group, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Minstrel_Level2To3_Group, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Minstrel_Level4To5_Group, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Minstrel_Level6To7_Group, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Minstrel_Level8To9_Group, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Missionary_Level1_MissionTeam, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Missionary_Level2_MissionTeam, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Missionary_Level3_MissionTeam, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Missionary_Level4_MissionTeam, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Missionary_Level5_MissionTeam, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Missionary_Level6_MissionTeam, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Missionary_Level7_MissionTeam, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Missionary_Level8_MissionTeam, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Missionary_Level9_MissionTeam, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Missionary_Level10_MissionTeam, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Missionary_Level11_MissionTeam, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Missionary_Level12_MissionTeam, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Missionary_Level13_MissionTeam, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Missionary_Level14_MissionTeam, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Missionary_Level15_MissionTeam, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Missionary_Level16_MissionTeam, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Missionary_Level17_MissionTeam, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Missionary_Level18_MissionTeam, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Missionary_Level19_MissionTeam, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Missionary_Level20_MissionTeam, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_RetiredAdventurer_Level11_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_RetiredAdventurer_Level12_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_RetiredAdventurer_Level13_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_RetiredAdventurer_Level14_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_RetiredAdventurer_Level15_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_RetiredAdventurer_Level16_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_RetiredAdventurer_Level17_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_RetiredAdventurer_Level18_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_RetiredAdventurer_Level19_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_RetiredAdventurer_Level20_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Scholar_Level1_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Scholar_Level2_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Scholar_Level3_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Scholar_Level4_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Scholar_Level5_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Scholar_Level6_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Scholar_Level7_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Scholar_Level8_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Scholar_Level9_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Scholar_Level10_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Scholar_Level11_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Scholar_Level12_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Scholar_Level13_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Scholar_Level14_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Scholar_Level15_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Scholar_Level16_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Scholar_Level17_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Scholar_Level18_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Scholar_Level19_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Scholar_Level20_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Sellsword_Level1_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Sellsword_Level2_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Sellsword_Level3_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Sellsword_Level4_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Sellsword_Level5_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Sellsword_Level6_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Sellsword_Level7_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Sellsword_Level8_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Sellsword_Level9_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Sellsword_Level10_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Sellsword_Level11_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Sellsword_Level12_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Sellsword_Level13_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Sellsword_Level14_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Sellsword_Level15_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Sellsword_Level16_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Sellsword_Level17_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Sellsword_Level18_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Sellsword_Level19_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Sellsword_Level20_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_StreetPerformer_Level1_Crew, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_StreetPerformer_Level2_Crew, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_StreetPerformer_Level3_Crew, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_StreetPerformer_Level4_Crew, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_StreetPerformer_Level5_Crew, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_StreetPerformer_Level6_Crew, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_StreetPerformer_Level7_Crew, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_StreetPerformer_Level8_Crew, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_StreetPerformer_Level9_Crew, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_StreetPerformer_Level10_Crew, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_StreetPerformer_Level11_Crew, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_StreetPerformer_Level12_Crew, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_StreetPerformer_Level13_Crew, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_StreetPerformer_Level14_Crew, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_StreetPerformer_Level15_Crew, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_StreetPerformer_Level16_Crew, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_StreetPerformer_Level17_Crew, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_StreetPerformer_Level18_Crew, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_StreetPerformer_Level19_Crew, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_StreetPerformer_Level20_Crew, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Teacher_Level11_WithStudents, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Teacher_Level12_WithStudents, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Teacher_Level13_WithStudents, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Teacher_Level14_WithStudents, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Teacher_Level15_WithStudents, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Teacher_Level16_WithStudents, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Teacher_Level17_WithStudents, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Teacher_Level18_WithStudents, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Teacher_Level19_WithStudents, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Teacher_Level20_WithStudents, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_WarHero_Level11_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_WarHero_Level12_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_WarHero_Level13_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_WarHero_Level14_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_WarHero_Level15_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_WarHero_Level16_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_WarHero_Level17_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_WarHero_Level18_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_WarHero_Level19_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_WarHero_Level20_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level11_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level11_WithClayGolem, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level11_WithDominatedCreature, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level11_WithFleshGolem, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level11_WithHomunculus, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level12_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level12_WithClayGolem, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level12_WithDominatedCreature, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level12_WithFleshGolem, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level12_WithHomunculus, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level13_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level13_WithClayGolem, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level13_WithDominatedCreature, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level13_WithFleshGolem, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level13_WithHomunculus, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level14_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level14_WithClayGolem, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level14_WithDominatedCreature, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level14_WithFleshGolem, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level14_WithGreaterStoneGolem, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level14_WithHomunculus, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level14_WithStoneGolem, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level15_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level15_WithClayGolem, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level15_WithDominatedCreature, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level15_WithFleshGolem, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level15_WithGreaterStoneGolem, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level15_WithHomunculus, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level15_WithShieldGuardian, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level15_WithStoneGolem, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level16_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level16_WithClayGolem, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level16_WithDominatedCreature, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level16_WithFleshGolem, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level16_WithGreaterStoneGolem, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level16_WithHomunculus, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level16_WithIronGolem, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level16_WithShieldGuardian, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level16_WithStoneGolem, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level17_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level17_WithClayGolem, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level17_WithDominatedCreature, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level17_WithFleshGolem, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level17_WithGreaterStoneGolem, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level17_WithHomunculus, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level17_WithIronGolem, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level17_WithShieldGuardian, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level17_WithStoneGolem, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level18_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level18_WithClayGolem, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level18_WithDominatedCreature, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level18_WithFleshGolem, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level18_WithGreaterStoneGolem, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level18_WithHomunculus, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level18_WithIronGolem, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level18_WithShieldGuardian, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level18_WithStoneGolem, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level19_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level19_WithClayGolem, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level19_WithDominatedCreature, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level19_WithFleshGolem, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level19_WithGreaterStoneGolem, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level19_WithHomunculus, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level19_WithIronGolem, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level19_WithShieldGuardian, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level19_WithStoneGolem, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level20_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level20_WithClayGolem, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level20_WithDominatedCreature, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level20_WithFleshGolem, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level20_WithGreaterStoneGolem, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level20_WithHomunculus, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level20_WithIronGolem, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level20_WithShieldGuardian, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level20_WithStoneGolem, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Adept_Doctor_Level1_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Adept_Doctor_Level10To11_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Adept_Doctor_Level12To13_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Adept_Doctor_Level14To15_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Adept_Doctor_Level16To17_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Adept_Doctor_Level18To19_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Adept_Doctor_Level20_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Adept_Doctor_Level2To3_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Adept_Doctor_Level4To5_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Adept_Doctor_Level6To7_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Adept_Doctor_Level8To9_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Adept_Fortuneteller_Level1_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Adept_Fortuneteller_Level10To11_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Adept_Fortuneteller_Level12To13_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Adept_Fortuneteller_Level14To15_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Adept_Fortuneteller_Level16To17_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Adept_Fortuneteller_Level18To19_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Adept_Fortuneteller_Level20_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Adept_Fortuneteller_Level2To3_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Adept_Fortuneteller_Level4To5_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Adept_Fortuneteller_Level6To7_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Adept_Fortuneteller_Level8To9_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Adept_Missionary_Level1_MissionTeam, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Adept_Missionary_Level10To11_MissionTeam, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Adept_Missionary_Level12To13_MissionTeam, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Adept_Missionary_Level14To15_MissionTeam, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Adept_Missionary_Level16To17_MissionTeam, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Adept_Missionary_Level18To19_MissionTeam, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Adept_Missionary_Level20_MissionTeam, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Adept_Missionary_Level2To3_MissionTeam, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Adept_Missionary_Level4To5_MissionTeam, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Adept_Missionary_Level6To7_MissionTeam, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Adept_Missionary_Level8To9_MissionTeam, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Adept_StreetPerformer_Level1_Crew, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Adept_StreetPerformer_Level10To11_Crew, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Adept_StreetPerformer_Level12To13_Crew, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Adept_StreetPerformer_Level14To15_Crew, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Adept_StreetPerformer_Level16To17_Crew, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Adept_StreetPerformer_Level18To19_Crew, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Adept_StreetPerformer_Level20_Crew, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Adept_StreetPerformer_Level2To3_Crew, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Adept_StreetPerformer_Level4To5_Crew, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Adept_StreetPerformer_Level6To7_Crew, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Adept_StreetPerformer_Level8To9_Crew, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Aristocrat_BusinessPeople_Level1_Group, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Aristocrat_BusinessPeople_Level10To11_Group, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Aristocrat_BusinessPeople_Level12To13_Group, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Aristocrat_BusinessPeople_Level14To15_Group, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Aristocrat_BusinessPeople_Level16To17_Group, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Aristocrat_BusinessPeople_Level18To19_Group, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Aristocrat_BusinessPeople_Level20_Group, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Aristocrat_BusinessPeople_Level2To3_Group, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Aristocrat_BusinessPeople_Level4To5_Group, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Aristocrat_BusinessPeople_Level6To7_Group, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Aristocrat_BusinessPeople_Level8To9_Group, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Aristocrat_Gentry_Level1_WithServants, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Aristocrat_Gentry_Level10To11_WithServants, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Aristocrat_Gentry_Level12To13_WithServants, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Aristocrat_Gentry_Level14To15_WithServants, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Aristocrat_Gentry_Level16To17_WithServants, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Aristocrat_Gentry_Level18To19_WithServants, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Aristocrat_Gentry_Level20_WithServants, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Aristocrat_Gentry_Level2To3_WithServants, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Aristocrat_Gentry_Level4To5_WithServants, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Aristocrat_Gentry_Level6To7_WithServants, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Aristocrat_Gentry_Level8To9_WithServants, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Aristocrat_Politician_Level1_WithAdvisersAndGuards, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Aristocrat_Politician_Level10To11_WithAdvisersAndGuards, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Aristocrat_Politician_Level12To13_WithAdvisersAndGuards, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Aristocrat_Politician_Level14To15_WithAdvisersAndGuards, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Aristocrat_Politician_Level16To17_WithAdvisersAndGuards, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Aristocrat_Politician_Level18To19_WithAdvisersAndGuards, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Aristocrat_Politician_Level20_WithAdvisersAndGuards, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Aristocrat_Politician_Level2To3_WithAdvisersAndGuards, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Aristocrat_Politician_Level4To5_WithAdvisersAndGuards, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Aristocrat_Politician_Level6To7_WithAdvisersAndGuards, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Aristocrat_Politician_Level8To9_WithAdvisersAndGuards, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Commoner_Beggar_Level1_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Commoner_Beggar_Level10To11_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Commoner_Beggar_Level12To13_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Commoner_Beggar_Level14To15_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Commoner_Beggar_Level16To17_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Commoner_Beggar_Level18To19_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Commoner_Beggar_Level20_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Commoner_Beggar_Level2To3_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Commoner_Beggar_Level4To5_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Commoner_Beggar_Level6To7_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Commoner_Beggar_Level8To9_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Commoner_ConstructionWorker_Level1_Crew, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Commoner_ConstructionWorker_Level10To11_Crew, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Commoner_ConstructionWorker_Level12To13_Crew, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Commoner_ConstructionWorker_Level14To15_Crew, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Commoner_ConstructionWorker_Level16To17_Crew, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Commoner_ConstructionWorker_Level18To19_Crew, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Commoner_ConstructionWorker_Level20_Crew, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Commoner_ConstructionWorker_Level2To3_Crew, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Commoner_ConstructionWorker_Level4To5_Crew, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Commoner_ConstructionWorker_Level6To7_Crew, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Commoner_ConstructionWorker_Level8To9_Crew, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Commoner_Farmer_Level1_Group, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Commoner_Farmer_Level10To11_Group, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Commoner_Farmer_Level12To13_Group, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Commoner_Farmer_Level14To15_Group, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Commoner_Farmer_Level16To17_Group, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Commoner_Farmer_Level18To19_Group, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Commoner_Farmer_Level20_Group, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Commoner_Farmer_Level2To3_Group, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Commoner_Farmer_Level4To5_Group, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Commoner_Farmer_Level6To7_Group, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Commoner_Farmer_Level8To9_Group, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Commoner_Herder_Level1_Group, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Commoner_Herder_Level10To11_Group, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Commoner_Herder_Level12To13_Group, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Commoner_Herder_Level14To15_Group, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Commoner_Herder_Level16To17_Group, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Commoner_Herder_Level18To19_Group, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Commoner_Herder_Level20_Group, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Commoner_Herder_Level2To3_Group, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Commoner_Herder_Level4To5_Group, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Commoner_Herder_Level6To7_Group, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Commoner_Herder_Level8To9_Group, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Commoner_Pilgrim_Level1_Caravan, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Commoner_Pilgrim_Level10To11_Caravan, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Commoner_Pilgrim_Level12To13_Caravan, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Commoner_Pilgrim_Level14To15_Caravan, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Commoner_Pilgrim_Level16To17_Caravan, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Commoner_Pilgrim_Level18To19_Caravan, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Commoner_Pilgrim_Level20_Caravan, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Commoner_Pilgrim_Level2To3_Caravan, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Commoner_Pilgrim_Level4To5_Caravan, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Commoner_Pilgrim_Level6To7_Caravan, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Commoner_Pilgrim_Level8To9_Caravan, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Commoner_Protestor_Level1_Protest, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Commoner_Protestor_Level10To11_Protest, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Commoner_Protestor_Level12To13_Protest, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Commoner_Protestor_Level14To15_Protest, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Commoner_Protestor_Level16To17_Protest, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Commoner_Protestor_Level18To19_Protest, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Commoner_Protestor_Level20_Protest, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Commoner_Protestor_Level2To3_Protest, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Commoner_Protestor_Level4To5_Protest, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Commoner_Protestor_Level6To7_Protest, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Commoner_Protestor_Level8To9_Protest, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Expert_Artisan_Level1_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Expert_Artisan_Level10To11_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Expert_Artisan_Level12To13_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Expert_Artisan_Level14To15_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Expert_Artisan_Level16To17_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Expert_Artisan_Level18To19_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Expert_Artisan_Level20_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Expert_Artisan_Level2To3_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Expert_Artisan_Level4To5_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Expert_Artisan_Level6To7_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Expert_Artisan_Level8To9_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level1_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level10To11_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level12To13_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level14To15_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level16To17_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level18To19_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level20_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level2To3_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level4To5_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level6To7_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level8To9_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level1_WithCat, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level10To11_WithCat, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level12To13_WithCat, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level14To15_WithCat, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level16To17_WithCat, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level18To19_WithCat, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level20_WithCat, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level2To3_WithCat, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level4To5_WithCat, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level6To7_WithCat, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level8To9_WithCat, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level1_WithCamel, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level10To11_WithCamel, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level12To13_WithCamel, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level14To15_WithCamel, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level16To17_WithCamel, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level18To19_WithCamel, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level20_WithCamel, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level2To3_WithCamel, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level4To5_WithCamel, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level6To7_WithCamel, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level8To9_WithCamel, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level1_WithDog, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level10To11_WithDog, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level12To13_WithDog, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level14To15_WithDog, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level16To17_WithDog, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level18To19_WithDog, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level20_WithDog, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level2To3_WithDog, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level4To5_WithDog, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level6To7_WithDog, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level8To9_WithDog, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level1_WithRidingDog, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level10To11_WithRidingDog, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level12To13_WithRidingDog, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level14To15_WithRidingDog, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level16To17_WithRidingDog, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level18To19_WithRidingDog, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level20_WithRidingDog, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level2To3_WithRidingDog, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level4To5_WithRidingDog, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level6To7_WithRidingDog, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level8To9_WithRidingDog, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level1_WithDonkey, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level10To11_WithDonkey, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level12To13_WithDonkey, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level14To15_WithDonkey, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level16To17_WithDonkey, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level18To19_WithDonkey, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level20_WithDonkey, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level2To3_WithDonkey, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level4To5_WithDonkey, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level6To7_WithDonkey, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level8To9_WithDonkey, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level1_WithMule, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level10To11_WithMule, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level12To13_WithMule, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level14To15_WithMule, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level16To17_WithMule, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level18To19_WithMule, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level20_WithMule, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level2To3_WithMule, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level4To5_WithMule, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level6To7_WithMule, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level8To9_WithMule, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level1_WithPony, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level10To11_WithPony, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level12To13_WithPony, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level14To15_WithPony, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level16To17_WithPony, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level18To19_WithPony, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level20_WithPony, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level2To3_WithPony, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level4To5_WithPony, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level6To7_WithPony, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level8To9_WithPony, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level1_WithWarpony, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level10To11_WithWarpony, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level12To13_WithWarpony, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level14To15_WithWarpony, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level16To17_WithWarpony, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level18To19_WithWarpony, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level20_WithWarpony, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level2To3_WithWarpony, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level4To5_WithWarpony, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level6To7_WithWarpony, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level8To9_WithWarpony, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level1_WithLightHorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level10To11_WithLightHorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level12To13_WithLightHorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level14To15_WithLightHorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level16To17_WithLightHorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level18To19_WithLightHorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level20_WithLightHorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level2To3_WithLightHorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level4To5_WithLightHorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level6To7_WithLightHorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level8To9_WithLightHorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level1_WithLightWarhorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level10To11_WithLightWarhorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level12To13_WithLightWarhorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level14To15_WithLightWarhorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level16To17_WithLightWarhorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level18To19_WithLightWarhorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level20_WithLightWarhorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level2To3_WithLightWarhorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level4To5_WithLightWarhorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level6To7_WithLightWarhorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level8To9_WithLightWarhorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level1_WithHeavyHorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level10To11_WithHeavyHorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level12To13_WithHeavyHorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level14To15_WithHeavyHorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level16To17_WithHeavyHorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level18To19_WithHeavyHorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level20_WithHeavyHorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level2To3_WithHeavyHorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level4To5_WithHeavyHorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level6To7_WithHeavyHorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level8To9_WithHeavyHorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level1_WithHeavyWarhorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level10To11_WithHeavyWarhorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level12To13_WithHeavyWarhorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level14To15_WithHeavyWarhorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level16To17_WithHeavyWarhorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level18To19_WithHeavyWarhorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level20_WithHeavyWarhorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level2To3_WithHeavyWarhorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level4To5_WithHeavyWarhorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level6To7_WithHeavyWarhorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Local_Level8To9_WithHeavyWarhorse, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Traveler_Level1_Group, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Traveler_Level10To11_Group, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Traveler_Level12To13_Group, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Traveler_Level14To15_Group, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Traveler_Level16To17_Group, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Traveler_Level18To19_Group, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Traveler_Level20_Group, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Traveler_Level2To3_Group, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Traveler_Level4To5_Group, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Traveler_Level6To7_Group, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Traveler_Level8To9_Group, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Paladin_Crusader_Level1_Band, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Paladin_Crusader_Level2_Band, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Paladin_Crusader_Level3_Band, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Paladin_Crusader_Level4_Band, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Paladin_Crusader_Level5_Band, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Paladin_Crusader_Level6_Band, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Paladin_Crusader_Level7_Band, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Paladin_Crusader_Level8_Band, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Paladin_Crusader_Level9_Band, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Paladin_Crusader_Level10_Band, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Paladin_Crusader_Level11_Band, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Paladin_Crusader_Level12_Band, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Paladin_Crusader_Level13_Band, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Paladin_Crusader_Level14_Band, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Paladin_Crusader_Level15_Band, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Paladin_Crusader_Level16_Band, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Paladin_Crusader_Level17_Band, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Paladin_Crusader_Level18_Band, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Paladin_Crusader_Level19_Band, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Paladin_Crusader_Level20_Band, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Rogue_Pickpocket_Level1_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Rogue_Pickpocket_Level2_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Rogue_Pickpocket_Level3_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Rogue_Pickpocket_Level4_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Rogue_Pickpocket_Level5_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Rogue_Pickpocket_Level6_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Rogue_Pickpocket_Level7_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Rogue_Pickpocket_Level8_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Rogue_Pickpocket_Level9_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Rogue_Pickpocket_Level10_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Rogue_Pickpocket_Level11_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Rogue_Pickpocket_Level12_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Rogue_Pickpocket_Level13_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Rogue_Pickpocket_Level14_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Rogue_Pickpocket_Level15_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Rogue_Pickpocket_Level16_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Rogue_Pickpocket_Level17_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Rogue_Pickpocket_Level18_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Rogue_Pickpocket_Level19_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Rogue_Pickpocket_Level20_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Warrior_Bandit_Level1_Gang, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Warrior_Bandit_Level10To11_Gang, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Warrior_Bandit_Level12To13_Gang, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Warrior_Bandit_Level14To15_Gang, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Warrior_Bandit_Level16To17_Gang, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Warrior_Bandit_Level18To19_Gang, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Warrior_Bandit_Level2To3_Gang, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Warrior_Bandit_Level4To5_Gang, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Warrior_Bandit_Level6To7_Gang, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Warrior_Bandit_Level8To9_Gang, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Warrior_Bandit_Level1_GangWithFighter, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Warrior_Bandit_Level10To11_GangWithFighter, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Warrior_Bandit_Level12To13_GangWithFighter, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Warrior_Bandit_Level14To15_GangWithFighter, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Warrior_Bandit_Level16To17_GangWithFighter, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Warrior_Bandit_Level18To19_GangWithFighter, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Warrior_Bandit_Level20_GangWithFighter, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Warrior_Bandit_Level2To3_GangWithFighter, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Warrior_Bandit_Level4To5_GangWithFighter, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Warrior_Bandit_Level6To7_GangWithFighter, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Warrior_Bandit_Level8To9_GangWithFighter, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Warrior_Guard_Level1_Patrol, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Warrior_Guard_Level10To11_Patrol, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Warrior_Guard_Level12To13_Patrol, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Warrior_Guard_Level14To15_Patrol, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Warrior_Guard_Level16To17_Patrol, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Warrior_Guard_Level18To19_Patrol, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Warrior_Guard_Level2To3_Patrol, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Warrior_Guard_Level4To5_Patrol, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Warrior_Guard_Level6To7_Patrol, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Warrior_Guard_Level8To9_Patrol, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Warrior_Guard_Level1_PatrolWithFighter, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Warrior_Guard_Level10To11_PatrolWithFighter, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Warrior_Guard_Level12To13_PatrolWithFighter, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Warrior_Guard_Level14To15_PatrolWithFighter, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Warrior_Guard_Level16To17_PatrolWithFighter, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Warrior_Guard_Level18To19_PatrolWithFighter, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Warrior_Guard_Level20_PatrolWithFighter, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Warrior_Guard_Level2To3_PatrolWithFighter, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Warrior_Guard_Level4To5_PatrolWithFighter, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Warrior_Guard_Level6To7_PatrolWithFighter, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Warrior_Guard_Level8To9_PatrolWithFighter, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Character_Adventurer_Level1_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Adventurer_Level2_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Adventurer_Level3_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Adventurer_Level4_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Adventurer_Level5_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Adventurer_Level6_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Adventurer_Level7_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Adventurer_Level8_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Adventurer_Level9_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Adventurer_Level10_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Adventurer_Level11_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Adventurer_Level12_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Adventurer_Level13_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Adventurer_Level14_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Adventurer_Level15_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Adventurer_Level16_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Adventurer_Level17_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Adventurer_Level18_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Adventurer_Level19_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Adventurer_Level20_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Adventurer_Level1_Party, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Adventurer_Level2_Party, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Adventurer_Level3_Party, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Adventurer_Level4_Party, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Adventurer_Level5_Party, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Adventurer_Level6_Party, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Adventurer_Level7_Party, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Adventurer_Level8_Party, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Adventurer_Level9_Party, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Adventurer_Level10_Party, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Adventurer_Level11_Party, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Adventurer_Level12_Party, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Adventurer_Level13_Party, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Adventurer_Level14_Party, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Adventurer_Level15_Party, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Adventurer_Level16_Party, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Adventurer_Level17_Party, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Adventurer_Level18_Party, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Adventurer_Level19_Party, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Adventurer_Level20_Party, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level1_WithCat, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level2_WithCat, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level3_WithCat, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level4_WithCat, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level5_WithCat, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level6_WithCat, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level7_WithCat, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level8_WithCat, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level9_WithCat, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level10_WithCat, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level11_WithCat, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level12_WithCat, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level13_WithCat, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level14_WithCat, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level15_WithCat, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level16_WithCat, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level17_WithCat, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level18_WithCat, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level19_WithCat, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level20_WithCat, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level1_WithCamel, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level2_WithCamel, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level3_WithCamel, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level4_WithCamel, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level5_WithCamel, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level6_WithCamel, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level7_WithCamel, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level8_WithCamel, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level9_WithCamel, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level10_WithCamel, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level11_WithCamel, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level12_WithCamel, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level13_WithCamel, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level14_WithCamel, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level15_WithCamel, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level16_WithCamel, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level17_WithCamel, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level18_WithCamel, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level19_WithCamel, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level20_WithCamel, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level1_WithDog, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level2_WithDog, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level3_WithDog, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level4_WithDog, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level5_WithDog, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level6_WithDog, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level7_WithDog, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level8_WithDog, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level9_WithDog, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level10_WithDog, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level11_WithDog, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level12_WithDog, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level13_WithDog, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level14_WithDog, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level15_WithDog, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level16_WithDog, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level17_WithDog, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level18_WithDog, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level19_WithDog, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level20_WithDog, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level1_WithDonkey, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level2_WithDonkey, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level3_WithDonkey, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level4_WithDonkey, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level5_WithDonkey, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level6_WithDonkey, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level7_WithDonkey, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level8_WithDonkey, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level9_WithDonkey, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level10_WithDonkey, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level11_WithDonkey, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level12_WithDonkey, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level13_WithDonkey, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level14_WithDonkey, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level15_WithDonkey, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level16_WithDonkey, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level17_WithDonkey, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level18_WithDonkey, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level19_WithDonkey, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level20_WithDonkey, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level1_WithHeavyHorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level2_WithHeavyHorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level3_WithHeavyHorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level4_WithHeavyHorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level5_WithHeavyHorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level6_WithHeavyHorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level7_WithHeavyHorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level8_WithHeavyHorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level9_WithHeavyHorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level10_WithHeavyHorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level11_WithHeavyHorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level12_WithHeavyHorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level13_WithHeavyHorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level14_WithHeavyHorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level15_WithHeavyHorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level16_WithHeavyHorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level17_WithHeavyHorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level18_WithHeavyHorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level19_WithHeavyHorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level20_WithHeavyHorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level1_WithHeavyWarhorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level2_WithHeavyWarhorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level3_WithHeavyWarhorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level4_WithHeavyWarhorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level5_WithHeavyWarhorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level6_WithHeavyWarhorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level7_WithHeavyWarhorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level8_WithHeavyWarhorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level9_WithHeavyWarhorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level10_WithHeavyWarhorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level11_WithHeavyWarhorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level12_WithHeavyWarhorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level13_WithHeavyWarhorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level14_WithHeavyWarhorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level15_WithHeavyWarhorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level16_WithHeavyWarhorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level17_WithHeavyWarhorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level18_WithHeavyWarhorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level19_WithHeavyWarhorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level20_WithHeavyWarhorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level1_WithLightHorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level2_WithLightHorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level3_WithLightHorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level4_WithLightHorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level5_WithLightHorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level6_WithLightHorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level7_WithLightHorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level8_WithLightHorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level9_WithLightHorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level10_WithLightHorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level11_WithLightHorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level12_WithLightHorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level13_WithLightHorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level14_WithLightHorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level15_WithLightHorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level16_WithLightHorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level17_WithLightHorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level18_WithLightHorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level19_WithLightHorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level20_WithLightHorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level1_WithLightWarhorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level2_WithLightWarhorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level3_WithLightWarhorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level4_WithLightWarhorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level5_WithLightWarhorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level6_WithLightWarhorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level7_WithLightWarhorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level8_WithLightWarhorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level9_WithLightWarhorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level10_WithLightWarhorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level11_WithLightWarhorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level12_WithLightWarhorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level13_WithLightWarhorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level14_WithLightWarhorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level15_WithLightWarhorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level16_WithLightWarhorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level17_WithLightWarhorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level18_WithLightWarhorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level19_WithLightWarhorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level20_WithLightWarhorse, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level1_WithPony, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level2_WithPony, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level3_WithPony, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level4_WithPony, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level5_WithPony, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level6_WithPony, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level7_WithPony, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level8_WithPony, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level9_WithPony, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level10_WithPony, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level11_WithPony, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level12_WithPony, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level13_WithPony, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level14_WithPony, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level15_WithPony, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level16_WithPony, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level17_WithPony, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level18_WithPony, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level19_WithPony, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level20_WithPony, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level1_WithWarpony, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level2_WithWarpony, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level3_WithWarpony, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level4_WithWarpony, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level5_WithWarpony, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level6_WithWarpony, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level7_WithWarpony, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level8_WithWarpony, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level9_WithWarpony, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level10_WithWarpony, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level11_WithWarpony, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level12_WithWarpony, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level13_WithWarpony, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level14_WithWarpony, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level15_WithWarpony, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level16_WithWarpony, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level17_WithWarpony, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level18_WithWarpony, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level19_WithWarpony, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level20_WithWarpony, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level1_WithRidingDog, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level2_WithRidingDog, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level3_WithRidingDog, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level4_WithRidingDog, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level5_WithRidingDog, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level6_WithRidingDog, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level7_WithRidingDog, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level8_WithRidingDog, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level9_WithRidingDog, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level10_WithRidingDog, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level11_WithRidingDog, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level12_WithRidingDog, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level13_WithRidingDog, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level14_WithRidingDog, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level15_WithRidingDog, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level16_WithRidingDog, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level17_WithRidingDog, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level18_WithRidingDog, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level19_WithRidingDog, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level20_WithRidingDog, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level1_WithMule, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level2_WithMule, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level3_WithMule, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level4_WithMule, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level5_WithMule, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level6_WithMule, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level7_WithMule, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level8_WithMule, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level9_WithMule, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level10_WithMule, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level11_WithMule, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level12_WithMule, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level13_WithMule, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level14_WithMule, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level15_WithMule, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level16_WithMule, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level17_WithMule, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level18_WithMule, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level19_WithMule, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_AnimalTrainer_Level20_WithMule, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Doctor_Level1_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Doctor_Level2_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Doctor_Level3_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Doctor_Level4_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Doctor_Level5_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Doctor_Level6_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Doctor_Level7_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Doctor_Level8_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Doctor_Level9_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Doctor_Level10_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Doctor_Level11_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Doctor_Level12_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Doctor_Level13_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Doctor_Level14_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Doctor_Level15_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Doctor_Level16_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Doctor_Level17_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Doctor_Level18_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Doctor_Level19_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Doctor_Level20_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_FamousEntertainer_Level11_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_FamousEntertainer_Level12_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_FamousEntertainer_Level13_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_FamousEntertainer_Level14_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_FamousEntertainer_Level15_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_FamousEntertainer_Level16_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_FamousEntertainer_Level17_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_FamousEntertainer_Level18_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_FamousEntertainer_Level19_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_FamousEntertainer_Level20_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_FamousPriest_Level11_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_FamousPriest_Level12_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_FamousPriest_Level13_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_FamousPriest_Level14_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_FamousPriest_Level15_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_FamousPriest_Level16_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_FamousPriest_Level17_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_FamousPriest_Level18_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_FamousPriest_Level19_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_FamousPriest_Level20_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_ContractKiller_Level1_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_ContractKiller_Level2_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_ContractKiller_Level3_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_ContractKiller_Level4_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_ContractKiller_Level5_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_ContractKiller_Level6_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_ContractKiller_Level7_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_ContractKiller_Level8_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_ContractKiller_Level9_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_ContractKiller_Level10_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_ContractKiller_Level11_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_ContractKiller_Level12_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_ContractKiller_Level13_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_ContractKiller_Level14_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_ContractKiller_Level15_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_ContractKiller_Level16_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_ContractKiller_Level17_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_ContractKiller_Level18_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_ContractKiller_Level19_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_ContractKiller_Level20_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Hunter_Level1_HuntingParty, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Hunter_Level10To11_HuntingParty, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Hunter_Level12To13_HuntingParty, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Hunter_Level14To15_HuntingParty, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Hunter_Level16To17_HuntingParty, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Hunter_Level18To19_HuntingParty, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Hunter_Level20_HuntingParty, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Hunter_Level2To3_HuntingParty, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Hunter_Level4To5_HuntingParty, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Hunter_Level6To7_HuntingParty, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Hunter_Level8To9_HuntingParty, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Merchant_Level1_Caravan, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Merchant_Level10To11_Caravan, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Merchant_Level12To13_Caravan, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Merchant_Level14To15_Caravan, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Merchant_Level16To17_Caravan, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Merchant_Level18To19_Caravan, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Merchant_Level20_Caravan, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Merchant_Level2To3_Caravan, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Merchant_Level4To5_Caravan, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Merchant_Level6To7_Caravan, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Merchant_Level8To9_Caravan, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Minstrel_Level1_Group, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Minstrel_Level10To11_Group, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Minstrel_Level12To13_Group, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Minstrel_Level14To15_Group, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Minstrel_Level16To17_Group, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Minstrel_Level18To19_Group, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Minstrel_Level20_Group, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Minstrel_Level2To3_Group, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Minstrel_Level4To5_Group, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Minstrel_Level6To7_Group, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Minstrel_Level8To9_Group, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Missionary_Level1_MissionTeam, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Missionary_Level2_MissionTeam, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Missionary_Level3_MissionTeam, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Missionary_Level4_MissionTeam, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Missionary_Level5_MissionTeam, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Missionary_Level6_MissionTeam, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Missionary_Level7_MissionTeam, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Missionary_Level8_MissionTeam, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Missionary_Level9_MissionTeam, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Missionary_Level10_MissionTeam, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Missionary_Level11_MissionTeam, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Missionary_Level12_MissionTeam, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Missionary_Level13_MissionTeam, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Missionary_Level14_MissionTeam, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Missionary_Level15_MissionTeam, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Missionary_Level16_MissionTeam, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Missionary_Level17_MissionTeam, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Missionary_Level18_MissionTeam, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Missionary_Level19_MissionTeam, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Missionary_Level20_MissionTeam, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_RetiredAdventurer_Level11_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_RetiredAdventurer_Level12_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_RetiredAdventurer_Level13_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_RetiredAdventurer_Level14_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_RetiredAdventurer_Level15_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_RetiredAdventurer_Level16_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_RetiredAdventurer_Level17_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_RetiredAdventurer_Level18_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_RetiredAdventurer_Level19_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_RetiredAdventurer_Level20_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Scholar_Level1_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Scholar_Level2_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Scholar_Level3_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Scholar_Level4_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Scholar_Level5_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Scholar_Level6_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Scholar_Level7_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Scholar_Level8_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Scholar_Level9_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Scholar_Level10_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Scholar_Level11_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Scholar_Level12_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Scholar_Level13_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Scholar_Level14_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Scholar_Level15_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Scholar_Level16_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Scholar_Level17_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Scholar_Level18_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Scholar_Level19_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Scholar_Level20_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Sellsword_Level1_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Sellsword_Level2_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Sellsword_Level3_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Sellsword_Level4_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Sellsword_Level5_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Sellsword_Level6_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Sellsword_Level7_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Sellsword_Level8_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Sellsword_Level9_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Sellsword_Level10_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Sellsword_Level11_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Sellsword_Level12_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Sellsword_Level13_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Sellsword_Level14_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Sellsword_Level15_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Sellsword_Level16_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Sellsword_Level17_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Sellsword_Level18_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Sellsword_Level19_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Sellsword_Level20_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Teacher_Level11_WithStudents, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Teacher_Level12_WithStudents, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Teacher_Level13_WithStudents, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Teacher_Level14_WithStudents, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Teacher_Level15_WithStudents, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Teacher_Level16_WithStudents, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Teacher_Level17_WithStudents, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Teacher_Level18_WithStudents, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Teacher_Level19_WithStudents, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_Teacher_Level20_WithStudents, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_WarHero_Level11_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_WarHero_Level12_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_WarHero_Level13_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_WarHero_Level14_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_WarHero_Level15_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_WarHero_Level16_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_WarHero_Level17_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_WarHero_Level18_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_WarHero_Level19_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Character_WarHero_Level20_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level11_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level11_WithClayGolem, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level11_WithDominatedCreature, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level11_WithFleshGolem, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level11_WithHomunculus, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level12_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level12_WithClayGolem, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level12_WithDominatedCreature, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level12_WithFleshGolem, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level12_WithHomunculus, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level13_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level13_WithClayGolem, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level13_WithDominatedCreature, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level13_WithFleshGolem, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level13_WithHomunculus, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level14_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level14_WithClayGolem, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level14_WithDominatedCreature, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level14_WithFleshGolem, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level14_WithGreaterStoneGolem, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level14_WithHomunculus, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level14_WithStoneGolem, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level15_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level15_WithClayGolem, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level15_WithDominatedCreature, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level15_WithFleshGolem, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level15_WithGreaterStoneGolem, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level15_WithHomunculus, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level15_WithShieldGuardian, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level15_WithStoneGolem, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level16_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level16_WithClayGolem, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level16_WithDominatedCreature, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level16_WithFleshGolem, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level16_WithGreaterStoneGolem, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level16_WithHomunculus, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level16_WithIronGolem, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level16_WithShieldGuardian, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level16_WithStoneGolem, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level17_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level17_WithClayGolem, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level17_WithDominatedCreature, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level17_WithFleshGolem, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level17_WithGreaterStoneGolem, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level17_WithHomunculus, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level17_WithIronGolem, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level17_WithShieldGuardian, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level17_WithStoneGolem, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level18_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level18_WithClayGolem, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level18_WithDominatedCreature, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level18_WithFleshGolem, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level18_WithGreaterStoneGolem, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level18_WithHomunculus, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level18_WithIronGolem, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level18_WithShieldGuardian, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level18_WithStoneGolem, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level19_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level19_WithClayGolem, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level19_WithDominatedCreature, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level19_WithFleshGolem, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level19_WithGreaterStoneGolem, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level19_WithHomunculus, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level19_WithIronGolem, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level19_WithShieldGuardian, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level19_WithStoneGolem, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level20_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level20_WithClayGolem, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level20_WithDominatedCreature, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level20_WithFleshGolem, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level20_WithGreaterStoneGolem, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level20_WithHomunculus, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level20_WithIronGolem, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level20_WithShieldGuardian, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Wizard_FamousResearcher_Level20_WithStoneGolem, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Adept_Fortuneteller_Level1_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Adept_Fortuneteller_Level10To11_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Adept_Fortuneteller_Level12To13_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Adept_Fortuneteller_Level14To15_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Adept_Fortuneteller_Level16To17_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Adept_Fortuneteller_Level18To19_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Adept_Fortuneteller_Level20_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Adept_Fortuneteller_Level2To3_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Adept_Fortuneteller_Level4To5_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Adept_Fortuneteller_Level6To7_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Adept_Fortuneteller_Level8To9_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Adept_Missionary_Level1_MissionTeam, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Adept_Missionary_Level10To11_MissionTeam, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Adept_Missionary_Level12To13_MissionTeam, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Adept_Missionary_Level14To15_MissionTeam, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Adept_Missionary_Level16To17_MissionTeam, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Adept_Missionary_Level18To19_MissionTeam, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Adept_Missionary_Level20_MissionTeam, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Adept_Missionary_Level2To3_MissionTeam, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Adept_Missionary_Level4To5_MissionTeam, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Adept_Missionary_Level6To7_MissionTeam, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Adept_Missionary_Level8To9_MissionTeam, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Commoner_Farmer_Level1_Group, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Commoner_Farmer_Level10To11_Group, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Commoner_Farmer_Level12To13_Group, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Commoner_Farmer_Level14To15_Group, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Commoner_Farmer_Level16To17_Group, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Commoner_Farmer_Level18To19_Group, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Commoner_Farmer_Level20_Group, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Commoner_Farmer_Level2To3_Group, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Commoner_Farmer_Level4To5_Group, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Commoner_Farmer_Level6To7_Group, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Commoner_Farmer_Level8To9_Group, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Commoner_Herder_Level1_Group, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Commoner_Herder_Level10To11_Group, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Commoner_Herder_Level12To13_Group, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Commoner_Herder_Level14To15_Group, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Commoner_Herder_Level16To17_Group, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Commoner_Herder_Level18To19_Group, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Commoner_Herder_Level20_Group, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Commoner_Herder_Level2To3_Group, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Commoner_Herder_Level4To5_Group, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Commoner_Herder_Level6To7_Group, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Commoner_Herder_Level8To9_Group, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Commoner_Pilgrim_Level1_Caravan, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Commoner_Pilgrim_Level10To11_Caravan, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Commoner_Pilgrim_Level12To13_Caravan, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Commoner_Pilgrim_Level14To15_Caravan, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Commoner_Pilgrim_Level16To17_Caravan, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Commoner_Pilgrim_Level18To19_Caravan, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Commoner_Pilgrim_Level20_Caravan, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Commoner_Pilgrim_Level2To3_Caravan, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Commoner_Pilgrim_Level4To5_Caravan, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Commoner_Pilgrim_Level6To7_Caravan, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Commoner_Pilgrim_Level8To9_Caravan, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Traveler_Level1_Group, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Traveler_Level10To11_Group, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Traveler_Level12To13_Group, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Traveler_Level14To15_Group, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Traveler_Level16To17_Group, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Traveler_Level18To19_Group, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Traveler_Level20_Group, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Traveler_Level2To3_Group, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Traveler_Level4To5_Group, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Traveler_Level6To7_Group, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Traveler_Level8To9_Group, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Paladin_Crusader_Level1_Band, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Paladin_Crusader_Level2_Band, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Paladin_Crusader_Level3_Band, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Paladin_Crusader_Level4_Band, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Paladin_Crusader_Level5_Band, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Paladin_Crusader_Level6_Band, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Paladin_Crusader_Level7_Band, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Paladin_Crusader_Level8_Band, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Paladin_Crusader_Level9_Band, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Paladin_Crusader_Level10_Band, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Paladin_Crusader_Level11_Band, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Paladin_Crusader_Level12_Band, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Paladin_Crusader_Level13_Band, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Paladin_Crusader_Level14_Band, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Paladin_Crusader_Level15_Band, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Paladin_Crusader_Level16_Band, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Paladin_Crusader_Level17_Band, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Paladin_Crusader_Level18_Band, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Paladin_Crusader_Level19_Band, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Paladin_Crusader_Level20_Band, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Rogue_Pickpocket_Level1_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Rogue_Pickpocket_Level2_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Rogue_Pickpocket_Level3_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Rogue_Pickpocket_Level4_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Rogue_Pickpocket_Level5_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Rogue_Pickpocket_Level6_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Rogue_Pickpocket_Level7_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Rogue_Pickpocket_Level8_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Rogue_Pickpocket_Level9_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Rogue_Pickpocket_Level10_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Rogue_Pickpocket_Level11_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Rogue_Pickpocket_Level12_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Rogue_Pickpocket_Level13_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Rogue_Pickpocket_Level14_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Rogue_Pickpocket_Level15_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Rogue_Pickpocket_Level16_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Rogue_Pickpocket_Level17_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Rogue_Pickpocket_Level18_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Rogue_Pickpocket_Level19_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Rogue_Pickpocket_Level20_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Warrior_Bandit_Level1_Gang, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Warrior_Bandit_Level10To11_Gang, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Warrior_Bandit_Level12To13_Gang, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Warrior_Bandit_Level14To15_Gang, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Warrior_Bandit_Level16To17_Gang, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Warrior_Bandit_Level18To19_Gang, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Warrior_Bandit_Level2To3_Gang, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Warrior_Bandit_Level4To5_Gang, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Warrior_Bandit_Level6To7_Gang, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Warrior_Bandit_Level8To9_Gang, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Warrior_Bandit_Level1_GangWithFighter, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Warrior_Bandit_Level10To11_GangWithFighter, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Warrior_Bandit_Level12To13_GangWithFighter, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Warrior_Bandit_Level14To15_GangWithFighter, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Warrior_Bandit_Level16To17_GangWithFighter, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Warrior_Bandit_Level18To19_GangWithFighter, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Warrior_Bandit_Level20_GangWithFighter, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Warrior_Bandit_Level2To3_GangWithFighter, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Warrior_Bandit_Level4To5_GangWithFighter, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Warrior_Bandit_Level6To7_GangWithFighter, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Warrior_Bandit_Level8To9_GangWithFighter, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Warrior_Guard_Level1_Patrol, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Warrior_Guard_Level10To11_Patrol, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Warrior_Guard_Level12To13_Patrol, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Warrior_Guard_Level14To15_Patrol, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Warrior_Guard_Level16To17_Patrol, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Warrior_Guard_Level18To19_Patrol, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Warrior_Guard_Level2To3_Patrol, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Warrior_Guard_Level4To5_Patrol, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Warrior_Guard_Level6To7_Patrol, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Warrior_Guard_Level8To9_Patrol, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Warrior_Guard_Level1_PatrolWithFighter, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Warrior_Guard_Level10To11_PatrolWithFighter, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Warrior_Guard_Level12To13_PatrolWithFighter, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Warrior_Guard_Level14To15_PatrolWithFighter, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Warrior_Guard_Level16To17_PatrolWithFighter, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Warrior_Guard_Level18To19_PatrolWithFighter, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Warrior_Guard_Level20_PatrolWithFighter, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Warrior_Guard_Level2To3_PatrolWithFighter, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Warrior_Guard_Level4To5_PatrolWithFighter, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Warrior_Guard_Level6To7_PatrolWithFighter, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Warrior_Guard_Level8To9_PatrolWithFighter, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Annis_Solitary, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Hag_Covey_WithCloudGiants, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Hag_Covey_WithFireGiants, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Hag_Covey_WithFrostGiants, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Hag_Covey_WithHillGiants, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.GreenHag_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Hag_Covey_WithCloudGiants, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Hag_Covey_WithFireGiants, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Hag_Covey_WithFrostGiants, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Hag_Covey_WithHillGiants, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.SeaHag_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic)]
-        [TestCase(EncounterConstants.Hag_Covey_WithCloudGiants, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic)]
-        [TestCase(EncounterConstants.Hag_Covey_WithFireGiants, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic)]
-        [TestCase(EncounterConstants.Hag_Covey_WithFrostGiants, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic)]
-        [TestCase(EncounterConstants.Hag_Covey_WithHillGiants, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic)]
-        [TestCase(EncounterConstants.Halfling_Lightfoot_Band, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Halfling_Lightfoot_Company, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Halfling_Lightfoot_Squad, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Halfling_Deep_Band, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Halfling_Deep_Company, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Halfling_Deep_Squad, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Halfling_Tallfellow_Band, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Halfling_Tallfellow_Company, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Halfling_Tallfellow_Squad, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.HarpyArcher_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Harpy_Flight, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Harpy_Pair, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Harpy_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Human_Band, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Human_Company, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Human_Squad, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Hydra_10Heads_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Hydra_11Heads_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Hydra_12Heads_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Hydra_5Heads_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Hydra_6Heads_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Hydra_7Heads_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Hydra_8Heads_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Hydra_9Heads_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Cryohydra_10Heads_Solitary, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Cryohydra_11Heads_Solitary, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Cryohydra_12Heads_Solitary, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Cryohydra_5Heads_Solitary, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Cryohydra_6Heads_Solitary, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Cryohydra_7Heads_Solitary, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Cryohydra_8Heads_Solitary, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Cryohydra_9Heads_Solitary, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Pyrohydra_10Heads_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Pyrohydra_11Heads_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Pyrohydra_12Heads_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Pyrohydra_5Heads_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Pyrohydra_6Heads_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Pyrohydra_7Heads_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Pyrohydra_8Heads_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Pyrohydra_9Heads_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Howler_Gang, EnvironmentConstants.Plane_Chaotic)]
-        [TestCase(EncounterConstants.Howler_Pack, EnvironmentConstants.Plane_Chaotic)]
-        [TestCase(EncounterConstants.Howler_Solitary, EnvironmentConstants.Plane_Chaotic)]
-        [TestCase(EncounterConstants.Homunculus_Solitary, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Hobgoblin_Band, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Hobgoblin_Gang, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Hobgoblin_Tribe_WithOgres, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Hobgoblin_Tribe_WithTrolls, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Hobgoblin_Warband, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Hippogriff_Flight, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Hippogriff_Pair, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Hippogriff_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.HellHound_Pack, EnvironmentConstants.Plane_LawfulEvil)]
-        [TestCase(EncounterConstants.HellHound_Pair, EnvironmentConstants.Plane_LawfulEvil)]
-        [TestCase(EncounterConstants.HellHound_Solitary, EnvironmentConstants.Plane_LawfulEvil)]
-        [TestCase(EncounterConstants.NessianWarhound_Pack, EnvironmentConstants.Plane_LawfulEvil)]
-        [TestCase(EncounterConstants.NessianWarhound_Pair, EnvironmentConstants.Plane_LawfulEvil)]
-        [TestCase(EncounterConstants.NessianWarhound_Solitary, EnvironmentConstants.Plane_LawfulEvil)]
-        [TestCase(EncounterConstants.Kolyarut_Solitary, EnvironmentConstants.Plane_Lawful)]
-        [TestCase(EncounterConstants.Marut_Solitary, EnvironmentConstants.Plane_Lawful)]
-        [TestCase(EncounterConstants.Zelekhut_Solitary, EnvironmentConstants.Plane_Lawful)]
-        [TestCase(EncounterConstants.InvisibleStalker_Solitary, EnvironmentConstants.Plane_Air)]
-        [TestCase(EncounterConstants.Kobold_Band, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Kobold_Gang, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Kobold_Tribe, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Kobold_Warband, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Kraken_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic)]
-        [TestCase(EncounterConstants.Krenshar_Pair, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Krenshar_Pride, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Krenshar_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Lamia_Gang, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Lamia_Pair, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Lamia_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Lammasu_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Lammasu_GoldenProtector_Solitary, EnvironmentConstants.Plane_LawfulGood)]
-        [TestCase(EncounterConstants.Leonal_Pride, EnvironmentConstants.Plane_Good)]
-        [TestCase(EncounterConstants.Leonal_Solitary, EnvironmentConstants.Plane_Good)]
-        [TestCase(EncounterConstants.Lich_Level11_Solitary, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Lich_Level11_Troupe, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Lich_Level12_Solitary, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Lich_Level12_Troupe, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Lich_Level13_Solitary, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Lich_Level13_Troupe, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Lich_Level14_Solitary, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Lich_Level14_Troupe, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Lich_Level15_Solitary, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Lich_Level15_Troupe, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Lich_Level16_Solitary, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Lich_Level16_Troupe, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Lich_Level17_Solitary, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Lich_Level17_Troupe, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Lich_Level18_Solitary, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Lich_Level18_Troupe, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Lich_Level19_Solitary, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Lich_Level19_Troupe, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Lich_Level20_Solitary, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Lich_Level20_Troupe, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Lillend_Covey, EnvironmentConstants.Plane_Chaotic)]
-        [TestCase(EncounterConstants.Lillend_Solitary, EnvironmentConstants.Plane_Chaotic)]
-        [TestCase(EncounterConstants.Lizardfolk_Band, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Lizardfolk_Gang, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Lizardfolk_Tribe, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Locathah_Company, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic)]
-        [TestCase(EncounterConstants.Locathah_Patrol, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic)]
-        [TestCase(EncounterConstants.Locathah_Tribe, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic)]
-        [TestCase(EncounterConstants.Werebear_Family, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Werebear_Pair, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Werebear_Solitary, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Werebear_Troupe, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Wereboar_Brood, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Wereboar_Pair, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Wereboar_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Wereboar_Troupe, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Wereboar_HillGiantDire_Brood, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Wereboar_HillGiantDire_Pair, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Wereboar_HillGiantDire_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Wereboar_HillGiantDire_Troupe, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Wererat_Pack, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Wererat_Pair, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Wererat_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Wererat_Troupe, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Weretiger_Pair, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Weretiger_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Werewolf_Pack, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Werewolf_Pair, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Werewolf_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Werewolf_Troupe, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.WerewolfLord_Pack, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.WerewolfLord_Pair, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.WerewolfLord_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Magmin_Gang, EnvironmentConstants.Plane_Fire)]
-        [TestCase(EncounterConstants.Magmin_Solitary, EnvironmentConstants.Plane_Fire)]
-        [TestCase(EncounterConstants.Magmin_Squad, EnvironmentConstants.Plane_Fire)]
-        [TestCase(EncounterConstants.Manticore_Pair, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Manticore_Pride, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Manticore_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Medusa_Covey, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Medusa_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Mephit_Gang, GroupConstants.Extraplanar)]
-        [TestCase(EncounterConstants.Mephit_Mob, GroupConstants.Extraplanar)]
-        [TestCase(EncounterConstants.Mephit_Solitary, GroupConstants.Extraplanar)]
-        [TestCase(EncounterConstants.Merfolk_Band, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic)]
-        [TestCase(EncounterConstants.Merfolk_Company, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic)]
-        [TestCase(EncounterConstants.Merfolk_Patrol, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic)]
-        [TestCase(EncounterConstants.Mimic_Solitary, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.Minotaur_Gang, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.Minotaur_Pair, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.Minotaur_Solitary, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.Mohrg_Gang, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Mohrg_Mob, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Mohrg_Solitary, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Mummy_GuardianDetail, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Mummy_Solitary, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Mummy_WardenSquad, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.MummyLord_Solitary, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.MummyLord_TombGuard, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Naga_Dark_Nest, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Naga_Dark_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Naga_Guardian_Nest, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Naga_Guardian_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Naga_Spirit_Nest, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Naga_Spirit_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Naga_Water_Nest, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic)]
-        [TestCase(EncounterConstants.Naga_Water_Pair, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic)]
-        [TestCase(EncounterConstants.Naga_Water_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic)]
-        [TestCase(EncounterConstants.NightHag_Covey, EnvironmentConstants.Plane_Evil)]
-        [TestCase(EncounterConstants.NightHag_Mounted, EnvironmentConstants.Plane_Evil)]
-        [TestCase(EncounterConstants.NightHag_Solitary, EnvironmentConstants.Plane_Evil)]
-        [TestCase(EncounterConstants.Nightmare_Solitary, EnvironmentConstants.Plane_Evil)]
-        [TestCase(EncounterConstants.Nightmare_Cauchemar_Solitary, EnvironmentConstants.Plane_NeutralEvil)]
-        [TestCase(EncounterConstants.Nightcrawler_Pair, EnvironmentConstants.Plane_Shadow)]
-        [TestCase(EncounterConstants.Nightcrawler_Solitary, EnvironmentConstants.Plane_Shadow)]
-        [TestCase(EncounterConstants.Nightwalker_Gang, EnvironmentConstants.Plane_Shadow)]
-        [TestCase(EncounterConstants.Nightwalker_Pair, EnvironmentConstants.Plane_Shadow)]
-        [TestCase(EncounterConstants.Nightwalker_Solitary, EnvironmentConstants.Plane_Shadow)]
-        [TestCase(EncounterConstants.Nightwing_Flock, EnvironmentConstants.Plane_Shadow)]
-        [TestCase(EncounterConstants.Nightwing_Pair, EnvironmentConstants.Plane_Shadow)]
-        [TestCase(EncounterConstants.Nightwing_Solitary, EnvironmentConstants.Plane_Shadow)]
-        [TestCase(EncounterConstants.Nymph_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Ogre_Band, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Ogre_Gang, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Ogre_Pair, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Ogre_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Ogre_Barbarian_Band, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Ogre_Barbarian_Gang, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Ogre_Barbarian_Pair, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Ogre_Barbarian_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Ogre_Merrow_Band, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic)]
-        [TestCase(EncounterConstants.Ogre_Merrow_Gang, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic)]
-        [TestCase(EncounterConstants.Ogre_Merrow_Pair, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic)]
-        [TestCase(EncounterConstants.Ogre_Merrow_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic)]
-        [TestCase(EncounterConstants.Ogre_Merrow_Barbarian_Band, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic)]
-        [TestCase(EncounterConstants.Ogre_Merrow_Barbarian_Gang, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic)]
-        [TestCase(EncounterConstants.Ogre_Merrow_Barbarian_Pair, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic)]
-        [TestCase(EncounterConstants.Ogre_Merrow_Barbarian_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic)]
-        [TestCase(EncounterConstants.OgreMage_Pair, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.OgreMage_Solitary, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.OgreMage_Troupe, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.BlackPudding_Solitary, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.BlackPudding_Elder_Solitary, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.GelatinousCube_Solitary, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.Ooze_Gray_Solitary, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Ooze_OchreJelly_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Orc_Band, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Orc_Gang, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Orc_Squad, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Orc_Half_Band, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Orc_Half_Gang, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Orc_Half_Squad, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Orc_Half_Band, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Orc_Half_Gang, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Orc_Half_Squad, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Otyugh_Cluster, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.Otyugh_Pair, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.Otyugh_Solitary, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.Owl_Giant_Company, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Owl_Giant_Pair, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Owl_Giant_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Owlbear_Pack, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Owlbear_Pair, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Owlbear_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Pegasus_Herd, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Pegasus_Pair, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Pegasus_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.PhantomFungus_Solitary, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.PhaseSpider_Cluster, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.PhaseSpider_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Phasm_Solitary, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.Aasimar_Pair, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Aasimar_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Aasimar_Team, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Tiefling_Pair, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Tiefling_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Tiefling_Team, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Pseudodragon_Clutch, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Pseudodragon_Pair, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Pseudodragon_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.PurpleWorm_Solitary, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.Rakshasa_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Rast_Cluster, EnvironmentConstants.Plane_Fire)]
-        [TestCase(EncounterConstants.Rast_Pair, EnvironmentConstants.Plane_Fire)]
-        [TestCase(EncounterConstants.Rast_Solitary, EnvironmentConstants.Plane_Fire)]
-        [TestCase(EncounterConstants.Ravid_WithAnimatedObjects, EnvironmentConstants.Plane_PositiveEnergy)]
-        [TestCase(EncounterConstants.RazorBoar_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.RazorBoar_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.RazorBoar_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.RazorBoar_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Remorhaz_Solitary, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Roc_Pair, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Roc_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Roper_Cluster, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.Roper_Pair, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.Roper_Solitary, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.RustMonster_Pair, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.RustMonster_Solitary, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.ShockerLizard_Clutch, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.ShockerLizard_Colony, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.ShockerLizard_Pair, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.ShockerLizard_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.ShieldGuardian_Solitary, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.ShamblingMound_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.ShadowMastiff_Pack, EnvironmentConstants.Plane_Shadow)]
-        [TestCase(EncounterConstants.ShadowMastiff_Pair, EnvironmentConstants.Plane_Shadow)]
-        [TestCase(EncounterConstants.ShadowMastiff_Solitary, EnvironmentConstants.Plane_Shadow)]
-        [TestCase(EncounterConstants.Shadow_Gang, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Shadow_Solitary, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Shadow_Swarm, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Shadow_Greater_Solitary, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.SeaCat_Pair, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic)]
-        [TestCase(EncounterConstants.SeaCat_Pride, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic)]
-        [TestCase(EncounterConstants.SeaCat_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic)]
-        [TestCase(EncounterConstants.Scorpionfolk_Company, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Scorpionfolk_Pair, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Scorpionfolk_Patrol, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Scorpionfolk_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Scorpionfolk_Troop, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Scorpionfolk_Company, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Scorpionfolk_Pair, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Scorpionfolk_Patrol, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Scorpionfolk_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Scorpionfolk_Troop, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Scorpionfolk_Company, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Scorpionfolk_Pair, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Scorpionfolk_Patrol, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Scorpionfolk_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Scorpionfolk_Troop, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Satyr_Band, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Satyr_Pair, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Satyr_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Satyr_Troop, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Salamander_Average_Cluster, EnvironmentConstants.Plane_Fire)]
-        [TestCase(EncounterConstants.Salamander_Average_Pair, EnvironmentConstants.Plane_Fire)]
-        [TestCase(EncounterConstants.Salamander_Average_Solitary, EnvironmentConstants.Plane_Fire)]
-        [TestCase(EncounterConstants.Salamander_Flamebrother_Cluster, EnvironmentConstants.Plane_Fire)]
-        [TestCase(EncounterConstants.Salamander_Flamebrother_Pair, EnvironmentConstants.Plane_Fire)]
-        [TestCase(EncounterConstants.Salamander_Flamebrother_Solitary, EnvironmentConstants.Plane_Fire)]
-        [TestCase(EncounterConstants.Salamander_Noble_NobleParty, EnvironmentConstants.Plane_Fire)]
-        [TestCase(EncounterConstants.Salamander_Noble_Pair, EnvironmentConstants.Plane_Fire)]
-        [TestCase(EncounterConstants.Salamander_Noble_Solitary, EnvironmentConstants.Plane_Fire)]
-        [TestCase(EncounterConstants.Sahuagin_Band_WithDireSharks, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic)]
-        [TestCase(EncounterConstants.Sahuagin_Band_WithHugeSharks, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic)]
-        [TestCase(EncounterConstants.Sahuagin_Band_WithLargeSharks, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic)]
-        [TestCase(EncounterConstants.Sahuagin_Band_WithMediumSharks, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic)]
-        [TestCase(EncounterConstants.Sahuagin_Pair, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic)]
-        [TestCase(EncounterConstants.Sahuagin_Patrol_WithDireSharks, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic)]
-        [TestCase(EncounterConstants.Sahuagin_Patrol_WithHugeSharks, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic)]
-        [TestCase(EncounterConstants.Sahuagin_Patrol_WithLargeSharks, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic)]
-        [TestCase(EncounterConstants.Sahuagin_Patrol_WithMediumSharks, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic)]
-        [TestCase(EncounterConstants.Sahuagin_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic)]
-        [TestCase(EncounterConstants.Sahuagin_Team, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic)]
-        [TestCase(EncounterConstants.Sahuagin_Tribe_WithDireSharks, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic)]
-        [TestCase(EncounterConstants.Sahuagin_Tribe_WithHugeSharks, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic)]
-        [TestCase(EncounterConstants.Sahuagin_Tribe_WithLargeSharks, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic)]
-        [TestCase(EncounterConstants.Sahuagin_Tribe_WithMediumSharks, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic)]
-        [TestCase(EncounterConstants.Skeleton_Chimera_Group, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Skeleton_Chimera_LargeGroup, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Skeleton_Chimera_SmallGroup, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Skeleton_Chimera_Group, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Skeleton_Chimera_LargeGroup, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Skeleton_Chimera_SmallGroup, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Skeleton_Dragon_Red_YoungAdult_Group, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Skeleton_Dragon_Red_YoungAdult_LargeGroup, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Skeleton_Dragon_Red_YoungAdult_SmallGroup, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Skeleton_Dragon_Red_YoungAdult_Group, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Skeleton_Dragon_Red_YoungAdult_LargeGroup, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Skeleton_Dragon_Red_YoungAdult_SmallGroup, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Skeleton_Ettin_Group, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Skeleton_Ettin_LargeGroup, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Skeleton_Ettin_SmallGroup, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Skeleton_Ettin_Group, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Skeleton_Ettin_LargeGroup, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Skeleton_Ettin_SmallGroup, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Skeleton_Giant_Cloud_Group, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Skeleton_Giant_Cloud_LargeGroup, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Skeleton_Giant_Cloud_SmallGroup, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Skeleton_Giant_Cloud_Group, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Skeleton_Giant_Cloud_LargeGroup, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Skeleton_Giant_Cloud_SmallGroup, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Skeleton_Human_Group, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Skeleton_Human_LargeGroup, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Skeleton_Human_SmallGroup, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Skeleton_Human_Group, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Skeleton_Human_LargeGroup, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Skeleton_Human_SmallGroup, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Skeleton_Megaraptor_Group, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Skeleton_Megaraptor_LargeGroup, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Skeleton_Megaraptor_SmallGroup, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Skeleton_Megaraptor_Group, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Skeleton_Megaraptor_LargeGroup, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Skeleton_Megaraptor_SmallGroup, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Skeleton_Owlbear_Group, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Skeleton_Owlbear_LargeGroup, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Skeleton_Owlbear_SmallGroup, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Skeleton_Owlbear_Group, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Skeleton_Owlbear_LargeGroup, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Skeleton_Owlbear_SmallGroup, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Skeleton_Troll_Group, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Skeleton_Troll_LargeGroup, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Skeleton_Troll_SmallGroup, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Skeleton_Troll_Group, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Skeleton_Troll_LargeGroup, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Skeleton_Troll_SmallGroup, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Skeleton_Wolf_Group, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Skeleton_Wolf_LargeGroup, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Skeleton_Wolf_SmallGroup, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Skeleton_Wolf_Group, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Skeleton_Wolf_LargeGroup, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Skeleton_Wolf_SmallGroup, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Skum_Brood, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.Skum_Pack, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.Spectre_Gang, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Spectre_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Spectre_Swarm, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Spectre_Gang, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.Spectre_Solitary, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.Spectre_Swarm, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.Androsphinx_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Criosphinx_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Gynosphinx_Covey, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Gynosphinx_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Hieracosphinx_Flock, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Hieracosphinx_Pair, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Hieracosphinx_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.SpiderEater_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Grig_Band, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Grig_Gang, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Grig_Tribe, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Nixie_Band, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic)]
-        [TestCase(EncounterConstants.Nixie_Gang, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic)]
-        [TestCase(EncounterConstants.Nixie_Tribe, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic)]
-        [TestCase(EncounterConstants.Pixie_Band, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Pixie_Gang, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Pixie_Tribe, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Pixie_WithIrresistableDance_Band, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Pixie_WithIrresistableDance_Tribe, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Stirge_Colony, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Stirge_Flock, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Stirge_Storm, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Bat_Swarm_Colony, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Bat_Swarm_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Bat_Swarm_Tangle, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Centipede_Swarm_Colony, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.Centipede_Swarm_Solitary, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.Centipede_Swarm_Tangle, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.Hellwasp_Swarm_Fright, EnvironmentConstants.Plane_Evil)]
-        [TestCase(EncounterConstants.Hellwasp_Swarm_Solitary, EnvironmentConstants.Plane_Evil)]
-        [TestCase(EncounterConstants.Hellwasp_Swarm_Terror, EnvironmentConstants.Plane_Evil)]
-        [TestCase(EncounterConstants.Locust_Swarm_Cloud, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Locust_Swarm_Plague, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Locust_Swarm_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Rat_Swarm_Infestation, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Rat_Swarm_Pack, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Rat_Swarm_Solitary, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Spider_Swarm_Colony, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Spider_Swarm_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Spider_Swarm_Tangle, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Tarrasque_Solitary, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Tendriculos_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Thoqqua_Pair, EnvironmentConstants.Plane_Fire)]
-        [TestCase(EncounterConstants.Thoqqua_Solitary, EnvironmentConstants.Plane_Fire)]
-        [TestCase(EncounterConstants.Titan_Pair, EnvironmentConstants.Plane_ChaoticGood)]
-        [TestCase(EncounterConstants.Titan_Solitary, EnvironmentConstants.Plane_ChaoticGood)]
-        [TestCase(EncounterConstants.Tojanida_Adult_Clutch, EnvironmentConstants.Plane_Water)]
-        [TestCase(EncounterConstants.Tojanida_Adult_Solitary, EnvironmentConstants.Plane_Water)]
-        [TestCase(EncounterConstants.Tojanida_Elder_Clutch, EnvironmentConstants.Plane_Water)]
-        [TestCase(EncounterConstants.Tojanida_Elder_Solitary, EnvironmentConstants.Plane_Water)]
-        [TestCase(EncounterConstants.Tojanida_Juvenile_Clutch, EnvironmentConstants.Plane_Water)]
-        [TestCase(EncounterConstants.Tojanida_Juvenile_Solitary, EnvironmentConstants.Plane_Water)]
-        [TestCase(EncounterConstants.Treant_Grove, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Treant_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Triton_Band, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic)]
-        [TestCase(EncounterConstants.Triton_Company, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic)]
-        [TestCase(EncounterConstants.Triton_Squad, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic)]
-        [TestCase(EncounterConstants.Troglodyte_Band, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.Troglodyte_Clutch, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.Troglodyte_Squad, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.Troll_Gang, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Troll_Solitary, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Troll_Hunter_Solitary, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Troll_Scrag_Gang, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Aquatic)]
-        [TestCase(EncounterConstants.Troll_Scrag_Solitary, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Aquatic)]
-        [TestCase(EncounterConstants.Troll_Scrag_Hunter_Solitary, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Aquatic)]
-        [TestCase(EncounterConstants.Unicorn_Grace, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Unicorn_Pair, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Unicorn_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Unicorn_CelestialCharger_Solitary, EnvironmentConstants.Plane_ChaoticGood)]
-        [TestCase(EncounterConstants.Vampire_Level1_Gang, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Vampire_Level1_Pair, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Vampire_Level1_Solitary, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Vampire_Level1_Troupe, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Vampire_Level2_Gang, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Vampire_Level2_Pair, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Vampire_Level2_Solitary, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Vampire_Level2_Troupe, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Vampire_Level3_Gang, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Vampire_Level3_Pair, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Vampire_Level3_Solitary, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Vampire_Level3_Troupe, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Vampire_Level4_Gang, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Vampire_Level4_Pair, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Vampire_Level4_Solitary, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Vampire_Level4_Troupe, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Vampire_Level5_Gang, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Vampire_Level5_Pair, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Vampire_Level5_Solitary, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Vampire_Level5_Troupe, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Vampire_Level6_Gang, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Vampire_Level6_Pair, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Vampire_Level6_Solitary, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Vampire_Level6_Troupe, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Vampire_Level7_Gang, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Vampire_Level7_Pair, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Vampire_Level7_Solitary, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Vampire_Level7_Troupe, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Vampire_Level8_Gang, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Vampire_Level8_Pair, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Vampire_Level8_Solitary, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Vampire_Level8_Troupe, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Vampire_Level9_Gang, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Vampire_Level9_Pair, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Vampire_Level9_Solitary, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Vampire_Level9_Troupe, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Vampire_Level10_Gang, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Vampire_Level10_Pair, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Vampire_Level10_Solitary, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Vampire_Level10_Troupe, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Vampire_Level11_Gang, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Vampire_Level11_Pair, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Vampire_Level11_Solitary, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Vampire_Level11_Troupe, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Vampire_Level12_Gang, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Vampire_Level12_Pair, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Vampire_Level12_Solitary, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Vampire_Level12_Troupe, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Vampire_Level13_Gang, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Vampire_Level13_Pair, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Vampire_Level13_Solitary, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Vampire_Level13_Troupe, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Vampire_Level14_Gang, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Vampire_Level14_Pair, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Vampire_Level14_Solitary, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Vampire_Level14_Troupe, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Vampire_Level15_Gang, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Vampire_Level15_Pair, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Vampire_Level15_Solitary, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Vampire_Level15_Troupe, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Vampire_Level16_Gang, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Vampire_Level16_Pair, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Vampire_Level16_Solitary, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Vampire_Level16_Troupe, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Vampire_Level17_Gang, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Vampire_Level17_Pair, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Vampire_Level17_Solitary, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Vampire_Level17_Troupe, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Vampire_Level18_Gang, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Vampire_Level18_Pair, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Vampire_Level18_Solitary, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Vampire_Level18_Troupe, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Vampire_Level19_Gang, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Vampire_Level19_Pair, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Vampire_Level19_Solitary, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Vampire_Level19_Troupe, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Vampire_Level20_Gang, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Vampire_Level20_Pair, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Vampire_Level20_Solitary, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Vampire_Level20_Troupe, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.VampireSpawn_Pack, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.VampireSpawn_Solitary, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Vargouille_Cluster, EnvironmentConstants.Plane_Evil)]
-        [TestCase(EncounterConstants.Vargouille_Mob, EnvironmentConstants.Plane_Evil)]
-        [TestCase(EncounterConstants.Wight_Gang, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Wight_Pack, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Wight_Pair, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Wight_Solitary, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.WillOWisp_Pair, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.WillOWisp_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.WillOWisp_String, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.WinterWolf_Pack, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.WinterWolf_Pair, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.WinterWolf_Solitary, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Worg_Pack, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Worg_Pair, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Worg_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Wraith_Gang, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Wraith_Pack, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Wraith_Solitary, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Wraith_Dread_Solitary, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Wyvern_Flight, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Wyvern_Pair, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Wyvern_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Xill_Gang, EnvironmentConstants.Plane_Ethereal)]
-        [TestCase(EncounterConstants.Xill_Solitary, EnvironmentConstants.Plane_Ethereal)]
-        [TestCase(EncounterConstants.Xorn_Average_Cluster, EnvironmentConstants.Plane_Earth)]
-        [TestCase(EncounterConstants.Xorn_Average_Pair, EnvironmentConstants.Plane_Earth)]
-        [TestCase(EncounterConstants.Xorn_Average_Solitary, EnvironmentConstants.Plane_Earth)]
-        [TestCase(EncounterConstants.Xorn_Elder_Pair, EnvironmentConstants.Plane_Earth)]
-        [TestCase(EncounterConstants.Xorn_Elder_Party, EnvironmentConstants.Plane_Earth)]
-        [TestCase(EncounterConstants.Xorn_Elder_Solitary, EnvironmentConstants.Plane_Earth)]
-        [TestCase(EncounterConstants.Xorn_Minor_Cluster, EnvironmentConstants.Plane_Earth)]
-        [TestCase(EncounterConstants.Xorn_Minor_Pair, EnvironmentConstants.Plane_Earth)]
-        [TestCase(EncounterConstants.Xorn_Minor_Solitary, EnvironmentConstants.Plane_Earth)]
-        [TestCase(EncounterConstants.YethHound_Pack, EnvironmentConstants.Plane_Evil)]
-        [TestCase(EncounterConstants.YethHound_Pair, EnvironmentConstants.Plane_Evil)]
-        [TestCase(EncounterConstants.YethHound_Solitary, EnvironmentConstants.Plane_Evil)]
-        [TestCase(EncounterConstants.Yrthak_Clutch, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Yrthak_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Zombie_Kobold_Group, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Zombie_Kobold_LargeGroup, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Zombie_Kobold_SmallGroup, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Zombie_Kobold_Group, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.Zombie_Kobold_LargeGroup, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.Zombie_Kobold_SmallGroup, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.Zombie_Kobold_Group, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Zombie_Kobold_LargeGroup, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Zombie_Kobold_SmallGroup, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Zombie_Human_Group, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Zombie_Human_LargeGroup, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Zombie_Human_SmallGroup, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Zombie_Human_Group, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.Zombie_Human_LargeGroup, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.Zombie_Human_SmallGroup, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.Zombie_Human_Group, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Zombie_Human_LargeGroup, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Zombie_Human_SmallGroup, EnvironmentConstants.Any)]
-        [TestCase(EncounterConstants.Zombie_Troglodyte_Group, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Zombie_Troglodyte_LargeGroup, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Zombie_Troglodyte_SmallGroup, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Zombie_Troglodyte_Group, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.Zombie_Troglodyte_LargeGroup, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.Zombie_Troglodyte_SmallGroup, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.Zombie_Bugbear_Group, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Zombie_Bugbear_LargeGroup, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Zombie_Bugbear_SmallGroup, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Zombie_Bugbear_Group, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.Zombie_Bugbear_LargeGroup, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.Zombie_Bugbear_SmallGroup, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.Zombie_Bugbear_Group, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Zombie_Bugbear_LargeGroup, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Zombie_Bugbear_SmallGroup, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Zombie_Ogre_Group, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Zombie_Ogre_LargeGroup, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Zombie_Ogre_SmallGroup, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Zombie_Ogre_Group, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.Zombie_Ogre_LargeGroup, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.Zombie_Ogre_SmallGroup, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.Zombie_Ogre_Group, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Zombie_Ogre_LargeGroup, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Zombie_Ogre_SmallGroup, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Zombie_Minotaur_Group, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Zombie_Minotaur_LargeGroup, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Zombie_Minotaur_SmallGroup, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Zombie_Minotaur_Group, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.Zombie_Minotaur_LargeGroup, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.Zombie_Minotaur_SmallGroup, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.Zombie_Wyvern_Group, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Zombie_Wyvern_LargeGroup, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Zombie_Wyvern_SmallGroup, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Zombie_Wyvern_Group, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.Zombie_Wyvern_LargeGroup, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.Zombie_Wyvern_SmallGroup, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.Zombie_Wyvern_Group, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Zombie_Wyvern_LargeGroup, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Zombie_Wyvern_SmallGroup, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Zombie_GrayRender_Group, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Zombie_GrayRender_LargeGroup, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Zombie_GrayRender_SmallGroup, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Zombie_GrayRender_Group, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.Zombie_GrayRender_LargeGroup, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.Zombie_GrayRender_SmallGroup, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.Zombie_GrayRender_Group, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Zombie_GrayRender_LargeGroup, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Zombie_GrayRender_SmallGroup, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Ape_Company, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Ape_Pair, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Ape_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Baboon_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Baboon_Troop, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Badger_Cete, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Badger_Pair, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Badger_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Bat_Colony, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Bat_Crowd, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Bear_Black_Pair, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Bear_Black_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Bear_Brown_Pair, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Bear_Brown_Solitary, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Bear_Polar_Pair, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Bear_Polar_Solitary, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Bison_Herd, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Bison_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Boar_Herd, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Boar_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Camel_Herd, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Cat_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Cat_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Cheetah_Family, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Cheetah_Pair, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Cheetah_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Crocodile_Colony, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Crocodile_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Crocodile_Giant_Colony, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Crocodile_Giant_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Dog_Pack, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Dog_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Dog_Pack, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Dog_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Dog_Riding_Pack, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Dog_Riding_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Dog_Riding_Pack, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Dog_Riding_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Donkey_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Donkey_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Eagle_Pair, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Eagle_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain)]
-        [TestCase(EncounterConstants.Elephant_Herd, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Elephant_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Hawk_Pair, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Hawk_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Horse_Heavy_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Horse_Heavy_War_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Horse_Light_Herd, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Horse_Light_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Horse_Light_War_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Hyena_Pack, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Hyena_Pair, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Hyena_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Leopard_Pair, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Leopard_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Lion_Pair, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Lion_Pride, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Lion_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Lizard_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Lizard_Monitor_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.MantaRay_School, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic)]
-        [TestCase(EncounterConstants.MantaRay_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic)]
-        [TestCase(EncounterConstants.Monkey_Troop, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Mule_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Octopus_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic)]
-        [TestCase(EncounterConstants.Octopus_Giant_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic)]
-        [TestCase(EncounterConstants.Owl_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Pony_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Pony_War_Solitary, EnvironmentConstants.Civilized)]
-        [TestCase(EncounterConstants.Porpoise_Pair, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic)]
-        [TestCase(EncounterConstants.Porpoise_School, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic)]
-        [TestCase(EncounterConstants.Porpoise_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic)]
-        [TestCase(EncounterConstants.Rat_Plague, EnvironmentConstants.Land)]
-        [TestCase(EncounterConstants.Raven_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Rhinoceras_Herd, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Rhinoceras_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Shark_Huge_Pack, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Aquatic)]
-        [TestCase(EncounterConstants.Shark_Huge_School, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Aquatic)]
-        [TestCase(EncounterConstants.Shark_Huge_Solitary, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Aquatic)]
-        [TestCase(EncounterConstants.Shark_Large_Pack, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Aquatic)]
-        [TestCase(EncounterConstants.Shark_Large_School, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Aquatic)]
-        [TestCase(EncounterConstants.Shark_Large_Solitary, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Aquatic)]
-        [TestCase(EncounterConstants.Shark_Medium_Pack, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Aquatic)]
-        [TestCase(EncounterConstants.Shark_Medium_School, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Aquatic)]
-        [TestCase(EncounterConstants.Shark_Medium_Solitary, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Aquatic)]
-        [TestCase(EncounterConstants.Snake_Constrictor_Giant_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Snake_Constrictor_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Snake_Viper_Huge_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Snake_Viper_Large_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Snake_Viper_Medium_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Snake_Viper_Small_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Snake_Viper_Tiny_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Squid_School, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic)]
-        [TestCase(EncounterConstants.Squid_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic)]
-        [TestCase(EncounterConstants.Squid_Giant_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic)]
-        [TestCase(EncounterConstants.Tiger_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Toad_Swarm, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh)]
-        [TestCase(EncounterConstants.Weasel_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Whale_Baleen_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic)]
-        [TestCase(EncounterConstants.Whale_Cachalot_Pod, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic)]
-        [TestCase(EncounterConstants.Whale_Cachalot_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic)]
-        [TestCase(EncounterConstants.Whale_Orca_Pod, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Aquatic)]
-        [TestCase(EncounterConstants.Whale_Orca_Solitary, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Aquatic)]
-        [TestCase(EncounterConstants.Wolf_Pack, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Wolf_Pair, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Wolf_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Wolverine_Solitary, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Ant_Giant_Queen_Hive, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Ant_Giant_Soldier_Gang, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Ant_Giant_Soldier_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Ant_Giant_Worker_Crew, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Ant_Giant_Worker_Gang, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Bee_Giant_Buzz, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Bee_Giant_Hive, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.Bee_Giant_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.BombardierBeetle_Giant_Click, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.BombardierBeetle_Giant_Cluster, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.FireBeetle_Giant_Cluster, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.FireBeetle_Giant_Colony, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains)]
-        [TestCase(EncounterConstants.StagBeetle_Giant_Cluster, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.StagBeetle_Giant_Mass, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.PrayingMantis_Giant_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Wasp_Giant_Nest, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Wasp_Giant_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Wasp_Giant_Swarm, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Centipede_Monstrous_Colossal_Solitary, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.Centipede_Monstrous_Gargantuan_Solitary, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.Centipede_Monstrous_Huge_Colony, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.Centipede_Monstrous_Huge_Solitary, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.Centipede_Monstrous_Large_Colony, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.Centipede_Monstrous_Large_Solitary, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.Centipede_Monstrous_Medium_Colony, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.Centipede_Monstrous_Medium_Solitary, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.Centipede_Monstrous_Small_Colony, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.Centipede_Monstrous_Small_Swarm, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.Centipede_Monstrous_Tiny_Colony, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.Scorpion_Monstrous_Colossal_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Scorpion_Monstrous_Gargantuan_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Scorpion_Monstrous_Huge_Colony, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Scorpion_Monstrous_Huge_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Scorpion_Monstrous_Large_Colony, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Scorpion_Monstrous_Large_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Scorpion_Monstrous_Medium_Colony, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Scorpion_Monstrous_Medium_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Scorpion_Monstrous_Small_Colony, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Scorpion_Monstrous_Small_Swarm, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Scorpion_Monstrous_Tiny_Colony, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert)]
-        [TestCase(EncounterConstants.Spider_Monstrous_Colossal_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Spider_Monstrous_Gargantuan_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Spider_Monstrous_Huge_Colony, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Spider_Monstrous_Huge_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Spider_Monstrous_Large_Colony, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Spider_Monstrous_Large_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Spider_Monstrous_Medium_Colony, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Spider_Monstrous_Medium_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Spider_Monstrous_Small_Colony, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Spider_Monstrous_Small_Swarm, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Spider_Monstrous_Tiny_Colony, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.Beholder_Cluster, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Beholder_Pair, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Beholder_Solitary, EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.CarrionCrawler_Cluster, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.CarrionCrawler_Pair, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.CarrionCrawler_Solitary, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.DisplacerBeast_Pair, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.DisplacerBeast_Pride, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.DisplacerBeast_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.DisplacerBeast_PackLord_Pair, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.DisplacerBeast_PackLord_Solitary, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills)]
-        [TestCase(EncounterConstants.Githyanki_Company, EnvironmentConstants.Plane_Astral)]
-        [TestCase(EncounterConstants.Githyanki_Regiment, EnvironmentConstants.Plane_Astral)]
-        [TestCase(EncounterConstants.Githyanki_Squad, EnvironmentConstants.Plane_Astral)]
-        [TestCase(EncounterConstants.Githzerai_Fellowship, EnvironmentConstants.Plane_Limbo)]
-        [TestCase(EncounterConstants.Githzerai_Order, EnvironmentConstants.Plane_Limbo)]
-        [TestCase(EncounterConstants.Githzerai_Sect, EnvironmentConstants.Plane_Limbo)]
-        [TestCase(EncounterConstants.MindFlayer_Cult, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.MindFlayer_Inquisition, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.MindFlayer_Pair, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.MindFlayer_Solitary, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.MindFlayer_Sorcerer_Cult, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.MindFlayer_Sorcerer_Inquisition, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.MindFlayer_Sorcerer_Solitary, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.KuoToa_Band, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic)]
-        [TestCase(EncounterConstants.KuoToa_Patrol, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic)]
-        [TestCase(EncounterConstants.KuoToa_Squad, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic)]
-        [TestCase(EncounterConstants.KuoToa_Tribe, EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic)]
-        [TestCase(EncounterConstants.Slaad_Blue_Gang, EnvironmentConstants.Plane_Limbo)]
-        [TestCase(EncounterConstants.Slaad_Blue_Pack, EnvironmentConstants.Plane_Limbo)]
-        [TestCase(EncounterConstants.Slaad_Blue_Pair, EnvironmentConstants.Plane_Limbo)]
-        [TestCase(EncounterConstants.Slaad_Blue_Solitary, EnvironmentConstants.Plane_Limbo)]
-        [TestCase(EncounterConstants.Slaad_Death_Pair, EnvironmentConstants.Plane_Limbo)]
-        [TestCase(EncounterConstants.Slaad_Death_Solitary, EnvironmentConstants.Plane_Limbo)]
-        [TestCase(EncounterConstants.Slaad_Gray_Pair, EnvironmentConstants.Plane_Limbo)]
-        [TestCase(EncounterConstants.Slaad_Gray_Solitary, EnvironmentConstants.Plane_Limbo)]
-        [TestCase(EncounterConstants.Slaad_Green_Gang, EnvironmentConstants.Plane_Limbo)]
-        [TestCase(EncounterConstants.Slaad_Green_Solitary, EnvironmentConstants.Plane_Limbo)]
-        [TestCase(EncounterConstants.Slaad_Red_Gang, EnvironmentConstants.Plane_Limbo)]
-        [TestCase(EncounterConstants.Slaad_Red_Pack, EnvironmentConstants.Plane_Limbo)]
-        [TestCase(EncounterConstants.Slaad_Red_Pair, EnvironmentConstants.Plane_Limbo)]
-        [TestCase(EncounterConstants.Slaad_Red_Solitary, EnvironmentConstants.Plane_Limbo)]
-        [TestCase(EncounterConstants.UmberHulk_Cluster, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.UmberHulk_Solitary, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.UmberHulk_TrulyHorrid_Solitary, EnvironmentConstants.Underground)]
-        [TestCase(EncounterConstants.YuanTi_Abomination_Gang, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.YuanTi_Abomination_Pair, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.YuanTi_Abomination_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.YuanTi_Halfblood_Gang, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.YuanTi_Halfblood_Pair, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.YuanTi_Halfblood_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.YuanTi_Pureblood_Gang, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.YuanTi_Pureblood_Pair, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.YuanTi_Pureblood_Solitary, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.YuanTi_Tribe, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest)]
-        [TestCase(EncounterConstants.YuanTi_Troupe, EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest)]
-        public void EncounterIsInCorrectEnvironment(string encounter, string environment)
+        [Test]
+        public void AllEncountersAreInCorrectEnvironments()
         {
-            Assert.That(table, Contains.Key(environment));
-            Assert.That(table[environment], Contains.Item(encounter), $"Env: {environment}");
+            var encounterEnvironments = new Dictionary<string, List<string>>();
+            foreach (var encounter in EncounterConstants.GetAll())
+            {
+                encounterEnvironments[encounter] = [];
+            }
+
+            encounterEnvironments[EncounterConstants.Aboleth_Brood].Add(EnvironmentConstants.Underground + EnvironmentConstants.Aquatic);
+            encounterEnvironments[EncounterConstants.Aboleth_Mage_Solitary].Add(EnvironmentConstants.Underground + EnvironmentConstants.Aquatic);
+            encounterEnvironments[EncounterConstants.Aboleth_SlaverBrood].Add(EnvironmentConstants.Underground + EnvironmentConstants.Aquatic);
+            encounterEnvironments[EncounterConstants.Aboleth_Solitary].Add(EnvironmentConstants.Underground + EnvironmentConstants.Aquatic);
+            encounterEnvironments[EncounterConstants.Achaierai_Flock].Add(EnvironmentConstants.Plane_Lawful);
+            encounterEnvironments[EncounterConstants.Achaierai_Solitary].Add(EnvironmentConstants.Plane_Lawful);
+            encounterEnvironments[EncounterConstants.Allip_Solitary].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.AstralDeva_Pair].Add(EnvironmentConstants.Plane_Good);
+            encounterEnvironments[EncounterConstants.AstralDeva_Solitary].Add(EnvironmentConstants.Plane_Good);
+            encounterEnvironments[EncounterConstants.AstralDeva_Squad].Add(EnvironmentConstants.Plane_Good);
+            encounterEnvironments[EncounterConstants.Planetar_Pair].Add(EnvironmentConstants.Plane_Good);
+            encounterEnvironments[EncounterConstants.Planetar_Solitary].Add(EnvironmentConstants.Plane_Good);
+            encounterEnvironments[EncounterConstants.Solar_Pair].Add(EnvironmentConstants.Plane_Good);
+            encounterEnvironments[EncounterConstants.Solar_Solitary].Add(EnvironmentConstants.Plane_Good);
+            encounterEnvironments[EncounterConstants.AnimatedObject_Colossal_Solitary].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.AnimatedObject_Gargantuan_Solitary].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.AnimatedObject_Huge_Solitary].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.AnimatedObject_Large_Solitary].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.AnimatedObject_Medium_Solitary].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.AnimatedObject_Small_Pair].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.AnimatedObject_Tiny_Group].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Ankheg_Cluster].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Ankheg_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Aranea_Colony].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Aranea_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.LanternArchon_Pair].Add(EnvironmentConstants.Plane_LawfulGood);
+            encounterEnvironments[EncounterConstants.LanternArchon_Solitary].Add(EnvironmentConstants.Plane_LawfulGood);
+            encounterEnvironments[EncounterConstants.LanternArchon_Squad].Add(EnvironmentConstants.Plane_LawfulGood);
+            encounterEnvironments[EncounterConstants.HoundArchon_Hero_Solitary].Add(EnvironmentConstants.Plane_LawfulGood);
+            encounterEnvironments[EncounterConstants.HoundArchon_Hero_WithDragon].Add(EnvironmentConstants.Plane_LawfulGood);
+            encounterEnvironments[EncounterConstants.HoundArchon_Pair].Add(EnvironmentConstants.Plane_LawfulGood);
+            encounterEnvironments[EncounterConstants.HoundArchon_Solitary].Add(EnvironmentConstants.Plane_LawfulGood);
+            encounterEnvironments[EncounterConstants.HoundArchon_Squad].Add(EnvironmentConstants.Plane_LawfulGood);
+            encounterEnvironments[EncounterConstants.TrumpetArchon_Pair].Add(EnvironmentConstants.Plane_LawfulGood);
+            encounterEnvironments[EncounterConstants.TrumpetArchon_Solitary].Add(EnvironmentConstants.Plane_LawfulGood);
+            encounterEnvironments[EncounterConstants.TrumpetArchon_Squad].Add(EnvironmentConstants.Plane_LawfulGood);
+            encounterEnvironments[EncounterConstants.Arrowhawk_Adult_Clutch].Add(EnvironmentConstants.Plane_Air);
+            encounterEnvironments[EncounterConstants.Arrowhawk_Adult_Solitary].Add(EnvironmentConstants.Plane_Air);
+            encounterEnvironments[EncounterConstants.Arrowhawk_Elder_Clutch].Add(EnvironmentConstants.Plane_Air);
+            encounterEnvironments[EncounterConstants.Arrowhawk_Elder_Solitary].Add(EnvironmentConstants.Plane_Air);
+            encounterEnvironments[EncounterConstants.Arrowhawk_Juvenile_Clutch].Add(EnvironmentConstants.Plane_Air);
+            encounterEnvironments[EncounterConstants.Arrowhawk_Juvenile_Solitary].Add(EnvironmentConstants.Plane_Air);
+            encounterEnvironments[EncounterConstants.AssassinVine_Patch].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.AssassinVine_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Athach_Gang].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Athach_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Athach_Tribe].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Avoral_Pair].Add(EnvironmentConstants.Plane_Good);
+            encounterEnvironments[EncounterConstants.Avoral_Solitary].Add(EnvironmentConstants.Plane_Good);
+            encounterEnvironments[EncounterConstants.Avoral_Squad].Add(EnvironmentConstants.Plane_Good);
+            encounterEnvironments[EncounterConstants.Azer_Clan].Add(EnvironmentConstants.Plane_Fire);
+            encounterEnvironments[EncounterConstants.Azer_Pair].Add(EnvironmentConstants.Plane_Fire);
+            encounterEnvironments[EncounterConstants.Azer_Solitary].Add(EnvironmentConstants.Plane_Fire);
+            encounterEnvironments[EncounterConstants.Azer_Squad].Add(EnvironmentConstants.Plane_Fire);
+            encounterEnvironments[EncounterConstants.Azer_Team].Add(EnvironmentConstants.Plane_Fire);
+            encounterEnvironments[EncounterConstants.Barghest_Greater_Pack].Add(EnvironmentConstants.Plane_Evil);
+            encounterEnvironments[EncounterConstants.Barghest_Greater_Solitary].Add(EnvironmentConstants.Plane_Evil);
+            encounterEnvironments[EncounterConstants.Barghest_Pack].Add(EnvironmentConstants.Plane_Evil);
+            encounterEnvironments[EncounterConstants.Barghest_Solitary].Add(EnvironmentConstants.Plane_Evil);
+            encounterEnvironments[EncounterConstants.Basilisk_Colony].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert);
+            encounterEnvironments[EncounterConstants.Basilisk_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert);
+            encounterEnvironments[EncounterConstants.Basilisk_AbyssalGreater_Colony].Add(EnvironmentConstants.Plane_ChaoticEvil);
+            encounterEnvironments[EncounterConstants.Basilisk_AbyssalGreater_Solitary].Add(EnvironmentConstants.Plane_ChaoticEvil);
+            encounterEnvironments[EncounterConstants.Behir_Pair].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Behir_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Belker_Clutch].Add(EnvironmentConstants.Plane_Air);
+            encounterEnvironments[EncounterConstants.Belker_Pair].Add(EnvironmentConstants.Plane_Air);
+            encounterEnvironments[EncounterConstants.Belker_Solitary].Add(EnvironmentConstants.Plane_Air);
+            encounterEnvironments[EncounterConstants.BlinkDog_Pack].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.BlinkDog_Pair].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.BlinkDog_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Bodak_Gang].Add(EnvironmentConstants.Plane_ChaoticEvil);
+            encounterEnvironments[EncounterConstants.Bodak_Solitary].Add(EnvironmentConstants.Plane_ChaoticEvil);
+            encounterEnvironments[EncounterConstants.Bralani_Pair].Add(EnvironmentConstants.Plane_ChaoticGood);
+            encounterEnvironments[EncounterConstants.Bralani_Solitary].Add(EnvironmentConstants.Plane_ChaoticGood);
+            encounterEnvironments[EncounterConstants.Bralani_Squad].Add(EnvironmentConstants.Plane_ChaoticGood);
+            encounterEnvironments[EncounterConstants.Bugbear_Gang].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Bugbear_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Bugbear_Tribe].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Bulette_Pair].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Bulette_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Badger_Celestial_Cete].Add(EnvironmentConstants.Plane_Good);
+            encounterEnvironments[EncounterConstants.Badger_Celestial_Pair].Add(EnvironmentConstants.Plane_Good);
+            encounterEnvironments[EncounterConstants.Badger_Celestial_Solitary].Add(EnvironmentConstants.Plane_Good);
+            encounterEnvironments[EncounterConstants.Dog_Celestial_Pack].Add(EnvironmentConstants.Plane_Good);
+            encounterEnvironments[EncounterConstants.Dog_Celestial_Solitary].Add(EnvironmentConstants.Plane_Good);
+            encounterEnvironments[EncounterConstants.FireBeetle_Giant_Celestial_Cluster].Add(EnvironmentConstants.Plane_Good);
+            encounterEnvironments[EncounterConstants.FireBeetle_Giant_Celestial_Colony].Add(EnvironmentConstants.Plane_Good);
+            encounterEnvironments[EncounterConstants.Monkey_Celestial_Troop].Add(EnvironmentConstants.Plane_Good);
+            encounterEnvironments[EncounterConstants.Owl_Celestial_Solitary].Add(EnvironmentConstants.Plane_Good);
+            encounterEnvironments[EncounterConstants.Porpoise_Celestial_Pair].Add(EnvironmentConstants.Plane_Good);
+            encounterEnvironments[EncounterConstants.Porpoise_Celestial_School].Add(EnvironmentConstants.Plane_Good);
+            encounterEnvironments[EncounterConstants.Porpoise_Celestial_Solitary].Add(EnvironmentConstants.Plane_Good);
+            encounterEnvironments[EncounterConstants.Centaur_Company].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Centaur_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Centaur_Tribe].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Centaur_Troop].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.ChaosBeast_Solitary].Add(EnvironmentConstants.Plane_Limbo);
+            encounterEnvironments[EncounterConstants.Chimera_Flight].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Chimera_Pride].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Chimera_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Choker_Solitary].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.Chuul_Pack].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh);
+            encounterEnvironments[EncounterConstants.Chuul_Pair].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh);
+            encounterEnvironments[EncounterConstants.Chuul_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh);
+            encounterEnvironments[EncounterConstants.Cloaker_Flock].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.Cloaker_Mob].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.Cloaker_Solitary].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.Cockatrice_Flight].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Cockatrice_Flock].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Cockatrice_Pair].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Cockatrice_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Couatl_Flight].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Couatl_Pair].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Couatl_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Darkmantle_Clutch].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.Darkmantle_Pair].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.Darkmantle_Solitary].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.Darkmantle_Swarm].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.Delver_Solitary].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.Babau_Gang].Add(EnvironmentConstants.Plane_ChaoticEvil);
+            encounterEnvironments[EncounterConstants.Babau_Solitary].Add(EnvironmentConstants.Plane_ChaoticEvil);
+            encounterEnvironments[EncounterConstants.Balor_Solitary].Add(EnvironmentConstants.Plane_ChaoticEvil);
+            encounterEnvironments[EncounterConstants.Balor_Troupe].Add(EnvironmentConstants.Plane_ChaoticEvil);
+            encounterEnvironments[EncounterConstants.Bebilith_Solitary].Add(EnvironmentConstants.Plane_ChaoticEvil);
+            encounterEnvironments[EncounterConstants.Dretch_Crowd].Add(EnvironmentConstants.Plane_ChaoticEvil);
+            encounterEnvironments[EncounterConstants.Dretch_Gang].Add(EnvironmentConstants.Plane_ChaoticEvil);
+            encounterEnvironments[EncounterConstants.Dretch_Mob].Add(EnvironmentConstants.Plane_ChaoticEvil);
+            encounterEnvironments[EncounterConstants.Dretch_Pair].Add(EnvironmentConstants.Plane_ChaoticEvil);
+            encounterEnvironments[EncounterConstants.Dretch_Solitary].Add(EnvironmentConstants.Plane_ChaoticEvil);
+            encounterEnvironments[EncounterConstants.Glabrezu_Solitary].Add(EnvironmentConstants.Plane_ChaoticEvil);
+            encounterEnvironments[EncounterConstants.Glabrezu_Troupe].Add(EnvironmentConstants.Plane_ChaoticEvil);
+            encounterEnvironments[EncounterConstants.Hezrou_Gang].Add(EnvironmentConstants.Plane_ChaoticEvil);
+            encounterEnvironments[EncounterConstants.Hezrou_Solitary].Add(EnvironmentConstants.Plane_ChaoticEvil);
+            encounterEnvironments[EncounterConstants.Marilith_Pair].Add(EnvironmentConstants.Plane_ChaoticEvil);
+            encounterEnvironments[EncounterConstants.Marilith_Solitary].Add(EnvironmentConstants.Plane_ChaoticEvil);
+            encounterEnvironments[EncounterConstants.Nalfeshnee_Solitary].Add(EnvironmentConstants.Plane_ChaoticEvil);
+            encounterEnvironments[EncounterConstants.Nalfeshnee_Troupe].Add(EnvironmentConstants.Plane_ChaoticEvil);
+            encounterEnvironments[EncounterConstants.Quasit_Solitary].Add(EnvironmentConstants.Plane_ChaoticEvil);
+            encounterEnvironments[EncounterConstants.Retriever_Solitary].Add(EnvironmentConstants.Plane_ChaoticEvil);
+            encounterEnvironments[EncounterConstants.Succubus_Solitary].Add(EnvironmentConstants.Plane_ChaoticEvil);
+            encounterEnvironments[EncounterConstants.Vrock_Gang].Add(EnvironmentConstants.Plane_ChaoticEvil);
+            encounterEnvironments[EncounterConstants.Vrock_Pair].Add(EnvironmentConstants.Plane_ChaoticEvil);
+            encounterEnvironments[EncounterConstants.Vrock_Solitary].Add(EnvironmentConstants.Plane_ChaoticEvil);
+            encounterEnvironments[EncounterConstants.Vrock_Squad].Add(EnvironmentConstants.Plane_ChaoticEvil);
+            encounterEnvironments[EncounterConstants.Derro_Band].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.Derro_Squad].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.Derro_Team].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.Destrachan_Pack].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.Destrachan_Solitary].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.BarbedDevil_Pair].Add(EnvironmentConstants.Plane_LawfulEvil);
+            encounterEnvironments[EncounterConstants.BarbedDevil_Solitary].Add(EnvironmentConstants.Plane_LawfulEvil);
+            encounterEnvironments[EncounterConstants.BarbedDevil_Squad].Add(EnvironmentConstants.Plane_LawfulEvil);
+            encounterEnvironments[EncounterConstants.BarbedDevil_Team].Add(EnvironmentConstants.Plane_LawfulEvil);
+            encounterEnvironments[EncounterConstants.BeardedDevil_Pair].Add(EnvironmentConstants.Plane_LawfulEvil);
+            encounterEnvironments[EncounterConstants.BeardedDevil_Solitary].Add(EnvironmentConstants.Plane_LawfulEvil);
+            encounterEnvironments[EncounterConstants.BeardedDevil_Squad].Add(EnvironmentConstants.Plane_LawfulEvil);
+            encounterEnvironments[EncounterConstants.BeardedDevil_Team].Add(EnvironmentConstants.Plane_LawfulEvil);
+            encounterEnvironments[EncounterConstants.BoneDevil_Solitary].Add(EnvironmentConstants.Plane_LawfulEvil);
+            encounterEnvironments[EncounterConstants.BoneDevil_Squad].Add(EnvironmentConstants.Plane_LawfulEvil);
+            encounterEnvironments[EncounterConstants.BoneDevil_Team].Add(EnvironmentConstants.Plane_LawfulEvil);
+            encounterEnvironments[EncounterConstants.ChainDevil_Band].Add(EnvironmentConstants.Plane_LawfulEvil);
+            encounterEnvironments[EncounterConstants.ChainDevil_Gang].Add(EnvironmentConstants.Plane_LawfulEvil);
+            encounterEnvironments[EncounterConstants.ChainDevil_Mob].Add(EnvironmentConstants.Plane_LawfulEvil);
+            encounterEnvironments[EncounterConstants.ChainDevil_Solitary].Add(EnvironmentConstants.Plane_LawfulEvil);
+            encounterEnvironments[EncounterConstants.Erinyes_Solitary].Add(EnvironmentConstants.Plane_LawfulEvil);
+            encounterEnvironments[EncounterConstants.Hellcat_Pair].Add(EnvironmentConstants.Plane_LawfulEvil);
+            encounterEnvironments[EncounterConstants.Hellcat_Pride].Add(EnvironmentConstants.Plane_LawfulEvil);
+            encounterEnvironments[EncounterConstants.Hellcat_Solitary].Add(EnvironmentConstants.Plane_LawfulEvil);
+            encounterEnvironments[EncounterConstants.HornedDevil_Solitary].Add(EnvironmentConstants.Plane_LawfulEvil);
+            encounterEnvironments[EncounterConstants.HornedDevil_Squad].Add(EnvironmentConstants.Plane_LawfulEvil);
+            encounterEnvironments[EncounterConstants.HornedDevil_Team].Add(EnvironmentConstants.Plane_LawfulEvil);
+            encounterEnvironments[EncounterConstants.IceDevil_Solitary].Add(EnvironmentConstants.Plane_LawfulEvil);
+            encounterEnvironments[EncounterConstants.IceDevil_Squad].Add(EnvironmentConstants.Plane_LawfulEvil);
+            encounterEnvironments[EncounterConstants.IceDevil_Team].Add(EnvironmentConstants.Plane_LawfulEvil);
+            encounterEnvironments[EncounterConstants.IceDevil_Troupe].Add(EnvironmentConstants.Plane_LawfulEvil);
+            encounterEnvironments[EncounterConstants.Imp_Solitary].Add(EnvironmentConstants.Plane_LawfulEvil);
+            encounterEnvironments[EncounterConstants.Lemure_Gang].Add(EnvironmentConstants.Plane_LawfulEvil);
+            encounterEnvironments[EncounterConstants.Lemure_Mob].Add(EnvironmentConstants.Plane_LawfulEvil);
+            encounterEnvironments[EncounterConstants.Lemure_Pair].Add(EnvironmentConstants.Plane_LawfulEvil);
+            encounterEnvironments[EncounterConstants.Lemure_Solitary].Add(EnvironmentConstants.Plane_LawfulEvil);
+            encounterEnvironments[EncounterConstants.Lemure_Swarm].Add(EnvironmentConstants.Plane_LawfulEvil);
+            encounterEnvironments[EncounterConstants.PitFiend_Pair].Add(EnvironmentConstants.Plane_LawfulEvil);
+            encounterEnvironments[EncounterConstants.PitFiend_Solitary].Add(EnvironmentConstants.Plane_LawfulEvil);
+            encounterEnvironments[EncounterConstants.PitFiend_Team].Add(EnvironmentConstants.Plane_LawfulEvil);
+            encounterEnvironments[EncounterConstants.PitFiend_Troupe].Add(EnvironmentConstants.Plane_LawfulEvil);
+            encounterEnvironments[EncounterConstants.Devourer_Solitary].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Digester_Pack].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Digester_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Deinonychus_Pack].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Deinonychus_Pair].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Deinonychus_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Elasmosaurus_Herd].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic);
+            encounterEnvironments[EncounterConstants.Elasmosaurus_Pair].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic);
+            encounterEnvironments[EncounterConstants.Elasmosaurus_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic);
+            encounterEnvironments[EncounterConstants.Megaraptor_Pack].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Megaraptor_Pair].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Megaraptor_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Triceratops_Herd].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Triceratops_Pair].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Triceratops_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Tyrannosaurus_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Tyrannosaurus_Pair].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Ape_Dire_Company].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Ape_Dire_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Badger_Dire_Cete].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Badger_Dire_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Bat_Dire_Colony].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert);
+            encounterEnvironments[EncounterConstants.Bat_Dire_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert);
+            encounterEnvironments[EncounterConstants.Bear_Dire_Pair].Add(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Bear_Dire_Solitary].Add(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Boar_Dire_Herd].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Boar_Dire_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Lion_Dire_Pair].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Lion_Dire_Pride].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Lion_Dire_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Rat_Dire_Pack].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Rat_Dire_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Rat_Dire_Fiendish_Pack].Add(EnvironmentConstants.Plane_Evil);
+            encounterEnvironments[EncounterConstants.Rat_Dire_Fiendish_Solitary].Add(EnvironmentConstants.Plane_Evil);
+            encounterEnvironments[EncounterConstants.Shark_Dire_School].Add(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Aquatic);
+            encounterEnvironments[EncounterConstants.Shark_Dire_Solitary].Add(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Aquatic);
+            encounterEnvironments[EncounterConstants.Tiger_Dire_Pair].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Tiger_Dire_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Weasel_Dire_Pair].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Weasel_Dire_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Wolf_Dire_Pack].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Wolf_Dire_Pair].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Wolf_Dire_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Wolverine_Dire_Pair].Add(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Wolverine_Dire_Solitary].Add(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Doppelganger_Gang].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Doppelganger_Pair].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Doppelganger_Solitary].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Dragon_Black_Adult_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh);
+            encounterEnvironments[EncounterConstants.Dragon_Black_Adult_Pair].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh);
+            encounterEnvironments[EncounterConstants.Dragon_Black_Adult_Family].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh);
+            encounterEnvironments[EncounterConstants.Dragon_Black_Ancient_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh);
+            encounterEnvironments[EncounterConstants.Dragon_Black_Ancient_Pair].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh);
+            encounterEnvironments[EncounterConstants.Dragon_Black_Ancient_Family].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh);
+            encounterEnvironments[EncounterConstants.Dragon_Black_GreatWyrm_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh);
+            encounterEnvironments[EncounterConstants.Dragon_Black_GreatWyrm_Pair].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh);
+            encounterEnvironments[EncounterConstants.Dragon_Black_GreatWyrm_Family].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh);
+            encounterEnvironments[EncounterConstants.Dragon_Black_Juvenile_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh);
+            encounterEnvironments[EncounterConstants.Dragon_Black_Juvenile_Clutch].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh);
+            encounterEnvironments[EncounterConstants.Dragon_Black_MatureAdult_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh);
+            encounterEnvironments[EncounterConstants.Dragon_Black_MatureAdult_Pair].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh);
+            encounterEnvironments[EncounterConstants.Dragon_Black_MatureAdult_Family].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh);
+            encounterEnvironments[EncounterConstants.Dragon_Black_Old_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh);
+            encounterEnvironments[EncounterConstants.Dragon_Black_Old_Pair].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh);
+            encounterEnvironments[EncounterConstants.Dragon_Black_Old_Family].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh);
+            encounterEnvironments[EncounterConstants.Dragon_Black_VeryOld_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh);
+            encounterEnvironments[EncounterConstants.Dragon_Black_VeryOld_Pair].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh);
+            encounterEnvironments[EncounterConstants.Dragon_Black_VeryOld_Family].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh);
+            encounterEnvironments[EncounterConstants.Dragon_Black_VeryYoung_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh);
+            encounterEnvironments[EncounterConstants.Dragon_Black_VeryYoung_Clutch].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh);
+            encounterEnvironments[EncounterConstants.Dragon_Black_Wyrm_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh);
+            encounterEnvironments[EncounterConstants.Dragon_Black_Wyrm_Pair].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh);
+            encounterEnvironments[EncounterConstants.Dragon_Black_Wyrm_Family].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh);
+            encounterEnvironments[EncounterConstants.Dragon_Black_Wyrmling_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh);
+            encounterEnvironments[EncounterConstants.Dragon_Black_Wyrmling_Clutch].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh);
+            encounterEnvironments[EncounterConstants.Dragon_Black_Young_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh);
+            encounterEnvironments[EncounterConstants.Dragon_Black_Young_Clutch].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh);
+            encounterEnvironments[EncounterConstants.Dragon_Black_YoungAdult_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh);
+            encounterEnvironments[EncounterConstants.Dragon_Black_YoungAdult_Clutch].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh);
+            encounterEnvironments[EncounterConstants.Dragon_Blue_Adult_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert);
+            encounterEnvironments[EncounterConstants.Dragon_Blue_Adult_Pair].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert);
+            encounterEnvironments[EncounterConstants.Dragon_Blue_Adult_Family].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert);
+            encounterEnvironments[EncounterConstants.Dragon_Blue_Ancient_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert);
+            encounterEnvironments[EncounterConstants.Dragon_Blue_Ancient_Pair].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert);
+            encounterEnvironments[EncounterConstants.Dragon_Blue_Ancient_Family].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert);
+            encounterEnvironments[EncounterConstants.Dragon_Blue_GreatWyrm_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert);
+            encounterEnvironments[EncounterConstants.Dragon_Blue_GreatWyrm_Pair].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert);
+            encounterEnvironments[EncounterConstants.Dragon_Blue_GreatWyrm_Family].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert);
+            encounterEnvironments[EncounterConstants.Dragon_Blue_Juvenile_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert);
+            encounterEnvironments[EncounterConstants.Dragon_Blue_Juvenile_Clutch].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert);
+            encounterEnvironments[EncounterConstants.Dragon_Blue_MatureAdult_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert);
+            encounterEnvironments[EncounterConstants.Dragon_Blue_MatureAdult_Pair].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert);
+            encounterEnvironments[EncounterConstants.Dragon_Blue_MatureAdult_Family].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert);
+            encounterEnvironments[EncounterConstants.Dragon_Blue_Old_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert);
+            encounterEnvironments[EncounterConstants.Dragon_Blue_Old_Pair].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert);
+            encounterEnvironments[EncounterConstants.Dragon_Blue_Old_Family].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert);
+            encounterEnvironments[EncounterConstants.Dragon_Blue_VeryOld_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert);
+            encounterEnvironments[EncounterConstants.Dragon_Blue_VeryOld_Pair].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert);
+            encounterEnvironments[EncounterConstants.Dragon_Blue_VeryOld_Family].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert);
+            encounterEnvironments[EncounterConstants.Dragon_Blue_VeryYoung_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert);
+            encounterEnvironments[EncounterConstants.Dragon_Blue_VeryYoung_Clutch].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert);
+            encounterEnvironments[EncounterConstants.Dragon_Blue_Wyrm_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert);
+            encounterEnvironments[EncounterConstants.Dragon_Blue_Wyrm_Pair].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert);
+            encounterEnvironments[EncounterConstants.Dragon_Blue_Wyrm_Family].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert);
+            encounterEnvironments[EncounterConstants.Dragon_Blue_Wyrmling_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert);
+            encounterEnvironments[EncounterConstants.Dragon_Blue_Wyrmling_Clutch].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert);
+            encounterEnvironments[EncounterConstants.Dragon_Blue_Young_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert);
+            encounterEnvironments[EncounterConstants.Dragon_Blue_Young_Clutch].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert);
+            encounterEnvironments[EncounterConstants.Dragon_Blue_YoungAdult_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert);
+            encounterEnvironments[EncounterConstants.Dragon_Blue_YoungAdult_Clutch].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert);
+            encounterEnvironments[EncounterConstants.Dragon_Brass_Adult_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert);
+            encounterEnvironments[EncounterConstants.Dragon_Brass_Adult_Pair].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert);
+            encounterEnvironments[EncounterConstants.Dragon_Brass_Adult_Family].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert);
+            encounterEnvironments[EncounterConstants.Dragon_Brass_Ancient_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert);
+            encounterEnvironments[EncounterConstants.Dragon_Brass_Ancient_Pair].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert);
+            encounterEnvironments[EncounterConstants.Dragon_Brass_Ancient_Family].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert);
+            encounterEnvironments[EncounterConstants.Dragon_Brass_GreatWyrm_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert);
+            encounterEnvironments[EncounterConstants.Dragon_Brass_GreatWyrm_Pair].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert);
+            encounterEnvironments[EncounterConstants.Dragon_Brass_GreatWyrm_Family].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert);
+            encounterEnvironments[EncounterConstants.Dragon_Brass_Juvenile_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert);
+            encounterEnvironments[EncounterConstants.Dragon_Brass_Juvenile_Clutch].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert);
+            encounterEnvironments[EncounterConstants.Dragon_Brass_MatureAdult_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert);
+            encounterEnvironments[EncounterConstants.Dragon_Brass_MatureAdult_Pair].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert);
+            encounterEnvironments[EncounterConstants.Dragon_Brass_MatureAdult_Family].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert);
+            encounterEnvironments[EncounterConstants.Dragon_Brass_Old_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert);
+            encounterEnvironments[EncounterConstants.Dragon_Brass_Old_Pair].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert);
+            encounterEnvironments[EncounterConstants.Dragon_Brass_Old_Family].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert);
+            encounterEnvironments[EncounterConstants.Dragon_Brass_VeryOld_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert);
+            encounterEnvironments[EncounterConstants.Dragon_Brass_VeryOld_Pair].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert);
+            encounterEnvironments[EncounterConstants.Dragon_Brass_VeryOld_Family].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert);
+            encounterEnvironments[EncounterConstants.Dragon_Brass_VeryYoung_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert);
+            encounterEnvironments[EncounterConstants.Dragon_Brass_VeryYoung_Clutch].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert);
+            encounterEnvironments[EncounterConstants.Dragon_Brass_Wyrm_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert);
+            encounterEnvironments[EncounterConstants.Dragon_Brass_Wyrm_Pair].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert);
+            encounterEnvironments[EncounterConstants.Dragon_Brass_Wyrm_Family].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert);
+            encounterEnvironments[EncounterConstants.Dragon_Brass_Wyrmling_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert);
+            encounterEnvironments[EncounterConstants.Dragon_Brass_Wyrmling_Clutch].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert);
+            encounterEnvironments[EncounterConstants.Dragon_Brass_Young_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert);
+            encounterEnvironments[EncounterConstants.Dragon_Brass_Young_Clutch].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert);
+            encounterEnvironments[EncounterConstants.Dragon_Brass_YoungAdult_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert);
+            encounterEnvironments[EncounterConstants.Dragon_Brass_YoungAdult_Clutch].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert);
+            encounterEnvironments[EncounterConstants.Dragon_Bronze_Adult_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Dragon_Bronze_Adult_Pair].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Dragon_Bronze_Adult_Family].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Dragon_Bronze_Ancient_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Dragon_Bronze_Ancient_Pair].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Dragon_Bronze_Ancient_Family].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Dragon_Bronze_GreatWyrm_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Dragon_Bronze_GreatWyrm_Pair].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Dragon_Bronze_GreatWyrm_Family].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Dragon_Bronze_Juvenile_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Dragon_Bronze_Juvenile_Clutch].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Dragon_Bronze_MatureAdult_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Dragon_Bronze_MatureAdult_Pair].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Dragon_Bronze_MatureAdult_Family].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Dragon_Bronze_Old_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Dragon_Bronze_Old_Pair].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Dragon_Bronze_Old_Family].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Dragon_Bronze_VeryOld_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Dragon_Bronze_VeryOld_Pair].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Dragon_Bronze_VeryOld_Family].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Dragon_Bronze_VeryYoung_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Dragon_Bronze_VeryYoung_Clutch].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Dragon_Bronze_Wyrm_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Dragon_Bronze_Wyrm_Pair].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Dragon_Bronze_Wyrm_Family].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Dragon_Bronze_Wyrmling_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Dragon_Bronze_Wyrmling_Clutch].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Dragon_Bronze_Young_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Dragon_Bronze_Young_Clutch].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Dragon_Bronze_YoungAdult_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Dragon_Bronze_YoungAdult_Clutch].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Dragon_Copper_Adult_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Dragon_Copper_Adult_Pair].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Dragon_Copper_Adult_Family].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Dragon_Copper_Ancient_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Dragon_Copper_Ancient_Pair].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Dragon_Copper_Ancient_Family].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Dragon_Copper_GreatWyrm_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Dragon_Copper_GreatWyrm_Pair].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Dragon_Copper_GreatWyrm_Family].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Dragon_Copper_Juvenile_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Dragon_Copper_Juvenile_Clutch].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Dragon_Copper_MatureAdult_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Dragon_Copper_MatureAdult_Pair].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Dragon_Copper_MatureAdult_Family].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Dragon_Copper_Old_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Dragon_Copper_Old_Pair].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Dragon_Copper_Old_Family].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Dragon_Copper_VeryOld_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Dragon_Copper_VeryOld_Pair].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Dragon_Copper_VeryOld_Family].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Dragon_Copper_VeryYoung_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Dragon_Copper_VeryYoung_Clutch].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Dragon_Copper_Wyrm_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Dragon_Copper_Wyrm_Pair].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Dragon_Copper_Wyrm_Family].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Dragon_Copper_Wyrmling_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Dragon_Copper_Wyrmling_Clutch].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Dragon_Copper_Young_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Dragon_Copper_Young_Clutch].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Dragon_Copper_YoungAdult_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Dragon_Copper_YoungAdult_Clutch].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Dragon_Gold_Adult_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Dragon_Gold_Adult_Pair].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Dragon_Gold_Adult_Family].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Dragon_Gold_Ancient_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Dragon_Gold_Ancient_Pair].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Dragon_Gold_Ancient_Family].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Dragon_Gold_GreatWyrm_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Dragon_Gold_GreatWyrm_Pair].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Dragon_Gold_GreatWyrm_Family].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Dragon_Gold_Juvenile_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Dragon_Gold_Juvenile_Clutch].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Dragon_Gold_MatureAdult_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Dragon_Gold_MatureAdult_Pair].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Dragon_Gold_MatureAdult_Family].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Dragon_Gold_Old_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Dragon_Gold_Old_Pair].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Dragon_Gold_Old_Family].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Dragon_Gold_VeryOld_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Dragon_Gold_VeryOld_Pair].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Dragon_Gold_VeryOld_Family].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Dragon_Gold_VeryYoung_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Dragon_Gold_VeryYoung_Clutch].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Dragon_Gold_Wyrm_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Dragon_Gold_Wyrm_Pair].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Dragon_Gold_Wyrm_Family].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Dragon_Gold_Wyrmling_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Dragon_Gold_Wyrmling_Clutch].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Dragon_Gold_Young_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Dragon_Gold_Young_Clutch].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Dragon_Gold_YoungAdult_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Dragon_Gold_YoungAdult_Clutch].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Dragon_Green_Adult_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Dragon_Green_Adult_Pair].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Dragon_Green_Adult_Family].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Dragon_Green_Ancient_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Dragon_Green_Ancient_Pair].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Dragon_Green_Ancient_Family].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Dragon_Green_GreatWyrm_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Dragon_Green_GreatWyrm_Pair].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Dragon_Green_GreatWyrm_Family].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Dragon_Green_Juvenile_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Dragon_Green_Juvenile_Clutch].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Dragon_Green_MatureAdult_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Dragon_Green_MatureAdult_Pair].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Dragon_Green_MatureAdult_Family].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Dragon_Green_Old_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Dragon_Green_Old_Pair].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Dragon_Green_Old_Family].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Dragon_Green_VeryOld_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Dragon_Green_VeryOld_Pair].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Dragon_Green_VeryOld_Family].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Dragon_Green_VeryYoung_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Dragon_Green_VeryYoung_Clutch].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Dragon_Green_Wyrm_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Dragon_Green_Wyrm_Pair].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Dragon_Green_Wyrm_Family].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Dragon_Green_Wyrmling_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Dragon_Green_Wyrmling_Clutch].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Dragon_Green_Young_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Dragon_Green_Young_Clutch].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Dragon_Green_YoungAdult_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Dragon_Green_YoungAdult_Clutch].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Dragon_Red_Adult_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Dragon_Red_Adult_Pair].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Dragon_Red_Adult_Family].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Dragon_Red_Ancient_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Dragon_Red_Ancient_Pair].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Dragon_Red_Ancient_Family].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Dragon_Red_GreatWyrm_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Dragon_Red_GreatWyrm_Pair].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Dragon_Red_GreatWyrm_Family].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Dragon_Red_Juvenile_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Dragon_Red_Juvenile_Clutch].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Dragon_Red_MatureAdult_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Dragon_Red_MatureAdult_Pair].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Dragon_Red_MatureAdult_Family].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Dragon_Red_Old_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Dragon_Red_Old_Pair].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Dragon_Red_Old_Family].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Dragon_Red_VeryOld_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Dragon_Red_VeryOld_Pair].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Dragon_Red_VeryOld_Family].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Dragon_Red_VeryYoung_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Dragon_Red_VeryYoung_Clutch].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Dragon_Red_Wyrm_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Dragon_Red_Wyrm_Pair].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Dragon_Red_Wyrm_Family].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Dragon_Red_Wyrmling_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Dragon_Red_Wyrmling_Clutch].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Dragon_Red_Young_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Dragon_Red_Young_Clutch].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Dragon_Red_YoungAdult_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Dragon_Red_YoungAdult_Clutch].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Dragon_Silver_Adult_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Dragon_Silver_Adult_Pair].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Dragon_Silver_Adult_Family].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Dragon_Silver_Ancient_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Dragon_Silver_Ancient_Pair].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Dragon_Silver_Ancient_Family].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Dragon_Silver_GreatWyrm_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Dragon_Silver_GreatWyrm_Pair].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Dragon_Silver_GreatWyrm_Family].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Dragon_Silver_Juvenile_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Dragon_Silver_Juvenile_Clutch].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Dragon_Silver_MatureAdult_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Dragon_Silver_MatureAdult_Pair].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Dragon_Silver_MatureAdult_Family].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Dragon_Silver_Old_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Dragon_Silver_Old_Pair].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Dragon_Silver_Old_Family].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Dragon_Silver_VeryOld_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Dragon_Silver_VeryOld_Pair].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Dragon_Silver_VeryOld_Family].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Dragon_Silver_VeryYoung_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Dragon_Silver_VeryYoung_Clutch].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Dragon_Silver_Wyrm_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Dragon_Silver_Wyrm_Pair].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Dragon_Silver_Wyrm_Family].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Dragon_Silver_Wyrmling_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Dragon_Silver_Wyrmling_Clutch].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Dragon_Silver_Young_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Dragon_Silver_Young_Clutch].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Dragon_Silver_YoungAdult_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Dragon_Silver_YoungAdult_Clutch].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Dragon_White_Adult_Solitary].Add(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Dragon_White_Adult_Pair].Add(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Dragon_White_Adult_Family].Add(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Dragon_White_Ancient_Solitary].Add(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Dragon_White_Ancient_Pair].Add(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Dragon_White_Ancient_Family].Add(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Dragon_White_GreatWyrm_Solitary].Add(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Dragon_White_GreatWyrm_Pair].Add(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Dragon_White_GreatWyrm_Family].Add(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Dragon_White_Juvenile_Solitary].Add(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Dragon_White_Juvenile_Clutch].Add(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Dragon_White_MatureAdult_Solitary].Add(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Dragon_White_MatureAdult_Pair].Add(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Dragon_White_MatureAdult_Family].Add(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Dragon_White_Old_Solitary].Add(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Dragon_White_Old_Pair].Add(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Dragon_White_Old_Family].Add(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Dragon_White_VeryOld_Solitary].Add(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Dragon_White_VeryOld_Pair].Add(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Dragon_White_VeryOld_Family].Add(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Dragon_White_VeryYoung_Solitary].Add(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Dragon_White_VeryYoung_Clutch].Add(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Dragon_White_Wyrm_Solitary].Add(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Dragon_White_Wyrm_Pair].Add(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Dragon_White_Wyrm_Family].Add(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Dragon_White_Wyrmling_Solitary].Add(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Dragon_White_Wyrmling_Clutch].Add(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Dragon_White_Young_Solitary].Add(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Dragon_White_Young_Clutch].Add(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Dragon_White_YoungAdult_Solitary].Add(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Dragon_White_YoungAdult_Clutch].Add(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.DragonTurtle_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic);
+            encounterEnvironments[EncounterConstants.Dragonne_Pair].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert);
+            encounterEnvironments[EncounterConstants.Dragonne_Pride].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert);
+            encounterEnvironments[EncounterConstants.Dragonne_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert);
+            encounterEnvironments[EncounterConstants.Drider_Pair].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.Drider_Solitary].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.Drider_Troupe].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.Dryad_Grove].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Dryad_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Dwarf_Hill_Clan].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Dwarf_Hill_Squad].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Dwarf_Hill_Team].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Dwarf_Mountain_Clan].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Dwarf_Mountain_Squad].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Dwarf_Mountain_Team].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Dwarf_Deep_Clan].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.Dwarf_Deep_Squad].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.Dwarf_Deep_Team].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.Duergar_Clan].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.Duergar_Squad].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.Duergar_Team].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.Eagle_Giant_Eyrie].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Eagle_Giant_Pair].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Eagle_Giant_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Elemental_Air_Elder_Solitary].Add(EnvironmentConstants.Plane_Air);
+            encounterEnvironments[EncounterConstants.Elemental_Air_Greater_Solitary].Add(EnvironmentConstants.Plane_Air);
+            encounterEnvironments[EncounterConstants.Elemental_Air_Huge_Solitary].Add(EnvironmentConstants.Plane_Air);
+            encounterEnvironments[EncounterConstants.Elemental_Air_Large_Solitary].Add(EnvironmentConstants.Plane_Air);
+            encounterEnvironments[EncounterConstants.Elemental_Air_Medium_Solitary].Add(EnvironmentConstants.Plane_Air);
+            encounterEnvironments[EncounterConstants.Elemental_Air_Small_Solitary].Add(EnvironmentConstants.Plane_Air);
+            encounterEnvironments[EncounterConstants.Elemental_Earth_Elder_Solitary].Add(EnvironmentConstants.Plane_Earth);
+            encounterEnvironments[EncounterConstants.Elemental_Earth_Greater_Solitary].Add(EnvironmentConstants.Plane_Earth);
+            encounterEnvironments[EncounterConstants.Elemental_Earth_Huge_Solitary].Add(EnvironmentConstants.Plane_Earth);
+            encounterEnvironments[EncounterConstants.Elemental_Earth_Large_Solitary].Add(EnvironmentConstants.Plane_Earth);
+            encounterEnvironments[EncounterConstants.Elemental_Earth_Medium_Solitary].Add(EnvironmentConstants.Plane_Earth);
+            encounterEnvironments[EncounterConstants.Elemental_Earth_Small_Solitary].Add(EnvironmentConstants.Plane_Earth);
+            encounterEnvironments[EncounterConstants.Elemental_Fire_Elder_Solitary].Add(EnvironmentConstants.Plane_Fire);
+            encounterEnvironments[EncounterConstants.Elemental_Fire_Greater_Solitary].Add(EnvironmentConstants.Plane_Fire);
+            encounterEnvironments[EncounterConstants.Elemental_Fire_Huge_Solitary].Add(EnvironmentConstants.Plane_Fire);
+            encounterEnvironments[EncounterConstants.Elemental_Fire_Large_Solitary].Add(EnvironmentConstants.Plane_Fire);
+            encounterEnvironments[EncounterConstants.Elemental_Fire_Medium_Solitary].Add(EnvironmentConstants.Plane_Fire);
+            encounterEnvironments[EncounterConstants.Elemental_Fire_Small_Solitary].Add(EnvironmentConstants.Plane_Fire);
+            encounterEnvironments[EncounterConstants.Elemental_Water_Elder_Solitary].Add(EnvironmentConstants.Plane_Water);
+            encounterEnvironments[EncounterConstants.Elemental_Water_Greater_Solitary].Add(EnvironmentConstants.Plane_Water);
+            encounterEnvironments[EncounterConstants.Elemental_Water_Huge_Solitary].Add(EnvironmentConstants.Plane_Water);
+            encounterEnvironments[EncounterConstants.Elemental_Water_Large_Solitary].Add(EnvironmentConstants.Plane_Water);
+            encounterEnvironments[EncounterConstants.Elemental_Water_Medium_Solitary].Add(EnvironmentConstants.Plane_Water);
+            encounterEnvironments[EncounterConstants.Elemental_Water_Small_Solitary].Add(EnvironmentConstants.Plane_Water);
+            encounterEnvironments[EncounterConstants.Elf_High_Band].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Elf_High_Company].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Elf_High_Squad].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Elf_Half_Band].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Elf_Half_Company].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Elf_Half_Squad].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Elf_Aquatic_Band].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic);
+            encounterEnvironments[EncounterConstants.Elf_Aquatic_Company].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic);
+            encounterEnvironments[EncounterConstants.Elf_Aquatic_Squad].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic);
+            encounterEnvironments[EncounterConstants.Elf_Gray_Band].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Elf_Gray_Company].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Elf_Gray_Squad].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Elf_Wild_Band].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Elf_Wild_Company].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Elf_Wild_Squad].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Elf_Wood_Band].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Elf_Wood_Company].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Elf_Wood_Squad].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Drow_Band].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.Drow_Patrol].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.Drow_Squad].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.EtherealFilcher_Solitary].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.EtherealMarauder_Solitary].Add(EnvironmentConstants.Plane_Ethereal);
+            encounterEnvironments[EncounterConstants.Ettercap_Pair].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Ettercap_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Ettercap_Troupe].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Ettin_Band].Add(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Ettin_Colony_WithGoblins].Add(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Ettin_Colony_WithOrcs].Add(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Ettin_Gang].Add(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Ettin_Solitary].Add(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Ettin_Troupe].Add(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Centipede_Monstrous_Fiendish_Colossal_Solitary].Add(EnvironmentConstants.Plane_Evil);
+            encounterEnvironments[EncounterConstants.Centipede_Monstrous_Fiendish_Gargantuan_Solitary].Add(EnvironmentConstants.Plane_Evil);
+            encounterEnvironments[EncounterConstants.Centipede_Monstrous_Fiendish_Huge_Solitary].Add(EnvironmentConstants.Plane_Evil);
+            encounterEnvironments[EncounterConstants.Centipede_Monstrous_Fiendish_Huge_Colony].Add(EnvironmentConstants.Plane_Evil);
+            encounterEnvironments[EncounterConstants.Centipede_Monstrous_Fiendish_Large_Solitary].Add(EnvironmentConstants.Plane_Evil);
+            encounterEnvironments[EncounterConstants.Centipede_Monstrous_Fiendish_Large_Colony].Add(EnvironmentConstants.Plane_Evil);
+            encounterEnvironments[EncounterConstants.Centipede_Monstrous_Fiendish_Medium_Solitary].Add(EnvironmentConstants.Plane_Evil);
+            encounterEnvironments[EncounterConstants.Centipede_Monstrous_Fiendish_Medium_Colony].Add(EnvironmentConstants.Plane_Evil);
+            encounterEnvironments[EncounterConstants.Raven_Fiendish_Solitary].Add(EnvironmentConstants.Plane_Evil);
+            encounterEnvironments[EncounterConstants.FormianMyrmarch_Platoon].Add(EnvironmentConstants.Plane_Lawful);
+            encounterEnvironments[EncounterConstants.FormianMyrmarch_Solitary].Add(EnvironmentConstants.Plane_Lawful);
+            encounterEnvironments[EncounterConstants.FormianMyrmarch_Team].Add(EnvironmentConstants.Plane_Lawful);
+            encounterEnvironments[EncounterConstants.FormianQueen_Hive].Add(EnvironmentConstants.Plane_Lawful);
+            encounterEnvironments[EncounterConstants.FormianTaskmaster_ConscriptionTeam].Add(EnvironmentConstants.Plane_Lawful);
+            encounterEnvironments[EncounterConstants.FormianTaskmaster_Solitary].Add(EnvironmentConstants.Plane_Lawful);
+            encounterEnvironments[EncounterConstants.FormianWarrior_Solitary].Add(EnvironmentConstants.Plane_Lawful);
+            encounterEnvironments[EncounterConstants.FormianWarrior_Team].Add(EnvironmentConstants.Plane_Lawful);
+            encounterEnvironments[EncounterConstants.FormianWarrior_Troop].Add(EnvironmentConstants.Plane_Lawful);
+            encounterEnvironments[EncounterConstants.FormianWorker_Crew].Add(EnvironmentConstants.Plane_Lawful);
+            encounterEnvironments[EncounterConstants.FormianWorker_Team].Add(EnvironmentConstants.Plane_Lawful);
+            encounterEnvironments[EncounterConstants.FrostWorm_Solitary].Add(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Shrieker_Patch].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.Shrieker_Solitary].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.VioletFungus_MixedPatch].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.VioletFungus_Patch].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.VioletFungus_Solitary].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.Gargoyle_Pair].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Gargoyle_Solitary].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Gargoyle_Wing].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Gargoyle_Kapoacinth_Pair].Add(EnvironmentConstants.Aquatic);
+            encounterEnvironments[EncounterConstants.Gargoyle_Kapoacinth_Solitary].Add(EnvironmentConstants.Aquatic);
+            encounterEnvironments[EncounterConstants.Gargoyle_Kapoacinth_Wing].Add(EnvironmentConstants.Aquatic);
+            encounterEnvironments[EncounterConstants.Djinni_Band].Add(EnvironmentConstants.Plane_Air);
+            encounterEnvironments[EncounterConstants.Djinni_Company].Add(EnvironmentConstants.Plane_Air);
+            encounterEnvironments[EncounterConstants.Djinni_Noble_Solitary].Add(EnvironmentConstants.Plane_Air);
+            encounterEnvironments[EncounterConstants.Djinni_Solitary].Add(EnvironmentConstants.Plane_Air);
+            encounterEnvironments[EncounterConstants.Efreeti_Band].Add(EnvironmentConstants.Plane_Fire);
+            encounterEnvironments[EncounterConstants.Efreeti_Company].Add(EnvironmentConstants.Plane_Fire);
+            encounterEnvironments[EncounterConstants.Efreeti_Solitary].Add(EnvironmentConstants.Plane_Fire);
+            encounterEnvironments[EncounterConstants.Janni_Band].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert);
+            encounterEnvironments[EncounterConstants.Janni_Company].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert);
+            encounterEnvironments[EncounterConstants.Janni_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert);
+            encounterEnvironments[EncounterConstants.Ghaele_Pair].Add(EnvironmentConstants.Plane_ChaoticGood);
+            encounterEnvironments[EncounterConstants.Ghaele_Solitary].Add(EnvironmentConstants.Plane_ChaoticGood);
+            encounterEnvironments[EncounterConstants.Ghaele_Squad].Add(EnvironmentConstants.Plane_ChaoticGood);
+            encounterEnvironments[EncounterConstants.Ghost_Level1_Gang].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Ghost_Level1_Mob].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Ghost_Level1_Solitary].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Ghost_Level2_Gang].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Ghost_Level2_Mob].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Ghost_Level2_Solitary].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Ghost_Level3_Gang].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Ghost_Level3_Mob].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Ghost_Level3_Solitary].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Ghost_Level4_Gang].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Ghost_Level4_Mob].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Ghost_Level4_Solitary].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Ghost_Level5_Gang].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Ghost_Level5_Mob].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Ghost_Level5_Solitary].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Ghost_Level6_Gang].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Ghost_Level6_Mob].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Ghost_Level6_Solitary].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Ghost_Level7_Gang].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Ghost_Level7_Mob].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Ghost_Level7_Solitary].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Ghost_Level8_Gang].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Ghost_Level8_Mob].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Ghost_Level8_Solitary].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Ghost_Level9_Gang].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Ghost_Level9_Mob].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Ghost_Level9_Solitary].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Ghost_Level10_Gang].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Ghost_Level10_Mob].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Ghost_Level10_Solitary].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Ghost_Level11_Gang].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Ghost_Level11_Mob].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Ghost_Level11_Solitary].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Ghost_Level12_Gang].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Ghost_Level12_Mob].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Ghost_Level12_Solitary].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Ghost_Level13_Gang].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Ghost_Level13_Mob].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Ghost_Level13_Solitary].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Ghost_Level14_Gang].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Ghost_Level14_Mob].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Ghost_Level14_Solitary].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Ghost_Level15_Gang].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Ghost_Level15_Mob].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Ghost_Level15_Solitary].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Ghost_Level16_Gang].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Ghost_Level16_Mob].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Ghost_Level16_Solitary].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Ghost_Level17_Gang].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Ghost_Level17_Mob].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Ghost_Level17_Solitary].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Ghost_Level18_Gang].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Ghost_Level18_Mob].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Ghost_Level18_Solitary].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Ghost_Level19_Gang].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Ghost_Level19_Mob].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Ghost_Level19_Solitary].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Ghost_Level20_Gang].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Ghost_Level20_Mob].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Ghost_Level20_Solitary].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Ghoul_Gang].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Ghoul_Pack].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Ghoul_Solitary].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Ghast_Gang].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Ghast_Pack].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Ghast_Solitary].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Ghoul_Lacedon_Gang].Add(EnvironmentConstants.Aquatic);
+            encounterEnvironments[EncounterConstants.Ghoul_Lacedon_Pack].Add(EnvironmentConstants.Aquatic);
+            encounterEnvironments[EncounterConstants.Ghoul_Lacedon_Solitary].Add(EnvironmentConstants.Aquatic);
+            encounterEnvironments[EncounterConstants.Giant_Cloud_Band_WithDireLions].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Giant_Cloud_Band_WithGriffons].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Giant_Cloud_Family_WithDireLions].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Giant_Cloud_Family_WithGriffons].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Giant_Cloud_Gang].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Giant_Cloud_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Giant_Fire_Band_WithAdept].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Giant_Fire_Band_WithCleric].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Giant_Fire_Gang].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Giant_Fire_HuntingRaidingParty_WithAdept_WithEttins].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Giant_Fire_HuntingRaidingParty_WithAdept_WithTrolls].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Giant_Fire_HuntingRaidingParty_WithSorcerer_WithEttins].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Giant_Fire_HuntingRaidingParty_WithSorcerer_WithTrolls].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Giant_Fire_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Giant_Fire_Tribe_WithAdept].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Giant_Fire_Tribe_WithLeader].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Giant_Frost_Band_WithAdept].Add(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Giant_Frost_Band_WithCleric].Add(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Giant_Frost_Gang].Add(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Giant_Frost_HuntingRaidingParty_WithAdept].Add(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Giant_Frost_HuntingRaidingParty_WithSorcerer].Add(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Giant_Frost_Jarl_Solitary].Add(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Giant_Frost_Solitary].Add(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Giant_Frost_Tribe_WithAdept].Add(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Giant_Frost_Tribe_WithAdept_WithJarl].Add(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Giant_Frost_Tribe_WithLeader].Add(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Giant_Frost_Tribe_WithLeader_WithJarl].Add(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Giant_Hill_Band].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Giant_Hill_Gang].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Giant_Hill_HuntingRaidingParty].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Giant_Hill_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Giant_Hill_Tribe].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Giant_Stone_Band].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Giant_Stone_Gang].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Giant_Stone_HuntingRaidingTradingParty].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Giant_Stone_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Giant_Stone_Tribe].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Giant_Storm_Family_WithGriffons].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Giant_Storm_Family_WithRocs].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Giant_Storm_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.GibberingMouther_Solitary].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.Girallon_Company].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Girallon_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Gnoll_Band].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Gnoll_HuntingParty].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Gnoll_Pair].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Gnoll_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Gnoll_Tribe].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Gnoll_Tribe_WithTrolls].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Gnome_Rock_Band].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Gnome_Rock_Company].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Gnome_Rock_Squad].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Gnome_Forest_Band].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Gnome_Forest_Company].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Gnome_Forest_Squad].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Svirfneblin_Band].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.Svirfneblin_Company].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.Svirfneblin_Squad].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.Goblin_Band].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Goblin_Gang].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Goblin_Tribe].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Goblin_Warband].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Golem_Clay_Gang].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Golem_Clay_Solitary].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Golem_Flesh_Gang].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Golem_Flesh_Solitary].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Golem_Iron_Gang].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Golem_Iron_Solitary].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Golem_Stone_Gang].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Golem_Stone_Greater_Gang].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Golem_Stone_Greater_Solitary].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Golem_Stone_Solitary].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Gorgon_Herd].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Gorgon_Pack].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Gorgon_Pair].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Gorgon_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.GrayRender_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh);
+            encounterEnvironments[EncounterConstants.Grick_Cluster].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.Grick_Solitary].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.Griffon_Pair].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Griffon_Pride].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Griffon_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Grimlock_Gang].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.Grimlock_Pack].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.Grimlock_Tribe].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.Character_Adventurer_Level1_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Adventurer_Level2_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Adventurer_Level3_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Adventurer_Level4_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Adventurer_Level5_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Adventurer_Level6_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Adventurer_Level7_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Adventurer_Level8_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Adventurer_Level9_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Adventurer_Level10_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Adventurer_Level11_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Adventurer_Level12_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Adventurer_Level13_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Adventurer_Level14_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Adventurer_Level15_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Adventurer_Level16_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Adventurer_Level17_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Adventurer_Level18_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Adventurer_Level19_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Adventurer_Level20_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Adventurer_Level1_Party].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Adventurer_Level2_Party].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Adventurer_Level3_Party].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Adventurer_Level4_Party].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Adventurer_Level5_Party].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Adventurer_Level6_Party].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Adventurer_Level7_Party].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Adventurer_Level8_Party].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Adventurer_Level9_Party].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Adventurer_Level10_Party].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Adventurer_Level11_Party].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Adventurer_Level12_Party].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Adventurer_Level13_Party].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Adventurer_Level14_Party].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Adventurer_Level15_Party].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Adventurer_Level16_Party].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Adventurer_Level17_Party].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Adventurer_Level18_Party].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Adventurer_Level19_Party].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Adventurer_Level20_Party].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level1_WithCat].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level2_WithCat].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level3_WithCat].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level4_WithCat].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level5_WithCat].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level6_WithCat].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level7_WithCat].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level8_WithCat].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level9_WithCat].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level10_WithCat].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level11_WithCat].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level12_WithCat].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level13_WithCat].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level14_WithCat].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level15_WithCat].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level16_WithCat].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level17_WithCat].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level18_WithCat].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level19_WithCat].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level20_WithCat].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level1_WithCamel].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level2_WithCamel].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level3_WithCamel].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level4_WithCamel].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level5_WithCamel].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level6_WithCamel].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level7_WithCamel].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level8_WithCamel].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level9_WithCamel].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level10_WithCamel].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level11_WithCamel].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level12_WithCamel].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level13_WithCamel].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level14_WithCamel].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level15_WithCamel].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level16_WithCamel].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level17_WithCamel].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level18_WithCamel].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level19_WithCamel].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level20_WithCamel].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level1_WithDog].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level2_WithDog].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level3_WithDog].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level4_WithDog].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level5_WithDog].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level6_WithDog].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level7_WithDog].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level8_WithDog].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level9_WithDog].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level10_WithDog].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level11_WithDog].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level12_WithDog].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level13_WithDog].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level14_WithDog].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level15_WithDog].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level16_WithDog].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level17_WithDog].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level18_WithDog].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level19_WithDog].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level20_WithDog].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level1_WithDonkey].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level2_WithDonkey].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level3_WithDonkey].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level4_WithDonkey].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level5_WithDonkey].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level6_WithDonkey].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level7_WithDonkey].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level8_WithDonkey].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level9_WithDonkey].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level10_WithDonkey].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level11_WithDonkey].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level12_WithDonkey].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level13_WithDonkey].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level14_WithDonkey].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level15_WithDonkey].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level16_WithDonkey].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level17_WithDonkey].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level18_WithDonkey].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level19_WithDonkey].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level20_WithDonkey].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level1_WithHeavyHorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level2_WithHeavyHorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level3_WithHeavyHorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level4_WithHeavyHorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level5_WithHeavyHorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level6_WithHeavyHorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level7_WithHeavyHorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level8_WithHeavyHorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level9_WithHeavyHorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level10_WithHeavyHorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level11_WithHeavyHorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level12_WithHeavyHorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level13_WithHeavyHorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level14_WithHeavyHorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level15_WithHeavyHorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level16_WithHeavyHorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level17_WithHeavyHorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level18_WithHeavyHorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level19_WithHeavyHorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level20_WithHeavyHorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level1_WithHeavyWarhorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level2_WithHeavyWarhorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level3_WithHeavyWarhorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level4_WithHeavyWarhorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level5_WithHeavyWarhorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level6_WithHeavyWarhorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level7_WithHeavyWarhorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level8_WithHeavyWarhorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level9_WithHeavyWarhorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level10_WithHeavyWarhorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level11_WithHeavyWarhorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level12_WithHeavyWarhorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level13_WithHeavyWarhorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level14_WithHeavyWarhorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level15_WithHeavyWarhorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level16_WithHeavyWarhorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level17_WithHeavyWarhorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level18_WithHeavyWarhorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level19_WithHeavyWarhorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level20_WithHeavyWarhorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level1_WithLightHorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level2_WithLightHorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level3_WithLightHorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level4_WithLightHorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level5_WithLightHorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level6_WithLightHorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level7_WithLightHorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level8_WithLightHorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level9_WithLightHorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level10_WithLightHorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level11_WithLightHorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level12_WithLightHorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level13_WithLightHorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level14_WithLightHorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level15_WithLightHorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level16_WithLightHorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level17_WithLightHorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level18_WithLightHorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level19_WithLightHorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level20_WithLightHorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level1_WithLightWarhorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level2_WithLightWarhorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level3_WithLightWarhorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level4_WithLightWarhorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level5_WithLightWarhorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level6_WithLightWarhorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level7_WithLightWarhorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level8_WithLightWarhorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level9_WithLightWarhorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level10_WithLightWarhorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level11_WithLightWarhorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level12_WithLightWarhorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level13_WithLightWarhorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level14_WithLightWarhorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level15_WithLightWarhorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level16_WithLightWarhorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level17_WithLightWarhorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level18_WithLightWarhorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level19_WithLightWarhorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level20_WithLightWarhorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level1_WithPony].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level2_WithPony].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level3_WithPony].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level4_WithPony].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level5_WithPony].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level6_WithPony].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level7_WithPony].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level8_WithPony].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level9_WithPony].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level10_WithPony].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level11_WithPony].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level12_WithPony].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level13_WithPony].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level14_WithPony].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level15_WithPony].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level16_WithPony].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level17_WithPony].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level18_WithPony].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level19_WithPony].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level20_WithPony].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level1_WithWarpony].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level2_WithWarpony].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level3_WithWarpony].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level4_WithWarpony].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level5_WithWarpony].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level6_WithWarpony].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level7_WithWarpony].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level8_WithWarpony].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level9_WithWarpony].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level10_WithWarpony].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level11_WithWarpony].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level12_WithWarpony].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level13_WithWarpony].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level14_WithWarpony].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level15_WithWarpony].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level16_WithWarpony].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level17_WithWarpony].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level18_WithWarpony].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level19_WithWarpony].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level20_WithWarpony].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level1_WithRidingDog].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level2_WithRidingDog].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level3_WithRidingDog].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level4_WithRidingDog].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level5_WithRidingDog].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level6_WithRidingDog].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level7_WithRidingDog].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level8_WithRidingDog].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level9_WithRidingDog].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level10_WithRidingDog].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level11_WithRidingDog].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level12_WithRidingDog].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level13_WithRidingDog].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level14_WithRidingDog].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level15_WithRidingDog].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level16_WithRidingDog].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level17_WithRidingDog].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level18_WithRidingDog].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level19_WithRidingDog].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level20_WithRidingDog].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level1_WithMule].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level2_WithMule].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level3_WithMule].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level4_WithMule].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level5_WithMule].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level6_WithMule].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level7_WithMule].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level8_WithMule].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level9_WithMule].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level10_WithMule].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level11_WithMule].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level12_WithMule].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level13_WithMule].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level14_WithMule].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level15_WithMule].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level16_WithMule].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level17_WithMule].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level18_WithMule].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level19_WithMule].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level20_WithMule].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_FamousEntertainer_Level11_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_FamousEntertainer_Level12_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_FamousEntertainer_Level13_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_FamousEntertainer_Level14_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_FamousEntertainer_Level15_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_FamousEntertainer_Level16_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_FamousEntertainer_Level17_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_FamousEntertainer_Level18_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_FamousEntertainer_Level19_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_FamousEntertainer_Level20_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_FamousPriest_Level11_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_FamousPriest_Level12_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_FamousPriest_Level13_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_FamousPriest_Level14_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_FamousPriest_Level15_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_FamousPriest_Level16_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_FamousPriest_Level17_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_FamousPriest_Level18_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_FamousPriest_Level19_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_FamousPriest_Level20_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_ContractKiller_Level1_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_ContractKiller_Level2_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_ContractKiller_Level3_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_ContractKiller_Level4_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_ContractKiller_Level5_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_ContractKiller_Level6_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_ContractKiller_Level7_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_ContractKiller_Level8_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_ContractKiller_Level9_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_ContractKiller_Level10_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_ContractKiller_Level11_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_ContractKiller_Level12_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_ContractKiller_Level13_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_ContractKiller_Level14_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_ContractKiller_Level15_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_ContractKiller_Level16_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_ContractKiller_Level17_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_ContractKiller_Level18_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_ContractKiller_Level19_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_ContractKiller_Level20_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Hunter_Level1_HuntingParty].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Hunter_Level10_HuntingParty].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Hunter_Level11_HuntingParty].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Hunter_Level12_HuntingParty].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Hunter_Level13_HuntingParty].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Hunter_Level14_HuntingParty].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Hunter_Level15_HuntingParty].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Hunter_Level16_HuntingParty].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Hunter_Level17_HuntingParty].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Hunter_Level18_HuntingParty].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Hunter_Level19_HuntingParty].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Hunter_Level20_HuntingParty].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Hunter_Level2_HuntingParty].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Hunter_Level3_HuntingParty].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Hunter_Level4_HuntingParty].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Hunter_Level5_HuntingParty].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Hunter_Level6_HuntingParty].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Hunter_Level7_HuntingParty].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Hunter_Level8_HuntingParty].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Hunter_Level9_HuntingParty].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Merchant_Level1_Caravan].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Merchant_Level10_Caravan].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Merchant_Level11_Caravan].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Merchant_Level12_Caravan].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Merchant_Level13_Caravan].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Merchant_Level14_Caravan].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Merchant_Level15_Caravan].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Merchant_Level16_Caravan].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Merchant_Level17_Caravan].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Merchant_Level18_Caravan].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Merchant_Level19_Caravan].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Merchant_Level20_Caravan].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Merchant_Level2_Caravan].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Merchant_Level3_Caravan].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Merchant_Level4_Caravan].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Merchant_Level5_Caravan].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Merchant_Level6_Caravan].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Merchant_Level7_Caravan].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Merchant_Level8_Caravan].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Merchant_Level9_Caravan].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Minstrel_Level1_Group].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Minstrel_Level10_Group].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Minstrel_Level11_Group].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Minstrel_Level12_Group].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Minstrel_Level13_Group].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Minstrel_Level14_Group].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Minstrel_Level15_Group].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Minstrel_Level16_Group].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Minstrel_Level17_Group].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Minstrel_Level18_Group].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Minstrel_Level19_Group].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Minstrel_Level20_Group].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Minstrel_Level2_Group].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Minstrel_Level3_Group].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Minstrel_Level4_Group].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Minstrel_Level5_Group].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Minstrel_Level6_Group].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Minstrel_Level7_Group].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Minstrel_Level8_Group].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Minstrel_Level9_Group].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Missionary_Level1_MissionTeam].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Missionary_Level2_MissionTeam].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Missionary_Level3_MissionTeam].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Missionary_Level4_MissionTeam].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Missionary_Level5_MissionTeam].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Missionary_Level6_MissionTeam].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Missionary_Level7_MissionTeam].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Missionary_Level8_MissionTeam].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Missionary_Level9_MissionTeam].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Missionary_Level10_MissionTeam].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Missionary_Level11_MissionTeam].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Missionary_Level12_MissionTeam].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Missionary_Level13_MissionTeam].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Missionary_Level14_MissionTeam].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Missionary_Level15_MissionTeam].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Missionary_Level16_MissionTeam].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Missionary_Level17_MissionTeam].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Missionary_Level18_MissionTeam].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Missionary_Level19_MissionTeam].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Missionary_Level20_MissionTeam].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_RetiredAdventurer_Level11_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_RetiredAdventurer_Level12_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_RetiredAdventurer_Level13_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_RetiredAdventurer_Level14_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_RetiredAdventurer_Level15_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_RetiredAdventurer_Level16_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_RetiredAdventurer_Level17_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_RetiredAdventurer_Level18_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_RetiredAdventurer_Level19_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_RetiredAdventurer_Level20_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Scholar_Level1_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Scholar_Level2_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Scholar_Level3_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Scholar_Level4_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Scholar_Level5_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Scholar_Level6_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Scholar_Level7_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Scholar_Level8_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Scholar_Level9_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Scholar_Level10_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Scholar_Level11_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Scholar_Level12_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Scholar_Level13_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Scholar_Level14_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Scholar_Level15_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Scholar_Level16_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Scholar_Level17_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Scholar_Level18_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Scholar_Level19_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Scholar_Level20_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Sellsword_Level1_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Sellsword_Level2_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Sellsword_Level3_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Sellsword_Level4_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Sellsword_Level5_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Sellsword_Level6_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Sellsword_Level7_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Sellsword_Level8_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Sellsword_Level9_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Sellsword_Level10_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Sellsword_Level11_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Sellsword_Level12_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Sellsword_Level13_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Sellsword_Level14_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Sellsword_Level15_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Sellsword_Level16_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Sellsword_Level17_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Sellsword_Level18_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Sellsword_Level19_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Sellsword_Level20_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_StreetPerformer_Level1_Crew].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_StreetPerformer_Level2_Crew].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_StreetPerformer_Level3_Crew].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_StreetPerformer_Level4_Crew].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_StreetPerformer_Level5_Crew].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_StreetPerformer_Level6_Crew].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_StreetPerformer_Level7_Crew].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_StreetPerformer_Level8_Crew].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_StreetPerformer_Level9_Crew].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_StreetPerformer_Level10_Crew].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_StreetPerformer_Level11_Crew].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_StreetPerformer_Level12_Crew].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_StreetPerformer_Level13_Crew].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_StreetPerformer_Level14_Crew].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_StreetPerformer_Level15_Crew].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_StreetPerformer_Level16_Crew].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_StreetPerformer_Level17_Crew].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_StreetPerformer_Level18_Crew].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_StreetPerformer_Level19_Crew].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_StreetPerformer_Level20_Crew].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Teacher_Level11_WithStudents].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Teacher_Level12_WithStudents].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Teacher_Level13_WithStudents].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Teacher_Level14_WithStudents].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Teacher_Level15_WithStudents].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Teacher_Level16_WithStudents].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Teacher_Level17_WithStudents].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Teacher_Level18_WithStudents].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Teacher_Level19_WithStudents].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Teacher_Level20_WithStudents].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_WarHero_Level11_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_WarHero_Level12_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_WarHero_Level13_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_WarHero_Level14_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_WarHero_Level15_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_WarHero_Level16_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_WarHero_Level17_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_WarHero_Level18_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_WarHero_Level19_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_WarHero_Level20_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level11_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level11_WithClayGolem].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level11_WithDominatedCreature].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level11_WithFleshGolem].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level11_WithHomunculus].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level12_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level12_WithClayGolem].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level12_WithDominatedCreature].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level12_WithFleshGolem].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level12_WithHomunculus].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level13_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level13_WithClayGolem].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level13_WithDominatedCreature].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level13_WithFleshGolem].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level13_WithHomunculus].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level14_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level14_WithClayGolem].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level14_WithDominatedCreature].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level14_WithFleshGolem].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level14_WithGreaterStoneGolem].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level14_WithHomunculus].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level14_WithStoneGolem].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level15_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level15_WithClayGolem].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level15_WithDominatedCreature].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level15_WithFleshGolem].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level15_WithGreaterStoneGolem].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level15_WithHomunculus].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level15_WithShieldGuardian].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level15_WithStoneGolem].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level16_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level16_WithClayGolem].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level16_WithDominatedCreature].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level16_WithFleshGolem].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level16_WithGreaterStoneGolem].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level16_WithHomunculus].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level16_WithIronGolem].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level16_WithShieldGuardian].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level16_WithStoneGolem].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level17_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level17_WithClayGolem].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level17_WithDominatedCreature].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level17_WithFleshGolem].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level17_WithGreaterStoneGolem].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level17_WithHomunculus].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level17_WithIronGolem].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level17_WithShieldGuardian].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level17_WithStoneGolem].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level18_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level18_WithClayGolem].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level18_WithDominatedCreature].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level18_WithFleshGolem].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level18_WithGreaterStoneGolem].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level18_WithHomunculus].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level18_WithIronGolem].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level18_WithShieldGuardian].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level18_WithStoneGolem].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level19_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level19_WithClayGolem].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level19_WithDominatedCreature].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level19_WithFleshGolem].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level19_WithGreaterStoneGolem].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level19_WithHomunculus].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level19_WithIronGolem].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level19_WithShieldGuardian].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level19_WithStoneGolem].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level20_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level20_WithClayGolem].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level20_WithDominatedCreature].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level20_WithFleshGolem].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level20_WithGreaterStoneGolem].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level20_WithHomunculus].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level20_WithIronGolem].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level20_WithShieldGuardian].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level20_WithStoneGolem].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Adept_Doctor_Level1_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Adept_Doctor_Level10_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Adept_Doctor_Level11_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Adept_Doctor_Level12_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Adept_Doctor_Level13_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Adept_Doctor_Level14_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Adept_Doctor_Level15_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Adept_Doctor_Level16_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Adept_Doctor_Level17_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Adept_Doctor_Level18_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Adept_Doctor_Level19_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Adept_Doctor_Level20_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Adept_Doctor_Level2_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Adept_Doctor_Level3_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Adept_Doctor_Level4_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Adept_Doctor_Level5_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Adept_Doctor_Level6_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Adept_Doctor_Level7_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Adept_Doctor_Level8_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Adept_Doctor_Level9_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Adept_Fortuneteller_Level1_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Adept_Fortuneteller_Level10_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Adept_Fortuneteller_Level11_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Adept_Fortuneteller_Level12_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Adept_Fortuneteller_Level13_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Adept_Fortuneteller_Level14_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Adept_Fortuneteller_Level15_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Adept_Fortuneteller_Level16_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Adept_Fortuneteller_Level17_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Adept_Fortuneteller_Level18_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Adept_Fortuneteller_Level19_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Adept_Fortuneteller_Level20_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Adept_Fortuneteller_Level2_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Adept_Fortuneteller_Level3_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Adept_Fortuneteller_Level4_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Adept_Fortuneteller_Level5_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Adept_Fortuneteller_Level6_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Adept_Fortuneteller_Level7_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Adept_Fortuneteller_Level8_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Adept_Fortuneteller_Level9_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Adept_Missionary_Level1_MissionTeam].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Adept_Missionary_Level10_MissionTeam].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Adept_Missionary_Level11_MissionTeam].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Adept_Missionary_Level12_MissionTeam].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Adept_Missionary_Level13_MissionTeam].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Adept_Missionary_Level14_MissionTeam].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Adept_Missionary_Level15_MissionTeam].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Adept_Missionary_Level16_MissionTeam].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Adept_Missionary_Level17_MissionTeam].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Adept_Missionary_Level18_MissionTeam].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Adept_Missionary_Level19_MissionTeam].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Adept_Missionary_Level20_MissionTeam].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Adept_Missionary_Level2_MissionTeam].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Adept_Missionary_Level3_MissionTeam].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Adept_Missionary_Level4_MissionTeam].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Adept_Missionary_Level5_MissionTeam].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Adept_Missionary_Level6_MissionTeam].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Adept_Missionary_Level7_MissionTeam].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Adept_Missionary_Level8_MissionTeam].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Adept_Missionary_Level9_MissionTeam].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Adept_StreetPerformer_Level1_Crew].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Adept_StreetPerformer_Level10_Crew].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Adept_StreetPerformer_Level11_Crew].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Adept_StreetPerformer_Level12_Crew].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Adept_StreetPerformer_Level13_Crew].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Adept_StreetPerformer_Level14_Crew].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Adept_StreetPerformer_Level15_Crew].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Adept_StreetPerformer_Level16_Crew].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Adept_StreetPerformer_Level17_Crew].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Adept_StreetPerformer_Level18_Crew].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Adept_StreetPerformer_Level19_Crew].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Adept_StreetPerformer_Level20_Crew].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Adept_StreetPerformer_Level2_Crew].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Adept_StreetPerformer_Level3_Crew].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Adept_StreetPerformer_Level4_Crew].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Adept_StreetPerformer_Level5_Crew].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Adept_StreetPerformer_Level6_Crew].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Adept_StreetPerformer_Level7_Crew].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Adept_StreetPerformer_Level8_Crew].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Adept_StreetPerformer_Level9_Crew].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Aristocrat_BusinessPeople_Level1_Group].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Aristocrat_BusinessPeople_Level2_Group].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Aristocrat_BusinessPeople_Level3_Group].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Aristocrat_BusinessPeople_Level4_Group].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Aristocrat_BusinessPeople_Level5_Group].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Aristocrat_BusinessPeople_Level6_Group].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Aristocrat_BusinessPeople_Level7_Group].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Aristocrat_BusinessPeople_Level8_Group].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Aristocrat_BusinessPeople_Level9_Group].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Aristocrat_BusinessPeople_Level10_Group].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Aristocrat_BusinessPeople_Level11_Group].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Aristocrat_BusinessPeople_Level12_Group].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Aristocrat_BusinessPeople_Level13_Group].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Aristocrat_BusinessPeople_Level14_Group].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Aristocrat_BusinessPeople_Level15_Group].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Aristocrat_BusinessPeople_Level16_Group].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Aristocrat_BusinessPeople_Level17_Group].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Aristocrat_BusinessPeople_Level18_Group].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Aristocrat_BusinessPeople_Level19_Group].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Aristocrat_BusinessPeople_Level20_Group].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Aristocrat_Gentry_Level1].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Aristocrat_Gentry_Level2].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Aristocrat_Gentry_Level3].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Aristocrat_Gentry_Level4].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Aristocrat_Gentry_Level5].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Aristocrat_Gentry_Level6_WithServants].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Aristocrat_Gentry_Level7_WithServants].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Aristocrat_Gentry_Level8_WithServants].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Aristocrat_Gentry_Level9_WithServants].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Aristocrat_Gentry_Level10_WithServants].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Aristocrat_Gentry_Level11_WithServants].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Aristocrat_Gentry_Level12_WithServants].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Aristocrat_Gentry_Level13_WithServants].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Aristocrat_Gentry_Level14_WithServants].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Aristocrat_Gentry_Level15_WithServants].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Aristocrat_Gentry_Level16_WithServants].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Aristocrat_Gentry_Level17_WithServants].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Aristocrat_Gentry_Level18_WithServants].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Aristocrat_Gentry_Level19_WithServants].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Aristocrat_Gentry_Level20_WithServants].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Aristocrat_Politician_Level1_WithAdvisersAndGuards].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Aristocrat_Politician_Level10_WithAdvisersAndGuards].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Aristocrat_Politician_Level11_WithAdvisersAndGuards].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Aristocrat_Politician_Level12_WithAdvisersAndGuards].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Aristocrat_Politician_Level13_WithAdvisersAndGuards].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Aristocrat_Politician_Level14_WithAdvisersAndGuards].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Aristocrat_Politician_Level15_WithAdvisersAndGuards].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Aristocrat_Politician_Level16_WithAdvisersAndGuards].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Aristocrat_Politician_Level17_WithAdvisersAndGuards].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Aristocrat_Politician_Level18_WithAdvisersAndGuards].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Aristocrat_Politician_Level19_WithAdvisersAndGuards].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Aristocrat_Politician_Level20_WithAdvisersAndGuards].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Aristocrat_Politician_Level2_WithAdvisersAndGuards].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Aristocrat_Politician_Level3_WithAdvisersAndGuards].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Aristocrat_Politician_Level4_WithAdvisersAndGuards].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Aristocrat_Politician_Level5_WithAdvisersAndGuards].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Aristocrat_Politician_Level6_WithAdvisersAndGuards].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Aristocrat_Politician_Level7_WithAdvisersAndGuards].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Aristocrat_Politician_Level8_WithAdvisersAndGuards].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Aristocrat_Politician_Level9_WithAdvisersAndGuards].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_Beggar_Level1_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_Beggar_Level10_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_Beggar_Level11_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_Beggar_Level12_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_Beggar_Level13_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_Beggar_Level14_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_Beggar_Level15_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_Beggar_Level16_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_Beggar_Level17_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_Beggar_Level18_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_Beggar_Level19_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_Beggar_Level20_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_Beggar_Level2_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_Beggar_Level3_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_Beggar_Level4_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_Beggar_Level5_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_Beggar_Level6_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_Beggar_Level7_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_Beggar_Level8_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_Beggar_Level9_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_ConstructionWorker_Level1_Crew].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_ConstructionWorker_Level10_Crew].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_ConstructionWorker_Level11_Crew].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_ConstructionWorker_Level12_Crew].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_ConstructionWorker_Level13_Crew].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_ConstructionWorker_Level14_Crew].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_ConstructionWorker_Level15_Crew].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_ConstructionWorker_Level16_Crew].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_ConstructionWorker_Level17_Crew].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_ConstructionWorker_Level18_Crew].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_ConstructionWorker_Level19_Crew].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_ConstructionWorker_Level20_Crew].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_ConstructionWorker_Level2_Crew].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_ConstructionWorker_Level3_Crew].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_ConstructionWorker_Level4_Crew].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_ConstructionWorker_Level5_Crew].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_ConstructionWorker_Level6_Crew].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_ConstructionWorker_Level7_Crew].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_ConstructionWorker_Level8_Crew].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_ConstructionWorker_Level9_Crew].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_Farmer_Level1_Group].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_Farmer_Level10_Group].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_Farmer_Level11_Group].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_Farmer_Level12_Group].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_Farmer_Level13_Group].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_Farmer_Level14_Group].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_Farmer_Level15_Group].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_Farmer_Level16_Group].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_Farmer_Level17_Group].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_Farmer_Level18_Group].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_Farmer_Level19_Group].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_Farmer_Level20_Group].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_Farmer_Level2_Group].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_Farmer_Level3_Group].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_Farmer_Level4_Group].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_Farmer_Level5_Group].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_Farmer_Level6_Group].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_Farmer_Level7_Group].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_Farmer_Level8_Group].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_Farmer_Level9_Group].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_Herder_Level1_Group].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_Herder_Level10_Group].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_Herder_Level11_Group].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_Herder_Level12_Group].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_Herder_Level13_Group].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_Herder_Level14_Group].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_Herder_Level15_Group].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_Herder_Level16_Group].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_Herder_Level17_Group].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_Herder_Level18_Group].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_Herder_Level19_Group].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_Herder_Level20_Group].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_Herder_Level2_Group].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_Herder_Level3_Group].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_Herder_Level4_Group].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_Herder_Level5_Group].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_Herder_Level6_Group].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_Herder_Level7_Group].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_Herder_Level8_Group].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_Herder_Level9_Group].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_Pilgrim_Level1_Caravan].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_Pilgrim_Level2_Caravan].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_Pilgrim_Level3_Caravan].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_Pilgrim_Level4_Caravan].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_Pilgrim_Level5_Caravan].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_Pilgrim_Level6_Caravan].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_Pilgrim_Level7_Caravan].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_Pilgrim_Level8_Caravan].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_Pilgrim_Level9_Caravan].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_Pilgrim_Level10_Caravan].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_Pilgrim_Level1_CaravanWithLeader].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_Pilgrim_Level2_CaravanWithLeader].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_Pilgrim_Level3_CaravanWithLeader].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_Pilgrim_Level4_CaravanWithLeader].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_Pilgrim_Level5_CaravanWithLeader].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_Pilgrim_Level6_CaravanWithLeader].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_Pilgrim_Level7_CaravanWithLeader].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_Pilgrim_Level8_CaravanWithLeader].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_Pilgrim_Level9_CaravanWithLeader].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_Pilgrim_Level10_CaravanWithLeader].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_Protestor_Level1_Protest].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_Protestor_Level10_Protest].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_Protestor_Level11_Protest].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_Protestor_Level12_Protest].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_Protestor_Level13_Protest].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_Protestor_Level14_Protest].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_Protestor_Level15_Protest].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_Protestor_Level16_Protest].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_Protestor_Level17_Protest].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_Protestor_Level18_Protest].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_Protestor_Level19_Protest].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_Protestor_Level20_Protest].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_Protestor_Level2_Protest].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_Protestor_Level3_Protest].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_Protestor_Level4_Protest].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_Protestor_Level5_Protest].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_Protestor_Level6_Protest].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_Protestor_Level7_Protest].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_Protestor_Level8_Protest].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Commoner_Protestor_Level9_Protest].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Expert_Artisan_Level1_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Expert_Artisan_Level10_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Expert_Artisan_Level11_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Expert_Artisan_Level12_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Expert_Artisan_Level13_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Expert_Artisan_Level14_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Expert_Artisan_Level15_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Expert_Artisan_Level16_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Expert_Artisan_Level17_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Expert_Artisan_Level18_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Expert_Artisan_Level19_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Expert_Artisan_Level20_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Expert_Artisan_Level2_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Expert_Artisan_Level3_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Expert_Artisan_Level4_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Expert_Artisan_Level5_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Expert_Artisan_Level6_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Expert_Artisan_Level7_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Expert_Artisan_Level8_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Expert_Artisan_Level9_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level1_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level10_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level11_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level12_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level13_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level14_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level15_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level16_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level17_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level18_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level19_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level20_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level2_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level3_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level4_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level5_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level6_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level7_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level8_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level9_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level1_WithCat].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level10_WithCat].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level11_WithCat].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level12_WithCat].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level13_WithCat].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level14_WithCat].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level15_WithCat].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level16_WithCat].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level17_WithCat].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level18_WithCat].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level19_WithCat].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level20_WithCat].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level2_WithCat].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level3_WithCat].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level4_WithCat].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level5_WithCat].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level6_WithCat].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level7_WithCat].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level8_WithCat].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level9_WithCat].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level1_WithCamel].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level10_WithCamel].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level11_WithCamel].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level12_WithCamel].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level13_WithCamel].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level14_WithCamel].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level15_WithCamel].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level16_WithCamel].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level17_WithCamel].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level18_WithCamel].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level19_WithCamel].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level20_WithCamel].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level2_WithCamel].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level3_WithCamel].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level4_WithCamel].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level5_WithCamel].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level6_WithCamel].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level7_WithCamel].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level8_WithCamel].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level9_WithCamel].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level1_WithDog].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level10_WithDog].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level11_WithDog].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level12_WithDog].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level13_WithDog].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level14_WithDog].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level15_WithDog].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level16_WithDog].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level17_WithDog].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level18_WithDog].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level19_WithDog].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level20_WithDog].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level2_WithDog].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level3_WithDog].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level4_WithDog].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level5_WithDog].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level6_WithDog].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level7_WithDog].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level8_WithDog].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level9_WithDog].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level1_WithRidingDog].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level10_WithRidingDog].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level11_WithRidingDog].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level12_WithRidingDog].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level13_WithRidingDog].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level14_WithRidingDog].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level15_WithRidingDog].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level16_WithRidingDog].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level17_WithRidingDog].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level18_WithRidingDog].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level19_WithRidingDog].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level20_WithRidingDog].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level2_WithRidingDog].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level3_WithRidingDog].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level4_WithRidingDog].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level5_WithRidingDog].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level6_WithRidingDog].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level7_WithRidingDog].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level8_WithRidingDog].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level9_WithRidingDog].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level1_WithDonkey].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level10_WithDonkey].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level11_WithDonkey].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level12_WithDonkey].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level13_WithDonkey].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level14_WithDonkey].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level15_WithDonkey].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level16_WithDonkey].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level17_WithDonkey].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level18_WithDonkey].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level19_WithDonkey].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level20_WithDonkey].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level2_WithDonkey].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level3_WithDonkey].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level4_WithDonkey].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level5_WithDonkey].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level6_WithDonkey].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level7_WithDonkey].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level8_WithDonkey].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level9_WithDonkey].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level1_WithMule].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level10_WithMule].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level11_WithMule].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level12_WithMule].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level13_WithMule].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level14_WithMule].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level15_WithMule].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level16_WithMule].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level17_WithMule].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level18_WithMule].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level19_WithMule].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level20_WithMule].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level2_WithMule].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level3_WithMule].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level4_WithMule].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level5_WithMule].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level6_WithMule].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level7_WithMule].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level8_WithMule].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level9_WithMule].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level1_WithPony].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level10_WithPony].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level11_WithPony].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level12_WithPony].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level13_WithPony].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level14_WithPony].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level15_WithPony].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level16_WithPony].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level17_WithPony].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level18_WithPony].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level19_WithPony].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level20_WithPony].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level2_WithPony].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level3_WithPony].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level4_WithPony].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level5_WithPony].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level6_WithPony].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level7_WithPony].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level8_WithPony].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level9_WithPony].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level1_WithWarpony].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level10_WithWarpony].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level11_WithWarpony].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level12_WithWarpony].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level13_WithWarpony].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level14_WithWarpony].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level15_WithWarpony].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level16_WithWarpony].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level17_WithWarpony].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level18_WithWarpony].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level19_WithWarpony].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level20_WithWarpony].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level2_WithWarpony].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level3_WithWarpony].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level4_WithWarpony].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level5_WithWarpony].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level6_WithWarpony].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level7_WithWarpony].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level8_WithWarpony].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level9_WithWarpony].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level1_WithLightHorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level10_WithLightHorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level11_WithLightHorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level12_WithLightHorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level13_WithLightHorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level14_WithLightHorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level15_WithLightHorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level16_WithLightHorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level17_WithLightHorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level18_WithLightHorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level19_WithLightHorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level20_WithLightHorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level2_WithLightHorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level3_WithLightHorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level4_WithLightHorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level5_WithLightHorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level6_WithLightHorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level7_WithLightHorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level8_WithLightHorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level9_WithLightHorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level1_WithLightWarhorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level10_WithLightWarhorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level11_WithLightWarhorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level12_WithLightWarhorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level13_WithLightWarhorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level14_WithLightWarhorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level15_WithLightWarhorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level16_WithLightWarhorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level17_WithLightWarhorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level18_WithLightWarhorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level19_WithLightWarhorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level20_WithLightWarhorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level2_WithLightWarhorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level3_WithLightWarhorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level4_WithLightWarhorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level5_WithLightWarhorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level6_WithLightWarhorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level7_WithLightWarhorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level8_WithLightWarhorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level9_WithLightWarhorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level1_WithHeavyHorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level10_WithHeavyHorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level11_WithHeavyHorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level12_WithHeavyHorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level13_WithHeavyHorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level14_WithHeavyHorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level15_WithHeavyHorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level16_WithHeavyHorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level17_WithHeavyHorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level18_WithHeavyHorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level19_WithHeavyHorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level20_WithHeavyHorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level2_WithHeavyHorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level3_WithHeavyHorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level4_WithHeavyHorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level5_WithHeavyHorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level6_WithHeavyHorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level7_WithHeavyHorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level8_WithHeavyHorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level9_WithHeavyHorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level1_WithHeavyWarhorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level10_WithHeavyWarhorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level11_WithHeavyWarhorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level12_WithHeavyWarhorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level13_WithHeavyWarhorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level14_WithHeavyWarhorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level15_WithHeavyWarhorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level16_WithHeavyWarhorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level17_WithHeavyWarhorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level18_WithHeavyWarhorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level19_WithHeavyWarhorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level20_WithHeavyWarhorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level2_WithHeavyWarhorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level3_WithHeavyWarhorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level4_WithHeavyWarhorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level5_WithHeavyWarhorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level6_WithHeavyWarhorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level7_WithHeavyWarhorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level8_WithHeavyWarhorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Local_Level9_WithHeavyWarhorse].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Traveler_Level1_Group].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Traveler_Level10_Group].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Traveler_Level11_Group].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Traveler_Level12_Group].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Traveler_Level13_Group].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Traveler_Level14_Group].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Traveler_Level15_Group].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Traveler_Level16_Group].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Traveler_Level17_Group].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Traveler_Level18_Group].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Traveler_Level19_Group].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Traveler_Level20_Group].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Traveler_Level2_Group].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Traveler_Level3_Group].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Traveler_Level4_Group].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Traveler_Level5_Group].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Traveler_Level6_Group].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Traveler_Level7_Group].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Traveler_Level8_Group].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Traveler_Level9_Group].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Paladin_Crusader_Level1_Band].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Paladin_Crusader_Level2_Band].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Paladin_Crusader_Level3_Band].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Paladin_Crusader_Level4_Band].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Paladin_Crusader_Level5_Band].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Paladin_Crusader_Level6_Band].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Paladin_Crusader_Level7_Band].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Paladin_Crusader_Level8_Band].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Paladin_Crusader_Level9_Band].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Paladin_Crusader_Level10_Band].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Paladin_Crusader_Level11_Band].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Paladin_Crusader_Level12_Band].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Paladin_Crusader_Level13_Band].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Paladin_Crusader_Level14_Band].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Paladin_Crusader_Level15_Band].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Paladin_Crusader_Level16_Band].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Paladin_Crusader_Level17_Band].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Paladin_Crusader_Level18_Band].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Paladin_Crusader_Level19_Band].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Paladin_Crusader_Level20_Band].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Rogue_Pickpocket_Level1_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Rogue_Pickpocket_Level2_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Rogue_Pickpocket_Level3_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Rogue_Pickpocket_Level4_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Rogue_Pickpocket_Level5_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Rogue_Pickpocket_Level6_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Rogue_Pickpocket_Level7_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Rogue_Pickpocket_Level8_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Rogue_Pickpocket_Level9_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Rogue_Pickpocket_Level10_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Rogue_Pickpocket_Level11_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Rogue_Pickpocket_Level12_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Rogue_Pickpocket_Level13_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Rogue_Pickpocket_Level14_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Rogue_Pickpocket_Level15_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Rogue_Pickpocket_Level16_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Rogue_Pickpocket_Level17_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Rogue_Pickpocket_Level18_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Rogue_Pickpocket_Level19_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Rogue_Pickpocket_Level20_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Warrior_Bandit_Level1_Gang].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Warrior_Bandit_Level10_Gang].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Warrior_Bandit_Level11_Gang].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Warrior_Bandit_Level12_Gang].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Warrior_Bandit_Level13_Gang].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Warrior_Bandit_Level14_Gang].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Warrior_Bandit_Level15_Gang].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Warrior_Bandit_Level16_Gang].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Warrior_Bandit_Level17_Gang].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Warrior_Bandit_Level18_Gang].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Warrior_Bandit_Level19_Gang].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Warrior_Bandit_Level2_Gang].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Warrior_Bandit_Level3_Gang].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Warrior_Bandit_Level4_Gang].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Warrior_Bandit_Level5_Gang].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Warrior_Bandit_Level6_Gang].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Warrior_Bandit_Level7_Gang].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Warrior_Bandit_Level8_Gang].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Warrior_Bandit_Level9_Gang].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Warrior_Bandit_Level1_GangWithFighter].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Warrior_Bandit_Level10_GangWithFighter].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Warrior_Bandit_Level11_GangWithFighter].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Warrior_Bandit_Level12_GangWithFighter].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Warrior_Bandit_Level13_GangWithFighter].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Warrior_Bandit_Level14_GangWithFighter].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Warrior_Bandit_Level15_GangWithFighter].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Warrior_Bandit_Level16_GangWithFighter].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Warrior_Bandit_Level17_GangWithFighter].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Warrior_Bandit_Level18_GangWithFighter].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Warrior_Bandit_Level19_GangWithFighter].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Warrior_Bandit_Level20_GangWithFighter].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Warrior_Bandit_Level2_GangWithFighter].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Warrior_Bandit_Level3_GangWithFighter].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Warrior_Bandit_Level4_GangWithFighter].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Warrior_Bandit_Level5_GangWithFighter].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Warrior_Bandit_Level6_GangWithFighter].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Warrior_Bandit_Level7_GangWithFighter].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Warrior_Bandit_Level8_GangWithFighter].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Warrior_Bandit_Level9_GangWithFighter].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Warrior_Guard_Level1_Patrol].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Warrior_Guard_Level10_Patrol].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Warrior_Guard_Level2_Patrol].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Warrior_Guard_Level3_Patrol].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Warrior_Guard_Level4_Patrol].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Warrior_Guard_Level5_Patrol].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Warrior_Guard_Level6_Patrol].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Warrior_Guard_Level7_Patrol].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Warrior_Guard_Level8_Patrol].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Warrior_Guard_Level9_Patrol].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Warrior_Guard_Level1_PatrolWithLieutenant].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Warrior_Guard_Level10_PatrolWithLieutenant].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Warrior_Guard_Level2_PatrolWithLieutenant].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Warrior_Guard_Level3_PatrolWithLieutenant].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Warrior_Guard_Level4_PatrolWithLieutenant].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Warrior_Guard_Level5_PatrolWithLieutenant].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Warrior_Guard_Level6_PatrolWithLieutenant].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Warrior_Guard_Level7_PatrolWithLieutenant].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Warrior_Guard_Level8_PatrolWithLieutenant].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Warrior_Guard_Level9_PatrolWithLieutenant].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Warrior_Guard_Level1_PatrolWithCaptain].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Warrior_Guard_Level10_PatrolWithCaptain].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Warrior_Guard_Level2_PatrolWithCaptain].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Warrior_Guard_Level3_PatrolWithCaptain].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Warrior_Guard_Level4_PatrolWithCaptain].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Warrior_Guard_Level5_PatrolWithCaptain].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Warrior_Guard_Level6_PatrolWithCaptain].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Warrior_Guard_Level7_PatrolWithCaptain].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Warrior_Guard_Level8_PatrolWithCaptain].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Warrior_Guard_Level9_PatrolWithCaptain].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Character_Adventurer_Level1_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Adventurer_Level2_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Adventurer_Level3_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Adventurer_Level4_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Adventurer_Level5_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Adventurer_Level6_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Adventurer_Level7_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Adventurer_Level8_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Adventurer_Level9_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Adventurer_Level10_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Adventurer_Level11_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Adventurer_Level12_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Adventurer_Level13_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Adventurer_Level14_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Adventurer_Level15_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Adventurer_Level16_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Adventurer_Level17_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Adventurer_Level18_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Adventurer_Level19_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Adventurer_Level20_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Adventurer_Level1_Party].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Adventurer_Level2_Party].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Adventurer_Level3_Party].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Adventurer_Level4_Party].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Adventurer_Level5_Party].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Adventurer_Level6_Party].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Adventurer_Level7_Party].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Adventurer_Level8_Party].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Adventurer_Level9_Party].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Adventurer_Level10_Party].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Adventurer_Level11_Party].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Adventurer_Level12_Party].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Adventurer_Level13_Party].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Adventurer_Level14_Party].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Adventurer_Level15_Party].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Adventurer_Level16_Party].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Adventurer_Level17_Party].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Adventurer_Level18_Party].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Adventurer_Level19_Party].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Adventurer_Level20_Party].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level1_WithCat].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level2_WithCat].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level3_WithCat].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level4_WithCat].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level5_WithCat].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level6_WithCat].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level7_WithCat].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level8_WithCat].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level9_WithCat].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level10_WithCat].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level11_WithCat].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level12_WithCat].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level13_WithCat].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level14_WithCat].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level15_WithCat].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level16_WithCat].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level17_WithCat].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level18_WithCat].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level19_WithCat].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level20_WithCat].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level1_WithCamel].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level2_WithCamel].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level3_WithCamel].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level4_WithCamel].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level5_WithCamel].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level6_WithCamel].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level7_WithCamel].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level8_WithCamel].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level9_WithCamel].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level10_WithCamel].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level11_WithCamel].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level12_WithCamel].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level13_WithCamel].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level14_WithCamel].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level15_WithCamel].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level16_WithCamel].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level17_WithCamel].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level18_WithCamel].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level19_WithCamel].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level20_WithCamel].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level1_WithDog].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level2_WithDog].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level3_WithDog].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level4_WithDog].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level5_WithDog].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level6_WithDog].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level7_WithDog].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level8_WithDog].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level9_WithDog].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level10_WithDog].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level11_WithDog].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level12_WithDog].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level13_WithDog].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level14_WithDog].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level15_WithDog].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level16_WithDog].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level17_WithDog].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level18_WithDog].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level19_WithDog].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level20_WithDog].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level1_WithDonkey].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level2_WithDonkey].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level3_WithDonkey].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level4_WithDonkey].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level5_WithDonkey].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level6_WithDonkey].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level7_WithDonkey].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level8_WithDonkey].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level9_WithDonkey].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level10_WithDonkey].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level11_WithDonkey].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level12_WithDonkey].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level13_WithDonkey].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level14_WithDonkey].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level15_WithDonkey].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level16_WithDonkey].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level17_WithDonkey].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level18_WithDonkey].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level19_WithDonkey].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level20_WithDonkey].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level1_WithHeavyHorse].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level2_WithHeavyHorse].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level3_WithHeavyHorse].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level4_WithHeavyHorse].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level5_WithHeavyHorse].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level6_WithHeavyHorse].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level7_WithHeavyHorse].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level8_WithHeavyHorse].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level9_WithHeavyHorse].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level10_WithHeavyHorse].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level11_WithHeavyHorse].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level12_WithHeavyHorse].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level13_WithHeavyHorse].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level14_WithHeavyHorse].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level15_WithHeavyHorse].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level16_WithHeavyHorse].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level17_WithHeavyHorse].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level18_WithHeavyHorse].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level19_WithHeavyHorse].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level20_WithHeavyHorse].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level1_WithHeavyWarhorse].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level2_WithHeavyWarhorse].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level3_WithHeavyWarhorse].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level4_WithHeavyWarhorse].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level5_WithHeavyWarhorse].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level6_WithHeavyWarhorse].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level7_WithHeavyWarhorse].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level8_WithHeavyWarhorse].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level9_WithHeavyWarhorse].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level10_WithHeavyWarhorse].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level11_WithHeavyWarhorse].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level12_WithHeavyWarhorse].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level13_WithHeavyWarhorse].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level14_WithHeavyWarhorse].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level15_WithHeavyWarhorse].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level16_WithHeavyWarhorse].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level17_WithHeavyWarhorse].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level18_WithHeavyWarhorse].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level19_WithHeavyWarhorse].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level20_WithHeavyWarhorse].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level1_WithLightHorse].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level2_WithLightHorse].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level3_WithLightHorse].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level4_WithLightHorse].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level5_WithLightHorse].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level6_WithLightHorse].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level7_WithLightHorse].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level8_WithLightHorse].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level9_WithLightHorse].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level10_WithLightHorse].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level11_WithLightHorse].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level12_WithLightHorse].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level13_WithLightHorse].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level14_WithLightHorse].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level15_WithLightHorse].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level16_WithLightHorse].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level17_WithLightHorse].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level18_WithLightHorse].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level19_WithLightHorse].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level20_WithLightHorse].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level1_WithLightWarhorse].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level2_WithLightWarhorse].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level3_WithLightWarhorse].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level4_WithLightWarhorse].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level5_WithLightWarhorse].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level6_WithLightWarhorse].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level7_WithLightWarhorse].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level8_WithLightWarhorse].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level9_WithLightWarhorse].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level10_WithLightWarhorse].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level11_WithLightWarhorse].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level12_WithLightWarhorse].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level13_WithLightWarhorse].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level14_WithLightWarhorse].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level15_WithLightWarhorse].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level16_WithLightWarhorse].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level17_WithLightWarhorse].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level18_WithLightWarhorse].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level19_WithLightWarhorse].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level20_WithLightWarhorse].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level1_WithPony].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level2_WithPony].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level3_WithPony].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level4_WithPony].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level5_WithPony].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level6_WithPony].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level7_WithPony].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level8_WithPony].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level9_WithPony].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level10_WithPony].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level11_WithPony].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level12_WithPony].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level13_WithPony].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level14_WithPony].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level15_WithPony].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level16_WithPony].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level17_WithPony].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level18_WithPony].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level19_WithPony].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level20_WithPony].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level1_WithWarpony].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level2_WithWarpony].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level3_WithWarpony].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level4_WithWarpony].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level5_WithWarpony].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level6_WithWarpony].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level7_WithWarpony].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level8_WithWarpony].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level9_WithWarpony].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level10_WithWarpony].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level11_WithWarpony].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level12_WithWarpony].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level13_WithWarpony].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level14_WithWarpony].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level15_WithWarpony].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level16_WithWarpony].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level17_WithWarpony].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level18_WithWarpony].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level19_WithWarpony].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level20_WithWarpony].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level1_WithRidingDog].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level2_WithRidingDog].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level3_WithRidingDog].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level4_WithRidingDog].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level5_WithRidingDog].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level6_WithRidingDog].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level7_WithRidingDog].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level8_WithRidingDog].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level9_WithRidingDog].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level10_WithRidingDog].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level11_WithRidingDog].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level12_WithRidingDog].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level13_WithRidingDog].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level14_WithRidingDog].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level15_WithRidingDog].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level16_WithRidingDog].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level17_WithRidingDog].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level18_WithRidingDog].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level19_WithRidingDog].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level20_WithRidingDog].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level1_WithMule].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level2_WithMule].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level3_WithMule].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level4_WithMule].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level5_WithMule].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level6_WithMule].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level7_WithMule].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level8_WithMule].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level9_WithMule].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level10_WithMule].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level11_WithMule].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level12_WithMule].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level13_WithMule].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level14_WithMule].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level15_WithMule].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level16_WithMule].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level17_WithMule].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level18_WithMule].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level19_WithMule].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_AnimalTrainer_Level20_WithMule].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Doctor_Level1_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Doctor_Level2_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Doctor_Level3_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Doctor_Level4_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Doctor_Level5_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Doctor_Level6_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Doctor_Level7_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Doctor_Level8_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Doctor_Level9_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Doctor_Level10_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Doctor_Level11_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Doctor_Level12_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Doctor_Level13_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Doctor_Level14_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Doctor_Level15_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Doctor_Level16_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Doctor_Level17_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Doctor_Level18_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Doctor_Level19_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Doctor_Level20_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_FamousEntertainer_Level11_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_FamousEntertainer_Level12_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_FamousEntertainer_Level13_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_FamousEntertainer_Level14_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_FamousEntertainer_Level15_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_FamousEntertainer_Level16_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_FamousEntertainer_Level17_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_FamousEntertainer_Level18_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_FamousEntertainer_Level19_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_FamousEntertainer_Level20_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_FamousPriest_Level11_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_FamousPriest_Level12_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_FamousPriest_Level13_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_FamousPriest_Level14_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_FamousPriest_Level15_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_FamousPriest_Level16_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_FamousPriest_Level17_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_FamousPriest_Level18_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_FamousPriest_Level19_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_FamousPriest_Level20_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_ContractKiller_Level1_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_ContractKiller_Level2_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_ContractKiller_Level3_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_ContractKiller_Level4_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_ContractKiller_Level5_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_ContractKiller_Level6_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_ContractKiller_Level7_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_ContractKiller_Level8_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_ContractKiller_Level9_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_ContractKiller_Level10_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_ContractKiller_Level11_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_ContractKiller_Level12_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_ContractKiller_Level13_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_ContractKiller_Level14_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_ContractKiller_Level15_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_ContractKiller_Level16_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_ContractKiller_Level17_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_ContractKiller_Level18_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_ContractKiller_Level19_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_ContractKiller_Level20_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Hunter_Level1_HuntingParty].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Hunter_Level10_HuntingParty].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Hunter_Level11_HuntingParty].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Hunter_Level12_HuntingParty].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Hunter_Level13_HuntingParty].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Hunter_Level14_HuntingParty].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Hunter_Level15_HuntingParty].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Hunter_Level16_HuntingParty].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Hunter_Level17_HuntingParty].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Hunter_Level18_HuntingParty].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Hunter_Level19_HuntingParty].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Hunter_Level20_HuntingParty].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Hunter_Level2_HuntingParty].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Hunter_Level3_HuntingParty].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Hunter_Level4_HuntingParty].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Hunter_Level5_HuntingParty].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Hunter_Level6_HuntingParty].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Hunter_Level7_HuntingParty].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Hunter_Level8_HuntingParty].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Hunter_Level9_HuntingParty].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Merchant_Level1_Caravan].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Merchant_Level10_Caravan].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Merchant_Level11_Caravan].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Merchant_Level12_Caravan].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Merchant_Level13_Caravan].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Merchant_Level14_Caravan].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Merchant_Level15_Caravan].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Merchant_Level16_Caravan].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Merchant_Level17_Caravan].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Merchant_Level18_Caravan].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Merchant_Level19_Caravan].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Merchant_Level20_Caravan].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Merchant_Level2_Caravan].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Merchant_Level3_Caravan].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Merchant_Level4_Caravan].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Merchant_Level5_Caravan].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Merchant_Level6_Caravan].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Merchant_Level7_Caravan].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Merchant_Level8_Caravan].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Merchant_Level9_Caravan].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Minstrel_Level1_Group].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Minstrel_Level10_Group].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Minstrel_Level11_Group].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Minstrel_Level12_Group].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Minstrel_Level13_Group].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Minstrel_Level14_Group].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Minstrel_Level15_Group].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Minstrel_Level16_Group].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Minstrel_Level17_Group].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Minstrel_Level18_Group].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Minstrel_Level19_Group].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Minstrel_Level20_Group].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Minstrel_Level2_Group].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Minstrel_Level3_Group].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Minstrel_Level4_Group].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Minstrel_Level5_Group].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Minstrel_Level6_Group].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Minstrel_Level7_Group].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Minstrel_Level8_Group].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Minstrel_Level9_Group].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Missionary_Level1_MissionTeam].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Missionary_Level2_MissionTeam].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Missionary_Level3_MissionTeam].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Missionary_Level4_MissionTeam].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Missionary_Level5_MissionTeam].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Missionary_Level6_MissionTeam].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Missionary_Level7_MissionTeam].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Missionary_Level8_MissionTeam].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Missionary_Level9_MissionTeam].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Missionary_Level10_MissionTeam].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Missionary_Level11_MissionTeam].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Missionary_Level12_MissionTeam].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Missionary_Level13_MissionTeam].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Missionary_Level14_MissionTeam].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Missionary_Level15_MissionTeam].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Missionary_Level16_MissionTeam].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Missionary_Level17_MissionTeam].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Missionary_Level18_MissionTeam].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Missionary_Level19_MissionTeam].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Missionary_Level20_MissionTeam].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_RetiredAdventurer_Level11_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_RetiredAdventurer_Level12_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_RetiredAdventurer_Level13_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_RetiredAdventurer_Level14_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_RetiredAdventurer_Level15_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_RetiredAdventurer_Level16_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_RetiredAdventurer_Level17_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_RetiredAdventurer_Level18_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_RetiredAdventurer_Level19_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_RetiredAdventurer_Level20_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Scholar_Level1_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Scholar_Level2_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Scholar_Level3_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Scholar_Level4_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Scholar_Level5_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Scholar_Level6_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Scholar_Level7_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Scholar_Level8_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Scholar_Level9_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Scholar_Level10_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Scholar_Level11_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Scholar_Level12_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Scholar_Level13_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Scholar_Level14_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Scholar_Level15_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Scholar_Level16_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Scholar_Level17_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Scholar_Level18_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Scholar_Level19_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Scholar_Level20_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Sellsword_Level1_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Sellsword_Level2_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Sellsword_Level3_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Sellsword_Level4_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Sellsword_Level5_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Sellsword_Level6_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Sellsword_Level7_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Sellsword_Level8_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Sellsword_Level9_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Sellsword_Level10_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Sellsword_Level11_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Sellsword_Level12_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Sellsword_Level13_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Sellsword_Level14_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Sellsword_Level15_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Sellsword_Level16_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Sellsword_Level17_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Sellsword_Level18_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Sellsword_Level19_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Sellsword_Level20_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Teacher_Level11_WithStudents].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Teacher_Level12_WithStudents].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Teacher_Level13_WithStudents].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Teacher_Level14_WithStudents].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Teacher_Level15_WithStudents].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Teacher_Level16_WithStudents].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Teacher_Level17_WithStudents].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Teacher_Level18_WithStudents].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Teacher_Level19_WithStudents].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_Teacher_Level20_WithStudents].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_WarHero_Level11_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_WarHero_Level12_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_WarHero_Level13_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_WarHero_Level14_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_WarHero_Level15_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_WarHero_Level16_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_WarHero_Level17_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_WarHero_Level18_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_WarHero_Level19_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Character_WarHero_Level20_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level11_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level11_WithClayGolem].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level11_WithDominatedCreature].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level11_WithFleshGolem].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level11_WithHomunculus].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level12_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level12_WithClayGolem].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level12_WithDominatedCreature].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level12_WithFleshGolem].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level12_WithHomunculus].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level13_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level13_WithClayGolem].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level13_WithDominatedCreature].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level13_WithFleshGolem].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level13_WithHomunculus].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level14_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level14_WithClayGolem].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level14_WithDominatedCreature].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level14_WithFleshGolem].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level14_WithGreaterStoneGolem].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level14_WithHomunculus].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level14_WithStoneGolem].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level15_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level15_WithClayGolem].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level15_WithDominatedCreature].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level15_WithFleshGolem].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level15_WithGreaterStoneGolem].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level15_WithHomunculus].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level15_WithShieldGuardian].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level15_WithStoneGolem].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level16_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level16_WithClayGolem].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level16_WithDominatedCreature].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level16_WithFleshGolem].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level16_WithGreaterStoneGolem].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level16_WithHomunculus].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level16_WithIronGolem].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level16_WithShieldGuardian].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level16_WithStoneGolem].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level17_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level17_WithClayGolem].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level17_WithDominatedCreature].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level17_WithFleshGolem].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level17_WithGreaterStoneGolem].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level17_WithHomunculus].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level17_WithIronGolem].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level17_WithShieldGuardian].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level17_WithStoneGolem].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level18_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level18_WithClayGolem].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level18_WithDominatedCreature].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level18_WithFleshGolem].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level18_WithGreaterStoneGolem].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level18_WithHomunculus].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level18_WithIronGolem].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level18_WithShieldGuardian].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level18_WithStoneGolem].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level19_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level19_WithClayGolem].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level19_WithDominatedCreature].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level19_WithFleshGolem].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level19_WithGreaterStoneGolem].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level19_WithHomunculus].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level19_WithIronGolem].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level19_WithShieldGuardian].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level19_WithStoneGolem].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level20_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level20_WithClayGolem].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level20_WithDominatedCreature].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level20_WithFleshGolem].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level20_WithGreaterStoneGolem].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level20_WithHomunculus].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level20_WithIronGolem].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level20_WithShieldGuardian].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Wizard_FamousResearcher_Level20_WithStoneGolem].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Adept_Fortuneteller_Level1_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Adept_Fortuneteller_Level10_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Adept_Fortuneteller_Level11_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Adept_Fortuneteller_Level12_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Adept_Fortuneteller_Level13_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Adept_Fortuneteller_Level14_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Adept_Fortuneteller_Level15_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Adept_Fortuneteller_Level16_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Adept_Fortuneteller_Level17_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Adept_Fortuneteller_Level18_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Adept_Fortuneteller_Level19_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Adept_Fortuneteller_Level20_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Adept_Fortuneteller_Level2_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Adept_Fortuneteller_Level3_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Adept_Fortuneteller_Level4_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Adept_Fortuneteller_Level5_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Adept_Fortuneteller_Level6_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Adept_Fortuneteller_Level7_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Adept_Fortuneteller_Level8_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Adept_Fortuneteller_Level9_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Adept_Missionary_Level1_MissionTeam].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Adept_Missionary_Level10_MissionTeam].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Adept_Missionary_Level11_MissionTeam].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Adept_Missionary_Level12_MissionTeam].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Adept_Missionary_Level13_MissionTeam].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Adept_Missionary_Level14_MissionTeam].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Adept_Missionary_Level15_MissionTeam].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Adept_Missionary_Level16_MissionTeam].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Adept_Missionary_Level17_MissionTeam].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Adept_Missionary_Level18_MissionTeam].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Adept_Missionary_Level19_MissionTeam].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Adept_Missionary_Level20_MissionTeam].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Adept_Missionary_Level2_MissionTeam].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Adept_Missionary_Level3_MissionTeam].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Adept_Missionary_Level4_MissionTeam].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Adept_Missionary_Level5_MissionTeam].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Adept_Missionary_Level6_MissionTeam].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Adept_Missionary_Level7_MissionTeam].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Adept_Missionary_Level8_MissionTeam].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Adept_Missionary_Level9_MissionTeam].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Commoner_Farmer_Level1_Group].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Commoner_Farmer_Level10_Group].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Commoner_Farmer_Level11_Group].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Commoner_Farmer_Level12_Group].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Commoner_Farmer_Level13_Group].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Commoner_Farmer_Level14_Group].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Commoner_Farmer_Level15_Group].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Commoner_Farmer_Level16_Group].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Commoner_Farmer_Level17_Group].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Commoner_Farmer_Level18_Group].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Commoner_Farmer_Level19_Group].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Commoner_Farmer_Level20_Group].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Commoner_Farmer_Level2_Group].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Commoner_Farmer_Level3_Group].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Commoner_Farmer_Level4_Group].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Commoner_Farmer_Level5_Group].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Commoner_Farmer_Level6_Group].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Commoner_Farmer_Level7_Group].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Commoner_Farmer_Level8_Group].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Commoner_Farmer_Level9_Group].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Commoner_Herder_Level1_Group].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Commoner_Herder_Level10_Group].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Commoner_Herder_Level11_Group].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Commoner_Herder_Level12_Group].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Commoner_Herder_Level13_Group].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Commoner_Herder_Level14_Group].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Commoner_Herder_Level15_Group].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Commoner_Herder_Level16_Group].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Commoner_Herder_Level17_Group].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Commoner_Herder_Level18_Group].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Commoner_Herder_Level19_Group].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Commoner_Herder_Level20_Group].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Commoner_Herder_Level2_Group].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Commoner_Herder_Level3_Group].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Commoner_Herder_Level4_Group].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Commoner_Herder_Level5_Group].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Commoner_Herder_Level6_Group].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Commoner_Herder_Level7_Group].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Commoner_Herder_Level8_Group].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Commoner_Herder_Level9_Group].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Commoner_Pilgrim_Level1_Caravan].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Commoner_Pilgrim_Level2_Caravan].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Commoner_Pilgrim_Level3_Caravan].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Commoner_Pilgrim_Level4_Caravan].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Commoner_Pilgrim_Level5_Caravan].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Commoner_Pilgrim_Level6_Caravan].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Commoner_Pilgrim_Level7_Caravan].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Commoner_Pilgrim_Level8_Caravan].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Commoner_Pilgrim_Level9_Caravan].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Commoner_Pilgrim_Level10_Caravan].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Commoner_Pilgrim_Level1_CaravanWithLeader].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Commoner_Pilgrim_Level2_CaravanWithLeader].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Commoner_Pilgrim_Level3_CaravanWithLeader].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Commoner_Pilgrim_Level4_CaravanWithLeader].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Commoner_Pilgrim_Level5_CaravanWithLeader].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Commoner_Pilgrim_Level6_CaravanWithLeader].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Commoner_Pilgrim_Level7_CaravanWithLeader].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Commoner_Pilgrim_Level8_CaravanWithLeader].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Commoner_Pilgrim_Level9_CaravanWithLeader].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Commoner_Pilgrim_Level10_CaravanWithLeader].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Traveler_Level1_Group].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Traveler_Level10_Group].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Traveler_Level11_Group].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Traveler_Level12_Group].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Traveler_Level13_Group].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Traveler_Level14_Group].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Traveler_Level15_Group].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Traveler_Level16_Group].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Traveler_Level17_Group].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Traveler_Level18_Group].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Traveler_Level19_Group].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Traveler_Level20_Group].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Traveler_Level2_Group].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Traveler_Level3_Group].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Traveler_Level4_Group].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Traveler_Level5_Group].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Traveler_Level6_Group].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Traveler_Level7_Group].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Traveler_Level8_Group].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Traveler_Level9_Group].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Paladin_Crusader_Level1_Band].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Paladin_Crusader_Level2_Band].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Paladin_Crusader_Level3_Band].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Paladin_Crusader_Level4_Band].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Paladin_Crusader_Level5_Band].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Paladin_Crusader_Level6_Band].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Paladin_Crusader_Level7_Band].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Paladin_Crusader_Level8_Band].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Paladin_Crusader_Level9_Band].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Paladin_Crusader_Level10_Band].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Paladin_Crusader_Level11_Band].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Paladin_Crusader_Level12_Band].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Paladin_Crusader_Level13_Band].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Paladin_Crusader_Level14_Band].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Paladin_Crusader_Level15_Band].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Paladin_Crusader_Level16_Band].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Paladin_Crusader_Level17_Band].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Paladin_Crusader_Level18_Band].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Paladin_Crusader_Level19_Band].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Paladin_Crusader_Level20_Band].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Rogue_Pickpocket_Level1_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Rogue_Pickpocket_Level2_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Rogue_Pickpocket_Level3_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Rogue_Pickpocket_Level4_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Rogue_Pickpocket_Level5_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Rogue_Pickpocket_Level6_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Rogue_Pickpocket_Level7_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Rogue_Pickpocket_Level8_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Rogue_Pickpocket_Level9_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Rogue_Pickpocket_Level10_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Rogue_Pickpocket_Level11_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Rogue_Pickpocket_Level12_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Rogue_Pickpocket_Level13_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Rogue_Pickpocket_Level14_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Rogue_Pickpocket_Level15_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Rogue_Pickpocket_Level16_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Rogue_Pickpocket_Level17_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Rogue_Pickpocket_Level18_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Rogue_Pickpocket_Level19_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Rogue_Pickpocket_Level20_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Warrior_Bandit_Level1_Gang].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Warrior_Bandit_Level10_Gang].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Warrior_Bandit_Level11_Gang].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Warrior_Bandit_Level12_Gang].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Warrior_Bandit_Level13_Gang].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Warrior_Bandit_Level14_Gang].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Warrior_Bandit_Level15_Gang].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Warrior_Bandit_Level16_Gang].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Warrior_Bandit_Level17_Gang].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Warrior_Bandit_Level18_Gang].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Warrior_Bandit_Level19_Gang].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Warrior_Bandit_Level2_Gang].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Warrior_Bandit_Level3_Gang].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Warrior_Bandit_Level4_Gang].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Warrior_Bandit_Level5_Gang].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Warrior_Bandit_Level6_Gang].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Warrior_Bandit_Level7_Gang].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Warrior_Bandit_Level8_Gang].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Warrior_Bandit_Level9_Gang].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Warrior_Bandit_Level1_GangWithFighter].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Warrior_Bandit_Level10_GangWithFighter].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Warrior_Bandit_Level11_GangWithFighter].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Warrior_Bandit_Level12_GangWithFighter].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Warrior_Bandit_Level13_GangWithFighter].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Warrior_Bandit_Level14_GangWithFighter].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Warrior_Bandit_Level15_GangWithFighter].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Warrior_Bandit_Level16_GangWithFighter].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Warrior_Bandit_Level17_GangWithFighter].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Warrior_Bandit_Level18_GangWithFighter].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Warrior_Bandit_Level19_GangWithFighter].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Warrior_Bandit_Level20_GangWithFighter].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Warrior_Bandit_Level2_GangWithFighter].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Warrior_Bandit_Level3_GangWithFighter].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Warrior_Bandit_Level4_GangWithFighter].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Warrior_Bandit_Level5_GangWithFighter].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Warrior_Bandit_Level6_GangWithFighter].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Warrior_Bandit_Level7_GangWithFighter].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Warrior_Bandit_Level8_GangWithFighter].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Warrior_Bandit_Level9_GangWithFighter].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Warrior_Guard_Level1_Patrol].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Warrior_Guard_Level10_Patrol].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Warrior_Guard_Level2_Patrol].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Warrior_Guard_Level3_Patrol].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Warrior_Guard_Level4_Patrol].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Warrior_Guard_Level5_Patrol].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Warrior_Guard_Level6_Patrol].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Warrior_Guard_Level7_Patrol].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Warrior_Guard_Level8_Patrol].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Warrior_Guard_Level9_Patrol].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Warrior_Guard_Level1_PatrolWithLieutenant].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Warrior_Guard_Level10_PatrolWithLieutenant].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Warrior_Guard_Level2_PatrolWithLieutenant].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Warrior_Guard_Level3_PatrolWithLieutenant].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Warrior_Guard_Level4_PatrolWithLieutenant].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Warrior_Guard_Level5_PatrolWithLieutenant].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Warrior_Guard_Level6_PatrolWithLieutenant].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Warrior_Guard_Level7_PatrolWithLieutenant].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Warrior_Guard_Level8_PatrolWithLieutenant].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Warrior_Guard_Level9_PatrolWithLieutenant].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Warrior_Guard_Level1_PatrolWithCaptain].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Warrior_Guard_Level10_PatrolWithCaptain].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Warrior_Guard_Level2_PatrolWithCaptain].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Warrior_Guard_Level3_PatrolWithCaptain].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Warrior_Guard_Level4_PatrolWithCaptain].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Warrior_Guard_Level5_PatrolWithCaptain].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Warrior_Guard_Level6_PatrolWithCaptain].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Warrior_Guard_Level7_PatrolWithCaptain].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Warrior_Guard_Level8_PatrolWithCaptain].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Warrior_Guard_Level9_PatrolWithCaptain].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Annis_Solitary].Add(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Marsh);
+            encounterEnvironments[EncounterConstants.Hag_Covey_WithCloudGiants].Add(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Marsh);
+            encounterEnvironments[EncounterConstants.Hag_Covey_WithFireGiants].Add(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Marsh);
+            encounterEnvironments[EncounterConstants.Hag_Covey_WithFrostGiants].Add(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Marsh);
+            encounterEnvironments[EncounterConstants.Hag_Covey_WithHillGiants].Add(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Marsh);
+            encounterEnvironments[EncounterConstants.GreenHag_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh);
+            encounterEnvironments[EncounterConstants.Hag_Covey_WithCloudGiants].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh);
+            encounterEnvironments[EncounterConstants.Hag_Covey_WithFireGiants].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh);
+            encounterEnvironments[EncounterConstants.Hag_Covey_WithFrostGiants].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh);
+            encounterEnvironments[EncounterConstants.Hag_Covey_WithHillGiants].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh);
+            encounterEnvironments[EncounterConstants.SeaHag_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic);
+            encounterEnvironments[EncounterConstants.Hag_Covey_WithCloudGiants].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic);
+            encounterEnvironments[EncounterConstants.Hag_Covey_WithFireGiants].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic);
+            encounterEnvironments[EncounterConstants.Hag_Covey_WithFrostGiants].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic);
+            encounterEnvironments[EncounterConstants.Hag_Covey_WithHillGiants].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic);
+            encounterEnvironments[EncounterConstants.Halfling_Lightfoot_Band].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Halfling_Lightfoot_Company].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Halfling_Lightfoot_Squad].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Halfling_Deep_Band].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Halfling_Deep_Company].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Halfling_Deep_Squad].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Halfling_Tallfellow_Band].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Halfling_Tallfellow_Company].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Halfling_Tallfellow_Squad].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.HarpyArcher_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh);
+            encounterEnvironments[EncounterConstants.Harpy_Flight].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh);
+            encounterEnvironments[EncounterConstants.Harpy_Pair].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh);
+            encounterEnvironments[EncounterConstants.Harpy_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh);
+            encounterEnvironments[EncounterConstants.Human_Band].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Human_Company].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Human_Squad].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Hydra_10Heads_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh);
+            encounterEnvironments[EncounterConstants.Hydra_11Heads_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh);
+            encounterEnvironments[EncounterConstants.Hydra_12Heads_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh);
+            encounterEnvironments[EncounterConstants.Hydra_5Heads_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh);
+            encounterEnvironments[EncounterConstants.Hydra_6Heads_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh);
+            encounterEnvironments[EncounterConstants.Hydra_7Heads_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh);
+            encounterEnvironments[EncounterConstants.Hydra_8Heads_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh);
+            encounterEnvironments[EncounterConstants.Hydra_9Heads_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh);
+            encounterEnvironments[EncounterConstants.Cryohydra_10Heads_Solitary].Add(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Marsh);
+            encounterEnvironments[EncounterConstants.Cryohydra_11Heads_Solitary].Add(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Marsh);
+            encounterEnvironments[EncounterConstants.Cryohydra_12Heads_Solitary].Add(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Marsh);
+            encounterEnvironments[EncounterConstants.Cryohydra_5Heads_Solitary].Add(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Marsh);
+            encounterEnvironments[EncounterConstants.Cryohydra_6Heads_Solitary].Add(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Marsh);
+            encounterEnvironments[EncounterConstants.Cryohydra_7Heads_Solitary].Add(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Marsh);
+            encounterEnvironments[EncounterConstants.Cryohydra_8Heads_Solitary].Add(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Marsh);
+            encounterEnvironments[EncounterConstants.Cryohydra_9Heads_Solitary].Add(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Marsh);
+            encounterEnvironments[EncounterConstants.Pyrohydra_10Heads_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh);
+            encounterEnvironments[EncounterConstants.Pyrohydra_11Heads_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh);
+            encounterEnvironments[EncounterConstants.Pyrohydra_12Heads_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh);
+            encounterEnvironments[EncounterConstants.Pyrohydra_5Heads_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh);
+            encounterEnvironments[EncounterConstants.Pyrohydra_6Heads_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh);
+            encounterEnvironments[EncounterConstants.Pyrohydra_7Heads_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh);
+            encounterEnvironments[EncounterConstants.Pyrohydra_8Heads_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh);
+            encounterEnvironments[EncounterConstants.Pyrohydra_9Heads_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh);
+            encounterEnvironments[EncounterConstants.Howler_Gang].Add(EnvironmentConstants.Plane_Chaotic);
+            encounterEnvironments[EncounterConstants.Howler_Pack].Add(EnvironmentConstants.Plane_Chaotic);
+            encounterEnvironments[EncounterConstants.Howler_Solitary].Add(EnvironmentConstants.Plane_Chaotic);
+            encounterEnvironments[EncounterConstants.Homunculus_Solitary].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Hobgoblin_Band].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Hobgoblin_Gang].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Hobgoblin_Tribe_WithOgres].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Hobgoblin_Tribe_WithTrolls].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Hobgoblin_Warband].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Hippogriff_Flight].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Hippogriff_Pair].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Hippogriff_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.HellHound_Pack].Add(EnvironmentConstants.Plane_LawfulEvil);
+            encounterEnvironments[EncounterConstants.HellHound_Pair].Add(EnvironmentConstants.Plane_LawfulEvil);
+            encounterEnvironments[EncounterConstants.HellHound_Solitary].Add(EnvironmentConstants.Plane_LawfulEvil);
+            encounterEnvironments[EncounterConstants.NessianWarhound_Pack].Add(EnvironmentConstants.Plane_LawfulEvil);
+            encounterEnvironments[EncounterConstants.NessianWarhound_Pair].Add(EnvironmentConstants.Plane_LawfulEvil);
+            encounterEnvironments[EncounterConstants.NessianWarhound_Solitary].Add(EnvironmentConstants.Plane_LawfulEvil);
+            encounterEnvironments[EncounterConstants.Kolyarut_Solitary].Add(EnvironmentConstants.Plane_Lawful);
+            encounterEnvironments[EncounterConstants.Marut_Solitary].Add(EnvironmentConstants.Plane_Lawful);
+            encounterEnvironments[EncounterConstants.Zelekhut_Solitary].Add(EnvironmentConstants.Plane_Lawful);
+            encounterEnvironments[EncounterConstants.InvisibleStalker_Solitary].Add(EnvironmentConstants.Plane_Air);
+            encounterEnvironments[EncounterConstants.Kobold_Band].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Kobold_Gang].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Kobold_Tribe].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Kobold_Warband].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Kraken_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic);
+            encounterEnvironments[EncounterConstants.Krenshar_Pair].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Krenshar_Pride].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Krenshar_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Lamia_Gang].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert);
+            encounterEnvironments[EncounterConstants.Lamia_Pair].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert);
+            encounterEnvironments[EncounterConstants.Lamia_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert);
+            encounterEnvironments[EncounterConstants.Lammasu_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert);
+            encounterEnvironments[EncounterConstants.Lammasu_GoldenProtector_Solitary].Add(EnvironmentConstants.Plane_LawfulGood);
+            encounterEnvironments[EncounterConstants.Leonal_Pride].Add(EnvironmentConstants.Plane_Good);
+            encounterEnvironments[EncounterConstants.Leonal_Solitary].Add(EnvironmentConstants.Plane_Good);
+            encounterEnvironments[EncounterConstants.Lich_Level11_Solitary].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Lich_Level11_Troupe].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Lich_Level12_Solitary].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Lich_Level12_Troupe].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Lich_Level13_Solitary].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Lich_Level13_Troupe].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Lich_Level14_Solitary].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Lich_Level14_Troupe].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Lich_Level15_Solitary].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Lich_Level15_Troupe].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Lich_Level16_Solitary].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Lich_Level16_Troupe].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Lich_Level17_Solitary].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Lich_Level17_Troupe].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Lich_Level18_Solitary].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Lich_Level18_Troupe].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Lich_Level19_Solitary].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Lich_Level19_Troupe].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Lich_Level20_Solitary].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Lich_Level20_Troupe].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Lillend_Covey].Add(EnvironmentConstants.Plane_Chaotic);
+            encounterEnvironments[EncounterConstants.Lillend_Solitary].Add(EnvironmentConstants.Plane_Chaotic);
+            encounterEnvironments[EncounterConstants.Lizardfolk_Band].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh);
+            encounterEnvironments[EncounterConstants.Lizardfolk_Gang].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh);
+            encounterEnvironments[EncounterConstants.Lizardfolk_Tribe].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh);
+            encounterEnvironments[EncounterConstants.Locathah_Company].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic);
+            encounterEnvironments[EncounterConstants.Locathah_Patrol].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic);
+            encounterEnvironments[EncounterConstants.Locathah_Tribe].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic);
+            encounterEnvironments[EncounterConstants.Werebear_Family].Add(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Werebear_Pair].Add(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Werebear_Solitary].Add(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Werebear_Troupe].Add(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Wereboar_Brood].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Wereboar_Pair].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Wereboar_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Wereboar_Troupe].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Wereboar_HillGiantDire_Brood].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Wereboar_HillGiantDire_Pair].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Wereboar_HillGiantDire_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Wereboar_HillGiantDire_Troupe].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Wererat_Pack].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Wererat_Pair].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Wererat_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Wererat_Troupe].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Weretiger_Pair].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Weretiger_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Werewolf_Pack].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Werewolf_Pair].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Werewolf_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Werewolf_Troupe].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.WerewolfLord_Pack].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.WerewolfLord_Pair].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.WerewolfLord_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Magmin_Gang].Add(EnvironmentConstants.Plane_Fire);
+            encounterEnvironments[EncounterConstants.Magmin_Solitary].Add(EnvironmentConstants.Plane_Fire);
+            encounterEnvironments[EncounterConstants.Magmin_Squad].Add(EnvironmentConstants.Plane_Fire);
+            encounterEnvironments[EncounterConstants.Manticore_Pair].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh);
+            encounterEnvironments[EncounterConstants.Manticore_Pride].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh);
+            encounterEnvironments[EncounterConstants.Manticore_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh);
+            encounterEnvironments[EncounterConstants.Medusa_Covey].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh);
+            encounterEnvironments[EncounterConstants.Medusa_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh);
+            encounterEnvironments[EncounterConstants.Mephit_Gang].Add(GroupConstants.Extraplanar);
+            encounterEnvironments[EncounterConstants.Mephit_Mob].Add(GroupConstants.Extraplanar);
+            encounterEnvironments[EncounterConstants.Mephit_Solitary].Add(GroupConstants.Extraplanar);
+            encounterEnvironments[EncounterConstants.Merfolk_Band].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic);
+            encounterEnvironments[EncounterConstants.Merfolk_Company].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic);
+            encounterEnvironments[EncounterConstants.Merfolk_Patrol].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic);
+            encounterEnvironments[EncounterConstants.Mimic_Solitary].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.Minotaur_Gang].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.Minotaur_Pair].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.Minotaur_Solitary].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.Mohrg_Gang].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Mohrg_Mob].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Mohrg_Solitary].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Mummy_GuardianDetail].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Mummy_Solitary].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Mummy_WardenSquad].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.MummyLord_Solitary].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.MummyLord_TombGuard].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Naga_Dark_Nest].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Naga_Dark_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Naga_Guardian_Nest].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Naga_Guardian_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Naga_Spirit_Nest].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh);
+            encounterEnvironments[EncounterConstants.Naga_Spirit_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh);
+            encounterEnvironments[EncounterConstants.Naga_Water_Nest].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic);
+            encounterEnvironments[EncounterConstants.Naga_Water_Pair].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic);
+            encounterEnvironments[EncounterConstants.Naga_Water_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic);
+            encounterEnvironments[EncounterConstants.NightHag_Covey].Add(EnvironmentConstants.Plane_Evil);
+            encounterEnvironments[EncounterConstants.NightHag_Mounted].Add(EnvironmentConstants.Plane_Evil);
+            encounterEnvironments[EncounterConstants.NightHag_Solitary].Add(EnvironmentConstants.Plane_Evil);
+            encounterEnvironments[EncounterConstants.Nightmare_Solitary].Add(EnvironmentConstants.Plane_Evil);
+            encounterEnvironments[EncounterConstants.Nightmare_Cauchemar_Solitary].Add(EnvironmentConstants.Plane_NeutralEvil);
+            encounterEnvironments[EncounterConstants.Nightcrawler_Pair].Add(EnvironmentConstants.Plane_Shadow);
+            encounterEnvironments[EncounterConstants.Nightcrawler_Solitary].Add(EnvironmentConstants.Plane_Shadow);
+            encounterEnvironments[EncounterConstants.Nightwalker_Gang].Add(EnvironmentConstants.Plane_Shadow);
+            encounterEnvironments[EncounterConstants.Nightwalker_Pair].Add(EnvironmentConstants.Plane_Shadow);
+            encounterEnvironments[EncounterConstants.Nightwalker_Solitary].Add(EnvironmentConstants.Plane_Shadow);
+            encounterEnvironments[EncounterConstants.Nightwing_Flock].Add(EnvironmentConstants.Plane_Shadow);
+            encounterEnvironments[EncounterConstants.Nightwing_Pair].Add(EnvironmentConstants.Plane_Shadow);
+            encounterEnvironments[EncounterConstants.Nightwing_Solitary].Add(EnvironmentConstants.Plane_Shadow);
+            encounterEnvironments[EncounterConstants.Nymph_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Ogre_Band].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Ogre_Gang].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Ogre_Pair].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Ogre_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Ogre_Barbarian_Band].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Ogre_Barbarian_Gang].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Ogre_Barbarian_Pair].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Ogre_Barbarian_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Ogre_Merrow_Band].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic);
+            encounterEnvironments[EncounterConstants.Ogre_Merrow_Gang].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic);
+            encounterEnvironments[EncounterConstants.Ogre_Merrow_Pair].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic);
+            encounterEnvironments[EncounterConstants.Ogre_Merrow_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic);
+            encounterEnvironments[EncounterConstants.Ogre_Merrow_Barbarian_Band].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic);
+            encounterEnvironments[EncounterConstants.Ogre_Merrow_Barbarian_Gang].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic);
+            encounterEnvironments[EncounterConstants.Ogre_Merrow_Barbarian_Pair].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic);
+            encounterEnvironments[EncounterConstants.Ogre_Merrow_Barbarian_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic);
+            encounterEnvironments[EncounterConstants.OgreMage_Pair].Add(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.OgreMage_Solitary].Add(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.OgreMage_Troupe].Add(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.BlackPudding_Solitary].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.BlackPudding_Elder_Solitary].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.GelatinousCube_Solitary].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.Ooze_Gray_Solitary].Add(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Marsh);
+            encounterEnvironments[EncounterConstants.Ooze_OchreJelly_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh);
+            encounterEnvironments[EncounterConstants.Orc_Band].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Orc_Gang].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Orc_Squad].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Orc_Half_Band].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Orc_Half_Gang].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Orc_Half_Squad].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Orc_Half_Band].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Orc_Half_Gang].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Orc_Half_Squad].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Otyugh_Cluster].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.Otyugh_Pair].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.Otyugh_Solitary].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.Owl_Giant_Company].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Owl_Giant_Pair].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Owl_Giant_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Owlbear_Pack].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Owlbear_Pair].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Owlbear_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Pegasus_Herd].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Pegasus_Pair].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Pegasus_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.PhantomFungus_Solitary].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.PhaseSpider_Cluster].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.PhaseSpider_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Phasm_Solitary].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.Aasimar_Pair].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Aasimar_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Aasimar_Team].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Tiefling_Pair].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Tiefling_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Tiefling_Team].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Pseudodragon_Clutch].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Pseudodragon_Pair].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Pseudodragon_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.PurpleWorm_Solitary].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.Rakshasa_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh);
+            encounterEnvironments[EncounterConstants.Rast_Cluster].Add(EnvironmentConstants.Plane_Fire);
+            encounterEnvironments[EncounterConstants.Rast_Pair].Add(EnvironmentConstants.Plane_Fire);
+            encounterEnvironments[EncounterConstants.Rast_Solitary].Add(EnvironmentConstants.Plane_Fire);
+            encounterEnvironments[EncounterConstants.Ravid_WithAnimatedObjects].Add(EnvironmentConstants.Plane_PositiveEnergy);
+            encounterEnvironments[EncounterConstants.RazorBoar_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.RazorBoar_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.RazorBoar_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.RazorBoar_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Remorhaz_Solitary].Add(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Desert);
+            encounterEnvironments[EncounterConstants.Roc_Pair].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Roc_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Roper_Cluster].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.Roper_Pair].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.Roper_Solitary].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.RustMonster_Pair].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.RustMonster_Solitary].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.ShockerLizard_Clutch].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh);
+            encounterEnvironments[EncounterConstants.ShockerLizard_Colony].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh);
+            encounterEnvironments[EncounterConstants.ShockerLizard_Pair].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh);
+            encounterEnvironments[EncounterConstants.ShockerLizard_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh);
+            encounterEnvironments[EncounterConstants.ShieldGuardian_Solitary].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.ShamblingMound_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh);
+            encounterEnvironments[EncounterConstants.ShadowMastiff_Pack].Add(EnvironmentConstants.Plane_Shadow);
+            encounterEnvironments[EncounterConstants.ShadowMastiff_Pair].Add(EnvironmentConstants.Plane_Shadow);
+            encounterEnvironments[EncounterConstants.ShadowMastiff_Solitary].Add(EnvironmentConstants.Plane_Shadow);
+            encounterEnvironments[EncounterConstants.Shadow_Gang].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Shadow_Solitary].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Shadow_Swarm].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Shadow_Greater_Solitary].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.SeaCat_Pair].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic);
+            encounterEnvironments[EncounterConstants.SeaCat_Pride].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic);
+            encounterEnvironments[EncounterConstants.SeaCat_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic);
+            encounterEnvironments[EncounterConstants.Scorpionfolk_Company].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert);
+            encounterEnvironments[EncounterConstants.Scorpionfolk_Pair].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert);
+            encounterEnvironments[EncounterConstants.Scorpionfolk_Patrol].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert);
+            encounterEnvironments[EncounterConstants.Scorpionfolk_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert);
+            encounterEnvironments[EncounterConstants.Scorpionfolk_Troop].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert);
+            encounterEnvironments[EncounterConstants.Scorpionfolk_Company].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Scorpionfolk_Pair].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Scorpionfolk_Patrol].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Scorpionfolk_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Scorpionfolk_Troop].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Scorpionfolk_Company].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Scorpionfolk_Pair].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Scorpionfolk_Patrol].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Scorpionfolk_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Scorpionfolk_Troop].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Satyr_Band].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Satyr_Pair].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Satyr_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Satyr_Troop].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Salamander_Average_Cluster].Add(EnvironmentConstants.Plane_Fire);
+            encounterEnvironments[EncounterConstants.Salamander_Average_Pair].Add(EnvironmentConstants.Plane_Fire);
+            encounterEnvironments[EncounterConstants.Salamander_Average_Solitary].Add(EnvironmentConstants.Plane_Fire);
+            encounterEnvironments[EncounterConstants.Salamander_Flamebrother_Cluster].Add(EnvironmentConstants.Plane_Fire);
+            encounterEnvironments[EncounterConstants.Salamander_Flamebrother_Pair].Add(EnvironmentConstants.Plane_Fire);
+            encounterEnvironments[EncounterConstants.Salamander_Flamebrother_Solitary].Add(EnvironmentConstants.Plane_Fire);
+            encounterEnvironments[EncounterConstants.Salamander_Noble_NobleParty].Add(EnvironmentConstants.Plane_Fire);
+            encounterEnvironments[EncounterConstants.Salamander_Noble_Pair].Add(EnvironmentConstants.Plane_Fire);
+            encounterEnvironments[EncounterConstants.Salamander_Noble_Solitary].Add(EnvironmentConstants.Plane_Fire);
+            encounterEnvironments[EncounterConstants.Sahuagin_Band_WithDireSharks].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic);
+            encounterEnvironments[EncounterConstants.Sahuagin_Band_WithHugeSharks].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic);
+            encounterEnvironments[EncounterConstants.Sahuagin_Band_WithLargeSharks].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic);
+            encounterEnvironments[EncounterConstants.Sahuagin_Band_WithMediumSharks].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic);
+            encounterEnvironments[EncounterConstants.Sahuagin_Pair].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic);
+            encounterEnvironments[EncounterConstants.Sahuagin_Patrol_WithDireSharks].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic);
+            encounterEnvironments[EncounterConstants.Sahuagin_Patrol_WithHugeSharks].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic);
+            encounterEnvironments[EncounterConstants.Sahuagin_Patrol_WithLargeSharks].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic);
+            encounterEnvironments[EncounterConstants.Sahuagin_Patrol_WithMediumSharks].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic);
+            encounterEnvironments[EncounterConstants.Sahuagin_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic);
+            encounterEnvironments[EncounterConstants.Sahuagin_Team].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic);
+            encounterEnvironments[EncounterConstants.Sahuagin_Tribe_WithDireSharks].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic);
+            encounterEnvironments[EncounterConstants.Sahuagin_Tribe_WithHugeSharks].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic);
+            encounterEnvironments[EncounterConstants.Sahuagin_Tribe_WithLargeSharks].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic);
+            encounterEnvironments[EncounterConstants.Sahuagin_Tribe_WithMediumSharks].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic);
+            encounterEnvironments[EncounterConstants.Skeleton_Chimera_Group].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Skeleton_Chimera_LargeGroup].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Skeleton_Chimera_SmallGroup].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Skeleton_Chimera_Group].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Skeleton_Chimera_LargeGroup].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Skeleton_Chimera_SmallGroup].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Skeleton_Dragon_Red_YoungAdult_Group].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Skeleton_Dragon_Red_YoungAdult_LargeGroup].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Skeleton_Dragon_Red_YoungAdult_SmallGroup].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Skeleton_Dragon_Red_YoungAdult_Group].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Skeleton_Dragon_Red_YoungAdult_LargeGroup].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Skeleton_Dragon_Red_YoungAdult_SmallGroup].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Skeleton_Ettin_Group].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Skeleton_Ettin_LargeGroup].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Skeleton_Ettin_SmallGroup].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Skeleton_Ettin_Group].Add(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Skeleton_Ettin_LargeGroup].Add(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Skeleton_Ettin_SmallGroup].Add(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Skeleton_Giant_Cloud_Group].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Skeleton_Giant_Cloud_LargeGroup].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Skeleton_Giant_Cloud_SmallGroup].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Skeleton_Giant_Cloud_Group].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Skeleton_Giant_Cloud_LargeGroup].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Skeleton_Giant_Cloud_SmallGroup].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Skeleton_Human_Group].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Skeleton_Human_LargeGroup].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Skeleton_Human_SmallGroup].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Skeleton_Human_Group].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Skeleton_Human_LargeGroup].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Skeleton_Human_SmallGroup].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Skeleton_Megaraptor_Group].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Skeleton_Megaraptor_LargeGroup].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Skeleton_Megaraptor_SmallGroup].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Skeleton_Megaraptor_Group].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Skeleton_Megaraptor_LargeGroup].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Skeleton_Megaraptor_SmallGroup].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Skeleton_Owlbear_Group].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Skeleton_Owlbear_LargeGroup].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Skeleton_Owlbear_SmallGroup].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Skeleton_Owlbear_Group].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Skeleton_Owlbear_LargeGroup].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Skeleton_Owlbear_SmallGroup].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Skeleton_Troll_Group].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Skeleton_Troll_LargeGroup].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Skeleton_Troll_SmallGroup].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Skeleton_Troll_Group].Add(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Skeleton_Troll_LargeGroup].Add(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Skeleton_Troll_SmallGroup].Add(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Skeleton_Wolf_Group].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Skeleton_Wolf_LargeGroup].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Skeleton_Wolf_SmallGroup].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Skeleton_Wolf_Group].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Skeleton_Wolf_LargeGroup].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Skeleton_Wolf_SmallGroup].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Skum_Brood].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.Skum_Pack].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.Spectre_Gang].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Spectre_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Spectre_Swarm].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Spectre_Gang].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.Spectre_Solitary].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.Spectre_Swarm].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.Androsphinx_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert);
+            encounterEnvironments[EncounterConstants.Criosphinx_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert);
+            encounterEnvironments[EncounterConstants.Gynosphinx_Covey].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert);
+            encounterEnvironments[EncounterConstants.Gynosphinx_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert);
+            encounterEnvironments[EncounterConstants.Hieracosphinx_Flock].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert);
+            encounterEnvironments[EncounterConstants.Hieracosphinx_Pair].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert);
+            encounterEnvironments[EncounterConstants.Hieracosphinx_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert);
+            encounterEnvironments[EncounterConstants.SpiderEater_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Grig_Band].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Grig_Gang].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Grig_Tribe].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Nixie_Band].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic);
+            encounterEnvironments[EncounterConstants.Nixie_Gang].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic);
+            encounterEnvironments[EncounterConstants.Nixie_Tribe].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic);
+            encounterEnvironments[EncounterConstants.Pixie_Band].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Pixie_Gang].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Pixie_Tribe].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Pixie_WithIrresistableDance_Band].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Pixie_WithIrresistableDance_Tribe].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Stirge_Colony].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh);
+            encounterEnvironments[EncounterConstants.Stirge_Flock].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh);
+            encounterEnvironments[EncounterConstants.Stirge_Storm].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh);
+            encounterEnvironments[EncounterConstants.Bat_Swarm_Colony].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert);
+            encounterEnvironments[EncounterConstants.Bat_Swarm_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert);
+            encounterEnvironments[EncounterConstants.Bat_Swarm_Tangle].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert);
+            encounterEnvironments[EncounterConstants.Centipede_Swarm_Colony].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.Centipede_Swarm_Solitary].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.Centipede_Swarm_Tangle].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.Hellwasp_Swarm_Fright].Add(EnvironmentConstants.Plane_Evil);
+            encounterEnvironments[EncounterConstants.Hellwasp_Swarm_Solitary].Add(EnvironmentConstants.Plane_Evil);
+            encounterEnvironments[EncounterConstants.Hellwasp_Swarm_Terror].Add(EnvironmentConstants.Plane_Evil);
+            encounterEnvironments[EncounterConstants.Locust_Swarm_Cloud].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Locust_Swarm_Plague].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Locust_Swarm_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Rat_Swarm_Infestation].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Rat_Swarm_Pack].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Rat_Swarm_Solitary].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Spider_Swarm_Colony].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Spider_Swarm_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Spider_Swarm_Tangle].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Tarrasque_Solitary].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Tendriculos_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Thoqqua_Pair].Add(EnvironmentConstants.Plane_Fire);
+            encounterEnvironments[EncounterConstants.Thoqqua_Solitary].Add(EnvironmentConstants.Plane_Fire);
+            encounterEnvironments[EncounterConstants.Titan_Pair].Add(EnvironmentConstants.Plane_ChaoticGood);
+            encounterEnvironments[EncounterConstants.Titan_Solitary].Add(EnvironmentConstants.Plane_ChaoticGood);
+            encounterEnvironments[EncounterConstants.Tojanida_Adult_Clutch].Add(EnvironmentConstants.Plane_Water);
+            encounterEnvironments[EncounterConstants.Tojanida_Adult_Solitary].Add(EnvironmentConstants.Plane_Water);
+            encounterEnvironments[EncounterConstants.Tojanida_Elder_Clutch].Add(EnvironmentConstants.Plane_Water);
+            encounterEnvironments[EncounterConstants.Tojanida_Elder_Solitary].Add(EnvironmentConstants.Plane_Water);
+            encounterEnvironments[EncounterConstants.Tojanida_Juvenile_Clutch].Add(EnvironmentConstants.Plane_Water);
+            encounterEnvironments[EncounterConstants.Tojanida_Juvenile_Solitary].Add(EnvironmentConstants.Plane_Water);
+            encounterEnvironments[EncounterConstants.Treant_Grove].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Treant_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Triton_Band].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic);
+            encounterEnvironments[EncounterConstants.Triton_Company].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic);
+            encounterEnvironments[EncounterConstants.Triton_Squad].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic);
+            encounterEnvironments[EncounterConstants.Troglodyte_Band].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.Troglodyte_Clutch].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.Troglodyte_Squad].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.Troll_Gang].Add(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Troll_Solitary].Add(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Troll_Hunter_Solitary].Add(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Troll_Scrag_Gang].Add(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Aquatic);
+            encounterEnvironments[EncounterConstants.Troll_Scrag_Solitary].Add(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Aquatic);
+            encounterEnvironments[EncounterConstants.Troll_Scrag_Hunter_Solitary].Add(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Aquatic);
+            encounterEnvironments[EncounterConstants.Unicorn_Grace].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Unicorn_Pair].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Unicorn_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Unicorn_CelestialCharger_Solitary].Add(EnvironmentConstants.Plane_ChaoticGood);
+            encounterEnvironments[EncounterConstants.Vampire_Level1_Gang].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Vampire_Level1_Pair].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Vampire_Level1_Solitary].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Vampire_Level1_Troupe].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Vampire_Level2_Gang].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Vampire_Level2_Pair].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Vampire_Level2_Solitary].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Vampire_Level2_Troupe].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Vampire_Level3_Gang].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Vampire_Level3_Pair].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Vampire_Level3_Solitary].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Vampire_Level3_Troupe].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Vampire_Level4_Gang].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Vampire_Level4_Pair].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Vampire_Level4_Solitary].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Vampire_Level4_Troupe].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Vampire_Level5_Gang].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Vampire_Level5_Pair].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Vampire_Level5_Solitary].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Vampire_Level5_Troupe].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Vampire_Level6_Gang].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Vampire_Level6_Pair].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Vampire_Level6_Solitary].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Vampire_Level6_Troupe].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Vampire_Level7_Gang].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Vampire_Level7_Pair].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Vampire_Level7_Solitary].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Vampire_Level7_Troupe].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Vampire_Level8_Gang].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Vampire_Level8_Pair].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Vampire_Level8_Solitary].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Vampire_Level8_Troupe].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Vampire_Level9_Gang].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Vampire_Level9_Pair].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Vampire_Level9_Solitary].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Vampire_Level9_Troupe].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Vampire_Level10_Gang].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Vampire_Level10_Pair].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Vampire_Level10_Solitary].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Vampire_Level10_Troupe].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Vampire_Level11_Gang].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Vampire_Level11_Pair].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Vampire_Level11_Solitary].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Vampire_Level11_Troupe].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Vampire_Level12_Gang].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Vampire_Level12_Pair].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Vampire_Level12_Solitary].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Vampire_Level12_Troupe].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Vampire_Level13_Gang].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Vampire_Level13_Pair].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Vampire_Level13_Solitary].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Vampire_Level13_Troupe].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Vampire_Level14_Gang].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Vampire_Level14_Pair].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Vampire_Level14_Solitary].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Vampire_Level14_Troupe].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Vampire_Level15_Gang].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Vampire_Level15_Pair].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Vampire_Level15_Solitary].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Vampire_Level15_Troupe].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Vampire_Level16_Gang].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Vampire_Level16_Pair].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Vampire_Level16_Solitary].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Vampire_Level16_Troupe].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Vampire_Level17_Gang].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Vampire_Level17_Pair].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Vampire_Level17_Solitary].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Vampire_Level17_Troupe].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Vampire_Level18_Gang].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Vampire_Level18_Pair].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Vampire_Level18_Solitary].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Vampire_Level18_Troupe].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Vampire_Level19_Gang].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Vampire_Level19_Pair].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Vampire_Level19_Solitary].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Vampire_Level19_Troupe].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Vampire_Level20_Gang].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Vampire_Level20_Pair].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Vampire_Level20_Solitary].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Vampire_Level20_Troupe].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.VampireSpawn_Pack].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.VampireSpawn_Solitary].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Vargouille_Cluster].Add(EnvironmentConstants.Plane_Evil);
+            encounterEnvironments[EncounterConstants.Vargouille_Mob].Add(EnvironmentConstants.Plane_Evil);
+            encounterEnvironments[EncounterConstants.Wight_Gang].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Wight_Pack].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Wight_Pair].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Wight_Solitary].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.WillOWisp_Pair].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh);
+            encounterEnvironments[EncounterConstants.WillOWisp_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh);
+            encounterEnvironments[EncounterConstants.WillOWisp_String].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh);
+            encounterEnvironments[EncounterConstants.WinterWolf_Pack].Add(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.WinterWolf_Pair].Add(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.WinterWolf_Solitary].Add(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Worg_Pack].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Worg_Pair].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Worg_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Wraith_Gang].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Wraith_Pack].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Wraith_Solitary].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Wraith_Dread_Solitary].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Wyvern_Flight].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Wyvern_Pair].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Wyvern_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Xill_Gang].Add(EnvironmentConstants.Plane_Ethereal);
+            encounterEnvironments[EncounterConstants.Xill_Solitary].Add(EnvironmentConstants.Plane_Ethereal);
+            encounterEnvironments[EncounterConstants.Xorn_Average_Cluster].Add(EnvironmentConstants.Plane_Earth);
+            encounterEnvironments[EncounterConstants.Xorn_Average_Pair].Add(EnvironmentConstants.Plane_Earth);
+            encounterEnvironments[EncounterConstants.Xorn_Average_Solitary].Add(EnvironmentConstants.Plane_Earth);
+            encounterEnvironments[EncounterConstants.Xorn_Elder_Pair].Add(EnvironmentConstants.Plane_Earth);
+            encounterEnvironments[EncounterConstants.Xorn_Elder_Party].Add(EnvironmentConstants.Plane_Earth);
+            encounterEnvironments[EncounterConstants.Xorn_Elder_Solitary].Add(EnvironmentConstants.Plane_Earth);
+            encounterEnvironments[EncounterConstants.Xorn_Minor_Cluster].Add(EnvironmentConstants.Plane_Earth);
+            encounterEnvironments[EncounterConstants.Xorn_Minor_Pair].Add(EnvironmentConstants.Plane_Earth);
+            encounterEnvironments[EncounterConstants.Xorn_Minor_Solitary].Add(EnvironmentConstants.Plane_Earth);
+            encounterEnvironments[EncounterConstants.YethHound_Pack].Add(EnvironmentConstants.Plane_Evil);
+            encounterEnvironments[EncounterConstants.YethHound_Pair].Add(EnvironmentConstants.Plane_Evil);
+            encounterEnvironments[EncounterConstants.YethHound_Solitary].Add(EnvironmentConstants.Plane_Evil);
+            encounterEnvironments[EncounterConstants.Yrthak_Clutch].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Yrthak_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Zombie_Kobold_Group].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Zombie_Kobold_LargeGroup].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Zombie_Kobold_SmallGroup].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Zombie_Kobold_Group].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.Zombie_Kobold_LargeGroup].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.Zombie_Kobold_SmallGroup].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.Zombie_Kobold_Group].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Zombie_Kobold_LargeGroup].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Zombie_Kobold_SmallGroup].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Zombie_Human_Group].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Zombie_Human_LargeGroup].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Zombie_Human_SmallGroup].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Zombie_Human_Group].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.Zombie_Human_LargeGroup].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.Zombie_Human_SmallGroup].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.Zombie_Human_Group].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Zombie_Human_LargeGroup].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Zombie_Human_SmallGroup].Add(EnvironmentConstants.Any);
+            encounterEnvironments[EncounterConstants.Zombie_Troglodyte_Group].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Zombie_Troglodyte_LargeGroup].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Zombie_Troglodyte_SmallGroup].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Zombie_Troglodyte_Group].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.Zombie_Troglodyte_LargeGroup].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.Zombie_Troglodyte_SmallGroup].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.Zombie_Bugbear_Group].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Zombie_Bugbear_LargeGroup].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Zombie_Bugbear_SmallGroup].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Zombie_Bugbear_Group].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.Zombie_Bugbear_LargeGroup].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.Zombie_Bugbear_SmallGroup].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.Zombie_Bugbear_Group].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Zombie_Bugbear_LargeGroup].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Zombie_Bugbear_SmallGroup].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Zombie_Ogre_Group].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Zombie_Ogre_LargeGroup].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Zombie_Ogre_SmallGroup].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Zombie_Ogre_Group].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.Zombie_Ogre_LargeGroup].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.Zombie_Ogre_SmallGroup].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.Zombie_Ogre_Group].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Zombie_Ogre_LargeGroup].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Zombie_Ogre_SmallGroup].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Zombie_Minotaur_Group].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Zombie_Minotaur_LargeGroup].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Zombie_Minotaur_SmallGroup].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Zombie_Minotaur_Group].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.Zombie_Minotaur_LargeGroup].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.Zombie_Minotaur_SmallGroup].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.Zombie_Wyvern_Group].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Zombie_Wyvern_LargeGroup].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Zombie_Wyvern_SmallGroup].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Zombie_Wyvern_Group].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.Zombie_Wyvern_LargeGroup].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.Zombie_Wyvern_SmallGroup].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.Zombie_Wyvern_Group].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Zombie_Wyvern_LargeGroup].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Zombie_Wyvern_SmallGroup].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Zombie_GrayRender_Group].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Zombie_GrayRender_LargeGroup].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Zombie_GrayRender_SmallGroup].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Zombie_GrayRender_Group].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.Zombie_GrayRender_LargeGroup].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.Zombie_GrayRender_SmallGroup].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.Zombie_GrayRender_Group].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh);
+            encounterEnvironments[EncounterConstants.Zombie_GrayRender_LargeGroup].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh);
+            encounterEnvironments[EncounterConstants.Zombie_GrayRender_SmallGroup].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh);
+            encounterEnvironments[EncounterConstants.Ape_Company].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Ape_Pair].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Ape_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Baboon_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Baboon_Troop].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Badger_Cete].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Badger_Pair].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Badger_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Bat_Colony].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert);
+            encounterEnvironments[EncounterConstants.Bat_Crowd].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert);
+            encounterEnvironments[EncounterConstants.Bear_Black_Pair].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Bear_Black_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Bear_Brown_Pair].Add(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Bear_Brown_Solitary].Add(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Bear_Polar_Pair].Add(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Bear_Polar_Solitary].Add(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Bison_Herd].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Bison_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Boar_Herd].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Boar_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Camel_Herd].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert);
+            encounterEnvironments[EncounterConstants.Cat_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Cat_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Cheetah_Family].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Cheetah_Pair].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Cheetah_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Crocodile_Colony].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh);
+            encounterEnvironments[EncounterConstants.Crocodile_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh);
+            encounterEnvironments[EncounterConstants.Crocodile_Giant_Colony].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh);
+            encounterEnvironments[EncounterConstants.Crocodile_Giant_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Marsh);
+            encounterEnvironments[EncounterConstants.Dog_Pack].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Dog_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Dog_Pack].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Dog_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Dog_Riding_Pack].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Dog_Riding_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Dog_Riding_Pack].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Dog_Riding_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Donkey_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Desert);
+            encounterEnvironments[EncounterConstants.Donkey_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Eagle_Pair].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Eagle_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Mountain);
+            encounterEnvironments[EncounterConstants.Elephant_Herd].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Elephant_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Hawk_Pair].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Hawk_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Horse_Heavy_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Horse_Heavy_War_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Horse_Light_Herd].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Horse_Light_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Horse_Light_War_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Hyena_Pack].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert);
+            encounterEnvironments[EncounterConstants.Hyena_Pair].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert);
+            encounterEnvironments[EncounterConstants.Hyena_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert);
+            encounterEnvironments[EncounterConstants.Leopard_Pair].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Leopard_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Lion_Pair].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Lion_Pride].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Lion_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Lizard_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Lizard_Monitor_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.MantaRay_School].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic);
+            encounterEnvironments[EncounterConstants.MantaRay_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic);
+            encounterEnvironments[EncounterConstants.Monkey_Troop].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Mule_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Octopus_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic);
+            encounterEnvironments[EncounterConstants.Octopus_Giant_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic);
+            encounterEnvironments[EncounterConstants.Owl_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Pony_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Pony_War_Solitary].Add(EnvironmentConstants.Civilized);
+            encounterEnvironments[EncounterConstants.Porpoise_Pair].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic);
+            encounterEnvironments[EncounterConstants.Porpoise_School].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic);
+            encounterEnvironments[EncounterConstants.Porpoise_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic);
+            encounterEnvironments[EncounterConstants.Rat_Plague].Add(EnvironmentConstants.Land);
+            encounterEnvironments[EncounterConstants.Raven_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Rhinoceras_Herd].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Rhinoceras_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Shark_Huge_Pack].Add(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Aquatic);
+            encounterEnvironments[EncounterConstants.Shark_Huge_School].Add(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Aquatic);
+            encounterEnvironments[EncounterConstants.Shark_Huge_Solitary].Add(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Aquatic);
+            encounterEnvironments[EncounterConstants.Shark_Large_Pack].Add(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Aquatic);
+            encounterEnvironments[EncounterConstants.Shark_Large_School].Add(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Aquatic);
+            encounterEnvironments[EncounterConstants.Shark_Large_Solitary].Add(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Aquatic);
+            encounterEnvironments[EncounterConstants.Shark_Medium_Pack].Add(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Aquatic);
+            encounterEnvironments[EncounterConstants.Shark_Medium_School].Add(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Aquatic);
+            encounterEnvironments[EncounterConstants.Shark_Medium_Solitary].Add(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Aquatic);
+            encounterEnvironments[EncounterConstants.Snake_Constrictor_Giant_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Snake_Constrictor_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Snake_Viper_Huge_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh);
+            encounterEnvironments[EncounterConstants.Snake_Viper_Large_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh);
+            encounterEnvironments[EncounterConstants.Snake_Viper_Medium_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh);
+            encounterEnvironments[EncounterConstants.Snake_Viper_Small_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh);
+            encounterEnvironments[EncounterConstants.Snake_Viper_Tiny_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh);
+            encounterEnvironments[EncounterConstants.Squid_School].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic);
+            encounterEnvironments[EncounterConstants.Squid_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic);
+            encounterEnvironments[EncounterConstants.Squid_Giant_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic);
+            encounterEnvironments[EncounterConstants.Tiger_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Toad_Swarm].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Marsh);
+            encounterEnvironments[EncounterConstants.Weasel_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Whale_Baleen_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Aquatic);
+            encounterEnvironments[EncounterConstants.Whale_Cachalot_Pod].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic);
+            encounterEnvironments[EncounterConstants.Whale_Cachalot_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic);
+            encounterEnvironments[EncounterConstants.Whale_Orca_Pod].Add(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Aquatic);
+            encounterEnvironments[EncounterConstants.Whale_Orca_Solitary].Add(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Aquatic);
+            encounterEnvironments[EncounterConstants.Wolf_Pack].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Wolf_Pair].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Wolf_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Wolverine_Solitary].Add(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Ant_Giant_Queen_Hive].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Ant_Giant_Soldier_Gang].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Ant_Giant_Soldier_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Ant_Giant_Worker_Crew].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Ant_Giant_Worker_Gang].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Bee_Giant_Buzz].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Bee_Giant_Hive].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.Bee_Giant_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.BombardierBeetle_Giant_Click].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.BombardierBeetle_Giant_Cluster].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.FireBeetle_Giant_Cluster].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.FireBeetle_Giant_Colony].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Plains);
+            encounterEnvironments[EncounterConstants.StagBeetle_Giant_Cluster].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.StagBeetle_Giant_Mass].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.PrayingMantis_Giant_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Wasp_Giant_Nest].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Wasp_Giant_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Wasp_Giant_Swarm].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Centipede_Monstrous_Colossal_Solitary].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.Centipede_Monstrous_Gargantuan_Solitary].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.Centipede_Monstrous_Huge_Colony].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.Centipede_Monstrous_Huge_Solitary].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.Centipede_Monstrous_Large_Colony].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.Centipede_Monstrous_Large_Solitary].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.Centipede_Monstrous_Medium_Colony].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.Centipede_Monstrous_Medium_Solitary].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.Centipede_Monstrous_Small_Colony].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.Centipede_Monstrous_Small_Swarm].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.Centipede_Monstrous_Tiny_Colony].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.Scorpion_Monstrous_Colossal_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert);
+            encounterEnvironments[EncounterConstants.Scorpion_Monstrous_Gargantuan_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert);
+            encounterEnvironments[EncounterConstants.Scorpion_Monstrous_Huge_Colony].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert);
+            encounterEnvironments[EncounterConstants.Scorpion_Monstrous_Huge_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert);
+            encounterEnvironments[EncounterConstants.Scorpion_Monstrous_Large_Colony].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert);
+            encounterEnvironments[EncounterConstants.Scorpion_Monstrous_Large_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert);
+            encounterEnvironments[EncounterConstants.Scorpion_Monstrous_Medium_Colony].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert);
+            encounterEnvironments[EncounterConstants.Scorpion_Monstrous_Medium_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert);
+            encounterEnvironments[EncounterConstants.Scorpion_Monstrous_Small_Colony].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert);
+            encounterEnvironments[EncounterConstants.Scorpion_Monstrous_Small_Swarm].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert);
+            encounterEnvironments[EncounterConstants.Scorpion_Monstrous_Tiny_Colony].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Desert);
+            encounterEnvironments[EncounterConstants.Spider_Monstrous_Colossal_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Spider_Monstrous_Gargantuan_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Spider_Monstrous_Huge_Colony].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Spider_Monstrous_Huge_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Spider_Monstrous_Large_Colony].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Spider_Monstrous_Large_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Spider_Monstrous_Medium_Colony].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Spider_Monstrous_Medium_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Spider_Monstrous_Small_Colony].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Spider_Monstrous_Small_Swarm].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Spider_Monstrous_Tiny_Colony].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.Beholder_Cluster].Add(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Beholder_Pair].Add(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Beholder_Solitary].Add(EnvironmentConstants.Temperatures.Cold + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.CarrionCrawler_Cluster].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.CarrionCrawler_Pair].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.CarrionCrawler_Solitary].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.DisplacerBeast_Pair].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.DisplacerBeast_Pride].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.DisplacerBeast_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.DisplacerBeast_PackLord_Pair].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.DisplacerBeast_PackLord_Solitary].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Hills);
+            encounterEnvironments[EncounterConstants.Githyanki_Company].Add(EnvironmentConstants.Plane_Astral);
+            encounterEnvironments[EncounterConstants.Githyanki_Regiment].Add(EnvironmentConstants.Plane_Astral);
+            encounterEnvironments[EncounterConstants.Githyanki_Squad].Add(EnvironmentConstants.Plane_Astral);
+            encounterEnvironments[EncounterConstants.Githzerai_Fellowship].Add(EnvironmentConstants.Plane_Limbo);
+            encounterEnvironments[EncounterConstants.Githzerai_Order].Add(EnvironmentConstants.Plane_Limbo);
+            encounterEnvironments[EncounterConstants.Githzerai_Sect].Add(EnvironmentConstants.Plane_Limbo);
+            encounterEnvironments[EncounterConstants.MindFlayer_Cult].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.MindFlayer_Inquisition].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.MindFlayer_Pair].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.MindFlayer_Solitary].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.MindFlayer_Sorcerer_Cult].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.MindFlayer_Sorcerer_Inquisition].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.MindFlayer_Sorcerer_Solitary].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.KuoToa_Band].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic);
+            encounterEnvironments[EncounterConstants.KuoToa_Patrol].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic);
+            encounterEnvironments[EncounterConstants.KuoToa_Squad].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic);
+            encounterEnvironments[EncounterConstants.KuoToa_Tribe].Add(EnvironmentConstants.Temperatures.Temperate + EnvironmentConstants.Aquatic);
+            encounterEnvironments[EncounterConstants.Slaad_Blue_Gang].Add(EnvironmentConstants.Plane_Limbo);
+            encounterEnvironments[EncounterConstants.Slaad_Blue_Pack].Add(EnvironmentConstants.Plane_Limbo);
+            encounterEnvironments[EncounterConstants.Slaad_Blue_Pair].Add(EnvironmentConstants.Plane_Limbo);
+            encounterEnvironments[EncounterConstants.Slaad_Blue_Solitary].Add(EnvironmentConstants.Plane_Limbo);
+            encounterEnvironments[EncounterConstants.Slaad_Death_Pair].Add(EnvironmentConstants.Plane_Limbo);
+            encounterEnvironments[EncounterConstants.Slaad_Death_Solitary].Add(EnvironmentConstants.Plane_Limbo);
+            encounterEnvironments[EncounterConstants.Slaad_Gray_Pair].Add(EnvironmentConstants.Plane_Limbo);
+            encounterEnvironments[EncounterConstants.Slaad_Gray_Solitary].Add(EnvironmentConstants.Plane_Limbo);
+            encounterEnvironments[EncounterConstants.Slaad_Green_Gang].Add(EnvironmentConstants.Plane_Limbo);
+            encounterEnvironments[EncounterConstants.Slaad_Green_Solitary].Add(EnvironmentConstants.Plane_Limbo);
+            encounterEnvironments[EncounterConstants.Slaad_Red_Gang].Add(EnvironmentConstants.Plane_Limbo);
+            encounterEnvironments[EncounterConstants.Slaad_Red_Pack].Add(EnvironmentConstants.Plane_Limbo);
+            encounterEnvironments[EncounterConstants.Slaad_Red_Pair].Add(EnvironmentConstants.Plane_Limbo);
+            encounterEnvironments[EncounterConstants.Slaad_Red_Solitary].Add(EnvironmentConstants.Plane_Limbo);
+            encounterEnvironments[EncounterConstants.UmberHulk_Cluster].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.UmberHulk_Solitary].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.UmberHulk_TrulyHorrid_Solitary].Add(EnvironmentConstants.Underground);
+            encounterEnvironments[EncounterConstants.YuanTi_Abomination_Gang].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.YuanTi_Abomination_Pair].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.YuanTi_Abomination_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.YuanTi_Halfblood_Gang].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.YuanTi_Halfblood_Pair].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.YuanTi_Halfblood_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.YuanTi_Pureblood_Gang].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.YuanTi_Pureblood_Pair].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.YuanTi_Pureblood_Solitary].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.YuanTi_Tribe].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest);
+            encounterEnvironments[EncounterConstants.YuanTi_Troupe].Add(EnvironmentConstants.Temperatures.Warm + EnvironmentConstants.Forest);
+
+            foreach (var kvp in encounterEnvironments)
+            {
+                var encounter = kvp.Key;
+                var environments = kvp.Value;
+                Assert.That(environments, Is.Not.Empty, encounter);
+
+                foreach (var environment in environments)
+                {
+                    Assert.That(table, Contains.Key(environment));
+                    Assert.That(table[environment], Contains.Item(encounter), $"Env: {environment}");
+                }
+            }
         }
 
         [Test]
