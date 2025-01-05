@@ -7,7 +7,9 @@
     <Product>EncounterGen</Product>
     <Description>This generates encounters for the Dungeons and Dragons 3.5 system.  One can generate encounters of particular levels, times of day, and environments.  One can also filter creature types.  Treasure and equipment are generated.</Description>
     <PackageReleaseNotes>
-	  6.0.0: #77 - fix security vulnerabilities. CharacterGen has a breaking change going to 13.0.0
+	  6.0.0:
+	    * #77 - fix security vulnerabilities. CharacterGen has a breaking change going to 13.0.0
+		* #78 - fix NPC Class encounter Challenge Ratings
 	</PackageReleaseNotes>
     <PackageProjectUrl>https://github.com/DnDGen/EncounterGen</PackageProjectUrl>
     <RepositoryUrl>https://github.com/DnDGen/EncounterGen</RepositoryUrl>
