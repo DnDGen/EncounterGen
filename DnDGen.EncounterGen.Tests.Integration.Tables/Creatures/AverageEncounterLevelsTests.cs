@@ -56,6 +56,10 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures
                     //INFO: Using a GUID and not the actual creature name so that characters are computed like other creatures
                     creature.Creature.Name = Guid.NewGuid().ToString();
                     creature.ChallengeRating = challengeRatingSelector.SelectAverageForCreature(creatureName);
+
+                    //INFO: Rounding away from zero, so that we over-estimate the CR of encounters
+                    //Otherwise, you have Adult White Dragon (Solitary) [1] and Adult White Dragons (Family) [1d2 + kids] have the same average CR,
+                    //which doesn't make sense
                     creature.Quantity = Convert.ToInt32(Math.Round(averageQuantity, MidpointRounding.AwayFromZero));
 
                     creatures.Add(creature);

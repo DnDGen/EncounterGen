@@ -490,6 +490,8 @@
 	</collection>
 	<collection>
 		<name>5</name>
+		<entry>Pilgrims [Level 1] (Caravan)</entry>
+		<entry>Guards [Level 2] (Patrol)</entry>
 		<entry>Achaierai (Solitary)</entry>
 		<entry>Huge Animated Object (Solitary)</entry>
 		<entry>Adult Arrowhawk (Solitary)</entry>
@@ -538,8 +540,7 @@
 		<entry>Missionaries [Level 2] (Mission Team)</entry>
 		<entry>Pickpocket [Level 5] (Solitary)</entry>
 		<entry>Gentry [Level 4]</entry>
-		<entry>Minstrels [Level 4] (Group)</entry>
-		<entry>Protestors [Level 4] (Protest)</entry>
+		<entry>Minstrels [Level 2] (Group)</entry>
 		<entry>Scholar [Level 5] (Solitary)</entry>
 		<entry>Sellsword [Level 5] (Solitary)</entry>
 		<entry>Street Performers [Level 3 Adepts] (Crew)</entry>
@@ -638,9 +639,11 @@
 		<entry>Yuan-ti Halfblood (Solitary)</entry>
 		<entry>Yuan-ti Purebloods (Pair)</entry>
 		<entry>Bugbear Zombies (Small Group)</entry>
+		<entry>Protestors [Level 2] (Protest)</entry>
 	</collection>
 	<collection>
 		<name>6</name>
+		<entry>Politician [Level 3] (with Advisers and Guards)</entry>
 		<entry>Gentry [Level 5]</entry>
 		<entry>Bandits [Level 1] (Gang with Fighter)</entry>
 		<entry>Business People [Level 4] (Group)</entry>
@@ -689,7 +692,6 @@
 		<entry>Merchants [Level 2] (Caravan)</entry>
 		<entry>Missionaries [Level 3] (Mission Team)</entry>
 		<entry>Pickpocket [Level 6] (Solitary)</entry>
-		<entry>Pilgrims [Level 1] (Caravan)</entry>
 		<entry>Scholar [Level 6] (Solitary)</entry>
 		<entry>Sellsword [Level 6] (Solitary)</entry>
 		<entry>Street Performers [Level 3] (Crew)</entry>
@@ -781,6 +783,10 @@
 	</collection>
 	<collection>
 		<name>7</name>
+		<entry>Protestors [Level 3] (Protest)</entry>
+		<entry>Politician [Level 4] (with Advisers and Guards)</entry>
+		<entry>Pilgrims [Level 2] (Caravan)</entry>
+		<entry>Guards [Level 3] (Patrol)</entry>
 		<entry>Gentry [Level 6] (with Servants)</entry>
 		<entry>Business People [Level 5] (Group)</entry>
 		<entry>Farmers [Level 5] (Group)</entry>
@@ -847,12 +853,9 @@
 		<entry>Local [Level 8] (with Light Horse)</entry>
 		<entry>Local [Level 8] (with Light Warhorse)</entry>
 		<entry>Local [Level 8] (with Mule)</entry>
-		<entry>Humans (Company)</entry>
 		<entry>Kobolds (Warband)</entry>
-		<entry>Locathah (Patrol)</entry>
-		<entry>Merfolk (Patrol)</entry>
 		<entry>Vampires [Level 1] (Gang)</entry>
-		<entry>Local [Level 14-15] (with Heavy Warhorse)</entry>
+		<entry>Local [Level 8] (with Heavy Warhorse)</entry>
 		<entry>Githyanki (Company)</entry>
 		<entry>Vampires [Level 3] (Pair)</entry>
 		<entry>Merrow Barbarian (Solitary)</entry>
@@ -939,9 +942,20 @@
 		<entry>Yuan-ti Purebloods (Gang)</entry>
 		<entry>Minotaur Zombies (Small Group)</entry>
 		<entry>Wyvern Zombies (Small Group)</entry>
+		<entry>Minstrels [Level 3] (Group)</entry>
 	</collection>
 	<collection>
 		<name>8</name>
+		<entry>Gentry [Level 7] (with Servants)</entry>
+		<entry>Guards [Level 2] (Patrol with Lieutenant)</entry>
+		<entry>Guards [Level 4] (Patrol)</entry>
+		<entry>Humans (Company)</entry>
+		<entry>Locathah (Patrol)</entry>
+		<entry>Merchants [Level 3] (Caravan)</entry>
+		<entry>Merfolk (Patrol)</entry>
+		<entry>Minstrels [Level 4] (Group)</entry>
+		<entry>Politician [Level 5] (with Advisers and Guards)</entry>
+		<entry>Protestors [Level 4] (Protest)</entry>
 		<entry>Forest Gnomes (Squad)</entry>
 		<entry>Rock Gnomes (Squad)</entry>
 		<entry>Half-Orcs (Squad)</entry>
@@ -1710,6 +1724,7 @@
 	</collection>
 	<collection>
 		<name>13</name>
+		<entry>Teacher [Level 12] (with Students)</entry>
 		<entry>Pilgrims [Level 2] (Caravan with Leader)</entry>
 		<entry>Pilgrims [Level 7] (Caravan)</entry>
 		<entry>Merfolk (Band)</entry>
@@ -1861,6 +1876,7 @@
 	</collection>
 	<collection>
 		<name>14</name>
+		<entry>Protestors [Level 10] (Protest)</entry>
 		<entry>Business People [Level 12] (Group)</entry>
 		<entry>Farmers [Level 12] (Group)</entry>
 		<entry>Herders [Level 12] (Group)</entry>
@@ -1919,7 +1935,7 @@
 		<entry>Sellsword [Level 14] (Solitary)</entry>
 		<entry>Street Performers [Level 11] (Crew)</entry>
 		<entry>Githzerai (Sect)</entry>
-		<entry>Teacher [Level 14] (with Students)</entry>
+		<entry>Teacher [Level 13] (with Students)</entry>
 		<entry>War Hero [Level 14] (Solitary)</entry>
 		<entry>Goblins (Tribe)</entry>
 		<entry>Hobgoblins (Tribe with Ogres)</entry>

@@ -582,23 +582,27 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Treasures
         public void TreasureGroupOfOnePresetItem(string entry, string itemName, string itemType, int itemBonus, string abilityName, params string[] traits)
         {
             var setItem = FormatSetItem(itemName, itemType, itemBonus, abilityName, 0, false, traits);
-            base.AssertDistinctCollection(entry, new[] { setItem });
+            base.AssertDistinctCollection(entry, [setItem]);
         }
 
         private string FormatSetItem(string itemName, string itemType, int itemBonus = 0, string abilityName = "", int abilityBonus = 0, bool isMagic = false, params string[] traits)
         {
-            var item = new Item();
-            item.Name = itemName;
-            item.ItemType = itemType;
+            var item = new Item
+            {
+                Name = itemName,
+                ItemType = itemType
+            };
             item.Magic.Bonus = itemBonus;
 
             if (!string.IsNullOrEmpty(abilityName))
             {
-                var ability = new SpecialAbility();
-                ability.Name = abilityName;
-                ability.BonusEquivalent = abilityBonus;
+                var ability = new SpecialAbility
+                {
+                    Name = abilityName,
+                    BonusEquivalent = abilityBonus
+                };
 
-                item.Magic.SpecialAbilities = new[] { ability };
+                item.Magic.SpecialAbilities = [ability];
             }
 
             item.IsMagical = isMagic;
@@ -614,7 +618,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Treasures
         {
             var morningstar = FormatSetItem(WeaponConstants.Morningstar, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Huge);
 
-            base.AssertCollection(CreatureDataConstants.Athach, new[] { morningstar, morningstar, morningstar });
+            base.AssertCollection(CreatureDataConstants.Athach, [morningstar, morningstar, morningstar]);
         }
 
         [Test]
@@ -623,7 +627,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Treasures
             var warhammer = FormatSetItem(WeaponConstants.Warhammer, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Medium);
             var spear = FormatSetItem(WeaponConstants.Shortspear, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Medium);
 
-            base.AssertDistinctCollection(CreatureDataConstants.Azer, new[] { warhammer, spear });
+            base.AssertDistinctCollection(CreatureDataConstants.Azer, [warhammer, spear]);
         }
 
         [Test]
@@ -632,7 +636,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Treasures
             var longsword = FormatSetItem(WeaponConstants.Longsword, ItemTypeConstants.Weapon, 1, SpecialAbilityConstants.Vorpal, 0, false, TraitConstants.Sizes.Large);
             var whip = FormatSetItem(WeaponConstants.Whip, ItemTypeConstants.Weapon, 1, SpecialAbilityConstants.Flaming, 0, false, TraitConstants.Sizes.Large);
 
-            base.AssertDistinctCollection(CreatureDataConstants.Balor, new[] { longsword, whip });
+            base.AssertDistinctCollection(CreatureDataConstants.Balor, [longsword, whip]);
         }
 
         [Test]
@@ -640,7 +644,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Treasures
         {
             var scimitar = FormatSetItem(WeaponConstants.Scimitar, ItemTypeConstants.Weapon, 1, SpecialAbilityConstants.Holy, 0, false, TraitConstants.Sizes.Medium);
             var longbow = FormatSetItem(WeaponConstants.CompositeLongbow, ItemTypeConstants.Weapon, 1, SpecialAbilityConstants.Holy, 0, false, "+4 Strength bonus", TraitConstants.Sizes.Medium);
-            base.AssertDistinctCollection(CreatureDataConstants.Bralani, new[] { scimitar, longbow });
+            base.AssertDistinctCollection(CreatureDataConstants.Bralani, [scimitar, longbow]);
         }
 
         [Test]
@@ -649,7 +653,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Treasures
             var morningstar = FormatSetItem(WeaponConstants.Morningstar, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Medium);
             var javelin = FormatSetItem(WeaponConstants.Javelin, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Medium);
 
-            base.AssertDistinctCollection(CreatureDataConstants.Bugbear, new[] { morningstar, javelin });
+            base.AssertDistinctCollection(CreatureDataConstants.Bugbear, [morningstar, javelin]);
         }
 
         [Test]
@@ -658,7 +662,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Treasures
             var longsword = FormatSetItem(WeaponConstants.Longsword, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Large);
             var longbow = FormatSetItem(WeaponConstants.CompositeLongbow, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Large, "+4 Strength bonus");
 
-            base.AssertDistinctCollection(CreatureDataConstants.Centaur, new[] { longsword, longbow });
+            base.AssertDistinctCollection(CreatureDataConstants.Centaur, [longsword, longbow]);
         }
 
         [Test]
@@ -666,7 +670,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Treasures
         {
             var shortSword = FormatSetItem(WeaponConstants.ShortSword, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Small);
             var crossbow = FormatSetItem(WeaponConstants.LightRepeatingCrossbow, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Small);
-            base.AssertDistinctCollection(CreatureDataConstants.Derro, new[] { shortSword, crossbow });
+            base.AssertDistinctCollection(CreatureDataConstants.Derro, [shortSword, crossbow]);
         }
 
         [Test]
@@ -675,7 +679,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Treasures
             var dagger = FormatSetItem(WeaponConstants.Dagger, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Large);
             var shortbow = FormatSetItem(WeaponConstants.Shortbow, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Large);
 
-            base.AssertCollection(CreatureDataConstants.Drider, new[] { dagger, dagger, shortbow });
+            base.AssertCollection(CreatureDataConstants.Drider, [dagger, dagger, shortbow]);
         }
 
         [Test]
@@ -684,7 +688,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Treasures
             var dagger = FormatSetItem(WeaponConstants.Dagger, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Medium);
             var longbow = FormatSetItem(WeaponConstants.Longbow, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Medium, TraitConstants.Masterwork);
 
-            base.AssertDistinctCollection(CreatureDataConstants.Dryad, new[] { dagger, longbow });
+            base.AssertDistinctCollection(CreatureDataConstants.Dryad, [dagger, longbow]);
         }
 
         [Test]
@@ -694,7 +698,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Treasures
             var longbow = FormatSetItem(WeaponConstants.CompositeLongbow, ItemTypeConstants.Weapon, 1, SpecialAbilityConstants.Flaming, 0, false, "+5 Strength bonus", TraitConstants.Sizes.Medium);
             var rope = FormatSetItem("Rope, 50 ft.", ItemTypeConstants.Tool);
 
-            base.AssertDistinctCollection(CreatureDataConstants.Erinyes, new[] { longsword, longbow, rope });
+            base.AssertDistinctCollection(CreatureDataConstants.Erinyes, [longsword, longbow, rope]);
         }
 
         [Test]
@@ -703,7 +707,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Treasures
             var morningstar = FormatSetItem(WeaponConstants.Morningstar, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Large);
             var javelin = FormatSetItem(WeaponConstants.Javelin, ItemTypeConstants.Weapon, 0, string.Empty, 0, false, TraitConstants.Sizes.Large);
 
-            base.AssertDistinctCollection(CreatureDataConstants.Ettin, new[] { morningstar, javelin });
+            base.AssertDistinctCollection(CreatureDataConstants.Ettin, [morningstar, javelin]);
         }
 
         [Test]
@@ -999,6 +1003,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Treasures
         {
             var entries = GetEntries();
             var characters = entries.Where(e => e.Contains(CreatureDataConstants.Character));
+            Assert.That(characters, Is.Not.Empty);
 
             foreach (var character in characters)
             {
@@ -1011,6 +1016,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Treasures
         {
             var entries = GetEntries();
             var noncombatants = entries.Where(e => e.Contains(CreatureDataConstants.Noncombatant));
+            Assert.That(noncombatants, Is.Not.Empty);
 
             foreach (var noncombatant in noncombatants)
             {
@@ -1030,11 +1036,11 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Treasures
 
                 var weapons = items.Where(i => i.Contains(ItemTypeConstants.Weapon));
                 foreach (var weapon in weapons)
-                    Assert.That(sizes.Any(s => weapon.Contains(s)), Is.True, $"Item {weapon} for {entry}");
+                    Assert.That(sizes.Any(weapon.Contains), Is.True, $"Item {weapon} for {entry}");
 
                 var armors = items.Where(i => i.Contains(ItemTypeConstants.Armor));
                 foreach (var armor in armors)
-                    Assert.That(sizes.Any(s => armor.Contains(s)), Is.True, $"Item {armor} for {entry}");
+                    Assert.That(sizes.Any(armor.Contains), Is.True, $"Item {armor} for {entry}");
             }
         }
     }

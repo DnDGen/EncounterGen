@@ -1255,7 +1255,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         }
 
         [Test]
-        public void AristocratBusinessmanPerformerSubgroup()
+        public void AristocratBusinessmanPersonSubgroup()
         {
             var items = new[]
             {
@@ -1285,7 +1285,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Tables.Creatures.CreatureGroups
         }
 
         [Test]
-        public void AristocratGentryPerformerSubgroup()
+        public void AristocratGentrySubgroup()
         {
             var items = new[]
             {

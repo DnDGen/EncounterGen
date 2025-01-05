@@ -23,6 +23,7 @@ namespace DnDGen.EncounterGen.Tests.Integration.Generators
             stopwatch = new Stopwatch();
         }
 
+        [Repeat(100)]
         [TestCase(EnvironmentConstants.Civilized, EnvironmentConstants.Temperatures.Temperate, EnvironmentConstants.TimesOfDay.Night, 7, false, true)]
         [TestCase(EnvironmentConstants.Civilized, EnvironmentConstants.Temperatures.Warm, EnvironmentConstants.TimesOfDay.Night, 1, false, true)]
         [TestCase(EnvironmentConstants.Desert, EnvironmentConstants.Temperatures.Warm, EnvironmentConstants.TimesOfDay.Day, 1, false, false)]

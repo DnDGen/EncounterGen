@@ -263,7 +263,7 @@
     <entry>Character(Beggar)@Commoner@</entry>
     <entry>Character(Business person)@Aristocrat@</entry>
     <entry>Character(Captain)@Fighter@</entry>
-    <entry>Character(Captain)@Warrior@</entry>
+    <entry>Character(Lieutenant)@Warrior@</entry>
     <entry>Character(Construction Worker)@Commoner@</entry>
     <entry>Character(Crusader)@Paladin@</entry>
     <entry>Character(Doctor)@Adept@</entry>
@@ -389,15 +389,24 @@
   <collection>
     <name>Character(Adviser)@Expert@</name>
     <entry>Character(Adviser)[1]@Expert@</entry>
-    <entry>Character(Adviser)[1d2+1]@Expert@</entry>
-    <entry>Character(Adviser)[1d2+3]@Expert@</entry>
-    <entry>Character(Adviser)[1d2+5]@Expert@</entry>
-    <entry>Character(Adviser)[1d2+7]@Expert@</entry>
-    <entry>Character(Adviser)[1d2+9]@Expert@</entry>
-    <entry>Character(Adviser)[1d2+11]@Expert@</entry>
-    <entry>Character(Adviser)[1d2+13]@Expert@</entry>
-    <entry>Character(Adviser)[1d2+15]@Expert@</entry>
-    <entry>Character(Adviser)[1d2+17]@Expert@</entry>
+	  <entry>Character(Adviser)[2]@Expert@</entry>
+	  <entry>Character(Adviser)[3]@Expert@</entry>
+	  <entry>Character(Adviser)[4]@Expert@</entry>
+	  <entry>Character(Adviser)[5]@Expert@</entry>
+	  <entry>Character(Adviser)[6]@Expert@</entry>
+	  <entry>Character(Adviser)[7]@Expert@</entry>
+	  <entry>Character(Adviser)[8]@Expert@</entry>
+	  <entry>Character(Adviser)[9]@Expert@</entry>
+	  <entry>Character(Adviser)[10]@Expert@</entry>
+	  <entry>Character(Adviser)[11]@Expert@</entry>
+	  <entry>Character(Adviser)[12]@Expert@</entry>
+	  <entry>Character(Adviser)[13]@Expert@</entry>
+	  <entry>Character(Adviser)[14]@Expert@</entry>
+	  <entry>Character(Adviser)[15]@Expert@</entry>
+	  <entry>Character(Adviser)[16]@Expert@</entry>
+	  <entry>Character(Adviser)[17]@Expert@</entry>
+	  <entry>Character(Adviser)[18]@Expert@</entry>
+	  <entry>Character(Adviser)[19]@Expert@</entry>
     <entry>Character(Adviser)[20]@Expert@</entry>
   </collection>
   <collection>
@@ -426,112 +435,165 @@
   <collection>
     <name>Character(Architect)@Expert@</name>
     <entry>Character(Architect)[1]@Expert@</entry>
-    <entry>Character(Architect)[1d2+1]@Expert@</entry>
-    <entry>Character(Architect)[1d2+3]@Expert@</entry>
-    <entry>Character(Architect)[1d2+5]@Expert@</entry>
-    <entry>Character(Architect)[1d2+7]@Expert@</entry>
-    <entry>Character(Architect)[1d2+9]@Expert@</entry>
-    <entry>Character(Architect)[1d2+11]@Expert@</entry>
-    <entry>Character(Architect)[1d2+13]@Expert@</entry>
-    <entry>Character(Architect)[1d2+15]@Expert@</entry>
-    <entry>Character(Architect)[1d2+17]@Expert@</entry>
+	  <entry>Character(Architect)[2]@Expert@</entry>
+	  <entry>Character(Architect)[3]@Expert@</entry>
+	  <entry>Character(Architect)[4]@Expert@</entry>
+	  <entry>Character(Architect)[5]@Expert@</entry>
+	  <entry>Character(Architect)[6]@Expert@</entry>
+	  <entry>Character(Architect)[7]@Expert@</entry>
+	  <entry>Character(Architect)[8]@Expert@</entry>
+	  <entry>Character(Architect)[9]@Expert@</entry>
+	  <entry>Character(Architect)[10]@Expert@</entry>
+	  <entry>Character(Architect)[11]@Expert@</entry>
+	  <entry>Character(Architect)[12]@Expert@</entry>
+	  <entry>Character(Architect)[13]@Expert@</entry>
+	  <entry>Character(Architect)[14]@Expert@</entry>
+	  <entry>Character(Architect)[15]@Expert@</entry>
+	  <entry>Character(Architect)[16]@Expert@</entry>
+	  <entry>Character(Architect)[17]@Expert@</entry>
+	  <entry>Character(Architect)[18]@Expert@</entry>
+	  <entry>Character(Architect)[19]@Expert@</entry>
     <entry>Character(Architect)[20]@Expert@</entry>
   </collection>
   <collection>
     <name>Character(Artisan)@Expert@</name>
     <entry>Character(Artisan)[1]@Expert@</entry>
-    <entry>Character(Artisan)[1d2+1]@Expert@</entry>
-    <entry>Character(Artisan)[1d2+3]@Expert@</entry>
-    <entry>Character(Artisan)[1d2+5]@Expert@</entry>
-    <entry>Character(Artisan)[1d2+7]@Expert@</entry>
-    <entry>Character(Artisan)[1d2+9]@Expert@</entry>
-    <entry>Character(Artisan)[1d2+11]@Expert@</entry>
-    <entry>Character(Artisan)[1d2+13]@Expert@</entry>
-    <entry>Character(Artisan)[1d2+15]@Expert@</entry>
-    <entry>Character(Artisan)[1d2+17]@Expert@</entry>
+	  <entry>Character(Artisan)[2]@Expert@</entry>
+	  <entry>Character(Artisan)[3]@Expert@</entry>
+	  <entry>Character(Artisan)[4]@Expert@</entry>
+	  <entry>Character(Artisan)[5]@Expert@</entry>
+	  <entry>Character(Artisan)[6]@Expert@</entry>
+	  <entry>Character(Artisan)[7]@Expert@</entry>
+	  <entry>Character(Artisan)[8]@Expert@</entry>
+	  <entry>Character(Artisan)[9]@Expert@</entry>
+	  <entry>Character(Artisan)[10]@Expert@</entry>
+	  <entry>Character(Artisan)[11]@Expert@</entry>
+	  <entry>Character(Artisan)[12]@Expert@</entry>
+	  <entry>Character(Artisan)[13]@Expert@</entry>
+	  <entry>Character(Artisan)[14]@Expert@</entry>
+	  <entry>Character(Artisan)[15]@Expert@</entry>
+	  <entry>Character(Artisan)[16]@Expert@</entry>
+	  <entry>Character(Artisan)[17]@Expert@</entry>
+	  <entry>Character(Artisan)[18]@Expert@</entry>
+	  <entry>Character(Artisan)[19]@Expert@</entry>
     <entry>Character(Artisan)[20]@Expert@</entry>
   </collection>
   <collection>
     <name>Character(Bandit)@Warrior@</name>
     <entry>Character(Bandit)[1]@Warrior@</entry>
-    <entry>Character(Bandit)[1d2+1]@Warrior@</entry>
-    <entry>Character(Bandit)[1d2+3]@Warrior@</entry>
-    <entry>Character(Bandit)[1d2+5]@Warrior@</entry>
-    <entry>Character(Bandit)[1d2+7]@Warrior@</entry>
-    <entry>Character(Bandit)[1d2+9]@Warrior@</entry>
-    <entry>Character(Bandit)[1d2+11]@Warrior@</entry>
-    <entry>Character(Bandit)[1d2+13]@Warrior@</entry>
-    <entry>Character(Bandit)[1d2+15]@Warrior@</entry>
-    <entry>Character(Bandit)[1d2+17]@Warrior@</entry>
-    <entry>Character(Bandit)[20]@Warrior@</entry>
+	  <entry>Character(Bandit)[2]@Warrior@</entry>
+	  <entry>Character(Bandit)[3]@Warrior@</entry>
+	  <entry>Character(Bandit)[4]@Warrior@</entry>
+	  <entry>Character(Bandit)[5]@Warrior@</entry>
+	  <entry>Character(Bandit)[6]@Warrior@</entry>
+	  <entry>Character(Bandit)[7]@Warrior@</entry>
+	  <entry>Character(Bandit)[8]@Warrior@</entry>
+	  <entry>Character(Bandit)[9]@Warrior@</entry>
+	  <entry>Character(Bandit)[10]@Warrior@</entry>
+	  <entry>Character(Bandit)[11]@Warrior@</entry>
+	  <entry>Character(Bandit)[12]@Warrior@</entry>
+	  <entry>Character(Bandit)[13]@Warrior@</entry>
+	  <entry>Character(Bandit)[14]@Warrior@</entry>
+	  <entry>Character(Bandit)[15]@Warrior@</entry>
+	  <entry>Character(Bandit)[16]@Warrior@</entry>
+	  <entry>Character(Bandit)[17]@Warrior@</entry>
+	  <entry>Character(Bandit)[18]@Warrior@</entry>
+	  <entry>Character(Bandit)[19]@Warrior@</entry>
+	  <entry>Character(Bandit)[20]@Warrior@</entry>
   </collection>
   <collection>
     <name>Character(Beggar)@Commoner@</name>
     <entry>Character(Beggar)[1]@Commoner@</entry>
-    <entry>Character(Beggar)[1d2+1]@Commoner@</entry>
-    <entry>Character(Beggar)[1d2+3]@Commoner@</entry>
-    <entry>Character(Beggar)[1d2+5]@Commoner@</entry>
-    <entry>Character(Beggar)[1d2+7]@Commoner@</entry>
-    <entry>Character(Beggar)[1d2+9]@Commoner@</entry>
-    <entry>Character(Beggar)[1d2+11]@Commoner@</entry>
-    <entry>Character(Beggar)[1d2+13]@Commoner@</entry>
-    <entry>Character(Beggar)[1d2+15]@Commoner@</entry>
-    <entry>Character(Beggar)[1d2+17]@Commoner@</entry>
-    <entry>Character(Beggar)[20]@Commoner@</entry>
+	  <entry>Character(Beggar)[2]@Commoner@</entry>
+	  <entry>Character(Beggar)[3]@Commoner@</entry>
+	  <entry>Character(Beggar)[4]@Commoner@</entry>
+	  <entry>Character(Beggar)[5]@Commoner@</entry>
+	  <entry>Character(Beggar)[6]@Commoner@</entry>
+	  <entry>Character(Beggar)[7]@Commoner@</entry>
+	  <entry>Character(Beggar)[8]@Commoner@</entry>
+	  <entry>Character(Beggar)[9]@Commoner@</entry>
+	  <entry>Character(Beggar)[10]@Commoner@</entry>
+	  <entry>Character(Beggar)[11]@Commoner@</entry>
+	  <entry>Character(Beggar)[12]@Commoner@</entry>
+	  <entry>Character(Beggar)[13]@Commoner@</entry>
+	  <entry>Character(Beggar)[14]@Commoner@</entry>
+	  <entry>Character(Beggar)[15]@Commoner@</entry>
+	  <entry>Character(Beggar)[16]@Commoner@</entry>
+	  <entry>Character(Beggar)[17]@Commoner@</entry>
+	  <entry>Character(Beggar)[18]@Commoner@</entry>
+	  <entry>Character(Beggar)[19]@Commoner@</entry>
+	  <entry>Character(Beggar)[20]@Commoner@</entry>
   </collection>
   <collection>
     <name>Character(Business person)@Aristocrat@</name>
     <entry>Character(Business person)[1]@Aristocrat@</entry>
-    <entry>Character(Business person)[1d2+1]@Aristocrat@</entry>
-    <entry>Character(Business person)[1d2+3]@Aristocrat@</entry>
-    <entry>Character(Business person)[1d2+5]@Aristocrat@</entry>
-    <entry>Character(Business person)[1d2+7]@Aristocrat@</entry>
-    <entry>Character(Business person)[1d2+9]@Aristocrat@</entry>
-    <entry>Character(Business person)[1d2+11]@Aristocrat@</entry>
-    <entry>Character(Business person)[1d2+13]@Aristocrat@</entry>
-    <entry>Character(Business person)[1d2+15]@Aristocrat@</entry>
-    <entry>Character(Business person)[1d2+17]@Aristocrat@</entry>
+	  <entry>Character(Business person)[2]@Aristocrat@</entry>
+	  <entry>Character(Business person)[3]@Aristocrat@</entry>
+	  <entry>Character(Business person)[4]@Aristocrat@</entry>
+	  <entry>Character(Business person)[5]@Aristocrat@</entry>
+	  <entry>Character(Business person)[6]@Aristocrat@</entry>
+	  <entry>Character(Business person)[7]@Aristocrat@</entry>
+	  <entry>Character(Business person)[8]@Aristocrat@</entry>
+	  <entry>Character(Business person)[9]@Aristocrat@</entry>
+	  <entry>Character(Business person)[10]@Aristocrat@</entry>
+	  <entry>Character(Business person)[11]@Aristocrat@</entry>
+	  <entry>Character(Business person)[12]@Aristocrat@</entry>
+	  <entry>Character(Business person)[13]@Aristocrat@</entry>
+	  <entry>Character(Business person)[14]@Aristocrat@</entry>
+	  <entry>Character(Business person)[15]@Aristocrat@</entry>
+	  <entry>Character(Business person)[16]@Aristocrat@</entry>
+	  <entry>Character(Business person)[17]@Aristocrat@</entry>
+	  <entry>Character(Business person)[18]@Aristocrat@</entry>
+	  <entry>Character(Business person)[19]@Aristocrat@</entry>
     <entry>Character(Business person)[20]@Aristocrat@</entry>
   </collection>
   <collection>
     <name>Character(Captain)@Fighter@</name>
-    <entry>Character(Captain)[1]@Fighter@</entry>
-    <entry>Character(Captain)[2]@Fighter@</entry>
-    <entry>Character(Captain)[3]@Fighter@</entry>
-    <entry>Character(Captain)[4]@Fighter@</entry>
-    <entry>Character(Captain)[5]@Fighter@</entry>
-    <entry>Character(Captain)[6]@Fighter@</entry>
-    <entry>Character(Captain)[7]@Fighter@</entry>
-    <entry>Character(Captain)[8]@Fighter@</entry>
-    <entry>Character(Captain)[9]@Fighter@</entry>
-    <entry>Character(Captain)[10]@Fighter@</entry>
     <entry>Character(Captain)[11]@Fighter@</entry>
+    <entry>Character(Captain)[12]@Fighter@</entry>
+    <entry>Character(Captain)[13]@Fighter@</entry>
+    <entry>Character(Captain)[14]@Fighter@</entry>
+    <entry>Character(Captain)[15]@Fighter@</entry>
+    <entry>Character(Captain)[16]@Fighter@</entry>
+    <entry>Character(Captain)[17]@Fighter@</entry>
+    <entry>Character(Captain)[18]@Fighter@</entry>
+    <entry>Character(Captain)[19]@Fighter@</entry>
+    <entry>Character(Captain)[20]@Fighter@</entry>
   </collection>
   <collection>
-    <name>Character(Captain)@Warrior@</name>
-    <entry>Character(Captain)[1d2+1]@Warrior@</entry>
-    <entry>Character(Captain)[1d2+3]@Warrior@</entry>
-    <entry>Character(Captain)[1d2+5]@Warrior@</entry>
-    <entry>Character(Captain)[1d2+7]@Warrior@</entry>
-    <entry>Character(Captain)[1d2+9]@Warrior@</entry>
-    <entry>Character(Captain)[1d2+11]@Warrior@</entry>
-    <entry>Character(Captain)[1d2+13]@Warrior@</entry>
-    <entry>Character(Captain)[1d2+15]@Warrior@</entry>
-    <entry>Character(Captain)[1d2+17]@Warrior@</entry>
-    <entry>Character(Captain)[20]@Warrior@</entry>
+    <name>Character(Lieutenant)@Warrior@</name>
+    <entry>Character(Lieutenant)[6]@Warrior@</entry>
+    <entry>Character(Lieutenant)[7]@Warrior@</entry>
+    <entry>Character(Lieutenant)[8]@Warrior@</entry>
+    <entry>Character(Lieutenant)[9]@Warrior@</entry>
+    <entry>Character(Lieutenant)[10]@Warrior@</entry>
+    <entry>Character(Lieutenant)[11]@Warrior@</entry>
+    <entry>Character(Lieutenant)[12]@Warrior@</entry>
+    <entry>Character(Lieutenant)[13]@Warrior@</entry>
+    <entry>Character(Lieutenant)[14]@Warrior@</entry>
+    <entry>Character(Lieutenant)[15]@Warrior@</entry>
   </collection>
   <collection>
     <name>Character(Construction Worker)@Commoner@</name>
     <entry>Character(Construction Worker)[1]@Commoner@</entry>
-    <entry>Character(Construction Worker)[1d2+1]@Commoner@</entry>
-    <entry>Character(Construction Worker)[1d2+3]@Commoner@</entry>
-    <entry>Character(Construction Worker)[1d2+5]@Commoner@</entry>
-    <entry>Character(Construction Worker)[1d2+7]@Commoner@</entry>
-    <entry>Character(Construction Worker)[1d2+9]@Commoner@</entry>
-    <entry>Character(Construction Worker)[1d2+11]@Commoner@</entry>
-    <entry>Character(Construction Worker)[1d2+13]@Commoner@</entry>
-    <entry>Character(Construction Worker)[1d2+15]@Commoner@</entry>
-    <entry>Character(Construction Worker)[1d2+17]@Commoner@</entry>
+	  <entry>Character(Construction Worker)[2]@Commoner@</entry>
+	  <entry>Character(Construction Worker)[3]@Commoner@</entry>
+	  <entry>Character(Construction Worker)[4]@Commoner@</entry>
+	  <entry>Character(Construction Worker)[5]@Commoner@</entry>
+	  <entry>Character(Construction Worker)[6]@Commoner@</entry>
+	  <entry>Character(Construction Worker)[7]@Commoner@</entry>
+	  <entry>Character(Construction Worker)[8]@Commoner@</entry>
+	  <entry>Character(Construction Worker)[9]@Commoner@</entry>
+	  <entry>Character(Construction Worker)[10]@Commoner@</entry>
+	  <entry>Character(Construction Worker)[11]@Commoner@</entry>
+	  <entry>Character(Construction Worker)[12]@Commoner@</entry>
+	  <entry>Character(Construction Worker)[13]@Commoner@</entry>
+	  <entry>Character(Construction Worker)[14]@Commoner@</entry>
+	  <entry>Character(Construction Worker)[15]@Commoner@</entry>
+	  <entry>Character(Construction Worker)[16]@Commoner@</entry>
+	  <entry>Character(Construction Worker)[17]@Commoner@</entry>
+	  <entry>Character(Construction Worker)[18]@Commoner@</entry>
+	  <entry>Character(Construction Worker)[19]@Commoner@</entry>
     <entry>Character(Construction Worker)[20]@Commoner@</entry>
   </collection>
   <collection>
@@ -560,15 +622,24 @@
   <collection>
     <name>Character(Doctor)@Adept@</name>
     <entry>Character(Doctor)[1]@Adept@</entry>
-    <entry>Character(Doctor)[1d2+1]@Adept@</entry>
-    <entry>Character(Doctor)[1d2+3]@Adept@</entry>
-    <entry>Character(Doctor)[1d2+5]@Adept@</entry>
-    <entry>Character(Doctor)[1d2+7]@Adept@</entry>
-    <entry>Character(Doctor)[1d2+9]@Adept@</entry>
-    <entry>Character(Doctor)[1d2+11]@Adept@</entry>
-    <entry>Character(Doctor)[1d2+13]@Adept@</entry>
-    <entry>Character(Doctor)[1d2+15]@Adept@</entry>
-    <entry>Character(Doctor)[1d2+17]@Adept@</entry>
+	  <entry>Character(Doctor)[2]@Adept@</entry>
+	  <entry>Character(Doctor)[3]@Adept@</entry>
+	  <entry>Character(Doctor)[4]@Adept@</entry>
+	  <entry>Character(Doctor)[5]@Adept@</entry>
+	  <entry>Character(Doctor)[6]@Adept@</entry>
+	  <entry>Character(Doctor)[7]@Adept@</entry>
+	  <entry>Character(Doctor)[8]@Adept@</entry>
+	  <entry>Character(Doctor)[9]@Adept@</entry>
+	  <entry>Character(Doctor)[10]@Adept@</entry>
+	  <entry>Character(Doctor)[11]@Adept@</entry>
+	  <entry>Character(Doctor)[12]@Adept@</entry>
+	  <entry>Character(Doctor)[13]@Adept@</entry>
+	  <entry>Character(Doctor)[14]@Adept@</entry>
+	  <entry>Character(Doctor)[15]@Adept@</entry>
+	  <entry>Character(Doctor)[16]@Adept@</entry>
+	  <entry>Character(Doctor)[17]@Adept@</entry>
+	  <entry>Character(Doctor)[18]@Adept@</entry>
+	  <entry>Character(Doctor)[19]@Adept@</entry>
     <entry>Character(Doctor)[20]@Adept@</entry>
   </collection>
   <collection>
@@ -636,71 +707,116 @@
   <collection>
     <name>Character(Farmer)@Commoner@</name>
     <entry>Character(Farmer)[1]@Commoner@</entry>
-    <entry>Character(Farmer)[1d2+1]@Commoner@</entry>
-    <entry>Character(Farmer)[1d2+3]@Commoner@</entry>
-    <entry>Character(Farmer)[1d2+5]@Commoner@</entry>
-    <entry>Character(Farmer)[1d2+7]@Commoner@</entry>
-    <entry>Character(Farmer)[1d2+9]@Commoner@</entry>
-    <entry>Character(Farmer)[1d2+11]@Commoner@</entry>
-    <entry>Character(Farmer)[1d2+13]@Commoner@</entry>
-    <entry>Character(Farmer)[1d2+15]@Commoner@</entry>
-    <entry>Character(Farmer)[1d2+17]@Commoner@</entry>
+	  <entry>Character(Farmer)[2]@Commoner@</entry>
+	  <entry>Character(Farmer)[3]@Commoner@</entry>
+	  <entry>Character(Farmer)[4]@Commoner@</entry>
+	  <entry>Character(Farmer)[5]@Commoner@</entry>
+	  <entry>Character(Farmer)[6]@Commoner@</entry>
+	  <entry>Character(Farmer)[7]@Commoner@</entry>
+	  <entry>Character(Farmer)[8]@Commoner@</entry>
+	  <entry>Character(Farmer)[9]@Commoner@</entry>
+	  <entry>Character(Farmer)[10]@Commoner@</entry>
+	  <entry>Character(Farmer)[11]@Commoner@</entry>
+	  <entry>Character(Farmer)[12]@Commoner@</entry>
+	  <entry>Character(Farmer)[13]@Commoner@</entry>
+	  <entry>Character(Farmer)[14]@Commoner@</entry>
+	  <entry>Character(Farmer)[15]@Commoner@</entry>
+	  <entry>Character(Farmer)[16]@Commoner@</entry>
+	  <entry>Character(Farmer)[17]@Commoner@</entry>
+	  <entry>Character(Farmer)[18]@Commoner@</entry>
+	  <entry>Character(Farmer)[19]@Commoner@</entry>
     <entry>Character(Farmer)[20]@Commoner@</entry>
   </collection>
   <collection>
     <name>Character(Fortuneteller)@Adept@</name>
     <entry>Character(Fortuneteller)[1]@Adept@</entry>
-    <entry>Character(Fortuneteller)[1d2+1]@Adept@</entry>
-    <entry>Character(Fortuneteller)[1d2+3]@Adept@</entry>
-    <entry>Character(Fortuneteller)[1d2+5]@Adept@</entry>
-    <entry>Character(Fortuneteller)[1d2+7]@Adept@</entry>
-    <entry>Character(Fortuneteller)[1d2+9]@Adept@</entry>
-    <entry>Character(Fortuneteller)[1d2+11]@Adept@</entry>
-    <entry>Character(Fortuneteller)[1d2+13]@Adept@</entry>
-    <entry>Character(Fortuneteller)[1d2+15]@Adept@</entry>
-    <entry>Character(Fortuneteller)[1d2+17]@Adept@</entry>
+	  <entry>Character(Fortuneteller)[2]@Adept@</entry>
+	  <entry>Character(Fortuneteller)[3]@Adept@</entry>
+	  <entry>Character(Fortuneteller)[4]@Adept@</entry>
+	  <entry>Character(Fortuneteller)[5]@Adept@</entry>
+	  <entry>Character(Fortuneteller)[6]@Adept@</entry>
+	  <entry>Character(Fortuneteller)[7]@Adept@</entry>
+	  <entry>Character(Fortuneteller)[8]@Adept@</entry>
+	  <entry>Character(Fortuneteller)[9]@Adept@</entry>
+	  <entry>Character(Fortuneteller)[10]@Adept@</entry>
+	  <entry>Character(Fortuneteller)[11]@Adept@</entry>
+	  <entry>Character(Fortuneteller)[12]@Adept@</entry>
+	  <entry>Character(Fortuneteller)[13]@Adept@</entry>
+	  <entry>Character(Fortuneteller)[14]@Adept@</entry>
+	  <entry>Character(Fortuneteller)[15]@Adept@</entry>
+	  <entry>Character(Fortuneteller)[16]@Adept@</entry>
+	  <entry>Character(Fortuneteller)[17]@Adept@</entry>
+	  <entry>Character(Fortuneteller)[18]@Adept@</entry>
+	  <entry>Character(Fortuneteller)[19]@Adept@</entry>
     <entry>Character(Fortuneteller)[20]@Adept@</entry>
   </collection>
   <collection>
     <name>Character(Gentry)@Aristocrat@</name>
     <entry>Character(Gentry)[1]@Aristocrat@</entry>
-    <entry>Character(Gentry)[1d2+1]@Aristocrat@</entry>
-    <entry>Character(Gentry)[1d2+3]@Aristocrat@</entry>
-    <entry>Character(Gentry)[1d2+5]@Aristocrat@</entry>
-    <entry>Character(Gentry)[1d2+7]@Aristocrat@</entry>
-    <entry>Character(Gentry)[1d2+9]@Aristocrat@</entry>
-    <entry>Character(Gentry)[1d2+11]@Aristocrat@</entry>
-    <entry>Character(Gentry)[1d2+13]@Aristocrat@</entry>
-    <entry>Character(Gentry)[1d2+15]@Aristocrat@</entry>
-    <entry>Character(Gentry)[1d2+17]@Aristocrat@</entry>
+	  <entry>Character(Gentry)[2]@Aristocrat@</entry>
+	  <entry>Character(Gentry)[3]@Aristocrat@</entry>
+	  <entry>Character(Gentry)[4]@Aristocrat@</entry>
+	  <entry>Character(Gentry)[5]@Aristocrat@</entry>
+	  <entry>Character(Gentry)[6]@Aristocrat@</entry>
+	  <entry>Character(Gentry)[7]@Aristocrat@</entry>
+	  <entry>Character(Gentry)[8]@Aristocrat@</entry>
+	  <entry>Character(Gentry)[9]@Aristocrat@</entry>
+	  <entry>Character(Gentry)[10]@Aristocrat@</entry>
+	  <entry>Character(Gentry)[11]@Aristocrat@</entry>
+	  <entry>Character(Gentry)[12]@Aristocrat@</entry>
+	  <entry>Character(Gentry)[13]@Aristocrat@</entry>
+	  <entry>Character(Gentry)[14]@Aristocrat@</entry>
+	  <entry>Character(Gentry)[15]@Aristocrat@</entry>
+	  <entry>Character(Gentry)[16]@Aristocrat@</entry>
+	  <entry>Character(Gentry)[17]@Aristocrat@</entry>
+	  <entry>Character(Gentry)[18]@Aristocrat@</entry>
+	  <entry>Character(Gentry)[19]@Aristocrat@</entry>
     <entry>Character(Gentry)[20]@Aristocrat@</entry>
   </collection>
   <collection>
     <name>Character(Guard)@Warrior@</name>
     <entry>Character(Guard)[1]@Warrior@</entry>
-    <entry>Character(Guard)[1d2+1]@Warrior@</entry>
-    <entry>Character(Guard)[1d2+3]@Warrior@</entry>
-    <entry>Character(Guard)[1d2+5]@Warrior@</entry>
-    <entry>Character(Guard)[1d2+7]@Warrior@</entry>
-    <entry>Character(Guard)[1d2+9]@Warrior@</entry>
-    <entry>Character(Guard)[1d2+11]@Warrior@</entry>
-    <entry>Character(Guard)[1d2+13]@Warrior@</entry>
-    <entry>Character(Guard)[1d2+15]@Warrior@</entry>
-    <entry>Character(Guard)[1d2+17]@Warrior@</entry>
+	  <entry>Character(Guard)[2]@Warrior@</entry>
+	  <entry>Character(Guard)[3]@Warrior@</entry>
+	  <entry>Character(Guard)[4]@Warrior@</entry>
+	  <entry>Character(Guard)[5]@Warrior@</entry>
+	  <entry>Character(Guard)[6]@Warrior@</entry>
+	  <entry>Character(Guard)[7]@Warrior@</entry>
+	  <entry>Character(Guard)[8]@Warrior@</entry>
+	  <entry>Character(Guard)[9]@Warrior@</entry>
+	  <entry>Character(Guard)[10]@Warrior@</entry>
+	  <entry>Character(Guard)[11]@Warrior@</entry>
+	  <entry>Character(Guard)[12]@Warrior@</entry>
+	  <entry>Character(Guard)[13]@Warrior@</entry>
+	  <entry>Character(Guard)[14]@Warrior@</entry>
+	  <entry>Character(Guard)[15]@Warrior@</entry>
+	  <entry>Character(Guard)[16]@Warrior@</entry>
+	  <entry>Character(Guard)[17]@Warrior@</entry>
+	  <entry>Character(Guard)[18]@Warrior@</entry>
+	  <entry>Character(Guard)[19]@Warrior@</entry>
     <entry>Character(Guard)[20]@Warrior@</entry>
   </collection>
   <collection>
     <name>Character(Herder)@Commoner@</name>
     <entry>Character(Herder)[1]@Commoner@</entry>
-    <entry>Character(Herder)[1d2+1]@Commoner@</entry>
-    <entry>Character(Herder)[1d2+3]@Commoner@</entry>
-    <entry>Character(Herder)[1d2+5]@Commoner@</entry>
-    <entry>Character(Herder)[1d2+7]@Commoner@</entry>
-    <entry>Character(Herder)[1d2+9]@Commoner@</entry>
-    <entry>Character(Herder)[1d2+11]@Commoner@</entry>
-    <entry>Character(Herder)[1d2+13]@Commoner@</entry>
-    <entry>Character(Herder)[1d2+15]@Commoner@</entry>
-    <entry>Character(Herder)[1d2+17]@Commoner@</entry>
+	  <entry>Character(Herder)[2]@Commoner@</entry>
+	  <entry>Character(Herder)[3]@Commoner@</entry>
+	  <entry>Character(Herder)[4]@Commoner@</entry>
+	  <entry>Character(Herder)[5]@Commoner@</entry>
+	  <entry>Character(Herder)[6]@Commoner@</entry>
+	  <entry>Character(Herder)[7]@Commoner@</entry>
+	  <entry>Character(Herder)[8]@Commoner@</entry>
+	  <entry>Character(Herder)[9]@Commoner@</entry>
+	  <entry>Character(Herder)[10]@Commoner@</entry>
+	  <entry>Character(Herder)[11]@Commoner@</entry>
+	  <entry>Character(Herder)[12]@Commoner@</entry>
+	  <entry>Character(Herder)[13]@Commoner@</entry>
+	  <entry>Character(Herder)[14]@Commoner@</entry>
+	  <entry>Character(Herder)[15]@Commoner@</entry>
+	  <entry>Character(Herder)[16]@Commoner@</entry>
+	  <entry>Character(Herder)[17]@Commoner@</entry>
+	  <entry>Character(Herder)[18]@Commoner@</entry>
+	  <entry>Character(Herder)[19]@Commoner@</entry>
     <entry>Character(Herder)[20]@Commoner@</entry>
   </collection>
   <collection>
@@ -729,48 +845,64 @@
   <collection>
     <name>Character(Hunter)@Commoner&amp;Warrior@</name>
     <entry>Character(Hunter)[1]@Commoner&amp;Warrior@</entry>
-    <entry>Character(Hunter)[1d2+1]@Commoner&amp;Warrior@</entry>
-    <entry>Character(Hunter)[1d2+3]@Commoner&amp;Warrior@</entry>
-    <entry>Character(Hunter)[1d2+5]@Commoner&amp;Warrior@</entry>
-    <entry>Character(Hunter)[1d2+7]@Commoner&amp;Warrior@</entry>
-    <entry>Character(Hunter)[1d2+9]@Commoner&amp;Warrior@</entry>
-    <entry>Character(Hunter)[1d2+11]@Commoner&amp;Warrior@</entry>
-    <entry>Character(Hunter)[1d2+13]@Commoner&amp;Warrior@</entry>
-    <entry>Character(Hunter)[1d2+15]@Commoner&amp;Warrior@</entry>
-    <entry>Character(Hunter)[1d2+17]@Commoner&amp;Warrior@</entry>
+	  <entry>Character(Hunter)[2]@Commoner&amp;Warrior@</entry>
+	  <entry>Character(Hunter)[3]@Commoner&amp;Warrior@</entry>
+	  <entry>Character(Hunter)[4]@Commoner&amp;Warrior@</entry>
+	  <entry>Character(Hunter)[5]@Commoner&amp;Warrior@</entry>
+	  <entry>Character(Hunter)[6]@Commoner&amp;Warrior@</entry>
+	  <entry>Character(Hunter)[7]@Commoner&amp;Warrior@</entry>
+	  <entry>Character(Hunter)[8]@Commoner&amp;Warrior@</entry>
+	  <entry>Character(Hunter)[9]@Commoner&amp;Warrior@</entry>
+	  <entry>Character(Hunter)[10]@Commoner&amp;Warrior@</entry>
+	  <entry>Character(Hunter)[11]@Commoner&amp;Warrior@</entry>
+	  <entry>Character(Hunter)[12]@Commoner&amp;Warrior@</entry>
+	  <entry>Character(Hunter)[13]@Commoner&amp;Warrior@</entry>
+	  <entry>Character(Hunter)[14]@Commoner&amp;Warrior@</entry>
+	  <entry>Character(Hunter)[15]@Commoner&amp;Warrior@</entry>
+	  <entry>Character(Hunter)[16]@Commoner&amp;Warrior@</entry>
+	  <entry>Character(Hunter)[17]@Commoner&amp;Warrior@</entry>
+	  <entry>Character(Hunter)[18]@Commoner&amp;Warrior@</entry>
+	  <entry>Character(Hunter)[19]@Commoner&amp;Warrior@</entry>
     <entry>Character(Hunter)[20]@Commoner&amp;Warrior@</entry>
   </collection>
   <collection>
     <name>Character(Leader)@Bard@</name>
-    <entry>Character(Leader)[1]@Bard@</entry>
-    <entry>Character(Leader)[2]@Bard@</entry>
-    <entry>Character(Leader)[3]@Bard@</entry>
-    <entry>Character(Leader)[4]@Bard@</entry>
-    <entry>Character(Leader)[5]@Bard@</entry>
-    <entry>Character(Leader)[6]@Bard@</entry>
-    <entry>Character(Leader)[7]@Bard@</entry>
-    <entry>Character(Leader)[8]@Bard@</entry>
-    <entry>Character(Leader)[9]@Bard@</entry>
-    <entry>Character(Leader)[10]@Bard@</entry>
+	  <entry>Character(Leader)[1]@Bard@</entry>
+	  <entry>Character(Leader)[2]@Bard@</entry>
+	  <entry>Character(Leader)[3]@Bard@</entry>
+	  <entry>Character(Leader)[4]@Bard@</entry>
+	  <entry>Character(Leader)[5]@Bard@</entry>
+	  <entry>Character(Leader)[6]@Bard@</entry>
+	  <entry>Character(Leader)[7]@Bard@</entry>
+	  <entry>Character(Leader)[8]@Bard@</entry>
+	  <entry>Character(Leader)[9]@Bard@</entry>
+	  <entry>Character(Leader)[10]@Bard@</entry>
     <entry>Character(Leader)[11]@Bard@</entry>
+    <entry>Character(Leader)[12]@Bard@</entry>
+    <entry>Character(Leader)[13]@Bard@</entry>
+    <entry>Character(Leader)[14]@Bard@</entry>
+    <entry>Character(Leader)[15]@Bard@</entry>
+    <entry>Character(Leader)[16]@Bard@</entry>
+    <entry>Character(Leader)[17]@Bard@</entry>
+    <entry>Character(Leader)[18]@Bard@</entry>
+    <entry>Character(Leader)[19]@Bard@</entry>
+    <entry>Character(Leader)[20]@Bard@</entry>
   </collection>
   <collection>
     <name>Character(Leader)@Cleric@</name>
-    <entry>Character(Leader)[1]@Cleric@</entry>
-    <entry>Character(Leader)[2]@Cleric@</entry>
-    <entry>Character(Leader)[3]@Cleric@</entry>
-    <entry>Character(Leader)[4]@Cleric@</entry>
-    <entry>Character(Leader)[5]@Cleric@</entry>
-    <entry>Character(Leader)[6]@Cleric@</entry>
-    <entry>Character(Leader)[7]@Cleric@</entry>
-    <entry>Character(Leader)[8]@Cleric@</entry>
-    <entry>Character(Leader)[9]@Cleric@</entry>
-    <entry>Character(Leader)[10]@Cleric@</entry>
     <entry>Character(Leader)[11]@Cleric@</entry>
+    <entry>Character(Leader)[12]@Cleric@</entry>
+    <entry>Character(Leader)[13]@Cleric@</entry>
+    <entry>Character(Leader)[14]@Cleric@</entry>
+    <entry>Character(Leader)[15]@Cleric@</entry>
+    <entry>Character(Leader)[16]@Cleric@</entry>
+    <entry>Character(Leader)[17]@Cleric@</entry>
+    <entry>Character(Leader)[18]@Cleric@</entry>
+    <entry>Character(Leader)[19]@Cleric@</entry>
+    <entry>Character(Leader)[20]@Cleric@</entry>
   </collection>
   <collection>
     <name>Character(Leader)@Fighter@</name>
-    <entry>Character(Leader)[1]@Fighter@</entry>
     <entry>Character(Leader)[2]@Fighter@</entry>
     <entry>Character(Leader)[3]@Fighter@</entry>
     <entry>Character(Leader)[4]@Fighter@</entry>
@@ -781,60 +913,105 @@
     <entry>Character(Leader)[9]@Fighter@</entry>
     <entry>Character(Leader)[10]@Fighter@</entry>
     <entry>Character(Leader)[11]@Fighter@</entry>
+	  <entry>Character(Leader)[12]@Fighter@</entry>
+	  <entry>Character(Leader)[13]@Fighter@</entry>
+	  <entry>Character(Leader)[14]@Fighter@</entry>
+	  <entry>Character(Leader)[15]@Fighter@</entry>
+	  <entry>Character(Leader)[16]@Fighter@</entry>
+	  <entry>Character(Leader)[17]@Fighter@</entry>
+	  <entry>Character(Leader)[18]@Fighter@</entry>
+	  <entry>Character(Leader)[19]@Fighter@</entry>
+	  <entry>Character(Leader)[20]@Fighter@</entry>
   </collection>
   <collection>
     <name>Character(Leader)@Warrior@</name>
-    <entry>Character(Leader)[1d2+1]@Warrior@</entry>
-    <entry>Character(Leader)[1d2+3]@Warrior@</entry>
-    <entry>Character(Leader)[1d2+5]@Warrior@</entry>
-    <entry>Character(Leader)[1d2+7]@Warrior@</entry>
-    <entry>Character(Leader)[1d2+9]@Warrior@</entry>
-    <entry>Character(Leader)[1d2+11]@Warrior@</entry>
-    <entry>Character(Leader)[1d2+13]@Warrior@</entry>
-    <entry>Character(Leader)[1d2+15]@Warrior@</entry>
-    <entry>Character(Leader)[1d2+17]@Warrior@</entry>
+	  <entry>Character(Leader)[2]@Warrior@</entry>
+	  <entry>Character(Leader)[3]@Warrior@</entry>
+	  <entry>Character(Leader)[4]@Warrior@</entry>
+	  <entry>Character(Leader)[5]@Warrior@</entry>
+	  <entry>Character(Leader)[6]@Warrior@</entry>
+	  <entry>Character(Leader)[7]@Warrior@</entry>
+	  <entry>Character(Leader)[8]@Warrior@</entry>
+	  <entry>Character(Leader)[9]@Warrior@</entry>
+	  <entry>Character(Leader)[10]@Warrior@</entry>
+	  <entry>Character(Leader)[11]@Warrior@</entry>
+	  <entry>Character(Leader)[12]@Warrior@</entry>
+	  <entry>Character(Leader)[13]@Warrior@</entry>
+	  <entry>Character(Leader)[14]@Warrior@</entry>
+	  <entry>Character(Leader)[15]@Warrior@</entry>
+	  <entry>Character(Leader)[16]@Warrior@</entry>
+	  <entry>Character(Leader)[17]@Warrior@</entry>
+	  <entry>Character(Leader)[18]@Warrior@</entry>
+	  <entry>Character(Leader)[19]@Warrior@</entry>
     <entry>Character(Leader)[20]@Warrior@</entry>
   </collection>
   <collection>
     <name>Character(Merchant)@Commoner&amp;Expert@</name>
     <entry>Character(Merchant)[1]@Commoner&amp;Expert@</entry>
-    <entry>Character(Merchant)[1d2+1]@Commoner&amp;Expert@</entry>
-    <entry>Character(Merchant)[1d2+3]@Commoner&amp;Expert@</entry>
-    <entry>Character(Merchant)[1d2+5]@Commoner&amp;Expert@</entry>
-    <entry>Character(Merchant)[1d2+7]@Commoner&amp;Expert@</entry>
-    <entry>Character(Merchant)[1d2+9]@Commoner&amp;Expert@</entry>
-    <entry>Character(Merchant)[1d2+11]@Commoner&amp;Expert@</entry>
-    <entry>Character(Merchant)[1d2+13]@Commoner&amp;Expert@</entry>
-    <entry>Character(Merchant)[1d2+15]@Commoner&amp;Expert@</entry>
-    <entry>Character(Merchant)[1d2+17]@Commoner&amp;Expert@</entry>
+	  <entry>Character(Merchant)[2]@Commoner&amp;Expert@</entry>
+	  <entry>Character(Merchant)[3]@Commoner&amp;Expert@</entry>
+	  <entry>Character(Merchant)[4]@Commoner&amp;Expert@</entry>
+	  <entry>Character(Merchant)[5]@Commoner&amp;Expert@</entry>
+	  <entry>Character(Merchant)[6]@Commoner&amp;Expert@</entry>
+	  <entry>Character(Merchant)[7]@Commoner&amp;Expert@</entry>
+	  <entry>Character(Merchant)[8]@Commoner&amp;Expert@</entry>
+	  <entry>Character(Merchant)[9]@Commoner&amp;Expert@</entry>
+	  <entry>Character(Merchant)[10]@Commoner&amp;Expert@</entry>
+	  <entry>Character(Merchant)[11]@Commoner&amp;Expert@</entry>
+	  <entry>Character(Merchant)[12]@Commoner&amp;Expert@</entry>
+	  <entry>Character(Merchant)[13]@Commoner&amp;Expert@</entry>
+	  <entry>Character(Merchant)[14]@Commoner&amp;Expert@</entry>
+	  <entry>Character(Merchant)[15]@Commoner&amp;Expert@</entry>
+	  <entry>Character(Merchant)[16]@Commoner&amp;Expert@</entry>
+	  <entry>Character(Merchant)[17]@Commoner&amp;Expert@</entry>
+	  <entry>Character(Merchant)[18]@Commoner&amp;Expert@</entry>
+	  <entry>Character(Merchant)[19]@Commoner&amp;Expert@</entry>
     <entry>Character(Merchant)[20]@Commoner&amp;Expert@</entry>
   </collection>
   <collection>
     <name>Character(Minstrel)@Commoner&amp;Expert@</name>
     <entry>Character(Minstrel)[1]@Commoner&amp;Expert@</entry>
-    <entry>Character(Minstrel)[1d2+1]@Commoner&amp;Expert@</entry>
-    <entry>Character(Minstrel)[1d2+3]@Commoner&amp;Expert@</entry>
-    <entry>Character(Minstrel)[1d2+5]@Commoner&amp;Expert@</entry>
-    <entry>Character(Minstrel)[1d2+7]@Commoner&amp;Expert@</entry>
-    <entry>Character(Minstrel)[1d2+9]@Commoner&amp;Expert@</entry>
-    <entry>Character(Minstrel)[1d2+11]@Commoner&amp;Expert@</entry>
-    <entry>Character(Minstrel)[1d2+13]@Commoner&amp;Expert@</entry>
-    <entry>Character(Minstrel)[1d2+15]@Commoner&amp;Expert@</entry>
-    <entry>Character(Minstrel)[1d2+17]@Commoner&amp;Expert@</entry>
+	  <entry>Character(Minstrel)[2]@Commoner&amp;Expert@</entry>
+	  <entry>Character(Minstrel)[3]@Commoner&amp;Expert@</entry>
+	  <entry>Character(Minstrel)[4]@Commoner&amp;Expert@</entry>
+	  <entry>Character(Minstrel)[5]@Commoner&amp;Expert@</entry>
+	  <entry>Character(Minstrel)[6]@Commoner&amp;Expert@</entry>
+	  <entry>Character(Minstrel)[7]@Commoner&amp;Expert@</entry>
+	  <entry>Character(Minstrel)[8]@Commoner&amp;Expert@</entry>
+	  <entry>Character(Minstrel)[9]@Commoner&amp;Expert@</entry>
+	  <entry>Character(Minstrel)[10]@Commoner&amp;Expert@</entry>
+	  <entry>Character(Minstrel)[11]@Commoner&amp;Expert@</entry>
+	  <entry>Character(Minstrel)[12]@Commoner&amp;Expert@</entry>
+	  <entry>Character(Minstrel)[13]@Commoner&amp;Expert@</entry>
+	  <entry>Character(Minstrel)[14]@Commoner&amp;Expert@</entry>
+	  <entry>Character(Minstrel)[15]@Commoner&amp;Expert@</entry>
+	  <entry>Character(Minstrel)[16]@Commoner&amp;Expert@</entry>
+	  <entry>Character(Minstrel)[17]@Commoner&amp;Expert@</entry>
+	  <entry>Character(Minstrel)[18]@Commoner&amp;Expert@</entry>
+	  <entry>Character(Minstrel)[19]@Commoner&amp;Expert@</entry>
     <entry>Character(Minstrel)[20]@Commoner&amp;Expert@</entry>
   </collection>
   <collection>
     <name>Character(Missionary)@Adept@</name>
     <entry>Character(Missionary)[1]@Adept@</entry>
-    <entry>Character(Missionary)[1d2+1]@Adept@</entry>
-    <entry>Character(Missionary)[1d2+3]@Adept@</entry>
-    <entry>Character(Missionary)[1d2+5]@Adept@</entry>
-    <entry>Character(Missionary)[1d2+7]@Adept@</entry>
-    <entry>Character(Missionary)[1d2+9]@Adept@</entry>
-    <entry>Character(Missionary)[1d2+11]@Adept@</entry>
-    <entry>Character(Missionary)[1d2+13]@Adept@</entry>
-    <entry>Character(Missionary)[1d2+15]@Adept@</entry>
-    <entry>Character(Missionary)[1d2+17]@Adept@</entry>
+	  <entry>Character(Missionary)[2]@Adept@</entry>
+	  <entry>Character(Missionary)[3]@Adept@</entry>
+	  <entry>Character(Missionary)[4]@Adept@</entry>
+	  <entry>Character(Missionary)[5]@Adept@</entry>
+	  <entry>Character(Missionary)[6]@Adept@</entry>
+	  <entry>Character(Missionary)[7]@Adept@</entry>
+	  <entry>Character(Missionary)[8]@Adept@</entry>
+	  <entry>Character(Missionary)[9]@Adept@</entry>
+	  <entry>Character(Missionary)[10]@Adept@</entry>
+	  <entry>Character(Missionary)[11]@Adept@</entry>
+	  <entry>Character(Missionary)[12]@Adept@</entry>
+	  <entry>Character(Missionary)[13]@Adept@</entry>
+	  <entry>Character(Missionary)[14]@Adept@</entry>
+	  <entry>Character(Missionary)[15]@Adept@</entry>
+	  <entry>Character(Missionary)[16]@Adept@</entry>
+	  <entry>Character(Missionary)[17]@Adept@</entry>
+	  <entry>Character(Missionary)[18]@Adept@</entry>
+	  <entry>Character(Missionary)[19]@Adept@</entry>
     <entry>Character(Missionary)[20]@Adept@</entry>
   </collection>
   <collection>
@@ -863,15 +1040,24 @@
   <collection>
     <name>Character(Politician)@Aristocrat@</name>
     <entry>Character(Politician)[1]@Aristocrat@</entry>
-    <entry>Character(Politician)[1d2+1]@Aristocrat@</entry>
-    <entry>Character(Politician)[1d2+3]@Aristocrat@</entry>
-    <entry>Character(Politician)[1d2+5]@Aristocrat@</entry>
-    <entry>Character(Politician)[1d2+7]@Aristocrat@</entry>
-    <entry>Character(Politician)[1d2+9]@Aristocrat@</entry>
-    <entry>Character(Politician)[1d2+11]@Aristocrat@</entry>
-    <entry>Character(Politician)[1d2+13]@Aristocrat@</entry>
-    <entry>Character(Politician)[1d2+15]@Aristocrat@</entry>
-    <entry>Character(Politician)[1d2+17]@Aristocrat@</entry>
+	  <entry>Character(Politician)[2]@Aristocrat@</entry>
+	  <entry>Character(Politician)[3]@Aristocrat@</entry>
+	  <entry>Character(Politician)[4]@Aristocrat@</entry>
+	  <entry>Character(Politician)[5]@Aristocrat@</entry>
+	  <entry>Character(Politician)[6]@Aristocrat@</entry>
+	  <entry>Character(Politician)[7]@Aristocrat@</entry>
+	  <entry>Character(Politician)[8]@Aristocrat@</entry>
+	  <entry>Character(Politician)[9]@Aristocrat@</entry>
+	  <entry>Character(Politician)[10]@Aristocrat@</entry>
+	  <entry>Character(Politician)[11]@Aristocrat@</entry>
+	  <entry>Character(Politician)[12]@Aristocrat@</entry>
+	  <entry>Character(Politician)[13]@Aristocrat@</entry>
+	  <entry>Character(Politician)[14]@Aristocrat@</entry>
+	  <entry>Character(Politician)[15]@Aristocrat@</entry>
+	  <entry>Character(Politician)[16]@Aristocrat@</entry>
+	  <entry>Character(Politician)[17]@Aristocrat@</entry>
+	  <entry>Character(Politician)[18]@Aristocrat@</entry>
+	  <entry>Character(Politician)[19]@Aristocrat@</entry>
     <entry>Character(Politician)[20]@Aristocrat@</entry>
   </collection>
   <collection>
@@ -900,29 +1086,37 @@
   <collection>
     <name>Character(Pilgrim)@Commoner@</name>
     <entry>Character(Pilgrim)[1]@Commoner@</entry>
-    <entry>Character(Pilgrim)[1d2+1]@Commoner@</entry>
-    <entry>Character(Pilgrim)[1d2+3]@Commoner@</entry>
-    <entry>Character(Pilgrim)[1d2+5]@Commoner@</entry>
-    <entry>Character(Pilgrim)[1d2+7]@Commoner@</entry>
-    <entry>Character(Pilgrim)[1d2+9]@Commoner@</entry>
-    <entry>Character(Pilgrim)[1d2+11]@Commoner@</entry>
-    <entry>Character(Pilgrim)[1d2+13]@Commoner@</entry>
-    <entry>Character(Pilgrim)[1d2+15]@Commoner@</entry>
-    <entry>Character(Pilgrim)[1d2+17]@Commoner@</entry>
-    <entry>Character(Pilgrim)[20]@Commoner@</entry>
+	  <entry>Character(Pilgrim)[2]@Commoner@</entry>
+	  <entry>Character(Pilgrim)[3]@Commoner@</entry>
+	  <entry>Character(Pilgrim)[4]@Commoner@</entry>
+	  <entry>Character(Pilgrim)[5]@Commoner@</entry>
+	  <entry>Character(Pilgrim)[6]@Commoner@</entry>
+	  <entry>Character(Pilgrim)[7]@Commoner@</entry>
+	  <entry>Character(Pilgrim)[8]@Commoner@</entry>
+	  <entry>Character(Pilgrim)[9]@Commoner@</entry>
+	  <entry>Character(Pilgrim)[10]@Commoner@</entry>
   </collection>
   <collection>
     <name>Character(Protestor)@Commoner@</name>
     <entry>Character(Protestor)[1]@Commoner@</entry>
-    <entry>Character(Protestor)[1d2+1]@Commoner@</entry>
-    <entry>Character(Protestor)[1d2+3]@Commoner@</entry>
-    <entry>Character(Protestor)[1d2+5]@Commoner@</entry>
-    <entry>Character(Protestor)[1d2+7]@Commoner@</entry>
-    <entry>Character(Protestor)[1d2+9]@Commoner@</entry>
-    <entry>Character(Protestor)[1d2+11]@Commoner@</entry>
-    <entry>Character(Protestor)[1d2+13]@Commoner@</entry>
-    <entry>Character(Protestor)[1d2+15]@Commoner@</entry>
-    <entry>Character(Protestor)[1d2+17]@Commoner@</entry>
+	  <entry>Character(Protestor)[2]@Commoner@</entry>
+	  <entry>Character(Protestor)[3]@Commoner@</entry>
+	  <entry>Character(Protestor)[4]@Commoner@</entry>
+	  <entry>Character(Protestor)[5]@Commoner@</entry>
+	  <entry>Character(Protestor)[6]@Commoner@</entry>
+	  <entry>Character(Protestor)[7]@Commoner@</entry>
+	  <entry>Character(Protestor)[8]@Commoner@</entry>
+	  <entry>Character(Protestor)[9]@Commoner@</entry>
+	  <entry>Character(Protestor)[10]@Commoner@</entry>
+	  <entry>Character(Protestor)[11]@Commoner@</entry>
+	  <entry>Character(Protestor)[12]@Commoner@</entry>
+	  <entry>Character(Protestor)[13]@Commoner@</entry>
+	  <entry>Character(Protestor)[14]@Commoner@</entry>
+	  <entry>Character(Protestor)[15]@Commoner@</entry>
+	  <entry>Character(Protestor)[16]@Commoner@</entry>
+	  <entry>Character(Protestor)[17]@Commoner@</entry>
+	  <entry>Character(Protestor)[18]@Commoner@</entry>
+	  <entry>Character(Protestor)[19]@Commoner@</entry>
     <entry>Character(Protestor)[20]@Commoner@</entry>
   </collection>
   <collection>
@@ -987,42 +1181,55 @@
   <collection>
     <name>Character(Servant)@Commoner@</name>
     <entry>Character(Servant)[1]@Commoner@</entry>
-    <entry>Character(Servant)[1d2+1]@Commoner@</entry>
-    <entry>Character(Servant)[1d2+3]@Commoner@</entry>
-    <entry>Character(Servant)[1d2+5]@Commoner@</entry>
-    <entry>Character(Servant)[1d2+7]@Commoner@</entry>
-    <entry>Character(Servant)[1d2+9]@Commoner@</entry>
-    <entry>Character(Servant)[1d2+11]@Commoner@</entry>
-    <entry>Character(Servant)[1d2+13]@Commoner@</entry>
-    <entry>Character(Servant)[1d2+15]@Commoner@</entry>
-    <entry>Character(Servant)[1d2+17]@Commoner@</entry>
-    <entry>Character(Servant)[20]@Commoner@</entry>
+    <entry>Character(Servant)[2]@Commoner@</entry>
+    <entry>Character(Servant)[3]@Commoner@</entry>
+    <entry>Character(Servant)[4]@Commoner@</entry>
+    <entry>Character(Servant)[5]@Commoner@</entry>
+    <entry>Character(Servant)[6]@Commoner@</entry>
+    <entry>Character(Servant)[7]@Commoner@</entry>
+    <entry>Character(Servant)[8]@Commoner@</entry>
+    <entry>Character(Servant)[9]@Commoner@</entry>
+	  <entry>Character(Servant)[10]@Commoner@</entry>
+	  <entry>Character(Servant)[11]@Commoner@</entry>
+	  <entry>Character(Servant)[12]@Commoner@</entry>
+	  <entry>Character(Servant)[13]@Commoner@</entry>
+	  <entry>Character(Servant)[14]@Commoner@</entry>
+	  <entry>Character(Servant)[15]@Commoner@</entry>
   </collection>
   <collection>
     <name>Character(Star Student)</name>
-    <entry>Character(Star Student)[1]</entry>
-    <entry>Character(Star Student)[2]</entry>
-    <entry>Character(Star Student)[3]</entry>
-    <entry>Character(Star Student)[4]</entry>
-    <entry>Character(Star Student)[5]</entry>
     <entry>Character(Star Student)[6]</entry>
     <entry>Character(Star Student)[7]</entry>
     <entry>Character(Star Student)[8]</entry>
     <entry>Character(Star Student)[9]</entry>
     <entry>Character(Star Student)[10]</entry>
+    <entry>Character(Star Student)[11]</entry>
+    <entry>Character(Star Student)[12]</entry>
+    <entry>Character(Star Student)[13]</entry>
+    <entry>Character(Star Student)[14]</entry>
+    <entry>Character(Star Student)[15]</entry>
   </collection>
   <collection>
     <name>Character(Street performer)@Adept@</name>
     <entry>Character(Street performer)[1]@Adept@</entry>
-    <entry>Character(Street performer)[1d2+1]@Adept@</entry>
-    <entry>Character(Street performer)[1d2+3]@Adept@</entry>
-    <entry>Character(Street performer)[1d2+5]@Adept@</entry>
-    <entry>Character(Street performer)[1d2+7]@Adept@</entry>
-    <entry>Character(Street performer)[1d2+9]@Adept@</entry>
-    <entry>Character(Street performer)[1d2+11]@Adept@</entry>
-    <entry>Character(Street performer)[1d2+13]@Adept@</entry>
-    <entry>Character(Street performer)[1d2+15]@Adept@</entry>
-    <entry>Character(Street performer)[1d2+17]@Adept@</entry>
+	  <entry>Character(Street performer)[2]@Adept@</entry>
+	  <entry>Character(Street performer)[3]@Adept@</entry>
+	  <entry>Character(Street performer)[4]@Adept@</entry>
+	  <entry>Character(Street performer)[5]@Adept@</entry>
+	  <entry>Character(Street performer)[6]@Adept@</entry>
+	  <entry>Character(Street performer)[7]@Adept@</entry>
+	  <entry>Character(Street performer)[8]@Adept@</entry>
+	  <entry>Character(Street performer)[9]@Adept@</entry>
+	  <entry>Character(Street performer)[10]@Adept@</entry>
+	  <entry>Character(Street performer)[11]@Adept@</entry>
+	  <entry>Character(Street performer)[12]@Adept@</entry>
+	  <entry>Character(Street performer)[13]@Adept@</entry>
+	  <entry>Character(Street performer)[14]@Adept@</entry>
+	  <entry>Character(Street performer)[15]@Adept@</entry>
+	  <entry>Character(Street performer)[16]@Adept@</entry>
+	  <entry>Character(Street performer)[17]@Adept@</entry>
+	  <entry>Character(Street performer)[18]@Adept@</entry>
+	  <entry>Character(Street performer)[19]@Adept@</entry>
     <entry>Character(Street performer)[20]@Adept@</entry>
   </collection>
   <collection>
@@ -1051,15 +1258,15 @@
   <collection>
     <name>Character(Student)@Any NPC@</name>
     <entry>Character(Student)[1]@Any NPC@</entry>
-    <entry>Character(Student)[1d2+1]@Any NPC@</entry>
-    <entry>Character(Student)[1d2+3]@Any NPC@</entry>
-    <entry>Character(Student)[1d2+5]@Any NPC@</entry>
-    <entry>Character(Student)[1d2+7]@Any NPC@</entry>
-    <entry>Character(Student)[1d2+9]@Any NPC@</entry>
-    <entry>Character(Student)[1d2+11]@Any NPC@</entry>
-    <entry>Character(Student)[1d2+13]@Any NPC@</entry>
-    <entry>Character(Student)[1d2+15]@Any NPC@</entry>
-    <entry>Character(Student)[1d2+17]@Any NPC@</entry>
+	  <entry>Character(Student)[2]@Any NPC@</entry>
+	  <entry>Character(Student)[3]@Any NPC@</entry>
+	  <entry>Character(Student)[4]@Any NPC@</entry>
+	  <entry>Character(Student)[5]@Any NPC@</entry>
+	  <entry>Character(Student)[6]@Any NPC@</entry>
+	  <entry>Character(Student)[7]@Any NPC@</entry>
+	  <entry>Character(Student)[8]@Any NPC@</entry>
+	  <entry>Character(Student)[9]@Any NPC@</entry>
+	  <entry>Character(Student)[10]@Any NPC@</entry>
   </collection>
   <collection>
     <name>Character(Teacher)</name>
@@ -1077,15 +1284,24 @@
   <collection>
     <name>Character(Traveler)@Any NPC@</name>
     <entry>Character(Traveler)[1]@Any NPC@</entry>
-    <entry>Character(Traveler)[1d2+1]@Any NPC@</entry>
-    <entry>Character(Traveler)[1d2+3]@Any NPC@</entry>
-    <entry>Character(Traveler)[1d2+5]@Any NPC@</entry>
-    <entry>Character(Traveler)[1d2+7]@Any NPC@</entry>
-    <entry>Character(Traveler)[1d2+9]@Any NPC@</entry>
-    <entry>Character(Traveler)[1d2+11]@Any NPC@</entry>
-    <entry>Character(Traveler)[1d2+13]@Any NPC@</entry>
-    <entry>Character(Traveler)[1d2+15]@Any NPC@</entry>
-    <entry>Character(Traveler)[1d2+17]@Any NPC@</entry>
+	  <entry>Character(Traveler)[2]@Any NPC@</entry>
+	  <entry>Character(Traveler)[3]@Any NPC@</entry>
+	  <entry>Character(Traveler)[4]@Any NPC@</entry>
+	  <entry>Character(Traveler)[5]@Any NPC@</entry>
+	  <entry>Character(Traveler)[6]@Any NPC@</entry>
+	  <entry>Character(Traveler)[7]@Any NPC@</entry>
+	  <entry>Character(Traveler)[8]@Any NPC@</entry>
+	  <entry>Character(Traveler)[9]@Any NPC@</entry>
+	  <entry>Character(Traveler)[10]@Any NPC@</entry>
+	  <entry>Character(Traveler)[11]@Any NPC@</entry>
+	  <entry>Character(Traveler)[12]@Any NPC@</entry>
+	  <entry>Character(Traveler)[13]@Any NPC@</entry>
+	  <entry>Character(Traveler)[14]@Any NPC@</entry>
+	  <entry>Character(Traveler)[15]@Any NPC@</entry>
+	  <entry>Character(Traveler)[16]@Any NPC@</entry>
+	  <entry>Character(Traveler)[17]@Any NPC@</entry>
+	  <entry>Character(Traveler)[18]@Any NPC@</entry>
+	  <entry>Character(Traveler)[19]@Any NPC@</entry>
     <entry>Character(Traveler)[20]@Any NPC@</entry>
   </collection>
   <collection>
@@ -1104,15 +1320,24 @@
   <collection>
     <name>Character@Any NPC@</name>
     <entry>Character[1]@Any NPC@</entry>
-    <entry>Character[1d2+1]@Any NPC@</entry>
-    <entry>Character[1d2+3]@Any NPC@</entry>
-    <entry>Character[1d2+5]@Any NPC@</entry>
-    <entry>Character[1d2+7]@Any NPC@</entry>
-    <entry>Character[1d2+9]@Any NPC@</entry>
-    <entry>Character[1d2+11]@Any NPC@</entry>
-    <entry>Character[1d2+13]@Any NPC@</entry>
-    <entry>Character[1d2+15]@Any NPC@</entry>
-    <entry>Character[1d2+17]@Any NPC@</entry>
+	  <entry>Character[2]@Any NPC@</entry>
+	  <entry>Character[3]@Any NPC@</entry>
+	  <entry>Character[4]@Any NPC@</entry>
+	  <entry>Character[5]@Any NPC@</entry>
+	  <entry>Character[6]@Any NPC@</entry>
+	  <entry>Character[7]@Any NPC@</entry>
+	  <entry>Character[8]@Any NPC@</entry>
+	  <entry>Character[9]@Any NPC@</entry>
+	  <entry>Character[10]@Any NPC@</entry>
+	  <entry>Character[11]@Any NPC@</entry>
+	  <entry>Character[12]@Any NPC@</entry>
+	  <entry>Character[13]@Any NPC@</entry>
+	  <entry>Character[14]@Any NPC@</entry>
+	  <entry>Character[15]@Any NPC@</entry>
+	  <entry>Character[16]@Any NPC@</entry>
+	  <entry>Character[17]@Any NPC@</entry>
+	  <entry>Character[18]@Any NPC@</entry>
+	  <entry>Character[19]@Any NPC@</entry>
     <entry>Character[20]@Any NPC@</entry>
   </collection>
   <collection>
@@ -1978,7 +2203,7 @@
   <collection>
     <name>Mummy</name>
     <entry>Mummy</entry>
-    <entry>Character(Lord)[10]#Mummy#@Cleric@</entry>
+    <entry>Character(Mummy Lord)[10]{Mummy}@Cleric@</entry>
   </collection>
   <collection>
     <name>Naga</name>
@@ -2382,7 +2607,7 @@
   <collection>
     <name>Werewolf</name>
     <entry>Werewolf</entry>
-    <entry>Character(Lord)[10]#Werewolf#@Fighter@</entry>
+    <entry>Character(Werewolf Lord)[10]#Dire Werewolf#@Fighter@</entry>
   </collection>
   <collection>
     <name>Whale</name>
